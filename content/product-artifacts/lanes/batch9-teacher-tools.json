@@ -1,0 +1,155 @@
+{
+  "batchId": "2026-06-02-batch9",
+  "lane": "classroom-teacher-tools",
+  "generatedAt": "2026-06-02",
+  "classroomRoutines": [
+    "Monday launch: read one prompt card, model a two-sentence story start, then let students draft privately for eight quiet minutes.",
+    "Station rotation: place four prompt cards at table groups for setting, problem, character choice, and revision so students collect one idea from each stop.",
+    "Quick conference line: while students write, meet with five students for one minute each and ask what changed because of the character's choice.",
+    "Friday sentence share: students choose one revised sentence to read to a partner, then name the detail they added or clarified.",
+    "Homeschool co-op circle: each child brings a finished paragraph, points to one concrete detail, and records one next-step revision before taking the page home."
+  ],
+  "teacherSetup": [
+    "Print the prompt cards in small sets, cut them apart, and band each set by routine: warm-up, station, partner talk, or extension.",
+    "Prepare a class tray with blank story maps, half-page draft sheets, colored pencils, and sticky notes labeled add, move, replace, and explain.",
+    "Choose six cards for the week before class starts: two easy starters, two detail builders, one partner activity, and one fast-finisher challenge.",
+    "Post the four rubric words on the board with student-friendly reminders: details, order, choice, and revise.",
+    "Plan to score one rubric criterion per writing block so feedback stays fast, specific, and usable for the next draft."
+  ],
+  "extensionActivities": [
+    {
+      "id": "detail-detective-walk",
+      "title": "Detail Detective Walk",
+      "minutes": 15,
+      "teacherMove": "Read one prompt card aloud, then send students to notice three classroom-safe details they can borrow for the setting.",
+      "studentOutput": "A three-item detail bank with one color, one texture, and one tiny action ready for a story draft.",
+      "usesPromptCards": true
+    },
+    {
+      "id": "sequence-strip-build",
+      "title": "Sequence Strip Build",
+      "minutes": 20,
+      "teacherMove": "Give pairs four blank strips and ask them to arrange a clear beginning, middle, choice, and ending before writing.",
+      "studentOutput": "A taped four-strip sequence plan with order words and one sentence on each strip.",
+      "usesPromptCards": true
+    },
+    {
+      "id": "choice-crossroads",
+      "title": "Choice Crossroads",
+      "minutes": 25,
+      "teacherMove": "Pause after the story problem and chart two kind, practical choices the character could make.",
+      "studentOutput": "A short paragraph explaining the chosen path and one result that follows from it.",
+      "usesPromptCards": true
+    },
+    {
+      "id": "setting-sound-map",
+      "title": "Setting Sound Map",
+      "minutes": 15,
+      "teacherMove": "Invite students to sketch a simple setting map and label quiet, busy, soft, and surprising sounds.",
+      "studentOutput": "A labeled setting map plus two sentences that use sound to make the scene clearer.",
+      "usesPromptCards": false
+    },
+    {
+      "id": "dialogue-tag-team",
+      "title": "Dialogue Tag Team",
+      "minutes": 20,
+      "teacherMove": "Model one polite question and one helpful answer, then have partners build a tiny exchange for their characters.",
+      "studentOutput": "Four lines of dialogue with speaker names and one action tag that shows what a character is doing.",
+      "usesPromptCards": true
+    },
+    {
+      "id": "prop-card-sort",
+      "title": "Prop Card Sort",
+      "minutes": 10,
+      "teacherMove": "Name five ordinary story objects and ask students to sort them into helpful, confusing, or clue categories.",
+      "studentOutput": "A three-column prop sort with one sentence explaining how one object changes the story.",
+      "usesPromptCards": false
+    },
+    {
+      "id": "revision-sticky-note",
+      "title": "Revision Sticky Note",
+      "minutes": 15,
+      "teacherMove": "Ask students to mark one draft spot with add, move, replace, or explain, then make only that revision.",
+      "studentOutput": "One revised sentence and a sticky note naming the exact revision move used.",
+      "usesPromptCards": false
+    },
+    {
+      "id": "ending-three-ways",
+      "title": "Ending Three Ways",
+      "minutes": 30,
+      "teacherMove": "List three ending types: solve it, learn from it, or invite the next adventure, then let students test all three.",
+      "studentOutput": "Three possible endings for the same draft, with a star beside the clearest ending.",
+      "usesPromptCards": true
+    },
+    {
+      "id": "partner-question-pass",
+      "title": "Partner Question Pass",
+      "minutes": 15,
+      "teacherMove": "Give each partner one question stem: What did the character notice, choose, change, or wonder?",
+      "studentOutput": "One partner question answered in writing and one draft detail improved because of it.",
+      "usesPromptCards": false
+    },
+    {
+      "id": "mini-conference-tracker",
+      "title": "Mini Conference Tracker",
+      "minutes": 45,
+      "teacherMove": "Meet with small groups and record one rubric strength plus one next move for each student while the rest complete card-based drafting.",
+      "studentOutput": "A conference slip with one strength, one revision target, and a completed draft section.",
+      "usesPromptCards": true
+    }
+  ],
+  "rubric": {
+    "levels": [
+      "Beginning",
+      "Developing",
+      "Secure",
+      "Extending"
+    ],
+    "criteria": [
+      {
+        "id": "concrete-details",
+        "name": "Concrete details",
+        "lookFor": "The draft includes observable nouns, actions, and sensory details a reader can picture without teacher explanation.",
+        "levels": {
+          "Beginning": "Names a place or object but gives few details the reader can picture.",
+          "Developing": "Adds one or two specific details, though some sentences still stay general.",
+          "Secure": "Uses several concrete details that make the setting, object, or action easy to imagine.",
+          "Extending": "Chooses precise details that also reveal mood, character thinking, or what matters in the scene."
+        }
+      },
+      {
+        "id": "clear-sequence",
+        "name": "Clear sequence",
+        "lookFor": "The reader can follow what happens first, next, after the character's choice, and at the end.",
+        "levels": {
+          "Beginning": "Lists events or ideas, but the order is hard to follow.",
+          "Developing": "Shows a beginning and ending, with one middle event that may need a clearer connection.",
+          "Secure": "Organizes events in a clear order using time words, cause-and-effect, or paragraph flow.",
+          "Extending": "Controls pacing by slowing down the important choice and moving quickly through smaller steps."
+        }
+      },
+      {
+        "id": "character-choice",
+        "name": "Character choice",
+        "lookFor": "The character makes a visible decision that changes what happens next in the story.",
+        "levels": {
+          "Beginning": "The character is present, but the story mostly happens around them.",
+          "Developing": "The character makes a choice, though the result is only partly explained.",
+          "Secure": "The character makes a clear choice and the next event follows from that decision.",
+          "Extending": "The choice shows what the character values and creates a more satisfying ending."
+        }
+      },
+      {
+        "id": "revision-move",
+        "name": "Revision move",
+        "lookFor": "The student can point to a specific change made after rereading, feedback, or teacher conference.",
+        "levels": {
+          "Beginning": "Rereads the draft but makes no visible change yet.",
+          "Developing": "Fixes or adds a small part when prompted by the teacher or partner.",
+          "Secure": "Names and completes one useful revision move: add, move, replace, or explain.",
+          "Extending": "Makes a purposeful revision and can explain how it helps the reader understand the story."
+        }
+      }
+    ]
+  }
+}
