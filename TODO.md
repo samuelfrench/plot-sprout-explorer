@@ -20,12 +20,14 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Configured push-triggered GitHub Pages deploy workflow for `self-hosted`, `Linux`, `X64` local runners.
 - [x] 2026-06-02: Added workflow policy verifier to reject scheduled/cron/image/content-generation GitHub Actions.
 - [x] 2026-06-02: Verified app locally with lint, tests, build, dev server, Playwright interaction checks, mobile overflow check, image render check, and zero browser console errors/warnings.
+- [x] 2026-06-02: Created public GitHub repo `samuelfrench/plot-sprout-explorer`, enabled GitHub Pages workflow deploys, and pushed initial app scaffold.
+- [x] 2026-06-02: Registered local self-hosted runner `sam-local-plot-sprout-1` with labels `self-hosted`, `Linux`, `X64`, `plot-sprout` via user service `actions-runner-plot-sprout-1.service`.
+- [x] 2026-06-02: Fixed first deploy failure root cause: Node 24.16/npm 11.13 required regenerated `package-lock.json` entries for `@emnapi/core` and `@emnapi/runtime`.
 
 ## In Progress
 
-- [ ] Commit nested repo changes.
-- [ ] Create/configure GitHub remote and push if available.
-- [ ] Confirm first push-triggered deploy run state.
+- [ ] Commit and push deploy lockfile fix.
+- [ ] Confirm first successful push-triggered deploy run state.
 
 ## Next Content Batches
 
