@@ -29,6 +29,8 @@ export type QuestPack = {
 const defaultSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 
+const assetPath = (path: string) => `${import.meta.env.BASE_URL}${path.replace(/^\/+/, '')}`
+
 export const questWorlds: QuestWorld[] = [
   {
     slug: 'moon-muffin-market',
@@ -46,7 +48,7 @@ export const questWorlds: QuestWorld[] = [
     conflict: 'The recipe cards have floated into the wrong stalls.',
     safety: defaultSafety,
     productAngle: '$9 printable pack: moon market map, pastry cards, ending-choice page, parent guide.',
-    image: '/images/plotsprout/moon-muffin-market.jpg',
+    image: assetPath('images/plotsprout/moon-muffin-market.jpg'),
     accent: '#ec6f3f',
   },
   {
@@ -65,7 +67,7 @@ export const questWorlds: QuestWorld[] = [
     conflict: 'A splash mixed up the delivery routes.',
     safety: defaultSafety,
     productAngle: '$9 printable pack: puddle map, letter templates, stamp sheet, family writing night guide.',
-    image: '/images/plotsprout/puddle-planet-post-office.jpg',
+    image: assetPath('images/plotsprout/puddle-planet-post-office.jpg'),
     accent: '#1d9db2',
   },
   {
@@ -84,7 +86,7 @@ export const questWorlds: QuestWorld[] = [
     conflict: 'The train has too many questions and not enough stops.',
     safety: defaultSafety,
     productAngle: '$79 classroom license candidate: question-driven narrative unit and rubric.',
-    image: '/images/plotsprout/buttonwood-library-train.jpg',
+    image: assetPath('images/plotsprout/buttonwood-library-train.jpg'),
     accent: '#8067c9',
   },
   {
@@ -103,7 +105,7 @@ export const questWorlds: QuestWorld[] = [
     conflict: 'The clocktower is growing tomorrow berries too early.',
     safety: defaultSafety,
     productAngle: '$29 printable homeschool bundle candidate: time, sequence, and revision writing pack.',
-    image: '/images/plotsprout/cloudberry-clocktower.jpg',
+    image: assetPath('images/plotsprout/cloudberry-clocktower.jpg'),
     accent: '#c64c7a',
   },
   {
@@ -122,7 +124,7 @@ export const questWorlds: QuestWorld[] = [
     conflict: 'The reef lights are blinking in the wrong order.',
     safety: defaultSafety,
     productAngle: '$9 printable pack: reef map, boat log, message cards, ending choices.',
-    image: '/images/plotsprout/tiny-lantern-reef.jpg',
+    image: assetPath('images/plotsprout/tiny-lantern-reef.jpg'),
     accent: '#2d7d5f',
   },
   {
@@ -141,7 +143,7 @@ export const questWorlds: QuestWorld[] = [
     conflict: 'A sketched door opens to the wrong classroom.',
     safety: defaultSafety,
     productAngle: '$29 printable homeschool bundle candidate: revision skills through fantasy quests.',
-    image: '/images/plotsprout/pencil-dragon-academy.jpg',
+    image: assetPath('images/plotsprout/pencil-dragon-academy.jpg'),
     accent: '#f2b84b',
   },
 ]
