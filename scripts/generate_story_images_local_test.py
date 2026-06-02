@@ -7,6 +7,7 @@ These tests deliberately avoid loading SDXL or touching CUDA.
 from __future__ import annotations
 
 import json
+import subprocess
 import sys
 import tempfile
 import unittest
@@ -45,6 +46,32 @@ class FakePipeline:
 
 
 class ImageGeneratorConfigTest(unittest.TestCase):
+    def test_module_import_does_not_require_gpu_dependencies(self) -> None:
+        code = """
+import importlib.abc
+import sys
+
+class GpuDependencyBlocker(importlib.abc.MetaPathFinder):
+    def find_spec(self, fullname, path=None, target=None):
+        if fullname.split('.')[0] in {'diffusers', 'PIL', 'torch'}:
+            raise ModuleNotFoundError(f"No module named '{fullname}'")
+        return None
+
+sys.meta_path.insert(0, GpuDependencyBlocker())
+sys.path.insert(0, 'scripts')
+
+from generate_story_images_local import NEGATIVE_PROMPT, manifest_jobs
+
+assert 'weapon' in NEGATIVE_PROMPT
+assert callable(manifest_jobs)
+"""
+        subprocess.run(
+            [sys.executable, "-c", code],
+            cwd=ROOT,
+            check=True,
+            env={"PYTHONDONTWRITEBYTECODE": "1"},
+        )
+
     def test_manifest_jobs_preserves_per_image_negative_prompt(self) -> None:
         custom_negative_prompt = "custom batch-only negative prompt"
         with tempfile.TemporaryDirectory(dir=ROOT) as temp_dir:

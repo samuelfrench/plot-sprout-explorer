@@ -18,10 +18,6 @@ from typing import Any
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
 
-import torch
-from diffusers import AutoencoderKL, DPMSolverMultistepScheduler, StableDiffusionXLPipeline
-from PIL import features
-
 
 ROOT = Path(__file__).resolve().parents[1]
 MODELS_ROOT = Path(os.environ.get("PLOTSPROUT_MODELS_ROOT", ROOT.parent / "ComfyUI/models"))
@@ -88,7 +84,16 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def load_pipeline() -> StableDiffusionXLPipeline:
+def load_torch() -> Any:
+    import torch
+
+    return torch
+
+
+def load_pipeline() -> Any:
+    torch = load_torch()
+    from diffusers import AutoencoderKL, DPMSolverMultistepScheduler, StableDiffusionXLPipeline
+
     if not SDXL_BASE_CHECKPOINT.exists():
         raise FileNotFoundError(f"SDXL base checkpoint not found: {SDXL_BASE_CHECKPOINT}")
 
@@ -115,6 +120,8 @@ def load_pipeline() -> StableDiffusionXLPipeline:
 
 
 def validate_webp_support() -> None:
+    from PIL import features
+
     if not features.check("webp"):
         raise RuntimeError("Pillow WebP support is required before generating Batch 4 images.")
 
@@ -178,8 +185,8 @@ def outputs_exist(job: dict[str, Any]) -> bool:
 
 
 def generate_job(
-    pipe: StableDiffusionXLPipeline,
-    generator: torch.Generator,
+    pipe: Any,
+    generator: Any,
     job: dict[str, Any],
     skip_existing: bool = False,
 ) -> dict[str, Any] | None:
@@ -264,6 +271,7 @@ def main() -> None:
         selected = sorted(PROMPTS) if args.all else (args.only or ["moon-muffin-market"])
         jobs = starter_jobs(selected)
 
+    torch = load_torch()
     torch.cuda.empty_cache()
     pipe = load_pipeline()
     generator = torch.Generator(device="cuda")
