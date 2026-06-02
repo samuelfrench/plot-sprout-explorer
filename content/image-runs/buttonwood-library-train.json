@@ -1,0 +1,15 @@
+{
+  "slug": "buttonwood-library-train",
+  "prompt": "family-friendly Buttonwood Library Train scene, pocket-sized train circling a library tree, acorn lamps, book tunnels, branch platforms with brass bells, cozy storybook illustration, No text, no letters, no logos, no watermark, no scary harm, no weapons",
+  "negativePrompt": "text, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 260602,
+  "jpegQuality": 92,
+  "elapsedSeconds": 6.6,
+  "output": "public/images/plotsprout/buttonwood-library-train.jpg"
+}

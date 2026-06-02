@@ -1,0 +1,15 @@
+{
+  "slug": "puddle-planet-post-office",
+  "prompt": "family-friendly Puddle Planet Post Office scene, sidewalk puddles as tiny planets, bottle-cap mail carriers, leaf boats with ribbon flags, cheerful rainy-day light, polished storybook illustration for kids, handmade texture, No text, no letters, no logos, no watermark, no scary harm, no weapons",
+  "negativePrompt": "text, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 260606,
+  "jpegQuality": 92,
+  "elapsedSeconds": 6.45,
+  "output": "public/images/plotsprout/puddle-planet-post-office.jpg"
+}

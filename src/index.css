@@ -1,0 +1,56 @@
+:root {
+  --ink: #19343a;
+  --muted: #52656b;
+  --paper: #f7fbf4;
+  --panel: #fdf8ef;
+  --line: #bfd8d2;
+  --mint: #d7f0e5;
+  --coral: #ec6f3f;
+  --gold: #f2c14f;
+
+  color: var(--ink);
+  background:
+    radial-gradient(circle at top left, rgba(242, 193, 79, 0.34), transparent 30rem),
+    linear-gradient(135deg, #f7fbf4 0%, #e8f6f1 46%, #fff7eb 100%);
+  font-family:
+    Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+  font-size: 17px;
+  font-synthesis: none;
+  line-height: 1.45;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+}
+
+h1,
+h2 {
+  margin: 0;
+  color: var(--ink);
+  line-height: 1.05;
+}
+
+h1 {
+  max-width: 12ch;
+  font-family: Georgia, Times New Roman, serif;
+  font-size: clamp(2.4rem, 6vw, 5.6rem);
+  font-weight: 900;
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-size: clamp(1.1rem, 2vw, 1.55rem);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}

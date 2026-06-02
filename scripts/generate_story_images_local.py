@@ -1,0 +1,164 @@
+#!/usr/bin/env python3
+"""Generate Plot Sprout Explorer images locally on the RTX 4090.
+
+Default output:
+  public/images/plotsprout/<slug>.jpg
+  content/image-runs/<slug>.json
+"""
+
+from __future__ import annotations
+
+import argparse
+import json
+import os
+import time
+from pathlib import Path
+
+os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
+
+import torch
+from diffusers import AutoencoderKL, DPMSolverMultistepScheduler, StableDiffusionXLPipeline
+
+
+ROOT = Path(__file__).resolve().parents[1]
+MODELS_ROOT = Path(os.environ.get("PLOTSPROUT_MODELS_ROOT", ROOT.parent / "ComfyUI/models"))
+SDXL_BASE_CHECKPOINT = MODELS_ROOT / "checkpoints/sd_xl_base_1.0.safetensors"
+SDXL_VAE_REPO = os.environ.get("PLOTSPROUT_SDXL_VAE", "madebyollin/sdxl-vae-fp16-fix")
+OUTPUT_DIR = ROOT / "public/images/plotsprout"
+RUN_DIR = ROOT / "content/image-runs"
+WIDTH = int(os.environ.get("PLOTSPROUT_IMAGE_WIDTH", "1344"))
+HEIGHT = int(os.environ.get("PLOTSPROUT_IMAGE_HEIGHT", "768"))
+STEPS = int(os.environ.get("PLOTSPROUT_IMAGE_STEPS", "42"))
+GUIDANCE = float(os.environ.get("PLOTSPROUT_IMAGE_GUIDANCE", "7.0"))
+JPEG_QUALITY = int(os.environ.get("PLOTSPROUT_IMAGE_JPEG_QUALITY", "92"))
+FREEU_SDXL = dict(b1=1.3, b2=1.4, s1=0.9, s2=0.2)
+NEGATIVE_PROMPT = (
+    "text, letters, logo, watermark, signature, scary, horror, weapon, violence, "
+    "brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows"
+)
+
+PROMPTS = {
+    "moon-muffin-market": (
+        "family-friendly Moon Muffin Market scene, tiny moonlit pastry market, cloud carts, "
+        "lantern strings shaped like commas, warm cinnamon atmosphere, expressive stalls, "
+        "polished storybook illustration for kids, handmade texture, rich detail, No text, "
+        "no letters, no logos, no watermark, no scary harm, no weapons"
+    ),
+    "puddle-planet-post-office": (
+        "family-friendly Puddle Planet Post Office scene, sidewalk puddles as tiny planets, "
+        "bottle-cap mail carriers, leaf boats with ribbon flags, cheerful rainy-day light, "
+        "polished storybook illustration for kids, handmade texture, No text, no letters, "
+        "no logos, no watermark, no scary harm, no weapons"
+    ),
+    "buttonwood-library-train": (
+        "family-friendly Buttonwood Library Train scene, pocket-sized train circling a library tree, "
+        "acorn lamps, book tunnels, branch platforms with brass bells, cozy storybook illustration, "
+        "No text, no letters, no logos, no watermark, no scary harm, no weapons"
+    ),
+    "cloudberry-clocktower": (
+        "family-friendly Cloudberry Clocktower scene, whimsical clocktower above town, berry vines, "
+        "teacup weather vanes, breakfast-hour mystery, polished storybook illustration, No text, "
+        "no letters, no logos, no watermark, no scary harm, no weapons"
+    ),
+    "tiny-lantern-reef": (
+        "family-friendly Tiny Lantern Reef scene, under-dock glowing reef, paper boats, button coral, "
+        "sea glass, ribbon currents, cozy storybook illustration, No text, no letters, no logos, "
+        "no watermark, no scary harm, no weapons"
+    ),
+    "pencil-dragon-academy": (
+        "family-friendly Pencil Dragon Academy scene, gentle pencil dragons, graph-paper hills, "
+        "compass nests, chalkboard cave, revision magic, polished storybook illustration, No text, "
+        "no letters, no logos, no watermark, no scary harm, no weapons"
+    ),
+}
+
+
+def parse_args() -> argparse.Namespace:
+    parser = argparse.ArgumentParser(description="Generate local Plot Sprout images.")
+    parser.add_argument("--only", choices=sorted(PROMPTS), action="append")
+    parser.add_argument("--all", action="store_true", help="Generate every starter image.")
+    return parser.parse_args()
+
+
+def load_pipeline() -> StableDiffusionXLPipeline:
+    if not SDXL_BASE_CHECKPOINT.exists():
+        raise FileNotFoundError(f"SDXL base checkpoint not found: {SDXL_BASE_CHECKPOINT}")
+
+    dtype = torch.float16
+    print(f"Loading SDXL base: {SDXL_BASE_CHECKPOINT}")
+    vae = AutoencoderKL.from_pretrained(SDXL_VAE_REPO, torch_dtype=dtype)
+    pipe = StableDiffusionXLPipeline.from_single_file(
+        str(SDXL_BASE_CHECKPOINT),
+        torch_dtype=dtype,
+        use_safetensors=True,
+        add_watermarker=False,
+        vae=vae,
+    )
+    pipe.scheduler = DPMSolverMultistepScheduler.from_config(
+        pipe.scheduler.config,
+        algorithm_type="dpmsolver++",
+        use_karras_sigmas=True,
+    )
+    pipe.enable_freeu(**FREEU_SDXL)
+    pipe.to("cuda")
+    pipe.set_progress_bar_config(disable=True)
+    return pipe
+
+
+def main() -> None:
+    args = parse_args()
+    selected = sorted(PROMPTS) if args.all else (args.only or ["moon-muffin-market"])
+
+    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
+    RUN_DIR.mkdir(parents=True, exist_ok=True)
+    torch.cuda.empty_cache()
+    pipe = load_pipeline()
+    generator = torch.Generator(device="cuda")
+
+    for index, slug in enumerate(selected):
+        prompt = PROMPTS[slug]
+        seed = 260602 + index
+        generator.manual_seed(seed)
+        start = time.time()
+        print(f"Generating {slug} ({WIDTH}x{HEIGHT}, {STEPS} steps, seed {seed})")
+        image = pipe(
+            prompt=prompt,
+            negative_prompt=NEGATIVE_PROMPT,
+            width=WIDTH,
+            height=HEIGHT,
+            num_inference_steps=STEPS,
+            guidance_scale=GUIDANCE,
+            generator=generator,
+        ).images[0]
+
+        output_path = OUTPUT_DIR / f"{slug}.jpg"
+        image.save(output_path, "JPEG", quality=JPEG_QUALITY, optimize=True)
+        run_path = RUN_DIR / f"{slug}.json"
+        run_path.write_text(
+            json.dumps(
+                {
+                    "slug": slug,
+                    "prompt": prompt,
+                    "negativePrompt": NEGATIVE_PROMPT,
+                    "model": "sd_xl_base_1.0.safetensors",
+                    "vae": SDXL_VAE_REPO,
+                    "width": WIDTH,
+                    "height": HEIGHT,
+                    "steps": STEPS,
+                    "guidance": GUIDANCE,
+                    "seed": seed,
+                    "jpegQuality": JPEG_QUALITY,
+                    "elapsedSeconds": round(time.time() - start, 2),
+                    "output": str(output_path.relative_to(ROOT)),
+                },
+                indent=2,
+            )
+            + "\n"
+        )
+        print(f"Saved {output_path}")
+        print(f"Saved {run_path}")
+
+
+if __name__ == "__main__":
+    main()

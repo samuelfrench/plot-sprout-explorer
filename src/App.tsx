@@ -1,0 +1,145 @@
+import { BookOpen, Compass, Download, Image, PenLine, ShieldCheck, Sparkles, WandSparkles } from 'lucide-react'
+import type { CSSProperties } from 'react'
+import { useMemo, useState } from 'react'
+import './App.css'
+import { buildQuestPack, questWorlds } from './storyData'
+
+function App() {
+  const [ageBand, setAgeBand] = useState('6-8')
+  const [selectedSlug, setSelectedSlug] = useState('moon-muffin-market')
+  const [seed, setSeed] = useState(1)
+
+  const filteredWorlds = useMemo(
+    () => questWorlds.filter((world) => world.ageBand === ageBand),
+    [ageBand],
+  )
+
+  const visibleWorlds = filteredWorlds.length > 0 ? filteredWorlds : questWorlds
+  const selectedWorld = questWorlds.find((world) => world.slug === selectedSlug) ?? visibleWorlds[0]
+  const pack = buildQuestPack(selectedWorld.slug, seed)
+
+  function chooseAge(nextAgeBand: string) {
+    setAgeBand(nextAgeBand)
+    const firstWorld = questWorlds.find((world) => world.ageBand === nextAgeBand)
+    if (firstWorld) {
+      setSelectedSlug(firstWorld.slug)
+      setSeed(1)
+    }
+  }
+
+  return (
+    <main className="app-shell">
+      <section className="workbench" aria-labelledby="page-title">
+        <div className="title-block">
+          <div className="mark" aria-hidden="true">
+            <Compass size={28} />
+          </div>
+          <div>
+            <p className="eyebrow">Family writing quest workbench</p>
+            <h1 id="page-title">Plot Sprout Explorer</h1>
+          </div>
+        </div>
+
+        <div className="control-strip" aria-label="Age band">
+          {['6-8', '7-9', '8-10', '10-12'].map((band) => (
+            <button
+              key={band}
+              type="button"
+              className={band === ageBand ? 'chip active' : 'chip'}
+              onClick={() => chooseAge(band)}
+            >
+              Ages {band}
+            </button>
+          ))}
+        </div>
+
+        <div className="layout-grid">
+          <section className="world-list" aria-label="Quest worlds">
+            {visibleWorlds.map((world) => (
+              <button
+                key={world.slug}
+                type="button"
+                className={world.slug === selectedWorld.slug ? 'world-card selected' : 'world-card'}
+                style={{ '--accent': world.accent } as CSSProperties}
+                onClick={() => setSelectedSlug(world.slug)}
+              >
+                <span className="world-age">Ages {world.ageBand}</span>
+                <strong>{world.title}</strong>
+                <span>{world.premise}</span>
+              </button>
+            ))}
+          </section>
+
+          <section className="quest-panel" aria-live="polite">
+            <div className="quest-visual">
+              <img src={pack.world.image} alt="" />
+              <div>
+                <p className="eyebrow">Tonight's kit</p>
+                <h2>{pack.printableTitle}</h2>
+              </div>
+            </div>
+
+            <ol className="quest-steps">
+              {pack.steps.map((step) => (
+                <li key={step.label}>
+                  <span>{step.label}</span>
+                  <p>{step.text}</p>
+                </li>
+              ))}
+            </ol>
+
+            <div className="button-row">
+              <button type="button" className="primary" onClick={() => setSeed((value) => value + 1)}>
+                <WandSparkles size={18} />
+                Build tonight's quest
+              </button>
+              <button type="button" className="secondary">
+                <Download size={18} />
+                Printable pack
+              </button>
+            </div>
+          </section>
+        </div>
+      </section>
+
+      <section className="ops-grid" aria-label="Project engine">
+        <article>
+          <Sparkles size={22} />
+          <h2>Codex content flywheel</h2>
+          <p>
+            Subagents generate worlds, prompts, printable-kit outlines, SEO pages, and review notes in
+            disjoint batches. The app can grow without manual page-by-page writing.
+          </p>
+        </article>
+        <article>
+          <Image size={22} />
+          <h2>Local GPU image lane</h2>
+          <p>
+            Image prompts are saved with every world. Production art is generated locally on the RTX 4090
+            with SDXL or FLUX, then committed with prompt sidecars.
+          </p>
+        </article>
+        <article>
+          <ShieldCheck size={22} />
+          <h2>Family safety first</h2>
+          <p>
+            No child accounts, no public story publishing, no branded characters, no scary harm, and no
+            unauthenticated mutation endpoints.
+          </p>
+        </article>
+        <article>
+          <BookOpen size={22} />
+          <h2>Monetizable kits</h2>
+          <p>{pack.paidUpsell}</p>
+        </article>
+        <article className="wide">
+          <PenLine size={22} />
+          <h2>Image prompt for this world</h2>
+          <p>{pack.imagePrompt}</p>
+        </article>
+      </section>
+    </main>
+  )
+}
+
+export default App

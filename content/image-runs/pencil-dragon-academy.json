@@ -1,0 +1,15 @@
+{
+  "slug": "pencil-dragon-academy",
+  "prompt": "family-friendly Pencil Dragon Academy scene, gentle pencil dragons, graph-paper hills, compass nests, chalkboard cave, revision magic, polished storybook illustration, No text, no letters, no logos, no watermark, no scary harm, no weapons",
+  "negativePrompt": "text, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 260605,
+  "jpegQuality": 92,
+  "elapsedSeconds": 6.33,
+  "output": "public/images/plotsprout/pencil-dragon-academy.jpg"
+}

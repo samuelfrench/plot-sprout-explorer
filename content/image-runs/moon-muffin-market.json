@@ -1,0 +1,15 @@
+{
+  "slug": "moon-muffin-market",
+  "prompt": "family-friendly Moon Muffin Market scene, tiny moonlit pastry market, cloud carts, lantern strings shaped like commas, warm cinnamon atmosphere, expressive stalls, polished storybook illustration for kids, handmade texture, rich detail, No text, no letters, no logos, no watermark, no scary harm, no weapons",
+  "negativePrompt": "text, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 260604,
+  "jpegQuality": 92,
+  "elapsedSeconds": 6.4,
+  "output": "public/images/plotsprout/moon-muffin-market.jpg"
+}
