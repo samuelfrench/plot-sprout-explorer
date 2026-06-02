@@ -1,0 +1,160 @@
+{
+  "laneId": "batch16-tutoring-tools",
+  "productSlug": "tutoring-center-story-sprint-pack",
+  "title": "Tutoring Center Story Sprint Pack - Tutor Tools Lane",
+  "generatedAt": "2026-06-02",
+  "tutorGuide": {
+    "beforeSession": [
+      "Choose one sprint routine for the block and one backup slip for a shorter finish.",
+      "Print only the pages needed for today's table so the packet stays light.",
+      "Pick an invented setting, an ordinary object, and a small mix-up before the writer arrives.",
+      "Place pencils, blank paper, and one quiet choice card within easy reach.",
+      "Plan a short adult model that shows one clear detail and one next action."
+    ],
+    "setup": [
+      "Seat the writer where the page, pencil, and timer are easy to see.",
+      "Set the sprint page on top and keep take-home slips in a separate stack.",
+      "Mark the first box to start so the writer does not need to scan every choice.",
+      "Offer two invented options if the writer feels stuck at the opening.",
+      "Keep the table clear except for the active page and one writing tool."
+    ],
+    "duringSprint": [
+      "Start with a two-minute choice talk, then move quickly to marks on paper.",
+      "Use invented people, places, and objects for every prompt.",
+      "Prompt for one sentence, one sketch label, or one dictated phrase at a time.",
+      "Praise a specific craft move such as a clearer verb, setting detail, or ordered step.",
+      "Pause after each step and ask whether the writer wants the next choice or a quiet minute."
+    ],
+    "wrapUp": [
+      "Ask the writer to circle one finished part they want to keep.",
+      "Choose one take-home slip that matches the skill practiced in the sprint.",
+      "Write a simple finish mark such as title, detail, ending, or next step.",
+      "Place loose pages in a plain folder or envelope for the family table.",
+      "Reset unused slips and pencils before the next writer arrives."
+    ],
+    "noDataUse": [
+      "Use invented details only; personal facts are not needed.",
+      "Keep pages on paper with the tutor or family.",
+      "Use initials, symbols, or blank folders if pages need a simple mark.",
+      "Share work only when the writer chooses a comfortable option."
+    ]
+  },
+  "sprintRoutines": [
+    {
+      "name": "Ten-Minute Story Seed",
+      "bestFor": "A first tutoring block when the writer needs a fast win with little setup.",
+      "steps": [
+        "Pick one invented place from two tutor options.",
+        "Add one ordinary object that belongs in that place.",
+        "Write three short lines: what is noticed, what changes, and what helps.",
+        "Circle the strongest line and turn it into the opening of a tiny story."
+      ]
+    },
+    {
+      "name": "Detail Ladder Sprint",
+      "bestFor": "Writers who make very short drafts and need more concrete description.",
+      "steps": [
+        "Draw four ladder rungs on the page.",
+        "Write one color, one sound, one texture, and one action on the rungs.",
+        "Choose two rungs and place them in one sentence about an invented setting.",
+        "Add one next action that makes the setting easier to picture."
+      ]
+    },
+    {
+      "name": "Tiny Problem Turn",
+      "bestFor": "A middle sprint when the page has a setting but no movement yet.",
+      "steps": [
+        "Choose a small mix-up such as a missing key, swapped map, or sleepy clock.",
+        "Write what the story helper tries first.",
+        "Write what the helper notices after the first try.",
+        "Finish with one kind fix that changes the scene."
+      ]
+    },
+    {
+      "name": "Quiet Dialogue Cards",
+      "bestFor": "Writers practicing conversation without a long draft.",
+      "steps": [
+        "Label two invented roles such as maker and guide.",
+        "Write one line where the maker asks for help.",
+        "Write one line where the guide gives a useful clue.",
+        "Add one sentence showing what both roles do next."
+      ]
+    },
+    {
+      "name": "Ending Switch Sprint",
+      "bestFor": "A closing routine for revision, endings, and flexible thinking.",
+      "steps": [
+        "Choose one draft sentence near the end of the page.",
+        "Write a peaceful ending where the helper solves the mix-up.",
+        "Write a second ending where the helper finds a new clue for later.",
+        "Pick the ending that matches the beginning and add one clearer detail."
+      ]
+    }
+  ],
+  "takeHomeSlips": [
+    {
+      "title": "One More Setting Detail",
+      "time": "6 minutes",
+      "skill": "setting detail",
+      "direction": "add_one_setting_detail_to_the_place_from_today_and_write_one_matching_action",
+      "familyLine": "family_line_ask_what_the_place_feels_like_and_list_two_words"
+    },
+    {
+      "title": "Object Clue Finish",
+      "time": "7 minutes",
+      "skill": "plot clue",
+      "direction": "circle_one_object_from_the_sprint_and_write_how_it_helps_the_story",
+      "familyLine": "family_line_offer_two_safe_object_choices_if_the_writer_gets_stuck"
+    },
+    {
+      "title": "Title Three Ways",
+      "time": "5 minutes",
+      "skill": "main idea",
+      "direction": "write_three_title_choices_one_place_title_one_object_title_and_one_action_title",
+      "familyLine": "family_line_choose_the_title_that_gives_the_clearest_story_clue"
+    },
+    {
+      "title": "Next Step Strip",
+      "time": "6 minutes",
+      "skill": "sequence",
+      "direction": "write_first_next_last_for_three_small_actions_the_helper_could_take",
+      "familyLine": "family_line_point_to_the_step_that_should_become_a_sentence"
+    },
+    {
+      "title": "Kind Fix Add-On",
+      "time": "8 minutes",
+      "skill": "ending choice",
+      "direction": "add_one_kind_fix_to_the_mix_up_and_write_why_it_works",
+      "familyLine": "family_line_ask_what_changed_after_the_kind_fix"
+    },
+    {
+      "title": "Dialogue Pair",
+      "time": "7 minutes",
+      "skill": "dialogue",
+      "direction": "write_two_short_lines_between_invented_roles_using_ask_and_answer",
+      "familyLine": "family_line_take_one_role_and_let_the_writer_choose_the_reply"
+    },
+    {
+      "title": "Clearer Verb Swap",
+      "time": "5 minutes",
+      "skill": "word choice",
+      "direction": "underline_one_action_word_and_swap_it_for_a_clearer_verb",
+      "familyLine": "family_line_offer_two_action_words_and_ask_which_one_fits"
+    },
+    {
+      "title": "Scene Sketch Label",
+      "time": "6 minutes",
+      "skill": "planning",
+      "direction": "draw_one_tiny_scene_box_and_label_three_parts_before_writing",
+      "familyLine": "family_line_notice_one_label_and_ask_how_it_could_start_a_sentence"
+    }
+  ],
+  "sharePrompts": [
+    "Sharing is optional: point to one word, sketch, or title you like.",
+    "You may show one circled detail and say why it belongs in the story.",
+    "You may ask the tutor to speak for your page, or you may pass.",
+    "Share one choice you changed during the sprint if you want to.",
+    "Show one ending choice with a thumbs-up, point, or quiet sentence.",
+    "Keep your page private today and listen for one clear detail from the group."
+  ]
+}
