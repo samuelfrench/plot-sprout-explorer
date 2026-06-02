@@ -98,9 +98,9 @@
 
 - [x] Run local Playwright smoke for `/`, `/window-seat-story-scene-card-pack/`, `/writing-desk-story-prompt-strip-pack/`, and `/bookshop-story-bookmark-pack/` on desktop and mobile.
 - [x] Dispatch read-only spec and quality reviewers.
-- [ ] Commit and push Batch 28 code/artifacts.
-- [ ] Watch the push-triggered `Deploy` GitHub Actions run on the self-hosted runner.
-- [ ] Run live Playwright smoke for `/`, `/window-seat-story-scene-card-pack/`, `/writing-desk-story-prompt-strip-pack/`, and `/bookshop-story-bookmark-pack/`.
-- [ ] Update `TODO.md` to mark Batch 28 shipped and set the next batch.
+- [x] Commit and push Batch 28 code/artifacts.
+- [x] Watch the push-triggered `Deploy` GitHub Actions run on the self-hosted runner.
+- [x] Run live Playwright smoke for `/`, `/window-seat-story-scene-card-pack/`, `/writing-desk-story-prompt-strip-pack/`, and `/bookshop-story-bookmark-pack/`.
+- [x] Update `TODO.md` to mark Batch 28 shipped and set the next batch.
 - [ ] Commit/push TODO closeout with `[skip ci]`.
 - [ ] Update memory with shipped commits, run ID, tests, image path, billable-service state, and checkout status.
