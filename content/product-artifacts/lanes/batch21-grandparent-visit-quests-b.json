@@ -1,0 +1,196 @@
+{
+  "batchId": "2026-06-02-batch21",
+  "lane": "batch21-grandparent-visit-quests-b",
+  "generatedAt": "2026-06-02",
+  "questCount": 4,
+  "quests": [
+    {
+      "id": "grandparent-visit-quest-05",
+      "title": "Penny Path Compass Shop Counter Quest",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "visitSkill": "Turning a small object choice into a clear story problem",
+      "visitFit": "Adult-led visit table quest for a grandparent, relative, neighbor helper, library family table, or homeschool co-op pair who want a short shared writing start.",
+      "adultSetup": "Print one page, place a coin-sized token or paper circle beside the pencil, and invite the writer to invent a shop helper without using real family details.",
+      "kidDirection": "Choose the pretend compass shop object, decide what it points toward, and write a tiny story problem that stays friendly and make-believe.",
+      "hostPrompt": "Offer two optional choices: a compass that points to a misplaced button or a compass that points to a quiet shelf; let the writer choose or invent a third option.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The compass shop counter holds ____________________.",
+            "The penny path points toward ____________________.",
+            "The shop helper notices one odd detail: ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "The helper can follow the tiny arrow to ____________________.",
+            "The helper can ask the shelf keeper about ____________________.",
+            "The choice I want in my story is ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "First, the compass spins when ____________________.",
+            "Next, the helper discovers ____________________.",
+            "The story problem is solved by ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "One idea I liked from our visit talk was ____________________.",
+            "One object I can add to the shop scene is ____________________.",
+            "My story can continue when ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: circle the compass direction and write one shelf clue: ____________________.",
+      "takeHomeLine": "Take-home line: Start another penny path scene with a pretend object that points to ____________________."
+    },
+    {
+      "id": "grandparent-visit-quest-06",
+      "title": "Tidepool Timekeepers Lab Minute Jar Quest",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "visitSkill": "Using sequence words to build a calm science-fantasy scene",
+      "visitFit": "Adult-led visit table quest for mixed-age family visits, library tables, and homeschool co-op days where the adult helps order three gentle events.",
+      "adultSetup": "Print the quest, set out a pencil, and invite the writer to imagine a harmless lab tool such as a shell marker, pebble dial, or minute jar.",
+      "kidDirection": "Pick the lab tool, decide what changes first and next, and draft a short tidepool scene with clear order words.",
+      "hostPrompt": "Offer optional talk choices: What does the lab tool show, what changes beside it, and what should the timekeeper do next?",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The tidepool timekeeper opens a minute jar labeled ____________________.",
+            "Inside the jar, the tiny clue looks like ____________________.",
+            "The lab table changes when ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "First, the timekeeper should check ____________________.",
+            "Next, the lab helper should compare ____________________.",
+            "Last, the scene should pause near ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "At the start, the minute jar shows ____________________.",
+            "After that, the tidepool clock makes ____________________.",
+            "The timekeeper writes a note about ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "One sequence word I used today was ____________________.",
+            "One lab detail from our talk was ____________________.",
+            "The next gentle experiment could be ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: number three lab clues and finish this line: clue one is ____________________.",
+      "takeHomeLine": "Take-home line: Continue the timekeeper story when the minute jar opens near ____________________."
+    },
+    {
+      "id": "grandparent-visit-quest-07",
+      "title": "Greenhouse Gear Garden Kind Repair Quest",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "visitSkill": "Writing a character action that shows helpfulness",
+      "visitFit": "Adult-led printable visit quest for a relaxed table where an adult and writer invent a garden helper, a small machine, and a cooperative fix.",
+      "adultSetup": "Print the page, place a pencil near any ordinary table object, and invite the writer to pretend the object is a gentle garden gear.",
+      "kidDirection": "Invent a greenhouse helper, choose what the gear should help, and write one action that shows the helper being thoughtful.",
+      "hostPrompt": "Offer optional choices: the gear can lift a tiny shade, turn a seed tray, or ring a soft bell for the next helper.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The greenhouse helper carries ____________________.",
+            "The garden gear is shaped like ____________________.",
+            "The plant table needs help with ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "The helper can adjust the gear beside ____________________.",
+            "The helper can trade tools with ____________________.",
+            "The most helpful choice is ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "The gear clicks softly when ____________________.",
+            "The helper shows care by ____________________.",
+            "The garden changes in a good way because ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "One helpful action from my story is ____________________.",
+            "One greenhouse sound I want to keep is ____________________.",
+            "The next page could begin beside ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: sketch or list the garden gear, then write its job here: ____________________.",
+      "takeHomeLine": "Take-home line: Add a new greenhouse helper who brings the tool ____________________."
+    },
+    {
+      "id": "grandparent-visit-quest-08",
+      "title": "Pantry Measurement Mystery Spoon Trail Quest",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "visitSkill": "Adding exact details and cause words to a mystery scene",
+      "visitFit": "Adult-led visit table quest for a grandparent, relative, neighbor helper, library table, or co-op adult who wants a cozy object-based writing prompt.",
+      "adultSetup": "Print the page, point to one safe ordinary object on the table, and remind the writer that all pantry clues are pretend.",
+      "kidDirection": "Choose three invented pantry clues, add one exact amount, and explain what the helper thinks happened.",
+      "hostPrompt": "Offer optional choices: a spoon trail, a flour dot map, or a measuring cup clue; invite the writer to pick the calmest mystery.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The pantry helper finds a spoon trail beside ____________________.",
+            "The first pretend clue measures ____________________.",
+            "The mystery shelf looks different because ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "The helper should compare ____________________.",
+            "The clue could mean ____________________.",
+            "The cause word I want to use is ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "The measuring cup tips toward ____________________.",
+            "Because ____________________, the helper checks ____________________.",
+            "The pantry mystery becomes clearer when ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "One exact detail I added was ____________________.",
+            "One pretend clue from our talk was ____________________.",
+            "The next mystery note could explain ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: write the three pantry clues as a list: ____________________.",
+      "takeHomeLine": "Take-home line: Continue the spoon trail mystery with a new pretend clue near ____________________."
+    }
+  ]
+}

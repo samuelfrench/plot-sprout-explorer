@@ -1,0 +1,1036 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grandparent Story Visit Kit</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #1e3034;
+        --muted: #53646a;
+        --paper: #fffdf8;
+        --line: #c7d7ce;
+        --green: #3f7d5f;
+        --coral: #e56c48;
+        --gold: #f1c453;
+        --blue: #357f8d;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 10.75px;
+        line-height: 1.13;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 12ch; font-size: 36px; }
+      h2 { margin-bottom: 0.05in; font-size: 20px; }
+      h3 { margin-bottom: 0.025in; font-size: 11px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.12in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(63, 125, 95, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(63, 125, 95, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.2in;
+        gap: 0.22in;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--green);
+        font-size: 8.35px;
+      }
+      .world-page {
+        border-top: 0.16in solid var(--gold);
+        font-size: 8.35px;
+      }
+      .routine-page {
+        border-top: 0.16in solid var(--blue);
+        font-size: 8.55px;
+      }
+      .slip-page {
+        border-top: 0.16in solid var(--coral);
+        font-size: 8.8px;
+      }
+      .visit-quest-page {
+        font-size: 9.75px;
+      }
+      .page-kicker, .kicker, .world-intro span, .slip-card span {
+        color: var(--green);
+        font-size: 8px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      .cover-page ul, .guide-page ul, .routine-page ul {
+        margin: 0;
+        padding-left: 0.18in;
+      }
+      .cover-meta {
+        display: grid;
+        gap: 0.08in;
+        align-content: start;
+      }
+      .guide-grid, .routine-grid, .slip-grid, .world-grid {
+        display: grid;
+        gap: 0.06in;
+      }
+      .guide-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .routine-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .slip-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .world-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      .guide-card, .routine-card, .slip-card, .world-intro, .worksheet-section {
+        padding: 0.052in;
+        background: rgba(255, 255, 255, 0.8);
+        border: 1px solid var(--line);
+      }
+      .world-intro img {
+        width: 100%;
+        aspect-ratio: 1.42 / 1;
+        object-fit: cover;
+        margin-bottom: 0.035in;
+      }
+      .world-page .world-intro {
+        padding: 0.04in;
+      }
+      .world-page .world-intro img {
+        aspect-ratio: 1.72 / 1;
+      }
+      .visit-quest-page figure {
+        float: right;
+        width: 1.58in;
+        margin: 0 0 0.055in 0.11in;
+      }
+      .visit-quest-page figure img {
+        width: 100%;
+        aspect-ratio: 1.25 / 1;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--green);
+        font-size: 7.3px;
+        font-weight: 900;
+      }
+      .kid-direction, .adult-note {
+        margin-bottom: 0.052in;
+        padding: 0.052in;
+        background: white;
+        border-left: 0.06in solid var(--gold);
+      }
+      .adult-note {
+        border-left-color: var(--green);
+      }
+      .quest-meta {
+        display: grid;
+        grid-template-columns: 1.1in 1fr;
+        gap: 0.04in;
+        margin-bottom: 0.052in;
+        color: var(--ink);
+        font-size: 8px;
+        font-weight: 900;
+      }
+      .quest-meta span {
+        padding: 0.035in;
+        background: rgba(241, 196, 83, 0.2);
+        border: 1px solid var(--line);
+      }
+      .worksheet-sections {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.052in;
+      }
+      .write-line {
+        min-height: 0.2in;
+        margin-bottom: 0.023in;
+        padding-bottom: 0.02in;
+        border-bottom: 1px solid rgba(63, 125, 95, 0.16);
+      }
+      .wrap-line, .extension-line, .take-home-line {
+        margin-bottom: 0.03in;
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px dashed var(--line);
+      }
+      .extension-line { border-color: var(--blue); }
+      .take-home-line { border-color: var(--coral); }
+      .share-grid {
+        columns: 2;
+      }
+      .footer-note {
+        margin-top: 0.07in;
+        font-size: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable grandparent visit story kit</p>
+        <h1>Grandparent Story Visit Kit</h1>
+        <p>Twelve adult-led visit quests for screen-free invented stories and take-home postcards.</p>
+        <p><strong>Audience:</strong> Grandparents, relatives, neighbor helpers, library family visit tables, and homeschool co-op family days.</p>
+        <p><strong>Format:</strong> 12 printable visit quests plus host guide tools, visit formats, and take-home postcards</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$31</span>
+        <h2>Included</h2>
+        <ul><li>12 printable visit quest pages</li>
+<li>Visit setup guide</li>
+<li>Story hosting notes</li>
+<li>Quiet participation options</li>
+<li>No-data use notes</li>
+<li>Take-home handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six repeatable visit formats</li>
+<li>Twelve take-home story postcards</li>
+<li>Eight optional family-share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Host guide</p>
+      <h2>Start the visit story</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Visit setup</h3><ul><li>Print one host guide, six visit format cards, a postcard stack, and extra blank half-sheets before the visit table opens.</li>
+<li>Place pencils, object choice slips, pretend place strips, and plain folders where the adult host can pass them out one step at a time.</li>
+<li>Choose three ordinary object starters such as a button, spoon, seed packet, paper clip, teacup, or ribbon before the first story begins.</li>
+<li>Prepare one quiet seat with a pencil, sketch space, and two simple choice strips for anyone who wants to join without speaking first.</li>
+<li>Use color tabs, table symbols, or blank folders for sorting instead of personal labels.</li>
+<li>Keep the kit screen-free by using only printed pages, spoken choices, sketches, pointing, and short written lines.</li></ul></article>
+        <article class="guide-card"><h3>Story hosting</h3><ul><li>Open with an invented helper, a pretend place, and one ordinary object so the story starts in make-believe space.</li>
+<li>Model one sample answer that is clearly invented, then invite writers to choose by pointing, sketching, dictating, or writing.</li>
+<li>Move through the page in small cooperative steps: place, helper, object, small mix-up, next action, and calm ending.</li>
+<li>Offer two adult-made choices when a writer pauses, and let the writer pick, change, combine, or invent a third option.</li>
+<li>Keep sharing optional and focused on a title, object clue, sketch, or one invented sentence from the printed page.</li>
+<li>Use gentle table language such as maker, guide, visitor, helper, messenger, keeper, or builder for every pretend role.</li></ul></article>
+        <article class="guide-card"><h3>Quiet participation</h3><ul><li>Let a participant complete only one blank, circle one choice, or draw one clue and still count the page as finished.</li>
+<li>Offer a silent postcard path where the writer fills the pretend place and object blanks before any table talk.</li>
+<li>Allow an adult to write a dictated phrase while the writer chooses the words, points to options, or sketches the clue.</li>
+<li>Accept a folded page, underlined word, or shown sketch as complete sharing when reading aloud is not preferred.</li>
+<li>Keep a spare fresh page nearby so a writer can restart without explanation if the first idea feels too crowded.</li>
+<li>Invite partners to trade only invented object ideas, not personal details, when they want a cooperative prompt.</li></ul></article>
+        <article class="guide-card"><h3>No-data use</h3><ul><li>This kit uses invented helpers, pretend places, and ordinary objects; private facts are not needed.</li>
+<li>Keep every page offline, printable, and handled by the host, writer, or household after the visit.</li>
+<li>Do not collect private identifiers, personal labels, personal timelines, or household details.</li>
+<li>Organize pages with symbols, colors, or plain folders instead of person-specific sorting.</li>
+<li>Send finished work home or let the writer keep it at the table; the host does not need to retain copies.</li></ul></article>
+        <article class="guide-card"><h3>Take-home handoff</h3><ul><li>Send home one finished visit page plus one optional story postcard for another screen-free writing moment.</li>
+<li>Mark one simple next step such as add a title, add one setting detail, add one object clue, or finish the ending.</li>
+<li>Tell households the postcard can be completed by pointing, sketching, dictating, or writing one short line.</li>
+<li>Keep home sharing optional and focused on the printed page, invented place, ordinary object, title, or calm ending.</li>
+<li>Invite the writer to save unused postcards for another table visit without requiring any follow-up report.</li></ul></article>
+        <article class="guide-card"><h3>Pack reset</h3><ul><li>Return unused format cards and postcards to the host folder before clearing pencils and choice strips.</li>
+<li>Place finished pages in plain take-home folders or let writers carry their own pages.</li>
+<li>Restock blank pages, sharpen pencils, and replace bent choice strips before the next visit table.</li>
+<li>Move used sample slips behind the host guide so the next host can begin with a fresh top card.</li>
+<li>Write only a nonpersonal supply note if needed, such as more pencils, fewer object slips, or extra quiet pages.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one quest at a time. Keep every detail invented, printable, and offline.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Image-backed visit quest menu</h2>
+      <p>Pick one quest at a time. Each page uses an invented world image so visit-table details become fiction without online sharing.</p>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <div>
+        <span>Ages 7-8</span>
+        <h3>Teacup Town Weather Window</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Spoon Ferry Lunchbox Harbor</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Pocket Park Notice Board</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Button Bakery Map Mix-Up</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Penny Path Compass Shop</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Tidepool Timekeepers Lab</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Greenhouse Gear Garden</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Pantry Measurement Mystery</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Rain Gauge Railway</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Seed Library Map Room</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Revision River Ferry</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Clue Label Tower Museum</h3>
+      </div>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Visit tools</p>
+      <h2>Repeatable visit formats and optional family-share prompts</h2>
+      <div class="routine-grid">
+    <article class="routine-card">
+      <h3>Teacup Map Story</h3>
+      <p><strong>Best for:</strong> A cozy table visit where an adult host and writer want a pretend place before the first sentence.</p>
+      <ol><li>Host places one teacup, button, or paper circle on the table and asks for a pretend place it could mark: ____________________.</li>
+<li>Writer adds an invented helper who visits that place for a small friendly errand: ____________________.</li>
+<li>Host offers two object choices and the writer picks one to become the clue: ____________________.</li>
+<li>Together they write one opening sentence and circle the detail to keep: ____________________.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Button Messenger Visit</h3>
+      <p><strong>Best for:</strong> Grandparent-style visits, neighbor-helper tables, and co-op family days with gentle back-and-forth writing.</p>
+      <ol><li>Host gives the writer a button card and asks what pretend message it carries: ____________________.</li>
+<li>Writer chooses an invented messenger role such as guide, maker, keeper, or builder: ____________________.</li>
+<li>Host asks where the messenger should deliver the object in a pretend town: ____________________.</li>
+<li>Together they write the next action and leave the ending blank for later: ____________________.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Kitchen Drawer Quest</h3>
+      <p><strong>Best for:</strong> Library family visit tables that need familiar object choices and no special supplies.</p>
+      <ol><li>Host spreads three printed object slips from an imaginary kitchen drawer and asks the writer to choose one: ____________________.</li>
+<li>Writer invents a tiny mix-up the object can help solve kindly: ____________________.</li>
+<li>Host models one sentence using a different object so the writer can make a fresh choice: ____________________.</li>
+<li>Writer adds first, next, and last story beats on the visit page: ____________________.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Porch Lantern Postcard</h3>
+      <p><strong>Best for:</strong> A quieter visit where the writer wants a small postcard instead of a full page.</p>
+      <ol><li>Host points to the lantern picture space and asks what make-believe place it lights up: ____________________.</li>
+<li>Writer sketches or writes one ordinary object waiting under the lantern: ____________________.</li>
+<li>Host offers a calm helper choice and asks what the helper notices first: ____________________.</li>
+<li>Writer completes one postcard line and chooses whether to share the title: ____________________.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Three-Chair Story Circle</h3>
+      <p><strong>Best for:</strong> Homeschool co-op family days with one adult host and a small group of mixed-age writers.</p>
+      <ol><li>Host labels three chair spaces as place, object, and helper, then asks writers to fill the first blank: ____________________.</li>
+<li>Each writer adds one invented object idea to the shared choice page: ____________________.</li>
+<li>Host reads the choices aloud and lets each writer pick a different path for a private page: ____________________.</li>
+<li>Writers finish with one calm ending line or one ending sketch: ____________________.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Tiny Shopkeeper Scene</h3>
+      <p><strong>Best for:</strong> A playful adult-led visit with pretend places, ordinary supplies, and cooperative sentence building.</p>
+      <ol><li>Host names an imaginary tiny shop and asks the writer what useful object sits in the window: ____________________.</li>
+<li>Writer invents a shopkeeper, helper, or visitor who needs that object for a kind task: ____________________.</li>
+<li>Host asks what small mix-up happens when the object is used in a surprising way: ____________________.</li>
+<li>Together they write one dialogue line and one next action: ____________________.</li></ol>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul class="share-grid"><li>Show one invented place from the visit page: ____________________.</li>
+<li>Read one sentence aloud, or ask a grown-up to read it: ____________________.</li>
+<li>Point to one ordinary object and tell how it helps the helper: ____________________.</li>
+<li>Share one title choice for the postcard story: ____________________.</li>
+<li>Tell which story step came first, next, or last: ____________________.</li>
+<li>Show one sketch and name the invented clue inside it: ____________________.</li>
+<li>Describe one calm ending choice from the make-believe story: ____________________.</li>
+<li>Keep the page private today and mark one finished detail: ____________________.</li></ul>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home tools</p>
+      <h2>Take-home story postcards</h2>
+      <div class="slip-grid">
+    <article class="slip-card">
+      <span>6 minutes | setting detail</span>
+      <h3>Pretend Porch Place</h3>
+      <p>Invent a porch, table, garden step, or window nook for a story scene: ____________________.</p>
+      <p>A grown-up can ask what the pretend place looks or sounds like: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | plot clue</span>
+      <h3>Object With a Job</h3>
+      <p>Choose one ordinary object and give it a useful job in the story: ____________________.</p>
+      <p>A grown-up can offer two possible jobs for the object here: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>6 minutes | character action</span>
+      <h3>Invented Helper Card</h3>
+      <p>Create an invented helper who solves a tiny friendly mix-up: ____________________.</p>
+      <p>A grown-up can ask what the helper tries first: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>8 minutes | sequence</span>
+      <h3>Button Trail</h3>
+      <p>Write first, next, and last for a button that rolls through a pretend place: ____________________.</p>
+      <p>A grown-up can point to the step that should become a longer sentence: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | description</span>
+      <h3>Teacup Clue</h3>
+      <p>Describe a tiny clue found beside a teacup in an invented room: ____________________.</p>
+      <p>A grown-up can ask which describing word makes the clue clearer: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>8 minutes | dialogue</span>
+      <h3>Window Nook Dialogue</h3>
+      <p>Write two short lines between an invented guide and an invented visitor: ____________________.</p>
+      <p>A grown-up can read one role while the writer chooses the reply: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | idea generation</span>
+      <h3>Shelf of Surprises</h3>
+      <p>List three ordinary shelf objects that could start a make-believe scene: ____________________.</p>
+      <p>A grown-up can choose one object and ask what changes when it moves: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>6 minutes | ending choice</span>
+      <h3>Kind Ending</h3>
+      <p>Add a calm ending where the helper uses one object wisely: ____________________.</p>
+      <p>A grown-up can ask what feels settled at the end: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>8 minutes | spatial planning</span>
+      <h3>Tiny Map Mark</h3>
+      <p>Draw or describe one mark on a pretend map and explain why it matters: ____________________.</p>
+      <p>A grown-up can ask where the helper should go next: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>5 minutes | revision</span>
+      <h3>Clearer Word Swap</h3>
+      <p>Pick one plain word from the visit page and swap in a clearer word: ____________________.</p>
+      <p>A grown-up can ask which word is easier to picture now: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>6 minutes | visual planning</span>
+      <h3>Sketch Then Sentence</h3>
+      <p>Sketch one story object and write one sentence under it: ____________________.</p>
+      <p>A grown-up can ask which part of the sketch belongs in the story: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | story planning</span>
+      <h3>Next Visit Seed</h3>
+      <p>Invent one pretend place, one helper, one object, and one small mix-up for next time: ____________________.</p>
+      <p>A grown-up can add one extra make-believe detail to the seed: ____________________.</p>
+    </article></div>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 1 | Ages 7-8</div>
+      <h2>Teacup Weather Window Visit</h2>
+      <figure><img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration"><figcaption>Teacup Town Weather Window</figcaption></figure>
+      <p class="kid-direction">Choose a tiny weather clue, listen to one pretend helper idea, and write the first small scene.</p>
+      <p class="adult-note">Offer two imagined weather choices, such as toast fog or button rain, then ask which helper should check the spoon window.</p>
+      <div class="quest-meta">
+        <span>turning a shared pretend choice into a clear setting detail</span>
+        <span>15-minute adult-led printable visit quest for a grandparent, relative, neighbor-helper, library table, or homeschool co-op family day.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print one page, place pencils between partners, and remind everyone that all weather clues and helpers are invented for Teacup Town.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The spoon window shows weather shaped like ____________________.</p>
+<p class="write-line">The teacup room has a tiny sound: ____________________.</p>
+<p class="write-line">The first forecast card says ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">The visiting helper suggests checking ____________________.</p>
+<p class="write-line">I choose the Teacup Town helper called ____________________.</p>
+<p class="write-line">Our made-up weather job is to ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">First, the helper looks through ____________________.</p>
+<p class="write-line">Next, the weather clue drifts toward ____________________.</p>
+<p class="write-line">The helper says, &quot;I can fix this by ____________________.&quot;</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">The clearest weather detail we invented was ____________________.</p>
+<p class="write-line">One word I want to keep in the story is ____________________.</p>
+<p class="write-line">The next Teacup Town errand could be ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: skip talking and draw one window clue, then label it ____________________.</p>
+      <p class="take-home-line">Take-home line: Continue the Teacup Town scene when the forecast card changes to ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 2 | Ages 7-9</div>
+      <h2>Spoon Ferry Lunchbox Visit</h2>
+      <figure><img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration"><figcaption>Spoon Ferry Lunchbox Harbor</figcaption></figure>
+      <p class="kid-direction">Send the spoon ferry across Lunchbox Harbor, choose one cargo, and write three gentle route steps.</p>
+      <p class="adult-note">Name two pretend ferry cargo choices, then ask which dock should receive the first polite note.</p>
+      <div class="quest-meta">
+        <span>writing a beginning-middle-ending route from an invented conversation choice</span>
+        <span>16-minute screen-free visit quest for a family visit table, library drop-in, neighbor-helper activity, or homeschool co-op writing station.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the ferry page, draw a simple harbor line if useful, and keep the talk about pretend cargo, pretend cafes, and story choices.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The spoon ferry waits beside the dock called ____________________.</p>
+<p class="write-line">The lunchbox harbor cargo is ____________________.</p>
+<p class="write-line">The water makes a soft sound like ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">The visiting helper thinks the ferry should stop at ____________________.</p>
+<p class="write-line">I choose the cargo helper named ____________________.</p>
+<p class="write-line">The polite dock question is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">First, the ferry carries ____________________.</p>
+<p class="write-line">Next, the helper asks, &quot;Do you need ____________________?&quot;</p>
+<p class="write-line">Last, the dock note explains ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">The best route word from this visit is ____________________.</p>
+<p class="write-line">The harbor detail I can picture clearly is ____________________.</p>
+<p class="write-line">The next ferry stop could be ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: trace the harbor path silently and fill one cargo label: ____________________.</p>
+      <p class="take-home-line">Take-home line: Add one more ferry sentence about the dock shaped like ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 3 | Ages 7-9</div>
+      <h2>Pocket Park Notice Visit</h2>
+      <figure><img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration"><figcaption>Pocket Park Notice Board</figcaption></figure>
+      <p class="kid-direction">Make a tiny notice, choose a pocket park helper, and write what the helper says after reading it.</p>
+      <p class="adult-note">Offer two pretend notice ideas, then let the child choose which one belongs on the matchbox board.</p>
+      <div class="quest-meta">
+        <span>turning an invented notice into a helpful character line</span>
+        <span>15-minute cooperative printable quest for grandparent visits, relative visits, library family tables, or co-op family writing days.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print one page, offer a pencil, and invite only pretend park notices about tiny jobs, picnic lists, seed swaps, or bench clues.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The matchbox notice board asks for ____________________.</p>
+<p class="write-line">The notice is pinned beside ____________________.</p>
+<p class="write-line">The pocket park bench is made from ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">The visiting helper suggests a notice about ____________________.</p>
+<p class="write-line">I choose the park helper called ____________________.</p>
+<p class="write-line">The helper brings a tiny object: ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">First, the helper reads ____________________.</p>
+<p class="write-line">Next, the helper says, &quot;I can help by ____________________.&quot;</p>
+<p class="write-line">Then the park path points toward ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">The notice word that helped our story was ____________________.</p>
+<p class="write-line">The helper&#39;s kind action was ____________________.</p>
+<p class="write-line">The next pocket park notice could ask for ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: write only the notice headline and add one park doodle label: ____________________.</p>
+      <p class="take-home-line">Take-home line: Continue the Pocket Park story with a new notice about ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 4 | Ages 7-9</div>
+      <h2>Button Bakery Map Visit</h2>
+      <figure><img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration"><figcaption>Button Bakery Map Mix-Up</figcaption></figure>
+      <p class="kid-direction">Find the mixed-up crumb map, choose one clearer direction, and write the fixed bakery route.</p>
+      <p class="adult-note">Ask which pretend bakery object should be easy to find, then offer one direction word for the child to try.</p>
+      <div class="quest-meta">
+        <span>using adult talk to revise one map clue into a clearer direction</span>
+        <span>17-minute adult-led printable visit quest for relative visits, neighbor-helper visits, library family tables, and homeschool co-op stations.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the map page, offer beside, near, around, and past as direction words, and keep every bakery clue pretend.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The crumb map begins beside ____________________.</p>
+<p class="write-line">The button roll tray is near ____________________.</p>
+<p class="write-line">The mixed-up clue points toward ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">The visiting helper suggests the direction word ____________________.</p>
+<p class="write-line">I choose the bakery helper called ____________________.</p>
+<p class="write-line">The unclear clue should change into ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">First, follow the crumbs past ____________________.</p>
+<p class="write-line">Next, turn around ____________________.</p>
+<p class="write-line">At the end, the bakery helper finds ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">The clearest map word we used was ____________________.</p>
+<p class="write-line">The bakery detail that helped readers was ____________________.</p>
+<p class="write-line">The next map stop could be ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: draw one arrow on the map and write its direction word: ____________________.</p>
+      <p class="take-home-line">Take-home line: Continue the Button Bakery route by adding a stop beside ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 5 | Ages 7-9</div>
+      <h2>Penny Path Compass Shop Counter Quest</h2>
+      <figure><img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration"><figcaption>Penny Path Compass Shop</figcaption></figure>
+      <p class="kid-direction">Choose the pretend compass shop object, decide what it points toward, and write a tiny story problem that stays friendly and make-believe.</p>
+      <p class="adult-note">Offer two optional choices: a compass that points to a misplaced button or a compass that points to a quiet shelf; let the writer choose or invent a third option.</p>
+      <div class="quest-meta">
+        <span>Turning a small object choice into a clear story problem</span>
+        <span>Adult-led visit table quest for a grandparent, relative, neighbor helper, library family table, or homeschool co-op pair who want a short shared writing start.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print one page, place a coin-sized token or paper circle beside the pencil, and invite the writer to invent a shop helper without using real family details.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The compass shop counter holds ____________________.</p>
+<p class="write-line">The penny path points toward ____________________.</p>
+<p class="write-line">The shop helper notices one odd detail: ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">The helper can follow the tiny arrow to ____________________.</p>
+<p class="write-line">The helper can ask the shelf keeper about ____________________.</p>
+<p class="write-line">The choice I want in my story is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">First, the compass spins when ____________________.</p>
+<p class="write-line">Next, the helper discovers ____________________.</p>
+<p class="write-line">The story problem is solved by ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">One idea I liked from our visit talk was ____________________.</p>
+<p class="write-line">One object I can add to the shop scene is ____________________.</p>
+<p class="write-line">My story can continue when ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: circle the compass direction and write one shelf clue: ____________________.</p>
+      <p class="take-home-line">Take-home line: Start another penny path scene with a pretend object that points to ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 6 | Ages 8-10</div>
+      <h2>Tidepool Timekeepers Lab Minute Jar Quest</h2>
+      <figure><img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration"><figcaption>Tidepool Timekeepers Lab</figcaption></figure>
+      <p class="kid-direction">Pick the lab tool, decide what changes first and next, and draft a short tidepool scene with clear order words.</p>
+      <p class="adult-note">Offer optional talk choices: What does the lab tool show, what changes beside it, and what should the timekeeper do next?</p>
+      <div class="quest-meta">
+        <span>Using sequence words to build a calm science-fantasy scene</span>
+        <span>Adult-led visit table quest for mixed-age family visits, library tables, and homeschool co-op days where the adult helps order three gentle events.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the quest, set out a pencil, and invite the writer to imagine a harmless lab tool such as a shell marker, pebble dial, or minute jar.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The tidepool timekeeper opens a minute jar labeled ____________________.</p>
+<p class="write-line">Inside the jar, the tiny clue looks like ____________________.</p>
+<p class="write-line">The lab table changes when ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">First, the timekeeper should check ____________________.</p>
+<p class="write-line">Next, the lab helper should compare ____________________.</p>
+<p class="write-line">Last, the scene should pause near ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">At the start, the minute jar shows ____________________.</p>
+<p class="write-line">After that, the tidepool clock makes ____________________.</p>
+<p class="write-line">The timekeeper writes a note about ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">One sequence word I used today was ____________________.</p>
+<p class="write-line">One lab detail from our talk was ____________________.</p>
+<p class="write-line">The next gentle experiment could be ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: number three lab clues and finish this line: clue one is ____________________.</p>
+      <p class="take-home-line">Take-home line: Continue the timekeeper story when the minute jar opens near ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 7 | Ages 8-10</div>
+      <h2>Greenhouse Gear Garden Kind Repair Quest</h2>
+      <figure><img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration"><figcaption>Greenhouse Gear Garden</figcaption></figure>
+      <p class="kid-direction">Invent a greenhouse helper, choose what the gear should help, and write one action that shows the helper being thoughtful.</p>
+      <p class="adult-note">Offer optional choices: the gear can lift a tiny shade, turn a seed tray, or ring a soft bell for the next helper.</p>
+      <div class="quest-meta">
+        <span>Writing a character action that shows helpfulness</span>
+        <span>Adult-led printable visit quest for a relaxed table where an adult and writer invent a garden helper, a small machine, and a cooperative fix.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, place a pencil near any ordinary table object, and invite the writer to pretend the object is a gentle garden gear.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The greenhouse helper carries ____________________.</p>
+<p class="write-line">The garden gear is shaped like ____________________.</p>
+<p class="write-line">The plant table needs help with ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">The helper can adjust the gear beside ____________________.</p>
+<p class="write-line">The helper can trade tools with ____________________.</p>
+<p class="write-line">The most helpful choice is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">The gear clicks softly when ____________________.</p>
+<p class="write-line">The helper shows care by ____________________.</p>
+<p class="write-line">The garden changes in a good way because ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">One helpful action from my story is ____________________.</p>
+<p class="write-line">One greenhouse sound I want to keep is ____________________.</p>
+<p class="write-line">The next page could begin beside ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: sketch or list the garden gear, then write its job here: ____________________.</p>
+      <p class="take-home-line">Take-home line: Add a new greenhouse helper who brings the tool ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 8 | Ages 8-10</div>
+      <h2>Pantry Measurement Mystery Spoon Trail Quest</h2>
+      <figure><img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration"><figcaption>Pantry Measurement Mystery</figcaption></figure>
+      <p class="kid-direction">Choose three invented pantry clues, add one exact amount, and explain what the helper thinks happened.</p>
+      <p class="adult-note">Offer optional choices: a spoon trail, a flour dot map, or a measuring cup clue; invite the writer to pick the calmest mystery.</p>
+      <div class="quest-meta">
+        <span>Adding exact details and cause words to a mystery scene</span>
+        <span>Adult-led visit table quest for a grandparent, relative, neighbor helper, library table, or co-op adult who wants a cozy object-based writing prompt.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, point to one safe ordinary object on the table, and remind the writer that all pantry clues are pretend.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The pantry helper finds a spoon trail beside ____________________.</p>
+<p class="write-line">The first pretend clue measures ____________________.</p>
+<p class="write-line">The mystery shelf looks different because ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">The helper should compare ____________________.</p>
+<p class="write-line">The clue could mean ____________________.</p>
+<p class="write-line">The cause word I want to use is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">The measuring cup tips toward ____________________.</p>
+<p class="write-line">Because ____________________, the helper checks ____________________.</p>
+<p class="write-line">The pantry mystery becomes clearer when ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">One exact detail I added was ____________________.</p>
+<p class="write-line">One pretend clue from our talk was ____________________.</p>
+<p class="write-line">The next mystery note could explain ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: write the three pantry clues as a list: ____________________.</p>
+      <p class="take-home-line">Take-home line: Continue the spoon trail mystery with a new pretend clue near ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 9 | Ages 8-10</div>
+      <h2>Rain Gauge Railway Route Visit</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Use the helper&#39;s pretend choice to plan a rain-gauge railway route, then draft a short scene with a beginning, turn, and wrap.</p>
+      <p class="adult-note">Offer one invented object, station, or weather clue; all choices can be made up on the spot.</p>
+      <div class="quest-meta">
+        <span>Turn an optional adult choice into a map-based story route with a clear setting clue.</span>
+        <span>Upper-age adult-led printable quest for a calm visit table, library family table, or homeschool co-op family day.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print one page, set out pencils, and invite the adult helper to choose one invented weather object or railway stop.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The visit table becomes a rainy railway when the helper chooses ____________________.</p>
+<p class="write-line">An ordinary object near the table turns into a station sign for ____________________.</p>
+<p class="write-line">The pretend weather note on the ticket warns about ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">Ask the helper to choose one invented railway job: ____________________.</p>
+<p class="write-line">The choice changes the route because ____________________.</p>
+<p class="write-line">The optional talk detail I will turn into a story clue is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">First, the rain-gauge train stops at ____________________.</p>
+<p class="write-line">Then the conductor notices ____________________.</p>
+<p class="write-line">The helper&#39;s choice changes the story by ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">My favorite invented clue from the visit is ____________________.</p>
+<p class="write-line">One sentence I can make clearer is ____________________.</p>
+<p class="write-line">The ending leaves the railway near ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: skip the talk choice and pick one printed object card: ____________________.</p>
+      <p class="take-home-line">Take-home line: Later, add one new pretend weather station called ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 10 | Ages 8-10</div>
+      <h2>Seed Library Map Room Catalog Visit</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="kid-direction">Choose a seed-library clue, add the helper&#39;s invented map choice, and write what the catalog helper does next.</p>
+      <p class="adult-note">Choose one pretend drawer label, path, color, or map mark; keep it invented and simple.</p>
+      <div class="quest-meta">
+        <span>Use an optional adult choice to connect a catalog clue, map mark, and next story action.</span>
+        <span>Upper-age adult-led printable quest for a relaxed visit, library family table, or homeschool co-op writing stop.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, place three harmless object prompts nearby, and ask the adult helper to invent one drawer label or map direction.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The map room drawer opens to ____________________.</p>
+<p class="write-line">The packet label describes a pretend plant that grows ____________________.</p>
+<p class="write-line">The helper&#39;s optional choice adds a map mark shaped like ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">Ask for one invented drawer category, then write ____________________.</p>
+<p class="write-line">Choose whether the seed helper follows a path, shelf, or return basket: ____________________.</p>
+<p class="write-line">The conversation detail I will turn into a story clue is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">The catalog helper opens ____________________.</p>
+<p class="write-line">The map changes when ____________________.</p>
+<p class="write-line">The next action is ____________________ because ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">The strongest map-room clue is ____________________.</p>
+<p class="write-line">A word that makes the setting clearer is ____________________.</p>
+<p class="write-line">The story can continue when the packet reveals ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: choose a printed drawer label and write the map clue here: ____________________.</p>
+      <p class="take-home-line">Take-home line: Add a new seed-library catalog card for ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 11 | Ages 10-11</div>
+      <h2>Revision River Ferry Keep Move Trim Visit</h2>
+      <figure><img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration"><figcaption>Revision River Ferry</figcaption></figure>
+      <p class="kid-direction">Draft a ferry sentence, use the helper&#39;s invented revision choice, and rewrite one line so the ending is clearer.</p>
+      <p class="adult-note">Choose keep, move, or trim for one pretend ferry detail, then ask where that detail belongs in the ending.</p>
+      <div class="quest-meta">
+        <span>Revise an invented ferry scene after an adult helper chooses one detail to keep, move, or trim.</span>
+        <span>Adult-led upper-age printable quest for a cooperative visit table where sharing is optional and revision stays low-pressure.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, set out pencils, and offer three paper choices: keep a detail, move a detail, or trim a detail.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The ferry carries a draft crate labeled ____________________.</p>
+<p class="write-line">The first dock shows a scene detail I might keep: ____________________.</p>
+<p class="write-line">The river sign points toward an ending about ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">Ask the helper to choose keep, move, or trim for this detail: ____________________.</p>
+<p class="write-line">The choice changes my next sentence by ____________________.</p>
+<p class="write-line">The detail that should echo near the ending is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">My first ferry sentence is ____________________.</p>
+<p class="write-line">I revise it by adding, moving, or trimming ____________________.</p>
+<p class="write-line">My clearer sentence becomes ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">The revision move I used today is ____________________.</p>
+<p class="write-line">The story is easier to follow because ____________________.</p>
+<p class="write-line">The ferry can land at ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: choose keep, move, or trim silently and mark the detail here: ____________________.</p>
+      <p class="take-home-line">Take-home line: Later, revise one more ferry sentence about ____________________.</p>
+    </section>
+
+    <section class="pack-page visit-quest-page">
+      <div class="page-kicker">Visit quest 12 | Ages 10-11</div>
+      <h2>Clue Label Tower Exhibit Visit</h2>
+      <figure><img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration"><figcaption>Clue Label Tower Museum</figcaption></figure>
+      <p class="kid-direction">Build a pretend tower exhibit, pick the clue that matters first, and draft a label that guides the reader into the scene.</p>
+      <p class="adult-note">Choose one color, shape, sound, texture, or object clue; the exhibit can be completely made up.</p>
+      <div class="quest-meta">
+        <span>Select one precise clue and turn it into a concise invented exhibit label.</span>
+        <span>Adult-led upper-age printable quest for a visit table, library family station, or homeschool co-op display activity.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, point to any safe ordinary object or printed object card, and invite the adult helper to choose one invented clue.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Visit story seed</h3>
+          <p class="write-line">The tower exhibit holds an ordinary object called ____________________.</p>
+<p class="write-line">The clue label points readers toward ____________________.</p>
+<p class="write-line">The helper&#39;s invented clue is a color, shape, sound, or texture: ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Talk-to-story choice</h3>
+          <p class="write-line">Ask the helper to choose which clue matters first: ____________________.</p>
+<p class="write-line">The clue I will leave in the background is ____________________.</p>
+<p class="write-line">The label should make visitors wonder about ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny draft</h3>
+          <p class="write-line">My exhibit label begins with ____________________.</p>
+<p class="write-line">The label explains the clue by saying ____________________.</p>
+<p class="write-line">The scene changes when a visitor notices ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Visit wrap</h3>
+          <p class="write-line">The clearest label word is ____________________.</p>
+<p class="write-line">One extra detail I can save for later is ____________________.</p>
+<p class="write-line">The next exhibit in the tower could be ____________________.</p>
+        </section></div>
+      <p class="extension-line">Quiet option: skip discussion and write only the final exhibit label here: ____________________.</p>
+      <p class="take-home-line">Take-home line: Make a pretend label for one safe ordinary object: ____________________.</p>
+    </section>
+  </body>
+</html>

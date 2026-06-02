@@ -55,6 +55,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 
 ## In Progress
 
+- [ ] Batch 21: Build the `$31` Grandparent Story Visit Kit with 12 adult-led printable visit quests, host guide tools, take-home story postcards, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [ ] External checkout gate: wire hosted checkout only after Sam chooses the provider and supplies the real provider-hosted URL.
 
 ## Next Content Batches
@@ -78,6 +79,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] Batch 18: Build the `$69` After-School Story Club Starter Kit with 18 after-school story club sessions, director guide tools, take-home prompt cards, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 19: Build the `$37` Museum Day Story Notebook Kit with 15 observation-to-fiction notebook pages, adult visit guide tools, take-home observation cards, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 20: Build the `$27` Family Game Night Story Card Deck with 15 cooperative printable table cards, host guide tools, take-home story starters, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
+- [ ] Batch 21: Build the `$31` Grandparent Story Visit Kit with 12 adult-led printable visit quests, host guide tools, take-home story postcards, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [ ] Batch 12: Add the chosen hosted checkout URL, provider-host allowlist, and CTA copy after Sam chooses the provider; do not add custom checkout/webhook endpoints.
 
 ## Product Gates
@@ -105,4 +107,5 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] $69 after-school story club starter kit with 18 adult-led club sessions, director tools, and take-home prompt cards.
 - [x] $37 museum day story notebook kit with 15 observation-to-fiction notebook pages, visit guide tools, and take-home observation cards.
 - [x] $27 family game night story card deck with 15 cooperative printable table cards, host guide tools, and take-home story starters.
+- [ ] $31 grandparent story visit kit with 12 adult-led printable visit quests, host guide tools, and take-home story postcards.
 - [ ] Parent email capture for weekly printable quest drops.

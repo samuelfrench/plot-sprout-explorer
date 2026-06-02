@@ -9,6 +9,8 @@ import {
   validateClassroomLicenseSource,
   validateCheckoutReadiness,
   validateFamilyGameNightStoryCardDeckSource,
+  validateGrandparentStoryVisitKitSource,
+  validateGrandparentStoryVisitKitSourceFiles,
   validateManifestWorldAssets,
   validateMuseumDayStoryNotebookKitSource,
   validatePackSource,
@@ -40,6 +42,7 @@ const batch17ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch18ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch18-product-images.json')
 const batch19ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch19-product-images.json')
 const batch20ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch20-product-images.json')
+const batch21ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch21-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -54,6 +57,7 @@ const summerCampSourceFile = resolve(root, 'content', 'product-artifacts', 'summ
 const afterSchoolSourceFile = resolve(root, 'content', 'product-artifacts', 'after-school-story-club-starter-kit.json')
 const museumDaySourceFile = resolve(root, 'content', 'product-artifacts', 'museum-day-story-notebook-kit.json')
 const familyGameNightSourceFile = resolve(root, 'content', 'product-artifacts', 'family-game-night-story-card-deck.json')
+const grandparentVisitSourceFile = resolve(root, 'content', 'product-artifacts', 'grandparent-story-visit-kit.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -69,6 +73,7 @@ const batch17ProductImagesBatchId = '2026-06-02-batch17-product-images'
 const batch18ProductImagesBatchId = '2026-06-02-batch18-product-images'
 const batch19ProductImagesBatchId = '2026-06-02-batch19-product-images'
 const batch20ProductImagesBatchId = '2026-06-02-batch20-product-images'
+const batch21ProductImagesBatchId = '2026-06-02-batch21-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -83,6 +88,7 @@ const summerCampBatchId = '2026-06-02-batch17'
 const afterSchoolBatchId = '2026-06-02-batch18'
 const museumDayBatchId = '2026-06-02-batch19'
 const familyGameNightBatchId = '2026-06-02-batch20'
+const grandparentVisitBatchId = '2026-06-02-batch21'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -983,6 +989,55 @@ function validateBatch20ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch21ProductImage(image) {
+  const label = `2026-06-02-batch21-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(image.slug === 'grandparent-story-visit-kit', `${label}.slug must be grandparent-story-visit-kit.`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch21/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch21/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch21/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'no text',
+    'no letters',
+    'no logos',
+    'no watermark',
+    'no branded characters',
+    'no scary harm',
+    'no weapons',
+    'no people',
+    'no faces',
+    'no animals',
+    'no phone',
+    'no tablet',
+    'no device',
+    'no family photos',
+    'screen-free printable grandparent story visit kit',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar.seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -1104,6 +1159,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
       minUseCases: 5,
       minParentSteps: 5,
       maxWorldSlugs: 15,
+    },
+    'grandparent-story-visit-kit': {
+      title: 'Grandparent Story Visit Kit',
+      pricePoint: '$31',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 12,
     },
   }
   const expectedProduct = expectedProducts[product.slug]
@@ -1381,12 +1444,23 @@ expect(Array.isArray(batch20ProductImages.images), 'batch20 product image manife
 expect(batch20ProductImages.images.length === 1, `Expected 1 Batch 20 product image, found ${batch20ProductImages.images.length}.`)
 validateBatch20ProductImage(batch20ProductImages.images[0])
 
+expect(existsSync(batch21ProductImagesFile), `Missing Batch 21 product image manifest: ${batch21ProductImagesFile}`)
+const batch21ProductImages = readJson(batch21ProductImagesFile)
+expect(
+  batch21ProductImages.batchId === batch21ProductImagesBatchId,
+  `batch21 product image manifest batchId must be ${batch21ProductImagesBatchId}.`,
+)
+expect(batch21ProductImages.generatedAt === '2026-06-02', 'batch21 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch21ProductImages.images), 'batch21 product image manifest images must be an array.')
+expect(batch21ProductImages.images.length === 1, `Expected 1 Batch 21 product image, found ${batch21ProductImages.images.length}.`)
+validateBatch21ProductImage(batch21ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 13, `Expected 13 product records, found ${products.products.length}.`)
+expect(products.products.length === 14, `Expected 14 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -1403,6 +1477,7 @@ for (const requiredProductSlug of [
   'after-school-story-club-starter-kit',
   'museum-day-story-notebook-kit',
   'family-game-night-story-card-deck',
+  'grandparent-story-visit-kit',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -2235,6 +2310,78 @@ for (const asset of familyGameNightArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Family Game Night Story Card Deck copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(grandparentVisitSourceFile), `Missing Batch 21 Grandparent Story Visit source file: ${grandparentVisitSourceFile}`)
+const grandparentVisitSource = readJson(grandparentVisitSourceFile)
+expect(
+  grandparentVisitSource.batchId === grandparentVisitBatchId,
+  `Grandparent Story Visit source batchId must be ${grandparentVisitBatchId}.`,
+)
+const grandparentVisitProduct = products.products.find((product) => product.slug === 'grandparent-story-visit-kit')
+expect(grandparentVisitProduct, 'Missing Grandparent Story Visit product record for Batch 21 artifact validation.')
+const grandparentVisitSourceErrors = validateGrandparentStoryVisitKitSource(
+  grandparentVisitSource,
+  grandparentVisitProduct,
+  worldAgeBands,
+)
+expect(
+  grandparentVisitSourceErrors.length === 0,
+  `Grandparent Story Visit Kit source failed validation:\n${grandparentVisitSourceErrors.join('\n')}`,
+)
+const grandparentVisitSourceFileErrors = validateGrandparentStoryVisitKitSourceFiles(grandparentVisitSource, root)
+expect(
+  grandparentVisitSourceFileErrors.length === 0,
+  `Grandparent Story Visit Kit sourceFiles failed validation:\n${grandparentVisitSourceFileErrors.join('\n')}`,
+)
+const grandparentVisitExpectedPdfPages = grandparentVisitSource.visitQuests.length + 5
+const grandparentVisitArtifactStatus = inspectArtifactFiles(root, grandparentVisitSource.artifact, {
+  expectedPdfPages: grandparentVisitExpectedPdfPages,
+})
+expect(
+  grandparentVisitArtifactStatus.valid,
+  `Grandparent Story Visit Kit artifacts failed validation:\n${grandparentVisitArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  grandparentVisitArtifactStatus.files.pdf.size > 100_000,
+  `Grandparent Story Visit Kit PDF artifact is unexpectedly small: ${grandparentVisitArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  grandparentVisitArtifactStatus.files.pdf.pageCount === grandparentVisitExpectedPdfPages,
+  `Grandparent Story Visit Kit PDF artifact must have ${grandparentVisitExpectedPdfPages} pages.`,
+)
+expect(
+  grandparentVisitArtifactStatus.files.zip.size > grandparentVisitArtifactStatus.files.pdf.size,
+  'Grandparent Story Visit Kit ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const grandparentVisitCheckoutErrors = validateCheckoutReadiness(grandparentVisitProduct, grandparentVisitArtifactStatus)
+expect(
+  grandparentVisitCheckoutErrors.length === 0,
+  `Grandparent Story Visit Kit checkout readiness failed validation:\n${grandparentVisitCheckoutErrors.join('\n')}`,
+)
+const grandparentVisitArtifactManifest = readJson(resolve(root, grandparentVisitSource.artifact.manifestPath))
+expect(
+  grandparentVisitArtifactManifest.sourcePageCount === grandparentVisitSource.visitQuests.length,
+  'Grandparent Story Visit Kit artifact manifest sourcePageCount must match source visit quests.',
+)
+expect(
+  Array.isArray(grandparentVisitArtifactManifest.files.assets),
+  'Grandparent Story Visit Kit artifact manifest files.assets must be an array.',
+)
+expect(
+  grandparentVisitArtifactManifest.files.assets.length === grandparentVisitSource.worldSlugs.length,
+  'Grandparent Story Visit Kit artifact manifest must include one copied local image per source world.',
+)
+const grandparentVisitManifestAssetErrors = validateManifestWorldAssets(
+  grandparentVisitSource,
+  grandparentVisitArtifactManifest,
+)
+expect(
+  grandparentVisitManifestAssetErrors.length === 0,
+  `Grandparent Story Visit Kit artifact manifest image coverage failed validation:\n${grandparentVisitManifestAssetErrors.join('\n')}`,
+)
+for (const asset of grandparentVisitArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Grandparent Story Visit Kit copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 13 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 14 product artifacts.`,
 )

@@ -1,0 +1,196 @@
+{
+  "batchId": "2026-06-02-batch21",
+  "lane": "batch21-grandparent-visit-quests-a",
+  "generatedAt": "2026-06-02",
+  "questCount": 4,
+  "quests": [
+    {
+      "id": "grandparent-visit-quest-01",
+      "title": "Teacup Weather Window Visit",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "visitSkill": "turning a shared pretend choice into a clear setting detail",
+      "visitFit": "15-minute adult-led printable visit quest for a grandparent, relative, neighbor-helper, library table, or homeschool co-op family day.",
+      "adultSetup": "Print one page, place pencils between partners, and remind everyone that all weather clues and helpers are invented for Teacup Town.",
+      "kidDirection": "Choose a tiny weather clue, listen to one pretend helper idea, and write the first small scene.",
+      "hostPrompt": "Offer two imagined weather choices, such as toast fog or button rain, then ask which helper should check the spoon window.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The spoon window shows weather shaped like ____________________.",
+            "The teacup room has a tiny sound: ____________________.",
+            "The first forecast card says ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "The visiting helper suggests checking ____________________.",
+            "I choose the Teacup Town helper called ____________________.",
+            "Our made-up weather job is to ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "First, the helper looks through ____________________.",
+            "Next, the weather clue drifts toward ____________________.",
+            "The helper says, \"I can fix this by ____________________.\""
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "The clearest weather detail we invented was ____________________.",
+            "One word I want to keep in the story is ____________________.",
+            "The next Teacup Town errand could be ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: skip talking and draw one window clue, then label it ____________________.",
+      "takeHomeLine": "Take-home line: Continue the Teacup Town scene when the forecast card changes to ____________________."
+    },
+    {
+      "id": "grandparent-visit-quest-02",
+      "title": "Spoon Ferry Lunchbox Visit",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "visitSkill": "writing a beginning-middle-ending route from an invented conversation choice",
+      "visitFit": "16-minute screen-free visit quest for a family visit table, library drop-in, neighbor-helper activity, or homeschool co-op writing station.",
+      "adultSetup": "Print the ferry page, draw a simple harbor line if useful, and keep the talk about pretend cargo, pretend cafes, and story choices.",
+      "kidDirection": "Send the spoon ferry across Lunchbox Harbor, choose one cargo, and write three gentle route steps.",
+      "hostPrompt": "Name two pretend ferry cargo choices, then ask which dock should receive the first polite note.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The spoon ferry waits beside the dock called ____________________.",
+            "The lunchbox harbor cargo is ____________________.",
+            "The water makes a soft sound like ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "The visiting helper thinks the ferry should stop at ____________________.",
+            "I choose the cargo helper named ____________________.",
+            "The polite dock question is ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "First, the ferry carries ____________________.",
+            "Next, the helper asks, \"Do you need ____________________?\"",
+            "Last, the dock note explains ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "The best route word from this visit is ____________________.",
+            "The harbor detail I can picture clearly is ____________________.",
+            "The next ferry stop could be ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: trace the harbor path silently and fill one cargo label: ____________________.",
+      "takeHomeLine": "Take-home line: Add one more ferry sentence about the dock shaped like ____________________."
+    },
+    {
+      "id": "grandparent-visit-quest-03",
+      "title": "Pocket Park Notice Visit",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "visitSkill": "turning an invented notice into a helpful character line",
+      "visitFit": "15-minute cooperative printable quest for grandparent visits, relative visits, library family tables, or co-op family writing days.",
+      "adultSetup": "Print one page, offer a pencil, and invite only pretend park notices about tiny jobs, picnic lists, seed swaps, or bench clues.",
+      "kidDirection": "Make a tiny notice, choose a pocket park helper, and write what the helper says after reading it.",
+      "hostPrompt": "Offer two pretend notice ideas, then let the child choose which one belongs on the matchbox board.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The matchbox notice board asks for ____________________.",
+            "The notice is pinned beside ____________________.",
+            "The pocket park bench is made from ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "The visiting helper suggests a notice about ____________________.",
+            "I choose the park helper called ____________________.",
+            "The helper brings a tiny object: ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "First, the helper reads ____________________.",
+            "Next, the helper says, \"I can help by ____________________.\"",
+            "Then the park path points toward ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "The notice word that helped our story was ____________________.",
+            "The helper's kind action was ____________________.",
+            "The next pocket park notice could ask for ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: write only the notice headline and add one park doodle label: ____________________.",
+      "takeHomeLine": "Take-home line: Continue the Pocket Park story with a new notice about ____________________."
+    },
+    {
+      "id": "grandparent-visit-quest-04",
+      "title": "Button Bakery Map Visit",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "visitSkill": "using adult talk to revise one map clue into a clearer direction",
+      "visitFit": "17-minute adult-led printable visit quest for relative visits, neighbor-helper visits, library family tables, and homeschool co-op stations.",
+      "adultSetup": "Print the map page, offer beside, near, around, and past as direction words, and keep every bakery clue pretend.",
+      "kidDirection": "Find the mixed-up crumb map, choose one clearer direction, and write the fixed bakery route.",
+      "hostPrompt": "Ask which pretend bakery object should be easy to find, then offer one direction word for the child to try.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The crumb map begins beside ____________________.",
+            "The button roll tray is near ____________________.",
+            "The mixed-up clue points toward ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "The visiting helper suggests the direction word ____________________.",
+            "I choose the bakery helper called ____________________.",
+            "The unclear clue should change into ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "First, follow the crumbs past ____________________.",
+            "Next, turn around ____________________.",
+            "At the end, the bakery helper finds ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "The clearest map word we used was ____________________.",
+            "The bakery detail that helped readers was ____________________.",
+            "The next map stop could be ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: draw one arrow on the map and write its direction word: ____________________.",
+      "takeHomeLine": "Take-home line: Continue the Button Bakery route by adding a stop beside ____________________."
+    }
+  ]
+}

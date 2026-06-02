@@ -408,6 +408,7 @@ export function buildProductArtifactManifest(source, files, options = {}) {
       source.sprints?.length ??
       source.activities?.length ??
       source.cards?.length ??
+      source.visitQuests?.length ??
       0,
     fulfillmentNote:
       options.fulfillmentNote ??

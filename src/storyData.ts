@@ -374,6 +374,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Fifteen cooperative family-table story cards with host tools, quiet options, and take-home starters.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'grandparent-story-visit-kit',
+    title: 'Grandparent Story Visit Kit',
+    pricePoint: '$31',
+    description:
+      'Twelve adult-led visit quests with host tools, quiet options, and take-home story postcards.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

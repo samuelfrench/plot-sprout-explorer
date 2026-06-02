@@ -1,0 +1,196 @@
+{
+  "batchId": "2026-06-02-batch21",
+  "lane": "batch21-grandparent-visit-quests-c",
+  "generatedAt": "2026-06-02",
+  "questCount": 4,
+  "quests": [
+    {
+      "id": "grandparent-visit-quest-09",
+      "title": "Rain Gauge Railway Route Visit",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "visitSkill": "Turn an optional adult choice into a map-based story route with a clear setting clue.",
+      "visitFit": "Upper-age adult-led printable quest for a calm visit table, library family table, or homeschool co-op family day.",
+      "adultSetup": "Print one page, set out pencils, and invite the adult helper to choose one invented weather object or railway stop.",
+      "kidDirection": "Use the helper's pretend choice to plan a rain-gauge railway route, then draft a short scene with a beginning, turn, and wrap.",
+      "hostPrompt": "Offer one invented object, station, or weather clue; all choices can be made up on the spot.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The visit table becomes a rainy railway when the helper chooses ____________________.",
+            "An ordinary object near the table turns into a station sign for ____________________.",
+            "The pretend weather note on the ticket warns about ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "Ask the helper to choose one invented railway job: ____________________.",
+            "The choice changes the route because ____________________.",
+            "The optional talk detail I will turn into a story clue is ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "First, the rain-gauge train stops at ____________________.",
+            "Then the conductor notices ____________________.",
+            "The helper's choice changes the story by ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "My favorite invented clue from the visit is ____________________.",
+            "One sentence I can make clearer is ____________________.",
+            "The ending leaves the railway near ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: skip the talk choice and pick one printed object card: ____________________.",
+      "takeHomeLine": "Take-home line: Later, add one new pretend weather station called ____________________."
+    },
+    {
+      "id": "grandparent-visit-quest-10",
+      "title": "Seed Library Map Room Catalog Visit",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "visitSkill": "Use an optional adult choice to connect a catalog clue, map mark, and next story action.",
+      "visitFit": "Upper-age adult-led printable quest for a relaxed visit, library family table, or homeschool co-op writing stop.",
+      "adultSetup": "Print the page, place three harmless object prompts nearby, and ask the adult helper to invent one drawer label or map direction.",
+      "kidDirection": "Choose a seed-library clue, add the helper's invented map choice, and write what the catalog helper does next.",
+      "hostPrompt": "Choose one pretend drawer label, path, color, or map mark; keep it invented and simple.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The map room drawer opens to ____________________.",
+            "The packet label describes a pretend plant that grows ____________________.",
+            "The helper's optional choice adds a map mark shaped like ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "Ask for one invented drawer category, then write ____________________.",
+            "Choose whether the seed helper follows a path, shelf, or return basket: ____________________.",
+            "The conversation detail I will turn into a story clue is ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "The catalog helper opens ____________________.",
+            "The map changes when ____________________.",
+            "The next action is ____________________ because ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "The strongest map-room clue is ____________________.",
+            "A word that makes the setting clearer is ____________________.",
+            "The story can continue when the packet reveals ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: choose a printed drawer label and write the map clue here: ____________________.",
+      "takeHomeLine": "Take-home line: Add a new seed-library catalog card for ____________________."
+    },
+    {
+      "id": "grandparent-visit-quest-11",
+      "title": "Revision River Ferry Keep Move Trim Visit",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "visitSkill": "Revise an invented ferry scene after an adult helper chooses one detail to keep, move, or trim.",
+      "visitFit": "Adult-led upper-age printable quest for a cooperative visit table where sharing is optional and revision stays low-pressure.",
+      "adultSetup": "Print the page, set out pencils, and offer three paper choices: keep a detail, move a detail, or trim a detail.",
+      "kidDirection": "Draft a ferry sentence, use the helper's invented revision choice, and rewrite one line so the ending is clearer.",
+      "hostPrompt": "Choose keep, move, or trim for one pretend ferry detail, then ask where that detail belongs in the ending.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The ferry carries a draft crate labeled ____________________.",
+            "The first dock shows a scene detail I might keep: ____________________.",
+            "The river sign points toward an ending about ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "Ask the helper to choose keep, move, or trim for this detail: ____________________.",
+            "The choice changes my next sentence by ____________________.",
+            "The detail that should echo near the ending is ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "My first ferry sentence is ____________________.",
+            "I revise it by adding, moving, or trimming ____________________.",
+            "My clearer sentence becomes ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "The revision move I used today is ____________________.",
+            "The story is easier to follow because ____________________.",
+            "The ferry can land at ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: choose keep, move, or trim silently and mark the detail here: ____________________.",
+      "takeHomeLine": "Take-home line: Later, revise one more ferry sentence about ____________________."
+    },
+    {
+      "id": "grandparent-visit-quest-12",
+      "title": "Clue Label Tower Exhibit Visit",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "visitSkill": "Select one precise clue and turn it into a concise invented exhibit label.",
+      "visitFit": "Adult-led upper-age printable quest for a visit table, library family station, or homeschool co-op display activity.",
+      "adultSetup": "Print the page, point to any safe ordinary object or printed object card, and invite the adult helper to choose one invented clue.",
+      "kidDirection": "Build a pretend tower exhibit, pick the clue that matters first, and draft a label that guides the reader into the scene.",
+      "hostPrompt": "Choose one color, shape, sound, texture, or object clue; the exhibit can be completely made up.",
+      "pageSections": [
+        {
+          "heading": "Visit story seed",
+          "lines": [
+            "The tower exhibit holds an ordinary object called ____________________.",
+            "The clue label points readers toward ____________________.",
+            "The helper's invented clue is a color, shape, sound, or texture: ____________________."
+          ]
+        },
+        {
+          "heading": "Talk-to-story choice",
+          "lines": [
+            "Ask the helper to choose which clue matters first: ____________________.",
+            "The clue I will leave in the background is ____________________.",
+            "The label should make visitors wonder about ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny draft",
+          "lines": [
+            "My exhibit label begins with ____________________.",
+            "The label explains the clue by saying ____________________.",
+            "The scene changes when a visitor notices ____________________."
+          ]
+        },
+        {
+          "heading": "Visit wrap",
+          "lines": [
+            "The clearest label word is ____________________.",
+            "One extra detail I can save for later is ____________________.",
+            "The next exhibit in the tower could be ____________________."
+          ]
+        }
+      ],
+      "quietOption": "Quiet option: skip discussion and write only the final exhibit label here: ____________________.",
+      "takeHomeLine": "Take-home line: Make a pretend label for one safe ordinary object: ____________________."
+    }
+  ]
+}

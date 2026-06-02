@@ -703,6 +703,61 @@
         "Let participants point, sketch, dictate, write one line, or pass during optional sharing.",
         "Send home one story starter when the table closes so families can extend the invented story offline."
       ]
+    },
+    {
+      "slug": "grandparent-story-visit-kit",
+      "title": "Grandparent Story Visit Kit",
+      "pricePoint": "$31",
+      "status": "checkout_pending",
+      "headline": "A printable story visit kit for grandparents, relatives, and calm family tables.",
+      "summary": "Twelve adult-led visit quests turn invented places, ordinary objects, and quiet choices into story pages with take-home postcards.",
+      "heroImage": "images/plotsprout/batch21/grandparent-story-visit-kit.jpg",
+      "ctaLabel": "Request visit kit launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Grandparent%20Story%20Visit%20Kit",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static grandparent visit kit page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "spoon-ferry-lunchbox-harbor",
+        "pocket-park-notice-board",
+        "button-bakery-map-mixup",
+        "penny-path-compass-shop",
+        "tidepool-timekeepers-lab",
+        "greenhouse-gear-garden",
+        "pantry-measurement-mystery",
+        "rain-gauge-railway",
+        "seed-library-map-room",
+        "revision-river-ferry",
+        "clue-label-tower-museum"
+      ],
+      "includedPages": [
+        "Twelve printable grandparent story visit quest pages",
+        "Visit setup guide",
+        "Story hosting notes",
+        "Quiet participation options",
+        "No-data use notes",
+        "Take-home handoff notes",
+        "Pack reset notes",
+        "Six repeatable visit formats",
+        "Twelve take-home story postcards",
+        "Eight optional family-share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A grandparent visit table that needs a calm screen-free writing activity",
+        "A relative visit day with short invented story choices and optional sharing",
+        "A library family table with adult-led printable story prompts",
+        "A homeschool co-op family day with quiet participation options",
+        "A take-home postcard set for continuing invented stories offline"
+      ],
+      "parentSteps": [
+        "Choose one visit quest before the table starts so the activity stays simple.",
+        "Print only the active quest pages and keep the rest in a host folder.",
+        "Place pencils, blank cards, and one quest page where the adult helper can guide each step.",
+        "Let participants point, sketch, dictate, write one line, or pass during optional sharing.",
+        "Send home one postcard starter when the visit ends so families can extend the invented story offline."
+      ]
     }
   ]
 }

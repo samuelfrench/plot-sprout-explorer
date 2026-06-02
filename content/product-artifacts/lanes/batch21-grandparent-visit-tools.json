@@ -1,0 +1,210 @@
+{
+  "batchId": "2026-06-02-batch21",
+  "lane": "batch21-grandparent-visit-tools",
+  "generatedAt": "2026-06-02",
+  "hostGuide": {
+    "visitSetup": [
+      "Print one host guide, six visit format cards, a postcard stack, and extra blank half-sheets before the visit table opens.",
+      "Place pencils, object choice slips, pretend place strips, and plain folders where the adult host can pass them out one step at a time.",
+      "Choose three ordinary object starters such as a button, spoon, seed packet, paper clip, teacup, or ribbon before the first story begins.",
+      "Prepare one quiet seat with a pencil, sketch space, and two simple choice strips for anyone who wants to join without speaking first.",
+      "Use color tabs, table symbols, or blank folders for sorting instead of personal labels.",
+      "Keep the kit screen-free by using only printed pages, spoken choices, sketches, pointing, and short written lines."
+    ],
+    "storyHosting": [
+      "Open with an invented helper, a pretend place, and one ordinary object so the story starts in make-believe space.",
+      "Model one sample answer that is clearly invented, then invite writers to choose by pointing, sketching, dictating, or writing.",
+      "Move through the page in small cooperative steps: place, helper, object, small mix-up, next action, and calm ending.",
+      "Offer two adult-made choices when a writer pauses, and let the writer pick, change, combine, or invent a third option.",
+      "Keep sharing optional and focused on a title, object clue, sketch, or one invented sentence from the printed page.",
+      "Use gentle table language such as maker, guide, visitor, helper, messenger, keeper, or builder for every pretend role."
+    ],
+    "quietParticipation": [
+      "Let a participant complete only one blank, circle one choice, or draw one clue and still count the page as finished.",
+      "Offer a silent postcard path where the writer fills the pretend place and object blanks before any table talk.",
+      "Allow an adult to write a dictated phrase while the writer chooses the words, points to options, or sketches the clue.",
+      "Accept a folded page, underlined word, or shown sketch as complete sharing when reading aloud is not preferred.",
+      "Keep a spare fresh page nearby so a writer can restart without explanation if the first idea feels too crowded.",
+      "Invite partners to trade only invented object ideas, not personal details, when they want a cooperative prompt."
+    ],
+    "noDataUse": [
+      "This kit uses invented helpers, pretend places, and ordinary objects; private facts are not needed.",
+      "Keep every page offline, printable, and handled by the host, writer, or household after the visit.",
+      "Do not collect private identifiers, personal labels, personal timelines, or household details.",
+      "Organize pages with symbols, colors, or plain folders instead of person-specific sorting.",
+      "Send finished work home or let the writer keep it at the table; the host does not need to retain copies."
+    ],
+    "takeHomeHandoff": [
+      "Send home one finished visit page plus one optional story postcard for another screen-free writing moment.",
+      "Mark one simple next step such as add a title, add one setting detail, add one object clue, or finish the ending.",
+      "Tell households the postcard can be completed by pointing, sketching, dictating, or writing one short line.",
+      "Keep home sharing optional and focused on the printed page, invented place, ordinary object, title, or calm ending.",
+      "Invite the writer to save unused postcards for another table visit without requiring any follow-up report."
+    ],
+    "packReset": [
+      "Return unused format cards and postcards to the host folder before clearing pencils and choice strips.",
+      "Place finished pages in plain take-home folders or let writers carry their own pages.",
+      "Restock blank pages, sharpen pencils, and replace bent choice strips before the next visit table.",
+      "Move used sample slips behind the host guide so the next host can begin with a fresh top card.",
+      "Write only a nonpersonal supply note if needed, such as more pencils, fewer object slips, or extra quiet pages."
+    ]
+  },
+  "visitFormats": [
+    {
+      "name": "Teacup Map Story",
+      "bestFor": "A cozy table visit where an adult host and writer want a pretend place before the first sentence.",
+      "steps": [
+        "Host places one teacup, button, or paper circle on the table and asks for a pretend place it could mark: ____________________.",
+        "Writer adds an invented helper who visits that place for a small friendly errand: ____________________.",
+        "Host offers two object choices and the writer picks one to become the clue: ____________________.",
+        "Together they write one opening sentence and circle the detail to keep: ____________________."
+      ]
+    },
+    {
+      "name": "Button Messenger Visit",
+      "bestFor": "Grandparent-style visits, neighbor-helper tables, and co-op family days with gentle back-and-forth writing.",
+      "steps": [
+        "Host gives the writer a button card and asks what pretend message it carries: ____________________.",
+        "Writer chooses an invented messenger role such as guide, maker, keeper, or builder: ____________________.",
+        "Host asks where the messenger should deliver the object in a pretend town: ____________________.",
+        "Together they write the next action and leave the ending blank for later: ____________________."
+      ]
+    },
+    {
+      "name": "Kitchen Drawer Quest",
+      "bestFor": "Library family visit tables that need familiar object choices and no special supplies.",
+      "steps": [
+        "Host spreads three printed object slips from an imaginary kitchen drawer and asks the writer to choose one: ____________________.",
+        "Writer invents a tiny mix-up the object can help solve kindly: ____________________.",
+        "Host models one sentence using a different object so the writer can make a fresh choice: ____________________.",
+        "Writer adds first, next, and last story beats on the visit page: ____________________."
+      ]
+    },
+    {
+      "name": "Porch Lantern Postcard",
+      "bestFor": "A quieter visit where the writer wants a small postcard instead of a full page.",
+      "steps": [
+        "Host points to the lantern picture space and asks what make-believe place it lights up: ____________________.",
+        "Writer sketches or writes one ordinary object waiting under the lantern: ____________________.",
+        "Host offers a calm helper choice and asks what the helper notices first: ____________________.",
+        "Writer completes one postcard line and chooses whether to share the title: ____________________."
+      ]
+    },
+    {
+      "name": "Three-Chair Story Circle",
+      "bestFor": "Homeschool co-op family days with one adult host and a small group of mixed-age writers.",
+      "steps": [
+        "Host labels three chair spaces as place, object, and helper, then asks writers to fill the first blank: ____________________.",
+        "Each writer adds one invented object idea to the shared choice page: ____________________.",
+        "Host reads the choices aloud and lets each writer pick a different path for a private page: ____________________.",
+        "Writers finish with one calm ending line or one ending sketch: ____________________."
+      ]
+    },
+    {
+      "name": "Tiny Shopkeeper Scene",
+      "bestFor": "A playful adult-led visit with pretend places, ordinary supplies, and cooperative sentence building.",
+      "steps": [
+        "Host names an imaginary tiny shop and asks the writer what useful object sits in the window: ____________________.",
+        "Writer invents a shopkeeper, helper, or visitor who needs that object for a kind task: ____________________.",
+        "Host asks what small mix-up happens when the object is used in a surprising way: ____________________.",
+        "Together they write one dialogue line and one next action: ____________________."
+      ]
+    }
+  ],
+  "takeHomePostcards": [
+    {
+      "title": "Pretend Porch Place",
+      "time": "6 minutes",
+      "skill": "setting detail",
+      "direction": "Invent a porch, table, garden step, or window nook for a story scene: ____________________.",
+      "familyLine": "A grown-up can ask what the pretend place looks or sounds like: ____________________."
+    },
+    {
+      "title": "Object With a Job",
+      "time": "7 minutes",
+      "skill": "plot clue",
+      "direction": "Choose one ordinary object and give it a useful job in the story: ____________________.",
+      "familyLine": "A grown-up can offer two possible jobs for the object here: ____________________."
+    },
+    {
+      "title": "Invented Helper Card",
+      "time": "6 minutes",
+      "skill": "character action",
+      "direction": "Create an invented helper who solves a tiny friendly mix-up: ____________________.",
+      "familyLine": "A grown-up can ask what the helper tries first: ____________________."
+    },
+    {
+      "title": "Button Trail",
+      "time": "8 minutes",
+      "skill": "sequence",
+      "direction": "Write first, next, and last for a button that rolls through a pretend place: ____________________.",
+      "familyLine": "A grown-up can point to the step that should become a longer sentence: ____________________."
+    },
+    {
+      "title": "Teacup Clue",
+      "time": "7 minutes",
+      "skill": "description",
+      "direction": "Describe a tiny clue found beside a teacup in an invented room: ____________________.",
+      "familyLine": "A grown-up can ask which describing word makes the clue clearer: ____________________."
+    },
+    {
+      "title": "Window Nook Dialogue",
+      "time": "8 minutes",
+      "skill": "dialogue",
+      "direction": "Write two short lines between an invented guide and an invented visitor: ____________________.",
+      "familyLine": "A grown-up can read one role while the writer chooses the reply: ____________________."
+    },
+    {
+      "title": "Shelf of Surprises",
+      "time": "7 minutes",
+      "skill": "idea generation",
+      "direction": "List three ordinary shelf objects that could start a make-believe scene: ____________________.",
+      "familyLine": "A grown-up can choose one object and ask what changes when it moves: ____________________."
+    },
+    {
+      "title": "Kind Ending",
+      "time": "6 minutes",
+      "skill": "ending choice",
+      "direction": "Add a calm ending where the helper uses one object wisely: ____________________.",
+      "familyLine": "A grown-up can ask what feels settled at the end: ____________________."
+    },
+    {
+      "title": "Tiny Map Mark",
+      "time": "8 minutes",
+      "skill": "spatial planning",
+      "direction": "Draw or describe one mark on a pretend map and explain why it matters: ____________________.",
+      "familyLine": "A grown-up can ask where the helper should go next: ____________________."
+    },
+    {
+      "title": "Clearer Word Swap",
+      "time": "5 minutes",
+      "skill": "revision",
+      "direction": "Pick one plain word from the visit page and swap in a clearer word: ____________________.",
+      "familyLine": "A grown-up can ask which word is easier to picture now: ____________________."
+    },
+    {
+      "title": "Sketch Then Sentence",
+      "time": "6 minutes",
+      "skill": "visual planning",
+      "direction": "Sketch one story object and write one sentence under it: ____________________.",
+      "familyLine": "A grown-up can ask which part of the sketch belongs in the story: ____________________."
+    },
+    {
+      "title": "Next Visit Seed",
+      "time": "7 minutes",
+      "skill": "story planning",
+      "direction": "Invent one pretend place, one helper, one object, and one small mix-up for next time: ____________________.",
+      "familyLine": "A grown-up can add one extra make-believe detail to the seed: ____________________."
+    }
+  ],
+  "optionalFamilySharePrompts": [
+    "Show one invented place from the visit page: ____________________.",
+    "Read one sentence aloud, or ask a grown-up to read it: ____________________.",
+    "Point to one ordinary object and tell how it helps the helper: ____________________.",
+    "Share one title choice for the postcard story: ____________________.",
+    "Tell which story step came first, next, or last: ____________________.",
+    "Show one sketch and name the invented clue inside it: ____________________.",
+    "Describe one calm ending choice from the make-believe story: ____________________.",
+    "Keep the page private today and mark one finished detail: ____________________."
+  ]
+}

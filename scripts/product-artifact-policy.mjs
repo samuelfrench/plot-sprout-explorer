@@ -17,6 +17,7 @@ export const summerCampStoryCircleKitProductSlug = 'summer-camp-story-circle-kit
 export const afterSchoolStoryClubKitProductSlug = 'after-school-story-club-starter-kit'
 export const museumDayStoryNotebookKitProductSlug = 'museum-day-story-notebook-kit'
 export const familyGameNightStoryCardDeckProductSlug = 'family-game-night-story-card-deck'
+export const grandparentStoryVisitKitProductSlug = 'grandparent-story-visit-kit'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -168,6 +169,13 @@ const requiredFamilyGameNightStoryCardDeckArtifactPaths = {
   zipPath: 'product-build/family-game-night-story-card-deck/family-game-night-story-card-deck.zip',
   sourceHtmlPath: 'product-build/family-game-night-story-card-deck/source/family-game-night-story-card-deck.html',
   manifestPath: 'product-build/family-game-night-story-card-deck/manifest.json',
+}
+
+const requiredGrandparentStoryVisitKitArtifactPaths = {
+  pdfPath: 'product-build/grandparent-story-visit-kit/Grandparent-Story-Visit-Kit.pdf',
+  zipPath: 'product-build/grandparent-story-visit-kit/grandparent-story-visit-kit.zip',
+  sourceHtmlPath: 'product-build/grandparent-story-visit-kit/source/grandparent-story-visit-kit.html',
+  manifestPath: 'product-build/grandparent-story-visit-kit/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -2719,6 +2727,316 @@ export function validateFamilyGameNightStoryCardDeckSource(source, product, know
   return errors
 }
 
+function validateNoUnsafeGrandparentStoryVisitLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const personalText = rawText
+    .replace(/\bskip real names?\b/gi, '')
+    .replace(/\bkeep pages offline\b/gi, '')
+    .replace(/\binvented details?\b/gi, '')
+    .replace(/\binvented helpers?\b/gi, '')
+    .replace(/\binvented places?\b/gi, '')
+    .replace(/\binvented choices?\b/gi, '')
+    .replace(/\bno personal records?\b/gi, '')
+    .replace(/\bwithout personal records?\b/gi, '')
+    .replace(/\bno-data use\b/gi, '')
+  pushIf(
+    errors,
+    /\bfamily\s+trees?\b|\bgenealog(y|ies|ical)\b|\bfamily names?\b|\bchild names?\b|\bstudent names?\b|\bphotos?\b|\baddresses?\b|\bphone numbers?\b|\bphones?\b|\brecording(s)?\b|\brecord(ed|s|ing)?\b|\baccounts?\b|\blogins?\b|\blog in\b|\bupload(s|ed|ing)?\b|\bpublic publishing\b|\bpublish online\b|\brosters?\b|\battendance\b|\bsign-?in\b|\bbehavior reports?\b/i.test(
+      personalText,
+    ),
+    `${label} includes family-tree, genealogy, family-name, child-name, photo, address, phone, recording, account, upload, public-publishing, roster, attendance, sign-in, or behavior-report language.`,
+  )
+
+  const safetyText = rawText
+    .replace(/\bno\s+scores?\b/gi, '')
+    .replace(/\bno\s+scoring\b/gi, '')
+    .replace(/\bno\s+grades?\b/gi, '')
+    .replace(/\bno\s+contest(s)?\b/gi, '')
+    .replace(/\bno\s+prizes?\b/gi, '')
+    .replace(/\bno\s+timers?\b/gi, '')
+    .replace(/\bno\s+timer pressure\b/gi, '')
+    .replace(/\bno\s+gambling\b/gi, '')
+    .replace(/\bwithout\s+scores?\b/gi, '')
+    .replace(/\bwithout\s+scoring\b/gi, '')
+    .replace(/\bwithout\s+grades?\b/gi, '')
+    .replace(/\bwithout\s+contest(s)?\b/gi, '')
+    .replace(/\bwithout\s+prizes?\b/gi, '')
+    .replace(/\bwithout\s+timer pressure\b/gi, '')
+    .replace(/\bwithout\s+gambling\b/gi, '')
+  pushIf(
+    errors,
+    /\bmedical\b|\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b|\btherapy\b|\btherapist(s)?\b|\bdiagnos(is|e|es|ed|ing|tic)\b|\bgrief counseling\b|\bfamily conflict\b|\bassessment(s)?\b|\bgrade(s|d|book)?\b|\bscore(s|d|book)?\b|\bguarantee(s|d)?\b|\bguaranteed\b|\bcontest(s)?\b|\bprizes?\b|\btimer(s)?\b|\btimed\b|\bgambling\b|\bbet(s|ting)?\b|\bcasino(s)?\b|\bchase(s|d|ing)?\b|\brun(s|ning)?\b|\bjump(s|ed|ing)?\b|\bhide and seek\b|\btag\b|\bclimb(s|ed|ing)?\b|\bthrow(s|ing)?\b|\broughhouse\b|\bwrestl(e|ing)\b|\bblindfold(s|ed)?\b|\bstairs?\b|\bkitchen knife|knives\b|\bflames?\b|\bmatchstick(s)?\b|\blighter(s)?\b/i.test(
+      safetyText,
+    ),
+    `${label} includes medical, legal, therapy, diagnosis, grief-counseling, family-conflict, assessment, grade, score, guaranteed-outcome, contest, prize, timer-pressure, gambling, or unsafe physical language.`,
+  )
+
+  const familyText = rawText
+    .replaceAll(requiredSafety, '')
+    .replace(/\bno\s+weapon(s)?\b/gi, '')
+    .replace(/\bno\s+branded characters\b/gi, '')
+    .replace(/\bno\s+scary harm\b/gi, '')
+    .replace(/\bno\s+romance\b/gi, '')
+  pushIf(
+    errors,
+    familySafetyBlockedTerms.some((pattern) => pattern.test(familyText)),
+    `${label} includes political, branded, romance, scary, violent, weapon, gambling, ad-targeting, or pressure language.`,
+  )
+}
+
+function validateGrandparentVisitQuest(quest, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, questIds, errors) {
+  const label = `visitQuests[${index}]`
+  pushIf(errors, !isObject(quest), `${label} must be an object.`)
+  if (!isObject(quest)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'visitSkill',
+    'visitFit',
+    'adultSetup',
+    'kidDirection',
+    'hostPrompt',
+    'quietOption',
+    'takeHomeLine',
+  ]) {
+    validateString(quest[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(quest.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(quest.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, !quest.id.startsWith('grandparent-visit-quest-'), `${label}.id must start with grandparent-visit-quest-.`)
+    pushIf(errors, questIds.has(quest.id), `${label}.id is duplicated.`)
+    questIds.add(quest.id)
+  }
+
+  pushIf(errors, !['7-8', '7-9', '8-10', '10-11'].includes(quest.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(quest.worldSlug) && !knownWorldSlugs.has(quest.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(quest.worldSlug) && !sourceWorldSlugs.has(quest.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(quest.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(quest.ageBand) && isNonEmptyString(worldAgeBand) && quest.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${quest.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  pushIf(errors, !Array.isArray(quest.pageSections), `${label}.pageSections must be an array.`)
+  if (Array.isArray(quest.pageSections)) {
+    pushIf(errors, quest.pageSections.length !== 4, `${label}.pageSections must have exactly 4 entries.`)
+    quest.pageSections.forEach((section, sectionIndex) => {
+      const sectionLabel = `${label}.pageSections[${sectionIndex}]`
+      pushIf(errors, !isObject(section), `${sectionLabel} must be an object.`)
+      if (!isObject(section)) return
+      validateString(section.heading, `${sectionLabel}.heading`, errors)
+      validateExactStringArray(section.lines, 3, `${sectionLabel}.lines`, errors)
+      if (Array.isArray(section.lines)) {
+        section.lines.forEach((line, lineIndex) => {
+          pushIf(errors, isNonEmptyString(line) && !hasWritableBlank(line), `${sectionLabel}.lines[${lineIndex}] must include a writable blank.`)
+          pushIf(errors, isNonEmptyString(line) && hasSnakeCasePlaceholder(line), `${sectionLabel}.lines[${lineIndex}] must use human-readable text, not snake_case placeholders.`)
+        })
+      }
+    })
+  }
+
+  for (const key of ['quietOption', 'takeHomeLine']) {
+    pushIf(errors, isNonEmptyString(quest[key]) && !hasWritableBlank(quest[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(quest[key]) && hasSnakeCasePlaceholder(quest[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeGrandparentStoryVisitLanguage(quest, label, errors)
+}
+
+function validateGrandparentVisitFormat(format, index, names, errors) {
+  const label = `visitFormats[${index}]`
+  pushIf(errors, !isObject(format), `${label} must be an object.`)
+  if (!isObject(format)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(format[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(format.name)) {
+    pushIf(errors, names.has(format.name), `${label}.name is duplicated.`)
+    names.add(format.name)
+  }
+  validateExactStringArray(format.steps, 4, `${label}.steps`, errors)
+  if (Array.isArray(format.steps)) {
+    format.steps.forEach((step, stepIndex) => {
+      pushIf(errors, isNonEmptyString(step) && !hasWritableBlank(step), `${label}.steps[${stepIndex}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(step) && hasSnakeCasePlaceholder(step), `${label}.steps[${stepIndex}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+  validateNoUnsafeGrandparentStoryVisitLanguage(format, label, errors)
+}
+
+function validateGrandparentTakeHomePostcard(card, index, titles, errors) {
+  const label = `takeHomePostcards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(card.title)) {
+    pushIf(errors, titles.has(card.title), `${label}.title is duplicated.`)
+    titles.add(card.title)
+  }
+  for (const key of ['direction', 'familyLine']) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeGrandparentStoryVisitLanguage(card, label, errors)
+}
+
+export function validateGrandparentStoryVisitKitSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Grandparent Story Visit Kit source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch21', 'batchId must be 2026-06-02-batch21.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(
+    errors,
+    source.productSlug !== grandparentStoryVisitKitProductSlug,
+    `productSlug must be ${grandparentStoryVisitKitProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Grandparent Story Visit Kit', 'title must be Grandparent Story Visit Kit.')
+  pushIf(errors, source.pricePoint !== '$31', 'pricePoint must be $31.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Grandparent Story Visit source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Grandparent Story Visit source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Grandparent Story Visit source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 12, 'worldSlugs must have exactly 12 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredGrandparentStoryVisitKitArtifactPaths, 'Grandparent Story Visit', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.hostGuide), 'hostGuide must be an object.')
+  if (isObject(source.hostGuide)) {
+    validateStringArray(source.hostGuide.visitSetup, 5, 'hostGuide.visitSetup', errors)
+    validateStringArray(source.hostGuide.storyHosting, 5, 'hostGuide.storyHosting', errors)
+    validateStringArray(source.hostGuide.quietParticipation, 5, 'hostGuide.quietParticipation', errors)
+    validateStringArray(source.hostGuide.noDataUse, 4, 'hostGuide.noDataUse', errors)
+    validateStringArray(source.hostGuide.takeHomeHandoff, 4, 'hostGuide.takeHomeHandoff', errors)
+    validateStringArray(source.hostGuide.packReset, 4, 'hostGuide.packReset', errors)
+    validateNoUnsafeGrandparentStoryVisitLanguage(source.hostGuide, 'hostGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.visitFormats), 'visitFormats must be an array.')
+  if (Array.isArray(source.visitFormats)) {
+    pushIf(errors, source.visitFormats.length !== 6, 'visitFormats must have exactly 6 entries.')
+    const names = new Set()
+    source.visitFormats.forEach((format, index) => validateGrandparentVisitFormat(format, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomePostcards), 'takeHomePostcards must be an array.')
+  if (Array.isArray(source.takeHomePostcards)) {
+    pushIf(errors, source.takeHomePostcards.length !== 12, 'takeHomePostcards must have exactly 12 entries.')
+    const titles = new Set()
+    source.takeHomePostcards.forEach((card, index) => validateGrandparentTakeHomePostcard(card, index, titles, errors))
+  }
+
+  validateExactStringArray(source.optionalFamilySharePrompts, 8, 'optionalFamilySharePrompts', errors)
+
+  pushIf(errors, !Array.isArray(source.visitQuests), 'visitQuests must be an array.')
+  if (Array.isArray(source.visitQuests)) {
+    pushIf(errors, source.visitQuests.length !== 12, 'visitQuests must have exactly 12 entries.')
+    const questIds = new Set()
+    const coveredWorlds = new Set()
+    source.visitQuests.forEach((quest, index) => {
+      validateGrandparentVisitQuest(quest, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, questIds, errors)
+      if (isNonEmptyString(quest?.worldSlug)) coveredWorlds.add(quest.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 12, 'visitQuests must cover at least 12 unique worlds.')
+  }
+
+  validateNoUnsafeGrandparentStoryVisitLanguage(source, 'Grandparent Story Visit Kit source', errors)
+  validateNoRiskyLanguage(source, 'Grandparent Story Visit Kit source', errors)
+  return errors
+}
+
+export function validateGrandparentStoryVisitKitSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three quest lanes and one tools lane.')
+
+  const questLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      pushIf(errors, lane.batchId !== source.batchId, `${sourceFile}.batchId must match ${source.batchId}.`)
+      if (Array.isArray(lane.quests)) {
+        questLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.hostGuide)) {
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 21 quest lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, questLaneFiles.length !== 3, 'sourceFiles must include exactly three quest lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneQuests = questLaneFiles
+    .flatMap(({ lane }) => lane.quests)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.visitQuests)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneQuests) !== JSON.stringify(source.visitQuests),
+      'sourceFiles quest lanes must reproduce visitQuests exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['hostGuide', 'visitFormats', 'takeHomePostcards', 'optionalFamilySharePrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -2847,7 +3165,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredFamilyGameNightStoryCardDeckArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredGrandparentStoryVisitKitArtifactPaths.pdfPath
+      ? requiredGrandparentStoryVisitKitArtifactPaths
+      : artifact?.pdfPath === requiredFamilyGameNightStoryCardDeckArtifactPaths.pdfPath
       ? requiredFamilyGameNightStoryCardDeckArtifactPaths
       : artifact?.pdfPath === requiredMuseumDayStoryNotebookArtifactPaths.pdfPath
       ? requiredMuseumDayStoryNotebookArtifactPaths
