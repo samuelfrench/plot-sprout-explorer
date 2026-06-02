@@ -1,0 +1,18 @@
+{
+  "slug": "tutoring-center-story-sprint-pack",
+  "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no toys, no decorations, blank white paper sheets, teal folders, pencils, blank choice cards, small timer, supply tray, plain background",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26061650,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch16/tutoring-center-story-sprint-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch16/tutoring-center-story-sprint-pack.webp",
+  "manifest": "content/image-queue/2026-06-02-batch16-product-images.json",
+  "title": "Tutoring Center Story Sprint Pack product image"
+}

@@ -12,6 +12,7 @@ export const roadTripProductSlug = 'road-trip-story-quest-pack'
 export const waitingRoomProductSlug = 'waiting-room-story-quest-pack'
 export const libraryStoryClubProductSlug = 'library-story-club-kit'
 export const substituteTeacherStationPackProductSlug = 'substitute-teacher-story-station-pack'
+export const tutoringCenterSprintPackProductSlug = 'tutoring-center-story-sprint-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -77,6 +78,13 @@ const requiredSubstituteTeacherStationArtifactPaths = {
   zipPath: 'product-build/substitute-teacher-story-station-pack/substitute-teacher-story-station-pack.zip',
   sourceHtmlPath: 'product-build/substitute-teacher-story-station-pack/source/substitute-teacher-story-station-pack.html',
   manifestPath: 'product-build/substitute-teacher-story-station-pack/manifest.json',
+}
+
+const requiredTutoringCenterSprintArtifactPaths = {
+  pdfPath: 'product-build/tutoring-center-story-sprint-pack/Tutoring-Center-Story-Sprint-Pack.pdf',
+  zipPath: 'product-build/tutoring-center-story-sprint-pack/tutoring-center-story-sprint-pack.zip',
+  sourceHtmlPath: 'product-build/tutoring-center-story-sprint-pack/source/tutoring-center-story-sprint-pack.html',
+  manifestPath: 'product-build/tutoring-center-story-sprint-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -1460,6 +1468,226 @@ export function validateSubstituteTeacherStationPackSource(source, product, know
   return errors
 }
 
+function validateNoUnsafeTutoringLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const text = rawText
+    .replace(/\bno\s+uploads?\b/gi, '')
+    .replace(/\bno\s+public publishing\b/gi, '')
+    .replace(/\bwithout\s+public publishing\b/gi, '')
+    .replace(/\bwithout\s+uploads?\b/gi, '')
+  pushIf(
+    errors,
+    /\brosters?\b|\battendance\b|\bsign-?in sheets?\b|\bstudent names?\b|\binitials\b|\bsurnames?\b|\bschool names?\b|\bphotos?\b|\baddresses?\b|\bbehavior reports?\b|\bupload(s|ed|ing)?\b|\baccounts?\b|\blogins?\b|\blog in\b|\bpublic publishing\b|\bpublish online\b/i.test(
+      text,
+    ),
+    `${label} includes roster, attendance, sign-in, student-name, school-data, photo, behavior-report, upload, account, or public publishing language.`,
+  )
+  pushIf(
+    errors,
+    /\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\bdiagnos(is|e|es|ed|ing|tic)\b|\btherapy\b|\btherapist\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b|\bgrade(s|d|book)?\b|\bscore(s|d|book)?\b|\bguarantee(s|d)?\b|\bguaranteed\b/i.test(
+      rawText,
+    ),
+    `${label} includes diagnosis, medical, legal, formal scoring, or guaranteed-outcome language.`,
+  )
+}
+
+function hasWritableBlank(value) {
+  return /_{4,}/.test(value)
+}
+
+function hasSnakeCasePlaceholder(value) {
+  return /\b[a-z]+(?:_[a-z]+){2,}\b/.test(value)
+}
+
+function validateTutoringSprint(sprint, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, sprintIds, errors) {
+  const label = `sprints[${index}]`
+  pushIf(errors, !isObject(sprint), `${label} must be an object.`)
+  if (!isObject(sprint)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'sprintSkill',
+    'sessionFit',
+    'tutorSetup',
+    'kidDirection',
+    'coachingPrompt',
+    'wrapUpLine',
+    'extensionLine',
+  ]) {
+    validateString(sprint[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(sprint.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(sprint.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, !sprint.id.startsWith('tutoring-'), `${label}.id must start with tutoring-.`)
+    pushIf(errors, sprintIds.has(sprint.id), `${label}.id is duplicated.`)
+    sprintIds.add(sprint.id)
+  }
+
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '9-11', '10-11'].includes(sprint.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(sprint.worldSlug) && !knownWorldSlugs.has(sprint.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(sprint.worldSlug) && !sourceWorldSlugs.has(sprint.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(sprint.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(sprint.ageBand) && isNonEmptyString(worldAgeBand) && sprint.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${sprint.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  pushIf(errors, !Array.isArray(sprint.pageSections), `${label}.pageSections must be an array.`)
+  if (Array.isArray(sprint.pageSections)) {
+    pushIf(errors, sprint.pageSections.length !== 3, `${label}.pageSections must have exactly 3 entries.`)
+    sprint.pageSections.forEach((section, sectionIndex) => {
+      const sectionLabel = `${label}.pageSections[${sectionIndex}]`
+      pushIf(errors, !isObject(section), `${sectionLabel} must be an object.`)
+      if (!isObject(section)) return
+      validateString(section.heading, `${sectionLabel}.heading`, errors)
+      validateExactStringArray(section.lines, 3, `${sectionLabel}.lines`, errors)
+      if (Array.isArray(section.lines)) {
+        section.lines.forEach((line, lineIndex) => {
+          pushIf(errors, isNonEmptyString(line) && !hasWritableBlank(line), `${sectionLabel}.lines[${lineIndex}] must include a writable blank.`)
+        })
+      }
+    })
+  }
+
+  pushIf(errors, isNonEmptyString(sprint.wrapUpLine) && !hasWritableBlank(sprint.wrapUpLine), `${label}.wrapUpLine must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(sprint.extensionLine) && !hasWritableBlank(sprint.extensionLine), `${label}.extensionLine must include a writable blank.`)
+  validateNoUnsafeTutoringLanguage(sprint, label, errors)
+}
+
+function validateTutoringRoutine(routine, index, routineNames, errors) {
+  const label = `sprintRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.name)) {
+    pushIf(errors, routineNames.has(routine.name), `${label}.name is duplicated.`)
+    routineNames.add(routine.name)
+  }
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeTutoringLanguage(routine, label, errors)
+}
+
+function validateTakeHomeSlip(slip, index, titles, errors) {
+  const label = `takeHomeSlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(slip[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(slip.title)) {
+    pushIf(errors, titles.has(slip.title), `${label}.title is duplicated.`)
+    titles.add(slip.title)
+  }
+  pushIf(errors, isNonEmptyString(slip.direction) && !hasWritableBlank(slip.direction), `${label}.direction must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(slip.direction) && hasSnakeCasePlaceholder(slip.direction), `${label}.direction must use human-readable text, not snake_case placeholders.`)
+  pushIf(errors, isNonEmptyString(slip.familyLine) && !hasWritableBlank(slip.familyLine), `${label}.familyLine must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(slip.familyLine) && hasSnakeCasePlaceholder(slip.familyLine), `${label}.familyLine must use human-readable text, not snake_case placeholders.`)
+  validateNoUnsafeTutoringLanguage(slip, label, errors)
+}
+
+export function validateTutoringCenterSprintPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Tutoring Center Story Sprint Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch16', 'batchId must be 2026-06-02-batch16.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(
+    errors,
+    source.productSlug !== tutoringCenterSprintPackProductSlug,
+    `productSlug must be ${tutoringCenterSprintPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Tutoring Center Story Sprint Pack', 'title must be Tutoring Center Story Sprint Pack.')
+  pushIf(errors, source.pricePoint !== '$49', 'pricePoint must be $49.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Tutoring Center source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Tutoring Center source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Tutoring Center source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 20, 'worldSlugs must have exactly 20 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredTutoringCenterSprintArtifactPaths, 'Tutoring Center', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.tutorGuide), 'tutorGuide must be an object.')
+  if (isObject(source.tutorGuide)) {
+    validateExactStringArray(source.tutorGuide.beforeSession, 5, 'tutorGuide.beforeSession', errors)
+    validateExactStringArray(source.tutorGuide.setup, 5, 'tutorGuide.setup', errors)
+    validateExactStringArray(source.tutorGuide.duringSprint, 5, 'tutorGuide.duringSprint', errors)
+    validateExactStringArray(source.tutorGuide.wrapUp, 5, 'tutorGuide.wrapUp', errors)
+    validateExactStringArray(source.tutorGuide.noDataUse, 4, 'tutorGuide.noDataUse', errors)
+    validateNoUnsafeTutoringLanguage(source.tutorGuide, 'tutorGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.sprintRoutines), 'sprintRoutines must be an array.')
+  if (Array.isArray(source.sprintRoutines)) {
+    pushIf(errors, source.sprintRoutines.length !== 5, 'sprintRoutines must have exactly 5 entries.')
+    const names = new Set()
+    source.sprintRoutines.forEach((routine, index) => validateTutoringRoutine(routine, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeSlips), 'takeHomeSlips must be an array.')
+  if (Array.isArray(source.takeHomeSlips)) {
+    pushIf(errors, source.takeHomeSlips.length !== 8, 'takeHomeSlips must have exactly 8 entries.')
+    const titles = new Set()
+    source.takeHomeSlips.forEach((slip, index) => validateTakeHomeSlip(slip, index, titles, errors))
+  }
+
+  validateExactStringArray(source.sharePrompts, 6, 'sharePrompts', errors)
+
+  pushIf(errors, !Array.isArray(source.sprints), 'sprints must be an array.')
+  if (Array.isArray(source.sprints)) {
+    pushIf(errors, source.sprints.length !== 20, 'sprints must have exactly 20 entries.')
+    const sprintIds = new Set()
+    const coveredWorlds = new Set()
+    source.sprints.forEach((sprint, index) => {
+      validateTutoringSprint(sprint, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, sprintIds, errors)
+      if (isNonEmptyString(sprint?.worldSlug)) coveredWorlds.add(sprint.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 16, 'sprints must cover at least 16 unique worlds.')
+  }
+
+  validateNoUnsafeTutoringLanguage(source, 'Tutoring Center Story Sprint Pack source', errors)
+  validateNoRiskyLanguage(source, 'Tutoring Center Story Sprint Pack source', errors)
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -1588,7 +1816,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredSubstituteTeacherStationArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredTutoringCenterSprintArtifactPaths.pdfPath
+      ? requiredTutoringCenterSprintArtifactPaths
+      : artifact?.pdfPath === requiredSubstituteTeacherStationArtifactPaths.pdfPath
       ? requiredSubstituteTeacherStationArtifactPaths
       : artifact?.pdfPath === requiredLibraryStoryClubArtifactPaths.pdfPath
       ? requiredLibraryStoryClubArtifactPaths

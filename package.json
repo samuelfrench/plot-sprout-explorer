@@ -22,6 +22,7 @@
     "image:batch13": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch13-product-images.json",
     "image:batch14": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch14-product-images.json",
     "image:batch15": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch15-product-images.json",
+    "image:batch16": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch16-product-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -29,7 +30,8 @@
     "product:road-trip-pack": "node scripts/road-trip-pack-builder.mjs",
     "product:waiting-room-pack": "node scripts/waiting-room-pack-builder.mjs",
     "product:library-story-club-kit": "node scripts/library-story-club-kit-builder.mjs",
-    "product:substitute-teacher-pack": "node scripts/substitute-teacher-station-pack-builder.mjs"
+    "product:substitute-teacher-pack": "node scripts/substitute-teacher-station-pack-builder.mjs",
+    "product:tutoring-center-pack": "node scripts/tutoring-center-sprint-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

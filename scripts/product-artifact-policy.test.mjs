@@ -17,6 +17,7 @@ import {
   validateRoadTripPackSource,
   validateSeasonBundleSource,
   validateSubstituteTeacherStationPackSource,
+  validateTutoringCenterSprintPackSource,
   validateWaitingRoomPackSource,
   writeStoredZip,
 } from './product-artifact-policy.mjs'
@@ -844,6 +845,142 @@ function validSubstituteTeacherStationPackSource() {
   }
 }
 
+function tutoringSprint(id, worldSlug, ageBand) {
+  return {
+    id,
+    title: id
+      .split('-')
+      .map((part) => part[0].toUpperCase() + part.slice(1))
+      .join(' '),
+    worldSlug,
+    ageBand,
+    sprintSkill: 'setting detail',
+    sessionFit: '10-minute tutoring warmup for a reluctant writer or small table.',
+    tutorSetup: 'Print one sprint page, set out pencils, and pick one world image.',
+    kidDirection: 'Choose one tiny detail, write one short draft line, and circle one word to keep.',
+    coachingPrompt: 'Ask for one concrete place detail before asking for a sentence.',
+    pageSections: ['Plan', 'Draft', 'Polish'].map((heading) => ({
+      heading,
+      lines: [
+        `${heading} detail: ____________________________`,
+        `${heading} choice: ____________________________`,
+        `${heading} sentence: ____________________________`,
+      ],
+    })),
+    wrapUpLine: 'One line I can keep: ____________________________',
+    extensionLine: 'At home I can add: ____________________________',
+  }
+}
+
+function validTutoringCenterSprintPackSource() {
+  const worldSlugs = [
+    'moon-muffin-market',
+    'puddle-planet-post-office',
+    'buttonwood-library-train',
+    'cloudberry-clocktower',
+    'tiny-lantern-reef',
+    'pencil-dragon-academy',
+    'acorn-avenue-errand-office',
+    'button-bakery-map-mixup',
+    'rain-gauge-railway',
+    'rain-boot-route-rangers',
+    'pocket-park-notice-board',
+    'penny-path-compass-shop',
+      'seed-library-map-room',
+      'greenhouse-gear-garden',
+      'index-card-theater-club',
+      'margin-note-market',
+      'clue-label-tower-museum',
+      'revision-river-ferry',
+      'compass-craft-academy',
+      'almost-invention-workshop',
+  ]
+  const worldAges = new Map([
+    ['moon-muffin-market', '6-8'],
+    ['puddle-planet-post-office', '6-8'],
+    ['buttonwood-library-train', '7-9'],
+    ['cloudberry-clocktower', '8-10'],
+    ['tiny-lantern-reef', '8-10'],
+    ['pencil-dragon-academy', '10-11'],
+    ['acorn-avenue-errand-office', '7-9'],
+    ['button-bakery-map-mixup', '7-9'],
+    ['rain-gauge-railway', '8-10'],
+    ['rain-boot-route-rangers', '7-9'],
+    ['pocket-park-notice-board', '7-9'],
+    ['penny-path-compass-shop', '7-9'],
+    ['seed-library-map-room', '8-10'],
+    ['greenhouse-gear-garden', '8-10'],
+    ['index-card-theater-club', '10-11'],
+    ['margin-note-market', '10-11'],
+    ['clue-label-tower-museum', '10-11'],
+    ['revision-river-ferry', '10-11'],
+    ['compass-craft-academy', '10-11'],
+    ['almost-invention-workshop', '10-11'],
+  ])
+
+  return {
+    source: {
+      batchId: '2026-06-02-batch16',
+      generatedAt: '2026-06-02',
+      productSlug: 'tutoring-center-story-sprint-pack',
+      title: 'Tutoring Center Story Sprint Pack',
+      pricePoint: '$49',
+      audience: 'Literacy tutors, tutoring centers, after-school programs, and homeschool co-op tutors for ages 7-11.',
+      sessionLength: '20 printable 10-minute story sprints plus tutor setup tools',
+      safetyNote: safety,
+      artifact: {
+        pdfPath: 'product-build/tutoring-center-story-sprint-pack/Tutoring-Center-Story-Sprint-Pack.pdf',
+        zipPath: 'product-build/tutoring-center-story-sprint-pack/tutoring-center-story-sprint-pack.zip',
+        sourceHtmlPath: 'product-build/tutoring-center-story-sprint-pack/source/tutoring-center-story-sprint-pack.html',
+        manifestPath: 'product-build/tutoring-center-story-sprint-pack/manifest.json',
+      },
+      worldSlugs,
+      cover: {
+        kicker: 'Printable tutoring writing sprint pack',
+        headline: 'Tutoring Center Story Sprint Pack',
+        subhead: 'Twenty 10-minute writing sprints for tutoring centers, small groups, and after-school tables.',
+        included: [
+          '20 printable sprint pages',
+          'Before-session prep guide',
+          'Tutor setup checklist',
+          'During-sprint coaching notes',
+          'Wrap-up routine',
+          'No-data center use notes',
+          'Five sprint routines',
+          'Eight take-home slips',
+          'Six optional share prompts',
+          'Provider-ready ZIP artifact',
+        ],
+      },
+      tutorGuide: {
+        beforeSession: ['Choose two sprint pages.', 'Print one packet per table.', 'Clip pencils together.', 'Set a timer nearby.', 'Pick one finish slip.'],
+        setup: ['Place one sprint page on the table.', 'Set out a pencil tray.', 'Choose one world image.', 'Read the tiny goal aloud.', 'Keep extra pages in a folder.'],
+        duringSprint: ['Ask for one concrete detail.', 'Offer two choices.', 'Read back one useful line.', 'Circle one strong word.', 'Stop while the page still feels light.'],
+        wrapUp: ['Choose one kept line.', 'Mark the next tiny choice.', 'Stack unused pages.', 'Send one slip home.', 'Reset the table for the next writer.'],
+        noDataUse: ['Use color folders for packets.', 'Avoid personal labels on pages.', 'Keep pages offline.', 'Share only invented story choices.'],
+      },
+      sprintRoutines: Array.from({ length: 5 }, (_, index) => ({
+        name: `Sprint Routine ${index + 1}`,
+        bestFor: 'Short tutoring writing block.',
+        steps: ['Pick one page.', 'Name one goal.', 'Write one line.', 'Choose one next step.'],
+      })),
+      takeHomeSlips: Array.from({ length: 8 }, (_, index) => ({
+        title: `Take-Home Slip ${index + 1}`,
+        time: '5 minutes',
+        skill: 'small detail',
+        direction: 'Add one detail to the story line: ____________________________',
+        familyLine: 'A grown-up can ask about: ____________________________',
+      })),
+      sharePrompts: ['Point to one invented place.', 'Read one kept line.', 'Name one detail.', 'Share one revised word.', 'Pass and listen.', 'Choose one page to save.'],
+      sprints: Array.from({ length: 20 }, (_, index) => {
+        const worldSlug = worldSlugs[index % worldSlugs.length]
+        return tutoringSprint(`tutoring-sprint-${index + 1}`, worldSlug, worldAges.get(worldSlug))
+      }),
+    },
+    worldAges,
+  }
+}
+
 describe('product artifact policy', () => {
   it('validates the Rainy Day pack source against the product record and required world coverage', () => {
     const product = {
@@ -1363,6 +1500,112 @@ describe('product artifact policy', () => {
         'substituteGuide includes roster, attendance, sign-in, student-name, school-data, photo, behavior-report, upload, account, or public publishing language.',
         'Substitute Teacher Story Station Pack source includes account, login, upload, or public publishing language.',
         'Substitute Teacher Story Station Pack source includes roster, attendance, sign-in, student-name, school-data, photo, behavior-report, upload, account, or public publishing language.',
+      ]),
+    )
+  })
+
+  it('validates the Tutoring Center Story Sprint Pack source with matching world age bands and writable sprint blanks', () => {
+    const { source, worldAges } = validTutoringCenterSprintPackSource()
+    const product = {
+      slug: 'tutoring-center-story-sprint-pack',
+      title: 'Tutoring Center Story Sprint Pack',
+      pricePoint: '$49',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateTutoringCenterSprintPackSource(source, product, worldAges)).toEqual([])
+  })
+
+  it('rejects Tutoring Center sprint lines that do not provide writable blanks', () => {
+    const { source, worldAges } = validTutoringCenterSprintPackSource()
+    source.sprints[0].pageSections[0].lines[0] = 'The sprint starts with one quiet detail.'
+    const product = {
+      slug: 'tutoring-center-story-sprint-pack',
+      title: 'Tutoring Center Story Sprint Pack',
+      pricePoint: '$49',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateTutoringCenterSprintPackSource(source, product, worldAges)).toContain(
+      'sprints[0].pageSections[0].lines[0] must include a writable blank.',
+    )
+  })
+
+  it('rejects Tutoring Center sprints that are not included in the source and product world list', () => {
+    const { source, worldAges } = validTutoringCenterSprintPackSource()
+    source.worldSlugs = source.worldSlugs.filter((slug) => slug !== 'clue-label-tower-museum')
+    const product = {
+      slug: 'tutoring-center-story-sprint-pack',
+      title: 'Tutoring Center Story Sprint Pack',
+      pricePoint: '$49',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateTutoringCenterSprintPackSource(source, product, worldAges)).toContain(
+      'sprints[16].worldSlug must be listed in worldSlugs.',
+    )
+  })
+
+  it('rejects Tutoring Center take-home slips that use snake_case instead of printable blanks', () => {
+    const { source, worldAges } = validTutoringCenterSprintPackSource()
+    source.takeHomeSlips[0].direction = 'add_one_setting_detail_to_the_place_from_today'
+    const product = {
+      slug: 'tutoring-center-story-sprint-pack',
+      title: 'Tutoring Center Story Sprint Pack',
+      pricePoint: '$49',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateTutoringCenterSprintPackSource(source, product, worldAges)).toEqual(
+      expect.arrayContaining([
+        'takeHomeSlips[0].direction must include a writable blank.',
+        'takeHomeSlips[0].direction must use human-readable text, not snake_case placeholders.',
+      ]),
+    )
+  })
+
+  it('rejects Tutoring Center no-data guidance that uses initials as a page marker', () => {
+    const { source, worldAges } = validTutoringCenterSprintPackSource()
+    source.tutorGuide.noDataUse[0] = 'Use initials on each page if pages need a simple mark.'
+    const product = {
+      slug: 'tutoring-center-story-sprint-pack',
+      title: 'Tutoring Center Story Sprint Pack',
+      pricePoint: '$49',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateTutoringCenterSprintPackSource(source, product, worldAges)).toEqual(
+      expect.arrayContaining([
+        'tutorGuide includes roster, attendance, sign-in, student-name, school-data, photo, behavior-report, upload, account, or public publishing language.',
+        'Tutoring Center Story Sprint Pack source includes roster, attendance, sign-in, student-name, school-data, photo, behavior-report, upload, account, or public publishing language.',
+      ]),
+    )
+  })
+
+  it('rejects Tutoring Center source that drifts into records, uploads, diagnosis, or guaranteed-outcome language', () => {
+    const { source, worldAges } = validTutoringCenterSprintPackSource()
+    source.tutorGuide.setup[0] =
+      'Collect attendance, student names, diagnostic notes, and photos, then upload them for public publishing with a guaranteed result.'
+    const product = {
+      slug: 'tutoring-center-story-sprint-pack',
+      title: 'Tutoring Center Story Sprint Pack',
+      pricePoint: '$49',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateTutoringCenterSprintPackSource(source, product, worldAges)).toEqual(
+      expect.arrayContaining([
+        'tutorGuide includes roster, attendance, sign-in, student-name, school-data, photo, behavior-report, upload, account, or public publishing language.',
+        'tutorGuide includes diagnosis, medical, legal, formal scoring, or guaranteed-outcome language.',
+        'Tutoring Center Story Sprint Pack source includes account, login, upload, or public publishing language.',
+        'Tutoring Center Story Sprint Pack source includes roster, attendance, sign-in, student-name, school-data, photo, behavior-report, upload, account, or public publishing language.',
+        'Tutoring Center Story Sprint Pack source includes diagnosis, medical, legal, formal scoring, or guaranteed-outcome language.',
       ]),
     )
   })

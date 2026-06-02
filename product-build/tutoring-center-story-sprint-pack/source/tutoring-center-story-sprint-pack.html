@@ -1,0 +1,1242 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutoring Center Story Sprint Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #17343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #b9d1c8;
+        --teal: #2c7a78;
+        --coral: #e96d3d;
+        --gold: #f2c14f;
+        --blue: #2b7f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 11.2px;
+        line-height: 1.16;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 12ch; font-size: 37px; }
+      h2 { margin-bottom: 0.05in; font-size: 22px; }
+      h3 { margin-bottom: 0.025in; font-size: 11.4px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.12in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.18in;
+        gap: 0.22in;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--teal);
+        font-size: 8.55px;
+      }
+      .routine-page {
+        border-top: 0.16in solid var(--blue);
+        font-size: 9px;
+      }
+      .slip-page {
+        border-top: 0.16in solid var(--coral);
+        font-size: 9px;
+      }
+      .sprint-page {
+        font-size: 10.1px;
+      }
+      .page-kicker, .kicker, .world-intro span, .slip-card span {
+        color: var(--teal);
+        font-size: 8.2px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 900;
+      }
+      .included-grid, .setup-grid, .world-grid, .routine-grid, .slip-grid, .share-grid {
+        display: grid;
+        gap: 0.05in;
+      }
+      .included-grid { grid-template-columns: 1fr; }
+      .setup-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .routine-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .share-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .world-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.045in;
+      }
+      .included-grid li, .setup-grid li, .share-grid li, .routine-card, .slip-card,
+      .world-intro, .worksheet-section, .kid-direction, .adult-note, .quest-meta, .wrap-line, .extension-line {
+        padding: 0.045in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .included-grid li, .setup-grid li, .share-grid li { list-style: none; }
+      .world-intro {
+        min-height: 0.52in;
+      }
+      .world-intro img, .world-intro p { display: none; }
+      .world-intro h3 { margin: 0; font-size: 8.1px; line-height: 1.02; }
+      .guide-page h2 { font-size: 19px; }
+      .guide-page h3 { font-size: 9.5px; }
+      .guide-page li { line-height: 1.1; }
+      .kid-direction {
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .adult-note {
+        border-color: #e5bc7c;
+        background: #fff4dc;
+      }
+      .quest-meta {
+        display: grid;
+        grid-template-columns: 1.35in 1fr;
+        gap: 0.04in;
+        color: var(--ink);
+        font-size: 8.8px;
+        font-weight: 900;
+      }
+      figure {
+        float: right;
+        width: 1.35in;
+        margin: 0 0 0.04in 0.08in;
+      }
+      figure img {
+        width: 1.35in;
+        height: 0.76in;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--muted);
+        font-size: 7.8px;
+      }
+      .write-line {
+        min-height: 0.17in;
+        margin-bottom: 0.025in;
+        padding-bottom: 0.024in;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .wrap-line, .extension-line {
+        margin-top: 0.04in;
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .footer-note {
+        margin-top: 0.05in;
+        padding-top: 0.05in;
+        border-top: 2px solid var(--gold);
+        color: var(--muted);
+        font-size: 8.8px;
+      }
+      @media screen {
+        body { padding: 24px; background: #dfeee7; }
+        .pack-page {
+          width: 8.5in;
+          margin: 0 auto 24px;
+          box-shadow: 0 18px 40px rgba(20, 31, 43, 0.18);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable tutoring writing sprint pack</p>
+        <h1>Tutoring Center Story Sprint Pack</h1>
+        <p>Twenty 10-minute writing sprints for tutoring centers, small groups, after-school tables, and homeschool co-op tutors.</p>
+        <div class="badge">$49</div>
+        <p><strong>Best for:</strong> Literacy tutors, tutoring centers, after-school programs, homeschool co-op tutors, and small-group writing intervention leaders for ages 7-11.</p>
+        <p><strong>Format:</strong> 20 printable 10-minute story sprints plus tutor setup tools</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div>
+        <h2>Inside</h2>
+        <ul class="included-grid"><li>20 printable sprint pages</li>
+<li>Before-session prep guide</li>
+<li>Tutor setup checklist</li>
+<li>During-sprint coaching notes</li>
+<li>Wrap-up routine</li>
+<li>No-data center use notes</li>
+<li>Five sprint routines</li>
+<li>Eight take-home micro-practice slips</li>
+<li>Six optional share prompts</li>
+<li>Provider-ready PDF, source HTML, manifest, and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Tutor setup</p>
+      <h2>Run the tutoring sprints</h2>
+      <div class="setup-grid">
+        <div>
+          <h3>Before session</h3>
+          <ol><li>Choose one sprint routine for the block and one backup slip for a shorter finish.</li>
+<li>Print only the pages needed for today&#39;s table so the packet stays light.</li>
+<li>Pick an invented setting, an ordinary object, and a small mix-up before the writer arrives.</li>
+<li>Place pencils, blank paper, and one quiet choice card within easy reach.</li>
+<li>Plan a short adult model that shows one clear detail and one next action.</li></ol>
+        </div>
+        <div>
+          <h3>Setup</h3>
+          <ol><li>Seat the writer where the page, pencil, and timer are easy to see.</li>
+<li>Set the sprint page on top and keep take-home slips in a separate stack.</li>
+<li>Mark the first box to start so the writer does not need to scan every choice.</li>
+<li>Offer two invented options if the writer feels stuck at the opening.</li>
+<li>Keep the table clear except for the active page and one writing tool.</li></ol>
+        </div>
+        <div>
+          <h3>During sprint</h3>
+          <ol><li>Start with a two-minute choice talk, then move quickly to marks on paper.</li>
+<li>Use invented people, places, and objects for every prompt.</li>
+<li>Prompt for one sentence, one sketch label, or one dictated phrase at a time.</li>
+<li>Praise a specific craft move such as a clearer verb, setting detail, or ordered step.</li>
+<li>Pause after each step and ask whether the writer wants the next choice or a quiet minute.</li></ol>
+        </div>
+        <div>
+          <h3>Wrap up</h3>
+          <ol><li>Ask the writer to circle one finished part they want to keep.</li>
+<li>Choose one take-home slip that matches the skill practiced in the sprint.</li>
+<li>Write a simple finish mark such as title, detail, ending, or next step.</li>
+<li>Place loose pages in a plain folder or envelope for the family table.</li>
+<li>Reset unused slips and pencils before the next writer arrives.</li></ol>
+        </div>
+        <div>
+          <h3>No-data use</h3>
+          <ol><li>Use invented details only; personal facts are not needed.</li>
+<li>Keep pages on paper with the tutor or family.</li>
+<li>Use color dots, symbols, or blank folders if pages need a simple mark.</li>
+<li>Share work only when the writer chooses a comfortable option.</li></ol>
+        </div>
+      </div>
+      <h3>Image-backed world menu</h3>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <div>
+        <span>Ages 6-8</span>
+        <h3>Moon Muffin Market</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <div>
+        <span>Ages 6-8</span>
+        <h3>Puddle Planet Post Office</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Buttonwood Library Train</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Cloudberry Clocktower</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Tiny Lantern Reef</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pencil-dragon-academy.jpg" alt="Pencil Dragon Academy illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Pencil Dragon Academy</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Acorn Avenue Errand Office</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Button Bakery Map Mix-Up</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Rain Gauge Railway</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Rain Boot Route Rangers</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Pocket Park Notice Board</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Penny Path Compass Shop</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Seed Library Map Room</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Greenhouse Gear Garden</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Index Card Theater Club</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Margin Note Market</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Clue Label Tower Museum</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Revision River Ferry</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Compass Craft Academy</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Almost Invention Workshop</h3>
+      </div>
+    </article></div>
+      <p class="footer-note">Use these pages offline for adult-guided tutoring. Keep finished pages in folders or send them home.</p>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Tutor tools</p>
+      <h2>Sprint routines and optional share prompts</h2>
+      <div class="routine-grid">
+    <article class="routine-card">
+      <h3>Ten-Minute Story Seed</h3>
+      <p><strong>Best for:</strong> A first tutoring block when the writer needs a fast win with little setup.</p>
+      <ol><li>Pick one invented place from two tutor options.</li>
+<li>Add one ordinary object that belongs in that place.</li>
+<li>Write three short lines: what is noticed, what changes, and what helps.</li>
+<li>Circle the strongest line and turn it into the opening of a tiny story.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Detail Ladder Sprint</h3>
+      <p><strong>Best for:</strong> Writers who make very short drafts and need more concrete description.</p>
+      <ol><li>Draw four ladder rungs on the page.</li>
+<li>Write one color, one sound, one texture, and one action on the rungs.</li>
+<li>Choose two rungs and place them in one sentence about an invented setting.</li>
+<li>Add one next action that makes the setting easier to picture.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Tiny Problem Turn</h3>
+      <p><strong>Best for:</strong> A middle sprint when the page has a setting but no movement yet.</p>
+      <ol><li>Choose a small mix-up such as a missing key, swapped map, or sleepy clock.</li>
+<li>Write what the story helper tries first.</li>
+<li>Write what the helper notices after the first try.</li>
+<li>Finish with one kind fix that changes the scene.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Quiet Dialogue Cards</h3>
+      <p><strong>Best for:</strong> Writers practicing conversation without a long draft.</p>
+      <ol><li>Label two invented roles such as maker and guide.</li>
+<li>Write one line where the maker asks for help.</li>
+<li>Write one line where the guide gives a useful clue.</li>
+<li>Add one sentence showing what both roles do next.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Ending Switch Sprint</h3>
+      <p><strong>Best for:</strong> A closing routine for revision, endings, and flexible thinking.</p>
+      <ol><li>Choose one draft sentence near the end of the page.</li>
+<li>Write a peaceful ending where the helper solves the mix-up.</li>
+<li>Write a second ending where the helper finds a new clue for later.</li>
+<li>Pick the ending that matches the beginning and add one clearer detail.</li></ol>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul class="share-grid"><li>Sharing is optional: point to one word, sketch, or title you like.</li>
+<li>You may show one circled detail and say why it belongs in the story.</li>
+<li>You may ask the tutor to speak for your page, or you may pass.</li>
+<li>Share one choice you changed during the sprint if you want to.</li>
+<li>Show one ending choice with a thumbs-up, point, or quiet sentence.</li>
+<li>Keep your page private today and listen for one clear detail from the group.</li></ul>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Tutor tools</p>
+      <h2>Take-home micro-practice slips</h2>
+      <div class="slip-grid">
+    <article class="slip-card">
+      <span>6 minutes | setting detail</span>
+      <h3>One More Setting Detail</h3>
+      <p>Add one setting detail to today&#39;s invented place: ____________________.</p>
+      <p>A grown-up can ask what the place feels like: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | plot clue</span>
+      <h3>Object Clue Finish</h3>
+      <p>Choose one object from the sprint and write how it helps: ____________________.</p>
+      <p>A grown-up can offer two object choices here: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>5 minutes | main idea</span>
+      <h3>Title Three Ways</h3>
+      <p>Write one place title, one object title, and one action title: ____________________.</p>
+      <p>A grown-up can ask which title gives the clearest clue: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>6 minutes | sequence</span>
+      <h3>Next Step Strip</h3>
+      <p>Write first, next, and last for three small helper actions: ____________________.</p>
+      <p>A grown-up can point to the step that should become a sentence: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>8 minutes | ending choice</span>
+      <h3>Kind Fix Add-On</h3>
+      <p>Add one kind fix to the mix-up and write why it works: ____________________.</p>
+      <p>A grown-up can ask what changed after the kind fix: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | dialogue</span>
+      <h3>Dialogue Pair</h3>
+      <p>Write two short lines between invented roles: ____________________.</p>
+      <p>A grown-up can take one role and let the writer choose the reply: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>5 minutes | word choice</span>
+      <h3>Clearer Verb Swap</h3>
+      <p>Pick one action word and trade it for a clearer verb: ____________________.</p>
+      <p>A grown-up can offer two action words and ask which one fits: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>6 minutes | planning</span>
+      <h3>Scene Sketch Label</h3>
+      <p>Draw one tiny scene box and label three parts: ____________________.</p>
+      <p>A grown-up can ask how one label could start a sentence: ____________________.</p>
+    </article></div>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 1 | Ages 6-8</div>
+      <h2>Moon Muffin Market Smell Map</h2>
+      <figure><img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration"><figcaption>Moon Muffin Market</figcaption></figure>
+      <p class="kid-direction">Pick one muffin stall, add three tiny market details, and write one keeper sentence.</p>
+      <p class="adult-note">Ask which detail the reader can smell, see, or hear before asking for a full sentence.</p>
+      <div class="quest-meta">
+        <span>setting detail</span>
+        <span>10-minute one-to-one warmup for a hesitant writer who can pick from concrete food and light details.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Print one page, set out a pencil, and offer two market choices before writing starts.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Market Start</h3>
+          <p class="write-line">The moon muffin stall smells like ____________________________.</p>
+<p class="write-line">The stall light looks like ____________________________.</p>
+<p class="write-line">The crumb path leads to ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny Job</h3>
+          <p class="write-line">The muffin helper carries ____________________________.</p>
+<p class="write-line">The helpful muffin can fix ____________________________.</p>
+<p class="write-line">The market bell tells everyone to ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Keeper Sentence</h3>
+          <p class="write-line">First, the helper notices ____________________________.</p>
+<p class="write-line">Next, the helper chooses ____________________________.</p>
+<p class="write-line">My best market sentence is ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">One market detail I want to keep is ____________________________.</p>
+      <p class="extension-line">Add one more smell, color, or sound: ____________________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 2 | Ages 6-8</div>
+      <h2>Puddle Planet Stamp Route</h2>
+      <figure><img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration"><figcaption>Puddle Planet Post Office</figcaption></figure>
+      <p class="kid-direction">Choose a bottle-cap stamp, plan three puddle stops, and write the delivery path in order.</p>
+      <p class="adult-note">Point to the three stops and ask what happens first, next, and last.</p>
+      <div class="quest-meta">
+        <span>sequence</span>
+        <span>10-minute tutoring warmup for a writer who needs a first, next, last path.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Print one page, draw three small boxes on scrap paper, and let the writer point to a route choice.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Stamp Pick</h3>
+          <p class="write-line">The bottle-cap stamp shows ____________________________.</p>
+<p class="write-line">The stamp means the note goes to ____________________________.</p>
+<p class="write-line">The puddle planet has ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Route Stops</h3>
+          <p class="write-line">First, the mail cart rolls past ____________________________.</p>
+<p class="write-line">Next, the leaf boat floats near ____________________________.</p>
+<p class="write-line">Last, the note lands beside ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Path Line</h3>
+          <p class="write-line">The mixed-up route starts when ____________________________.</p>
+<p class="write-line">The kind fix is to ____________________________.</p>
+<p class="write-line">My clear route sentence is ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">The order word that helped me most is ____________________________.</p>
+      <p class="extension-line">Add one new puddle stop after the last stop: ____________________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 3 | Ages 7-9</div>
+      <h2>Buttonwood Library Train Ticket Rule</h2>
+      <figure><img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration"><figcaption>Buttonwood Library Train</figcaption></figure>
+      <p class="kid-direction">Make a ticket rule, choose a train stop, and write why the rule helps the tiny train.</p>
+      <p class="adult-note">Ask what the train needs to do calmly, then help the writer finish the because line.</p>
+      <div class="quest-meta">
+        <span>rule and reason</span>
+        <span>12-minute tutoring warmup for a writer who can make one simple rule and explain why it helps.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Print one page, offer two train-stop choices, and model one short because sentence.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Ticket Rule</h3>
+          <p class="write-line">The ticket rule says each rider must ____________________________.</p>
+<p class="write-line">The ticket color is ____________________________.</p>
+<p class="write-line">The rule helps because ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Train Stop</h3>
+          <p class="write-line">The Buttonwood train stops at ____________________________.</p>
+<p class="write-line">The shelf beside the stop holds ____________________________.</p>
+<p class="write-line">The quiet bell reminds riders to ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Reason Line</h3>
+          <p class="write-line">Without the rule, the train might ____________________________.</p>
+<p class="write-line">With the rule, the train can ____________________________.</p>
+<p class="write-line">My rule sentence is ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">The rule I wrote clearly is ____________________________.</p>
+      <p class="extension-line">Add one more reason the rule helps: ____________________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 4 | Ages 8-10</div>
+      <h2>Cloudberry Clocktower Missing Minute</h2>
+      <figure><img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration"><figcaption>Cloudberry Clocktower</figcaption></figure>
+      <p class="kid-direction">Pick one missing minute, show where it went, and write the fix in one short scene.</p>
+      <p class="adult-note">Ask what changed at the clocktower and what small fix would help right away.</p>
+      <div class="quest-meta">
+        <span>small problem and fix</span>
+        <span>12-minute tutoring warmup for a writer who needs a concrete problem before drafting.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Print one page, set a quiet timer, and let the writer choose a berry, bell, or stair detail.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Clock Clue</h3>
+          <p class="write-line">The missing minute is hiding near ____________________________.</p>
+<p class="write-line">The clockberry color is ____________________________.</p>
+<p class="write-line">The tower stair points toward ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Small Fix</h3>
+          <p class="write-line">The bell helper tries ____________________________.</p>
+<p class="write-line">The minute moves when ____________________________.</p>
+<p class="write-line">The clocktower feels calmer because ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Scene Line</h3>
+          <p class="write-line">At first, the clock shows ____________________________.</p>
+<p class="write-line">Then the helper notices ____________________________.</p>
+<p class="write-line">My fix sentence is ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">The clearest fix in my scene is ____________________________.</p>
+      <p class="extension-line">Add one clocktower sound or color: ____________________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 5 | Ages 8-10</div>
+      <h2>Tiny Lantern Reef Glow Path</h2>
+      <figure><img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration"><figcaption>Tiny Lantern Reef</figcaption></figure>
+      <p class="kid-direction">Choose a reef lantern, mark three glow stops, and write how the paper boat moves.</p>
+      <p class="adult-note">Ask the writer to use beside, under, around, or past in one line.</p>
+      <div class="quest-meta">
+        <span>direction words</span>
+        <span>12-minute tutoring warmup for a writer who benefits from a map-like path and short direction words.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Print one page, draw a simple three-dot path, and invite the writer to trace it before writing.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Lantern Pick</h3>
+          <p class="write-line">The tiny lantern glows beside ____________________________.</p>
+<p class="write-line">The paper boat carries ____________________________.</p>
+<p class="write-line">The reef path begins under ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Glow Stops</h3>
+          <p class="write-line">The first glow stop is near ____________________________.</p>
+<p class="write-line">The second glow stop curves around ____________________________.</p>
+<p class="write-line">The last glow stop waits past ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Boat Line</h3>
+          <p class="write-line">The boat moves slowly when ____________________________.</p>
+<p class="write-line">The lantern keeper points to ____________________________.</p>
+<p class="write-line">My reef direction sentence is ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">The direction word I used best is ____________________________.</p>
+      <p class="extension-line">Add one new glow stop with a direction word: ____________________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 6 | Ages 10-11</div>
+      <h2>Pencil Dragon Academy Door Redraw</h2>
+      <figure><img src="assets/pencil-dragon-academy.jpg" alt="Pencil Dragon Academy illustration"><figcaption>Pencil Dragon Academy</figcaption></figure>
+      <p class="kid-direction">Sketch a door idea in words, spot one confusing part, and redraw the sentence with a clearer choice.</p>
+      <p class="adult-note">Ask what the door should do, then offer one add, move, or replace choice.</p>
+      <div class="quest-meta">
+        <span>revision choice</span>
+        <span>12-minute tutoring warmup for a writer who can improve one sentence without starting over.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Print one page, give one pencil and one eraser, and say the goal is one better line.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Door Idea</h3>
+          <p class="write-line">The pencil door opens toward ____________________________.</p>
+<p class="write-line">The dragon pencil marks ____________________________.</p>
+<p class="write-line">The first sentence idea is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Clearer Choice</h3>
+          <p class="write-line">One confusing part is ____________________________.</p>
+<p class="write-line">I can add, move, or replace ____________________________.</p>
+<p class="write-line">The clearer word I choose is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Redraw Line</h3>
+          <p class="write-line">Before revision, the door seemed ____________________________.</p>
+<p class="write-line">After revision, the door shows ____________________________.</p>
+<p class="write-line">My redrawn sentence is ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">One word I improved is ____________________________.</p>
+      <p class="extension-line">Add one clearer academy detail to the sentence: ____________________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 7 | Ages 7-9</div>
+      <h2>Acorn Avenue Errand Order Sprint</h2>
+      <figure><img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration"><figcaption>Acorn Avenue Errand Office</figcaption></figure>
+      <p class="kid-direction">Sort the acorn errands, add one exact detail for each stop, and draft the helper note.</p>
+      <p class="adult-note">Ask which stop must happen first, then have the writer point to the detail that proves it.</p>
+      <div class="quest-meta">
+        <span>Sequence details and three-sentence draft</span>
+        <span>12-minute warmup for one-to-one or pair tutoring.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Print one page, choose three errand slips, and set a pencil beside the route box.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Errand Clues</h3>
+          <p class="write-line">The first leaf slip asks for ____________________.</p>
+<p class="write-line">The second leaf slip belongs near ____________________.</p>
+<p class="write-line">The third leaf slip gives the clue ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Best Order</h3>
+          <p class="write-line">First, the acorn clerk should ____________________.</p>
+<p class="write-line">Next, the helper needs to ____________________.</p>
+<p class="write-line">Last, the route finishes at ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Short Draft</h3>
+          <p class="write-line">My opening sentence starts with ____________________.</p>
+<p class="write-line">My middle sentence adds the detail ____________________.</p>
+<p class="write-line">My final sentence explains ____________________.</p>
+        </section></div>
+      <p class="wrap-line">One sequence word I used well is ____________________.</p>
+      <p class="extension-line">Add a fourth stop that changes the route by ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 8 | Ages 7-9</div>
+      <h2>Button Bakery Clear Map Sprint</h2>
+      <figure><img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration"><figcaption>Button Bakery Map Mix-Up</figcaption></figure>
+      <p class="kid-direction">Fix the bakery map by choosing clear clues, ordering the turns, and writing a tidy route draft.</p>
+      <p class="adult-note">Ask the writer to replace one vague word with a thing readers can picture.</p>
+      <div class="quest-meta">
+        <span>Map clues, exact nouns, and clear order</span>
+        <span>10-minute table warmup before a longer writing turn.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Draw a quick bakery path with three turns, then hand the writer the fill-in page.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Bakery Clues</h3>
+          <p class="write-line">The crumb map starts beside ____________________.</p>
+<p class="write-line">The button tray rolls toward ____________________.</p>
+<p class="write-line">The clearest bakery clue is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Route Turns</h3>
+          <p class="write-line">Turn one goes past ____________________.</p>
+<p class="write-line">Turn two stops near ____________________.</p>
+<p class="write-line">Turn three ends beside ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Draft</h3>
+          <p class="write-line">First, the cart helper notices ____________________.</p>
+<p class="write-line">Next, the helper follows ____________________.</p>
+<p class="write-line">The map mixup is fixed when ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The exact noun that helped my map is ____________________.</p>
+      <p class="extension-line">Add one new bakery clue that points to ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 9 | Ages 8-10</div>
+      <h2>Rain Gauge Railway Log Sprint</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Read the gauge clue, choose the railway stops, and draft a log that explains the route.</p>
+      <p class="adult-note">Ask what changed, why it matters, and which detail should appear before the next step.</p>
+      <div class="quest-meta">
+        <span>Observation details, cause, and next step</span>
+        <span>15-minute tutoring warmup for detail work and short explanatory drafting.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Set out the page, mark three imaginary gauge levels, and invite the writer to choose one route.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Gauge Details</h3>
+          <p class="write-line">The rain gauge shows ____________________.</p>
+<p class="write-line">The first weather detail is ____________________.</p>
+<p class="write-line">The railway ticket points toward ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Route Cause</h3>
+          <p class="write-line">The water sample moves because ____________________.</p>
+<p class="write-line">The switch changes the route near ____________________.</p>
+<p class="write-line">The next stop needs a note about ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Railway Log</h3>
+          <p class="write-line">First, the conductor checks ____________________.</p>
+<p class="write-line">Then, the railway carries ____________________.</p>
+<p class="write-line">The log should end with ____________________.</p>
+        </section></div>
+      <p class="wrap-line">One cause-and-effect phrase I used is ____________________.</p>
+      <p class="extension-line">Add a second gauge clue that changes the next stop to ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 10 | Ages 7-9</div>
+      <h2>Rain Boot Route Sequence Sprint</h2>
+      <figure><img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration"><figcaption>Rain Boot Route Rangers</figcaption></figure>
+      <p class="kid-direction">Choose a boot route, add dry path details, and write the ranger message in order.</p>
+      <p class="adult-note">Ask the writer to say the route aloud once, then write the words in the same order.</p>
+      <div class="quest-meta">
+        <span>Transition words and route details</span>
+        <span>10-minute quick start for a hesitant writer or small pair.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Circle three route spots on the page and model one transition word aloud.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Route Spots</h3>
+          <p class="write-line">The boot route begins at ____________________.</p>
+<p class="write-line">The dry stepping spot is ____________________.</p>
+<p class="write-line">The puddle reflection shows ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Order Words</h3>
+          <p class="write-line">First, the ranger checks ____________________.</p>
+<p class="write-line">After that, the ranger follows ____________________.</p>
+<p class="write-line">Finally, the route reaches ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ranger Draft</h3>
+          <p class="write-line">My first sentence tells about ____________________.</p>
+<p class="write-line">My second sentence adds the detail ____________________.</p>
+<p class="write-line">My last sentence gives the message ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The transition word that made my route clearer is ____________________.</p>
+      <p class="extension-line">Add one route sign that warns the ranger to check ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 11 | Ages 7-9</div>
+      <h2>Pocket Park Notice Detail Sprint</h2>
+      <figure><img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration"><figcaption>Pocket Park Notice Board</figcaption></figure>
+      <p class="kid-direction">Pick one park notice, add exact park details, and draft the helper&#39;s next message.</p>
+      <p class="adult-note">Ask which detail readers need first so the helper knows what to do.</p>
+      <div class="quest-meta">
+        <span>Specific details and short notice drafting</span>
+        <span>12-minute tutoring page for detail practice before independent writing.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Offer three tiny notice choices and have the writer underline the clearest one.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Notice Choice</h3>
+          <p class="write-line">The park notice asks for ____________________.</p>
+<p class="write-line">The helper should look near ____________________.</p>
+<p class="write-line">The missing detail on the notice is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Park Details</h3>
+          <p class="write-line">The bottle-cap bench sits beside ____________________.</p>
+<p class="write-line">The pebble path curves around ____________________.</p>
+<p class="write-line">The tiny sign points toward ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Helper Message</h3>
+          <p class="write-line">First, the helper reads ____________________.</p>
+<p class="write-line">Next, the helper adds ____________________.</p>
+<p class="write-line">The clearer park message says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The detail that made my notice clearer is ____________________.</p>
+      <p class="extension-line">Write a second notice that asks for ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 12 | Ages 7-9</div>
+      <h2>Penny Path Direction Draft Sprint</h2>
+      <figure><img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration"><figcaption>Penny Path Compass Shop</figcaption></figure>
+      <p class="kid-direction">Follow the button compass, order the clues, and write a short direction draft.</p>
+      <p class="adult-note">Ask the writer to test the route by tracing each turn with a finger before drafting.</p>
+      <div class="quest-meta">
+        <span>Direction words, clue order, and concise drafting</span>
+        <span>10-minute warmup for direction language and sentence order.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Point to the compass shop, mark two path turns, and ask the writer to choose the final stop.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Compass Start</h3>
+          <p class="write-line">The compass needle points toward ____________________.</p>
+<p class="write-line">The penny path begins beside ____________________.</p>
+<p class="write-line">The shop clue shows ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Direction Clues</h3>
+          <p class="write-line">Go around ____________________.</p>
+<p class="write-line">Stop when you see ____________________.</p>
+<p class="write-line">Turn toward ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Route Draft</h3>
+          <p class="write-line">First, the helper follows ____________________.</p>
+<p class="write-line">Next, the compass changes when ____________________.</p>
+<p class="write-line">The final direction says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The direction word I used clearly is ____________________.</p>
+      <p class="extension-line">Add a new compass clue that leads to ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 13 | Ages 8-10</div>
+      <h2>Seed Library Map Note Sprint</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="kid-direction">Choose a seed drawer, map the route, and draft a return note with exact observations.</p>
+      <p class="adult-note">Ask the writer to keep the best observation and remove one extra word before the final line.</p>
+      <div class="quest-meta">
+        <span>Observation notes, sequence, and concise revision</span>
+        <span>15-minute tutoring sprint for short draft planning and revision.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Set the map page beside a pencil, then ask the writer to choose one seed drawer and one route.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Seed Drawer</h3>
+          <p class="write-line">The seed drawer label says ____________________.</p>
+<p class="write-line">The packet contains ____________________.</p>
+<p class="write-line">The first map mark shows ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Route</h3>
+          <p class="write-line">First, the route passes ____________________.</p>
+<p class="write-line">Next, the map turns near ____________________.</p>
+<p class="write-line">Last, the route arrives at ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Return Note</h3>
+          <p class="write-line">The best observation is ____________________.</p>
+<p class="write-line">One word I can remove is ____________________.</p>
+<p class="write-line">My revised seed note says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The observation I kept in my final note is ____________________.</p>
+      <p class="extension-line">Add a second seed drawer that changes the route by ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 14 | Ages 8-10</div>
+      <h2>Greenhouse Gear Garden Voice Check</h2>
+      <figure><img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration"><figcaption>Greenhouse Gear Garden</figcaption></figure>
+      <p class="kid-direction">Write as the greenhouse helper who notices how the gears sound, move, and change the plant plan.</p>
+      <p class="adult-note">Ask which word makes the helper sound careful, curious, or excited.</p>
+      <div class="quest-meta">
+        <span>voice through precise garden-machine details</span>
+        <span>10-minute tutoring warmup for one writer or a quiet pair before a short draft.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Set out the page, a pencil, and two detail cards; invite the writer to choose one machine and one plant detail.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Voice Detail</h3>
+          <p class="write-line">The greenhouse helper sounds like ____________________.</p>
+<p class="write-line">The gear detail that fits this voice is ____________________.</p>
+<p class="write-line">One plant detail the helper notices is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Sentence Shape</h3>
+          <p class="write-line">A short starter sentence could be ____________________.</p>
+<p class="write-line">A longer detail sentence could add ____________________.</p>
+<p class="write-line">The two sentences connect when ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ending Beat</h3>
+          <p class="write-line">The helper changes the gear plan by ____________________.</p>
+<p class="write-line">The final word that matches the voice is ____________________.</p>
+<p class="write-line">My greenhouse ending line is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">One voice word I used well was ____________________.</p>
+      <p class="extension-line">Next time, I can add one sharper machine detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 15 | Ages 10-11</div>
+      <h2>Index Card Theater Dialogue Turn</h2>
+      <figure><img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration"><figcaption>Index Card Theater Club</figcaption></figure>
+      <p class="kid-direction">Create a two-line exchange where the second line changes what the scene is about.</p>
+      <p class="adult-note">Ask what the speaker wants before the line and what changes after the reply.</p>
+      <div class="quest-meta">
+        <span>dialogue voice and paragraph turn</span>
+        <span>12-minute tutoring sprint for shaping a tiny scene with a clear shift.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Place three index cards face down, then have the writer pick one setting card and one voice card.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Scene Voice</h3>
+          <p class="write-line">The first speaker sounds ____________________.</p>
+<p class="write-line">The second speaker sounds ____________________.</p>
+<p class="write-line">The theater setting creates a mood of ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Dialogue Turn</h3>
+          <p class="write-line">The first line of dialogue is ____________________.</p>
+<p class="write-line">The reply changes the plan because ____________________.</p>
+<p class="write-line">A stage action between the lines is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Paragraph Finish</h3>
+          <p class="write-line">The paragraph begins with ____________________.</p>
+<p class="write-line">The middle sentence should reveal ____________________.</p>
+<p class="write-line">My theater ending line is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The line that changed my scene most was ____________________.</p>
+      <p class="extension-line">Add one stage action that shows voice: ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 16 | Ages 10-11</div>
+      <h2>Margin Note Market Revision Choice</h2>
+      <figure><img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration"><figcaption>Margin Note Market</figcaption></figure>
+      <p class="kid-direction">Trade a fuzzy note for a clear revision task, then write the improved sentence.</p>
+      <p class="adult-note">Ask which exact word, detail, or order change will help a reader follow the idea.</p>
+      <div class="quest-meta">
+        <span>specific revision choice from a margin note</span>
+        <span>10-minute tutoring warmup for turning vague feedback into one useful edit.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Offer three sample margin notes and ask the writer to choose one note to make more specific.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Market Note</h3>
+          <p class="write-line">The fuzzy margin note says ____________________.</p>
+<p class="write-line">The clearer revision task is ____________________.</p>
+<p class="write-line">The part of the sentence to improve is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Detail Trade</h3>
+          <p class="write-line">A plain word I can trade out is ____________________.</p>
+<p class="write-line">A stronger detail I can trade in is ____________________.</p>
+<p class="write-line">The sentence sounds clearer when ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Revised Line</h3>
+          <p class="write-line">Before revision, the idea was ____________________.</p>
+<p class="write-line">After revision, the idea shows ____________________.</p>
+<p class="write-line">My market ending line is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">One revision choice I can explain is ____________________.</p>
+      <p class="extension-line">Try the same trade on another sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 17 | Ages 10-11</div>
+      <h2>Clue Label Tower Paragraph Label</h2>
+      <figure><img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration"><figcaption>Clue Label Tower Museum</figcaption></figure>
+      <p class="kid-direction">Write a museum label paragraph that tells readers what to notice first, next, and last.</p>
+      <p class="adult-note">Ask which detail belongs in the paragraph and which detail can wait.</p>
+      <div class="quest-meta">
+        <span>paragraph focus with clue and label details</span>
+        <span>12-minute tutoring sprint for building one focused paragraph from three details.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Put three object cards on the table and have the writer choose one clue worth explaining.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Clue Focus</h3>
+          <p class="write-line">The object on the tower shelf is ____________________.</p>
+<p class="write-line">The clue readers should notice first is ____________________.</p>
+<p class="write-line">A detail I can leave out for now is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Paragraph Shape</h3>
+          <p class="write-line">My first sentence should point to ____________________.</p>
+<p class="write-line">My middle sentence should explain ____________________.</p>
+<p class="write-line">My final sentence should connect to ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Label Finish</h3>
+          <p class="write-line">The label sounds precise when I use ____________________.</p>
+<p class="write-line">One word I can revise for focus is ____________________.</p>
+<p class="write-line">My museum ending line is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The detail that kept my paragraph focused was ____________________.</p>
+      <p class="extension-line">Write a second label with one new clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 18 | Ages 10-11</div>
+      <h2>Revision River Ferry Ending Pass</h2>
+      <figure><img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration"><figcaption>Revision River Ferry</figcaption></figure>
+      <p class="kid-direction">Send one rough ending across the ferry and bring back a clearer final sentence.</p>
+      <p class="adult-note">Ask what the reader should understand at the final dock.</p>
+      <div class="quest-meta">
+        <span>ending revision with setup, turn, and final echo</span>
+        <span>10-minute tutoring sprint for revising a weak ending into a clearer final beat.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Ask the writer to mark one opening detail, one middle turn, and one final echo before drafting.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Ferry Load</h3>
+          <p class="write-line">The opening detail I can echo is ____________________.</p>
+<p class="write-line">The middle turn that matters is ____________________.</p>
+<p class="write-line">The rough ending currently says ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Revision Crossing</h3>
+          <p class="write-line">One word I can cut is ____________________.</p>
+<p class="write-line">One clearer word I can add is ____________________.</p>
+<p class="write-line">The ending feels stronger because ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Final Dock</h3>
+          <p class="write-line">The final sentence should show ____________________.</p>
+<p class="write-line">The echo from the opening is ____________________.</p>
+<p class="write-line">My ferry ending line is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The ending choice I improved was ____________________.</p>
+      <p class="extension-line">Revise one more final sentence with an echo: ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 19 | Ages 10-11</div>
+      <h2>Compass Craft Route Paragraph</h2>
+      <figure><img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration"><figcaption>Compass Craft Academy</figcaption></figure>
+      <p class="kid-direction">Plan a paragraph route, then write the sentence that moves readers through the turn.</p>
+      <p class="adult-note">Ask which sentence gives the reader the clearest direction.</p>
+      <div class="quest-meta">
+        <span>paragraph route with beginning, turn, and finish</span>
+        <span>12-minute tutoring sprint for planning one paragraph before drafting.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Draw three small route dots and have the writer label the start, turn, and finish.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Route Dots</h3>
+          <p class="write-line">The paragraph starts at ____________________.</p>
+<p class="write-line">The paragraph turns when ____________________.</p>
+<p class="write-line">The paragraph finishes by showing ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Connection Words</h3>
+          <p class="write-line">A word that moves the route forward is ____________________.</p>
+<p class="write-line">A phrase that explains the turn is ____________________.</p>
+<p class="write-line">A sentence that connects two route dots is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Academy Finish</h3>
+          <p class="write-line">The clearest sentence in my route is ____________________.</p>
+<p class="write-line">One route detail I can revise is ____________________.</p>
+<p class="write-line">My compass ending line is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The sentence that shaped my paragraph was ____________________.</p>
+      <p class="extension-line">Add one more route dot for a longer paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page sprint-page">
+      <div class="page-kicker">Sprint 20 | Ages 10-11</div>
+      <h2>Almost Invention Instruction Voice</h2>
+      <figure><img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration"><figcaption>Almost Invention Workshop</figcaption></figure>
+      <p class="kid-direction">Write a clear workshop paragraph that explains how the almost-invention gets tested and revised.</p>
+      <p class="adult-note">Ask where the reader might get confused and what sentence can fix that spot.</p>
+      <div class="quest-meta">
+        <span>clear instruction voice and revise-and-test ending</span>
+        <span>12-minute tutoring sprint for ordering steps and ending with a useful test note.</span>
+      </div>
+      <p><strong>Tutor setup:</strong> Give the writer three step cards and ask which step must come first for the invention to make sense.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Step Order</h3>
+          <p class="write-line">The invention almost works when ____________________.</p>
+<p class="write-line">The first step readers need is ____________________.</p>
+<p class="write-line">The step that needs clearer order is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Instruction Voice</h3>
+          <p class="write-line">The instruction voice should sound ____________________.</p>
+<p class="write-line">A precise action word I can use is ____________________.</p>
+<p class="write-line">A sentence that explains the test is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Workshop Ending</h3>
+          <p class="write-line">The test shows the inventor should revise ____________________.</p>
+<p class="write-line">The final note should help readers understand ____________________.</p>
+<p class="write-line">My invention ending line is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">One instruction sentence I made clearer was ____________________.</p>
+      <p class="extension-line">Add a test note that improves the ending: ____________________.</p>
+    </section>
+  </body>
+</html>

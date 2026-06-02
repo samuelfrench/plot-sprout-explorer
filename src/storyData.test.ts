@@ -50,8 +50,9 @@ describe('storyData', () => {
       'waiting-room-story-quest-pack',
       'library-story-club-kit',
       'substitute-teacher-story-station-pack',
+      'tutoring-center-story-sprint-pack',
     ])
-    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19', '$17', '$11', '$23', '$39'])
+    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19', '$17', '$11', '$23', '$39', '$49'])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
     }

@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch16-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "tutoring-center-story-sprint-pack",
+      "title": "Tutoring Center Story Sprint Pack product image",
+      "purpose": "Static product hero for the $49 Tutoring Center Story Sprint Pack page.",
+      "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no toys, no decorations, blank white paper sheets, teal folders, pencils, blank choice cards, small timer, supply tray, plain background",
+      "outputJpeg": "public/images/plotsprout/batch16/tutoring-center-story-sprint-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch16/tutoring-center-story-sprint-pack.webp",
+      "sidecar": "content/image-runs/batch16/tutoring-center-story-sprint-pack.json",
+      "seed": 26061650
+    }
+  ]
+}

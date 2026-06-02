@@ -334,6 +334,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Twelve substitute-ready story stations with setup tools, routines, early finisher cards, and handoff notes.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'tutoring-center-story-sprint-pack',
+    title: 'Tutoring Center Story Sprint Pack',
+    pricePoint: '$49',
+    description:
+      'Twenty tutor-led 10-minute story sprints with routines, coaching notes, and take-home practice slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

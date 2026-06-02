@@ -405,6 +405,7 @@ export function buildProductArtifactManifest(source, files, options = {}) {
       source.quests?.length ??
       source.sessions?.length ??
       source.stations?.length ??
+      source.sprints?.length ??
       0,
     fulfillmentNote:
       options.fulfillmentNote ??

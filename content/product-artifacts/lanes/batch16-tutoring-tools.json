@@ -35,7 +35,7 @@
     "noDataUse": [
       "Use invented details only; personal facts are not needed.",
       "Keep pages on paper with the tutor or family.",
-      "Use initials, symbols, or blank folders if pages need a simple mark.",
+      "Use color dots, symbols, or blank folders if pages need a simple mark.",
       "Share work only when the writer chooses a comfortable option."
     ]
   },
@@ -96,57 +96,57 @@
       "title": "One More Setting Detail",
       "time": "6 minutes",
       "skill": "setting detail",
-      "direction": "add_one_setting_detail_to_the_place_from_today_and_write_one_matching_action",
-      "familyLine": "family_line_ask_what_the_place_feels_like_and_list_two_words"
+      "direction": "Add one setting detail to today's invented place: ____________________.",
+      "familyLine": "A grown-up can ask what the place feels like: ____________________."
     },
     {
       "title": "Object Clue Finish",
       "time": "7 minutes",
       "skill": "plot clue",
-      "direction": "circle_one_object_from_the_sprint_and_write_how_it_helps_the_story",
-      "familyLine": "family_line_offer_two_safe_object_choices_if_the_writer_gets_stuck"
+      "direction": "Choose one object from the sprint and write how it helps: ____________________.",
+      "familyLine": "A grown-up can offer two object choices here: ____________________."
     },
     {
       "title": "Title Three Ways",
       "time": "5 minutes",
       "skill": "main idea",
-      "direction": "write_three_title_choices_one_place_title_one_object_title_and_one_action_title",
-      "familyLine": "family_line_choose_the_title_that_gives_the_clearest_story_clue"
+      "direction": "Write one place title, one object title, and one action title: ____________________.",
+      "familyLine": "A grown-up can ask which title gives the clearest clue: ____________________."
     },
     {
       "title": "Next Step Strip",
       "time": "6 minutes",
       "skill": "sequence",
-      "direction": "write_first_next_last_for_three_small_actions_the_helper_could_take",
-      "familyLine": "family_line_point_to_the_step_that_should_become_a_sentence"
+      "direction": "Write first, next, and last for three small helper actions: ____________________.",
+      "familyLine": "A grown-up can point to the step that should become a sentence: ____________________."
     },
     {
       "title": "Kind Fix Add-On",
       "time": "8 minutes",
       "skill": "ending choice",
-      "direction": "add_one_kind_fix_to_the_mix_up_and_write_why_it_works",
-      "familyLine": "family_line_ask_what_changed_after_the_kind_fix"
+      "direction": "Add one kind fix to the mix-up and write why it works: ____________________.",
+      "familyLine": "A grown-up can ask what changed after the kind fix: ____________________."
     },
     {
       "title": "Dialogue Pair",
       "time": "7 minutes",
       "skill": "dialogue",
-      "direction": "write_two_short_lines_between_invented_roles_using_ask_and_answer",
-      "familyLine": "family_line_take_one_role_and_let_the_writer_choose_the_reply"
+      "direction": "Write two short lines between invented roles: ____________________.",
+      "familyLine": "A grown-up can take one role and let the writer choose the reply: ____________________."
     },
     {
       "title": "Clearer Verb Swap",
       "time": "5 minutes",
       "skill": "word choice",
-      "direction": "underline_one_action_word_and_swap_it_for_a_clearer_verb",
-      "familyLine": "family_line_offer_two_action_words_and_ask_which_one_fits"
+      "direction": "Pick one action word and trade it for a clearer verb: ____________________.",
+      "familyLine": "A grown-up can offer two action words and ask which one fits: ____________________."
     },
     {
       "title": "Scene Sketch Label",
       "time": "6 minutes",
       "skill": "planning",
-      "direction": "draw_one_tiny_scene_box_and_label_three_parts_before_writing",
-      "familyLine": "family_line_notice_one_label_and_ask_how_it_could_start_a_sentence"
+      "direction": "Draw one tiny scene box and label three parts: ____________________.",
+      "familyLine": "A grown-up can ask how one label could start a sentence: ____________________."
     }
   ],
   "sharePrompts": [

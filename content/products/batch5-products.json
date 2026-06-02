@@ -406,6 +406,68 @@
         "Let students point, sketch, dictate, write one line, or finish the page quietly.",
         "Collect finished pages in the folder and leave unused pages for the next session."
       ]
+    },
+    {
+      "slug": "tutoring-center-story-sprint-pack",
+      "title": "Tutoring Center Story Sprint Pack",
+      "pricePoint": "$49",
+      "status": "checkout_pending",
+      "headline": "A printable tutoring-center writing sprint pack for 10-minute story practice.",
+      "summary": "Twenty tutor-led story sprints help writers choose concrete details, draft short lines, revise one keeper sentence, and carry a tiny practice slip home.",
+      "heroImage": "images/plotsprout/batch16/tutoring-center-story-sprint-pack.jpg",
+      "ctaLabel": "Request tutoring pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Tutoring%20Center%20Story%20Sprint%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static tutoring pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "cloudberry-clocktower",
+        "tiny-lantern-reef",
+        "pencil-dragon-academy",
+        "acorn-avenue-errand-office",
+        "button-bakery-map-mixup",
+        "rain-gauge-railway",
+        "rain-boot-route-rangers",
+        "pocket-park-notice-board",
+        "penny-path-compass-shop",
+        "seed-library-map-room",
+        "greenhouse-gear-garden",
+        "index-card-theater-club",
+        "margin-note-market",
+        "clue-label-tower-museum",
+        "revision-river-ferry",
+        "compass-craft-academy",
+        "almost-invention-workshop"
+      ],
+      "includedPages": [
+        "Twenty printable 10-minute story sprint pages",
+        "Before-session prep guide",
+        "Tutor setup checklist",
+        "During-sprint coaching notes",
+        "Wrap-up routine",
+        "No-data center use notes",
+        "Five repeatable sprint routines",
+        "Eight take-home micro-practice slips",
+        "Six optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A tutoring center warm-up packet for reluctant writers",
+        "A literacy intervention table that needs concrete story choices",
+        "An after-school writing group with short repeatable pages",
+        "A homeschool co-op tutor station for ages 7-11",
+        "A small-group writing block that ends with one keeper sentence"
+      ],
+      "parentSteps": [
+        "Print only the sprint pages needed for the day plus a few spare slips.",
+        "Choose one routine and one page before the writer sits down.",
+        "Let the writer point, sketch, dictate, write one line, or circle one keeper word.",
+        "Use invented places, objects, and helpers instead of personal facts.",
+        "Send one tiny practice slip home when the sprint ends."
+      ]
     }
   ]
 }

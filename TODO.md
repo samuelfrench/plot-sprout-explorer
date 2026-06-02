@@ -47,6 +47,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Batch 13 deployed from commit `420a041` via local runner run `26813534542` / job `79049406273`, completed `2026-06-02T10:21:01Z`; live GitHub Pages desktop/mobile smoke passed for `/waiting-room-story-quest-pack/` with image load, no console warnings/errors, and no horizontal overflow.
 - [x] 2026-06-02: Batch 14 built the `$23` Library Story Club Kit static product page, 10-session source JSON from three gpt-5.5/xhigh lanes, local RTX 4090 product image, 14-page PDF, ZIP, manifest, provider-ready folder, full `npm run verify`, desktop/mobile local smoke for all product pages, spec PASS + quality PASS, and deploy run `26814922767` / job `79054163033` succeeded; live GitHub Pages desktop/mobile smoke passed for `/library-story-club-kit/`; checkout stays pending.
 - [x] 2026-06-02: Batch 15 built the `$39` Substitute Teacher Story Station Pack static product page, 12-station source JSON from gpt-5.5/xhigh lanes plus local fallback for one disconnected lane, local RTX 4090 product image, 16-page PDF, 6.6MB ZIP, manifest, provider-ready folder, full `npm run verify`, desktop/mobile local smoke for all product pages, spec PASS + quality PASS, and deploy run `26817646522` / job `79063437700` succeeded; live GitHub Pages desktop/mobile smoke passed for `/substitute-teacher-story-station-pack/`; checkout stays pending.
+- [x] 2026-06-02: Batch 16 built the `$49` Tutoring Center Story Sprint Pack static product page, 20-sprint source JSON from four gpt-5.5/xhigh lanes, local RTX 4090 product image, 24-page PDF, 12.1MB ZIP, manifest, provider-ready folder, full `npm run verify`, and desktop/mobile local smoke for all product pages; checkout stays pending.
 
 ## In Progress
 
@@ -68,6 +69,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] Batch 13: Build the `$11` Waiting Room Story Quest Pack with 8 quiet waiting quests, adult setup tools, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 14: Build the `$23` Library Story Club Kit with 10 adult-led club sessions, facilitator tools, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 15: Build the `$39` Substitute Teacher Story Station Pack with 12 substitute story stations, substitute guide tools, early finisher cards, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
+- [x] Batch 16: Build the `$49` Tutoring Center Story Sprint Pack with 20 tutoring story sprints, tutor guide tools, take-home micro-practice slips, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [ ] Batch 12: Add the chosen hosted checkout URL, provider-host allowlist, and CTA copy after Sam chooses the provider; do not add custom checkout/webhook endpoints.
 
 ## Product Gates
@@ -90,4 +92,5 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] $11 waiting room story quest pack with 8 quiet printable waiting quests and adult setup tools.
 - [x] $23 library story club kit with 10 adult-led club sessions and facilitator tools.
 - [x] $39 substitute teacher story station pack with 12 printable stations, substitute guide tools, and early finisher cards.
+- [x] $49 tutoring center story sprint pack with 20 printable 10-minute sprints, tutor guide tools, and take-home micro-practice slips.
 - [ ] Parent email capture for weekly printable quest drops.
