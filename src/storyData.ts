@@ -310,6 +310,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Eight travel-friendly writing quests for car passengers, rest stops, hotel desks, and visit-day tables.',
     note: 'No checkout, accounts, uploads, or public publishing are enabled.',
   },
+  {
+    slug: 'waiting-room-story-quest-pack',
+    title: 'Waiting Room Story Quest Pack',
+    pricePoint: '$11',
+    description:
+      'Eight quiet, low-mess writing quests for restaurants, lobbies, sibling activities, pickup lines, and gates.',
+    note: 'No checkout, accounts, uploads, or public publishing are enabled.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

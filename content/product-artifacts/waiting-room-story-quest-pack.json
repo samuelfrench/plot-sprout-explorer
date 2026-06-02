@@ -1,0 +1,548 @@
+{
+  "batchId": "2026-06-02-batch13",
+  "generatedAt": "2026-06-02",
+  "productSlug": "waiting-room-story-quest-pack",
+  "title": "Waiting Room Story Quest Pack",
+  "pricePoint": "$11",
+  "audience": "Families with writers ages 7-11 who need a quiet, low-mess printable activity for restaurants, generic lobbies, airport gates, sibling events, and pickup lines.",
+  "sessionLength": "Five to twenty minutes per quest page, with extension cards for longer calm waits.",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "worldSlugs": [
+    "acorn-avenue-errand-office",
+    "button-bakery-map-mixup",
+    "spoon-ferry-lunchbox-harbor",
+    "pocket-park-notice-board",
+    "penny-path-compass-shop",
+    "margin-note-market",
+    "clue-label-tower-museum",
+    "index-card-theater-club"
+  ],
+  "artifact": {
+    "pdfPath": "product-build/waiting-room-story-quest-pack/Waiting-Room-Story-Quest-Pack.pdf",
+    "zipPath": "product-build/waiting-room-story-quest-pack/waiting-room-story-quest-pack.zip",
+    "sourceHtmlPath": "product-build/waiting-room-story-quest-pack/source/waiting-room-story-quest-pack.html",
+    "manifestPath": "product-build/waiting-room-story-quest-pack/manifest.json"
+  },
+  "sourceLanes": [
+    "content/product-artifacts/lanes/batch13-waiting-room-quests-a.json",
+    "content/product-artifacts/lanes/batch13-waiting-room-quests-b.json",
+    "content/product-artifacts/lanes/batch13-waiting-room-tools.json"
+  ],
+  "cover": {
+    "kicker": "Printable waiting-room writing kit",
+    "headline": "Waiting Room Story Quest Pack",
+    "subhead": "Quiet, low-mess writing routines for families who need a calm printable activity at tables, gates, lobbies, pickup lines, and sibling events.",
+    "included": [
+      "Before-you-wait print checklist",
+      "Restaurant table setup notes",
+      "Generic lobby writing routine",
+      "Sibling event quiet-kit plan",
+      "Pickup-line folder routine",
+      "Five seated waiting routines",
+      "Eight extension activities",
+      "Six optional group share cards",
+      "Adult wording prompts for stuck writers",
+      "Low-mess packing list"
+    ]
+  },
+  "setupGuide": {
+    "beforeYouWait": [
+      "Print one packet per child plus two spare draft pages, then clip the pages in use order: quest starter, choice strip, draft page, extension page, and share card.",
+      "Pack sharpened pencils, one small crayon set, sticky notes, a clipboard or folder, and a resealable pouch for loose cards.",
+      "Pre-select two quest starters so children can begin quickly without spreading papers across chairs or tables.",
+      "Use first names, initials, or simple symbols on folders, and leave private family details off the writing pages.",
+      "Tell children they may write, draw, point to choices, or dictate a sentence to an adult helper."
+    ],
+    "restaurantTable": [
+      "Wait until ordering is finished, then place one folder, one pencil, and one choice strip beside each child.",
+      "Keep food, cups, sauces, and napkins on one side of the table while writing pages stay on the other side.",
+      "Choose prompts that need small hand motions: circle, underline, list three words, or write one sentence.",
+      "Use a quiet table signal, such as tapping the folder once, to pause writing when meals arrive or the table needs clearing.",
+      "Before leaving, tuck every page back into the folder and mark one blank the child can finish later."
+    ],
+    "appointmentLobby": [
+      "Choose a seat cluster where one adult can see the folders, pencils, and finished pages without blocking walkways.",
+      "Start with a two-minute detail bank: color, shape, object, sound, and quiet action.",
+      "Keep voices low by asking children to point to a choice before saying it softly to the adult helper.",
+      "Use short page jobs if the wait may end suddenly: title, setting word, helper choice, or one calm sentence.",
+      "When it is time to move, close the folder immediately and save sharing for the car, sidewalk, or home table."
+    ],
+    "siblingEvent": [
+      "Set up one portable folder for the waiting child before the event begins so materials do not need to be sorted in the seats.",
+      "Choose a quest that can be completed quietly while another child has a class, lesson, rehearsal, practice, or performance.",
+      "Give the waiting child a helper role, such as page captain, detail finder, or ending chooser.",
+      "Use the event setting only in broad fictional terms, such as big room, hallway, bench, music, motion, or bright lights.",
+      "At the end, invite the sibling to show one drawing or one sentence without interrupting the event wrap-up."
+    ],
+    "pickupLine": [
+      "Keep a slim folder, two pencils, and one folded quest page in the front seat pocket or tote bag.",
+      "Use the folder during still waiting stretches, and let the child plan orally if writing feels awkward.",
+      "Ask for one detail, one choice, and one next action instead of a full draft.",
+      "When the line moves or the wait ends, close the folder and let the story continue later."
+    ]
+  },
+  "waitingRoutines": [
+    {
+      "name": "Two-Minute Detail Bank",
+      "bestFor": "Short waits at a table, gate, lobby seat, or pickup line.",
+      "steps": [
+        "Adult chooses one quest page and points to the detail bank box.",
+        "Child silently finds one color, one shape, one object, and one sound nearby.",
+        "Child writes or sketches the four details in the box with no extra materials.",
+        "Adult asks the child to choose one detail for the first story sentence."
+      ]
+    },
+    {
+      "name": "Folder Open, Folder Closed",
+      "bestFor": "Unpredictable waits where the group may need to move quickly.",
+      "steps": [
+        "Adult opens the folder to a single page and keeps every other page clipped behind it.",
+        "Child completes one small task: circle a choice, write a title, or add one sentence.",
+        "Adult marks the next blank with a sticky note if the page is not finished.",
+        "Folder closes as soon as the group needs to move, with pencils returned to the pouch."
+      ]
+    },
+    {
+      "name": "Whisper Choice Build",
+      "bestFor": "Quiet spaces where children need adult support but voices should stay low.",
+      "steps": [
+        "Adult points to two printed choices and asks the child to choose by tapping the page.",
+        "Child whispers the choice once or points again if talking feels hard.",
+        "Adult repeats the choice softly and asks for one matching action word.",
+        "Child writes the action word or asks the adult to write it in the margin."
+      ]
+    },
+    {
+      "name": "Sibling Seat Studio",
+      "bestFor": "Waiting during a sibling activity, homeschool group, class break, or family event.",
+      "steps": [
+        "Adult gives the waiting child a folder, pencil, and one page job before the event starts.",
+        "Child chooses a quiet role: map maker, title finder, detail collector, or ending planner.",
+        "Adult checks in once halfway through with a thumbs-up, point, or one soft question.",
+        "Child finishes by circling the line or drawing they want to share later."
+      ]
+    },
+    {
+      "name": "Tabletop Story Relay",
+      "bestFor": "Two or more children sharing one table with a parent, grandparent, tutor, or classroom helper.",
+      "steps": [
+        "Adult places one shared choice strip in the center and one draft page in front of each child.",
+        "Each child writes or sketches one setting detail without speaking over the group.",
+        "Children pass the choice strip clockwise and add one helper or object choice.",
+        "Adult closes the relay by asking each child to write one next sentence on their own page."
+      ]
+    }
+  ],
+  "extensionActivities": [
+    {
+      "title": "Seat Map Story Path",
+      "time": "10 minutes",
+      "direction": "Child draws a simple map of the table, row, bench, or gate area, then adds three invented story stops with one calm detail at each stop.",
+      "writingSkill": "setting sequence"
+    },
+    {
+      "title": "Menu Word Borrow",
+      "time": "8 minutes",
+      "direction": "At a restaurant table, adult reads five ordinary menu words aloud, and the child borrows one noun and one adjective for a fictional scene.",
+      "writingSkill": "word choice"
+    },
+    {
+      "title": "Quiet Object Sort",
+      "time": "12 minutes",
+      "direction": "Child picks three nearby objects and sorts them into setting detail, helpful item, and ending clue.",
+      "writingSkill": "story structure"
+    },
+    {
+      "title": "One-Sentence Relay",
+      "time": "10 minutes",
+      "direction": "Each child writes one sentence, folds the page to show only that line, and passes it to an adult who adds a neutral next-word prompt.",
+      "writingSkill": "sentence connection"
+    },
+    {
+      "title": "Sound Bank Sketch",
+      "time": "8 minutes",
+      "direction": "Child lists or sketches three soft sounds from the space, then chooses one to place in the story opening.",
+      "writingSkill": "sensory detail"
+    },
+    {
+      "title": "Tiny Title Test",
+      "time": "7 minutes",
+      "direction": "Child writes three possible titles on sticky notes and chooses the one that best matches the setting, helper, and ending.",
+      "writingSkill": "main idea"
+    },
+    {
+      "title": "Calm Action Ladder",
+      "time": "12 minutes",
+      "direction": "Child writes three small actions a character could take, then numbers them first, next, and last.",
+      "writingSkill": "sequence"
+    },
+    {
+      "title": "Finish Later Bookmark",
+      "time": "6 minutes",
+      "direction": "Child marks one unfinished blank, writes a next-step word beside it, and slips the page back into the folder for home or class time.",
+      "writingSkill": "revision planning"
+    }
+  ],
+  "groupShareCards": [
+    "Read one quiet sentence and name the setting detail that helped you write it.",
+    "Point to one sketch or word bank item and tell how it could help the next scene.",
+    "Ask an adult to read one line while you show the matching page mark.",
+    "Share one title option and ask listeners which word sounds clearest.",
+    "Tell the group one calm action your character takes next.",
+    "Pass today and take the listener role: notice one clear detail from another person's page."
+  ],
+  "quests": [
+    {
+      "id": "quiet-acorn-avenue-slip-sort",
+      "title": "Acorn Avenue Slip Sort",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "waitingUse": "Quiet one-page writing for a seated lobby wait with an adult nearby and only a pencil on the page.",
+      "setupMinutes": "3 minutes",
+      "waitingMode": "Appointment lobby",
+      "kidDirection": "Choose three tiny errand slips, sort them by place, and write the first helpful delivery note.",
+      "adultNote": "Point to one real room detail for inspiration, then let the child keep answers short and quiet.",
+      "materials": [
+        "Printed errand office page",
+        "Pencil",
+        "Small clipboard",
+        "Two colored pencils"
+      ],
+      "pageSections": [
+        {
+          "heading": "Errand Slips",
+          "lines": [
+            "The first leaf slip asks for ____________________________.",
+            "The second leaf slip belongs near ____________________________.",
+            "The third leaf slip is marked with ____________________________."
+          ]
+        },
+        {
+          "heading": "Desk Clues",
+          "lines": [
+            "The acorn desk drawer holds ____________________________.",
+            "The quiet waiting-room clue looks like ____________________________.",
+            "The clerk writes the neat label ____________________________."
+          ]
+        },
+        {
+          "heading": "Delivery Note",
+          "lines": [
+            "First, the helper carries ____________________________.",
+            "Next, the helper checks ____________________________.",
+            "The tiny delivery note says ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this page and finish the Acorn Avenue errand route at home."
+    },
+    {
+      "id": "quiet-button-bakery-table-map",
+      "title": "Button Bakery Table Map",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "waitingUse": "Low-mess restaurant table quest for a calm seated wait while food or a turn is coming.",
+      "setupMinutes": "4 minutes",
+      "waitingMode": "Restaurant table",
+      "kidDirection": "Draw a tiny bakery path, name the mixed-up clue, and write three clear directions.",
+      "adultNote": "Use the edge of the printed page as the bakery street and keep extra materials off the table.",
+      "materials": [
+        "Printed bakery map page",
+        "Pencil",
+        "Crayon",
+        "Paper napkin"
+      ],
+      "pageSections": [
+        {
+          "heading": "Tiny Route",
+          "lines": [
+            "The button roll starts beside ____________________________.",
+            "The crumb path turns around ____________________________.",
+            "The bakery counter waits near ____________________________."
+          ]
+        },
+        {
+          "heading": "Map Mixup",
+          "lines": [
+            "The upside-down clue points to ____________________________.",
+            "The quiet table clue is ____________________________.",
+            "The helper redraws the map with ____________________________."
+          ]
+        },
+        {
+          "heading": "Clear Directions",
+          "lines": [
+            "First, roll past ____________________________.",
+            "Next, look under ____________________________.",
+            "Last, place the button tray at ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this map page and add one more Button Bakery stop later."
+    },
+    {
+      "id": "quiet-spoon-ferry-gate-log",
+      "title": "Spoon Ferry Gate Log",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "waitingUse": "Quiet airport gate writing page for a seated family wait with one pencil and one printed sheet.",
+      "setupMinutes": "3 minutes",
+      "waitingMode": "Airport gate",
+      "kidDirection": "Pick a lunchbox cargo, list three harbor stops, and write the ferry log ending.",
+      "adultNote": "Invite the child to borrow one color or shape from nearby seats, bags, or signs without leaving the seat.",
+      "materials": [
+        "Printed ferry log page",
+        "Pencil",
+        "Blue colored pencil",
+        "Index card"
+      ],
+      "pageSections": [
+        {
+          "heading": "Lunchbox Cargo",
+          "lines": [
+            "The spoon ferry carries ____________________________.",
+            "The lunchbox label shows ____________________________.",
+            "The cargo helper notices ____________________________."
+          ]
+        },
+        {
+          "heading": "Harbor Stops",
+          "lines": [
+            "Stop one has a dock shaped like ____________________________.",
+            "Stop two waits beside ____________________________.",
+            "Stop three needs the cargo called ____________________________."
+          ]
+        },
+        {
+          "heading": "Ferry Log",
+          "lines": [
+            "First, the ferry glides past ____________________________.",
+            "Next, the helper asks about ____________________________.",
+            "The final lunchbox log says ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this ferry log and finish the harbor route after the wait."
+    },
+    {
+      "id": "quiet-pocket-park-bench-notice",
+      "title": "Pocket Park Bench Notice",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "waitingUse": "Sibling activity for a seated pickup line or lobby wait where each child can add one quiet notice.",
+      "setupMinutes": "5 minutes",
+      "waitingMode": "Sibling activity",
+      "kidDirection": "Fill the notice board with three small park messages and write what happens on the bench.",
+      "adultNote": "Let siblings suggest one short noun each, then have one child write while the page stays flat.",
+      "materials": [
+        "Printed pocket park page",
+        "Pencil",
+        "Three sticky note strips",
+        "Green colored pencil"
+      ],
+      "pageSections": [
+        {
+          "heading": "Notice Board",
+          "lines": [
+            "The first tiny notice says ____________________________.",
+            "The second tiny notice points toward ____________________________.",
+            "The third tiny notice asks for ____________________________."
+          ]
+        },
+        {
+          "heading": "Bench Details",
+          "lines": [
+            "The bottle-cap bench sits under ____________________________.",
+            "The pebble path curves around ____________________________.",
+            "The quiet park sound is ____________________________."
+          ]
+        },
+        {
+          "heading": "Park Message",
+          "lines": [
+            "First, the helper reads ____________________________.",
+            "Next, the helper adds ____________________________.",
+            "The finished park message says ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this page and finish the Pocket Park notice story at home."
+    },
+    {
+      "id": "quiet-penny-path-pocket-compass-route",
+      "title": "Penny Path Pocket Compass Route",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "waitingUse": "A quiet table-page activity where an adult reads the compass choices and the child writes a tiny errand route with one pencil.",
+      "setupMinutes": "4 minutes",
+      "waitingMode": "Restaurant table",
+      "kidDirection": "Fill the compass blanks to show where the button compass points and why the helper follows it.",
+      "adultNote": "Read the headings aloud, then let the child choose one snack-stand or mailbox detail before writing.",
+      "materials": [
+        "printed Penny Path quest page",
+        "pencil",
+        "receipt-route card",
+        "small clipboard"
+      ],
+      "pageSections": [
+        {
+          "heading": "Compass Shop Start",
+          "lines": [
+            "The button compass points first toward ____________________.",
+            "The folded receipt asks the helper to find ____________________.",
+            "The quiet clue near the snack stand is ____________________."
+          ]
+        },
+        {
+          "heading": "Kind Turn Map",
+          "lines": [
+            "The compass changes direction after ____________________.",
+            "The next stop should be ____________________ because ____________________.",
+            "The mailbox row color I choose is ____________________."
+          ]
+        },
+        {
+          "heading": "Finish The Errand",
+          "lines": [
+            "The helper solves the tiny errand by ____________________.",
+            "A clearer direction word I can add is ____________________.",
+            "My final Penny Path sentence is ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this compass route page to finish a longer Penny Path errand story later."
+    },
+    {
+      "id": "quiet-margin-note-market-swap",
+      "title": "Margin Note Market Quiet Swap",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "waitingUse": "A quiet lobby activity where an adult points to three note choices and the child turns each one into a useful revision task.",
+      "setupMinutes": "5 minutes",
+      "waitingMode": "Appointment lobby",
+      "kidDirection": "Turn three vague notes into specific revision tasks for a market stall writer.",
+      "adultNote": "If the wait is short, ask the child to finish only the strongest note and save the rest.",
+      "materials": [
+        "printed market feedback page",
+        "pencil",
+        "three note tokens",
+        "pocket folder"
+      ],
+      "pageSections": [
+        {
+          "heading": "Market Stall Notes",
+          "lines": [
+            "The Clarity stall receives a note that says ____________________.",
+            "The Detail stall needs one exact example about ____________________.",
+            "The Ending stall asks the writer to check ____________________."
+          ]
+        },
+        {
+          "heading": "Make Feedback Useful",
+          "lines": [
+            "A vague note I can replace is ____________________.",
+            "My specific revision task says ____________________.",
+            "The writer should try this first because ____________________."
+          ]
+        },
+        {
+          "heading": "Next Draft Plan",
+          "lines": [
+            "The market stall I would visit next is ____________________.",
+            "One sentence that needs a stronger detail is ____________________.",
+            "The calm note I would hand back says ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this market page to finish the remaining note swaps at home or during another quiet wait."
+    },
+    {
+      "id": "quiet-clue-label-tower-gate-gallery",
+      "title": "Clue Label Tower Gate Gallery",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "waitingUse": "A quiet gate-seat activity where an adult sets one printed page on a folder and the child writes exhibit labels from everyday-object clues.",
+      "setupMinutes": "6 minutes",
+      "waitingMode": "Airport gate",
+      "kidDirection": "Choose three exhibit objects and write one clear label that tells visitors what to notice.",
+      "adultNote": "Invite the child to use nearby safe objects as inspiration while staying seated.",
+      "materials": [
+        "printed tower museum label page",
+        "pencil",
+        "object clue strip",
+        "firm folder"
+      ],
+      "pageSections": [
+        {
+          "heading": "Gallery Object Picks",
+          "lines": [
+            "The first exhibit object is ____________________.",
+            "The clue visitors should notice is ____________________.",
+            "A distracting detail I will leave out is ____________________."
+          ]
+        },
+        {
+          "heading": "One-Sentence Labels",
+          "lines": [
+            "Label one should explain ____________________.",
+            "Label two should point visitors toward ____________________.",
+            "Label three becomes clearer when I add ____________________."
+          ]
+        },
+        {
+          "heading": "Curator Finish",
+          "lines": [
+            "The label drawer I would open next is ____________________.",
+            "The clearest museum word on my page is ____________________.",
+            "My final exhibit label says ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this gallery page so the final exhibit label can become a short museum story."
+    },
+    {
+      "id": "quiet-index-card-seat-row-cues",
+      "title": "Index Card Theater Seat-Row Cues",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "waitingUse": "A quiet adult-guided sibling activity where children stay seated, point to cue choices, and write stage-card lines on one page.",
+      "setupMinutes": "5 minutes",
+      "waitingMode": "Sibling activity",
+      "kidDirection": "Arrange the beginning, turn, and finish cues, then write the narrator's quiet closing line.",
+      "adultNote": "Give each child a turn choosing a cue, then keep the finished page in the folder if the wait ends.",
+      "materials": [
+        "printed theater cue page",
+        "pencils",
+        "cue-card strip",
+        "firm folder"
+      ],
+      "pageSections": [
+        {
+          "heading": "Scene Card Row",
+          "lines": [
+            "The beginning card shows ____________________.",
+            "The turn card changes the scene when ____________________.",
+            "The finish card should leave the audience noticing ____________________."
+          ]
+        },
+        {
+          "heading": "Quiet Cue Choices",
+          "lines": [
+            "The action cue tells the actor to ____________________.",
+            "The dialogue cue line is ____________________.",
+            "The setting cue adds ____________________ to the tiny stage."
+          ]
+        },
+        {
+          "heading": "Closing Line",
+          "lines": [
+            "The narrator reminds us that ____________________.",
+            "One jumpy part I can connect is ____________________.",
+            "My final seat-row cue says ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this theater cue page to finish the scene-card performance plan later."
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch13-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "waiting-room-story-quest-pack",
+      "title": "Waiting Room Story Quest Pack product image",
+      "purpose": "Static product hero for the $11 Waiting Room Story Quest Pack page.",
+      "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no markings, blank paper sheets, plain colored pencils, simple folders, pastel background, no notebooks, no forms, no markers, no rulers, no grids",
+      "outputJpeg": "public/images/plotsprout/batch13/waiting-room-story-quest-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch13/waiting-room-story-quest-pack.webp",
+      "sidecar": "content/image-runs/batch13/waiting-room-story-quest-pack.json",
+      "seed": 26061316
+    }
+  ]
+}

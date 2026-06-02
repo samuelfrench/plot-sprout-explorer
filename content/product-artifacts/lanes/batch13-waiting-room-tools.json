@@ -1,0 +1,168 @@
+{
+  "batchId": "2026-06-02-batch13",
+  "lane": "waiting-room-tools",
+  "generatedAt": "2026-06-02",
+  "cover": {
+    "kicker": "Printable waiting-room writing kit",
+    "headline": "Waiting Room Story Quest Pack",
+    "subhead": "Quiet, low-mess writing routines for families who need a calm printable activity at tables, gates, lobbies, pickup lines, and sibling events.",
+    "included": [
+      "Before-you-wait print checklist",
+      "Restaurant table setup notes",
+      "Generic lobby writing routine",
+      "Sibling event quiet-kit plan",
+      "Pickup-line folder routine",
+      "Five seated waiting routines",
+      "Eight extension activities",
+      "Six optional group share cards",
+      "Adult wording prompts for stuck writers",
+      "Low-mess packing list"
+    ]
+  },
+  "setupGuide": {
+    "beforeYouWait": [
+      "Print one packet per child plus two spare draft pages, then clip the pages in use order: quest starter, choice strip, draft page, extension page, and share card.",
+      "Pack sharpened pencils, one small crayon set, sticky notes, a clipboard or folder, and a resealable pouch for loose cards.",
+      "Pre-select two quest starters so children can begin quickly without spreading papers across chairs or tables.",
+      "Use first names, initials, or simple symbols on folders, and leave private family details off the writing pages.",
+      "Tell children they may write, draw, point to choices, or dictate a sentence to an adult helper."
+    ],
+    "restaurantTable": [
+      "Wait until ordering is finished, then place one folder, one pencil, and one choice strip beside each child.",
+      "Keep food, cups, sauces, and napkins on one side of the table while writing pages stay on the other side.",
+      "Choose prompts that need small hand motions: circle, underline, list three words, or write one sentence.",
+      "Use a quiet table signal, such as tapping the folder once, to pause writing when meals arrive or the table needs clearing.",
+      "Before leaving, tuck every page back into the folder and mark one blank the child can finish later."
+    ],
+    "appointmentLobby": [
+      "Choose a seat cluster where one adult can see the folders, pencils, and finished pages without blocking walkways.",
+      "Start with a two-minute detail bank: color, shape, object, sound, and quiet action.",
+      "Keep voices low by asking children to point to a choice before saying it softly to the adult helper.",
+      "Use short page jobs if the wait may end suddenly: title, setting word, helper choice, or one calm sentence.",
+      "When it is time to move, close the folder immediately and save sharing for the car, sidewalk, or home table."
+    ],
+    "siblingEvent": [
+      "Set up one portable folder for the waiting child before the event begins so materials do not need to be sorted in the seats.",
+      "Choose a quest that can be completed quietly while another child has a class, lesson, rehearsal, practice, or performance.",
+      "Give the waiting child a helper role, such as page captain, detail finder, or ending chooser.",
+      "Use the event setting only in broad fictional terms, such as big room, hallway, bench, music, motion, or bright lights.",
+      "At the end, invite the sibling to show one drawing or one sentence without interrupting the event wrap-up."
+    ],
+    "pickupLine": [
+      "Keep a slim folder, two pencils, and one folded quest page in the front seat pocket or tote bag.",
+      "Use the folder during still waiting stretches, and let the child plan orally if writing feels awkward.",
+      "Ask for one detail, one choice, and one next action instead of a full draft.",
+      "When the line moves or the wait ends, close the folder and let the story continue later."
+    ]
+  },
+  "waitingRoutines": [
+    {
+      "name": "Two-Minute Detail Bank",
+      "bestFor": "Short waits at a table, gate, lobby seat, or pickup line.",
+      "steps": [
+        "Adult chooses one quest page and points to the detail bank box.",
+        "Child silently finds one color, one shape, one object, and one sound nearby.",
+        "Child writes or sketches the four details in the box with no extra materials.",
+        "Adult asks the child to choose one detail for the first story sentence."
+      ]
+    },
+    {
+      "name": "Folder Open, Folder Closed",
+      "bestFor": "Unpredictable waits where the group may need to move quickly.",
+      "steps": [
+        "Adult opens the folder to a single page and keeps every other page clipped behind it.",
+        "Child completes one small task: circle a choice, write a title, or add one sentence.",
+        "Adult marks the next blank with a sticky note if the page is not finished.",
+        "Folder closes as soon as the group needs to move, with pencils returned to the pouch."
+      ]
+    },
+    {
+      "name": "Whisper Choice Build",
+      "bestFor": "Quiet spaces where children need adult support but voices should stay low.",
+      "steps": [
+        "Adult points to two printed choices and asks the child to choose by tapping the page.",
+        "Child whispers the choice once or points again if talking feels hard.",
+        "Adult repeats the choice softly and asks for one matching action word.",
+        "Child writes the action word or asks the adult to write it in the margin."
+      ]
+    },
+    {
+      "name": "Sibling Seat Studio",
+      "bestFor": "Waiting during a sibling activity, homeschool group, class break, or family event.",
+      "steps": [
+        "Adult gives the waiting child a folder, pencil, and one page job before the event starts.",
+        "Child chooses a quiet role: map maker, title finder, detail collector, or ending planner.",
+        "Adult checks in once halfway through with a thumbs-up, point, or one soft question.",
+        "Child finishes by circling the line or drawing they want to share later."
+      ]
+    },
+    {
+      "name": "Tabletop Story Relay",
+      "bestFor": "Two or more children sharing one table with a parent, grandparent, tutor, or classroom helper.",
+      "steps": [
+        "Adult places one shared choice strip in the center and one draft page in front of each child.",
+        "Each child writes or sketches one setting detail without speaking over the group.",
+        "Children pass the choice strip clockwise and add one helper or object choice.",
+        "Adult closes the relay by asking each child to write one next sentence on their own page."
+      ]
+    }
+  ],
+  "extensionActivities": [
+    {
+      "title": "Seat Map Story Path",
+      "time": "10 minutes",
+      "direction": "Child draws a simple map of the table, row, bench, or gate area, then adds three invented story stops with one calm detail at each stop.",
+      "writingSkill": "setting sequence"
+    },
+    {
+      "title": "Menu Word Borrow",
+      "time": "8 minutes",
+      "direction": "At a restaurant table, adult reads five ordinary menu words aloud, and the child borrows one noun and one adjective for a fictional scene.",
+      "writingSkill": "word choice"
+    },
+    {
+      "title": "Quiet Object Sort",
+      "time": "12 minutes",
+      "direction": "Child picks three nearby objects and sorts them into setting detail, helpful item, and ending clue.",
+      "writingSkill": "story structure"
+    },
+    {
+      "title": "One-Sentence Relay",
+      "time": "10 minutes",
+      "direction": "Each child writes one sentence, folds the page to show only that line, and passes it to an adult who adds a neutral next-word prompt.",
+      "writingSkill": "sentence connection"
+    },
+    {
+      "title": "Sound Bank Sketch",
+      "time": "8 minutes",
+      "direction": "Child lists or sketches three soft sounds from the space, then chooses one to place in the story opening.",
+      "writingSkill": "sensory detail"
+    },
+    {
+      "title": "Tiny Title Test",
+      "time": "7 minutes",
+      "direction": "Child writes three possible titles on sticky notes and chooses the one that best matches the setting, helper, and ending.",
+      "writingSkill": "main idea"
+    },
+    {
+      "title": "Calm Action Ladder",
+      "time": "12 minutes",
+      "direction": "Child writes three small actions a character could take, then numbers them first, next, and last.",
+      "writingSkill": "sequence"
+    },
+    {
+      "title": "Finish Later Bookmark",
+      "time": "6 minutes",
+      "direction": "Child marks one unfinished blank, writes a next-step word beside it, and slips the page back into the folder for home or class time.",
+      "writingSkill": "revision planning"
+    }
+  ],
+  "groupShareCards": [
+    "Read one quiet sentence and name the setting detail that helped you write it.",
+    "Point to one sketch or word bank item and tell how it could help the next scene.",
+    "Ask an adult to read one line while you show the matching page mark.",
+    "Share one title option and ask listeners which word sounds clearest.",
+    "Tell the group one calm action your character takes next.",
+    "Pass today and take the listener role: notice one clear detail from another person's page."
+  ]
+}

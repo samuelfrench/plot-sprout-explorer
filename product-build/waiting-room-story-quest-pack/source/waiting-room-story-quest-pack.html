@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waiting Room Story Quest Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.36in; }
+      :root {
+        --ink: #17343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #b6d4cf;
+        --teal: #2c7a78;
+        --coral: #ec6f3f;
+        --gold: #f2c14f;
+        --blue: #2b7f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 12px;
+        line-height: 1.24;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 11ch; font-size: 40px; }
+      h2 { margin-bottom: 0.06in; font-size: 24px; }
+      h3 { margin-bottom: 0.03in; font-size: 12.4px; }
+      p, li { color: var(--muted); }
+      img {
+        display: block;
+        max-width: 100%;
+        border: 1px solid var(--line);
+      }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.13in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.2in;
+        gap: 0.22in;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--teal);
+        font-size: 10.6px;
+      }
+      .share-page {
+        border-top: 0.16in solid var(--coral);
+        font-size: 10.1px;
+      }
+      .extension-page {
+        border-top: 0.16in solid var(--blue);
+        font-size: 10.2px;
+      }
+      .page-kicker, .kicker, .world-intro span, .extension-card span {
+        color: var(--teal);
+        font-size: 9.2px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 900;
+      }
+      .included-grid, .setup-grid, .world-grid, .routine-grid, .extension-grid, .share-grid {
+        display: grid;
+        gap: 0.07in;
+      }
+      .included-grid { grid-template-columns: 1fr; }
+      .setup-grid, .routine-grid, .extension-grid, .share-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .included-grid li, .setup-grid li, .share-grid li, .routine-card, .extension-card,
+      .world-intro, .worksheet-section, .kid-direction, .adult-note, .take-home, .quest-meta {
+        padding: 0.05in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .included-grid li, .setup-grid li, .share-grid li { list-style: none; }
+      .world-intro img, .world-intro p { display: none; }
+      .world-intro h3 { margin: 0; font-size: 9px; line-height: 1.04; }
+      .kid-direction {
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .adult-note {
+        border-color: #e5bc7c;
+        background: #fff4dc;
+      }
+      .quest-meta {
+        display: grid;
+        grid-template-columns: 0.7in 0.95in 1fr;
+        gap: 0.04in;
+        color: var(--ink);
+        font-size: 9.4px;
+        font-weight: 900;
+      }
+      figure {
+        float: right;
+        width: 1.64in;
+        margin: 0 0 0.05in 0.1in;
+      }
+      figure img {
+        width: 1.64in;
+        height: 0.92in;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--muted);
+        font-size: 8.8px;
+      }
+      .write-line {
+        min-height: 0.2in;
+        margin-bottom: 0.035in;
+        padding-bottom: 0.03in;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .footer-note {
+        margin-top: 0.07in;
+        padding-top: 0.07in;
+        border-top: 2px solid var(--gold);
+        color: var(--muted);
+        font-size: 9.3px;
+      }
+      @media screen {
+        body { padding: 24px; background: #dfeee7; }
+        .pack-page {
+          width: 8.5in;
+          margin: 0 auto 24px;
+          box-shadow: 0 18px 40px rgba(20, 31, 43, 0.18);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable waiting-room writing kit</p>
+        <h1>Waiting Room Story Quest Pack</h1>
+        <p>Quiet, low-mess writing routines for families who need a calm printable activity at tables, gates, lobbies, pickup lines, and sibling events.</p>
+        <div class="badge">$11</div>
+        <p><strong>Best for:</strong> Families with writers ages 7-11 who need a quiet, low-mess printable activity for restaurants, generic lobbies, airport gates, sibling events, and pickup lines.</p>
+        <p><strong>Format:</strong> Five to twenty minutes per quest page, with extension cards for longer calm waits.</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div>
+        <h2>Inside</h2>
+        <ul class="included-grid"><li>Before-you-wait print checklist</li>
+<li>Restaurant table setup notes</li>
+<li>Generic lobby writing routine</li>
+<li>Sibling event quiet-kit plan</li>
+<li>Pickup-line folder routine</li>
+<li>Five seated waiting routines</li>
+<li>Eight extension activities</li>
+<li>Six optional group share cards</li>
+<li>Adult wording prompts for stuck writers</li>
+<li>Low-mess packing list</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult setup</p>
+      <h2>Run the quiet waiting pack</h2>
+      <div class="setup-grid">
+        <div>
+          <h3>Before you wait</h3>
+          <ol><li>Print one packet per child plus two spare draft pages, then clip the pages in use order: quest starter, choice strip, draft page, extension page, and share card.</li>
+<li>Pack sharpened pencils, one small crayon set, sticky notes, a clipboard or folder, and a resealable pouch for loose cards.</li>
+<li>Pre-select two quest starters so children can begin quickly without spreading papers across chairs or tables.</li>
+<li>Use first names, initials, or simple symbols on folders, and leave private family details off the writing pages.</li>
+<li>Tell children they may write, draw, point to choices, or dictate a sentence to an adult helper.</li></ol>
+        </div>
+        <div>
+          <h3>Restaurant table</h3>
+          <ol><li>Wait until ordering is finished, then place one folder, one pencil, and one choice strip beside each child.</li>
+<li>Keep food, cups, sauces, and napkins on one side of the table while writing pages stay on the other side.</li>
+<li>Choose prompts that need small hand motions: circle, underline, list three words, or write one sentence.</li>
+<li>Use a quiet table signal, such as tapping the folder once, to pause writing when meals arrive or the table needs clearing.</li>
+<li>Before leaving, tuck every page back into the folder and mark one blank the child can finish later.</li></ol>
+        </div>
+        <div>
+          <h3>Appointment lobby</h3>
+          <ol><li>Choose a seat cluster where one adult can see the folders, pencils, and finished pages without blocking walkways.</li>
+<li>Start with a two-minute detail bank: color, shape, object, sound, and quiet action.</li>
+<li>Keep voices low by asking children to point to a choice before saying it softly to the adult helper.</li>
+<li>Use short page jobs if the wait may end suddenly: title, setting word, helper choice, or one calm sentence.</li>
+<li>When it is time to move, close the folder immediately and save sharing for the car, sidewalk, or home table.</li></ol>
+        </div>
+        <div>
+          <h3>Sibling event</h3>
+          <ol><li>Set up one portable folder for the waiting child before the event begins so materials do not need to be sorted in the seats.</li>
+<li>Choose a quest that can be completed quietly while another child has a class, lesson, rehearsal, practice, or performance.</li>
+<li>Give the waiting child a helper role, such as page captain, detail finder, or ending chooser.</li>
+<li>Use the event setting only in broad fictional terms, such as big room, hallway, bench, music, motion, or bright lights.</li>
+<li>At the end, invite the sibling to show one drawing or one sentence without interrupting the event wrap-up.</li></ol>
+        </div>
+        <div>
+          <h3>Pickup line</h3>
+          <ol><li>Keep a slim folder, two pencils, and one folded quest page in the front seat pocket or tote bag.</li>
+<li>Use the folder during still waiting stretches, and let the child plan orally if writing feels awkward.</li>
+<li>Ask for one detail, one choice, and one next action instead of a full draft.</li>
+<li>When the line moves or the wait ends, close the folder and let the story continue later.</li></ol>
+        </div>
+      </div>
+      <h3>World menu</h3>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Acorn Avenue Errand Office</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Button Bakery Map Mix-Up</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Spoon Ferry Lunchbox Harbor</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Pocket Park Notice Board</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Penny Path Compass Shop</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Margin Note Market</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Clue Label Tower Museum</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Index Card Theater Club</h3>
+      </div>
+    </article></div>
+      <p class="footer-note">Use these pages offline for adult-guided waiting writing with no accounts, no uploads, and no public sharing.</p>
+    </section>
+    <section class="pack-page share-page">
+      <p class="page-kicker">Waiting tools</p>
+      <h2>Routines and share cards</h2>
+      <div class="routine-grid">
+    <article class="routine-card">
+      <h3>Two-Minute Detail Bank</h3>
+      <p><strong>Best for:</strong> Short waits at a table, gate, lobby seat, or pickup line.</p>
+      <ol><li>Adult chooses one quest page and points to the detail bank box.</li>
+<li>Child silently finds one color, one shape, one object, and one sound nearby.</li>
+<li>Child writes or sketches the four details in the box with no extra materials.</li>
+<li>Adult asks the child to choose one detail for the first story sentence.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Folder Open, Folder Closed</h3>
+      <p><strong>Best for:</strong> Unpredictable waits where the group may need to move quickly.</p>
+      <ol><li>Adult opens the folder to a single page and keeps every other page clipped behind it.</li>
+<li>Child completes one small task: circle a choice, write a title, or add one sentence.</li>
+<li>Adult marks the next blank with a sticky note if the page is not finished.</li>
+<li>Folder closes as soon as the group needs to move, with pencils returned to the pouch.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Whisper Choice Build</h3>
+      <p><strong>Best for:</strong> Quiet spaces where children need adult support but voices should stay low.</p>
+      <ol><li>Adult points to two printed choices and asks the child to choose by tapping the page.</li>
+<li>Child whispers the choice once or points again if talking feels hard.</li>
+<li>Adult repeats the choice softly and asks for one matching action word.</li>
+<li>Child writes the action word or asks the adult to write it in the margin.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Sibling Seat Studio</h3>
+      <p><strong>Best for:</strong> Waiting during a sibling activity, homeschool group, class break, or family event.</p>
+      <ol><li>Adult gives the waiting child a folder, pencil, and one page job before the event starts.</li>
+<li>Child chooses a quiet role: map maker, title finder, detail collector, or ending planner.</li>
+<li>Adult checks in once halfway through with a thumbs-up, point, or one soft question.</li>
+<li>Child finishes by circling the line or drawing they want to share later.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Tabletop Story Relay</h3>
+      <p><strong>Best for:</strong> Two or more children sharing one table with a parent, grandparent, tutor, or classroom helper.</p>
+      <ol><li>Adult places one shared choice strip in the center and one draft page in front of each child.</li>
+<li>Each child writes or sketches one setting detail without speaking over the group.</li>
+<li>Children pass the choice strip clockwise and add one helper or object choice.</li>
+<li>Adult closes the relay by asking each child to write one next sentence on their own page.</li></ol>
+    </article></div>
+      <h3>Group share cards</h3>
+      <ul class="share-grid"><li>Read one quiet sentence and name the setting detail that helped you write it.</li>
+<li>Point to one sketch or word bank item and tell how it could help the next scene.</li>
+<li>Ask an adult to read one line while you show the matching page mark.</li>
+<li>Share one title option and ask listeners which word sounds clearest.</li>
+<li>Tell the group one calm action your character takes next.</li>
+<li>Pass today and take the listener role: notice one clear detail from another person&#39;s page.</li></ul>
+    </section>
+    <section class="pack-page extension-page">
+      <p class="page-kicker">Waiting tools</p>
+      <h2>Extension activity menu</h2>
+      <div class="extension-grid">
+    <article class="extension-card">
+      <span>10 minutes | setting sequence</span>
+      <h3>Seat Map Story Path</h3>
+      <p>Child draws a simple map of the table, row, bench, or gate area, then adds three invented story stops with one calm detail at each stop.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>8 minutes | word choice</span>
+      <h3>Menu Word Borrow</h3>
+      <p>At a restaurant table, adult reads five ordinary menu words aloud, and the child borrows one noun and one adjective for a fictional scene.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>12 minutes | story structure</span>
+      <h3>Quiet Object Sort</h3>
+      <p>Child picks three nearby objects and sorts them into setting detail, helpful item, and ending clue.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>10 minutes | sentence connection</span>
+      <h3>One-Sentence Relay</h3>
+      <p>Each child writes one sentence, folds the page to show only that line, and passes it to an adult who adds a neutral next-word prompt.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>8 minutes | sensory detail</span>
+      <h3>Sound Bank Sketch</h3>
+      <p>Child lists or sketches three soft sounds from the space, then chooses one to place in the story opening.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>7 minutes | main idea</span>
+      <h3>Tiny Title Test</h3>
+      <p>Child writes three possible titles on sticky notes and chooses the one that best matches the setting, helper, and ending.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>12 minutes | sequence</span>
+      <h3>Calm Action Ladder</h3>
+      <p>Child writes three small actions a character could take, then numbers them first, next, and last.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>6 minutes | revision planning</span>
+      <h3>Finish Later Bookmark</h3>
+      <p>Child marks one unfinished blank, writes a next-step word beside it, and slips the page back into the folder for home or class time.</p>
+    </article></div>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Waiting quest 1 | Appointment lobby</div>
+      <h2>Acorn Avenue Slip Sort</h2>
+      <figure><img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration"><figcaption>Acorn Avenue Errand Office</figcaption></figure>
+      <p class="kid-direction">Choose three tiny errand slips, sort them by place, and write the first helpful delivery note.</p>
+      <p class="adult-note">Point to one real room detail for inspiration, then let the child keep answers short and quiet.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>3 minutes setup</span>
+        <span>Quiet one-page writing for a seated lobby wait with an adult nearby and only a pencil on the page.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Errand Slips</h3>
+          <p class="write-line">The first leaf slip asks for ____________________________.</p>
+<p class="write-line">The second leaf slip belongs near ____________________________.</p>
+<p class="write-line">The third leaf slip is marked with ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Desk Clues</h3>
+          <p class="write-line">The acorn desk drawer holds ____________________________.</p>
+<p class="write-line">The quiet waiting-room clue looks like ____________________________.</p>
+<p class="write-line">The clerk writes the neat label ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Delivery Note</h3>
+          <p class="write-line">First, the helper carries ____________________________.</p>
+<p class="write-line">Next, the helper checks ____________________________.</p>
+<p class="write-line">The tiny delivery note says ____________________________.</p>
+        </section></div>
+      <p class="take-home">Save this page and finish the Acorn Avenue errand route at home.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Waiting quest 2 | Restaurant table</div>
+      <h2>Button Bakery Table Map</h2>
+      <figure><img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration"><figcaption>Button Bakery Map Mix-Up</figcaption></figure>
+      <p class="kid-direction">Draw a tiny bakery path, name the mixed-up clue, and write three clear directions.</p>
+      <p class="adult-note">Use the edge of the printed page as the bakery street and keep extra materials off the table.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>4 minutes setup</span>
+        <span>Low-mess restaurant table quest for a calm seated wait while food or a turn is coming.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Tiny Route</h3>
+          <p class="write-line">The button roll starts beside ____________________________.</p>
+<p class="write-line">The crumb path turns around ____________________________.</p>
+<p class="write-line">The bakery counter waits near ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Mixup</h3>
+          <p class="write-line">The upside-down clue points to ____________________________.</p>
+<p class="write-line">The quiet table clue is ____________________________.</p>
+<p class="write-line">The helper redraws the map with ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Clear Directions</h3>
+          <p class="write-line">First, roll past ____________________________.</p>
+<p class="write-line">Next, look under ____________________________.</p>
+<p class="write-line">Last, place the button tray at ____________________________.</p>
+        </section></div>
+      <p class="take-home">Save this map page and add one more Button Bakery stop later.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Waiting quest 3 | Airport gate</div>
+      <h2>Spoon Ferry Gate Log</h2>
+      <figure><img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration"><figcaption>Spoon Ferry Lunchbox Harbor</figcaption></figure>
+      <p class="kid-direction">Pick a lunchbox cargo, list three harbor stops, and write the ferry log ending.</p>
+      <p class="adult-note">Invite the child to borrow one color or shape from nearby seats, bags, or signs without leaving the seat.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>3 minutes setup</span>
+        <span>Quiet airport gate writing page for a seated family wait with one pencil and one printed sheet.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Lunchbox Cargo</h3>
+          <p class="write-line">The spoon ferry carries ____________________________.</p>
+<p class="write-line">The lunchbox label shows ____________________________.</p>
+<p class="write-line">The cargo helper notices ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Harbor Stops</h3>
+          <p class="write-line">Stop one has a dock shaped like ____________________________.</p>
+<p class="write-line">Stop two waits beside ____________________________.</p>
+<p class="write-line">Stop three needs the cargo called ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ferry Log</h3>
+          <p class="write-line">First, the ferry glides past ____________________________.</p>
+<p class="write-line">Next, the helper asks about ____________________________.</p>
+<p class="write-line">The final lunchbox log says ____________________________.</p>
+        </section></div>
+      <p class="take-home">Save this ferry log and finish the harbor route after the wait.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Waiting quest 4 | Sibling activity</div>
+      <h2>Pocket Park Bench Notice</h2>
+      <figure><img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration"><figcaption>Pocket Park Notice Board</figcaption></figure>
+      <p class="kid-direction">Fill the notice board with three small park messages and write what happens on the bench.</p>
+      <p class="adult-note">Let siblings suggest one short noun each, then have one child write while the page stays flat.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>5 minutes setup</span>
+        <span>Sibling activity for a seated pickup line or lobby wait where each child can add one quiet notice.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Notice Board</h3>
+          <p class="write-line">The first tiny notice says ____________________________.</p>
+<p class="write-line">The second tiny notice points toward ____________________________.</p>
+<p class="write-line">The third tiny notice asks for ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Bench Details</h3>
+          <p class="write-line">The bottle-cap bench sits under ____________________________.</p>
+<p class="write-line">The pebble path curves around ____________________________.</p>
+<p class="write-line">The quiet park sound is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Park Message</h3>
+          <p class="write-line">First, the helper reads ____________________________.</p>
+<p class="write-line">Next, the helper adds ____________________________.</p>
+<p class="write-line">The finished park message says ____________________________.</p>
+        </section></div>
+      <p class="take-home">Save this page and finish the Pocket Park notice story at home.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Waiting quest 5 | Restaurant table</div>
+      <h2>Penny Path Pocket Compass Route</h2>
+      <figure><img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration"><figcaption>Penny Path Compass Shop</figcaption></figure>
+      <p class="kid-direction">Fill the compass blanks to show where the button compass points and why the helper follows it.</p>
+      <p class="adult-note">Read the headings aloud, then let the child choose one snack-stand or mailbox detail before writing.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>4 minutes setup</span>
+        <span>A quiet table-page activity where an adult reads the compass choices and the child writes a tiny errand route with one pencil.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Compass Shop Start</h3>
+          <p class="write-line">The button compass points first toward ____________________.</p>
+<p class="write-line">The folded receipt asks the helper to find ____________________.</p>
+<p class="write-line">The quiet clue near the snack stand is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Kind Turn Map</h3>
+          <p class="write-line">The compass changes direction after ____________________.</p>
+<p class="write-line">The next stop should be ____________________ because ____________________.</p>
+<p class="write-line">The mailbox row color I choose is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Finish The Errand</h3>
+          <p class="write-line">The helper solves the tiny errand by ____________________.</p>
+<p class="write-line">A clearer direction word I can add is ____________________.</p>
+<p class="write-line">My final Penny Path sentence is ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this compass route page to finish a longer Penny Path errand story later.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Waiting quest 6 | Appointment lobby</div>
+      <h2>Margin Note Market Quiet Swap</h2>
+      <figure><img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration"><figcaption>Margin Note Market</figcaption></figure>
+      <p class="kid-direction">Turn three vague notes into specific revision tasks for a market stall writer.</p>
+      <p class="adult-note">If the wait is short, ask the child to finish only the strongest note and save the rest.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>5 minutes setup</span>
+        <span>A quiet lobby activity where an adult points to three note choices and the child turns each one into a useful revision task.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Market Stall Notes</h3>
+          <p class="write-line">The Clarity stall receives a note that says ____________________.</p>
+<p class="write-line">The Detail stall needs one exact example about ____________________.</p>
+<p class="write-line">The Ending stall asks the writer to check ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Make Feedback Useful</h3>
+          <p class="write-line">A vague note I can replace is ____________________.</p>
+<p class="write-line">My specific revision task says ____________________.</p>
+<p class="write-line">The writer should try this first because ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Next Draft Plan</h3>
+          <p class="write-line">The market stall I would visit next is ____________________.</p>
+<p class="write-line">One sentence that needs a stronger detail is ____________________.</p>
+<p class="write-line">The calm note I would hand back says ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this market page to finish the remaining note swaps at home or during another quiet wait.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Waiting quest 7 | Airport gate</div>
+      <h2>Clue Label Tower Gate Gallery</h2>
+      <figure><img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration"><figcaption>Clue Label Tower Museum</figcaption></figure>
+      <p class="kid-direction">Choose three exhibit objects and write one clear label that tells visitors what to notice.</p>
+      <p class="adult-note">Invite the child to use nearby safe objects as inspiration while staying seated.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>6 minutes setup</span>
+        <span>A quiet gate-seat activity where an adult sets one printed page on a folder and the child writes exhibit labels from everyday-object clues.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Gallery Object Picks</h3>
+          <p class="write-line">The first exhibit object is ____________________.</p>
+<p class="write-line">The clue visitors should notice is ____________________.</p>
+<p class="write-line">A distracting detail I will leave out is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>One-Sentence Labels</h3>
+          <p class="write-line">Label one should explain ____________________.</p>
+<p class="write-line">Label two should point visitors toward ____________________.</p>
+<p class="write-line">Label three becomes clearer when I add ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Curator Finish</h3>
+          <p class="write-line">The label drawer I would open next is ____________________.</p>
+<p class="write-line">The clearest museum word on my page is ____________________.</p>
+<p class="write-line">My final exhibit label says ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this gallery page so the final exhibit label can become a short museum story.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Waiting quest 8 | Sibling activity</div>
+      <h2>Index Card Theater Seat-Row Cues</h2>
+      <figure><img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration"><figcaption>Index Card Theater Club</figcaption></figure>
+      <p class="kid-direction">Arrange the beginning, turn, and finish cues, then write the narrator&#39;s quiet closing line.</p>
+      <p class="adult-note">Give each child a turn choosing a cue, then keep the finished page in the folder if the wait ends.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>5 minutes setup</span>
+        <span>A quiet adult-guided sibling activity where children stay seated, point to cue choices, and write stage-card lines on one page.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Scene Card Row</h3>
+          <p class="write-line">The beginning card shows ____________________.</p>
+<p class="write-line">The turn card changes the scene when ____________________.</p>
+<p class="write-line">The finish card should leave the audience noticing ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Quiet Cue Choices</h3>
+          <p class="write-line">The action cue tells the actor to ____________________.</p>
+<p class="write-line">The dialogue cue line is ____________________.</p>
+<p class="write-line">The setting cue adds ____________________ to the tiny stage.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Closing Line</h3>
+          <p class="write-line">The narrator reminds us that ____________________.</p>
+<p class="write-line">One jumpy part I can connect is ____________________.</p>
+<p class="write-line">My final seat-row cue says ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this theater cue page to finish the scene-card performance plan later.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,183 @@
+{
+  "batchId": "2026-06-02-batch13",
+  "lane": "waiting-room-quests-a",
+  "generatedAt": "2026-06-02",
+  "quests": [
+    {
+      "id": "quiet-acorn-avenue-slip-sort",
+      "title": "Acorn Avenue Slip Sort",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "waitingUse": "Quiet one-page writing for a seated lobby wait with an adult nearby and only a pencil on the page.",
+      "setupMinutes": "3 minutes",
+      "waitingMode": "Appointment lobby",
+      "kidDirection": "Choose three tiny errand slips, sort them by place, and write the first helpful delivery note.",
+      "adultNote": "Point to one real room detail for inspiration, then let the child keep answers short and quiet.",
+      "materials": [
+        "Printed errand office page",
+        "Pencil",
+        "Small clipboard",
+        "Two colored pencils"
+      ],
+      "pageSections": [
+        {
+          "heading": "Errand Slips",
+          "lines": [
+            "The first leaf slip asks for ____________________________.",
+            "The second leaf slip belongs near ____________________________.",
+            "The third leaf slip is marked with ____________________________."
+          ]
+        },
+        {
+          "heading": "Desk Clues",
+          "lines": [
+            "The acorn desk drawer holds ____________________________.",
+            "The quiet waiting-room clue looks like ____________________________.",
+            "The clerk writes the neat label ____________________________."
+          ]
+        },
+        {
+          "heading": "Delivery Note",
+          "lines": [
+            "First, the helper carries ____________________________.",
+            "Next, the helper checks ____________________________.",
+            "The tiny delivery note says ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this page and finish the Acorn Avenue errand route at home."
+    },
+    {
+      "id": "quiet-button-bakery-table-map",
+      "title": "Button Bakery Table Map",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "waitingUse": "Low-mess restaurant table quest for a calm seated wait while food or a turn is coming.",
+      "setupMinutes": "4 minutes",
+      "waitingMode": "Restaurant table",
+      "kidDirection": "Draw a tiny bakery path, name the mixed-up clue, and write three clear directions.",
+      "adultNote": "Use the edge of the printed page as the bakery street and keep extra materials off the table.",
+      "materials": [
+        "Printed bakery map page",
+        "Pencil",
+        "Crayon",
+        "Paper napkin"
+      ],
+      "pageSections": [
+        {
+          "heading": "Tiny Route",
+          "lines": [
+            "The button roll starts beside ____________________________.",
+            "The crumb path turns around ____________________________.",
+            "The bakery counter waits near ____________________________."
+          ]
+        },
+        {
+          "heading": "Map Mixup",
+          "lines": [
+            "The upside-down clue points to ____________________________.",
+            "The quiet table clue is ____________________________.",
+            "The helper redraws the map with ____________________________."
+          ]
+        },
+        {
+          "heading": "Clear Directions",
+          "lines": [
+            "First, roll past ____________________________.",
+            "Next, look under ____________________________.",
+            "Last, place the button tray at ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this map page and add one more Button Bakery stop later."
+    },
+    {
+      "id": "quiet-spoon-ferry-gate-log",
+      "title": "Spoon Ferry Gate Log",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "waitingUse": "Quiet airport gate writing page for a seated family wait with one pencil and one printed sheet.",
+      "setupMinutes": "3 minutes",
+      "waitingMode": "Airport gate",
+      "kidDirection": "Pick a lunchbox cargo, list three harbor stops, and write the ferry log ending.",
+      "adultNote": "Invite the child to borrow one color or shape from nearby seats, bags, or signs without leaving the seat.",
+      "materials": [
+        "Printed ferry log page",
+        "Pencil",
+        "Blue colored pencil",
+        "Index card"
+      ],
+      "pageSections": [
+        {
+          "heading": "Lunchbox Cargo",
+          "lines": [
+            "The spoon ferry carries ____________________________.",
+            "The lunchbox label shows ____________________________.",
+            "The cargo helper notices ____________________________."
+          ]
+        },
+        {
+          "heading": "Harbor Stops",
+          "lines": [
+            "Stop one has a dock shaped like ____________________________.",
+            "Stop two waits beside ____________________________.",
+            "Stop three needs the cargo called ____________________________."
+          ]
+        },
+        {
+          "heading": "Ferry Log",
+          "lines": [
+            "First, the ferry glides past ____________________________.",
+            "Next, the helper asks about ____________________________.",
+            "The final lunchbox log says ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this ferry log and finish the harbor route after the wait."
+    },
+    {
+      "id": "quiet-pocket-park-bench-notice",
+      "title": "Pocket Park Bench Notice",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "waitingUse": "Sibling activity for a seated pickup line or lobby wait where each child can add one quiet notice.",
+      "setupMinutes": "5 minutes",
+      "waitingMode": "Sibling activity",
+      "kidDirection": "Fill the notice board with three small park messages and write what happens on the bench.",
+      "adultNote": "Let siblings suggest one short noun each, then have one child write while the page stays flat.",
+      "materials": [
+        "Printed pocket park page",
+        "Pencil",
+        "Three sticky note strips",
+        "Green colored pencil"
+      ],
+      "pageSections": [
+        {
+          "heading": "Notice Board",
+          "lines": [
+            "The first tiny notice says ____________________________.",
+            "The second tiny notice points toward ____________________________.",
+            "The third tiny notice asks for ____________________________."
+          ]
+        },
+        {
+          "heading": "Bench Details",
+          "lines": [
+            "The bottle-cap bench sits under ____________________________.",
+            "The pebble path curves around ____________________________.",
+            "The quiet park sound is ____________________________."
+          ]
+        },
+        {
+          "heading": "Park Message",
+          "lines": [
+            "First, the helper reads ____________________________.",
+            "Next, the helper adds ____________________________.",
+            "The finished park message says ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this page and finish the Pocket Park notice story at home."
+    }
+  ]
+}

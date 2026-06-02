@@ -41,6 +41,7 @@ npm run image:starter -- --only moon-muffin-market
 npm run image:batch7
 npm run image:batch10
 npm run image:batch11
+npm run image:batch13
 ```
 
 ## Build Product Artifacts
@@ -53,6 +54,7 @@ npm run product:homeschool-season-bundle
 npm run product:classroom-license-pack
 npm run product:birthday-party-kit
 npm run product:road-trip-pack
+npm run product:waiting-room-pack
 ```
 
 ## Safety

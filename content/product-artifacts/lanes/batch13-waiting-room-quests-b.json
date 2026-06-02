@@ -1,0 +1,183 @@
+{
+  "batchId": "2026-06-02-batch13",
+  "lane": "waiting-room-quests-b",
+  "generatedAt": "2026-06-02",
+  "quests": [
+    {
+      "id": "quiet-penny-path-pocket-compass-route",
+      "title": "Penny Path Pocket Compass Route",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "waitingUse": "A quiet table-page activity where an adult reads the compass choices and the child writes a tiny errand route with one pencil.",
+      "setupMinutes": "4 minutes",
+      "waitingMode": "Restaurant table",
+      "kidDirection": "Fill the compass blanks to show where the button compass points and why the helper follows it.",
+      "adultNote": "Read the headings aloud, then let the child choose one snack-stand or mailbox detail before writing.",
+      "materials": [
+        "printed Penny Path quest page",
+        "pencil",
+        "receipt-route card",
+        "small clipboard"
+      ],
+      "pageSections": [
+        {
+          "heading": "Compass Shop Start",
+          "lines": [
+            "The button compass points first toward ____________________.",
+            "The folded receipt asks the helper to find ____________________.",
+            "The quiet clue near the snack stand is ____________________."
+          ]
+        },
+        {
+          "heading": "Kind Turn Map",
+          "lines": [
+            "The compass changes direction after ____________________.",
+            "The next stop should be ____________________ because ____________________.",
+            "The mailbox row color I choose is ____________________."
+          ]
+        },
+        {
+          "heading": "Finish The Errand",
+          "lines": [
+            "The helper solves the tiny errand by ____________________.",
+            "A clearer direction word I can add is ____________________.",
+            "My final Penny Path sentence is ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this compass route page to finish a longer Penny Path errand story later."
+    },
+    {
+      "id": "quiet-margin-note-market-swap",
+      "title": "Margin Note Market Quiet Swap",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "waitingUse": "A quiet lobby activity where an adult points to three note choices and the child turns each one into a useful revision task.",
+      "setupMinutes": "5 minutes",
+      "waitingMode": "Appointment lobby",
+      "kidDirection": "Turn three vague notes into specific revision tasks for a market stall writer.",
+      "adultNote": "If the wait is short, ask the child to finish only the strongest note and save the rest.",
+      "materials": [
+        "printed market feedback page",
+        "pencil",
+        "three note tokens",
+        "pocket folder"
+      ],
+      "pageSections": [
+        {
+          "heading": "Market Stall Notes",
+          "lines": [
+            "The Clarity stall receives a note that says ____________________.",
+            "The Detail stall needs one exact example about ____________________.",
+            "The Ending stall asks the writer to check ____________________."
+          ]
+        },
+        {
+          "heading": "Make Feedback Useful",
+          "lines": [
+            "A vague note I can replace is ____________________.",
+            "My specific revision task says ____________________.",
+            "The writer should try this first because ____________________."
+          ]
+        },
+        {
+          "heading": "Next Draft Plan",
+          "lines": [
+            "The market stall I would visit next is ____________________.",
+            "One sentence that needs a stronger detail is ____________________.",
+            "The calm note I would hand back says ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this market page to finish the remaining note swaps at home or during another quiet wait."
+    },
+    {
+      "id": "quiet-clue-label-tower-gate-gallery",
+      "title": "Clue Label Tower Gate Gallery",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "waitingUse": "A quiet gate-seat activity where an adult sets one printed page on a folder and the child writes exhibit labels from everyday-object clues.",
+      "setupMinutes": "6 minutes",
+      "waitingMode": "Airport gate",
+      "kidDirection": "Choose three exhibit objects and write one clear label that tells visitors what to notice.",
+      "adultNote": "Invite the child to use nearby safe objects as inspiration while staying seated.",
+      "materials": [
+        "printed tower museum label page",
+        "pencil",
+        "object clue strip",
+        "firm folder"
+      ],
+      "pageSections": [
+        {
+          "heading": "Gallery Object Picks",
+          "lines": [
+            "The first exhibit object is ____________________.",
+            "The clue visitors should notice is ____________________.",
+            "A distracting detail I will leave out is ____________________."
+          ]
+        },
+        {
+          "heading": "One-Sentence Labels",
+          "lines": [
+            "Label one should explain ____________________.",
+            "Label two should point visitors toward ____________________.",
+            "Label three becomes clearer when I add ____________________."
+          ]
+        },
+        {
+          "heading": "Curator Finish",
+          "lines": [
+            "The label drawer I would open next is ____________________.",
+            "The clearest museum word on my page is ____________________.",
+            "My final exhibit label says ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this gallery page so the final exhibit label can become a short museum story."
+    },
+    {
+      "id": "quiet-index-card-seat-row-cues",
+      "title": "Index Card Theater Seat-Row Cues",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "waitingUse": "A quiet adult-guided sibling activity where children stay seated, point to cue choices, and write stage-card lines on one page.",
+      "setupMinutes": "5 minutes",
+      "waitingMode": "Sibling activity",
+      "kidDirection": "Arrange the beginning, turn, and finish cues, then write the narrator's quiet closing line.",
+      "adultNote": "Give each child a turn choosing a cue, then keep the finished page in the folder if the wait ends.",
+      "materials": [
+        "printed theater cue page",
+        "pencils",
+        "cue-card strip",
+        "firm folder"
+      ],
+      "pageSections": [
+        {
+          "heading": "Scene Card Row",
+          "lines": [
+            "The beginning card shows ____________________.",
+            "The turn card changes the scene when ____________________.",
+            "The finish card should leave the audience noticing ____________________."
+          ]
+        },
+        {
+          "heading": "Quiet Cue Choices",
+          "lines": [
+            "The action cue tells the actor to ____________________.",
+            "The dialogue cue line is ____________________.",
+            "The setting cue adds ____________________ to the tiny stage."
+          ]
+        },
+        {
+          "heading": "Closing Line",
+          "lines": [
+            "The narrator reminds us that ____________________.",
+            "One jumpy part I can connect is ____________________.",
+            "My final seat-row cue says ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Save this theater cue page to finish the scene-card performance plan later."
+    }
+  ]
+}

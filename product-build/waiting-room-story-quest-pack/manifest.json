@@ -1,0 +1,73 @@
+{
+  "batchId": "2026-06-02-batch13",
+  "generatedAt": "2026-06-02",
+  "productSlug": "waiting-room-story-quest-pack",
+  "title": "Waiting Room Story Quest Pack",
+  "pricePoint": "$11",
+  "sourcePageCount": 8,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/waiting-room-story-quest-pack/Waiting-Room-Story-Quest-Pack.pdf",
+      "sha256": "66729167625fe437bf7a436e9bbb91b0f4156ac4a1f9934c8190c23be65b8c78",
+      "size": 2583759
+    },
+    "zip": {
+      "path": "product-build/waiting-room-story-quest-pack/waiting-room-story-quest-pack.zip",
+      "sha256": "d8ce8920933017d4604c834c4fcee8d0edab2a40d2ed7daf7fc0c5924038eb5b",
+      "size": 4956939
+    },
+    "sourceHtml": {
+      "path": "product-build/waiting-room-story-quest-pack/source/waiting-room-story-quest-pack.html",
+      "sha256": "f0fe80459262e30c1216beb9852a0e96980cf2a23e23214710f6c8f74eafc01a",
+      "size": 34085
+    },
+    "readme": {
+      "path": "product-build/waiting-room-story-quest-pack/README.txt",
+      "sha256": "96053cef155990d6dcc6a5adf1dadc974d374f3561c60a91d0c3cd6260002262",
+      "size": 565
+    },
+    "assets": [
+      {
+        "path": "product-build/waiting-room-story-quest-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/waiting-room-story-quest-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/waiting-room-story-quest-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/waiting-room-story-quest-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/waiting-room-story-quest-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/waiting-room-story-quest-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/waiting-room-story-quest-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/waiting-room-story-quest-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      }
+    ]
+  }
+}

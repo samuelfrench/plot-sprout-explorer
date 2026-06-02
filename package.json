@@ -19,11 +19,13 @@
     "image:batch7": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch7-product-images.json",
     "image:batch10": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch10-product-images.json",
     "image:batch11": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch11-product-images.json",
+    "image:batch13": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch13-product-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
     "product:birthday-party-kit": "node scripts/birthday-party-kit-builder.mjs",
-    "product:road-trip-pack": "node scripts/road-trip-pack-builder.mjs"
+    "product:road-trip-pack": "node scripts/road-trip-pack-builder.mjs",
+    "product:waiting-room-pack": "node scripts/waiting-room-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

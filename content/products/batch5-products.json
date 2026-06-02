@@ -254,6 +254,54 @@
         "Put finished pages into the travel folder before changing locations.",
         "Use one share card after the car is parked, at a table, or during a calm visit."
       ]
+    },
+    {
+      "slug": "waiting-room-story-quest-pack",
+      "title": "Waiting Room Story Quest Pack",
+      "pricePoint": "$11",
+      "status": "checkout_pending",
+      "headline": "A printable quiet-writing kit for restaurants, lobbies, sibling activities, and pickup lines.",
+      "summary": "Eight low-mess story quests help families turn short waits into quiet planning, tiny drafts, and finished take-home pages.",
+      "heroImage": "images/plotsprout/batch13/waiting-room-story-quest-pack.jpg",
+      "ctaLabel": "Request waiting room pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Waiting%20Room%20Story%20Quest%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static waiting-room pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "acorn-avenue-errand-office",
+        "button-bakery-map-mixup",
+        "spoon-ferry-lunchbox-harbor",
+        "pocket-park-notice-board",
+        "penny-path-compass-shop",
+        "margin-note-market",
+        "clue-label-tower-museum",
+        "index-card-theater-club"
+      ],
+      "includedPages": [
+        "Eight printable waiting-room quest pages",
+        "Before-you-wait adult setup checklist",
+        "Restaurant table setup notes",
+        "Generic lobby writing routine",
+        "Sibling event quiet-kit plan",
+        "Pickup-line folder routine",
+        "Five seated waiting routines",
+        "Eight extension activity cards",
+        "Six optional group-share cards",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A restaurant table activity that does not require a screen",
+        "A generic lobby or gate activity with quiet one-page jobs",
+        "A sibling-event folder for rehearsals, lessons, practices, or performances",
+        "A pickup-line writing starter that can close quickly when the wait ends"
+      ],
+      "parentSteps": [
+        "Print one packet per child plus two spare draft pages.",
+        "Pre-select two quest starters so the child does not need to browse every page.",
+        "Pack pencils, a small crayon set, sticky notes, and a clipboard or folder.",
+        "Let the child point, draw, dictate, write one line, or save the page for home.",
+        "Close the folder immediately when the wait ends and share later at a table or at home."
+      ]
     }
   ]
 }

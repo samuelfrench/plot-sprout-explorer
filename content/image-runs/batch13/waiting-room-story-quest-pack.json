@@ -1,0 +1,18 @@
+{
+  "slug": "waiting-room-story-quest-pack",
+  "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no markings, blank paper sheets, plain colored pencils, simple folders, pastel background, no notebooks, no forms, no markers, no rulers, no grids",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26061316,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch13/waiting-room-story-quest-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch13/waiting-room-story-quest-pack.webp",
+  "manifest": "content/image-queue/2026-06-02-batch13-product-images.json",
+  "title": "Waiting Room Story Quest Pack product image"
+}

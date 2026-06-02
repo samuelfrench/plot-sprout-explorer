@@ -11,6 +11,7 @@ import {
   validatePackSource,
   validateRoadTripPackSource,
   validateSeasonBundleSource,
+  validateWaitingRoomPackSource,
 } from './product-artifact-policy.mjs'
 import { starterWorlds } from './starter-worlds.mjs'
 
@@ -24,12 +25,14 @@ const batch4ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-bat
 const batch7ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch7-product-images.json')
 const batch10ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch10-product-images.json')
 const batch11ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch11-product-images.json')
+const batch13ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch13-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
 const classroomLicenseSourceFile = resolve(root, 'content', 'product-artifacts', 'classroom-story-license-pack.json')
 const birthdayPartySourceFile = resolve(root, 'content', 'product-artifacts', 'birthday-party-story-quest-kit.json')
 const roadTripSourceFile = resolve(root, 'content', 'product-artifacts', 'road-trip-story-quest-pack.json')
+const waitingRoomSourceFile = resolve(root, 'content', 'product-artifacts', 'waiting-room-story-quest-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -37,12 +40,14 @@ const batch4ImagesBatchId = '2026-06-02-batch4'
 const batch7ProductImagesBatchId = '2026-06-02-batch7-product-images'
 const batch10ProductImagesBatchId = '2026-06-02-batch10-product-images'
 const batch11ProductImagesBatchId = '2026-06-02-batch11-product-images'
+const batch13ProductImagesBatchId = '2026-06-02-batch13-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
 const classroomLicenseBatchId = '2026-06-02-batch9'
 const birthdayPartyBatchId = '2026-06-02-batch10'
 const roadTripBatchId = '2026-06-02-batch11'
+const waitingRoomBatchId = '2026-06-02-batch13'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -578,6 +583,50 @@ function validateBatch11ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch13ProductImage(image) {
+  const label = `2026-06-02-batch13-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(image.slug === 'waiting-room-story-quest-pack', `${label}.slug must be waiting-room-story-quest-pack.`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch13/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch13/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch13/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'no text',
+    'no letters',
+    'no logos',
+    'no watermark',
+    'no branded characters',
+    'no scary harm',
+    'no weapons',
+    'no people',
+    'no faces',
+    'no animals',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar.seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -631,6 +680,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'road-trip-story-quest-pack': {
       title: 'Road Trip Story Quest Pack',
       pricePoint: '$17',
+      minIncludedPages: 9,
+      minUseCases: 4,
+      minParentSteps: 5,
+      maxWorldSlugs: 10,
+    },
+    'waiting-room-story-quest-pack': {
+      title: 'Waiting Room Story Quest Pack',
+      pricePoint: '$11',
       minIncludedPages: 9,
       minUseCases: 4,
       minParentSteps: 5,
@@ -824,12 +881,23 @@ expect(Array.isArray(batch11ProductImages.images), 'batch11 product image manife
 expect(batch11ProductImages.images.length === 1, `Expected 1 Batch 11 product image, found ${batch11ProductImages.images.length}.`)
 validateBatch11ProductImage(batch11ProductImages.images[0])
 
+expect(existsSync(batch13ProductImagesFile), `Missing Batch 13 product image manifest: ${batch13ProductImagesFile}`)
+const batch13ProductImages = readJson(batch13ProductImagesFile)
+expect(
+  batch13ProductImages.batchId === batch13ProductImagesBatchId,
+  `batch13 product image manifest batchId must be ${batch13ProductImagesBatchId}.`,
+)
+expect(batch13ProductImages.generatedAt === '2026-06-02', 'batch13 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch13ProductImages.images), 'batch13 product image manifest images must be an array.')
+expect(batch13ProductImages.images.length === 1, `Expected 1 Batch 13 product image, found ${batch13ProductImages.images.length}.`)
+validateBatch13ProductImage(batch13ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 5, `Expected 5 product records, found ${products.products.length}.`)
+expect(products.products.length === 6, `Expected 6 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -838,6 +906,7 @@ for (const requiredProductSlug of [
   'classroom-story-license-pack',
   'birthday-party-story-quest-kit',
   'road-trip-story-quest-pack',
+  'waiting-room-story-quest-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -1141,6 +1210,66 @@ for (const asset of roadTripArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Road Trip Story Quest Pack copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(waitingRoomSourceFile), `Missing Batch 13 Waiting Room pack source file: ${waitingRoomSourceFile}`)
+const waitingRoomSource = readJson(waitingRoomSourceFile)
+expect(
+  waitingRoomSource.batchId === waitingRoomBatchId,
+  `Waiting Room pack source batchId must be ${waitingRoomBatchId}.`,
+)
+const waitingRoomProduct = products.products.find((product) => product.slug === 'waiting-room-story-quest-pack')
+expect(waitingRoomProduct, 'Missing Waiting Room product record for Batch 13 artifact validation.')
+const waitingRoomSourceErrors = validateWaitingRoomPackSource(waitingRoomSource, waitingRoomProduct, worldAgeBands)
+expect(
+  waitingRoomSourceErrors.length === 0,
+  `Waiting Room Story Quest Pack source failed validation:\n${waitingRoomSourceErrors.join('\n')}`,
+)
+const waitingRoomExpectedPdfPages = waitingRoomSource.quests.length + 4
+const waitingRoomArtifactStatus = inspectArtifactFiles(root, waitingRoomSource.artifact, {
+  expectedPdfPages: waitingRoomExpectedPdfPages,
+})
+expect(
+  waitingRoomArtifactStatus.valid,
+  `Waiting Room Story Quest Pack artifacts failed validation:\n${waitingRoomArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  waitingRoomArtifactStatus.files.pdf.size > 100_000,
+  `Waiting Room Story Quest Pack PDF artifact is unexpectedly small: ${waitingRoomArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  waitingRoomArtifactStatus.files.pdf.pageCount === waitingRoomExpectedPdfPages,
+  `Waiting Room Story Quest Pack PDF artifact must have ${waitingRoomExpectedPdfPages} pages.`,
+)
+expect(
+  waitingRoomArtifactStatus.files.zip.size > waitingRoomArtifactStatus.files.pdf.size,
+  'Waiting Room Story Quest Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const waitingRoomCheckoutErrors = validateCheckoutReadiness(waitingRoomProduct, waitingRoomArtifactStatus)
+expect(
+  waitingRoomCheckoutErrors.length === 0,
+  `Waiting Room Story Quest Pack checkout readiness failed validation:\n${waitingRoomCheckoutErrors.join('\n')}`,
+)
+const waitingRoomArtifactManifest = readJson(resolve(root, waitingRoomSource.artifact.manifestPath))
+expect(
+  waitingRoomArtifactManifest.sourcePageCount === waitingRoomSource.quests.length,
+  'Waiting Room Story Quest Pack artifact manifest sourcePageCount must match source quests.',
+)
+expect(
+  Array.isArray(waitingRoomArtifactManifest.files.assets),
+  'Waiting Room Story Quest Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  waitingRoomArtifactManifest.files.assets.length === waitingRoomSource.worldSlugs.length,
+  'Waiting Room Story Quest Pack artifact manifest must include one copied local image per product world.',
+)
+const waitingRoomManifestAssetErrors = validateManifestWorldAssets(waitingRoomSource, waitingRoomArtifactManifest)
+expect(
+  waitingRoomManifestAssetErrors.length === 0,
+  `Waiting Room Story Quest Pack artifact manifest image coverage failed validation:\n${waitingRoomManifestAssetErrors.join('\n')}`,
+)
+for (const asset of waitingRoomArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Waiting Room Story Quest Pack copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 5 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 6 product artifacts.`,
 )

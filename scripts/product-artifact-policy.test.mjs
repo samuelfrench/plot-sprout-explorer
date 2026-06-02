@@ -15,6 +15,7 @@ import {
   validatePackSource,
   validateRoadTripPackSource,
   validateSeasonBundleSource,
+  validateWaitingRoomPackSource,
   writeStoredZip,
 } from './product-artifact-policy.mjs'
 
@@ -512,6 +513,111 @@ function validRoadTripSource() {
   }
 }
 
+function waitingRoomQuest(id, worldSlug, ageBand) {
+  return {
+    id,
+    title: id.split('-').join(' '),
+    worldSlug,
+    ageBand,
+    waitingUse: 'Quiet table or lobby writing station with one printed page.',
+    setupMinutes: '4 minutes',
+    waitingMode: 'Appointment lobby',
+    kidDirection: 'Choose one quiet detail and write one sentence before the next page.',
+    adultNote: 'Read choices softly and let pointing count as planning.',
+    materials: ['printed quest page', 'pencil', 'folder', 'small clipboard'],
+    pageSections: ['Notice', 'Choose', 'Finish'].map((heading) => ({
+      heading,
+      lines: [
+        `${heading} detail: ____________________________`,
+        `${heading} choice: ____________________________`,
+        `${heading} sentence: ____________________________`,
+      ],
+    })),
+    takeHomeLine: 'Save this page in the waiting folder as one finished quiet quest.',
+  }
+}
+
+function validWaitingRoomSource() {
+  const worldSlugs = [
+    'acorn-avenue-errand-office',
+    'button-bakery-map-mixup',
+    'spoon-ferry-lunchbox-harbor',
+    'pocket-park-notice-board',
+    'penny-path-compass-shop',
+    'margin-note-market',
+    'clue-label-tower-museum',
+    'index-card-theater-club',
+  ]
+  const worldAges = new Map([
+    ['acorn-avenue-errand-office', '7-9'],
+    ['button-bakery-map-mixup', '7-9'],
+    ['spoon-ferry-lunchbox-harbor', '7-9'],
+    ['pocket-park-notice-board', '7-9'],
+    ['penny-path-compass-shop', '7-9'],
+    ['margin-note-market', '10-11'],
+    ['clue-label-tower-museum', '10-11'],
+    ['index-card-theater-club', '10-11'],
+  ])
+
+  return {
+    source: {
+      batchId: '2026-06-02-batch13',
+      generatedAt: '2026-06-02',
+      productSlug: 'waiting-room-story-quest-pack',
+      title: 'Waiting Room Story Quest Pack',
+      pricePoint: '$11',
+      audience: 'Parents, grandparents, tutors, and homeschool families planning quiet adult-guided writing for ages 7-11.',
+      sessionLength: '8 printable quiet waiting quests plus adult setup tools',
+      safetyNote: safety,
+      artifact: {
+        pdfPath: 'product-build/waiting-room-story-quest-pack/Waiting-Room-Story-Quest-Pack.pdf',
+        zipPath: 'product-build/waiting-room-story-quest-pack/waiting-room-story-quest-pack.zip',
+        sourceHtmlPath: 'product-build/waiting-room-story-quest-pack/source/waiting-room-story-quest-pack.html',
+        manifestPath: 'product-build/waiting-room-story-quest-pack/manifest.json',
+      },
+      worldSlugs,
+      cover: {
+        kicker: 'Printable waiting-room writing kit',
+        headline: 'Waiting Room Story Quest Pack',
+        subhead: 'Eight quiet quests for restaurant tables, lobbies, sibling activities, and pickup lines.',
+        included: [
+          '8 quiet waiting quests',
+          'Adult setup guide',
+          'Before-you-wait checklist',
+          'Restaurant table routine',
+          'Lobby routine',
+          'Sibling activity routine',
+          'Pickup-line routine',
+          'Share cards',
+          'Source HTML',
+          'ZIP artifact',
+        ],
+      },
+      setupGuide: {
+        beforeYouWait: ['Print packets.', 'Clip pages.', 'Pack pencils.', 'Choose first page.', 'Store finished pages.'],
+        restaurantTable: ['Pick one page.', 'Keep voices low.', 'Circle first.', 'Write one line.', 'Folder the page.'],
+        appointmentLobby: ['Use a clipboard.', 'Read choices softly.', 'Skip hard lines.', 'Mark one detail.', 'Close the folder.'],
+        siblingEvent: ['Choose a page.', 'Trade a pencil.', 'Set a timer.', 'Write quietly.', 'Share later.'],
+        pickupLine: ['Keep page ready.', 'Circle a detail.', 'Write one line.', 'Save the page.'],
+      },
+      waitingRoutines: Array.from({ length: 5 }, (_, index) => ({
+        name: `Routine ${index + 1}`,
+        bestFor: 'Quiet table or lobby wait.',
+        steps: ['Set page.', 'Pick card.', 'Write line.', 'Folder page.'],
+      })),
+      extensionActivities: Array.from({ length: 8 }, (_, index) => ({
+        title: `Extension ${index + 1}`,
+        time: '8 minutes',
+        direction: 'Add one concrete detail to the quiet quest page.',
+        writingSkill: 'setting detail',
+      })),
+      groupShareCards: ['Read one line.', 'Point to a detail.', 'Name a helper.', 'Pick a card.', 'Add one color.', 'Pass and listen.'],
+      quests: worldSlugs.map((worldSlug, index) => waitingRoomQuest(`quiet-quest-${index + 1}`, worldSlug, worldAges.get(worldSlug))),
+    },
+    worldAges,
+  }
+}
+
 describe('product artifact policy', () => {
   it('validates the Rainy Day pack source against the product record and required world coverage', () => {
     const product = {
@@ -884,6 +990,54 @@ describe('product artifact policy', () => {
       expect.arrayContaining([
         'setupGuide includes driver-facing facilitation language.',
         'Road Trip Story Quest Pack source includes driver-facing facilitation language.',
+      ]),
+    )
+  })
+
+  it('validates the Waiting Room Story Quest Pack source with matching world age bands and writable quest blanks', () => {
+    const { source, worldAges } = validWaitingRoomSource()
+    const product = {
+      slug: 'waiting-room-story-quest-pack',
+      title: 'Waiting Room Story Quest Pack',
+      pricePoint: '$11',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateWaitingRoomPackSource(source, product, worldAges)).toEqual([])
+  })
+
+  it('rejects Waiting Room quest lines that do not provide writable blanks', () => {
+    const { source, worldAges } = validWaitingRoomSource()
+    source.quests[0].pageSections[0].lines[0] = 'The waiting page starts with a quiet detail.'
+    const product = {
+      slug: 'waiting-room-story-quest-pack',
+      title: 'Waiting Room Story Quest Pack',
+      pricePoint: '$11',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateWaitingRoomPackSource(source, product, worldAges)).toContain(
+      'quests[0].pageSections[0].lines[0] must include a writable blank.',
+    )
+  })
+
+  it('rejects Waiting Room source that drifts into medical, emergency, or treatment advice', () => {
+    const { source, worldAges } = validWaitingRoomSource()
+    source.setupGuide.appointmentLobby[0] = 'Write down symptoms and ask for treatment advice.'
+    const product = {
+      slug: 'waiting-room-story-quest-pack',
+      title: 'Waiting Room Story Quest Pack',
+      pricePoint: '$11',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateWaitingRoomPackSource(source, product, worldAges)).toEqual(
+      expect.arrayContaining([
+        'setupGuide includes medical, emergency, legal, diagnosis, therapy, or treatment language.',
+        'Waiting Room Story Quest Pack source includes medical, emergency, legal, diagnosis, therapy, or treatment language.',
       ]),
     )
   })
