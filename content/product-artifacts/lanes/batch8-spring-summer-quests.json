@@ -1,0 +1,235 @@
+{
+  "metadata": {
+    "batchId": "2026-06-02-batch8",
+    "lane": "spring-summer",
+    "productSlug": "homeschool-season-story-bundle"
+  },
+  "records": [
+    {
+      "id": "spring-greenhouse-gear-schedule",
+      "title": "Spring Greenhouse Gear Schedule",
+      "worldSlug": "greenhouse-gear-garden",
+      "season": "spring",
+      "type": "worksheet",
+      "kidDirection": "Test the greenhouse gears by writing a fair spring care schedule for the sprouts.",
+      "adultNote": "Keep this offline and adult-guided. Let the child point, circle, or sketch before turning the plan into sentences.",
+      "sections": [
+        {
+          "heading": "Greenhouse Job Check",
+          "lines": [
+            "Tiny sprout job: ________________________________",
+            "Tall plant job: ________________________________",
+            "Compost gear job: ________________________________",
+            "Roof vent job: ________________________________"
+          ]
+        },
+        {
+          "heading": "Fair Spring Schedule",
+          "lines": [
+            "First, the greenhouse should ________________________________.",
+            "Next, the gear pattern should ________________________________.",
+            "After that, the seedlings need ________________________________.",
+            "The fairest rule for every plant is ________________________________."
+          ]
+        },
+        {
+          "heading": "Notebook Sentence",
+          "lines": [
+            "My hero notices that ________________________________.",
+            "The greenhouse problem gets clearer when ________________________________.",
+            "One kind change the hero makes is ________________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spring-seed-library-map",
+      "title": "Spring Seed Library Map",
+      "worldSlug": "seed-library-map-room",
+      "season": "spring",
+      "type": "map",
+      "kidDirection": "Draw or label a spring garden map from the seed packet clues.",
+      "adultNote": "Use this as a planning page before full drafting. No accounts, uploads, or public sharing are part of the activity.",
+      "sections": [
+        {
+          "heading": "Packet Clues",
+          "lines": [
+            "Seed packet name: ________________________________",
+            "First garden clue: ________________________________",
+            "Second garden clue: ________________________________",
+            "Question for the next gardener: ________________________________"
+          ]
+        },
+        {
+          "heading": "Map Labels",
+          "lines": [
+            "Where the beans climb: ________________________________",
+            "Where the carrots curve: ________________________________",
+            "Where the sunflower turns: ________________________________",
+            "Where the field notebook waits: ________________________________"
+          ]
+        },
+        {
+          "heading": "Story Route",
+          "lines": [
+            "The hero starts at ________________________________.",
+            "The map changes when ________________________________.",
+            "The return note says ________________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spring-moss-observation-reflection",
+      "title": "Spring Moss Observation Reflection",
+      "worldSlug": "moss-message-observatory",
+      "season": "spring",
+      "type": "reflection",
+      "kidDirection": "Record careful spring details so the moss message can make sense.",
+      "adultNote": "Encourage exact sensory words and one calm revision pass. This page is for private family or classroom use.",
+      "sections": [
+        {
+          "heading": "Field Notebook Details",
+          "lines": [
+            "Moss shade I notice: ________________________________",
+            "Moisture clue I notice: ________________________________",
+            "Time of day clue: ________________________________",
+            "Sketch label or shape: ________________________________"
+          ]
+        },
+        {
+          "heading": "What Changed",
+          "lines": [
+            "Before the rain, the moss looked ________________________________.",
+            "After the rain, the moss looked ________________________________.",
+            "The clue that matters most is ________________________________."
+          ]
+        },
+        {
+          "heading": "Reflection Sentence",
+          "lines": [
+            "My hero learns that careful observers ________________________________.",
+            "One detail I can add to my story is ________________________________.",
+            "One sentence I want to revise is ________________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "summer-tidepool-timekeeper-log",
+      "title": "Summer Tidepool Timekeeper Log",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "season": "summer",
+      "type": "worksheet",
+      "kidDirection": "Compare tidepool notes and write what your hero should check next.",
+      "adultNote": "Treat the science details as story clues, not a test. Keep the session offline and guided by an adult.",
+      "sections": [
+        {
+          "heading": "Lab Measurements",
+          "lines": [
+            "Pool with the highest water mark: ________________________________",
+            "Pool with the lowest water mark: ________________________________",
+            "Shell-shadow clue: ________________________________",
+            "Pebble notebook note: ________________________________"
+          ]
+        },
+        {
+          "heading": "Compare the Clues",
+          "lines": [
+            "The measurements do not match because ________________________________.",
+            "The hero should check ________________________________ before deciding.",
+            "The gentlest question to ask the lab team is ________________________________."
+          ]
+        },
+        {
+          "heading": "Ending Choice",
+          "lines": [
+            "My hero adjusts ________________________________.",
+            "My hero builds ________________________________.",
+            "My hero writes a final tide note that says ________________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "summer-solar-oven-test-cards",
+      "title": "Summer Solar Oven Test Cards",
+      "worldSlug": "solar-oven-picnic-station",
+      "season": "summer",
+      "type": "cards",
+      "kidDirection": "Fill in three test cards before writing the picnic station scene.",
+      "adultNote": "Cut the cards apart or number them. Focus on clear cause-and-effect sentences, not perfect engineering.",
+      "sections": [
+        {
+          "heading": "Test Card 1",
+          "lines": [
+            "Oven angle: ________________________________",
+            "Snack being warmed: ________________________________",
+            "Prediction before testing: ________________________________"
+          ]
+        },
+        {
+          "heading": "Test Card 2",
+          "lines": [
+            "Shiny panel change: ________________________________",
+            "Timer setting: ________________________________",
+            "What the hero notices: ________________________________"
+          ]
+        },
+        {
+          "heading": "Test Card 3",
+          "lines": [
+            "Cloud clue: ________________________________",
+            "Fair-test rule: ________________________________",
+            "Picnic guide sentence: ________________________________"
+          ]
+        },
+        {
+          "heading": "Story Builder",
+          "lines": [
+            "The warmest snack was ________________________________ because ________________________________.",
+            "The hero changes the plan by ________________________________.",
+            "The next team should remember ________________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "summer-spoon-ferry-dialogue-prompt",
+      "title": "Summer Spoon Ferry Dialogue Prompt",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "season": "summer",
+      "type": "prompt",
+      "kidDirection": "Write a clear snack order and polite dockside dialogue for Lunchbox Harbor.",
+      "adultNote": "This page works best as an oral rehearsal first. Keep sharing private to the family, homeschool group, or classroom.",
+      "sections": [
+        {
+          "heading": "Snack Order Clues",
+          "lines": [
+            "Cafe name: ________________________________",
+            "Snack words that could be confusing: ________________________________",
+            "Question the hero asks: ________________________________",
+            "Clear order after the question: ________________________________"
+          ]
+        },
+        {
+          "heading": "Dockside Dialogue",
+          "lines": [
+            "Ferry cook says: \"______________________________\"",
+            "Dock helper says: \"______________________________\"",
+            "Hero replies politely: \"______________________________\""
+          ]
+        },
+        {
+          "heading": "Summer Harbor Scene",
+          "lines": [
+            "The spoon ferry crosses ________________________________.",
+            "The cracker dock detail I add is ________________________________.",
+            "The menu card becomes clearer when ________________________________.",
+            "My ending sentence is ________________________________."
+          ]
+        }
+      ]
+    }
+  ]
+}
