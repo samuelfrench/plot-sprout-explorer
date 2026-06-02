@@ -1,0 +1,227 @@
+{
+  "batchId": "2026-06-02-batch9",
+  "lane": "classroom-prompt-cards-c",
+  "generatedAt": "2026-06-02",
+  "promptCards": [
+    {
+      "id": "card-c-moon-muffin-market-setting-detail",
+      "worldSlug": "moon-muffin-market",
+      "title": "Moon Muffin Market Stall Details",
+      "skillFocus": "setting detail",
+      "teacherSetup": "Place this card at a description station and ask students to add three market details before drafting.",
+      "studentPrompt": "Write about a moonlit muffin stall where your character notices one detail that helps the whole market run smoothly.",
+      "choiceSet": [
+        "crumb bell",
+        "silver apron",
+        "star basket"
+      ],
+      "writingLines": [
+        "The stall looks like ________________________________",
+        "The first helpful detail is ________________________________",
+        "My character notices ________________________________",
+        "The market feels ________________________________"
+      ],
+      "shareMove": "Invite students to read only their strongest setting detail to a partner.",
+      "extension": "Have students circle one vague word and replace it with a more exact market detail.",
+      "rubricLookFor": "The writing includes at least three concrete setting details tied to the market scene."
+    },
+    {
+      "id": "card-c-puddle-planet-post-office-character-choice",
+      "worldSlug": "puddle-planet-post-office",
+      "title": "Puddle Planet Delivery Choice",
+      "skillFocus": "character choice",
+      "teacherSetup": "Ask students to pick one delivery decision and explain why the character chooses it.",
+      "studentPrompt": "Write about a post office on Puddle Planet where your character must choose the fairest way to sort a mixed-up stack of cheerful notes.",
+      "choiceSet": [
+        "color order",
+        "puddle stamps",
+        "neighbor route"
+      ],
+      "writingLines": [
+        "My character needs to choose ________________________________",
+        "One reason for this choice is ________________________________",
+        "Another choice could be ________________________________",
+        "The choice helps because ________________________________"
+      ],
+      "shareMove": "Ask partners to name the choice they heard and one reason that made sense.",
+      "extension": "Add a thought bubble that shows what the character considers before deciding.",
+      "rubricLookFor": "The writing names a clear character choice and gives a reason connected to the scene."
+    },
+    {
+      "id": "card-c-buttonwood-library-train-sequence",
+      "worldSlug": "buttonwood-library-train",
+      "title": "Buttonwood Library Train Sequence",
+      "skillFocus": "sequence",
+      "teacherSetup": "Have students number the four writing lines before they draft so the events stay in order.",
+      "studentPrompt": "Write the order of events as a tiny library train carries book carts to the right reading rooms.",
+      "choiceSet": [
+        "map car",
+        "quiet whistle",
+        "bookmark tunnel"
+      ],
+      "writingLines": [
+        "First, the train ________________________________",
+        "Next, the book cart ________________________________",
+        "Then, the reading room ________________________________",
+        "Finally, everyone knows ________________________________"
+      ],
+      "shareMove": "Have students swap cards and point to the word that shows each step in order.",
+      "extension": "Add one transition word to each line without changing the order.",
+      "rubricLookFor": "The writing uses a clear beginning, middle steps, and ending in logical order."
+    },
+    {
+      "id": "card-c-cloudberry-clocktower-dialogue",
+      "worldSlug": "cloudberry-clocktower",
+      "title": "Cloudberry Clocktower Polite Dialogue",
+      "skillFocus": "dialogue",
+      "teacherSetup": "Model one line of polite dialogue, then have students write two speakers with different jobs.",
+      "studentPrompt": "Write a short conversation at Cloudberry Clocktower where two helpers calmly decide how to reset the snack-time chimes.",
+      "choiceSet": [
+        "clock keeper",
+        "berry baker",
+        "cloud painter"
+      ],
+      "writingLines": [
+        "One helper says ________________________________",
+        "The other helper asks ________________________________",
+        "My character answers ________________________________",
+        "The chimes sound ________________________________"
+      ],
+      "shareMove": "Let pairs read the dialogue quietly, each taking one speaker's line.",
+      "extension": "Revise one line so it sounds more like the speaker's job.",
+      "rubricLookFor": "The dialogue includes at least two speakers and moves the clocktower problem forward."
+    },
+    {
+      "id": "card-c-tiny-lantern-reef-revision",
+      "worldSlug": "tiny-lantern-reef",
+      "title": "Tiny Lantern Reef Revision Dive",
+      "skillFocus": "revision",
+      "teacherSetup": "Give students a first sentence to improve and ask them to revise for clarity rather than length.",
+      "studentPrompt": "Revise a reef scene so readers can understand how the tiny lanterns guide a friendly sea parade.",
+      "choiceSet": [
+        "glow path",
+        "shell sign",
+        "bubble map"
+      ],
+      "writingLines": [
+        "My first sentence is ________________________________",
+        "One unclear word is ________________________________",
+        "I can make it clearer by adding ________________________________",
+        "My revised sentence is ________________________________"
+      ],
+      "shareMove": "Ask students to share the one word or detail they changed, not the whole draft.",
+      "extension": "Use a colored pencil to underline the added revision detail.",
+      "rubricLookFor": "The student identifies a specific change and improves clarity in the revised sentence."
+    },
+    {
+      "id": "card-c-pencil-dragon-academy-sensory-detail",
+      "worldSlug": "pencil-dragon-academy",
+      "title": "Pencil Dragon Academy Sense Notes",
+      "skillFocus": "sensory detail",
+      "teacherSetup": "Ask students to use at least two senses before writing the academy scene.",
+      "studentPrompt": "Write about a Pencil Dragon Academy lesson where careful sense details help a student remember the next writing step.",
+      "choiceSet": [
+        "scratchy pencil",
+        "warm paper",
+        "cedar shelf"
+      ],
+      "writingLines": [
+        "I can see ________________________________",
+        "I can hear ________________________________",
+        "I can feel or smell ________________________________",
+        "These details help because ________________________________"
+      ],
+      "shareMove": "Invite students to trade cards and star one sensory detail they can picture clearly.",
+      "extension": "Add one more sense detail to the line that feels thinnest.",
+      "rubricLookFor": "The writing uses two or more sensory details that fit the academy setting."
+    },
+    {
+      "id": "card-c-margin-note-market-problem-solution",
+      "worldSlug": "margin-note-market",
+      "title": "Margin Note Market Problem Fix",
+      "skillFocus": "problem-solution",
+      "teacherSetup": "Have students state the market problem in one sentence before choosing a calm solution.",
+      "studentPrompt": "Write about a market in the margins of a notebook where tiny notes get out of order and your character finds a fair fix.",
+      "choiceSet": [
+        "sticky tabs",
+        "page arrows",
+        "label basket"
+      ],
+      "writingLines": [
+        "The problem is ________________________________",
+        "My character tries ________________________________",
+        "The solution works when ________________________________",
+        "The market learns ________________________________"
+      ],
+      "shareMove": "Ask volunteers to read only the problem and solution lines as a quick pair check.",
+      "extension": "Draw a before-and-after margin note to show how the fix changes the market.",
+      "rubricLookFor": "The writing connects a specific problem to a specific solution that fits the notebook market."
+    },
+    {
+      "id": "card-c-pocket-park-notice-board-ending-choice",
+      "worldSlug": "pocket-park-notice-board",
+      "title": "Pocket Park Notice Board Ending",
+      "skillFocus": "ending choice",
+      "teacherSetup": "Ask students to draft two possible endings and choose the one that best matches the park notice.",
+      "studentPrompt": "Write an ending for a pocket park story where the final notice helps everyone understand the shared plan.",
+      "choiceSet": [
+        "garden sign",
+        "lost button",
+        "picnic list"
+      ],
+      "writingLines": [
+        "One ending could be ________________________________",
+        "Another ending could be ________________________________",
+        "I choose this ending because ________________________________",
+        "The final notice says ________________________________"
+      ],
+      "shareMove": "Let students hold up one or two fingers to show which ending they chose before explaining.",
+      "extension": "Add a final sentence that shows how the park feels after the notice is read.",
+      "rubricLookFor": "The chosen ending matches the earlier story problem and explains why it fits."
+    },
+    {
+      "id": "card-c-greenhouse-gear-garden-sentence-variety",
+      "worldSlug": "greenhouse-gear-garden",
+      "title": "Greenhouse Gear Garden Sentence Mix",
+      "skillFocus": "sentence variety",
+      "teacherSetup": "Display short, medium, and question sentence examples before students draft the greenhouse note.",
+      "studentPrompt": "Write a greenhouse gear note using different kinds of sentences so the garden helpers can follow the plan.",
+      "choiceSet": [
+        "short note",
+        "longer detail",
+        "kind question"
+      ],
+      "writingLines": [
+        "A short sentence: ________________________________",
+        "A longer sentence with a detail: ________________________________",
+        "A question sentence: ________________________________",
+        "My favorite sentence is ________________________________"
+      ],
+      "shareMove": "Ask partners to tap once for a short sentence and twice for a longer sentence.",
+      "extension": "Revise one sentence beginning so not every line starts the same way.",
+      "rubricLookFor": "The writing includes varied sentence lengths or types that remain clear."
+    },
+    {
+      "id": "card-c-solar-oven-picnic-station-peer-sharing",
+      "worldSlug": "solar-oven-picnic-station",
+      "title": "Solar Oven Picnic Station Share Card",
+      "skillFocus": "peer sharing",
+      "teacherSetup": "Set a two-minute partner share and remind students to respond with one noticed detail and one question.",
+      "studentPrompt": "Write a picnic station scene you can share with a partner, showing how the solar oven team prepares a fair test snack.",
+      "choiceSet": [
+        "shade timer",
+        "foil flap",
+        "snack tray"
+      ],
+      "writingLines": [
+        "The picnic team prepares ________________________________",
+        "The fair test detail is ________________________________",
+        "A detail I want my partner to notice is ________________________________",
+        "A question I can ask my partner is ________________________________"
+      ],
+      "shareMove": "Partners give one quiet compliment about a clear detail and ask one curious question.",
+      "extension": "Add a peer suggestion box where the writer can choose one idea to try next.",
+      "rubricLookFor": "The student prepares a shareable scene and includes a specific detail for peer response."
+    }
+  ]
+}
