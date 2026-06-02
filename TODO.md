@@ -35,10 +35,11 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Added static `/mini-units/` hub and 10 crawlable mini-unit pages with Batch 3 content validation.
 - [x] 2026-06-02: Batch 4 generated 20 local RTX 4090 world images for top Batch 1 worlds, saved JPEG/WebP assets, prompt sidecars, manifest, static `/world-gallery/` page, and validator coverage.
 - [x] 2026-06-02: Batch 5 added the static `$9` Rainy Day Story Quest Pack product page with checkout-pending/provider-pending copy, homepage link, renderer output, and content validation.
+- [x] 2026-06-02: Batch 6 documented the checkout-provider decision path: hosted checkout links first, recommended order Creem, Dodo Payments, Stripe Payment Links, then Polar Checkout Links, with the product staying `checkout_pending` until Sam chooses a provider and supplies a real hosted checkout URL after the pack artifact exists.
 
 ## In Progress
 
-- [ ] Batch 6 checkout-provider decision note and checkout wiring plan, without enabling checkout until provider choice is explicit.
+- [ ] Batch 7 build the actual Rainy Day Story Quest Pack artifact before checkout wiring.
 
 ## Next Content Batches
 
@@ -47,19 +48,22 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] Batch 3: Generate 10 homeschool/classroom mini-units with teacher notes and no student-account requirements.
 - [x] Batch 4: Generate 20 local GPU images for top worlds, save JPEG/WebP assets, and record prompt sidecars.
 - [x] Batch 5: Build the first purchase-ready static product page for a $9 printable quest pack, without enabling checkout until a provider is selected.
-- [ ] Batch 6: Choose the checkout provider path and define the exact safe wiring steps for the $9 pack.
+- [x] Batch 6: Choose the checkout provider path and define the exact safe wiring steps for the $9 pack.
+- [ ] Batch 7: Build the Rainy Day Story Quest Pack PDF/source pages/ZIP or provider-upload-ready folder, then add validation that checkout cannot be marked ready without the artifact.
 
 ## Product Gates
 
 - [ ] No child accounts before parent/teacher auth and privacy policy exist.
 - [ ] No public publishing before moderation and abuse controls exist.
 - [ ] No cloud image generation unless Sam explicitly approves paid/cloud use.
+- [ ] No checkout URL until the paid product artifact exists and Sam explicitly chooses the provider.
 - [ ] No generic broad "AI bedtime story app" positioning; keep the wedge to printable family/classroom writing quests.
 - [ ] No automated GitHub Actions content-generation workflows; content generation stays manual/subagent-driven from local Codex.
 
 ## Monetization Backlog
 
-- [ ] $9 printable "Rainy Day Story Quest Pack" landing page.
+- [x] $9 printable "Rainy Day Story Quest Pack" landing page.
+- [ ] $9 printable "Rainy Day Story Quest Pack" PDF/source/ZIP artifact.
 - [ ] $29 homeschool season bundle with 12 printable quests.
 - [ ] $79 classroom license pack with 30 prompts, rubric, and extension activities.
 - [ ] Parent email capture for weekly printable quest drops.
