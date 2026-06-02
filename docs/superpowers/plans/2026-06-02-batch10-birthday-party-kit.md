@@ -71,6 +71,6 @@
 - [x] Run `npm run product:birthday-party-kit`.
 - [x] Run `npm run verify`.
 - [x] Run local browser smoke for root and all product pages.
-- [ ] Commit and push the batch.
-- [ ] Confirm local self-hosted runner deploy succeeds and live Pages smoke passes.
+- [x] Commit and push the batch.
+- [x] Confirm local self-hosted runner deploy succeeds and live Pages smoke passes.
 - [ ] Update TODO and memory with terse evidence.

@@ -40,6 +40,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Batch 8 built the `$29` Homeschool Season Story Bundle static product page, source JSON, PDF, ZIP, manifest, provider-upload-ready folder, and validation that checkout stays pending.
 - [x] 2026-06-02: Batch 9 built the `$79` Classroom Story License Pack static product page, 30-card source JSON from four subagent lanes, 34-page PDF, ZIP, manifest, provider-ready folder, and validation that checkout stays pending.
 - [x] 2026-06-02: Batch 10 built the `$19` Birthday Party Story Quest Kit static product page, 8-quest source JSON from three subagent lanes, local RTX 4090 product image, 12-page PDF, ZIP, manifest, provider-ready folder, and validation that checkout stays pending.
+- [x] 2026-06-02: Batch 10 deployed via local runner run `26810062955`; live GitHub Pages desktop/mobile smoke passed for `/`, `/birthday-party-story-quest-kit/`, `/classroom-story-license-pack/`, `/homeschool-season-story-bundle/`, and `/rainy-day-story-quest-pack/`.
 
 ## In Progress
 
