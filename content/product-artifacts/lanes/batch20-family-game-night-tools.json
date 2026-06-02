@@ -1,0 +1,195 @@
+{
+  "lane": "batch20-family-game-night-tools",
+  "productSlug": "family-game-night-story-card-deck",
+  "hostGuide": {
+    "tableSetup": [
+      "Print one host copy, one active card stack, and a small take-home starter stack before the family table opens.",
+      "Place pencils, blank half-sheets, and one face-down card pile within adult reach so cards enter the table one at a time.",
+      "Keep extra cards in a host folder until the group finishes the current story step.",
+      "Set a quiet spot at the same table with paper, pencil, and a choice strip for anyone who wants a private start.",
+      "Use plain folders, color tabs, or table symbols for simple sorting when pages need to travel home.",
+      "Choose one adult sample place, one ordinary object, and one small friendly mix-up before the first card is read."
+    ],
+    "roundHosting": [
+      "Open each round by reading one card aloud and naming the first writing blank before anyone adds ideas.",
+      "Model one invented answer, then invite short written, sketched, pointed, or spoken choices.",
+      "Move in small steps: place, helper, object, mix-up, next action, and calm ending.",
+      "Keep the active card visible and leave the rest of the stack covered until the current page has one finished line.",
+      "Invite optional family sharing after writing, with the choice to share a title, object, sketch, or one sentence.",
+      "When the table gets busy, pause on the current blank and offer two simple invented choices."
+    ],
+    "quietParticipation": [
+      "Let anyone join by pointing to a printed choice, circling an option, sketching a clue, or writing one private line.",
+      "Offer a silent card path where the writer fills only the place blank and the object blank.",
+      "Allow a grown-up to write a dictated phrase while the writer chooses the words.",
+      "Make sharing optional and accept a shown sketch, underlined word, or folded page as complete participation.",
+      "Use short check-ins such as choose one object or mark one ending instead of calling on anyone unexpectedly.",
+      "Keep a spare blank card nearby for a fresh start when the current card feels too crowded."
+    ],
+    "noDataUse": [
+      "Use invented places, invented helpers, and ordinary objects; personal facts are not needed.",
+      "Keep every card printable, offline, and handled by the host, family, or participant.",
+      "Do not collect personal lists, photos, recordings, location details, contact details, or private identifiers.",
+      "Use color tabs, table symbols, or plain folders for organization instead of personal labels.",
+      "Keep all finished pages at the table or send them home with the family."
+    ],
+    "familyHandoff": [
+      "Send home the finished card page plus one optional take-home story starter.",
+      "Mark one simple follow-up such as add a title, add one clearer detail, or finish the ending.",
+      "Tell families the starter can be completed by pointing, sketching, dictating, or writing one short line.",
+      "Keep home sharing optional and focused on the printed page, invented place, object clue, or title.",
+      "Invite families to save unfinished cards for another calm table moment."
+    ],
+    "packReset": [
+      "Collect unused cards first and return them to the host folder before clearing pencils and paper.",
+      "Place finished pages in plain take-home folders or let families carry their own pages.",
+      "Stack the played cards behind the host copy so the next table can begin with a fresh face-down pile.",
+      "Replace bent choice slips, sharpen pencils, and refill blank half-sheets before storing the deck.",
+      "Note which card format worked best on a small host note without recording personal details."
+    ]
+  },
+  "roundFormats": [
+    {
+      "name": "One-Card Story Seed",
+      "bestFor": "A calm first table round where the host wants one shared card and quick individual story starts.",
+      "steps": [
+        "Host reads one card aloud and points to the place blank.",
+        "Each participant chooses an invented place, ordinary object, or helper by writing, sketching, or pointing.",
+        "Host offers one sample sentence using different invented details.",
+        "Writers add two short lines to their own page and mark one idea to keep."
+      ]
+    },
+    {
+      "name": "Pass the Object Clue",
+      "bestFor": "Family tables that like shared ideas while each writer still keeps a private page.",
+      "steps": [
+        "Host places one ordinary object choice in the center and reads the active card prompt.",
+        "Each participant adds one possible use for the object on a scrap or shared host page.",
+        "Host repeats the gathered ideas using only invented details.",
+        "Writers choose one idea and turn it into a story clue on their own card page."
+      ]
+    },
+    {
+      "name": "Quiet Sketch Start",
+      "bestFor": "Mixed-energy groups, shy writers, and tables that need a low-noise opening.",
+      "steps": [
+        "Host gives everyone the same card and asks for a silent sketch in the first blank.",
+        "Participants label the sketch with one place word, object word, or action word.",
+        "Host reads two optional next-step choices for anyone who wants support.",
+        "Writers turn the sketch and label into one clear opening sentence."
+      ]
+    },
+    {
+      "name": "Four-Blank Family Tale",
+      "bestFor": "A longer table round with a clear beginning, middle, and ending path.",
+      "steps": [
+        "Host chooses a card with blanks for place, helper, object, and ending.",
+        "Participants fill one blank at a time while the host keeps the next blank covered.",
+        "Host pauses after the object blank and asks everyone to choose one next action.",
+        "Writers finish the ending blank and underline the strongest story detail."
+      ]
+    },
+    {
+      "name": "Title Last Round",
+      "bestFor": "A closing round when families want a finished page without a long draft.",
+      "steps": [
+        "Host reads a short card and asks writers to complete only the setting and object blanks.",
+        "Participants add one ending line that makes the small mix-up settle kindly.",
+        "Host invites each writer to write three title choices privately.",
+        "Writers circle one title and place the page in a take-home folder."
+      ]
+    },
+    {
+      "name": "Table Talk to Tiny Draft",
+      "bestFor": "Homeschool co-op nights, library family events, or classroom celebration tables with adult guidance.",
+      "steps": [
+        "Host reads one card and asks for optional table talk about invented places or ordinary objects.",
+        "Participants choose two table ideas and write them in their own blanks.",
+        "Host models how the two ideas can become first and next.",
+        "Writers draft three lines and choose whether to share a title, sketch, or object clue."
+      ]
+    }
+  ],
+  "takeHomeStoryStarters": [
+    {
+      "title": "Game Night Place",
+      "time": "6 minutes",
+      "skill": "setting detail",
+      "direction": "Invent one cozy story place from tonight's card: ____________________.",
+      "familyLine": "A grown-up can ask what the place looks, sounds, or feels like: ____________________."
+    },
+    {
+      "title": "Object Clue Add-On",
+      "time": "7 minutes",
+      "skill": "plot clue",
+      "direction": "Choose one ordinary object from the table and make it a useful clue: ____________________.",
+      "familyLine": "A grown-up can offer two possible object uses here: ____________________."
+    },
+    {
+      "title": "Helper Next Action",
+      "time": "6 minutes",
+      "skill": "action choice",
+      "direction": "Write what the invented helper does next after the small mix-up: ____________________.",
+      "familyLine": "A grown-up can ask which action makes the most sense: ____________________."
+    },
+    {
+      "title": "Three Tiny Titles",
+      "time": "5 minutes",
+      "skill": "main idea",
+      "direction": "Write three possible titles for the card story: ____________________.",
+      "familyLine": "A grown-up can ask which title gives the clearest clue: ____________________."
+    },
+    {
+      "title": "First Next Last Card",
+      "time": "8 minutes",
+      "skill": "sequence",
+      "direction": "Write first, next, and last for the card story path: ____________________.",
+      "familyLine": "A grown-up can point to the step that should become longer: ____________________."
+    },
+    {
+      "title": "Clearer Word Swap",
+      "time": "5 minutes",
+      "skill": "revision",
+      "direction": "Pick one word from the card page and swap in a clearer word: ____________________.",
+      "familyLine": "A grown-up can ask which word became easier to picture: ____________________."
+    },
+    {
+      "title": "Dialogue Pair",
+      "time": "7 minutes",
+      "skill": "dialogue",
+      "direction": "Write two short lines between an invented guide and an invented maker: ____________________.",
+      "familyLine": "A grown-up can read one role while the writer chooses the reply: ____________________."
+    },
+    {
+      "title": "Kind Ending",
+      "time": "8 minutes",
+      "skill": "ending choice",
+      "direction": "Add a calm ending where the helper uses one object wisely: ____________________.",
+      "familyLine": "A grown-up can ask what changed by the end: ____________________."
+    },
+    {
+      "title": "Sketch and Sentence",
+      "time": "6 minutes",
+      "skill": "visual planning",
+      "direction": "Sketch one card idea and write one sentence under it: ____________________.",
+      "familyLine": "A grown-up can ask which part of the sketch belongs in the story: ____________________."
+    },
+    {
+      "title": "Next Table Seed",
+      "time": "7 minutes",
+      "skill": "story planning",
+      "direction": "Invent one place, one helper, one object, and one small mix-up for next time: ____________________.",
+      "familyLine": "A grown-up can add one extra detail to the seed: ____________________."
+    }
+  ],
+  "optionalFamilySharePrompts": [
+    "Show one title or sketch from the card page: ____________________.",
+    "Read one sentence aloud, or ask a grown-up to read it: ____________________.",
+    "Point to one object clue and say how it helps the story: ____________________.",
+    "Share one invented place detail from the table round: ____________________.",
+    "Tell which part came first, next, or last: ____________________.",
+    "Show one word that became clearer after the round: ____________________.",
+    "Describe one calm ending choice from the invented story: ____________________.",
+    "Keep the page private today and mark one finished detail: ____________________."
+  ]
+}

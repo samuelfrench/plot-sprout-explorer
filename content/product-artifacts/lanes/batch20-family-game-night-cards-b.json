@@ -1,0 +1,216 @@
+{
+  "lane": "batch20-family-game-night-cards-b",
+  "productSlug": "family-game-night-story-card-deck",
+  "cards": [
+    {
+      "id": "family-game-night-card-06",
+      "title": "Tidepool Timekeepers Lab Setting Card",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "cardSkill": "Setting detail and sensory observation",
+      "tableFit": "Ages 8-10 cooperative family-table round where the group builds one calm tidepool lab scene.",
+      "adultSetup": "Print the card, place one pencil in the center, and invite the table to offer tiny tidepool details aloud.",
+      "kidDirection": "Choose the timekeeper's job, collect three setting clues, and write the first small moment of the story.",
+      "hostPrompt": "Ask for one sight, one sound, and one texture, then let the writer choose which details belong on the page.",
+      "pageSections": [
+        {
+          "heading": "Lab Setting",
+          "lines": [
+            "The tidepool lab is tucked beside ____________________.",
+            "The clearest sound in the lab is ____________________.",
+            "One texture the timekeeper touches is ____________________."
+          ]
+        },
+        {
+          "heading": "Timekeeper Choice",
+          "lines": [
+            "The timekeeper decides to check ____________________.",
+            "The tiny tool on the table is ____________________.",
+            "The choice matters because ____________________."
+          ]
+        },
+        {
+          "heading": "Opening Moment",
+          "lines": [
+            "First, the tidepool clock shows ____________________.",
+            "Next, the lab helper notices ____________________.",
+            "The scene begins when ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "One tidepool detail our table agrees to use is ____________________.",
+      "tinyDraftLine": "My first sentence begins with ____________________.",
+      "roundWrapLine": "The round wraps up with the timekeeper choosing ____________________.",
+      "quietOptionLine": "If I want a quiet turn, I can circle the detail ____________________.",
+      "takeHomeStoryLine": "At home, the tidepool lab can open again when ____________________."
+    },
+    {
+      "id": "family-game-night-card-07",
+      "title": "Greenhouse Gear Garden Character Card",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "cardSkill": "Character choice and dialogue",
+      "tableFit": "Ages 8-10 cooperative family-table card for choosing one garden helper and one shared speaking line.",
+      "adultSetup": "Print the card, set out pencils, and ask the table to name gentle greenhouse jobs before writing starts.",
+      "kidDirection": "Pick a gear-garden helper, give the helper a clear choice, and write one line of dialogue.",
+      "hostPrompt": "Invite short suggestions for what the helper sees, wants, and says in a friendly greenhouse moment.",
+      "pageSections": [
+        {
+          "heading": "Garden Helper",
+          "lines": [
+            "The greenhouse helper carries ____________________.",
+            "The helper cares most about ____________________.",
+            "One gear in the garden moves near ____________________."
+          ]
+        },
+        {
+          "heading": "Choice Point",
+          "lines": [
+            "The helper can turn toward ____________________.",
+            "The helper can pause beside ____________________.",
+            "The kinder choice is to ____________________."
+          ]
+        },
+        {
+          "heading": "Speaking Line",
+          "lines": [
+            "The helper says, \"I notice ____________________.\"",
+            "Another table idea for dialogue is ____________________.",
+            "The line shows the helper feels ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "One greenhouse job we can picture together is ____________________.",
+      "tinyDraftLine": "My dialogue sentence will say, \"____________________.\"",
+      "roundWrapLine": "The round wraps up after the helper decides to ____________________.",
+      "quietOptionLine": "If I want a quiet turn, I can write the helper's object as ____________________.",
+      "takeHomeStoryLine": "At home, the gear garden grows a new scene around ____________________."
+    },
+    {
+      "id": "family-game-night-card-08",
+      "title": "Pantry Measurement Mystery Sequence Card",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "cardSkill": "Sequence and exact measurement detail",
+      "tableFit": "Ages 8-10 cooperative family-table card for ordering three pantry clues into one short scene.",
+      "adultSetup": "Print the card and invite the table to choose three harmless pantry objects as pretend story clues.",
+      "kidDirection": "Order the pantry clues, add one exact measurement detail, and draft the next step in the scene.",
+      "hostPrompt": "Ask what should happen first, what changes next, and which small measurement detail makes the scene clearer.",
+      "pageSections": [
+        {
+          "heading": "Pantry Clues",
+          "lines": [
+            "The first pantry clue sits beside ____________________.",
+            "The second clue measures ____________________.",
+            "The third clue points toward ____________________."
+          ]
+        },
+        {
+          "heading": "Clear Order",
+          "lines": [
+            "First, the shelf helper checks ____________________.",
+            "Next, the measuring cup shows ____________________.",
+            "After that, the helper moves toward ____________________."
+          ]
+        },
+        {
+          "heading": "Next Step Draft",
+          "lines": [
+            "The scene continues when ____________________.",
+            "The exact amount I will include is ____________________.",
+            "The next helpful action is ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "One pantry clue our table can place in order is ____________________.",
+      "tinyDraftLine": "My sequence sentence starts with ____________________.",
+      "roundWrapLine": "The round wraps up when the pantry helper reaches ____________________.",
+      "quietOptionLine": "If I want a quiet turn, I can number the clue ____________________.",
+      "takeHomeStoryLine": "At home, the pantry scene can continue with ____________________."
+    },
+    {
+      "id": "family-game-night-card-09",
+      "title": "Rain Gauge Railway Sensory Route Card",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "cardSkill": "Sensory detail, sequence, and ending choice",
+      "tableFit": "Ages 8-10 cooperative family-table round where the group builds one weather route together.",
+      "adultSetup": "Print the card, invite one gentle weather detail from the table, and keep the route short.",
+      "kidDirection": "Choose the railway route, add two sensory details, and decide where the ending should stop.",
+      "hostPrompt": "Ask what the gauge shows, what the railway feels like, and which stop gives the story a satisfying ending.",
+      "pageSections": [
+        {
+          "heading": "Gauge Reading",
+          "lines": [
+            "The rain gauge shows ____________________.",
+            "The air around the platform smells like ____________________.",
+            "The railway track shines near ____________________."
+          ]
+        },
+        {
+          "heading": "Route Sequence",
+          "lines": [
+            "First, the conductor checks ____________________.",
+            "Then, the route bends toward ____________________.",
+            "Before the last stop, the rider notices ____________________."
+          ]
+        },
+        {
+          "heading": "Ending Choice",
+          "lines": [
+            "The story can end at ____________________.",
+            "The ending feels complete because ____________________.",
+            "One final detail to add is ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "One railway sound our table can use is ____________________.",
+      "tinyDraftLine": "My route sentence includes the detail ____________________.",
+      "roundWrapLine": "The round wraps up at the railway stop called ____________________.",
+      "quietOptionLine": "If I want a quiet turn, I can choose the ending place ____________________.",
+      "takeHomeStoryLine": "At home, the rain gauge route can continue toward ____________________."
+    },
+    {
+      "id": "family-game-night-card-10",
+      "title": "Seed Library Map Room Revision Card",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "cardSkill": "Map detail, revision, and ending choice",
+      "tableFit": "Ages 8-10 cooperative family-table card for revising one map scene with clearer details.",
+      "adultSetup": "Print the card, ask the table for one map-room object, and remind writers they can improve one sentence.",
+      "kidDirection": "Pick a seed map, write a short route, revise one vague word, and choose the ending doorway.",
+      "hostPrompt": "Ask which noun should be more exact, which route detail should move earlier, and where the story should end.",
+      "pageSections": [
+        {
+          "heading": "Map Room Detail",
+          "lines": [
+            "The seed map is spread across ____________________.",
+            "The clearest label on the map says ____________________.",
+            "The map room smells like ____________________."
+          ]
+        },
+        {
+          "heading": "Revision Spot",
+          "lines": [
+            "A vague word I can replace is ____________________.",
+            "A stronger noun for the sentence is ____________________.",
+            "The revised detail helps readers picture ____________________."
+          ]
+        },
+        {
+          "heading": "Ending Doorway",
+          "lines": [
+            "The route leads to ____________________.",
+            "The final seed packet shows ____________________.",
+            "The ending line should leave the reader with ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "One map-room detail our table wants to keep is ____________________.",
+      "tinyDraftLine": "My revised sentence will change ____________________ to ____________________.",
+      "roundWrapLine": "The round wraps up when the seed map points to ____________________.",
+      "quietOptionLine": "If I want a quiet turn, I can underline the word ____________________.",
+      "takeHomeStoryLine": "At home, the seed library story can end near ____________________."
+    }
+  ]
+}

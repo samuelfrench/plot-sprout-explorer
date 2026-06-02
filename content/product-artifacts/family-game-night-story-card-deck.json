@@ -1,0 +1,881 @@
+{
+  "batchId": "2026-06-02-batch20",
+  "generatedAt": "2026-06-02",
+  "productSlug": "family-game-night-story-card-deck",
+  "title": "Family Game Night Story Card Deck",
+  "pricePoint": "$27",
+  "audience": "Families, homeschool co-ops, library family nights, and classroom celebration tables for ages 7-11.",
+  "sessionLength": "15 printable cooperative story cards plus host guide tools",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch20-family-game-night-cards-a.json",
+    "content/product-artifacts/lanes/batch20-family-game-night-cards-b.json",
+    "content/product-artifacts/lanes/batch20-family-game-night-cards-c.json",
+    "content/product-artifacts/lanes/batch20-family-game-night-tools.json"
+  ],
+  "artifact": {
+    "pdfPath": "product-build/family-game-night-story-card-deck/Family-Game-Night-Story-Card-Deck.pdf",
+    "zipPath": "product-build/family-game-night-story-card-deck/family-game-night-story-card-deck.zip",
+    "sourceHtmlPath": "product-build/family-game-night-story-card-deck/source/family-game-night-story-card-deck.html",
+    "manifestPath": "product-build/family-game-night-story-card-deck/manifest.json"
+  },
+  "worldSlugs": [
+    "teacup-town-weather-window",
+    "spoon-ferry-lunchbox-harbor",
+    "pocket-park-notice-board",
+    "button-bakery-map-mixup",
+    "penny-path-compass-shop",
+    "tidepool-timekeepers-lab",
+    "greenhouse-gear-garden",
+    "pantry-measurement-mystery",
+    "rain-gauge-railway",
+    "seed-library-map-room",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "almost-invention-workshop",
+    "index-card-theater-club"
+  ],
+  "cover": {
+    "kicker": "Printable family game night story cards",
+    "headline": "Family Game Night Story Card Deck",
+    "subhead": "Fifteen cooperative table cards for screen-free story rounds, quiet choices, and take-home starters.",
+    "included": [
+      "15 cooperative story card pages",
+      "Host table setup guide",
+      "Round hosting notes",
+      "Quiet participation options",
+      "No-data use notes",
+      "Family handoff notes",
+      "Pack reset notes",
+      "Six cooperative round formats",
+      "Ten take-home story starters",
+      "Eight optional family-share prompts",
+      "Local image-backed world menu",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "hostGuide": {
+    "tableSetup": [
+      "Print one host copy, one active card stack, and a small take-home starter stack before the family table opens.",
+      "Place pencils, blank half-sheets, and one face-down card pile within adult reach so cards enter the table one at a time.",
+      "Keep extra cards in a host folder until the group finishes the current story step.",
+      "Set a quiet spot at the same table with paper, pencil, and a choice strip for anyone who wants a private start.",
+      "Use plain folders, color tabs, or table symbols for simple sorting when pages need to travel home.",
+      "Choose one adult sample place, one ordinary object, and one small friendly mix-up before the first card is read."
+    ],
+    "roundHosting": [
+      "Open each round by reading one card aloud and naming the first writing blank before anyone adds ideas.",
+      "Model one invented answer, then invite short written, sketched, pointed, or spoken choices.",
+      "Move in small steps: place, helper, object, mix-up, next action, and calm ending.",
+      "Keep the active card visible and leave the rest of the stack covered until the current page has one finished line.",
+      "Invite optional family sharing after writing, with the choice to share a title, object, sketch, or one sentence.",
+      "When the table gets busy, pause on the current blank and offer two simple invented choices."
+    ],
+    "quietParticipation": [
+      "Let anyone join by pointing to a printed choice, circling an option, sketching a clue, or writing one private line.",
+      "Offer a silent card path where the writer fills only the place blank and the object blank.",
+      "Allow a grown-up to write a dictated phrase while the writer chooses the words.",
+      "Make sharing optional and accept a shown sketch, underlined word, or folded page as complete participation.",
+      "Use short check-ins such as choose one object or mark one ending instead of calling on anyone unexpectedly.",
+      "Keep a spare blank card nearby for a fresh start when the current card feels too crowded."
+    ],
+    "noDataUse": [
+      "Use invented places, invented helpers, and ordinary objects; personal facts are not needed.",
+      "Keep every card printable, offline, and handled by the host, family, or participant.",
+      "This deck does not require personal lists, recordings, location details, contact details, or private identifiers.",
+      "Use color tabs, table symbols, or plain folders for organization instead of personal labels.",
+      "Keep all finished pages at the table or send them home with the family."
+    ],
+    "familyHandoff": [
+      "Send home the finished card page plus one optional take-home story starter.",
+      "Mark one simple follow-up such as add a title, add one clearer detail, or finish the ending.",
+      "Tell families the starter can be completed by pointing, sketching, dictating, or writing one short line.",
+      "Keep home sharing optional and focused on the printed page, invented place, object clue, or title.",
+      "Invite families to save unfinished cards for another calm table moment."
+    ],
+    "packReset": [
+      "Collect unused cards first and return them to the host folder before clearing pencils and paper.",
+      "Place finished pages in plain take-home folders or let families carry their own pages.",
+      "Stack the played cards behind the host copy so the next table can begin with a fresh face-down pile.",
+      "Replace bent choice slips, sharpen pencils, and refill blank half-sheets before storing the deck.",
+      "Note which card format worked best on a small host note without recording personal details."
+    ]
+  },
+  "roundFormats": [
+    {
+      "name": "One-Card Story Seed",
+      "bestFor": "A calm first table round where the host wants one shared card and quick individual story starts.",
+      "steps": [
+        "Host reads one card aloud and points to the place blank.",
+        "Each participant chooses an invented place, ordinary object, or helper by writing, sketching, or pointing.",
+        "Host offers one sample sentence using different invented details.",
+        "Writers add two short lines to their own page and mark one idea to keep."
+      ]
+    },
+    {
+      "name": "Pass the Object Clue",
+      "bestFor": "Family tables that like shared ideas while each writer still keeps a private page.",
+      "steps": [
+        "Host places one ordinary object choice in the center and reads the active card prompt.",
+        "Each participant adds one possible use for the object on a scrap or shared host page.",
+        "Host repeats the gathered ideas using only invented details.",
+        "Writers choose one idea and turn it into a story clue on their own card page."
+      ]
+    },
+    {
+      "name": "Quiet Sketch Start",
+      "bestFor": "Mixed-energy groups, shy writers, and tables that need a low-noise opening.",
+      "steps": [
+        "Host gives everyone the same card and asks for a silent sketch in the first blank.",
+        "Participants label the sketch with one place word, object word, or action word.",
+        "Host reads two optional next-step choices for anyone who wants support.",
+        "Writers turn the sketch and label into one clear opening sentence."
+      ]
+    },
+    {
+      "name": "Four-Blank Family Tale",
+      "bestFor": "A longer table round with a clear beginning, middle, and ending path.",
+      "steps": [
+        "Host chooses a card with blanks for place, helper, object, and ending.",
+        "Participants fill one blank at a time while the host keeps the next blank covered.",
+        "Host pauses after the object blank and asks everyone to choose one next action.",
+        "Writers finish the ending blank and underline the strongest story detail."
+      ]
+    },
+    {
+      "name": "Title Last Round",
+      "bestFor": "A closing round when families want a finished page without a long draft.",
+      "steps": [
+        "Host reads a short card and asks writers to complete only the setting and object blanks.",
+        "Participants add one ending line that makes the small mix-up settle kindly.",
+        "Host invites each writer to write three title choices privately.",
+        "Writers circle one title and place the page in a take-home folder."
+      ]
+    },
+    {
+      "name": "Table Talk to Tiny Draft",
+      "bestFor": "Homeschool co-op nights, library family events, or classroom celebration tables with adult guidance.",
+      "steps": [
+        "Host reads one card and asks for optional table talk about invented places or ordinary objects.",
+        "Participants choose two table ideas and write them in their own blanks.",
+        "Host models how the two ideas can become first and next.",
+        "Writers draft three lines and choose whether to share a title, sketch, or object clue."
+      ]
+    }
+  ],
+  "takeHomeStoryStarters": [
+    {
+      "title": "Game Night Place",
+      "time": "6 minutes",
+      "skill": "setting detail",
+      "direction": "Invent one cozy story place from tonight's card: ____________________.",
+      "familyLine": "A grown-up can ask what the place looks, sounds, or feels like: ____________________."
+    },
+    {
+      "title": "Object Clue Add-On",
+      "time": "7 minutes",
+      "skill": "plot clue",
+      "direction": "Choose one ordinary object from the table and make it a useful clue: ____________________.",
+      "familyLine": "A grown-up can offer two possible object uses here: ____________________."
+    },
+    {
+      "title": "Helper Next Action",
+      "time": "6 minutes",
+      "skill": "action choice",
+      "direction": "Write what the invented helper does next after the small mix-up: ____________________.",
+      "familyLine": "A grown-up can ask which action makes the most sense: ____________________."
+    },
+    {
+      "title": "Three Tiny Titles",
+      "time": "5 minutes",
+      "skill": "main idea",
+      "direction": "Write three possible titles for the card story: ____________________.",
+      "familyLine": "A grown-up can ask which title gives the clearest clue: ____________________."
+    },
+    {
+      "title": "First Next Last Card",
+      "time": "8 minutes",
+      "skill": "sequence",
+      "direction": "Write first, next, and last for the card story path: ____________________.",
+      "familyLine": "A grown-up can point to the step that should become longer: ____________________."
+    },
+    {
+      "title": "Clearer Word Swap",
+      "time": "5 minutes",
+      "skill": "revision",
+      "direction": "Pick one word from the card page and swap in a clearer word: ____________________.",
+      "familyLine": "A grown-up can ask which word became easier to picture: ____________________."
+    },
+    {
+      "title": "Dialogue Pair",
+      "time": "7 minutes",
+      "skill": "dialogue",
+      "direction": "Write two short lines between an invented guide and an invented maker: ____________________.",
+      "familyLine": "A grown-up can read one role while the writer chooses the reply: ____________________."
+    },
+    {
+      "title": "Kind Ending",
+      "time": "8 minutes",
+      "skill": "ending choice",
+      "direction": "Add a calm ending where the helper uses one object wisely: ____________________.",
+      "familyLine": "A grown-up can ask what changed by the end: ____________________."
+    },
+    {
+      "title": "Sketch and Sentence",
+      "time": "6 minutes",
+      "skill": "visual planning",
+      "direction": "Sketch one card idea and write one sentence under it: ____________________.",
+      "familyLine": "A grown-up can ask which part of the sketch belongs in the story: ____________________."
+    },
+    {
+      "title": "Next Table Seed",
+      "time": "7 minutes",
+      "skill": "story planning",
+      "direction": "Invent one place, one helper, one object, and one small mix-up for next time: ____________________.",
+      "familyLine": "A grown-up can add one extra detail to the seed: ____________________."
+    }
+  ],
+  "optionalFamilySharePrompts": [
+    "Show one title or sketch from the card page: ____________________.",
+    "Read one sentence aloud, or ask a grown-up to read it: ____________________.",
+    "Point to one object clue and say how it helps the story: ____________________.",
+    "Share one invented place detail from the table round: ____________________.",
+    "Tell which part came first, next, or last: ____________________.",
+    "Show one word that became clearer after the round: ____________________.",
+    "Describe one calm ending choice from the invented story: ____________________.",
+    "Keep the page private today and mark one finished detail: ____________________."
+  ],
+  "cards": [
+    {
+      "id": "family-game-night-card-01",
+      "title": "Teacup Weather Window Helper",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "cardSkill": "setting detail and character choice",
+      "tableFit": "15-minute cooperative, screen-free printable family-table card for younger writers who can add one tiny setting clue and one helper choice.",
+      "adultSetup": "Print one card per writer, place pencils in the middle, and model one short setting detail before the table writes.",
+      "kidDirection": "Choose a teacup weather clue, pick the helper at the window, and write what the helper notices first.",
+      "hostPrompt": "Ask the table which tiny weather clue is easiest to picture, then invite each writer to choose a helpful character.",
+      "pageSections": [
+        {
+          "heading": "Window Weather",
+          "lines": [
+            "The teacup window shows weather shaped like ____________________.",
+            "The tiny room smells like ____________________ when the weather changes.",
+            "The sill holds a small clue: ____________________."
+          ]
+        },
+        {
+          "heading": "Helper Choice",
+          "lines": [
+            "The helper at the window is ____________________.",
+            "The helper carries ____________________.",
+            "The helper decides to check ____________________ first."
+          ]
+        },
+        {
+          "heading": "Story Start",
+          "lines": [
+            "First, the weather clue moves toward ____________________.",
+            "Next, the helper says, \"I notice ____________________.\"",
+            "The table story starts when ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Table talk: One setting detail I can add for the family table is ____________________.",
+      "tinyDraftLine": "Tiny draft: The helper looks through the window and sees ____________________.",
+      "roundWrapLine": "Round wrap: The detail that made our teacup scene clearer was ____________________.",
+      "quietOptionLine": "Quiet option: Point to a favorite line, then write one more window clue: ____________________.",
+      "takeHomeStoryLine": "Take-home story: At home, add a new weather clue that changes ____________________."
+    },
+    {
+      "id": "family-game-night-card-02",
+      "title": "Spoon Ferry Harbor Cargo Note",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "cardSkill": "sequence and sensory detail",
+      "tableFit": "16-minute cooperative, screen-free printable family-table card for writing a clear ferry sequence with one sound, color, or texture.",
+      "adultSetup": "Print the card, set out pencils, and place a simple paper harbor path in the middle for writers to point at while planning.",
+      "kidDirection": "Send the spoon ferry across the lunchbox harbor, choose its cargo, and write three calm story steps.",
+      "hostPrompt": "Ask writers to name one harbor detail they can hear, see, or feel before they write the ferry note.",
+      "pageSections": [
+        {
+          "heading": "Harbor Setting",
+          "lines": [
+            "The spoon ferry waits beside ____________________.",
+            "The lunchbox harbor sound is ____________________.",
+            "The dock color I picture is ____________________."
+          ]
+        },
+        {
+          "heading": "Cargo Choice",
+          "lines": [
+            "The ferry carries ____________________.",
+            "The harbor helper checks ____________________.",
+            "The careful paper route goes around ____________________."
+          ]
+        },
+        {
+          "heading": "Three-Step Note",
+          "lines": [
+            "First, the ferry glides past ____________________.",
+            "Next, the cargo helper notices ____________________.",
+            "Last, the dock note says ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Table talk: The sensory detail I can offer the table is ____________________.",
+      "tinyDraftLine": "Tiny draft: The spoon ferry carries ____________________ across the harbor.",
+      "roundWrapLine": "Round wrap: The step that helped our ferry story move forward was ____________________.",
+      "quietOptionLine": "Quiet option: Trace the ferry path silently, then write one cargo clue: ____________________.",
+      "takeHomeStoryLine": "Take-home story: At home, add one more harbor sound or color: ____________________."
+    },
+    {
+      "id": "family-game-night-card-03",
+      "title": "Pocket Park Notice Board Helper",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "cardSkill": "dialogue and character choice",
+      "tableFit": "15-minute cooperative, screen-free printable family-table card for inventing one useful notice and one friendly spoken line.",
+      "adultSetup": "Print the card, offer pencils and blank paper strips, and remind writers that every notice is invented for the story world.",
+      "kidDirection": "Create a pocket park notice, choose the helper who reads it, and write what the helper says.",
+      "hostPrompt": "Ask the table what kind of small park job a helper could do, then invite one short spoken sentence.",
+      "pageSections": [
+        {
+          "heading": "Notice Board",
+          "lines": [
+            "The pocket park notice asks for ____________________.",
+            "The notice is posted beside ____________________.",
+            "The board has a small drawing of ____________________."
+          ]
+        },
+        {
+          "heading": "Park Helper",
+          "lines": [
+            "The helper who reads the notice is ____________________.",
+            "The helper brings ____________________.",
+            "The helper chooses this job because ____________________."
+          ]
+        },
+        {
+          "heading": "Spoken Line",
+          "lines": [
+            "The helper says, \"I can help with ____________________.\"",
+            "The next kind reply is ____________________.",
+            "The notice board changes when ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Table talk: A helpful notice idea for our park is ____________________.",
+      "tinyDraftLine": "Tiny draft: The pocket park helper says, \"____________________.\"",
+      "roundWrapLine": "Round wrap: The spoken line that made our park helper clearer was ____________________.",
+      "quietOptionLine": "Quiet option: Skip reading aloud and copy one notice line here: ____________________.",
+      "takeHomeStoryLine": "Take-home story: At home, add one new pocket park notice about ____________________."
+    },
+    {
+      "id": "family-game-night-card-04",
+      "title": "Button Bakery Map Fix",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "cardSkill": "revision and clear directions",
+      "tableFit": "17-minute cooperative, screen-free printable family-table card for replacing one vague map clue with a clearer bakery detail.",
+      "adultSetup": "Print the card, set out pencils, and offer beside, past, near, and around as gentle direction words.",
+      "kidDirection": "Fix the bakery map by choosing one mixed-up clue, adding a direction word, and writing the clearer route.",
+      "hostPrompt": "Ask writers to point to one bakery object on the card and make the route more specific before the round wraps.",
+      "pageSections": [
+        {
+          "heading": "Bakery Map",
+          "lines": [
+            "The crumb path begins near ____________________.",
+            "The button baker looks past ____________________.",
+            "The mixed-up clue points toward ____________________."
+          ]
+        },
+        {
+          "heading": "Clearer Clue",
+          "lines": [
+            "I can replace a vague word with ____________________.",
+            "The better direction word is ____________________.",
+            "The bakery detail that helps readers is ____________________."
+          ]
+        },
+        {
+          "heading": "Fixed Route",
+          "lines": [
+            "First, follow the crumb path beside ____________________.",
+            "Next, turn around ____________________.",
+            "The fixed map ends at ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Table talk: The clearer direction I can add is ____________________.",
+      "tinyDraftLine": "Tiny draft: The button baker fixes the map by changing ____________________.",
+      "roundWrapLine": "Round wrap: The revision that made our route easier to follow was ____________________.",
+      "quietOptionLine": "Quiet option: Draw one arrow first, then write the clearer clue: ____________________.",
+      "takeHomeStoryLine": "Take-home story: At home, revise one bakery map clue into ____________________."
+    },
+    {
+      "id": "family-game-night-card-05",
+      "title": "Penny Path Compass Shop Ending",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "cardSkill": "ending choice and dialogue",
+      "tableFit": "16-minute cooperative, screen-free printable family-table card for choosing a gentle ending and adding one compass-shop line of dialogue.",
+      "adultSetup": "Print the card, place pencils nearby, and invite writers to choose a calm ending that finishes the route on paper.",
+      "kidDirection": "Follow the penny compass, choose where the route ends, and write what the shop helper says there.",
+      "hostPrompt": "Ask the table which ending feels complete, then have each writer add one short shop-helper sentence.",
+      "pageSections": [
+        {
+          "heading": "Compass Setting",
+          "lines": [
+            "The penny compass points toward ____________________.",
+            "The shop shelf holds ____________________.",
+            "The path under the counter looks like ____________________."
+          ]
+        },
+        {
+          "heading": "Shop Helper",
+          "lines": [
+            "The compass shop helper carries ____________________.",
+            "The helper says, \"This path leads to ____________________.\"",
+            "The helper pauses beside ____________________."
+          ]
+        },
+        {
+          "heading": "Ending Choice",
+          "lines": [
+            "The route could end with a discovered object: ____________________.",
+            "The route could end with a helpful note: ____________________.",
+            "I choose this ending because ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Table talk: The ending choice I can offer the family table is ____________________.",
+      "tinyDraftLine": "Tiny draft: At the compass shop, the helper says, \"____________________.\"",
+      "roundWrapLine": "Round wrap: The ending that made our Penny Path story feel complete was ____________________.",
+      "quietOptionLine": "Quiet option: Choose the ending silently, then write one compass clue: ____________________.",
+      "takeHomeStoryLine": "Take-home story: At home, add one more ending detail about ____________________."
+    },
+    {
+      "id": "family-game-night-card-06",
+      "title": "Tidepool Timekeepers Lab Setting Card",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "cardSkill": "Setting detail and sensory observation",
+      "tableFit": "Ages 8-10 cooperative family-table round where the group builds one calm tidepool lab scene.",
+      "adultSetup": "Print the card, place one pencil in the center, and invite the table to offer tiny tidepool details aloud.",
+      "kidDirection": "Choose the timekeeper's job, collect three setting clues, and write the first small moment of the story.",
+      "hostPrompt": "Ask for one sight, one sound, and one texture, then let the writer choose which details belong on the page.",
+      "pageSections": [
+        {
+          "heading": "Lab Setting",
+          "lines": [
+            "The tidepool lab is tucked beside ____________________.",
+            "The clearest sound in the lab is ____________________.",
+            "One texture the timekeeper touches is ____________________."
+          ]
+        },
+        {
+          "heading": "Timekeeper Choice",
+          "lines": [
+            "The timekeeper decides to check ____________________.",
+            "The tiny tool on the table is ____________________.",
+            "The choice matters because ____________________."
+          ]
+        },
+        {
+          "heading": "Opening Moment",
+          "lines": [
+            "First, the tidepool clock shows ____________________.",
+            "Next, the lab helper notices ____________________.",
+            "The scene begins when ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "One tidepool detail our table agrees to use is ____________________.",
+      "tinyDraftLine": "My first sentence begins with ____________________.",
+      "roundWrapLine": "The round wraps up with the timekeeper choosing ____________________.",
+      "quietOptionLine": "If I want a quiet turn, I can circle the detail ____________________.",
+      "takeHomeStoryLine": "At home, the tidepool lab can open again when ____________________."
+    },
+    {
+      "id": "family-game-night-card-07",
+      "title": "Greenhouse Gear Garden Character Card",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "cardSkill": "Character choice and dialogue",
+      "tableFit": "Ages 8-10 cooperative family-table card for choosing one garden helper and one shared speaking line.",
+      "adultSetup": "Print the card, set out pencils, and ask the table to name gentle greenhouse jobs before writing starts.",
+      "kidDirection": "Pick a gear-garden helper, give the helper a clear choice, and write one line of dialogue.",
+      "hostPrompt": "Invite short suggestions for what the helper sees, wants, and says in a friendly greenhouse moment.",
+      "pageSections": [
+        {
+          "heading": "Garden Helper",
+          "lines": [
+            "The greenhouse helper carries ____________________.",
+            "The helper cares most about ____________________.",
+            "One gear in the garden moves near ____________________."
+          ]
+        },
+        {
+          "heading": "Choice Point",
+          "lines": [
+            "The helper can turn toward ____________________.",
+            "The helper can pause beside ____________________.",
+            "The kinder choice is to ____________________."
+          ]
+        },
+        {
+          "heading": "Speaking Line",
+          "lines": [
+            "The helper says, \"I notice ____________________.\"",
+            "Another table idea for dialogue is ____________________.",
+            "The line shows the helper feels ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "One greenhouse job we can picture together is ____________________.",
+      "tinyDraftLine": "My dialogue sentence will say, \"____________________.\"",
+      "roundWrapLine": "The round wraps up after the helper decides to ____________________.",
+      "quietOptionLine": "If I want a quiet turn, I can write the helper's object as ____________________.",
+      "takeHomeStoryLine": "At home, the gear garden grows a new scene around ____________________."
+    },
+    {
+      "id": "family-game-night-card-08",
+      "title": "Pantry Measurement Mystery Sequence Card",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "cardSkill": "Sequence and exact measurement detail",
+      "tableFit": "Ages 8-10 cooperative family-table card for ordering three pantry clues into one short scene.",
+      "adultSetup": "Print the card and invite the table to choose three harmless pantry objects as pretend story clues.",
+      "kidDirection": "Order the pantry clues, add one exact measurement detail, and draft the next step in the scene.",
+      "hostPrompt": "Ask what should happen first, what changes next, and which small measurement detail makes the scene clearer.",
+      "pageSections": [
+        {
+          "heading": "Pantry Clues",
+          "lines": [
+            "The first pantry clue sits beside ____________________.",
+            "The second clue measures ____________________.",
+            "The third clue points toward ____________________."
+          ]
+        },
+        {
+          "heading": "Clear Order",
+          "lines": [
+            "First, the shelf helper checks ____________________.",
+            "Next, the measuring cup shows ____________________.",
+            "After that, the helper moves toward ____________________."
+          ]
+        },
+        {
+          "heading": "Next Step Draft",
+          "lines": [
+            "The scene continues when ____________________.",
+            "The exact amount I will include is ____________________.",
+            "The next helpful action is ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "One pantry clue our table can place in order is ____________________.",
+      "tinyDraftLine": "My sequence sentence starts with ____________________.",
+      "roundWrapLine": "The round wraps up when the pantry helper reaches ____________________.",
+      "quietOptionLine": "If I want a quiet turn, I can number the clue ____________________.",
+      "takeHomeStoryLine": "At home, the pantry scene can continue with ____________________."
+    },
+    {
+      "id": "family-game-night-card-09",
+      "title": "Rain Gauge Railway Sensory Route Card",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "cardSkill": "Sensory detail, sequence, and ending choice",
+      "tableFit": "Ages 8-10 cooperative family-table round where the group builds one weather route together.",
+      "adultSetup": "Print the card, invite one gentle weather detail from the table, and keep the route short.",
+      "kidDirection": "Choose the railway route, add two sensory details, and decide where the ending should stop.",
+      "hostPrompt": "Ask what the gauge shows, what the railway feels like, and which stop gives the story a satisfying ending.",
+      "pageSections": [
+        {
+          "heading": "Gauge Reading",
+          "lines": [
+            "The rain gauge shows ____________________.",
+            "The air around the platform smells like ____________________.",
+            "The railway track shines near ____________________."
+          ]
+        },
+        {
+          "heading": "Route Sequence",
+          "lines": [
+            "First, the conductor checks ____________________.",
+            "Then, the route bends toward ____________________.",
+            "Before the last stop, the rider notices ____________________."
+          ]
+        },
+        {
+          "heading": "Ending Choice",
+          "lines": [
+            "The story can end at ____________________.",
+            "The ending feels complete because ____________________.",
+            "One final detail to add is ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "One railway sound our table can use is ____________________.",
+      "tinyDraftLine": "My route sentence includes the detail ____________________.",
+      "roundWrapLine": "The round wraps up at the railway stop called ____________________.",
+      "quietOptionLine": "If I want a quiet turn, I can choose the ending place ____________________.",
+      "takeHomeStoryLine": "At home, the rain gauge route can continue toward ____________________."
+    },
+    {
+      "id": "family-game-night-card-10",
+      "title": "Seed Library Map Room Revision Card",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "cardSkill": "Map detail, revision, and ending choice",
+      "tableFit": "Ages 8-10 cooperative family-table card for revising one map scene with clearer details.",
+      "adultSetup": "Print the card, ask the table for one map-room object, and remind writers they can improve one sentence.",
+      "kidDirection": "Pick a seed map, write a short route, revise one vague word, and choose the ending doorway.",
+      "hostPrompt": "Ask which noun should be more exact, which route detail should move earlier, and where the story should end.",
+      "pageSections": [
+        {
+          "heading": "Map Room Detail",
+          "lines": [
+            "The seed map is spread across ____________________.",
+            "The clearest label on the map says ____________________.",
+            "The map room smells like ____________________."
+          ]
+        },
+        {
+          "heading": "Revision Spot",
+          "lines": [
+            "A vague word I can replace is ____________________.",
+            "A stronger noun for the sentence is ____________________.",
+            "The revised detail helps readers picture ____________________."
+          ]
+        },
+        {
+          "heading": "Ending Doorway",
+          "lines": [
+            "The route leads to ____________________.",
+            "The final seed packet shows ____________________.",
+            "The ending line should leave the reader with ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "One map-room detail our table wants to keep is ____________________.",
+      "tinyDraftLine": "My revised sentence will change ____________________ to ____________________.",
+      "roundWrapLine": "The round wraps up when the seed map points to ____________________.",
+      "quietOptionLine": "If I want a quiet turn, I can underline the word ____________________.",
+      "takeHomeStoryLine": "At home, the seed library story can end near ____________________."
+    },
+    {
+      "id": "family-game-night-card-11",
+      "title": "Revision River Ferry Ending Switch",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "cardSkill": "Revise a shared table idea by choosing the clearest ending detail.",
+      "tableFit": "Upper-age cooperative family-table card for a calm paper-and-pencil story round.",
+      "adultSetup": "Set one printed card near the pencils and ask the table to choose one ferry detail everyone may borrow.",
+      "kidDirection": "Draft a river scene, revise one sentence, and choose an ending that echoes an earlier clue.",
+      "hostPrompt": "Ask which detail should return at the dock and which extra sentence can be trimmed.",
+      "pageSections": [
+        {
+          "heading": "Ferry Start",
+          "lines": [
+            "The ferry carries a small object shaped like ____________________.",
+            "The river setting feels ____________________ because of one detail.",
+            "The table clue everyone may borrow is ____________________."
+          ]
+        },
+        {
+          "heading": "Revision Turn",
+          "lines": [
+            "My first ending idea is ____________________.",
+            "One sentence I can make clearer is ____________________.",
+            "The detail that should return near the dock is ____________________."
+          ]
+        },
+        {
+          "heading": "Dock Ending",
+          "lines": [
+            "The ferry reaches the dock when ____________________.",
+            "My revised final image is ____________________.",
+            "The ending choice I like best is ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Tell the table one detail you kept after revising: ____________________.",
+      "tinyDraftLine": "Tiny draft: The ferry changed course when ____________________.",
+      "roundWrapLine": "This round made my ending clearer by ____________________.",
+      "quietOptionLine": "Quiet option: circle one sentence to revise and copy it here: ____________________.",
+      "takeHomeStoryLine": "Take-home story starter: A ferry ticket with a revised note says ____________________."
+    },
+    {
+      "id": "family-game-night-card-12",
+      "title": "Clue Label Tower Sensory Case",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "cardSkill": "Select precise setting details and turn them into a concise story label.",
+      "tableFit": "Upper-age cooperative family-table card for screen-free observation, sorting, and short writing.",
+      "adultSetup": "Place the card in the center and invite the table to name one quiet museum case, shelf, or tower detail.",
+      "kidDirection": "Choose one clue, add a sensory detail, and write a label that points a reader into the scene.",
+      "hostPrompt": "Ask which clue belongs in the first sentence and which detail is only background.",
+      "pageSections": [
+        {
+          "heading": "Case Clues",
+          "lines": [
+            "The tower case holds something that looks like ____________________.",
+            "A sound, texture, or color near it is ____________________.",
+            "The clue the table can reuse is ____________________."
+          ]
+        },
+        {
+          "heading": "Label Focus",
+          "lines": [
+            "The label should help readers notice ____________________.",
+            "The detail I will leave in the background is ____________________.",
+            "The strongest setting word on my card is ____________________."
+          ]
+        },
+        {
+          "heading": "Museum Scene",
+          "lines": [
+            "My story label begins with ____________________.",
+            "The scene changes when someone notices ____________________.",
+            "The label makes the setting feel ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Share one setting word the table could borrow: ____________________.",
+      "tinyDraftLine": "Tiny draft: The tower label pointed toward ____________________.",
+      "roundWrapLine": "This round helped me choose the clearest clue: ____________________.",
+      "quietOptionLine": "Quiet option: write only your final invented label here: ____________________.",
+      "takeHomeStoryLine": "Take-home story starter: A label on an ordinary shelf explains ____________________."
+    },
+    {
+      "id": "family-game-night-card-13",
+      "title": "Compass Craft Academy Route Choice",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "cardSkill": "Build sequence with a clear route, character choice, and turning point.",
+      "tableFit": "Upper-age cooperative family-table card for mapping a short scene with three connected steps.",
+      "adultSetup": "Invite the table to agree on one starting place, one turn, and one finish before anyone writes.",
+      "kidDirection": "Plan a three-stop route, choose what the main character decides, and draft the turning sentence.",
+      "hostPrompt": "Ask which stop changes the plan and which map word helps readers follow the sequence.",
+      "pageSections": [
+        {
+          "heading": "Route Map",
+          "lines": [
+            "The route starts beside ____________________.",
+            "The middle stop reveals ____________________.",
+            "The finish point waits near ____________________."
+          ]
+        },
+        {
+          "heading": "Choice Point",
+          "lines": [
+            "The main character chooses to ____________________.",
+            "The reason for that choice is ____________________.",
+            "A compass word that shows the next step is ____________________."
+          ]
+        },
+        {
+          "heading": "Sequence Draft",
+          "lines": [
+            "First, the route moves through ____________________.",
+            "Next, the plan changes because ____________________.",
+            "Finally, the ending lands at ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Tell the table which stop changed the route: ____________________.",
+      "tinyDraftLine": "Tiny draft: The compass pointed next to ____________________.",
+      "roundWrapLine": "This round made my sequence clearer by ____________________.",
+      "quietOptionLine": "Quiet option: draw three route dots and write the middle turn: ____________________.",
+      "takeHomeStoryLine": "Take-home story starter: A hallway map at home leads from ____________________ to ____________________."
+    },
+    {
+      "id": "family-game-night-card-14",
+      "title": "Almost Invention Workshop Test Note",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "cardSkill": "Use ordered steps, sensory detail, and revision to explain a paper invention.",
+      "tableFit": "Upper-age cooperative family-table card for inventing a simple paper-only idea together.",
+      "adultSetup": "Ask the table to pick one simple household problem for an imaginary paper tool to help explain.",
+      "kidDirection": "Invent a nearly useful paper tool, write three ordered steps, and revise one test note.",
+      "hostPrompt": "Ask where the directions need a clearer verb, label, or sensory detail.",
+      "pageSections": [
+        {
+          "heading": "Workshop Idea",
+          "lines": [
+            "The paper-only invention is called ____________________.",
+            "It is meant to help with ____________________.",
+            "The texture, color, or shape detail is ____________________."
+          ]
+        },
+        {
+          "heading": "Step Order",
+          "lines": [
+            "Step one tells the reader to ____________________.",
+            "Step two changes the tool by ____________________.",
+            "Step three checks whether ____________________."
+          ]
+        },
+        {
+          "heading": "Test Note",
+          "lines": [
+            "The part that almost works is ____________________.",
+            "The direction I should revise is ____________________.",
+            "The final test note says ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Share one verb that made the directions clearer: ____________________.",
+      "tinyDraftLine": "Tiny draft: The almost-invention worked better after ____________________.",
+      "roundWrapLine": "This round helped me revise the step that says ____________________.",
+      "quietOptionLine": "Quiet option: revise one direction silently and write it here: ____________________.",
+      "takeHomeStoryLine": "Take-home story starter: A paper tool on the kitchen table almost solves ____________________."
+    },
+    {
+      "id": "family-game-night-card-15",
+      "title": "Index Card Theater Dialogue Turn",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "cardSkill": "Write concise dialogue that reveals character choice and ending direction.",
+      "tableFit": "Upper-age cooperative family-table card for a short two-voice scene on printable cards.",
+      "adultSetup": "Invite the table to choose one setting cue and one shared object before writers draft two spoken lines.",
+      "kidDirection": "Write two lines of dialogue, show what a character chooses, and end with a clear scene shift.",
+      "hostPrompt": "Ask what the first line expects and how the reply changes the scene direction.",
+      "pageSections": [
+        {
+          "heading": "Stage Cards",
+          "lines": [
+            "The tiny theater setting is ____________________.",
+            "The shared object on the table is ____________________.",
+            "A quiet action before the dialogue is ____________________."
+          ]
+        },
+        {
+          "heading": "Dialogue Turn",
+          "lines": [
+            "The first spoken line is ____________________.",
+            "The reply changes the plan by ____________________.",
+            "The character choice behind the reply is ____________________."
+          ]
+        },
+        {
+          "heading": "Scene Shift",
+          "lines": [
+            "The scene turns when ____________________.",
+            "The final stage detail is ____________________.",
+            "The ending direction points toward ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Share the reply that changed your scene: ____________________.",
+      "tinyDraftLine": "Tiny draft: The second line changed everything because ____________________.",
+      "roundWrapLine": "This round made my dialogue stronger by ____________________.",
+      "quietOptionLine": "Quiet option: write only the two spoken lines here: ____________________.",
+      "takeHomeStoryLine": "Take-home story starter: Two index cards on a table begin a scene about ____________________."
+    }
+  ]
+}

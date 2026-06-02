@@ -16,6 +16,7 @@ export const tutoringCenterSprintPackProductSlug = 'tutoring-center-story-sprint
 export const summerCampStoryCircleKitProductSlug = 'summer-camp-story-circle-kit'
 export const afterSchoolStoryClubKitProductSlug = 'after-school-story-club-starter-kit'
 export const museumDayStoryNotebookKitProductSlug = 'museum-day-story-notebook-kit'
+export const familyGameNightStoryCardDeckProductSlug = 'family-game-night-story-card-deck'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -160,6 +161,13 @@ const requiredMuseumDayStoryNotebookArtifactPaths = {
   zipPath: 'product-build/museum-day-story-notebook-kit/museum-day-story-notebook-kit.zip',
   sourceHtmlPath: 'product-build/museum-day-story-notebook-kit/source/museum-day-story-notebook-kit.html',
   manifestPath: 'product-build/museum-day-story-notebook-kit/manifest.json',
+}
+
+const requiredFamilyGameNightStoryCardDeckArtifactPaths = {
+  pdfPath: 'product-build/family-game-night-story-card-deck/Family-Game-Night-Story-Card-Deck.pdf',
+  zipPath: 'product-build/family-game-night-story-card-deck/family-game-night-story-card-deck.zip',
+  sourceHtmlPath: 'product-build/family-game-night-story-card-deck/source/family-game-night-story-card-deck.html',
+  manifestPath: 'product-build/family-game-night-story-card-deck/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -2455,6 +2463,262 @@ export function validateMuseumDayStoryNotebookKitSource(source, product, knownWo
   return errors
 }
 
+function validateNoUnsafeFamilyGameNightLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const text = rawText
+    .replace(/\bno\s+scores?\b/gi, '')
+    .replace(/\bno\s+scoring\b/gi, '')
+    .replace(/\bno\s+winners?\b/gi, '')
+    .replace(/\bno\s+teams?\b/gi, '')
+    .replace(/\bno\s+competition\b/gi, '')
+    .replace(/\bno\s+gambling\b/gi, '')
+    .replace(/\bno\s+betting\b/gi, '')
+    .replace(/\bno\s+dares?\b/gi, '')
+    .replace(/\bno\s+prizes?\b/gi, '')
+    .replace(/\bno\s+leaderboards?\b/gi, '')
+    .replace(/\bwithout\s+scores?\b/gi, '')
+    .replace(/\bwithout\s+scoring\b/gi, '')
+    .replace(/\bwithout\s+winners?\b/gi, '')
+    .replace(/\bwithout\s+teams?\b/gi, '')
+    .replace(/\bwithout\s+competition\b/gi, '')
+    .replace(/\bwithout\s+gambling\b/gi, '')
+    .replace(/\bwithout\s+betting\b/gi, '')
+    .replace(/\bwithout\s+dares?\b/gi, '')
+    .replace(/\bwithout\s+prizes?\b/gi, '')
+    .replace(/\bwithout\s+leaderboards?\b/gi, '')
+    .replace(/\bno\s+accounts?\b/gi, '')
+    .replace(/\bno\s+child accounts?\b/gi, '')
+    .replace(/\bno\s+student data\b/gi, '')
+    .replace(/\bno\s+data use\b/gi, '')
+    .replace(/\bno\s+uploads?\b/gi, '')
+    .replace(/\bno\s+public publishing\b/gi, '')
+    .replace(/\bwithout\s+accounts?\b/gi, '')
+    .replace(/\bwithout\s+child accounts?\b/gi, '')
+    .replace(/\bwithout\s+student data\b/gi, '')
+    .replace(/\bwithout\s+uploads?\b/gi, '')
+    .replace(/\bwithout\s+public publishing\b/gi, '')
+    .replace(/\bkeep pages offline\b/gi, '')
+    .replace(/\binvented choices only\b/gi, '')
+  pushIf(
+    errors,
+    /\bscores?\b|\bscoring\b|\bscorecards?\b|\bwinners?\b|\bwinning\b|\bteams?\b|\bcompetition\b|\bcompetitive\b|\bcompete(s|d|ing)?\b|\bgambling\b|\bbet(s|ting)?\b|\bcasino(s)?\b|\bdares?\b|\bprizes?\b|\bleaderboards?\b|\btimer(s)?\b|\btimed\b|\brace(s|d)?\b/i.test(
+      text,
+    ),
+    `${label} includes scoring, winner, team, gambling, betting, dare, prize, leaderboard, timer-pressure, or competition language.`,
+  )
+  pushIf(
+    errors,
+    /\brosters?\b|\battendance\b|\bsign-?in\b|\bchild names?\b|\bstudent names?\b|\binitials\b|\bsurnames?\b|\bschool names?\b|\bphotos?\b|\baddresses?\b|\bbehavior reports?\b|\bupload(s|ed|ing)?\b|\baccounts?\b|\blogins?\b|\blog in\b|\bpublic publishing\b|\bpublish online\b|\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\bdiagnos(is|e|es|ed|ing|tic)\b|\btherapy\b|\btherapist\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b|\bassessment(s)?\b|\bgrade(s|d|book)?\b|\bscore(s|d|book)?\b|\bguarantee(s|d)?\b|\bguaranteed\b/i.test(
+      text,
+    ),
+    `${label} includes roster, attendance, sign-in, child-name, photo, address, behavior, medical, legal, therapy, diagnosis, assessment, grade, score, or guaranteed-outcome language.`,
+  )
+  pushIf(
+    errors,
+    /\bchase(s|d|ing)?\b|\brun(s|ning)?\b|\bjump(s|ed|ing)?\b|\bhide and seek\b|\btag\b|\bclimb(s|ed|ing)?\b|\bthrow(s|ing)?\b|\broughhouse\b|\bwrestl(e|ing)\b|\bblindfold(s|ed)?\b|\bstairs?\b|\bkitchen knife|knives\b|\bflames?\b|\bmatchstick(s)?\b|\blighter(s)?\b/i.test(
+      rawText,
+    ),
+    `${label} includes unsafe physical game instruction language.`,
+  )
+}
+
+function validateFamilyGameNightCard(card, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, cardIds, errors) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'cardSkill',
+    'tableFit',
+    'adultSetup',
+    'kidDirection',
+    'hostPrompt',
+    'tableTalkLine',
+    'tinyDraftLine',
+    'roundWrapLine',
+    'quietOptionLine',
+    'takeHomeStoryLine',
+  ]) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(card.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(card.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, !card.id.startsWith('family-game-night-card-'), `${label}.id must start with family-game-night-card-.`)
+    pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+    cardIds.add(card.id)
+  }
+
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '9-11', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  pushIf(errors, !Array.isArray(card.pageSections), `${label}.pageSections must be an array.`)
+  if (Array.isArray(card.pageSections)) {
+    pushIf(errors, card.pageSections.length !== 3, `${label}.pageSections must have exactly 3 entries.`)
+    card.pageSections.forEach((section, sectionIndex) => {
+      const sectionLabel = `${label}.pageSections[${sectionIndex}]`
+      pushIf(errors, !isObject(section), `${sectionLabel} must be an object.`)
+      if (!isObject(section)) return
+      validateString(section.heading, `${sectionLabel}.heading`, errors)
+      validateExactStringArray(section.lines, 3, `${sectionLabel}.lines`, errors)
+      if (Array.isArray(section.lines)) {
+        section.lines.forEach((line, lineIndex) => {
+          pushIf(errors, isNonEmptyString(line) && !hasWritableBlank(line), `${sectionLabel}.lines[${lineIndex}] must include a writable blank.`)
+          pushIf(errors, isNonEmptyString(line) && hasSnakeCasePlaceholder(line), `${sectionLabel}.lines[${lineIndex}] must use human-readable text, not snake_case placeholders.`)
+        })
+      }
+    })
+  }
+
+  for (const key of ['tableTalkLine', 'tinyDraftLine', 'roundWrapLine', 'quietOptionLine', 'takeHomeStoryLine']) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeFamilyGameNightLanguage(card, label, errors)
+}
+
+function validateFamilyGameNightRoundFormat(format, index, names, errors) {
+  const label = `roundFormats[${index}]`
+  pushIf(errors, !isObject(format), `${label} must be an object.`)
+  if (!isObject(format)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(format[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(format.name)) {
+    pushIf(errors, names.has(format.name), `${label}.name is duplicated.`)
+    names.add(format.name)
+  }
+  validateExactStringArray(format.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeFamilyGameNightLanguage(format, label, errors)
+}
+
+function validateTakeHomeStoryStarter(card, index, titles, errors) {
+  const label = `takeHomeStoryStarters[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(card.title)) {
+    pushIf(errors, titles.has(card.title), `${label}.title is duplicated.`)
+    titles.add(card.title)
+  }
+  pushIf(errors, isNonEmptyString(card.direction) && !hasWritableBlank(card.direction), `${label}.direction must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(card.direction) && hasSnakeCasePlaceholder(card.direction), `${label}.direction must use human-readable text, not snake_case placeholders.`)
+  pushIf(errors, isNonEmptyString(card.familyLine) && !hasWritableBlank(card.familyLine), `${label}.familyLine must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(card.familyLine) && hasSnakeCasePlaceholder(card.familyLine), `${label}.familyLine must use human-readable text, not snake_case placeholders.`)
+  validateNoUnsafeFamilyGameNightLanguage(card, label, errors)
+}
+
+export function validateFamilyGameNightStoryCardDeckSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Family Game Night Story Card Deck source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch20', 'batchId must be 2026-06-02-batch20.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(
+    errors,
+    source.productSlug !== familyGameNightStoryCardDeckProductSlug,
+    `productSlug must be ${familyGameNightStoryCardDeckProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Family Game Night Story Card Deck', 'title must be Family Game Night Story Card Deck.')
+  pushIf(errors, source.pricePoint !== '$27', 'pricePoint must be $27.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Family Game Night source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Family Game Night source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Family Game Night source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 15, 'worldSlugs must have exactly 15 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredFamilyGameNightStoryCardDeckArtifactPaths, 'Family Game Night', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.hostGuide), 'hostGuide must be an object.')
+  if (isObject(source.hostGuide)) {
+    validateStringArray(source.hostGuide.tableSetup, 5, 'hostGuide.tableSetup', errors)
+    validateStringArray(source.hostGuide.roundHosting, 5, 'hostGuide.roundHosting', errors)
+    validateStringArray(source.hostGuide.quietParticipation, 5, 'hostGuide.quietParticipation', errors)
+    validateStringArray(source.hostGuide.noDataUse, 4, 'hostGuide.noDataUse', errors)
+    validateStringArray(source.hostGuide.familyHandoff, 4, 'hostGuide.familyHandoff', errors)
+    validateStringArray(source.hostGuide.packReset, 4, 'hostGuide.packReset', errors)
+    validateNoUnsafeFamilyGameNightLanguage(source.hostGuide, 'hostGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.roundFormats), 'roundFormats must be an array.')
+  if (Array.isArray(source.roundFormats)) {
+    pushIf(errors, source.roundFormats.length !== 6, 'roundFormats must have exactly 6 entries.')
+    const names = new Set()
+    source.roundFormats.forEach((format, index) => validateFamilyGameNightRoundFormat(format, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeStoryStarters), 'takeHomeStoryStarters must be an array.')
+  if (Array.isArray(source.takeHomeStoryStarters)) {
+    pushIf(errors, source.takeHomeStoryStarters.length !== 10, 'takeHomeStoryStarters must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeStoryStarters.forEach((card, index) => validateTakeHomeStoryStarter(card, index, titles, errors))
+  }
+
+  validateExactStringArray(source.optionalFamilySharePrompts, 8, 'optionalFamilySharePrompts', errors)
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 15, 'cards must have exactly 15 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateFamilyGameNightCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 15, 'cards must cover at least 15 unique worlds.')
+  }
+
+  validateNoUnsafeFamilyGameNightLanguage(source, 'Family Game Night Story Card Deck source', errors)
+  validateNoFamilySafetyLanguage(source, 'Family Game Night Story Card Deck source', errors)
+  validateNoRiskyLanguage(source, 'Family Game Night Story Card Deck source', errors)
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -2583,7 +2847,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredMuseumDayStoryNotebookArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredFamilyGameNightStoryCardDeckArtifactPaths.pdfPath
+      ? requiredFamilyGameNightStoryCardDeckArtifactPaths
+      : artifact?.pdfPath === requiredMuseumDayStoryNotebookArtifactPaths.pdfPath
       ? requiredMuseumDayStoryNotebookArtifactPaths
       : artifact?.pdfPath === requiredAfterSchoolStoryClubArtifactPaths.pdfPath
       ? requiredAfterSchoolStoryClubArtifactPaths

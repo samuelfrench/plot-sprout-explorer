@@ -366,6 +366,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Fifteen adult-led museum-day notebook pages with visit tools, observation cards, and family handoff prompts.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'family-game-night-story-card-deck',
+    title: 'Family Game Night Story Card Deck',
+    pricePoint: '$27',
+    description:
+      'Fifteen cooperative family-table story cards with host tools, quiet options, and take-home starters.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

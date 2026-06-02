@@ -1,0 +1,216 @@
+{
+  "lane": "batch20-family-game-night-cards-a",
+  "productSlug": "family-game-night-story-card-deck",
+  "cards": [
+    {
+      "id": "family-game-night-card-01",
+      "title": "Teacup Weather Window Helper",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-9",
+      "cardSkill": "setting detail and character choice",
+      "tableFit": "15-minute cooperative, screen-free printable family-table card for younger writers who can add one tiny setting clue and one helper choice.",
+      "adultSetup": "Print one card per writer, place pencils in the middle, and model one short setting detail before the table writes.",
+      "kidDirection": "Choose a teacup weather clue, pick the helper at the window, and write what the helper notices first.",
+      "hostPrompt": "Ask the table which tiny weather clue is easiest to picture, then invite each writer to choose a helpful character.",
+      "pageSections": [
+        {
+          "heading": "Window Weather",
+          "lines": [
+            "The teacup window shows weather shaped like ____________________.",
+            "The tiny room smells like ____________________ when the weather changes.",
+            "The sill holds a small clue: ____________________."
+          ]
+        },
+        {
+          "heading": "Helper Choice",
+          "lines": [
+            "The helper at the window is ____________________.",
+            "The helper carries ____________________.",
+            "The helper decides to check ____________________ first."
+          ]
+        },
+        {
+          "heading": "Story Start",
+          "lines": [
+            "First, the weather clue moves toward ____________________.",
+            "Next, the helper says, \"I notice ____________________.\"",
+            "The table story starts when ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Table talk: One setting detail I can add for the family table is ____________________.",
+      "tinyDraftLine": "Tiny draft: The helper looks through the window and sees ____________________.",
+      "roundWrapLine": "Round wrap: The detail that made our teacup scene clearer was ____________________.",
+      "quietOptionLine": "Quiet option: Point to a favorite line, then write one more window clue: ____________________.",
+      "takeHomeStoryLine": "Take-home story: At home, add a new weather clue that changes ____________________."
+    },
+    {
+      "id": "family-game-night-card-02",
+      "title": "Spoon Ferry Harbor Cargo Note",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "cardSkill": "sequence and sensory detail",
+      "tableFit": "16-minute cooperative, screen-free printable family-table card for writing a clear ferry sequence with one sound, color, or texture.",
+      "adultSetup": "Print the card, set out pencils, and place a simple paper harbor path in the middle for writers to point at while planning.",
+      "kidDirection": "Send the spoon ferry across the lunchbox harbor, choose its cargo, and write three calm story steps.",
+      "hostPrompt": "Ask writers to name one harbor detail they can hear, see, or feel before they write the ferry note.",
+      "pageSections": [
+        {
+          "heading": "Harbor Setting",
+          "lines": [
+            "The spoon ferry waits beside ____________________.",
+            "The lunchbox harbor sound is ____________________.",
+            "The dock color I picture is ____________________."
+          ]
+        },
+        {
+          "heading": "Cargo Choice",
+          "lines": [
+            "The ferry carries ____________________.",
+            "The harbor helper checks ____________________.",
+            "The careful paper route goes around ____________________."
+          ]
+        },
+        {
+          "heading": "Three-Step Note",
+          "lines": [
+            "First, the ferry glides past ____________________.",
+            "Next, the cargo helper notices ____________________.",
+            "Last, the dock note says ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Table talk: The sensory detail I can offer the table is ____________________.",
+      "tinyDraftLine": "Tiny draft: The spoon ferry carries ____________________ across the harbor.",
+      "roundWrapLine": "Round wrap: The step that helped our ferry story move forward was ____________________.",
+      "quietOptionLine": "Quiet option: Trace the ferry path silently, then write one cargo clue: ____________________.",
+      "takeHomeStoryLine": "Take-home story: At home, add one more harbor sound or color: ____________________."
+    },
+    {
+      "id": "family-game-night-card-03",
+      "title": "Pocket Park Notice Board Helper",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "cardSkill": "dialogue and character choice",
+      "tableFit": "15-minute cooperative, screen-free printable family-table card for inventing one useful notice and one friendly spoken line.",
+      "adultSetup": "Print the card, offer pencils and blank paper strips, and remind writers that every notice is invented for the story world.",
+      "kidDirection": "Create a pocket park notice, choose the helper who reads it, and write what the helper says.",
+      "hostPrompt": "Ask the table what kind of small park job a helper could do, then invite one short spoken sentence.",
+      "pageSections": [
+        {
+          "heading": "Notice Board",
+          "lines": [
+            "The pocket park notice asks for ____________________.",
+            "The notice is posted beside ____________________.",
+            "The board has a small drawing of ____________________."
+          ]
+        },
+        {
+          "heading": "Park Helper",
+          "lines": [
+            "The helper who reads the notice is ____________________.",
+            "The helper brings ____________________.",
+            "The helper chooses this job because ____________________."
+          ]
+        },
+        {
+          "heading": "Spoken Line",
+          "lines": [
+            "The helper says, \"I can help with ____________________.\"",
+            "The next kind reply is ____________________.",
+            "The notice board changes when ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Table talk: A helpful notice idea for our park is ____________________.",
+      "tinyDraftLine": "Tiny draft: The pocket park helper says, \"____________________.\"",
+      "roundWrapLine": "Round wrap: The spoken line that made our park helper clearer was ____________________.",
+      "quietOptionLine": "Quiet option: Skip reading aloud and copy one notice line here: ____________________.",
+      "takeHomeStoryLine": "Take-home story: At home, add one new pocket park notice about ____________________."
+    },
+    {
+      "id": "family-game-night-card-04",
+      "title": "Button Bakery Map Fix",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "cardSkill": "revision and clear directions",
+      "tableFit": "17-minute cooperative, screen-free printable family-table card for replacing one vague map clue with a clearer bakery detail.",
+      "adultSetup": "Print the card, set out pencils, and offer beside, past, near, and around as gentle direction words.",
+      "kidDirection": "Fix the bakery map by choosing one mixed-up clue, adding a direction word, and writing the clearer route.",
+      "hostPrompt": "Ask writers to point to one bakery object on the card and make the route more specific before the round wraps.",
+      "pageSections": [
+        {
+          "heading": "Bakery Map",
+          "lines": [
+            "The crumb path begins near ____________________.",
+            "The button baker looks past ____________________.",
+            "The mixed-up clue points toward ____________________."
+          ]
+        },
+        {
+          "heading": "Clearer Clue",
+          "lines": [
+            "I can replace a vague word with ____________________.",
+            "The better direction word is ____________________.",
+            "The bakery detail that helps readers is ____________________."
+          ]
+        },
+        {
+          "heading": "Fixed Route",
+          "lines": [
+            "First, follow the crumb path beside ____________________.",
+            "Next, turn around ____________________.",
+            "The fixed map ends at ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Table talk: The clearer direction I can add is ____________________.",
+      "tinyDraftLine": "Tiny draft: The button baker fixes the map by changing ____________________.",
+      "roundWrapLine": "Round wrap: The revision that made our route easier to follow was ____________________.",
+      "quietOptionLine": "Quiet option: Draw one arrow first, then write the clearer clue: ____________________.",
+      "takeHomeStoryLine": "Take-home story: At home, revise one bakery map clue into ____________________."
+    },
+    {
+      "id": "family-game-night-card-05",
+      "title": "Penny Path Compass Shop Ending",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "cardSkill": "ending choice and dialogue",
+      "tableFit": "16-minute cooperative, screen-free printable family-table card for choosing a gentle ending and adding one compass-shop line of dialogue.",
+      "adultSetup": "Print the card, place pencils nearby, and invite writers to choose a calm ending that finishes the route on paper.",
+      "kidDirection": "Follow the penny compass, choose where the route ends, and write what the shop helper says there.",
+      "hostPrompt": "Ask the table which ending feels complete, then have each writer add one short shop-helper sentence.",
+      "pageSections": [
+        {
+          "heading": "Compass Setting",
+          "lines": [
+            "The penny compass points toward ____________________.",
+            "The shop shelf holds ____________________.",
+            "The path under the counter looks like ____________________."
+          ]
+        },
+        {
+          "heading": "Shop Helper",
+          "lines": [
+            "The compass shop helper carries ____________________.",
+            "The helper says, \"This path leads to ____________________.\"",
+            "The helper pauses beside ____________________."
+          ]
+        },
+        {
+          "heading": "Ending Choice",
+          "lines": [
+            "The route could end with a discovered object: ____________________.",
+            "The route could end with a helpful note: ____________________.",
+            "I choose this ending because ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Table talk: The ending choice I can offer the family table is ____________________.",
+      "tinyDraftLine": "Tiny draft: At the compass shop, the helper says, \"____________________.\"",
+      "roundWrapLine": "Round wrap: The ending that made our Penny Path story feel complete was ____________________.",
+      "quietOptionLine": "Quiet option: Choose the ending silently, then write one compass clue: ____________________.",
+      "takeHomeStoryLine": "Take-home story: At home, add one more ending detail about ____________________."
+    }
+  ]
+}

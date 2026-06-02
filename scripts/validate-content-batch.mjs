@@ -8,6 +8,7 @@ import {
   validateBirthdayPartyKitSource,
   validateClassroomLicenseSource,
   validateCheckoutReadiness,
+  validateFamilyGameNightStoryCardDeckSource,
   validateManifestWorldAssets,
   validateMuseumDayStoryNotebookKitSource,
   validatePackSource,
@@ -38,6 +39,7 @@ const batch16ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch17ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch17-product-images.json')
 const batch18ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch18-product-images.json')
 const batch19ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch19-product-images.json')
+const batch20ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch20-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -51,6 +53,7 @@ const tutoringCenterSourceFile = resolve(root, 'content', 'product-artifacts', '
 const summerCampSourceFile = resolve(root, 'content', 'product-artifacts', 'summer-camp-story-circle-kit.json')
 const afterSchoolSourceFile = resolve(root, 'content', 'product-artifacts', 'after-school-story-club-starter-kit.json')
 const museumDaySourceFile = resolve(root, 'content', 'product-artifacts', 'museum-day-story-notebook-kit.json')
+const familyGameNightSourceFile = resolve(root, 'content', 'product-artifacts', 'family-game-night-story-card-deck.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -65,6 +68,7 @@ const batch16ProductImagesBatchId = '2026-06-02-batch16-product-images'
 const batch17ProductImagesBatchId = '2026-06-02-batch17-product-images'
 const batch18ProductImagesBatchId = '2026-06-02-batch18-product-images'
 const batch19ProductImagesBatchId = '2026-06-02-batch19-product-images'
+const batch20ProductImagesBatchId = '2026-06-02-batch20-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -78,6 +82,7 @@ const tutoringCenterBatchId = '2026-06-02-batch16'
 const summerCampBatchId = '2026-06-02-batch17'
 const afterSchoolBatchId = '2026-06-02-batch18'
 const museumDayBatchId = '2026-06-02-batch19'
+const familyGameNightBatchId = '2026-06-02-batch20'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -929,6 +934,55 @@ function validateBatch19ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch20ProductImage(image) {
+  const label = `2026-06-02-batch20-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(image.slug === 'family-game-night-story-card-deck', `${label}.slug must be family-game-night-story-card-deck.`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch20/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch20/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch20/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'no text',
+    'no letters',
+    'no logos',
+    'no watermark',
+    'no branded characters',
+    'no scary harm',
+    'no weapons',
+    'no people',
+    'no faces',
+    'no animals',
+    'no phone',
+    'no tablet',
+    'no device',
+    'no dice',
+    'screen-free printable family game night story card deck',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar.seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -1038,6 +1092,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'museum-day-story-notebook-kit': {
       title: 'Museum Day Story Notebook Kit',
       pricePoint: '$37',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 15,
+    },
+    'family-game-night-story-card-deck': {
+      title: 'Family Game Night Story Card Deck',
+      pricePoint: '$27',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -1308,12 +1370,23 @@ expect(Array.isArray(batch19ProductImages.images), 'batch19 product image manife
 expect(batch19ProductImages.images.length === 1, `Expected 1 Batch 19 product image, found ${batch19ProductImages.images.length}.`)
 validateBatch19ProductImage(batch19ProductImages.images[0])
 
+expect(existsSync(batch20ProductImagesFile), `Missing Batch 20 product image manifest: ${batch20ProductImagesFile}`)
+const batch20ProductImages = readJson(batch20ProductImagesFile)
+expect(
+  batch20ProductImages.batchId === batch20ProductImagesBatchId,
+  `batch20 product image manifest batchId must be ${batch20ProductImagesBatchId}.`,
+)
+expect(batch20ProductImages.generatedAt === '2026-06-02', 'batch20 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch20ProductImages.images), 'batch20 product image manifest images must be an array.')
+expect(batch20ProductImages.images.length === 1, `Expected 1 Batch 20 product image, found ${batch20ProductImages.images.length}.`)
+validateBatch20ProductImage(batch20ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 12, `Expected 12 product records, found ${products.products.length}.`)
+expect(products.products.length === 13, `Expected 13 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -1326,6 +1399,10 @@ for (const requiredProductSlug of [
   'library-story-club-kit',
   'substitute-teacher-story-station-pack',
   'tutoring-center-story-sprint-pack',
+  'summer-camp-story-circle-kit',
+  'after-school-story-club-starter-kit',
+  'museum-day-story-notebook-kit',
+  'family-game-night-story-card-deck',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -2091,6 +2168,73 @@ for (const asset of museumDayArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Museum Day Story Notebook Kit copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(familyGameNightSourceFile), `Missing Batch 20 Family Game Night source file: ${familyGameNightSourceFile}`)
+const familyGameNightSource = readJson(familyGameNightSourceFile)
+expect(
+  familyGameNightSource.batchId === familyGameNightBatchId,
+  `Family Game Night source batchId must be ${familyGameNightBatchId}.`,
+)
+const familyGameNightProduct = products.products.find((product) => product.slug === 'family-game-night-story-card-deck')
+expect(familyGameNightProduct, 'Missing Family Game Night product record for Batch 20 artifact validation.')
+const familyGameNightSourceErrors = validateFamilyGameNightStoryCardDeckSource(
+  familyGameNightSource,
+  familyGameNightProduct,
+  worldAgeBands,
+)
+expect(
+  familyGameNightSourceErrors.length === 0,
+  `Family Game Night Story Card Deck source failed validation:\n${familyGameNightSourceErrors.join('\n')}`,
+)
+const familyGameNightExpectedPdfPages = familyGameNightSource.cards.length + 5
+const familyGameNightArtifactStatus = inspectArtifactFiles(root, familyGameNightSource.artifact, {
+  expectedPdfPages: familyGameNightExpectedPdfPages,
+})
+expect(
+  familyGameNightArtifactStatus.valid,
+  `Family Game Night Story Card Deck artifacts failed validation:\n${familyGameNightArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  familyGameNightArtifactStatus.files.pdf.size > 100_000,
+  `Family Game Night Story Card Deck PDF artifact is unexpectedly small: ${familyGameNightArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  familyGameNightArtifactStatus.files.pdf.pageCount === familyGameNightExpectedPdfPages,
+  `Family Game Night Story Card Deck PDF artifact must have ${familyGameNightExpectedPdfPages} pages.`,
+)
+expect(
+  familyGameNightArtifactStatus.files.zip.size > familyGameNightArtifactStatus.files.pdf.size,
+  'Family Game Night Story Card Deck ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const familyGameNightCheckoutErrors = validateCheckoutReadiness(familyGameNightProduct, familyGameNightArtifactStatus)
+expect(
+  familyGameNightCheckoutErrors.length === 0,
+  `Family Game Night Story Card Deck checkout readiness failed validation:\n${familyGameNightCheckoutErrors.join('\n')}`,
+)
+const familyGameNightArtifactManifest = readJson(resolve(root, familyGameNightSource.artifact.manifestPath))
+expect(
+  familyGameNightArtifactManifest.sourcePageCount === familyGameNightSource.cards.length,
+  'Family Game Night Story Card Deck artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(familyGameNightArtifactManifest.files.assets),
+  'Family Game Night Story Card Deck artifact manifest files.assets must be an array.',
+)
+expect(
+  familyGameNightArtifactManifest.files.assets.length === familyGameNightSource.worldSlugs.length,
+  'Family Game Night Story Card Deck artifact manifest must include one copied local image per source world.',
+)
+const familyGameNightManifestAssetErrors = validateManifestWorldAssets(
+  familyGameNightSource,
+  familyGameNightArtifactManifest,
+)
+expect(
+  familyGameNightManifestAssetErrors.length === 0,
+  `Family Game Night Story Card Deck artifact manifest image coverage failed validation:\n${familyGameNightManifestAssetErrors.join('\n')}`,
+)
+for (const asset of familyGameNightArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Family Game Night Story Card Deck copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 12 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 13 product artifacts.`,
 )

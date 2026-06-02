@@ -48,6 +48,7 @@ npm run image:batch16
 npm run image:batch17
 npm run image:batch18
 npm run image:batch19
+npm run image:batch20
 ```
 
 ## Build Product Artifacts
@@ -67,6 +68,7 @@ npm run product:tutoring-center-pack
 npm run product:summer-camp-kit
 npm run product:after-school-club-kit
 npm run product:museum-day-kit
+npm run product:family-game-night-deck
 ```
 
 ## Safety

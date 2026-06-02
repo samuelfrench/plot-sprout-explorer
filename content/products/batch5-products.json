@@ -645,6 +645,64 @@
         "Let participants point, sketch, dictate, write one line, or pass during optional sharing.",
         "Send home one observation card when the visit ends so families can extend the invented story offline."
       ]
+    },
+    {
+      "slug": "family-game-night-story-card-deck",
+      "title": "Family Game Night Story Card Deck",
+      "pricePoint": "$27",
+      "status": "checkout_pending",
+      "headline": "A printable cooperative story card deck for screen-free family game nights.",
+      "summary": "Fifteen adult-led table cards help families turn invented worlds, object clues, and quiet choices into short story rounds with take-home starters.",
+      "heroImage": "images/plotsprout/batch20/family-game-night-story-card-deck.jpg",
+      "ctaLabel": "Request family deck launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Family%20Game%20Night%20Story%20Card%20Deck",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static family game night deck page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "spoon-ferry-lunchbox-harbor",
+        "pocket-park-notice-board",
+        "button-bakery-map-mixup",
+        "penny-path-compass-shop",
+        "tidepool-timekeepers-lab",
+        "greenhouse-gear-garden",
+        "pantry-measurement-mystery",
+        "rain-gauge-railway",
+        "seed-library-map-room",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "almost-invention-workshop",
+        "index-card-theater-club"
+      ],
+      "includedPages": [
+        "Fifteen printable cooperative story card pages",
+        "Host table setup guide",
+        "Round hosting notes",
+        "Quiet participation options",
+        "No-data use notes",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six cooperative round formats",
+        "Ten take-home story starters",
+        "Eight optional family-share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A screen-free family game night table that needs calm creative writing",
+        "A homeschool co-op evening with adult-led printable story rounds",
+        "A library family event with optional sharing and quiet participation",
+        "A classroom celebration table that stays offline and easy to reset",
+        "A take-home story starter set for continuing invented stories later"
+      ],
+      "parentSteps": [
+        "Choose one card before the table starts so the round stays simple.",
+        "Print only the active cards and keep the rest in a host folder.",
+        "Place pencils, blank half-sheets, and one card in the middle before writers begin.",
+        "Let participants point, sketch, dictate, write one line, or pass during optional sharing.",
+        "Send home one story starter when the table closes so families can extend the invented story offline."
+      ]
     }
   ]
 }

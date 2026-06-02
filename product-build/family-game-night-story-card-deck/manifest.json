@@ -1,0 +1,108 @@
+{
+  "batchId": "2026-06-02-batch20",
+  "generatedAt": "2026-06-02",
+  "productSlug": "family-game-night-story-card-deck",
+  "title": "Family Game Night Story Card Deck",
+  "pricePoint": "$27",
+  "sourcePageCount": 15,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/family-game-night-story-card-deck/Family-Game-Night-Story-Card-Deck.pdf",
+      "sha256": "39051e97a83490d6d17bf20c69014df3e0ccbc125a51c6ed2189173794a54282",
+      "size": 4881164
+    },
+    "zip": {
+      "path": "product-build/family-game-night-story-card-deck/family-game-night-story-card-deck.zip",
+      "sha256": "15de41293523df1f263e9022f8cd354b02e3d6a256fda6f87ddc12a2629a1d5a",
+      "size": 9234486
+    },
+    "sourceHtml": {
+      "path": "product-build/family-game-night-story-card-deck/source/family-game-night-story-card-deck.html",
+      "sha256": "5f7e3bf751a3c91cd05d9af2e049636059a62ac2f1daa4afc3ceb11f85a56057",
+      "size": 61908
+    },
+    "readme": {
+      "path": "product-build/family-game-night-story-card-deck/README.txt",
+      "sha256": "b299730c3ec7196d52790240938f797cab3cf9104efdbdcf30bd009431343d3c",
+      "size": 490
+    },
+    "assets": [
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/pantry-measurement-mystery.jpg",
+        "sha256": "b85111fa750c89e60fc21133ea09e431a26a010d8ff24db7c4baa305c3ff3f73",
+        "size": 287571
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      },
+      {
+        "path": "product-build/family-game-night-story-card-deck/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      }
+    ]
+  }
+}

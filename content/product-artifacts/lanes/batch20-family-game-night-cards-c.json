@@ -1,0 +1,216 @@
+{
+  "lane": "batch20-family-game-night-cards-c",
+  "productSlug": "family-game-night-story-card-deck",
+  "cards": [
+    {
+      "id": "family-game-night-card-11",
+      "title": "Revision River Ferry Ending Switch",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "cardSkill": "Revise a shared table idea by choosing the clearest ending detail.",
+      "tableFit": "Upper-age cooperative family-table card for a calm paper-and-pencil story round.",
+      "adultSetup": "Set one printed card near the pencils and ask the table to choose one ferry detail everyone may borrow.",
+      "kidDirection": "Draft a river scene, revise one sentence, and choose an ending that echoes an earlier clue.",
+      "hostPrompt": "Ask which detail should return at the dock and which extra sentence can be trimmed.",
+      "pageSections": [
+        {
+          "heading": "Ferry Start",
+          "lines": [
+            "The ferry carries a small object shaped like ____________________.",
+            "The river setting feels ____________________ because of one detail.",
+            "The table clue everyone may borrow is ____________________."
+          ]
+        },
+        {
+          "heading": "Revision Turn",
+          "lines": [
+            "My first ending idea is ____________________.",
+            "One sentence I can make clearer is ____________________.",
+            "The detail that should return near the dock is ____________________."
+          ]
+        },
+        {
+          "heading": "Dock Ending",
+          "lines": [
+            "The ferry reaches the dock when ____________________.",
+            "My revised final image is ____________________.",
+            "The ending choice I like best is ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Tell the table one detail you kept after revising: ____________________.",
+      "tinyDraftLine": "Tiny draft: The ferry changed course when ____________________.",
+      "roundWrapLine": "This round made my ending clearer by ____________________.",
+      "quietOptionLine": "Quiet option: circle one sentence to revise and copy it here: ____________________.",
+      "takeHomeStoryLine": "Take-home story starter: A ferry ticket with a revised note says ____________________."
+    },
+    {
+      "id": "family-game-night-card-12",
+      "title": "Clue Label Tower Sensory Case",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "cardSkill": "Select precise setting details and turn them into a concise story label.",
+      "tableFit": "Upper-age cooperative family-table card for screen-free observation, sorting, and short writing.",
+      "adultSetup": "Place the card in the center and invite the table to name one quiet museum case, shelf, or tower detail.",
+      "kidDirection": "Choose one clue, add a sensory detail, and write a label that points a reader into the scene.",
+      "hostPrompt": "Ask which clue belongs in the first sentence and which detail is only background.",
+      "pageSections": [
+        {
+          "heading": "Case Clues",
+          "lines": [
+            "The tower case holds something that looks like ____________________.",
+            "A sound, texture, or color near it is ____________________.",
+            "The clue the table can reuse is ____________________."
+          ]
+        },
+        {
+          "heading": "Label Focus",
+          "lines": [
+            "The label should help readers notice ____________________.",
+            "The detail I will leave in the background is ____________________.",
+            "The strongest setting word on my card is ____________________."
+          ]
+        },
+        {
+          "heading": "Museum Scene",
+          "lines": [
+            "My story label begins with ____________________.",
+            "The scene changes when someone notices ____________________.",
+            "The label makes the setting feel ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Share one setting word the table could borrow: ____________________.",
+      "tinyDraftLine": "Tiny draft: The tower label pointed toward ____________________.",
+      "roundWrapLine": "This round helped me choose the clearest clue: ____________________.",
+      "quietOptionLine": "Quiet option: write only your final invented label here: ____________________.",
+      "takeHomeStoryLine": "Take-home story starter: A label on an ordinary shelf explains ____________________."
+    },
+    {
+      "id": "family-game-night-card-13",
+      "title": "Compass Craft Academy Route Choice",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "cardSkill": "Build sequence with a clear route, character choice, and turning point.",
+      "tableFit": "Upper-age cooperative family-table card for mapping a short scene with three connected steps.",
+      "adultSetup": "Invite the table to agree on one starting place, one turn, and one finish before anyone writes.",
+      "kidDirection": "Plan a three-stop route, choose what the main character decides, and draft the turning sentence.",
+      "hostPrompt": "Ask which stop changes the plan and which map word helps readers follow the sequence.",
+      "pageSections": [
+        {
+          "heading": "Route Map",
+          "lines": [
+            "The route starts beside ____________________.",
+            "The middle stop reveals ____________________.",
+            "The finish point waits near ____________________."
+          ]
+        },
+        {
+          "heading": "Choice Point",
+          "lines": [
+            "The main character chooses to ____________________.",
+            "The reason for that choice is ____________________.",
+            "A compass word that shows the next step is ____________________."
+          ]
+        },
+        {
+          "heading": "Sequence Draft",
+          "lines": [
+            "First, the route moves through ____________________.",
+            "Next, the plan changes because ____________________.",
+            "Finally, the ending lands at ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Tell the table which stop changed the route: ____________________.",
+      "tinyDraftLine": "Tiny draft: The compass pointed next to ____________________.",
+      "roundWrapLine": "This round made my sequence clearer by ____________________.",
+      "quietOptionLine": "Quiet option: draw three route dots and write the middle turn: ____________________.",
+      "takeHomeStoryLine": "Take-home story starter: A hallway map at home leads from ____________________ to ____________________."
+    },
+    {
+      "id": "family-game-night-card-14",
+      "title": "Almost Invention Workshop Test Note",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "cardSkill": "Use ordered steps, sensory detail, and revision to explain a paper invention.",
+      "tableFit": "Upper-age cooperative family-table card for inventing a simple paper-only idea together.",
+      "adultSetup": "Ask the table to pick one simple household problem for an imaginary paper tool to help explain.",
+      "kidDirection": "Invent a nearly useful paper tool, write three ordered steps, and revise one test note.",
+      "hostPrompt": "Ask where the directions need a clearer verb, label, or sensory detail.",
+      "pageSections": [
+        {
+          "heading": "Workshop Idea",
+          "lines": [
+            "The paper-only invention is called ____________________.",
+            "It is meant to help with ____________________.",
+            "The texture, color, or shape detail is ____________________."
+          ]
+        },
+        {
+          "heading": "Step Order",
+          "lines": [
+            "Step one tells the reader to ____________________.",
+            "Step two changes the tool by ____________________.",
+            "Step three checks whether ____________________."
+          ]
+        },
+        {
+          "heading": "Test Note",
+          "lines": [
+            "The part that almost works is ____________________.",
+            "The direction I should revise is ____________________.",
+            "The final test note says ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Share one verb that made the directions clearer: ____________________.",
+      "tinyDraftLine": "Tiny draft: The almost-invention worked better after ____________________.",
+      "roundWrapLine": "This round helped me revise the step that says ____________________.",
+      "quietOptionLine": "Quiet option: revise one direction silently and write it here: ____________________.",
+      "takeHomeStoryLine": "Take-home story starter: A paper tool on the kitchen table almost solves ____________________."
+    },
+    {
+      "id": "family-game-night-card-15",
+      "title": "Index Card Theater Dialogue Turn",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "cardSkill": "Write concise dialogue that reveals character choice and ending direction.",
+      "tableFit": "Upper-age cooperative family-table card for a short two-voice scene on printable cards.",
+      "adultSetup": "Invite the table to choose one setting cue and one shared object before writers draft two spoken lines.",
+      "kidDirection": "Write two lines of dialogue, show what a character chooses, and end with a clear scene shift.",
+      "hostPrompt": "Ask what the first line expects and how the reply changes the scene direction.",
+      "pageSections": [
+        {
+          "heading": "Stage Cards",
+          "lines": [
+            "The tiny theater setting is ____________________.",
+            "The shared object on the table is ____________________.",
+            "A quiet action before the dialogue is ____________________."
+          ]
+        },
+        {
+          "heading": "Dialogue Turn",
+          "lines": [
+            "The first spoken line is ____________________.",
+            "The reply changes the plan by ____________________.",
+            "The character choice behind the reply is ____________________."
+          ]
+        },
+        {
+          "heading": "Scene Shift",
+          "lines": [
+            "The scene turns when ____________________.",
+            "The final stage detail is ____________________.",
+            "The ending direction points toward ____________________."
+          ]
+        }
+      ],
+      "tableTalkLine": "Share the reply that changed your scene: ____________________.",
+      "tinyDraftLine": "Tiny draft: The second line changed everything because ____________________.",
+      "roundWrapLine": "This round made my dialogue stronger by ____________________.",
+      "quietOptionLine": "Quiet option: write only the two spoken lines here: ____________________.",
+      "takeHomeStoryLine": "Take-home story starter: Two index cards on a table begin a scene about ____________________."
+    }
+  ]
+}

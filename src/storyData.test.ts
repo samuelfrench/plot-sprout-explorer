@@ -54,8 +54,9 @@ describe('storyData', () => {
       'summer-camp-story-circle-kit',
       'after-school-story-club-starter-kit',
       'museum-day-story-notebook-kit',
+      'family-game-night-story-card-deck',
     ])
-    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19', '$17', '$11', '$23', '$39', '$49', '$59', '$69', '$37'])
+    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19', '$17', '$11', '$23', '$39', '$49', '$59', '$69', '$37', '$27'])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
     }

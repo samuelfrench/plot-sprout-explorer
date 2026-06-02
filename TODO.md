@@ -54,6 +54,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 
 ## In Progress
 
+- [ ] Batch 20: Built and locally verified the `$27` Family Game Night Story Card Deck with 15 cooperative printable table cards, host guide tools, take-home story starters, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending; commit, push, deploy, and live smoke are pending.
 - [ ] External checkout gate: wire hosted checkout only after Sam chooses the provider and supplies the real provider-hosted URL.
 
 ## Next Content Batches
@@ -76,6 +77,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] Batch 17: Build the `$59` Summer Camp Story Circle Kit with 16 camp story circles, counselor guide tools, take-home trail cards, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 18: Build the `$69` After-School Story Club Starter Kit with 18 after-school story club sessions, director guide tools, take-home prompt cards, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 19: Build the `$37` Museum Day Story Notebook Kit with 15 observation-to-fiction notebook pages, adult visit guide tools, take-home observation cards, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
+- [ ] Batch 20: Build the `$27` Family Game Night Story Card Deck with 15 cooperative printable table cards, host guide tools, take-home story starters, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [ ] Batch 12: Add the chosen hosted checkout URL, provider-host allowlist, and CTA copy after Sam chooses the provider; do not add custom checkout/webhook endpoints.
 
 ## Product Gates
@@ -102,4 +104,5 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] $59 summer camp story circle kit with 16 printable adult-led camp story circles, counselor tools, and take-home trail cards.
 - [x] $69 after-school story club starter kit with 18 adult-led club sessions, director tools, and take-home prompt cards.
 - [x] $37 museum day story notebook kit with 15 observation-to-fiction notebook pages, visit guide tools, and take-home observation cards.
+- [ ] $27 family game night story card deck with 15 cooperative printable table cards, host guide tools, and take-home story starters.
 - [ ] Parent email capture for weekly printable quest drops.
