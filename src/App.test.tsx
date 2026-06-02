@@ -15,4 +15,26 @@ describe('App', () => {
     expect(screen.getByText(/Local GPU image lane/i)).toBeInTheDocument()
     expect(screen.getByRole('button', { name: /Build tonight's quest/i })).toBeInTheDocument()
   })
+
+  it('links to crawlable writing lane collection pages', () => {
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: /Writing lanes/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Creative writing prompts for kids/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('creative-writing-prompts-for-kids'),
+    )
+    expect(screen.getByRole('link', { name: /Story writing worksheets/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('story-writing-worksheets'),
+    )
+    expect(screen.getByRole('link', { name: /Reluctant writer activities/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('reluctant-writer-activities'),
+    )
+    expect(screen.getByRole('link', { name: /Homeschool writing prompts/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('homeschool-writing-prompts'),
+    )
+  })
 })

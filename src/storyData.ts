@@ -26,6 +26,13 @@ export type QuestPack = {
   imagePrompt: string
 }
 
+export type SeoCollectionLink = {
+  slug: string
+  title: string
+  description: string
+  lane: string
+}
+
 const defaultSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 
@@ -192,3 +199,34 @@ export function buildImagePrompt(world: QuestWorld): string {
     'No text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons',
   ].join(', ')
 }
+
+export const seoCollectionLinks: SeoCollectionLink[] = [
+  {
+    slug: 'creative-writing-prompts-for-kids',
+    title: 'Creative writing prompts for kids',
+    lane: 'Prompt bank',
+    description:
+      'Whimsical quest starts that help kids choose a setting, a tiny problem, and a kind ending.',
+  },
+  {
+    slug: 'story-writing-worksheets',
+    title: 'Story writing worksheets',
+    lane: 'Worksheet lane',
+    description:
+      'Printable-friendly planning pages for characters, scenes, revision, and finished-story steps.',
+  },
+  {
+    slug: 'reluctant-writer-activities',
+    title: 'Reluctant writer activities',
+    lane: 'Low-pressure starts',
+    description:
+      'Short, choice-based writing activities for kids who need a smaller first step onto the page.',
+  },
+  {
+    slug: 'homeschool-writing-prompts',
+    title: 'Homeschool writing prompts',
+    lane: 'Homeschool pack',
+    description:
+      'Flexible writing quests that pair story practice with observation, mapping, and simple projects.',
+  },
+]

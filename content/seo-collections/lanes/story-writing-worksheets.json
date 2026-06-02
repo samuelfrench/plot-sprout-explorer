@@ -1,0 +1,48 @@
+{
+  "slug": "story-writing-worksheets",
+  "keyword": "story writing worksheets",
+  "title": "Story Writing Worksheets for Kids",
+  "metaDescription": "Printable story writing worksheets for ages 7-11 with safe prompts, planning boxes, revision steps, and parent or teacher notes.",
+  "audience": "Parents, homeschool adults, and elementary teachers who need print-ready story practice for ages 7-11 without logins or sharing pressure.",
+  "intro": "These story writing worksheets turn one whimsical setting into a complete page sequence: choose a world, name the main problem, plan three events, draft a short scene, and revise one sentence. Each worksheet is built for quiet desk work, small groups, homeschool tables, or a substitute folder.",
+  "whyItWorks": "Reluctant writers get fewer blank-page decisions. The world supplies props and jobs, the worksheet supplies boxes and sentence targets, and the adult can check progress without judging imagination. Kids still make choices, but every choice has a small next step.",
+  "featuredWorldSlugs": [
+    "sticker-station-mail-cart",
+    "pocket-park-notice-board",
+    "greenhouse-gear-garden",
+    "seed-library-map-room",
+    "revision-river-ferry"
+  ],
+  "sections": [
+    {
+      "heading": "Plan Before Drafting",
+      "body": "Start with a one-page planner so the child knows what belongs in the story before writing full sentences. The goal is a usable outline, not a perfect plot map.",
+      "bullets": [
+        "Pick one featured world and write the place name at the top of the page.",
+        "Name the helper, the small problem, and the object that matters most.",
+        "Fill three event boxes: first try, mixed result, and better second try."
+      ]
+    },
+    {
+      "heading": "Keep the Draft Short",
+      "body": "The draft page should ask for one clear scene instead of a whole chapter. Short targets help kids finish, especially when writing time is limited.",
+      "bullets": [
+        "Use a six-to-ten sentence target for ages 7-9 and a short paragraph target for older writers.",
+        "Add a word bank with setting words, action words, and feeling words from the chosen world.",
+        "Leave a small sketch box for planning details, not for replacing the written draft."
+      ]
+    },
+    {
+      "heading": "Revise With a Checklist",
+      "body": "Revision stays concrete when the worksheet asks for visible changes. A parent or teacher can review the page quickly without turning it into a grading session.",
+      "bullets": [
+        "Underline the sentence that shows what the main character wants.",
+        "Add one detail about sound, texture, color, or movement.",
+        "Rewrite one confusing sentence so the next event is easier to follow."
+      ]
+    }
+  ],
+  "printableOffer": "A future printable pack could bundle these lanes as PDF planners, draft pages, revision checklists, and classroom license notes for repeat use.",
+  "safetyNote": "Prompts stay age-banded, offline, and school-safe. No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "cta": "Choose a featured world, print one planner, and have the child finish one short story draft before adding extra pages."
+}

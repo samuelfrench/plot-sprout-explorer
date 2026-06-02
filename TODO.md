@@ -29,15 +29,17 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Batch 1 content expansion generated 30 age-banded worlds, 90 writing prompts, 30 local GPU image prompts, and 10 printable kit outlines across lower/middle/upper lanes.
 - [x] 2026-06-02: Added `npm run verify:content` with schema/count/reference/safety/monetization gates for Batch 1 content.
 - [x] 2026-06-02: Batch 1 safety/spec and product-quality subagent reviews approved after fixes for age targeting, duplicate mechanics, and validator coverage.
+- [x] 2026-06-02: Batch 2 generated four crawlable SEO collection pages for creative writing prompts, story writing worksheets, reluctant writer activities, and homeschool writing prompts.
+- [x] 2026-06-02: Added deterministic static SEO renderer plus content validation for Batch 2 collection JSON and generated pages.
 
 ## In Progress
 
-- [ ] Batch 2 SEO collection pages for the four target lanes.
+- [ ] Batch 3 homeschool/classroom mini-units with teacher notes and no student-account requirements.
 
 ## Next Content Batches
 
 - [x] Batch 1: Generate 30 age-banded worlds, 90 writing prompts, 30 image prompts, and 10 printable kit outlines.
-- [ ] Batch 2: Generate SEO collection pages for `creative writing prompts for kids`, `story writing worksheets`, `reluctant writer activities`, and `homeschool writing prompts`.
+- [x] Batch 2: Generate SEO collection pages for `creative writing prompts for kids`, `story writing worksheets`, `reluctant writer activities`, and `homeschool writing prompts`.
 - [ ] Batch 3: Generate 10 homeschool/classroom mini-units with teacher notes and no student-account requirements.
 - [ ] Batch 4: Generate 20 local GPU images for top worlds, save JPEG/WebP assets, and record prompt sidecars.
 

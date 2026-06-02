@@ -1,8 +1,20 @@
-import { BookOpen, Compass, Download, Image, PenLine, ShieldCheck, Sparkles, WandSparkles } from 'lucide-react'
+import {
+  ArrowRight,
+  BookOpen,
+  Compass,
+  Download,
+  Image,
+  PenLine,
+  ShieldCheck,
+  Sparkles,
+  WandSparkles,
+} from 'lucide-react'
 import type { CSSProperties } from 'react'
 import { useMemo, useState } from 'react'
 import './App.css'
-import { buildQuestPack, questWorlds } from './storyData'
+import { buildQuestPack, questWorlds, seoCollectionLinks } from './storyData'
+
+const pagePath = (slug: string) => `${import.meta.env.BASE_URL}${slug}/`
 
 function App() {
   const [ageBand, setAgeBand] = useState('6-8')
@@ -102,7 +114,24 @@ function App() {
         </div>
       </section>
 
-      <section className="ops-grid" aria-label="Project engine">
+      <section className="lane-section" aria-labelledby="lane-title">
+        <div>
+          <p className="eyebrow">Crawlable parent and teacher pages</p>
+          <h2 id="lane-title">Writing lanes</h2>
+        </div>
+        <div className="lane-grid">
+          {seoCollectionLinks.map((collection) => (
+            <a key={collection.slug} className="lane-card" href={pagePath(collection.slug)}>
+              <span>{collection.lane}</span>
+              <strong>{collection.title}</strong>
+              <p>{collection.description}</p>
+              <ArrowRight size={18} aria-hidden="true" />
+            </a>
+          ))}
+        </div>
+      </section>
+
+      <section id="project-engine" className="ops-grid" aria-label="Project engine">
         <article>
           <Sparkles size={22} />
           <h2>Codex content flywheel</h2>

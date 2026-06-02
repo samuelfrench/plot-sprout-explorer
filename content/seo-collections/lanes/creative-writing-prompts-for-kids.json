@@ -1,0 +1,48 @@
+{
+  "slug": "creative-writing-prompts-for-kids",
+  "keyword": "creative writing prompts for kids",
+  "title": "Creative Writing Prompts for Kids Ages 7-11",
+  "metaDescription": "Use these creative writing prompts for kids to turn short story practice into printable quests for home, homeschool, or classroom writing time.",
+  "audience": "Parents, homeschool families, tutors, and elementary teachers who need practical story starters for kids ages 7-11 without accounts, public posting, or open-ended screen time.",
+  "intro": "These creative writing prompts for kids are built around small, explorable worlds: a lost market ticket, a mixed-up bakery map, a rain gauge railway, and other concrete story setups. Each prompt gives children a place, a problem, and a writing move so they can start quickly instead of staring at a blank page.",
+  "whyItWorks": "Young writers usually do better when the prompt gives them a safe constraint and one visible job. The worlds in this lane ask kids to solve a mystery, describe a setting, track clues, or write dialogue between helpful characters. That keeps the writing playful while still practicing sequence, detail, cause and effect, and revision.",
+  "featuredWorldSlugs": [
+    "button-bakery-map-mixup",
+    "mitten-market-lost-ticket",
+    "penny-path-compass-shop",
+    "rain-gauge-railway",
+    "moss-message-observatory"
+  ],
+  "sections": [
+    {
+      "heading": "Start With a Small Story Job",
+      "body": "A useful prompt should make the first sentence easier, not harder. Give the child one clear job, such as finding the missing ticket, correcting a map label, or choosing which clue to follow next.",
+      "bullets": [
+        "Ask for a beginning sentence that names the place and the problem.",
+        "Limit the first draft to one page or 10-15 focused minutes.",
+        "End the session with one decision the character makes."
+      ]
+    },
+    {
+      "heading": "Use Choice Without Overload",
+      "body": "Choice helps kids feel ownership, but too many options can stall reluctant writers. These worlds work best when the adult offers two or three safe choices and lets the child pick the path.",
+      "bullets": [
+        "Let the writer choose the helper, clue, or object before drafting.",
+        "Keep the main problem fixed so the story has direction.",
+        "Use a quick sketch or word bank before writing if the child needs a warmup."
+      ]
+    },
+    {
+      "heading": "Turn Prompts Into Revision Practice",
+      "body": "The same prompt can support a first draft and a cleaner second draft. After the story is written, ask for one improvement that adds clarity, detail, or stronger order.",
+      "bullets": [
+        "Circle one sentence where the setting could be more specific.",
+        "Add one line of dialogue that shows what a character notices.",
+        "Rewrite the ending so the reader can see how the problem was solved."
+      ]
+    }
+  ],
+  "printableOffer": "Future printable packs can bundle these worlds into one-page quest sheets with a prompt, planning box, word bank, revision check, and teacher note. A classroom license can add small-group variants and extension tasks without requiring student accounts.",
+  "safetyNote": "All prompts should stay gentle, fictional, and age-appropriate. No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "cta": "Pick one featured world, set a short timer, and have the child write the next clue, choice, or ending before moving to a longer draft."
+}

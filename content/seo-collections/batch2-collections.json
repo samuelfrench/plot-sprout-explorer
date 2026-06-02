@@ -1,0 +1,198 @@
+{
+  "batchId": "2026-06-02-batch2",
+  "generatedAt": "2026-06-02",
+  "collections": [
+    {
+      "slug": "creative-writing-prompts-for-kids",
+      "keyword": "creative writing prompts for kids",
+      "title": "Creative Writing Prompts for Kids Ages 7-11",
+      "metaDescription": "Use these creative writing prompts for kids to turn short story practice into printable quests for home, homeschool, or classroom writing time.",
+      "audience": "Parents, homeschool families, tutors, and elementary teachers who need practical story starters for kids ages 7-11 without accounts, public posting, or open-ended screen time.",
+      "intro": "These creative writing prompts for kids are built around small, explorable worlds: a lost market ticket, a mixed-up bakery map, a rain gauge railway, and other concrete story setups. Each prompt gives children a place, a problem, and a writing move so they can start quickly instead of staring at a blank page.",
+      "whyItWorks": "Young writers usually do better when the prompt gives them a safe constraint and one visible job. The worlds in this lane ask kids to solve a mystery, describe a setting, track clues, or write dialogue between helpful characters. That keeps the writing playful while still practicing sequence, detail, cause and effect, and revision.",
+      "featuredWorldSlugs": [
+        "button-bakery-map-mixup",
+        "mitten-market-lost-ticket",
+        "penny-path-compass-shop",
+        "rain-gauge-railway",
+        "moss-message-observatory"
+      ],
+      "sections": [
+        {
+          "heading": "Start With a Small Story Job",
+          "body": "A useful prompt should make the first sentence easier, not harder. Give the child one clear job, such as finding the missing ticket, correcting a map label, or choosing which clue to follow next.",
+          "bullets": [
+            "Ask for a beginning sentence that names the place and the problem.",
+            "Limit the first draft to one page or 10-15 focused minutes.",
+            "End the session with one decision the character makes."
+          ]
+        },
+        {
+          "heading": "Use Choice Without Overload",
+          "body": "Choice helps kids feel ownership, but too many options can stall reluctant writers. These worlds work best when the adult offers two or three safe choices and lets the child pick the path.",
+          "bullets": [
+            "Let the writer choose the helper, clue, or object before drafting.",
+            "Keep the main problem fixed so the story has direction.",
+            "Use a quick sketch or word bank before writing if the child needs a warmup."
+          ]
+        },
+        {
+          "heading": "Turn Prompts Into Revision Practice",
+          "body": "The same prompt can support a first draft and a cleaner second draft. After the story is written, ask for one improvement that adds clarity, detail, or stronger order.",
+          "bullets": [
+            "Circle one sentence where the setting could be more specific.",
+            "Add one line of dialogue that shows what a character notices.",
+            "Rewrite the ending so the reader can see how the problem was solved."
+          ]
+        }
+      ],
+      "printableOffer": "Future printable packs can bundle these worlds into one-page quest sheets with a prompt, planning box, word bank, revision check, and teacher note. A classroom license can add small-group variants and extension tasks without requiring student accounts.",
+      "safetyNote": "All prompts should stay gentle, fictional, and age-appropriate. No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "cta": "Pick one featured world, set a short timer, and have the child write the next clue, choice, or ending before moving to a longer draft."
+    },
+    {
+      "slug": "story-writing-worksheets",
+      "keyword": "story writing worksheets",
+      "title": "Story Writing Worksheets for Kids",
+      "metaDescription": "Printable story writing worksheets for ages 7-11 with safe prompts, planning boxes, revision steps, and parent or teacher notes.",
+      "audience": "Parents, homeschool adults, and elementary teachers who need print-ready story practice for ages 7-11 without logins or sharing pressure.",
+      "intro": "These story writing worksheets turn one whimsical setting into a complete page sequence: choose a world, name the main problem, plan three events, draft a short scene, and revise one sentence. Each worksheet is built for quiet desk work, small groups, homeschool tables, or a substitute folder.",
+      "whyItWorks": "Reluctant writers get fewer blank-page decisions. The world supplies props and jobs, the worksheet supplies boxes and sentence targets, and the adult can check progress without judging imagination. Kids still make choices, but every choice has a small next step.",
+      "featuredWorldSlugs": [
+        "sticker-station-mail-cart",
+        "pocket-park-notice-board",
+        "greenhouse-gear-garden",
+        "seed-library-map-room",
+        "revision-river-ferry"
+      ],
+      "sections": [
+        {
+          "heading": "Plan Before Drafting",
+          "body": "Start with a one-page planner so the child knows what belongs in the story before writing full sentences. The goal is a usable outline, not a perfect plot map.",
+          "bullets": [
+            "Pick one featured world and write the place name at the top of the page.",
+            "Name the helper, the small problem, and the object that matters most.",
+            "Fill three event boxes: first try, mixed result, and better second try."
+          ]
+        },
+        {
+          "heading": "Keep the Draft Short",
+          "body": "The draft page should ask for one clear scene instead of a whole chapter. Short targets help kids finish, especially when writing time is limited.",
+          "bullets": [
+            "Use a six-to-ten sentence target for ages 7-9 and a short paragraph target for older writers.",
+            "Add a word bank with setting words, action words, and feeling words from the chosen world.",
+            "Leave a small sketch box for planning details, not for replacing the written draft."
+          ]
+        },
+        {
+          "heading": "Revise With a Checklist",
+          "body": "Revision stays concrete when the worksheet asks for visible changes. A parent or teacher can review the page quickly without turning it into a grading session.",
+          "bullets": [
+            "Underline the sentence that shows what the main character wants.",
+            "Add one detail about sound, texture, color, or movement.",
+            "Rewrite one confusing sentence so the next event is easier to follow."
+          ]
+        }
+      ],
+      "printableOffer": "A future printable pack could bundle these lanes as PDF planners, draft pages, revision checklists, and classroom license notes for repeat use.",
+      "safetyNote": "Prompts stay age-banded, offline, and school-safe. No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "cta": "Choose a featured world, print one planner, and have the child finish one short story draft before adding extra pages."
+    },
+    {
+      "slug": "reluctant-writer-activities",
+      "keyword": "reluctant writer activities",
+      "title": "Reluctant Writer Activities for Short Story Starts",
+      "metaDescription": "Low-pressure reluctant writer activities with maps, errands, tests, and margin-note choices for home, homeschool, tutoring, or classroom writing time.",
+      "audience": "Parents, homeschool families, tutors, and elementary teachers helping kids ages 7-11 who need concrete, low-pressure writing starts without public posting, student accounts, or open-ended screen time.",
+      "intro": "These reluctant writer activities begin with small jobs a child can picture: sort an acorn errand route, copy a rain-boot map, test muffin measurements, compare solar oven notes, or turn vague feedback into one useful next step. Each world gives the writer a place, a task, and a choice so the page feels smaller before the draft gets longer.",
+      "whyItWorks": "A reluctant writer often needs less pressure and more structure. These activities trade a blank page for short, visible moves: draw the route, label the test, choose the helper, write one clue, or revise one note. The adult can keep the session brief while still practicing sequence, description, cause and effect, and calm revision.",
+      "featuredWorldSlugs": [
+        "acorn-avenue-errand-office",
+        "rain-boot-route-rangers",
+        "pantry-measurement-mystery",
+        "solar-oven-picnic-station",
+        "margin-note-market"
+      ],
+      "sections": [
+        {
+          "heading": "Start With a Tiny Job",
+          "body": "The first activity should ask for one action, not a whole story. Let the child complete a map mark, note, label, or decision before turning it into sentences.",
+          "bullets": [
+            "Ask for one route note, one clue sentence, or one test prediction.",
+            "Keep the first writing window to 5-12 minutes.",
+            "Stop after a clear choice instead of pushing for a polished ending."
+          ]
+        },
+        {
+          "heading": "Use Objects as Prompts",
+          "body": "Concrete objects lower the pressure because the writer has something to describe and change. Errand slips, rain maps, spoons, recipe cards, and feedback notes give the sentence a job.",
+          "bullets": [
+            "Let the writer pick one object before writing the first line.",
+            "Have them add two useful details the reader can see.",
+            "Use a quick sketch, tally, or label when speaking the idea is easier than writing it."
+          ]
+        },
+        {
+          "heading": "Make Revision One Choice",
+          "body": "Revision works better when it feels like a small decision. Instead of asking for a full rewrite, ask the child to improve one note, reorder one step, or add one missing reason.",
+          "bullets": [
+            "Turn vague feedback into one specific next action.",
+            "Choose one sentence to make clearer, not every sentence.",
+            "End with a check box, author note, or margin note that records the change."
+          ]
+        }
+      ],
+      "printableOffer": "Future printable packs can bundle these worlds into one-page reluctant writer activity sheets with a tiny job, sketch box, word bank, short-draft space, and one-step revision check. A future classroom license can add station cards, small-group routines, and teacher notes without requiring student accounts.",
+      "safetyNote": "Keep every activity fictional, gentle, and adult-guided for home or classroom use. No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "cta": "Choose one featured world, set a short timer, and ask for one route note, test result, clue sentence, or revision choice before expanding the draft."
+    },
+    {
+      "slug": "homeschool-writing-prompts",
+      "keyword": "homeschool writing prompts",
+      "title": "Homeschool Writing Prompts for Ages 7-11",
+      "metaDescription": "Use low-prep homeschool writing prompts with gentle story worlds, short drafting jobs, and optional science, map, weather, and revision hooks.",
+      "audience": "Homeschool parents who need practical writing prompts for ages 7-11 that can fit into a short lesson, morning basket, unit study, or independent notebook time without student accounts or public posting.",
+      "intro": "These homeschool writing prompts give children a small world, a concrete writing job, and a safe decision to make on the page. A parent can read one setup, choose a prompt, and start a 10-20 minute writing block without building a full lesson from scratch.",
+      "whyItWorks": "Homeschool writers often need structure before they need more freedom. These worlds pair story practice with optional hooks for weather observation, measurement, mapping, sequencing, and revision, so a parent can keep writing central while connecting it to science, nature study, geography, or language arts.",
+      "featuredWorldSlugs": [
+        "teacup-town-weather-window",
+        "spoon-ferry-lunchbox-harbor",
+        "tidepool-timekeepers-lab",
+        "compost-clock-workshop",
+        "compass-craft-academy"
+      ],
+      "sections": [
+        {
+          "heading": "Keep the Lesson Low Prep",
+          "body": "A useful homeschool prompt should remove setup work, not add another planning burden. Start with one featured world, read the premise aloud, and ask for one focused draft before expanding into notebooking, discussion, or revision.",
+          "bullets": [
+            "Set a timer for 10-20 minutes and ask for one complete scene, note, menu, map, or ending.",
+            "Offer two hero choices instead of asking the child to invent everything first.",
+            "Use the world details as a ready-made word bank for spelling, description, and sentence variety."
+          ]
+        },
+        {
+          "heading": "Add Cross-Curricular Hooks",
+          "body": "The writing can stay simple while the topic connects to the rest of the homeschool day. Teacup Town supports weather words, Tidepool Timekeepers supports observation notes, and Compost Clock turns slow natural change into sequence writing.",
+          "bullets": [
+            "Pair the prompt with a quick drawing, chart, or labeled map before drafting.",
+            "Ask for one science or measurement detail that must appear in the paragraph.",
+            "Close with a short oral narration so the child explains what changed in the story."
+          ]
+        },
+        {
+          "heading": "Support Reluctant Writers",
+          "body": "Children who resist blank-page writing usually do better with a narrow task and a visible finish line. These prompts give the child a problem to clarify, a route to plan, or a helpful note to write before a longer story is expected.",
+          "bullets": [
+            "Let the child dictate the first sentence if handwriting is the blocker.",
+            "Ask for three strong sentences before requesting a full page.",
+            "Revise only one target at a time, such as clearer order, one added detail, or stronger dialogue."
+          ]
+        }
+      ],
+      "printableOffer": "A future homeschool printable bundle can package these worlds as one-page quest sheets with planning boxes, word banks, extension hooks, and parent notes. A future classroom license can add small-group versions and rubrics without requiring student accounts.",
+      "safetyNote": "Keep every setup fictional, gentle, and parent-guided. No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "cta": "Choose one featured world, pick the shortest prompt, and turn it into today's focused homeschool writing block."
+    }
+  ]
+}

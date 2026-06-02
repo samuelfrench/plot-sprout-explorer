@@ -4,7 +4,10 @@ import { resolve } from 'node:path'
 const root = resolve(import.meta.dirname, '..')
 const worldsDir = resolve(root, 'content', 'worlds')
 const kitsDir = resolve(root, 'content', 'printable-kits')
+const seoCollectionsDir = resolve(root, 'content', 'seo-collections')
+const seoCollectionsFile = resolve(seoCollectionsDir, 'batch2-collections.json')
 const batchId = '2026-06-02-batch1'
+const seoBatchId = '2026-06-02-batch2'
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 const seoLanes = new Set([
@@ -12,6 +15,12 @@ const seoLanes = new Set([
   'story writing worksheets',
   'reluctant writer activities',
   'homeschool writing prompts',
+])
+const targetCollections = new Map([
+  ['creative-writing-prompts-for-kids', 'creative writing prompts for kids'],
+  ['story-writing-worksheets', 'story writing worksheets'],
+  ['reluctant-writer-activities', 'reluctant writer activities'],
+  ['homeschool-writing-prompts', 'homeschool writing prompts'],
 ])
 const pricePoints = new Set(['$9', '$29', '$79'])
 const bannedTerms = [
@@ -84,6 +93,12 @@ function validateList(value, length, label) {
   value.forEach((item, index) => validateString(item, `${label}[${index}]`))
 }
 
+function validateMinList(value, minimumLength, label) {
+  expect(Array.isArray(value), `${label} must be an array.`)
+  expect(value.length >= minimumLength, `${label} must have at least ${minimumLength} entries.`)
+  value.forEach((item, index) => validateString(item, `${label}[${index}]`))
+}
+
 function validateNoBannedTerms(record, label) {
   const text = JSON.stringify(record)
     .replaceAll(safety, '')
@@ -147,6 +162,53 @@ function validateKit(kit, file, worldSlugs, kitSlugs) {
   validateNoBannedTerms(kit, label)
 }
 
+function validateCollection(collection, collectionSlugs, worldSlugs) {
+  const label = `batch2-collections.json:${collection.slug ?? 'missing-slug'}`
+  for (const key of [
+    'slug',
+    'keyword',
+    'title',
+    'metaDescription',
+    'audience',
+    'intro',
+    'whyItWorks',
+    'printableOffer',
+    'safetyNote',
+    'cta',
+  ]) {
+    validateString(collection[key], `${label}.${key}`)
+  }
+
+  expect(targetCollections.has(collection.slug), `${label}.slug is not a target Batch 2 collection.`)
+  expect(collection.keyword === targetCollections.get(collection.slug), `${label}.keyword does not match the target lane.`)
+  expect(!collectionSlugs.has(collection.slug), `${label}.slug is duplicated across Batch 2 collections.`)
+  collectionSlugs.add(collection.slug)
+  expect(collection.metaDescription.length <= 165, `${label}.metaDescription is too long for a focused search result.`)
+  expect(collection.title.length <= 72, `${label}.title is too long for a focused page title.`)
+  expect(collection.safetyNote.includes(safety), `${label}.safetyNote missing required safety sentence.`)
+
+  validateMinList(collection.featuredWorldSlugs, 3, `${label}.featuredWorldSlugs`)
+  for (const worldSlug of collection.featuredWorldSlugs) {
+    expect(worldSlugs.has(worldSlug), `${label}.featuredWorldSlugs references unknown world slug ${worldSlug}.`)
+  }
+
+  expect(Array.isArray(collection.sections), `${label}.sections must be an array.`)
+  expect(collection.sections.length === 3, `${label}.sections must have exactly 3 entries.`)
+  collection.sections.forEach((section, index) => {
+    validateString(section.heading, `${label}.sections[${index}].heading`)
+    validateString(section.body, `${label}.sections[${index}].body`)
+    validateMinList(section.bullets, 3, `${label}.sections[${index}].bullets`)
+  })
+
+  validateNoBannedTerms(collection, label)
+
+  const renderedPath = resolve(root, 'public', collection.slug, 'index.html')
+  expect(existsSync(renderedPath), `${label} static output is missing: ${renderedPath}`)
+  const renderedHtml = readFileSync(renderedPath, 'utf8')
+  expect(renderedHtml.includes(collection.title), `${label} static output missing collection title.`)
+  expect(renderedHtml.includes(collection.metaDescription), `${label} static output missing meta description.`)
+}
+
 for (const dir of [worldsDir, kitsDir]) {
   expect(existsSync(dir), `Missing content directory: ${dir}`)
 }
@@ -183,4 +245,22 @@ for (const file of kitFiles) {
 expect(worldCount === 30, `Expected 30 Batch 1 worlds, found ${worldCount}.`)
 expect(kitCount === 10, `Expected 10 Batch 1 printable kit outlines, found ${kitCount}.`)
 
-console.log(`Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines.`)
+expect(existsSync(seoCollectionsFile), `Missing Batch 2 SEO collections file: ${seoCollectionsFile}`)
+const seoCollections = readJson(seoCollectionsFile)
+expect(seoCollections.batchId === seoBatchId, `batch2-collections.json.batchId must be ${seoBatchId}.`)
+expect(seoCollections.generatedAt === '2026-06-02', 'batch2-collections.json.generatedAt must be 2026-06-02.')
+expect(Array.isArray(seoCollections.collections), 'batch2-collections.json.collections must be an array.')
+expect(
+  seoCollections.collections.length === targetCollections.size,
+  `Expected ${targetCollections.size} Batch 2 SEO collections, found ${seoCollections.collections.length}.`,
+)
+
+const collectionSlugs = new Set()
+seoCollections.collections.forEach((collection) => validateCollection(collection, collectionSlugs, worldSlugs))
+for (const slug of targetCollections.keys()) {
+  expect(collectionSlugs.has(slug), `Missing Batch 2 SEO collection slug: ${slug}`)
+}
+
+console.log(
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections.`,
+)
