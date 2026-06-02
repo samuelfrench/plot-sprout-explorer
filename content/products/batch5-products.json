@@ -468,6 +468,64 @@
         "Use invented places, objects, and helpers instead of personal facts.",
         "Send one tiny practice slip home when the sprint ends."
       ]
+    },
+    {
+      "slug": "summer-camp-story-circle-kit",
+      "title": "Summer Camp Story Circle Kit",
+      "pricePoint": "$59",
+      "status": "checkout_pending",
+      "headline": "A printable story-circle kit for summer camp tables and recreation programs.",
+      "summary": "Sixteen adult-led story circles help camp counselors run short, offline writing activities with invented worlds, group twists, quiet options, and trail cards.",
+      "heroImage": "images/plotsprout/batch17/summer-camp-story-circle-kit.jpg",
+      "ctaLabel": "Request camp kit launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Summer%20Camp%20Story%20Circle%20Kit",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static camp kit page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "rain-gauge-railway",
+        "spoon-ferry-lunchbox-harbor",
+        "rain-boot-route-rangers",
+        "pocket-park-notice-board",
+        "acorn-avenue-errand-office",
+        "button-bakery-map-mixup",
+        "seed-library-map-room",
+        "greenhouse-gear-garden",
+        "index-card-theater-club",
+        "penny-path-compass-shop",
+        "margin-note-market",
+        "clue-label-tower-museum",
+        "revision-river-ferry",
+        "compass-craft-academy",
+        "almost-invention-workshop"
+      ],
+      "includedPages": [
+        "Sixteen printable summer camp story circle pages",
+        "Before-camp prep guide",
+        "Counselor setup checklist",
+        "Running-circle coaching notes",
+        "Quiet participation options",
+        "No-data center and camp use notes",
+        "Six repeatable circle formats",
+        "Ten take-home trail cards",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A day-camp quiet block that does not require screens",
+        "A recreation program table station for mixed-age creative writing",
+        "A homeschool summer co-op story circle with printable pages",
+        "A counselor-led rainy afternoon activity with optional sharing",
+        "A take-home writing prompt set for families after camp"
+      ],
+      "parentSteps": [
+        "Print only the activity pages needed for the week and keep the rest in a counselor folder.",
+        "Choose one circle format before the group arrives so the activity starts quickly.",
+        "Let children point, sketch, dictate, write, or pass during optional sharing.",
+        "Use quiet option lines when a child wants to work privately instead of speaking to the group.",
+        "Send home one trail card when the circle ends so families can extend the invented story offline."
+      ]
     }
   ]
 }

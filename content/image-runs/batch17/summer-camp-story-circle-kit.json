@@ -1,0 +1,19 @@
+{
+  "slug": "summer-camp-story-circle-kit",
+  "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device, screen-free printable summer camp writing kit, blank white paper, blank clipboards, blank folders, pencils, cord loops, colored paper shapes",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, printed markings, icon, symbol, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26061752,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch17/summer-camp-story-circle-kit.jpg",
+  "outputWebp": "public/images/plotsprout/batch17/summer-camp-story-circle-kit.webp",
+  "manifest": "content/image-queue/2026-06-02-batch17-product-images.json",
+  "postProcess": "ImageMagick covered two tiny worksheet header marks with matching paper fill and regenerated WebP locally.",
+  "title": "Summer Camp Story Circle Kit product image"
+}

@@ -38,7 +38,8 @@ WEBP_QUALITY = int(os.environ.get("PLOTSPROUT_IMAGE_WEBP_QUALITY", "92"))
 FREEU_SDXL = dict(b1=1.3, b2=1.4, s1=0.9, s2=0.2)
 NEGATIVE_PROMPT = (
     "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, "
-    "brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows"
+    "brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, "
+    "printed markings, icon, symbol, distorted faces, distorted hands, blurry, low resolution, harsh shadows"
 )
 
 PROMPTS = {

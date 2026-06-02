@@ -1,0 +1,208 @@
+{
+  "laneId": "batch17-summer-camp-activities-a",
+  "productSlug": "summer-camp-story-circle-kit",
+  "title": "Summer Camp Story Circle Kit - Lower Activity Lane",
+  "generatedAt": "2026-06-02",
+  "activities": [
+    {
+      "id": "summer-camp-teacup-town-weather-window",
+      "title": "Teacup Town Weather Window",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "6-8",
+      "circleSkill": "weather detail",
+      "sessionFit": "15-minute morning story circle for young writers who can choose one weather clue and one helpful action.",
+      "counselorSetup": "Print one page per kid, set out pencils, and pick a pretend weather card before circle begins.",
+      "kidDirection": "Look through the tiny weather window, choose what changes outside, and finish the three story parts.",
+      "counselorPrompt": "Ask which weather clue is easiest to picture, then invite one simple because sentence.",
+      "pageSections": [
+        {
+          "heading": "Weather Window",
+          "lines": [
+            "Outside the teacup window, the weather looks like ____________________________.",
+            "The tiny curtain moves because ____________________________.",
+            "The window bell rings when ____________________________."
+          ]
+        },
+        {
+          "heading": "Town Helper",
+          "lines": [
+            "The teacup town helper carries ____________________________.",
+            "The helper checks the sky near ____________________________.",
+            "The kind plan is to ____________________________."
+          ]
+        },
+        {
+          "heading": "Circle Sentence",
+          "lines": [
+            "First, the weather changes over ____________________________.",
+            "Next, the helper notices ____________________________.",
+            "My teacup town sentence is ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Pass the pretend weather card and let each writer add one sky detail: ____________________________.",
+      "wrapUpLine": "The weather detail I used best was ____________________________.",
+      "quietOptionLine": "Quiet option: circle one line to finish later: ____________________________."
+    },
+    {
+      "id": "summer-camp-rain-gauge-railway",
+      "title": "Rain Gauge Railway",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "6-8",
+      "circleSkill": "sequence words",
+      "sessionFit": "15-minute transition activity for a lower group that needs first, next, and last story steps.",
+      "counselorSetup": "Print one page per kid, draw three pretend train stops on scrap paper, and model one short route aloud.",
+      "kidDirection": "Choose a rain-gauge ticket, send the tiny train to three stops, and finish the route sentence.",
+      "counselorPrompt": "Point to each stop and ask what happens first, next, and last before writing.",
+      "pageSections": [
+        {
+          "heading": "Gauge Ticket",
+          "lines": [
+            "The rain-gauge ticket shows ____________________________.",
+            "The tiny train starts beside ____________________________.",
+            "The first raindrop passenger brings ____________________________."
+          ]
+        },
+        {
+          "heading": "Railway Stops",
+          "lines": [
+            "First, the train clicks past ____________________________.",
+            "Next, the gauge marker rises to ____________________________.",
+            "Last, the train waits near ____________________________."
+          ]
+        },
+        {
+          "heading": "Route Message",
+          "lines": [
+            "The conductor says the route is calm because ____________________________.",
+            "The best stop for a story clue is ____________________________.",
+            "My railway route sentence is ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Group twist: build a three-stop route aloud and write the stop you like most: ____________________________.",
+      "wrapUpLine": "The order word that helped my story was ____________________________.",
+      "quietOptionLine": "Quiet option: draw one tiny rail mark, then fill this clue: ____________________________."
+    },
+    {
+      "id": "summer-camp-spoon-ferry-lunchbox-harbor",
+      "title": "Spoon Ferry Lunchbox Harbor",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "6-8",
+      "circleSkill": "setting and object choice",
+      "sessionFit": "15-minute picnic-table story circle for kids who can pick a harbor object and describe where it goes.",
+      "counselorSetup": "Print one page per kid, place a pretend spoon ferry marker in the middle, and invite one quiet look before writing.",
+      "kidDirection": "Send the spoon ferry across the lunchbox harbor, choose what it carries, and finish the harbor note.",
+      "counselorPrompt": "Ask which harbor object belongs near the ferry, then ask what the ferry carries next.",
+      "pageSections": [
+        {
+          "heading": "Lunchbox Harbor",
+          "lines": [
+            "The spoon ferry docks beside ____________________________.",
+            "The lunchbox lighthouse shines on ____________________________.",
+            "The harbor flag is made from ____________________________."
+          ]
+        },
+        {
+          "heading": "Ferry Load",
+          "lines": [
+            "The ferry carries a pretend picnic of ____________________________.",
+            "The smallest passenger asks for ____________________________.",
+            "The careful ferry path goes around ____________________________."
+          ]
+        },
+        {
+          "heading": "Harbor Note",
+          "lines": [
+            "First, the ferry helper chooses ____________________________.",
+            "Next, the harbor crew listens for ____________________________.",
+            "My lunchbox harbor sentence is ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Group twist: each writer adds one pretend harbor sound before choosing a line: ____________________________.",
+      "wrapUpLine": "The harbor object I described clearly was ____________________________.",
+      "quietOptionLine": "Quiet option: finish only the ferry load line first: ____________________________."
+    },
+    {
+      "id": "summer-camp-rain-boot-route-rangers",
+      "title": "Rain Boot Route Rangers",
+      "worldSlug": "rain-boot-route-rangers",
+      "ageBand": "7-9",
+      "circleSkill": "map clues",
+      "sessionFit": "20-minute story circle for a lower group ready to combine direction words with a small helpful route.",
+      "counselorSetup": "Print one page per kid, sketch a three-step pretend trail, and offer beside, under, past, or around as choices.",
+      "kidDirection": "Choose two rain-boot clues, map the route, and write where the route rangers go first.",
+      "counselorPrompt": "Ask the group to point in the air for beside, under, past, or around, then choose one word for writing.",
+      "pageSections": [
+        {
+          "heading": "Boot Map",
+          "lines": [
+            "The left rain boot points toward ____________________________.",
+            "The right rain boot holds a map of ____________________________.",
+            "The route ranger badge shows ____________________________."
+          ]
+        },
+        {
+          "heading": "Path Clues",
+          "lines": [
+            "The first puddle clue is beside ____________________________.",
+            "The second route mark hides under ____________________________.",
+            "The last dry stepping spot is ____________________________."
+          ]
+        },
+        {
+          "heading": "Ranger Note",
+          "lines": [
+            "The route starts when ____________________________.",
+            "The friendly path goes past ____________________________.",
+            "My ranger route sentence is ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Group twist: choose one direction word and use it in this route clue: ____________________________.",
+      "wrapUpLine": "The map clue that made my route clearer was ____________________________.",
+      "quietOptionLine": "Quiet option: trace the route with a finger, then finish this line: ____________________________."
+    },
+    {
+      "id": "summer-camp-pocket-park-notice-board",
+      "title": "Pocket Park Notice Board",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "circleSkill": "message and reason",
+      "sessionFit": "20-minute closing circle for writers who can make a pretend notice and explain why it helps the pocket park.",
+      "counselorSetup": "Print one page per kid, show three blank pretend notice strips, and remind the circle to use invented park details.",
+      "kidDirection": "Invent a pocket park notice, choose the clearest reason, and write what the park helper does next.",
+      "counselorPrompt": "Ask kids to keep notices invented and place-based, then help them finish one because line.",
+      "pageSections": [
+        {
+          "heading": "Notice Board",
+          "lines": [
+            "The first pocket park notice asks for ____________________________.",
+            "The second notice points toward ____________________________.",
+            "The board frame is decorated with ____________________________."
+          ]
+        },
+        {
+          "heading": "Park Helper",
+          "lines": [
+            "The pebble path leads to ____________________________.",
+            "The pocket park helper brings ____________________________.",
+            "The helpful reason is ____________________________."
+          ]
+        },
+        {
+          "heading": "Final Notice",
+          "lines": [
+            "First, the helper reads ____________________________.",
+            "Next, the helper adds ____________________________.",
+            "My clear park notice says ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Group twist: share one pretend park object and add it to this notice: ____________________________.",
+      "wrapUpLine": "The reason that makes my notice useful is ____________________________.",
+      "quietOptionLine": "Quiet option: choose one notice to copy neatly here: ____________________________."
+    }
+  ]
+}

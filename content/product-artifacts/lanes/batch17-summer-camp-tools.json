@@ -1,0 +1,186 @@
+{
+  "laneId": "batch17-summer-camp-tools",
+  "productSlug": "summer-camp-story-circle-kit",
+  "title": "Summer Camp Story Circle Kit - Counselor Tools Lane",
+  "generatedAt": "2026-06-02",
+  "counselorGuide": {
+    "beforeCamp": [
+      "Print one counselor copy, one circle-format page for the block, and one take-home trail card stack before the group arrives.",
+      "Choose two invented camp settings such as pinecone pier, lantern lodge, or meadow mailbox for quick adult examples.",
+      "Place blank paper, pencils, color dots, and symbol cards in a supply bin for simple printable sorting.",
+      "Pick one quiet backup format for writers who need a smaller table or a silent start.",
+      "Prepare a thirty-second adult model using an invented helper, an ordinary object, and a small friendly mix-up."
+    ],
+    "setup": [
+      "Seat writers where they can see the adult leader and reach one page without passing a stack around the circle.",
+      "Set out only the active circle page, pencils, and a few symbol cards so the table stays calm.",
+      "Use color dots, sun symbols, leaf symbols, or blank folders if pages need to be grouped after the activity.",
+      "Read the first direction aloud, then show one invented example before asking for ideas.",
+      "Keep extra pages in a counselor folder and hand them out only when the group is ready for the next step."
+    ],
+    "runningCircle": [
+      "Start with a short invented setting choice and repeat the choice so every writer hears the same story seed.",
+      "Invite responses by pointing, drawing, dictating one phrase to the adult leader, or writing a short line.",
+      "Move around the circle with one small job at a time: setting, helper, object, clue, then ending.",
+      "Redirect personal facts by offering two invented options and saying the story can use make-believe details today.",
+      "End by asking writers to mark one sentence, sketch, or title they want to keep."
+    ],
+    "quietOptions": [
+      "Offer a silent sketch-and-label page for writers who want to join without speaking.",
+      "Let a writer point to a symbol card while the adult leader reads the matching invented option.",
+      "Use a two-person table circle when the full group is too loud for careful writing.",
+      "Give early finishers a trail card and ask them to add one invented clue or ending detail.",
+      "Allow passing during share time while still letting the writer keep, fold, or file the page."
+    ],
+    "noDataUse": [
+      "Use invented places, invented helpers, and ordinary objects; personal facts are not needed.",
+      "Keep all pages printable and handled by the adult leader, family, or participant.",
+      "Use color dots, symbols, or blank folders for simple sorting instead of private labels.",
+      "Sharing stays optional and can be done by pointing to a word, sketch, title, or chosen sentence."
+    ]
+  },
+  "circleFormats": [
+    {
+      "name": "Pinecone Pass-Around",
+      "bestFor": "A first camp circle when the group needs one shared idea and quick turns.",
+      "steps": [
+        "Adult leader starts with an invented place such as Pinecone Pier and says one peaceful detail.",
+        "Each writer adds one ordinary object, sound, color, or tiny clue to the shared story seed.",
+        "Adult leader repeats the gathered ideas and asks writers to choose two for their own page.",
+        "Writers draft a short opening where a friendly helper notices the chosen details."
+      ]
+    },
+    {
+      "name": "Cabin Card Chain",
+      "bestFor": "Small groups that enjoy building a story in ordered steps.",
+      "steps": [
+        "Adult leader places four cards in the center: place, helper, object, and ending.",
+        "The circle fills each card with an invented detail using quick spoken, pointed, or written choices.",
+        "Writers number the cards first, next, then, and last on their own page.",
+        "Each writer turns the card chain into four short story lines."
+      ]
+    },
+    {
+      "name": "Quiet Trail Map",
+      "bestFor": "A shaded-table option for mixed-energy groups or hot afternoons.",
+      "steps": [
+        "Adult leader gives each writer a simple path shape with three blank trail stops.",
+        "Writers label the stops with an invented camp place, an object clue, and a kind fix.",
+        "Adult leader offers two example verbs for anyone who needs a starting word.",
+        "Writers add one sentence under each stop to make a tiny trail story."
+      ]
+    },
+    {
+      "name": "Lantern Lodge Listening Circle",
+      "bestFor": "Groups practicing listening before they write.",
+      "steps": [
+        "Adult leader reads a two-sentence invented scene about Lantern Lodge and a misplaced bell.",
+        "Writers listen for one setting detail, one object, and one possible helper.",
+        "The circle shares optional details while the adult leader writes neutral choices on a visible page.",
+        "Writers choose one detail and write what the helper does next."
+      ]
+    },
+    {
+      "name": "Meadow Mail Reply",
+      "bestFor": "A letter-style circle for recreation rooms, picnic tables, or co-op groups.",
+      "steps": [
+        "Adult leader announces that a note arrived from an invented place called Meadow Mail Tent.",
+        "The group chooses what small friendly problem the note describes.",
+        "Writers draft a three-line reply with one greeting, one useful idea, and one closing action.",
+        "Adult leader invites writers to underline the clearest action line before cleanup."
+      ]
+    },
+    {
+      "name": "Four-Beat Lantern Tale",
+      "bestFor": "A camp-themed story circle that avoids unsafe activity instructions while keeping the evening feel.",
+      "steps": [
+        "Adult leader draws four boxes labeled glow, clue, helper, and home base.",
+        "Writers fill each box with invented details such as a jar lantern, ribbon map, or pebble path.",
+        "The circle quietly points to favorite box ideas and the adult leader names two possible orders.",
+        "Writers write one sentence per box and finish with a calm return to the home base."
+      ]
+    }
+  ],
+  "takeHomeTrailCards": [
+    {
+      "title": "Pinecone Place Detail",
+      "time": "6 minutes",
+      "skill": "setting detail",
+      "direction": "Add one invented place detail from today's circle: ________________________.",
+      "familyLine": "A grown-up can ask what the place sounds like: ________________________."
+    },
+    {
+      "title": "Trail Object Clue",
+      "time": "7 minutes",
+      "skill": "plot clue",
+      "direction": "Choose one ordinary object and write how it helps the helper: ________________________.",
+      "familyLine": "A grown-up can offer two object choices here: ________________________."
+    },
+    {
+      "title": "Kind Fix Finish",
+      "time": "8 minutes",
+      "skill": "ending choice",
+      "direction": "Write one kind fix for the invented mix-up: ________________________.",
+      "familyLine": "A grown-up can ask what changed after the fix: ________________________."
+    },
+    {
+      "title": "Four-Step Trail",
+      "time": "8 minutes",
+      "skill": "sequence",
+      "direction": "Write first, next, then, and last for a tiny trail story: ________________________.",
+      "familyLine": "A grown-up can point to the step that should become longer: ________________________."
+    },
+    {
+      "title": "Lantern Lodge Line",
+      "time": "5 minutes",
+      "skill": "strong sentence",
+      "direction": "Write one clear sentence about an invented lodge or tent: ________________________.",
+      "familyLine": "A grown-up can ask which word makes the sentence clearer: ________________________."
+    },
+    {
+      "title": "Helper Pocket",
+      "time": "6 minutes",
+      "skill": "character support",
+      "direction": "List three safe invented items a story helper carries: ________________________.",
+      "familyLine": "A grown-up can ask which item is useful first: ________________________."
+    },
+    {
+      "title": "Meadow Mail Reply",
+      "time": "9 minutes",
+      "skill": "letter format",
+      "direction": "Write a short reply to an invented meadow message: ________________________.",
+      "familyLine": "A grown-up can help choose the first friendly action: ________________________."
+    },
+    {
+      "title": "Sound-and-Color Add-On",
+      "time": "6 minutes",
+      "skill": "sensory detail",
+      "direction": "Add one sound and one color to a make-believe camp path: ________________________.",
+      "familyLine": "A grown-up can ask which detail belongs near the beginning: ________________________."
+    },
+    {
+      "title": "Title Trail",
+      "time": "5 minutes",
+      "skill": "main idea",
+      "direction": "Write one title with a place, one with an object, and one with an action: ________________________.",
+      "familyLine": "A grown-up can ask which title gives the best story clue: ________________________."
+    },
+    {
+      "title": "Next Circle Seed",
+      "time": "7 minutes",
+      "skill": "planning",
+      "direction": "Invent one place, one helper, and one small mix-up for another circle: ________________________.",
+      "familyLine": "A grown-up can add one ordinary object to the seed: ________________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Sharing is optional: point to one word, sketch, or title you want the group to notice.",
+    "Read one sentence that shows an invented setting detail, or ask the adult leader to read it.",
+    "Show one object clue and say how it helps the story if you want to.",
+    "Share one kind fix your helper tried in the invented story.",
+    "Point to the strongest action word on your page.",
+    "Tell the circle which trail step came first, next, then, or last.",
+    "Show a title choice and explain which story clue it gives.",
+    "Pass today and listen for one clear detail from another writer's invented story."
+  ]
+}

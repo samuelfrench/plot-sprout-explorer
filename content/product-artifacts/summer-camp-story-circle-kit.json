@@ -1,0 +1,873 @@
+{
+  "batchId": "2026-06-02-batch17",
+  "generatedAt": "2026-06-02",
+  "productSlug": "summer-camp-story-circle-kit",
+  "title": "Summer Camp Story Circle Kit",
+  "pricePoint": "$59",
+  "audience": "Day camps, summer camps, recreation programs, camp counselors, and homeschool summer co-ops for ages 6-11.",
+  "sessionLength": "16 printable adult-led camp story circles plus counselor setup tools",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/summer-camp-story-circle-kit/Summer-Camp-Story-Circle-Kit.pdf",
+    "zipPath": "product-build/summer-camp-story-circle-kit/summer-camp-story-circle-kit.zip",
+    "sourceHtmlPath": "product-build/summer-camp-story-circle-kit/source/summer-camp-story-circle-kit.html",
+    "manifestPath": "product-build/summer-camp-story-circle-kit/manifest.json"
+  },
+  "worldSlugs": [
+    "teacup-town-weather-window",
+    "rain-gauge-railway",
+    "spoon-ferry-lunchbox-harbor",
+    "rain-boot-route-rangers",
+    "pocket-park-notice-board",
+    "acorn-avenue-errand-office",
+    "button-bakery-map-mixup",
+    "seed-library-map-room",
+    "greenhouse-gear-garden",
+    "index-card-theater-club",
+    "penny-path-compass-shop",
+    "margin-note-market",
+    "clue-label-tower-museum",
+    "revision-river-ferry",
+    "compass-craft-academy",
+    "almost-invention-workshop"
+  ],
+  "cover": {
+    "kicker": "Printable summer camp writing circle kit",
+    "headline": "Summer Camp Story Circle Kit",
+    "subhead": "Sixteen adult-led story circles for camp tables, recreation programs, summer co-ops, and counselor-led quiet blocks.",
+    "included": [
+      "16 printable story circle activity pages",
+      "Before-camp prep guide",
+      "Counselor setup checklist",
+      "Running-circle coaching notes",
+      "Quiet option notes",
+      "No-data use notes",
+      "Six circle formats",
+      "Ten take-home trail cards",
+      "Eight optional share prompts",
+      "Provider-ready PDF, source HTML, manifest, and ZIP artifact"
+    ]
+  },
+  "counselorGuide": {
+    "beforeCamp": [
+      "Print one counselor copy, one circle-format page for the block, and one take-home trail card stack before the group arrives.",
+      "Choose two invented camp settings such as pinecone pier, lantern lodge, or meadow mailbox for quick adult examples.",
+      "Place blank paper, pencils, color dots, and symbol cards in a supply bin for simple printable sorting.",
+      "Pick one quiet backup format for writers who need a smaller table or a silent start.",
+      "Prepare a thirty-second adult model using an invented helper, an ordinary object, and a small friendly mix-up."
+    ],
+    "setup": [
+      "Seat writers where they can see the adult leader and reach one page without passing a stack around the circle.",
+      "Set out only the active circle page, pencils, and a few symbol cards so the table stays calm.",
+      "Use color dots, sun symbols, leaf symbols, or blank folders if pages need to be grouped after the activity.",
+      "Read the first direction aloud, then show one invented example before asking for ideas.",
+      "Keep extra pages in a counselor folder and hand them out only when the group is ready for the next step."
+    ],
+    "runningCircle": [
+      "Start with a short invented setting choice and repeat the choice so every writer hears the same story seed.",
+      "Invite responses by pointing, drawing, dictating one phrase to the adult leader, or writing a short line.",
+      "Move around the circle with one small job at a time: setting, helper, object, clue, then ending.",
+      "Redirect personal facts by offering two invented options and saying the story can use make-believe details today.",
+      "End by asking writers to mark one sentence, sketch, or title they want to keep."
+    ],
+    "quietOptions": [
+      "Offer a silent sketch-and-label page for writers who want to join without speaking.",
+      "Let a writer point to a symbol card while the adult leader reads the matching invented option.",
+      "Use a two-person table circle when the full group is too loud for careful writing.",
+      "Give early finishers a trail card and ask them to add one invented clue or ending detail.",
+      "Allow passing during share time while still letting the writer keep, fold, or file the page."
+    ],
+    "noDataUse": [
+      "Use invented places, invented helpers, and ordinary objects; personal facts are not needed.",
+      "Keep all pages printable and handled by the adult leader, family, or participant.",
+      "Use color dots, symbols, or blank folders for simple sorting instead of private labels.",
+      "Sharing stays optional and can be done by pointing to a word, sketch, title, or chosen sentence."
+    ]
+  },
+  "circleFormats": [
+    {
+      "name": "Pinecone Pass-Around",
+      "bestFor": "A first camp circle when the group needs one shared idea and quick turns.",
+      "steps": [
+        "Adult leader starts with an invented place such as Pinecone Pier and says one peaceful detail.",
+        "Each writer adds one ordinary object, sound, color, or tiny clue to the shared story seed.",
+        "Adult leader repeats the gathered ideas and asks writers to choose two for their own page.",
+        "Writers draft a short opening where a friendly helper notices the chosen details."
+      ]
+    },
+    {
+      "name": "Cabin Card Chain",
+      "bestFor": "Small groups that enjoy building a story in ordered steps.",
+      "steps": [
+        "Adult leader places four cards in the center: place, helper, object, and ending.",
+        "The circle fills each card with an invented detail using quick spoken, pointed, or written choices.",
+        "Writers number the cards first, next, then, and last on their own page.",
+        "Each writer turns the card chain into four short story lines."
+      ]
+    },
+    {
+      "name": "Quiet Trail Map",
+      "bestFor": "A shaded-table option for mixed-energy groups or hot afternoons.",
+      "steps": [
+        "Adult leader gives each writer a simple path shape with three blank trail stops.",
+        "Writers label the stops with an invented camp place, an object clue, and a kind fix.",
+        "Adult leader offers two example verbs for anyone who needs a starting word.",
+        "Writers add one sentence under each stop to make a tiny trail story."
+      ]
+    },
+    {
+      "name": "Lantern Lodge Listening Circle",
+      "bestFor": "Groups practicing listening before they write.",
+      "steps": [
+        "Adult leader reads a two-sentence invented scene about Lantern Lodge and a misplaced bell.",
+        "Writers listen for one setting detail, one object, and one possible helper.",
+        "The circle shares optional details while the adult leader writes neutral choices on a visible page.",
+        "Writers choose one detail and write what the helper does next."
+      ]
+    },
+    {
+      "name": "Meadow Mail Reply",
+      "bestFor": "A letter-style circle for recreation rooms, picnic tables, or co-op groups.",
+      "steps": [
+        "Adult leader announces that a note arrived from an invented place called Meadow Mail Tent.",
+        "The group chooses what small friendly problem the note describes.",
+        "Writers draft a three-line reply with one greeting, one useful idea, and one closing action.",
+        "Adult leader invites writers to underline the clearest action line before cleanup."
+      ]
+    },
+    {
+      "name": "Four-Beat Lantern Tale",
+      "bestFor": "A camp-themed story circle that avoids unsafe activity instructions while keeping the evening feel.",
+      "steps": [
+        "Adult leader draws four boxes labeled glow, clue, helper, and home base.",
+        "Writers fill each box with invented details such as a jar lantern, ribbon map, or pebble path.",
+        "The circle quietly points to favorite box ideas and the adult leader names two possible orders.",
+        "Writers write one sentence per box and finish with a calm return to the home base."
+      ]
+    }
+  ],
+  "takeHomeTrailCards": [
+    {
+      "title": "Pinecone Place Detail",
+      "time": "6 minutes",
+      "skill": "setting detail",
+      "direction": "Add one invented place detail from today's circle: ________________________.",
+      "familyLine": "A grown-up can ask what the place sounds like: ________________________."
+    },
+    {
+      "title": "Trail Object Clue",
+      "time": "7 minutes",
+      "skill": "plot clue",
+      "direction": "Choose one ordinary object and write how it helps the helper: ________________________.",
+      "familyLine": "A grown-up can offer two object choices here: ________________________."
+    },
+    {
+      "title": "Kind Fix Finish",
+      "time": "8 minutes",
+      "skill": "ending choice",
+      "direction": "Write one kind fix for the invented mix-up: ________________________.",
+      "familyLine": "A grown-up can ask what changed after the fix: ________________________."
+    },
+    {
+      "title": "Four-Step Trail",
+      "time": "8 minutes",
+      "skill": "sequence",
+      "direction": "Write first, next, then, and last for a tiny trail story: ________________________.",
+      "familyLine": "A grown-up can point to the step that should become longer: ________________________."
+    },
+    {
+      "title": "Lantern Lodge Line",
+      "time": "5 minutes",
+      "skill": "strong sentence",
+      "direction": "Write one clear sentence about an invented lodge or tent: ________________________.",
+      "familyLine": "A grown-up can ask which word makes the sentence clearer: ________________________."
+    },
+    {
+      "title": "Helper Pocket",
+      "time": "6 minutes",
+      "skill": "character support",
+      "direction": "List three safe invented items a story helper carries: ________________________.",
+      "familyLine": "A grown-up can ask which item is useful first: ________________________."
+    },
+    {
+      "title": "Meadow Mail Reply",
+      "time": "9 minutes",
+      "skill": "letter format",
+      "direction": "Write a short reply to an invented meadow message: ________________________.",
+      "familyLine": "A grown-up can help choose the first friendly action: ________________________."
+    },
+    {
+      "title": "Sound-and-Color Add-On",
+      "time": "6 minutes",
+      "skill": "sensory detail",
+      "direction": "Add one sound and one color to a make-believe camp path: ________________________.",
+      "familyLine": "A grown-up can ask which detail belongs near the beginning: ________________________."
+    },
+    {
+      "title": "Title Trail",
+      "time": "5 minutes",
+      "skill": "main idea",
+      "direction": "Write one title with a place, one with an object, and one with an action: ________________________.",
+      "familyLine": "A grown-up can ask which title gives the best story clue: ________________________."
+    },
+    {
+      "title": "Next Circle Seed",
+      "time": "7 minutes",
+      "skill": "planning",
+      "direction": "Invent one place, one helper, and one small mix-up for another circle: ________________________.",
+      "familyLine": "A grown-up can add one ordinary object to the seed: ________________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Sharing is optional: point to one word, sketch, or title you want the group to notice.",
+    "Read one sentence that shows an invented setting detail, or ask the adult leader to read it.",
+    "Show one object clue and say how it helps the story if you want to.",
+    "Share one kind fix your helper tried in the invented story.",
+    "Point to the strongest action word on your page.",
+    "Tell the circle which trail step came first, next, then, or last.",
+    "Show a title choice and explain which story clue it gives.",
+    "Pass today and listen for one clear detail from another writer's invented story."
+  ],
+  "activities": [
+    {
+      "id": "camp-summer-camp-teacup-town-weather-window",
+      "title": "Teacup Town Weather Window",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "circleSkill": "weather detail",
+      "sessionFit": "15-minute morning story circle for young writers who can choose one weather clue and one helpful action.",
+      "counselorSetup": "Print one page per kid, set out pencils, and pick a pretend weather card before circle begins.",
+      "kidDirection": "Look through the tiny weather window, choose what changes outside, and finish the three story parts.",
+      "counselorPrompt": "Ask which weather clue is easiest to picture, then invite one simple because sentence.",
+      "pageSections": [
+        {
+          "heading": "Weather Window",
+          "lines": [
+            "Outside the teacup window, the weather looks like ____________________________.",
+            "The tiny curtain moves because ____________________________.",
+            "The window bell rings when ____________________________."
+          ]
+        },
+        {
+          "heading": "Town Helper",
+          "lines": [
+            "The teacup town helper carries ____________________________.",
+            "The helper checks the sky near ____________________________.",
+            "The kind plan is to ____________________________."
+          ]
+        },
+        {
+          "heading": "Circle Sentence",
+          "lines": [
+            "First, the weather changes over ____________________________.",
+            "Next, the helper notices ____________________________.",
+            "My teacup town sentence is ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Pass the pretend weather card and let each writer add one sky detail: ____________________________.",
+      "wrapUpLine": "The weather detail I used best was ____________________________.",
+      "quietOptionLine": "Quiet option: circle one line to finish later: ____________________________."
+    },
+    {
+      "id": "camp-summer-camp-rain-gauge-railway",
+      "title": "Rain Gauge Railway",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "circleSkill": "sequence words",
+      "sessionFit": "15-minute transition activity for a lower group that needs first, next, and last story steps.",
+      "counselorSetup": "Print one page per kid, draw three pretend train stops on scrap paper, and model one short route aloud.",
+      "kidDirection": "Choose a rain-gauge ticket, send the tiny train to three stops, and finish the route sentence.",
+      "counselorPrompt": "Point to each stop and ask what happens first, next, and last before writing.",
+      "pageSections": [
+        {
+          "heading": "Gauge Ticket",
+          "lines": [
+            "The rain-gauge ticket shows ____________________________.",
+            "The tiny train starts beside ____________________________.",
+            "The first raindrop passenger brings ____________________________."
+          ]
+        },
+        {
+          "heading": "Railway Stops",
+          "lines": [
+            "First, the train clicks past ____________________________.",
+            "Next, the gauge marker rises to ____________________________.",
+            "Last, the train waits near ____________________________."
+          ]
+        },
+        {
+          "heading": "Route Message",
+          "lines": [
+            "The conductor says the route is calm because ____________________________.",
+            "The best stop for a story clue is ____________________________.",
+            "My railway route sentence is ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Group twist: build a three-stop route aloud and write the stop you like most: ____________________________.",
+      "wrapUpLine": "The order word that helped my story was ____________________________.",
+      "quietOptionLine": "Quiet option: draw one tiny rail mark, then fill this clue: ____________________________."
+    },
+    {
+      "id": "camp-summer-camp-spoon-ferry-lunchbox-harbor",
+      "title": "Spoon Ferry Lunchbox Harbor",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "circleSkill": "setting and object choice",
+      "sessionFit": "15-minute picnic-table story circle for kids who can pick a harbor object and describe where it goes.",
+      "counselorSetup": "Print one page per kid, place a pretend spoon ferry marker in the middle, and invite one quiet look before writing.",
+      "kidDirection": "Send the spoon ferry across the lunchbox harbor, choose what it carries, and finish the harbor note.",
+      "counselorPrompt": "Ask which harbor object belongs near the ferry, then ask what the ferry carries next.",
+      "pageSections": [
+        {
+          "heading": "Lunchbox Harbor",
+          "lines": [
+            "The spoon ferry docks beside ____________________________.",
+            "The lunchbox lighthouse shines on ____________________________.",
+            "The harbor flag is made from ____________________________."
+          ]
+        },
+        {
+          "heading": "Ferry Load",
+          "lines": [
+            "The ferry carries a pretend picnic of ____________________________.",
+            "The smallest passenger asks for ____________________________.",
+            "The careful ferry path goes around ____________________________."
+          ]
+        },
+        {
+          "heading": "Harbor Note",
+          "lines": [
+            "First, the ferry helper chooses ____________________________.",
+            "Next, the harbor crew listens for ____________________________.",
+            "My lunchbox harbor sentence is ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Group twist: each writer adds one pretend harbor sound before choosing a line: ____________________________.",
+      "wrapUpLine": "The harbor object I described clearly was ____________________________.",
+      "quietOptionLine": "Quiet option: finish only the ferry load line first: ____________________________."
+    },
+    {
+      "id": "camp-summer-camp-rain-boot-route-rangers",
+      "title": "Rain Boot Route Rangers",
+      "worldSlug": "rain-boot-route-rangers",
+      "ageBand": "7-9",
+      "circleSkill": "map clues",
+      "sessionFit": "20-minute story circle for a lower group ready to combine direction words with a small helpful route.",
+      "counselorSetup": "Print one page per kid, sketch a three-step pretend trail, and offer beside, under, past, or around as choices.",
+      "kidDirection": "Choose two rain-boot clues, map the route, and write where the route rangers go first.",
+      "counselorPrompt": "Ask the group to point in the air for beside, under, past, or around, then choose one word for writing.",
+      "pageSections": [
+        {
+          "heading": "Boot Map",
+          "lines": [
+            "The left rain boot points toward ____________________________.",
+            "The right rain boot holds a map of ____________________________.",
+            "The route ranger badge shows ____________________________."
+          ]
+        },
+        {
+          "heading": "Path Clues",
+          "lines": [
+            "The first puddle clue is beside ____________________________.",
+            "The second route mark hides under ____________________________.",
+            "The last dry stepping spot is ____________________________."
+          ]
+        },
+        {
+          "heading": "Ranger Note",
+          "lines": [
+            "The route starts when ____________________________.",
+            "The friendly path goes past ____________________________.",
+            "My ranger route sentence is ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Group twist: choose one direction word and use it in this route clue: ____________________________.",
+      "wrapUpLine": "The map clue that made my route clearer was ____________________________.",
+      "quietOptionLine": "Quiet option: trace the route with a finger, then finish this line: ____________________________."
+    },
+    {
+      "id": "camp-summer-camp-pocket-park-notice-board",
+      "title": "Pocket Park Notice Board",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "circleSkill": "message and reason",
+      "sessionFit": "20-minute closing circle for writers who can make a pretend notice and explain why it helps the pocket park.",
+      "counselorSetup": "Print one page per kid, show three blank pretend notice strips, and remind the circle to use invented park details.",
+      "kidDirection": "Invent a pocket park notice, choose the clearest reason, and write what the park helper does next.",
+      "counselorPrompt": "Ask kids to keep notices invented and place-based, then help them finish one because line.",
+      "pageSections": [
+        {
+          "heading": "Notice Board",
+          "lines": [
+            "The first pocket park notice asks for ____________________________.",
+            "The second notice points toward ____________________________.",
+            "The board frame is decorated with ____________________________."
+          ]
+        },
+        {
+          "heading": "Park Helper",
+          "lines": [
+            "The pebble path leads to ____________________________.",
+            "The pocket park helper brings ____________________________.",
+            "The helpful reason is ____________________________."
+          ]
+        },
+        {
+          "heading": "Final Notice",
+          "lines": [
+            "First, the helper reads ____________________________.",
+            "Next, the helper adds ____________________________.",
+            "My clear park notice says ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Group twist: share one pretend park object and add it to this notice: ____________________________.",
+      "wrapUpLine": "The reason that makes my notice useful is ____________________________.",
+      "quietOptionLine": "Quiet option: choose one notice to copy neatly here: ____________________________."
+    },
+    {
+      "id": "camp-acorn-errand-relay-circle",
+      "title": "Acorn Errand Relay Circle",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "circleSkill": "Sequencing a shared quest with clear handoff details",
+      "sessionFit": "18-minute opening circle for a cabin table, rec program group, or co-op writing block.",
+      "counselorSetup": "Print one page per writer, choose a talking object, and mark three imaginary errand stops on the circle board.",
+      "kidDirection": "Add one errand clue, pass the story to the next writer, and help the acorn office finish its route.",
+      "counselorPrompt": "Ask each writer to give the next person one useful detail instead of solving the whole route.",
+      "pageSections": [
+        {
+          "heading": "Errand Start",
+          "lines": [
+            "The acorn office opens beside ____________________________.",
+            "The first tiny errand asks for ____________________________.",
+            "The route helper carries ____________________________."
+          ]
+        },
+        {
+          "heading": "Circle Handoff",
+          "lines": [
+            "I pass the next clue by adding ____________________________.",
+            "The next helper should check near ____________________________.",
+            "One detail everyone should remember is ____________________________."
+          ]
+        },
+        {
+          "heading": "Route Finish",
+          "lines": [
+            "The final stop appears when ____________________________.",
+            "The acorn clerk thanks the group for ____________________________.",
+            "Our story circle ends with ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "When the talking object reaches the counselor, add a surprise errand from ____________________________.",
+      "wrapUpLine": "The handoff detail that helped the circle most was ____________________________.",
+      "quietOptionLine": "Instead of passing aloud, write the next route clue on ____________________________."
+    },
+    {
+      "id": "camp-button-bakery-map-circle",
+      "title": "Button Bakery Map Mixup Circle",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "circleSkill": "Using map language and specific nouns in a group story",
+      "sessionFit": "20-minute after-lunch circle when the group needs a low-prep shared writing activity.",
+      "counselorSetup": "Sketch a simple bakery counter, crumb path, and button tray before handing out pages.",
+      "kidDirection": "Choose one bakery clue, add a direction word, and help the group fix the mixed-up map.",
+      "counselorPrompt": "Invite writers to replace vague clues with objects the whole circle can picture.",
+      "pageSections": [
+        {
+          "heading": "Bakery Map",
+          "lines": [
+            "The crumb path begins under ____________________________.",
+            "The map points past a tray of ____________________________.",
+            "The button baker notices ____________________________."
+          ]
+        },
+        {
+          "heading": "Direction Clues",
+          "lines": [
+            "Turn left when the group sees ____________________________.",
+            "Step around the counter near ____________________________.",
+            "Stop at the shelf marked ____________________________."
+          ]
+        },
+        {
+          "heading": "Map Fix",
+          "lines": [
+            "The mixed-up map changes because ____________________________.",
+            "The best clue from the circle is ____________________________.",
+            "The bakery route finally leads to ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Halfway through, trade maps with a neighbor and add one clear landmark: ____________________________.",
+      "wrapUpLine": "The strongest map word I used today was ____________________________.",
+      "quietOptionLine": "Work silently by drawing arrows first, then write the route clue ____________________________."
+    },
+    {
+      "id": "camp-seed-library-packet-circle",
+      "title": "Seed Library Packet Circle",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "circleSkill": "Combining setting clues, cause, and next action",
+      "sessionFit": "22-minute shaded-table activity for older elementary writers who can build on each other's ideas.",
+      "counselorSetup": "Set out pencils and invite the group to imagine a seed library with drawers, ladders, and map pins.",
+      "kidDirection": "Invent one seed packet, explain why it matters, and pass the next map-room action to the circle.",
+      "counselorPrompt": "Ask writers to connect each new seed clue to a next step the map keeper can take.",
+      "pageSections": [
+        {
+          "heading": "Packet Clue",
+          "lines": [
+            "The seed packet is labeled ____________________________.",
+            "Inside the packet, the group finds ____________________________.",
+            "The map-room shelf clue shows ____________________________."
+          ]
+        },
+        {
+          "heading": "Why It Matters",
+          "lines": [
+            "This seed matters because ____________________________.",
+            "The map keeper studies ____________________________.",
+            "The next drawer opens only after ____________________________."
+          ]
+        },
+        {
+          "heading": "Circle Action",
+          "lines": [
+            "The group decides to carry ____________________________.",
+            "The map changes when someone adds ____________________________.",
+            "The seed library story moves toward ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Let one writer become the map keeper and choose the next drawer: ____________________________.",
+      "wrapUpLine": "One cause-and-next-step link from my page is ____________________________.",
+      "quietOptionLine": "For a quiet round, point to a map spot and write the seed clue ____________________________."
+    },
+    {
+      "id": "camp-greenhouse-gear-garden-build",
+      "title": "Greenhouse Gear Garden Build",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "circleSkill": "Adding problem-solving steps without turning the story into a contest",
+      "sessionFit": "20-minute maker-style story circle for camp tables, art rooms, or garden-theme afternoons.",
+      "counselorSetup": "Draw three harmless garden gadgets on a board and remind writers that silly fixes are welcome.",
+      "kidDirection": "Choose a garden gadget, describe what it does, and add one cooperative repair step.",
+      "counselorPrompt": "Ask how the gadget helps the group and what gentle problem it creates next.",
+      "pageSections": [
+        {
+          "heading": "Garden Gadget",
+          "lines": [
+            "The greenhouse gear is shaped like ____________________________.",
+            "It helps the garden by ____________________________.",
+            "The first sound it makes is ____________________________."
+          ]
+        },
+        {
+          "heading": "Gentle Problem",
+          "lines": [
+            "The gadget gets confused near ____________________________.",
+            "The group notices the small problem when ____________________________.",
+            "A helpful tool on the table is ____________________________."
+          ]
+        },
+        {
+          "heading": "Repair Step",
+          "lines": [
+            "First, the circle suggests ____________________________.",
+            "Next, the gear garden helper tries ____________________________.",
+            "The greenhouse works again after ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Add a second gadget that only works when two writers agree on ____________________________.",
+      "wrapUpLine": "The cooperative repair step I liked best was ____________________________.",
+      "quietOptionLine": "Sketch the gadget quietly, then label the repair idea ____________________________."
+    },
+    {
+      "id": "camp-index-card-scene-circle",
+      "title": "Index Card Theater Scene Circle",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "circleSkill": "Building a tiny scene with dialogue, stage action, and turn-taking",
+      "sessionFit": "25-minute indoor camp option for hot afternoons, rain delays, or theater-themed rotations.",
+      "counselorSetup": "Give each writer a pretend index card role and set a rule that every scene stays kind and playful.",
+      "kidDirection": "Pick a role card, write one line of dialogue, and pass the scene so the next writer can move it forward.",
+      "counselorPrompt": "Ask writers to make each line change what the characters do next.",
+      "pageSections": [
+        {
+          "heading": "Role Card",
+          "lines": [
+            "My theater card gives me the role of ____________________________.",
+            "The scene begins beside ____________________________.",
+            "The prop on the floor is ____________________________."
+          ]
+        },
+        {
+          "heading": "Dialogue Turn",
+          "lines": [
+            "My character asks ____________________________.",
+            "Another character answers with ____________________________.",
+            "The line changes the scene by ____________________________."
+          ]
+        },
+        {
+          "heading": "Stage Action",
+          "lines": [
+            "At the start, the character moves toward ____________________________.",
+            "In the middle, the group reacts to ____________________________.",
+            "The scene closes when ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "After two turns, the counselor adds a new prop card: ____________________________.",
+      "wrapUpLine": "The dialogue line that moved the scene forward was ____________________________.",
+      "quietOptionLine": "Act nothing out; write the stage action quietly as ____________________________."
+    },
+    {
+      "id": "camp-penny-path-compass-circle",
+      "title": "Penny Path Compass Circle",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "circleSkill": "Choosing direction words and sensory details for a shared route",
+      "sessionFit": "18-minute trailhead or picnic-table writing circle before a walk, game, or craft.",
+      "counselorSetup": "Place a pretend compass in the center and assign north, south, east, and west spots around the circle.",
+      "kidDirection": "Spin the compass, choose a path clue, and add one detail that helps the group follow the route.",
+      "counselorPrompt": "Ask each writer to include one direction word and one detail a reader could hear, see, or feel.",
+      "pageSections": [
+        {
+          "heading": "Compass Spin",
+          "lines": [
+            "The penny compass points toward ____________________________.",
+            "The first path marker looks like ____________________________.",
+            "The shopkeeper offers the group ____________________________."
+          ]
+        },
+        {
+          "heading": "Route Detail",
+          "lines": [
+            "The group walks around ____________________________.",
+            "A sound along the path is ____________________________.",
+            "The next clue shines near ____________________________."
+          ]
+        },
+        {
+          "heading": "Shared Directions",
+          "lines": [
+            "First, follow the compass past ____________________________.",
+            "Next, turn when you notice ____________________________.",
+            "The route ends beside ____________________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Let the next writer reverse one direction and explain the new clue: ____________________________.",
+      "wrapUpLine": "The direction detail that made my route clearer was ____________________________.",
+      "quietOptionLine": "Trace the compass path silently, then write one route sentence: ____________________________."
+    },
+    {
+      "id": "camp-summer-camp-margin-note-market-kind-revision-circle",
+      "title": "Margin Note Market Kind Revision Circle",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "circleSkill": "Turn vague feedback into a kind, specific revision move.",
+      "sessionFit": "20-minute shaded-table story circle for older kids after a camp activity block.",
+      "counselorSetup": "Print one page per writer, set out pencils, and choose three invented sample notes for the group to trade.",
+      "kidDirection": "Pick one market note, turn it into a clear revision task, and write a new story line that helps the next writer.",
+      "counselorPrompt": "Ask which exact word, detail, or order change would make the note useful without making it personal.",
+      "pageSections": [
+        {
+          "heading": "Market Note Stand",
+          "lines": [
+            "The first note on the paper awning says ____________________.",
+            "The note feels too vague because ____________________.",
+            "A kinder version of the note could start with ____________________."
+          ]
+        },
+        {
+          "heading": "Revision Trade",
+          "lines": [
+            "The detail I want the writer to add is ____________________.",
+            "The word I would trade for a stronger one is ____________________.",
+            "The sentence would be easier to follow if ____________________."
+          ]
+        },
+        {
+          "heading": "Circle Share",
+          "lines": [
+            "My revised story line begins with ____________________.",
+            "The group can notice the clearer detail ____________________.",
+            "The next writer could build on ____________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Pass the page once and let the next writer add one helpful market sticker note: ____________________.",
+      "wrapUpLine": "The revision move I can explain clearly is ____________________.",
+      "quietOptionLine": "Work silently by circling one note and writing only the revised line here: ____________________."
+    },
+    {
+      "id": "camp-summer-camp-clue-label-tower-museum-exhibit-circle",
+      "title": "Clue Label Tower Museum Exhibit Circle",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "circleSkill": "Choose focused details and write a concise exhibit label.",
+      "sessionFit": "25-minute cabin-table or picnic-table story circle with small groups.",
+      "counselorSetup": "Print the page, place three harmless object cards in the middle, and invite each writer to invent one exhibit.",
+      "kidDirection": "Create a tower exhibit, choose the clue that matters most, and write a label that points readers in the right order.",
+      "counselorPrompt": "Ask which clue belongs first, which detail can wait, and what the label should help readers notice.",
+      "pageSections": [
+        {
+          "heading": "Tower Exhibit",
+          "lines": [
+            "The object on the top shelf is ____________________.",
+            "The clue hanging beside it shows ____________________.",
+            "The detail that does not fit the label is ____________________."
+          ]
+        },
+        {
+          "heading": "Label Order",
+          "lines": [
+            "Readers should notice first that ____________________.",
+            "The middle label sentence should explain ____________________.",
+            "The final label sentence should point toward ____________________."
+          ]
+        },
+        {
+          "heading": "Museum Circle",
+          "lines": [
+            "My exhibit label begins with ____________________.",
+            "The strongest clue word in my label is ____________________.",
+            "A new exhibit nearby could display ____________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Each writer adds one tiny invented exhibit clue to the next page: ____________________.",
+      "wrapUpLine": "The clue that kept my label focused was ____________________.",
+      "quietOptionLine": "Skip the group pass and write a one-sentence exhibit label here: ____________________."
+    },
+    {
+      "id": "camp-summer-camp-revision-river-ferry-ending-circle",
+      "title": "Revision River Ferry Ending Circle",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "circleSkill": "Revise an ending so it echoes an earlier detail.",
+      "sessionFit": "20-minute end-of-day story circle when the group needs a calm writing finish.",
+      "counselorSetup": "Print pages, draw three ferry docks on a board or scrap paper, and model one invented opening detail.",
+      "kidDirection": "Send a rough ending across the ferry, add one echo from the beginning, and bring back a clearer final line.",
+      "counselorPrompt": "Ask what the reader should remember when the ferry reaches the final dock.",
+      "pageSections": [
+        {
+          "heading": "First Dock",
+          "lines": [
+            "The opening detail on the riverbank is ____________________.",
+            "The middle moment changes when ____________________.",
+            "The rough ending says ____________________."
+          ]
+        },
+        {
+          "heading": "Ferry Revision",
+          "lines": [
+            "One word I can remove from the ending is ____________________.",
+            "One detail I can echo from the start is ____________________.",
+            "The ending becomes clearer because ____________________."
+          ]
+        },
+        {
+          "heading": "Final Dock",
+          "lines": [
+            "My revised final sentence begins with ____________________.",
+            "The echo readers should notice is ____________________.",
+            "The ferry leaves behind a clue about ____________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "The circle chooses one harmless ferry sound to weave into every ending: ____________________.",
+      "wrapUpLine": "The opening detail I brought back at the end was ____________________.",
+      "quietOptionLine": "Write the revised ending privately and underline the echoed detail here: ____________________."
+    },
+    {
+      "id": "camp-summer-camp-compass-craft-academy-route-circle",
+      "title": "Compass Craft Academy Route Circle",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "circleSkill": "Plan a paragraph route with a clear beginning, turn, and finish.",
+      "sessionFit": "25-minute small-group circle after a map, hike, or craft rotation.",
+      "counselorSetup": "Print pages, draw a simple three-stop route, and ask each writer to pick a made-up compass craft.",
+      "kidDirection": "Map a paragraph route for a compass craft, then write the sentence that guides readers through the turn.",
+      "counselorPrompt": "Ask which sentence acts like the compass needle and keeps the paragraph pointed forward.",
+      "pageSections": [
+        {
+          "heading": "Academy Route",
+          "lines": [
+            "The compass craft begins beside ____________________.",
+            "The route turns when the needle points to ____________________.",
+            "The finish should show readers ____________________."
+          ]
+        },
+        {
+          "heading": "Paragraph Compass",
+          "lines": [
+            "The first sentence should set up ____________________.",
+            "The turning sentence should explain ____________________.",
+            "The final sentence should connect back to ____________________."
+          ]
+        },
+        {
+          "heading": "Circle Route",
+          "lines": [
+            "My clearest route word is ____________________.",
+            "The group could add one map symbol for ____________________.",
+            "My compass paragraph line is ____________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "Let the group choose one invented compass symbol for every route: ____________________.",
+      "wrapUpLine": "The sentence that turned my paragraph was ____________________.",
+      "quietOptionLine": "Trace the three route dots silently and write the turning sentence here: ____________________."
+    },
+    {
+      "id": "camp-summer-camp-almost-invention-workshop-test-circle",
+      "title": "Almost Invention Workshop Test Circle",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "circleSkill": "Order instructions and end with a useful test note.",
+      "sessionFit": "20-minute maker-table story circle for older kids between outdoor rotations.",
+      "counselorSetup": "Print pages, set out pencils, and invite the group to invent safe, silly workshop tools with no real building required.",
+      "kidDirection": "Describe an almost-invention, put the steps in order, and write a test note that explains what to adjust next.",
+      "counselorPrompt": "Ask where a reader might get confused and which step should be moved or clarified.",
+      "pageSections": [
+        {
+          "heading": "Workshop Parts",
+          "lines": [
+            "The almost-invention is supposed to help with ____________________.",
+            "The first harmless part on the bench is ____________________.",
+            "The part that keeps wobbling is ____________________."
+          ]
+        },
+        {
+          "heading": "Step Order",
+          "lines": [
+            "The first instruction should tell readers to ____________________.",
+            "The step that needs a clearer place is ____________________.",
+            "The test should happen after ____________________."
+          ]
+        },
+        {
+          "heading": "Test Note",
+          "lines": [
+            "The invention almost works when ____________________.",
+            "The adjustment I would try next is ____________________.",
+            "My workshop test note says ____________________."
+          ]
+        }
+      ],
+      "groupTwistLine": "The circle adds one silly safety label to every invented tool: ____________________.",
+      "wrapUpLine": "The instruction I made clearest was ____________________.",
+      "quietOptionLine": "Choose one step to revise silently and write the new test note here: ____________________."
+    }
+  ]
+}

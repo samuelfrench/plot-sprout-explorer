@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-02-batch17",
+  "generatedAt": "2026-06-02",
+  "productSlug": "summer-camp-story-circle-kit",
+  "title": "Summer Camp Story Circle Kit",
+  "pricePoint": "$59",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/summer-camp-story-circle-kit/Summer-Camp-Story-Circle-Kit.pdf",
+      "sha256": "4ba20f4d43cea7519c33f20d4ee5e098b68e4535e1d01b861dfaea1fbd54ed1b",
+      "size": 4921643
+    },
+    "zip": {
+      "path": "product-build/summer-camp-story-circle-kit/summer-camp-story-circle-kit.zip",
+      "sha256": "1176e78140e943561d0b500320e42c43a097f74a17cd66c8277f136704ac9005",
+      "size": 9515765
+    },
+    "sourceHtml": {
+      "path": "product-build/summer-camp-story-circle-kit/source/summer-camp-story-circle-kit.html",
+      "sha256": "aaebfc2db8345ab94c9dfbaf8f219ffb1b3301e3063b6afbd5ed28fb154589ed",
+      "size": 60582
+    },
+    "readme": {
+      "path": "product-build/summer-camp-story-circle-kit/README.txt",
+      "sha256": "06c37d72bb555aa2357a8830ac6e2c47a9d4fdb126d7eeee8ab3fc5aea9d2b58",
+      "size": 492
+    },
+    "assets": [
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/summer-camp-story-circle-kit/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      }
+    ]
+  }
+}

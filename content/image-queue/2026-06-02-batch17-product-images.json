@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch17-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "summer-camp-story-circle-kit",
+      "title": "Summer Camp Story Circle Kit product image",
+      "purpose": "Static product hero for the $59 Summer Camp Story Circle Kit page.",
+      "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device, screen-free printable summer camp writing kit, blank white paper, blank clipboards, blank folders, pencils, cord loops, colored paper shapes",
+      "outputJpeg": "public/images/plotsprout/batch17/summer-camp-story-circle-kit.jpg",
+      "outputWebp": "public/images/plotsprout/batch17/summer-camp-story-circle-kit.webp",
+      "sidecar": "content/image-runs/batch17/summer-camp-story-circle-kit.json",
+      "seed": 26061752
+    }
+  ]
+}

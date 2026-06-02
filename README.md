@@ -61,6 +61,7 @@ npm run product:waiting-room-pack
 npm run product:library-story-club-kit
 npm run product:substitute-teacher-pack
 npm run product:tutoring-center-pack
+npm run product:summer-camp-kit
 ```
 
 ## Safety

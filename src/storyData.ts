@@ -342,6 +342,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Twenty tutor-led 10-minute story sprints with routines, coaching notes, and take-home practice slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'summer-camp-story-circle-kit',
+    title: 'Summer Camp Story Circle Kit',
+    pricePoint: '$59',
+    description:
+      'Sixteen counselor-led story circles with camp-safe routines, quiet options, and take-home trail cards.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

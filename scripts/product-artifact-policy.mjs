@@ -13,9 +13,61 @@ export const waitingRoomProductSlug = 'waiting-room-story-quest-pack'
 export const libraryStoryClubProductSlug = 'library-story-club-kit'
 export const substituteTeacherStationPackProductSlug = 'substitute-teacher-story-station-pack'
 export const tutoringCenterSprintPackProductSlug = 'tutoring-center-story-sprint-pack'
+export const summerCampStoryCircleKitProductSlug = 'summer-camp-story-circle-kit'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
+
+const familySafetyBlockedTerms = [
+  /\bweapon(s)?\b/i,
+  /\bgun(s)?\b/i,
+  /\bsword(s)?\b/i,
+  /\bfight(ing)?\b/i,
+  /\bkill(s|ed|ing)?\b/i,
+  /\bblood\b/i,
+  /\bhorror\b/i,
+  /\bromance\b/i,
+  /\bkiss(ing)?\b/i,
+  /\bdating\b/i,
+  /\bpolitic(s|al)?\b/i,
+  /\belection(s)?\b/i,
+  /\bvote(s|d|r|rs|ing)?\b/i,
+  /\bcampaign(s|ing)?\b/i,
+  /\breligion\b/i,
+  /\breligious\b/i,
+  /\bchurch(es)?\b/i,
+  /\btemple(s)?\b/i,
+  /\bmosque(s)?\b/i,
+  /\bsynagogue(s)?\b/i,
+  /\bprayer(s)?\b/i,
+  /\bjesus\b/i,
+  /\bgod\b/i,
+  /\bpresident(s)?\b/i,
+  /\bcelebrity\b/i,
+  /\binfluencer(s)?\b/i,
+  /\bfamous\b/i,
+  /\breal child\b/i,
+  /\bgambling\b/i,
+  /\bcasino\b/i,
+  /\bmust buy\b/i,
+  /\bmake your child\b/i,
+  /\bguaranteed\b/i,
+  /\bsecret trick\b/i,
+  /\bmiss out\b/i,
+  /\bai bedtime\b/i,
+  /\bbedtime story\b/i,
+  /\bstory generator\b/i,
+  /\bgenerate stories\b/i,
+  /\bdisney\b/i,
+  /\bpokemon\b/i,
+  /\bminecraft\b/i,
+  /\bmarvel\b/i,
+  /\bstar wars\b/i,
+  /\bharry potter\b/i,
+  /\bbranded\b/i,
+  /\bbrand(ed)? character(s)?\b/i,
+  /\bad(s)? targeted to children\b/i,
+]
 
 const requiredWorldSlugs = [
   'teacup-town-weather-window',
@@ -85,6 +137,13 @@ const requiredTutoringCenterSprintArtifactPaths = {
   zipPath: 'product-build/tutoring-center-story-sprint-pack/tutoring-center-story-sprint-pack.zip',
   sourceHtmlPath: 'product-build/tutoring-center-story-sprint-pack/source/tutoring-center-story-sprint-pack.html',
   manifestPath: 'product-build/tutoring-center-story-sprint-pack/manifest.json',
+}
+
+const requiredSummerCampStoryCircleArtifactPaths = {
+  pdfPath: 'product-build/summer-camp-story-circle-kit/Summer-Camp-Story-Circle-Kit.pdf',
+  zipPath: 'product-build/summer-camp-story-circle-kit/summer-camp-story-circle-kit.zip',
+  sourceHtmlPath: 'product-build/summer-camp-story-circle-kit/source/summer-camp-story-circle-kit.html',
+  manifestPath: 'product-build/summer-camp-story-circle-kit/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -1688,6 +1747,241 @@ export function validateTutoringCenterSprintPackSource(source, product, knownWor
   return errors
 }
 
+function validateNoUnsafeCampLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const text = rawText
+    .replace(/\bno\s+accounts?\b/gi, '')
+    .replace(/\bno\s+child accounts?\b/gi, '')
+    .replace(/\bno\s+uploads?\b/gi, '')
+    .replace(/\bno\s+public publishing\b/gi, '')
+    .replace(/\bwithout\s+accounts?\b/gi, '')
+    .replace(/\bwithout\s+child accounts?\b/gi, '')
+    .replace(/\bwithout\s+uploads?\b/gi, '')
+    .replace(/\bwithout\s+public publishing\b/gi, '')
+  pushIf(
+    errors,
+    /\brosters?\b|\battendance\b|\bsign-?in\b|\bcamper names?\b|\bstudent names?\b|\binitials\b|\bsurnames?\b|\bschool names?\b|\bphotos?\b|\baddresses?\b|\bbehavior reports?\b|\bupload(s|ed|ing)?\b|\baccounts?\b|\blogins?\b|\blog in\b|\bpublic publishing\b|\bpublish online\b|\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\bdiagnos(is|e|es|ed|ing|tic)\b|\btherapy\b|\btherapist\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b|\bassessment(s)?\b|\bgrade(s|d|book)?\b|\bscore(s|d|book)?\b|\bguarantee(s|d)?\b|\bguaranteed\b/i.test(
+      text,
+    ),
+    `${label} includes roster, attendance, sign-in, camper-name, photo, address, behavior, medical, legal, therapy, diagnosis, assessment, or guaranteed-outcome language.`,
+  )
+  pushIf(
+    errors,
+    /\bcampfires?\b|\bfire pit(s)?\b|\bflames?\b|\bmatches\b|\blighter(s)?\b|\bswim(ming)?\b|\bdeep water\b|\bopen water\b|\bcliff(s)?\b|\brope course(s)?\b|\barchery\b|\bknife|knives\b/i.test(
+      rawText,
+    ),
+    `${label} includes unsafe fire, water, or outdoor-risk language.`,
+  )
+}
+
+function validateNoFamilySafetyLanguage(value, label, errors) {
+  const text = JSON.stringify(value)
+    .replaceAll(requiredSafety, '')
+    .replace(/\bno\s+weapon(s)?\b/gi, '')
+    .replace(/\bno\s+branded characters\b/gi, '')
+    .replace(/\bno\s+scary harm\b/gi, '')
+    .replace(/\bno\s+logos?\b/gi, '')
+    .replace(/\bno\s+watermark\b/gi, '')
+    .replace(/\bno\s+text\b/gi, '')
+
+  pushIf(
+    errors,
+    familySafetyBlockedTerms.some((pattern) => pattern.test(text)),
+    `${label} includes political, branded, romance, scary, violent, weapon, gambling, ad-targeting, or pressure language.`,
+  )
+}
+
+function validateCampActivity(activity, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, activityIds, errors) {
+  const label = `activities[${index}]`
+  pushIf(errors, !isObject(activity), `${label} must be an object.`)
+  if (!isObject(activity)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'circleSkill',
+    'sessionFit',
+    'counselorSetup',
+    'kidDirection',
+    'counselorPrompt',
+    'groupTwistLine',
+    'wrapUpLine',
+    'quietOptionLine',
+  ]) {
+    validateString(activity[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(activity.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(activity.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, activityIds.has(activity.id), `${label}.id is duplicated.`)
+    activityIds.add(activity.id)
+  }
+
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '9-11', '10-11'].includes(activity.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(activity.worldSlug) && !knownWorldSlugs.has(activity.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(activity.worldSlug) && !sourceWorldSlugs.has(activity.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(activity.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(activity.ageBand) && isNonEmptyString(worldAgeBand) && activity.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${activity.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  pushIf(errors, !Array.isArray(activity.pageSections), `${label}.pageSections must be an array.`)
+  if (Array.isArray(activity.pageSections)) {
+    pushIf(errors, activity.pageSections.length !== 3, `${label}.pageSections must have exactly 3 entries.`)
+    activity.pageSections.forEach((section, sectionIndex) => {
+      const sectionLabel = `${label}.pageSections[${sectionIndex}]`
+      pushIf(errors, !isObject(section), `${sectionLabel} must be an object.`)
+      if (!isObject(section)) return
+      validateString(section.heading, `${sectionLabel}.heading`, errors)
+      validateExactStringArray(section.lines, 3, `${sectionLabel}.lines`, errors)
+      if (Array.isArray(section.lines)) {
+        section.lines.forEach((line, lineIndex) => {
+          pushIf(errors, isNonEmptyString(line) && !hasWritableBlank(line), `${sectionLabel}.lines[${lineIndex}] must include a writable blank.`)
+        })
+      }
+    })
+  }
+
+  for (const key of ['groupTwistLine', 'wrapUpLine', 'quietOptionLine']) {
+    pushIf(errors, isNonEmptyString(activity[key]) && !hasWritableBlank(activity[key]), `${label}.${key} must include a writable blank.`)
+  }
+  validateNoUnsafeCampLanguage(activity, label, errors)
+}
+
+function validateCircleFormat(format, index, names, errors) {
+  const label = `circleFormats[${index}]`
+  pushIf(errors, !isObject(format), `${label} must be an object.`)
+  if (!isObject(format)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(format[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(format.name)) {
+    pushIf(errors, names.has(format.name), `${label}.name is duplicated.`)
+    names.add(format.name)
+  }
+  validateExactStringArray(format.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeCampLanguage(format, label, errors)
+}
+
+function validateTrailCard(card, index, titles, errors) {
+  const label = `takeHomeTrailCards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(card.title)) {
+    pushIf(errors, titles.has(card.title), `${label}.title is duplicated.`)
+    titles.add(card.title)
+  }
+  pushIf(errors, isNonEmptyString(card.direction) && !hasWritableBlank(card.direction), `${label}.direction must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(card.direction) && hasSnakeCasePlaceholder(card.direction), `${label}.direction must use human-readable text, not snake_case placeholders.`)
+  pushIf(errors, isNonEmptyString(card.familyLine) && !hasWritableBlank(card.familyLine), `${label}.familyLine must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(card.familyLine) && hasSnakeCasePlaceholder(card.familyLine), `${label}.familyLine must use human-readable text, not snake_case placeholders.`)
+  validateNoUnsafeCampLanguage(card, label, errors)
+}
+
+export function validateSummerCampStoryCircleKitSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Summer Camp Story Circle Kit source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch17', 'batchId must be 2026-06-02-batch17.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(
+    errors,
+    source.productSlug !== summerCampStoryCircleKitProductSlug,
+    `productSlug must be ${summerCampStoryCircleKitProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Summer Camp Story Circle Kit', 'title must be Summer Camp Story Circle Kit.')
+  pushIf(errors, source.pricePoint !== '$59', 'pricePoint must be $59.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Summer Camp source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Summer Camp source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Summer Camp source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredSummerCampStoryCircleArtifactPaths, 'Summer Camp', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.counselorGuide), 'counselorGuide must be an object.')
+  if (isObject(source.counselorGuide)) {
+    validateExactStringArray(source.counselorGuide.beforeCamp, 5, 'counselorGuide.beforeCamp', errors)
+    validateExactStringArray(source.counselorGuide.setup, 5, 'counselorGuide.setup', errors)
+    validateExactStringArray(source.counselorGuide.runningCircle, 5, 'counselorGuide.runningCircle', errors)
+    validateExactStringArray(source.counselorGuide.quietOptions, 5, 'counselorGuide.quietOptions', errors)
+    validateExactStringArray(source.counselorGuide.noDataUse, 4, 'counselorGuide.noDataUse', errors)
+    validateNoUnsafeCampLanguage(source.counselorGuide, 'counselorGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.circleFormats), 'circleFormats must be an array.')
+  if (Array.isArray(source.circleFormats)) {
+    pushIf(errors, source.circleFormats.length !== 6, 'circleFormats must have exactly 6 entries.')
+    const names = new Set()
+    source.circleFormats.forEach((format, index) => validateCircleFormat(format, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeTrailCards), 'takeHomeTrailCards must be an array.')
+  if (Array.isArray(source.takeHomeTrailCards)) {
+    pushIf(errors, source.takeHomeTrailCards.length !== 10, 'takeHomeTrailCards must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeTrailCards.forEach((card, index) => validateTrailCard(card, index, titles, errors))
+  }
+
+  validateExactStringArray(source.optionalSharePrompts, 8, 'optionalSharePrompts', errors)
+
+  pushIf(errors, !Array.isArray(source.activities), 'activities must be an array.')
+  if (Array.isArray(source.activities)) {
+    pushIf(errors, source.activities.length !== 16, 'activities must have exactly 16 entries.')
+    const activityIds = new Set()
+    const coveredWorlds = new Set()
+    source.activities.forEach((activity, index) => {
+      validateCampActivity(activity, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, activityIds, errors)
+      if (isNonEmptyString(activity?.worldSlug)) coveredWorlds.add(activity.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 16, 'activities must cover at least 16 unique worlds.')
+  }
+
+  validateNoUnsafeCampLanguage(source, 'Summer Camp Story Circle Kit source', errors)
+  validateNoFamilySafetyLanguage(source, 'Summer Camp Story Circle Kit source', errors)
+  validateNoRiskyLanguage(source, 'Summer Camp Story Circle Kit source', errors)
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -1816,7 +2110,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredTutoringCenterSprintArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredSummerCampStoryCircleArtifactPaths.pdfPath
+      ? requiredSummerCampStoryCircleArtifactPaths
+      : artifact?.pdfPath === requiredTutoringCenterSprintArtifactPaths.pdfPath
       ? requiredTutoringCenterSprintArtifactPaths
       : artifact?.pdfPath === requiredSubstituteTeacherStationArtifactPaths.pdfPath
       ? requiredSubstituteTeacherStationArtifactPaths

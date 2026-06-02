@@ -1,0 +1,1107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summer Camp Story Circle Kit</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #17343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #b9d1c8;
+        --teal: #2c7a78;
+        --coral: #e96d3d;
+        --gold: #f2c14f;
+        --blue: #2b7f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 11.2px;
+        line-height: 1.16;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 12ch; font-size: 37px; }
+      h2 { margin-bottom: 0.05in; font-size: 22px; }
+      h3 { margin-bottom: 0.025in; font-size: 11.4px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.12in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.18in;
+        gap: 0.22in;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--teal);
+        font-size: 8.55px;
+      }
+      .routine-page {
+        border-top: 0.16in solid var(--blue);
+        font-size: 9px;
+      }
+      .slip-page {
+        border-top: 0.16in solid var(--coral);
+        font-size: 9px;
+      }
+      .camp-activity-page {
+        font-size: 10.1px;
+      }
+      .page-kicker, .kicker, .world-intro span, .slip-card span {
+        color: var(--teal);
+        font-size: 8.2px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 900;
+      }
+      .included-grid, .setup-grid, .world-grid, .routine-grid, .slip-grid, .share-grid {
+        display: grid;
+        gap: 0.05in;
+      }
+      .included-grid { grid-template-columns: 1fr; }
+      .setup-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .routine-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .share-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .world-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.045in;
+      }
+      .included-grid li, .setup-grid li, .share-grid li, .routine-card, .slip-card,
+      .world-intro, .worksheet-section, .kid-direction, .adult-note, .quest-meta, .wrap-line, .extension-line {
+        padding: 0.045in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .included-grid li, .setup-grid li, .share-grid li { list-style: none; }
+      .world-intro {
+        min-height: 0.52in;
+      }
+      .world-intro img, .world-intro p { display: none; }
+      .world-intro h3 { margin: 0; font-size: 8.1px; line-height: 1.02; }
+      .guide-page h2 { font-size: 19px; }
+      .guide-page h3 { font-size: 9.5px; }
+      .guide-page li { line-height: 1.1; }
+      .kid-direction {
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .adult-note {
+        border-color: #e5bc7c;
+        background: #fff4dc;
+      }
+      .quest-meta {
+        display: grid;
+        grid-template-columns: 1.35in 1fr;
+        gap: 0.04in;
+        color: var(--ink);
+        font-size: 8.8px;
+        font-weight: 900;
+      }
+      figure {
+        float: right;
+        width: 1.35in;
+        margin: 0 0 0.04in 0.08in;
+      }
+      figure img {
+        width: 1.35in;
+        height: 0.76in;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--muted);
+        font-size: 7.8px;
+      }
+      .write-line {
+        min-height: 0.17in;
+        margin-bottom: 0.025in;
+        padding-bottom: 0.024in;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .wrap-line, .extension-line {
+        margin-top: 0.04in;
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .footer-note {
+        margin-top: 0.05in;
+        padding-top: 0.05in;
+        border-top: 2px solid var(--gold);
+        color: var(--muted);
+        font-size: 8.8px;
+      }
+      @media screen {
+        body { padding: 24px; background: #dfeee7; }
+        .pack-page {
+          width: 8.5in;
+          margin: 0 auto 24px;
+          box-shadow: 0 18px 40px rgba(20, 31, 43, 0.18);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable summer camp writing circle kit</p>
+        <h1>Summer Camp Story Circle Kit</h1>
+        <p>Sixteen adult-led story circles for camp tables, recreation programs, summer co-ops, and counselor-led quiet blocks.</p>
+        <div class="badge">$59</div>
+        <p><strong>Best for:</strong> Day camps, summer camps, recreation programs, camp counselors, and homeschool summer co-ops for ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable adult-led camp story circles plus counselor setup tools</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div>
+        <h2>Inside</h2>
+        <ul class="included-grid"><li>16 printable story circle activity pages</li>
+<li>Before-camp prep guide</li>
+<li>Counselor setup checklist</li>
+<li>Running-circle coaching notes</li>
+<li>Quiet option notes</li>
+<li>No-data use notes</li>
+<li>Six circle formats</li>
+<li>Ten take-home trail cards</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF, source HTML, manifest, and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Counselor setup</p>
+      <h2>Run the story circles</h2>
+      <div class="setup-grid">
+        <div>
+          <h3>Before camp</h3>
+          <ol><li>Print one counselor copy, one circle-format page for the block, and one take-home trail card stack before the group arrives.</li>
+<li>Choose two invented camp settings such as pinecone pier, lantern lodge, or meadow mailbox for quick adult examples.</li>
+<li>Place blank paper, pencils, color dots, and symbol cards in a supply bin for simple printable sorting.</li>
+<li>Pick one quiet backup format for writers who need a smaller table or a silent start.</li>
+<li>Prepare a thirty-second adult model using an invented helper, an ordinary object, and a small friendly mix-up.</li></ol>
+        </div>
+        <div>
+          <h3>Setup</h3>
+          <ol><li>Seat writers where they can see the adult leader and reach one page without passing a stack around the circle.</li>
+<li>Set out only the active circle page, pencils, and a few symbol cards so the table stays calm.</li>
+<li>Use color dots, sun symbols, leaf symbols, or blank folders if pages need to be grouped after the activity.</li>
+<li>Read the first direction aloud, then show one invented example before asking for ideas.</li>
+<li>Keep extra pages in a counselor folder and hand them out only when the group is ready for the next step.</li></ol>
+        </div>
+        <div>
+          <h3>Running circles</h3>
+          <ol><li>Start with a short invented setting choice and repeat the choice so every writer hears the same story seed.</li>
+<li>Invite responses by pointing, drawing, dictating one phrase to the adult leader, or writing a short line.</li>
+<li>Move around the circle with one small job at a time: setting, helper, object, clue, then ending.</li>
+<li>Redirect personal facts by offering two invented options and saying the story can use make-believe details today.</li>
+<li>End by asking writers to mark one sentence, sketch, or title they want to keep.</li></ol>
+        </div>
+        <div>
+          <h3>Quiet options</h3>
+          <ol><li>Offer a silent sketch-and-label page for writers who want to join without speaking.</li>
+<li>Let a writer point to a symbol card while the adult leader reads the matching invented option.</li>
+<li>Use a two-person table circle when the full group is too loud for careful writing.</li>
+<li>Give early finishers a trail card and ask them to add one invented clue or ending detail.</li>
+<li>Allow passing during share time while still letting the writer keep, fold, or file the page.</li></ol>
+        </div>
+        <div>
+          <h3>No-data use</h3>
+          <ol><li>Use invented places, invented helpers, and ordinary objects; personal facts are not needed.</li>
+<li>Keep all pages printable and handled by the adult leader, family, or participant.</li>
+<li>Use color dots, symbols, or blank folders for simple sorting instead of private labels.</li>
+<li>Sharing stays optional and can be done by pointing to a word, sketch, title, or chosen sentence.</li></ol>
+        </div>
+      </div>
+      <h3>Image-backed world menu</h3>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <div>
+        <span>Ages 7-8</span>
+        <h3>Teacup Town Weather Window</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Rain Gauge Railway</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Spoon Ferry Lunchbox Harbor</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Rain Boot Route Rangers</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Pocket Park Notice Board</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Acorn Avenue Errand Office</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Button Bakery Map Mix-Up</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Seed Library Map Room</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Greenhouse Gear Garden</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Index Card Theater Club</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Penny Path Compass Shop</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Margin Note Market</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Clue Label Tower Museum</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Revision River Ferry</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Compass Craft Academy</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Almost Invention Workshop</h3>
+      </div>
+    </article></div>
+      <p class="footer-note">Use these pages offline for adult-guided summer camp. Keep finished pages in folders or send them home.</p>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Counselor tools</p>
+      <h2>Circle formats and optional share prompts</h2>
+      <div class="routine-grid">
+    <article class="routine-card">
+      <h3>Pinecone Pass-Around</h3>
+      <p><strong>Best for:</strong> A first camp circle when the group needs one shared idea and quick turns.</p>
+      <ol><li>Adult leader starts with an invented place such as Pinecone Pier and says one peaceful detail.</li>
+<li>Each writer adds one ordinary object, sound, color, or tiny clue to the shared story seed.</li>
+<li>Adult leader repeats the gathered ideas and asks writers to choose two for their own page.</li>
+<li>Writers draft a short opening where a friendly helper notices the chosen details.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Cabin Card Chain</h3>
+      <p><strong>Best for:</strong> Small groups that enjoy building a story in ordered steps.</p>
+      <ol><li>Adult leader places four cards in the center: place, helper, object, and ending.</li>
+<li>The circle fills each card with an invented detail using quick spoken, pointed, or written choices.</li>
+<li>Writers number the cards first, next, then, and last on their own page.</li>
+<li>Each writer turns the card chain into four short story lines.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Quiet Trail Map</h3>
+      <p><strong>Best for:</strong> A shaded-table option for mixed-energy groups or hot afternoons.</p>
+      <ol><li>Adult leader gives each writer a simple path shape with three blank trail stops.</li>
+<li>Writers label the stops with an invented camp place, an object clue, and a kind fix.</li>
+<li>Adult leader offers two example verbs for anyone who needs a starting word.</li>
+<li>Writers add one sentence under each stop to make a tiny trail story.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Lantern Lodge Listening Circle</h3>
+      <p><strong>Best for:</strong> Groups practicing listening before they write.</p>
+      <ol><li>Adult leader reads a two-sentence invented scene about Lantern Lodge and a misplaced bell.</li>
+<li>Writers listen for one setting detail, one object, and one possible helper.</li>
+<li>The circle shares optional details while the adult leader writes neutral choices on a visible page.</li>
+<li>Writers choose one detail and write what the helper does next.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Meadow Mail Reply</h3>
+      <p><strong>Best for:</strong> A letter-style circle for recreation rooms, picnic tables, or co-op groups.</p>
+      <ol><li>Adult leader announces that a note arrived from an invented place called Meadow Mail Tent.</li>
+<li>The group chooses what small friendly problem the note describes.</li>
+<li>Writers draft a three-line reply with one greeting, one useful idea, and one closing action.</li>
+<li>Adult leader invites writers to underline the clearest action line before cleanup.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Four-Beat Lantern Tale</h3>
+      <p><strong>Best for:</strong> A camp-themed story circle that avoids unsafe activity instructions while keeping the evening feel.</p>
+      <ol><li>Adult leader draws four boxes labeled glow, clue, helper, and home base.</li>
+<li>Writers fill each box with invented details such as a jar lantern, ribbon map, or pebble path.</li>
+<li>The circle quietly points to favorite box ideas and the adult leader names two possible orders.</li>
+<li>Writers write one sentence per box and finish with a calm return to the home base.</li></ol>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul class="share-grid"><li>Sharing is optional: point to one word, sketch, or title you want the group to notice.</li>
+<li>Read one sentence that shows an invented setting detail, or ask the adult leader to read it.</li>
+<li>Show one object clue and say how it helps the story if you want to.</li>
+<li>Share one kind fix your helper tried in the invented story.</li>
+<li>Point to the strongest action word on your page.</li>
+<li>Tell the circle which trail step came first, next, then, or last.</li>
+<li>Show a title choice and explain which story clue it gives.</li>
+<li>Pass today and listen for one clear detail from another writer&#39;s invented story.</li></ul>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Counselor tools</p>
+      <h2>Take-home trail cards</h2>
+      <div class="slip-grid">
+    <article class="slip-card">
+      <span>6 minutes | setting detail</span>
+      <h3>Pinecone Place Detail</h3>
+      <p>Add one invented place detail from today&#39;s circle: ________________________.</p>
+      <p>A grown-up can ask what the place sounds like: ________________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | plot clue</span>
+      <h3>Trail Object Clue</h3>
+      <p>Choose one ordinary object and write how it helps the helper: ________________________.</p>
+      <p>A grown-up can offer two object choices here: ________________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>8 minutes | ending choice</span>
+      <h3>Kind Fix Finish</h3>
+      <p>Write one kind fix for the invented mix-up: ________________________.</p>
+      <p>A grown-up can ask what changed after the fix: ________________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>8 minutes | sequence</span>
+      <h3>Four-Step Trail</h3>
+      <p>Write first, next, then, and last for a tiny trail story: ________________________.</p>
+      <p>A grown-up can point to the step that should become longer: ________________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>5 minutes | strong sentence</span>
+      <h3>Lantern Lodge Line</h3>
+      <p>Write one clear sentence about an invented lodge or tent: ________________________.</p>
+      <p>A grown-up can ask which word makes the sentence clearer: ________________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>6 minutes | character support</span>
+      <h3>Helper Pocket</h3>
+      <p>List three safe invented items a story helper carries: ________________________.</p>
+      <p>A grown-up can ask which item is useful first: ________________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>9 minutes | letter format</span>
+      <h3>Meadow Mail Reply</h3>
+      <p>Write a short reply to an invented meadow message: ________________________.</p>
+      <p>A grown-up can help choose the first friendly action: ________________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>6 minutes | sensory detail</span>
+      <h3>Sound-and-Color Add-On</h3>
+      <p>Add one sound and one color to a make-believe camp path: ________________________.</p>
+      <p>A grown-up can ask which detail belongs near the beginning: ________________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>5 minutes | main idea</span>
+      <h3>Title Trail</h3>
+      <p>Write one title with a place, one with an object, and one with an action: ________________________.</p>
+      <p>A grown-up can ask which title gives the best story clue: ________________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | planning</span>
+      <h3>Next Circle Seed</h3>
+      <p>Invent one place, one helper, and one small mix-up for another circle: ________________________.</p>
+      <p>A grown-up can add one ordinary object to the seed: ________________________.</p>
+    </article></div>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 1 | Ages 7-8</div>
+      <h2>Teacup Town Weather Window</h2>
+      <figure><img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration"><figcaption>Teacup Town Weather Window</figcaption></figure>
+      <p class="kid-direction">Look through the tiny weather window, choose what changes outside, and finish the three story parts.</p>
+      <p class="adult-note">Ask which weather clue is easiest to picture, then invite one simple because sentence.</p>
+      <div class="quest-meta">
+        <span>weather detail</span>
+        <span>15-minute morning story circle for young writers who can choose one weather clue and one helpful action.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print one page per kid, set out pencils, and pick a pretend weather card before circle begins.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Weather Window</h3>
+          <p class="write-line">Outside the teacup window, the weather looks like ____________________________.</p>
+<p class="write-line">The tiny curtain moves because ____________________________.</p>
+<p class="write-line">The window bell rings when ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Town Helper</h3>
+          <p class="write-line">The teacup town helper carries ____________________________.</p>
+<p class="write-line">The helper checks the sky near ____________________________.</p>
+<p class="write-line">The kind plan is to ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Circle Sentence</h3>
+          <p class="write-line">First, the weather changes over ____________________________.</p>
+<p class="write-line">Next, the helper notices ____________________________.</p>
+<p class="write-line">My teacup town sentence is ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">Pass the pretend weather card and let each writer add one sky detail: ____________________________.</p>
+      <p class="wrap-line">The weather detail I used best was ____________________________.</p>
+      <p class="extension-line">Quiet option: circle one line to finish later: ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 2 | Ages 8-10</div>
+      <h2>Rain Gauge Railway</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Choose a rain-gauge ticket, send the tiny train to three stops, and finish the route sentence.</p>
+      <p class="adult-note">Point to each stop and ask what happens first, next, and last before writing.</p>
+      <div class="quest-meta">
+        <span>sequence words</span>
+        <span>15-minute transition activity for a lower group that needs first, next, and last story steps.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print one page per kid, draw three pretend train stops on scrap paper, and model one short route aloud.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Gauge Ticket</h3>
+          <p class="write-line">The rain-gauge ticket shows ____________________________.</p>
+<p class="write-line">The tiny train starts beside ____________________________.</p>
+<p class="write-line">The first raindrop passenger brings ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Railway Stops</h3>
+          <p class="write-line">First, the train clicks past ____________________________.</p>
+<p class="write-line">Next, the gauge marker rises to ____________________________.</p>
+<p class="write-line">Last, the train waits near ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Route Message</h3>
+          <p class="write-line">The conductor says the route is calm because ____________________________.</p>
+<p class="write-line">The best stop for a story clue is ____________________________.</p>
+<p class="write-line">My railway route sentence is ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">Group twist: build a three-stop route aloud and write the stop you like most: ____________________________.</p>
+      <p class="wrap-line">The order word that helped my story was ____________________________.</p>
+      <p class="extension-line">Quiet option: draw one tiny rail mark, then fill this clue: ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 3 | Ages 7-9</div>
+      <h2>Spoon Ferry Lunchbox Harbor</h2>
+      <figure><img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration"><figcaption>Spoon Ferry Lunchbox Harbor</figcaption></figure>
+      <p class="kid-direction">Send the spoon ferry across the lunchbox harbor, choose what it carries, and finish the harbor note.</p>
+      <p class="adult-note">Ask which harbor object belongs near the ferry, then ask what the ferry carries next.</p>
+      <div class="quest-meta">
+        <span>setting and object choice</span>
+        <span>15-minute picnic-table story circle for kids who can pick a harbor object and describe where it goes.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print one page per kid, place a pretend spoon ferry marker in the middle, and invite one quiet look before writing.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Lunchbox Harbor</h3>
+          <p class="write-line">The spoon ferry docks beside ____________________________.</p>
+<p class="write-line">The lunchbox lighthouse shines on ____________________________.</p>
+<p class="write-line">The harbor flag is made from ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ferry Load</h3>
+          <p class="write-line">The ferry carries a pretend picnic of ____________________________.</p>
+<p class="write-line">The smallest passenger asks for ____________________________.</p>
+<p class="write-line">The careful ferry path goes around ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Harbor Note</h3>
+          <p class="write-line">First, the ferry helper chooses ____________________________.</p>
+<p class="write-line">Next, the harbor crew listens for ____________________________.</p>
+<p class="write-line">My lunchbox harbor sentence is ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">Group twist: each writer adds one pretend harbor sound before choosing a line: ____________________________.</p>
+      <p class="wrap-line">The harbor object I described clearly was ____________________________.</p>
+      <p class="extension-line">Quiet option: finish only the ferry load line first: ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 4 | Ages 7-9</div>
+      <h2>Rain Boot Route Rangers</h2>
+      <figure><img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration"><figcaption>Rain Boot Route Rangers</figcaption></figure>
+      <p class="kid-direction">Choose two rain-boot clues, map the route, and write where the route rangers go first.</p>
+      <p class="adult-note">Ask the group to point in the air for beside, under, past, or around, then choose one word for writing.</p>
+      <div class="quest-meta">
+        <span>map clues</span>
+        <span>20-minute story circle for a lower group ready to combine direction words with a small helpful route.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print one page per kid, sketch a three-step pretend trail, and offer beside, under, past, or around as choices.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Boot Map</h3>
+          <p class="write-line">The left rain boot points toward ____________________________.</p>
+<p class="write-line">The right rain boot holds a map of ____________________________.</p>
+<p class="write-line">The route ranger badge shows ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Path Clues</h3>
+          <p class="write-line">The first puddle clue is beside ____________________________.</p>
+<p class="write-line">The second route mark hides under ____________________________.</p>
+<p class="write-line">The last dry stepping spot is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ranger Note</h3>
+          <p class="write-line">The route starts when ____________________________.</p>
+<p class="write-line">The friendly path goes past ____________________________.</p>
+<p class="write-line">My ranger route sentence is ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">Group twist: choose one direction word and use it in this route clue: ____________________________.</p>
+      <p class="wrap-line">The map clue that made my route clearer was ____________________________.</p>
+      <p class="extension-line">Quiet option: trace the route with a finger, then finish this line: ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 5 | Ages 7-9</div>
+      <h2>Pocket Park Notice Board</h2>
+      <figure><img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration"><figcaption>Pocket Park Notice Board</figcaption></figure>
+      <p class="kid-direction">Invent a pocket park notice, choose the clearest reason, and write what the park helper does next.</p>
+      <p class="adult-note">Ask kids to keep notices invented and place-based, then help them finish one because line.</p>
+      <div class="quest-meta">
+        <span>message and reason</span>
+        <span>20-minute closing circle for writers who can make a pretend notice and explain why it helps the pocket park.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print one page per kid, show three blank pretend notice strips, and remind the circle to use invented park details.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Notice Board</h3>
+          <p class="write-line">The first pocket park notice asks for ____________________________.</p>
+<p class="write-line">The second notice points toward ____________________________.</p>
+<p class="write-line">The board frame is decorated with ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Park Helper</h3>
+          <p class="write-line">The pebble path leads to ____________________________.</p>
+<p class="write-line">The pocket park helper brings ____________________________.</p>
+<p class="write-line">The helpful reason is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Final Notice</h3>
+          <p class="write-line">First, the helper reads ____________________________.</p>
+<p class="write-line">Next, the helper adds ____________________________.</p>
+<p class="write-line">My clear park notice says ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">Group twist: share one pretend park object and add it to this notice: ____________________________.</p>
+      <p class="wrap-line">The reason that makes my notice useful is ____________________________.</p>
+      <p class="extension-line">Quiet option: choose one notice to copy neatly here: ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 6 | Ages 7-9</div>
+      <h2>Acorn Errand Relay Circle</h2>
+      <figure><img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration"><figcaption>Acorn Avenue Errand Office</figcaption></figure>
+      <p class="kid-direction">Add one errand clue, pass the story to the next writer, and help the acorn office finish its route.</p>
+      <p class="adult-note">Ask each writer to give the next person one useful detail instead of solving the whole route.</p>
+      <div class="quest-meta">
+        <span>Sequencing a shared quest with clear handoff details</span>
+        <span>18-minute opening circle for a cabin table, rec program group, or co-op writing block.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print one page per writer, choose a talking object, and mark three imaginary errand stops on the circle board.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Errand Start</h3>
+          <p class="write-line">The acorn office opens beside ____________________________.</p>
+<p class="write-line">The first tiny errand asks for ____________________________.</p>
+<p class="write-line">The route helper carries ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Circle Handoff</h3>
+          <p class="write-line">I pass the next clue by adding ____________________________.</p>
+<p class="write-line">The next helper should check near ____________________________.</p>
+<p class="write-line">One detail everyone should remember is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Route Finish</h3>
+          <p class="write-line">The final stop appears when ____________________________.</p>
+<p class="write-line">The acorn clerk thanks the group for ____________________________.</p>
+<p class="write-line">Our story circle ends with ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">When the talking object reaches the counselor, add a surprise errand from ____________________________.</p>
+      <p class="wrap-line">The handoff detail that helped the circle most was ____________________________.</p>
+      <p class="extension-line">Instead of passing aloud, write the next route clue on ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 7 | Ages 7-9</div>
+      <h2>Button Bakery Map Mixup Circle</h2>
+      <figure><img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration"><figcaption>Button Bakery Map Mix-Up</figcaption></figure>
+      <p class="kid-direction">Choose one bakery clue, add a direction word, and help the group fix the mixed-up map.</p>
+      <p class="adult-note">Invite writers to replace vague clues with objects the whole circle can picture.</p>
+      <div class="quest-meta">
+        <span>Using map language and specific nouns in a group story</span>
+        <span>20-minute after-lunch circle when the group needs a low-prep shared writing activity.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Sketch a simple bakery counter, crumb path, and button tray before handing out pages.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Bakery Map</h3>
+          <p class="write-line">The crumb path begins under ____________________________.</p>
+<p class="write-line">The map points past a tray of ____________________________.</p>
+<p class="write-line">The button baker notices ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Direction Clues</h3>
+          <p class="write-line">Turn left when the group sees ____________________________.</p>
+<p class="write-line">Step around the counter near ____________________________.</p>
+<p class="write-line">Stop at the shelf marked ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Fix</h3>
+          <p class="write-line">The mixed-up map changes because ____________________________.</p>
+<p class="write-line">The best clue from the circle is ____________________________.</p>
+<p class="write-line">The bakery route finally leads to ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">Halfway through, trade maps with a neighbor and add one clear landmark: ____________________________.</p>
+      <p class="wrap-line">The strongest map word I used today was ____________________________.</p>
+      <p class="extension-line">Work silently by drawing arrows first, then write the route clue ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 8 | Ages 8-10</div>
+      <h2>Seed Library Packet Circle</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="kid-direction">Invent one seed packet, explain why it matters, and pass the next map-room action to the circle.</p>
+      <p class="adult-note">Ask writers to connect each new seed clue to a next step the map keeper can take.</p>
+      <div class="quest-meta">
+        <span>Combining setting clues, cause, and next action</span>
+        <span>22-minute shaded-table activity for older elementary writers who can build on each other&#39;s ideas.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Set out pencils and invite the group to imagine a seed library with drawers, ladders, and map pins.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Packet Clue</h3>
+          <p class="write-line">The seed packet is labeled ____________________________.</p>
+<p class="write-line">Inside the packet, the group finds ____________________________.</p>
+<p class="write-line">The map-room shelf clue shows ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Why It Matters</h3>
+          <p class="write-line">This seed matters because ____________________________.</p>
+<p class="write-line">The map keeper studies ____________________________.</p>
+<p class="write-line">The next drawer opens only after ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Circle Action</h3>
+          <p class="write-line">The group decides to carry ____________________________.</p>
+<p class="write-line">The map changes when someone adds ____________________________.</p>
+<p class="write-line">The seed library story moves toward ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">Let one writer become the map keeper and choose the next drawer: ____________________________.</p>
+      <p class="wrap-line">One cause-and-next-step link from my page is ____________________________.</p>
+      <p class="extension-line">For a quiet round, point to a map spot and write the seed clue ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 9 | Ages 8-10</div>
+      <h2>Greenhouse Gear Garden Build</h2>
+      <figure><img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration"><figcaption>Greenhouse Gear Garden</figcaption></figure>
+      <p class="kid-direction">Choose a garden gadget, describe what it does, and add one cooperative repair step.</p>
+      <p class="adult-note">Ask how the gadget helps the group and what gentle problem it creates next.</p>
+      <div class="quest-meta">
+        <span>Adding problem-solving steps without turning the story into a contest</span>
+        <span>20-minute maker-style story circle for camp tables, art rooms, or garden-theme afternoons.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Draw three harmless garden gadgets on a board and remind writers that silly fixes are welcome.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Garden Gadget</h3>
+          <p class="write-line">The greenhouse gear is shaped like ____________________________.</p>
+<p class="write-line">It helps the garden by ____________________________.</p>
+<p class="write-line">The first sound it makes is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Gentle Problem</h3>
+          <p class="write-line">The gadget gets confused near ____________________________.</p>
+<p class="write-line">The group notices the small problem when ____________________________.</p>
+<p class="write-line">A helpful tool on the table is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Repair Step</h3>
+          <p class="write-line">First, the circle suggests ____________________________.</p>
+<p class="write-line">Next, the gear garden helper tries ____________________________.</p>
+<p class="write-line">The greenhouse works again after ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">Add a second gadget that only works when two writers agree on ____________________________.</p>
+      <p class="wrap-line">The cooperative repair step I liked best was ____________________________.</p>
+      <p class="extension-line">Sketch the gadget quietly, then label the repair idea ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 10 | Ages 10-11</div>
+      <h2>Index Card Theater Scene Circle</h2>
+      <figure><img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration"><figcaption>Index Card Theater Club</figcaption></figure>
+      <p class="kid-direction">Pick a role card, write one line of dialogue, and pass the scene so the next writer can move it forward.</p>
+      <p class="adult-note">Ask writers to make each line change what the characters do next.</p>
+      <div class="quest-meta">
+        <span>Building a tiny scene with dialogue, stage action, and turn-taking</span>
+        <span>25-minute indoor camp option for hot afternoons, rain delays, or theater-themed rotations.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Give each writer a pretend index card role and set a rule that every scene stays kind and playful.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Role Card</h3>
+          <p class="write-line">My theater card gives me the role of ____________________________.</p>
+<p class="write-line">The scene begins beside ____________________________.</p>
+<p class="write-line">The prop on the floor is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Dialogue Turn</h3>
+          <p class="write-line">My character asks ____________________________.</p>
+<p class="write-line">Another character answers with ____________________________.</p>
+<p class="write-line">The line changes the scene by ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Stage Action</h3>
+          <p class="write-line">At the start, the character moves toward ____________________________.</p>
+<p class="write-line">In the middle, the group reacts to ____________________________.</p>
+<p class="write-line">The scene closes when ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">After two turns, the counselor adds a new prop card: ____________________________.</p>
+      <p class="wrap-line">The dialogue line that moved the scene forward was ____________________________.</p>
+      <p class="extension-line">Act nothing out; write the stage action quietly as ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 11 | Ages 7-9</div>
+      <h2>Penny Path Compass Circle</h2>
+      <figure><img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration"><figcaption>Penny Path Compass Shop</figcaption></figure>
+      <p class="kid-direction">Spin the compass, choose a path clue, and add one detail that helps the group follow the route.</p>
+      <p class="adult-note">Ask each writer to include one direction word and one detail a reader could hear, see, or feel.</p>
+      <div class="quest-meta">
+        <span>Choosing direction words and sensory details for a shared route</span>
+        <span>18-minute trailhead or picnic-table writing circle before a walk, game, or craft.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Place a pretend compass in the center and assign north, south, east, and west spots around the circle.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Compass Spin</h3>
+          <p class="write-line">The penny compass points toward ____________________________.</p>
+<p class="write-line">The first path marker looks like ____________________________.</p>
+<p class="write-line">The shopkeeper offers the group ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Route Detail</h3>
+          <p class="write-line">The group walks around ____________________________.</p>
+<p class="write-line">A sound along the path is ____________________________.</p>
+<p class="write-line">The next clue shines near ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Shared Directions</h3>
+          <p class="write-line">First, follow the compass past ____________________________.</p>
+<p class="write-line">Next, turn when you notice ____________________________.</p>
+<p class="write-line">The route ends beside ____________________________.</p>
+        </section></div>
+      <p class="wrap-line">Let the next writer reverse one direction and explain the new clue: ____________________________.</p>
+      <p class="wrap-line">The direction detail that made my route clearer was ____________________________.</p>
+      <p class="extension-line">Trace the compass path silently, then write one route sentence: ____________________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 12 | Ages 10-11</div>
+      <h2>Margin Note Market Kind Revision Circle</h2>
+      <figure><img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration"><figcaption>Margin Note Market</figcaption></figure>
+      <p class="kid-direction">Pick one market note, turn it into a clear revision task, and write a new story line that helps the next writer.</p>
+      <p class="adult-note">Ask which exact word, detail, or order change would make the note useful without making it personal.</p>
+      <div class="quest-meta">
+        <span>Turn vague feedback into a kind, specific revision move.</span>
+        <span>20-minute shaded-table story circle for older kids after a camp activity block.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print one page per writer, set out pencils, and choose three invented sample notes for the group to trade.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Market Note Stand</h3>
+          <p class="write-line">The first note on the paper awning says ____________________.</p>
+<p class="write-line">The note feels too vague because ____________________.</p>
+<p class="write-line">A kinder version of the note could start with ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Revision Trade</h3>
+          <p class="write-line">The detail I want the writer to add is ____________________.</p>
+<p class="write-line">The word I would trade for a stronger one is ____________________.</p>
+<p class="write-line">The sentence would be easier to follow if ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Circle Share</h3>
+          <p class="write-line">My revised story line begins with ____________________.</p>
+<p class="write-line">The group can notice the clearer detail ____________________.</p>
+<p class="write-line">The next writer could build on ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Pass the page once and let the next writer add one helpful market sticker note: ____________________.</p>
+      <p class="wrap-line">The revision move I can explain clearly is ____________________.</p>
+      <p class="extension-line">Work silently by circling one note and writing only the revised line here: ____________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 13 | Ages 10-11</div>
+      <h2>Clue Label Tower Museum Exhibit Circle</h2>
+      <figure><img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration"><figcaption>Clue Label Tower Museum</figcaption></figure>
+      <p class="kid-direction">Create a tower exhibit, choose the clue that matters most, and write a label that points readers in the right order.</p>
+      <p class="adult-note">Ask which clue belongs first, which detail can wait, and what the label should help readers notice.</p>
+      <div class="quest-meta">
+        <span>Choose focused details and write a concise exhibit label.</span>
+        <span>25-minute cabin-table or picnic-table story circle with small groups.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print the page, place three harmless object cards in the middle, and invite each writer to invent one exhibit.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Tower Exhibit</h3>
+          <p class="write-line">The object on the top shelf is ____________________.</p>
+<p class="write-line">The clue hanging beside it shows ____________________.</p>
+<p class="write-line">The detail that does not fit the label is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Label Order</h3>
+          <p class="write-line">Readers should notice first that ____________________.</p>
+<p class="write-line">The middle label sentence should explain ____________________.</p>
+<p class="write-line">The final label sentence should point toward ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Museum Circle</h3>
+          <p class="write-line">My exhibit label begins with ____________________.</p>
+<p class="write-line">The strongest clue word in my label is ____________________.</p>
+<p class="write-line">A new exhibit nearby could display ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Each writer adds one tiny invented exhibit clue to the next page: ____________________.</p>
+      <p class="wrap-line">The clue that kept my label focused was ____________________.</p>
+      <p class="extension-line">Skip the group pass and write a one-sentence exhibit label here: ____________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 14 | Ages 10-11</div>
+      <h2>Revision River Ferry Ending Circle</h2>
+      <figure><img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration"><figcaption>Revision River Ferry</figcaption></figure>
+      <p class="kid-direction">Send a rough ending across the ferry, add one echo from the beginning, and bring back a clearer final line.</p>
+      <p class="adult-note">Ask what the reader should remember when the ferry reaches the final dock.</p>
+      <div class="quest-meta">
+        <span>Revise an ending so it echoes an earlier detail.</span>
+        <span>20-minute end-of-day story circle when the group needs a calm writing finish.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print pages, draw three ferry docks on a board or scrap paper, and model one invented opening detail.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>First Dock</h3>
+          <p class="write-line">The opening detail on the riverbank is ____________________.</p>
+<p class="write-line">The middle moment changes when ____________________.</p>
+<p class="write-line">The rough ending says ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ferry Revision</h3>
+          <p class="write-line">One word I can remove from the ending is ____________________.</p>
+<p class="write-line">One detail I can echo from the start is ____________________.</p>
+<p class="write-line">The ending becomes clearer because ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Final Dock</h3>
+          <p class="write-line">My revised final sentence begins with ____________________.</p>
+<p class="write-line">The echo readers should notice is ____________________.</p>
+<p class="write-line">The ferry leaves behind a clue about ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The circle chooses one harmless ferry sound to weave into every ending: ____________________.</p>
+      <p class="wrap-line">The opening detail I brought back at the end was ____________________.</p>
+      <p class="extension-line">Write the revised ending privately and underline the echoed detail here: ____________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 15 | Ages 10-11</div>
+      <h2>Compass Craft Academy Route Circle</h2>
+      <figure><img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration"><figcaption>Compass Craft Academy</figcaption></figure>
+      <p class="kid-direction">Map a paragraph route for a compass craft, then write the sentence that guides readers through the turn.</p>
+      <p class="adult-note">Ask which sentence acts like the compass needle and keeps the paragraph pointed forward.</p>
+      <div class="quest-meta">
+        <span>Plan a paragraph route with a clear beginning, turn, and finish.</span>
+        <span>25-minute small-group circle after a map, hike, or craft rotation.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print pages, draw a simple three-stop route, and ask each writer to pick a made-up compass craft.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Academy Route</h3>
+          <p class="write-line">The compass craft begins beside ____________________.</p>
+<p class="write-line">The route turns when the needle points to ____________________.</p>
+<p class="write-line">The finish should show readers ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Paragraph Compass</h3>
+          <p class="write-line">The first sentence should set up ____________________.</p>
+<p class="write-line">The turning sentence should explain ____________________.</p>
+<p class="write-line">The final sentence should connect back to ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Circle Route</h3>
+          <p class="write-line">My clearest route word is ____________________.</p>
+<p class="write-line">The group could add one map symbol for ____________________.</p>
+<p class="write-line">My compass paragraph line is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Let the group choose one invented compass symbol for every route: ____________________.</p>
+      <p class="wrap-line">The sentence that turned my paragraph was ____________________.</p>
+      <p class="extension-line">Trace the three route dots silently and write the turning sentence here: ____________________.</p>
+    </section>
+
+    <section class="pack-page camp-activity-page">
+      <div class="page-kicker">Circle 16 | Ages 10-11</div>
+      <h2>Almost Invention Workshop Test Circle</h2>
+      <figure><img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration"><figcaption>Almost Invention Workshop</figcaption></figure>
+      <p class="kid-direction">Describe an almost-invention, put the steps in order, and write a test note that explains what to adjust next.</p>
+      <p class="adult-note">Ask where a reader might get confused and which step should be moved or clarified.</p>
+      <div class="quest-meta">
+        <span>Order instructions and end with a useful test note.</span>
+        <span>20-minute maker-table story circle for older kids between outdoor rotations.</span>
+      </div>
+      <p><strong>Counselor setup:</strong> Print pages, set out pencils, and invite the group to invent safe, silly workshop tools with no real building required.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Workshop Parts</h3>
+          <p class="write-line">The almost-invention is supposed to help with ____________________.</p>
+<p class="write-line">The first harmless part on the bench is ____________________.</p>
+<p class="write-line">The part that keeps wobbling is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Step Order</h3>
+          <p class="write-line">The first instruction should tell readers to ____________________.</p>
+<p class="write-line">The step that needs a clearer place is ____________________.</p>
+<p class="write-line">The test should happen after ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Test Note</h3>
+          <p class="write-line">The invention almost works when ____________________.</p>
+<p class="write-line">The adjustment I would try next is ____________________.</p>
+<p class="write-line">My workshop test note says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The circle adds one silly safety label to every invented tool: ____________________.</p>
+      <p class="wrap-line">The instruction I made clearest was ____________________.</p>
+      <p class="extension-line">Choose one step to revise silently and write the new test note here: ____________________.</p>
+    </section>
+  </body>
+</html>

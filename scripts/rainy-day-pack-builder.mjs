@@ -406,6 +406,7 @@ export function buildProductArtifactManifest(source, files, options = {}) {
       source.sessions?.length ??
       source.stations?.length ??
       source.sprints?.length ??
+      source.activities?.length ??
       0,
     fulfillmentNote:
       options.fulfillmentNote ??

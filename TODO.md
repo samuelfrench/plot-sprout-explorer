@@ -51,6 +51,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 
 ## In Progress
 
+- [ ] Batch 17: `$59` Summer Camp Story Circle Kit is locally built and verified with 16 printable adult-led camp story circle pages, counselor guide tools, take-home trail cards, static product page, local product image, PDF/source/ZIP artifact, review passes, and checkout-pending validation; commit/push/deploy closeout remains.
 - [ ] External checkout gate: wire hosted checkout only after Sam chooses the provider and supplies the real provider-hosted URL.
 
 ## Next Content Batches
@@ -70,6 +71,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] Batch 14: Build the `$23` Library Story Club Kit with 10 adult-led club sessions, facilitator tools, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 15: Build the `$39` Substitute Teacher Story Station Pack with 12 substitute story stations, substitute guide tools, early finisher cards, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 16: Build the `$49` Tutoring Center Story Sprint Pack with 20 tutoring story sprints, tutor guide tools, take-home micro-practice slips, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
+- [ ] Batch 17: Commit, push, and verify deploy for the locally built `$59` Summer Camp Story Circle Kit.
 - [ ] Batch 12: Add the chosen hosted checkout URL, provider-host allowlist, and CTA copy after Sam chooses the provider; do not add custom checkout/webhook endpoints.
 
 ## Product Gates
@@ -93,4 +95,5 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] $23 library story club kit with 10 adult-led club sessions and facilitator tools.
 - [x] $39 substitute teacher story station pack with 12 printable stations, substitute guide tools, and early finisher cards.
 - [x] $49 tutoring center story sprint pack with 20 printable 10-minute sprints, tutor guide tools, and take-home micro-practice slips.
+- [ ] $59 summer camp story circle kit with 16 printable adult-led camp story circles, counselor tools, take-home trail cards, and local verification complete; deploy verification pending.
 - [ ] Parent email capture for weekly printable quest drops.
