@@ -1,0 +1,1126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank-You Note Story Postcard Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #243135;
+        --muted: #59666a;
+        --paper: #fffdf8;
+        --line: #ccd8ce;
+        --leaf: #39735c;
+        --rose: #c94f66;
+        --gold: #e7b84a;
+        --blue: #327889;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 9px;
+        line-height: 1.11;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 11ch; font-size: 35px; }
+      h2 { margin-bottom: 0.05in; font-size: 19px; }
+      h3 { margin-bottom: 0.025in; font-size: 9.4px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.12in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(57, 115, 92, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(57, 115, 92, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.2in;
+        gap: 0.22in;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page { border-top: 0.16in solid var(--leaf); font-size: 7.45px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 7.35px; }
+      .situation-page { border-top: 0.16in solid var(--blue); }
+      .revision-page { border-top: 0.16in solid var(--rose); }
+      .postcard-page { font-size: 8.65px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--leaf);
+        font-size: 7.4px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      .cover-page ul, .guide-page ul, .situation-page ol, .revision-page ul {
+        margin: 0;
+        padding-left: 0.16in;
+      }
+      .cover-meta {
+        display: grid;
+        gap: 0.08in;
+        align-content: start;
+      }
+      .guide-grid, .situation-grid, .revision-grid, .world-grid {
+        display: grid;
+        gap: 0.055in;
+      }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.04in; }
+      .situation-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .revision-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.038in; }
+      .guide-card, .small-card, .world-card, .field-block {
+        padding: 0.048in;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid var(--line);
+      }
+      .world-card img {
+        width: 100%;
+        aspect-ratio: 2.15 / 1;
+        object-fit: cover;
+        margin-bottom: 0.025in;
+      }
+      .world-card h3 { font-size: 7.4px; }
+      .small-card p, .small-card li { margin-bottom: 0.025in; }
+      .postcard-page figure {
+        float: right;
+        width: 1.6in;
+        margin: 0 0 0.055in 0.11in;
+      }
+      .postcard-page figure img {
+        width: 100%;
+        aspect-ratio: 1.28 / 1;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--leaf);
+        font-size: 7px;
+        font-weight: 900;
+      }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.05in;
+        padding: 0.05in;
+        background: white;
+        border-left: 0.06in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--leaf); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.045in;
+      }
+      .field-block p {
+        min-height: 0.34in;
+        margin-bottom: 0;
+        padding-bottom: 0.02in;
+        border-bottom: 1px solid rgba(57, 115, 92, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.055in;
+        padding: 0.052in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--rose);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note {
+        margin-top: 0.07in;
+        font-size: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable thank-you note story pack</p>
+        <h1>Thank-You Note Story Postcard Pack</h1>
+        <p>Sixteen printable postcards that turn gratitude into a tiny story detail before kids copy or deliver the final note offline.</p>
+        <p><strong>Audience:</strong> Parents, homeschool families, tutors, relatives, co-op hosts, and library family tables helping kids write sincere thank-you notes.</p>
+        <p><strong>Format:</strong> 16 printable thank-you story postcards plus adult guide tools, note situations, revision prompts, and optional share prompts</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$21</span>
+        <h2>Included</h2>
+        <ul><li>16 printable thank-you story postcards</li>
+<li>Adult setup guide</li>
+<li>Coaching moves for reluctant writers</li>
+<li>Privacy and no-data notes</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six repeatable note situations</li>
+<li>Ten revision prompt strips</li>
+<li>Eight optional share prompts</li>
+<li>Local image-backed world menu</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Start the thank-you note</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Setup</h3><ul><li>Print the postcard pages, adult guide page, note situation cards, and revision prompt strips before the writing table opens.</li>
+<li>Place pencils, blank scrap paper, and ordinary object idea slips within adult reach so writers can choose one small detail at a time.</li>
+<li>Choose a simple recipient role for each note, such as helper, host, coach, tutor, neighbor, relative, or friend.</li>
+<li>Invite writers to begin with a tiny invented story detail before drafting the real thank-you sentence.</li>
+<li>Keep the session screen-free with printed cards, spoken choices, sketches, pointing, dictation, and short written lines.</li>
+<li>Prepare one quiet restart page so a writer can switch ideas without explaining why the first draft felt stuck.</li></ul></article>
+        <article class="guide-card"><h3>Coaching moves</h3><ul><li>Ask what kind action the recipient did, then help the writer add one invented object or tiny scene detail beside it.</li>
+<li>Model one sincere sentence that names the kindness plainly and does not mention value, ratings, or comparisons.</li>
+<li>Offer two concrete detail choices when a writer pauses, such as a blue mug or a paper star, and let the writer pick or invent another.</li>
+<li>Guide the note through three parts: thank you, tiny story detail, and one warm closing sentence.</li>
+<li>Keep corrections gentle by asking what the recipient should picture, hear, or understand more clearly.</li>
+<li>Let writers share only a title, object clue, or one sentence if they want adult feedback.</li></ul></article>
+        <article class="guide-card"><h3>Privacy notes</h3><ul><li>The pack is printable and offline; keep writing pages family-held.</li>
+<li>Use role labels, initials chosen at home, or blank recipient lines.</li>
+<li>Use role labels, initials chosen by the family, or blank recipient lines.</li>
+<li>Keep finished notes with the household, tutor, or classroom adult; the product does not retain copies.</li>
+<li>Stay with ordinary kindness, invented details, and simple objects instead of private adult or family details.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff notes</h3><ul><li>Send each writer home with the finished postcard draft and one optional revision strip.</li>
+<li>Tell adults the note can be completed by pointing, dictating, sketching, or writing one short line.</li>
+<li>Suggest reading the note aloud only if the writer chooses, with feedback focused on kindness and clarity.</li>
+<li>Remind families that sending, delivery, or saving the note is handled outside the printable pack.</li>
+<li>Offer one next step such as add a clearer object, add a sincere sentence, or copy the final version neatly.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Return unused situation cards and revision strips to the adult folder.</li>
+<li>Recycle scrap pages that contain only practice ideas, unless the writer wants to keep them.</li>
+<li>Restock blank postcard pages, sharpen pencils, and replace bent object slips.</li>
+<li>Write only a nonpersonal supply note if needed, such as more pencils, fewer strips, or extra quiet-start pages.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one postcard at a time. Keep every story object invented, printable, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen postcard worlds</h2>
+      <p>Pick a world image, then turn one thankful detail into a tiny invented story clue.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Greenhouse Gear Garden</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article></div>
+    </section>
+    <section class="pack-page situation-page">
+      <p class="page-kicker">Writing situations</p>
+      <h2>Choose the thank-you moment</h2>
+      <div class="situation-grid">
+    <article class="small-card">
+      <h3>Gift From a Helpful Giver</h3>
+      <p>Thanking someone for a thoughtful item without discussing price or asking for personal details.</p>
+      <ol><li>Name the kind action in simple words: thank you for ____________________.</li>
+<li>Invent a tiny story detail about where the object might travel next: ____________________.</li>
+<li>Add one ordinary object clue that makes the sentence easier to picture: ____________________.</li>
+<li>Finish with one sincere line about how the kindness helped: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Visit Host Thank-You</h3>
+      <p>Writing to someone who hosted a meal, play time, lesson, or calm visit.</p>
+      <ol><li>Start with the hosted moment using a role label, not private location details: ____________________.</li>
+<li>Invent one tiny scene detail from a pretend porch, table, or garden step: ____________________.</li>
+<li>Write one real thank-you sentence that names the kindness: ____________________.</li>
+<li>Add a warm closing that does not ask for another invitation: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Tutor or Teacher Help</h3>
+      <p>Thanking an adult who helped with practice, reading, math, writing, music, art, or a skill.</p>
+      <ol><li>Name the helpful action in school-safe words: ____________________.</li>
+<li>Invent a tiny story object that could hold the new skill, such as a pencil boat or paper lantern: ____________________.</li>
+<li>Add one sentence about what became clearer or easier: ____________________.</li>
+<li>Close with a kind line the writer would feel comfortable handing over: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Neighbor or Helper Kindness</h3>
+      <p>Thanking someone for ordinary help while keeping private household facts off the page.</p>
+      <ol><li>Write the thank-you reason without private schedules, contact details, or family records: ____________________.</li>
+<li>Choose one invented ordinary object that could carry the thank-you across a pretend sidewalk: ____________________.</li>
+<li>Add one sentence that shows the helper&#39;s kindness mattered: ____________________.</li>
+<li>Pick a simple closing word or phrase for the postcard: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Group or Club Leader Note</h3>
+      <p>Thanking a coach, club leader, librarian, co-op adult, or activity helper without ranking details.</p>
+      <ol><li>Name the group moment in general words: ____________________.</li>
+<li>Invent one tiny team object, table object, or library object for a story detail: ____________________.</li>
+<li>Write a thank-you sentence about patience, planning, kindness, or encouragement: ____________________.</li>
+<li>Add one clear line about what the writer appreciated most: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Surprise Kindness Postcard</h3>
+      <p>A short note when the writer remembers a small kind action and wants a quick draft.</p>
+      <ol><li>Write the kind action in one plain sentence: ____________________.</li>
+<li>Add an invented mini-scene where the thank-you rides inside an ordinary object: ____________________.</li>
+<li>Choose one feeling word that stays calm and sincere: ____________________.</li>
+<li>Finish with a neat final sentence for the postcard front or back: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page revision-page">
+      <p class="page-kicker">Revision tools</p>
+      <h2>Polish the thank-you note</h2>
+      <div class="revision-grid">
+    <article class="small-card">
+      <p class="card-kicker">main idea</p>
+      <h3>Kindness First</h3>
+      <p>Underline the sentence that says thank you most clearly, then rewrite it with __________.</p>
+      <p>Ask which sentence should reach the reader first with __________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">specific detail</p>
+      <h3>Tiny Story Detail</h3>
+      <p>Add one invented object, place, or small action after the thank-you sentence with __________.</p>
+      <p>Offer two ordinary object choices and let the writer choose one with __________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">explanation</p>
+      <h3>Clearer Reason</h3>
+      <p>Finish this sentence: I appreciated it because __________.</p>
+      <p>Ask what the kindness made easier, calmer, or nicer with __________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">appropriate detail</p>
+      <h3>No Price Needed</h3>
+      <p>Replace any value detail with a useful or kind detail: __________.</p>
+      <p>Guide the writer toward how the kindness helped, not what anything cost, with __________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">word choice</p>
+      <h3>Better Picture Word</h3>
+      <p>Swap one plain word for a clearer picture word with __________.</p>
+      <p>Ask which word helps the reader picture the object or moment with __________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">ending</p>
+      <h3>Warm Closing</h3>
+      <p>Add a closing sentence that sounds sincere and simple with __________.</p>
+      <p>Offer a calm closing frame such as I hope this note makes you smile with __________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">fluency</p>
+      <h3>Sentence Smooth-Out</h3>
+      <p>Read the note softly and mark one sentence to make smoother with __________.</p>
+      <p>Read the sentence back exactly once and ask where it catches with __________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">elaboration</p>
+      <h3>One Extra Thanks</h3>
+      <p>Add one more thank-you detail that is kind, ordinary, and private-detail-free with __________.</p>
+      <p>Ask for one small appreciated action, not a full story about the family, with __________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">concision</p>
+      <h3>Postcard Space Check</h3>
+      <p>Circle the best two sentences and copy only those into the postcard space with __________.</p>
+      <p>Help the writer choose the two lines the reader most needs with __________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">audience awareness</p>
+      <h3>Invented Detail Check</h3>
+      <p>Make sure the tiny story detail is friendly, invented, and easy to understand with __________.</p>
+      <p>Ask whether the detail makes the note clearer without adding private facts with __________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Share one invented object detail from the note: ____________________.</li>
+<li>Read only the thank-you sentence, or ask an adult to read it: ____________________.</li>
+<li>Point to the word that shows the kindness most clearly: ____________________.</li>
+<li>Show one sketch or postcard border idea without sharing private details: ____________________.</li>
+<li>Tell which sentence should come first on the postcard: ____________________.</li>
+<li>Share one ordinary object the thank-you could travel inside: ____________________.</li>
+<li>Name one revision that made the note kinder or clearer: ____________________.</li>
+<li>Keep the note private today and mark one finished line: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 1 | Ages 7-8 | specific thank-you detail</div>
+      <h2>Teacup Weather Window Thank-You</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one postcard, offer a pencil, and invite the child to thank someone for a kind object, help, visit, or shared moment without using private details.</p>
+      <p class="kid-direction">Write a short thank-you note that starts with one real thankful detail, then adds one tiny Teacup Town weather-window story clue.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Thank you for __________; it made my day feel carefully noticed.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>In Teacup Town, the weather window showed __________ when I thought about your kindness.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>A kind way to end is: Thank you again for __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a teacup window with a tiny forecast shaped like __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Reread the first sentence and make the thankful detail more exact by adding __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: write only the thank-you sentence and fill the window clue with __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Save this postcard as a finished thank-you note with one clear detail: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 2 | Ages 7-9 | kind sentence</div>
+      <h2>Button Bakery Map Thank-You</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the postcard, point to one ordinary object nearby, and remind the writer that the bakery map clue is invented for the note.</p>
+      <p class="kid-direction">Write one kind thank-you sentence, then imagine the Button Bakery map sending a crumb trail toward that kindness.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Thank you for __________; that was a kind thing to do.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>The Button Bakery crumb map led straight to __________ because it reminded me of your help.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>A polite close can say: I appreciate __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a tiny bakery map arrow pointing toward __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Make the kind sentence warmer by adding one feeling word before __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: skip the map talk and write a quiet thank-you line about __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Keep this postcard ready to give after you finish the bakery detail: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 3 | Ages 7-9 | gift-to-story bridge</div>
+      <h2>Pocket Park Notice Thank-You</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one postcard and invite the child to thank someone for a simple gift, help, or time together without mentioning cost or private records.</p>
+      <p class="kid-direction">Name the kind thing, turn it into a Pocket Park notice, and write why it mattered.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Thank you for __________; I noticed the care in it.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>On the Pocket Park notice board, the tiny sign said __________ to show why the gift or help mattered.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>A friendly close can say: Your __________ was thoughtful.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a matchbox notice board with a small sign about __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Add one story bridge word so the thank-you note moves from the real thing to __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: write the notice headline only: Thank you for __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: This postcard turns one thankful object or action into a story clue: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 4 | Ages 7-9 | memory detail</div>
+      <h2>Spoon Ferry Harbor Memory Thank-You</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the harbor postcard and ask for one safe, ordinary memory detail such as a color, snack, table sound, or shared object.</p>
+      <p class="kid-direction">Write a thank-you note with one memory detail, then let the spoon ferry carry that detail across Lunchbox Harbor.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Thank you for __________; I remember the moment with __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>The spoon ferry carried a lunchbox cargo labeled __________ across the harbor.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>A careful close can say: I am glad I can remember __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw the spoon ferry carrying one tiny cargo marked __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Make the memory clearer by adding one sound, color, or texture: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: fill only the memory line and ferry label with __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Save this postcard when it has one true memory detail and one pretend harbor clue: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 5 | Ages 7-9 | revision polish</div>
+      <h2>Penny Path Compass Shop Thank-You Polish</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the postcard, keep the writing private to the family or class table, and invite the child to improve one sentence without scoring it.</p>
+      <p class="kid-direction">Draft a thank-you note, add a Penny Path compass clue, and polish one sentence so it sounds kind and clear.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Thank you for __________; I want this note to sound clear and kind.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>At the Penny Path Compass Shop, the small compass pointed toward __________ as the best thank-you clue.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>A polished close can say: I appreciate __________ very much.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a penny compass pointing to an ordinary object called __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Polish the note by replacing one plain word with __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: circle the sentence to polish and fill the compass clue with __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: This finished postcard should have one polished thank-you sentence about __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 6 | Ages 8-10 | specific thank-you detail</div>
+      <h2>Rain Gauge Railway Detail Ticket</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one postcard, set out a pencil, and ask the writer to choose one small true detail they appreciated before inventing the railway part.</p>
+      <p class="kid-direction">Write a sincere thank-you sentence, then turn the appreciated detail into a tiny Rain Gauge Railway ticket clue.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Thank you for __________; one detail I noticed and appreciated was __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>In Rain Gauge Railway, that kind thing becomes a station ticket marked with __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>My polite closing sentence will say __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a rain gauge, a train ticket, and the ordinary object I appreciated: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Check that the note names one specific detail instead of only saying nice; my detail is __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>If I want a quiet start, I can point to the detail card and write __________.</p>
+    </section></div>
+      <p class="take-home-line">A sincere thank-you note can remember one small detail like __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 7 | Ages 8-10 | kind sentence</div>
+      <h2>Seed Library Kind Sentence Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one card and invite the writer to pick a pretend seed packet, map mark, or drawer label that can carry a kind sentence.</p>
+      <p class="kid-direction">Write one clear kind sentence, then let the Seed Library Map Room turn it into a catalog note.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Thank you for __________; it helped me feel __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>In Seed Library Map Room, the thank-you sentence is filed in a drawer labeled __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>The kind closing words I want to use are __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a seed packet, a map corner, and one helpful object from the thank-you: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Reread the sentence and make sure it sounds kind and clear by adding __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>If I want to work silently, I can choose a seed packet word and write __________.</p>
+    </section></div>
+      <p class="take-home-line">A kind thank-you sentence can make the reader remember __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 8 | Ages 8-10 | gift-to-story bridge</div>
+      <h2>Greenhouse Gear Gift Bridge Postcard</h2>
+      <figure>
+        <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+        <figcaption>Greenhouse Gear Garden</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one postcard and remind the writer to describe how the gift or kindness was useful without writing about cost.</p>
+      <p class="kid-direction">Name what you are thankful for, then imagine it as a gentle greenhouse gear that helps a pretend garden scene.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Thank you for __________; I used it or remembered it when __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>In Greenhouse Gear Garden, the thank-you gift turns into a garden gear that helps __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>A polite ending I can add is __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw the greenhouse gear beside the real-life thing I am thankful for: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Make the bridge clearer by adding how the gift or kindness helped: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>If I am not ready to talk, I can sketch the gear first and label it __________.</p>
+    </section></div>
+      <p class="take-home-line">A gift-to-story bridge connects real thanks to one invented detail: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 9 | Ages 8-10 | memory detail</div>
+      <h2>Pantry Measurement Memory Note</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the postcard and help the writer choose one simple memory detail such as a color, sound, tool, snack, book, or table object.</p>
+      <p class="kid-direction">Write one thank-you memory detail, then make it part of a cozy pantry measurement clue.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Thank you for __________; I remember when __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>In Pantry Measurement Mystery, that memory becomes a measuring-cup clue beside __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>My closing line of thanks will be __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a measuring spoon trail and the memory detail I want to keep: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Add one exact memory word so the reader can picture __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>If I want a quiet version, I can list three memory words first: __________.</p>
+    </section></div>
+      <p class="take-home-line">A thank-you note feels more sincere when it includes a remembered detail like __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 10 | Ages 8-10 | revision polish</div>
+      <h2>Tidepool Timekeepers Polished Thanks</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one postcard and invite the writer to draft first, then revise one word, one detail, and one closing line without any score or speed goal.</p>
+      <p class="kid-direction">Write a first thank-you line, add a Tidepool Timekeepers lab detail, and polish one sentence so it sounds finished.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Thank you for __________; my first draft says __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>In Tidepool Timekeepers Lab, the polished sentence glows inside a minute jar labeled __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>After revision, my polite close will read __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a tidepool clock, a minute jar, and one polished thank-you word: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Polish the note by replacing one plain word with __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>If I want to revise quietly, I can underline one sentence and improve __________.</p>
+    </section></div>
+      <p class="take-home-line">A polished thank-you postcard keeps the same thanks but makes one part clearer: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 11 | Ages 10-11 | specific thank-you detail</div>
+      <h2>Margin Note Market Button Stand</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, offer a pencil, and ask the child to pick one safe ordinary object from the table as the invented market detail.</p>
+      <p class="kid-direction">Write a sincere thank-you note that names one real helpful thing, then adds a tiny invented margin-market detail to make the note warm.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Start with a direct thank-you and one specific detail about what helped you: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>Turn the helpful thing into a tiny market stall clue, such as a button basket, folded receipt, or pencil label: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>Close with one kind sentence that says why the gesture mattered today: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a margin-note market stall with one ordinary object label: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Revise by replacing a general word like nice or good with a more exact gratitude word: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: skip the story scene and write only one clear thank-you detail: __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: A sincere note gets stronger when one real thank-you detail meets one tiny invented clue: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 12 | Ages 10-11 | kind sentence</div>
+      <h2>Index Card Theater Prop Thanks</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the postcard and set out two blank index cards so the child can imagine a tiny stage without performing or sharing aloud.</p>
+      <p class="kid-direction">Write a note with two short kind sentences, then invent one stage prop that quietly shows the thank-you feeling.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Begin with a thank-you sentence that sounds like your own voice: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>Add a tiny theater prop, curtain tag, or stage cue that connects to the thank-you: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>Close with a kind sentence that does not ask for anything back: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw two index cards on a tiny stage, with one prop labeled: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Revise one sentence so it sounds warmer and less rushed: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: write the note as two quiet stage lines and one close: __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: A kind thank-you note can be short, clear, and still feel personal: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 13 | Ages 10-11 | gift-to-story bridge</div>
+      <h2>Revision River Ferry Gift Bridge</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the postcard, remind the child to focus on thanks rather than size or value, and invite them to choose one pretend ferry cargo detail.</p>
+      <p class="kid-direction">Name the real thank-you reason, then build a small ferry image that carries the object or helpful moment into a story.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Start by thanking the person for the gift, help, or time with one exact detail: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>Imagine the thanked-for thing riding across Revision River as safe ferry cargo: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>Close by saying how you will use, remember, or appreciate the gesture: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a little ferry carrying one ordinary object with a thank-you tag: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Revise the bridge sentence so the real thanks and invented ferry detail connect clearly: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: write one real thank-you sentence and one ferry cargo phrase: __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: The best bridge sentence keeps the gratitude real and the story detail tiny: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 14 | Ages 10-11 | memory detail</div>
+      <h2>Clue Label Tower Memory Exhibit</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and invite the child to pick one ordinary remembered object, sound, color, or moment from the day.</p>
+      <p class="kid-direction">Write a thank-you note that labels one remembered detail like a museum clue, then explains why it made the moment better.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Start with thanks for the visit, lesson, ride, meal, or shared time: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>Make one remembered detail into a pretend museum clue label: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>Close with one sentence about why that memory will be easy to keep: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a tower museum label for one ordinary memory object: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Revise by adding one exact memory detail instead of a broad phrase: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: list one memory clue first, then turn it into a sentence: __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: One exact memory detail can make a thank-you note feel sincere: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 15 | Ages 10-11 | revision polish</div>
+      <h2>Binding Day Boardwalk Polished Postcard</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the postcard and give the child a scrap paper draft space so the final postcard can stay neat and low-pressure.</p>
+      <p class="kid-direction">Draft a quick thank-you, then use one binding-day boardwalk detail to polish the note before copying the final version.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Draft the first thank-you sentence before polishing it: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>Add a boardwalk ticket, folded page, or paper string detail that matches the gratitude: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>Close with a polished sentence that feels finished but not fancy: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a boardwalk postcard stand with one tied-up thank-you page: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Revise by checking for one clear detail, one kind sentence, and one tidy close: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: polish only one sentence and copy it carefully here: __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: A polished thank-you note is specific, kind, and easy to read: __________.</p>
+    </section>
+
+    <section class="pack-page postcard-page">
+      <div class="page-kicker">Postcard 16 | Ages 10-11 | gift-to-story bridge</div>
+      <h2>Compass Craft Academy Thanks Route</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the postcard and invite the child to mark three compass points: what happened, why it mattered, and the closing thanks.</p>
+      <p class="kid-direction">Map the thank-you note like a three-stop route, then add one invented compass-craft detail without asking for a reply.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start the thank-you note</h3>
+      <p>Start at the first compass point by naming what you are thankful for: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story bridge</h3>
+      <p>Move to the second point with a tiny map, compass, or craft-room detail: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polite close</h3>
+      <p>End at the final point with a polite close that asks for nothing: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tiny drawing prompt</h3>
+      <p>Draw a three-stop compass route for the thank-you note: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Polish the thank-you note</h3>
+      <p>Revise the route so the note moves from thanks to detail to close in order: __________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: fill only the three route points before writing the final note: __________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: A clear thank-you route helps the reader feel the real gratitude: __________.</p>
+    </section>
+  </body>
+</html>

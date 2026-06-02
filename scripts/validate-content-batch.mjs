@@ -14,6 +14,8 @@ import {
   validateManifestWorldAssets,
   validateMuseumDayStoryNotebookKitSource,
   validatePackSource,
+  validateThankYouNoteStoryPostcardPackSource,
+  validateThankYouNoteStoryPostcardPackSourceFiles,
   validateLibraryStoryClubKitSource,
   validateRoadTripPackSource,
   validateSeasonBundleSource,
@@ -43,6 +45,7 @@ const batch18ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch19ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch19-product-images.json')
 const batch20ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch20-product-images.json')
 const batch21ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch21-product-images.json')
+const batch22ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch22-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -58,6 +61,7 @@ const afterSchoolSourceFile = resolve(root, 'content', 'product-artifacts', 'aft
 const museumDaySourceFile = resolve(root, 'content', 'product-artifacts', 'museum-day-story-notebook-kit.json')
 const familyGameNightSourceFile = resolve(root, 'content', 'product-artifacts', 'family-game-night-story-card-deck.json')
 const grandparentVisitSourceFile = resolve(root, 'content', 'product-artifacts', 'grandparent-story-visit-kit.json')
+const thankYouSourceFile = resolve(root, 'content', 'product-artifacts', 'thank-you-note-story-postcard-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -74,6 +78,7 @@ const batch18ProductImagesBatchId = '2026-06-02-batch18-product-images'
 const batch19ProductImagesBatchId = '2026-06-02-batch19-product-images'
 const batch20ProductImagesBatchId = '2026-06-02-batch20-product-images'
 const batch21ProductImagesBatchId = '2026-06-02-batch21-product-images'
+const batch22ProductImagesBatchId = '2026-06-02-batch22-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -89,6 +94,7 @@ const afterSchoolBatchId = '2026-06-02-batch18'
 const museumDayBatchId = '2026-06-02-batch19'
 const familyGameNightBatchId = '2026-06-02-batch20'
 const grandparentVisitBatchId = '2026-06-02-batch21'
+const thankYouBatchId = '2026-06-02-batch22'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -1038,6 +1044,55 @@ function validateBatch21ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch22ProductImage(image) {
+  const label = `2026-06-02-batch22-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(image.slug === 'thank-you-note-story-postcard-pack', `${label}.slug must be thank-you-note-story-postcard-pack.`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch22/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch22/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch22/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'no text',
+    'no letters',
+    'no logos',
+    'no watermark',
+    'no branded characters',
+    'no scary harm',
+    'no weapons',
+    'no people',
+    'no faces',
+    'no animals',
+    'no phone',
+    'no tablet',
+    'no device',
+    'no family photos',
+    'screen-free printable thank-you note story postcard pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar.seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -1167,6 +1222,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
       minUseCases: 5,
       minParentSteps: 5,
       maxWorldSlugs: 12,
+    },
+    'thank-you-note-story-postcard-pack': {
+      title: 'Thank-You Note Story Postcard Pack',
+      pricePoint: '$21',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
     },
   }
   const expectedProduct = expectedProducts[product.slug]
@@ -1455,12 +1518,23 @@ expect(Array.isArray(batch21ProductImages.images), 'batch21 product image manife
 expect(batch21ProductImages.images.length === 1, `Expected 1 Batch 21 product image, found ${batch21ProductImages.images.length}.`)
 validateBatch21ProductImage(batch21ProductImages.images[0])
 
+expect(existsSync(batch22ProductImagesFile), `Missing Batch 22 product image manifest: ${batch22ProductImagesFile}`)
+const batch22ProductImages = readJson(batch22ProductImagesFile)
+expect(
+  batch22ProductImages.batchId === batch22ProductImagesBatchId,
+  `batch22 product image manifest batchId must be ${batch22ProductImagesBatchId}.`,
+)
+expect(batch22ProductImages.generatedAt === '2026-06-02', 'batch22 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch22ProductImages.images), 'batch22 product image manifest images must be an array.')
+expect(batch22ProductImages.images.length === 1, `Expected 1 Batch 22 product image, found ${batch22ProductImages.images.length}.`)
+validateBatch22ProductImage(batch22ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 14, `Expected 14 product records, found ${products.products.length}.`)
+expect(products.products.length === 15, `Expected 15 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -1478,6 +1552,7 @@ for (const requiredProductSlug of [
   'museum-day-story-notebook-kit',
   'family-game-night-story-card-deck',
   'grandparent-story-visit-kit',
+  'thank-you-note-story-postcard-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -2382,6 +2457,75 @@ for (const asset of grandparentVisitArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Grandparent Story Visit Kit copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(thankYouSourceFile), `Missing Batch 22 Thank-You Note Story Postcard source file: ${thankYouSourceFile}`)
+const thankYouSource = readJson(thankYouSourceFile)
+expect(
+  thankYouSource.batchId === thankYouBatchId,
+  `Thank-You Note Story Postcard Pack source batchId must be ${thankYouBatchId}.`,
+)
+const thankYouProduct = products.products.find((product) => product.slug === 'thank-you-note-story-postcard-pack')
+expect(thankYouProduct, 'Missing Thank-You Note Story Postcard Pack product record for Batch 22 artifact validation.')
+const thankYouSourceErrors = validateThankYouNoteStoryPostcardPackSource(
+  thankYouSource,
+  thankYouProduct,
+  worldAgeBands,
+)
+expect(
+  thankYouSourceErrors.length === 0,
+  `Thank-You Note Story Postcard Pack source failed validation:\n${thankYouSourceErrors.join('\n')}`,
+)
+const thankYouSourceFileErrors = validateThankYouNoteStoryPostcardPackSourceFiles(thankYouSource, root)
+expect(
+  thankYouSourceFileErrors.length === 0,
+  `Thank-You Note Story Postcard Pack sourceFiles failed validation:\n${thankYouSourceFileErrors.join('\n')}`,
+)
+const thankYouExpectedPdfPages = thankYouSource.postcards.length + 5
+const thankYouArtifactStatus = inspectArtifactFiles(root, thankYouSource.artifact, {
+  expectedPdfPages: thankYouExpectedPdfPages,
+})
+expect(
+  thankYouArtifactStatus.valid,
+  `Thank-You Note Story Postcard Pack artifacts failed validation:\n${thankYouArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  thankYouArtifactStatus.files.pdf.size > 100_000,
+  `Thank-You Note Story Postcard Pack PDF artifact is unexpectedly small: ${thankYouArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  thankYouArtifactStatus.files.pdf.pageCount === thankYouExpectedPdfPages,
+  `Thank-You Note Story Postcard Pack PDF artifact must have ${thankYouExpectedPdfPages} pages.`,
+)
+expect(
+  thankYouArtifactStatus.files.zip.size > thankYouArtifactStatus.files.pdf.size,
+  'Thank-You Note Story Postcard Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const thankYouCheckoutErrors = validateCheckoutReadiness(thankYouProduct, thankYouArtifactStatus)
+expect(
+  thankYouCheckoutErrors.length === 0,
+  `Thank-You Note Story Postcard Pack checkout readiness failed validation:\n${thankYouCheckoutErrors.join('\n')}`,
+)
+const thankYouArtifactManifest = readJson(resolve(root, thankYouSource.artifact.manifestPath))
+expect(
+  thankYouArtifactManifest.sourcePageCount === thankYouSource.postcards.length,
+  'Thank-You Note Story Postcard Pack artifact manifest sourcePageCount must match source postcards.',
+)
+expect(
+  Array.isArray(thankYouArtifactManifest.files.assets),
+  'Thank-You Note Story Postcard Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  thankYouArtifactManifest.files.assets.length === thankYouSource.worldSlugs.length,
+  'Thank-You Note Story Postcard Pack artifact manifest must include one copied local image per source world.',
+)
+const thankYouManifestAssetErrors = validateManifestWorldAssets(thankYouSource, thankYouArtifactManifest)
+expect(
+  thankYouManifestAssetErrors.length === 0,
+  `Thank-You Note Story Postcard Pack artifact manifest image coverage failed validation:\n${thankYouManifestAssetErrors.join('\n')}`,
+)
+for (const asset of thankYouArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Thank-You Note Story Postcard Pack copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 14 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 15 product artifacts.`,
 )

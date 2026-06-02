@@ -382,6 +382,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Twelve adult-led visit quests with host tools, quiet options, and take-home story postcards.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'thank-you-note-story-postcard-pack',
+    title: 'Thank-You Note Story Postcard Pack',
+    pricePoint: '$21',
+    description:
+      'Sixteen printable thank-you story postcards with adult guide tools, revision prompts, and optional share prompts.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

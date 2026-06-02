@@ -56,6 +56,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 
 ## In Progress
 
+- [ ] Batch 22 deploy/live smoke: `$21` Thank-You Note Story Postcard Pack is locally built, artifact-verified, and review-fixed; push-triggered deploy and live smoke still pending.
 - [ ] External checkout gate: wire hosted checkout only after Sam chooses the provider and supplies the real provider-hosted URL.
 
 ## Next Content Batches

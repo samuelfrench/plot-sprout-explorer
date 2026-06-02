@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-02-batch22",
+  "generatedAt": "2026-06-02",
+  "productSlug": "thank-you-note-story-postcard-pack",
+  "title": "Thank-You Note Story Postcard Pack",
+  "pricePoint": "$21",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/thank-you-note-story-postcard-pack/Thank-You-Note-Story-Postcard-Pack.pdf",
+      "sha256": "12e435910ceacaff1190610a05fb21e16fcb791d211f4a45bc92e97ceb39b04c",
+      "size": 5060409
+    },
+    "zip": {
+      "path": "product-build/thank-you-note-story-postcard-pack/thank-you-note-story-postcard-pack.zip",
+      "sha256": "2f80fdfbcc4bd2e6b369ce2f7b78c8b8e0a55e69ee209f8cbc3607a9f0ad7d8a",
+      "size": 9721765
+    },
+    "sourceHtml": {
+      "path": "product-build/thank-you-note-story-postcard-pack/source/thank-you-note-story-postcard-pack.html",
+      "sha256": "71b77b25fc8adbb0768b016e9966d7192ecfc41662451c0d2b2ae216b7551142",
+      "size": 52284
+    },
+    "readme": {
+      "path": "product-build/thank-you-note-story-postcard-pack/README.txt",
+      "sha256": "4711dbecd82da1de3e338c36b9ffb91c0b609d0726863ded7063d41cdb5b0fd7",
+      "size": 591
+    },
+    "assets": [
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/pantry-measurement-mystery.jpg",
+        "sha256": "b85111fa750c89e60fc21133ea09e431a26a010d8ff24db7c4baa305c3ff3f73",
+        "size": 287571
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      },
+      {
+        "path": "product-build/thank-you-note-story-postcard-pack/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      }
+    ]
+  }
+}

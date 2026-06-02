@@ -56,8 +56,9 @@ describe('storyData', () => {
       'museum-day-story-notebook-kit',
       'family-game-night-story-card-deck',
       'grandparent-story-visit-kit',
+      'thank-you-note-story-postcard-pack',
     ])
-    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19', '$17', '$11', '$23', '$39', '$49', '$59', '$69', '$37', '$27', '$31'])
+    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19', '$17', '$11', '$23', '$39', '$49', '$59', '$69', '$37', '$27', '$31', '$21'])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
     }

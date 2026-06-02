@@ -1,0 +1,504 @@
+{
+  "batchId": "2026-06-02-batch22",
+  "generatedAt": "2026-06-02",
+  "productSlug": "thank-you-note-story-postcard-pack",
+  "title": "Thank-You Note Story Postcard Pack",
+  "pricePoint": "$21",
+  "audience": "Parents, homeschool families, tutors, relatives, co-op hosts, and library family tables helping kids write sincere thank-you notes.",
+  "sessionLength": "16 printable thank-you story postcards plus adult guide tools, note situations, revision prompts, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch22-thank-you-postcards-a.json",
+    "content/product-artifacts/lanes/batch22-thank-you-postcards-b.json",
+    "content/product-artifacts/lanes/batch22-thank-you-postcards-c.json",
+    "content/product-artifacts/lanes/batch22-thank-you-tools.json"
+  ],
+  "artifact": {
+    "pdfPath": "product-build/thank-you-note-story-postcard-pack/Thank-You-Note-Story-Postcard-Pack.pdf",
+    "zipPath": "product-build/thank-you-note-story-postcard-pack/thank-you-note-story-postcard-pack.zip",
+    "sourceHtmlPath": "product-build/thank-you-note-story-postcard-pack/source/thank-you-note-story-postcard-pack.html",
+    "manifestPath": "product-build/thank-you-note-story-postcard-pack/manifest.json"
+  },
+  "worldSlugs": [
+    "teacup-town-weather-window",
+    "button-bakery-map-mixup",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "penny-path-compass-shop",
+    "rain-gauge-railway",
+    "seed-library-map-room",
+    "greenhouse-gear-garden",
+    "pantry-measurement-mystery",
+    "tidepool-timekeepers-lab",
+    "margin-note-market",
+    "index-card-theater-club",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "binding-day-boardwalk",
+    "compass-craft-academy"
+  ],
+  "cover": {
+    "kicker": "Printable thank-you note story pack",
+    "headline": "Thank-You Note Story Postcard Pack",
+    "subhead": "Sixteen printable postcards that turn gratitude into a tiny story detail before kids copy or deliver the final note offline.",
+    "included": [
+      "16 printable thank-you story postcards",
+      "Adult setup guide",
+      "Coaching moves for reluctant writers",
+      "Privacy and no-data notes",
+      "Family handoff notes",
+      "Pack reset notes",
+      "Six repeatable note situations",
+      "Ten revision prompt strips",
+      "Eight optional share prompts",
+      "Local image-backed world menu",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "setup": [
+      "Print the postcard pages, adult guide page, note situation cards, and revision prompt strips before the writing table opens.",
+      "Place pencils, blank scrap paper, and ordinary object idea slips within adult reach so writers can choose one small detail at a time.",
+      "Choose a simple recipient role for each note, such as helper, host, coach, tutor, neighbor, relative, or friend, without writing private contact details.",
+      "Invite writers to begin with a tiny invented story detail before drafting the real thank-you sentence.",
+      "Keep the session screen-free with printed cards, spoken choices, sketches, pointing, dictation, and short written lines.",
+      "Prepare one quiet restart page so a writer can switch ideas without explaining why the first draft felt stuck."
+    ],
+    "coachingMoves": [
+      "Ask what kind action the recipient did, then help the writer add one invented object or tiny scene detail beside it.",
+      "Model one sincere sentence that names the kindness plainly and does not mention value, ratings, or comparisons.",
+      "Offer two concrete detail choices when a writer pauses, such as a blue mug or a paper star, and let the writer pick or invent another.",
+      "Guide the note through three parts: thank you, tiny story detail, and one warm closing sentence.",
+      "Keep corrections gentle by asking what the recipient should picture, hear, or understand more clearly.",
+      "Let writers share only a title, object clue, or one sentence if they want adult feedback."
+    ],
+    "privacyNotes": [
+      "The pack is printable and offline; it does not need accounts, uploads, photos, recordings, or public posting.",
+      "Do not collect mailing details, full names, contact details, child profiles, family records, or private household facts.",
+      "Use role labels, initials chosen by the family, or blank recipient lines instead of storing personal identifiers.",
+      "Keep finished notes with the household, tutor, or classroom adult; the product does not retain copies.",
+      "Stay with ordinary kindness, invented details, and simple objects instead of private adult or family details."
+    ],
+    "handoff": [
+      "Send each writer home with the finished postcard draft and one optional revision strip.",
+      "Tell adults the note can be completed by pointing, dictating, sketching, or writing one short line.",
+      "Suggest reading the note aloud only if the writer chooses, with feedback focused on kindness and clarity.",
+      "Remind families that mailing, delivery, or saving the note is handled outside the printable pack.",
+      "Offer one next step such as add a clearer object, add a sincere sentence, or copy the final version neatly."
+    ],
+    "reset": [
+      "Return unused situation cards and revision strips to the adult folder.",
+      "Recycle scrap pages that contain only practice ideas, unless the writer wants to keep them.",
+      "Restock blank postcard pages, sharpen pencils, and replace bent object slips.",
+      "Write only a nonpersonal supply note if needed, such as more pencils, fewer strips, or extra quiet-start pages."
+    ]
+  },
+  "noteSituations": [
+    {
+      "name": "Gift From a Helpful Giver",
+      "bestFor": "Thanking someone for a thoughtful item without discussing price or asking for personal details.",
+      "steps": [
+        "Name the kind action in simple words: thank you for ____________________.",
+        "Invent a tiny story detail about where the object might travel next: ____________________.",
+        "Add one ordinary object clue that makes the sentence easier to picture: ____________________.",
+        "Finish with one sincere line about how the kindness helped: ____________________."
+      ]
+    },
+    {
+      "name": "Visit Host Thank-You",
+      "bestFor": "Writing to someone who hosted a meal, play time, lesson, or calm visit.",
+      "steps": [
+        "Start with the hosted moment using a role label, not private location details: ____________________.",
+        "Invent one tiny scene detail from a pretend porch, table, or garden step: ____________________.",
+        "Write one real thank-you sentence that names the kindness: ____________________.",
+        "Add a warm closing that does not ask for another invitation: ____________________."
+      ]
+    },
+    {
+      "name": "Tutor or Teacher Help",
+      "bestFor": "Thanking an adult who helped with practice, reading, math, writing, music, art, or a skill.",
+      "steps": [
+        "Name the helpful action in school-safe words: ____________________.",
+        "Invent a tiny story object that could hold the new skill, such as a pencil boat or paper lantern: ____________________.",
+        "Add one sentence about what became clearer or easier: ____________________.",
+        "Close with a kind line the writer would feel comfortable handing over: ____________________."
+      ]
+    },
+    {
+      "name": "Neighbor or Helper Kindness",
+      "bestFor": "Thanking someone for ordinary help while keeping private household facts off the page.",
+      "steps": [
+        "Write the thank-you reason without private schedules, contact details, or family records: ____________________.",
+        "Choose one invented ordinary object that could carry the thank-you across a pretend sidewalk: ____________________.",
+        "Add one sentence that shows the helper's kindness mattered: ____________________.",
+        "Pick a simple closing word or phrase for the postcard: ____________________."
+      ]
+    },
+    {
+      "name": "Group or Club Leader Note",
+      "bestFor": "Thanking a coach, club leader, librarian, co-op adult, or activity helper without ranking details.",
+      "steps": [
+        "Name the group moment in general words: ____________________.",
+        "Invent one tiny team object, table object, or library object for a story detail: ____________________.",
+        "Write a thank-you sentence about patience, planning, kindness, or encouragement: ____________________.",
+        "Add one clear line about what the writer appreciated most: ____________________."
+      ]
+    },
+    {
+      "name": "Surprise Kindness Postcard",
+      "bestFor": "A short note when the writer remembers a small kind action and wants a quick draft.",
+      "steps": [
+        "Write the kind action in one plain sentence: ____________________.",
+        "Add an invented mini-scene where the thank-you rides inside an ordinary object: ____________________.",
+        "Choose one feeling word that stays calm and sincere: ____________________.",
+        "Finish with a neat final sentence for the postcard front or back: ____________________."
+      ]
+    }
+  ],
+  "revisionPrompts": [
+    {
+      "title": "Kindness First",
+      "skill": "main idea",
+      "direction": "Underline the sentence that says thank you most clearly, then rewrite it with __________.",
+      "adultLine": "Ask which sentence should reach the reader first with __________."
+    },
+    {
+      "title": "Tiny Story Detail",
+      "skill": "specific detail",
+      "direction": "Add one invented object, place, or small action after the thank-you sentence with __________.",
+      "adultLine": "Offer two ordinary object choices and let the writer choose one with __________."
+    },
+    {
+      "title": "Clearer Reason",
+      "skill": "explanation",
+      "direction": "Finish this sentence: I appreciated it because __________.",
+      "adultLine": "Ask what the kindness made easier, calmer, or nicer with __________."
+    },
+    {
+      "title": "No Price Needed",
+      "skill": "appropriate detail",
+      "direction": "Replace any value detail with a useful or kind detail: __________.",
+      "adultLine": "Guide the writer toward how the kindness helped, not what anything cost, with __________."
+    },
+    {
+      "title": "Better Picture Word",
+      "skill": "word choice",
+      "direction": "Swap one plain word for a clearer picture word with __________.",
+      "adultLine": "Ask which word helps the reader picture the object or moment with __________."
+    },
+    {
+      "title": "Warm Closing",
+      "skill": "ending",
+      "direction": "Add a closing sentence that sounds sincere and simple with __________.",
+      "adultLine": "Offer a calm closing frame such as I hope this note makes you smile with __________."
+    },
+    {
+      "title": "Sentence Smooth-Out",
+      "skill": "fluency",
+      "direction": "Read the note softly and mark one sentence to make smoother with __________.",
+      "adultLine": "Read the sentence back exactly once and ask where it catches with __________."
+    },
+    {
+      "title": "One Extra Thanks",
+      "skill": "elaboration",
+      "direction": "Add one more thank-you detail that is kind, ordinary, and private-detail-free with __________.",
+      "adultLine": "Ask for one small appreciated action, not a full story about the family, with __________."
+    },
+    {
+      "title": "Postcard Space Check",
+      "skill": "concision",
+      "direction": "Circle the best two sentences and copy only those into the postcard space with __________.",
+      "adultLine": "Help the writer choose the two lines the reader most needs with __________."
+    },
+    {
+      "title": "Invented Detail Check",
+      "skill": "audience awareness",
+      "direction": "Make sure the tiny story detail is friendly, invented, and easy to understand with __________.",
+      "adultLine": "Ask whether the detail makes the note clearer without adding private facts with __________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Share one invented object detail from the note: ____________________.",
+    "Read only the thank-you sentence, or ask an adult to read it: ____________________.",
+    "Point to the word that shows the kindness most clearly: ____________________.",
+    "Show one sketch or postcard border idea without sharing private details: ____________________.",
+    "Tell which sentence should come first on the postcard: ____________________.",
+    "Share one ordinary object the thank-you could travel inside: ____________________.",
+    "Name one revision that made the note kinder or clearer: ____________________.",
+    "Keep the note private today and mark one finished line: ____________________."
+  ],
+  "postcards": [
+    {
+      "id": "thank-you-postcard-01",
+      "title": "Teacup Weather Window Thank-You",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "thankYouSkill": "specific thank-you detail",
+      "useCase": "Checkout-pending $21 printable postcard for a parent, homeschool family, or tutor helping a young writer name one exact thankful detail.",
+      "adultSetup": "Print one postcard, offer a pencil, and invite the child to thank someone for a kind object, help, visit, or shared moment without using private details.",
+      "kidDirection": "Write a short thank-you note that starts with one real thankful detail, then adds one tiny Teacup Town weather-window story clue.",
+      "noteStarter": "Thank you for __________; it made my day feel carefully noticed.",
+      "storyBridge": "In Teacup Town, the weather window showed __________ when I thought about your kindness.",
+      "politeClose": "A kind way to end is: Thank you again for __________.",
+      "drawingPrompt": "Draw a teacup window with a tiny forecast shaped like __________.",
+      "revisionNudge": "Reread the first sentence and make the thankful detail more exact by adding __________.",
+      "quietOption": "Quiet option: write only the thank-you sentence and fill the window clue with __________.",
+      "takeHomeLine": "Take-home line: Save this postcard as a finished thank-you note with one clear detail: __________."
+    },
+    {
+      "id": "thank-you-postcard-02",
+      "title": "Button Bakery Map Thank-You",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "thankYouSkill": "kind sentence",
+      "useCase": "Printable thank-you postcard for kids who need a calm, screen-free way to write one warm sentence before adding a pretend bakery route.",
+      "adultSetup": "Print the postcard, point to one ordinary object nearby, and remind the writer that the bakery map clue is invented for the note.",
+      "kidDirection": "Write one kind thank-you sentence, then imagine the Button Bakery map sending a crumb trail toward that kindness.",
+      "noteStarter": "Thank you for __________; that was a kind thing to do.",
+      "storyBridge": "The Button Bakery crumb map led straight to __________ because it reminded me of your help.",
+      "politeClose": "A polite close can say: I appreciate __________.",
+      "drawingPrompt": "Draw a tiny bakery map arrow pointing toward __________.",
+      "revisionNudge": "Make the kind sentence warmer by adding one feeling word before __________.",
+      "quietOption": "Quiet option: skip the map talk and write a quiet thank-you line about __________.",
+      "takeHomeLine": "Take-home line: Keep this postcard ready to give after you finish the bakery detail: __________."
+    },
+    {
+      "id": "thank-you-postcard-03",
+      "title": "Pocket Park Notice Thank-You",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "thankYouSkill": "gift-to-story bridge",
+      "useCase": "Screen-free printable postcard for turning a thoughtful gift, useful object, or helpful action into a tiny pocket park notice.",
+      "adultSetup": "Print one postcard and invite the child to thank someone for a simple gift, help, or time together without mentioning cost or private records.",
+      "kidDirection": "Name the kind thing, turn it into a Pocket Park notice, and write why it mattered.",
+      "noteStarter": "Thank you for __________; I noticed the care in it.",
+      "storyBridge": "On the Pocket Park notice board, the tiny sign said __________ to show why the gift or help mattered.",
+      "politeClose": "A friendly close can say: Your __________ was thoughtful.",
+      "drawingPrompt": "Draw a matchbox notice board with a small sign about __________.",
+      "revisionNudge": "Add one story bridge word so the thank-you note moves from the real thing to __________.",
+      "quietOption": "Quiet option: write the notice headline only: Thank you for __________.",
+      "takeHomeLine": "Take-home line: This postcard turns one thankful object or action into a story clue: __________."
+    },
+    {
+      "id": "thank-you-postcard-04",
+      "title": "Spoon Ferry Harbor Memory Thank-You",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "thankYouSkill": "memory detail",
+      "useCase": "Printable thank-you postcard for parents, homeschool families, or tutors helping a child add one remembered ordinary detail to a sincere note.",
+      "adultSetup": "Print the harbor postcard and ask for one safe, ordinary memory detail such as a color, snack, table sound, or shared object.",
+      "kidDirection": "Write a thank-you note with one memory detail, then let the spoon ferry carry that detail across Lunchbox Harbor.",
+      "noteStarter": "Thank you for __________; I remember the moment with __________.",
+      "storyBridge": "The spoon ferry carried a lunchbox cargo labeled __________ across the harbor.",
+      "politeClose": "A careful close can say: I am glad I can remember __________.",
+      "drawingPrompt": "Draw the spoon ferry carrying one tiny cargo marked __________.",
+      "revisionNudge": "Make the memory clearer by adding one sound, color, or texture: __________.",
+      "quietOption": "Quiet option: fill only the memory line and ferry label with __________.",
+      "takeHomeLine": "Take-home line: Save this postcard when it has one true memory detail and one pretend harbor clue: __________."
+    },
+    {
+      "id": "thank-you-postcard-05",
+      "title": "Penny Path Compass Shop Thank-You Polish",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "thankYouSkill": "revision polish",
+      "useCase": "Lower-age printable postcard for using a simple compass-shop story detail to polish a thank-you note before giving it privately.",
+      "adultSetup": "Print the postcard, keep the writing private to the family or class table, and invite the child to improve one sentence without scoring it.",
+      "kidDirection": "Draft a thank-you note, add a Penny Path compass clue, and polish one sentence so it sounds kind and clear.",
+      "noteStarter": "Thank you for __________; I want this note to sound clear and kind.",
+      "storyBridge": "At the Penny Path Compass Shop, the small compass pointed toward __________ as the best thank-you clue.",
+      "politeClose": "A polished close can say: I appreciate __________ very much.",
+      "drawingPrompt": "Draw a penny compass pointing to an ordinary object called __________.",
+      "revisionNudge": "Polish the note by replacing one plain word with __________.",
+      "quietOption": "Quiet option: circle the sentence to polish and fill the compass clue with __________.",
+      "takeHomeLine": "Take-home line: This finished postcard should have one polished thank-you sentence about __________."
+    },
+    {
+      "id": "thank-you-postcard-06",
+      "title": "Rain Gauge Railway Detail Ticket",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "thankYouSkill": "specific thank-you detail",
+      "useCase": "Printable postcard for a child who wants to thank someone for a gift, favor, visit, lesson, or shared activity without mentioning price or private details.",
+      "adultSetup": "Print one postcard, set out a pencil, and ask the writer to choose one small true detail they appreciated before inventing the railway part.",
+      "kidDirection": "Write a sincere thank-you sentence, then turn the appreciated detail into a tiny Rain Gauge Railway ticket clue.",
+      "noteStarter": "Thank you for __________; one detail I noticed and appreciated was __________.",
+      "storyBridge": "In Rain Gauge Railway, that kind thing becomes a station ticket marked with __________.",
+      "politeClose": "My polite closing sentence will say __________.",
+      "drawingPrompt": "Draw a rain gauge, a train ticket, and the ordinary object I appreciated: __________.",
+      "revisionNudge": "Check that the note names one specific detail instead of only saying nice; my detail is __________.",
+      "quietOption": "If I want a quiet start, I can point to the detail card and write __________.",
+      "takeHomeLine": "A sincere thank-you note can remember one small detail like __________."
+    },
+    {
+      "id": "thank-you-postcard-07",
+      "title": "Seed Library Kind Sentence Card",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "thankYouSkill": "kind sentence",
+      "useCase": "Printable postcard for homeschool, tutoring, or family table practice when the child needs help writing one warm sentence of thanks.",
+      "adultSetup": "Print one card and invite the writer to pick a pretend seed packet, map mark, or drawer label that can carry a kind sentence.",
+      "kidDirection": "Write one clear kind sentence, then let the Seed Library Map Room turn it into a catalog note.",
+      "noteStarter": "Thank you for __________; it helped me feel __________.",
+      "storyBridge": "In Seed Library Map Room, the thank-you sentence is filed in a drawer labeled __________.",
+      "politeClose": "The kind closing words I want to use are __________.",
+      "drawingPrompt": "Draw a seed packet, a map corner, and one helpful object from the thank-you: __________.",
+      "revisionNudge": "Reread the sentence and make sure it sounds kind and clear by adding __________.",
+      "quietOption": "If I want to work silently, I can choose a seed packet word and write __________.",
+      "takeHomeLine": "A kind thank-you sentence can make the reader remember __________."
+    },
+    {
+      "id": "thank-you-postcard-08",
+      "title": "Greenhouse Gear Gift Bridge Postcard",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "thankYouSkill": "gift-to-story bridge",
+      "useCase": "Printable postcard for turning a gift, borrowed object, useful supply, or helpful gesture into a tiny invented garden detail.",
+      "adultSetup": "Print one postcard and remind the writer to describe how the gift or kindness was useful without writing about cost.",
+      "kidDirection": "Name what you are thankful for, then imagine it as a gentle greenhouse gear that helps a pretend garden scene.",
+      "noteStarter": "Thank you for __________; I used it or remembered it when __________.",
+      "storyBridge": "In Greenhouse Gear Garden, the thank-you gift turns into a garden gear that helps __________.",
+      "politeClose": "A polite ending I can add is __________.",
+      "drawingPrompt": "Draw the greenhouse gear beside the real-life thing I am thankful for: __________.",
+      "revisionNudge": "Make the bridge clearer by adding how the gift or kindness helped: __________.",
+      "quietOption": "If I am not ready to talk, I can sketch the gear first and label it __________.",
+      "takeHomeLine": "A gift-to-story bridge connects real thanks to one invented detail: __________."
+    },
+    {
+      "id": "thank-you-postcard-09",
+      "title": "Pantry Measurement Memory Note",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "thankYouSkill": "memory detail",
+      "useCase": "Printable postcard for a child writing thanks after a meal, class activity, errand help, visit, or ordinary shared moment.",
+      "adultSetup": "Print the postcard and help the writer choose one simple memory detail such as a color, sound, tool, snack, book, or table object.",
+      "kidDirection": "Write one thank-you memory detail, then make it part of a cozy pantry measurement clue.",
+      "noteStarter": "Thank you for __________; I remember when __________.",
+      "storyBridge": "In Pantry Measurement Mystery, that memory becomes a measuring-cup clue beside __________.",
+      "politeClose": "My closing line of thanks will be __________.",
+      "drawingPrompt": "Draw a measuring spoon trail and the memory detail I want to keep: __________.",
+      "revisionNudge": "Add one exact memory word so the reader can picture __________.",
+      "quietOption": "If I want a quiet version, I can list three memory words first: __________.",
+      "takeHomeLine": "A thank-you note feels more sincere when it includes a remembered detail like __________."
+    },
+    {
+      "id": "thank-you-postcard-10",
+      "title": "Tidepool Timekeepers Polished Thanks",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "thankYouSkill": "revision polish",
+      "useCase": "Printable postcard for revising a first thank-you draft so it sounds complete, warm, and easy to read.",
+      "adultSetup": "Print one postcard and invite the writer to draft first, then revise one word, one detail, and one closing line without any score or speed goal.",
+      "kidDirection": "Write a first thank-you line, add a Tidepool Timekeepers lab detail, and polish one sentence so it sounds finished.",
+      "noteStarter": "Thank you for __________; my first draft says __________.",
+      "storyBridge": "In Tidepool Timekeepers Lab, the polished sentence glows inside a minute jar labeled __________.",
+      "politeClose": "After revision, my polite close will read __________.",
+      "drawingPrompt": "Draw a tidepool clock, a minute jar, and one polished thank-you word: __________.",
+      "revisionNudge": "Polish the note by replacing one plain word with __________.",
+      "quietOption": "If I want to revise quietly, I can underline one sentence and improve __________.",
+      "takeHomeLine": "A polished thank-you postcard keeps the same thanks but makes one part clearer: __________."
+    },
+    {
+      "id": "thank-you-postcard-11",
+      "title": "Margin Note Market Button Stand",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "thankYouSkill": "specific thank-you detail",
+      "useCase": "Upper-age printable postcard for thanking someone for a small object, helpful errand, or shared supplies after a homeschool table activity.",
+      "adultSetup": "Print the card, offer a pencil, and ask the child to pick one safe ordinary object from the table as the invented market detail.",
+      "kidDirection": "Write a sincere thank-you note that names one real helpful thing, then adds a tiny invented margin-market detail to make the note warm.",
+      "noteStarter": "Start with a direct thank-you and one specific detail about what helped you: __________.",
+      "storyBridge": "Turn the helpful thing into a tiny market stall clue, such as a button basket, folded receipt, or pencil label: __________.",
+      "politeClose": "Close with one kind sentence that says why the gesture mattered today: __________.",
+      "drawingPrompt": "Draw a margin-note market stall with one ordinary object label: __________.",
+      "revisionNudge": "Revise by replacing a general word like nice or good with a more exact gratitude word: __________.",
+      "quietOption": "Quiet option: skip the story scene and write only one clear thank-you detail: __________.",
+      "takeHomeLine": "Take-home line: A sincere note gets stronger when one real thank-you detail meets one tiny invented clue: __________."
+    },
+    {
+      "id": "thank-you-postcard-12",
+      "title": "Index Card Theater Prop Thanks",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "thankYouSkill": "kind sentence",
+      "useCase": "Printable postcard for a child thanking a helper, tutor, relative, or family friend after receiving time, help, or a simple item.",
+      "adultSetup": "Print the postcard and set out two blank index cards so the child can imagine a tiny stage without performing or sharing aloud.",
+      "kidDirection": "Write a note with two short kind sentences, then invent one stage prop that quietly shows the thank-you feeling.",
+      "noteStarter": "Begin with a thank-you sentence that sounds like your own voice: __________.",
+      "storyBridge": "Add a tiny theater prop, curtain tag, or stage cue that connects to the thank-you: __________.",
+      "politeClose": "Close with a kind sentence that does not ask for anything back: __________.",
+      "drawingPrompt": "Draw two index cards on a tiny stage, with one prop labeled: __________.",
+      "revisionNudge": "Revise one sentence so it sounds warmer and less rushed: __________.",
+      "quietOption": "Quiet option: write the note as two quiet stage lines and one close: __________.",
+      "takeHomeLine": "Take-home line: A kind thank-you note can be short, clear, and still feel personal: __________."
+    },
+    {
+      "id": "thank-you-postcard-13",
+      "title": "Revision River Ferry Gift Bridge",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "thankYouSkill": "gift-to-story bridge",
+      "useCase": "Upper-age printable postcard for turning a thank-you about a simple gift, borrowed supply, or thoughtful help into a short story detail.",
+      "adultSetup": "Print the postcard, remind the child to focus on thanks rather than size or value, and invite them to choose one pretend ferry cargo detail.",
+      "kidDirection": "Name the real thank-you reason, then build a small ferry image that carries the object or helpful moment into a story.",
+      "noteStarter": "Start by thanking the person for the gift, help, or time with one exact detail: __________.",
+      "storyBridge": "Imagine the thanked-for thing riding across Revision River as safe ferry cargo: __________.",
+      "politeClose": "Close by saying how you will use, remember, or appreciate the gesture: __________.",
+      "drawingPrompt": "Draw a little ferry carrying one ordinary object with a thank-you tag: __________.",
+      "revisionNudge": "Revise the bridge sentence so the real thanks and invented ferry detail connect clearly: __________.",
+      "quietOption": "Quiet option: write one real thank-you sentence and one ferry cargo phrase: __________.",
+      "takeHomeLine": "Take-home line: The best bridge sentence keeps the gratitude real and the story detail tiny: __________."
+    },
+    {
+      "id": "thank-you-postcard-14",
+      "title": "Clue Label Tower Memory Exhibit",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "thankYouSkill": "memory detail",
+      "useCase": "Printable postcard for thanking someone after a visit, lesson, ride, meal, or shared activity by naming one remembered ordinary detail.",
+      "adultSetup": "Print the card and invite the child to pick one ordinary remembered object, sound, color, or moment from the day.",
+      "kidDirection": "Write a thank-you note that labels one remembered detail like a museum clue, then explains why it made the moment better.",
+      "noteStarter": "Start with thanks for the visit, lesson, ride, meal, or shared time: __________.",
+      "storyBridge": "Make one remembered detail into a pretend museum clue label: __________.",
+      "politeClose": "Close with one sentence about why that memory will be easy to keep: __________.",
+      "drawingPrompt": "Draw a tower museum label for one ordinary memory object: __________.",
+      "revisionNudge": "Revise by adding one exact memory detail instead of a broad phrase: __________.",
+      "quietOption": "Quiet option: list one memory clue first, then turn it into a sentence: __________.",
+      "takeHomeLine": "Take-home line: One exact memory detail can make a thank-you note feel sincere: __________."
+    },
+    {
+      "id": "thank-you-postcard-15",
+      "title": "Binding Day Boardwalk Polished Postcard",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "thankYouSkill": "revision polish",
+      "useCase": "Upper-age printable postcard for revising a thank-you draft before handing it to a family member, tutor, neighbor, or helper.",
+      "adultSetup": "Print the postcard and give the child a scrap paper draft space so the final postcard can stay neat and low-pressure.",
+      "kidDirection": "Draft a quick thank-you, then use one binding-day boardwalk detail to polish the note before copying the final version.",
+      "noteStarter": "Draft the first thank-you sentence before polishing it: __________.",
+      "storyBridge": "Add a boardwalk ticket, folded page, or paper string detail that matches the gratitude: __________.",
+      "politeClose": "Close with a polished sentence that feels finished but not fancy: __________.",
+      "drawingPrompt": "Draw a boardwalk postcard stand with one tied-up thank-you page: __________.",
+      "revisionNudge": "Revise by checking for one clear detail, one kind sentence, and one tidy close: __________.",
+      "quietOption": "Quiet option: polish only one sentence and copy it carefully here: __________.",
+      "takeHomeLine": "Take-home line: A polished thank-you note is specific, kind, and easy to read: __________."
+    },
+    {
+      "id": "thank-you-postcard-16",
+      "title": "Compass Craft Academy Thanks Route",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "thankYouSkill": "gift-to-story bridge",
+      "useCase": "Printable postcard for helping kids plan a clear beginning, middle, and close for a sincere thank-you note.",
+      "adultSetup": "Print the postcard and invite the child to mark three compass points: what happened, why it mattered, and the closing thanks.",
+      "kidDirection": "Map the thank-you note like a three-stop route, then add one invented compass-craft detail without asking for a reply.",
+      "noteStarter": "Start at the first compass point by naming what you are thankful for: __________.",
+      "storyBridge": "Move to the second point with a tiny map, compass, or craft-room detail: __________.",
+      "politeClose": "End at the final point with a polite close that asks for nothing: __________.",
+      "drawingPrompt": "Draw a three-stop compass route for the thank-you note: __________.",
+      "revisionNudge": "Revise the route so the note moves from thanks to detail to close in order: __________.",
+      "quietOption": "Quiet option: fill only the three route points before writing the final note: __________.",
+      "takeHomeLine": "Take-home line: A clear thank-you route helps the reader feel the real gratitude: __________."
+    }
+  ]
+}

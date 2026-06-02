@@ -758,6 +758,64 @@
         "Let participants point, sketch, dictate, write one line, or pass during optional sharing.",
         "Send home one postcard starter when the visit ends so families can extend the invented story offline."
       ]
+    },
+    {
+      "slug": "thank-you-note-story-postcard-pack",
+      "title": "Thank-You Note Story Postcard Pack",
+      "pricePoint": "$21",
+      "status": "checkout_pending",
+      "headline": "A printable thank-you note pack that starts with gratitude and one tiny story detail.",
+      "summary": "Sixteen adult-guided postcards help kids write sincere thank-you notes with a kind sentence, an invented object clue, and a polite close.",
+      "heroImage": "images/plotsprout/batch22/thank-you-note-story-postcard-pack.jpg",
+      "ctaLabel": "Request postcard pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Thank-You%20Note%20Story%20Postcard%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static thank-you postcard pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "button-bakery-map-mixup",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "penny-path-compass-shop",
+        "rain-gauge-railway",
+        "seed-library-map-room",
+        "greenhouse-gear-garden",
+        "pantry-measurement-mystery",
+        "tidepool-timekeepers-lab",
+        "margin-note-market",
+        "index-card-theater-club",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "binding-day-boardwalk",
+        "compass-craft-academy"
+      ],
+      "includedPages": [
+        "Sixteen printable thank-you story postcards",
+        "Adult setup guide",
+        "Coaching moves for reluctant writers",
+        "Privacy and no-data notes",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six repeatable note situations",
+        "Ten revision prompt strips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A parent-led thank-you note session after birthdays, holidays, visits, lessons, or help",
+        "A homeschool writing activity that teaches gratitude, specificity, and revision",
+        "A tutoring warm-up for reluctant writers who need a small sincere first sentence",
+        "A library family table with optional sharing and no data collection",
+        "A co-op or classroom station for polite notes that stay offline"
+      ],
+      "parentSteps": [
+        "Choose one postcard before the writing table starts so the note has a clear purpose.",
+        "Keep delivery details separate from the writing page and handled by the adult.",
+        "Let the writer point, sketch, dictate, write one line, or pass during optional sharing.",
+        "Ask for one exact kindness detail before asking for a full note.",
+        "Use one revision strip to polish the note, then let the family copy or deliver it offline."
+      ]
     }
   ]
 }

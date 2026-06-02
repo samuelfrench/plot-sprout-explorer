@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch22-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "thank-you-note-story-postcard-pack",
+      "title": "Thank-You Note Story Postcard Pack product image",
+      "purpose": "Static product page hero and printable product listing image",
+      "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, completely blank thank-you postcard sheets, blank envelopes with no markings, plain unmarked wooden colored pencils with no writing on barrels, warm wooden table, clean stationery product photo, all paper blank and unmarked, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device, no family photos, screen-free printable thank-you note story postcard pack",
+      "seed": 26062253,
+      "outputJpeg": "public/images/plotsprout/batch22/thank-you-note-story-postcard-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch22/thank-you-note-story-postcard-pack.webp",
+      "sidecar": "content/image-runs/batch22/thank-you-note-story-postcard-pack.json"
+    }
+  ]
+}
