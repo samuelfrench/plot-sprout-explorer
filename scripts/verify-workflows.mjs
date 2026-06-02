@@ -27,10 +27,14 @@ if (!/push:\s*\n\s*branches:\s*\[\s*main\s*\]/m.test(deploy)) {
   throw new Error('Deploy workflow must deploy from push to main.')
 }
 
+if (/cache:\s*npm/i.test(deploy)) {
+  throw new Error('Do not enable setup-node npm caching on the shared local runner cache.')
+}
+
 for (const pattern of blockedPatterns) {
   if (pattern.test(deploy)) {
     throw new Error(`Deploy workflow includes blocked content-generation automation: ${pattern}`)
   }
 }
 
-console.log('Workflow policy verified: push deploy only, self-hosted runner, no content generation.')
+console.log('Workflow policy verified: push deploy only, self-hosted runner, no content generation, no npm cache.')
