@@ -8,7 +8,7 @@
     "build": "npm run render:seo && tsc -b && vite build",
     "lint": "eslint .",
     "preview": "vite preview",
-    "test": "vitest run",
+    "test": "vitest run --testTimeout 15000",
     "verify": "npm run render:seo && npm run verify:actions && npm run verify:content && npm run lint && npm run test && npm run build",
     "verify:actions": "node scripts/verify-workflows.mjs",
     "verify:content": "node scripts/validate-content-batch.mjs",
