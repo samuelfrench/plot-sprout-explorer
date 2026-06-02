@@ -1,0 +1,995 @@
+{
+  "batchId": "2026-06-02-batch18",
+  "generatedAt": "2026-06-02",
+  "productSlug": "after-school-story-club-starter-kit",
+  "title": "After-School Story Club Starter Kit",
+  "pricePoint": "$69",
+  "audience": "After-school programs, enrichment coordinators, community centers, childcare site leads, and homeschool co-ops for ages 7-11.",
+  "sessionLength": "18 printable adult-led story club sessions plus director setup tools",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/after-school-story-club-starter-kit/After-School-Story-Club-Starter-Kit.pdf",
+    "zipPath": "product-build/after-school-story-club-starter-kit/after-school-story-club-starter-kit.zip",
+    "sourceHtmlPath": "product-build/after-school-story-club-starter-kit/source/after-school-story-club-starter-kit.html",
+    "manifestPath": "product-build/after-school-story-club-starter-kit/manifest.json"
+  },
+  "worldSlugs": [
+    "teacup-town-weather-window",
+    "spoon-ferry-lunchbox-harbor",
+    "pocket-park-notice-board",
+    "acorn-avenue-errand-office",
+    "button-bakery-map-mixup",
+    "penny-path-compass-shop",
+    "tidepool-timekeepers-lab",
+    "greenhouse-gear-garden",
+    "pantry-measurement-mystery",
+    "rain-gauge-railway",
+    "seed-library-map-room",
+    "moss-message-observatory",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "almost-invention-workshop",
+    "margin-note-market",
+    "index-card-theater-club"
+  ],
+  "cover": {
+    "kicker": "Printable after-school writing club kit",
+    "headline": "After-School Story Club Starter Kit",
+    "subhead": "Eighteen adult-led story club sessions for enrichment tables, community centers, childcare programs, and co-op groups.",
+    "included": [
+      "18 printable story club session pages",
+      "Before-club planning guide",
+      "Room setup checklist",
+      "Running-club coaching notes",
+      "Quiet participation options",
+      "No-data use notes",
+      "Family handoff notes",
+      "Six repeatable club formats",
+      "Twelve take-home prompt cards",
+      "Eight optional family-share prompts",
+      "Local image-backed world menu",
+      "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+    ]
+  },
+  "directorGuide": {
+    "beforeClub": [
+      "Print one director copy, one active club format, and enough take-home prompt cards for the planned group size.",
+      "Choose a calm invented setting, an ordinary object, and a small friendly mix-up for the adult example.",
+      "Place pencils, blank paper, choice slips, and plain folders in a single supply bin before the room opens.",
+      "Pick one main format and one quieter backup format so the session can adjust without extra prep.",
+      "Prepare a thirty-second adult model that uses only invented details and shows one clear next action."
+    ],
+    "roomSetup": [
+      "Set tables so writers can see the adult leader, reach supplies, and keep their pages on the table.",
+      "Put only the active page, pencils, and a small stack of blank paper within reach at the start.",
+      "Keep take-home prompt cards in a separate folder until the last few minutes of club.",
+      "Use table symbols, color dots, or plain folders if pages need simple sorting after the session.",
+      "Create one quiet corner with the same writing page for participants who prefer a lower-noise start."
+    ],
+    "runningClub": [
+      "Open with the session choice, read the first direction aloud, and show one invented adult example.",
+      "Move through one task at a time: setting, helper, object, small mix-up, next action, and ending.",
+      "Offer two invented options when a writer is stuck instead of asking for personal facts.",
+      "Invite participation through writing, sketch labels, pointing to a choice, or dictating one phrase to the adult leader.",
+      "End by asking each writer to mark one title, sentence, sketch, or detail they want to keep."
+    ],
+    "quietParticipation": [
+      "Allow passing during discussion while still giving the writer a page and a clear private task.",
+      "Use silent choice slips so a participant can point to setting, object, or ending options without speaking.",
+      "Let writers circle, underline, or sketch a response when full sentences feel too large for the moment.",
+      "Pair a quiet writer with the adult leader for one dictated phrase if the writer wants support.",
+      "Offer a take-home prompt card as the finish step for anyone who completes the club page early."
+    ],
+    "noDataUse": [
+      "Do not collect personal details; all stories use invented places, invented helpers, and ordinary objects.",
+      "This kit has no personal lists, personal labels, digital collection, image collection, or web-sharing step.",
+      "Keep every page printable, offline, and handled by the adult leader, participant, or family.",
+      "Use symbols, color dots, or plain folders for organization instead of private identifiers."
+    ],
+    "familyHandoff": [
+      "Send home the finished page, one optional prompt card, and a short note that the story details are invented.",
+      "Tell families the prompt card is optional and can be completed with pointing, sketching, or one sentence.",
+      "Mark one simple next step such as add a title, add one clearer detail, or finish the ending.",
+      "Keep any group sharing optional and focused on a title, sketch, object, or invented setting detail."
+    ]
+  },
+  "clubFormats": [
+    {
+      "name": "Snack Table Story Seed",
+      "bestFor": "The first 15 minutes of an after-school block when arrivals are uneven and the room needs a calm start.",
+      "steps": [
+        "Adult leader places one seed page and two invented setting choices at each seat.",
+        "Writers choose a setting, add one ordinary object, and sketch or write one detail.",
+        "Adult leader models a short opening using a different invented choice.",
+        "Writers turn their setting and object into two or three story lines."
+      ]
+    },
+    {
+      "name": "Homework-Finished Mini Quest",
+      "bestFor": "Mixed groups where some writers need a quiet enrichment option after other table work is done.",
+      "steps": [
+        "Adult leader gives a mini quest page with four boxes labeled place, helper, object, and ending.",
+        "Writers fill each box with invented details from the printed choice bank.",
+        "Adult leader checks that each page has one small friendly mix-up and one helpful next action.",
+        "Writers draft one sentence per box and choose a title before cleanup."
+      ]
+    },
+    {
+      "name": "Community Room Story Circle",
+      "bestFor": "Community centers, childcare site leads, and co-op adults running one shared table activity.",
+      "steps": [
+        "Adult leader reads a two-sentence invented scene and places four choice slips in the center.",
+        "Participants add ideas by speaking, pointing, sketching, or writing on their own page.",
+        "Adult leader repeats the shared idea using neutral invented details only.",
+        "Writers choose two shared details and make a short story start on their own page."
+      ]
+    },
+    {
+      "name": "Quiet Folder Finish",
+      "bestFor": "The final 10 minutes when the group needs a settled ending and easy family handoff.",
+      "steps": [
+        "Adult leader asks writers to stop at the end of the line or sketch part they are working on.",
+        "Writers mark one part to keep and one part that could use a title, detail, or ending.",
+        "Adult leader offers one take-home prompt card that matches the marked next step.",
+        "Pages go into plain folders before supplies are reset for the next club day."
+      ]
+    },
+    {
+      "name": "Four-Corner Story Builder",
+      "bestFor": "Rooms with extra table space and writers who benefit from moving through clear stations.",
+      "steps": [
+        "Adult leader sets four corners: invented place, helper, ordinary object, and kind ending.",
+        "Writers visit each corner and add one note to their own page.",
+        "Adult leader brings everyone back to seats and models how to order the four notes.",
+        "Writers draft a tiny story using first, next, then, and last."
+      ]
+    },
+    {
+      "name": "Co-Op Choice Board",
+      "bestFor": "Homeschool co-op adults who want a flexible adult-led writing block for different ages.",
+      "steps": [
+        "Adult leader displays three printable choices: map, message, or object clue.",
+        "Writers choose one path and complete the matching first box.",
+        "Adult leader offers short support prompts while keeping all details invented.",
+        "Writers finish with one ending line and one optional share choice."
+      ]
+    }
+  ],
+  "takeHomePromptCards": [
+    {
+      "title": "After-Club Setting Add-On",
+      "time": "6 minutes",
+      "skill": "setting detail",
+      "direction": "Add one invented detail to the place from today's club page: ____________________.",
+      "familyLine": "A grown-up can ask what the place sounds or looks like: ____________________."
+    },
+    {
+      "title": "Ordinary Object Clue",
+      "time": "7 minutes",
+      "skill": "plot clue",
+      "direction": "Choose one ordinary object and write how it helps the story helper: ____________________.",
+      "familyLine": "A grown-up can offer two object choices here: ____________________."
+    },
+    {
+      "title": "Title Before Dinner",
+      "time": "5 minutes",
+      "skill": "main idea",
+      "direction": "Write three possible titles for the invented story: ____________________.",
+      "familyLine": "A grown-up can ask which title gives the clearest clue: ____________________."
+    },
+    {
+      "title": "First Next Last",
+      "time": "6 minutes",
+      "skill": "sequence",
+      "direction": "Write first, next, and last for three small story actions: ____________________.",
+      "familyLine": "A grown-up can point to the action that should become longer: ____________________."
+    },
+    {
+      "title": "Helper Choice Line",
+      "time": "7 minutes",
+      "skill": "character action",
+      "direction": "Write one line showing what the invented helper chooses to do next: ____________________.",
+      "familyLine": "A grown-up can ask what made that choice useful: ____________________."
+    },
+    {
+      "title": "Kind Ending Try",
+      "time": "8 minutes",
+      "skill": "ending choice",
+      "direction": "Add one kind ending to the small story mix-up: ____________________.",
+      "familyLine": "A grown-up can ask what changed at the end: ____________________."
+    },
+    {
+      "title": "Dialogue Pair",
+      "time": "7 minutes",
+      "skill": "dialogue",
+      "direction": "Write two short lines between invented roles such as maker and guide: ____________________.",
+      "familyLine": "A grown-up can read one role while the writer chooses the reply: ____________________."
+    },
+    {
+      "title": "Choice Slip Rewrite",
+      "time": "6 minutes",
+      "skill": "revision",
+      "direction": "Pick one choice from club and rewrite it with a clearer word: ____________________.",
+      "familyLine": "A grown-up can ask which word became easier to picture: ____________________."
+    },
+    {
+      "title": "Tiny Map Label",
+      "time": "6 minutes",
+      "skill": "planning",
+      "direction": "Draw a tiny invented map and label three safe story stops: ____________________.",
+      "familyLine": "A grown-up can ask which stop belongs near the beginning: ____________________."
+    },
+    {
+      "title": "Object Pocket",
+      "time": "5 minutes",
+      "skill": "idea bank",
+      "direction": "List three ordinary objects a story helper could carry: ____________________.",
+      "familyLine": "A grown-up can ask which object should appear first: ____________________."
+    },
+    {
+      "title": "One Strong Sentence",
+      "time": "5 minutes",
+      "skill": "sentence clarity",
+      "direction": "Choose one club idea and write it as one clear sentence: ____________________.",
+      "familyLine": "A grown-up can ask which word does the most work: ____________________."
+    },
+    {
+      "title": "Next Club Seed",
+      "time": "7 minutes",
+      "skill": "story planning",
+      "direction": "Invent one place, one helper, and one small mix-up for another club day: ____________________.",
+      "familyLine": "A grown-up can add one ordinary object to the seed: ____________________."
+    }
+  ],
+  "optionalFamilySharePrompts": [
+    "Show one title, sketch, or invented setting detail from the club page.",
+    "Read one sentence aloud, or ask a grown-up to read it for you.",
+    "Point to one ordinary object and explain how it helps the story.",
+    "Share one small next action the helper could take.",
+    "Tell which part came first, next, or last in the story.",
+    "Show one word you made clearer after club.",
+    "Describe one kind ending choice from the invented story.",
+    "Pass today and keep the page private while the family notices one finished detail."
+  ],
+  "sessions": [
+    {
+      "id": "after-school-teacup-weather-window-club",
+      "title": "Teacup Weather Window Club",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "clubSkill": "weather clues",
+      "sessionFit": "20-minute adult-led after-school club opener for a small table that needs one setting detail and one gentle sentence finish.",
+      "directorSetup": "Print one page per writer, place pencils and two pretend weather clue cards on the table, and keep the activity at an indoor writing station.",
+      "kidDirection": "Look through the teacup weather window, choose one sky clue, and write what the tiny helper notices next.",
+      "facilitatorPrompt": "Ask the table which clue is easiest to picture, then model one short sentence that starts with because.",
+      "pageSections": [
+        {
+          "heading": "Weather Window",
+          "lines": [
+            "The teacup window shows a sky clue: ____________________.",
+            "The tiny curtain moves when ____________________.",
+            "The weather card on the sill says ____________________."
+          ]
+        },
+        {
+          "heading": "Town Helper",
+          "lines": [
+            "The helper carries a tiny supply of ____________________.",
+            "The helper checks the cup-handle bridge for ____________________.",
+            "The kind plan for the town is ____________________."
+          ]
+        },
+        {
+          "heading": "Club Sentence",
+          "lines": [
+            "First, the sky clue changes near ____________________.",
+            "Next, the helper notices ____________________.",
+            "My teacup town sentence is ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: One weather clue I can read to the table is ____________________.",
+      "wrapUpLine": "Wrap-up line: The detail that made my teacup scene clearer was ____________________.",
+      "quietOptionLine": "Quiet option: Circle one line to finish later: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one weather clues detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-spoon-ferry-harbor-note",
+      "title": "Spoon Ferry Harbor Note",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "clubSkill": "setting objects",
+      "sessionFit": "22-minute adult-led after-school club page for a calm table after snack, with one object choice and one short harbor note.",
+      "directorSetup": "Print the harbor page, set out pencils and paper spoon markers, and place a simple lunchbox map in the center of the table.",
+      "kidDirection": "Send the paper spoon ferry across the lunchbox harbor, choose what it carries, and write a clear note for the dock crew.",
+      "facilitatorPrompt": "Ask writers to name one pretend harbor object before they decide what the ferry carries.",
+      "pageSections": [
+        {
+          "heading": "Lunchbox Harbor",
+          "lines": [
+            "The spoon ferry docks beside ____________________.",
+            "The lunchbox lighthouse shines on ____________________.",
+            "The cracker dock is decorated with ____________________."
+          ]
+        },
+        {
+          "heading": "Ferry Load",
+          "lines": [
+            "The paper ferry carries ____________________.",
+            "The smallest pretend passenger asks for ____________________.",
+            "The careful ferry path curves around ____________________."
+          ]
+        },
+        {
+          "heading": "Harbor Note",
+          "lines": [
+            "First, the dock crew checks ____________________.",
+            "Next, the ferry helper adds ____________________.",
+            "The harbor note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: The lunchbox harbor object I can read aloud is ____________________.",
+      "wrapUpLine": "Wrap-up line: The object that helped my setting was ____________________.",
+      "quietOptionLine": "Quiet option: Draw the ferry path, then finish this clue: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one setting objects detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-pocket-park-notice-table",
+      "title": "Pocket Park Notice Table",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "clubSkill": "message and reason",
+      "sessionFit": "20-minute adult-led after-school club table for writers who can invent one notice and explain why it helps a tiny park.",
+      "directorSetup": "Print one notice page per writer, set out pencils and three blank paper strips, and keep all notices fictional.",
+      "kidDirection": "Invent a pocket park notice, choose the clearest reason, and write what the park helper does next.",
+      "facilitatorPrompt": "Prompt the group to use invented park details, then help each writer finish one because sentence.",
+      "pageSections": [
+        {
+          "heading": "Notice Board",
+          "lines": [
+            "The first pocket park notice asks for ____________________.",
+            "The second notice points toward ____________________.",
+            "The board frame is decorated with ____________________."
+          ]
+        },
+        {
+          "heading": "Park Reason",
+          "lines": [
+            "This notice helps because ____________________.",
+            "The pebble path leads to ____________________.",
+            "The pocket park helper brings ____________________."
+          ]
+        },
+        {
+          "heading": "Helper Action",
+          "lines": [
+            "First, the helper reads ____________________.",
+            "Next, the helper adds ____________________.",
+            "The final pocket park notice says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: The useful notice I can read to the group is ____________________.",
+      "wrapUpLine": "Wrap-up line: The reason that made my notice clear was ____________________.",
+      "quietOptionLine": "Quiet option: Choose one notice strip and copy it neatly here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one message and reason detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-acorn-errand-desk",
+      "title": "Acorn Errand Desk",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "clubSkill": "sequence steps",
+      "sessionFit": "22-minute adult-led after-school club activity for a table that needs first, next, and last story steps.",
+      "directorSetup": "Print the errand desk page, set out pencils and three paper leaf slips, and keep the route on the table map.",
+      "kidDirection": "Sort three friendly errand slips, choose a helpful order, and write the desk note that explains the route.",
+      "facilitatorPrompt": "Ask which errand should come first and what clue makes the order easier to follow.",
+      "pageSections": [
+        {
+          "heading": "Errand Slips",
+          "lines": [
+            "The first leaf slip asks for ____________________.",
+            "The second leaf slip belongs near ____________________.",
+            "The third leaf slip is marked with ____________________."
+          ]
+        },
+        {
+          "heading": "Desk Sort",
+          "lines": [
+            "The acorn drawer holds ____________________.",
+            "The route list starts with ____________________.",
+            "The helper chooses this order because ____________________."
+          ]
+        },
+        {
+          "heading": "Route Note",
+          "lines": [
+            "First, the helper carries ____________________.",
+            "Next, the helper checks ____________________.",
+            "Last, the desk note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: The route step I can read to the table is ____________________.",
+      "wrapUpLine": "Wrap-up line: The order word that helped my story was ____________________.",
+      "quietOptionLine": "Quiet option: Number the slips, then finish this route clue: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one sequence steps detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-button-bakery-map-fix",
+      "title": "Button Bakery Map Fix",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "clubSkill": "map directions",
+      "sessionFit": "24-minute adult-led after-school club session for a table ready to use direction words and specific bakery details.",
+      "directorSetup": "Print one bakery map page per writer, set out pencils and crumb-path paper strips, and sketch a simple tabletop route.",
+      "kidDirection": "Choose a bakery clue, add a direction word, and help the button baker fix the mixed-up map.",
+      "facilitatorPrompt": "Invite writers to replace vague clues with objects the whole table can picture.",
+      "pageSections": [
+        {
+          "heading": "Bakery Map",
+          "lines": [
+            "The crumb path begins under ____________________.",
+            "The map points past a tray of ____________________.",
+            "The button baker notices ____________________."
+          ]
+        },
+        {
+          "heading": "Direction Clues",
+          "lines": [
+            "Turn left when the helper sees ____________________.",
+            "Step around the counter near ____________________.",
+            "Stop at the shelf with ____________________."
+          ]
+        },
+        {
+          "heading": "Map Fix",
+          "lines": [
+            "The mixed-up map changes because ____________________.",
+            "The clearest bakery clue is ____________________.",
+            "The fixed route leads to ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: The map word I can read to the club is ____________________.",
+      "wrapUpLine": "Wrap-up line: The bakery detail that made my route clearer was ____________________.",
+      "quietOptionLine": "Quiet option: Draw arrows first, then write this map clue: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one map directions detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-penny-path-compass-card",
+      "title": "Penny Path Compass Card",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "clubSkill": "direction detail",
+      "sessionFit": "22-minute adult-led after-school club page for a tabletop route activity with one compass clue and one clear direction card.",
+      "directorSetup": "Print one compass page per writer, place a pretend penny compass card on each table, and keep the route on paper.",
+      "kidDirection": "Spin the pretend compass, choose a path clue, and write three directions for the shop helper.",
+      "facilitatorPrompt": "Ask each writer to include one direction word and one detail a reader could picture.",
+      "pageSections": [
+        {
+          "heading": "Compass Clue",
+          "lines": [
+            "The penny compass points toward ____________________.",
+            "The first path marker looks like ____________________.",
+            "The shop window displays ____________________."
+          ]
+        },
+        {
+          "heading": "Path Details",
+          "lines": [
+            "The paper route goes around ____________________.",
+            "A small sound along the path is ____________________.",
+            "The next clue shines near ____________________."
+          ]
+        },
+        {
+          "heading": "Direction Card",
+          "lines": [
+            "First, follow the compass past ____________________.",
+            "Next, turn when you notice ____________________.",
+            "The route ends beside ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: The compass direction I can read to the table is ____________________.",
+      "wrapUpLine": "Wrap-up line: The direction detail that helped my route was ____________________.",
+      "quietOptionLine": "Quiet option: Trace the paper path silently, then finish this line: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one direction detail detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-tidepool-timekeepers-lab-clock",
+      "title": "Tidepool Timekeepers Lab Clock",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "clubSkill": "Sequencing observations by time",
+      "sessionFit": "32-minute adult-led after-school story club session for a table group that needs a calm opening, short draft, and optional read-back.",
+      "directorSetup": "Print one page per writer, place pencils and three tide-card slips on each table, and set a front table as the pretend lab station.",
+      "kidDirection": "Choose a tide time, add two careful lab details, and write a short note that helps the next timekeeper understand the order.",
+      "facilitatorPrompt": "Ask the site lead to point writers toward time words, measured details, and one clear next step for the lab team.",
+      "pageSections": [
+        {
+          "heading": "Lab Clock",
+          "lines": [
+            "The first tide time on the lab card is ____________________.",
+            "The shell shadow changes near ____________________.",
+            "The next pool to check should be ____________________."
+          ]
+        },
+        {
+          "heading": "Observation Order",
+          "lines": [
+            "First, the timekeeper writes down ____________________.",
+            "Next, the lab helper compares ____________________.",
+            "Last, the tide note should explain ____________________."
+          ]
+        },
+        {
+          "heading": "Field Note",
+          "lines": [
+            "The clearest measurement detail is ____________________.",
+            "One word that shows the order is ____________________.",
+            "My final tidepool lab note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The time-order detail I can share with the club is ____________________.",
+      "wrapUpLine": "One observation I made clearer today was ____________________.",
+      "quietOptionLine": "For a quiet version, number the tide cards and write the first note about ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one sequencing observations by time detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-greenhouse-gear-garden-plan",
+      "title": "Greenhouse Gear Garden Plan",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "clubSkill": "Explaining a helpful design choice",
+      "sessionFit": "35-minute after-school story club table block for a maker-style group that can sketch first and draft second.",
+      "directorSetup": "Print the garden page, set out pencils and green or gray colored pencils, and draw three harmless gear shapes on the room board.",
+      "kidDirection": "Invent a greenhouse gear, explain what it helps, and write the small adjustment that makes the garden schedule clearer.",
+      "facilitatorPrompt": "Invite the site lead to ask what the gear helps, what gets confusing, and which gentle fix belongs in the next sentence.",
+      "pageSections": [
+        {
+          "heading": "Gear Idea",
+          "lines": [
+            "The greenhouse gear is shaped like ____________________.",
+            "It helps the seedlings by ____________________.",
+            "The garden table clue shows ____________________."
+          ]
+        },
+        {
+          "heading": "Schedule Problem",
+          "lines": [
+            "The gear turns too early near ____________________.",
+            "The plant label that needs a clearer time is ____________________.",
+            "The helper notices the mix-up when ____________________."
+          ]
+        },
+        {
+          "heading": "Design Fix",
+          "lines": [
+            "The first adjustment should be ____________________.",
+            "The reason this helps the garden is ____________________.",
+            "My final greenhouse plan says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The design choice I can share with the club is ____________________.",
+      "wrapUpLine": "One exact garden word I used today was ____________________.",
+      "quietOptionLine": "For a quiet version, sketch the gear first and label ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one explaining a helpful design choice detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-pantry-measurement-mystery-chart",
+      "title": "Pantry Measurement Mystery Chart",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "clubSkill": "Writing cause and evidence",
+      "sessionFit": "30-minute adult-led after-school club session for snack-table energy, quick evidence sorting, and a short explanation paragraph.",
+      "directorSetup": "Print one pantry chart per writer, place pencils beside three recipe clue slips, and use a room board for a simple before-and-after chart.",
+      "kidDirection": "Pick a pantry clue, compare the recipe notes, and write what changed in the muffin chart.",
+      "facilitatorPrompt": "Ask the site lead to guide writers from guess words toward evidence words such as because, changed, and compared.",
+      "pageSections": [
+        {
+          "heading": "Pantry Clues",
+          "lines": [
+            "The recipe card first shows ____________________.",
+            "The measuring spoon clue points to ____________________.",
+            "The muffin chart changes near ____________________."
+          ]
+        },
+        {
+          "heading": "Cause Check",
+          "lines": [
+            "One amount that changed was ____________________.",
+            "The evidence that helps me know is ____________________.",
+            "The pantry helper should compare ____________________."
+          ]
+        },
+        {
+          "heading": "Mystery Note",
+          "lines": [
+            "The clearest cause word I can use is ____________________.",
+            "The chart makes more sense after ____________________.",
+            "My final pantry mystery note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The evidence clue I can share with the club is ____________________.",
+      "wrapUpLine": "One cause-and-effect sentence I improved was ____________________.",
+      "quietOptionLine": "For a quiet version, circle one recipe clue and finish ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one writing cause and evidence detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-rain-gauge-railway-route",
+      "title": "Rain Gauge Railway Route",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "clubSkill": "Using map words in a story route",
+      "sessionFit": "33-minute after-school story club session for a weather-themed table, with map planning before independent writing.",
+      "directorSetup": "Print the railway route page, place pencils at each seat, and tape three pretend station labels to the tables in the room.",
+      "kidDirection": "Choose the railway stops, add rain-gauge details, and write a route note that moves from start to finish.",
+      "facilitatorPrompt": "Prompt the site lead to ask for direction words, one measurement detail, and a final station that makes sense.",
+      "pageSections": [
+        {
+          "heading": "Weather Station",
+          "lines": [
+            "The rain gauge shows ____________________.",
+            "The first railway stop is beside ____________________.",
+            "The garden alert card points toward ____________________."
+          ]
+        },
+        {
+          "heading": "Route Words",
+          "lines": [
+            "The train moves past ____________________.",
+            "The route turns after ____________________.",
+            "The sample car stops near ____________________."
+          ]
+        },
+        {
+          "heading": "Conductor Note",
+          "lines": [
+            "The clearest map word on my page is ____________________.",
+            "The route makes sense because ____________________.",
+            "My final railway note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The route word I can share with the club is ____________________.",
+      "wrapUpLine": "One station detail I made clearer was ____________________.",
+      "quietOptionLine": "For a quiet version, draw arrows first and write the stop near ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one using map words in a story route detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-seed-library-map-room-card",
+      "title": "Seed Library Map Room Card",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "clubSkill": "Connecting setting details to next action",
+      "sessionFit": "36-minute adult-led after-school story club session for a steady table group that can sort cards and draft a return note.",
+      "directorSetup": "Print seed-map pages, stack three blank packet cards per table, and set up pencils with one folded pretend map at the center.",
+      "kidDirection": "Choose a seed packet, add a map-room clue, and write the next action for the catalog helper.",
+      "facilitatorPrompt": "Have the site lead ask how the setting clue changes what the helper should do next.",
+      "pageSections": [
+        {
+          "heading": "Packet Pick",
+          "lines": [
+            "The seed packet label says ____________________.",
+            "The folded map opens toward ____________________.",
+            "The drawer clue shows ____________________."
+          ]
+        },
+        {
+          "heading": "Map Room Detail",
+          "lines": [
+            "The garden map has a mark beside ____________________.",
+            "The catalog card explains ____________________.",
+            "The shelf note helps the helper find ____________________."
+          ]
+        },
+        {
+          "heading": "Next Action",
+          "lines": [
+            "The catalog helper should first ____________________.",
+            "The next action matters because ____________________.",
+            "My final seed library note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The setting clue I can share with the club is ____________________.",
+      "wrapUpLine": "One next-action phrase I wrote today was ____________________.",
+      "quietOptionLine": "For a quiet version, point to one map mark and complete ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one connecting setting details to next action detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-moss-message-observatory-note",
+      "title": "Moss Message Observatory Note",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "clubSkill": "Adding sensory description",
+      "sessionFit": "31-minute after-school story club session for a quiet table, useful when the group needs slower observation and descriptive writing.",
+      "directorSetup": "Print the observatory page, set out pencils and green color swatches, and make a calm room corner for silent sketching before writing.",
+      "kidDirection": "Choose a moss pattern, describe its color and texture, and write a field note for the observatory shelf.",
+      "facilitatorPrompt": "Ask the site lead to help writers name what can be seen, felt, or measured in the pretend notebook scene.",
+      "pageSections": [
+        {
+          "heading": "Moss Pattern",
+          "lines": [
+            "The moss pattern looks like ____________________.",
+            "The color swatch that fits best is ____________________.",
+            "The observatory shelf holds ____________________."
+          ]
+        },
+        {
+          "heading": "Careful Description",
+          "lines": [
+            "The moss texture reminds me of ____________________.",
+            "The light in the forest corner is ____________________.",
+            "The notebook detail I should add is ____________________."
+          ]
+        },
+        {
+          "heading": "Field Note",
+          "lines": [
+            "The strongest describing word is ____________________.",
+            "The pattern seems clearer after ____________________.",
+            "My final observatory note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The descriptive detail I can share with the club is ____________________.",
+      "wrapUpLine": "One sensory word I used today was ____________________.",
+      "quietOptionLine": "For a quiet version, shade the swatch first and write about ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one adding sensory description detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-revision-river-ferry-ending-route",
+      "title": "Revision River Ferry Ending Route",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "clubSkill": "ending revision",
+      "sessionFit": "Adult-led 25-minute after-school story club session for an older writing table after snack or homework time.",
+      "directorSetup": "Print one session page per writer, set pencils at each seat, place three draft-route cards in the center, and leave a quiet finish basket on the side table.",
+      "kidDirection": "Choose one rough ending, ferry it past two helpful details, and write a clearer final line for an invented scene.",
+      "facilitatorPrompt": "Ask which early detail should return at the end and what the reader should understand at the final dock.",
+      "pageSections": [
+        {
+          "heading": "Starting Dock",
+          "lines": [
+            "The early detail waiting on the dock is ____________________.",
+            "The scene changes when ____________________.",
+            "The rough ending I want to improve is ____________________."
+          ]
+        },
+        {
+          "heading": "Ferry Revision",
+          "lines": [
+            "One word I can remove for clarity is ____________________.",
+            "One detail I can carry forward is ____________________.",
+            "The ending becomes easier to follow because ____________________."
+          ]
+        },
+        {
+          "heading": "Final Dock",
+          "lines": [
+            "My revised ending begins with ____________________.",
+            "The detail that echoes the start is ____________________.",
+            "The final dock leaves readers thinking about ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share the echoed detail you used, or point to it on the page: ____________________.",
+      "wrapUpLine": "The ending choice I improved today was ____________________.",
+      "quietOptionLine": "Work silently by writing only the revised final sentence here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one ending revision detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-clue-label-tower-museum-focus-label",
+      "title": "Clue Label Tower Focus Label",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "clubSkill": "focused detail selection",
+      "sessionFit": "Adult-led 30-minute after-school story club session for older writers building one concise exhibit paragraph.",
+      "directorSetup": "Print the pages, set out pencils, place three harmless object cards on each table, and mark a display corner for finished paper labels.",
+      "kidDirection": "Invent a tower exhibit, choose the clue that matters most, and write a label that guides readers in a clear order.",
+      "facilitatorPrompt": "Ask which clue belongs first, which detail can wait, and how the label can stay short but useful.",
+      "pageSections": [
+        {
+          "heading": "Tower Exhibit",
+          "lines": [
+            "The object on the tower shelf is ____________________.",
+            "The clue beside it shows ____________________.",
+            "A detail that can wait for another label is ____________________."
+          ]
+        },
+        {
+          "heading": "Label Order",
+          "lines": [
+            "Readers should notice first that ____________________.",
+            "The middle sentence should explain ____________________.",
+            "The final sentence should point toward ____________________."
+          ]
+        },
+        {
+          "heading": "Curator Finish",
+          "lines": [
+            "The clearest label word I used is ____________________.",
+            "One word I can replace for focus is ____________________.",
+            "My finished tower label says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share one clue word that helped your label stay focused: ____________________.",
+      "wrapUpLine": "The detail I chose to leave out was ____________________.",
+      "quietOptionLine": "Skip sharing and copy your final label neatly here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one focused detail selection detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-compass-craft-academy-paragraph-route",
+      "title": "Compass Craft Academy Paragraph Route",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "clubSkill": "paragraph structure",
+      "sessionFit": "Adult-led 25-minute after-school story club session for planning a beginning, turn, and finish before drafting.",
+      "directorSetup": "Print one page per writer, draw three route dots on a board or chart paper, and set route-word cards near the table edge.",
+      "kidDirection": "Map a paragraph route for a made-up compass craft, then write the sentence that moves readers through the turn.",
+      "facilitatorPrompt": "Ask which sentence acts like the compass needle and keeps the paragraph pointed forward.",
+      "pageSections": [
+        {
+          "heading": "Route Dots",
+          "lines": [
+            "The paragraph starts beside ____________________.",
+            "The route turns when ____________________.",
+            "The finish should show readers ____________________."
+          ]
+        },
+        {
+          "heading": "Compass Sentence",
+          "lines": [
+            "A word that moves the route forward is ____________________.",
+            "A phrase that explains the turn is ____________________.",
+            "The sentence that guides readers best is ____________________."
+          ]
+        },
+        {
+          "heading": "Academy Finish",
+          "lines": [
+            "The route detail I can make clearer is ____________________.",
+            "The final sentence should connect back to ____________________.",
+            "My compass craft paragraph line is ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share the route word that helped your paragraph turn: ____________________.",
+      "wrapUpLine": "The sentence that shaped my paragraph was ____________________.",
+      "quietOptionLine": "Work quietly by tracing three route dots and writing the turn here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one paragraph structure detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-almost-invention-workshop-test-note",
+      "title": "Almost Invention Workshop Test Note",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "clubSkill": "instruction order",
+      "sessionFit": "Adult-led 30-minute after-school story club session for older writers who need a structured explain-and-revise task.",
+      "directorSetup": "Print the workshop pages, set pencils and three step cards at each table, and keep all invention ideas on paper with no real building required.",
+      "kidDirection": "Describe an almost-invention, put its steps in a sensible order, and write a test note that explains what to adjust next.",
+      "facilitatorPrompt": "Ask where a reader might get confused and which step should be moved, shortened, or clarified.",
+      "pageSections": [
+        {
+          "heading": "Workshop Plan",
+          "lines": [
+            "The almost-invention is supposed to help with ____________________.",
+            "The first harmless part on the bench is ____________________.",
+            "The part that needs a clearer job is ____________________."
+          ]
+        },
+        {
+          "heading": "Step Order",
+          "lines": [
+            "The first instruction should tell readers to ____________________.",
+            "The step that belongs next is ____________________.",
+            "The step that needs clearer wording is ____________________."
+          ]
+        },
+        {
+          "heading": "Test Note",
+          "lines": [
+            "The invention almost works when ____________________.",
+            "The adjustment I would try next is ____________________.",
+            "My workshop test note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share one step you moved or clarified for readers: ____________________.",
+      "wrapUpLine": "The instruction I made clearest today was ____________________.",
+      "quietOptionLine": "Work silently by revising one step and writing it here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one instruction order detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-margin-note-market-kind-feedback",
+      "title": "Margin Note Market Kind Feedback",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "clubSkill": "specific feedback",
+      "sessionFit": "Adult-led 25-minute after-school story club session for practicing useful revision comments on invented sample lines.",
+      "directorSetup": "Print the pages, place pencils and sample note strips on each table, and use only invented writing snippets for the feedback practice.",
+      "kidDirection": "Trade a fuzzy market note for a kind, specific revision task, then write a new line that follows the note.",
+      "facilitatorPrompt": "Ask which exact word, detail, or order change would make the note useful without making it personal.",
+      "pageSections": [
+        {
+          "heading": "Market Note",
+          "lines": [
+            "The fuzzy note on the stand says ____________________.",
+            "The note feels too broad because ____________________.",
+            "A kinder version of the note could start with ____________________."
+          ]
+        },
+        {
+          "heading": "Revision Trade",
+          "lines": [
+            "The detail I want the writer to add is ____________________.",
+            "The plain word I would trade out is ____________________.",
+            "The sentence would be easier to follow if ____________________."
+          ]
+        },
+        {
+          "heading": "New Story Line",
+          "lines": [
+            "My revised story line begins with ____________________.",
+            "The clearer detail readers can notice is ____________________.",
+            "The next useful note could be about ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share one feedback phrase that stayed kind and specific: ____________________.",
+      "wrapUpLine": "The revision move I can explain clearly is ____________________.",
+      "quietOptionLine": "Work quietly by choosing one note and writing only the revised line: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one specific feedback detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-index-card-theater-club-scene-turn",
+      "title": "Index Card Theater Scene Turn",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "clubSkill": "scene turning point",
+      "sessionFit": "Adult-led 30-minute after-school story club session for shaping a small scene with a clear shift.",
+      "directorSetup": "Print the pages, set pencils at each seat, place three scene cards face up, and keep the share time optional for quieter writers.",
+      "kidDirection": "Arrange three theater cards, write a two-line exchange, and make the second line change the direction of the scene.",
+      "facilitatorPrompt": "Ask what the first speaker expects, what the reply changes, and which stage action makes the turn clear.",
+      "pageSections": [
+        {
+          "heading": "Scene Cards",
+          "lines": [
+            "The first scene card shows ____________________.",
+            "The middle card changes the plan because ____________________.",
+            "The final card should reveal ____________________."
+          ]
+        },
+        {
+          "heading": "Dialogue Turn",
+          "lines": [
+            "The first line of dialogue is ____________________.",
+            "The reply changes the scene when ____________________.",
+            "A small stage action between the lines is ____________________."
+          ]
+        },
+        {
+          "heading": "Theater Finish",
+          "lines": [
+            "The turning point becomes clear because ____________________.",
+            "One cue word I can revise is ____________________.",
+            "My final theater scene line is ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share the line or action that turned your scene: ____________________.",
+      "wrapUpLine": "The moment that changed my scene most was ____________________.",
+      "quietOptionLine": "Skip read-aloud time and write your strongest scene line here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one scene turning point detail for this club story: ____________________."
+    }
+  ]
+}

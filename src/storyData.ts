@@ -350,6 +350,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen counselor-led story circles with camp-safe routines, quiet options, and take-home trail cards.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'after-school-story-club-starter-kit',
+    title: 'After-School Story Club Starter Kit',
+    pricePoint: '$69',
+    description:
+      'Eighteen adult-led after-school club sessions with director tools, quiet options, and take-home prompt cards.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

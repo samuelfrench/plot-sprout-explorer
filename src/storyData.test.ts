@@ -52,8 +52,9 @@ describe('storyData', () => {
       'substitute-teacher-story-station-pack',
       'tutoring-center-story-sprint-pack',
       'summer-camp-story-circle-kit',
+      'after-school-story-club-starter-kit',
     ])
-    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19', '$17', '$11', '$23', '$39', '$49', '$59'])
+    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19', '$17', '$11', '$23', '$39', '$49', '$59', '$69'])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
     }

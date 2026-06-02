@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch18-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "after-school-story-club-starter-kit",
+      "title": "After-School Story Club Starter Kit product image",
+      "purpose": "Static product hero for the $69 After-School Story Club Starter Kit page.",
+      "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device, screen-free printable after-school writing club kit, blank white paper, blank folders, blank cards, pencils, supply tray, color tags",
+      "outputJpeg": "public/images/plotsprout/batch18/after-school-story-club-starter-kit.jpg",
+      "outputWebp": "public/images/plotsprout/batch18/after-school-story-club-starter-kit.webp",
+      "sidecar": "content/image-runs/batch18/after-school-story-club-starter-kit.json",
+      "seed": 26061850
+    }
+  ]
+}

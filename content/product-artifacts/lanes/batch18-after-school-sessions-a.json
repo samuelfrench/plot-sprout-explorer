@@ -1,0 +1,253 @@
+{
+  "batchId": "2026-06-02-batch18",
+  "lane": "after-school-sessions-a",
+  "generatedAt": "2026-06-02",
+  "sessions": [
+    {
+      "id": "after-school-teacup-weather-window-club",
+      "title": "Teacup Weather Window Club",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "clubSkill": "weather clues",
+      "sessionFit": "20-minute adult-led after-school club opener for a small table that needs one setting detail and one gentle sentence finish.",
+      "directorSetup": "Print one page per writer, place pencils and two pretend weather clue cards on the table, and keep the activity at an indoor writing station.",
+      "kidDirection": "Look through the teacup weather window, choose one sky clue, and write what the tiny helper notices next.",
+      "facilitatorPrompt": "Ask the table which clue is easiest to picture, then model one short sentence that starts with because.",
+      "pageSections": [
+        {
+          "heading": "Weather Window",
+          "lines": [
+            "The teacup window shows a sky clue: ____________________.",
+            "The tiny curtain moves when ____________________.",
+            "The weather card on the sill says ____________________."
+          ]
+        },
+        {
+          "heading": "Town Helper",
+          "lines": [
+            "The helper carries a tiny supply of ____________________.",
+            "The helper checks the cup-handle bridge for ____________________.",
+            "The kind plan for the town is ____________________."
+          ]
+        },
+        {
+          "heading": "Club Sentence",
+          "lines": [
+            "First, the sky clue changes near ____________________.",
+            "Next, the helper notices ____________________.",
+            "My teacup town sentence is ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: One weather clue I can read to the table is ____________________.",
+      "wrapUpLine": "Wrap-up line: The detail that made my teacup scene clearer was ____________________.",
+      "quietOptionLine": "Quiet option: Circle one line to finish later: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one weather clues detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-spoon-ferry-harbor-note",
+      "title": "Spoon Ferry Harbor Note",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "clubSkill": "setting objects",
+      "sessionFit": "22-minute adult-led after-school club page for a calm table after snack, with one object choice and one short harbor note.",
+      "directorSetup": "Print the harbor page, set out pencils and paper spoon markers, and place a simple lunchbox map in the center of the table.",
+      "kidDirection": "Send the paper spoon ferry across the lunchbox harbor, choose what it carries, and write a clear note for the dock crew.",
+      "facilitatorPrompt": "Ask writers to name one pretend harbor object before they decide what the ferry carries.",
+      "pageSections": [
+        {
+          "heading": "Lunchbox Harbor",
+          "lines": [
+            "The spoon ferry docks beside ____________________.",
+            "The lunchbox lighthouse shines on ____________________.",
+            "The cracker dock is decorated with ____________________."
+          ]
+        },
+        {
+          "heading": "Ferry Load",
+          "lines": [
+            "The paper ferry carries ____________________.",
+            "The smallest pretend passenger asks for ____________________.",
+            "The careful ferry path curves around ____________________."
+          ]
+        },
+        {
+          "heading": "Harbor Note",
+          "lines": [
+            "First, the dock crew checks ____________________.",
+            "Next, the ferry helper adds ____________________.",
+            "The harbor note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: The lunchbox harbor object I can read aloud is ____________________.",
+      "wrapUpLine": "Wrap-up line: The object that helped my setting was ____________________.",
+      "quietOptionLine": "Quiet option: Draw the ferry path, then finish this clue: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one setting objects detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-pocket-park-notice-table",
+      "title": "Pocket Park Notice Table",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "clubSkill": "message and reason",
+      "sessionFit": "20-minute adult-led after-school club table for writers who can invent one notice and explain why it helps a tiny park.",
+      "directorSetup": "Print one notice page per writer, set out pencils and three blank paper strips, and keep all notices fictional.",
+      "kidDirection": "Invent a pocket park notice, choose the clearest reason, and write what the park helper does next.",
+      "facilitatorPrompt": "Prompt the group to use invented park details, then help each writer finish one because sentence.",
+      "pageSections": [
+        {
+          "heading": "Notice Board",
+          "lines": [
+            "The first pocket park notice asks for ____________________.",
+            "The second notice points toward ____________________.",
+            "The board frame is decorated with ____________________."
+          ]
+        },
+        {
+          "heading": "Park Reason",
+          "lines": [
+            "This notice helps because ____________________.",
+            "The pebble path leads to ____________________.",
+            "The pocket park helper brings ____________________."
+          ]
+        },
+        {
+          "heading": "Helper Action",
+          "lines": [
+            "First, the helper reads ____________________.",
+            "Next, the helper adds ____________________.",
+            "The final pocket park notice says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: The useful notice I can read to the group is ____________________.",
+      "wrapUpLine": "Wrap-up line: The reason that made my notice clear was ____________________.",
+      "quietOptionLine": "Quiet option: Choose one notice strip and copy it neatly here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one message and reason detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-acorn-errand-desk",
+      "title": "Acorn Errand Desk",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "clubSkill": "sequence steps",
+      "sessionFit": "22-minute adult-led after-school club activity for a table that needs first, next, and last story steps.",
+      "directorSetup": "Print the errand desk page, set out pencils and three paper leaf slips, and keep the route on the table map.",
+      "kidDirection": "Sort three friendly errand slips, choose a helpful order, and write the desk note that explains the route.",
+      "facilitatorPrompt": "Ask which errand should come first and what clue makes the order easier to follow.",
+      "pageSections": [
+        {
+          "heading": "Errand Slips",
+          "lines": [
+            "The first leaf slip asks for ____________________.",
+            "The second leaf slip belongs near ____________________.",
+            "The third leaf slip is marked with ____________________."
+          ]
+        },
+        {
+          "heading": "Desk Sort",
+          "lines": [
+            "The acorn drawer holds ____________________.",
+            "The route list starts with ____________________.",
+            "The helper chooses this order because ____________________."
+          ]
+        },
+        {
+          "heading": "Route Note",
+          "lines": [
+            "First, the helper carries ____________________.",
+            "Next, the helper checks ____________________.",
+            "Last, the desk note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: The route step I can read to the table is ____________________.",
+      "wrapUpLine": "Wrap-up line: The order word that helped my story was ____________________.",
+      "quietOptionLine": "Quiet option: Number the slips, then finish this route clue: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one sequence steps detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-button-bakery-map-fix",
+      "title": "Button Bakery Map Fix",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "clubSkill": "map directions",
+      "sessionFit": "24-minute adult-led after-school club session for a table ready to use direction words and specific bakery details.",
+      "directorSetup": "Print one bakery map page per writer, set out pencils and crumb-path paper strips, and sketch a simple tabletop route.",
+      "kidDirection": "Choose a bakery clue, add a direction word, and help the button baker fix the mixed-up map.",
+      "facilitatorPrompt": "Invite writers to replace vague clues with objects the whole table can picture.",
+      "pageSections": [
+        {
+          "heading": "Bakery Map",
+          "lines": [
+            "The crumb path begins under ____________________.",
+            "The map points past a tray of ____________________.",
+            "The button baker notices ____________________."
+          ]
+        },
+        {
+          "heading": "Direction Clues",
+          "lines": [
+            "Turn left when the helper sees ____________________.",
+            "Step around the counter near ____________________.",
+            "Stop at the shelf with ____________________."
+          ]
+        },
+        {
+          "heading": "Map Fix",
+          "lines": [
+            "The mixed-up map changes because ____________________.",
+            "The clearest bakery clue is ____________________.",
+            "The fixed route leads to ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: The map word I can read to the club is ____________________.",
+      "wrapUpLine": "Wrap-up line: The bakery detail that made my route clearer was ____________________.",
+      "quietOptionLine": "Quiet option: Draw arrows first, then write this map clue: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one map directions detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-penny-path-compass-card",
+      "title": "Penny Path Compass Card",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "clubSkill": "direction detail",
+      "sessionFit": "22-minute adult-led after-school club page for a tabletop route activity with one compass clue and one clear direction card.",
+      "directorSetup": "Print one compass page per writer, place a pretend penny compass card on each table, and keep the route on paper.",
+      "kidDirection": "Spin the pretend compass, choose a path clue, and write three directions for the shop helper.",
+      "facilitatorPrompt": "Ask each writer to include one direction word and one detail a reader could picture.",
+      "pageSections": [
+        {
+          "heading": "Compass Clue",
+          "lines": [
+            "The penny compass points toward ____________________.",
+            "The first path marker looks like ____________________.",
+            "The shop window displays ____________________."
+          ]
+        },
+        {
+          "heading": "Path Details",
+          "lines": [
+            "The paper route goes around ____________________.",
+            "A small sound along the path is ____________________.",
+            "The next clue shines near ____________________."
+          ]
+        },
+        {
+          "heading": "Direction Card",
+          "lines": [
+            "First, follow the compass past ____________________.",
+            "Next, turn when you notice ____________________.",
+            "The route ends beside ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Club share line: The compass direction I can read to the table is ____________________.",
+      "wrapUpLine": "Wrap-up line: The direction detail that helped my route was ____________________.",
+      "quietOptionLine": "Quiet option: Trace the paper path silently, then finish this line: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one direction detail detail for this club story: ____________________."
+    }
+  ]
+}

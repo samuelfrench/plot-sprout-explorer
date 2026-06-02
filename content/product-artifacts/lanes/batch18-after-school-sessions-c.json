@@ -1,0 +1,253 @@
+{
+  "batchId": "2026-06-02-batch18",
+  "lane": "after-school-sessions-c",
+  "generatedAt": "2026-06-02",
+  "sessions": [
+    {
+      "id": "after-school-revision-river-ferry-ending-route",
+      "title": "Revision River Ferry Ending Route",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "clubSkill": "ending revision",
+      "sessionFit": "Adult-led 25-minute after-school story club session for an older writing table after snack or homework time.",
+      "directorSetup": "Print one session page per writer, set pencils at each seat, place three draft-route cards in the center, and leave a quiet finish basket on the side table.",
+      "kidDirection": "Choose one rough ending, ferry it past two helpful details, and write a clearer final line for an invented scene.",
+      "facilitatorPrompt": "Ask which early detail should return at the end and what the reader should understand at the final dock.",
+      "pageSections": [
+        {
+          "heading": "Starting Dock",
+          "lines": [
+            "The early detail waiting on the dock is ____________________.",
+            "The scene changes when ____________________.",
+            "The rough ending I want to improve is ____________________."
+          ]
+        },
+        {
+          "heading": "Ferry Revision",
+          "lines": [
+            "One word I can remove for clarity is ____________________.",
+            "One detail I can carry forward is ____________________.",
+            "The ending becomes easier to follow because ____________________."
+          ]
+        },
+        {
+          "heading": "Final Dock",
+          "lines": [
+            "My revised ending begins with ____________________.",
+            "The detail that echoes the start is ____________________.",
+            "The final dock leaves readers thinking about ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share the echoed detail you used, or point to it on the page: ____________________.",
+      "wrapUpLine": "The ending choice I improved today was ____________________.",
+      "quietOptionLine": "Work silently by writing only the revised final sentence here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one ending revision detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-clue-label-tower-museum-focus-label",
+      "title": "Clue Label Tower Focus Label",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "clubSkill": "focused detail selection",
+      "sessionFit": "Adult-led 30-minute after-school story club session for older writers building one concise exhibit paragraph.",
+      "directorSetup": "Print the pages, set out pencils, place three harmless object cards on each table, and mark a display corner for finished paper labels.",
+      "kidDirection": "Invent a tower exhibit, choose the clue that matters most, and write a label that guides readers in a clear order.",
+      "facilitatorPrompt": "Ask which clue belongs first, which detail can wait, and how the label can stay short but useful.",
+      "pageSections": [
+        {
+          "heading": "Tower Exhibit",
+          "lines": [
+            "The object on the tower shelf is ____________________.",
+            "The clue beside it shows ____________________.",
+            "A detail that can wait for another label is ____________________."
+          ]
+        },
+        {
+          "heading": "Label Order",
+          "lines": [
+            "Readers should notice first that ____________________.",
+            "The middle sentence should explain ____________________.",
+            "The final sentence should point toward ____________________."
+          ]
+        },
+        {
+          "heading": "Curator Finish",
+          "lines": [
+            "The clearest label word I used is ____________________.",
+            "One word I can replace for focus is ____________________.",
+            "My finished tower label says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share one clue word that helped your label stay focused: ____________________.",
+      "wrapUpLine": "The detail I chose to leave out was ____________________.",
+      "quietOptionLine": "Skip sharing and copy your final label neatly here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one focused detail selection detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-compass-craft-academy-paragraph-route",
+      "title": "Compass Craft Academy Paragraph Route",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "clubSkill": "paragraph structure",
+      "sessionFit": "Adult-led 25-minute after-school story club session for planning a beginning, turn, and finish before drafting.",
+      "directorSetup": "Print one page per writer, draw three route dots on a board or chart paper, and set route-word cards near the table edge.",
+      "kidDirection": "Map a paragraph route for a made-up compass craft, then write the sentence that moves readers through the turn.",
+      "facilitatorPrompt": "Ask which sentence acts like the compass needle and keeps the paragraph pointed forward.",
+      "pageSections": [
+        {
+          "heading": "Route Dots",
+          "lines": [
+            "The paragraph starts beside ____________________.",
+            "The route turns when ____________________.",
+            "The finish should show readers ____________________."
+          ]
+        },
+        {
+          "heading": "Compass Sentence",
+          "lines": [
+            "A word that moves the route forward is ____________________.",
+            "A phrase that explains the turn is ____________________.",
+            "The sentence that guides readers best is ____________________."
+          ]
+        },
+        {
+          "heading": "Academy Finish",
+          "lines": [
+            "The route detail I can make clearer is ____________________.",
+            "The final sentence should connect back to ____________________.",
+            "My compass craft paragraph line is ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share the route word that helped your paragraph turn: ____________________.",
+      "wrapUpLine": "The sentence that shaped my paragraph was ____________________.",
+      "quietOptionLine": "Work quietly by tracing three route dots and writing the turn here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one paragraph structure detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-almost-invention-workshop-test-note",
+      "title": "Almost Invention Workshop Test Note",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "clubSkill": "instruction order",
+      "sessionFit": "Adult-led 30-minute after-school story club session for older writers who need a structured explain-and-revise task.",
+      "directorSetup": "Print the workshop pages, set pencils and three step cards at each table, and keep all invention ideas on paper with no real building required.",
+      "kidDirection": "Describe an almost-invention, put its steps in a sensible order, and write a test note that explains what to adjust next.",
+      "facilitatorPrompt": "Ask where a reader might get confused and which step should be moved, shortened, or clarified.",
+      "pageSections": [
+        {
+          "heading": "Workshop Plan",
+          "lines": [
+            "The almost-invention is supposed to help with ____________________.",
+            "The first harmless part on the bench is ____________________.",
+            "The part that needs a clearer job is ____________________."
+          ]
+        },
+        {
+          "heading": "Step Order",
+          "lines": [
+            "The first instruction should tell readers to ____________________.",
+            "The step that belongs next is ____________________.",
+            "The step that needs clearer wording is ____________________."
+          ]
+        },
+        {
+          "heading": "Test Note",
+          "lines": [
+            "The invention almost works when ____________________.",
+            "The adjustment I would try next is ____________________.",
+            "My workshop test note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share one step you moved or clarified for readers: ____________________.",
+      "wrapUpLine": "The instruction I made clearest today was ____________________.",
+      "quietOptionLine": "Work silently by revising one step and writing it here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one instruction order detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-margin-note-market-kind-feedback",
+      "title": "Margin Note Market Kind Feedback",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "clubSkill": "specific feedback",
+      "sessionFit": "Adult-led 25-minute after-school story club session for practicing useful revision comments on invented sample lines.",
+      "directorSetup": "Print the pages, place pencils and sample note strips on each table, and use only invented writing snippets for the feedback practice.",
+      "kidDirection": "Trade a fuzzy market note for a kind, specific revision task, then write a new line that follows the note.",
+      "facilitatorPrompt": "Ask which exact word, detail, or order change would make the note useful without making it personal.",
+      "pageSections": [
+        {
+          "heading": "Market Note",
+          "lines": [
+            "The fuzzy note on the stand says ____________________.",
+            "The note feels too broad because ____________________.",
+            "A kinder version of the note could start with ____________________."
+          ]
+        },
+        {
+          "heading": "Revision Trade",
+          "lines": [
+            "The detail I want the writer to add is ____________________.",
+            "The plain word I would trade out is ____________________.",
+            "The sentence would be easier to follow if ____________________."
+          ]
+        },
+        {
+          "heading": "New Story Line",
+          "lines": [
+            "My revised story line begins with ____________________.",
+            "The clearer detail readers can notice is ____________________.",
+            "The next useful note could be about ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share one feedback phrase that stayed kind and specific: ____________________.",
+      "wrapUpLine": "The revision move I can explain clearly is ____________________.",
+      "quietOptionLine": "Work quietly by choosing one note and writing only the revised line: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one specific feedback detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-index-card-theater-club-scene-turn",
+      "title": "Index Card Theater Scene Turn",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "clubSkill": "scene turning point",
+      "sessionFit": "Adult-led 30-minute after-school story club session for shaping a small scene with a clear shift.",
+      "directorSetup": "Print the pages, set pencils at each seat, place three scene cards face up, and keep the share time optional for quieter writers.",
+      "kidDirection": "Arrange three theater cards, write a two-line exchange, and make the second line change the direction of the scene.",
+      "facilitatorPrompt": "Ask what the first speaker expects, what the reply changes, and which stage action makes the turn clear.",
+      "pageSections": [
+        {
+          "heading": "Scene Cards",
+          "lines": [
+            "The first scene card shows ____________________.",
+            "The middle card changes the plan because ____________________.",
+            "The final card should reveal ____________________."
+          ]
+        },
+        {
+          "heading": "Dialogue Turn",
+          "lines": [
+            "The first line of dialogue is ____________________.",
+            "The reply changes the scene when ____________________.",
+            "A small stage action between the lines is ____________________."
+          ]
+        },
+        {
+          "heading": "Theater Finish",
+          "lines": [
+            "The turning point becomes clear because ____________________.",
+            "One cue word I can revise is ____________________.",
+            "My final theater scene line is ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "Share the line or action that turned your scene: ____________________.",
+      "wrapUpLine": "The moment that changed my scene most was ____________________.",
+      "quietOptionLine": "Skip read-aloud time and write your strongest scene line here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one scene turning point detail for this club story: ____________________."
+    }
+  ]
+}

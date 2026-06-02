@@ -1,0 +1,205 @@
+{
+  "batchId": "2026-06-02-batch18",
+  "lane": "after-school-tools",
+  "generatedAt": "2026-06-02",
+  "directorGuide": {
+    "beforeClub": [
+      "Print one director copy, one active club format, and enough take-home prompt cards for the planned group size.",
+      "Choose a calm invented setting, an ordinary object, and a small friendly mix-up for the adult example.",
+      "Place pencils, blank paper, choice slips, and plain folders in a single supply bin before the room opens.",
+      "Pick one main format and one quieter backup format so the session can adjust without extra prep.",
+      "Prepare a thirty-second adult model that uses only invented details and shows one clear next action."
+    ],
+    "roomSetup": [
+      "Set tables so writers can see the adult leader, reach supplies, and keep their pages on the table.",
+      "Put only the active page, pencils, and a small stack of blank paper within reach at the start.",
+      "Keep take-home prompt cards in a separate folder until the last few minutes of club.",
+      "Use table symbols, color dots, or plain folders if pages need simple sorting after the session.",
+      "Create one quiet corner with the same writing page for participants who prefer a lower-noise start."
+    ],
+    "runningClub": [
+      "Open with the session choice, read the first direction aloud, and show one invented adult example.",
+      "Move through one task at a time: setting, helper, object, small mix-up, next action, and ending.",
+      "Offer two invented options when a writer is stuck instead of asking for personal facts.",
+      "Invite participation through writing, sketch labels, pointing to a choice, or dictating one phrase to the adult leader.",
+      "End by asking each writer to mark one title, sentence, sketch, or detail they want to keep."
+    ],
+    "quietParticipation": [
+      "Allow passing during discussion while still giving the writer a page and a clear private task.",
+      "Use silent choice slips so a participant can point to setting, object, or ending options without speaking.",
+      "Let writers circle, underline, or sketch a response when full sentences feel too large for the moment.",
+      "Pair a quiet writer with the adult leader for one dictated phrase if the writer wants support.",
+      "Offer a take-home prompt card as the finish step for anyone who completes the club page early."
+    ],
+    "noDataUse": [
+      "Do not collect personal details; all stories use invented places, invented helpers, and ordinary objects.",
+      "This kit has no personal lists, personal labels, digital collection, image collection, or web-sharing step.",
+      "Keep every page printable, offline, and handled by the adult leader, participant, or family.",
+      "Use symbols, color dots, or plain folders for organization instead of private identifiers."
+    ],
+    "familyHandoff": [
+      "Send home the finished page, one optional prompt card, and a short note that the story details are invented.",
+      "Tell families the prompt card is optional and can be completed with pointing, sketching, or one sentence.",
+      "Mark one simple next step such as add a title, add one clearer detail, or finish the ending.",
+      "Keep any group sharing optional and focused on a title, sketch, object, or invented setting detail."
+    ]
+  },
+  "clubFormats": [
+    {
+      "name": "Snack Table Story Seed",
+      "bestFor": "The first 15 minutes of an after-school block when arrivals are uneven and the room needs a calm start.",
+      "steps": [
+        "Adult leader places one seed page and two invented setting choices at each seat.",
+        "Writers choose a setting, add one ordinary object, and sketch or write one detail.",
+        "Adult leader models a short opening using a different invented choice.",
+        "Writers turn their setting and object into two or three story lines."
+      ]
+    },
+    {
+      "name": "Homework-Finished Mini Quest",
+      "bestFor": "Mixed groups where some writers need a quiet enrichment option after other table work is done.",
+      "steps": [
+        "Adult leader gives a mini quest page with four boxes labeled place, helper, object, and ending.",
+        "Writers fill each box with invented details from the printed choice bank.",
+        "Adult leader checks that each page has one small friendly mix-up and one helpful next action.",
+        "Writers draft one sentence per box and choose a title before cleanup."
+      ]
+    },
+    {
+      "name": "Community Room Story Circle",
+      "bestFor": "Community centers, childcare site leads, and co-op adults running one shared table activity.",
+      "steps": [
+        "Adult leader reads a two-sentence invented scene and places four choice slips in the center.",
+        "Participants add ideas by speaking, pointing, sketching, or writing on their own page.",
+        "Adult leader repeats the shared idea using neutral invented details only.",
+        "Writers choose two shared details and make a short story start on their own page."
+      ]
+    },
+    {
+      "name": "Quiet Folder Finish",
+      "bestFor": "The final 10 minutes when the group needs a settled ending and easy family handoff.",
+      "steps": [
+        "Adult leader asks writers to stop at the end of the line or sketch part they are working on.",
+        "Writers mark one part to keep and one part that could use a title, detail, or ending.",
+        "Adult leader offers one take-home prompt card that matches the marked next step.",
+        "Pages go into plain folders before supplies are reset for the next club day."
+      ]
+    },
+    {
+      "name": "Four-Corner Story Builder",
+      "bestFor": "Rooms with extra table space and writers who benefit from moving through clear stations.",
+      "steps": [
+        "Adult leader sets four corners: invented place, helper, ordinary object, and kind ending.",
+        "Writers visit each corner and add one note to their own page.",
+        "Adult leader brings everyone back to seats and models how to order the four notes.",
+        "Writers draft a tiny story using first, next, then, and last."
+      ]
+    },
+    {
+      "name": "Co-Op Choice Board",
+      "bestFor": "Homeschool co-op adults who want a flexible adult-led writing block for different ages.",
+      "steps": [
+        "Adult leader displays three printable choices: map, message, or object clue.",
+        "Writers choose one path and complete the matching first box.",
+        "Adult leader offers short support prompts while keeping all details invented.",
+        "Writers finish with one ending line and one optional share choice."
+      ]
+    }
+  ],
+  "takeHomePromptCards": [
+    {
+      "title": "After-Club Setting Add-On",
+      "time": "6 minutes",
+      "skill": "setting detail",
+      "direction": "Add one invented detail to the place from today's club page: ____________________.",
+      "familyLine": "A grown-up can ask what the place sounds or looks like: ____________________."
+    },
+    {
+      "title": "Ordinary Object Clue",
+      "time": "7 minutes",
+      "skill": "plot clue",
+      "direction": "Choose one ordinary object and write how it helps the story helper: ____________________.",
+      "familyLine": "A grown-up can offer two object choices here: ____________________."
+    },
+    {
+      "title": "Title Before Dinner",
+      "time": "5 minutes",
+      "skill": "main idea",
+      "direction": "Write three possible titles for the invented story: ____________________.",
+      "familyLine": "A grown-up can ask which title gives the clearest clue: ____________________."
+    },
+    {
+      "title": "First Next Last",
+      "time": "6 minutes",
+      "skill": "sequence",
+      "direction": "Write first, next, and last for three small story actions: ____________________.",
+      "familyLine": "A grown-up can point to the action that should become longer: ____________________."
+    },
+    {
+      "title": "Helper Choice Line",
+      "time": "7 minutes",
+      "skill": "character action",
+      "direction": "Write one line showing what the invented helper chooses to do next: ____________________.",
+      "familyLine": "A grown-up can ask what made that choice useful: ____________________."
+    },
+    {
+      "title": "Kind Ending Try",
+      "time": "8 minutes",
+      "skill": "ending choice",
+      "direction": "Add one kind ending to the small story mix-up: ____________________.",
+      "familyLine": "A grown-up can ask what changed at the end: ____________________."
+    },
+    {
+      "title": "Dialogue Pair",
+      "time": "7 minutes",
+      "skill": "dialogue",
+      "direction": "Write two short lines between invented roles such as maker and guide: ____________________.",
+      "familyLine": "A grown-up can read one role while the writer chooses the reply: ____________________."
+    },
+    {
+      "title": "Choice Slip Rewrite",
+      "time": "6 minutes",
+      "skill": "revision",
+      "direction": "Pick one choice from club and rewrite it with a clearer word: ____________________.",
+      "familyLine": "A grown-up can ask which word became easier to picture: ____________________."
+    },
+    {
+      "title": "Tiny Map Label",
+      "time": "6 minutes",
+      "skill": "planning",
+      "direction": "Draw a tiny invented map and label three safe story stops: ____________________.",
+      "familyLine": "A grown-up can ask which stop belongs near the beginning: ____________________."
+    },
+    {
+      "title": "Object Pocket",
+      "time": "5 minutes",
+      "skill": "idea bank",
+      "direction": "List three ordinary objects a story helper could carry: ____________________.",
+      "familyLine": "A grown-up can ask which object should appear first: ____________________."
+    },
+    {
+      "title": "One Strong Sentence",
+      "time": "5 minutes",
+      "skill": "sentence clarity",
+      "direction": "Choose one club idea and write it as one clear sentence: ____________________.",
+      "familyLine": "A grown-up can ask which word does the most work: ____________________."
+    },
+    {
+      "title": "Next Club Seed",
+      "time": "7 minutes",
+      "skill": "story planning",
+      "direction": "Invent one place, one helper, and one small mix-up for another club day: ____________________.",
+      "familyLine": "A grown-up can add one ordinary object to the seed: ____________________."
+    }
+  ],
+  "optionalFamilySharePrompts": [
+    "Show one title, sketch, or invented setting detail from the club page.",
+    "Read one sentence aloud, or ask a grown-up to read it for you.",
+    "Point to one ordinary object and explain how it helps the story.",
+    "Share one small next action the helper could take.",
+    "Tell which part came first, next, or last in the story.",
+    "Show one word you made clearer after club.",
+    "Describe one kind ending choice from the invented story.",
+    "Pass today and keep the page private while the family notices one finished detail."
+  ]
+}

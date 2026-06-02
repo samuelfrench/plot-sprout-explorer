@@ -1,0 +1,18 @@
+{
+  "slug": "after-school-story-club-starter-kit",
+  "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device, screen-free printable after-school writing club kit, blank white paper, blank folders, blank cards, pencils, supply tray, color tags",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, printed markings, icon, symbol, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26061850,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch18/after-school-story-club-starter-kit.jpg",
+  "outputWebp": "public/images/plotsprout/batch18/after-school-story-club-starter-kit.webp",
+  "manifest": "content/image-queue/2026-06-02-batch18-product-images.json",
+  "title": "After-School Story Club Starter Kit product image"
+}

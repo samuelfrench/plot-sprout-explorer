@@ -526,6 +526,67 @@
         "Use quiet option lines when a child wants to work privately instead of speaking to the group.",
         "Send home one trail card when the circle ends so families can extend the invented story offline."
       ]
+    },
+    {
+      "slug": "after-school-story-club-starter-kit",
+      "title": "After-School Story Club Starter Kit",
+      "pricePoint": "$69",
+      "status": "checkout_pending",
+      "headline": "A printable story club kit for after-school enrichment tables and co-op groups.",
+      "summary": "Eighteen adult-led story club sessions help program directors run short, offline writing clubs with invented worlds, quiet options, and take-home cards.",
+      "heroImage": "images/plotsprout/batch18/after-school-story-club-starter-kit.jpg",
+      "ctaLabel": "Request after-school kit launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=After-School%20Story%20Club%20Starter%20Kit",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static after-school kit page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "spoon-ferry-lunchbox-harbor",
+        "pocket-park-notice-board",
+        "acorn-avenue-errand-office",
+        "button-bakery-map-mixup",
+        "penny-path-compass-shop",
+        "tidepool-timekeepers-lab",
+        "greenhouse-gear-garden",
+        "pantry-measurement-mystery",
+        "rain-gauge-railway",
+        "seed-library-map-room",
+        "moss-message-observatory",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "almost-invention-workshop",
+        "margin-note-market",
+        "index-card-theater-club"
+      ],
+      "includedPages": [
+        "Eighteen printable after-school story club session pages",
+        "Before-club planning guide",
+        "Director room setup checklist",
+        "Running-club coaching notes",
+        "Quiet participation options",
+        "No-data use notes",
+        "Family handoff notes",
+        "Six repeatable club formats",
+        "Twelve take-home prompt cards",
+        "Eight optional family-share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "An after-school enrichment table that needs a calm printable writing routine",
+        "A community center story club with mixed ages and optional sharing",
+        "A childcare program quiet block that stays screen-free and adult-led",
+        "A homeschool co-op writing club that needs repeatable short sessions",
+        "A family handoff prompt set for continuing invented stories offline"
+      ],
+      "parentSteps": [
+        "Choose one club format before the room opens so the session starts quickly.",
+        "Print only the session pages needed for the day and keep the rest in a director folder.",
+        "Place pencils, blank paper, and the active page at each table before writers arrive.",
+        "Let participants write, sketch labels, point to choices, dictate one phrase, or pass during sharing.",
+        "Send home one prompt card when the club ends so families can extend the invented story offline."
+      ]
     }
   ]
 }

@@ -1,0 +1,253 @@
+{
+  "batchId": "2026-06-02-batch18",
+  "lane": "after-school-sessions-b",
+  "generatedAt": "2026-06-02",
+  "sessions": [
+    {
+      "id": "after-school-tidepool-timekeepers-lab-clock",
+      "title": "Tidepool Timekeepers Lab Clock",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "clubSkill": "Sequencing observations by time",
+      "sessionFit": "32-minute adult-led after-school story club session for a table group that needs a calm opening, short draft, and optional read-back.",
+      "directorSetup": "Print one page per writer, place pencils and three tide-card slips on each table, and set a front table as the pretend lab station.",
+      "kidDirection": "Choose a tide time, add two careful lab details, and write a short note that helps the next timekeeper understand the order.",
+      "facilitatorPrompt": "Ask the site lead to point writers toward time words, measured details, and one clear next step for the lab team.",
+      "pageSections": [
+        {
+          "heading": "Lab Clock",
+          "lines": [
+            "The first tide time on the lab card is ____________________.",
+            "The shell shadow changes near ____________________.",
+            "The next pool to check should be ____________________."
+          ]
+        },
+        {
+          "heading": "Observation Order",
+          "lines": [
+            "First, the timekeeper writes down ____________________.",
+            "Next, the lab helper compares ____________________.",
+            "Last, the tide note should explain ____________________."
+          ]
+        },
+        {
+          "heading": "Field Note",
+          "lines": [
+            "The clearest measurement detail is ____________________.",
+            "One word that shows the order is ____________________.",
+            "My final tidepool lab note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The time-order detail I can share with the club is ____________________.",
+      "wrapUpLine": "One observation I made clearer today was ____________________.",
+      "quietOptionLine": "For a quiet version, number the tide cards and write the first note about ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one sequencing observations by time detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-greenhouse-gear-garden-plan",
+      "title": "Greenhouse Gear Garden Plan",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "clubSkill": "Explaining a helpful design choice",
+      "sessionFit": "35-minute after-school story club table block for a maker-style group that can sketch first and draft second.",
+      "directorSetup": "Print the garden page, set out pencils and green or gray colored pencils, and draw three harmless gear shapes on the room board.",
+      "kidDirection": "Invent a greenhouse gear, explain what it helps, and write the small adjustment that makes the garden schedule clearer.",
+      "facilitatorPrompt": "Invite the site lead to ask what the gear helps, what gets confusing, and which gentle fix belongs in the next sentence.",
+      "pageSections": [
+        {
+          "heading": "Gear Idea",
+          "lines": [
+            "The greenhouse gear is shaped like ____________________.",
+            "It helps the seedlings by ____________________.",
+            "The garden table clue shows ____________________."
+          ]
+        },
+        {
+          "heading": "Schedule Problem",
+          "lines": [
+            "The gear turns too early near ____________________.",
+            "The plant label that needs a clearer time is ____________________.",
+            "The helper notices the mix-up when ____________________."
+          ]
+        },
+        {
+          "heading": "Design Fix",
+          "lines": [
+            "The first adjustment should be ____________________.",
+            "The reason this helps the garden is ____________________.",
+            "My final greenhouse plan says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The design choice I can share with the club is ____________________.",
+      "wrapUpLine": "One exact garden word I used today was ____________________.",
+      "quietOptionLine": "For a quiet version, sketch the gear first and label ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one explaining a helpful design choice detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-pantry-measurement-mystery-chart",
+      "title": "Pantry Measurement Mystery Chart",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "clubSkill": "Writing cause and evidence",
+      "sessionFit": "30-minute adult-led after-school club session for snack-table energy, quick evidence sorting, and a short explanation paragraph.",
+      "directorSetup": "Print one pantry chart per writer, place pencils beside three recipe clue slips, and use a room board for a simple before-and-after chart.",
+      "kidDirection": "Pick a pantry clue, compare the recipe notes, and write what changed in the muffin chart.",
+      "facilitatorPrompt": "Ask the site lead to guide writers from guess words toward evidence words such as because, changed, and compared.",
+      "pageSections": [
+        {
+          "heading": "Pantry Clues",
+          "lines": [
+            "The recipe card first shows ____________________.",
+            "The measuring spoon clue points to ____________________.",
+            "The muffin chart changes near ____________________."
+          ]
+        },
+        {
+          "heading": "Cause Check",
+          "lines": [
+            "One amount that changed was ____________________.",
+            "The evidence that helps me know is ____________________.",
+            "The pantry helper should compare ____________________."
+          ]
+        },
+        {
+          "heading": "Mystery Note",
+          "lines": [
+            "The clearest cause word I can use is ____________________.",
+            "The chart makes more sense after ____________________.",
+            "My final pantry mystery note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The evidence clue I can share with the club is ____________________.",
+      "wrapUpLine": "One cause-and-effect sentence I improved was ____________________.",
+      "quietOptionLine": "For a quiet version, circle one recipe clue and finish ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one writing cause and evidence detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-rain-gauge-railway-route",
+      "title": "Rain Gauge Railway Route",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "clubSkill": "Using map words in a story route",
+      "sessionFit": "33-minute after-school story club session for a weather-themed table, with map planning before independent writing.",
+      "directorSetup": "Print the railway route page, place pencils at each seat, and tape three pretend station labels to the tables in the room.",
+      "kidDirection": "Choose the railway stops, add rain-gauge details, and write a route note that moves from start to finish.",
+      "facilitatorPrompt": "Prompt the site lead to ask for direction words, one measurement detail, and a final station that makes sense.",
+      "pageSections": [
+        {
+          "heading": "Weather Station",
+          "lines": [
+            "The rain gauge shows ____________________.",
+            "The first railway stop is beside ____________________.",
+            "The garden alert card points toward ____________________."
+          ]
+        },
+        {
+          "heading": "Route Words",
+          "lines": [
+            "The train moves past ____________________.",
+            "The route turns after ____________________.",
+            "The sample car stops near ____________________."
+          ]
+        },
+        {
+          "heading": "Conductor Note",
+          "lines": [
+            "The clearest map word on my page is ____________________.",
+            "The route makes sense because ____________________.",
+            "My final railway note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The route word I can share with the club is ____________________.",
+      "wrapUpLine": "One station detail I made clearer was ____________________.",
+      "quietOptionLine": "For a quiet version, draw arrows first and write the stop near ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one using map words in a story route detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-seed-library-map-room-card",
+      "title": "Seed Library Map Room Card",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "clubSkill": "Connecting setting details to next action",
+      "sessionFit": "36-minute adult-led after-school story club session for a steady table group that can sort cards and draft a return note.",
+      "directorSetup": "Print seed-map pages, stack three blank packet cards per table, and set up pencils with one folded pretend map at the center.",
+      "kidDirection": "Choose a seed packet, add a map-room clue, and write the next action for the catalog helper.",
+      "facilitatorPrompt": "Have the site lead ask how the setting clue changes what the helper should do next.",
+      "pageSections": [
+        {
+          "heading": "Packet Pick",
+          "lines": [
+            "The seed packet label says ____________________.",
+            "The folded map opens toward ____________________.",
+            "The drawer clue shows ____________________."
+          ]
+        },
+        {
+          "heading": "Map Room Detail",
+          "lines": [
+            "The garden map has a mark beside ____________________.",
+            "The catalog card explains ____________________.",
+            "The shelf note helps the helper find ____________________."
+          ]
+        },
+        {
+          "heading": "Next Action",
+          "lines": [
+            "The catalog helper should first ____________________.",
+            "The next action matters because ____________________.",
+            "My final seed library note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The setting clue I can share with the club is ____________________.",
+      "wrapUpLine": "One next-action phrase I wrote today was ____________________.",
+      "quietOptionLine": "For a quiet version, point to one map mark and complete ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one connecting setting details to next action detail for this club story: ____________________."
+    },
+    {
+      "id": "after-school-moss-message-observatory-note",
+      "title": "Moss Message Observatory Note",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "clubSkill": "Adding sensory description",
+      "sessionFit": "31-minute after-school story club session for a quiet table, useful when the group needs slower observation and descriptive writing.",
+      "directorSetup": "Print the observatory page, set out pencils and green color swatches, and make a calm room corner for silent sketching before writing.",
+      "kidDirection": "Choose a moss pattern, describe its color and texture, and write a field note for the observatory shelf.",
+      "facilitatorPrompt": "Ask the site lead to help writers name what can be seen, felt, or measured in the pretend notebook scene.",
+      "pageSections": [
+        {
+          "heading": "Moss Pattern",
+          "lines": [
+            "The moss pattern looks like ____________________.",
+            "The color swatch that fits best is ____________________.",
+            "The observatory shelf holds ____________________."
+          ]
+        },
+        {
+          "heading": "Careful Description",
+          "lines": [
+            "The moss texture reminds me of ____________________.",
+            "The light in the forest corner is ____________________.",
+            "The notebook detail I should add is ____________________."
+          ]
+        },
+        {
+          "heading": "Field Note",
+          "lines": [
+            "The strongest describing word is ____________________.",
+            "The pattern seems clearer after ____________________.",
+            "My final observatory note says ____________________."
+          ]
+        }
+      ],
+      "clubShareLine": "The descriptive detail I can share with the club is ____________________.",
+      "wrapUpLine": "One sensory word I used today was ____________________.",
+      "quietOptionLine": "For a quiet version, shade the swatch first and write about ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one adding sensory description detail for this club story: ____________________."
+    }
+  ]
+}
