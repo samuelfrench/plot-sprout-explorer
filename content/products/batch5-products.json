@@ -352,6 +352,60 @@
         "Mark one clear finish job on any unfinished page before it goes home.",
         "Reset the table supplies and save unused pages for the next club meeting."
       ]
+    },
+    {
+      "slug": "substitute-teacher-story-station-pack",
+      "title": "Substitute Teacher Story Station Pack",
+      "pricePoint": "$39",
+      "status": "checkout_pending",
+      "headline": "A printable substitute-folder writing kit for calm story stations, early finishers, and low-prep classroom coverage.",
+      "summary": "Twelve substitute-ready story stations help students plan tiny worlds, draft short scenes, revise one line, and leave finished pages in a folder.",
+      "heroImage": "images/plotsprout/batch15/substitute-teacher-story-station-pack.jpg",
+      "ctaLabel": "Request substitute pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Substitute%20Teacher%20Story%20Station%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static substitute pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "buttonwood-library-train",
+        "pocket-park-notice-board",
+        "penny-path-compass-shop",
+        "acorn-avenue-errand-office",
+        "rain-boot-route-rangers",
+        "rain-gauge-railway",
+        "seed-library-map-room",
+        "index-card-theater-club",
+        "margin-note-market",
+        "clue-label-tower-museum",
+        "revision-river-ferry",
+        "compass-craft-academy"
+      ],
+      "includedPages": [
+        "Twelve printable substitute story station pages",
+        "Before-the-day prep guide",
+        "Morning setup checklist",
+        "During-stations support notes",
+        "End-of-day collection plan",
+        "Handoff note routine",
+        "Five low-prep station routines",
+        "Eight early finisher cards",
+        "Six optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A substitute folder activity that can run from printed pages",
+        "An early finisher station for students who need a quiet next step",
+        "A homeschool co-op table with concrete writing choices",
+        "A tutoring center packet for reluctant writers who need structure",
+        "A classroom enrichment station that produces short finished pages"
+      ],
+      "parentSteps": [
+        "Print one packet per class set plus a few spare draft pages.",
+        "Choose three to five stations before the day starts instead of using every page.",
+        "Set out pencils, folders, and the first station page in one visible place.",
+        "Let students point, sketch, dictate, write one line, or finish the page quietly.",
+        "Collect finished pages in the folder and leave unused pages for the next session."
+      ]
     }
   ]
 }

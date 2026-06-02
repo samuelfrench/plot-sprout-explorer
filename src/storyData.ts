@@ -326,6 +326,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Ten adult-led story club sessions with facilitator tools for libraries, co-ops, tutoring groups, and classrooms.',
     note: 'No checkout, accounts, uploads, or public publishing are enabled.',
   },
+  {
+    slug: 'substitute-teacher-story-station-pack',
+    title: 'Substitute Teacher Story Station Pack',
+    pricePoint: '$39',
+    description:
+      'Twelve substitute-ready story stations with setup tools, routines, early finisher cards, and handoff notes.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

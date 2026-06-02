@@ -1,0 +1,271 @@
+{
+  "batchId": "2026-06-02-batch15",
+  "generatedAt": "2026-06-02",
+  "lane": "substitute-stations-b",
+  "stations": [
+    {
+      "id": "substitute-seed-library-map-room",
+      "title": "Seed Library Map Room",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "stationUse": "Substitute-day printable writing station for a calm independent desk, co-op table, or tutoring rotation using a seed-map story plan.",
+      "setupMinutes": "5 minutes",
+      "stationMode": "Independent desk",
+      "kidDirection": "Choose a seed drawer, map a tiny route, and write the first note for the map room helper.",
+      "subNote": "Use this station when students can work quietly from a printed page; invented plant names are enough.",
+      "materials": [
+        "Printed seed map page",
+        "Pencil",
+        "Green colored pencil",
+        "Small map strip"
+      ],
+      "pageSections": [
+        {
+          "heading": "Seed Drawer",
+          "lines": [
+            "The seed drawer label says ____________________________.",
+            "The tiny seed packet holds ____________________________.",
+            "The map room shelf is marked with ____________________________."
+          ]
+        },
+        {
+          "heading": "Map Route",
+          "lines": [
+            "The first map turn goes past ____________________________.",
+            "The second map clue is hidden near ____________________________.",
+            "The final map mark points toward ____________________________."
+          ]
+        },
+        {
+          "heading": "Helper Note",
+          "lines": [
+            "First, the helper plants the idea of ____________________________.",
+            "Next, the helper checks ____________________________.",
+            "The map room note says ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "One map-room detail I want to keep is ____________________________."
+    },
+    {
+      "id": "substitute-index-card-theater-club",
+      "title": "Index Card Theater Club",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "stationUse": "Substitute-day printable writing station for older elementary writers to plan a tiny scene with index-card roles and a short dialogue beat.",
+      "setupMinutes": "6 minutes",
+      "stationMode": "Partner table",
+      "kidDirection": "Pick a theater card, choose a scene job, and write a short exchange that moves the story forward.",
+      "subNote": "Partners may read ideas quietly, but each writer should complete a separate page.",
+      "materials": [
+        "Printed theater card page",
+        "Pencil",
+        "Two blank index cards",
+        "Purple colored pencil"
+      ],
+      "pageSections": [
+        {
+          "heading": "Scene Card",
+          "lines": [
+            "The theater card names a place called ____________________________.",
+            "The card asks one character to carry ____________________________.",
+            "The scene job for this card is ____________________________."
+          ]
+        },
+        {
+          "heading": "Dialogue Beat",
+          "lines": [
+            "The first speaker says ____________________________.",
+            "The second speaker answers ____________________________.",
+            "The dialogue changes the plan by ____________________________."
+          ]
+        },
+        {
+          "heading": "Stage Direction",
+          "lines": [
+            "At the start, the character stands near ____________________________.",
+            "In the middle, the character notices ____________________________.",
+            "At the end, the scene points toward ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "The line that best moves my scene is ____________________________."
+    },
+    {
+      "id": "substitute-margin-note-market",
+      "title": "Margin Note Market",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "stationUse": "Substitute-day printable writing station for revision practice, early finishers, or a quiet table where students trade stronger details.",
+      "setupMinutes": "5 minutes",
+      "stationMode": "Early finisher",
+      "kidDirection": "Visit the margin note stalls, trade a weak detail for a stronger one, and write the revised sentence.",
+      "subNote": "Use this as a no-pressure revision page; one improved sentence is a complete station outcome.",
+      "materials": [
+        "Printed margin market page",
+        "Pencil",
+        "Yellow highlighter",
+        "Small revision strip"
+      ],
+      "pageSections": [
+        {
+          "heading": "Market Stall",
+          "lines": [
+            "The first margin stall offers ____________________________.",
+            "The second margin stall trades for ____________________________.",
+            "The note seller recommends ____________________________."
+          ]
+        },
+        {
+          "heading": "Detail Trade",
+          "lines": [
+            "A plain detail on my page is ____________________________.",
+            "A stronger detail I can trade in is ____________________________.",
+            "The sentence changes because ____________________________."
+          ]
+        },
+        {
+          "heading": "Revised Line",
+          "lines": [
+            "Before revision, the sentence was about ____________________________.",
+            "After revision, the sentence includes ____________________________.",
+            "The improved sentence is ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "One revision choice that helped my writing is ____________________________."
+    },
+    {
+      "id": "substitute-clue-label-tower-museum",
+      "title": "Clue Label Tower Museum",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "stationUse": "Substitute-day printable writing station for a museum-label style activity that builds precise nouns, clues, and a short exhibit note.",
+      "setupMinutes": "6 minutes",
+      "stationMode": "Independent desk",
+      "kidDirection": "Create three exhibit labels, choose the clearest clue, and write the tower museum note.",
+      "subNote": "This station rewards precise words; students can finish with labels instead of a long draft.",
+      "materials": [
+        "Printed tower museum page",
+        "Pencil",
+        "Three label slips",
+        "Gray colored pencil"
+      ],
+      "pageSections": [
+        {
+          "heading": "Exhibit Labels",
+          "lines": [
+            "The first exhibit is labeled ____________________________.",
+            "The second exhibit is labeled ____________________________.",
+            "The third exhibit is labeled ____________________________."
+          ]
+        },
+        {
+          "heading": "Clue Choice",
+          "lines": [
+            "The clearest clue is hidden beside ____________________________.",
+            "The clue matters because ____________________________.",
+            "The tower guide notices ____________________________."
+          ]
+        },
+        {
+          "heading": "Museum Note",
+          "lines": [
+            "First, the guide checks ____________________________.",
+            "Next, the guide adds a label for ____________________________.",
+            "The exhibit note explains ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "The most precise exhibit word I chose is ____________________________."
+    },
+    {
+      "id": "substitute-revision-river-ferry",
+      "title": "Revision River Ferry",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "stationUse": "Substitute-day printable writing station for a calm revision ferry route where students move one draft idea from rough to clearer.",
+      "setupMinutes": "5 minutes",
+      "stationMode": "Calm start",
+      "kidDirection": "Load one sentence onto the ferry, cross the revision river, and unload a clearer version.",
+      "subNote": "A student may revise a sentence from this page or invent a new rough sentence to polish.",
+      "materials": [
+        "Printed revision ferry page",
+        "Pencil",
+        "Blue colored pencil",
+        "Small ferry ticket"
+      ],
+      "pageSections": [
+        {
+          "heading": "Ferry Load",
+          "lines": [
+            "The rough sentence starts with ____________________________.",
+            "The ferry carries one detail about ____________________________.",
+            "The sentence needs clearer words for ____________________________."
+          ]
+        },
+        {
+          "heading": "River Crossing",
+          "lines": [
+            "At the first dock, I add ____________________________.",
+            "At the second dock, I remove ____________________________.",
+            "At the third dock, I choose the stronger word ____________________________."
+          ]
+        },
+        {
+          "heading": "Clearer Unload",
+          "lines": [
+            "The revised sentence now shows ____________________________.",
+            "The detail that changed most is ____________________________.",
+            "My clearer version is ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "One word I improved on the ferry is ____________________________."
+    },
+    {
+      "id": "substitute-compass-craft-academy",
+      "title": "Compass Craft Academy",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "stationUse": "Substitute-day printable writing station for a self-directed craft-academy plan using directions, materials, and a short procedure-style scene.",
+      "setupMinutes": "6 minutes",
+      "stationMode": "Small group",
+      "kidDirection": "Choose a compass craft, list the materials, and write the first three steps of the academy plan.",
+      "subNote": "Small groups may brainstorm materials together, then each writer completes a separate plan.",
+      "materials": [
+        "Printed compass academy page",
+        "Pencil",
+        "Gold colored pencil",
+        "Small craft plan strip"
+      ],
+      "pageSections": [
+        {
+          "heading": "Craft Choice",
+          "lines": [
+            "The academy craft is called ____________________________.",
+            "The compass points toward ____________________________.",
+            "The craft helps the story character by ____________________________."
+          ]
+        },
+        {
+          "heading": "Material List",
+          "lines": [
+            "The first invented material is ____________________________.",
+            "The second invented material is ____________________________.",
+            "The safest classroom substitute for drawing it is ____________________________."
+          ]
+        },
+        {
+          "heading": "Academy Plan",
+          "lines": [
+            "Step one of the craft plan is ____________________________.",
+            "Step two of the craft plan is ____________________________.",
+            "Step three of the craft plan is ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "The clearest academy step I wrote is ____________________________."
+    }
+  ]
+}

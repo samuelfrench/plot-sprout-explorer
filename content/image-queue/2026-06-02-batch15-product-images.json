@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch15-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "substitute-teacher-story-station-pack",
+      "title": "Substitute Teacher Story Station Pack product image",
+      "purpose": "Static product hero for the $39 Substitute Teacher Story Station Pack page.",
+      "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no plants, no toys, no decorations, minimal substitute day desk kit, blank white paper sheets, teal folders, clipboard, pencils, supply tray, plain white background",
+      "outputJpeg": "public/images/plotsprout/batch15/substitute-teacher-story-station-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch15/substitute-teacher-story-station-pack.webp",
+      "sidecar": "content/image-runs/batch15/substitute-teacher-story-station-pack.json",
+      "seed": 26061543
+    }
+  ]
+}

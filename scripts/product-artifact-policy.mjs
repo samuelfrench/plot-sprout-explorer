@@ -11,6 +11,7 @@ export const birthdayPartyProductSlug = 'birthday-party-story-quest-kit'
 export const roadTripProductSlug = 'road-trip-story-quest-pack'
 export const waitingRoomProductSlug = 'waiting-room-story-quest-pack'
 export const libraryStoryClubProductSlug = 'library-story-club-kit'
+export const substituteTeacherStationPackProductSlug = 'substitute-teacher-story-station-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -69,6 +70,13 @@ const requiredLibraryStoryClubArtifactPaths = {
   zipPath: 'product-build/library-story-club-kit/library-story-club-kit.zip',
   sourceHtmlPath: 'product-build/library-story-club-kit/source/library-story-club-kit.html',
   manifestPath: 'product-build/library-story-club-kit/manifest.json',
+}
+
+const requiredSubstituteTeacherStationArtifactPaths = {
+  pdfPath: 'product-build/substitute-teacher-story-station-pack/Substitute-Teacher-Story-Station-Pack.pdf',
+  zipPath: 'product-build/substitute-teacher-story-station-pack/substitute-teacher-story-station-pack.zip',
+  sourceHtmlPath: 'product-build/substitute-teacher-story-station-pack/source/substitute-teacher-story-station-pack.html',
+  manifestPath: 'product-build/substitute-teacher-story-station-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -1252,6 +1260,206 @@ export function validateLibraryStoryClubKitSource(source, product, knownWorldSlu
   return errors
 }
 
+function validateNoUnsafeSubstituteLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const text = rawText
+    .replace(/\bno\s+uploads?\b/gi, '')
+    .replace(/\bno\s+public publishing\b/gi, '')
+    .replace(/\bwithout\s+public publishing\b/gi, '')
+    .replace(/\bwithout\s+uploads?\b/gi, '')
+  pushIf(
+    errors,
+    /\brosters?\b|\battendance\b|\bsign-?in sheets?\b|\bstudent names?\b|\bsurnames?\b|\bschool names?\b|\bphotos?\b|\baddresses?\b|\bbehavior reports?\b|\bupload(s|ed|ing)?\b|\baccounts?\b|\blogins?\b|\blog in\b|\bpublic publishing\b|\bpublish online\b/i.test(
+      text,
+    ),
+    `${label} includes roster, attendance, sign-in, student-name, school-data, photo, behavior-report, upload, account, or public publishing language.`,
+  )
+  pushIf(
+    errors,
+    /\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\bdiagnos(is|e|es|ed|ing)\b|\btherapy\b|\btherapist\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b/i.test(
+      rawText,
+    ),
+    `${label} includes medical, emergency, legal, diagnosis, therapy, or treatment language.`,
+  )
+}
+
+function validateSubstituteStation(station, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, stationIds, errors) {
+  const label = `stations[${index}]`
+  pushIf(errors, !isObject(station), `${label} must be an object.`)
+  if (!isObject(station)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'stationUse',
+    'setupMinutes',
+    'stationMode',
+    'kidDirection',
+    'subNote',
+    'exitTicketLine',
+  ]) {
+    validateString(station[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(station.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(station.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, !station.id.startsWith('substitute-'), `${label}.id must start with substitute-.`)
+    pushIf(errors, stationIds.has(station.id), `${label}.id is duplicated.`)
+    stationIds.add(station.id)
+  }
+
+  pushIf(errors, !['7-8', '7-9', '8-10', '9-11', '10-11'].includes(station.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(
+    errors,
+    isNonEmptyString(station.stationMode) &&
+      !['Calm start', 'Partner table', 'Early finisher', 'Independent desk', 'Small group'].includes(station.stationMode),
+    `${label}.stationMode is not allowed.`,
+  )
+  pushIf(errors, isNonEmptyString(station.worldSlug) && !knownWorldSlugs.has(station.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(station.worldSlug) && !sourceWorldSlugs.has(station.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(station.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(station.ageBand) && isNonEmptyString(worldAgeBand) && station.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${station.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  validateExactStringArray(station.materials, 4, `${label}.materials`, errors)
+
+  pushIf(errors, !Array.isArray(station.pageSections), `${label}.pageSections must be an array.`)
+  if (Array.isArray(station.pageSections)) {
+    pushIf(errors, station.pageSections.length !== 3, `${label}.pageSections must have exactly 3 entries.`)
+    station.pageSections.forEach((section, sectionIndex) => {
+      const sectionLabel = `${label}.pageSections[${sectionIndex}]`
+      pushIf(errors, !isObject(section), `${sectionLabel} must be an object.`)
+      if (!isObject(section)) return
+      validateString(section.heading, `${sectionLabel}.heading`, errors)
+      validateExactStringArray(section.lines, 3, `${sectionLabel}.lines`, errors)
+      if (Array.isArray(section.lines)) {
+        section.lines.forEach((line, lineIndex) => {
+          pushIf(errors, isNonEmptyString(line) && !/_+/.test(line), `${sectionLabel}.lines[${lineIndex}] must include a writable blank.`)
+        })
+      }
+    })
+  }
+
+  pushIf(errors, isNonEmptyString(station.exitTicketLine) && !/_+/.test(station.exitTicketLine), `${label}.exitTicketLine must include a writable blank.`)
+  validateNoUnsafeSubstituteLanguage(station, label, errors)
+}
+
+function validateSubstituteRoutine(routine, index, routineNames, errors) {
+  const label = `stationRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.name)) {
+    pushIf(errors, routineNames.has(routine.name), `${label}.name is duplicated.`)
+    routineNames.add(routine.name)
+  }
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeSubstituteLanguage(routine, label, errors)
+}
+
+export function validateSubstituteTeacherStationPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Substitute Teacher Story Station Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch15', 'batchId must be 2026-06-02-batch15.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(
+    errors,
+    source.productSlug !== substituteTeacherStationPackProductSlug,
+    `productSlug must be ${substituteTeacherStationPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Substitute Teacher Story Station Pack', 'title must be Substitute Teacher Story Station Pack.')
+  pushIf(errors, source.pricePoint !== '$39', 'pricePoint must be $39.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Substitute Teacher source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Substitute Teacher source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Substitute Teacher source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 12, 'worldSlugs must have exactly 12 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredSubstituteTeacherStationArtifactPaths, 'Substitute Teacher', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.substituteGuide), 'substituteGuide must be an object.')
+  if (isObject(source.substituteGuide)) {
+    validateExactStringArray(source.substituteGuide.beforeTheDay, 5, 'substituteGuide.beforeTheDay', errors)
+    validateExactStringArray(source.substituteGuide.morningSetup, 5, 'substituteGuide.morningSetup', errors)
+    validateExactStringArray(source.substituteGuide.duringStations, 5, 'substituteGuide.duringStations', errors)
+    validateExactStringArray(source.substituteGuide.endOfDay, 5, 'substituteGuide.endOfDay', errors)
+    validateExactStringArray(source.substituteGuide.handoff, 4, 'substituteGuide.handoff', errors)
+    validateNoUnsafeSubstituteLanguage(source.substituteGuide, 'substituteGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.stationRoutines), 'stationRoutines must be an array.')
+  if (Array.isArray(source.stationRoutines)) {
+    pushIf(errors, source.stationRoutines.length !== 5, 'stationRoutines must have exactly 5 entries.')
+    const names = new Set()
+    source.stationRoutines.forEach((routine, index) => validateSubstituteRoutine(routine, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.earlyFinisherCards), 'earlyFinisherCards must be an array.')
+  if (Array.isArray(source.earlyFinisherCards)) {
+    pushIf(errors, source.earlyFinisherCards.length !== 8, 'earlyFinisherCards must have exactly 8 entries.')
+    const titles = new Set()
+    source.earlyFinisherCards.forEach((activity, index) => validateBirthdayExtension(activity, index, titles, errors))
+  }
+
+  validateExactStringArray(source.sharePrompts, 6, 'sharePrompts', errors)
+
+  pushIf(errors, !Array.isArray(source.stations), 'stations must be an array.')
+  if (Array.isArray(source.stations)) {
+    pushIf(errors, source.stations.length !== 12, 'stations must have exactly 12 entries.')
+    const stationIds = new Set()
+    const coveredWorlds = new Set()
+    source.stations.forEach((station, index) => {
+      validateSubstituteStation(station, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, stationIds, errors)
+      if (isNonEmptyString(station?.worldSlug)) coveredWorlds.add(station.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 12, 'stations must cover at least 12 unique worlds.')
+  }
+
+  validateNoUnsafeSubstituteLanguage(source, 'Substitute Teacher Story Station Pack source', errors)
+  validateNoRiskyLanguage(source, 'Substitute Teacher Story Station Pack source', errors)
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -1380,7 +1588,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredLibraryStoryClubArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredSubstituteTeacherStationArtifactPaths.pdfPath
+      ? requiredSubstituteTeacherStationArtifactPaths
+      : artifact?.pdfPath === requiredLibraryStoryClubArtifactPaths.pdfPath
       ? requiredLibraryStoryClubArtifactPaths
       : artifact?.pdfPath === requiredWaitingRoomArtifactPaths.pdfPath
       ? requiredWaitingRoomArtifactPaths

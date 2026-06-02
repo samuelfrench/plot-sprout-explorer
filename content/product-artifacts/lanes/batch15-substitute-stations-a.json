@@ -1,0 +1,271 @@
+{
+  "batchId": "2026-06-02-batch15",
+  "generatedAt": "2026-06-02",
+  "lane": "substitute-stations-a",
+  "stations": [
+    {
+      "id": "substitute-buttonwood-library-train-stop",
+      "title": "Buttonwood Library Train Stop",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "stationUse": "Substitute-day printable writing station for a quiet desk start, center rotation, or folder activity using one printed page.",
+      "setupMinutes": "4 minutes",
+      "stationMode": "Calm start",
+      "kidDirection": "Choose a library train stop, add three quiet details, and write the helper note.",
+      "subNote": "Use this as calm independent writing; point to the first box and let children complete as much as fits the time.",
+      "materials": [
+        "Printed train station page",
+        "Pencil",
+        "Blue colored pencil",
+        "Small paper ticket"
+      ],
+      "pageSections": [
+        {
+          "heading": "Train Stop",
+          "lines": [
+            "The Buttonwood train stops beside ____________________________.",
+            "The quiet platform has ____________________________.",
+            "The ticket marker points toward ____________________________."
+          ]
+        },
+        {
+          "heading": "Library Car",
+          "lines": [
+            "Inside the reading car, the shelf holds ____________________________.",
+            "The soft seat looks like ____________________________.",
+            "The train bell reminds everyone to ____________________________."
+          ]
+        },
+        {
+          "heading": "Helper Note",
+          "lines": [
+            "First, the helper checks ____________________________.",
+            "Next, the helper carries ____________________________.",
+            "The note for the next rider says ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "One Buttonwood detail I added well is ____________________________."
+    },
+    {
+      "id": "substitute-pocket-park-notice-board",
+      "title": "Pocket Park Notice Board",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "stationUse": "Substitute-day printable writing station for a partner table, early finisher bin, or quiet center with simple invented notices.",
+      "setupMinutes": "5 minutes",
+      "stationMode": "Partner table",
+      "kidDirection": "Invent three tiny park notices, pick the clearest one, and write what the helper does next.",
+      "subNote": "Partners may trade one idea aloud, then each child writes on a separate printed page.",
+      "materials": [
+        "Printed pocket park page",
+        "Pencil",
+        "Three paper notice slips",
+        "Green colored pencil"
+      ],
+      "pageSections": [
+        {
+          "heading": "Tiny Notices",
+          "lines": [
+            "The first notice asks for ____________________________.",
+            "The second notice points toward ____________________________.",
+            "The third notice reminds everyone about ____________________________."
+          ]
+        },
+        {
+          "heading": "Park Details",
+          "lines": [
+            "The bottle-cap bench sits near ____________________________.",
+            "The pebble path curves around ____________________________.",
+            "The shade leaf covers ____________________________."
+          ]
+        },
+        {
+          "heading": "Helper Choice",
+          "lines": [
+            "First, the helper reads ____________________________.",
+            "Next, the helper adds ____________________________.",
+            "The clearest park message says ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "My best Pocket Park notice is ____________________________."
+    },
+    {
+      "id": "substitute-penny-path-compass-shop",
+      "title": "Penny Path Compass Shop",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "stationUse": "Substitute-day printable writing station for a direction-writing center using a simple compass clue and a short route note.",
+      "setupMinutes": "4 minutes",
+      "stationMode": "Independent desk",
+      "kidDirection": "Pick a compass clue, draw a penny path, and write three clear shop directions.",
+      "subNote": "A quick sample direction on the board is enough; the page can be finished without extra explanation.",
+      "materials": [
+        "Printed compass shop page",
+        "Pencil",
+        "Copper colored pencil",
+        "Small direction card"
+      ],
+      "pageSections": [
+        {
+          "heading": "Compass Clue",
+          "lines": [
+            "The compass needle points toward ____________________________.",
+            "The penny path begins beside ____________________________.",
+            "The shop window shows ____________________________."
+          ]
+        },
+        {
+          "heading": "Path Marks",
+          "lines": [
+            "The first path mark looks like ____________________________.",
+            "The second path mark waits near ____________________________.",
+            "The final path mark leads to ____________________________."
+          ]
+        },
+        {
+          "heading": "Shop Directions",
+          "lines": [
+            "First, walk past ____________________________.",
+            "Next, check the compass for ____________________________.",
+            "The direction card ends with ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "The clearest direction I wrote is ____________________________."
+    },
+    {
+      "id": "substitute-acorn-avenue-errand-office",
+      "title": "Acorn Avenue Errand Office",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "stationUse": "Substitute-day printable writing station for a small group or desk activity where children sort friendly errand slips into a short story.",
+      "setupMinutes": "5 minutes",
+      "stationMode": "Small group",
+      "kidDirection": "Sort three errand slips, choose a helpful order, and write the office note.",
+      "subNote": "Have the group choose invented places only; each child keeps their own page and can work quietly after setup.",
+      "materials": [
+        "Printed errand office page",
+        "Pencil",
+        "Three paper errand slips",
+        "Yellow colored pencil"
+      ],
+      "pageSections": [
+        {
+          "heading": "Errand Slips",
+          "lines": [
+            "The first leaf slip needs ____________________________.",
+            "The second leaf slip belongs at ____________________________.",
+            "The third leaf slip is marked with ____________________________."
+          ]
+        },
+        {
+          "heading": "Office Sort",
+          "lines": [
+            "The acorn drawer holds ____________________________.",
+            "The route list starts with ____________________________.",
+            "The helper chooses this order because ____________________________."
+          ]
+        },
+        {
+          "heading": "Office Note",
+          "lines": [
+            "First, the helper carries ____________________________.",
+            "Next, the helper checks ____________________________.",
+            "The finished office note says ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "The errand order that makes sense is ____________________________."
+    },
+    {
+      "id": "substitute-rain-boot-route-rangers",
+      "title": "Rain Boot Route Rangers",
+      "worldSlug": "rain-boot-route-rangers",
+      "ageBand": "7-9",
+      "stationUse": "Substitute-day printable writing station for early finishers who can plan a cheerful rainy route with dry, tidy classroom supplies.",
+      "setupMinutes": "3 minutes",
+      "stationMode": "Early finisher",
+      "kidDirection": "Choose a rain boot route, add puddle-safe clues, and write a ranger message.",
+      "subNote": "Keep this as dry paper planning; no water or outdoor movement is needed.",
+      "materials": [
+        "Printed rain boot route page",
+        "Pencil",
+        "Blue colored pencil",
+        "Small route strip"
+      ],
+      "pageSections": [
+        {
+          "heading": "Route Start",
+          "lines": [
+            "The rain boot route begins beside ____________________________.",
+            "The first dry stepping spot is ____________________________.",
+            "The ranger map shows ____________________________."
+          ]
+        },
+        {
+          "heading": "Puddle Clues",
+          "lines": [
+            "The tiny puddle reflects ____________________________.",
+            "The boot print curves around ____________________________.",
+            "The safe path marker looks like ____________________________."
+          ]
+        },
+        {
+          "heading": "Ranger Message",
+          "lines": [
+            "First, the ranger checks ____________________________.",
+            "Next, the ranger points toward ____________________________.",
+            "The route message says ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "A careful route clue I wrote is ____________________________."
+    },
+    {
+      "id": "substitute-rain-gauge-railway",
+      "title": "Rain Gauge Railway",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "stationUse": "Substitute-day printable writing station for older elementary writers to combine observation words, sequence, and a short railway log.",
+      "setupMinutes": "6 minutes",
+      "stationMode": "Independent desk",
+      "kidDirection": "Read the rain gauge clue, plan the railway stops, and write a neat weather log.",
+      "subNote": "This page works best after a brief reminder to use invented measurements and fictional railway details.",
+      "materials": [
+        "Printed rain gauge railway page",
+        "Pencil",
+        "Blue and gray colored pencils",
+        "Small paper log strip"
+      ],
+      "pageSections": [
+        {
+          "heading": "Gauge Clue",
+          "lines": [
+            "The rain gauge shows ____________________________.",
+            "The railway platform waits near ____________________________.",
+            "The first observation word is ____________________________."
+          ]
+        },
+        {
+          "heading": "Railway Stops",
+          "lines": [
+            "Stop one is beside ____________________________.",
+            "Stop two has a signal shaped like ____________________________.",
+            "Stop three needs a note about ____________________________."
+          ]
+        },
+        {
+          "heading": "Weather Log",
+          "lines": [
+            "First, the railway helper records ____________________________.",
+            "Next, the helper compares ____________________________.",
+            "The finished weather log says ____________________________."
+          ]
+        }
+      ],
+      "exitTicketLine": "One observation that improved my railway log is ____________________________."
+    }
+  ]
+}

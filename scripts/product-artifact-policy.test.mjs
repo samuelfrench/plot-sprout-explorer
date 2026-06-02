@@ -16,6 +16,7 @@ import {
   validateLibraryStoryClubKitSource,
   validateRoadTripPackSource,
   validateSeasonBundleSource,
+  validateSubstituteTeacherStationPackSource,
   validateWaitingRoomPackSource,
   writeStoredZip,
 } from './product-artifact-policy.mjs'
@@ -728,6 +729,121 @@ function validLibraryStoryClubSource() {
   }
 }
 
+function substituteStation(id, worldSlug, ageBand) {
+  return {
+    id,
+    title: id.split('-').join(' '),
+    worldSlug,
+    ageBand,
+    stationUse: 'Printable substitute-day story station for a calm desk, early finisher, tutoring, or co-op table.',
+    setupMinutes: '5 minutes',
+    stationMode: 'Independent desk',
+    kidDirection: 'Choose one invented place detail, one helper choice, and one sentence to draft before the station closes.',
+    subNote: 'Keep this station light, collect pages in the folder, and let pointing or drawing count as planning.',
+    materials: ['printed station page', 'pencil', 'folder', 'small choice cards'],
+    pageSections: ['Station Start', 'Story Choice', 'Quiet Finish'].map((heading) => ({
+      heading,
+      lines: [
+        `${heading} detail: ____________________________`,
+        `${heading} choice: ____________________________`,
+        `${heading} sentence: ____________________________`,
+      ],
+    })),
+    exitTicketLine: 'One detail I can use tomorrow: ____________________________',
+  }
+}
+
+function validSubstituteTeacherStationPackSource() {
+  const worldSlugs = [
+    'buttonwood-library-train',
+    'pocket-park-notice-board',
+    'penny-path-compass-shop',
+    'acorn-avenue-errand-office',
+    'rain-boot-route-rangers',
+    'rain-gauge-railway',
+    'seed-library-map-room',
+    'index-card-theater-club',
+    'margin-note-market',
+    'clue-label-tower-museum',
+    'revision-river-ferry',
+    'compass-craft-academy',
+  ]
+  const worldAges = new Map([
+    ['buttonwood-library-train', '7-9'],
+    ['pocket-park-notice-board', '7-9'],
+    ['penny-path-compass-shop', '7-9'],
+    ['acorn-avenue-errand-office', '7-9'],
+    ['rain-boot-route-rangers', '7-9'],
+    ['rain-gauge-railway', '8-10'],
+    ['seed-library-map-room', '8-10'],
+    ['index-card-theater-club', '10-11'],
+    ['margin-note-market', '10-11'],
+    ['clue-label-tower-museum', '10-11'],
+    ['revision-river-ferry', '10-11'],
+    ['compass-craft-academy', '10-11'],
+  ])
+
+  return {
+    source: {
+      batchId: '2026-06-02-batch15',
+      generatedAt: '2026-06-02',
+      productSlug: 'substitute-teacher-story-station-pack',
+      title: 'Substitute Teacher Story Station Pack',
+      pricePoint: '$39',
+      audience: 'Elementary teachers, homeschool co-op leaders, tutors, and substitute folders for ages 7-11.',
+      sessionLength: '12 printable substitute stations plus adult setup tools',
+      safetyNote: safety,
+      artifact: {
+        pdfPath: 'product-build/substitute-teacher-story-station-pack/Substitute-Teacher-Story-Station-Pack.pdf',
+        zipPath: 'product-build/substitute-teacher-story-station-pack/substitute-teacher-story-station-pack.zip',
+        sourceHtmlPath: 'product-build/substitute-teacher-story-station-pack/source/substitute-teacher-story-station-pack.html',
+        manifestPath: 'product-build/substitute-teacher-story-station-pack/manifest.json',
+      },
+      worldSlugs,
+      cover: {
+        kicker: 'Printable substitute writing station pack',
+        headline: 'Substitute Teacher Story Station Pack',
+        subhead: 'Twelve calm writing stations for substitute folders, co-op tables, tutoring groups, and early finishers.',
+        included: [
+          '12 printable station pages',
+          'Before-the-day prep guide',
+          'Morning setup checklist',
+          'During-stations notes',
+          'End-of-day collection plan',
+          'Handoff note routine',
+          'Five station routines',
+          'Eight early finisher cards',
+          'Six optional share prompts',
+          'Provider-ready ZIP artifact',
+        ],
+      },
+      substituteGuide: {
+        beforeTheDay: ['Print station pages.', 'Choose three starter stations.', 'Set folders aside.', 'Clip pencils together.', 'Leave one simple note.'],
+        morningSetup: ['Place packets on desks.', 'Put pencils in the tray.', 'Pick the first station.', 'Read one direction aloud.', 'Keep pages in folders.'],
+        duringStations: ['Use quiet voices.', 'Let pointing count.', 'Circle one useful detail.', 'Move finished pages to folders.', 'Offer the early finisher card.'],
+        endOfDay: ['Stack finished pages.', 'Clip unfinished pages.', 'Return pencils.', 'Save unused stations.', 'Leave one short note.'],
+        handoff: ['List stations used.', 'Mark pages collected.', 'Name the next easy station.', 'Leave folders on the desk.'],
+      },
+      stationRoutines: Array.from({ length: 5 }, (_, index) => ({
+        name: `Station Routine ${index + 1}`,
+        bestFor: 'Substitute-day story station.',
+        steps: ['Set one page.', 'Read one direction.', 'Write one line.', 'Folder the page.'],
+      })),
+      earlyFinisherCards: Array.from({ length: 8 }, (_, index) => ({
+        title: `Early Finisher ${index + 1}`,
+        time: '8 minutes',
+        direction: 'Add one concrete detail to the station draft.',
+        writingSkill: 'setting detail',
+      })),
+      sharePrompts: ['Read one invented line.', 'Point to a setting detail.', 'Name a helper choice.', 'Share one revised word.', 'Pass and listen.', 'Choose one folder page.'],
+      stations: worldSlugs.map((worldSlug, index) =>
+        substituteStation(`substitute-station-${index + 1}`, worldSlug, worldAges.get(worldSlug)),
+      ),
+    },
+    worldAges,
+  }
+}
+
 describe('product artifact policy', () => {
   it('validates the Rainy Day pack source against the product record and required world coverage', () => {
     const product = {
@@ -1197,6 +1313,56 @@ describe('product artifact policy', () => {
         'facilitatorGuide includes patron records, library-card data, sign-in sheet, photo, upload, account, or public publishing language.',
         'Library Story Club Kit source includes account, login, upload, or public publishing language.',
         'Library Story Club Kit source includes patron records, library-card data, sign-in sheet, photo, upload, account, or public publishing language.',
+      ]),
+    )
+  })
+
+  it('validates the Substitute Teacher Story Station Pack source with matching world age bands and writable station blanks', () => {
+    const { source, worldAges } = validSubstituteTeacherStationPackSource()
+    const product = {
+      slug: 'substitute-teacher-story-station-pack',
+      title: 'Substitute Teacher Story Station Pack',
+      pricePoint: '$39',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateSubstituteTeacherStationPackSource(source, product, worldAges)).toEqual([])
+  })
+
+  it('rejects Substitute Teacher station lines that do not provide writable blanks', () => {
+    const { source, worldAges } = validSubstituteTeacherStationPackSource()
+    source.stations[0].pageSections[0].lines[0] = 'The station starts with one quiet detail.'
+    const product = {
+      slug: 'substitute-teacher-story-station-pack',
+      title: 'Substitute Teacher Story Station Pack',
+      pricePoint: '$39',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateSubstituteTeacherStationPackSource(source, product, worldAges)).toContain(
+      'stations[0].pageSections[0].lines[0] must include a writable blank.',
+    )
+  })
+
+  it('rejects Substitute Teacher source that drifts into roster, attendance, student-name, upload, or public publishing language', () => {
+    const { source, worldAges } = validSubstituteTeacherStationPackSource()
+    source.substituteGuide.morningSetup[0] =
+      'Collect the class roster, attendance sheet, student names, and story photos, then upload them for public publishing.'
+    const product = {
+      slug: 'substitute-teacher-story-station-pack',
+      title: 'Substitute Teacher Story Station Pack',
+      pricePoint: '$39',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateSubstituteTeacherStationPackSource(source, product, worldAges)).toEqual(
+      expect.arrayContaining([
+        'substituteGuide includes roster, attendance, sign-in, student-name, school-data, photo, behavior-report, upload, account, or public publishing language.',
+        'Substitute Teacher Story Station Pack source includes account, login, upload, or public publishing language.',
+        'Substitute Teacher Story Station Pack source includes roster, attendance, sign-in, student-name, school-data, photo, behavior-report, upload, account, or public publishing language.',
       ]),
     )
   })

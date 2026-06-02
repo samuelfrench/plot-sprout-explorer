@@ -49,6 +49,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 
 ## In Progress
 
+- [ ] Batch 15 deploy closeout: `$39` Substitute Teacher Story Station Pack is locally built and verified with PDF/source/ZIP, local RTX 4090 product image, full `npm run verify`, desktop/mobile local smoke, and spec/quality review approvals; push-triggered deploy and live smoke still need final evidence.
 - [ ] External checkout gate: wire hosted checkout only after Sam chooses the provider and supplies the real provider-hosted URL.
 
 ## Next Content Batches
@@ -66,6 +67,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] Batch 11: Build the `$17` Road Trip Story Quest Pack with 8 travel-friendly quests, adult setup tools, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 13: Build the `$11` Waiting Room Story Quest Pack with 8 quiet waiting quests, adult setup tools, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 14: Build the `$23` Library Story Club Kit with 10 adult-led club sessions, facilitator tools, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
+- [x] Batch 15: Build the `$39` Substitute Teacher Story Station Pack with 12 substitute story stations, substitute guide tools, early finisher cards, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [ ] Batch 12: Add the chosen hosted checkout URL, provider-host allowlist, and CTA copy after Sam chooses the provider; do not add custom checkout/webhook endpoints.
 
 ## Product Gates
@@ -87,4 +89,5 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] $17 road trip story quest pack with 8 printable travel quests and adult setup tools.
 - [x] $11 waiting room story quest pack with 8 quiet printable waiting quests and adult setup tools.
 - [x] $23 library story club kit with 10 adult-led club sessions and facilitator tools.
+- [x] $39 substitute teacher story station pack with 12 printable stations, substitute guide tools, and early finisher cards.
 - [ ] Parent email capture for weekly printable quest drops.

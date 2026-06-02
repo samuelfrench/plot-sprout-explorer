@@ -1,0 +1,29 @@
+{
+  "slug": "substitute-teacher-story-station-pack",
+  "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no plants, no toys, no decorations, minimal substitute day desk kit, blank white paper sheets, teal folders, clipboard, pencils, supply tray, plain white background",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26061543,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch15/substitute-teacher-story-station-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch15/substitute-teacher-story-station-pack.webp",
+  "manifest": "content/image-queue/2026-06-02-batch15-product-images.json",
+  "title": "Substitute Teacher Story Station Pack product image",
+  "postprocess": {
+    "operation": "center crop from local SDXL output to remove peripheral text-like marks",
+    "sourceCropBox": [
+      300,
+      190,
+      1200,
+      704
+    ],
+    "finalWidth": 1344,
+    "finalHeight": 768
+  }
+}

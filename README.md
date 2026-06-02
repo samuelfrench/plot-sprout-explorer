@@ -43,6 +43,7 @@ npm run image:batch10
 npm run image:batch11
 npm run image:batch13
 npm run image:batch14
+npm run image:batch15
 ```
 
 ## Build Product Artifacts
@@ -57,6 +58,7 @@ npm run product:birthday-party-kit
 npm run product:road-trip-pack
 npm run product:waiting-room-pack
 npm run product:library-story-club-kit
+npm run product:substitute-teacher-pack
 ```
 
 ## Safety

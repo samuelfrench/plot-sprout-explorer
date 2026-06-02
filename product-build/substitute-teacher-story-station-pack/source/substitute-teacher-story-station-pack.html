@@ -1,0 +1,866 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Substitute Teacher Story Station Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.36in; }
+      :root {
+        --ink: #17343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #b9d1c8;
+        --teal: #2c7a78;
+        --coral: #e96d3d;
+        --gold: #f2c14f;
+        --blue: #2b7f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 11.8px;
+        line-height: 1.22;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 12ch; font-size: 38px; }
+      h2 { margin-bottom: 0.06in; font-size: 23px; }
+      h3 { margin-bottom: 0.03in; font-size: 12px; }
+      p, li { color: var(--muted); }
+      img {
+        display: block;
+        max-width: 100%;
+        border: 1px solid var(--line);
+      }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.13in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.22in;
+        gap: 0.22in;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--teal);
+        font-size: 8.7px;
+      }
+      .routine-page {
+        border-top: 0.16in solid var(--blue);
+        font-size: 9.7px;
+      }
+      .finisher-page {
+        border-top: 0.16in solid var(--coral);
+        font-size: 10px;
+      }
+      .page-kicker, .kicker, .world-intro span, .finisher-card span {
+        color: var(--teal);
+        font-size: 9px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 900;
+      }
+      .included-grid, .setup-grid, .world-grid, .routine-grid, .finisher-grid, .share-grid {
+        display: grid;
+        gap: 0.06in;
+      }
+      .included-grid { grid-template-columns: 1fr; }
+      .setup-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+      .routine-grid, .finisher-grid, .share-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .world-grid {
+        grid-template-columns: repeat(6, minmax(0, 1fr));
+        gap: 0.045in;
+      }
+      .included-grid li, .setup-grid li, .share-grid li, .routine-card, .finisher-card,
+      .world-intro, .worksheet-section, .kid-direction, .adult-note, .exit-ticket, .quest-meta {
+        padding: 0.05in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .included-grid li, .setup-grid li, .share-grid li { list-style: none; }
+      .world-intro img, .world-intro p { display: none; }
+      .world-intro h3 { margin: 0; font-size: 8.3px; line-height: 1.02; }
+      .guide-page h2 { font-size: 20px; }
+      .guide-page h3 { font-size: 10px; }
+      .guide-page li { line-height: 1.12; }
+      .kid-direction {
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .adult-note {
+        border-color: #e5bc7c;
+        background: #fff4dc;
+      }
+      .quest-meta {
+        display: grid;
+        grid-template-columns: 0.7in 0.95in 1fr;
+        gap: 0.04in;
+        color: var(--ink);
+        font-size: 9.2px;
+        font-weight: 900;
+      }
+      figure {
+        float: right;
+        width: 1.58in;
+        margin: 0 0 0.05in 0.1in;
+      }
+      figure img {
+        width: 1.58in;
+        height: 0.88in;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--muted);
+        font-size: 8.4px;
+      }
+      .write-line {
+        min-height: 0.19in;
+        margin-bottom: 0.03in;
+        padding-bottom: 0.028in;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .exit-ticket {
+        margin-top: 0.05in;
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .footer-note {
+        margin-top: 0.06in;
+        padding-top: 0.06in;
+        border-top: 2px solid var(--gold);
+        color: var(--muted);
+        font-size: 9.1px;
+      }
+      @media screen {
+        body { padding: 24px; background: #dfeee7; }
+        .pack-page {
+          width: 8.5in;
+          margin: 0 auto 24px;
+          box-shadow: 0 18px 40px rgba(20, 31, 43, 0.18);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable sub-folder stations for calm story writing</p>
+        <h1>Substitute Teacher Story Station Pack</h1>
+        <p>A ready-to-use set of story station routines, quiet extension cards, and handoff notes for ages 7-11 in classrooms, homeschool co-ops, tutoring centers, and substitute folders.</p>
+        <div class="badge">$39</div>
+        <p><strong>Best for:</strong> Elementary teachers, homeschool co-op leaders, tutors, and substitute folders for ages 7-11.</p>
+        <p><strong>Format:</strong> 12 printable substitute stations plus adult setup tools</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div>
+        <h2>Inside</h2>
+        <ul class="included-grid"><li>One-page substitute guide for quick planning</li>
+<li>Five low-prep story station routines</li>
+<li>Eight early finisher cards for quiet writing choices</li>
+<li>Six share prompts for gentle discussion</li>
+<li>Simple setup notes for desks, tables, or floor spots</li>
+<li>Printable-only directions with no digital tools required</li>
+<li>Invented-world prompts for family-friendly storytelling</li>
+<li>Flexible timing for short blocks or full rotations</li>
+<li>Teacher handoff notes focused on completed materials</li>
+<li>Calm routines that work without grading pressure</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Substitute setup</p>
+      <h2>Run the substitute stations</h2>
+      <div class="setup-grid">
+        <div>
+          <h3>Before the day</h3>
+          <ol><li>Print one routine page for each station you plan to use.</li>
+<li>Print enough early finisher cards for quiet choice work.</li>
+<li>Place pencils, blank paper, and the selected station pages in one folder.</li>
+<li>Choose three to five stations based on the time available.</li>
+<li>Leave a simple note telling students that every story world is invented.</li></ol>
+        </div>
+        <div>
+          <h3>Morning setup</h3>
+          <ol><li>Set station pages where students can reach them without extra explanation.</li>
+<li>Put blank paper beside each station page.</li>
+<li>Post or read the station order before students begin.</li>
+<li>Keep early finisher cards in a separate quiet-choice stack.</li>
+<li>Use a visible timer if the group already follows timed rotations.</li></ol>
+        </div>
+        <div>
+          <h3>During stations</h3>
+          <ol><li>Read the first direction aloud, then let students work independently or with a partner.</li>
+<li>Remind students to write about invented characters and places only.</li>
+<li>Encourage short, complete ideas instead of perfect spelling.</li>
+<li>Rotate when the group is ready, or let students finish one station deeply.</li>
+<li>Use early finisher cards for students who complete a station before the group moves on.</li></ol>
+        </div>
+        <div>
+          <h3>End of day</h3>
+          <ol><li>Ask students to place finished pages in the class work stack or take-home folder.</li>
+<li>Collect unused station pages so the teacher can reuse them.</li>
+<li>Circle any station that students especially enjoyed.</li>
+<li>Note whether the group completed all planned rotations or only part of the set.</li>
+<li>Leave early finisher cards in the substitute folder for future use.</li></ol>
+        </div>
+        <div>
+          <h3>Handoff</h3>
+          <ol><li>Students completed printable story station work from invented-world prompts.</li>
+<li>No digital tools, personal details, or online sharing were used.</li>
+<li>The strongest participation appeared during the station choices marked on the pages.</li>
+<li>Unused pages and quiet-choice cards are returned to the folder.</li></ol>
+        </div>
+      </div>
+      <h3>World menu</h3>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Buttonwood Library Train</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Pocket Park Notice Board</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Penny Path Compass Shop</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Acorn Avenue Errand Office</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Rain Boot Route Rangers</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Rain Gauge Railway</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Seed Library Map Room</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Index Card Theater Club</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Margin Note Market</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Clue Label Tower Museum</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Revision River Ferry</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Compass Craft Academy</h3>
+      </div>
+    </article></div>
+      <p class="footer-note">Use these pages offline for adult-guided station work. Keep finished work in folders or send it home.</p>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Station tools</p>
+      <h2>Station routines and optional share prompts</h2>
+      <div class="routine-grid">
+    <article class="routine-card">
+      <h3>Map the Tiny Kingdom</h3>
+      <p><strong>Best for:</strong> A calm first station when students need a clear starting point</p>
+      <ol><li>Draw a small invented kingdom with three places: a gate, a workshop, and a quiet garden.</li>
+<li>Label each place with one detail that could start a story.</li>
+<li>Choose one place and write what a friendly character notices there.</li>
+<li>Add one kind problem the character can solve before leaving the kingdom.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Message from Moonberry Mail</h3>
+      <p><strong>Best for:</strong> Pairs or independent writers who enjoy letter-style prompts</p>
+      <ol><li>Imagine a mail cart arrives from a town called Moonberry Hollow.</li>
+<li>Write the first three sentences of the message inside the envelope.</li>
+<li>Decide what helpful errand the message asks the reader to complete.</li>
+<li>Write a short reply explaining the first step of the plan.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Three Object Story Tray</h3>
+      <p><strong>Best for:</strong> Students who benefit from concrete choices before drafting</p>
+      <ol><li>Pick three invented objects: a glowing button, a silver seed, and a paper compass.</li>
+<li>Choose which object a character finds first.</li>
+<li>Write how the object changes the character&#39;s plan for the day.</li>
+<li>End with the character using one object to help a neighbor in the story world.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Quiet Quest Countdown</h3>
+      <p><strong>Best for:</strong> Short blocks, tutoring sessions, or a final station before cleanup</p>
+      <ol><li>Fold a page into four boxes and number them one through four.</li>
+<li>In box one, sketch a peaceful invented place.</li>
+<li>In boxes two and three, write two steps a character takes to complete a small quest.</li>
+<li>In box four, write one sentence showing how the place is better at the end.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Story Helper Circle</h3>
+      <p><strong>Best for:</strong> Small groups that need a structured way to build one shared idea</p>
+      <ol><li>Each student writes one invented setting on a scrap of paper.</li>
+<li>Choose one setting and place it in the center of the group.</li>
+<li>Each student adds one friendly helper, tool, or clue for that setting.</li>
+<li>Independently write a short scene using the shared setting and one added idea.</li></ol>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul class="share-grid"><li>Read one sentence that shows where your story takes place.</li>
+<li>Share one invented object and explain why it matters.</li>
+<li>Tell the group one kind choice your character made.</li>
+<li>Name one detail you added after your first draft.</li>
+<li>Share a title and explain which story clue it gives.</li>
+<li>Tell one next scene you could write if you had more time.</li></ul>
+    </section>
+    <section class="pack-page finisher-page">
+      <p class="page-kicker">Station tools</p>
+      <h2>Early finisher cards</h2>
+      <div class="finisher-grid">
+    <article class="finisher-card">
+      <span>5 minutes | Setting detail</span>
+      <h3>New Door Detail</h3>
+      <p>Add a door, archway, or path to your story world and write what makes it interesting.</p>
+    </article>
+
+    <article class="finisher-card">
+      <span>5 minutes | Character support</span>
+      <h3>Helper&#39;s Pocket</h3>
+      <p>Draw three safe objects a friendly helper carries, then write how one object is useful.</p>
+    </article>
+
+    <article class="finisher-card">
+      <span>7 minutes | Revision</span>
+      <h3>Better Ending</h3>
+      <p>Write a second ending where the character solves the problem in a quieter or kinder way.</p>
+    </article>
+
+    <article class="finisher-card">
+      <span>6 minutes | Sensory language</span>
+      <h3>Five-Sense Place</h3>
+      <p>Choose one invented place from your page and add one sight, sound, smell, texture, and taste.</p>
+    </article>
+
+    <article class="finisher-card">
+      <span>5 minutes | Plot adjustment</span>
+      <h3>Tiny Problem Swap</h3>
+      <p>Replace your story problem with a small mix-up, missing object, or confusing clue.</p>
+    </article>
+
+    <article class="finisher-card">
+      <span>6 minutes | Dialogue</span>
+      <h3>Friendly Dialogue</h3>
+      <p>Write four lines of conversation between two invented characters who are making a plan.</p>
+    </article>
+
+    <article class="finisher-card">
+      <span>4 minutes | Sequencing</span>
+      <h3>Quest List</h3>
+      <p>List three steps your character could take next, then circle the step that would make the best scene.</p>
+    </article>
+
+    <article class="finisher-card">
+      <span>3 minutes | Main idea</span>
+      <h3>Title Test</h3>
+      <p>Write three possible titles for your story and underline the one that gives the clearest clue.</p>
+    </article></div>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 1 | Calm start</div>
+      <h2>Buttonwood Library Train Stop</h2>
+      <figure><img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration"><figcaption>Buttonwood Library Train</figcaption></figure>
+      <p class="kid-direction">Choose a library train stop, add three quiet details, and write the helper note.</p>
+      <p class="adult-note">Use this as calm independent writing; point to the first box and let children complete as much as fits the time.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>4 minutes setup</span>
+        <span>Substitute-day printable writing station for a quiet desk start, center rotation, or folder activity using one printed page.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Train Stop</h3>
+          <p class="write-line">The Buttonwood train stops beside ____________________________.</p>
+<p class="write-line">The quiet platform has ____________________________.</p>
+<p class="write-line">The ticket marker points toward ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Library Car</h3>
+          <p class="write-line">Inside the reading car, the shelf holds ____________________________.</p>
+<p class="write-line">The soft seat looks like ____________________________.</p>
+<p class="write-line">The train bell reminds everyone to ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Helper Note</h3>
+          <p class="write-line">First, the helper checks ____________________________.</p>
+<p class="write-line">Next, the helper carries ____________________________.</p>
+<p class="write-line">The note for the next rider says ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">One Buttonwood detail I added well is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 2 | Partner table</div>
+      <h2>Pocket Park Notice Board</h2>
+      <figure><img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration"><figcaption>Pocket Park Notice Board</figcaption></figure>
+      <p class="kid-direction">Invent three tiny park notices, pick the clearest one, and write what the helper does next.</p>
+      <p class="adult-note">Partners may trade one idea aloud, then each child writes on a separate printed page.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>5 minutes setup</span>
+        <span>Substitute-day printable writing station for a partner table, early finisher bin, or quiet center with simple invented notices.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Tiny Notices</h3>
+          <p class="write-line">The first notice asks for ____________________________.</p>
+<p class="write-line">The second notice points toward ____________________________.</p>
+<p class="write-line">The third notice reminds everyone about ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Park Details</h3>
+          <p class="write-line">The bottle-cap bench sits near ____________________________.</p>
+<p class="write-line">The pebble path curves around ____________________________.</p>
+<p class="write-line">The shade leaf covers ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Helper Choice</h3>
+          <p class="write-line">First, the helper reads ____________________________.</p>
+<p class="write-line">Next, the helper adds ____________________________.</p>
+<p class="write-line">The clearest park message says ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">My best Pocket Park notice is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 3 | Independent desk</div>
+      <h2>Penny Path Compass Shop</h2>
+      <figure><img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration"><figcaption>Penny Path Compass Shop</figcaption></figure>
+      <p class="kid-direction">Pick a compass clue, draw a penny path, and write three clear shop directions.</p>
+      <p class="adult-note">A quick sample direction on the board is enough; the page can be finished without extra explanation.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>4 minutes setup</span>
+        <span>Substitute-day printable writing station for a direction-writing center using a simple compass clue and a short route note.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Compass Clue</h3>
+          <p class="write-line">The compass needle points toward ____________________________.</p>
+<p class="write-line">The penny path begins beside ____________________________.</p>
+<p class="write-line">The shop window shows ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Path Marks</h3>
+          <p class="write-line">The first path mark looks like ____________________________.</p>
+<p class="write-line">The second path mark waits near ____________________________.</p>
+<p class="write-line">The final path mark leads to ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Shop Directions</h3>
+          <p class="write-line">First, walk past ____________________________.</p>
+<p class="write-line">Next, check the compass for ____________________________.</p>
+<p class="write-line">The direction card ends with ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">The clearest direction I wrote is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 4 | Small group</div>
+      <h2>Acorn Avenue Errand Office</h2>
+      <figure><img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration"><figcaption>Acorn Avenue Errand Office</figcaption></figure>
+      <p class="kid-direction">Sort three errand slips, choose a helpful order, and write the office note.</p>
+      <p class="adult-note">Have the group choose invented places only; each child keeps their own page and can work quietly after setup.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>5 minutes setup</span>
+        <span>Substitute-day printable writing station for a small group or desk activity where children sort friendly errand slips into a short story.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Errand Slips</h3>
+          <p class="write-line">The first leaf slip needs ____________________________.</p>
+<p class="write-line">The second leaf slip belongs at ____________________________.</p>
+<p class="write-line">The third leaf slip is marked with ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Office Sort</h3>
+          <p class="write-line">The acorn drawer holds ____________________________.</p>
+<p class="write-line">The route list starts with ____________________________.</p>
+<p class="write-line">The helper chooses this order because ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Office Note</h3>
+          <p class="write-line">First, the helper carries ____________________________.</p>
+<p class="write-line">Next, the helper checks ____________________________.</p>
+<p class="write-line">The finished office note says ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">The errand order that makes sense is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 5 | Early finisher</div>
+      <h2>Rain Boot Route Rangers</h2>
+      <figure><img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration"><figcaption>Rain Boot Route Rangers</figcaption></figure>
+      <p class="kid-direction">Choose a rain boot route, add puddle-safe clues, and write a ranger message.</p>
+      <p class="adult-note">Keep this as dry paper planning; no water or outdoor movement is needed.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>3 minutes setup</span>
+        <span>Substitute-day printable writing station for early finishers who can plan a cheerful rainy route with dry, tidy classroom supplies.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Route Start</h3>
+          <p class="write-line">The rain boot route begins beside ____________________________.</p>
+<p class="write-line">The first dry stepping spot is ____________________________.</p>
+<p class="write-line">The ranger map shows ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Puddle Clues</h3>
+          <p class="write-line">The tiny puddle reflects ____________________________.</p>
+<p class="write-line">The boot print curves around ____________________________.</p>
+<p class="write-line">The safe path marker looks like ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ranger Message</h3>
+          <p class="write-line">First, the ranger checks ____________________________.</p>
+<p class="write-line">Next, the ranger points toward ____________________________.</p>
+<p class="write-line">The route message says ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">A careful route clue I wrote is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 6 | Independent desk</div>
+      <h2>Rain Gauge Railway</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Read the rain gauge clue, plan the railway stops, and write a neat weather log.</p>
+      <p class="adult-note">This page works best after a brief reminder to use invented measurements and fictional railway details.</p>
+      <div class="quest-meta">
+        <span>Ages 8-10</span>
+        <span>6 minutes setup</span>
+        <span>Substitute-day printable writing station for older elementary writers to combine observation words, sequence, and a short railway log.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Gauge Clue</h3>
+          <p class="write-line">The rain gauge shows ____________________________.</p>
+<p class="write-line">The railway platform waits near ____________________________.</p>
+<p class="write-line">The first observation word is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Railway Stops</h3>
+          <p class="write-line">Stop one is beside ____________________________.</p>
+<p class="write-line">Stop two has a signal shaped like ____________________________.</p>
+<p class="write-line">Stop three needs a note about ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Weather Log</h3>
+          <p class="write-line">First, the railway helper records ____________________________.</p>
+<p class="write-line">Next, the helper compares ____________________________.</p>
+<p class="write-line">The finished weather log says ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">One observation that improved my railway log is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 7 | Independent desk</div>
+      <h2>Seed Library Map Room</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="kid-direction">Choose a seed drawer, map a tiny route, and write the first note for the map room helper.</p>
+      <p class="adult-note">Use this station when students can work quietly from a printed page; invented plant names are enough.</p>
+      <div class="quest-meta">
+        <span>Ages 8-10</span>
+        <span>5 minutes setup</span>
+        <span>Substitute-day printable writing station for a calm independent desk, co-op table, or tutoring rotation using a seed-map story plan.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Seed Drawer</h3>
+          <p class="write-line">The seed drawer label says ____________________________.</p>
+<p class="write-line">The tiny seed packet holds ____________________________.</p>
+<p class="write-line">The map room shelf is marked with ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Route</h3>
+          <p class="write-line">The first map turn goes past ____________________________.</p>
+<p class="write-line">The second map clue is hidden near ____________________________.</p>
+<p class="write-line">The final map mark points toward ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Helper Note</h3>
+          <p class="write-line">First, the helper plants the idea of ____________________________.</p>
+<p class="write-line">Next, the helper checks ____________________________.</p>
+<p class="write-line">The map room note says ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">One map-room detail I want to keep is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 8 | Partner table</div>
+      <h2>Index Card Theater Club</h2>
+      <figure><img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration"><figcaption>Index Card Theater Club</figcaption></figure>
+      <p class="kid-direction">Pick a theater card, choose a scene job, and write a short exchange that moves the story forward.</p>
+      <p class="adult-note">Partners may read ideas quietly, but each writer should complete a separate page.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>6 minutes setup</span>
+        <span>Substitute-day printable writing station for older elementary writers to plan a tiny scene with index-card roles and a short dialogue beat.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Scene Card</h3>
+          <p class="write-line">The theater card names a place called ____________________________.</p>
+<p class="write-line">The card asks one character to carry ____________________________.</p>
+<p class="write-line">The scene job for this card is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Dialogue Beat</h3>
+          <p class="write-line">The first speaker says ____________________________.</p>
+<p class="write-line">The second speaker answers ____________________________.</p>
+<p class="write-line">The dialogue changes the plan by ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Stage Direction</h3>
+          <p class="write-line">At the start, the character stands near ____________________________.</p>
+<p class="write-line">In the middle, the character notices ____________________________.</p>
+<p class="write-line">At the end, the scene points toward ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">The line that best moves my scene is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 9 | Early finisher</div>
+      <h2>Margin Note Market</h2>
+      <figure><img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration"><figcaption>Margin Note Market</figcaption></figure>
+      <p class="kid-direction">Visit the margin note stalls, trade a weak detail for a stronger one, and write the revised sentence.</p>
+      <p class="adult-note">Use this as a no-pressure revision page; one improved sentence is a complete station outcome.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>5 minutes setup</span>
+        <span>Substitute-day printable writing station for revision practice, early finishers, or a quiet table where students trade stronger details.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Market Stall</h3>
+          <p class="write-line">The first margin stall offers ____________________________.</p>
+<p class="write-line">The second margin stall trades for ____________________________.</p>
+<p class="write-line">The note seller recommends ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Detail Trade</h3>
+          <p class="write-line">A plain detail on my page is ____________________________.</p>
+<p class="write-line">A stronger detail I can trade in is ____________________________.</p>
+<p class="write-line">The sentence changes because ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Revised Line</h3>
+          <p class="write-line">Before revision, the sentence was about ____________________________.</p>
+<p class="write-line">After revision, the sentence includes ____________________________.</p>
+<p class="write-line">The improved sentence is ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">One revision choice that helped my writing is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 10 | Independent desk</div>
+      <h2>Clue Label Tower Museum</h2>
+      <figure><img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration"><figcaption>Clue Label Tower Museum</figcaption></figure>
+      <p class="kid-direction">Create three exhibit labels, choose the clearest clue, and write the tower museum note.</p>
+      <p class="adult-note">This station rewards precise words; students can finish with labels instead of a long draft.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>6 minutes setup</span>
+        <span>Substitute-day printable writing station for a museum-label style activity that builds precise nouns, clues, and a short exhibit note.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Exhibit Labels</h3>
+          <p class="write-line">The first exhibit is labeled ____________________________.</p>
+<p class="write-line">The second exhibit is labeled ____________________________.</p>
+<p class="write-line">The third exhibit is labeled ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Clue Choice</h3>
+          <p class="write-line">The clearest clue is hidden beside ____________________________.</p>
+<p class="write-line">The clue matters because ____________________________.</p>
+<p class="write-line">The tower guide notices ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Museum Note</h3>
+          <p class="write-line">First, the guide checks ____________________________.</p>
+<p class="write-line">Next, the guide adds a label for ____________________________.</p>
+<p class="write-line">The exhibit note explains ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">The most precise exhibit word I chose is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 11 | Calm start</div>
+      <h2>Revision River Ferry</h2>
+      <figure><img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration"><figcaption>Revision River Ferry</figcaption></figure>
+      <p class="kid-direction">Load one sentence onto the ferry, cross the revision river, and unload a clearer version.</p>
+      <p class="adult-note">A student may revise a sentence from this page or invent a new rough sentence to polish.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>5 minutes setup</span>
+        <span>Substitute-day printable writing station for a calm revision ferry route where students move one draft idea from rough to clearer.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Ferry Load</h3>
+          <p class="write-line">The rough sentence starts with ____________________________.</p>
+<p class="write-line">The ferry carries one detail about ____________________________.</p>
+<p class="write-line">The sentence needs clearer words for ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>River Crossing</h3>
+          <p class="write-line">At the first dock, I add ____________________________.</p>
+<p class="write-line">At the second dock, I remove ____________________________.</p>
+<p class="write-line">At the third dock, I choose the stronger word ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Clearer Unload</h3>
+          <p class="write-line">The revised sentence now shows ____________________________.</p>
+<p class="write-line">The detail that changed most is ____________________________.</p>
+<p class="write-line">My clearer version is ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">One word I improved on the ferry is ____________________________.</p>
+    </section>
+
+    <section class="pack-page station-page">
+      <div class="page-kicker">Station 12 | Small group</div>
+      <h2>Compass Craft Academy</h2>
+      <figure><img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration"><figcaption>Compass Craft Academy</figcaption></figure>
+      <p class="kid-direction">Choose a compass craft, list the materials, and write the first three steps of the academy plan.</p>
+      <p class="adult-note">Small groups may brainstorm materials together, then each writer completes a separate plan.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>6 minutes setup</span>
+        <span>Substitute-day printable writing station for a self-directed craft-academy plan using directions, materials, and a short procedure-style scene.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Craft Choice</h3>
+          <p class="write-line">The academy craft is called ____________________________.</p>
+<p class="write-line">The compass points toward ____________________________.</p>
+<p class="write-line">The craft helps the story character by ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Material List</h3>
+          <p class="write-line">The first invented material is ____________________________.</p>
+<p class="write-line">The second invented material is ____________________________.</p>
+<p class="write-line">The safest classroom substitute for drawing it is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Academy Plan</h3>
+          <p class="write-line">Step one of the craft plan is ____________________________.</p>
+<p class="write-line">Step two of the craft plan is ____________________________.</p>
+<p class="write-line">Step three of the craft plan is ____________________________.</p>
+        </section></div>
+      <p class="exit-ticket">The clearest academy step I wrote is ____________________________.</p>
+    </section>
+  </body>
+</html>

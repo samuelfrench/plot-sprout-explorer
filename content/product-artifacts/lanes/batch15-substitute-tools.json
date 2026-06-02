@@ -1,0 +1,168 @@
+{
+  "batchId": "2026-06-02-batch15",
+  "generatedAt": "2026-06-02",
+  "lane": "substitute-tools",
+  "cover": {
+    "kicker": "Printable sub-folder stations for calm story writing",
+    "headline": "Substitute Teacher Story Station Pack",
+    "subhead": "A ready-to-use set of story station routines, quiet extension cards, and handoff notes for ages 7-11 in classrooms, homeschool co-ops, tutoring centers, and substitute folders.",
+    "included": [
+      "One-page substitute guide for quick planning",
+      "Five low-prep story station routines",
+      "Eight early finisher cards for quiet writing choices",
+      "Six share prompts for gentle discussion",
+      "Simple setup notes for desks, tables, or floor spots",
+      "Printable-only directions with no digital tools required",
+      "Invented-world prompts for family-friendly storytelling",
+      "Flexible timing for short blocks or full rotations",
+      "Teacher handoff notes focused on completed materials",
+      "Calm routines that work without grading pressure"
+    ]
+  },
+  "substituteGuide": {
+    "beforeTheDay": [
+      "Print one routine page for each station you plan to use.",
+      "Print enough early finisher cards for quiet choice work.",
+      "Place pencils, blank paper, and the selected station pages in one folder.",
+      "Choose three to five stations based on the time available.",
+      "Leave a simple note telling students that every story world is invented."
+    ],
+    "morningSetup": [
+      "Set station pages where students can reach them without extra explanation.",
+      "Put blank paper beside each station page.",
+      "Post or read the station order before students begin.",
+      "Keep early finisher cards in a separate quiet-choice stack.",
+      "Use a visible timer if the group already follows timed rotations."
+    ],
+    "duringStations": [
+      "Read the first direction aloud, then let students work independently or with a partner.",
+      "Remind students to write about invented characters and places only.",
+      "Encourage short, complete ideas instead of perfect spelling.",
+      "Rotate when the group is ready, or let students finish one station deeply.",
+      "Use early finisher cards for students who complete a station before the group moves on."
+    ],
+    "endOfDay": [
+      "Ask students to place finished pages in the class work stack or take-home folder.",
+      "Collect unused station pages so the teacher can reuse them.",
+      "Circle any station that students especially enjoyed.",
+      "Note whether the group completed all planned rotations or only part of the set.",
+      "Leave early finisher cards in the substitute folder for future use."
+    ],
+    "handoff": [
+      "Students completed printable story station work from invented-world prompts.",
+      "No digital tools, personal details, or online sharing were used.",
+      "The strongest participation appeared during the station choices marked on the pages.",
+      "Unused pages and quiet-choice cards are returned to the folder."
+    ]
+  },
+  "stationRoutines": [
+    {
+      "name": "Map the Tiny Kingdom",
+      "bestFor": "A calm first station when students need a clear starting point",
+      "steps": [
+        "Draw a small invented kingdom with three places: a gate, a workshop, and a quiet garden.",
+        "Label each place with one detail that could start a story.",
+        "Choose one place and write what a friendly character notices there.",
+        "Add one kind problem the character can solve before leaving the kingdom."
+      ]
+    },
+    {
+      "name": "Message from Moonberry Mail",
+      "bestFor": "Pairs or independent writers who enjoy letter-style prompts",
+      "steps": [
+        "Imagine a mail cart arrives from a town called Moonberry Hollow.",
+        "Write the first three sentences of the message inside the envelope.",
+        "Decide what helpful errand the message asks the reader to complete.",
+        "Write a short reply explaining the first step of the plan."
+      ]
+    },
+    {
+      "name": "Three Object Story Tray",
+      "bestFor": "Students who benefit from concrete choices before drafting",
+      "steps": [
+        "Pick three invented objects: a glowing button, a silver seed, and a paper compass.",
+        "Choose which object a character finds first.",
+        "Write how the object changes the character's plan for the day.",
+        "End with the character using one object to help a neighbor in the story world."
+      ]
+    },
+    {
+      "name": "Quiet Quest Countdown",
+      "bestFor": "Short blocks, tutoring sessions, or a final station before cleanup",
+      "steps": [
+        "Fold a page into four boxes and number them one through four.",
+        "In box one, sketch a peaceful invented place.",
+        "In boxes two and three, write two steps a character takes to complete a small quest.",
+        "In box four, write one sentence showing how the place is better at the end."
+      ]
+    },
+    {
+      "name": "Story Helper Circle",
+      "bestFor": "Small groups that need a structured way to build one shared idea",
+      "steps": [
+        "Each student writes one invented setting on a scrap of paper.",
+        "Choose one setting and place it in the center of the group.",
+        "Each student adds one friendly helper, tool, or clue for that setting.",
+        "Independently write a short scene using the shared setting and one added idea."
+      ]
+    }
+  ],
+  "earlyFinisherCards": [
+    {
+      "title": "New Door Detail",
+      "time": "5 minutes",
+      "direction": "Add a door, archway, or path to your story world and write what makes it interesting.",
+      "writingSkill": "Setting detail"
+    },
+    {
+      "title": "Helper's Pocket",
+      "time": "5 minutes",
+      "direction": "Draw three safe objects a friendly helper carries, then write how one object is useful.",
+      "writingSkill": "Character support"
+    },
+    {
+      "title": "Better Ending",
+      "time": "7 minutes",
+      "direction": "Write a second ending where the character solves the problem in a quieter or kinder way.",
+      "writingSkill": "Revision"
+    },
+    {
+      "title": "Five-Sense Place",
+      "time": "6 minutes",
+      "direction": "Choose one invented place from your page and add one sight, sound, smell, texture, and taste.",
+      "writingSkill": "Sensory language"
+    },
+    {
+      "title": "Tiny Problem Swap",
+      "time": "5 minutes",
+      "direction": "Replace your story problem with a small mix-up, missing object, or confusing clue.",
+      "writingSkill": "Plot adjustment"
+    },
+    {
+      "title": "Friendly Dialogue",
+      "time": "6 minutes",
+      "direction": "Write four lines of conversation between two invented characters who are making a plan.",
+      "writingSkill": "Dialogue"
+    },
+    {
+      "title": "Quest List",
+      "time": "4 minutes",
+      "direction": "List three steps your character could take next, then circle the step that would make the best scene.",
+      "writingSkill": "Sequencing"
+    },
+    {
+      "title": "Title Test",
+      "time": "3 minutes",
+      "direction": "Write three possible titles for your story and underline the one that gives the clearest clue.",
+      "writingSkill": "Main idea"
+    }
+  ],
+  "sharePrompts": [
+    "Read one sentence that shows where your story takes place.",
+    "Share one invented object and explain why it matters.",
+    "Tell the group one kind choice your character made.",
+    "Name one detail you added after your first draft.",
+    "Share a title and explain which story clue it gives.",
+    "Tell one next scene you could write if you had more time."
+  ]
+}
