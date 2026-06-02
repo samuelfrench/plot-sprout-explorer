@@ -23,11 +23,13 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Created public GitHub repo `samuelfrench/plot-sprout-explorer`, enabled GitHub Pages workflow deploys, and pushed initial app scaffold.
 - [x] 2026-06-02: Registered local self-hosted runner `sam-local-plot-sprout-1` with labels `self-hosted`, `Linux`, `X64`, `plot-sprout` via user service `actions-runner-plot-sprout-1.service`.
 - [x] 2026-06-02: Fixed first deploy failure root cause: Node 24.16/npm 11.13 required regenerated `package-lock.json` entries for `@emnapi/core` and `@emnapi/runtime`.
+- [x] 2026-06-02: Fixed GitHub Pages base-path asset bug; live site now serves HTML, JS, favicon, and local world images from `/plot-sprout-explorer/`.
+- [x] 2026-06-02: Removed `setup-node` npm caching after it restored a 5.6GB shared local runner cache; workflow verifier now blocks `cache: npm`.
+- [x] 2026-06-02: Final no-cache deploy succeeded on local runner at `2026-06-02T04:35:44Z`; live URL `https://samuelfrench.github.io/plot-sprout-explorer/` returned HTTP 200 for HTML, JS, and generated JPEG assets, and Playwright live smoke found zero console warnings/errors.
 
 ## In Progress
 
-- [ ] Commit and push deploy lockfile fix.
-- [ ] Confirm first successful push-triggered deploy run state.
+- [ ] Batch 1 content expansion: generate 30 age-banded worlds, 90 writing prompts, 30 image prompts, and 10 printable kit outlines.
 
 ## Next Content Batches
 
