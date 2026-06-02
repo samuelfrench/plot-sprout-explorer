@@ -1,0 +1,227 @@
+{
+  "batchId": "2026-06-02-batch9",
+  "lane": "classroom-prompt-cards-b",
+  "generatedAt": "2026-06-02",
+  "promptCards": [
+    {
+      "id": "card-b-seed-drawer-map-details",
+      "worldSlug": "seed-library-map-room",
+      "title": "Seed Drawer Map Details",
+      "skillFocus": "setting detail",
+      "teacherSetup": "Place three seed packets or blank index cards at the writing table and ask students to point to one map-room detail before they write.",
+      "studentPrompt": "Describe the seed library map room so a classmate can picture where the hidden garden note belongs.",
+      "choiceSet": [
+        "bean drawer",
+        "carrot aisle",
+        "sunflower table"
+      ],
+      "writingLines": [
+        "The first place I notice in the map room is ____________________",
+        "A tiny object on the table looks like ____________________",
+        "The map clue is tucked beside ____________________",
+        "My setting helps the story because ____________________"
+      ],
+      "shareMove": "Ask partners to trade papers and underline one detail they can picture clearly.",
+      "extension": "Students add a small map label in the margin and write one sentence explaining it.",
+      "rubricLookFor": "The student includes at least three concrete setting details tied to the story task."
+    },
+    {
+      "id": "card-b-solar-oven-picnic-fix",
+      "worldSlug": "solar-oven-picnic-station",
+      "title": "Solar Oven Picnic Fix",
+      "skillFocus": "problem-solution",
+      "teacherSetup": "Draw a quick three-step test chart on the board with problem, try, and result columns.",
+      "studentPrompt": "Help the picnic team choose a fair fix when one solar oven warms a snack faster than the others.",
+      "choiceSet": [
+        "tilt the panel",
+        "move the marker",
+        "check the timer"
+      ],
+      "writingLines": [
+        "The picnic station problem is ____________________",
+        "My hero tries this first fix: ____________________",
+        "The result shows ____________________",
+        "The fair solution for the team is ____________________"
+      ],
+      "shareMove": "Have students read only their solution sentence to a table partner.",
+      "extension": "Students sketch a before-and-after test card with one label for each change.",
+      "rubricLookFor": "The student names a clear problem and connects the solution to evidence from the scene."
+    },
+    {
+      "id": "card-b-moss-observatory-senses",
+      "worldSlug": "moss-message-observatory",
+      "title": "Moss Observatory Senses",
+      "skillFocus": "sensory detail",
+      "teacherSetup": "Invite students to list quiet forest words for sight, touch, sound, and smell before drafting.",
+      "studentPrompt": "Write a calm observatory scene where moss details help your hero understand a nature message.",
+      "choiceSet": [
+        "silver rain dot",
+        "soft green patch",
+        "twig shadow"
+      ],
+      "writingLines": [
+        "The moss looks ____________________",
+        "The observatory air feels ____________________",
+        "A quiet sound nearby is ____________________",
+        "The sensory clue tells my hero ____________________"
+      ],
+      "shareMove": "Invite volunteers to share one sensory word, not the whole paragraph.",
+      "extension": "Students revise one plain word into a more exact sensory word.",
+      "rubricLookFor": "The student uses sensory details that make the observatory scene more specific."
+    },
+    {
+      "id": "card-b-spoon-ferry-dock-dialogue",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "title": "Spoon Ferry Dock Dialogue",
+      "skillFocus": "dialogue",
+      "teacherSetup": "Model one polite question and one helpful answer on the board before students write their own lines.",
+      "studentPrompt": "Write a short dockside conversation that helps the spoon ferry deliver the right lunchbox order.",
+      "choiceSet": [
+        "cracker dock",
+        "grape buoy",
+        "napkin menu"
+      ],
+      "writingLines": [
+        "The ferry cook asks this question: ____________________",
+        "The dock helper answers with: ____________________",
+        "My hero says this polite line: ____________________",
+        "The conversation solves ____________________"
+      ],
+      "shareMove": "Partners read the three spoken lines in quiet voices and check whether the order makes sense.",
+      "extension": "Students add one action tag that shows who is speaking without using a name.",
+      "rubricLookFor": "The student writes dialogue that sounds polite and moves the scene forward."
+    },
+    {
+      "id": "card-b-museum-label-choice",
+      "worldSlug": "clue-label-tower-museum",
+      "title": "Museum Label Choice",
+      "skillFocus": "character choice",
+      "teacherSetup": "Show students how a museum curator chooses one clue to place first and one clue to save for later.",
+      "studentPrompt": "Decide which exhibit label your curator should write first so visitors notice the best clue.",
+      "choiceSet": [
+        "button compass",
+        "paper telescope",
+        "ribbon ruler"
+      ],
+      "writingLines": [
+        "My curator chooses the exhibit called ____________________",
+        "The label should mention ____________________",
+        "The curator waits to reveal ____________________",
+        "This choice helps visitors because ____________________"
+      ],
+      "shareMove": "Students hold up one finger for first, second, or third clue choice before discussing with a partner.",
+      "extension": "Students write a second version of the label for younger museum visitors.",
+      "rubricLookFor": "The student explains a character choice with a reason connected to the visitor experience."
+    },
+    {
+      "id": "card-b-compass-craft-route-order",
+      "worldSlug": "compass-craft-academy",
+      "title": "Compass Craft Route Order",
+      "skillFocus": "sequence",
+      "teacherSetup": "Give students three sticky notes or paper scraps so they can physically order the route before writing.",
+      "studentPrompt": "Plan the order of stops for a craft-academy map route that leads to a finished story project.",
+      "choiceSet": [
+        "thread path",
+        "paper bridge",
+        "color corner"
+      ],
+      "writingLines": [
+        "First, my map route goes to ____________________",
+        "Next, the compass points toward ____________________",
+        "After that, my hero checks ____________________",
+        "The final stop is important because ____________________"
+      ],
+      "shareMove": "Students compare only their first and final stops with a nearby writer.",
+      "extension": "Students add transition words above each line and read the route again.",
+      "rubricLookFor": "The student uses ordered steps that make the route easy to follow."
+    },
+    {
+      "id": "card-b-almost-invention-sentence-test",
+      "worldSlug": "almost-invention-workshop",
+      "title": "Almost Invention Sentence Test",
+      "skillFocus": "sentence variety",
+      "teacherSetup": "Write a short sentence, a longer because sentence, and a question sentence on the board as examples.",
+      "studentPrompt": "Test an almost-invention by writing sentences that do not all start or sound the same.",
+      "choiceSet": [
+        "cardboard gear",
+        "paper lever",
+        "button dial"
+      ],
+      "writingLines": [
+        "My short sentence: ____________________",
+        "My because sentence: ____________________",
+        "My question sentence: ____________________",
+        "My best invention sentence is ____________________"
+      ],
+      "shareMove": "Ask students to star the sentence type they used least and share that one with a partner.",
+      "extension": "Students combine two short sentences into one smoother sentence.",
+      "rubricLookFor": "The student tries at least three sentence patterns while staying on the same invention idea."
+    },
+    {
+      "id": "card-b-binding-day-ending-choice",
+      "worldSlug": "binding-day-boardwalk",
+      "title": "Binding Day Ending Choice",
+      "skillFocus": "ending choice",
+      "teacherSetup": "Ask students to choose whether their booklet ending should feel helpful, funny, or thoughtful before they write.",
+      "studentPrompt": "Write an ending for Binding Day that shows how the finished booklet is shared in the classroom.",
+      "choiceSet": [
+        "helpful ending",
+        "funny ending",
+        "thoughtful ending"
+      ],
+      "writingLines": [
+        "At the boardwalk table, the finished booklet shows ____________________",
+        "My hero chooses to end with ____________________",
+        "The class notices ____________________",
+        "The final sentence of my story is ____________________"
+      ],
+      "shareMove": "Students read their final sentence only and let partners name the ending feeling.",
+      "extension": "Students draft a second ending with a different feeling and circle the stronger one.",
+      "rubricLookFor": "The student writes an ending that matches the story action and leaves a clear final feeling."
+    },
+    {
+      "id": "card-b-index-card-theater-table-share",
+      "worldSlug": "index-card-theater-club",
+      "title": "Index Card Theater Table Share",
+      "skillFocus": "peer sharing",
+      "teacherSetup": "Arrange students in pairs and give each writer one index card for a scene title or favorite line.",
+      "studentPrompt": "Prepare a tiny theater-club share that lets a partner understand your scene without reading the whole story.",
+      "choiceSet": [
+        "scene title",
+        "favorite line",
+        "prop clue"
+      ],
+      "writingLines": [
+        "My scene is called ____________________",
+        "One line I can share is ____________________",
+        "One prop or action that helps is ____________________",
+        "A kind question for my partner is ____________________"
+      ],
+      "shareMove": "Partners share one card each, then say one thing they understood clearly.",
+      "extension": "Students add a tiny cue mark where a reader should pause.",
+      "rubricLookFor": "The student selects a short shareable piece and responds to a peer with a kind question or comment."
+    },
+    {
+      "id": "card-b-revision-river-two-pass",
+      "worldSlug": "revision-river-ferry",
+      "title": "Revision River Two-Pass",
+      "skillFocus": "revision",
+      "teacherSetup": "Tell students to pick one sentence from yesterday or from a quick draft and copy it onto the first line.",
+      "studentPrompt": "Ride the revision ferry by changing one sentence so it becomes clearer and more interesting.",
+      "choiceSet": [
+        "add a detail",
+        "swap a verb",
+        "trim extra words"
+      ],
+      "writingLines": [
+        "My first sentence is ____________________",
+        "The revision move I chose is ____________________",
+        "My revised sentence is ____________________",
+        "The revised version is clearer because ____________________"
+      ],
+      "shareMove": "Students point to the changed word or phrase instead of reading the whole draft aloud.",
+      "extension": "Students make one more small revision and label it with the move they used.",
+      "rubricLookFor": "The student makes a visible revision and can explain how the change improves the sentence."
+    }
+  ]
+}
