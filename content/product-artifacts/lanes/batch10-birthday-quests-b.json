@@ -1,0 +1,183 @@
+{
+  "batchId": "2026-06-02-batch10",
+  "lane": "birthday-quests-b",
+  "generatedAt": "2026-06-02",
+  "quests": [
+    {
+      "id": "button-bakery-candle-map-parade",
+      "title": "Button Bakery Candle Map Parade",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "partyUse": "A 50-minute birthday table activity where pairs decorate bakery route cards before writing one tiny delivery scene.",
+      "setupMinutes": "7 minutes",
+      "groupMode": "pairs at a snack table",
+      "kidDirection": "Choose one bakery stop, add three party details, and write how the helper gets the candle map back in order.",
+      "adultNote": "Read the first section aloud, let pairs point to a route before writing, and invite each pair to read one sentence at the end.",
+      "materials": [
+        "printed bakery route page",
+        "colored pencils",
+        "blank party detail cards",
+        "small timer"
+      ],
+      "pageSections": [
+        {
+          "heading": "Party Route Starts",
+          "lines": [
+            "The button roll table is decorated with ____________________.",
+            "The first crumb clue points toward ____________________.",
+            "The birthday helper carries ____________________."
+          ]
+        },
+        {
+          "heading": "Candle Map Choices",
+          "lines": [
+            "The map gets confusing when ____________________.",
+            "My helper chooses to check ____________________ first.",
+            "A polite bakery line is \"____________________\"."
+          ]
+        },
+        {
+          "heading": "Read-Aloud Ending",
+          "lines": [
+            "The route becomes clear after ____________________.",
+            "One detail I added for listeners is ____________________.",
+            "My final party sentence is ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Take home this bakery route page as the first scene from a cheerful party story."
+    },
+    {
+      "id": "seed-library-party-wish-catalog",
+      "title": "Seed Library Party Wish Catalog",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "partyUse": "A homeschool co-op celebration station where small groups turn birthday wishes into garden catalog entries and story starters.",
+      "setupMinutes": "6 minutes",
+      "groupMode": "small table groups of three",
+      "kidDirection": "Fill three seed catalog cards, then choose the one that should begin the birthday garden story.",
+      "adultNote": "Assign one card per child, then have the group pick a beginning card, a middle card, and an ending card together.",
+      "materials": [
+        "printed seed catalog cards",
+        "pencils",
+        "seed packet prop cards",
+        "table name tent"
+      ],
+      "pageSections": [
+        {
+          "heading": "Catalog Card Details",
+          "lines": [
+            "Seed card name: ____________________.",
+            "Garden party color or shape: ____________________.",
+            "Tiny map label: ____________________."
+          ]
+        },
+        {
+          "heading": "Group Story Order",
+          "lines": [
+            "The first card belongs near ____________________.",
+            "The middle card changes the plan by ____________________.",
+            "The final card helps the garden because ____________________."
+          ]
+        },
+        {
+          "heading": "Polish And Share",
+          "lines": [
+            "One plain word we can replace is ____________________.",
+            "Our clearer garden detail is ____________________.",
+            "The line we will read aloud is ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Take home your catalog card to remember the garden story your group built together."
+    },
+    {
+      "id": "rain-gauge-surprise-forecast-relay",
+      "title": "Rain Gauge Surprise Forecast Relay",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "partyUse": "A library writing table or classroom celebration relay where children pass forecast cards and build a shared weather sequence.",
+      "setupMinutes": "5 minutes",
+      "groupMode": "whole group relay with table captains",
+      "kidDirection": "Add one forecast clue to the railway card, pass it, and help the group write a clear first-next-final sequence.",
+      "adultNote": "Keep turns short, read the sequence after every three cards, and let quiet writers contribute by adding a detail or arrow.",
+      "materials": [
+        "printed railway forecast cards",
+        "pencils",
+        "blue and green markers",
+        "sequence strip"
+      ],
+      "pageSections": [
+        {
+          "heading": "Forecast Card Pass",
+          "lines": [
+            "My rain number or weather clue is ____________________.",
+            "The tiny train carries it to ____________________.",
+            "The garden post notices ____________________."
+          ]
+        },
+        {
+          "heading": "Sequence Strip",
+          "lines": [
+            "First, the rain gauge shows ____________________.",
+            "Next, the railway changes course toward ____________________.",
+            "Finally, the party forecast says ____________________."
+          ]
+        },
+        {
+          "heading": "Group Revision Stop",
+          "lines": [
+            "One confusing part is ____________________.",
+            "We make it clearer by adding ____________________.",
+            "Our best read-aloud line is ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Take home your forecast card as proof that one small clue can help a whole group story."
+    },
+    {
+      "id": "binding-day-party-booklet-finish",
+      "title": "Binding Day Party Booklet Finish",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "partyUse": "A 60-minute older-kid party or classroom celebration where writers turn a quick draft into a folded take-home booklet.",
+      "setupMinutes": "8 minutes",
+      "groupMode": "quiet corner with optional partner check",
+      "kidDirection": "Write a title, choose the strongest ending, and revise one line before folding your party booklet.",
+      "adultNote": "Offer privacy for drafts, use partner checks only by choice, and end with a one-line table share instead of full readings.",
+      "materials": [
+        "printed booklet template",
+        "pencils",
+        "folding bone or craft stick",
+        "colored title strips"
+      ],
+      "pageSections": [
+        {
+          "heading": "Booklet Setup",
+          "lines": [
+            "My title strip says ____________________.",
+            "The boardwalk table I choose is ____________________.",
+            "The reader should notice ____________________."
+          ]
+        },
+        {
+          "heading": "Ending Choice",
+          "lines": [
+            "Possible ending one: ____________________.",
+            "Possible ending two: ____________________.",
+            "I choose this ending because ____________________."
+          ]
+        },
+        {
+          "heading": "Final Revision Pass",
+          "lines": [
+            "The line I will revise is ____________________.",
+            "I make it clearer by ____________________.",
+            "My one-line share is ____________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Take home this folded booklet as a finished birthday writing keepsake."
+    }
+  ]
+}

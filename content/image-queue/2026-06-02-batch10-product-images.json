@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-02-batch10-product-images",
+  "generatedAt": "2026-06-02",
+  "purpose": "Create the local product-cover image for the Birthday Party Story Quest Kit without cloud image services.",
+  "images": [
+    {
+      "slug": "birthday-party-story-quest-kit",
+      "title": "Birthday Party Story Quest Kit",
+      "purpose": "Static product-page hero and provider-review cover art for the $19 printable party kit.",
+      "prompt": "family-friendly flat lay birthday party writing kit, no people, no faces, no characters, no animals, no text, no letters, no labels, no logos, no watermark, no branded characters, no scary harm, no weapons, blank quest maps, folded story booklets, crayons, paper confetti, route cards, warm daylight, polished storybook illustration",
+      "outputJpeg": "public/images/plotsprout/batch10/birthday-party-story-quest-kit.jpg",
+      "outputWebp": "public/images/plotsprout/batch10/birthday-party-story-quest-kit.webp",
+      "sidecar": "content/image-runs/batch10/birthday-party-story-quest-kit.json",
+      "seed": 26061003
+    }
+  ]
+}

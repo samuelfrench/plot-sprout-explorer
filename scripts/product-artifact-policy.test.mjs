@@ -8,6 +8,7 @@ import {
   countPdfPages,
   inspectConfiguredArtifactFiles,
   inspectArtifactFiles,
+  validateBirthdayPartyKitSource,
   validateCheckoutReadiness,
   validateClassroomLicenseSource,
   validateManifestWorldAssets,
@@ -296,6 +297,116 @@ function validClassroomLicenseSource() {
   }
 }
 
+function birthdayQuest(id, worldSlug, ageBand) {
+  return {
+    id,
+    title: id.split('-').join(' '),
+    worldSlug,
+    ageBand,
+    partyUse: 'Birthday party writing table with a short take-home page.',
+    setupMinutes: '5 minutes',
+    groupMode: 'small table',
+    kidDirection: 'Choose one place detail and write one sentence for the folder.',
+    adultNote: 'Read choices aloud and let children point before writing.',
+    materials: ['printed quest page', 'pencils', 'crayons', 'timer'],
+    pageSections: ['Place', 'Helper', 'Ending'].map((heading) => ({
+      heading,
+      lines: [
+        `${heading} detail: ____________________________`,
+        `${heading} choice: ____________________________`,
+        `${heading} sentence: ____________________________`,
+      ],
+    })),
+    takeHomeLine: 'Take this page home as a finished party quest start.',
+  }
+}
+
+function validBirthdayPartySource() {
+  const worldSlugs = [
+    'teacup-town-weather-window',
+    'button-bakery-map-mixup',
+    'rain-gauge-railway',
+    'compass-craft-academy',
+    'seed-library-map-room',
+    'binding-day-boardwalk',
+  ]
+  const worldAges = new Map([
+    ['teacup-town-weather-window', '7-8'],
+    ['button-bakery-map-mixup', '7-9'],
+    ['rain-gauge-railway', '8-10'],
+    ['compass-craft-academy', '10-11'],
+    ['seed-library-map-room', '8-10'],
+    ['binding-day-boardwalk', '10-11'],
+  ])
+  const quests = [
+    birthdayQuest('teacup-party-forecast', 'teacup-town-weather-window', '7-8'),
+    birthdayQuest('button-bakery-map', 'button-bakery-map-mixup', '7-9'),
+    birthdayQuest('railway-gift-route', 'rain-gauge-railway', '8-10'),
+    birthdayQuest('compass-map-relay', 'compass-craft-academy', '10-11'),
+    birthdayQuest('seed-wish-catalog', 'seed-library-map-room', '8-10'),
+    birthdayQuest('binding-day-booklet', 'binding-day-boardwalk', '10-11'),
+    birthdayQuest('button-bakery-parade', 'button-bakery-map-mixup', '7-9'),
+    birthdayQuest('rain-gauge-relay', 'rain-gauge-railway', '8-10'),
+  ]
+
+  return {
+    source: {
+      batchId: '2026-06-02-batch10',
+      generatedAt: '2026-06-02',
+      productSlug: 'birthday-party-story-quest-kit',
+      title: 'Birthday Party Story Quest Kit',
+      pricePoint: '$19',
+      audience: 'Parents and teachers hosting adult-led writing celebrations for ages 7-11.',
+      sessionLength: '8 printable party quests plus adult setup tools',
+      safetyNote: safety,
+      artifact: {
+        pdfPath: 'product-build/birthday-party-story-quest-kit/Birthday-Party-Story-Quest-Kit.pdf',
+        zipPath: 'product-build/birthday-party-story-quest-kit/birthday-party-story-quest-kit.zip',
+        sourceHtmlPath: 'product-build/birthday-party-story-quest-kit/source/birthday-party-story-quest-kit.html',
+        manifestPath: 'product-build/birthday-party-story-quest-kit/manifest.json',
+      },
+      worldSlugs,
+      cover: {
+        kicker: 'Printable party writing kit',
+        headline: 'Birthday Party Story Quest Kit',
+        subhead: 'Eight low-pressure writing quests for party tables.',
+        included: [
+          '8 party quests',
+          'Adult setup guide',
+          'Timing menu',
+          'Table setup list',
+          'Five party routines',
+          'Eight extension activities',
+          'Six share cards',
+          'World menu',
+          'Source HTML',
+          'ZIP artifact',
+        ],
+      },
+      setupGuide: {
+        timing: ['Arrival.', 'Launch.', 'Draft.', 'Decorate.', 'Share.'],
+        tableSetup: ['Folders.', 'Pencils.', 'Cards.', 'Timer.', 'Snack surface.'],
+        adultScript: ['Safety.', 'Point first.', 'One place.', 'Two choices.', 'Optional share.'],
+        takeHomePrep: ['Print packets.', 'Fold covers.', 'Add note.', 'Pack cards.'],
+      },
+      partyRoutines: Array.from({ length: 5 }, (_, index) => ({
+        name: `Routine ${index + 1}`,
+        bestFor: 'Birthday writing table.',
+        steps: ['Set page.', 'Pick card.', 'Write line.', 'Folder page.'],
+      })),
+      extensionActivities: Array.from({ length: 8 }, (_, index) => ({
+        title: `Extension ${index + 1}`,
+        time: '10 minutes',
+        direction: 'Add one concrete detail to the quest page.',
+        writingSkill: 'setting detail',
+      })),
+      groupShareCards: ['Read one line.', 'Show a map.', 'Ask an adult.', 'Name a card.', 'Pick a detail.', 'Pass and listen.'],
+      quests,
+    },
+    worldAges,
+  }
+}
+
 describe('product artifact policy', () => {
   it('validates the Rainy Day pack source against the product record and required world coverage', () => {
     const product = {
@@ -373,7 +484,9 @@ describe('product artifact policy', () => {
       const status = inspectArtifactFiles(root, validSource().artifact, { expectedPdfPages: 15 })
 
       expect(status.valid).toBe(false)
-      expect(status.errors).toContain('Rainy Day PDF artifact must have exactly 15 pages; found 2.')
+      expect(status.errors).toContain(
+        'product-build/rainy-day-story-quest-pack/Rainy-Day-Story-Quest-Pack.pdf must have exactly 15 pages; found 2.',
+      )
     } finally {
       rmSync(root, { recursive: true, force: true })
     }
@@ -541,6 +654,51 @@ describe('product artifact policy', () => {
         'extensionActivities must have exactly 10 entries.',
         'rubric.criteria must have exactly 4 entries.',
       ]),
+    )
+  })
+
+  it('validates the Birthday Party Story Quest Kit source with matching world age bands and writable quest blanks', () => {
+    const { source, worldAges } = validBirthdayPartySource()
+    const product = {
+      slug: 'birthday-party-story-quest-kit',
+      title: 'Birthday Party Story Quest Kit',
+      pricePoint: '$19',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateBirthdayPartyKitSource(source, product, worldAges)).toEqual([])
+  })
+
+  it('rejects Birthday Party quests whose age band does not match the referenced world', () => {
+    const { source, worldAges } = validBirthdayPartySource()
+    source.quests[3].ageBand = '9-11'
+    const product = {
+      slug: 'birthday-party-story-quest-kit',
+      title: 'Birthday Party Story Quest Kit',
+      pricePoint: '$19',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateBirthdayPartyKitSource(source, product, worldAges)).toContain(
+      'quests[3].ageBand must match compass-craft-academy ageBand 10-11.',
+    )
+  })
+
+  it('rejects Birthday Party quest lines that do not provide writable blanks', () => {
+    const { source, worldAges } = validBirthdayPartySource()
+    source.quests[0].pageSections[0].lines[0] = 'The party table has a map.'
+    const product = {
+      slug: 'birthday-party-story-quest-kit',
+      title: 'Birthday Party Story Quest Kit',
+      pricePoint: '$19',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateBirthdayPartyKitSource(source, product, worldAges)).toContain(
+      'quests[0].pageSections[0].lines[0] must include a writable blank.',
     )
   })
 })

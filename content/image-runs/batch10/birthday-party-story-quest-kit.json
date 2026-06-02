@@ -1,0 +1,18 @@
+{
+  "slug": "birthday-party-story-quest-kit",
+  "prompt": "family-friendly flat lay birthday party writing kit, no people, no faces, no characters, no animals, no text, no letters, no labels, no logos, no watermark, no branded characters, no scary harm, no weapons, blank quest maps, folded story booklets, crayons, paper confetti, route cards, warm daylight, polished storybook illustration",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26061003,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch10/birthday-party-story-quest-kit.jpg",
+  "outputWebp": "public/images/plotsprout/batch10/birthday-party-story-quest-kit.webp",
+  "manifest": "content/image-queue/2026-06-02-batch10-product-images.json",
+  "title": "Birthday Party Story Quest Kit"
+}

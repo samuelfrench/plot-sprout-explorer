@@ -7,6 +7,7 @@ import { containsActiveCheckoutLanguage } from './content-policy.mjs'
 export const rainyDayProductSlug = 'rainy-day-story-quest-pack'
 export const seasonBundleProductSlug = 'homeschool-season-story-bundle'
 export const classroomLicenseProductSlug = 'classroom-story-license-pack'
+export const birthdayPartyProductSlug = 'birthday-party-story-quest-kit'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -37,6 +38,13 @@ const requiredClassroomLicenseArtifactPaths = {
   zipPath: 'product-build/classroom-story-license-pack/classroom-story-license-pack.zip',
   sourceHtmlPath: 'product-build/classroom-story-license-pack/source/classroom-story-license-pack.html',
   manifestPath: 'product-build/classroom-story-license-pack/manifest.json',
+}
+
+const requiredBirthdayPartyArtifactPaths = {
+  pdfPath: 'product-build/birthday-party-story-quest-kit/Birthday-Party-Story-Quest-Kit.pdf',
+  zipPath: 'product-build/birthday-party-story-quest-kit/birthday-party-story-quest-kit.zip',
+  sourceHtmlPath: 'product-build/birthday-party-story-quest-kit/source/birthday-party-story-quest-kit.html',
+  manifestPath: 'product-build/birthday-party-story-quest-kit/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -504,6 +512,178 @@ export function validateClassroomLicenseSource(source, product, knownWorldSlugs)
   return errors
 }
 
+function validateBirthdayQuest(quest, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, questIds, errors) {
+  const label = `quests[${index}]`
+  pushIf(errors, !isObject(quest), `${label} must be an object.`)
+  if (!isObject(quest)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'partyUse',
+    'setupMinutes',
+    'groupMode',
+    'kidDirection',
+    'adultNote',
+    'takeHomeLine',
+  ]) {
+    validateString(quest[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(quest.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(quest.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, questIds.has(quest.id), `${label}.id is duplicated.`)
+    questIds.add(quest.id)
+  }
+
+  pushIf(errors, !['7-8', '7-9', '8-10', '9-11', '10-11'].includes(quest.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(quest.worldSlug) && !knownWorldSlugs.has(quest.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(quest.worldSlug) && !sourceWorldSlugs.has(quest.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(quest.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(quest.ageBand) && isNonEmptyString(worldAgeBand) && quest.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${quest.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+  validateExactStringArray(quest.materials, 4, `${label}.materials`, errors)
+
+  pushIf(errors, !Array.isArray(quest.pageSections), `${label}.pageSections must be an array.`)
+  if (Array.isArray(quest.pageSections)) {
+    pushIf(errors, quest.pageSections.length !== 3, `${label}.pageSections must have exactly 3 entries.`)
+    quest.pageSections.forEach((section, sectionIndex) => {
+      const sectionLabel = `${label}.pageSections[${sectionIndex}]`
+      pushIf(errors, !isObject(section), `${sectionLabel} must be an object.`)
+      if (!isObject(section)) return
+      validateString(section.heading, `${sectionLabel}.heading`, errors)
+      validateExactStringArray(section.lines, 3, `${sectionLabel}.lines`, errors)
+      if (Array.isArray(section.lines)) {
+        section.lines.forEach((line, lineIndex) => {
+          pushIf(errors, isNonEmptyString(line) && !/_+/.test(line), `${sectionLabel}.lines[${lineIndex}] must include a writable blank.`)
+        })
+      }
+    })
+  }
+}
+
+function validateBirthdayRoutine(routine, index, routineNames, errors) {
+  const label = `partyRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.name)) {
+    pushIf(errors, routineNames.has(routine.name), `${label}.name is duplicated.`)
+    routineNames.add(routine.name)
+  }
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+}
+
+function validateBirthdayExtension(activity, index, titles, errors) {
+  const label = `extensionActivities[${index}]`
+  pushIf(errors, !isObject(activity), `${label} must be an object.`)
+  if (!isObject(activity)) return
+  for (const key of ['title', 'time', 'direction', 'writingSkill']) {
+    validateString(activity[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(activity.title)) {
+    pushIf(errors, titles.has(activity.title), `${label}.title is duplicated.`)
+    titles.add(activity.title)
+  }
+}
+
+export function validateBirthdayPartyKitSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Birthday Party Story Quest Kit source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch10', 'batchId must be 2026-06-02-batch10.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(errors, source.productSlug !== birthdayPartyProductSlug, `productSlug must be ${birthdayPartyProductSlug}.`)
+  pushIf(errors, source.title !== 'Birthday Party Story Quest Kit', 'title must be Birthday Party Story Quest Kit.')
+  pushIf(errors, source.pricePoint !== '$19', 'pricePoint must be $19.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Birthday Party source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Birthday Party source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Birthday Party source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(source.worldSlugs ?? [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length < 6, 'worldSlugs must have at least 6 entries.')
+    pushIf(errors, source.worldSlugs.length > 10, 'worldSlugs must have no more than 10 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredBirthdayPartyArtifactPaths, 'Birthday Party', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.setupGuide), 'setupGuide must be an object.')
+  if (isObject(source.setupGuide)) {
+    validateExactStringArray(source.setupGuide.timing, 5, 'setupGuide.timing', errors)
+    validateExactStringArray(source.setupGuide.tableSetup, 5, 'setupGuide.tableSetup', errors)
+    validateExactStringArray(source.setupGuide.adultScript, 5, 'setupGuide.adultScript', errors)
+    validateExactStringArray(source.setupGuide.takeHomePrep, 4, 'setupGuide.takeHomePrep', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.partyRoutines), 'partyRoutines must be an array.')
+  if (Array.isArray(source.partyRoutines)) {
+    pushIf(errors, source.partyRoutines.length !== 5, 'partyRoutines must have exactly 5 entries.')
+    const names = new Set()
+    source.partyRoutines.forEach((routine, index) => validateBirthdayRoutine(routine, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.extensionActivities), 'extensionActivities must be an array.')
+  if (Array.isArray(source.extensionActivities)) {
+    pushIf(errors, source.extensionActivities.length !== 8, 'extensionActivities must have exactly 8 entries.')
+    const titles = new Set()
+    source.extensionActivities.forEach((activity, index) => validateBirthdayExtension(activity, index, titles, errors))
+  }
+
+  validateExactStringArray(source.groupShareCards, 6, 'groupShareCards', errors)
+
+  pushIf(errors, !Array.isArray(source.quests), 'quests must be an array.')
+  if (Array.isArray(source.quests)) {
+    pushIf(errors, source.quests.length !== 8, 'quests must have exactly 8 entries.')
+    const questIds = new Set()
+    const coveredWorlds = new Set()
+    source.quests.forEach((quest, index) => {
+      validateBirthdayQuest(quest, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, questIds, errors)
+      if (isNonEmptyString(quest?.worldSlug)) coveredWorlds.add(quest.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 6, 'quests must cover at least 6 unique worlds.')
+  }
+
+  validateNoRiskyLanguage(source, 'Birthday Party Story Quest Kit source', errors)
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -603,7 +783,7 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
       const pageCount = countPdfPages(buffer)
       files[label].pageCount = pageCount
       if (pageCount !== options.expectedPdfPages) {
-        errors.push(`Rainy Day PDF artifact must have exactly ${options.expectedPdfPages} pages; found ${pageCount}.`)
+        errors.push(`${relativePath} must have exactly ${options.expectedPdfPages} pages; found ${pageCount}.`)
       }
     }
     if (key === 'zipPath' && buffer.subarray(0, 2).toString('ascii') !== 'PK') {
@@ -632,7 +812,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredClassroomLicenseArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredBirthdayPartyArtifactPaths.pdfPath
+      ? requiredBirthdayPartyArtifactPaths
+      : artifact?.pdfPath === requiredClassroomLicenseArtifactPaths.pdfPath
       ? requiredClassroomLicenseArtifactPaths
       : artifact?.pdfPath === requiredSeasonBundleArtifactPaths.pdfPath
       ? requiredSeasonBundleArtifactPaths

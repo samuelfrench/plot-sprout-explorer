@@ -1,0 +1,144 @@
+{
+  "batchId": "2026-06-02-batch10",
+  "lane": "birthday-party-tools",
+  "generatedAt": "2026-06-02",
+  "setupGuide": {
+    "timing": [
+      "45-minute version: 5 minutes for arrival coloring, 8 minutes for the shared story spark, 17 minutes for drafting, 5 minutes for decorating, and 10 minutes for group share.",
+      "60-minute version: 10 minutes for arrival table work, 10 minutes for the adult-led quest launch, 20 minutes for station drafting, 10 minutes for covers, and 10 minutes for take-home folders.",
+      "75-minute version: 10 minutes for arrival, 12 minutes for warm-up choices, 25 minutes for rotating story stations, 13 minutes for extension activity, and 15 minutes for optional sentence sharing.",
+      "For a classroom celebration, run the story spark before treats, then use cake or snack time as the natural break before folders go home.",
+      "Keep a visible timer at the adult seat and announce the last 3 minutes before each move so children can finish a sentence instead of stopping mid-thought."
+    ],
+    "tableSetup": [
+      "Cover one main table with plain craft paper and place a pencil cup, crayons, scissors, tape, and a small scrap-paper tray in the center.",
+      "Set one folder or envelope per child with a story map, draft page, cover page, and blank ending card already stacked in use order.",
+      "Use color dots or table numbers for groups instead of personal data labels, and keep the host copy beside the timer.",
+      "Put four station signs around the table: place, helper, mix-up, and ending, with enough printed choice cards for two children to use each station at once.",
+      "Keep snacks, drinks, candles, and gift bags on a separate surface so the writing pages stay dry and easy to send home."
+    ],
+    "adultScript": [
+      "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "Today we are making tiny quest stories. You can point, draw, dictate to an adult, or write your own words.",
+      "A good party story needs one clear place, one helpful character, one small mix-up, and one kind ending.",
+      "If you get stuck, choose between the two cards in front of you, then say the sentence out loud before writing.",
+      "For sharing, you may read one sentence, ask an adult to read one sentence, show a drawing, or pass and be a careful listener."
+    ],
+    "takeHomePrep": [
+      "Before guests arrive, print one complete packet per child plus three spare packets for siblings, mistakes, or late additions.",
+      "Pre-fold each cover page and tuck the story map inside so children leave with a finished booklet shape even if the draft is short.",
+      "Add one blank thank-you note sheet behind the story page for families who want to turn the quest into a later note.",
+      "At the end, place loose choice cards in a small envelope inside each folder so the story can be finished at home without extra setup."
+    ]
+  },
+  "partyRoutines": [
+    {
+      "name": "Arrival Quest Table",
+      "bestFor": "The first 10 minutes while guests arrive at different times.",
+      "steps": [
+        "Place one low-pressure map or cover page at every seat before the first child arrives.",
+        "Invite each child to color, circle a favorite place, or add one label while waiting for the group.",
+        "Ask an adult helper to quietly slide finished arrival pages into the child's folder.",
+        "Begin the main quest once most seats are filled, using the arrival page as the first story detail."
+      ]
+    },
+    {
+      "name": "Story Station Carousel",
+      "bestFor": "A 60-minute party with 8-16 children and two adult helpers.",
+      "steps": [
+        "Set four stations around one table: place card, helper card, mix-up card, and ending card.",
+        "Start each group at a different station and give them 4 minutes to circle or write one choice.",
+        "Rotate groups clockwise until each folder has one note from every station.",
+        "Bring everyone back to seats and turn the four notes into a short draft or dictated story."
+      ]
+    },
+    {
+      "name": "Whole-Group Quest Build",
+      "bestFor": "Library tables, classroom celebrations, or younger groups that need one shared pace.",
+      "steps": [
+        "Read the quest starter aloud and hold up two printable choices at a time.",
+        "Let the group choose by pointing to the left or right side of the table.",
+        "Write the group choice on a large sheet, then have each child copy, sketch, or adapt it on their own page.",
+        "Repeat for place, helper, mix-up, and ending so every child leaves with a complete story frame."
+      ]
+    },
+    {
+      "name": "Pair-and-Polish Mini Draft",
+      "bestFor": "Older children, homeschool co-ops, and classroom groups with 20 minutes of focused writing time.",
+      "steps": [
+        "Give pairs one story map and ask each child to choose one different detail to add.",
+        "Set a 7-minute quiet draft timer while adults help with spelling only when asked.",
+        "Have partners trade pages and underline one detail that is already clear.",
+        "Ask each child to add one stronger noun, action, or sound before the group share."
+      ]
+    },
+    {
+      "name": "Take-Home Quest Folder Finish",
+      "bestFor": "Busy birthday parties where writing must fit between treats, photos, and free play.",
+      "steps": [
+        "Run only the story spark and first draft page during the party.",
+        "Use a folder checklist with three boxes: map started, sentence started, ending chosen.",
+        "Let children decorate the cover while adults gather pages and loose cards.",
+        "Send the folder home with a one-step finish note: add one ending sentence after the party."
+      ]
+    }
+  ],
+  "extensionActivities": [
+    {
+      "title": "Invitation Map Warm-Up",
+      "time": "10 minutes",
+      "direction": "Children draw a tiny route from the party door to an invented quest table, then label three stops with ordinary details from the room.",
+      "writingSkill": "setting detail"
+    },
+    {
+      "title": "Snack Table Sensory List",
+      "time": "8 minutes",
+      "direction": "Before snacks are served, children list one color, one shape, one sound, and one texture they can borrow for a story scene.",
+      "writingSkill": "sensory detail"
+    },
+    {
+      "title": "Gift-Bow Character Choice",
+      "time": "12 minutes",
+      "direction": "Give each child a paper bow shape and ask them to write two helpful choices a character could make with it in a tiny quest.",
+      "writingSkill": "character choice"
+    },
+    {
+      "title": "Table Tent Quest Titles",
+      "time": "10 minutes",
+      "direction": "Fold blank cards into table tents and have children write a story title on the front and three clue words on the back.",
+      "writingSkill": "main idea"
+    },
+    {
+      "title": "Kind Ending Spinner",
+      "time": "15 minutes",
+      "direction": "Use a paper spinner with three ending types: help someone, fix a mix-up, or learn a useful lesson, then write one matching final sentence.",
+      "writingSkill": "ending choice"
+    },
+    {
+      "title": "Three-Prop Story Sort",
+      "time": "12 minutes",
+      "direction": "Place three safe everyday props on the table and ask groups to sort them into place detail, helpful item, or ending clue.",
+      "writingSkill": "story structure"
+    },
+    {
+      "title": "Thank-You Note Story Bridge",
+      "time": "15 minutes",
+      "direction": "Children draft one thank-you sentence that mentions an invented quest detail, then add one real appreciation sentence for the host.",
+      "writingSkill": "audience and purpose"
+    },
+    {
+      "title": "Table Gallery Walk",
+      "time": "10 minutes",
+      "direction": "Finished pages stay on the table while children walk quietly, place one star sticker beside a clear detail, and return to revise one line.",
+      "writingSkill": "revision from response"
+    }
+  ],
+  "groupShareCards": [
+    "Read one sentence you are proud of, then tell the group which word you chose carefully.",
+    "Point to one map or cover detail and explain where the character goes next.",
+    "Ask an adult to read one line for you while you hold up the page.",
+    "Tell the group which choice card helped your story most: place, helper, mix-up, or ending.",
+    "Ask listeners to choose one detail you could add next: color, sound, action, or feeling.",
+    "Pass today and take the listener job: notice one clear detail from another child's story."
+  ]
+}

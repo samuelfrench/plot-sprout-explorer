@@ -1,0 +1,183 @@
+{
+  "batchId": "2026-06-02-batch10",
+  "lane": "birthday-quests-a",
+  "generatedAt": "2026-06-02",
+  "quests": [
+    {
+      "id": "teacup-town-birthday-forecast",
+      "title": "Teacup Town Birthday Forecast",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "partyUse": "Arrival-table warm-up for a 45-minute birthday party or library celebration where early guests need a quiet first page.",
+      "setupMinutes": "5 minutes",
+      "groupMode": "quiet corner",
+      "kidDirection": "Circle one weather clue, then write three tiny details for the birthday forecast.",
+      "adultNote": "Read the three headings aloud, invite pointing before writing, and let children keep unfinished pages without pressure.",
+      "materials": [
+        "Printed forecast quest pages",
+        "Crayons or colored pencils",
+        "Pencils",
+        "Five-minute timer"
+      ],
+      "pageSections": [
+        {
+          "heading": "Weather Clue",
+          "lines": [
+            "The spoon window shows ____________________________.",
+            "The steam cloud looks like ____________________________.",
+            "The cup-handle bridge feels ____________________________."
+          ]
+        },
+        {
+          "heading": "Party Errand",
+          "lines": [
+            "My helper carries ____________________________ to the table.",
+            "First, the helper checks ____________________________.",
+            "Next, the helper asks ____________________________."
+          ]
+        },
+        {
+          "heading": "Read-Aloud Line",
+          "lines": [
+            "The birthday forecast says ____________________________.",
+            "My clearest setting detail is ____________________________.",
+            "One line I may read aloud is ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Take this page home as the first scene of a tiny Teacup Town birthday story."
+    },
+    {
+      "id": "button-bakery-candle-map",
+      "title": "Button Bakery Candle Map",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "partyUse": "Pair station for a birthday party, homeschool co-op celebration, or classroom treat table that needs a clear map-and-choice activity.",
+      "setupMinutes": "7 minutes",
+      "groupMode": "pairs",
+      "kidDirection": "Draw the bakery route, choose a helper, and write what the helper fixes first.",
+      "adultNote": "Let each pair share one pencil path before writing; keep the conversation about clear directions and kind choices.",
+      "materials": [
+        "Printed bakery quest pages",
+        "Pencils",
+        "Colored pencils",
+        "Paper bakery tokens"
+      ],
+      "pageSections": [
+        {
+          "heading": "Crumb Route",
+          "lines": [
+            "The button roll starts at ____________________________.",
+            "The crumb path turns toward ____________________________.",
+            "The bakery sign shows ____________________________."
+          ]
+        },
+        {
+          "heading": "Helper Choice",
+          "lines": [
+            "My helper is a ____________________________.",
+            "The helper notices the map problem when ____________________________.",
+            "The helper fixes the first stop by ____________________________."
+          ]
+        },
+        {
+          "heading": "Clear Direction",
+          "lines": [
+            "First, go past ____________________________.",
+            "Next, follow ____________________________.",
+            "Last, deliver the birthday treat to ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Take this map home and finish the Button Bakery story with one clear direction sentence."
+    },
+    {
+      "id": "rain-gauge-railway-gift-timetable",
+      "title": "Rain Gauge Railway Gift Timetable",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "partyUse": "Small-table writing quest for a 60-minute party, co-op celebration, or classroom rotation with a sequence-writing focus.",
+      "setupMinutes": "6 minutes",
+      "groupMode": "small table",
+      "kidDirection": "Number the train stops, add one sensory detail, and write the final timetable note.",
+      "adultNote": "Use this after snacks or cake when the group needs a structured page with a visible finish line.",
+      "materials": [
+        "Printed railway quest pages",
+        "Pencils",
+        "Number stickers",
+        "Blue and green crayons"
+      ],
+      "pageSections": [
+        {
+          "heading": "Train Stops",
+          "lines": [
+            "Stop 1 is beside ____________________________.",
+            "Stop 2 carries ____________________________.",
+            "Stop 3 waits near ____________________________."
+          ]
+        },
+        {
+          "heading": "Sensory Detail",
+          "lines": [
+            "The train sounds like ____________________________.",
+            "The garden smells like ____________________________.",
+            "The wet track shines like ____________________________."
+          ]
+        },
+        {
+          "heading": "Timetable Note",
+          "lines": [
+            "First, the gift car ____________________________.",
+            "Next, the conductor notices ____________________________.",
+            "At the end, the timetable says ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Take this timetable home as a birthday railway scene with a beginning, middle, and ending."
+    },
+    {
+      "id": "compass-craft-story-map-relay",
+      "title": "Compass Craft Story Map Relay",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "partyUse": "Whole-group finale for a 60-75 minute birthday party, library writing table, or upper-elementary classroom celebration.",
+      "setupMinutes": "8 minutes",
+      "groupMode": "whole group",
+      "kidDirection": "Add one route card, one speaker line, and one revised ending to the shared story map.",
+      "adultNote": "Pass the page around in order, accept short phrases, and make read-aloud sharing optional for quieter children.",
+      "materials": [
+        "Printed story map pages",
+        "Pencils",
+        "Index cards",
+        "Colored route strips"
+      ],
+      "pageSections": [
+        {
+          "heading": "Route Card",
+          "lines": [
+            "Our story starts at ____________________________.",
+            "The route turns when ____________________________.",
+            "The map clue everyone should notice is ____________________________."
+          ]
+        },
+        {
+          "heading": "Speaker Line",
+          "lines": [
+            "Character one says, \"____________________________\"",
+            "Character two answers, \"____________________________\"",
+            "The line changes the plan because ____________________________."
+          ]
+        },
+        {
+          "heading": "Ending Revision",
+          "lines": [
+            "Our first ending idea is ____________________________.",
+            "We can make it clearer by adding ____________________________.",
+            "Our revised ending sentence is ____________________________."
+          ]
+        }
+      ],
+      "takeHomeLine": "Take this relay page home as proof that a group story can still have one clear ending."
+    }
+  ]
+}

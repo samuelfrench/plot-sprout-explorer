@@ -45,8 +45,9 @@ describe('storyData', () => {
       'rainy-day-story-quest-pack',
       'homeschool-season-story-bundle',
       'classroom-story-license-pack',
+      'birthday-party-story-quest-kit',
     ])
-    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79'])
+    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19'])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
     }

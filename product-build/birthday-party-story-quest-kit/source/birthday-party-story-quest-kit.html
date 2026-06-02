@@ -1,0 +1,658 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Party Story Quest Kit</title>
+    <style>
+      @page { size: Letter; margin: 0.36in; }
+      :root {
+        --ink: #17343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #b6d4cf;
+        --teal: #2c7a78;
+        --coral: #ec6f3f;
+        --gold: #f2c14f;
+        --blue: #2b7f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 12px;
+        line-height: 1.24;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 11ch; font-size: 40px; }
+      h2 { margin-bottom: 0.06in; font-size: 24px; }
+      h3 { margin-bottom: 0.03in; font-size: 12.4px; }
+      p, li { color: var(--muted); }
+      img {
+        display: block;
+        max-width: 100%;
+        border: 1px solid var(--line);
+      }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.13in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.2in;
+        gap: 0.22in;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--teal);
+        font-size: 10.6px;
+      }
+      .share-page {
+        border-top: 0.16in solid var(--coral);
+        font-size: 10.1px;
+      }
+      .extension-page {
+        border-top: 0.16in solid var(--blue);
+        font-size: 10.2px;
+      }
+      .page-kicker, .kicker, .world-intro span, .extension-card span {
+        color: var(--teal);
+        font-size: 9.2px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 900;
+      }
+      .included-grid, .setup-grid, .world-grid, .routine-grid, .extension-grid, .share-grid {
+        display: grid;
+        gap: 0.07in;
+      }
+      .included-grid { grid-template-columns: 1fr; }
+      .setup-grid, .routine-grid, .extension-grid, .share-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .included-grid li, .setup-grid li, .share-grid li, .routine-card, .extension-card,
+      .world-intro, .worksheet-section, .kid-direction, .adult-note, .take-home, .quest-meta {
+        padding: 0.05in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .included-grid li, .setup-grid li, .share-grid li { list-style: none; }
+      .world-intro img, .world-intro p { display: none; }
+      .world-intro h3 { margin: 0; font-size: 9px; line-height: 1.04; }
+      .kid-direction {
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .adult-note {
+        border-color: #e5bc7c;
+        background: #fff4dc;
+      }
+      .quest-meta {
+        display: grid;
+        grid-template-columns: 0.7in 0.95in 1fr;
+        gap: 0.04in;
+        color: var(--ink);
+        font-size: 9.4px;
+        font-weight: 900;
+      }
+      figure {
+        float: right;
+        width: 1.64in;
+        margin: 0 0 0.05in 0.1in;
+      }
+      figure img {
+        width: 1.64in;
+        height: 0.92in;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--muted);
+        font-size: 8.8px;
+      }
+      .write-line {
+        min-height: 0.2in;
+        margin-bottom: 0.035in;
+        padding-bottom: 0.03in;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .footer-note {
+        margin-top: 0.07in;
+        padding-top: 0.07in;
+        border-top: 2px solid var(--gold);
+        color: var(--muted);
+        font-size: 9.3px;
+      }
+      @media screen {
+        body { padding: 24px; background: #dfeee7; }
+        .pack-page {
+          width: 8.5in;
+          margin: 0 auto 24px;
+          box-shadow: 0 18px 40px rgba(20, 31, 43, 0.18);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable birthday writing kit</p>
+        <h1>Birthday Party Story Quest Kit</h1>
+        <p>Eight party-table writing quests turn a birthday, co-op celebration, library event, or classroom treat day into a low-pressure take-home story activity.</p>
+        <div class="badge">$19</div>
+        <p><strong>Best for:</strong> Parents, tutors, librarians, homeschool co-ops, and elementary teachers hosting adult-led writing celebrations for ages 7-11.</p>
+        <p><strong>Format:</strong> 8 printable party quests, adult setup guide, five party routines, eight extensions, and six group-share cards</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div>
+        <h2>Inside</h2>
+        <ul class="included-grid"><li>8 printable birthday party quest pages</li>
+<li>Adult setup guide with 45, 60, and 75 minute timing options</li>
+<li>Table setup checklist for folders, cards, writing tools, and take-home pages</li>
+<li>Five adult-led party routines for arrivals, stations, whole-group work, pairs, and folders</li>
+<li>Eight extension activities for sensory detail, character choice, story order, endings, and revision</li>
+<li>Six group-share cards with optional read-aloud choices</li>
+<li>World menu using committed local Plot Sprout images</li>
+<li>Take-home folder directions for unfinished pages</li>
+<li>Source HTML for private fulfillment review</li>
+<li>Provider-ready ZIP artifact with PDF, source HTML, README, and local image assets</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult setup</p>
+      <h2>Run the party table</h2>
+      <div class="setup-grid">
+        <div>
+          <h3>Timing</h3>
+          <ol><li>45-minute version: 5 minutes for arrival coloring, 8 minutes for the shared story spark, 17 minutes for drafting, 5 minutes for decorating, and 10 minutes for group share.</li>
+<li>60-minute version: 10 minutes for arrival table work, 10 minutes for the adult-led quest launch, 20 minutes for station drafting, 10 minutes for covers, and 10 minutes for take-home folders.</li>
+<li>75-minute version: 10 minutes for arrival, 12 minutes for warm-up choices, 25 minutes for rotating story stations, 13 minutes for extension activity, and 15 minutes for optional sentence sharing.</li>
+<li>For a classroom celebration, run the story spark before treats, then use cake or snack time as the natural break before folders go home.</li>
+<li>Keep a visible timer at the adult seat and announce the last 3 minutes before each move so children can finish a sentence instead of stopping mid-thought.</li></ol>
+        </div>
+        <div>
+          <h3>Table setup</h3>
+          <ol><li>Cover one main table with plain craft paper and place a pencil cup, crayons, scissors, tape, and a small scrap-paper tray in the center.</li>
+<li>Set one folder or envelope per child with a story map, draft page, cover page, and blank ending card already stacked in use order.</li>
+<li>Use color dots or table numbers for groups instead of personal data labels, and keep the host copy beside the timer.</li>
+<li>Put four station signs around the table: place, helper, mix-up, and ending, with enough printed choice cards for two children to use each station at once.</li>
+<li>Keep snacks, drinks, candles, and gift bags on a separate surface so the writing pages stay dry and easy to send home.</li></ol>
+        </div>
+        <div>
+          <h3>Adult script</h3>
+          <ol><li>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</li>
+<li>Today we are making tiny quest stories. You can point, draw, dictate to an adult, or write your own words.</li>
+<li>A good party story needs one clear place, one helpful character, one small mix-up, and one kind ending.</li>
+<li>If you get stuck, choose between the two cards in front of you, then say the sentence out loud before writing.</li>
+<li>For sharing, you may read one sentence, ask an adult to read one sentence, show a drawing, or pass and be a careful listener.</li></ol>
+        </div>
+        <div>
+          <h3>Take-home prep</h3>
+          <ol><li>Before guests arrive, print one complete packet per child plus three spare packets for siblings, mistakes, or late additions.</li>
+<li>Pre-fold each cover page and tuck the story map inside so children leave with a finished booklet shape even if the draft is short.</li>
+<li>Add one blank thank-you note sheet behind the story page for families who want to turn the quest into a later note.</li>
+<li>At the end, place loose choice cards in a small envelope inside each folder so the story can be finished at home without extra setup.</li></ol>
+        </div>
+      </div>
+      <h3>World menu</h3>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <div>
+        <span>Ages 7-8</span>
+        <h3>Teacup Town Weather Window</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Button Bakery Map Mix-Up</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Rain Gauge Railway</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Compass Craft Academy</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Seed Library Map Room</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Binding Day Boardwalk</h3>
+      </div>
+    </article></div>
+      <p class="footer-note">Use these pages offline for adult-guided party writing with no accounts, no uploads, and no public sharing.</p>
+    </section>
+    <section class="pack-page share-page">
+      <p class="page-kicker">Party tools</p>
+      <h2>Routines and share cards</h2>
+      <div class="routine-grid">
+    <article class="routine-card">
+      <h3>Arrival Quest Table</h3>
+      <p><strong>Best for:</strong> The first 10 minutes while guests arrive at different times.</p>
+      <ol><li>Place one low-pressure map or cover page at every seat before the first child arrives.</li>
+<li>Invite each child to color, circle a favorite place, or add one label while waiting for the group.</li>
+<li>Ask an adult helper to quietly slide finished arrival pages into the child&#39;s folder.</li>
+<li>Begin the main quest once most seats are filled, using the arrival page as the first story detail.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Story Station Carousel</h3>
+      <p><strong>Best for:</strong> A 60-minute party with 8-16 children and two adult helpers.</p>
+      <ol><li>Set four stations around one table: place card, helper card, mix-up card, and ending card.</li>
+<li>Start each group at a different station and give them 4 minutes to circle or write one choice.</li>
+<li>Rotate groups clockwise until each folder has one note from every station.</li>
+<li>Bring everyone back to seats and turn the four notes into a short draft or dictated story.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Whole-Group Quest Build</h3>
+      <p><strong>Best for:</strong> Library tables, classroom celebrations, or younger groups that need one shared pace.</p>
+      <ol><li>Read the quest starter aloud and hold up two printable choices at a time.</li>
+<li>Let the group choose by pointing to the left or right side of the table.</li>
+<li>Write the group choice on a large sheet, then have each child copy, sketch, or adapt it on their own page.</li>
+<li>Repeat for place, helper, mix-up, and ending so every child leaves with a complete story frame.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Pair-and-Polish Mini Draft</h3>
+      <p><strong>Best for:</strong> Older children, homeschool co-ops, and classroom groups with 20 minutes of focused writing time.</p>
+      <ol><li>Give pairs one story map and ask each child to choose one different detail to add.</li>
+<li>Set a 7-minute quiet draft timer while adults help with spelling only when asked.</li>
+<li>Have partners trade pages and underline one detail that is already clear.</li>
+<li>Ask each child to add one stronger noun, action, or sound before the group share.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Take-Home Quest Folder Finish</h3>
+      <p><strong>Best for:</strong> Busy birthday parties where writing must fit between treats, photos, and free play.</p>
+      <ol><li>Run only the story spark and first draft page during the party.</li>
+<li>Use a folder checklist with three boxes: map started, sentence started, ending chosen.</li>
+<li>Let children decorate the cover while adults gather pages and loose cards.</li>
+<li>Send the folder home with a one-step finish note: add one ending sentence after the party.</li></ol>
+    </article></div>
+      <h3>Group share cards</h3>
+      <ul class="share-grid"><li>Read one sentence you are proud of, then tell the group which word you chose carefully.</li>
+<li>Point to one map or cover detail and explain where the character goes next.</li>
+<li>Ask an adult to read one line for you while you hold up the page.</li>
+<li>Tell the group which choice card helped your story most: place, helper, mix-up, or ending.</li>
+<li>Ask listeners to choose one detail you could add next: color, sound, action, or feeling.</li>
+<li>Pass today and take the listener job: notice one clear detail from another child&#39;s story.</li></ul>
+    </section>
+    <section class="pack-page extension-page">
+      <p class="page-kicker">Party tools</p>
+      <h2>Extension activity menu</h2>
+      <div class="extension-grid">
+    <article class="extension-card">
+      <span>10 minutes | setting detail</span>
+      <h3>Invitation Map Warm-Up</h3>
+      <p>Children draw a tiny route from the party door to an invented quest table, then label three stops with ordinary details from the room.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>8 minutes | sensory detail</span>
+      <h3>Snack Table Sensory List</h3>
+      <p>Before snacks are served, children list one color, one shape, one sound, and one texture they can borrow for a story scene.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>12 minutes | character choice</span>
+      <h3>Gift-Bow Character Choice</h3>
+      <p>Give each child a paper bow shape and ask them to write two helpful choices a character could make with it in a tiny quest.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>10 minutes | main idea</span>
+      <h3>Table Tent Quest Titles</h3>
+      <p>Fold blank cards into table tents and have children write a story title on the front and three clue words on the back.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>15 minutes | ending choice</span>
+      <h3>Kind Ending Spinner</h3>
+      <p>Use a paper spinner with three ending types: help someone, fix a mix-up, or learn a useful lesson, then write one matching final sentence.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>12 minutes | story structure</span>
+      <h3>Three-Prop Story Sort</h3>
+      <p>Place three safe everyday props on the table and ask groups to sort them into place detail, helpful item, or ending clue.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>15 minutes | audience and purpose</span>
+      <h3>Thank-You Note Story Bridge</h3>
+      <p>Children draft one thank-you sentence that mentions an invented quest detail, then add one real appreciation sentence for the host.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>10 minutes | revision from response</span>
+      <h3>Table Gallery Walk</h3>
+      <p>Finished pages stay on the table while children walk quietly, place one star sticker beside a clear detail, and return to revise one line.</p>
+    </article></div>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Party quest 1 | quiet corner</div>
+      <h2>Teacup Town Birthday Forecast</h2>
+      <figure><img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration"><figcaption>Teacup Town Weather Window</figcaption></figure>
+      <p class="kid-direction">Circle one weather clue, then write three tiny details for the birthday forecast.</p>
+      <p class="adult-note">Read the three headings aloud, invite pointing before writing, and let children keep unfinished pages without pressure.</p>
+      <div class="quest-meta">
+        <span>Ages 7-8</span>
+        <span>5 minutes setup</span>
+        <span>Arrival-table warm-up for a 45-minute birthday party or library celebration where early guests need a quiet first page.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Weather Clue</h3>
+          <p class="write-line">The spoon window shows ____________________________.</p>
+<p class="write-line">The steam cloud looks like ____________________________.</p>
+<p class="write-line">The cup-handle bridge feels ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Party Errand</h3>
+          <p class="write-line">My helper carries ____________________________ to the table.</p>
+<p class="write-line">First, the helper checks ____________________________.</p>
+<p class="write-line">Next, the helper asks ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Read-Aloud Line</h3>
+          <p class="write-line">The birthday forecast says ____________________________.</p>
+<p class="write-line">My clearest setting detail is ____________________________.</p>
+<p class="write-line">One line I may read aloud is ____________________________.</p>
+        </section></div>
+      <p class="take-home">Take this page home as the first scene of a tiny Teacup Town birthday story.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Party quest 2 | pairs</div>
+      <h2>Button Bakery Candle Map</h2>
+      <figure><img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration"><figcaption>Button Bakery Map Mix-Up</figcaption></figure>
+      <p class="kid-direction">Draw the bakery route, choose a helper, and write what the helper fixes first.</p>
+      <p class="adult-note">Let each pair share one pencil path before writing; keep the conversation about clear directions and kind choices.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>7 minutes setup</span>
+        <span>Pair station for a birthday party, homeschool co-op celebration, or classroom treat table that needs a clear map-and-choice activity.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Crumb Route</h3>
+          <p class="write-line">The button roll starts at ____________________________.</p>
+<p class="write-line">The crumb path turns toward ____________________________.</p>
+<p class="write-line">The bakery sign shows ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Helper Choice</h3>
+          <p class="write-line">My helper is a ____________________________.</p>
+<p class="write-line">The helper notices the map problem when ____________________________.</p>
+<p class="write-line">The helper fixes the first stop by ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Clear Direction</h3>
+          <p class="write-line">First, go past ____________________________.</p>
+<p class="write-line">Next, follow ____________________________.</p>
+<p class="write-line">Last, deliver the birthday treat to ____________________________.</p>
+        </section></div>
+      <p class="take-home">Take this map home and finish the Button Bakery story with one clear direction sentence.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Party quest 3 | small table</div>
+      <h2>Rain Gauge Railway Gift Timetable</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Number the train stops, add one sensory detail, and write the final timetable note.</p>
+      <p class="adult-note">Use this after snacks or cake when the group needs a structured page with a visible finish line.</p>
+      <div class="quest-meta">
+        <span>Ages 8-10</span>
+        <span>6 minutes setup</span>
+        <span>Small-table writing quest for a 60-minute party, co-op celebration, or classroom rotation with a sequence-writing focus.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Train Stops</h3>
+          <p class="write-line">Stop 1 is beside ____________________________.</p>
+<p class="write-line">Stop 2 carries ____________________________.</p>
+<p class="write-line">Stop 3 waits near ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Sensory Detail</h3>
+          <p class="write-line">The train sounds like ____________________________.</p>
+<p class="write-line">The garden smells like ____________________________.</p>
+<p class="write-line">The wet track shines like ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Timetable Note</h3>
+          <p class="write-line">First, the gift car ____________________________.</p>
+<p class="write-line">Next, the conductor notices ____________________________.</p>
+<p class="write-line">At the end, the timetable says ____________________________.</p>
+        </section></div>
+      <p class="take-home">Take this timetable home as a birthday railway scene with a beginning, middle, and ending.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Party quest 4 | whole group</div>
+      <h2>Compass Craft Story Map Relay</h2>
+      <figure><img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration"><figcaption>Compass Craft Academy</figcaption></figure>
+      <p class="kid-direction">Add one route card, one speaker line, and one revised ending to the shared story map.</p>
+      <p class="adult-note">Pass the page around in order, accept short phrases, and make read-aloud sharing optional for quieter children.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>8 minutes setup</span>
+        <span>Whole-group finale for a 60-75 minute birthday party, library writing table, or upper-elementary classroom celebration.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Route Card</h3>
+          <p class="write-line">Our story starts at ____________________________.</p>
+<p class="write-line">The route turns when ____________________________.</p>
+<p class="write-line">The map clue everyone should notice is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Speaker Line</h3>
+          <p class="write-line">Character one says, &quot;____________________________&quot;</p>
+<p class="write-line">Character two answers, &quot;____________________________&quot;</p>
+<p class="write-line">The line changes the plan because ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ending Revision</h3>
+          <p class="write-line">Our first ending idea is ____________________________.</p>
+<p class="write-line">We can make it clearer by adding ____________________________.</p>
+<p class="write-line">Our revised ending sentence is ____________________________.</p>
+        </section></div>
+      <p class="take-home">Take this relay page home as proof that a group story can still have one clear ending.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Party quest 5 | pairs at a snack table</div>
+      <h2>Button Bakery Candle Map Parade</h2>
+      <figure><img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration"><figcaption>Button Bakery Map Mix-Up</figcaption></figure>
+      <p class="kid-direction">Choose one bakery stop, add three party details, and write how the helper gets the candle map back in order.</p>
+      <p class="adult-note">Read the first section aloud, let pairs point to a route before writing, and invite each pair to read one sentence at the end.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>7 minutes setup</span>
+        <span>A 50-minute birthday table activity where pairs decorate bakery route cards before writing one tiny delivery scene.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Party Route Starts</h3>
+          <p class="write-line">The button roll table is decorated with ____________________.</p>
+<p class="write-line">The first crumb clue points toward ____________________.</p>
+<p class="write-line">The birthday helper carries ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Candle Map Choices</h3>
+          <p class="write-line">The map gets confusing when ____________________.</p>
+<p class="write-line">My helper chooses to check ____________________ first.</p>
+<p class="write-line">A polite bakery line is &quot;____________________&quot;.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Read-Aloud Ending</h3>
+          <p class="write-line">The route becomes clear after ____________________.</p>
+<p class="write-line">One detail I added for listeners is ____________________.</p>
+<p class="write-line">My final party sentence is ____________________.</p>
+        </section></div>
+      <p class="take-home">Take home this bakery route page as the first scene from a cheerful party story.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Party quest 6 | small table groups of three</div>
+      <h2>Seed Library Party Wish Catalog</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="kid-direction">Fill three seed catalog cards, then choose the one that should begin the birthday garden story.</p>
+      <p class="adult-note">Assign one card per child, then have the group pick a beginning card, a middle card, and an ending card together.</p>
+      <div class="quest-meta">
+        <span>Ages 8-10</span>
+        <span>6 minutes setup</span>
+        <span>A homeschool co-op celebration station where small groups turn birthday wishes into garden catalog entries and story starters.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Catalog Card Details</h3>
+          <p class="write-line">Seed card name: ____________________.</p>
+<p class="write-line">Garden party color or shape: ____________________.</p>
+<p class="write-line">Tiny map label: ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Group Story Order</h3>
+          <p class="write-line">The first card belongs near ____________________.</p>
+<p class="write-line">The middle card changes the plan by ____________________.</p>
+<p class="write-line">The final card helps the garden because ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Polish And Share</h3>
+          <p class="write-line">One plain word we can replace is ____________________.</p>
+<p class="write-line">Our clearer garden detail is ____________________.</p>
+<p class="write-line">The line we will read aloud is ____________________.</p>
+        </section></div>
+      <p class="take-home">Take home your catalog card to remember the garden story your group built together.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Party quest 7 | whole group relay with table captains</div>
+      <h2>Rain Gauge Surprise Forecast Relay</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Add one forecast clue to the railway card, pass it, and help the group write a clear first-next-final sequence.</p>
+      <p class="adult-note">Keep turns short, read the sequence after every three cards, and let quiet writers contribute by adding a detail or arrow.</p>
+      <div class="quest-meta">
+        <span>Ages 8-10</span>
+        <span>5 minutes setup</span>
+        <span>A library writing table or classroom celebration relay where children pass forecast cards and build a shared weather sequence.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Forecast Card Pass</h3>
+          <p class="write-line">My rain number or weather clue is ____________________.</p>
+<p class="write-line">The tiny train carries it to ____________________.</p>
+<p class="write-line">The garden post notices ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Sequence Strip</h3>
+          <p class="write-line">First, the rain gauge shows ____________________.</p>
+<p class="write-line">Next, the railway changes course toward ____________________.</p>
+<p class="write-line">Finally, the party forecast says ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Group Revision Stop</h3>
+          <p class="write-line">One confusing part is ____________________.</p>
+<p class="write-line">We make it clearer by adding ____________________.</p>
+<p class="write-line">Our best read-aloud line is ____________________.</p>
+        </section></div>
+      <p class="take-home">Take home your forecast card as proof that one small clue can help a whole group story.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Party quest 8 | quiet corner with optional partner check</div>
+      <h2>Binding Day Party Booklet Finish</h2>
+      <figure><img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration"><figcaption>Binding Day Boardwalk</figcaption></figure>
+      <p class="kid-direction">Write a title, choose the strongest ending, and revise one line before folding your party booklet.</p>
+      <p class="adult-note">Offer privacy for drafts, use partner checks only by choice, and end with a one-line table share instead of full readings.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>8 minutes setup</span>
+        <span>A 60-minute older-kid party or classroom celebration where writers turn a quick draft into a folded take-home booklet.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Booklet Setup</h3>
+          <p class="write-line">My title strip says ____________________.</p>
+<p class="write-line">The boardwalk table I choose is ____________________.</p>
+<p class="write-line">The reader should notice ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ending Choice</h3>
+          <p class="write-line">Possible ending one: ____________________.</p>
+<p class="write-line">Possible ending two: ____________________.</p>
+<p class="write-line">I choose this ending because ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Final Revision Pass</h3>
+          <p class="write-line">The line I will revise is ____________________.</p>
+<p class="write-line">I make it clearer by ____________________.</p>
+<p class="write-line">My one-line share is ____________________.</p>
+        </section></div>
+      <p class="take-home">Take home this folded booklet as a finished birthday writing keepsake.</p>
+    </section>
+  </body>
+</html>

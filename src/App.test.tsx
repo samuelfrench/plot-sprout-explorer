@@ -65,6 +65,7 @@ describe('App', () => {
     expect(screen.getByRole('heading', { name: /Rainy Day Story Quest Pack/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Homeschool Season Story Bundle/i })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: /Classroom Story License Pack/i })).toBeInTheDocument()
+    expect(screen.getByRole('heading', { name: /Birthday Party Story Quest Kit/i })).toBeInTheDocument()
     expect(screen.getByRole('link', { name: /Preview Rainy Day Story Quest Pack/i })).toHaveAttribute(
       'href',
       expect.stringContaining('rainy-day-story-quest-pack'),
@@ -76,6 +77,10 @@ describe('App', () => {
     expect(screen.getByRole('link', { name: /Preview Classroom Story License Pack/i })).toHaveAttribute(
       'href',
       expect.stringContaining('classroom-story-license-pack'),
+    )
+    expect(screen.getByRole('link', { name: /Preview Birthday Party Story Quest Kit/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('birthday-party-story-quest-kit'),
     )
   })
 })

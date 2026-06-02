@@ -294,6 +294,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Thirty classroom prompt cards with teacher routines, extension activities, and a four-criterion writing rubric.',
     note: 'No checkout, accounts, uploads, or public publishing are enabled.',
   },
+  {
+    slug: 'birthday-party-story-quest-kit',
+    title: 'Birthday Party Story Quest Kit',
+    pricePoint: '$19',
+    description:
+      'Eight party-table writing quests with adult setup tools, routines, extensions, and take-home folder steps.',
+    note: 'No checkout, accounts, uploads, or public publishing are enabled.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

@@ -160,6 +160,52 @@
         "Save one finished card response per student as visible writing evidence.",
         "Rotate prompt cards by skill focus so practice stays varied without adding new software."
       ]
+    },
+    {
+      "slug": "birthday-party-story-quest-kit",
+      "title": "Birthday Party Story Quest Kit",
+      "pricePoint": "$19",
+      "status": "checkout_pending",
+      "headline": "A printable party-table writing kit for birthdays and classroom celebrations.",
+      "summary": "Eight adult-led party quests help kids make a story map, draft a tiny scene, revise one line, and take home a finished page.",
+      "heroImage": "images/plotsprout/batch10/birthday-party-story-quest-kit.jpg",
+      "ctaLabel": "Request party kit launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Birthday%20Party%20Story%20Quest%20Kit",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static party kit page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "button-bakery-map-mixup",
+        "rain-gauge-railway",
+        "compass-craft-academy",
+        "seed-library-map-room",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Eight printable birthday party quest pages",
+        "Adult setup guide for 45, 60, and 75 minute parties",
+        "Arrival table warm-up routine",
+        "Story station carousel routine",
+        "Whole-group quest build routine",
+        "Pair-and-polish mini draft routine",
+        "Take-home folder finish routine",
+        "Eight extension activity cards",
+        "Six optional group-share cards",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A birthday party writing table that does not need screens",
+        "A homeschool co-op celebration with a take-home story page",
+        "A library or classroom event station for short narrative practice",
+        "A tutoring party pack for kids who need concrete choices before drafting"
+      ],
+      "parentSteps": [
+        "Print one packet per child plus three spare packets before guests arrive.",
+        "Use the arrival page as a low-pressure coloring, circling, or labeling warm-up.",
+        "Pick one routine based on the group size instead of trying to run every page.",
+        "Let children point, draw, dictate, write, or pass during optional sharing.",
+        "Send the folder home with one clear finish step if the story is not complete."
+      ]
     }
   ]
 }

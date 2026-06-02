@@ -4,6 +4,7 @@ import { resolve } from 'node:path'
 import { containsActiveCheckoutLanguage } from './content-policy.mjs'
 import {
   inspectArtifactFiles,
+  validateBirthdayPartyKitSource,
   validateClassroomLicenseSource,
   validateCheckoutReadiness,
   validateManifestWorldAssets,
@@ -20,19 +21,23 @@ const seoCollectionsFile = resolve(seoCollectionsDir, 'batch2-collections.json')
 const miniUnitsFile = resolve(root, 'content', 'mini-units', 'batch3-mini-units.json')
 const batch4ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch4-world-images.json')
 const batch7ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch7-product-images.json')
+const batch10ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch10-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
 const classroomLicenseSourceFile = resolve(root, 'content', 'product-artifacts', 'classroom-story-license-pack.json')
+const birthdayPartySourceFile = resolve(root, 'content', 'product-artifacts', 'birthday-party-story-quest-kit.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
 const batch4ImagesBatchId = '2026-06-02-batch4'
 const batch7ProductImagesBatchId = '2026-06-02-batch7-product-images'
+const batch10ProductImagesBatchId = '2026-06-02-batch10-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
 const classroomLicenseBatchId = '2026-06-02-batch9'
+const birthdayPartyBatchId = '2026-06-02-batch10'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -482,6 +487,48 @@ function validateBatch7ProductImage(image, worldSlugs, worldSources) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch10ProductImage(image) {
+  const label = `2026-06-02-batch10-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(image.slug === 'birthday-party-story-quest-kit', `${label}.slug must be birthday-party-story-quest-kit.`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch10/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch10/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch10/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'birthday party',
+    'no text',
+    'no letters',
+    'no labels',
+    'no logos',
+    'no watermark',
+    'no branded characters',
+    'no scary harm',
+    'no weapons',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar.seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -523,6 +570,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
       minUseCases: 5,
       minParentSteps: 5,
       maxWorldSlugs: 30,
+    },
+    'birthday-party-story-quest-kit': {
+      title: 'Birthday Party Story Quest Kit',
+      pricePoint: '$19',
+      minIncludedPages: 9,
+      minUseCases: 4,
+      minParentSteps: 5,
+      maxWorldSlugs: 10,
     },
   }
   const expectedProduct = expectedProducts[product.slug]
@@ -582,6 +637,7 @@ expect(kitFiles.length === 3, `Expected 3 Batch 1 kit files, found ${kitFiles.le
 
 const worldSlugs = new Set()
 const worldSources = new Map()
+const worldAgeBands = new Map()
 let worldCount = 0
 
 for (const world of starterWorlds) {
@@ -593,6 +649,7 @@ for (const world of starterWorlds) {
   expect(allowedStarterAgeBands.has(world.ageBand), `${label}.ageBand is not allowed.`)
   worldSlugs.add(world.slug)
   worldSources.set(world.slug, 'scripts/starter-worlds.mjs')
+  worldAgeBands.set(world.slug, world.ageBand)
 }
 
 for (const file of worldFiles) {
@@ -604,6 +661,7 @@ for (const file of worldFiles) {
   data.worlds.forEach((world) => {
     validateWorld(world, file, worldSlugs)
     worldSources.set(world.slug, `content/worlds/${file}`)
+    worldAgeBands.set(world.slug, world.ageBand)
   })
   worldCount += data.worlds.length
 }
@@ -687,15 +745,31 @@ expect(Array.isArray(batch7ProductImages.images), 'batch7 product image manifest
 expect(batch7ProductImages.images.length === 1, `Expected 1 Batch 7 product image, found ${batch7ProductImages.images.length}.`)
 validateBatch7ProductImage(batch7ProductImages.images[0], worldSlugs, worldSources)
 
+expect(existsSync(batch10ProductImagesFile), `Missing Batch 10 product image manifest: ${batch10ProductImagesFile}`)
+const batch10ProductImages = readJson(batch10ProductImagesFile)
+expect(
+  batch10ProductImages.batchId === batch10ProductImagesBatchId,
+  `batch10 product image manifest batchId must be ${batch10ProductImagesBatchId}.`,
+)
+expect(batch10ProductImages.generatedAt === '2026-06-02', 'batch10 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch10ProductImages.images), 'batch10 product image manifest images must be an array.')
+expect(batch10ProductImages.images.length === 1, `Expected 1 Batch 10 product image, found ${batch10ProductImages.images.length}.`)
+validateBatch10ProductImage(batch10ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 3, `Expected 3 product records, found ${products.products.length}.`)
+expect(products.products.length === 4, `Expected 4 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
-for (const requiredProductSlug of ['rainy-day-story-quest-pack', 'homeschool-season-story-bundle', 'classroom-story-license-pack']) {
+for (const requiredProductSlug of [
+  'rainy-day-story-quest-pack',
+  'homeschool-season-story-bundle',
+  'classroom-story-license-pack',
+  'birthday-party-story-quest-kit',
+]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
 
@@ -878,6 +952,66 @@ for (const asset of classroomArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Classroom Story License copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(birthdayPartySourceFile), `Missing Batch 10 Birthday Party kit source file: ${birthdayPartySourceFile}`)
+const birthdayPartySource = readJson(birthdayPartySourceFile)
+expect(
+  birthdayPartySource.batchId === birthdayPartyBatchId,
+  `Birthday Party kit source batchId must be ${birthdayPartyBatchId}.`,
+)
+const birthdayPartyProduct = products.products.find((product) => product.slug === 'birthday-party-story-quest-kit')
+expect(birthdayPartyProduct, 'Missing Birthday Party product record for Batch 10 artifact validation.')
+const birthdayPartySourceErrors = validateBirthdayPartyKitSource(birthdayPartySource, birthdayPartyProduct, worldAgeBands)
+expect(
+  birthdayPartySourceErrors.length === 0,
+  `Birthday Party Story Quest Kit source failed validation:\n${birthdayPartySourceErrors.join('\n')}`,
+)
+const birthdayPartyExpectedPdfPages = birthdayPartySource.quests.length + 4
+const birthdayPartyArtifactStatus = inspectArtifactFiles(root, birthdayPartySource.artifact, {
+  expectedPdfPages: birthdayPartyExpectedPdfPages,
+})
+expect(
+  birthdayPartyArtifactStatus.valid,
+  `Birthday Party Story Quest Kit artifacts failed validation:\n${birthdayPartyArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  birthdayPartyArtifactStatus.files.pdf.size > 100_000,
+  `Birthday Party Story Quest Kit PDF artifact is unexpectedly small: ${birthdayPartyArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  birthdayPartyArtifactStatus.files.pdf.pageCount === birthdayPartyExpectedPdfPages,
+  `Birthday Party Story Quest Kit PDF artifact must have ${birthdayPartyExpectedPdfPages} pages.`,
+)
+expect(
+  birthdayPartyArtifactStatus.files.zip.size > birthdayPartyArtifactStatus.files.pdf.size,
+  'Birthday Party Story Quest Kit ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const birthdayPartyCheckoutErrors = validateCheckoutReadiness(birthdayPartyProduct, birthdayPartyArtifactStatus)
+expect(
+  birthdayPartyCheckoutErrors.length === 0,
+  `Birthday Party Story Quest Kit checkout readiness failed validation:\n${birthdayPartyCheckoutErrors.join('\n')}`,
+)
+const birthdayPartyArtifactManifest = readJson(resolve(root, birthdayPartySource.artifact.manifestPath))
+expect(
+  birthdayPartyArtifactManifest.sourcePageCount === birthdayPartySource.quests.length,
+  'Birthday Party Story Quest Kit artifact manifest sourcePageCount must match source quests.',
+)
+expect(
+  Array.isArray(birthdayPartyArtifactManifest.files.assets),
+  'Birthday Party Story Quest Kit artifact manifest files.assets must be an array.',
+)
+expect(
+  birthdayPartyArtifactManifest.files.assets.length === birthdayPartySource.worldSlugs.length,
+  'Birthday Party Story Quest Kit artifact manifest must include one copied local image per product world.',
+)
+const birthdayPartyManifestAssetErrors = validateManifestWorldAssets(birthdayPartySource, birthdayPartyArtifactManifest)
+expect(
+  birthdayPartyManifestAssetErrors.length === 0,
+  `Birthday Party Story Quest Kit artifact manifest image coverage failed validation:\n${birthdayPartyManifestAssetErrors.join('\n')}`,
+)
+for (const asset of birthdayPartyArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Birthday Party Story Quest Kit copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length} local world images, ${productSlugs.size} static product pages, 3 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 4 product artifacts.`,
 )

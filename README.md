@@ -39,6 +39,7 @@ Uses local SDXL on the RTX 4090. No cloud image service.
 ```bash
 npm run image:starter -- --only moon-muffin-market
 npm run image:batch7
+npm run image:batch10
 ```
 
 ## Build Product Artifacts
@@ -49,6 +50,7 @@ Builds provider-upload-ready PDF, source HTML, manifest, and ZIP files. These ar
 npm run product:rainy-day-pack
 npm run product:homeschool-season-bundle
 npm run product:classroom-license-pack
+npm run product:birthday-party-kit
 ```
 
 ## Safety
