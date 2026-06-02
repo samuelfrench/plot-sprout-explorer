@@ -1,0 +1,21 @@
+{
+  "slug": "rain-gauge-railway",
+  "prompt": "family-friendly children's publishing illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, Rain Gauge Railway: backyard mini train carrying clear water samples, garden beds, weather flags, blank measuring tubes, cloud notebook, fresh after-rain colors, gentle engineering, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460611,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/rain-gauge-railway.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/rain-gauge-railway.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Rain Gauge Railway",
+  "ageBand": "8-10",
+  "seoLane": "creative writing prompts for kids",
+  "sourceWorldFile": "content/worlds/batch1-middle.json"
+}

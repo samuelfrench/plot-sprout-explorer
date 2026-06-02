@@ -1,0 +1,21 @@
+{
+  "slug": "clue-label-tower-museum",
+  "prompt": "family-friendly children's storybook illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no identifiable real children, no portraits, Clue Label Tower Museum: bright tower museum, everyday object cases, blank label cards, spiral clue shelves, clipboards, rich educational fantasy, back-view silhouettes only if needed, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460616,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/clue-label-tower-museum.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/clue-label-tower-museum.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Clue Label Tower Museum",
+  "ageBand": "10-11",
+  "seoLane": "creative writing prompts for kids",
+  "sourceWorldFile": "content/worlds/batch1-upper.json"
+}

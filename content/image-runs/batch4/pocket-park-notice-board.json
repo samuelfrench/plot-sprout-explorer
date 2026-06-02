@@ -1,0 +1,21 @@
+{
+  "slug": "pocket-park-notice-board",
+  "prompt": "family-friendly children's illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, Pocket Park Notice Board: miniature park inside a jacket pocket, matchbox notice board, bottle-cap benches, mint leaf trees, pebble path, bright civic errand mood, blank surfaces, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460606,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/pocket-park-notice-board.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/pocket-park-notice-board.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Pocket Park Notice Board",
+  "ageBand": "7-9",
+  "seoLane": "story writing worksheets",
+  "sourceWorldFile": "content/worlds/batch1-lower.json"
+}

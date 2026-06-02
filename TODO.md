@@ -33,17 +33,19 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Added deterministic static SEO renderer plus content validation for Batch 2 collection JSON and generated pages.
 - [x] 2026-06-02: Batch 3 generated 10 homeschool/classroom mini-units with lesson flow, teacher notes, assessment notes, printable-kit direction, and no student-account requirements.
 - [x] 2026-06-02: Added static `/mini-units/` hub and 10 crawlable mini-unit pages with Batch 3 content validation.
+- [x] 2026-06-02: Batch 4 generated 20 local RTX 4090 world images for top Batch 1 worlds, saved JPEG/WebP assets, prompt sidecars, manifest, static `/world-gallery/` page, and validator coverage.
 
 ## In Progress
 
-- [ ] Batch 4 local GPU images for top worlds, saved as JPEG/WebP assets with prompt sidecars.
+- [ ] Batch 5 monetization page for the $9 printable "Rainy Day Story Quest Pack".
 
 ## Next Content Batches
 
 - [x] Batch 1: Generate 30 age-banded worlds, 90 writing prompts, 30 image prompts, and 10 printable kit outlines.
 - [x] Batch 2: Generate SEO collection pages for `creative writing prompts for kids`, `story writing worksheets`, `reluctant writer activities`, and `homeschool writing prompts`.
 - [x] Batch 3: Generate 10 homeschool/classroom mini-units with teacher notes and no student-account requirements.
-- [ ] Batch 4: Generate 20 local GPU images for top worlds, save JPEG/WebP assets, and record prompt sidecars.
+- [x] Batch 4: Generate 20 local GPU images for top worlds, save JPEG/WebP assets, and record prompt sidecars.
+- [ ] Batch 5: Build the first purchase-ready static product page for a $9 printable quest pack, without enabling checkout until a provider is selected.
 
 ## Product Gates
 

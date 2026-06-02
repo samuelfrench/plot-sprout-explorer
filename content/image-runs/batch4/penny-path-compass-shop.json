@@ -1,0 +1,21 @@
+{
+  "slug": "penny-path-compass-shop",
+  "prompt": "family-friendly storybook illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, Penny Path Compass Shop: tiny compass shop on a penny-stone path, button compasses, snack stands, mailbox rows, receipt-sized errand slips, sunny tabletop fantasy, blank surfaces, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460607,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/penny-path-compass-shop.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/penny-path-compass-shop.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Penny Path Compass Shop",
+  "ageBand": "7-9",
+  "seoLane": "creative writing prompts for kids",
+  "sourceWorldFile": "content/worlds/batch1-lower.json"
+}

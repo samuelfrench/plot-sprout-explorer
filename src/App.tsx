@@ -12,7 +12,13 @@ import {
 import type { CSSProperties } from 'react'
 import { useMemo, useState } from 'react'
 import './App.css'
-import { buildQuestPack, miniUnitHubLink, questWorlds, seoCollectionLinks } from './storyData'
+import {
+  buildQuestPack,
+  miniUnitHubLink,
+  questWorlds,
+  seoCollectionLinks,
+  worldGalleryLink,
+} from './storyData'
 
 const pagePath = (slug: string) => `${import.meta.env.BASE_URL}${slug}/`
 
@@ -140,6 +146,19 @@ function App() {
         <p className="unit-note">{miniUnitHubLink.note}</p>
         <a className="unit-link" href={pagePath(miniUnitHubLink.slug)}>
           Browse mini-units
+          <ArrowRight size={18} aria-hidden="true" />
+        </a>
+      </section>
+
+      <section className="gallery-section" aria-labelledby="gallery-title">
+        <div>
+          <p className="eyebrow">Local RTX 4090 art batch</p>
+          <h2 id="gallery-title">{worldGalleryLink.title}</h2>
+        </div>
+        <p>{worldGalleryLink.description}</p>
+        <p className="gallery-note">{worldGalleryLink.note}</p>
+        <a className="gallery-link" href={pagePath(worldGalleryLink.slug)}>
+          Browse local art
           <ArrowRight size={18} aria-hidden="true" />
         </a>
       </section>

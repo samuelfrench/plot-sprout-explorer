@@ -1,0 +1,21 @@
+{
+  "slug": "margin-note-market",
+  "prompt": "family-friendly children's storybook illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no identifiable real children, no portraits, Margin Note Market: imaginative paper market, feedback stalls, colorful blank note cards, pencils, clipboards, revision idea trading, classroom fantasy, back-view silhouettes only if needed, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460619,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/margin-note-market.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/margin-note-market.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Margin Note Market",
+  "ageBand": "10-11",
+  "seoLane": "reluctant writer activities",
+  "sourceWorldFile": "content/worlds/batch1-upper.json"
+}

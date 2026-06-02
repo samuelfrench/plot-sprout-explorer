@@ -14,6 +14,7 @@ const blockedPatterns = [
   /cron:/i,
   /content:batch/i,
   /image:starter/i,
+  /image:batch4/i,
   /generate.*content/i,
   /create-content-batch/i,
   /generate_story_images_local/i,

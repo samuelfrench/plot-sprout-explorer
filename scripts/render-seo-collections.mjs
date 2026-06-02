@@ -4,6 +4,7 @@ import { resolve } from 'node:path'
 const root = resolve(import.meta.dirname, '..')
 const collectionPath = resolve(root, 'content', 'seo-collections', 'batch2-collections.json')
 const miniUnitsPath = resolve(root, 'content', 'mini-units', 'batch3-mini-units.json')
+const batch4ImagesPath = resolve(root, 'content', 'image-queue', '2026-06-02-batch4-world-images.json')
 const worldsDir = resolve(root, 'content', 'worlds')
 const publicDir = resolve(root, 'public')
 const siteRoot = 'https://samuelfrench.github.io/plot-sprout-explorer'
@@ -517,6 +518,180 @@ function renderMiniUnit(unit, worlds) {
 `
 }
 
+function renderWorldGallery(manifest, worlds) {
+  const canonical = `${siteRoot}/world-gallery/`
+  const laneCounts = manifest.images.reduce((counts, image) => {
+    counts.set(image.seoLane, (counts.get(image.seoLane) ?? 0) + 1)
+    return counts
+  }, new Map())
+  const laneSummary = Array.from(laneCounts.entries())
+    .map(([lane, count]) => `${count} ${lane}`)
+    .join(' | ')
+  const cards = manifest.images
+    .map((image) => {
+      const world = worlds.get(image.slug)
+      if (!world) fail(`Unknown Batch 4 world slug: ${image.slug}`)
+      return `
+        <article class="image-card">
+          <picture>
+            <source srcset="${basePath}${escapeHtml(image.outputWebp.replace(/^public\//, ''))}" type="image/webp">
+            <img src="${basePath}${escapeHtml(image.outputJpeg.replace(/^public\//, ''))}" alt="${escapeHtml(image.title)} quest world illustration" loading="lazy" width="1344" height="768">
+          </picture>
+          <div>
+            <span>Ages ${escapeHtml(image.ageBand)} | ${escapeHtml(image.seoLane)}</span>
+            <h2>${escapeHtml(image.title)}</h2>
+            <p>${escapeHtml(world.premise)}</p>
+            <p><strong>Printable angle:</strong> ${escapeHtml(world.productAngle)}</p>
+          </div>
+        </article>`
+    })
+    .join('\n')
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>World Art Gallery | Plot Sprout Explorer</title>
+    <meta name="description" content="Browse 20 locally generated Plot Sprout world images for printable writing quests, classroom packets, and homeschool story prompts.">
+    <link rel="canonical" href="${canonical}">
+    <link rel="icon" type="image/svg+xml" href="${basePath}favicon.svg">
+    <style>
+      :root {
+        --ink: #19343a;
+        --muted: #52656b;
+        --panel: #fdf8ef;
+        --line: #bfd8d2;
+        --coral: #ec6f3f;
+        --teal: #2c7a78;
+        --gold: #f2c14f;
+        color: var(--ink);
+        background:
+          linear-gradient(90deg, rgba(25, 52, 58, 0.05) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(25, 52, 58, 0.05) 1px, transparent 1px),
+          linear-gradient(135deg, #f7fbf4 0%, #e8f6f1 46%, #fff7eb 100%);
+        background-size: 36px 36px, 36px 36px, auto;
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 17px;
+        line-height: 1.5;
+      }
+      * { box-sizing: border-box; }
+      body { min-width: 320px; margin: 0; }
+      main { width: min(1180px, calc(100% - 28px)); margin: 0 auto; padding: 28px 0; }
+      a { color: inherit; }
+      h1, h2 { margin: 0; line-height: 1.08; }
+      h1 {
+        max-width: 12ch;
+        font-family: Georgia, Times New Roman, serif;
+        font-size: clamp(2.2rem, 7vw, 5.5rem);
+      }
+      p { color: var(--muted); }
+      .hero, .image-card, .note {
+        border: 1px solid var(--line);
+        background: color-mix(in srgb, var(--panel) 92%, white);
+        box-shadow: 0 18px 45px rgba(20, 31, 43, 0.08);
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(220px, 0.48fr);
+        gap: 20px;
+        padding: 24px;
+        border-top: 8px solid var(--gold);
+      }
+      .eyebrow, .image-card span {
+        color: var(--teal);
+        font-size: 0.76rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .stat-stack {
+        display: grid;
+        gap: 10px;
+        align-content: start;
+      }
+      .stat {
+        padding: 12px;
+        background: #fff;
+        border: 1px solid var(--line);
+        font-weight: 900;
+      }
+      .button {
+        display: inline-flex;
+        width: fit-content;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 16px;
+        color: #fff;
+        font-weight: 900;
+        text-decoration: none;
+        background: var(--coral);
+        border: 1px solid #9c3f29;
+        border-radius: 7px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+      .image-card {
+        display: grid;
+        grid-template-columns: minmax(190px, 0.9fr) minmax(0, 1fr);
+        gap: 14px;
+        min-height: 250px;
+        padding: 14px;
+        border-top: 7px solid var(--teal);
+      }
+      picture, img {
+        display: block;
+        width: 100%;
+      }
+      img {
+        aspect-ratio: 7 / 4;
+        height: auto;
+        object-fit: cover;
+        background: #dfeee7;
+        border: 1px solid var(--line);
+      }
+      .image-card h2 {
+        font-size: clamp(1.2rem, 3vw, 1.7rem);
+      }
+      .note { margin-top: 18px; padding: 18px; }
+      footer { padding: 24px 0 8px; color: var(--muted); }
+      @media (max-width: 860px) {
+        .hero, .grid, .image-card { grid-template-columns: 1fr; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Local GPU image batch</p>
+          <h1>World Art Gallery</h1>
+          <p>Twenty committed Plot Sprout world images generated locally on the RTX 4090. Each image supports printable writing quests, classroom packets, homeschool prompts, and static SEO pages without cloud image services.</p>
+          <a class="button" href="${basePath}">Open the quest workbench</a>
+        </div>
+        <div class="stat-stack">
+          <div class="stat">20 local world images</div>
+          <div class="stat">JPEG + WebP assets</div>
+          <div class="stat">${escapeHtml(laneSummary)}</div>
+        </div>
+      </section>
+      <div class="grid">${cards}</div>
+      <section class="note">
+        <h2>Generation policy</h2>
+        <p>Batch 4 is a manual Codex/local-GPU batch. The images are committed as static files with prompt sidecars under <code>content/image-runs/batch4/</code>. There are no upload forms, public publishing flows, or automated GitHub Actions content-generation jobs.</p>
+      </section>
+      <footer><a href="${basePath}">Plot Sprout Explorer</a> keeps art generation local, reviewed, and adult-guided.</footer>
+    </main>
+  </body>
+</html>
+`
+}
+
 if (!existsSync(collectionPath)) {
   fail(`Missing SEO collection source: ${collectionPath}`)
 }
@@ -546,3 +721,13 @@ for (const unit of miniUnits.units) {
   writeFileSync(resolve(outputDir, 'index.html'), renderMiniUnit(unit, worlds))
   console.log(`Rendered mini-units/${unit.slug}/index.html`)
 }
+
+if (!existsSync(batch4ImagesPath)) {
+  fail(`Missing Batch 4 image manifest: ${batch4ImagesPath}`)
+}
+
+const batch4Images = readJson(batch4ImagesPath)
+const galleryDir = resolve(publicDir, 'world-gallery')
+mkdirSync(galleryDir, { recursive: true })
+writeFileSync(resolve(galleryDir, 'index.html'), renderWorldGallery(batch4Images, worlds))
+console.log('Rendered world-gallery/index.html')

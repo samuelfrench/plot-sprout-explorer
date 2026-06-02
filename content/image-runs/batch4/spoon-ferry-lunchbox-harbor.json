@@ -1,0 +1,21 @@
+{
+  "slug": "spoon-ferry-lunchbox-harbor",
+  "prompt": "family-friendly storybook art, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, Spoon Ferry Lunchbox Harbor: tiny spoon ferry, lunchbox harbor, cracker cafes, napkin menu cards, grape buoy markers, apple-juice water, blank surfaces, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460605,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/spoon-ferry-lunchbox-harbor.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/spoon-ferry-lunchbox-harbor.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Spoon Ferry Lunchbox Harbor",
+  "ageBand": "7-9",
+  "seoLane": "homeschool writing prompts",
+  "sourceWorldFile": "content/worlds/batch1-lower.json"
+}

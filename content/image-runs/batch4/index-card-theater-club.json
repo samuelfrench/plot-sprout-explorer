@@ -1,0 +1,21 @@
+{
+  "slug": "index-card-theater-club",
+  "prompt": "family-friendly children's storybook illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no identifiable real children, no portraits, Index Card Theater Club: bright tabletop theater, index cards, paper curtains, cue lights, movable scene pieces, pencils, story planning, back-view silhouettes only if needed, blank surfaces, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460621,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/index-card-theater-club.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/index-card-theater-club.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Index Card Theater Club",
+  "ageBand": "10-11",
+  "seoLane": "homeschool writing prompts",
+  "sourceWorldFile": "content/worlds/batch1-upper.json"
+}

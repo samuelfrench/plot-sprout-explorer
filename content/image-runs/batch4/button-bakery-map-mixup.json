@@ -1,0 +1,21 @@
+{
+  "slug": "button-bakery-map-mixup",
+  "prompt": "family-friendly children's publishing illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, Button Bakery Map Mix-Up: lunchbox bakery, button rolls, crumb trail map, jam jar lamps, cheerful tiny shops, bright watercolor look, blank surfaces, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460603,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/button-bakery-map-mixup.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/button-bakery-map-mixup.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Button Bakery Map Mix-Up",
+  "ageBand": "7-9",
+  "seoLane": "creative writing prompts for kids",
+  "sourceWorldFile": "content/worlds/batch1-lower.json"
+}

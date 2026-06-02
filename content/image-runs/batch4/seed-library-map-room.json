@@ -1,0 +1,21 @@
+{
+  "slug": "seed-library-map-room",
+  "prompt": "family-friendly children's publishing illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, Seed Library Map Room: wooden seed drawers, foldout garden maps, ruler edges, blank catalog cards, seed packets, field notebooks, sunlit tables, classroom nature systems, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460612,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/seed-library-map-room.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/seed-library-map-room.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Seed Library Map Room",
+  "ageBand": "8-10",
+  "seoLane": "story writing worksheets",
+  "sourceWorldFile": "content/worlds/batch1-middle.json"
+}

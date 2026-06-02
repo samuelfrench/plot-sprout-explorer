@@ -1,0 +1,21 @@
+{
+  "slug": "solar-oven-picnic-station",
+  "prompt": "family-friendly children's editorial illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no flames, no smoke, no burns, Solar Oven Picnic Station: meadow, cardboard solar ovens, reflective panels, thermometers, blank recipe cards, sun-shadow arrows, field notebook, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460613,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/solar-oven-picnic-station.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/solar-oven-picnic-station.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Solar Oven Picnic Station",
+  "ageBand": "8-10",
+  "seoLane": "reluctant writer activities",
+  "sourceWorldFile": "content/worlds/batch1-middle.json"
+}

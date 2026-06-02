@@ -1,0 +1,21 @@
+{
+  "slug": "binding-day-boardwalk",
+  "prompt": "family-friendly children's storybook illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, Binding Day Boardwalk: sunny creative boardwalk, booklet-making tables, blank cover mockups, paper garlands, organized publishing stations, cheerful classroom showcase mood, blank surfaces, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460620,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/binding-day-boardwalk.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/binding-day-boardwalk.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Binding Day Boardwalk",
+  "ageBand": "10-11",
+  "seoLane": "story writing worksheets",
+  "sourceWorldFile": "content/worlds/batch1-upper.json"
+}

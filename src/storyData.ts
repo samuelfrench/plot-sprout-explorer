@@ -40,6 +40,13 @@ export type MiniUnitHubLink = {
   note: string
 }
 
+export type WorldGalleryLink = {
+  slug: string
+  title: string
+  description: string
+  note: string
+}
+
 const defaultSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 
@@ -244,4 +251,12 @@ export const miniUnitHubLink: MiniUnitHubLink = {
   description:
     'Ten low-prep homeschool and classroom units with lesson flow, teacher notes, and printable kit angles.',
   note: 'No student accounts, uploads, or public story sharing required.',
+}
+
+export const worldGalleryLink: WorldGalleryLink = {
+  slug: 'world-gallery',
+  title: 'World art gallery',
+  description:
+    'Twenty local RTX 4090 world images for printable quests, classroom packets, and static SEO pages.',
+  note: 'Images are generated locally and committed with prompt sidecars.',
 }

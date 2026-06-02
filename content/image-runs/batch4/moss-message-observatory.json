@@ -1,0 +1,21 @@
+{
+  "slug": "moss-message-observatory",
+  "prompt": "family-friendly children's illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, Moss Message Observatory: peaceful forest observatory, observation deck, moss color swatches, magnifying glasses, rain-date stamps, field notebook sketches, gentle nature mystery, soft varied green light, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460614,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/moss-message-observatory.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/moss-message-observatory.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Moss Message Observatory",
+  "ageBand": "8-10",
+  "seoLane": "creative writing prompts for kids",
+  "sourceWorldFile": "content/worlds/batch1-middle.json"
+}

@@ -48,4 +48,14 @@ describe('App', () => {
     )
     expect(screen.getByText(/No student accounts/i)).toBeInTheDocument()
   })
+
+  it('links to the static world art gallery without loading image data into React', () => {
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: /World art gallery/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Browse local art/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('world-gallery'),
+    )
+  })
 })

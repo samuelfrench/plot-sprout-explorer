@@ -1,0 +1,21 @@
+{
+  "slug": "pantry-measurement-mystery",
+  "prompt": "family-friendly children's illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, Pantry Measurement Mystery: sunny kitchen pantry, jars, measuring spoons, muffin-height chart, cooling rack graph, recipe notebook, warm practical light, cheerful kitchen science, blank surfaces, icon-only marks",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 460610,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch4/pantry-measurement-mystery.jpg",
+  "outputWebp": "public/images/plotsprout/batch4/pantry-measurement-mystery.webp",
+  "manifest": "content/image-queue/2026-06-02-batch4-world-images.json",
+  "title": "Pantry Measurement Mystery",
+  "ageBand": "8-10",
+  "seoLane": "reluctant writer activities",
+  "sourceWorldFile": "content/worlds/batch1-middle.json"
+}

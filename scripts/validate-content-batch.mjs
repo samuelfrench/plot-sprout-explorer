@@ -7,9 +7,11 @@ const kitsDir = resolve(root, 'content', 'printable-kits')
 const seoCollectionsDir = resolve(root, 'content', 'seo-collections')
 const seoCollectionsFile = resolve(seoCollectionsDir, 'batch2-collections.json')
 const miniUnitsFile = resolve(root, 'content', 'mini-units', 'batch3-mini-units.json')
+const batch4ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch4-world-images.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
+const batch4ImagesBatchId = '2026-06-02-batch4'
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 const seoLanes = new Set([
@@ -113,6 +115,81 @@ function validateNoBannedTerms(record, label) {
   for (const pattern of bannedTerms) {
     expect(!pattern.test(text), `${label} includes blocked term pattern: ${pattern}`)
   }
+}
+
+function readJpegDimensions(buffer, label) {
+  expect(buffer[0] === 0xff && buffer[1] === 0xd8, `${label} is not a JPEG file.`)
+  let offset = 2
+  while (offset < buffer.length) {
+    if (buffer[offset] !== 0xff) {
+      offset += 1
+      continue
+    }
+    const marker = buffer[offset + 1]
+    offset += 2
+    if (marker === 0xd9 || marker === 0xda) break
+    const segmentLength = buffer.readUInt16BE(offset)
+    const isStartOfFrame =
+      marker >= 0xc0 &&
+      marker <= 0xcf &&
+      ![0xc4, 0xc8, 0xcc].includes(marker)
+    if (isStartOfFrame) {
+      return {
+        height: buffer.readUInt16BE(offset + 3),
+        width: buffer.readUInt16BE(offset + 5),
+      }
+    }
+    offset += segmentLength
+  }
+  fail(`${label} does not contain a readable JPEG size marker.`)
+}
+
+function readWebpDimensions(buffer, label) {
+  expect(buffer.subarray(0, 4).toString('ascii') === 'RIFF', `${label} is not a RIFF file.`)
+  expect(buffer.subarray(8, 12).toString('ascii') === 'WEBP', `${label} is not a WebP file.`)
+  let offset = 12
+  while (offset + 8 <= buffer.length) {
+    const chunkType = buffer.subarray(offset, offset + 4).toString('ascii')
+    const chunkLength = buffer.readUInt32LE(offset + 4)
+    const dataOffset = offset + 8
+    if (chunkType === 'VP8X') {
+      return {
+        width: 1 + buffer.readUIntLE(dataOffset + 4, 3),
+        height: 1 + buffer.readUIntLE(dataOffset + 7, 3),
+      }
+    }
+    if (chunkType === 'VP8L') {
+      expect(buffer[dataOffset] === 0x2f, `${label} has an invalid VP8L signature.`)
+      const bits = buffer.readUInt32LE(dataOffset + 1)
+      return {
+        width: (bits & 0x3fff) + 1,
+        height: ((bits >> 14) & 0x3fff) + 1,
+      }
+    }
+    if (chunkType === 'VP8 ') {
+      expect(
+        buffer[dataOffset + 3] === 0x9d &&
+          buffer[dataOffset + 4] === 0x01 &&
+          buffer[dataOffset + 5] === 0x2a,
+        `${label} has an invalid VP8 start code.`,
+      )
+      return {
+        width: buffer.readUInt16LE(dataOffset + 6) & 0x3fff,
+        height: buffer.readUInt16LE(dataOffset + 8) & 0x3fff,
+      }
+    }
+    offset += 8 + chunkLength + (chunkLength % 2)
+  }
+  fail(`${label} does not contain a readable WebP size chunk.`)
+}
+
+function validateImageFile(path, label, format) {
+  expect(existsSync(path), `${label} missing image file: ${path}`)
+  const buffer = readFileSync(path)
+  const dimensions =
+    format === 'jpeg' ? readJpegDimensions(buffer, label) : readWebpDimensions(buffer, label)
+  expect(dimensions.width >= 1344, `${label} width ${dimensions.width} is smaller than 1344.`)
+  expect(dimensions.height >= 768, `${label} height ${dimensions.height} is smaller than 768.`)
 }
 
 function validateWorld(world, file, slugs) {
@@ -282,6 +359,64 @@ function validateMiniUnit(unit, unitSlugs, worldSlugs) {
   expect(renderedHtml.includes('Lesson flow'), `${label} static output missing lesson flow heading.`)
 }
 
+function validateBatch4Image(image, imageSlugs, worldSlugs, worldSources) {
+  const label = `2026-06-02-batch4-world-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of [
+    'slug',
+    'title',
+    'ageBand',
+    'seoLane',
+    'sourceWorldFile',
+    'prompt',
+    'outputJpeg',
+    'outputWebp',
+    'sidecar',
+  ]) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(image.slug), `${label}.slug must be lowercase kebab-case.`)
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 4 images.`)
+  imageSlugs.add(image.slug)
+  expect(worldSlugs.has(image.slug), `${label}.slug does not reference a Batch 1 world.`)
+  expect(image.sourceWorldFile === worldSources.get(image.slug), `${label}.sourceWorldFile does not match source world file.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch4/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch4/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch4/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+
+  for (const phrase of [
+    'family-friendly',
+    'no text',
+    'no letters',
+    'no logos',
+    'no watermark',
+    'no branded characters',
+    'no scary harm',
+    'no weapons',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  validateString(sidecar.model, `${label}.sidecar.model`)
+  expect(sidecar.width >= 1344, `${label}.sidecar.width is too small.`)
+  expect(sidecar.height >= 768, `${label}.sidecar.height is too small.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar.seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 for (const dir of [worldsDir, kitsDir]) {
   expect(existsSync(dir), `Missing content directory: ${dir}`)
 }
@@ -292,6 +427,7 @@ expect(worldFiles.length === 3, `Expected 3 Batch 1 world files, found ${worldFi
 expect(kitFiles.length === 3, `Expected 3 Batch 1 kit files, found ${kitFiles.length}.`)
 
 const worldSlugs = new Set()
+const worldSources = new Map()
 let worldCount = 0
 
 for (const file of worldFiles) {
@@ -300,7 +436,10 @@ for (const file of worldFiles) {
   validateString(data.lane, `${file}.lane`)
   expect(Array.isArray(data.worlds), `${file}.worlds must be an array.`)
   expect(data.worlds.length === 10, `${file}.worlds must contain exactly 10 worlds.`)
-  data.worlds.forEach((world) => validateWorld(world, file, worldSlugs))
+  data.worlds.forEach((world) => {
+    validateWorld(world, file, worldSlugs)
+    worldSources.set(world.slug, `content/worlds/${file}`)
+  })
   worldCount += data.worlds.length
 }
 
@@ -348,6 +487,30 @@ expect(existsSync(miniUnitIndexPath), `Missing Batch 3 mini-unit index page: ${m
 const miniUnitIndexHtml = readFileSync(miniUnitIndexPath, 'utf8')
 expect(miniUnitIndexHtml.includes('Teacher Mini-Units'), 'Batch 3 mini-unit index missing expected heading.')
 
+expect(existsSync(batch4ImagesFile), `Missing Batch 4 image manifest: ${batch4ImagesFile}`)
+const batch4Images = readJson(batch4ImagesFile)
+expect(batch4Images.batchId === batch4ImagesBatchId, `batch4 image manifest batchId must be ${batch4ImagesBatchId}.`)
+expect(batch4Images.generatedAt === '2026-06-02', 'batch4 image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch4Images.images), 'batch4 image manifest images must be an array.')
+expect(batch4Images.images.length === 20, `Expected 20 Batch 4 images, found ${batch4Images.images.length}.`)
+const batch4ImageSlugs = new Set()
+batch4Images.images.forEach((image) => validateBatch4Image(image, batch4ImageSlugs, worldSlugs, worldSources))
+const worldGalleryPath = resolve(root, 'public', 'world-gallery', 'index.html')
+expect(existsSync(worldGalleryPath), `Missing Batch 4 world gallery page: ${worldGalleryPath}`)
+const worldGalleryHtml = readFileSync(worldGalleryPath, 'utf8')
+expect(worldGalleryHtml.includes('World Art Gallery'), 'Batch 4 world gallery missing expected heading.')
+expect(
+  (worldGalleryHtml.match(/class="image-card"/g) ?? []).length === 20,
+  'Batch 4 world gallery must render exactly 20 image cards.',
+)
+for (const image of batch4Images.images) {
+  expect(worldGalleryHtml.includes(image.title), `Batch 4 world gallery missing image title: ${image.title}`)
+  expect(
+    worldGalleryHtml.includes(image.outputJpeg.replace(/^public\//, '')),
+    `Batch 4 world gallery missing JPEG path for ${image.slug}.`,
+  )
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size} local world images.`,
 )

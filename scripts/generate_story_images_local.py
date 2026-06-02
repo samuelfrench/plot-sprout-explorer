@@ -13,12 +13,14 @@ import json
 import os
 import time
 from pathlib import Path
+from typing import Any
 
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
 os.environ.setdefault("TRANSFORMERS_VERBOSITY", "error")
 
 import torch
 from diffusers import AutoencoderKL, DPMSolverMultistepScheduler, StableDiffusionXLPipeline
+from PIL import features
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -32,9 +34,10 @@ HEIGHT = int(os.environ.get("PLOTSPROUT_IMAGE_HEIGHT", "768"))
 STEPS = int(os.environ.get("PLOTSPROUT_IMAGE_STEPS", "42"))
 GUIDANCE = float(os.environ.get("PLOTSPROUT_IMAGE_GUIDANCE", "7.0"))
 JPEG_QUALITY = int(os.environ.get("PLOTSPROUT_IMAGE_JPEG_QUALITY", "92"))
+WEBP_QUALITY = int(os.environ.get("PLOTSPROUT_IMAGE_WEBP_QUALITY", "92"))
 FREEU_SDXL = dict(b1=1.3, b2=1.4, s1=0.9, s2=0.2)
 NEGATIVE_PROMPT = (
-    "text, letters, logo, watermark, signature, scary, horror, weapon, violence, "
+    "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, "
     "brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows"
 )
 
@@ -78,6 +81,9 @@ def parse_args() -> argparse.Namespace:
     parser = argparse.ArgumentParser(description="Generate local Plot Sprout images.")
     parser.add_argument("--only", choices=sorted(PROMPTS), action="append")
     parser.add_argument("--all", action="store_true", help="Generate every starter image.")
+    parser.add_argument("--manifest", type=Path, help="Generate images from a Batch 4 manifest.")
+    parser.add_argument("--limit", type=int, help="Only generate the first N manifest images.")
+    parser.add_argument("--skip-existing", action="store_true", help="Skip manifest images whose outputs already exist.")
     return parser.parse_args()
 
 
@@ -87,13 +93,14 @@ def load_pipeline() -> StableDiffusionXLPipeline:
 
     dtype = torch.float16
     print(f"Loading SDXL base: {SDXL_BASE_CHECKPOINT}")
-    vae = AutoencoderKL.from_pretrained(SDXL_VAE_REPO, torch_dtype=dtype)
+    vae = AutoencoderKL.from_pretrained(SDXL_VAE_REPO, torch_dtype=dtype, local_files_only=True)
     pipe = StableDiffusionXLPipeline.from_single_file(
         str(SDXL_BASE_CHECKPOINT),
         torch_dtype=dtype,
         use_safetensors=True,
         add_watermarker=False,
         vae=vae,
+        local_files_only=True,
     )
     pipe.scheduler = DPMSolverMultistepScheduler.from_config(
         pipe.scheduler.config,
@@ -106,19 +113,99 @@ def load_pipeline() -> StableDiffusionXLPipeline:
     return pipe
 
 
+def validate_webp_support() -> None:
+    if not features.check("webp"):
+        raise RuntimeError("Pillow WebP support is required before generating Batch 4 images.")
+
+
+def starter_jobs(selected: list[str]) -> list[dict[str, Any]]:
+    jobs: list[dict[str, Any]] = []
+    for index, slug in enumerate(selected):
+        jobs.append(
+            {
+                "slug": slug,
+                "prompt": PROMPTS[slug],
+                "outputJpeg": str((OUTPUT_DIR / f"{slug}.jpg").relative_to(ROOT)),
+                "outputWebp": None,
+                "sidecar": str((RUN_DIR / f"{slug}.json").relative_to(ROOT)),
+                "seed": 260602 + index,
+                "mode": "starter",
+            }
+        )
+    return jobs
+
+
+def manifest_jobs(path: Path, limit: int | None) -> list[dict[str, Any]]:
+    manifest_path = path if path.is_absolute() else ROOT / path
+    data = json.loads(manifest_path.read_text())
+    images = data.get("images")
+    if not isinstance(images, list):
+        raise ValueError(f"Manifest missing images array: {manifest_path}")
+    if limit is not None:
+        images = images[:limit]
+    jobs: list[dict[str, Any]] = []
+    for item in images:
+        slug = item["slug"]
+        seed = item.get("seed")
+        if not isinstance(seed, int):
+            raise ValueError(f"Manifest image {slug} must include a deterministic integer seed.")
+        jobs.append(
+            {
+                "slug": slug,
+                "prompt": item["prompt"],
+                "outputJpeg": item["outputJpeg"],
+                "outputWebp": item["outputWebp"],
+                "sidecar": item["sidecar"],
+                "seed": seed,
+                "manifest": str(manifest_path.relative_to(ROOT)),
+                "title": item.get("title"),
+                "ageBand": item.get("ageBand"),
+                "seoLane": item.get("seoLane"),
+                "sourceWorldFile": item.get("sourceWorldFile"),
+                "mode": "manifest",
+            }
+        )
+    return jobs
+
+
+def outputs_exist(job: dict[str, Any]) -> bool:
+    output_jpeg = ROOT / job["outputJpeg"]
+    output_webp = ROOT / job["outputWebp"] if job.get("outputWebp") else None
+    sidecar = ROOT / job["sidecar"]
+    return output_jpeg.exists() and (output_webp is None or output_webp.exists()) and sidecar.exists()
+
+
 def main() -> None:
     args = parse_args()
-    selected = sorted(PROMPTS) if args.all else (args.only or ["moon-muffin-market"])
+    if args.manifest and (args.only or args.all):
+        raise ValueError("Use either --manifest or starter --only/--all arguments, not both.")
 
-    OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
-    RUN_DIR.mkdir(parents=True, exist_ok=True)
+    if args.manifest:
+        validate_webp_support()
+        jobs = manifest_jobs(args.manifest, args.limit)
+    else:
+        selected = sorted(PROMPTS) if args.all else (args.only or ["moon-muffin-market"])
+        jobs = starter_jobs(selected)
+
     torch.cuda.empty_cache()
     pipe = load_pipeline()
     generator = torch.Generator(device="cuda")
 
-    for index, slug in enumerate(selected):
-        prompt = PROMPTS[slug]
-        seed = 260602 + index
+    for job in jobs:
+        slug = job["slug"]
+        prompt = job["prompt"]
+        seed = job["seed"]
+        output_jpeg = ROOT / job["outputJpeg"]
+        output_webp = ROOT / job["outputWebp"] if job.get("outputWebp") else None
+        sidecar_path = ROOT / job["sidecar"]
+        if args.skip_existing and outputs_exist(job):
+            print(f"Skipping {slug}; outputs already exist.")
+            continue
+
+        output_jpeg.parent.mkdir(parents=True, exist_ok=True)
+        if output_webp:
+            output_webp.parent.mkdir(parents=True, exist_ok=True)
+        sidecar_path.parent.mkdir(parents=True, exist_ok=True)
         generator.manual_seed(seed)
         start = time.time()
         print(f"Generating {slug} ({WIDTH}x{HEIGHT}, {STEPS} steps, seed {seed})")
@@ -132,32 +219,44 @@ def main() -> None:
             generator=generator,
         ).images[0]
 
-        output_path = OUTPUT_DIR / f"{slug}.jpg"
-        image.save(output_path, "JPEG", quality=JPEG_QUALITY, optimize=True)
-        run_path = RUN_DIR / f"{slug}.json"
-        run_path.write_text(
+        image.save(output_jpeg, "JPEG", quality=JPEG_QUALITY, optimize=True)
+        if output_webp:
+            image.save(output_webp, "WEBP", quality=WEBP_QUALITY, method=6)
+
+        elapsed_seconds = round(time.time() - start, 2)
+        sidecar = {
+            "slug": slug,
+            "prompt": prompt,
+            "negativePrompt": NEGATIVE_PROMPT,
+            "model": "sd_xl_base_1.0.safetensors",
+            "vae": SDXL_VAE_REPO,
+            "width": WIDTH,
+            "height": HEIGHT,
+            "steps": STEPS,
+            "guidance": GUIDANCE,
+            "seed": seed,
+            "jpegQuality": JPEG_QUALITY,
+            "webpQuality": WEBP_QUALITY if output_webp else None,
+            "outputJpeg": str(output_jpeg.relative_to(ROOT)),
+            "outputWebp": str(output_webp.relative_to(ROOT)) if output_webp else None,
+        }
+        if job.get("mode") == "starter":
+            sidecar["elapsedSeconds"] = elapsed_seconds
+            sidecar["output"] = str(output_jpeg.relative_to(ROOT))
+        for key in ["manifest", "title", "ageBand", "seoLane", "sourceWorldFile"]:
+            if job.get(key):
+                sidecar[key] = job[key]
+        sidecar_path.write_text(
             json.dumps(
-                {
-                    "slug": slug,
-                    "prompt": prompt,
-                    "negativePrompt": NEGATIVE_PROMPT,
-                    "model": "sd_xl_base_1.0.safetensors",
-                    "vae": SDXL_VAE_REPO,
-                    "width": WIDTH,
-                    "height": HEIGHT,
-                    "steps": STEPS,
-                    "guidance": GUIDANCE,
-                    "seed": seed,
-                    "jpegQuality": JPEG_QUALITY,
-                    "elapsedSeconds": round(time.time() - start, 2),
-                    "output": str(output_path.relative_to(ROOT)),
-                },
+                sidecar,
                 indent=2,
             )
             + "\n"
         )
-        print(f"Saved {output_path}")
-        print(f"Saved {run_path}")
+        print(f"Saved {output_jpeg}")
+        if output_webp:
+            print(f"Saved {output_webp}")
+        print(f"Saved {sidecar_path}")
 
 
 if __name__ == "__main__":
