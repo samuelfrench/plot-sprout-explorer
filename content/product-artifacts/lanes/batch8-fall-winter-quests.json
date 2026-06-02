@@ -1,0 +1,225 @@
+{
+  "metadata": {
+    "batchId": "2026-06-02-batch8",
+    "lane": "fall-winter",
+    "productSlug": "homeschool-season-story-bundle"
+  },
+  "records": [
+    {
+      "id": "fall-acorn-errand-route-map",
+      "title": "Fall Acorn Errand Route Map",
+      "worldSlug": "acorn-avenue-errand-office",
+      "season": "fall",
+      "type": "map",
+      "kidDirection": "Draw a fall errand route through Acorn Avenue, then write the clue that helps your hero choose the next stop.",
+      "adultNote": "Keep the work offline and choice-based. Let the child point, draw, or label before asking for full sentences.",
+      "sections": [
+        {
+          "heading": "Route Stops",
+          "lines": [
+            "Start at the acorn desk with this errand slip: ____________________________",
+            "Stop 1 has this fall detail: ____________________________",
+            "Stop 2 has this helpful neighbor: ____________________________",
+            "Finish at this shared shortcut: ____________________________"
+          ]
+        },
+        {
+          "heading": "Map Clues",
+          "lines": [
+            "The chalk arrow points toward: ____________________________",
+            "The leaf-paper note says: ____________________________",
+            "The route changes when: ____________________________"
+          ]
+        },
+        {
+          "heading": "Story Sentence",
+          "lines": [
+            "My hero solves the errand mix-up by ____________________________.",
+            "The kind ending happens when ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fall-seed-library-catalog-cards",
+      "title": "Fall Seed Library Catalog Cards",
+      "worldSlug": "seed-library-map-room",
+      "season": "fall",
+      "type": "cards",
+      "kidDirection": "Fill in three seed catalog cards with garden clues from the end of the growing season.",
+      "adultNote": "Use this as a short observation-to-story station. The child can invent details or borrow safe details from a real garden walk.",
+      "sections": [
+        {
+          "heading": "Seed Card A",
+          "lines": [
+            "Seed name or plant clue: ____________________________",
+            "Where it grew on the map: ____________________________",
+            "One fall change I noticed: ____________________________"
+          ]
+        },
+        {
+          "heading": "Seed Card B",
+          "lines": [
+            "Seed name or plant clue: ____________________________",
+            "Where it grew on the map: ____________________________",
+            "One fall change I noticed: ____________________________"
+          ]
+        },
+        {
+          "heading": "Seed Card C",
+          "lines": [
+            "Seed name or plant clue: ____________________________",
+            "Where it grew on the map: ____________________________",
+            "One fall change I noticed: ____________________________"
+          ]
+        },
+        {
+          "heading": "Catalog Note",
+          "lines": [
+            "The next gardener should remember ____________________________.",
+            "This seed story could begin with ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "fall-greenhouse-gear-reflection",
+      "title": "Fall Greenhouse Gear Reflection",
+      "worldSlug": "greenhouse-gear-garden",
+      "season": "fall",
+      "type": "reflection",
+      "kidDirection": "Think like a greenhouse helper and decide how the gears should care for fall seedlings.",
+      "adultNote": "Guide the child toward cause-and-effect language: what changed, what the hero noticed, and what small fix comes next.",
+      "sections": [
+        {
+          "heading": "What Changed",
+          "lines": [
+            "The fall greenhouse feels: ____________________________",
+            "The smallest seedlings need: ____________________________",
+            "The tallest plants need: ____________________________",
+            "The gear pattern surprises the hero by ____________________________"
+          ]
+        },
+        {
+          "heading": "Helpful Fix",
+          "lines": [
+            "First, my hero checks ____________________________.",
+            "Next, my hero changes ____________________________.",
+            "Then, the plants can ____________________________."
+          ]
+        },
+        {
+          "heading": "Reflection Sentence",
+          "lines": [
+            "I chose this fix because ____________________________.",
+            "One clearer detail I can add to my story is ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "winter-teacup-forecast-worksheet",
+      "title": "Winter Teacup Forecast Worksheet",
+      "worldSlug": "teacup-town-weather-window",
+      "season": "winter",
+      "type": "worksheet",
+      "kidDirection": "Write a tiny winter forecast so Teacup Town can plan its cozy errands.",
+      "adultNote": "Read the headings aloud and ask for short, concrete details. Keep the session adult-guided and printable-first.",
+      "sections": [
+        {
+          "heading": "Weather Clues",
+          "lines": [
+            "The spoon-shaped window shows: ____________________________",
+            "The steam cloud looks like: ____________________________",
+            "The cup-handle bridge feels: ____________________________"
+          ]
+        },
+        {
+          "heading": "Town Errands",
+          "lines": [
+            "The umbrella shop prepares: ____________________________",
+            "The picnic cart changes its plan by ____________________________.",
+            "The sugar-cube sign painter writes: ____________________________"
+          ]
+        },
+        {
+          "heading": "Forecast Paragraph",
+          "lines": [
+            "Today in Teacup Town, ____________________________.",
+            "My hero helps by ____________________________.",
+            "The clearest winter clue is ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "winter-button-bakery-crumb-map",
+      "title": "Winter Button Bakery Crumb Map",
+      "worldSlug": "button-bakery-map-mixup",
+      "season": "winter",
+      "type": "map",
+      "kidDirection": "Turn the upside-down crumb map into clear winter directions for a bakery delivery.",
+      "adultNote": "Have the child trace the route with a finger first, then write only the labels needed to make the directions understandable.",
+      "sections": [
+        {
+          "heading": "Bakery Start",
+          "lines": [
+            "My hero carries this warm roll: ____________________________",
+            "The first crumb clue is beside: ____________________________",
+            "The winter street detail is: ____________________________"
+          ]
+        },
+        {
+          "heading": "Clear Directions",
+          "lines": [
+            "Turn toward ____________________________.",
+            "Pass the shop with ____________________________.",
+            "Stop when the map shows ____________________________.",
+            "Redraw the route by adding ____________________________."
+          ]
+        },
+        {
+          "heading": "Delivery Ending",
+          "lines": [
+            "The delivery arrives when ____________________________.",
+            "The baker thanks the hero for ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "winter-clue-label-museum-prompt",
+      "title": "Winter Clue Label Museum Prompt",
+      "worldSlug": "clue-label-tower-museum",
+      "season": "winter",
+      "type": "prompt",
+      "kidDirection": "Write museum labels that help visitors notice one useful winter clue at a time.",
+      "adultNote": "This page is for concise explanatory writing. Encourage one clear sentence before adding extra description.",
+      "sections": [
+        {
+          "heading": "Exhibit Labels",
+          "lines": [
+            "Object 1 is ____________________________ and its clue is ____________________________.",
+            "Object 2 is ____________________________ and its clue is ____________________________.",
+            "Object 3 is ____________________________ and its clue is ____________________________."
+          ]
+        },
+        {
+          "heading": "Curator Choice",
+          "lines": [
+            "The best first exhibit is ____________________________ because ____________________________.",
+            "The label should leave out ____________________________ so visitors notice ____________________________."
+          ]
+        },
+        {
+          "heading": "Short Story Prompt",
+          "lines": [
+            "When the winter museum opens, my hero notices ____________________________.",
+            "The final label explains ____________________________.",
+            "A visitor understands the clue after ____________________________."
+          ]
+        }
+      ]
+    }
+  ]
+}
