@@ -986,6 +986,130 @@
           "summary": "A two-card theater world for using one view detail to shape a clear character choice."
         }
       ]
+    },
+    {
+      "slug": "kitchen-table-story-recipe-card-deck",
+      "title": "Kitchen Table Story Recipe Card Deck",
+      "pricePoint": "$29",
+      "status": "checkout_pending",
+      "headline": "A printable recipe-card deck that turns table details into story ingredients.",
+      "summary": "Sixteen adult-led paper recipe cards help kids plan story ingredients before writing one clear sentence.",
+      "heroImage": "images/plotsprout/batch25/kitchen-table-story-recipe-card-deck.jpg",
+      "ctaLabel": "Request recipe card deck launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Kitchen%20Table%20Story%20Recipe%20Card%20Deck",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static kitchen table story recipe card deck page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "teacup-town-weather-window",
+        "button-bakery-map-mixup",
+        "spoon-ferry-lunchbox-harbor",
+        "pantry-measurement-mystery",
+        "seed-library-map-room",
+        "moss-message-observatory",
+        "compass-craft-academy",
+        "almost-invention-workshop",
+        "margin-note-market",
+        "binding-day-boardwalk",
+        "index-card-theater-club",
+        "clue-label-tower-museum",
+        "revision-river-ferry"
+      ],
+      "includedPages": [
+        "Sixteen printable paper story recipe cards",
+        "Adult setup guide",
+        "Table setup notes",
+        "Story ingredient coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led card formats",
+        "Ten take-home recipe slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool table writing session that needs concrete story starters",
+        "A library, co-op, or tutoring table with screen-free printable writing pages",
+        "A family writing warm-up where pointing and sketching can come before sentences",
+        "A reluctant-writer activity that separates planning choices from full drafting",
+        "A take-home recipe slip set for finishing one invented story detail offline"
+      ],
+      "parentSteps": [
+        "Choose one recipe card format before the activity starts.",
+        "Set the paper, pencil, sketch, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one broad table detail into a make-believe story clue rather than recording private information.",
+        "Send home one recipe slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for choosing one setting ingredient before drafting a first scene."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A tiny post-office world for inventing a careful character role and one question."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A rolling library world for giving one paper object a useful story job."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A window-world for turning one color, pattern, or sound word into sensory description."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A map-mixup world for ordering three story clues into first, next, and finally."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A harbor world for revising one plain sentence with a clearer setting detail."
+        },
+        {
+          "slug": "pantry-measurement-mystery",
+          "summary": "A shelf-map world for making an ordinary object become a setting clue."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A paper map-room world for assigning a helpful story job to one invented object."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A quiet observatory world for building a clue from one gentle sensory word."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass academy world for arranging a beginning path with three calm steps."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "summary": "A nearly useful invention world for revising a fuzzy idea into one clearer line."
+        },
+        {
+          "slug": "margin-note-market",
+          "summary": "A revision market world for turning one broad note into a specific next writing move."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A page-order boardwalk world for choosing which story step belongs first."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "summary": "A two-card theater world for shaping a character choice with one clear prop."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A label tower world for making one sensory clue easier for a reader to picture."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for moving one sentence from vague to specific."
+        }
+      ]
     }
   ]
 }

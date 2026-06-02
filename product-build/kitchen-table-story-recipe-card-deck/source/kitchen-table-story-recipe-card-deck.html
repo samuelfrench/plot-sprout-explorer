@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Table Story Recipe Card Deck</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263034;
+        --muted: #5d6669;
+        --paper: #fffdf7;
+        --line: #d8cdb9;
+        --tomato: #b44436;
+        --mint: #3d7865;
+        --blue: #356d8f;
+        --saffron: #d6a642;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.05px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.6px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.6px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(180, 68, 54, 0.07) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(61, 120, 101, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--tomato); }
+      .guide-page { border-top: 0.16in solid var(--mint); font-size: 6.85px; }
+      .world-page { border-top: 0.16in solid var(--saffron); font-size: 6.85px; }
+      .format-page { border-top: 0.16in solid var(--blue); font-size: 7.1px; }
+      .slip-page { border-top: 0.16in solid var(--tomato); font-size: 6.95px; }
+      .recipe-card-page { font-size: 7.58px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--mint);
+        font-size: 6.65px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .format-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.034in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.035in; }
+      .format-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .recipe-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.85);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .recipe-slip p { margin-bottom: 0.022in; }
+      .recipe-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .recipe-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--mint); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--saffron);
+      }
+      .kid-direction { border-left-color: var(--mint); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(61, 120, 101, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--tomato);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable kitchen table story recipe cards</p>
+        <h1>Kitchen Table Story Recipe Card Deck</h1>
+        <p>Sixteen paper recipe-card prompts turn table details into story ingredients for writing-only sessions.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, library tables, and adult-led table writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable paper story recipe cards plus adult guide tools, card formats, take-home recipe slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$29</span>
+        <h2>Included</h2>
+        <ul><li>16 printable paper story recipe cards</li>
+<li>Adult setup guide</li>
+<li>Kitchen table safety notes</li>
+<li>Story ingredient coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led card formats</li>
+<li>Ten take-home recipe slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story ingredient coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the story recipe cards, take-home slips, and adult guide before the session; every recipe word means a story choice only.</li>
+<li>Set the adult-led rule: writers use paper, pencils, sketches, and imagination at the table.</li>
+<li>Choose one card format before writers begin so the table has one clear path.</li>
+<li>Say that a story ingredient can be a setting, character, object, sequence, sensory detail, or revision choice.</li>
+<li>Keep the session offline, calm, and focused on one short card that can become a later story.</li></ul></article>
+        <article class="guide-card"><h3>Table setup</h3><ul><li>Place blank recipe cards, take-home slips, and pencils where the adult can see every page.</li>
+<li>Set six labeled piles: setting recipe, character recipe, object recipe, sequence recipe, revision recipe, and sensory recipe.</li>
+<li>Put one broad story place card on the table, such as kitchen table, porch table, reading corner, library table, or classroom table.</li>
+<li>Leave open space on each card for a title, three story ingredients, one sketch, and one sentence.</li>
+<li>Keep unused cards in an adult folder so the writing surface stays simple and paper-only.</li></ul></article>
+        <article class="guide-card"><h3>Story ingredient coaching</h3><ul><li>Ask for one setting ingredient first: a made-up place, a broad real place word, or a mood word.</li>
+<li>Ask for one character ingredient next: a fictional role, a careful choice, or a small question.</li>
+<li>Ask for one object ingredient that has a story job, such as helping, hiding, guiding, or reminding.</li>
+<li>Ask for one sequence ingredient with first, next, and finally, with no need to hurry.</li>
+<li>Ask for one revision ingredient that makes a sentence clearer by adding a look, sound, pattern, or feeling word.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Use invented names, role words, or blank labels for every person on the cards.</li>
+<li>Use broad place words instead of addresses, exact schedules, group names, signs, or private routines.</li>
+<li>Keep recipe words as story metaphors; do not turn the cards into real table directions.</li>
+<li>Keep finished cards in the family folder, tutor folder, co-op folder, or classroom folder.</li>
+<li>Check every take-home slip for private details before it leaves the adult-led table.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one finished story recipe card and one blank take-home recipe slip with each writer.</li>
+<li>Tell family adults that five to nine quiet minutes is enough for one extra story recipe.</li>
+<li>Invite the family adult to ask for one setting ingredient, one character ingredient, and one object ingredient.</li>
+<li>Ask adults to praise one clear word, sketch, or sentence before suggesting one small revision.</li>
+<li>Suggest keeping the cards together so the writer can reuse the strongest ingredient in a later printable story.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect unused cards, slips, pencils, and broad place cards.</li>
+<li>Review finished pages for private details before they go home.</li>
+<li>Recycle scrap pages that only hold practice marks.</li>
+<li>Restock the adult folder with fresh paper cards for the next offline session.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen recipe-card worlds</h2>
+      <p>Pick a world image, then turn one table detail into a fictional story clue.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Almost Invention Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article></div>
+    </section>
+    <section class="pack-page format-page">
+      <p class="page-kicker">Card formats</p>
+      <h2>Choose the paper card rhythm</h2>
+      <div class="format-grid">
+    <article class="small-card">
+      <h3>Setting Recipe Card</h3>
+      <p>Writers who need a clear place before choosing characters or objects.</p>
+      <ol><li>Adult places one broad place card beside the blank recipe card.</li>
+<li>Writer chooses a setting ingredient and writes it on the first line.</li>
+<li>Writer adds one look detail and one mood word to the card.</li>
+<li>Writer writes one sentence that shows where the story begins.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Character Recipe Card</h3>
+      <p>Kids who enjoy inventing roles, wishes, and questions.</p>
+      <ol><li>Adult asks the writer to choose an invented character role.</li>
+<li>Writer adds one careful want, worry, or wonder to the card.</li>
+<li>Writer sketches one small clue about the character.</li>
+<li>Writer writes one sentence about what the character notices first.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Object Recipe Card</h3>
+      <p>Families or tutors turning ordinary table ideas into story helpers.</p>
+      <ol><li>Adult asks the writer to name a made-up object or choose one from a printed idea list.</li>
+<li>Writer gives the object one story job.</li>
+<li>Writer adds one detail about how the object looks or sounds.</li>
+<li>Writer writes one sentence showing why the object matters.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sequence Recipe Card</h3>
+      <p>Writers who need a beginning path before drafting.</p>
+      <ol><li>Adult points to the first, next, and finally blanks on the card.</li>
+<li>Writer chooses one setting ingredient and one character ingredient.</li>
+<li>Writer fills the three blanks with calm story steps.</li>
+<li>Writer circles the step that would make the strongest first paragraph.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Revision Recipe Card</h3>
+      <p>Writers strengthening a sentence they already started.</p>
+      <ol><li>Adult places an earlier sentence beside the blank revision card.</li>
+<li>Writer chooses one clearer look, sound, pattern, or feeling word.</li>
+<li>Writer copies the sentence and adds the new ingredient.</li>
+<li>Writer marks the one word that improved the sentence most.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sensory Recipe Card</h3>
+      <p>Quiet writers who notice sound, color, pattern, or texture words.</p>
+      <ol><li>Adult asks the writer to choose one safe paper-only sensory word.</li>
+<li>Writer pairs the word with a setting, object, or character.</li>
+<li>Writer sketches the detail in the card corner.</li>
+<li>Writer writes one sentence where the detail gives a story clue.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home recipe slips</p>
+      <h2>Finish one story recipe later</h2>
+      <div class="slip-grid">
+    <article class="recipe-slip">
+      <p class="card-kicker">5 minutes | setting recipe</p>
+      <h3>Place Ingredient</h3>
+      <p>Choose a broad story place: ____________________. Add one mood word for that place: ____________________.</p>
+      <p>Our setting recipe begins to feel ____________________.</p>
+    </article>
+
+    <article class="recipe-slip">
+      <p class="card-kicker">6 minutes | character recipe</p>
+      <h3>Character Ingredient</h3>
+      <p>Invent a character role: ____________________. Give the character one question: ____________________.</p>
+      <p>The character question we want to keep is ____________________.</p>
+    </article>
+
+    <article class="recipe-slip">
+      <p class="card-kicker">7 minutes | object recipe</p>
+      <h3>Object With a Job</h3>
+      <p>Invent one story object: ____________________. Its helpful story job is ____________________.</p>
+      <p>The object matters because ____________________.</p>
+    </article>
+
+    <article class="recipe-slip">
+      <p class="card-kicker">8 minutes | sequence recipe</p>
+      <h3>First Next Finally</h3>
+      <p>Plan three story steps. First ____________________. Next ____________________. Finally ____________________.</p>
+      <p>The step we want to write first is ____________________.</p>
+    </article>
+
+    <article class="recipe-slip">
+      <p class="card-kicker">5 minutes | revision recipe</p>
+      <h3>Clearer Sentence</h3>
+      <p>Copy one sentence: ____________________. Add one clearer detail: ____________________.</p>
+      <p>The revision helped because ____________________.</p>
+    </article>
+
+    <article class="recipe-slip">
+      <p class="card-kicker">6 minutes | sensory recipe</p>
+      <h3>Sound Ingredient</h3>
+      <p>Choose one gentle sound word for a story: ____________________. The sound tells the character ____________________.</p>
+      <p>Our sound ingredient creates a clue about ____________________.</p>
+    </article>
+
+    <article class="recipe-slip">
+      <p class="card-kicker">7 minutes | sensory recipe</p>
+      <h3>Pattern Ingredient</h3>
+      <p>Choose one story pattern, such as dots, lines, circles, or repeats: ____________________. It means ____________________.</p>
+      <p>The pattern ingredient makes us wonder ____________________.</p>
+    </article>
+
+    <article class="recipe-slip">
+      <p class="card-kicker">8 minutes | revision recipe</p>
+      <h3>Better Beginning</h3>
+      <p>Write a beginning sentence: ____________________. Add one setting ingredient to make it clearer: ____________________.</p>
+      <p>The beginning now shows ____________________.</p>
+    </article>
+
+    <article class="recipe-slip">
+      <p class="card-kicker">9 minutes | character recipe</p>
+      <h3>Character Plus Object</h3>
+      <p>Invent a character: ____________________. Give the character one object with a story job: ____________________.</p>
+      <p>The character will use the object to ____________________.</p>
+    </article>
+
+    <article class="recipe-slip">
+      <p class="card-kicker">6 minutes | sequence recipe</p>
+      <h3>Tiny Story Recipe</h3>
+      <p>Write one setting, one character, and one object. Setting: ____________________. Character: ____________________. Object: ____________________.</p>
+      <p>The story recipe we would continue is ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Read one story ingredient from your paper card: ____________________.</li>
+<li>Show one sketch from the card if you choose: ____________________.</li>
+<li>Name the broad place word that helped your story: ____________________.</li>
+<li>Share one invented character role without private details: ____________________.</li>
+<li>Tell the story job of one made-up object: ____________________.</li>
+<li>Read the first, next, or finally line you like best: ____________________.</li>
+<li>Name one detail that made a sentence clearer: ____________________.</li>
+<li>Mark one card you want to save for later writing: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 1 | Ages 6-8 | setting recipe</div>
+      <h2>Moon Market Setting Recipe</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place one printed card, one pencil, and blank paper on the table. Say that each ingredient is a story idea, then invite a small sketch before writing.</p>
+      <p class="kid-direction">Imagine a moon market with quiet stalls, floating signs, and one tiny problem the setting can help show.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My Moon Market setting recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: sky color ____________________, market sound ____________________, tiny sign ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up: Move one setting clue from the edge of the market to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: First the market looks like ____________________. Next the moon cart waits near ____________________. Last the setting feels ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one plain place word with a more exact setting word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch one stall shape, then label it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At another table, add one new Moon Market setting clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 2 | Ages 6-8 | character recipe</div>
+      <h2>Puddle Planet Mail Helper Recipe</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place the card on the table and ask for one helper sketch before any sentence. Keep every message pretend and every choice story-shaped.</p>
+      <p class="kid-direction">Imagine a puddle-planet mail helper who sorts pretend messages by color, shape, and mood.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My Puddle Planet character recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: helper job ____________________, stamp shape ____________________, tiny worry ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up: Trade the helper&#39;s usual route for a puddle path toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: First the helper notices ____________________. Next the pretend message points to ____________________. Last the helper chooses ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one exact character habit that readers can picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the helper badge and write one character word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At another table, invent one new pretend message for ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 3 | Ages 7-9 | object recipe</div>
+      <h2>Buttonwood Library Train Object Recipe</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Set the card and pencil on the table. Ask the kid to sketch one small object, then write how the object helps the scene change.</p>
+      <p class="kid-direction">Imagine the library train rolls past shelves and needs one object to solve a small story mix-up.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My Buttonwood object recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: object shape ____________________, shelf clue ____________________, train sound ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up: Give the object one surprising library job: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: First the object rests near ____________________. Next the train shelf shifts beside ____________________. Last the object helps by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace a vague object word with one exact noun: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the object silently, then name its job: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At another table, add a second helpful object called ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 4 | Ages 7-8 | sensory recipe</div>
+      <h2>Teacup Weather Window Sensory Recipe</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place the card near a window or table view. Invite a quick sketch, then ask for one color, one sound, and one pretend texture.</p>
+      <p class="kid-direction">Imagine Teacup Town gets a message through the weather window, and the clues are all details a reader can picture.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My Teacup Town sensory recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: window color ____________________, weather sound ____________________, tiny texture ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up: Swap the weather mood for a new story mood: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: First the window shows ____________________. Next the room grows ____________________. Last the town hears ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one sensory word that makes the window scene clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to a color, sketch a small square, and label it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At another table, write one more weather-window detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 5 | Ages 7-9 | sequence recipe</div>
+      <h2>Button Map Mix-Up Sequence Recipe</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place the card on the table and draw three small paper boxes. Ask the kid to sketch one clue in each box before writing the sequence.</p>
+      <p class="kid-direction">Imagine a button map has its clues out of order. Choose the first clue, the middle clue, and the ending place.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My Button Map sequence recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: first clue ____________________, middle turn ____________________, ending place ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up: Swap the middle clue with a clearer paper clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: First ____________________. Then ____________________. Last ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one reason the middle clue belongs in that spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number the three boxes, then write only the first clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At another table, retell the route with a new final clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 6 | Ages 7-9 | revision recipe</div>
+      <h2>Ferry Harbor Revision Recipe</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place the card on the table and ask for one short draft line. Then invite the kid to add a clearer harbor detail.</p>
+      <p class="kid-direction">Imagine a tiny ferry crossing a lunchbox harbor. Write one draft line, then make the line clearer.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My ferry harbor revision recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: draft line ____________________, clearer detail ____________________, harbor sound ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up: Move the strongest detail closer to the beginning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: First my old line says ____________________. Next I add ____________________. Last my clearer line says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Underline one exact word to keep in the revised sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle one word with pencil, then rewrite only that word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At another table, revise one ferry sentence about ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 7 | Ages 8-10 | setting recipe</div>
+      <h2>Pantry Shelf Setting Recipe</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one card, place it on the table with a pencil, and ask the writer to choose one ordinary object to sketch.</p>
+      <p class="kid-direction">Sketch the pretend pantry setting, name three story ingredients, and write one sentence that shows where the mystery begins.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: The pantry mystery setting is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: shelf shape ____________________, measuring mark ____________________, tiny clue ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix it up on paper by moving one clue from the shelf to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence: In the pantry map, ____________________ waits beside ____________________, so the mystery feels ready.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise by adding one clear where-word to show the clue is near ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: sketch the shelf first, then label one place ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At another table, turn one ordinary object into a setting clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 8 | Ages 8-10 | object recipe</div>
+      <h2>Seed Drawer Object Recipe</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one card, set out a pencil, and remind the writer that every seed drawer and label is pretend story language.</p>
+      <p class="kid-direction">Choose a paper object, sketch its label, and imagine why the Seed Library Map Room needs that clue.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: The seed drawer object is named ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: drawer label ____________________, map mark ____________________, secret object ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix it up on paper by giving the object a new job: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence: The map keeper opens ____________________ and discovers ____________________ inside.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise by adding one exact shape, color, or placement detail to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: sketch the object first, then write its quiet label: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At the table, turn one small paper shape into a map-room clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 9 | Ages 8-10 | sensory recipe</div>
+      <h2>Moss Message Sensory Recipe</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one card, place it on the table with a pencil, and invite the writer to notice one color or pattern in the room.</p>
+      <p class="kid-direction">Collect a color, a sound word, and an imagined texture, then turn them into a moss observatory message.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: The observatory message is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: color ____________________, soft sound ____________________, imagined texture ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix it up on paper by letting the message appear first on ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence: The observer sees ____________________, hears ____________________, and imagines the message means ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise by replacing one plain describing word with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: point to one color silently, sketch it, and write ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use one safe room detail as the first observatory signal: ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 10 | Ages 10-11 | sequence recipe</div>
+      <h2>Compass Route Sequence Recipe</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one card, place it on the table with a pencil, and ask the writer to sketch a simple pretend route.</p>
+      <p class="kid-direction">Choose a starting mark, a middle turn, and an ending place, then write the route as a story sequence.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: The compass route recipe is named ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: starting mark ____________________, middle turn ____________________, ending place ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix it up on paper by changing the middle turn toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence: First ____________________, next ____________________, finally ____________________, so the map feels complete.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise by adding one precise direction word or distance clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: number the three route marks, then write only the strongest mark: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use the route to begin a compass academy paragraph about ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 11 | Ages 10-11 | revision recipe</div>
+      <h2>Almost Invention Revision Recipe</h2>
+      <figure>
+        <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+        <figcaption>Almost Invention Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one card, keep the work paper-only at the table, and invite the writer to sketch a nearly ready invention idea.</p>
+      <p class="kid-direction">Write one plain almost-invention sentence, choose the unclear word, and revise it with a sharper story ingredient.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: The almost invention is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: plain idea ____________________, unclear word ____________________, sharper detail ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix it up on paper by moving the sharper detail closer to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence: Plain line: ____________________. Revised line: ____________________, because the detail shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise by replacing one vague word with a precise noun or action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: underline one word silently, then write the clearer replacement: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Keep the revised sentence as the first line of an almost-invention story: ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 12 | Ages 10-11 | revision recipe</div>
+      <h2>Margin Note Market Revision Recipe</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, place paper and pencils on the table, and invite the writer to imagine a quiet market stall that trades only kind notes and clearer words.</p>
+      <p class="kid-direction">Choose one draft idea, imagine it as a note from Margin Note Market, and revise the idea so a reader can picture the exact story change.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My margin-note story recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: I need one fuzzy draft note ____________________, one exact replacement word ____________________, and one kind question ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up note: Change the broad note into a clear action the writer can try next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: The note first says ____________________; the writer looks closer at ____________________; the revised line becomes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one vague word with a specific table, paper, pencil, or sketch detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Work silently and revise only one sentence from the card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this margin note later to improve a tiny story about ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 13 | Ages 10-11 | sequence recipe</div>
+      <h2>Binding Day Boardwalk Sequence Recipe</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, set out paper and pencils, and ask the writer to imagine a boardwalk where paper pages line up in the right order.</p>
+      <p class="kid-direction">Imagine three boardwalk stops, sketch one small page clue, and write the order that helps the story feel finished.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My Binding Day sequence recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: I need an opening page clue ____________________, a middle turn ____________________, and a final boardwalk detail ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up note: Move one event earlier or later so the story order makes better sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: First the paper page shows ____________________; next the boardwalk turn reveals ____________________; finally the ending lands on ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one bridge sentence between two story moments: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number three paper ideas, then write only the middle turn here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use the final boardwalk detail to start a short scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 14 | Ages 10-11 | character recipe</div>
+      <h2>Index Card Theater Character Recipe</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, place paper and pencils on the table, and invite the writer to imagine a tiny theater made from index cards and sketched signs.</p>
+      <p class="kid-direction">Give a character one clear want, sketch a simple stage cue, and write two lines that show the choice changing.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My index-card character recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: I need a character who wants ____________________, a table-stage cue ____________________, and a choice that changes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up note: Swap the first line or reply so the character choice becomes clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: The character expects ____________________; the stage cue shows ____________________; the choice turns toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one visible action that shows the character choice without explaining it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write only the two spoken lines on the paper card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use the clearest character choice to begin a table scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 15 | Ages 10-11 | sensory recipe</div>
+      <h2>Clue Label Tower Sensory Recipe</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, set paper and pencils on the table, and ask the writer to imagine a quiet tower museum with labels for ordinary story clues.</p>
+      <p class="kid-direction">Pick one imagined exhibit, sketch its label, and use concrete sensory words to make the setting easy to picture.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My clue-label sensory recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: I need one exhibit shape ____________________, one color clue ____________________, one texture word ____________________, and one quiet sound ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up note: Trade one general description for a more concrete museum-label clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: The tower label names ____________________; the setting feels ____________________; the clue points the reader toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace a plain describing word with one sensory detail from the label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the exhibit label first, then write one sensory sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this label later to build a quiet museum scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page recipe-card-page">
+      <div class="page-kicker">Paper Card 16 | Ages 10-11 | revision recipe</div>
+      <h2>Revision River Ferry Ending Recipe</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, place paper and pencils on the table, and invite the writer to imagine a calm ferry carrying draft sentences across Revision River.</p>
+      <p class="kid-direction">Choose one earlier clue, draft an ending, and revise the final sentence so the ending feels connected.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story recipe title</h3>
+      <p>Recipe title: My Revision River ending recipe is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story ingredients</h3>
+      <p>Story ingredients: I need one earlier clue ____________________, one ferry crossing image ____________________, and one final feeling ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mix-it-up story move</h3>
+      <p>Mix-it-up note: Bring back one clue from the beginning so the ending feels complete: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Serving sentence path</h3>
+      <p>Serving sentence path: At first the story notices ____________________; near the river the clue returns as ____________________; the final sentence becomes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Trim one extra phrase or add one clearer ending image: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle the ending sentence on paper and write the revised version here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this revised ending to finish a tiny story about ____________________.</p>
+    </section>
+  </body>
+</html>

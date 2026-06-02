@@ -21,6 +21,7 @@ export const grandparentStoryVisitKitProductSlug = 'grandparent-story-visit-kit'
 export const thankYouNoteStoryPostcardPackProductSlug = 'thank-you-note-story-postcard-pack'
 export const natureWalkStoryFieldNotesKitProductSlug = 'nature-walk-story-field-notes-kit'
 export const backyardStorySeedPacketKitProductSlug = 'backyard-story-seed-packet-kit'
+export const kitchenTableStoryRecipeCardDeckProductSlug = 'kitchen-table-story-recipe-card-deck'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -203,6 +204,14 @@ const requiredBackyardStorySeedPacketKitArtifactPaths = {
   sourceHtmlPath:
     'product-build/backyard-story-seed-packet-kit/source/backyard-story-seed-packet-kit.html',
   manifestPath: 'product-build/backyard-story-seed-packet-kit/manifest.json',
+}
+
+const requiredKitchenTableStoryRecipeCardDeckArtifactPaths = {
+  pdfPath: 'product-build/kitchen-table-story-recipe-card-deck/Kitchen-Table-Story-Recipe-Card-Deck.pdf',
+  zipPath: 'product-build/kitchen-table-story-recipe-card-deck/kitchen-table-story-recipe-card-deck.zip',
+  sourceHtmlPath:
+    'product-build/kitchen-table-story-recipe-card-deck/source/kitchen-table-story-recipe-card-deck.html',
+  manifestPath: 'product-build/kitchen-table-story-recipe-card-deck/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -3982,6 +3991,307 @@ export function validateBackyardStorySeedPacketKitSourceFiles(source, rootDir = 
   return errors
 }
 
+const kitchenRecipeCardSkills = new Set([
+  'setting recipe',
+  'character recipe',
+  'object recipe',
+  'sequence recipe',
+  'revision recipe',
+  'sensory recipe',
+])
+
+const kitchenRecipeSlipTimes = new Set(['5 minutes', '6 minutes', '7 minutes', '8 minutes', '9 minutes'])
+
+function validateNoUnsafeKitchenRecipeLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const accountText = rawText
+    .replace(/\bUse invented names, role words, or blank labels for every person on the cards\./gi, '')
+    .replace(/\bUse invented character labels instead of real names\./gi, '')
+    .replace(/\bUse broad place words instead of addresses, exact schedules, group names, signs, or private routines\./gi, '')
+    .replace(/\bUse broad table words instead of private family details\./gi, '')
+    .replace(/\bKeep finished cards in the family folder, tutor folder, co-op folder, or classroom folder\./gi, '')
+    .replace(/\bKeep family routines, exact places, and private details off the card\./gi, '')
+    .replace(/\bKeep the cards offline with the family adult, tutor, or table host\./gi, '')
+    .replace(/\bCheck every take-home slip for private details before it leaves the adult-led table\./gi, '')
+    .replace(/\bSharing stays optional and limited to one title, sketch, or invented line\./gi, '')
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+  pushIf(
+    errors,
+    /\baccounts?\b|\blogins?\b|\blog in\b|\bupload(s|ed|ing)?\b|\bpublic publishing\b|\bpublish online\b|\bgps\b|\bcoordinates?\b|\bexact address\b|\baddresses?\b|\bphone(s)?\b|\bemails?\b|\bphotos?\b|\bcameras?\b|\bchild names?\b|\bstudent names?\b|\bfull names?\b|\brosters?\b|\battendance\b|\bsign-?in\b|\bbehavior reports?\b|\bhouse numbers?\b|\blicense plates?\b|\bvehicle plates?\b|\bschool names?\b|\bexact location\b|\bexact places?\b|\bexact schedules?\b/i.test(
+      accountText,
+    ),
+    `${label} includes account, upload, public-publishing, exact-place, contact, photo, child-profile, grade, score, roster, attendance, sign-in, or behavior-report language.`,
+  )
+
+  const safetyText = rawText
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+    .replace(/\bstory recipe cards?\b/gi, '')
+    .replace(/\bpaper recipe cards?\b/gi, '')
+    .replace(/\bblank recipe cards?\b/gi, '')
+    .replace(/\brecipe cards?\b/gi, '')
+    .replace(/\btake-home recipe slips?\b/gi, '')
+    .replace(/\brecipe slips?\b/gi, '')
+    .replace(/\brecipe words?\b/gi, '')
+    .replace(/\bstory recipe\b/gi, '')
+    .replace(/\bstory ingredients?\b/gi, '')
+    .replace(/\bsetting ingredients?\b/gi, '')
+    .replace(/\bcharacter ingredients?\b/gi, '')
+    .replace(/\bobject ingredients?\b/gi, '')
+    .replace(/\bsequence ingredients?\b/gi, '')
+    .replace(/\brevision ingredients?\b/gi, '')
+    .replace(/\bsensory ingredients?\b/gi, '')
+    .replace(/\bingredients?\b/gi, '')
+    .replace(/\breal table directions\b/gi, '')
+    .replace(/\bpaper-only sensory word\b/gi, '')
+  pushIf(
+    errors,
+    /\bfood prep\b|\bserve food\b|\breal recipe advice\b|\brecipe instructions\b|\bcook(s|ed|ing)?\b|\bbak(e|es|ed|ing)\b|\btast(e|es|ed|ing)?\b|\beat(s|en|ing)?\b|\bstove(s)?\b|\boven(s)?\b|\bmicrowave(s)?\b|\bflame(s)?\b|\bheat\b|\bhot\b|\bknife\b|\bknives\b|\bscissors?\b|\b(kitchen|sharp|cutting) tools?\b|\ballerg(y|ies|en|ens|ic)\b|\bnutrition\b|\bdiet(s|ing|ary)?\b|\bmedical\b|\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b|\btherapy\b|\btherapist(s)?\b|\bdiagnos(is|e|es|ed|ing|tic)\b|\bgrief\b|\bassessment(s)?\b|\bgrade(s|d|book)?\b|\bscore(s|d|book)?\b|\bguarantee(s|d)?\b|\bguaranteed\b|\bcontest(s)?\b|\bprizes?\b|\btimer(s)?\b|\btimed\b|\bgambling\b|\bbet(s|ting)?\b|\bcasino(s)?\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bchurch(es)?\b|\btemple(s)?\b|\bmosque(s)?\b|\bsynagogue(s)?\b|\bprayer(s)?\b|\bjesus\b|\bgod\b|\bromance\b|\bkiss(ing)?\b|\bdating\b|\bweapon(s)?\b|\bgun(s)?\b|\bsword(s)?\b|\bfight(ing)?\b|\bkill(s|ed|ing)?\b|\bblood\b|\bhorror\b|\bbranded\b|\bbrand(ed)? character(s)?\b|\bad(s)? targeted to children\b|\bclimb(s|ed|ing)?\b|\bjump(s|ed|ing)?\b|\brun(s|ning)?\b|\broughhouse\b|\bwrestl(e|ing)\b|\bblindfold(s|ed)?\b|\bstairs?\b|\bmatchstick(s)?\b|\blighter(s)?\b/i.test(
+      safetyText,
+    ),
+    `${label} includes food-prep, tasting/eating, cooking/baking, heat, knife/tool, allergen, nutrition, diet, medical, legal, therapy, diagnosis, grief, assessment, grade, score, guaranteed-outcome, contest, prize, timer-pressure, gambling, politics, religion, romance, weapon, violence, branded, ad-targeting, or unsafe physical language.`,
+  )
+}
+
+function validateKitchenRecipeCard(card, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, cardIds, errors) {
+  const label = `recipeCards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'recipeCardSkill',
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'recipeTitlePrompt',
+    'storyIngredientsPrompt',
+    'mixItUpPrompt',
+    'servingSentencePath',
+    'revisionNudge',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(card.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(card.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, !card.id.startsWith('kitchen-recipe-card-'), `${label}.id must start with kitchen-recipe-card-.`)
+    pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+    cardIds.add(card.id)
+  }
+  pushIf(errors, !kitchenRecipeCardSkills.has(card.recipeCardSkill), `${label}.recipeCardSkill is not allowed.`)
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  for (const key of ['recipeTitlePrompt', 'storyIngredientsPrompt', 'mixItUpPrompt', 'servingSentencePath', 'revisionNudge', 'quietOptionLine', 'takeHomeLine']) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeKitchenRecipeLanguage(card, label, errors)
+}
+
+function validateKitchenCardFormat(format, index, names, errors) {
+  const label = `cardFormats[${index}]`
+  pushIf(errors, !isObject(format), `${label} must be an object.`)
+  if (!isObject(format)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(format[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(format.name)) {
+    pushIf(errors, names.has(format.name), `${label}.name is duplicated.`)
+    names.add(format.name)
+  }
+  validateExactStringArray(format.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeKitchenRecipeLanguage(format, label, errors)
+}
+
+function validateKitchenTakeHomeRecipeSlip(slip, index, titles, errors) {
+  const label = `takeHomeRecipeSlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(slip[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(slip.title)) {
+    pushIf(errors, titles.has(slip.title), `${label}.title is duplicated.`)
+    titles.add(slip.title)
+  }
+  pushIf(errors, !kitchenRecipeSlipTimes.has(slip.time), `${label}.time is not allowed.`)
+  pushIf(errors, !kitchenRecipeCardSkills.has(slip.skill), `${label}.skill is not allowed.`)
+  for (const key of ['direction', 'familyLine']) {
+    pushIf(errors, isNonEmptyString(slip[key]) && !hasWritableBlank(slip[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(slip[key]) && hasSnakeCasePlaceholder(slip[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeKitchenRecipeLanguage(slip, label, errors)
+}
+
+export function validateKitchenTableStoryRecipeCardDeckSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Kitchen Table Story Recipe Card Deck source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch25', 'batchId must be 2026-06-02-batch25.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(
+    errors,
+    source.productSlug !== kitchenTableStoryRecipeCardDeckProductSlug,
+    `productSlug must be ${kitchenTableStoryRecipeCardDeckProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Kitchen Table Story Recipe Card Deck', 'title must be Kitchen Table Story Recipe Card Deck.')
+  pushIf(errors, source.pricePoint !== '$29', 'pricePoint must be $29.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Kitchen Table Story Recipe Card Deck source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Kitchen Table Story Recipe Card Deck source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Kitchen Table Story Recipe Card Deck source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredKitchenTableStoryRecipeCardDeckArtifactPaths, 'Kitchen Table Story Recipe Card Deck', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateStringArray(source.adultGuide.beforeSession, 5, 'adultGuide.beforeSession', errors)
+    validateStringArray(source.adultGuide.tableSetup, 5, 'adultGuide.tableSetup', errors)
+    validateStringArray(source.adultGuide.storyIngredientCoaching, 5, 'adultGuide.storyIngredientCoaching', errors)
+    validateStringArray(source.adultGuide.privacyAndSafetyNotes, 5, 'adultGuide.privacyAndSafetyNotes', errors)
+    validateStringArray(source.adultGuide.familyHandoff, 5, 'adultGuide.familyHandoff', errors)
+    validateStringArray(source.adultGuide.reset, 4, 'adultGuide.reset', errors)
+    validateNoUnsafeKitchenRecipeLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.cardFormats), 'cardFormats must be an array.')
+  if (Array.isArray(source.cardFormats)) {
+    pushIf(errors, source.cardFormats.length !== 6, 'cardFormats must have exactly 6 entries.')
+    const names = new Set()
+    source.cardFormats.forEach((format, index) => validateKitchenCardFormat(format, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeRecipeSlips), 'takeHomeRecipeSlips must be an array.')
+  if (Array.isArray(source.takeHomeRecipeSlips)) {
+    pushIf(errors, source.takeHomeRecipeSlips.length !== 10, 'takeHomeRecipeSlips must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeRecipeSlips.forEach((slip, index) => validateKitchenTakeHomeRecipeSlip(slip, index, titles, errors))
+  }
+
+  validateExactStringArray(source.optionalSharePrompts, 8, 'optionalSharePrompts', errors)
+  if (Array.isArray(source.optionalSharePrompts)) {
+    source.optionalSharePrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalSharePrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalSharePrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.recipeCards), 'recipeCards must be an array.')
+  if (Array.isArray(source.recipeCards)) {
+    pushIf(errors, source.recipeCards.length !== 16, 'recipeCards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.recipeCards.forEach((card, index) => {
+      validateKitchenRecipeCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 16, 'recipeCards must cover at least 16 unique worlds.')
+  }
+
+  validateNoUnsafeKitchenRecipeLanguage(source, 'Kitchen Table Story Recipe Card Deck source', errors)
+  validateNoRiskyLanguage(source, 'Kitchen Table Story Recipe Card Deck source', errors)
+  return errors
+}
+
+export function validateKitchenTableStoryRecipeCardDeckSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three recipe-card lanes and one tools lane.')
+
+  const recipeCardLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      if (Array.isArray(lane.recipeCards)) {
+        recipeCardLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 25 recipe-card lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, recipeCardLaneFiles.length !== 3, 'sourceFiles must include exactly three recipe-card lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneRecipeCards = recipeCardLaneFiles
+    .flatMap(({ lane }) => lane.recipeCards)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.recipeCards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneRecipeCards) !== JSON.stringify(source.recipeCards),
+      'sourceFiles recipe-card lanes must reproduce recipeCards exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'cardFormats', 'takeHomeRecipeSlips', 'optionalSharePrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -4110,7 +4420,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredBackyardStorySeedPacketKitArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredKitchenTableStoryRecipeCardDeckArtifactPaths.pdfPath
+      ? requiredKitchenTableStoryRecipeCardDeckArtifactPaths
+      : artifact?.pdfPath === requiredBackyardStorySeedPacketKitArtifactPaths.pdfPath
       ? requiredBackyardStorySeedPacketKitArtifactPaths
       : artifact?.pdfPath === requiredNatureWalkStoryFieldNotesKitArtifactPaths.pdfPath
       ? requiredNatureWalkStoryFieldNotesKitArtifactPaths

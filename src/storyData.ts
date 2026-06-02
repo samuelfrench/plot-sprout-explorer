@@ -406,6 +406,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Fourteen paper story seed packet pages with adult guide tools, packet formats, and take-home seed slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'kitchen-table-story-recipe-card-deck',
+    title: 'Kitchen Table Story Recipe Card Deck',
+    pricePoint: '$29',
+    description:
+      'Sixteen paper story recipe cards with adult guide tools, card formats, and take-home recipe slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

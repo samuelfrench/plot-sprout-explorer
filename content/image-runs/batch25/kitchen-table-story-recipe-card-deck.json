@@ -1,0 +1,18 @@
+{
+  "slug": "kitchen-table-story-recipe-card-deck",
+  "prompt": "family-friendly flat lay product mockup: blank cream index-card deck, blank folded paper slips, colored paper tabs, warm wooden tabletop, large empty center. No text, no letters, no labels, no logos, no watermark. No pencils, no pens, no crayons, no scissors, no knives, no utensils, no cups, no plates, no bowls, no food, no people, no faces, no animals, no phone, no tablet, no device, no stove, no oven, no microwave, no map, no GPS, no route, no address, screen-free printable kitchen table story recipe card deck",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, printed markings, icon, symbol, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26062530,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch25/kitchen-table-story-recipe-card-deck.jpg",
+  "outputWebp": "public/images/plotsprout/batch25/kitchen-table-story-recipe-card-deck.webp",
+  "manifest": "content/image-queue/2026-06-02-batch25-product-images.json",
+  "title": "Kitchen Table Story Recipe Card Deck"
+}

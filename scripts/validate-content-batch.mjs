@@ -5,6 +5,8 @@ import { containsActiveCheckoutLanguage } from './content-policy.mjs'
 import {
   validateBackyardStorySeedPacketKitSource,
   validateBackyardStorySeedPacketKitSourceFiles,
+  validateKitchenTableStoryRecipeCardDeckSource,
+  validateKitchenTableStoryRecipeCardDeckSourceFiles,
   validateAfterSchoolStoryClubKitSource,
   inspectArtifactFiles,
   validateBirthdayPartyKitSource,
@@ -52,6 +54,7 @@ const batch21ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch22ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch22-product-images.json')
 const batch23ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch23-product-images.json')
 const batch24ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch24-product-images.json')
+const batch25ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch25-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -70,6 +73,7 @@ const grandparentVisitSourceFile = resolve(root, 'content', 'product-artifacts',
 const thankYouSourceFile = resolve(root, 'content', 'product-artifacts', 'thank-you-note-story-postcard-pack.json')
 const natureWalkSourceFile = resolve(root, 'content', 'product-artifacts', 'nature-walk-story-field-notes-kit.json')
 const backyardSeedSourceFile = resolve(root, 'content', 'product-artifacts', 'backyard-story-seed-packet-kit.json')
+const kitchenRecipeSourceFile = resolve(root, 'content', 'product-artifacts', 'kitchen-table-story-recipe-card-deck.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -89,6 +93,7 @@ const batch21ProductImagesBatchId = '2026-06-02-batch21-product-images'
 const batch22ProductImagesBatchId = '2026-06-02-batch22-product-images'
 const batch23ProductImagesBatchId = '2026-06-02-batch23-product-images'
 const batch24ProductImagesBatchId = '2026-06-02-batch24-product-images'
+const batch25ProductImagesBatchId = '2026-06-02-batch25-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -107,6 +112,7 @@ const grandparentVisitBatchId = '2026-06-02-batch21'
 const thankYouBatchId = '2026-06-02-batch22'
 const natureWalkBatchId = '2026-06-02-batch23'
 const backyardSeedBatchId = '2026-06-02-batch24'
+const kitchenRecipeBatchId = '2026-06-02-batch25'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -1214,6 +1220,70 @@ function validateBatch24ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch25ProductImage(image) {
+  const label = `2026-06-02-batch25-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(image.slug === 'kitchen-table-story-recipe-card-deck', `${label}.slug must be kitchen-table-story-recipe-card-deck.`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch25/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch25/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch25/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank cream index-card',
+    'no text',
+    'no letters',
+    'no labels',
+    'no logos',
+    'no watermark',
+    'no pencils',
+    'no pens',
+    'no crayons',
+    'no scissors',
+    'no knives',
+    'no utensils',
+    'no plates',
+    'no bowls',
+    'no cups',
+    'no food',
+    'no people',
+    'no faces',
+    'no animals',
+    'no phone',
+    'no tablet',
+    'no device',
+    'no stove',
+    'no oven',
+    'no microwave',
+    'no map',
+    'no gps',
+    'no route',
+    'no address',
+    'screen-free printable kitchen table story recipe card deck',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -1368,6 +1438,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
       minParentSteps: 5,
       maxWorldSlugs: 14,
     },
+    'kitchen-table-story-recipe-card-deck': {
+      title: 'Kitchen Table Story Recipe Card Deck',
+      pricePoint: '$29',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -1414,6 +1492,35 @@ function validateProduct(product, productSlugs, worldSlugs) {
       expect(seenSummarySlugs.has(worldSlug), `${label}.worldSummaries missing linked world slug ${worldSlug}.`)
     }
   }
+  if (product.slug === 'kitchen-table-story-recipe-card-deck') {
+    const offScopeKitchenLanguage =
+      /\bfood prep\b|\bserve food\b|\breal recipe advice\b|\brecipe instructions\b|\bcook(s|ed|ing)?\b|\bbak(e|es|ed|ing)\b|\btast(e|es|ed|ing)?\b|\beat(s|en|ing)?\b|\bstove(s)?\b|\boven(s)?\b|\bmicrowave(s)?\b|\bflame(s)?\b|\bknife\b|\bknives\b|\bscissors?\b|\ballerg(y|ies|en|ens|ic)\b|\bnutrition\b|\bdiet(s|ing|ary)?\b/i
+    expect(Array.isArray(product.worldSummaries), `${label}.worldSummaries must be an array.`)
+    expect(
+      product.worldSummaries.length === product.worldSlugs.length,
+      `${label}.worldSummaries must cover every linked world.`,
+    )
+    const expectedSummarySlugs = new Set(product.worldSlugs)
+    const seenSummarySlugs = new Set()
+    product.worldSummaries.forEach((summary, index) => {
+      expect(typeof summary === 'object' && summary !== null, `${label}.worldSummaries[${index}] must be an object.`)
+      validateString(summary.slug, `${label}.worldSummaries[${index}].slug`)
+      validateString(summary.summary, `${label}.worldSummaries[${index}].summary`)
+      expect(
+        expectedSummarySlugs.has(summary.slug),
+        `${label}.worldSummaries[${index}].slug must match a linked world slug.`,
+      )
+      expect(!seenSummarySlugs.has(summary.slug), `${label}.worldSummaries[${index}].slug is duplicated.`)
+      seenSummarySlugs.add(summary.slug)
+      expect(
+        !offScopeKitchenLanguage.test(summary.summary),
+        `${label}.worldSummaries[${index}].summary includes real table-task, tasting, allergen, nutrition, or diet language.`,
+      )
+    })
+    for (const worldSlug of product.worldSlugs) {
+      expect(seenSummarySlugs.has(worldSlug), `${label}.worldSummaries missing linked world slug ${worldSlug}.`)
+    }
+  }
   validateMinList(product.includedPages, expectedProduct.minIncludedPages, `${label}.includedPages`)
   validateMinList(product.useCases, expectedProduct.minUseCases, `${label}.useCases`)
   validateMinList(product.parentSteps, expectedProduct.minParentSteps, `${label}.parentSteps`)
@@ -1435,6 +1542,15 @@ function validateProduct(product, productSlugs, worldSlugs) {
     expect(
       !/\bseed swaps?\b|\bcompost\b|\bwatering cans?\b|\bseedlings?\b|\bsolar ovens?\b|\bwarm snacks?\b|\bplanting seeds?\b|\bwatering plants?\b|\bsoil\b|\bgarden tools?\b|\bforaging\b|\btasting plants?\b|\bplant identification\b/i.test(renderedHtml),
       `${label} static output includes real-gardening, experiment, foraging, tasting, or plant-identification language.`,
+    )
+  }
+  if (product.slug === 'kitchen-table-story-recipe-card-deck') {
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    expect(
+      !/\bfood prep\b|\bserve food\b|\breal recipe advice\b|\brecipe instructions\b|\bcook(s|ed|ing)?\b|\bbak(e|es|ed|ing)\b|\btast(e|es|ed|ing)?\b|\beat(s|en|ing)?\b|\bstove(s)?\b|\boven(s)?\b|\bmicrowave(s)?\b|\bflame(s)?\b|\bknife\b|\bknives\b|\bscissors?\b|\ballerg(y|ies|en|ens|ic)\b|\bnutrition\b|\bdiet(s|ing|ary)?\b/i.test(renderedHtml),
+      `${label} static output includes real table-task, tasting, allergen, nutrition, or diet language.`,
     )
   }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
@@ -1726,12 +1842,23 @@ expect(Array.isArray(batch24ProductImages.images), 'batch24 product image manife
 expect(batch24ProductImages.images.length === 1, `Expected 1 Batch 24 product image, found ${batch24ProductImages.images.length}.`)
 validateBatch24ProductImage(batch24ProductImages.images[0])
 
+expect(existsSync(batch25ProductImagesFile), `Missing Batch 25 product image manifest: ${batch25ProductImagesFile}`)
+const batch25ProductImages = readJson(batch25ProductImagesFile)
+expect(
+  batch25ProductImages.batchId === batch25ProductImagesBatchId,
+  `batch25 product image manifest batchId must be ${batch25ProductImagesBatchId}.`,
+)
+expect(batch25ProductImages.generatedAt === '2026-06-02', 'batch25 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch25ProductImages.images), 'batch25 product image manifest images must be an array.')
+expect(batch25ProductImages.images.length === 1, `Expected 1 Batch 25 product image, found ${batch25ProductImages.images.length}.`)
+validateBatch25ProductImage(batch25ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 17, `Expected 17 product records, found ${products.products.length}.`)
+expect(products.products.length === 18, `Expected 18 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -1752,6 +1879,7 @@ for (const requiredProductSlug of [
   'thank-you-note-story-postcard-pack',
   'nature-walk-story-field-notes-kit',
   'backyard-story-seed-packet-kit',
+  'kitchen-table-story-recipe-card-deck',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -2863,6 +2991,75 @@ for (const asset of backyardSeedArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Backyard Story Seed Packet Kit copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(kitchenRecipeSourceFile), `Missing Batch 25 Kitchen Table Story Recipe Card Deck source file: ${kitchenRecipeSourceFile}`)
+const kitchenRecipeSource = readJson(kitchenRecipeSourceFile)
+expect(
+  kitchenRecipeSource.batchId === kitchenRecipeBatchId,
+  `Kitchen Table Story Recipe Card Deck source batchId must be ${kitchenRecipeBatchId}.`,
+)
+const kitchenRecipeProduct = products.products.find((product) => product.slug === 'kitchen-table-story-recipe-card-deck')
+expect(kitchenRecipeProduct, 'Missing Kitchen Table Story Recipe Card Deck product record for Batch 25 artifact validation.')
+const kitchenRecipeSourceErrors = validateKitchenTableStoryRecipeCardDeckSource(
+  kitchenRecipeSource,
+  kitchenRecipeProduct,
+  worldAgeBands,
+)
+expect(
+  kitchenRecipeSourceErrors.length === 0,
+  `Kitchen Table Story Recipe Card Deck source failed validation:\n${kitchenRecipeSourceErrors.join('\n')}`,
+)
+const kitchenRecipeSourceFileErrors = validateKitchenTableStoryRecipeCardDeckSourceFiles(kitchenRecipeSource, root)
+expect(
+  kitchenRecipeSourceFileErrors.length === 0,
+  `Kitchen Table Story Recipe Card Deck sourceFiles failed validation:\n${kitchenRecipeSourceFileErrors.join('\n')}`,
+)
+const kitchenRecipeExpectedPdfPages = kitchenRecipeSource.recipeCards.length + 5
+const kitchenRecipeArtifactStatus = inspectArtifactFiles(root, kitchenRecipeSource.artifact, {
+  expectedPdfPages: kitchenRecipeExpectedPdfPages,
+})
+expect(
+  kitchenRecipeArtifactStatus.valid,
+  `Kitchen Table Story Recipe Card Deck artifacts failed validation:\n${kitchenRecipeArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  kitchenRecipeArtifactStatus.files.pdf.size > 100_000,
+  `Kitchen Table Story Recipe Card Deck PDF artifact is unexpectedly small: ${kitchenRecipeArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  kitchenRecipeArtifactStatus.files.pdf.pageCount === kitchenRecipeExpectedPdfPages,
+  `Kitchen Table Story Recipe Card Deck PDF artifact must have ${kitchenRecipeExpectedPdfPages} pages.`,
+)
+expect(
+  kitchenRecipeArtifactStatus.files.zip.size > kitchenRecipeArtifactStatus.files.pdf.size,
+  'Kitchen Table Story Recipe Card Deck ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const kitchenRecipeCheckoutErrors = validateCheckoutReadiness(kitchenRecipeProduct, kitchenRecipeArtifactStatus)
+expect(
+  kitchenRecipeCheckoutErrors.length === 0,
+  `Kitchen Table Story Recipe Card Deck checkout readiness failed validation:\n${kitchenRecipeCheckoutErrors.join('\n')}`,
+)
+const kitchenRecipeArtifactManifest = readJson(resolve(root, kitchenRecipeSource.artifact.manifestPath))
+expect(
+  kitchenRecipeArtifactManifest.sourcePageCount === kitchenRecipeSource.recipeCards.length,
+  'Kitchen Table Story Recipe Card Deck artifact manifest sourcePageCount must match source recipeCards.',
+)
+expect(
+  Array.isArray(kitchenRecipeArtifactManifest.files.assets),
+  'Kitchen Table Story Recipe Card Deck artifact manifest files.assets must be an array.',
+)
+expect(
+  kitchenRecipeArtifactManifest.files.assets.length === kitchenRecipeSource.worldSlugs.length,
+  'Kitchen Table Story Recipe Card Deck artifact manifest must include one copied local image per source world.',
+)
+const kitchenRecipeManifestAssetErrors = validateManifestWorldAssets(kitchenRecipeSource, kitchenRecipeArtifactManifest)
+expect(
+  kitchenRecipeManifestAssetErrors.length === 0,
+  `Kitchen Table Story Recipe Card Deck artifact manifest image coverage failed validation:\n${kitchenRecipeManifestAssetErrors.join('\n')}`,
+)
+for (const asset of kitchenRecipeArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Kitchen Table Story Recipe Card Deck copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 17 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 18 product artifacts.`,
 )

@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch25-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "kitchen-table-story-recipe-card-deck",
+      "title": "Kitchen Table Story Recipe Card Deck",
+      "purpose": "Product hero image for the Batch 25 printable kitchen table story recipe card deck.",
+      "prompt": "family-friendly flat lay product mockup: blank cream index-card deck, blank folded paper slips, colored paper tabs, warm wooden tabletop, large empty center. No text, no letters, no labels, no logos, no watermark. No pencils, no pens, no crayons, no scissors, no knives, no utensils, no cups, no plates, no bowls, no food, no people, no faces, no animals, no phone, no tablet, no device, no stove, no oven, no microwave, no map, no GPS, no route, no address, screen-free printable kitchen table story recipe card deck",
+      "outputJpeg": "public/images/plotsprout/batch25/kitchen-table-story-recipe-card-deck.jpg",
+      "outputWebp": "public/images/plotsprout/batch25/kitchen-table-story-recipe-card-deck.webp",
+      "sidecar": "content/image-runs/batch25/kitchen-table-story-recipe-card-deck.json",
+      "seed": 26062530
+    }
+  ]
+}

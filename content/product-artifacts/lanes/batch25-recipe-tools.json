@@ -1,0 +1,190 @@
+{
+  "laneId": "batch25-recipe-tools",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the story recipe cards, take-home slips, and adult guide before the session; every recipe word means a story choice only.",
+      "Set the adult-led rule: writers use paper, pencils, sketches, and imagination at the table.",
+      "Choose one card format before writers begin so the table has one clear path.",
+      "Say that a story ingredient can be a setting, character, object, sequence, sensory detail, or revision choice.",
+      "Keep the session offline, calm, and focused on one short card that can become a later story."
+    ],
+    "tableSetup": [
+      "Place blank recipe cards, take-home slips, and pencils where the adult can see every page.",
+      "Set six labeled piles: setting recipe, character recipe, object recipe, sequence recipe, revision recipe, and sensory recipe.",
+      "Put one broad story place card on the table, such as kitchen table, porch table, reading corner, library table, or classroom table.",
+      "Leave open space on each card for a title, three story ingredients, one sketch, and one sentence.",
+      "Keep unused cards in an adult folder so the writing surface stays simple and paper-only."
+    ],
+    "storyIngredientCoaching": [
+      "Ask for one setting ingredient first: a made-up place, a broad real place word, or a mood word.",
+      "Ask for one character ingredient next: a fictional role, a careful choice, or a small question.",
+      "Ask for one object ingredient that has a story job, such as helping, hiding, guiding, or reminding.",
+      "Ask for one sequence ingredient with first, next, and finally, with no need to hurry.",
+      "Ask for one revision ingredient that makes a sentence clearer by adding a look, sound, pattern, or feeling word."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented names, role words, or blank labels for every person on the cards.",
+      "Use broad place words instead of addresses, exact schedules, group names, signs, or private routines.",
+      "Keep recipe words as story metaphors; do not turn the cards into real table directions.",
+      "Keep finished cards in the family folder, tutor folder, co-op folder, or classroom folder.",
+      "Check every take-home slip for private details before it leaves the adult-led table."
+    ],
+    "familyHandoff": [
+      "Send one finished story recipe card and one blank take-home recipe slip with each writer.",
+      "Tell family adults that five to nine quiet minutes is enough for one extra story recipe.",
+      "Invite the family adult to ask for one setting ingredient, one character ingredient, and one object ingredient.",
+      "Ask adults to praise one clear word, sketch, or sentence before suggesting one small revision.",
+      "Suggest keeping the cards together so the writer can reuse the strongest ingredient in a later printable story."
+    ],
+    "reset": [
+      "Collect unused cards, slips, pencils, and broad place cards.",
+      "Review finished pages for private details before they go home.",
+      "Recycle scrap pages that only hold practice marks.",
+      "Restock the adult folder with fresh paper cards for the next offline session."
+    ]
+  },
+  "cardFormats": [
+    {
+      "name": "Setting Recipe Card",
+      "bestFor": "Writers who need a clear place before choosing characters or objects.",
+      "steps": [
+        "Adult places one broad place card beside the blank recipe card.",
+        "Writer chooses a setting ingredient and writes it on the first line.",
+        "Writer adds one look detail and one mood word to the card.",
+        "Writer writes one sentence that shows where the story begins."
+      ]
+    },
+    {
+      "name": "Character Recipe Card",
+      "bestFor": "Kids who enjoy inventing roles, wishes, and questions.",
+      "steps": [
+        "Adult asks the writer to choose an invented character role.",
+        "Writer adds one careful want, worry, or wonder to the card.",
+        "Writer sketches one small clue about the character.",
+        "Writer writes one sentence about what the character notices first."
+      ]
+    },
+    {
+      "name": "Object Recipe Card",
+      "bestFor": "Families or tutors turning ordinary table ideas into story helpers.",
+      "steps": [
+        "Adult asks the writer to name a made-up object or choose one from a printed idea list.",
+        "Writer gives the object one story job.",
+        "Writer adds one detail about how the object looks or sounds.",
+        "Writer writes one sentence showing why the object matters."
+      ]
+    },
+    {
+      "name": "Sequence Recipe Card",
+      "bestFor": "Writers who need a beginning path before drafting.",
+      "steps": [
+        "Adult points to the first, next, and finally blanks on the card.",
+        "Writer chooses one setting ingredient and one character ingredient.",
+        "Writer fills the three blanks with calm story steps.",
+        "Writer circles the step that would make the strongest first paragraph."
+      ]
+    },
+    {
+      "name": "Revision Recipe Card",
+      "bestFor": "Writers strengthening a sentence they already started.",
+      "steps": [
+        "Adult places an earlier sentence beside the blank revision card.",
+        "Writer chooses one clearer look, sound, pattern, or feeling word.",
+        "Writer copies the sentence and adds the new ingredient.",
+        "Writer marks the one word that improved the sentence most."
+      ]
+    },
+    {
+      "name": "Sensory Recipe Card",
+      "bestFor": "Quiet writers who notice sound, color, pattern, or texture words.",
+      "steps": [
+        "Adult asks the writer to choose one safe paper-only sensory word.",
+        "Writer pairs the word with a setting, object, or character.",
+        "Writer sketches the detail in the card corner.",
+        "Writer writes one sentence where the detail gives a story clue."
+      ]
+    }
+  ],
+  "takeHomeRecipeSlips": [
+    {
+      "title": "Place Ingredient",
+      "time": "5 minutes",
+      "skill": "setting recipe",
+      "direction": "Choose a broad story place: ____________________. Add one mood word for that place: ____________________.",
+      "familyLine": "Our setting recipe begins to feel ____________________."
+    },
+    {
+      "title": "Character Ingredient",
+      "time": "6 minutes",
+      "skill": "character recipe",
+      "direction": "Invent a character role: ____________________. Give the character one question: ____________________.",
+      "familyLine": "The character question we want to keep is ____________________."
+    },
+    {
+      "title": "Object With a Job",
+      "time": "7 minutes",
+      "skill": "object recipe",
+      "direction": "Invent one story object: ____________________. Its helpful story job is ____________________.",
+      "familyLine": "The object matters because ____________________."
+    },
+    {
+      "title": "First Next Finally",
+      "time": "8 minutes",
+      "skill": "sequence recipe",
+      "direction": "Plan three story steps. First ____________________. Next ____________________. Finally ____________________.",
+      "familyLine": "The step we want to write first is ____________________."
+    },
+    {
+      "title": "Clearer Sentence",
+      "time": "5 minutes",
+      "skill": "revision recipe",
+      "direction": "Copy one sentence: ____________________. Add one clearer detail: ____________________.",
+      "familyLine": "The revision helped because ____________________."
+    },
+    {
+      "title": "Sound Ingredient",
+      "time": "6 minutes",
+      "skill": "sensory recipe",
+      "direction": "Choose one gentle sound word for a story: ____________________. The sound tells the character ____________________.",
+      "familyLine": "Our sound ingredient creates a clue about ____________________."
+    },
+    {
+      "title": "Pattern Ingredient",
+      "time": "7 minutes",
+      "skill": "sensory recipe",
+      "direction": "Choose one story pattern, such as dots, lines, circles, or repeats: ____________________. It means ____________________.",
+      "familyLine": "The pattern ingredient makes us wonder ____________________."
+    },
+    {
+      "title": "Better Beginning",
+      "time": "8 minutes",
+      "skill": "revision recipe",
+      "direction": "Write a beginning sentence: ____________________. Add one setting ingredient to make it clearer: ____________________.",
+      "familyLine": "The beginning now shows ____________________."
+    },
+    {
+      "title": "Character Plus Object",
+      "time": "9 minutes",
+      "skill": "character recipe",
+      "direction": "Invent a character: ____________________. Give the character one object with a story job: ____________________.",
+      "familyLine": "The character will use the object to ____________________."
+    },
+    {
+      "title": "Tiny Story Recipe",
+      "time": "6 minutes",
+      "skill": "sequence recipe",
+      "direction": "Write one setting, one character, and one object. Setting: ____________________. Character: ____________________. Object: ____________________.",
+      "familyLine": "The story recipe we would continue is ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Read one story ingredient from your paper card: ____________________.",
+    "Show one sketch from the card if you choose: ____________________.",
+    "Name the broad place word that helped your story: ____________________.",
+    "Share one invented character role without private details: ____________________.",
+    "Tell the story job of one made-up object: ____________________.",
+    "Read the first, next, or finally line you like best: ____________________.",
+    "Name one detail that made a sentence clearer: ____________________.",
+    "Mark one card you want to save for later writing: ____________________."
+  ]
+}
