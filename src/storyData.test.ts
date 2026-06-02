@@ -63,6 +63,7 @@ describe('storyData', () => {
       'bookshop-story-bookmark-pack',
       'writing-desk-story-prompt-strip-pack',
       'window-seat-story-scene-card-pack',
+      'quiet-corner-story-map-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -86,6 +87,7 @@ describe('storyData', () => {
       '$25',
       '$27',
       '$29',
+      '$31',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)

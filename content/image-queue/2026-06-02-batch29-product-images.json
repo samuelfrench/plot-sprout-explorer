@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-02-batch29-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "quiet-corner-story-map-card-pack",
+      "title": "Quiet Corner Story Map Card Pack product image",
+      "purpose": "Static product page hero for the quiet corner story map card pack.",
+      "seed": 26062931,
+      "prompt": "family-friendly flat lay product image of blank cream paper story map cards on a plain white background, cards show only soft abstract map-like shapes with no readable marks, zero other objects, screen-free printable quiet corner story map card pack, warm natural light, clean catalog composition, no text, no letters, no labels, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, phone, tablet, laptop, computer, screen, device, gps, navigation app, coordinates, address, house, street sign, real place, realistic road atlas, real-world map, photo, camera, people, face, animal, plant, greenery, flower, jar, cup, mug, bowl, utensil, brush, spoon, fork, knife, pencil, pen, crayon, marker, notebook, spiral binding, ruler, scissors, calendar, clock, timer, score, star, rating, review, tabletop props, decoration",
+      "outputJpeg": "public/images/plotsprout/batch29/quiet-corner-story-map-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch29/quiet-corner-story-map-card-pack.webp",
+      "sidecar": "content/image-runs/batch29/quiet-corner-story-map-card-pack.json"
+    }
+  ]
+}

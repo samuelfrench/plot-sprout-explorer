@@ -1492,6 +1492,130 @@
           "summary": "A page-order boardwalk world for making one unclear scene easier to follow."
         }
       ]
+    },
+    {
+      "slug": "quiet-corner-story-map-card-pack",
+      "title": "Quiet Corner Story Map Card Pack",
+      "pricePoint": "$31",
+      "status": "checkout_pending",
+      "headline": "A printable story-map card pack for quiet creative writing tables.",
+      "summary": "Sixteen adult-led fictional story-map cards help kids turn paper shapes, labels, and clues into short writing starts.",
+      "heroImage": "images/plotsprout/batch29/quiet-corner-story-map-card-pack.jpg",
+      "ctaLabel": "Request story map card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Quiet%20Corner%20Story%20Map%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static quiet corner story map card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable quiet-corner story map cards",
+        "Adult setup guide",
+        "Fictional story-map safety notes",
+        "Story map coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led map routines",
+        "Ten take-home map slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one calm shape before a full story",
+        "A tutoring or co-op desk where writers can choose one paper map card at a time",
+        "A family quiet-corner warm-up where pointing, sketching, and one blank can start the page",
+        "A reluctant-writer activity that separates one clue from a full draft",
+        "A take-home map slip set for finishing one invented detail offline"
+      ],
+      "parentSteps": [
+        "Choose one map routine before the activity starts.",
+        "Set the paper, pencil, sketch, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one broad pretend setting into a make-believe story clue rather than recording private place details.",
+        "Send home one map slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for placing one pretend setting label before drafting a first line."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A tiny post-office world for turning one pretend message into a story clue."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A rolling library world for arranging a first, next, and finally map card."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for sorting one mixed-up paper shape into a clearer story start."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A weather-window world for turning one color, sound, or texture into a map clue."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A notice-board world for writing one invented label and the clue beside it."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A lunchbox harbor world for giving one pretend object a useful story job."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An errand-office world for placing one helper, shelf, or note inside a story shape."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A paper map-room world for inventing one clue and one careful helper."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A railway world for turning a repeating pattern into a calm story sequence."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A quiet observatory world for sending one pretend message across the card."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for making one pretend time clue feel clear and curious."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for moving one fuzzy sentence toward a sharper detail."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A label tower world for adding a sharper shape, texture, or clue to the card."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A craft academy world for choosing between two calm story-card choices."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A page-order boardwalk world for making one unclear story sequence easier to follow."
+        }
+      ]
     }
   ]
 }

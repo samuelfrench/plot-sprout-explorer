@@ -36,6 +36,7 @@
     "image:batch26": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch26-product-images.json",
     "image:batch27": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch27-product-images.json",
     "image:batch28": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch28-product-images.json",
+    "image:batch29": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch29-product-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -56,7 +57,8 @@
     "product:kitchen-recipe-deck": "node scripts/kitchen-table-story-recipe-card-deck-builder.mjs",
     "product:bookshop-bookmark-pack": "node scripts/bookshop-story-bookmark-pack-builder.mjs",
     "product:writing-desk-strip-pack": "node scripts/writing-desk-story-prompt-strip-pack-builder.mjs",
-    "product:window-seat-scene-pack": "node scripts/window-seat-story-scene-card-pack-builder.mjs"
+    "product:window-seat-scene-pack": "node scripts/window-seat-story-scene-card-pack-builder.mjs",
+    "product:quiet-corner-map-pack": "node scripts/quiet-corner-story-map-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

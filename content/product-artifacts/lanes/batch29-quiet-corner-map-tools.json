@@ -1,0 +1,193 @@
+{
+  "batchId": "2026-06-02-batch29",
+  "lane": "quiet-corner-map-tools",
+  "generatedAt": "2026-06-02",
+  "productSlug": "quiet-corner-story-map-card-pack",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the story map cards, take-home map slips, and adult guide before writers arrive.",
+      "Set the adult-led rule: every idea stays offline, paper-only, and made up for creative writing.",
+      "Explain that each story map is a fictional story-shape card, not a tool for finding anything.",
+      "Choose one map routine before the session so each writer has a calm paper path.",
+      "Keep pencils, blank cards, and broad idea words ready for writers ages 6-11."
+    ],
+    "quietCornerSetup": [
+      "Place story map cards, blank paper, pencils, and take-home slips where the adult can see every page.",
+      "Set six labeled piles: setting map, character map, object map, sequence map, sensory map, and revision map.",
+      "Use broad pretend setting words such as nook, shelf, lamp, cushion, curtain, garden, bell, basket, or doorway.",
+      "Leave room on each card for a title, one small story shape, three labels, and one first line.",
+      "Keep extra cards in an adult folder so the quiet corner stays simple, offline, and paper-only."
+    ],
+    "storyMapCoaching": [
+      "Ask for one pretend setting first, then turn it into a tiny story shape with one mood word.",
+      "Ask for one invented character role who notices, carries, sorts, waits, or changes something gentle.",
+      "Ask for one pretend object and give it a clear story job on the card.",
+      "Ask for first, next, and finally lines when the writer needs an easy paper path.",
+      "Ask the writer to revise one sentence by adding a clearer color, sound, label, pattern, or texture word."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented labels, role words, or blank spaces for every person on the story map cards.",
+      "Use broad setting words instead of private details, named rooms, clubs, or narrow routines.",
+      "Keep finished story map cards with the family adult, tutor, co-op adult, or classroom adult.",
+      "Make sharing optional and limited to one invented word, small sketch, or short line.",
+      "Check every take-home map slip for private details before it leaves the adult-led table."
+    ],
+    "familyHandoff": [
+      "Send one finished story map card and one blank take-home map slip with each writer.",
+      "Tell family adults that five to nine quiet minutes is enough for one extra story map clue.",
+      "Invite the family adult to ask for one pretend setting, one invented character, and one pretend object.",
+      "Ask adults to praise one clear word, sketch, or sentence before suggesting one small revision.",
+      "Suggest keeping story map cards together so the writer can reuse the strongest paper clue in a later story."
+    ],
+    "reset": [
+      "Collect unused story map cards, take-home map slips, pencils, and broad idea cards.",
+      "Check finished story map cards for private details before they go with the family adult.",
+      "Recycle scrap pages that only hold warm-up marks.",
+      "Restock the adult folder with fresh story map cards for the next offline session."
+    ]
+  },
+  "mapRoutines": [
+    {
+      "name": "Setting Map",
+      "bestFor": "Writers who need one pretend setting before adding story action.",
+      "steps": [
+        "Adult points to one broad pretend setting word on the paper card.",
+        "Writer draws a small story shape and labels the setting with a mood word.",
+        "Writer adds one look detail that belongs inside the made-up quiet corner.",
+        "Writer writes one first line showing where the story begins."
+      ]
+    },
+    {
+      "name": "Character Map",
+      "bestFor": "Kids who like inventing roles, questions, and calm choices.",
+      "steps": [
+        "Adult asks the writer to choose an invented role, such as keeper, finder, sorter, helper, or listener.",
+        "Writer places the role beside the story shape on the card.",
+        "Writer adds one question the character wonders about the pretend setting.",
+        "Writer writes one sentence about what the character notices first."
+      ]
+    },
+    {
+      "name": "Object Map",
+      "bestFor": "Families turning a simple paper clue into a useful story object.",
+      "steps": [
+        "Adult asks the writer to invent one gentle object for the card.",
+        "Writer gives the object one story job, such as guiding, reminding, hiding, sorting, or changing.",
+        "Writer sketches the object beside the story shape and adds one label.",
+        "Writer writes one sentence showing why the object matters."
+      ]
+    },
+    {
+      "name": "Sequence Map",
+      "bestFor": "Writers who need a beginning, middle, and ending paper path.",
+      "steps": [
+        "Adult points to the first, next, and finally spaces on the card.",
+        "Writer chooses one pretend setting and one invented character.",
+        "Writer fills the three spaces with calm story steps.",
+        "Writer circles the step that should become the first full paragraph."
+      ]
+    },
+    {
+      "name": "Sensory Map",
+      "bestFor": "Quiet writers who notice color, sound, shape, pattern, or texture words.",
+      "steps": [
+        "Adult asks the writer to choose one gentle sensory word from the paper list.",
+        "Writer pairs that word with the pretend setting, character, or object.",
+        "Writer adds the sensory word as a label on the story shape.",
+        "Writer writes one sentence where the sensory detail becomes a story clue."
+      ]
+    },
+    {
+      "name": "Revision Map",
+      "bestFor": "Writers strengthening one sentence from an earlier story map card.",
+      "steps": [
+        "Adult places the earlier sentence beside a blank revision map card.",
+        "Writer chooses one clearer color, sound, label, pattern, or texture word.",
+        "Writer copies the sentence and adds the clearer detail.",
+        "Writer underlines the word or phrase that improved the sentence most."
+      ]
+    }
+  ],
+  "takeHomeMapSlips": [
+    {
+      "title": "Quiet Setting Start",
+      "time": "5 minutes",
+      "s\u006bill": "setting map",
+      "direction": "Choose a pretend quiet-corner setting for your story shape: ____________________.",
+      "familyLine": "The setting begins to feel ____________________."
+    },
+    {
+      "title": "Character Role Dot",
+      "time": "6 minutes",
+      "s\u006bill": "character map",
+      "direction": "Invent a character role for the paper map: ____________________.",
+      "familyLine": "This character wants to know ____________________."
+    },
+    {
+      "title": "Object With a Job",
+      "time": "7 minutes",
+      "s\u006bill": "object map",
+      "direction": "Invent one gentle object for the story shape: ____________________.",
+      "familyLine": "The object helps the story because ____________________."
+    },
+    {
+      "title": "First Next Finally",
+      "time": "8 minutes",
+      "s\u006bill": "sequence map",
+      "direction": "Write the next calm story step on the paper path: ____________________.",
+      "familyLine": "The step we would write more about is ____________________."
+    },
+    {
+      "title": "Color Clue",
+      "time": "5 minutes",
+      "s\u006bill": "sensory map",
+      "direction": "Add one color word to the story map card: ____________________.",
+      "familyLine": "The color clue makes us picture ____________________."
+    },
+    {
+      "title": "Clearer Sentence",
+      "time": "6 minutes",
+      "s\u006bill": "revision map",
+      "direction": "Copy one story map sentence and improve one word: ____________________.",
+      "familyLine": "The revision helped because ____________________."
+    },
+    {
+      "title": "Sound Label",
+      "time": "7 minutes",
+      "s\u006bill": "sensory map",
+      "direction": "Choose one gentle sound word for the paper map: ____________________.",
+      "familyLine": "The sound clue points toward ____________________."
+    },
+    {
+      "title": "Tiny Object Turn",
+      "time": "8 minutes",
+      "s\u006bill": "object map",
+      "direction": "Write how a pretend object changes the story shape: ____________________.",
+      "familyLine": "The object changes the story when ____________________."
+    },
+    {
+      "title": "Character Choice Line",
+      "time": "9 minutes",
+      "s\u006bill": "character map",
+      "direction": "Write one calm choice for the invented character: ____________________.",
+      "familyLine": "The choice fits the story because ____________________."
+    },
+    {
+      "title": "Better Story Path",
+      "time": "6 minutes",
+      "s\u006bill": "sequence map",
+      "direction": "Choose one story path line to keep for later: ____________________.",
+      "familyLine": "The line we want to continue is ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Read one invented setting word from your card if you choose: ____________________.",
+    "Show one small paper sketch from the story shape: ____________________.",
+    "Name one invented character role without private details: ____________________.",
+    "Share one pretend object label from the card: ____________________.",
+    "Read one first, next, or finally line you like: ____________________.",
+    "Point to one sensory word that helped the story: ____________________.",
+    "Read one revised phrase that sounds clearer now: ____________________.",
+    "Circle one invented word or line you want to save for later: ____________________."
+  ]
+}

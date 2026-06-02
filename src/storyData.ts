@@ -438,6 +438,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable window-seat scene cards with adult guide tools, scene routines, and take-home scene slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'quiet-corner-story-map-card-pack',
+    title: 'Quiet Corner Story Map Card Pack',
+    pricePoint: '$31',
+    description:
+      'Sixteen printable quiet-corner story map cards with adult guide tools, map routines, and take-home map slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

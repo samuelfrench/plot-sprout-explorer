@@ -1,0 +1,519 @@
+{
+  "batchId": "2026-06-02-batch29",
+  "generatedAt": "2026-06-02",
+  "productSlug": "quiet-corner-story-map-card-pack",
+  "title": "Quiet Corner Story Map Card Pack",
+  "pricePoint": "$31",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.",
+  "sessionLength": "16 printable story map cards plus adult guide tools, map routines, take-home map slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/quiet-corner-story-map-card-pack/Quiet-Corner-Story-Map-Card-Pack.pdf",
+    "zipPath": "product-build/quiet-corner-story-map-card-pack/quiet-corner-story-map-card-pack.zip",
+    "sourceHtmlPath": "product-build/quiet-corner-story-map-card-pack/source/quiet-corner-story-map-card-pack.html",
+    "manifestPath": "product-build/quiet-corner-story-map-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch29-quiet-corner-map-cards-a.json",
+    "content/product-artifacts/lanes/batch29-quiet-corner-map-cards-b.json",
+    "content/product-artifacts/lanes/batch29-quiet-corner-map-cards-c.json",
+    "content/product-artifacts/lanes/batch29-quiet-corner-map-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable quiet-corner map cards",
+    "headline": "Quiet Corner Story Map Card Pack",
+    "subhead": "Sixteen paper story map cards turn fictional quiet-corner shapes into screen-free story starts.",
+    "included": [
+      "16 printable quiet-corner map cards",
+      "Adult setup guide",
+      "Fictional story-map safety notes",
+      "Story map coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led map routines",
+      "Ten take-home map slips",
+      "Eight optional share prompts",
+      "Local image-backed world menu",
+      "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Print the story map cards, take-home map slips, and adult guide before writers arrive.",
+      "Set the adult-led rule: every idea stays offline, paper-only, and made up for creative writing.",
+      "Explain that each story map is a fictional story-shape card, not a tool for finding anything.",
+      "Choose one map routine before the session so each writer has a calm paper path.",
+      "Keep pencils, blank cards, and broad idea words ready for writers ages 6-11."
+    ],
+    "quietCornerSetup": [
+      "Place story map cards, blank paper, pencils, and take-home slips where the adult can see every page.",
+      "Set six labeled piles: setting map, character map, object map, sequence map, sensory map, and revision map.",
+      "Use broad pretend setting words such as nook, shelf, lamp, cushion, curtain, garden, bell, basket, or doorway.",
+      "Leave room on each card for a title, one small story shape, three labels, and one first line.",
+      "Keep extra cards in an adult folder so the quiet corner stays simple, offline, and paper-only."
+    ],
+    "storyMapCoaching": [
+      "Ask for one pretend setting first, then turn it into a tiny story shape with one mood word.",
+      "Ask for one invented character role who notices, carries, sorts, waits, or changes something gentle.",
+      "Ask for one pretend object and give it a clear story job on the card.",
+      "Ask for first, next, and finally lines when the writer needs an easy paper path.",
+      "Ask the writer to revise one sentence by adding a clearer color, sound, label, pattern, or texture word."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented labels, role words, or blank spaces for every person on the story map cards.",
+      "Use broad setting words instead of private details, named rooms, clubs, or narrow routines.",
+      "Keep finished story map cards with the family adult, tutor, co-op adult, or classroom adult.",
+      "Make sharing optional and limited to one invented word, small sketch, or short line.",
+      "Check every take-home map slip for private details before it leaves the adult-led table."
+    ],
+    "familyHandoff": [
+      "Send one finished story map card and one blank take-home map slip with each writer.",
+      "Tell family adults that five to nine quiet minutes is enough for one extra story map clue.",
+      "Invite the family adult to ask for one pretend setting, one invented character, and one pretend object.",
+      "Ask adults to praise one clear word, sketch, or sentence before suggesting one small revision.",
+      "Suggest keeping story map cards together so the writer can reuse the strongest paper clue in a later story."
+    ],
+    "reset": [
+      "Collect unused story map cards, take-home map slips, pencils, and broad idea cards.",
+      "Check finished story map cards for private details before they go with the family adult.",
+      "Recycle scrap pages that only hold warm-up marks.",
+      "Restock the adult folder with fresh story map cards for the next offline session."
+    ]
+  },
+  "mapRoutines": [
+    {
+      "name": "Setting Map",
+      "bestFor": "Writers who need one pretend setting before adding story action.",
+      "steps": [
+        "Adult points to one broad pretend setting word on the paper card.",
+        "Writer draws a small story shape and labels the setting with a mood word.",
+        "Writer adds one look detail that belongs inside the made-up quiet corner.",
+        "Writer writes one first line showing where the story begins."
+      ]
+    },
+    {
+      "name": "Character Map",
+      "bestFor": "Kids who like inventing roles, questions, and calm choices.",
+      "steps": [
+        "Adult asks the writer to choose an invented role, such as keeper, finder, sorter, helper, or listener.",
+        "Writer places the role beside the story shape on the card.",
+        "Writer adds one question the character wonders about the pretend setting.",
+        "Writer writes one sentence about what the character notices first."
+      ]
+    },
+    {
+      "name": "Object Map",
+      "bestFor": "Families turning a simple paper clue into a useful story object.",
+      "steps": [
+        "Adult asks the writer to invent one gentle object for the card.",
+        "Writer gives the object one story job, such as guiding, reminding, hiding, sorting, or changing.",
+        "Writer sketches the object beside the story shape and adds one label.",
+        "Writer writes one sentence showing why the object matters."
+      ]
+    },
+    {
+      "name": "Sequence Map",
+      "bestFor": "Writers who need a beginning, middle, and ending paper path.",
+      "steps": [
+        "Adult points to the first, next, and finally spaces on the card.",
+        "Writer chooses one pretend setting and one invented character.",
+        "Writer fills the three spaces with calm story steps.",
+        "Writer circles the step that should become the first full paragraph."
+      ]
+    },
+    {
+      "name": "Sensory Map",
+      "bestFor": "Quiet writers who notice color, sound, shape, pattern, or texture words.",
+      "steps": [
+        "Adult asks the writer to choose one gentle sensory word from the paper list.",
+        "Writer pairs that word with the pretend setting, character, or object.",
+        "Writer adds the sensory word as a label on the story shape.",
+        "Writer writes one sentence where the sensory detail becomes a story clue."
+      ]
+    },
+    {
+      "name": "Revision Map",
+      "bestFor": "Writers strengthening one sentence from an earlier story map card.",
+      "steps": [
+        "Adult places the earlier sentence beside a blank revision map card.",
+        "Writer chooses one clearer color, sound, label, pattern, or texture word.",
+        "Writer copies the sentence and adds the clearer detail.",
+        "Writer underlines the word or phrase that improved the sentence most."
+      ]
+    }
+  ],
+  "takeHomeMapSlips": [
+    {
+      "title": "Quiet Setting Start",
+      "time": "5 minutes",
+      "skill": "setting map",
+      "direction": "Choose a pretend quiet-corner setting for your story shape: ____________________.",
+      "familyLine": "The setting begins to feel ____________________."
+    },
+    {
+      "title": "Character Role Dot",
+      "time": "6 minutes",
+      "skill": "character map",
+      "direction": "Invent a character role for the paper map: ____________________.",
+      "familyLine": "This character wants to know ____________________."
+    },
+    {
+      "title": "Object With a Job",
+      "time": "7 minutes",
+      "skill": "object map",
+      "direction": "Invent one gentle object for the story shape: ____________________.",
+      "familyLine": "The object helps the story because ____________________."
+    },
+    {
+      "title": "First Next Finally",
+      "time": "8 minutes",
+      "skill": "sequence map",
+      "direction": "Write the next calm story step on the paper path: ____________________.",
+      "familyLine": "The step we would write more about is ____________________."
+    },
+    {
+      "title": "Color Clue",
+      "time": "5 minutes",
+      "skill": "sensory map",
+      "direction": "Add one color word to the story map card: ____________________.",
+      "familyLine": "The color clue makes us picture ____________________."
+    },
+    {
+      "title": "Clearer Sentence",
+      "time": "6 minutes",
+      "skill": "revision map",
+      "direction": "Copy one story map sentence and improve one word: ____________________.",
+      "familyLine": "The revision helped because ____________________."
+    },
+    {
+      "title": "Sound Label",
+      "time": "7 minutes",
+      "skill": "sensory map",
+      "direction": "Choose one gentle sound word for the paper map: ____________________.",
+      "familyLine": "The sound clue points toward ____________________."
+    },
+    {
+      "title": "Tiny Object Turn",
+      "time": "8 minutes",
+      "skill": "object map",
+      "direction": "Write how a pretend object changes the story shape: ____________________.",
+      "familyLine": "The object changes the story when ____________________."
+    },
+    {
+      "title": "Character Choice Line",
+      "time": "9 minutes",
+      "skill": "character map",
+      "direction": "Write one calm choice for the invented character: ____________________.",
+      "familyLine": "The choice fits the story because ____________________."
+    },
+    {
+      "title": "Better Story Path",
+      "time": "6 minutes",
+      "skill": "sequence map",
+      "direction": "Choose one story path line to keep for later: ____________________.",
+      "familyLine": "The line we want to continue is ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Read one invented setting word from your card if you choose: ____________________.",
+    "Show one small paper sketch from the story shape: ____________________.",
+    "Name one invented character role without private details: ____________________.",
+    "Share one pretend object label from the card: ____________________.",
+    "Read one first, next, or finally line you like: ____________________.",
+    "Point to one sensory word that helped the story: ____________________.",
+    "Read one revised phrase that sounds clearer now: ____________________.",
+    "Circle one invented word or line you want to save for later: ____________________."
+  ],
+  "cards": [
+    {
+      "id": "quiet-map-card-01",
+      "title": "Moon Muffin Market",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "mapSkill": "setting map",
+      "useCase": "Adult-led, offline, paper-only story map card for building one cozy market setting from invented map clues: ____________________.",
+      "adultSetup": "Print the card, place it beside a blank page, and ask the writer to draw one stall, one sign, and one quiet corner: ____________________.",
+      "kidDirection": "Pretend the Moon Muffin Market fits on this paper map; choose where the first stall sits and what makes it special: ____________________.",
+      "mapFrontPrompt": "Map front: Draw a fictional market corner with a moon muffin stall beside ____________________.",
+      "mapBackPrompt": "Map back: Add one tiny setting label for the stall light, table shape, or crumb basket: ____________________.",
+      "storyShapePrompt": "Story shape: The setting feels different when the map line bends toward ____________________.",
+      "firstLineBridge": "First line bridge: At the Moon Muffin Market, the first stall waited beside ____________________.",
+      "revisionNudge": "Revision nudge: Replace one plain place word with a clearer market detail: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch one stall shape first, then write its setting word: ____________________.",
+      "takeHomeLine": "Take-home line: Add one more pretend market corner on paper: ____________________."
+    },
+    {
+      "id": "quiet-map-card-02",
+      "title": "Puddle Planet Post Office",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "mapSkill": "message map",
+      "useCase": "Adult-led, offline, paper-only story map card for sending a pretend message across a puddle-shaped story path: ____________________.",
+      "adultSetup": "Print the card, draw two puddle circles and a tiny paper mailbox, and remind the writer every note is made up: ____________________.",
+      "kidDirection": "Imagine a pretend message starts at the splash tray; choose what it says in three safe words or a tiny symbol: ____________________.",
+      "mapFrontPrompt": "Map front: The pretend message starts in the splash tray and moves across a paper path to ____________________.",
+      "mapBackPrompt": "Map back: Add a stamped shape, puddle color, or helper job that changes the message: ____________________.",
+      "storyShapePrompt": "Story shape: The message map changes when the puddle helper finds ____________________.",
+      "firstLineBridge": "First line bridge: The puddle note floated toward ____________________, so the helper decided ____________________.",
+      "revisionNudge": "Revision nudge: Add one exact message word or clue that a reader can picture: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the message as a small folded shape, then label it: ____________________.",
+      "takeHomeLine": "Take-home line: Make a second pretend message for the Puddle Planet table: ____________________."
+    },
+    {
+      "id": "quiet-map-card-03",
+      "title": "Buttonwood Library Train",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "mapSkill": "sequence map",
+      "useCase": "Adult-led, offline, paper-only story map card for placing three gentle train clues in story order: ____________________.",
+      "adultSetup": "Print the card, draw three small boxcars on scrap paper, and let the writer point to first, next, and last: ____________________.",
+      "kidDirection": "Pretend the Buttonwood Library Train carries story clues; put the shelf card, bell, and book cart in an order: ____________________.",
+      "mapFrontPrompt": "Map front: First clue on the library train map line: ____________________.",
+      "mapBackPrompt": "Map back: Next clue: ____________________. Last quiet clue: ____________________.",
+      "storyShapePrompt": "Story shape: The train story begins, turns, and settles when the three clues line up beside ____________________.",
+      "firstLineBridge": "First line bridge: First the library train found ____________________, then it rolled gently toward ____________________.",
+      "revisionNudge": "Revision nudge: Add one word that shows why the next clue belongs after the first: ____________________.",
+      "quietOptionLine": "Quiet option: Number three boxcars and fill only the first clue: ____________________.",
+      "takeHomeLine": "Take-home line: Retell the train sequence with one new final clue: ____________________."
+    },
+    {
+      "id": "quiet-map-card-04",
+      "title": "Button Bakery Map Mix-Up",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "mapSkill": "mix-up map",
+      "useCase": "Adult-led, offline, paper-only story map card for untangling one mixed-up bakery clue on a fictional map: ____________________.",
+      "adultSetup": "Print the card, draw three crumb dots and one button tray, and invite the writer to move one clue on paper: ____________________.",
+      "kidDirection": "Pretend Button Bakery mixed up the map labels; choose which label belongs with the tray, the lamp, or the counter: ____________________.",
+      "mapFrontPrompt": "Map front: The mixed-up bakery label points to ____________________, but it should point to ____________________.",
+      "mapBackPrompt": "Map back: Add the clue that helps the helper fix the paper map mix-up: ____________________.",
+      "storyShapePrompt": "Story shape: The mix-up turns into a story when the correct map line reaches ____________________.",
+      "firstLineBridge": "First line bridge: At Button Bakery, the label for ____________________ sat beside the wrong crumb clue.",
+      "revisionNudge": "Revision nudge: Make the mix-up clearer by naming the two swapped details: ____________________.",
+      "quietOptionLine": "Quiet option: Draw two small dots, then circle the one that belongs first: ____________________.",
+      "takeHomeLine": "Take-home line: Add one new pretend bakery label to sort later: ____________________."
+    },
+    {
+      "id": "quiet-map-card-05",
+      "title": "Teacup Town Weather Window",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "mapSkill": "sensory map",
+      "useCase": "Adult-led, offline, paper-only story map card for adding color, sound, and texture to a tiny Teacup Town map: ____________________.",
+      "adultSetup": "Print the card, set out a pencil, and ask for one gentle sensory mark before any sentence: ____________________.",
+      "kidDirection": "Pretend the Teacup Town window shows a tiny map; choose one color, one soft sound, or one texture clue: ____________________.",
+      "mapFrontPrompt": "Map front: The teacup window shines over a paper corner colored like ____________________.",
+      "mapBackPrompt": "Map back: Add the soft sound or texture that belongs beside that corner: ____________________.",
+      "storyShapePrompt": "Story shape: The sensory map changes mood when the window shows ____________________.",
+      "firstLineBridge": "First line bridge: The Teacup Town window glowed like ____________________, and the paper corner felt ____________________.",
+      "revisionNudge": "Revision nudge: Trade one plain describing word for a clearer sensory word: ____________________.",
+      "quietOptionLine": "Quiet option: Make one tiny color mark, then name the feeling: ____________________.",
+      "takeHomeLine": "Take-home line: Add a second Teacup Town sensory clue on paper: ____________________."
+    },
+    {
+      "id": "quiet-map-card-06",
+      "title": "Pocket Park Notice Board",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "mapSkill": "notice map",
+      "useCase": "Adult-led, offline, paper-only story map card for turning one pretend notice into a tiny park story clue: ____________________.",
+      "adultSetup": "Print the card, draw a small board and two paper paths, and ask the writer to invent a short notice: ____________________.",
+      "kidDirection": "Imagine Pocket Park has a tiny notice board; write what the pretend notice asks a character to look for: ____________________.",
+      "mapFrontPrompt": "Map front: The Pocket Park notice says, Look near ____________________.",
+      "mapBackPrompt": "Map back: The clue beside the board is shaped like ____________________.",
+      "storyShapePrompt": "Story shape: The notice map becomes a story when someone finds ____________________.",
+      "firstLineBridge": "First line bridge: Under the Pocket Park notice board, ____________________ waited beside a folded leaf.",
+      "revisionNudge": "Revision nudge: Make the notice more useful by adding one exact object or place detail: ____________________.",
+      "quietOptionLine": "Quiet option: Copy one notice word neatly, then sketch its clue: ____________________.",
+      "takeHomeLine": "Take-home line: Make one more Pocket Park notice for a new story corner: ____________________."
+    },
+    {
+      "id": "quiet-map-card-07",
+      "title": "Spoon Ferry Lunchbox Harbor",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "mapSkill": "object map",
+      "useCase": "Adult-led offline paper story map card for turning one pretend lunchbox object into a clear story start: ____________________.",
+      "adultSetup": "Print the card, place a blank paper map box beside it, and ask the writer to choose one invented harbor object: ____________________.",
+      "kidDirection": "Draw one lunchbox harbor object, then add where it sits on the fictional paper path: ____________________.",
+      "mapFrontPrompt": "Map front: In Spoon Ferry Lunchbox Harbor, the most important object is ____________________.",
+      "mapBackPrompt": "Map back: Add one label, one nearby helper, and one tiny job for the object: ____________________.",
+      "storyShapePrompt": "Story shape: The story begins when the object is moved from ____________________ to ____________________.",
+      "firstLineBridge": "First line bridge: At the edge of the lunchbox harbor, I found ____________________ beside ____________________.",
+      "revisionNudge": "Revision nudge: Replace one plain object word with a sharper detail: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch the object first, then write its label: ____________________.",
+      "takeHomeLine": "Take-home line: Save this object map and add one more harbor clue at home: ____________________."
+    },
+    {
+      "id": "quiet-map-card-08",
+      "title": "Acorn Avenue Errand Office",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "mapSkill": "helper map",
+      "useCase": "Adult-led offline paper story map card for planning one pretend helper job in an errand office: ____________________.",
+      "adultSetup": "Print the card, draw three small office spots, and invite the writer to place one helper on the paper map: ____________________.",
+      "kidDirection": "Choose an errand helper, mark where they begin, and write what they carry: ____________________.",
+      "mapFrontPrompt": "Map front: The Acorn Avenue helper starts at ____________________ with ____________________.",
+      "mapBackPrompt": "Map back: Helper notes: careful job ____________________, needed object ____________________, next paper stop ____________________.",
+      "storyShapePrompt": "Story shape: The helper changes the story when they notice ____________________.",
+      "firstLineBridge": "First line bridge: The errand office helper held ____________________ and looked toward ____________________.",
+      "revisionNudge": "Revision nudge: Add one action that shows how the helper helps: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the helper's hands, then label what they hold: ____________________.",
+      "takeHomeLine": "Take-home line: Bring this helper map home and add one new office label: ____________________."
+    },
+    {
+      "id": "quiet-map-card-09",
+      "title": "Seed Library Map Room",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "mapSkill": "clue map",
+      "useCase": "Adult-led offline paper story map card for placing one invented seed-library clue on a fictional map line: ____________________.",
+      "adultSetup": "Print the card, add a simple map-room table shape, and ask the writer to invent one clue label: ____________________.",
+      "kidDirection": "Put one clue in the Seed Library Map Room, then write what it helps a character understand: ____________________.",
+      "mapFrontPrompt": "Map front: The seed-library clue is tucked near ____________________ and says ____________________.",
+      "mapBackPrompt": "Map back: Clue notes: drawer label ____________________, hidden detail ____________________, question it raises ____________________.",
+      "storyShapePrompt": "Story shape: The clue turns the story from looking to choosing when ____________________.",
+      "firstLineBridge": "First line bridge: Under the map-room label, ____________________ waited for someone to notice.",
+      "revisionNudge": "Revision nudge: Add one exact clue word that a reader can picture: ____________________.",
+      "quietOptionLine": "Quiet option: Copy the clue label neatly, then circle the strongest word: ____________________.",
+      "takeHomeLine": "Take-home line: Use this clue map later to begin a seed-library paragraph: ____________________."
+    },
+    {
+      "id": "quiet-map-card-10",
+      "title": "Rain Gauge Railway",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "mapSkill": "pattern map",
+      "useCase": "Adult-led offline paper story map card for arranging a pretend rain-gauge pattern into a story start: ____________________.",
+      "adultSetup": "Print the card, draw four small gauge marks, and invite the writer to choose a repeating paper pattern: ____________________.",
+      "kidDirection": "Make a rain-gauge pattern, name what repeats, and write how the railway helper reads it: ____________________.",
+      "mapFrontPrompt": "Map front: The rain-gauge pattern repeats ____________________, ____________________, then ____________________.",
+      "mapBackPrompt": "Map back: Pattern notes: first mark ____________________, repeat mark ____________________, story meaning ____________________.",
+      "storyShapePrompt": "Story shape: The pattern changes the story when the next mark should be ____________________ but becomes ____________________.",
+      "firstLineBridge": "First line bridge: Beside the Rain Gauge Railway, the marks repeated until ____________________ appeared.",
+      "revisionNudge": "Revision nudge: Add one shape, color, or sound word so the pattern is easier to follow: ____________________.",
+      "quietOptionLine": "Quiet option: Number the marks quietly, then write the repeated part: ____________________.",
+      "takeHomeLine": "Take-home line: Save this pattern map and add the next railway mark later: ____________________."
+    },
+    {
+      "id": "quiet-map-card-11",
+      "title": "Moss Message Observatory",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "mapSkill": "message map",
+      "useCase": "Adult-led offline paper story map card for turning one pretend moss message into a private story clue: ____________________.",
+      "adultSetup": "Print the card, draw a quiet observatory corner, and ask the writer to invent one moss message mark: ____________________.",
+      "kidDirection": "Design a moss message, place it on the story map, and write what it might mean: ____________________.",
+      "mapFrontPrompt": "Map front: The moss message appears on ____________________ and looks like ____________________.",
+      "mapBackPrompt": "Map back: Message notes: mark shape ____________________, quiet meaning ____________________, who notices it ____________________.",
+      "storyShapePrompt": "Story shape: The message matters because it asks the character to ____________________.",
+      "firstLineBridge": "First line bridge: In the Moss Message Observatory, ____________________ appeared beside ____________________.",
+      "revisionNudge": "Revision nudge: Add one texture word to make the moss message clearer: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the message silently, then give it a two-word name: ____________________.",
+      "takeHomeLine": "Take-home line: Keep this message map and write one more observatory clue: ____________________."
+    },
+    {
+      "id": "quiet-map-card-12",
+      "title": "Tidepool Timekeepers Lab",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "mapSkill": "time map",
+      "useCase": "Adult-led, offline, paper-only printable story map card for arranging pretend tidepool lab moments from first clue to final change: ____________________.",
+      "adultSetup": "Print one card, set out pencils, and ask the writer to invent a tiny tidepool lab where paper shells mark story moments: ____________________.",
+      "kidDirection": "Draw a pretend map line through three lab moments, then write what changes between the first and last mark: ____________________.",
+      "mapFrontPrompt": "Map front: Place three paper shells on the lab map line for first, next, and finally; the first shell shows ____________________.",
+      "mapBackPrompt": "Map back: Add one small lab detail that changes after the middle shell, such as a jar, chart, clock face, or note: ____________________.",
+      "storyShapePrompt": "Story shape: The time map begins when ____________________, turns when ____________________, and ends when ____________________.",
+      "firstLineBridge": "First line bridge: Begin the story with the first tidepool lab moment and one clear clue: ____________________.",
+      "revisionNudge": "Revision nudge: Check that the three moments happen in a clear order, then sharpen one time word: ____________________.",
+      "quietOptionLine": "Quiet option: Number the three shells silently before writing the middle moment here: ____________________.",
+      "takeHomeLine": "Take-home line: Take this paper time map home and add one final tidepool lab sentence about ____________________."
+    },
+    {
+      "id": "quiet-map-card-13",
+      "title": "Revision River Ferry",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "mapSkill": "revision map",
+      "useCase": "Adult-led, offline, paper-only printable story map card for moving a draft idea from fuzzy to clear across a fictional ferry page: ____________________.",
+      "adultSetup": "Print one card, fold a scrap page into two ferry docks, and label one side draft and one side clearer draft: ____________________.",
+      "kidDirection": "Write one draft sentence on the first dock, then use the ferry map line to carry a better version to the second dock: ____________________.",
+      "mapFrontPrompt": "Map front: The first ferry dock holds this draft sentence: ____________________.",
+      "mapBackPrompt": "Map back: The second ferry dock holds my clearer sentence with one stronger detail: ____________________.",
+      "storyShapePrompt": "Story shape: The revision map crosses from a plain idea to a clearer idea by changing ____________________.",
+      "firstLineBridge": "First line bridge: Start with the improved ferry sentence so the reader can picture ____________________.",
+      "revisionNudge": "Revision nudge: Circle one vague word on the first dock and replace it with a concrete word on the second dock: ____________________.",
+      "quietOptionLine": "Quiet option: Work silently by copying only the clearer sentence onto the back dock: ____________________.",
+      "takeHomeLine": "Take-home line: Take this ferry revision map home and use it to polish one story sentence about ____________________."
+    },
+    {
+      "id": "quiet-map-card-14",
+      "title": "Clue Label Tower Museum",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "mapSkill": "label map",
+      "useCase": "Adult-led, offline, paper-only printable story map card for labeling invented museum clues so a quiet mystery scene feels clear: ____________________.",
+      "adultSetup": "Print one card, draw three blank label boxes, and remind the writer that every label belongs to a made-up exhibit: ____________________.",
+      "kidDirection": "Choose three invented exhibit clues, label each one, and connect the labels with a fictional map line: ____________________.",
+      "mapFrontPrompt": "Map front: The first tower museum label names an exhibit shaped like ____________________.",
+      "mapBackPrompt": "Map back: Add two more label clues, one for a texture and one for a sound: ____________________.",
+      "storyShapePrompt": "Story shape: The label map makes the story clearer because the first clue points to ____________________.",
+      "firstLineBridge": "First line bridge: Begin with the label that would make a reader lean closer: ____________________.",
+      "revisionNudge": "Revision nudge: Replace one plain label with a sharper clue that names color, shape, texture, or sound: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch one tiny label box first, then write its best clue here: ____________________.",
+      "takeHomeLine": "Take-home line: Take this museum label map home and turn one clue into a first paragraph about ____________________."
+    },
+    {
+      "id": "quiet-map-card-15",
+      "title": "Compass Craft Academy",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "mapSkill": "choice map",
+      "useCase": "Adult-led, offline, paper-only printable story map card for showing how one fictional academy choice changes a character's next step: ____________________.",
+      "adultSetup": "Print one card, draw a paper compass with four invented choice points, and ask the writer to pick two possible story moves: ____________________.",
+      "kidDirection": "Place a character at the center of the compass, choose one paper path, and explain why that choice matters: ____________________.",
+      "mapFrontPrompt": "Map front: The compass center shows a character who must choose between ____________________ and ____________________.",
+      "mapBackPrompt": "Map back: The chosen paper path leads to a new problem, helper, object, or question: ____________________.",
+      "storyShapePrompt": "Story shape: The choice map turns when the character decides ____________________ because ____________________.",
+      "firstLineBridge": "First line bridge: Start at the compass center with the moment before the choice: ____________________.",
+      "revisionNudge": "Revision nudge: Add one visible clue that proves the character made a clear choice: ____________________.",
+      "quietOptionLine": "Quiet option: Mark one compass point silently, then write the chosen story move here: ____________________.",
+      "takeHomeLine": "Take-home line: Take this choice map home and write what happens after the academy compass points toward ____________________."
+    },
+    {
+      "id": "quiet-map-card-16",
+      "title": "Binding Day Boardwalk",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "mapSkill": "order map",
+      "useCase": "Adult-led, offline, paper-only printable story map card for putting boardwalk story pages into a clear beginning, middle, and ending order: ____________________.",
+      "adultSetup": "Print one card, cut or draw three paper page spots, and invite the writer to arrange a made-up boardwalk story: ____________________.",
+      "kidDirection": "Fill three page spots with story moments, then draw a map line that shows the order a reader should follow: ____________________.",
+      "mapFrontPrompt": "Map front: The first boardwalk page belongs at the start because it shows ____________________.",
+      "mapBackPrompt": "Map back: The middle page changes the story by adding ____________________, and the final page answers ____________________.",
+      "storyShapePrompt": "Story shape: The order map works when page one leads to ____________________, then the ending lands on ____________________.",
+      "firstLineBridge": "First line bridge: Begin with the boardwalk page that makes the next two moments make sense: ____________________.",
+      "revisionNudge": "Revision nudge: Move one page spot if the order feels jumpy, then write the bridge word or phrase that helps: ____________________.",
+      "quietOptionLine": "Quiet option: Number the three page spots silently, then copy the final order here: ____________________.",
+      "takeHomeLine": "Take-home line: Take this order map home and finish the boardwalk story with one clear ending sentence: ____________________."
+    }
+  ]
+}
