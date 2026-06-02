@@ -1,0 +1,227 @@
+{
+  "batchId": "2026-06-02-batch9",
+  "lane": "classroom-prompt-cards-a",
+  "generatedAt": "2026-06-02",
+  "promptCards": [
+    {
+      "id": "card-a-acorn-avenue-setting-clues",
+      "worldSlug": "acorn-avenue-errand-office",
+      "title": "Acorn Avenue Setting Clues",
+      "skillFocus": "setting detail",
+      "teacherSetup": "Post this card at a writing station and ask students to circle one route choice before drafting.",
+      "studentPrompt": "Describe Acorn Avenue on a busy errand morning so a reader can picture where your helper is going.",
+      "choiceSet": [
+        "leafy desk",
+        "tiny mail cart",
+        "squirrel bell"
+      ],
+      "writingLines": [
+        "The first place my helper sees is ____________________",
+        "A tiny sign on the route says ____________________",
+        "The path feels busy because ____________________",
+        "One extra setting detail I will add is ____________________"
+      ],
+      "shareMove": "Ask partners to point to the clearest place detail without correcting the draft.",
+      "extension": "Have students sketch a two-stop map and label one detail from their writing.",
+      "rubricLookFor": "The draft includes at least two concrete place details that match the chosen route."
+    },
+    {
+      "id": "card-a-button-bakery-choice-helper",
+      "worldSlug": "button-bakery-map-mixup",
+      "title": "Button Bakery Choice Helper",
+      "skillFocus": "character choice",
+      "teacherSetup": "Give students thirty seconds to choose a bakery job before they write the scene.",
+      "studentPrompt": "Write about a bakery helper who must choose the best way to fix a mixed-up crumb map.",
+      "choiceSet": [
+        "turn the map",
+        "ask the baker",
+        "follow warm crumbs"
+      ],
+      "writingLines": [
+        "My helper notices the map problem when ____________________",
+        "The choice my helper makes is ____________________",
+        "This choice is smart because ____________________",
+        "Another choice my helper could try is ____________________"
+      ],
+      "shareMove": "Invite students to read only the sentence that explains why the choice makes sense.",
+      "extension": "Students trade cards and list one kind consequence of a different choice.",
+      "rubricLookFor": "The writing names a clear character choice and gives a reason for it."
+    },
+    {
+      "id": "card-a-teacup-town-forecast-order",
+      "worldSlug": "teacup-town-weather-window",
+      "title": "Teacup Town Forecast Order",
+      "skillFocus": "sequence",
+      "teacherSetup": "Ask students to number the three choices before completing the writing lines.",
+      "studentPrompt": "Create a Teacup Town forecast scene that shows what happens first, next, and last.",
+      "choiceSet": [
+        "steam cloud",
+        "spoon window",
+        "cup bridge"
+      ],
+      "writingLines": [
+        "First, the weather watcher sees ____________________",
+        "Next, the town changes its plan by ____________________",
+        "After that, my character helps by ____________________",
+        "Last, the forecast note says ____________________"
+      ],
+      "shareMove": "Have partners hold up one, two, and three fingers as the sequence is read.",
+      "extension": "Students add a fourth step that still fits the order of the scene.",
+      "rubricLookFor": "The draft uses sequence language to show events in a logical order."
+    },
+    {
+      "id": "card-a-pocket-park-notice-chat",
+      "worldSlug": "pocket-park-notice-board",
+      "title": "Pocket Park Notice Chat",
+      "skillFocus": "dialogue",
+      "teacherSetup": "Model one spoken line with quotation marks before students write their own park notice conversation.",
+      "studentPrompt": "Write a friendly conversation about which notice should go on the Pocket Park board first.",
+      "choiceSet": [
+        "lost mitten",
+        "picnic rule",
+        "garden meeting"
+      ],
+      "writingLines": [
+        "The first speaker says ____________________",
+        "The second speaker answers ____________________",
+        "The notice board question is ____________________",
+        "The conversation helps because ____________________"
+      ],
+      "shareMove": "Let pairs read the two spoken lines quietly using classroom voices.",
+      "extension": "Students revise one line so it sounds more like the speaker who says it.",
+      "rubricLookFor": "The dialogue includes two speakers and moves the notice-board problem forward."
+    },
+    {
+      "id": "card-a-penny-path-clearer-sentence",
+      "worldSlug": "penny-path-compass-shop",
+      "title": "Penny Path Clearer Sentence",
+      "skillFocus": "revision",
+      "teacherSetup": "Ask students to draft one quick direction sentence, then improve it with a clearer clue.",
+      "studentPrompt": "Help the compass shop owner revise a confusing direction into a sentence travelers can follow.",
+      "choiceSet": [
+        "shine clue",
+        "street corner",
+        "shop window"
+      ],
+      "writingLines": [
+        "My first direction sentence is ____________________",
+        "The confusing part is ____________________",
+        "I can make it clearer by adding ____________________",
+        "My revised direction sentence is ____________________"
+      ],
+      "shareMove": "Ask students to show a partner only the before-and-after change.",
+      "extension": "Students underline the exact words they added during revision.",
+      "rubricLookFor": "The revised sentence is more specific than the first sentence."
+    },
+    {
+      "id": "card-a-rain-boot-route-sense-walk",
+      "worldSlug": "rain-boot-route-rangers",
+      "title": "Rain Boot Route Sense Walk",
+      "skillFocus": "sensory detail",
+      "teacherSetup": "Read the choices aloud and have students pick one sense to emphasize in their route description.",
+      "studentPrompt": "Describe a Rain Boot Route Rangers walk using safe sound, sight, or touch details.",
+      "choiceSet": [
+        "plink sound",
+        "bright puddle",
+        "squishy path"
+      ],
+      "writingLines": [
+        "My route begins with this sound ____________________",
+        "The brightest thing I see is ____________________",
+        "The path feels like ____________________",
+        "The sensory detail that helps most is ____________________"
+      ],
+      "shareMove": "Invite students to read one sensory phrase while classmates listen for the sense used.",
+      "extension": "Students add one color word and one texture word to the same scene.",
+      "rubricLookFor": "The writing uses at least two sensory details connected to the route."
+    },
+    {
+      "id": "card-a-tidepool-lab-problem-fix",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "title": "Tidepool Lab Problem Fix",
+      "skillFocus": "problem-solution",
+      "teacherSetup": "Have students mark P for problem and S for solution beside their lines after writing.",
+      "studentPrompt": "Write about a tidepool lab note that does not match and how the timekeepers solve it calmly.",
+      "choiceSet": [
+        "shell clock",
+        "pebble chart",
+        "water mark"
+      ],
+      "writingLines": [
+        "The lab problem begins when ____________________",
+        "The clue that helps is ____________________",
+        "The timekeepers solve it by ____________________",
+        "The lab is ready again because ____________________"
+      ],
+      "shareMove": "Ask partners to identify the problem sentence and the solution sentence.",
+      "extension": "Students add a labeled diagram that shows the clue used to solve the problem.",
+      "rubricLookFor": "The writing states a problem and a matching solution."
+    },
+    {
+      "id": "card-a-greenhouse-gear-ending-choice",
+      "worldSlug": "greenhouse-gear-garden",
+      "title": "Greenhouse Gear Ending Choice",
+      "skillFocus": "ending choice",
+      "teacherSetup": "Ask students to choose the ending mood before drafting the final four lines.",
+      "studentPrompt": "Write an ending for a greenhouse story where the helper decides what the gears should do next.",
+      "choiceSet": [
+        "quiet ending",
+        "surprise ending",
+        "team ending"
+      ],
+      "writingLines": [
+        "At the end, the greenhouse helper chooses ____________________",
+        "The gears respond by ____________________",
+        "The plants show the ending is working when ____________________",
+        "My final sentence will leave the reader thinking ____________________"
+      ],
+      "shareMove": "Let students name their ending mood before reading the final sentence.",
+      "extension": "Students write a second possible ending with a different mood.",
+      "rubricLookFor": "The ending choice fits the greenhouse problem and gives the scene a clear finish."
+    },
+    {
+      "id": "card-a-pantry-measurement-sentence-mix",
+      "worldSlug": "pantry-measurement-mystery",
+      "title": "Pantry Measurement Sentence Mix",
+      "skillFocus": "sentence variety",
+      "teacherSetup": "Write short, medium, and question on the board before students complete the pantry scene.",
+      "studentPrompt": "Tell a pantry mystery moment using different kinds of sentences so the writing does not sound the same each time.",
+      "choiceSet": [
+        "measuring cup",
+        "crumb trail",
+        "recipe card"
+      ],
+      "writingLines": [
+        "My short sentence is ____________________",
+        "My longer detail sentence is ____________________",
+        "My question sentence is ____________________",
+        "The sentence I like best is ____________________"
+      ],
+      "shareMove": "Ask students to read two sentences and let a partner name how they are different.",
+      "extension": "Students reorder their sentences and choose which order sounds clearest.",
+      "rubricLookFor": "The draft includes at least two sentence lengths or sentence types."
+    },
+    {
+      "id": "card-a-rain-gauge-railway-table-share",
+      "worldSlug": "rain-gauge-railway",
+      "title": "Rain Gauge Railway Table Share",
+      "skillFocus": "peer sharing",
+      "teacherSetup": "Use this card after a five-minute quickwrite and set a timer for quiet partner sharing.",
+      "studentPrompt": "Prepare one Rain Gauge Railway sentence you are comfortable sharing with a partner or small table group.",
+      "choiceSet": [
+        "train stop",
+        "rain number",
+        "ticket note"
+      ],
+      "writingLines": [
+        "The sentence I might share is ____________________",
+        "The part I want listeners to notice is ____________________",
+        "One question I can ask a partner is ____________________",
+        "One kind response I can give is ____________________"
+      ],
+      "shareMove": "Students may read one sentence, point to one line, or pass while still listening.",
+      "extension": "Students use one partner response to add a clearer rain or railway detail.",
+      "rubricLookFor": "The student prepares a shareable sentence and participates in a respectful response routine."
+    }
+  ]
+}
