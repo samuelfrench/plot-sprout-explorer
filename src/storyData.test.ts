@@ -4,6 +4,7 @@ import {
   buildImagePrompt,
   buildQuestPack,
   getQuestBySlug,
+  productLinks,
   questWorlds,
 } from './storyData'
 
@@ -37,5 +38,16 @@ describe('storyData', () => {
     expect(prompt).toContain('No text')
     expect(prompt).toContain('no logos')
     expect(prompt).toContain('storybook illustration')
+  })
+
+  it('exposes checkout-pending product links for both paid printable bundles', () => {
+    expect(productLinks.map((product) => product.slug)).toEqual([
+      'rainy-day-story-quest-pack',
+      'homeschool-season-story-bundle',
+    ])
+    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29'])
+    for (const product of productLinks) {
+      expect(product.note).toMatch(/No checkout/i)
+    }
   })
 })

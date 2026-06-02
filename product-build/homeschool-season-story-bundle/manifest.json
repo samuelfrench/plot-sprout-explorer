@@ -1,0 +1,83 @@
+{
+  "batchId": "2026-06-02-batch8",
+  "generatedAt": "2026-06-02",
+  "productSlug": "homeschool-season-story-bundle",
+  "title": "Homeschool Season Story Bundle",
+  "pricePoint": "$29",
+  "sourcePageCount": 12,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/homeschool-season-story-bundle/Homeschool-Season-Story-Bundle.pdf",
+      "sha256": "261785955450dac3a68e4ef8311954d9ca10896cac9e660dee3842211c93a8d8",
+      "size": 3195341
+    },
+    "zip": {
+      "path": "product-build/homeschool-season-story-bundle/homeschool-season-story-bundle.zip",
+      "sha256": "3389d8d349dfe09eba3582324f4ba3efc322d6c833e29a3ec0badeb32e6016f4",
+      "size": 6205389
+    },
+    "sourceHtml": {
+      "path": "product-build/homeschool-season-story-bundle/source/homeschool-season-story-bundle.html",
+      "sha256": "549c1f5b379caa281d0a3f55dcc2e20453001b0e2f85128cf6adbe016aa36e6f",
+      "size": 35772
+    },
+    "readme": {
+      "path": "product-build/homeschool-season-story-bundle/README.txt",
+      "sha256": "0f14480246769273779b12c53b45f966c9b6dbd1c3c3cfcf8caf6d44413f54de",
+      "size": 481
+    },
+    "assets": [
+      {
+        "path": "product-build/homeschool-season-story-bundle/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/homeschool-season-story-bundle/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/homeschool-season-story-bundle/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/homeschool-season-story-bundle/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/homeschool-season-story-bundle/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/homeschool-season-story-bundle/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/homeschool-season-story-bundle/source/assets/solar-oven-picnic-station.jpg",
+        "sha256": "9742a1d469b45961d9634dc0fb6e722bf60c2f8beb872eb9790da8b21e9300be",
+        "size": 299058
+      },
+      {
+        "path": "product-build/homeschool-season-story-bundle/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/homeschool-season-story-bundle/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      },
+      {
+        "path": "product-build/homeschool-season-story-bundle/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      }
+    ]
+  }
+}

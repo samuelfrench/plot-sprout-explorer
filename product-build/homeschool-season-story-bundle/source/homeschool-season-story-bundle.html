@@ -1,0 +1,719 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homeschool Season Story Bundle</title>
+    <style>
+      @page { size: Letter; margin: 0.38in; }
+      :root {
+        --ink: #18343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #b7d4cf;
+        --leaf: #2c7a78;
+        --gold: #f2c14f;
+        --coral: #ec6f3f;
+        --berry: #c64c7a;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 13.5px;
+        line-height: 1.32;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 12ch; font-size: 45px; }
+      h2 { font-size: 25px; }
+      h3 { margin-bottom: 0.04in; font-size: 14px; }
+      p, li { color: var(--muted); }
+      img {
+        display: block;
+        max-width: 100%;
+        border: 1px solid var(--line);
+      }
+      .pack-page {
+        height: 9.2in;
+        padding: 0.14in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.2in;
+        gap: 0.25in;
+        align-items: start;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--leaf);
+        font-size: 11.4px;
+      }
+      .kicker, .page-kicker, .world-intro span {
+        color: var(--leaf);
+        font-size: 10.5px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.92in;
+        min-height: 0.52in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-size: 22px;
+        font-weight: 900;
+      }
+      .included-grid, .support-grid, .season-grid, .world-grid {
+        display: grid;
+        gap: 0.08in;
+      }
+      .included-grid { grid-template-columns: 1fr; }
+      .support-grid, .season-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .world-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+      .included-grid li, .support-grid li, .season-grid li {
+        min-height: 0.36in;
+        padding: 0.06in;
+        border: 1px solid var(--line);
+        background: white;
+        list-style: none;
+      }
+      .world-intro {
+        min-height: auto;
+        padding: 0.045in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .world-intro img {
+        display: none;
+      }
+      .world-intro p {
+        display: none;
+      }
+      .world-intro h3 {
+        margin: 0;
+        font-size: 9.4px;
+        line-height: 1.06;
+      }
+      .guide-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.12in;
+      }
+      .guide-box, .worksheet-section, .kid-direction, .adult-note {
+        padding: 0.08in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .kid-direction {
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .adult-note {
+        border-color: #e5bc7c;
+        background: #fff4dc;
+      }
+      figure {
+        float: right;
+        width: 1.72in;
+        margin: 0 0 0.06in 0.12in;
+      }
+      figure img {
+        width: 1.72in;
+        height: 0.96in;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--muted);
+        font-size: 9.6px;
+      }
+      .worksheet-section {
+        margin-top: 0.07in;
+      }
+      .worksheet-sections {
+        clear: both;
+      }
+      .dense-page .worksheet-sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.07in;
+      }
+      .dense-page .worksheet-section {
+        margin-top: 0;
+      }
+      .write-line {
+        min-height: 0.19in;
+        margin-bottom: 0.04in;
+        padding-bottom: 0.035in;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .fall-page { border-top: 0.16in solid var(--coral); }
+      .winter-page { border-top: 0.16in solid #2b7f92; }
+      .spring-page { border-top: 0.16in solid var(--leaf); }
+      .summer-page { border-top: 0.16in solid var(--gold); }
+      .footer-note {
+        margin-top: 0.08in;
+        padding-top: 0.08in;
+        border-top: 2px solid var(--gold);
+        color: var(--muted);
+        font-size: 10px;
+      }
+      @media screen {
+        body { padding: 24px; background: #dfeee7; }
+        .pack-page {
+          width: 8.5in;
+          margin: 0 auto 24px;
+          box-shadow: 0 18px 40px rgba(20, 31, 43, 0.18);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable homeschool writing bundle</p>
+        <h1>Homeschool Season Story Bundle</h1>
+        <p>Twelve seasonal story quests turn a full year of homeschool writing into small offline sessions: choose a world, collect details, draft one scene, revise one sentence, and save the finished page.</p>
+        <div class="badge">$29</div>
+        <p><strong>Best for:</strong> Homeschool families, tutors, and elementary co-ops planning a year of short creative-writing sessions for ages 7-11.</p>
+        <p><strong>Format:</strong> 12 printable quests across four seasons</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div>
+        <h2>Inside</h2>
+        <ul class="included-grid"><li>Three fall quests for maps, details, and reflection</li>
+<li>Three winter quests for sequence, labels, and clear directions</li>
+<li>Three spring quests for observation notes and revision</li>
+<li>Three summer quests for cause-and-effect scenes and read-aloud endings</li>
+<li>Season planning guide for a weekly rhythm</li>
+<li>Parent and tutor support moves for reluctant writers</li>
+<li>Co-op station notes for small groups</li>
+<li>Portfolio direction for saving finished pages</li>
+<li>Extension menu for drawing, reading aloud, and revising</li>
+<li>Offline family-safety and printable-use note</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult setup guide</p>
+      <h2>Run the year in small sessions</h2>
+      <div class="guide-columns">
+        <div class="guide-box">
+          <h3>Setup</h3>
+          <ol><li>Print one season at a time so the year feels manageable instead of like a workbook stack.</li>
+<li>Pick one weekly writing slot and keep each quest to a short, visible finish line.</li>
+<li>Use the pages offline for private family, tutoring, or classroom writing practice.</li>
+<li>Save each finished quest behind a season divider to build a concrete writing portfolio.</li></ol>
+        </div>
+        <div class="guide-box">
+          <h3>Season plan</h3>
+          <ol class="season-grid">
+        <li>
+          <strong>Fall:</strong>
+          Collect concrete setting details, map small errands, and explain one helpful change.
+        </li>
+
+        <li>
+          <strong>Winter:</strong>
+          Practice clear sequence, concise labels, and polite dialogue before drafting.
+        </li>
+
+        <li>
+          <strong>Spring:</strong>
+          Observe carefully, choose clearer words, and revise one sentence at a time.
+        </li>
+
+        <li>
+          <strong>Summer:</strong>
+          Use cause-and-effect notes, read aloud one favorite line, and finish with a kind ending.
+        </li></ol>
+        </div>
+      </div>
+      <h3>World menu</h3>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Acorn Avenue Errand Office</h3>
+        <p>A desk inside a hollow acorn sorts tiny neighborhood errands: return a borrowed thimble, update the snack map, and deliver cheerful notes before the lunch bell.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Seed Library Map Room</h3>
+        <p>Inside a community seed library, drawers open onto maps showing where beans climbed, carrots curved, and sunflowers turned their faces through the season.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Greenhouse Gear Garden</h3>
+        <p>Behind the school garden is a greenhouse where friendly gears turn compost drums, lift watering cans, and open roof vents whenever seedlings need more air.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <div>
+        <span>Ages 7-8</span>
+        <h3>Teacup Town Weather Window</h3>
+        <p>Inside a blue teacup, a tiny town checks the weather through a spoon-shaped window and plans errands around drizzle, sunbeams, and toast-scented fog.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Button Bakery Map Mix-Up</h3>
+        <p>A bakery the size of a lunchbox sells button-shaped rolls, and every customer gets a crumb map to the next helpful errand.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Clue Label Tower Museum</h3>
+        <p>Inside a tall museum of everyday objects, each exhibit opens when its short label explains the one clue visitors should notice.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Moss Message Observatory</h3>
+        <p>A quiet forest observatory studies moss patches that change shade after rain, leaving soft patterns for careful observers to sketch in field notebooks.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Tidepool Timekeepers Lab</h3>
+        <p>At the edge of a quiet bay, a floating field lab keeps track of tide minutes, shell shadows, and which tiny pools refill first after the moon tugs the water.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Solar Oven Picnic Station</h3>
+        <p>On a bright meadow table, kids test cardboard solar ovens that warm snacks by angle, timing, shiny panels, and careful notes instead of plugs.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Spoon Ferry Lunchbox Harbor</h3>
+        <p>At Lunchbox Harbor, spoon ferries carry menu cards, snack orders, and polite dockside dialogue between tiny cracker cafes.</p>
+      </div>
+    </article></div>
+      <h3>Support moves</h3>
+      <ul class="support-grid"><li>Let the child point, circle, sketch, or dictate before asking for full sentences.</li>
+<li>Offer two choices when a blank feels too open, then let the child pick and copy one phrase.</li>
+<li>Read back one strong sentence and ask what single detail would make it clearer.</li>
+<li>Stop after one finished quest page rather than stretching the session into extra pages.</li>
+<li>Praise a concrete writing move such as a useful map label, careful observation, or polite line of speech.</li></ul>
+      <h3>Extension ideas</h3>
+      <ul class="support-grid"><li>Staple three quest pages into a seasonal mini-book with a hand-drawn cover.</li>
+<li>Let siblings or co-op partners complete different pages and trade read-aloud moments.</li>
+<li>Choose one sentence each month for a gentle revision pass with a brighter verb or clearer detail.</li>
+<li>Use the portfolio folder at the end of the year to pick the child&#39;s strongest story scene.</li>
+<li>Turn one favorite quest into a family read-aloud script with narrator and helper roles.</li></ul>
+      <p class="footer-note">Use these pages offline. The bundle is designed for adult-guided writing practice with no accounts, no uploads, and no public sharing.</p>
+    </section>
+    
+    <section class="pack-page quest-page fall-page">
+      <div class="page-kicker">Quest 1 | Fall | map</div>
+      <h2>Fall Acorn Errand Route Map</h2>
+      <figure><img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration"><figcaption>Acorn Avenue Errand Office</figcaption></figure>
+      <p class="kid-direction">Draw a fall errand route through Acorn Avenue, then write the clue that helps your hero choose the next stop.</p>
+      <p class="adult-note">Keep the work offline and choice-based. Let the child point, draw, or label before asking for full sentences.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Route Stops</h3>
+          <p class="write-line">Start at the acorn desk with this errand slip: ____________________________</p>
+<p class="write-line">Stop 1 has this fall detail: ____________________________</p>
+<p class="write-line">Stop 2 has this helpful neighbor: ____________________________</p>
+<p class="write-line">Finish at this shared shortcut: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Clues</h3>
+          <p class="write-line">The chalk arrow points toward: ____________________________</p>
+<p class="write-line">The leaf-paper note says: ____________________________</p>
+<p class="write-line">The route changes when: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Story Sentence</h3>
+          <p class="write-line">My hero solves the errand mix-up by ____________________________.</p>
+<p class="write-line">The kind ending happens when ____________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page fall-page dense-page">
+      <div class="page-kicker">Quest 2 | Fall | cards</div>
+      <h2>Fall Seed Library Catalog Cards</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="kid-direction">Fill in three seed catalog cards with garden clues from the end of the growing season.</p>
+      <p class="adult-note">Use this as a short observation-to-story station. The child can invent details or borrow safe details from a real garden walk.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Seed Card A</h3>
+          <p class="write-line">Seed name or plant clue: ____________________________</p>
+<p class="write-line">Where it grew on the map: ____________________________</p>
+<p class="write-line">One fall change I noticed: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Seed Card B</h3>
+          <p class="write-line">Seed name or plant clue: ____________________________</p>
+<p class="write-line">Where it grew on the map: ____________________________</p>
+<p class="write-line">One fall change I noticed: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Seed Card C</h3>
+          <p class="write-line">Seed name or plant clue: ____________________________</p>
+<p class="write-line">Where it grew on the map: ____________________________</p>
+<p class="write-line">One fall change I noticed: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Catalog Note</h3>
+          <p class="write-line">The next gardener should remember ____________________________.</p>
+<p class="write-line">This seed story could begin with ____________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page fall-page">
+      <div class="page-kicker">Quest 3 | Fall | reflection</div>
+      <h2>Fall Greenhouse Gear Reflection</h2>
+      <figure><img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration"><figcaption>Greenhouse Gear Garden</figcaption></figure>
+      <p class="kid-direction">Think like a greenhouse helper and decide how the gears should care for fall seedlings.</p>
+      <p class="adult-note">Guide the child toward cause-and-effect language: what changed, what the hero noticed, and what small fix comes next.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>What Changed</h3>
+          <p class="write-line">The fall greenhouse feels: ____________________________</p>
+<p class="write-line">The smallest seedlings need: ____________________________</p>
+<p class="write-line">The tallest plants need: ____________________________</p>
+<p class="write-line">The gear pattern surprises the hero by ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Helpful Fix</h3>
+          <p class="write-line">First, my hero checks ____________________________.</p>
+<p class="write-line">Next, my hero changes ____________________________.</p>
+<p class="write-line">Then, the plants can ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Reflection Sentence</h3>
+          <p class="write-line">I chose this fix because ____________________________.</p>
+<p class="write-line">One clearer detail I can add to my story is ____________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page winter-page">
+      <div class="page-kicker">Quest 4 | Winter | worksheet</div>
+      <h2>Winter Teacup Forecast Worksheet</h2>
+      <figure><img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration"><figcaption>Teacup Town Weather Window</figcaption></figure>
+      <p class="kid-direction">Write a tiny winter forecast so Teacup Town can plan its cozy errands.</p>
+      <p class="adult-note">Read the headings aloud and ask for short, concrete details. Keep the session adult-guided and printable-first.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Weather Clues</h3>
+          <p class="write-line">The spoon-shaped window shows: ____________________________</p>
+<p class="write-line">The steam cloud looks like: ____________________________</p>
+<p class="write-line">The cup-handle bridge feels: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Town Errands</h3>
+          <p class="write-line">The umbrella shop prepares: ____________________________</p>
+<p class="write-line">The picnic cart changes its plan by ____________________________.</p>
+<p class="write-line">The sugar-cube sign painter writes: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Forecast Paragraph</h3>
+          <p class="write-line">Today in Teacup Town, ____________________________.</p>
+<p class="write-line">My hero helps by ____________________________.</p>
+<p class="write-line">The clearest winter clue is ____________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page winter-page">
+      <div class="page-kicker">Quest 5 | Winter | map</div>
+      <h2>Winter Button Bakery Crumb Map</h2>
+      <figure><img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration"><figcaption>Button Bakery Map Mix-Up</figcaption></figure>
+      <p class="kid-direction">Turn the upside-down crumb map into clear winter directions for a bakery delivery.</p>
+      <p class="adult-note">Have the child trace the route with a finger first, then write only the labels needed to make the directions understandable.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Bakery Start</h3>
+          <p class="write-line">My hero carries this warm roll: ____________________________</p>
+<p class="write-line">The first crumb clue is beside: ____________________________</p>
+<p class="write-line">The winter street detail is: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Clear Directions</h3>
+          <p class="write-line">Turn toward ____________________________.</p>
+<p class="write-line">Pass the shop with ____________________________.</p>
+<p class="write-line">Stop when the map shows ____________________________.</p>
+<p class="write-line">Redraw the route by adding ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Delivery Ending</h3>
+          <p class="write-line">The delivery arrives when ____________________________.</p>
+<p class="write-line">The baker thanks the hero for ____________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page winter-page">
+      <div class="page-kicker">Quest 6 | Winter | prompt</div>
+      <h2>Winter Clue Label Museum Prompt</h2>
+      <figure><img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration"><figcaption>Clue Label Tower Museum</figcaption></figure>
+      <p class="kid-direction">Write museum labels that help visitors notice one useful winter clue at a time.</p>
+      <p class="adult-note">This page is for concise explanatory writing. Encourage one clear sentence before adding extra description.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Exhibit Labels</h3>
+          <p class="write-line">Object 1 is ____________________________ and its clue is ____________________________.</p>
+<p class="write-line">Object 2 is ____________________________ and its clue is ____________________________.</p>
+<p class="write-line">Object 3 is ____________________________ and its clue is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Curator Choice</h3>
+          <p class="write-line">The best first exhibit is ____________________________ because ____________________________.</p>
+<p class="write-line">The label should leave out ____________________________ so visitors notice ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Short Story Prompt</h3>
+          <p class="write-line">When the winter museum opens, my hero notices ____________________________.</p>
+<p class="write-line">The final label explains ____________________________.</p>
+<p class="write-line">A visitor understands the clue after ____________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page spring-page">
+      <div class="page-kicker">Quest 7 | Spring | worksheet</div>
+      <h2>Spring Greenhouse Gear Schedule</h2>
+      <figure><img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration"><figcaption>Greenhouse Gear Garden</figcaption></figure>
+      <p class="kid-direction">Test the greenhouse gears by writing a fair spring care schedule for the sprouts.</p>
+      <p class="adult-note">Keep this offline and adult-guided. Let the child point, circle, or sketch before turning the plan into sentences.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Greenhouse Job Check</h3>
+          <p class="write-line">Tiny sprout job: ________________________________</p>
+<p class="write-line">Tall plant job: ________________________________</p>
+<p class="write-line">Compost gear job: ________________________________</p>
+<p class="write-line">Roof vent job: ________________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Fair Spring Schedule</h3>
+          <p class="write-line">First, the greenhouse should ________________________________.</p>
+<p class="write-line">Next, the gear pattern should ________________________________.</p>
+<p class="write-line">After that, the seedlings need ________________________________.</p>
+<p class="write-line">The fairest rule for every plant is ________________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Notebook Sentence</h3>
+          <p class="write-line">My hero notices that ________________________________.</p>
+<p class="write-line">The greenhouse problem gets clearer when ________________________________.</p>
+<p class="write-line">One kind change the hero makes is ________________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page spring-page">
+      <div class="page-kicker">Quest 8 | Spring | map</div>
+      <h2>Spring Seed Library Map</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="kid-direction">Draw or label a spring garden map from the seed packet clues.</p>
+      <p class="adult-note">Use this as a planning page before full drafting. Keep the activity private, offline, and adult-guided.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Packet Clues</h3>
+          <p class="write-line">Seed packet name: ________________________________</p>
+<p class="write-line">First garden clue: ________________________________</p>
+<p class="write-line">Second garden clue: ________________________________</p>
+<p class="write-line">Question for the next gardener: ________________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Labels</h3>
+          <p class="write-line">Where the beans climb: ________________________________</p>
+<p class="write-line">Where the carrots curve: ________________________________</p>
+<p class="write-line">Where the sunflower turns: ________________________________</p>
+<p class="write-line">Where the field notebook waits: ________________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Story Route</h3>
+          <p class="write-line">The hero starts at ________________________________.</p>
+<p class="write-line">The map changes when ________________________________.</p>
+<p class="write-line">The return note says ________________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page spring-page">
+      <div class="page-kicker">Quest 9 | Spring | reflection</div>
+      <h2>Spring Moss Observation Reflection</h2>
+      <figure><img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration"><figcaption>Moss Message Observatory</figcaption></figure>
+      <p class="kid-direction">Record careful spring details so the moss message can make sense.</p>
+      <p class="adult-note">Encourage exact sensory words and one calm revision pass. This page is for private family or classroom use.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Field Notebook Details</h3>
+          <p class="write-line">Moss shade I notice: ________________________________</p>
+<p class="write-line">Moisture clue I notice: ________________________________</p>
+<p class="write-line">Time of day clue: ________________________________</p>
+<p class="write-line">Sketch label or shape: ________________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>What Changed</h3>
+          <p class="write-line">Before the rain, the moss looked ________________________________.</p>
+<p class="write-line">After the rain, the moss looked ________________________________.</p>
+<p class="write-line">The clue that matters most is ________________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Reflection Sentence</h3>
+          <p class="write-line">My hero learns that careful observers ________________________________.</p>
+<p class="write-line">One detail I can add to my story is ________________________________.</p>
+<p class="write-line">One sentence I want to revise is ________________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page summer-page">
+      <div class="page-kicker">Quest 10 | Summer | worksheet</div>
+      <h2>Summer Tidepool Timekeeper Log</h2>
+      <figure><img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration"><figcaption>Tidepool Timekeepers Lab</figcaption></figure>
+      <p class="kid-direction">Compare tidepool notes and write what your hero should check next.</p>
+      <p class="adult-note">Treat the science details as story clues, not a test. Keep the session offline and guided by an adult.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Lab Measurements</h3>
+          <p class="write-line">Pool with the highest water mark: ________________________________</p>
+<p class="write-line">Pool with the lowest water mark: ________________________________</p>
+<p class="write-line">Shell-shadow clue: ________________________________</p>
+<p class="write-line">Pebble notebook note: ________________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Compare the Clues</h3>
+          <p class="write-line">The measurements do not match because ________________________________.</p>
+<p class="write-line">The hero should check ________________________________ before deciding.</p>
+<p class="write-line">The gentlest question to ask the lab team is ________________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ending Choice</h3>
+          <p class="write-line">My hero adjusts ________________________________.</p>
+<p class="write-line">My hero builds ________________________________.</p>
+<p class="write-line">My hero writes a final tide note that says ________________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page summer-page dense-page">
+      <div class="page-kicker">Quest 11 | Summer | cards</div>
+      <h2>Summer Solar Oven Test Cards</h2>
+      <figure><img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration"><figcaption>Solar Oven Picnic Station</figcaption></figure>
+      <p class="kid-direction">Fill in three test cards before writing the picnic station scene.</p>
+      <p class="adult-note">Cut the cards apart or number them. Focus on clear cause-and-effect sentences, not perfect engineering.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Test Card 1</h3>
+          <p class="write-line">Oven angle: ________________________________</p>
+<p class="write-line">Snack being warmed: ________________________________</p>
+<p class="write-line">Prediction before testing: ________________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Test Card 2</h3>
+          <p class="write-line">Shiny panel change: ________________________________</p>
+<p class="write-line">Timer setting: ________________________________</p>
+<p class="write-line">What the hero notices: ________________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Test Card 3</h3>
+          <p class="write-line">Cloud clue: ________________________________</p>
+<p class="write-line">Fair-test rule: ________________________________</p>
+<p class="write-line">Picnic guide sentence: ________________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Story Builder</h3>
+          <p class="write-line">The warmest snack was ________________________________ because ________________________________.</p>
+<p class="write-line">The hero changes the plan by ________________________________.</p>
+<p class="write-line">The next team should remember ________________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page quest-page summer-page">
+      <div class="page-kicker">Quest 12 | Summer | prompt</div>
+      <h2>Summer Spoon Ferry Dialogue Prompt</h2>
+      <figure><img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration"><figcaption>Spoon Ferry Lunchbox Harbor</figcaption></figure>
+      <p class="kid-direction">Write a clear snack order and polite dockside dialogue for Lunchbox Harbor.</p>
+      <p class="adult-note">This page works best as an oral rehearsal first. Keep sharing private to the family, homeschool group, or classroom.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Snack Order Clues</h3>
+          <p class="write-line">Cafe name: ________________________________</p>
+<p class="write-line">Snack words that could be confusing: ________________________________</p>
+<p class="write-line">Question the hero asks: ________________________________</p>
+<p class="write-line">Clear order after the question: ________________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Dockside Dialogue</h3>
+          <p class="write-line">Ferry cook says: &quot;______________________________&quot;</p>
+<p class="write-line">Dock helper says: &quot;______________________________&quot;</p>
+<p class="write-line">Hero replies politely: &quot;______________________________&quot;</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Summer Harbor Scene</h3>
+          <p class="write-line">The spoon ferry crosses ________________________________.</p>
+<p class="write-line">The cracker dock detail I add is ________________________________.</p>
+<p class="write-line">The menu card becomes clearer when ________________________________.</p>
+<p class="write-line">My ending sentence is ________________________________.</p>
+        </section></div>
+    </section>
+  </body>
+</html>

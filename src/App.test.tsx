@@ -59,13 +59,18 @@ describe('App', () => {
     )
   })
 
-  it('links to the static rainy day product page without active checkout', () => {
+  it('links to static product pages without active checkout', () => {
     render(<App />)
 
     expect(screen.getByRole('heading', { name: /Rainy Day Story Quest Pack/i })).toBeInTheDocument()
-    expect(screen.getByRole('link', { name: /Preview the pack/i })).toHaveAttribute(
+    expect(screen.getByRole('heading', { name: /Homeschool Season Story Bundle/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Preview Rainy Day Story Quest Pack/i })).toHaveAttribute(
       'href',
       expect.stringContaining('rainy-day-story-quest-pack'),
+    )
+    expect(screen.getByRole('link', { name: /Preview Homeschool Season Story Bundle/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('homeschool-season-story-bundle'),
     )
   })
 })

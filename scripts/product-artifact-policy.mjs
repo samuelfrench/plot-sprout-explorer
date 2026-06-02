@@ -1,9 +1,11 @@
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs'
+import { createHash } from 'node:crypto'
 import { dirname, resolve } from 'node:path'
 
 import { containsActiveCheckoutLanguage } from './content-policy.mjs'
 
 export const rainyDayProductSlug = 'rainy-day-story-quest-pack'
+export const seasonBundleProductSlug = 'homeschool-season-story-bundle'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -20,6 +22,13 @@ const requiredArtifactPaths = {
   zipPath: 'product-build/rainy-day-story-quest-pack/rainy-day-story-quest-pack.zip',
   sourceHtmlPath: 'product-build/rainy-day-story-quest-pack/source/rainy-day-story-quest-pack.html',
   manifestPath: 'product-build/rainy-day-story-quest-pack/manifest.json',
+}
+
+const requiredSeasonBundleArtifactPaths = {
+  pdfPath: 'product-build/homeschool-season-story-bundle/Homeschool-Season-Story-Bundle.pdf',
+  zipPath: 'product-build/homeschool-season-story-bundle/homeschool-season-story-bundle.zip',
+  sourceHtmlPath: 'product-build/homeschool-season-story-bundle/source/homeschool-season-story-bundle.html',
+  manifestPath: 'product-build/homeschool-season-story-bundle/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -48,7 +57,15 @@ function validateStringArray(value, minLength, label, errors) {
 }
 
 function sameStringSet(left, right) {
-  return left.length === right.length && left.every((item) => right.includes(item))
+  if (!Array.isArray(left) || !Array.isArray(right)) return false
+  const leftSet = new Set(left)
+  const rightSet = new Set(right)
+  return (
+    left.length === leftSet.size &&
+    right.length === rightSet.size &&
+    leftSet.size === rightSet.size &&
+    [...leftSet].every((item) => rightSet.has(item))
+  )
 }
 
 function validateNoRiskyLanguage(value, label, errors) {
@@ -193,15 +210,189 @@ export function validatePackSource(source, product, knownWorldSlugs) {
   return errors
 }
 
+function validateArtifactPaths(source, expectedPaths, label, errors) {
+  pushIf(errors, !isObject(source.artifact), 'artifact must be an object.')
+  if (!isObject(source.artifact)) return
+  for (const [key, expectedPath] of Object.entries(expectedPaths)) {
+    pushIf(errors, source.artifact[key] !== expectedPath, `${label} artifact.${key} must be ${expectedPath}.`)
+  }
+}
+
+function validateSeasonPlan(source, errors) {
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (!isObject(source.adultGuide)) return
+  validateStringArray(source.adultGuide.setup, 4, 'adultGuide.setup', errors)
+  validateStringArray(source.adultGuide.supportMoves, 5, 'adultGuide.supportMoves', errors)
+  validateStringArray(source.adultGuide.extensionIdeas, 4, 'adultGuide.extensionIdeas', errors)
+  pushIf(errors, !Array.isArray(source.adultGuide.seasonPlan), 'adultGuide.seasonPlan must be an array.')
+  if (Array.isArray(source.adultGuide.seasonPlan)) {
+    const seasons = source.adultGuide.seasonPlan.map((plan) => plan?.season)
+    pushIf(errors, !sameStringSet(seasons, ['fall', 'winter', 'spring', 'summer']), 'adultGuide.seasonPlan must cover fall, winter, spring, and summer.')
+    source.adultGuide.seasonPlan.forEach((plan, index) => {
+      pushIf(errors, !isObject(plan), `adultGuide.seasonPlan[${index}] must be an object.`)
+      if (!isObject(plan)) return
+      validateString(plan.season, `adultGuide.seasonPlan[${index}].season`, errors)
+      validateString(plan.focus, `adultGuide.seasonPlan[${index}].focus`, errors)
+    })
+  }
+}
+
+export function validateSeasonBundleSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Season bundle source must be an object.')
+  if (!isObject(source)) return errors
+
+  const worldSlugs = knownWorldSlugs instanceof Set ? knownWorldSlugs : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch8', 'batchId must be 2026-06-02-batch8.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(errors, source.productSlug !== seasonBundleProductSlug, `productSlug must be ${seasonBundleProductSlug}.`)
+  pushIf(errors, source.title !== 'Homeschool Season Story Bundle', 'title must be Homeschool Season Story Bundle.')
+  pushIf(errors, source.pricePoint !== '$29', 'pricePoint must be $29.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Season bundle source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Season bundle source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Season bundle source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  if (Array.isArray(source.worldSlugs)) {
+    const uniqueWorldSlugs = new Set(source.worldSlugs)
+    pushIf(errors, source.worldSlugs.length < 8, 'worldSlugs must have at least 8 entries.')
+    pushIf(errors, source.worldSlugs.length > 12, 'worldSlugs must have no more than 12 entries.')
+    pushIf(errors, uniqueWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, uniqueWorldSlugs.size < 8, 'worldSlugs must include at least 8 unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredSeasonBundleArtifactPaths, 'Season bundle', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  validateSeasonPlan(source, errors)
+
+  pushIf(errors, !Array.isArray(source.pages), 'pages must be an array.')
+  if (Array.isArray(source.pages)) {
+    pushIf(errors, source.pages.length !== 12, 'pages must have exactly 12 printable quests.')
+    const pageIds = new Set()
+    const pageWorldCoverage = new Set()
+    const seasonCounts = new Map([
+      ['fall', 0],
+      ['winter', 0],
+      ['spring', 0],
+      ['summer', 0],
+    ])
+    const sourceWorldSet = new Set(source.worldSlugs ?? [])
+    source.pages.forEach((page, index) => {
+      validatePage(page, index, worldSlugs, new Map(), pageIds, errors)
+      validateString(page.season, `pages[${index}].season`, errors)
+      if (isNonEmptyString(page.season)) {
+        pushIf(errors, !seasonCounts.has(page.season), `pages[${index}].season must be fall, winter, spring, or summer.`)
+        if (seasonCounts.has(page.season)) seasonCounts.set(page.season, seasonCounts.get(page.season) + 1)
+      }
+      if (isNonEmptyString(page.worldSlug)) {
+        pushIf(errors, !sourceWorldSet.has(page.worldSlug), `pages[${index}].worldSlug must be listed in worldSlugs.`)
+        pageWorldCoverage.add(page.worldSlug)
+      }
+    })
+    for (const [season, count] of seasonCounts.entries()) {
+      pushIf(errors, count !== 3, `${season} must have exactly 3 printable quests.`)
+    }
+    pushIf(errors, pageWorldCoverage.size < 8, 'pages must cover at least 8 unique worlds.')
+  }
+
+  validateNoRiskyLanguage(source, 'Homeschool Season Story Bundle source', errors)
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
 }
 
-export function inspectArtifactFiles(root, artifact, options = {}) {
+function sha256(buffer) {
+  return createHash('sha256').update(buffer).digest('hex')
+}
+
+function manifestFileRecords(value, label = 'files') {
+  if (Array.isArray(value)) {
+    return value.flatMap((item, index) => manifestFileRecords(item, `${label}[${index}]`))
+  }
+  if (!isObject(value)) return []
+  if (isNonEmptyString(value.path)) {
+    return [{ label, record: value }]
+  }
+  return Object.entries(value).flatMap(([key, item]) => manifestFileRecords(item, `${label}.${key}`))
+}
+
+function validateManifestFileRecords(root, manifest, expectedPaths, errors) {
+  if (!isObject(manifest?.files)) return
+
+  for (const [manifestKey, pathKey] of [
+    ['pdf', 'pdfPath'],
+    ['zip', 'zipPath'],
+    ['sourceHtml', 'sourceHtmlPath'],
+  ]) {
+    const recordPath = manifest.files[manifestKey]?.path
+    if (isNonEmptyString(recordPath) && recordPath !== expectedPaths[pathKey]) {
+      errors.push(`manifest files.${manifestKey} path must be ${expectedPaths[pathKey]}.`)
+    }
+  }
+
+  for (const { label, record } of manifestFileRecords(manifest.files)) {
+    const relativePath = record.path
+    const absolutePath = resolve(root, relativePath)
+    if (!existsSync(absolutePath)) {
+      errors.push(`manifest ${label} path does not exist: ${relativePath}.`)
+      continue
+    }
+    const buffer = readFileSync(absolutePath)
+    if (!Number.isInteger(record.size)) {
+      errors.push(`manifest ${label} size must be an integer.`)
+    } else if (record.size !== buffer.length) {
+      errors.push(`manifest ${label} size does not match ${relativePath}.`)
+    }
+    if (!/^[a-f0-9]{64}$/.test(record.sha256 ?? '')) {
+      errors.push(`manifest ${label} sha256 must be a 64-character lowercase hex digest.`)
+    } else if (record.sha256 !== sha256(buffer)) {
+      errors.push(`manifest ${label} sha256 does not match ${relativePath}.`)
+    }
+  }
+}
+
+export function validateManifestWorldAssets(source, manifest) {
+  const errors = []
+  const assets = manifest?.files?.assets
+  if (!Array.isArray(assets)) {
+    return [`${source.title} artifact manifest files.assets must be an array.`]
+  }
+  const assetPaths = assets.map((asset) => asset?.path).filter(isNonEmptyString)
+  for (const worldSlug of source.worldSlugs ?? []) {
+    const hasAsset = assetPaths.some((path) => path.endsWith(`/assets/${worldSlug}.jpg`))
+    if (!hasAsset) {
+      errors.push(`${source.title} artifact manifest missing copied image for ${worldSlug}.`)
+    }
+  }
+  return errors
+}
+
+export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, options = {}) {
   const files = {}
   const errors = []
-  for (const [key, relativePath] of Object.entries(requiredArtifactPaths)) {
+  let parsedManifest = null
+  for (const [key, relativePath] of Object.entries(expectedPaths)) {
     const label = key.replace(/Path$/, '')
     const configuredPath = artifact?.[key]
     if (configuredPath !== relativePath) {
@@ -236,17 +427,28 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
     }
     if (key === 'manifestPath') {
       try {
-        JSON.parse(buffer.toString('utf8'))
+        parsedManifest = JSON.parse(buffer.toString('utf8'))
       } catch {
         errors.push(`${relativePath} is not valid JSON.`)
       }
     }
+  }
+  if (parsedManifest) {
+    validateManifestFileRecords(root, parsedManifest, expectedPaths, errors)
   }
   return {
     valid: errors.length === 0,
     errors,
     files,
   }
+}
+
+export function inspectArtifactFiles(root, artifact, options = {}) {
+  const expectedPaths =
+    artifact?.pdfPath === requiredSeasonBundleArtifactPaths.pdfPath
+      ? requiredSeasonBundleArtifactPaths
+      : requiredArtifactPaths
+  return inspectConfiguredArtifactFiles(root, artifact, expectedPaths, options)
 }
 
 export function validateCheckoutReadiness(product, artifactStatus) {

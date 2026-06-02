@@ -14,8 +14,8 @@ import { useMemo, useState } from 'react'
 import './App.css'
 import {
   buildQuestPack,
-  featuredProductLink,
   miniUnitHubLink,
+  productLinks,
   questWorlds,
   seoCollectionLinks,
   worldGalleryLink,
@@ -166,16 +166,25 @@ function App() {
 
       <section className="product-section" aria-labelledby="product-title">
         <div>
-          <p className="eyebrow">First printable offer</p>
-          <h2 id="product-title">{featuredProductLink.title}</h2>
+          <p className="eyebrow">Checkout-pending printable offers</p>
+          <h2 id="product-title">Paid bundle shelf</h2>
         </div>
-        <p>{featuredProductLink.description}</p>
-        <p className="product-price">{featuredProductLink.pricePoint}</p>
-        <a className="product-link" href={pagePath(featuredProductLink.slug)}>
-          Preview the pack
-          <ArrowRight size={18} aria-hidden="true" />
-        </a>
-        <p className="product-note">{featuredProductLink.note}</p>
+        <div className="product-grid">
+          {productLinks.map((product) => (
+            <article key={product.slug} className="product-card">
+              <div>
+                <p className="product-price">{product.pricePoint}</p>
+                <h3>{product.title}</h3>
+                <p>{product.description}</p>
+              </div>
+              <a className="product-link" href={pagePath(product.slug)}>
+                Preview {product.title}
+                <ArrowRight size={18} aria-hidden="true" />
+              </a>
+              <p className="product-note">{product.note}</p>
+            </article>
+          ))}
+        </div>
       </section>
 
       <section id="project-engine" className="ops-grid" aria-label="Project engine">

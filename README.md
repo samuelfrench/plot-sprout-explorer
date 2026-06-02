@@ -41,12 +41,13 @@ npm run image:starter -- --only moon-muffin-market
 npm run image:batch7
 ```
 
-## Build Product Artifact
+## Build Product Artifacts
 
-Builds the provider-upload-ready Rainy Day Story Quest Pack PDF, source HTML, manifest, and ZIP. This is a local/manual product-build step and must not be scheduled in GitHub Actions.
+Builds provider-upload-ready PDF, source HTML, manifest, and ZIP files. These are local/manual product-build steps and must not be scheduled in GitHub Actions.
 
 ```bash
 npm run product:rainy-day-pack
+npm run product:homeschool-season-bundle
 ```
 
 ## Safety

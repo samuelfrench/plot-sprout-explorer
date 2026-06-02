@@ -8,23 +8,31 @@ import {
   writeFileSync,
 } from 'node:fs'
 import { createHash } from 'node:crypto'
-import { basename, dirname, relative, resolve } from 'node:path'
+import { dirname, relative, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 
 import { writeStoredZip } from './product-artifact-policy.mjs'
+import { buildProductArtifactManifest } from './rainy-day-pack-builder.mjs'
 
 const root = resolve(import.meta.dirname, '..')
-const sourcePath = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
+const sourcePath = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
 const productsPath = resolve(root, 'content', 'products', 'batch5-products.json')
 const worldsDir = resolve(root, 'content', 'worlds')
-const buildDir = resolve(root, 'product-build', 'rainy-day-story-quest-pack')
+const buildDir = resolve(root, 'product-build', 'homeschool-season-story-bundle')
 const sourceDir = resolve(buildDir, 'source')
 const assetsDir = resolve(sourceDir, 'assets')
-const pdfPath = resolve(buildDir, 'Rainy-Day-Story-Quest-Pack.pdf')
-const zipPath = resolve(buildDir, 'rainy-day-story-quest-pack.zip')
-const htmlPath = resolve(sourceDir, 'rainy-day-story-quest-pack.html')
+const pdfPath = resolve(buildDir, 'Homeschool-Season-Story-Bundle.pdf')
+const zipPath = resolve(buildDir, 'homeschool-season-story-bundle.zip')
+const htmlPath = resolve(sourceDir, 'homeschool-season-story-bundle.html')
 const manifestPath = resolve(buildDir, 'manifest.json')
 const readmePath = resolve(buildDir, 'README.txt')
+
+const seasonLabels = {
+  fall: 'Fall',
+  winter: 'Winter',
+  spring: 'Spring',
+  summer: 'Summer',
+}
 
 function readJson(path) {
   return JSON.parse(readFileSync(path, 'utf8'))
@@ -39,14 +47,12 @@ function escapeHtml(value) {
     .replaceAll("'", '&#39;')
 }
 
-function renderLines(lines) {
-  return lines
-    .map((line) => `<p class="write-line">${escapeHtml(line)}</p>`)
-    .join('\n')
-}
-
 function renderList(items) {
   return items.map((item) => `<li>${escapeHtml(item)}</li>`).join('\n')
+}
+
+function renderLines(lines) {
+  return lines.map((line) => `<p class="write-line">${escapeHtml(line)}</p>`).join('\n')
 }
 
 function renderWorldIntro(world, imagePath) {
@@ -64,7 +70,7 @@ function renderWorldIntro(world, imagePath) {
     </article>`
 }
 
-function renderPrintablePage(page, index, worlds, imageMap) {
+function renderQuestPage(page, index, worlds, imageMap) {
   const world = worlds.get(page.worldSlug)
   const imagePath = imageMap.get(page.worldSlug)
   const imageBlock =
@@ -80,12 +86,12 @@ function renderPrintablePage(page, index, worlds, imageMap) {
         </section>`,
     )
     .join('\n')
-  const pageClasses = ['pack-page', 'worksheet-page']
+  const pageClasses = ['pack-page', 'quest-page', `${page.season}-page`]
   if (page.sections.length >= 4) pageClasses.push('dense-page')
 
   return `
     <section class="${pageClasses.join(' ')}">
-      <div class="page-kicker">Page ${index + 1} | ${escapeHtml(page.type)}</div>
+      <div class="page-kicker">Quest ${index + 1} | ${escapeHtml(seasonLabels[page.season] ?? page.season)} | ${escapeHtml(page.type)}</div>
       <h2>${escapeHtml(page.title)}</h2>
       ${imageBlock}
       <p class="kid-direction">${escapeHtml(page.kidDirection)}</p>
@@ -94,27 +100,27 @@ function renderPrintablePage(page, index, worlds, imageMap) {
     </section>`
 }
 
-export function renderRainyDayPackHtml(source, worlds, imageMap = new Map()) {
+export function renderSeasonBundleHtml(source, worlds, imageMap = new Map()) {
   const worldIntros = source.worldSlugs
     .map((slug) => {
       const world = worlds.get(slug)
-      if (!world) throw new Error(`Unknown Rainy Day world slug: ${slug}`)
+      if (!world) throw new Error(`Unknown Homeschool Season world slug: ${slug}`)
       return renderWorldIntro(world, imageMap.get(slug))
     })
     .join('\n')
 
-  const sessionFlow = source.adultGuide.sessionFlow
+  const seasonPlan = source.adultGuide.seasonPlan
     .map(
-      (step) => `
+      (season) => `
         <li>
-          <strong>${escapeHtml(step.minutes)} min | ${escapeHtml(step.title)}:</strong>
-          ${escapeHtml(step.instruction)}
+          <strong>${escapeHtml(seasonLabels[season.season] ?? season.season)}:</strong>
+          ${escapeHtml(season.focus)}
         </li>`,
     )
     .join('\n')
 
   const printablePages = source.pages
-    .map((page, index) => renderPrintablePage(page, index, worlds, imageMap))
+    .map((page, index) => renderQuestPage(page, index, worlds, imageMap))
     .join('\n')
 
   return `<!doctype html>
@@ -126,31 +132,29 @@ export function renderRainyDayPackHtml(source, worlds, imageMap = new Map()) {
     <style>
       @page { size: Letter; margin: 0.38in; }
       :root {
-        --ink: #17343a;
+        --ink: #18343a;
         --muted: #52656b;
         --paper: #fffdf6;
-        --line: #9fcac4;
-        --rain: #2b7f92;
-        --sun: #f2c14f;
-        --coral: #e96d3d;
+        --line: #b7d4cf;
+        --leaf: #2c7a78;
+        --gold: #f2c14f;
+        --coral: #ec6f3f;
+        --berry: #c64c7a;
         color: var(--ink);
         font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
-        font-size: 14px;
-        line-height: 1.35;
+        font-size: 13.5px;
+        line-height: 1.32;
       }
       * { box-sizing: border-box; }
-      body {
-        margin: 0;
-        background: var(--paper);
-      }
+      body { margin: 0; background: var(--paper); }
       h1, h2, h3, p { margin-top: 0; }
       h1, h2 {
         font-family: Georgia, Times New Roman, serif;
         line-height: 1.02;
       }
-      h1 { max-width: 12ch; font-size: 48px; }
-      h2 { font-size: 28px; }
-      h3 { font-size: 15px; }
+      h1 { max-width: 12ch; font-size: 45px; }
+      h2 { font-size: 25px; }
+      h3 { margin-bottom: 0.04in; font-size: 14px; }
       p, li { color: var(--muted); }
       img {
         display: block;
@@ -163,28 +167,33 @@ export function renderRainyDayPackHtml(source, worlds, imageMap = new Map()) {
         overflow: hidden;
         page-break-after: always;
         background:
-          linear-gradient(90deg, rgba(43, 127, 146, 0.08) 1px, transparent 1px),
-          linear-gradient(180deg, rgba(43, 127, 146, 0.08) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
           var(--paper);
         background-size: 0.25in 0.25in;
         border: 2px solid var(--ink);
       }
       .cover-page {
         display: grid;
-        grid-template-columns: 1fr 2.1in;
+        grid-template-columns: 1fr 2.2in;
         gap: 0.25in;
         align-items: start;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--leaf);
+        font-size: 11.4px;
       }
       .kicker, .page-kicker, .world-intro span {
-        color: var(--rain);
-        font-size: 11px;
+        color: var(--leaf);
+        font-size: 10.5px;
         font-weight: 900;
         letter-spacing: 0.08em;
         text-transform: uppercase;
       }
       .badge {
         display: inline-grid;
-        min-width: 0.86in;
+        min-width: 0.92in;
         min-height: 0.52in;
         place-items: center;
         border: 2px solid var(--ink);
@@ -193,50 +202,44 @@ export function renderRainyDayPackHtml(source, worlds, imageMap = new Map()) {
         font-size: 22px;
         font-weight: 900;
       }
-      .included-grid, .world-grid, .support-grid {
+      .included-grid, .support-grid, .season-grid, .world-grid {
         display: grid;
-        gap: 0.12in;
+        gap: 0.08in;
       }
-      .included-grid {
-        grid-template-columns: 1fr;
-      }
-      .world-grid, .support-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-      .included-grid li, .support-grid li {
-        min-height: 0.46in;
-        padding: 0.08in;
+      .included-grid { grid-template-columns: 1fr; }
+      .support-grid, .season-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .world-grid { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+      .included-grid li, .support-grid li, .season-grid li {
+        min-height: 0.36in;
+        padding: 0.06in;
         border: 1px solid var(--line);
         background: white;
         list-style: none;
       }
       .world-intro {
-        display: grid;
-        grid-template-columns: 1.35in 1fr;
-        gap: 0.12in;
-        min-height: 1.22in;
-        padding: 0.1in;
+        min-height: auto;
+        padding: 0.045in;
         border: 1px solid var(--line);
         background: white;
       }
       .world-intro img {
-        width: 1.35in;
-        height: 0.78in;
-        object-fit: cover;
+        display: none;
       }
-      .image-placeholder {
-        width: 1.35in;
-        height: 0.78in;
-        border: 1px dashed var(--line);
-        background: #e8f6f1;
+      .world-intro p {
+        display: none;
+      }
+      .world-intro h3 {
+        margin: 0;
+        font-size: 9.4px;
+        line-height: 1.06;
       }
       .guide-columns {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.14in;
+        gap: 0.12in;
       }
       .guide-box, .worksheet-section, .kid-direction, .adult-note {
-        padding: 0.09in;
+        padding: 0.08in;
         border: 1px solid var(--line);
         background: white;
       }
@@ -250,20 +253,20 @@ export function renderRainyDayPackHtml(source, worlds, imageMap = new Map()) {
       }
       figure {
         float: right;
-        width: 1.86in;
-        margin: 0 0 0.08in 0.14in;
+        width: 1.72in;
+        margin: 0 0 0.06in 0.12in;
       }
       figure img {
-        width: 1.86in;
-        height: 1.04in;
+        width: 1.72in;
+        height: 0.96in;
         object-fit: cover;
       }
       figcaption {
         color: var(--muted);
-        font-size: 10px;
+        font-size: 9.6px;
       }
       .worksheet-section {
-        margin-top: 0.08in;
+        margin-top: 0.07in;
       }
       .worksheet-sections {
         clear: both;
@@ -271,61 +274,28 @@ export function renderRainyDayPackHtml(source, worlds, imageMap = new Map()) {
       .dense-page .worksheet-sections {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 0.08in;
+        gap: 0.07in;
       }
       .dense-page .worksheet-section {
         margin-top: 0;
       }
       .write-line {
-        min-height: 0.2in;
-        margin-bottom: 0.045in;
-        padding-bottom: 0.04in;
+        min-height: 0.19in;
+        margin-bottom: 0.04in;
+        padding-bottom: 0.035in;
         border-bottom: 1px solid var(--line);
         color: var(--ink);
       }
+      .fall-page { border-top: 0.16in solid var(--coral); }
+      .winter-page { border-top: 0.16in solid #2b7f92; }
+      .spring-page { border-top: 0.16in solid var(--leaf); }
+      .summer-page { border-top: 0.16in solid var(--gold); }
       .footer-note {
-        margin-top: 0.1in;
-        padding-top: 0.1in;
-        border-top: 2px solid var(--sun);
+        margin-top: 0.08in;
+        padding-top: 0.08in;
+        border-top: 2px solid var(--gold);
         color: var(--muted);
-        font-size: 11px;
-      }
-      .guide-page {
-        font-size: 11.5px;
-      }
-      .guide-page h2 {
-        font-size: 26px;
-      }
-      .guide-page h3 {
-        margin-bottom: 0.04in;
-      }
-      .guide-page .footer-note {
-        margin-top: 0.06in;
-        padding-top: 0.06in;
         font-size: 10px;
-      }
-      .guide-page .world-grid {
-        grid-template-columns: repeat(4, minmax(0, 1fr));
-        gap: 0.06in;
-      }
-      .guide-page .world-intro {
-        display: block;
-        min-height: auto;
-        padding: 0.07in;
-      }
-      .guide-page .world-intro img {
-        display: none;
-      }
-      .guide-page .world-intro p {
-        margin-bottom: 0;
-        font-size: 10px;
-        line-height: 1.22;
-      }
-      .guide-page .support-grid li {
-        min-height: auto;
-        padding: 0.055in;
-        font-size: 10.5px;
-        line-height: 1.22;
       }
       @media screen {
         body { padding: 24px; background: #dfeee7; }
@@ -345,7 +315,7 @@ export function renderRainyDayPackHtml(source, worlds, imageMap = new Map()) {
         <p>${escapeHtml(source.cover.subhead)}</p>
         <div class="badge">${escapeHtml(source.pricePoint)}</div>
         <p><strong>Best for:</strong> ${escapeHtml(source.audience)}</p>
-        <p><strong>Session:</strong> ${escapeHtml(source.sessionLength)}</p>
+        <p><strong>Format:</strong> ${escapeHtml(source.sessionLength)}</p>
         <p>${escapeHtml(source.safetyNote)}</p>
       </div>
       <div>
@@ -355,15 +325,15 @@ export function renderRainyDayPackHtml(source, worlds, imageMap = new Map()) {
     </section>
     <section class="pack-page guide-page">
       <p class="page-kicker">Adult setup guide</p>
-      <h2>Run the rainy-day session</h2>
+      <h2>Run the year in small sessions</h2>
       <div class="guide-columns">
         <div class="guide-box">
           <h3>Setup</h3>
           <ol>${renderList(source.adultGuide.setup)}</ol>
         </div>
         <div class="guide-box">
-          <h3>Session flow</h3>
-          <ol>${sessionFlow}</ol>
+          <h3>Season plan</h3>
+          <ol class="season-grid">${seasonPlan}</ol>
         </div>
       </div>
       <h3>World menu</h3>
@@ -372,7 +342,7 @@ export function renderRainyDayPackHtml(source, worlds, imageMap = new Map()) {
       <ul class="support-grid">${renderList(source.adultGuide.supportMoves)}</ul>
       <h3>Extension ideas</h3>
       <ul class="support-grid">${renderList(source.adultGuide.extensionIdeas)}</ul>
-      <p class="footer-note">Use these pages offline. The pack is designed for adult-guided writing practice with no accounts, no uploads, and no public sharing.</p>
+      <p class="footer-note">Use these pages offline. The bundle is designed for adult-guided writing practice with no accounts, no uploads, and no public sharing.</p>
     </section>
     ${printablePages}
   </body>
@@ -392,32 +362,6 @@ function fileRecord(path) {
   }
 }
 
-export function buildProductArtifactManifest(source, files, options = {}) {
-  return {
-    batchId: source.batchId,
-    generatedAt: source.generatedAt,
-    productSlug: source.productSlug,
-    title: source.title,
-    pricePoint: source.pricePoint,
-    sourcePageCount: source.pages.length,
-    fulfillmentNote:
-      options.fulfillmentNote ??
-      'provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.',
-    files,
-  }
-}
-
-export function buildArtifactManifest(source, files) {
-  return buildProductArtifactManifest(
-    {
-      ...source,
-      batchId: source.batchId ?? '2026-06-02-batch7',
-      generatedAt: source.generatedAt ?? '2026-06-02',
-    },
-    files,
-  )
-}
-
 function loadWorlds() {
   const worlds = new Map()
   for (const file of readdirSync(worldsDir).filter((item) => /^batch1-.+\.json$/.test(item))) {
@@ -434,6 +378,8 @@ function productImagePath(slug) {
   if (existsSync(batch7Jpeg)) return batch7Jpeg
   const batch4Jpeg = resolve(root, 'public', 'images', 'plotsprout', 'batch4', `${slug}.jpg`)
   if (existsSync(batch4Jpeg)) return batch4Jpeg
+  const starterJpeg = resolve(root, 'public', 'images', 'plotsprout', `${slug}.jpg`)
+  if (existsSync(starterJpeg)) return starterJpeg
   return null
 }
 
@@ -444,10 +390,10 @@ function prepareBuildDirectory() {
 
 function copyPackAssets(source) {
   const imageMap = new Map()
-  for (const slug of source.worldSlugs) {
+  for (const slug of new Set(source.worldSlugs)) {
     const sourceImage = productImagePath(slug)
     if (!sourceImage) continue
-    const targetName = `${slug}${sourceImage.endsWith('.webp') ? '.webp' : '.jpg'}`
+    const targetName = `${slug}.jpg`
     const targetPath = resolve(assetsDir, targetName)
     copyFileSync(sourceImage, targetPath)
     imageMap.set(slug, `assets/${targetName}`)
@@ -461,15 +407,15 @@ function writeReadme(source) {
     '',
     `Price point: ${source.pricePoint}`,
     `Audience: ${source.audience}`,
-    `Session: ${source.sessionLength}`,
+    `Format: ${source.sessionLength}`,
     '',
     'Files:',
-    '- Rainy-Day-Story-Quest-Pack.pdf',
-    '- source/rainy-day-story-quest-pack.html',
+    '- Homeschool-Season-Story-Bundle.pdf',
+    '- source/homeschool-season-story-bundle.html',
     '- source/assets/*.jpg',
     '',
     'Fulfillment note:',
-    'Upload the ZIP to a hosted checkout provider only after Sam chooses the provider.',
+    'Upload the ZIP to a hosted provider only after Sam chooses the provider.',
     'Do not add a public download URL to the static site.',
     '',
   ].join('\n')
@@ -479,7 +425,7 @@ function writeReadme(source) {
 function zipEntries() {
   const entries = [
     {
-      name: 'Rainy-Day-Story-Quest-Pack.pdf',
+      name: 'Homeschool-Season-Story-Bundle.pdf',
       data: readFileSync(pdfPath),
     },
     {
@@ -487,7 +433,7 @@ function zipEntries() {
       data: readFileSync(readmePath),
     },
     {
-      name: 'source/rainy-day-story-quest-pack.html',
+      name: 'source/homeschool-season-story-bundle.html',
       data: readFileSync(htmlPath),
     },
   ]
@@ -500,7 +446,7 @@ function zipEntries() {
   return entries
 }
 
-export async function buildRainyDayPack() {
+export async function buildHomeschoolSeasonBundle() {
   const source = readJson(sourcePath)
   const product = readJson(productsPath).products.find((candidate) => candidate.slug === source.productSlug)
   if (!product) throw new Error(`Missing product record for ${source.productSlug}`)
@@ -508,7 +454,7 @@ export async function buildRainyDayPack() {
 
   prepareBuildDirectory()
   const imageMap = copyPackAssets(source)
-  const html = renderRainyDayPackHtml(source, worlds, imageMap)
+  const html = renderSeasonBundleHtml(source, worlds, imageMap)
   mkdirSync(dirname(htmlPath), { recursive: true })
   writeFileSync(htmlPath, html)
   writeReadme(source)
@@ -534,7 +480,7 @@ export async function buildRainyDayPack() {
   }
 
   writeStoredZip(zipPath, zipEntries())
-  const manifest = buildArtifactManifest(source, {
+  const manifest = buildProductArtifactManifest(source, {
     pdf: fileRecord(pdfPath),
     zip: fileRecord(zipPath),
     sourceHtml: fileRecord(htmlPath),
@@ -553,7 +499,7 @@ export async function buildRainyDayPack() {
 }
 
 if (import.meta.url === pathToFileURL(process.argv[1] ?? '').href) {
-  buildRainyDayPack()
+  buildHomeschoolSeasonBundle()
     .then(({ manifest }) => {
       console.log(
         `Built ${manifest.title}: ${manifest.files.pdf.path}, ${manifest.files.zip.path}, ${manifest.files.sourceHtml.path}`,

@@ -39,6 +39,57 @@
         "Let the child point, circle, or label before writing full sentences.",
         "End with two kind choices and let the child choose the ending."
       ]
+    },
+    {
+      "slug": "homeschool-season-story-bundle",
+      "title": "Homeschool Season Story Bundle",
+      "pricePoint": "$29",
+      "status": "checkout_pending",
+      "headline": "Twelve printable story quests for a full homeschool writing rhythm.",
+      "summary": "Four seasonal lanes give families a year of short story practice: map a tiny place, collect concrete details, draft one useful scene, revise one sentence, and save the finished page.",
+      "heroImage": "images/plotsprout/batch4/seed-library-map-room.jpg",
+      "ctaLabel": "Request bundle launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Homeschool%20Season%20Story%20Bundle",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static bundle page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "greenhouse-gear-garden",
+        "teacup-town-weather-window",
+        "button-bakery-map-mixup",
+        "clue-label-tower-museum",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "solar-oven-picnic-station",
+        "spoon-ferry-lunchbox-harbor"
+      ],
+      "includedPages": [
+        "Fall detail hunt page",
+        "Fall errand map page",
+        "Fall sentence polish page",
+        "Winter sequence ladder page",
+        "Winter dialogue cards",
+        "Winter cozy scene draft page",
+        "Spring observation notebook page",
+        "Spring revision garden page",
+        "Spring clearer verb page",
+        "Summer map-and-memory page",
+        "Summer read-aloud reflection page",
+        "Season portfolio cover and adult guide"
+      ],
+      "useCases": [
+        "A weekly homeschool writing warm-up that does not require a screen",
+        "A co-op table station for short narrative practice",
+        "A tutoring bundle for reluctant writers who need concrete choices",
+        "A portfolio-friendly set of finished story pages across the year"
+      ],
+      "parentSteps": [
+        "Choose one season and print only those pages for the month.",
+        "Let the child point, circle, label, or dictate before asking for full sentences.",
+        "Move one planned detail into the story page instead of starting from a blank page.",
+        "Save the finished page behind the season divider for a visible writing record."
+      ]
     }
   ]
 }

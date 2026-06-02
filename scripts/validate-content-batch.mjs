@@ -5,7 +5,9 @@ import { containsActiveCheckoutLanguage } from './content-policy.mjs'
 import {
   inspectArtifactFiles,
   validateCheckoutReadiness,
+  validateManifestWorldAssets,
   validatePackSource,
+  validateSeasonBundleSource,
 } from './product-artifact-policy.mjs'
 
 const root = resolve(import.meta.dirname, '..')
@@ -18,6 +20,7 @@ const batch4ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-bat
 const batch7ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch7-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
+const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -25,6 +28,7 @@ const batch4ImagesBatchId = '2026-06-02-batch4'
 const batch7ProductImagesBatchId = '2026-06-02-batch7-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
+const seasonBundleBatchId = '2026-06-02-batch8'
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 const seoLanes = new Set([
@@ -490,9 +494,28 @@ function validateProduct(product, productSlugs, worldSlugs) {
   ]) {
     validateString(product[key], `${label}.${key}`)
   }
-  expect(product.slug === 'rainy-day-story-quest-pack', `${label}.slug must be rainy-day-story-quest-pack.`)
-  expect(product.title === 'Rainy Day Story Quest Pack', `${label}.title mismatch.`)
-  expect(product.pricePoint === '$9', `${label}.pricePoint must be $9.`)
+  const expectedProducts = {
+    'rainy-day-story-quest-pack': {
+      title: 'Rainy Day Story Quest Pack',
+      pricePoint: '$9',
+      minIncludedPages: 6,
+      minUseCases: 3,
+      minParentSteps: 3,
+      maxWorldSlugs: 5,
+    },
+    'homeschool-season-story-bundle': {
+      title: 'Homeschool Season Story Bundle',
+      pricePoint: '$29',
+      minIncludedPages: 10,
+      minUseCases: 4,
+      minParentSteps: 4,
+      maxWorldSlugs: 12,
+    },
+  }
+  const expectedProduct = expectedProducts[product.slug]
+  expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
+  expect(product.title === expectedProduct.title, `${label}.title mismatch.`)
+  expect(product.pricePoint === expectedProduct.pricePoint, `${label}.pricePoint mismatch.`)
   expect(product.status === 'checkout_pending', `${label}.status must be checkout_pending.`)
   expect(!productSlugs.has(product.slug), `${label}.slug is duplicated across Batch 5 products.`)
   productSlugs.add(product.slug)
@@ -501,13 +524,13 @@ function validateProduct(product, productSlugs, worldSlugs) {
   expect(/provider|checkout.*pending|checkout.*selected/i.test(product.checkoutNote), `${label}.checkoutNote must say checkout/provider is pending.`)
   expect(product.safetyNote.includes(safety), `${label}.safetyNote missing required safety sentence.`)
   validateMinList(product.worldSlugs, 3, `${label}.worldSlugs`)
-  expect(product.worldSlugs.length <= 5, `${label}.worldSlugs must have no more than 5 entries.`)
+  expect(product.worldSlugs.length <= expectedProduct.maxWorldSlugs, `${label}.worldSlugs has too many entries.`)
   for (const worldSlug of product.worldSlugs) {
     expect(worldSlugs.has(worldSlug), `${label}.worldSlugs references unknown world slug ${worldSlug}.`)
   }
-  validateMinList(product.includedPages, 6, `${label}.includedPages`)
-  validateMinList(product.useCases, 3, `${label}.useCases`)
-  validateMinList(product.parentSteps, 3, `${label}.parentSteps`)
+  validateMinList(product.includedPages, expectedProduct.minIncludedPages, `${label}.includedPages`)
+  validateMinList(product.useCases, expectedProduct.minUseCases, `${label}.useCases`)
+  validateMinList(product.parentSteps, expectedProduct.minParentSteps, `${label}.parentSteps`)
 
   expect(!containsActiveCheckoutLanguage(product), `${label} includes active checkout or payment-provider language.`)
   expect(!/student accounts?|login|log in|public publishing|publish online|upload/i.test(JSON.stringify(product)), `${label} includes account, upload, or public publishing language.`)
@@ -519,6 +542,16 @@ function validateProduct(product, productSlugs, worldSlugs) {
   expect(renderedHtml.includes(product.title), `${label} static output missing product title.`)
   expect(renderedHtml.includes(product.pricePoint), `${label} static output missing price.`)
   expect(renderedHtml.includes(product.checkoutNote), `${label} static output missing checkout note.`)
+  const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
+  validateString(metaDescription, `${label} rendered meta description`)
+  expect(
+    !/\b(and|or|with|for|to)$/i.test(metaDescription),
+    `${label} rendered meta description must not end on a dangling connector.`,
+  )
+  expect(
+    !/[,:;-]$/.test(metaDescription),
+    `${label} rendered meta description must not end on dangling punctuation.`,
+  )
 }
 
 for (const dir of [worldsDir, kitsDir]) {
@@ -631,9 +664,12 @@ const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 1, `Expected 1 Batch 5 product, found ${products.products.length}.`)
+expect(products.products.length === 2, `Expected 2 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
+for (const requiredProductSlug of ['rainy-day-story-quest-pack', 'homeschool-season-story-bundle']) {
+  expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
+}
 
 expect(existsSync(rainyDayPackSourceFile), `Missing Batch 7 Rainy Day pack source file: ${rainyDayPackSourceFile}`)
 const rainyDayPackSource = readJson(rainyDayPackSourceFile)
@@ -683,12 +719,77 @@ expect(
   rainyDayArtifactManifest.files.assets.length === rainyDayPackSource.worldSlugs.length,
   'Rainy Day artifact manifest must include one copied source image per product world.',
 )
+const rainyDayManifestAssetErrors = validateManifestWorldAssets(rainyDayPackSource, rainyDayArtifactManifest)
+expect(
+  rainyDayManifestAssetErrors.length === 0,
+  `Rainy Day artifact manifest image coverage failed validation:\n${rainyDayManifestAssetErrors.join('\n')}`,
+)
 for (const worldSlug of rainyDayPackSource.worldSlugs) {
   const asset = rainyDayArtifactManifest.files.assets.find((candidate) => candidate.path.includes(`${worldSlug}.jpg`))
   expect(asset, `Rainy Day artifact manifest missing copied image for ${worldSlug}.`)
   validateImageFile(resolve(root, asset.path), `Rainy Day copied artifact image ${worldSlug}`, 'jpeg')
 }
 
+expect(existsSync(seasonBundleSourceFile), `Missing Batch 8 Homeschool Season bundle source file: ${seasonBundleSourceFile}`)
+const seasonBundleSource = readJson(seasonBundleSourceFile)
+expect(
+  seasonBundleSource.batchId === seasonBundleBatchId,
+  `Homeschool Season bundle source batchId must be ${seasonBundleBatchId}.`,
+)
+const seasonBundleProduct = products.products.find((product) => product.slug === 'homeschool-season-story-bundle')
+expect(seasonBundleProduct, 'Missing Homeschool Season product record for Batch 8 artifact validation.')
+const seasonBundleSourceErrors = validateSeasonBundleSource(seasonBundleSource, seasonBundleProduct, worldSlugs)
+expect(
+  seasonBundleSourceErrors.length === 0,
+  `Homeschool Season bundle source failed validation:\n${seasonBundleSourceErrors.join('\n')}`,
+)
+const seasonBundleExpectedPdfPages = seasonBundleSource.pages.length + 2
+const seasonBundleArtifactStatus = inspectArtifactFiles(root, seasonBundleSource.artifact, {
+  expectedPdfPages: seasonBundleExpectedPdfPages,
+})
+expect(
+  seasonBundleArtifactStatus.valid,
+  `Homeschool Season bundle artifacts failed validation:\n${seasonBundleArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  seasonBundleArtifactStatus.files.pdf.size > 100_000,
+  `Homeschool Season PDF artifact is unexpectedly small: ${seasonBundleArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  seasonBundleArtifactStatus.files.pdf.pageCount === seasonBundleExpectedPdfPages,
+  `Homeschool Season PDF artifact must have ${seasonBundleExpectedPdfPages} pages.`,
+)
+expect(
+  seasonBundleArtifactStatus.files.zip.size > seasonBundleArtifactStatus.files.pdf.size,
+  'Homeschool Season ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const seasonBundleCheckoutErrors = validateCheckoutReadiness(seasonBundleProduct, seasonBundleArtifactStatus)
+expect(
+  seasonBundleCheckoutErrors.length === 0,
+  `Homeschool Season checkout readiness failed validation:\n${seasonBundleCheckoutErrors.join('\n')}`,
+)
+const seasonBundleArtifactManifest = readJson(resolve(root, seasonBundleSource.artifact.manifestPath))
+expect(
+  seasonBundleArtifactManifest.sourcePageCount === seasonBundleSource.pages.length,
+  'Homeschool Season artifact manifest sourcePageCount must match source pages.',
+)
+expect(
+  Array.isArray(seasonBundleArtifactManifest.files.assets),
+  'Homeschool Season artifact manifest files.assets must be an array.',
+)
+expect(
+  seasonBundleArtifactManifest.files.assets.length === seasonBundleSource.worldSlugs.length,
+  'Homeschool Season artifact manifest must include one copied local image per product world.',
+)
+const seasonBundleManifestAssetErrors = validateManifestWorldAssets(seasonBundleSource, seasonBundleArtifactManifest)
+expect(
+  seasonBundleManifestAssetErrors.length === 0,
+  `Homeschool Season artifact manifest image coverage failed validation:\n${seasonBundleManifestAssetErrors.join('\n')}`,
+)
+for (const asset of seasonBundleArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Homeschool Season copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length} local world images, ${productSlugs.size} static product page, 1 product artifact.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length} local world images, ${productSlugs.size} static product pages, 2 product artifacts.`,
 )

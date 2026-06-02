@@ -50,6 +50,15 @@ function renderList(items) {
   return items.map((item) => `<li>${escapeHtml(item)}</li>`).join('\n')
 }
 
+function metaDescription(value, maxLength = 158) {
+  const text = String(value).trim()
+  if (text.length <= maxLength) return text
+  const clipped = text.slice(0, maxLength + 1)
+  const boundary = clipped.lastIndexOf(' ')
+  const candidate = boundary > 80 ? clipped.slice(0, boundary) : text.slice(0, maxLength)
+  return candidate.replace(/\s+(and|or|with|for|to)$/i, '').replace(/[ ,;:-]+$/g, '')
+}
+
 function renderCollection(collection, worlds) {
   const canonical = `${siteRoot}/${collection.slug}/`
   const imagePath = heroImages.get(collection.slug) ?? 'images/plotsprout/moon-muffin-market.jpg'
@@ -717,7 +726,7 @@ function renderProductPage(product, worlds) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>${escapeHtml(product.title)} | Plot Sprout Explorer</title>
-    <meta name="description" content="${escapeHtml(product.summary).slice(0, 158)}">
+    <meta name="description" content="${escapeHtml(metaDescription(product.summary))}">
     <link rel="canonical" href="${canonical}">
     <link rel="icon" type="image/svg+xml" href="${basePath}favicon.svg">
     <style>

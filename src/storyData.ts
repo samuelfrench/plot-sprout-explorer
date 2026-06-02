@@ -269,11 +269,23 @@ export const worldGalleryLink: WorldGalleryLink = {
   note: 'Images are generated locally and committed with prompt sidecars.',
 }
 
-export const featuredProductLink: FeaturedProductLink = {
-  slug: 'rainy-day-story-quest-pack',
-  title: 'Rainy Day Story Quest Pack',
-  pricePoint: '$9',
-  description:
-    'A static product page for a rainy-day printable quest pack, ready for checkout wiring after a provider is selected.',
-  note: 'No checkout, accounts, uploads, or public publishing are enabled.',
-}
+export const productLinks: FeaturedProductLink[] = [
+  {
+    slug: 'rainy-day-story-quest-pack',
+    title: 'Rainy Day Story Quest Pack',
+    pricePoint: '$9',
+    description:
+      'A static product page for a rainy-day printable quest pack, ready for checkout wiring after a provider is selected.',
+    note: 'No checkout, accounts, uploads, or public publishing are enabled.',
+  },
+  {
+    slug: 'homeschool-season-story-bundle',
+    title: 'Homeschool Season Story Bundle',
+    pricePoint: '$29',
+    description:
+      'Twelve seasonal printable quests for homeschool families building a year of short story practice.',
+    note: 'No checkout, accounts, uploads, or public publishing are enabled.',
+  },
+]
+
+export const featuredProductLink: FeaturedProductLink = productLinks[0]
