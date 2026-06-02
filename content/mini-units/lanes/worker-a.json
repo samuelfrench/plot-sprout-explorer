@@ -1,0 +1,130 @@
+{
+  "lane": "lower-practical-starters",
+  "units": [
+    {
+      "slug": "weather-window-errand-notebook",
+      "title": "Weather Window Errand Notebook",
+      "ageBand": "7-8",
+      "audience": "Homeschool families and early elementary teachers who need a low-prep writing unit about weather clues, simple errands, and clear notes.",
+      "duration": "3 lessons, 25-30 minutes each",
+      "summary": "Children use tiny town weather clues and a cozy market ticket problem to practice observing, listing, and writing one helpful note at a time.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "mitten-market-lost-ticket",
+        "sticker-station-mail-cart"
+      ],
+      "objectives": [
+        "Name three setting details that help a reader picture a gentle story world.",
+        "Write a clear three-step errand note with a beginning, middle, and end.",
+        "Revise one sentence by adding a weather, map, or mood detail."
+      ],
+      "materials": [
+        "Plain paper or writing notebooks",
+        "Pencils and crayons",
+        "Three sticky notes per child",
+        "A timer",
+        "Simple weather word bank",
+        "Optional index cards for errand slips"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Weather Clue Warm-Up",
+          "minutes": 25,
+          "teacherMove": "Read the Teacup Town premise aloud, draw a simple spoon window, and model listing three safe weather clues without starting a full story.",
+          "studentTask": "Students draw a tiny window and list three clues a helper would notice before planning the town errands.",
+          "output": "Weather window sketch with three labeled clues."
+        },
+        {
+          "title": "Lost Ticket Route",
+          "minutes": 30,
+          "teacherMove": "Introduce Mitten Market and show how a lost ticket can become three practical steps: find it, ask one question, return it.",
+          "studentTask": "Students write a three-step errand note on an index card, then underline the action word in each step.",
+          "output": "Three-step lost-ticket errand note."
+        },
+        {
+          "title": "Friendly Mail Cart Note",
+          "minutes": 30,
+          "teacherMove": "Use Sticker Station to model adding one mood word and one clear sign-off to a short note.",
+          "studentTask": "Students revise their errand note into a friendly mail-cart message with one added detail and a kind sign-off.",
+          "output": "Revised friendly note ready for a notebook or take-home folder."
+        }
+      ],
+      "teacherNotes": [
+        "Keep drafting on paper; no digital setup is part of the unit.",
+        "For reluctant writers, accept a labeled drawing plus three dictated sentences before asking for independent handwriting.",
+        "Use the weather word bank as a spelling support, not a vocabulary test.",
+        "Read student work aloud only with permission, and keep examples fictional.",
+        "A strong finished piece can be six clear sentences; do not expand the task into a long story unless the child asks."
+      ],
+      "homeschoolAdaptation": "Use one lesson per day during morning basket or language arts. Let the child dictate the first draft while the parent writes, then ask the child to copy or revise one favorite sentence independently.",
+      "classroomManagement": "Seat students with pencils, paper, and three sticky notes before reading the premise. Use quiet thumbs-up checks after each step so the group can move without long transitions.",
+      "assessment": "Check for three observable clues, three ordered errand steps, and one revised sentence that adds a weather, map, or mood detail.",
+      "printableOffer": "A future printable pack could include weather windows, lost-ticket errand slips, greeting-note cards, and a simple teacher rubric. A future classroom license could add small-group card sets for paper-based use.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "family-friendly lower elementary writing mini-unit scene, children at desks with paper weather windows, tiny teacup town and mitten market craft props, pencils, crayons, sticky notes, practical classroom table, warm storybook illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "map-mixup-message-makers",
+      "title": "Map Mix-Up Message Makers",
+      "ageBand": "7-9",
+      "audience": "Homeschool parents, co-op leaders, and grade 2-3 teachers who want a short map, direction, and dialogue writing unit.",
+      "duration": "3 lessons, 30 minutes each",
+      "summary": "Children turn bakery maps, errand slips, and lunchbox harbor orders into clear directions, short dialogue, and a practical final message.",
+      "worldSlugs": [
+        "button-bakery-map-mixup",
+        "acorn-avenue-errand-office",
+        "spoon-ferry-lunchbox-harbor",
+        "sticker-station-mail-cart"
+      ],
+      "objectives": [
+        "Use a simple map to plan a fictional route with two or three stops.",
+        "Write directions that include order words such as first, next, and last.",
+        "Create a short polite dialogue that clarifies a mixed-up message."
+      ],
+      "materials": [
+        "Blank paper for maps",
+        "Pencils and colored pencils",
+        "Sticky notes or small paper slips",
+        "Classroom board or parent whiteboard",
+        "Optional toy counters for route stops",
+        "Timer"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Bakery Map Draft",
+          "minutes": 30,
+          "teacherMove": "Read the Button Bakery premise and draw a four-stop map with a bakery, one helper shop, one turn, and one finish spot.",
+          "studentTask": "Students draw their own simple map and place two or three stops that a helper can visit in order.",
+          "output": "Labeled route map with a clear start and finish."
+        },
+        {
+          "title": "Errand Office Directions",
+          "minutes": 30,
+          "teacherMove": "Use Acorn Avenue to model turning a map into three direction sentences that start with first, next, and last.",
+          "studentTask": "Students write three ordered direction sentences for their map and trade with a partner or adult for a clarity check.",
+          "output": "Three-sentence direction card."
+        },
+        {
+          "title": "Harbor Order Dialogue",
+          "minutes": 30,
+          "teacherMove": "Introduce Spoon Ferry and Sticker Station as examples of friendly clarification, then model a two-speaker dialogue that asks one useful question.",
+          "studentTask": "Students add a short dialogue to their direction card so one character can clarify a mixed-up order or message.",
+          "output": "Map, direction card, and two-speaker clarification dialogue."
+        }
+      ],
+      "teacherNotes": [
+        "Keep maps small: four locations are enough for this age band.",
+        "The lesson works with blank paper; printed worksheets are optional, not required.",
+        "Do not require children to use real addresses, real classmates, or personal family details.",
+        "If partner work is distracting, use adult or teacher checks instead of peer checks.",
+        "For handwriting fatigue, let students write the direction card and dictate the dialogue."
+      ],
+      "homeschoolAdaptation": "Spread the lessons across a week and use household objects as route markers. A parent can walk the route with the child before the child writes the three direction sentences.",
+      "classroomManagement": "Prepare small paper slips before the lesson and limit movement by having students point to map stops instead of walking routes around the room.",
+      "assessment": "Look for a start and finish on the map, three ordered direction sentences, and a dialogue line that asks or answers one clear question.",
+      "printableOffer": "A future homeschool bundle could package bakery maps, errand cards, and lunchbox dialogue strips. A future classroom license could add reusable small-group map mats and assessment checklists.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "family-friendly lower elementary map writing mini-unit scene, paper bakery map, acorn errand slips, spoon ferry lunchbox harbor props, children using pencils and colored counters at a classroom table, bright practical storybook illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    }
+  ]
+}

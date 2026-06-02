@@ -6,8 +6,10 @@ const worldsDir = resolve(root, 'content', 'worlds')
 const kitsDir = resolve(root, 'content', 'printable-kits')
 const seoCollectionsDir = resolve(root, 'content', 'seo-collections')
 const seoCollectionsFile = resolve(seoCollectionsDir, 'batch2-collections.json')
+const miniUnitsFile = resolve(root, 'content', 'mini-units', 'batch3-mini-units.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
+const miniUnitsBatchId = '2026-06-02-batch3'
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 const seoLanes = new Set([
@@ -209,6 +211,77 @@ function validateCollection(collection, collectionSlugs, worldSlugs) {
   expect(renderedHtml.includes(collection.metaDescription), `${label} static output missing meta description.`)
 }
 
+function validateLesson(lesson, label) {
+  for (const key of ['title', 'teacherMove', 'studentTask', 'output']) {
+    validateString(lesson[key], `${label}.${key}`)
+  }
+  expect(Number.isInteger(lesson.minutes), `${label}.minutes must be an integer.`)
+  expect(lesson.minutes >= 10 && lesson.minutes <= 60, `${label}.minutes must be between 10 and 60.`)
+}
+
+function validateMiniUnit(unit, unitSlugs, worldSlugs) {
+  const label = `batch3-mini-units.json:${unit.slug ?? 'missing-slug'}`
+  for (const key of [
+    'slug',
+    'title',
+    'ageBand',
+    'audience',
+    'duration',
+    'summary',
+    'homeschoolAdaptation',
+    'classroomManagement',
+    'assessment',
+    'printableOffer',
+    'safetyNote',
+    'imagePrompt',
+  ]) {
+    validateString(unit[key], `${label}.${key}`)
+  }
+
+  expect(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(unit.slug), `${label}.slug must be lowercase kebab-case.`)
+  expect(!unitSlugs.has(unit.slug), `${label}.slug is duplicated across Batch 3 mini-units.`)
+  unitSlugs.add(unit.slug)
+  expect(['7-8', '7-9', '8-10', '9-11', '10-11'].includes(unit.ageBand), `${label}.ageBand is not allowed.`)
+  expect(unit.safetyNote.includes(safety), `${label}.safetyNote missing required safety sentence.`)
+
+  validateMinList(unit.worldSlugs, 2, `${label}.worldSlugs`)
+  expect(unit.worldSlugs.length <= 4, `${label}.worldSlugs must have no more than 4 entries.`)
+  for (const worldSlug of unit.worldSlugs) {
+    expect(worldSlugs.has(worldSlug), `${label}.worldSlugs references unknown world slug ${worldSlug}.`)
+  }
+
+  validateList(unit.objectives, 3, `${label}.objectives`)
+  validateMinList(unit.materials, 4, `${label}.materials`)
+  validateMinList(unit.teacherNotes, 4, `${label}.teacherNotes`)
+
+  expect(Array.isArray(unit.lessonFlow), `${label}.lessonFlow must be an array.`)
+  expect(unit.lessonFlow.length === 3, `${label}.lessonFlow must have exactly 3 lessons.`)
+  unit.lessonFlow.forEach((lesson, index) => validateLesson(lesson, `${label}.lessonFlow[${index}]`))
+
+  expect(/printable|classroom|homeschool|bundle|pack/i.test(unit.printableOffer), `${label}.printableOffer is not concrete enough.`)
+  for (const phrase of ['no text', 'no logos', 'no watermark', 'no branded characters', 'no scary harm', 'no weapons']) {
+    expect(unit.imagePrompt.toLowerCase().includes(phrase), `${label}.imagePrompt missing "${phrase}".`)
+  }
+  const accountLanguage = JSON.stringify(unit)
+    .replace(/\bwithout\s+logins?\b/gi, '')
+    .replace(/\bwithout\s+student accounts?\b/gi, '')
+    .replace(/\bwithout\s+account setup\b/gi, '')
+    .replace(/\bno\s+student accounts?\b/gi, '')
+    .replace(/\bno\s+logins?\b/gi, '')
+    .replace(/\bno\s+uploads?\b/gi, '')
+    .replace(/\bno\s+public publishing\b/gi, '')
+    .replace(/\bdoes not require student accounts?\b/gi, '')
+  expect(!/student accounts?|login|log in|public publishing|publish online|upload/i.test(accountLanguage), `${label} includes account, login, upload, or public publishing language.`)
+
+  validateNoBannedTerms(unit, label)
+
+  const renderedPath = resolve(root, 'public', 'mini-units', unit.slug, 'index.html')
+  expect(existsSync(renderedPath), `${label} static output is missing: ${renderedPath}`)
+  const renderedHtml = readFileSync(renderedPath, 'utf8')
+  expect(renderedHtml.includes(unit.title), `${label} static output missing unit title.`)
+  expect(renderedHtml.includes('Lesson flow'), `${label} static output missing lesson flow heading.`)
+}
+
 for (const dir of [worldsDir, kitsDir]) {
   expect(existsSync(dir), `Missing content directory: ${dir}`)
 }
@@ -261,6 +334,20 @@ for (const slug of targetCollections.keys()) {
   expect(collectionSlugs.has(slug), `Missing Batch 2 SEO collection slug: ${slug}`)
 }
 
+expect(existsSync(miniUnitsFile), `Missing Batch 3 mini-units file: ${miniUnitsFile}`)
+const miniUnits = readJson(miniUnitsFile)
+expect(miniUnits.batchId === miniUnitsBatchId, `batch3-mini-units.json.batchId must be ${miniUnitsBatchId}.`)
+expect(miniUnits.generatedAt === '2026-06-02', 'batch3-mini-units.json.generatedAt must be 2026-06-02.')
+expect(Array.isArray(miniUnits.units), 'batch3-mini-units.json.units must be an array.')
+expect(miniUnits.units.length === 10, `Expected 10 Batch 3 mini-units, found ${miniUnits.units.length}.`)
+
+const miniUnitSlugs = new Set()
+miniUnits.units.forEach((unit) => validateMiniUnit(unit, miniUnitSlugs, worldSlugs))
+const miniUnitIndexPath = resolve(root, 'public', 'mini-units', 'index.html')
+expect(existsSync(miniUnitIndexPath), `Missing Batch 3 mini-unit index page: ${miniUnitIndexPath}`)
+const miniUnitIndexHtml = readFileSync(miniUnitIndexPath, 'utf8')
+expect(miniUnitIndexHtml.includes('Teacher Mini-Units'), 'Batch 3 mini-unit index missing expected heading.')
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units.`,
 )

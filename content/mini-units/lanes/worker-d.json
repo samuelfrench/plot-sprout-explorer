@@ -1,0 +1,128 @@
+{
+  "lane": "revision-craft-mini-units",
+  "units": [
+    {
+      "slug": "revision-river-scene-repair",
+      "title": "Revision River Scene Repair",
+      "ageBand": "10-11",
+      "audience": "Upper elementary writers who can draft a short scene and need a practical revision routine for clarity, pacing, and stronger reader cues.",
+      "duration": "45 minutes",
+      "summary": "Students revise one short adventure scene by marking where the action slows, where the reader needs a clearer clue, and where a sentence can do more useful work.",
+      "worldSlugs": [
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "blue-pencil-observatory"
+      ],
+      "objectives": [
+        "Identify one strong moment, one confusing moment, and one slow moment in a draft.",
+        "Revise exposition into action, dialogue, or a precise clue label.",
+        "Explain one craft decision in a short revision note."
+      ],
+      "materials": [
+        "One-page student draft or teacher-provided sample scene",
+        "Colored pencils or highlighters in three colors",
+        "Revision river map printable",
+        "Scene repair checklist",
+        "Sticky notes"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Map the Current Scene",
+          "minutes": 12,
+          "teacherMove": "Model reading a short scene once for meaning and once for craft, marking a green star for the strongest moment, a blue question mark for confusion, and an orange pause for slow pacing.",
+          "studentTask": "Students reread their scene or sample and mark one strong moment, one confusing moment, and one slow moment.",
+          "output": "A marked draft with three revision targets."
+        },
+        {
+          "title": "Trade Exposition for Evidence",
+          "minutes": 18,
+          "teacherMove": "Show how a telling sentence can become a visible action, a line of dialogue, or a labeled clue that helps the reader infer what matters.",
+          "studentTask": "Students choose the confusing or slow moment and rewrite two to four sentences using action, dialogue, or a concrete clue.",
+          "output": "A revised scene section with clearer reader evidence."
+        },
+        {
+          "title": "Write the Craft Note",
+          "minutes": 15,
+          "teacherMove": "Prompt students to name the exact change they made and why it helps the reader follow the scene.",
+          "studentTask": "Students attach a sticky-note explanation that starts with, 'I changed...' and names the intended reader effect.",
+          "output": "A revised scene plus one craft-decision note."
+        }
+      ],
+      "teacherNotes": [
+        "Keep the draft short enough for real revision inside the lesson; 150 to 250 words is enough.",
+        "If students do not have drafts, use a neutral sample about a ferry guide sorting mixed-up clue labels.",
+        "Treat peer feedback as reader response, not grading; students should point to a sentence and name what they understood.",
+        "Use the three-color code consistently so students can see revision as a sequence of decisions.",
+        "For reluctant writers, allow sentence replacement instead of full paragraph rewriting."
+      ],
+      "homeschoolAdaptation": "Use a parent-child conference: the child reads the draft aloud, the parent marks only one confusing spot, and the child revises that spot before writing the craft note.",
+      "classroomManagement": "Collect colored pencils before independent work starts, set a visible timer for each phase, and limit partner talk to one question and one suggestion per draft.",
+      "assessment": "Check that each student marked three draft targets, revised one specific section, and wrote a craft note that explains the purpose of the revision.",
+      "printableOffer": "Future printable pack idea: a Revision River scene repair map, color-code bookmark, sample scene, and classroom license version with extra peer-feedback slips.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Friendly upper-elementary writing workshop on a bright river ferry with paper maps, colored pencils, clue labels, and a telescope station, warm daylight, whimsical but realistic classroom craft materials, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "craft-academy-procedure-polish",
+      "title": "Craft Academy Procedure Polish",
+      "ageBand": "10-11",
+      "audience": "Upper elementary homeschool groups or classrooms practicing procedural writing, exposition control, and feedback that improves usability.",
+      "duration": "50 minutes",
+      "summary": "Students revise a how-to page by testing whether a reader can follow each step, then tighten sequence words, remove filler exposition, and add useful cautions.",
+      "worldSlugs": [
+        "compass-craft-academy",
+        "almost-invention-workshop",
+        "appendix-archive-lab",
+        "margin-note-market"
+      ],
+      "objectives": [
+        "Sequence a procedure so each step can be followed without extra explanation.",
+        "Replace vague verbs and filler exposition with precise action language.",
+        "Use feedback to add one helpful margin note, caution, or materials clarification."
+      ],
+      "materials": [
+        "Drafted how-to page or teacher-provided procedure sample",
+        "Procedure test cards",
+        "Margin-note strips",
+        "Pencils",
+        "Checklist for precise verbs, sequence words, and materials"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Run the Reader Test",
+          "minutes": 15,
+          "teacherMove": "Demonstrate following a procedure exactly as written, pausing when a missing material, unclear verb, or skipped sequence makes the step hard to complete.",
+          "studentTask": "Students trade procedures with a partner or adult and mark any place where the reader has to guess.",
+          "output": "A procedure draft with reader-test marks."
+        },
+        {
+          "title": "Polish the Steps",
+          "minutes": 20,
+          "teacherMove": "Model changing vague directions into precise steps with clear sequence words, exact materials, and only the background information the reader needs.",
+          "studentTask": "Students revise at least three steps by tightening verbs, adding sequence cues, or moving extra explanation into a short note.",
+          "output": "A clearer procedure with revised steps."
+        },
+        {
+          "title": "Add the Useful Margin Note",
+          "minutes": 15,
+          "teacherMove": "Show examples of margin notes that help the reader avoid confusion without taking over the whole page.",
+          "studentTask": "Students add one margin note, caution, or materials clarification based on reader feedback.",
+          "output": "A polished procedure page with one reader-tested support note."
+        }
+      ],
+      "teacherNotes": [
+        "Choose low-stakes procedures such as folding a paper booklet, sorting an appendix card set, or building a paper compass marker.",
+        "Do not let students redesign the whole activity; the target is clearer writing, not a new project.",
+        "When feedback feels too broad, ask the reader to point to the exact step where guessing started.",
+        "Encourage precise verbs such as fold, align, label, compare, circle, and check.",
+        "Keep safety notes practical and classroom-based, such as asking an adult before using messy supplies."
+      ],
+      "homeschoolAdaptation": "Have the child hand the procedure to an adult or sibling who silently follows the steps; the child records every pause as a revision target before rewriting.",
+      "classroomManagement": "Pair students by draft length, keep materials at a central supply point, and require quiet reader tests before discussion so feedback is based on the written directions.",
+      "assessment": "Review the final procedure for clear sequence, precise verbs, complete materials, and one margin note that responds to real reader feedback.",
+      "printableOffer": "Future printable bundle idea: procedure test cards, craft academy revision checklist, margin-note strips, and a classroom license pack for repeated writing centers.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Bright craft academy desk with paper compass parts, almost-invention sketches, appendix cards, margin-note strips, pencils, checklists, and neatly arranged revision tools, cheerful upper-elementary classroom style, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    }
+  ]
+}

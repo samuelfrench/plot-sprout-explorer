@@ -1,0 +1,126 @@
+{
+  "lane": "worksheet-mini-units",
+  "units": [
+    {
+      "slug": "tiny-errand-map-worksheet-sequence",
+      "title": "Tiny Errand Map Worksheet Sequence",
+      "ageBand": "7-9",
+      "audience": "Lower elementary homeschool groups, tutoring pods, and classrooms working on short narrative planning.",
+      "duration": "Three 30-minute printable worksheet sessions",
+      "summary": "Students plan a small helpful errand, draft a beginning-middle-end story, then revise with a reflection checklist.",
+      "worldSlugs": [
+        "pocket-park-notice-board",
+        "paperclip-plaza-parcel-day",
+        "rain-boot-route-rangers"
+      ],
+      "objectives": [
+        "Choose a setting, helper role, and tiny errand before drafting.",
+        "Write a three-part story with a clear problem and helpful choice.",
+        "Use a revision checklist to add setting detail and reflect on one improved sentence."
+      ],
+      "materials": [
+        "World choice sheet",
+        "Tiny errand planner worksheet",
+        "Beginning-middle-end draft page",
+        "Revision and reflection checklist",
+        "Pencils and colored pencils"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Planner: Pick the Errand Path",
+          "minutes": 30,
+          "teacherMove": "Read the three world blurbs aloud, model choosing one helper role, and show how to circle a setting detail before writing.",
+          "studentTask": "Pick one world, choose a helper role, draw a simple errand path, and fill in who needs help, what is unclear, and what clue will guide the hero.",
+          "output": "Completed planner with a world choice, helper role, route sketch, and three story facts."
+        },
+        {
+          "title": "Draft: Build Three Story Steps",
+          "minutes": 30,
+          "teacherMove": "Demonstrate turning planner notes into three short paragraphs: arrival, mixed-up errand, and helpful ending.",
+          "studentTask": "Write a draft using the planner boxes, underline the problem sentence, and add one setting detail from the chosen world.",
+          "output": "One-page story draft with beginning, middle, and ending sections."
+        },
+        {
+          "title": "Revision: Check the Helpful Choice",
+          "minutes": 30,
+          "teacherMove": "Guide students through a read-aloud check for missing details, then model rewriting one sentence to make the action clearer.",
+          "studentTask": "Use the checklist to add one detail, fix one confusing sentence, and answer a reflection prompt about how the hero helped.",
+          "output": "Revised draft plus a short reflection note on the strongest change."
+        }
+      ],
+      "teacherNotes": [
+        "Keep the story problem small: mixed-up notices, parcels, or route clues work better than large conflicts.",
+        "For reluctant writers, allow phrase lists in the planner before full sentences in the draft.",
+        "Use partner talk before writing, but keep the final worksheet individual for easier assessment.",
+        "If students finish early, have them add labels to the route sketch or write a new notice for the next helper."
+      ],
+      "homeschoolAdaptation": "Use the planner on day one, the draft page on day two, and the revision checklist on day three; a parent can scribe planner words while the child writes the final draft sentences.",
+      "classroomManagement": "Set out one worksheet at a time, keep world choices limited to the three listed options, and use a two-minute quiet check before sharing any draft sentence aloud.",
+      "assessment": "Check for a completed planner, a story with three ordered parts, and one visible revision that improves clarity or setting detail.",
+      "printableOffer": "Future $29 printable bundle with world choice cards, planner pages, draft sheets, revision checklists, and a small-group teacher guide.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Bright family-friendly printable worksheet cover scene with a tiny park notice board, paperclip parcel plaza, and rain boot route office on one tabletop map, cheerful errands, pencils, route arrows made from colored yarn, polished children's editorial illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "garden-clue-revision-worksheets",
+      "title": "Garden Clue Revision Worksheets",
+      "ageBand": "8-10",
+      "audience": "Middle elementary classrooms and homeschool co-ops practicing story structure, observation details, and revision habits.",
+      "duration": "Three 35-minute printable worksheet sessions",
+      "summary": "Students plan a garden mystery with observation clues, draft a short narrative, then revise for sequence, detail, and a clear final decision.",
+      "worldSlugs": [
+        "greenhouse-gear-garden",
+        "seed-library-map-room",
+        "penny-path-compass-shop"
+      ],
+      "objectives": [
+        "Plan a story using observation details, a route, and a helpful decision.",
+        "Draft a short narrative that connects clue, setting, and character action.",
+        "Revise for clearer sequence, stronger sensory detail, and a reflective ending."
+      ],
+      "materials": [
+        "Garden clue planner",
+        "Observation detail bank",
+        "Two-column draft worksheet",
+        "Sequence revision checklist",
+        "Reflection exit slip",
+        "Pencils and highlighters"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Planner: Sort the Garden Clues",
+          "minutes": 35,
+          "teacherMove": "Introduce the three worlds, model sorting details into place, clue, and choice columns, and show how one clue can guide the next scene.",
+          "studentTask": "Select a world pair or trio, choose four observation details, map the clue order, and write the hero's helpful decision in one sentence.",
+          "output": "Completed garden clue planner with ordered details and a final decision sentence."
+        },
+        {
+          "title": "Draft: Connect Clues to Action",
+          "minutes": 35,
+          "teacherMove": "Model a two-column draft with clue notes on the left and story sentences on the right, emphasizing cause-and-effect transitions.",
+          "studentTask": "Write a draft that moves from first clue to second clue to final decision, using at least two transition words and two setting details.",
+          "output": "Two-column story draft that connects observations to character action."
+        },
+        {
+          "title": "Revision: Reflect on the Route",
+          "minutes": 35,
+          "teacherMove": "Lead a color-coding pass for sequence words, setting details, and the final decision, then model adding one reflection sentence.",
+          "studentTask": "Highlight the draft, reorder or rewrite one unclear part, add one sensory detail, and complete the reflection exit slip.",
+          "output": "Marked-up revised draft with a completed reflection exit slip."
+        }
+      ],
+      "teacherNotes": [
+        "This unit works well after a science observation lesson because students can transfer noticing habits into narrative writing.",
+        "Require only two worlds for students who need a simpler plan; offer all three worlds to students ready for a longer route.",
+        "Use highlighters during revision so students can see whether their draft has sequence words and observation details.",
+        "Keep peer feedback focused on one question: which clue helped you understand the hero's next step?"
+      ],
+      "homeschoolAdaptation": "Walk outside or inspect a houseplant before the planner, then let the child borrow real observation words for the draft and save the exit slip for a portfolio sample.",
+      "classroomManagement": "Prepare world packets by table, assign materials managers to pass out one worksheet stage at a time, and collect highlighters before oral sharing.",
+      "assessment": "Look for an ordered clue plan, a draft with connected actions, and a revision mark that improves sequence, detail, or final reflection.",
+      "printableOffer": "Future $79 classroom license pack with garden clue planners, observation banks, draft worksheets, revision rubrics, and extension task cards.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Bright family-friendly printable worksheet cover scene with a greenhouse gear garden, seed library map room, penny path compass shop, garden notebooks, seed packets, route cards, soft daylight, polished children's editorial illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    }
+  ]
+}

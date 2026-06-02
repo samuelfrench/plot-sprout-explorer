@@ -33,6 +33,13 @@ export type SeoCollectionLink = {
   lane: string
 }
 
+export type MiniUnitHubLink = {
+  slug: string
+  title: string
+  description: string
+  note: string
+}
+
 const defaultSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 
@@ -230,3 +237,11 @@ export const seoCollectionLinks: SeoCollectionLink[] = [
       'Flexible writing quests that pair story practice with observation, mapping, and simple projects.',
   },
 ]
+
+export const miniUnitHubLink: MiniUnitHubLink = {
+  slug: 'mini-units',
+  title: 'Teacher mini-units',
+  description:
+    'Ten low-prep homeschool and classroom units with lesson flow, teacher notes, and printable kit angles.',
+  note: 'No student accounts, uploads, or public story sharing required.',
+}

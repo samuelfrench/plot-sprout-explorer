@@ -12,7 +12,7 @@ import {
 import type { CSSProperties } from 'react'
 import { useMemo, useState } from 'react'
 import './App.css'
-import { buildQuestPack, questWorlds, seoCollectionLinks } from './storyData'
+import { buildQuestPack, miniUnitHubLink, questWorlds, seoCollectionLinks } from './storyData'
 
 const pagePath = (slug: string) => `${import.meta.env.BASE_URL}${slug}/`
 
@@ -129,6 +129,19 @@ function App() {
             </a>
           ))}
         </div>
+      </section>
+
+      <section className="mini-unit-section" aria-labelledby="mini-unit-title">
+        <div>
+          <p className="eyebrow">Three-lesson printable units</p>
+          <h2 id="mini-unit-title">{miniUnitHubLink.title}</h2>
+        </div>
+        <p>{miniUnitHubLink.description}</p>
+        <p className="unit-note">{miniUnitHubLink.note}</p>
+        <a className="unit-link" href={pagePath(miniUnitHubLink.slug)}>
+          Browse mini-units
+          <ArrowRight size={18} aria-hidden="true" />
+        </a>
       </section>
 
       <section id="project-engine" className="ops-grid" aria-label="Project engine">

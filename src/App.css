@@ -5,7 +5,8 @@
 
 .workbench,
 .ops-grid article,
-.lane-section {
+.lane-section,
+.mini-unit-section {
   border: 1px solid var(--line);
   background: color-mix(in srgb, var(--panel) 92%, white);
   box-shadow: 0 18px 45px rgba(20, 31, 43, 0.08);
@@ -260,6 +261,48 @@ button:focus-visible {
   color: #2c7a78;
 }
 
+.mini-unit-section {
+  display: grid;
+  grid-template-columns: minmax(180px, 0.42fr) minmax(0, 1fr) minmax(190px, auto);
+  gap: 18px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 20px;
+}
+
+.mini-unit-section p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.unit-note {
+  padding: 12px;
+  background: #fff;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.unit-link {
+  display: inline-flex;
+  min-height: 44px;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  padding: 0 16px;
+  color: #fff;
+  font-weight: 900;
+  text-decoration: none;
+  background: #19343a;
+  border: 1px solid #19343a;
+  border-radius: 7px;
+}
+
+.unit-link:focus-visible {
+  outline: 3px solid #2c7a78;
+  outline-offset: 2px;
+}
+
 .ops-grid {
   display: grid;
   grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -285,7 +328,8 @@ button:focus-visible {
   .quest-steps,
   .ops-grid,
   .lane-section,
-  .lane-grid {
+  .lane-grid,
+  .mini-unit-section {
     grid-template-columns: 1fr;
   }
 

@@ -1,0 +1,130 @@
+{
+  "lane": "stem-nature-crossover",
+  "units": [
+    {
+      "slug": "tide-weather-measurement-map",
+      "title": "Tide and Weather Measurement Map",
+      "ageBand": "8-10",
+      "audience": "Homeschool families or grades 3-4 classrooms practicing observation-based story planning with simple nature data.",
+      "duration": "Three 35-minute sessions",
+      "summary": "Students compare tide, rain, and pond-bridge measurements, then turn the evidence into a labeled map and a short explanation paragraph. Writing stays central through field notes, map labels, sequence words, and a final cause-and-effect claim.",
+      "worldSlugs": [
+        "tidepool-timekeepers-lab",
+        "rain-gauge-railway",
+        "pond-bridge-blueprint-club"
+      ],
+      "objectives": [
+        "Record at least four precise observation notes using measurement words and sensory details.",
+        "Build a labeled map that shows a route, measurement points, and one change over time.",
+        "Write a short explanation that connects evidence from the map to a practical design choice."
+      ],
+      "materials": [
+        "Plain paper or science notebooks",
+        "Pencils and colored pencils",
+        "Ruler or measuring tape",
+        "Clear cup or classroom rain gauge model",
+        "Sticky notes for labels",
+        "Optional tray of pebbles, shells, leaves, or paper bridge strips"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Observe and Measure",
+          "minutes": 35,
+          "teacherMove": "Introduce the tide lab, rain railway, and pond bridge as three stations that all need careful notes before anyone decides what to fix.",
+          "studentTask": "Rotate through three paper stations, sketch what changed, add one number or size comparison, and write one sentence that begins with I noticed.",
+          "output": "A field-note page with three sketches, three labels, and at least four observation sentences."
+        },
+        {
+          "title": "Map the Evidence Route",
+          "minutes": 35,
+          "teacherMove": "Model how to turn notes into a simple map with arrows, labels, a key, and one sequence path from first check to final check.",
+          "studentTask": "Draw a route that connects the tidepool, rain gauge, and bridge test area, then add labels for measurements, questions, and changes over time.",
+          "output": "A labeled evidence map with a key, arrows, and at least six short map labels."
+        },
+        {
+          "title": "Explain the Design Choice",
+          "minutes": 35,
+          "teacherMove": "Give students a sentence frame for using evidence: The best choice is blank because the notes show blank.",
+          "studentTask": "Choose one practical improvement, such as a better marker, route, or support, and write a five-to-seven sentence explanation using map evidence.",
+          "output": "A short explanation paragraph attached to the finished measurement map."
+        }
+      ],
+      "teacherNotes": [
+        "Keep measurements simple: longer, shorter, deeper, shallower, heavier, lighter, more, and less are enough for this age band.",
+        "Students who resist paragraphs can first write labels on sticky notes, then move the strongest labels into sentence order.",
+        "Use invented classroom data if real weather or outdoor materials are not available.",
+        "Emphasize that the map is a thinking tool, not an art contest.",
+        "For partners, assign one mapper and one evidence reader, then switch roles before the paragraph."
+      ],
+      "homeschoolAdaptation": "Use a sink, bathtub edge, porch cup, or garden path as the observation area. A parent can act as the station reader while the child writes notes and explains the final map aloud before drafting.",
+      "classroomManagement": "Set up three quiet stations with a timer and a clear materials limit at each station. Collect loose nature items before paragraph writing so the room shifts from exploring to explaining.",
+      "assessment": "Check for one labeled map, at least four observation notes, and one explanation paragraph that cites a specific measurement or comparison.",
+      "printableOffer": "Future printable STEM nature map pack with station cards, field-note sheets, route-map templates, evidence sentence frames, and a classroom license option.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Polished family-friendly children's educational illustration of a tabletop tide, weather, and pond bridge mapping activity, field notebooks, rain gauge cup, shell markers, ruler, tiny bridge model, colored map arrows, bright natural light, no text, no logos, no watermark, no branded characters, no scary harm, no weapons."
+    },
+    {
+      "slug": "garden-energy-sequence-notebook",
+      "title": "Garden Energy Sequence Notebook",
+      "ageBand": "9-11",
+      "audience": "Upper elementary homeschool groups or grades 4-5 classrooms connecting garden systems, energy, and explanatory writing.",
+      "duration": "Two 45-minute sessions plus one 20-minute revision pass",
+      "summary": "Students trace how sunlight, compost, moss moisture, and orchard pulleys change a small nature system. They write a sequence notebook page, add measurements or comparisons, and revise the page into a clear how-it-works explanation.",
+      "worldSlugs": [
+        "compost-clock-workshop",
+        "solar-oven-picnic-station",
+        "moss-message-observatory",
+        "orchard-pulley-post"
+      ],
+      "objectives": [
+        "Sequence a nature or engineering process with at least five ordered steps.",
+        "Use comparison, time, or measurement details to make each step more specific.",
+        "Revise an explanatory paragraph so the reader can follow what changes and why."
+      ],
+      "materials": [
+        "Notebook paper",
+        "Index cards",
+        "Pencils and colored pencils",
+        "Ruler",
+        "Small paper scraps for sequence cards",
+        "Optional thermometer, compost sample jar, leaf samples, or string pulley model"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Collect System Clues",
+          "minutes": 45,
+          "teacherMove": "Present the four worlds as connected systems: slow compost change, sun-warmed oven testing, moss moisture clues, and orchard pulley movement.",
+          "studentTask": "Choose two systems, write three clue cards for each one, and add a number, time word, or comparison to every card.",
+          "output": "Six clue cards with ordered details ready for sorting."
+        },
+        {
+          "title": "Build the Sequence Notebook",
+          "minutes": 45,
+          "teacherMove": "Demonstrate how to sort clue cards into before, during, after, and why it matters before writing full sentences.",
+          "studentTask": "Arrange the cards into a five-step process, sketch a small diagram, and draft a notebook page explaining how the system works.",
+          "output": "A sequence notebook page with a diagram, five ordered steps, and one explanation paragraph."
+        },
+        {
+          "title": "Revise for Reader Clarity",
+          "minutes": 20,
+          "teacherMove": "Lead a quick clarity check for missing steps, vague words, and places where a measurement detail would help.",
+          "studentTask": "Underline two clear details, add one missing transition, and revise one sentence so it explains why a change happens.",
+          "output": "A revised explanatory notebook page with visible edits."
+        }
+      ],
+      "teacherNotes": [
+        "Use index cards before drafting so students can physically reorder the sequence without rewriting the whole paragraph.",
+        "The science can stay approximate; the writing target is clear observation, order, and explanation.",
+        "Offer transition banks such as first, next, after that, meanwhile, finally, because, and as a result.",
+        "For advanced students, require one measured comparison, such as warmer than, twice as long, or three marks higher.",
+        "For group work, have one student read the sequence aloud while another checks whether the diagram matches the words."
+      ],
+      "homeschoolAdaptation": "Let the child pick one real household system, such as a sunny window, plant pot, compost cup, or simple string lift, then pair it with one Plot Sprout world for the final explanation.",
+      "classroomManagement": "Keep optional materials at a teacher table and release them only after students have written clue cards. This keeps the focus on notes and sequence before hands-on testing.",
+      "assessment": "Review the notebook page for five ordered steps, at least three specific measurement or comparison details, and one revision that improves the how-it-works explanation.",
+      "printableOffer": "Future printable garden systems bundle with sequence cards, notebook pages, revision checklists, diagram frames, and classroom license options.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Polished family-friendly children's educational illustration of a garden systems writing notebook, compost layer cards, solar oven sketch, moss observation swatches, orchard pulley model, ruler, sequence cards, warm classroom table, no text, no logos, no watermark, no branded characters, no scary harm, no weapons."
+    }
+  ]
+}

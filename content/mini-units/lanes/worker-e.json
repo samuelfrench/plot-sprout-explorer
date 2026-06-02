@@ -1,0 +1,133 @@
+{
+  "lane": "mixed-bundle-mini-units",
+  "units": [
+    {
+      "slug": "classroom-story-packet-workshop",
+      "title": "Classroom Story Packet Workshop",
+      "ageBand": "10-11",
+      "audience": "Upper elementary classrooms, co-ops, and tutoring groups that need a printable writing unit with clear teacher routines and reusable center materials.",
+      "duration": "Three 45-minute sessions",
+      "summary": "Students turn scene cards, margin notes, and revision checkpoints into a polished story packet that can be assessed without any digital setup.",
+      "worldSlugs": [
+        "index-card-theater-club",
+        "margin-note-market",
+        "blue-pencil-observatory",
+        "binding-day-boardwalk"
+      ],
+      "objectives": [
+        "Plan a short story using index cards for scene order, character choice, and setting detail.",
+        "Revise a draft by adding useful margin notes, clearer transitions, and stronger reader cues.",
+        "Assemble a printable story packet with a title page, draft page, revision evidence, and reflection note."
+      ],
+      "materials": [
+        "Index cards",
+        "Pencils",
+        "Colored pencils or highlighters",
+        "Blank story draft paper",
+        "Margin-note strips",
+        "Packet cover sheet",
+        "Stapler or paper clips"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Build the Scene Card Lineup",
+          "minutes": 45,
+          "teacherMove": "Introduce the theater club as a place where every scene has one job, then model writing one card for setup, one for problem, and one for choice.",
+          "studentTask": "Students create four scene cards, add one setting detail to each card, and arrange the cards in a clear order before drafting.",
+          "output": "Ordered scene-card lineup with four planned story moments."
+        },
+        {
+          "title": "Add Useful Margin Notes",
+          "minutes": 45,
+          "teacherMove": "Use Margin Note Market and Blue Pencil Observatory to model comments that help a reader, such as clarify, add detail, check order, and explain why.",
+          "studentTask": "Students draft the story from their cards, then add at least three margin notes that identify where the draft needs clearer information.",
+          "output": "One-page draft with three practical margin notes."
+        },
+        {
+          "title": "Bind the Story Packet",
+          "minutes": 45,
+          "teacherMove": "Present Binding Day Boardwalk as a final assembly station and model how to attach draft evidence, revision marks, and a short reflection without turning the task into a long craft project.",
+          "studentTask": "Students revise one section, prepare a simple cover sheet, attach scene cards or margin-note evidence, and write a reflection naming one change they made.",
+          "output": "Finished story packet with plan, draft, revision evidence, and reflection."
+        }
+      ],
+      "teacherNotes": [
+        "Keep the packet to four pages or fewer so assessment stays practical.",
+        "Use teacher-provided sample cards for students who freeze during planning.",
+        "Let students staple or clip packets only after the writing and revision evidence are complete.",
+        "For group sharing, ask students to read one revised sentence instead of the full story.",
+        "The unit is built for repeat classroom use with paper materials and no digital workflow."
+      ],
+      "homeschoolAdaptation": "Use the same packet over three days. A parent can read the draft aloud after session two, point to one unclear place, and let the child choose which section to revise for the final packet.",
+      "classroomManagement": "Prepare card stacks, margin-note strips, and cover sheets in separate trays. Release materials one phase at a time so students plan first, draft second, and assemble only at the end.",
+      "assessment": "Review the packet for four ordered scene cards, a complete short draft, at least three margin notes, one visible revision, and a reflection that names the writer's choice.",
+      "printableOffer": "Future $79 classroom license pack with scene cards, margin-note strips, packet covers, rubric pages, and reusable writing-center directions.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "family-friendly upper elementary classroom writing workshop, index cards, margin-note strips, blue pencil observatory tools, paper story packets, boardwalk binding station, pencils and highlighters on shared desks, polished children's educational illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "seasonal-map-room-writing-cycle",
+      "title": "Seasonal Map Room Writing Cycle",
+      "ageBand": "8-10",
+      "audience": "Homeschool families, co-ops, and mixed-age classrooms that want a seasonal printable writing routine with observation, mapping, and short narrative drafting.",
+      "duration": "Three 35-minute sessions across one week or season theme",
+      "summary": "Students collect seasonal clues, map a gentle errand route, and write a short story page that can become part of a family or class seasonal binder.",
+      "worldSlugs": [
+        "seed-library-map-room",
+        "paperclip-plaza-parcel-day",
+        "rain-gauge-railway",
+        "teacup-town-weather-window"
+      ],
+      "objectives": [
+        "Collect seasonal setting details that can become story clues.",
+        "Map a short route that shows where the character finds, carries, or sorts the clues.",
+        "Write and revise a one-page seasonal story with a clear beginning, middle, and ending."
+      ],
+      "materials": [
+        "Seasonal observation page",
+        "Blank route map",
+        "Pencils",
+        "Colored pencils",
+        "Small paper slips for clues",
+        "Folder or binder",
+        "Optional leaf, seed packet, weather chart, or household seasonal object"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Gather Seasonal Clues",
+          "minutes": 35,
+          "teacherMove": "Introduce the seed library, rain railway, and weather window as places where writers notice small changes before they invent a story.",
+          "studentTask": "Students list or sketch six seasonal clues, then choose the three that would help a character solve a gentle mix-up.",
+          "output": "Observation page with six clues and three selected story clues."
+        },
+        {
+          "title": "Map the Parcel Route",
+          "minutes": 35,
+          "teacherMove": "Use Paperclip Plaza to model a simple route with a start, two stops, one question, and a return point.",
+          "studentTask": "Students draw a route map, place the three selected clues along the path, and write one sentence explaining why the route matters.",
+          "output": "Labeled route map with three clue stops and one route sentence."
+        },
+        {
+          "title": "Draft the Season Page",
+          "minutes": 35,
+          "teacherMove": "Model turning the map into three paragraphs: notice the season, follow the route, and finish with a helpful choice.",
+          "studentTask": "Students draft a one-page story, underline the clearest seasonal detail, and revise one sentence to make the route easier to follow.",
+          "output": "Finished seasonal story page ready for a binder or folder."
+        }
+      ],
+      "teacherNotes": [
+        "The unit works with any season because students choose their own observation details.",
+        "For younger or reluctant writers, use labeled sketches for the observation page and require three strong sentences for the final story.",
+        "Do not require real names, addresses, family schedules, or personal routines in the route map.",
+        "Use the binder or folder as a storage tool, not as a display requirement.",
+        "Repeat the unit later with new seasonal clues to build a yearlong writing record."
+      ],
+      "homeschoolAdaptation": "Run the three sessions during morning basket, nature study, or a rainy afternoon week. Save each season page in a family binder and repeat the same printable set with new clues in another season.",
+      "classroomManagement": "Keep observation objects at a teacher table or center, limit map routes to two stops, and collect colored pencils before drafting so the room shifts from planning to writing.",
+      "assessment": "Check for six observation clues, a route map with three clue stops, a one-page story with beginning-middle-ending structure, and one sentence revision that improves clarity.",
+      "printableOffer": "Future $29 homeschool season bundle with four seasonal observation pages, route maps, story drafts, binder covers, and optional co-op teacher notes.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "family-friendly homeschool and classroom seasonal writing table, seed library map room cards, paperclip parcel route map, rain gauge railway clue slips, teacup weather window sketches, binder pages, pencils and colored pencils, polished children's educational illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    }
+  ]
+}

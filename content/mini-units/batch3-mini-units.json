@@ -1,0 +1,628 @@
+{
+  "batchId": "2026-06-02-batch3",
+  "generatedAt": "2026-06-02",
+  "units": [
+    {
+      "slug": "weather-window-errand-notebook",
+      "title": "Weather Window Errand Notebook",
+      "ageBand": "7-8",
+      "audience": "Homeschool families and early elementary teachers who need a low-prep writing unit about weather clues, simple errands, and clear notes.",
+      "duration": "3 lessons, 25-30 minutes each",
+      "summary": "Children use tiny town weather clues and a cozy market ticket problem to practice observing, listing, and writing one helpful note at a time.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "mitten-market-lost-ticket",
+        "sticker-station-mail-cart"
+      ],
+      "objectives": [
+        "Name three setting details that help a reader picture a gentle story world.",
+        "Write a clear three-step errand note with a beginning, middle, and end.",
+        "Revise one sentence by adding a weather, map, or mood detail."
+      ],
+      "materials": [
+        "Plain paper or writing notebooks",
+        "Pencils and crayons",
+        "Three sticky notes per child",
+        "A timer",
+        "Simple weather word bank",
+        "Optional index cards for errand slips"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Weather Clue Warm-Up",
+          "minutes": 25,
+          "teacherMove": "Read the Teacup Town premise aloud, draw a simple spoon window, and model listing three safe weather clues without starting a full story.",
+          "studentTask": "Students draw a tiny window and list three clues a helper would notice before planning the town errands.",
+          "output": "Weather window sketch with three labeled clues."
+        },
+        {
+          "title": "Lost Ticket Route",
+          "minutes": 30,
+          "teacherMove": "Introduce Mitten Market and show how a lost ticket can become three practical steps: find it, ask one question, return it.",
+          "studentTask": "Students write a three-step errand note on an index card, then underline the action word in each step.",
+          "output": "Three-step lost-ticket errand note."
+        },
+        {
+          "title": "Friendly Mail Cart Note",
+          "minutes": 30,
+          "teacherMove": "Use Sticker Station to model adding one mood word and one clear sign-off to a short note.",
+          "studentTask": "Students revise their errand note into a friendly mail-cart message with one added detail and a kind sign-off.",
+          "output": "Revised friendly note ready for a notebook or take-home folder."
+        }
+      ],
+      "teacherNotes": [
+        "Keep drafting on paper; no digital setup is part of the unit.",
+        "For reluctant writers, accept a labeled drawing plus three dictated sentences before asking for independent handwriting.",
+        "Use the weather word bank as a spelling support, not a vocabulary test.",
+        "Read student work aloud only with permission, and keep examples fictional.",
+        "A strong finished piece can be six clear sentences; do not expand the task into a long story unless the child asks."
+      ],
+      "homeschoolAdaptation": "Use one lesson per day during morning basket or language arts. Let the child dictate the first draft while the parent writes, then ask the child to copy or revise one favorite sentence independently.",
+      "classroomManagement": "Seat students with pencils, paper, and three sticky notes before reading the premise. Use quiet thumbs-up checks after each step so the group can move without long transitions.",
+      "assessment": "Check for three observable clues, three ordered errand steps, and one revised sentence that adds a weather, map, or mood detail.",
+      "printableOffer": "A future printable pack could include weather windows, lost-ticket errand slips, greeting-note cards, and a simple teacher rubric. A future classroom license could add small-group card sets for paper-based use.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "family-friendly lower elementary writing mini-unit scene, children at desks with paper weather windows, tiny teacup town and mitten market craft props, pencils, crayons, sticky notes, practical classroom table, warm storybook illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "map-mixup-message-makers",
+      "title": "Map Mix-Up Message Makers",
+      "ageBand": "7-9",
+      "audience": "Homeschool parents, co-op leaders, and grade 2-3 teachers who want a short map, direction, and dialogue writing unit.",
+      "duration": "3 lessons, 30 minutes each",
+      "summary": "Children turn bakery maps, errand slips, and lunchbox harbor orders into clear directions, short dialogue, and a practical final message.",
+      "worldSlugs": [
+        "button-bakery-map-mixup",
+        "acorn-avenue-errand-office",
+        "spoon-ferry-lunchbox-harbor",
+        "sticker-station-mail-cart"
+      ],
+      "objectives": [
+        "Use a simple map to plan a fictional route with two or three stops.",
+        "Write directions that include order words such as first, next, and last.",
+        "Create a short polite dialogue that clarifies a mixed-up message."
+      ],
+      "materials": [
+        "Blank paper for maps",
+        "Pencils and colored pencils",
+        "Sticky notes or small paper slips",
+        "Classroom board or parent whiteboard",
+        "Optional toy counters for route stops",
+        "Timer"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Bakery Map Draft",
+          "minutes": 30,
+          "teacherMove": "Read the Button Bakery premise and draw a four-stop map with a bakery, one helper shop, one turn, and one finish spot.",
+          "studentTask": "Students draw their own simple map and place two or three stops that a helper can visit in order.",
+          "output": "Labeled route map with a clear start and finish."
+        },
+        {
+          "title": "Errand Office Directions",
+          "minutes": 30,
+          "teacherMove": "Use Acorn Avenue to model turning a map into three direction sentences that start with first, next, and last.",
+          "studentTask": "Students write three ordered direction sentences for their map and trade with a partner or adult for a clarity check.",
+          "output": "Three-sentence direction card."
+        },
+        {
+          "title": "Harbor Order Dialogue",
+          "minutes": 30,
+          "teacherMove": "Introduce Spoon Ferry and Sticker Station as examples of friendly clarification, then model a two-speaker dialogue that asks one useful question.",
+          "studentTask": "Students add a short dialogue to their direction card so one character can clarify a mixed-up order or message.",
+          "output": "Map, direction card, and two-speaker clarification dialogue."
+        }
+      ],
+      "teacherNotes": [
+        "Keep maps small: four locations are enough for this age band.",
+        "The lesson works with blank paper; printed worksheets are optional, not required.",
+        "Do not require children to use real addresses, real classmates, or personal family details.",
+        "If partner work is distracting, use adult or teacher checks instead of peer checks.",
+        "For handwriting fatigue, let students write the direction card and dictate the dialogue."
+      ],
+      "homeschoolAdaptation": "Spread the lessons across a week and use household objects as route markers. A parent can walk the route with the child before the child writes the three direction sentences.",
+      "classroomManagement": "Prepare small paper slips before the lesson and limit movement by having students point to map stops instead of walking routes around the room.",
+      "assessment": "Look for a start and finish on the map, three ordered direction sentences, and a dialogue line that asks or answers one clear question.",
+      "printableOffer": "A future homeschool bundle could package bakery maps, errand cards, and lunchbox dialogue strips. A future classroom license could add reusable small-group map mats and assessment checklists.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "family-friendly lower elementary map writing mini-unit scene, paper bakery map, acorn errand slips, spoon ferry lunchbox harbor props, children using pencils and colored counters at a classroom table, bright practical storybook illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "tiny-errand-map-worksheet-sequence",
+      "title": "Tiny Errand Map Worksheet Sequence",
+      "ageBand": "7-9",
+      "audience": "Lower elementary homeschool groups, tutoring pods, and classrooms working on short narrative planning.",
+      "duration": "Three 30-minute printable worksheet sessions",
+      "summary": "Students plan a small helpful errand, draft a beginning-middle-end story, then revise with a reflection checklist.",
+      "worldSlugs": [
+        "pocket-park-notice-board",
+        "paperclip-plaza-parcel-day",
+        "rain-boot-route-rangers"
+      ],
+      "objectives": [
+        "Choose a setting, helper role, and tiny errand before drafting.",
+        "Write a three-part story with a clear problem and helpful choice.",
+        "Use a revision checklist to add setting detail and reflect on one improved sentence."
+      ],
+      "materials": [
+        "World choice sheet",
+        "Tiny errand planner worksheet",
+        "Beginning-middle-end draft page",
+        "Revision and reflection checklist",
+        "Pencils and colored pencils"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Planner: Pick the Errand Path",
+          "minutes": 30,
+          "teacherMove": "Read the three world blurbs aloud, model choosing one helper role, and show how to circle a setting detail before writing.",
+          "studentTask": "Pick one world, choose a helper role, draw a simple errand path, and fill in who needs help, what is unclear, and what clue will guide the hero.",
+          "output": "Completed planner with a world choice, helper role, route sketch, and three story facts."
+        },
+        {
+          "title": "Draft: Build Three Story Steps",
+          "minutes": 30,
+          "teacherMove": "Demonstrate turning planner notes into three short paragraphs: arrival, mixed-up errand, and helpful ending.",
+          "studentTask": "Write a draft using the planner boxes, underline the problem sentence, and add one setting detail from the chosen world.",
+          "output": "One-page story draft with beginning, middle, and ending sections."
+        },
+        {
+          "title": "Revision: Check the Helpful Choice",
+          "minutes": 30,
+          "teacherMove": "Guide students through a read-aloud check for missing details, then model rewriting one sentence to make the action clearer.",
+          "studentTask": "Use the checklist to add one detail, fix one confusing sentence, and answer a reflection prompt about how the hero helped.",
+          "output": "Revised draft plus a short reflection note on the strongest change."
+        }
+      ],
+      "teacherNotes": [
+        "Keep the story problem small: mixed-up notices, parcels, or route clues work better than large conflicts.",
+        "For reluctant writers, allow phrase lists in the planner before full sentences in the draft.",
+        "Use partner talk before writing, but keep the final worksheet individual for easier assessment.",
+        "If students finish early, have them add labels to the route sketch or write a new notice for the next helper."
+      ],
+      "homeschoolAdaptation": "Use the planner on day one, the draft page on day two, and the revision checklist on day three; a parent can scribe planner words while the child writes the final draft sentences.",
+      "classroomManagement": "Set out one worksheet at a time, keep world choices limited to the three listed options, and use a two-minute quiet check before sharing any draft sentence aloud.",
+      "assessment": "Check for a completed planner, a story with three ordered parts, and one visible revision that improves clarity or setting detail.",
+      "printableOffer": "Future $29 printable bundle with world choice cards, planner pages, draft sheets, revision checklists, and a small-group teacher guide.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Bright family-friendly printable worksheet cover scene with a tiny park notice board, paperclip parcel plaza, and rain boot route office on one tabletop map, cheerful errands, pencils, route arrows made from colored yarn, polished children's editorial illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "garden-clue-revision-worksheets",
+      "title": "Garden Clue Revision Worksheets",
+      "ageBand": "8-10",
+      "audience": "Middle elementary classrooms and homeschool co-ops practicing story structure, observation details, and revision habits.",
+      "duration": "Three 35-minute printable worksheet sessions",
+      "summary": "Students plan a garden mystery with observation clues, draft a short narrative, then revise for sequence, detail, and a clear final decision.",
+      "worldSlugs": [
+        "greenhouse-gear-garden",
+        "seed-library-map-room",
+        "penny-path-compass-shop"
+      ],
+      "objectives": [
+        "Plan a story using observation details, a route, and a helpful decision.",
+        "Draft a short narrative that connects clue, setting, and character action.",
+        "Revise for clearer sequence, stronger sensory detail, and a reflective ending."
+      ],
+      "materials": [
+        "Garden clue planner",
+        "Observation detail bank",
+        "Two-column draft worksheet",
+        "Sequence revision checklist",
+        "Reflection exit slip",
+        "Pencils and highlighters"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Planner: Sort the Garden Clues",
+          "minutes": 35,
+          "teacherMove": "Introduce the three worlds, model sorting details into place, clue, and choice columns, and show how one clue can guide the next scene.",
+          "studentTask": "Select a world pair or trio, choose four observation details, map the clue order, and write the hero's helpful decision in one sentence.",
+          "output": "Completed garden clue planner with ordered details and a final decision sentence."
+        },
+        {
+          "title": "Draft: Connect Clues to Action",
+          "minutes": 35,
+          "teacherMove": "Model a two-column draft with clue notes on the left and story sentences on the right, emphasizing cause-and-effect transitions.",
+          "studentTask": "Write a draft that moves from first clue to second clue to final decision, using at least two transition words and two setting details.",
+          "output": "Two-column story draft that connects observations to character action."
+        },
+        {
+          "title": "Revision: Reflect on the Route",
+          "minutes": 35,
+          "teacherMove": "Lead a color-coding pass for sequence words, setting details, and the final decision, then model adding one reflection sentence.",
+          "studentTask": "Highlight the draft, reorder or rewrite one unclear part, add one sensory detail, and complete the reflection exit slip.",
+          "output": "Marked-up revised draft with a completed reflection exit slip."
+        }
+      ],
+      "teacherNotes": [
+        "This unit works well after a science observation lesson because students can transfer noticing habits into narrative writing.",
+        "Require only two worlds for students who need a simpler plan; offer all three worlds to students ready for a longer route.",
+        "Use highlighters during revision so students can see whether their draft has sequence words and observation details.",
+        "Keep peer feedback focused on one question: which clue helped you understand the hero's next step?"
+      ],
+      "homeschoolAdaptation": "Walk outside or inspect a houseplant before the planner, then let the child borrow real observation words for the draft and save the exit slip for a portfolio sample.",
+      "classroomManagement": "Prepare world packets by table, assign materials managers to pass out one worksheet stage at a time, and collect highlighters before oral sharing.",
+      "assessment": "Look for an ordered clue plan, a draft with connected actions, and a revision mark that improves sequence, detail, or final reflection.",
+      "printableOffer": "Future $79 classroom license pack with garden clue planners, observation banks, draft worksheets, revision rubrics, and extension task cards.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Bright family-friendly printable worksheet cover scene with a greenhouse gear garden, seed library map room, penny path compass shop, garden notebooks, seed packets, route cards, soft daylight, polished children's editorial illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "tide-weather-measurement-map",
+      "title": "Tide and Weather Measurement Map",
+      "ageBand": "8-10",
+      "audience": "Homeschool families or grades 3-4 classrooms practicing observation-based story planning with simple nature data.",
+      "duration": "Three 35-minute sessions",
+      "summary": "Students compare tide, rain, and pond-bridge measurements, then turn the evidence into a labeled map and a short explanation paragraph. Writing stays central through field notes, map labels, sequence words, and a final cause-and-effect claim.",
+      "worldSlugs": [
+        "tidepool-timekeepers-lab",
+        "rain-gauge-railway",
+        "pond-bridge-blueprint-club"
+      ],
+      "objectives": [
+        "Record at least four precise observation notes using measurement words and sensory details.",
+        "Build a labeled map that shows a route, measurement points, and one change over time.",
+        "Write a short explanation that connects evidence from the map to a practical design choice."
+      ],
+      "materials": [
+        "Plain paper or science notebooks",
+        "Pencils and colored pencils",
+        "Ruler or measuring tape",
+        "Clear cup or classroom rain gauge model",
+        "Sticky notes for labels",
+        "Optional tray of pebbles, shells, leaves, or paper bridge strips"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Observe and Measure",
+          "minutes": 35,
+          "teacherMove": "Introduce the tide lab, rain railway, and pond bridge as three stations that all need careful notes before anyone decides what to fix.",
+          "studentTask": "Rotate through three paper stations, sketch what changed, add one number or size comparison, and write one sentence that begins with I noticed.",
+          "output": "A field-note page with three sketches, three labels, and at least four observation sentences."
+        },
+        {
+          "title": "Map the Evidence Route",
+          "minutes": 35,
+          "teacherMove": "Model how to turn notes into a simple map with arrows, labels, a key, and one sequence path from first check to final check.",
+          "studentTask": "Draw a route that connects the tidepool, rain gauge, and bridge test area, then add labels for measurements, questions, and changes over time.",
+          "output": "A labeled evidence map with a key, arrows, and at least six short map labels."
+        },
+        {
+          "title": "Explain the Design Choice",
+          "minutes": 35,
+          "teacherMove": "Give students a sentence frame for using evidence: The best choice is blank because the notes show blank.",
+          "studentTask": "Choose one practical improvement, such as a better marker, route, or support, and write a five-to-seven sentence explanation using map evidence.",
+          "output": "A short explanation paragraph attached to the finished measurement map."
+        }
+      ],
+      "teacherNotes": [
+        "Keep measurements simple: longer, shorter, deeper, shallower, heavier, lighter, more, and less are enough for this age band.",
+        "Students who resist paragraphs can first write labels on sticky notes, then move the strongest labels into sentence order.",
+        "Use invented classroom data if real weather or outdoor materials are not available.",
+        "Emphasize that the map is a thinking tool, not an art contest.",
+        "For partners, assign one mapper and one evidence reader, then switch roles before the paragraph."
+      ],
+      "homeschoolAdaptation": "Use a sink, bathtub edge, porch cup, or garden path as the observation area. A parent can act as the station reader while the child writes notes and explains the final map aloud before drafting.",
+      "classroomManagement": "Set up three quiet stations with a timer and a clear materials limit at each station. Collect loose nature items before paragraph writing so the room shifts from exploring to explaining.",
+      "assessment": "Check for one labeled map, at least four observation notes, and one explanation paragraph that cites a specific measurement or comparison.",
+      "printableOffer": "Future printable STEM nature map pack with station cards, field-note sheets, route-map templates, evidence sentence frames, and a classroom license option.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Polished family-friendly children's educational illustration of a tabletop tide, weather, and pond bridge mapping activity, field notebooks, rain gauge cup, shell markers, ruler, tiny bridge model, colored map arrows, bright natural light, no text, no logos, no watermark, no branded characters, no scary harm, no weapons."
+    },
+    {
+      "slug": "garden-energy-sequence-notebook",
+      "title": "Garden Energy Sequence Notebook",
+      "ageBand": "9-11",
+      "audience": "Upper elementary homeschool groups or grades 4-5 classrooms connecting garden systems, energy, and explanatory writing.",
+      "duration": "Two 45-minute sessions plus one 20-minute revision pass",
+      "summary": "Students trace how sunlight, compost, moss moisture, and orchard pulleys change a small nature system. They write a sequence notebook page, add measurements or comparisons, and revise the page into a clear how-it-works explanation.",
+      "worldSlugs": [
+        "compost-clock-workshop",
+        "solar-oven-picnic-station",
+        "moss-message-observatory",
+        "orchard-pulley-post"
+      ],
+      "objectives": [
+        "Sequence a nature or engineering process with at least five ordered steps.",
+        "Use comparison, time, or measurement details to make each step more specific.",
+        "Revise an explanatory paragraph so the reader can follow what changes and why."
+      ],
+      "materials": [
+        "Notebook paper",
+        "Index cards",
+        "Pencils and colored pencils",
+        "Ruler",
+        "Small paper scraps for sequence cards",
+        "Optional thermometer, compost sample jar, leaf samples, or string pulley model"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Collect System Clues",
+          "minutes": 45,
+          "teacherMove": "Present the four worlds as connected systems: slow compost change, sun-warmed oven testing, moss moisture clues, and orchard pulley movement.",
+          "studentTask": "Choose two systems, write three clue cards for each one, and add a number, time word, or comparison to every card.",
+          "output": "Six clue cards with ordered details ready for sorting."
+        },
+        {
+          "title": "Build the Sequence Notebook",
+          "minutes": 45,
+          "teacherMove": "Demonstrate how to sort clue cards into before, during, after, and why it matters before writing full sentences.",
+          "studentTask": "Arrange the cards into a five-step process, sketch a small diagram, and draft a notebook page explaining how the system works.",
+          "output": "A sequence notebook page with a diagram, five ordered steps, and one explanation paragraph."
+        },
+        {
+          "title": "Revise for Reader Clarity",
+          "minutes": 20,
+          "teacherMove": "Lead a quick clarity check for missing steps, vague words, and places where a measurement detail would help.",
+          "studentTask": "Underline two clear details, add one missing transition, and revise one sentence so it explains why a change happens.",
+          "output": "A revised explanatory notebook page with visible edits."
+        }
+      ],
+      "teacherNotes": [
+        "Use index cards before drafting so students can physically reorder the sequence without rewriting the whole paragraph.",
+        "The science can stay approximate; the writing target is clear observation, order, and explanation.",
+        "Offer transition banks such as first, next, after that, meanwhile, finally, because, and as a result.",
+        "For advanced students, require one measured comparison, such as warmer than, twice as long, or three marks higher.",
+        "For group work, have one student read the sequence aloud while another checks whether the diagram matches the words."
+      ],
+      "homeschoolAdaptation": "Let the child pick one real household system, such as a sunny window, plant pot, compost cup, or simple string lift, then pair it with one Plot Sprout world for the final explanation.",
+      "classroomManagement": "Keep optional materials at a teacher table and release them only after students have written clue cards. This keeps the focus on notes and sequence before hands-on testing.",
+      "assessment": "Review the notebook page for five ordered steps, at least three specific measurement or comparison details, and one revision that improves the how-it-works explanation.",
+      "printableOffer": "Future printable garden systems bundle with sequence cards, notebook pages, revision checklists, diagram frames, and classroom license options.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Polished family-friendly children's educational illustration of a garden systems writing notebook, compost layer cards, solar oven sketch, moss observation swatches, orchard pulley model, ruler, sequence cards, warm classroom table, no text, no logos, no watermark, no branded characters, no scary harm, no weapons."
+    },
+    {
+      "slug": "revision-river-scene-repair",
+      "title": "Revision River Scene Repair",
+      "ageBand": "10-11",
+      "audience": "Upper elementary writers who can draft a short scene and need a practical revision routine for clarity, pacing, and stronger reader cues.",
+      "duration": "45 minutes",
+      "summary": "Students revise one short adventure scene by marking where the action slows, where the reader needs a clearer clue, and where a sentence can do more useful work.",
+      "worldSlugs": [
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "blue-pencil-observatory"
+      ],
+      "objectives": [
+        "Identify one strong moment, one confusing moment, and one slow moment in a draft.",
+        "Revise exposition into action, dialogue, or a precise clue label.",
+        "Explain one craft decision in a short revision note."
+      ],
+      "materials": [
+        "One-page student draft or teacher-provided sample scene",
+        "Colored pencils or highlighters in three colors",
+        "Revision river map printable",
+        "Scene repair checklist",
+        "Sticky notes"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Map the Current Scene",
+          "minutes": 12,
+          "teacherMove": "Model reading a short scene once for meaning and once for craft, marking a green star for the strongest moment, a blue question mark for confusion, and an orange pause for slow pacing.",
+          "studentTask": "Students reread their scene or sample and mark one strong moment, one confusing moment, and one slow moment.",
+          "output": "A marked draft with three revision targets."
+        },
+        {
+          "title": "Trade Exposition for Evidence",
+          "minutes": 18,
+          "teacherMove": "Show how a telling sentence can become a visible action, a line of dialogue, or a labeled clue that helps the reader infer what matters.",
+          "studentTask": "Students choose the confusing or slow moment and rewrite two to four sentences using action, dialogue, or a concrete clue.",
+          "output": "A revised scene section with clearer reader evidence."
+        },
+        {
+          "title": "Write the Craft Note",
+          "minutes": 15,
+          "teacherMove": "Prompt students to name the exact change they made and why it helps the reader follow the scene.",
+          "studentTask": "Students attach a sticky-note explanation that starts with, 'I changed...' and names the intended reader effect.",
+          "output": "A revised scene plus one craft-decision note."
+        }
+      ],
+      "teacherNotes": [
+        "Keep the draft short enough for real revision inside the lesson; 150 to 250 words is enough.",
+        "If students do not have drafts, use a neutral sample about a ferry guide sorting mixed-up clue labels.",
+        "Treat peer feedback as reader response, not grading; students should point to a sentence and name what they understood.",
+        "Use the three-color code consistently so students can see revision as a sequence of decisions.",
+        "For reluctant writers, allow sentence replacement instead of full paragraph rewriting."
+      ],
+      "homeschoolAdaptation": "Use a parent-child conference: the child reads the draft aloud, the parent marks only one confusing spot, and the child revises that spot before writing the craft note.",
+      "classroomManagement": "Collect colored pencils before independent work starts, set a visible timer for each phase, and limit partner talk to one question and one suggestion per draft.",
+      "assessment": "Check that each student marked three draft targets, revised one specific section, and wrote a craft note that explains the purpose of the revision.",
+      "printableOffer": "Future printable pack idea: a Revision River scene repair map, color-code bookmark, sample scene, and classroom license version with extra peer-feedback slips.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Friendly upper-elementary writing workshop on a bright river ferry with paper maps, colored pencils, clue labels, and a telescope station, warm daylight, whimsical but realistic classroom craft materials, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "craft-academy-procedure-polish",
+      "title": "Craft Academy Procedure Polish",
+      "ageBand": "10-11",
+      "audience": "Upper elementary homeschool groups or classrooms practicing procedural writing, exposition control, and feedback that improves usability.",
+      "duration": "50 minutes",
+      "summary": "Students revise a how-to page by testing whether a reader can follow each step, then tighten sequence words, remove filler exposition, and add useful cautions.",
+      "worldSlugs": [
+        "compass-craft-academy",
+        "almost-invention-workshop",
+        "appendix-archive-lab",
+        "margin-note-market"
+      ],
+      "objectives": [
+        "Sequence a procedure so each step can be followed without extra explanation.",
+        "Replace vague verbs and filler exposition with precise action language.",
+        "Use feedback to add one helpful margin note, caution, or materials clarification."
+      ],
+      "materials": [
+        "Drafted how-to page or teacher-provided procedure sample",
+        "Procedure test cards",
+        "Margin-note strips",
+        "Pencils",
+        "Checklist for precise verbs, sequence words, and materials"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Run the Reader Test",
+          "minutes": 15,
+          "teacherMove": "Demonstrate following a procedure exactly as written, pausing when a missing material, unclear verb, or skipped sequence makes the step hard to complete.",
+          "studentTask": "Students trade procedures with a partner or adult and mark any place where the reader has to guess.",
+          "output": "A procedure draft with reader-test marks."
+        },
+        {
+          "title": "Polish the Steps",
+          "minutes": 20,
+          "teacherMove": "Model changing vague directions into precise steps with clear sequence words, exact materials, and only the background information the reader needs.",
+          "studentTask": "Students revise at least three steps by tightening verbs, adding sequence cues, or moving extra explanation into a short note.",
+          "output": "A clearer procedure with revised steps."
+        },
+        {
+          "title": "Add the Useful Margin Note",
+          "minutes": 15,
+          "teacherMove": "Show examples of margin notes that help the reader avoid confusion without taking over the whole page.",
+          "studentTask": "Students add one margin note, caution, or materials clarification based on reader feedback.",
+          "output": "A polished procedure page with one reader-tested support note."
+        }
+      ],
+      "teacherNotes": [
+        "Choose low-stakes procedures such as folding a paper booklet, sorting an appendix card set, or building a paper compass marker.",
+        "Do not let students redesign the whole activity; the target is clearer writing, not a new project.",
+        "When feedback feels too broad, ask the reader to point to the exact step where guessing started.",
+        "Encourage precise verbs such as fold, align, label, compare, circle, and check.",
+        "Keep safety notes practical and classroom-based, such as asking an adult before using messy supplies."
+      ],
+      "homeschoolAdaptation": "Have the child hand the procedure to an adult or sibling who silently follows the steps; the child records every pause as a revision target before rewriting.",
+      "classroomManagement": "Pair students by draft length, keep materials at a central supply point, and require quiet reader tests before discussion so feedback is based on the written directions.",
+      "assessment": "Review the final procedure for clear sequence, precise verbs, complete materials, and one margin note that responds to real reader feedback.",
+      "printableOffer": "Future printable bundle idea: procedure test cards, craft academy revision checklist, margin-note strips, and a classroom license pack for repeated writing centers.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "Bright craft academy desk with paper compass parts, almost-invention sketches, appendix cards, margin-note strips, pencils, checklists, and neatly arranged revision tools, cheerful upper-elementary classroom style, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "classroom-story-packet-workshop",
+      "title": "Classroom Story Packet Workshop",
+      "ageBand": "10-11",
+      "audience": "Upper elementary classrooms, co-ops, and tutoring groups that need a printable writing unit with clear teacher routines and reusable center materials.",
+      "duration": "Three 45-minute sessions",
+      "summary": "Students turn scene cards, margin notes, and revision checkpoints into a polished story packet that can be assessed without any digital setup.",
+      "worldSlugs": [
+        "index-card-theater-club",
+        "margin-note-market",
+        "blue-pencil-observatory",
+        "binding-day-boardwalk"
+      ],
+      "objectives": [
+        "Plan a short story using index cards for scene order, character choice, and setting detail.",
+        "Revise a draft by adding useful margin notes, clearer transitions, and stronger reader cues.",
+        "Assemble a printable story packet with a title page, draft page, revision evidence, and reflection note."
+      ],
+      "materials": [
+        "Index cards",
+        "Pencils",
+        "Colored pencils or highlighters",
+        "Blank story draft paper",
+        "Margin-note strips",
+        "Packet cover sheet",
+        "Stapler or paper clips"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Build the Scene Card Lineup",
+          "minutes": 45,
+          "teacherMove": "Introduce the theater club as a place where every scene has one job, then model writing one card for setup, one for problem, and one for choice.",
+          "studentTask": "Students create four scene cards, add one setting detail to each card, and arrange the cards in a clear order before drafting.",
+          "output": "Ordered scene-card lineup with four planned story moments."
+        },
+        {
+          "title": "Add Useful Margin Notes",
+          "minutes": 45,
+          "teacherMove": "Use Margin Note Market and Blue Pencil Observatory to model comments that help a reader, such as clarify, add detail, check order, and explain why.",
+          "studentTask": "Students draft the story from their cards, then add at least three margin notes that identify where the draft needs clearer information.",
+          "output": "One-page draft with three practical margin notes."
+        },
+        {
+          "title": "Bind the Story Packet",
+          "minutes": 45,
+          "teacherMove": "Present Binding Day Boardwalk as a final assembly station and model how to attach draft evidence, revision marks, and a short reflection without turning the task into a long craft project.",
+          "studentTask": "Students revise one section, prepare a simple cover sheet, attach scene cards or margin-note evidence, and write a reflection naming one change they made.",
+          "output": "Finished story packet with plan, draft, revision evidence, and reflection."
+        }
+      ],
+      "teacherNotes": [
+        "Keep the packet to four pages or fewer so assessment stays practical.",
+        "Use teacher-provided sample cards for students who freeze during planning.",
+        "Let students staple or clip packets only after the writing and revision evidence are complete.",
+        "For group sharing, ask students to read one revised sentence instead of the full story.",
+        "The unit is built for repeat classroom use with paper materials and no digital workflow."
+      ],
+      "homeschoolAdaptation": "Use the same packet over three days. A parent can read the draft aloud after session two, point to one unclear place, and let the child choose which section to revise for the final packet.",
+      "classroomManagement": "Prepare card stacks, margin-note strips, and cover sheets in separate trays. Release materials one phase at a time so students plan first, draft second, and assemble only at the end.",
+      "assessment": "Review the packet for four ordered scene cards, a complete short draft, at least three margin notes, one visible revision, and a reflection that names the writer's choice.",
+      "printableOffer": "Future $79 classroom license pack with scene cards, margin-note strips, packet covers, rubric pages, and reusable writing-center directions.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "family-friendly upper elementary classroom writing workshop, index cards, margin-note strips, blue pencil observatory tools, paper story packets, boardwalk binding station, pencils and highlighters on shared desks, polished children's educational illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    },
+    {
+      "slug": "seasonal-map-room-writing-cycle",
+      "title": "Seasonal Map Room Writing Cycle",
+      "ageBand": "8-10",
+      "audience": "Homeschool families, co-ops, and mixed-age classrooms that want a seasonal printable writing routine with observation, mapping, and short narrative drafting.",
+      "duration": "Three 35-minute sessions across one week or season theme",
+      "summary": "Students collect seasonal clues, map a gentle errand route, and write a short story page that can become part of a family or class seasonal binder.",
+      "worldSlugs": [
+        "seed-library-map-room",
+        "paperclip-plaza-parcel-day",
+        "rain-gauge-railway",
+        "teacup-town-weather-window"
+      ],
+      "objectives": [
+        "Collect seasonal setting details that can become story clues.",
+        "Map a short route that shows where the character finds, carries, or sorts the clues.",
+        "Write and revise a one-page seasonal story with a clear beginning, middle, and ending."
+      ],
+      "materials": [
+        "Seasonal observation page",
+        "Blank route map",
+        "Pencils",
+        "Colored pencils",
+        "Small paper slips for clues",
+        "Folder or binder",
+        "Optional leaf, seed packet, weather chart, or household seasonal object"
+      ],
+      "lessonFlow": [
+        {
+          "title": "Gather Seasonal Clues",
+          "minutes": 35,
+          "teacherMove": "Introduce the seed library, rain railway, and weather window as places where writers notice small changes before they invent a story.",
+          "studentTask": "Students list or sketch six seasonal clues, then choose the three that would help a character solve a gentle mix-up.",
+          "output": "Observation page with six clues and three selected story clues."
+        },
+        {
+          "title": "Map the Parcel Route",
+          "minutes": 35,
+          "teacherMove": "Use Paperclip Plaza to model a simple route with a start, two stops, one question, and a return point.",
+          "studentTask": "Students draw a route map, place the three selected clues along the path, and write one sentence explaining why the route matters.",
+          "output": "Labeled route map with three clue stops and one route sentence."
+        },
+        {
+          "title": "Draft the Season Page",
+          "minutes": 35,
+          "teacherMove": "Model turning the map into three paragraphs: notice the season, follow the route, and finish with a helpful choice.",
+          "studentTask": "Students draft a one-page story, underline the clearest seasonal detail, and revise one sentence to make the route easier to follow.",
+          "output": "Finished seasonal story page ready for a binder or folder."
+        }
+      ],
+      "teacherNotes": [
+        "The unit works with any season because students choose their own observation details.",
+        "For younger or reluctant writers, use labeled sketches for the observation page and require three strong sentences for the final story.",
+        "Do not require real names, addresses, family schedules, or personal routines in the route map.",
+        "Use the binder or folder as a storage tool, not as a display requirement.",
+        "Repeat the unit later with new seasonal clues to build a yearlong writing record."
+      ],
+      "homeschoolAdaptation": "Run the three sessions during morning basket, nature study, or a rainy afternoon week. Save each season page in a family binder and repeat the same printable set with new clues in another season.",
+      "classroomManagement": "Keep observation objects at a teacher table or center, limit map routes to two stops, and collect colored pencils before drafting so the room shifts from planning to writing.",
+      "assessment": "Check for six observation clues, a route map with three clue stops, a one-page story with beginning-middle-ending structure, and one sentence revision that improves clarity.",
+      "printableOffer": "Future $29 homeschool season bundle with four seasonal observation pages, route maps, story drafts, binder covers, and optional co-op teacher notes.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "imagePrompt": "family-friendly homeschool and classroom seasonal writing table, seed library map room cards, paperclip parcel route map, rain gauge railway clue slips, teacup weather window sketches, binder pages, pencils and colored pencils, polished children's educational illustration, no text, no logos, no watermark, no branded characters, no scary harm, no weapons"
+    }
+  ]
+}

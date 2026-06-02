@@ -37,4 +37,15 @@ describe('App', () => {
       expect.stringContaining('homeschool-writing-prompts'),
     )
   })
+
+  it('links to teacher mini-units without requiring student accounts', () => {
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: /Teacher mini-units/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Browse mini-units/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('mini-units'),
+    )
+    expect(screen.getByText(/No student accounts/i)).toBeInTheDocument()
+  })
 })
