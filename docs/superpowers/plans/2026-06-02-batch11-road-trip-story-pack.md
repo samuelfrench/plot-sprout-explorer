@@ -132,6 +132,6 @@ Run local preview and Playwright smoke for `/`, `/road-trip-story-quest-pack/`, 
 
 Commit the whole Batch 11 as one batch commit, push to `origin/main`, confirm GitHub Actions deploy success on the local runner, and run a live smoke on the new product route.
 
-- [ ] **Step 5: Update TODO and memory**
+- [x] **Step 5: Update TODO and memory**
 
 Record Batch 11 completion, deploy run, validation evidence, local GPU image use, subagent use, and billable-service state. Keep checkout provider-gated.
