@@ -11,6 +11,8 @@ import {
   validateKitchenTableStoryRecipeCardDeckSourceFiles,
   validateQuietCornerStoryMapCardPackSource,
   validateQuietCornerStoryMapCardPackSourceFiles,
+  validatePorchLightStorySignalCardPackSource,
+  validatePorchLightStorySignalCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
   validateWindowSeatStorySceneCardPackSourceFiles,
   validateWritingDeskStoryPromptStripPackSource,
@@ -68,6 +70,7 @@ const batch26ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch27ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch27-product-images.json')
 const batch28ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch28-product-images.json')
 const batch29ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch29-product-images.json')
+const batch30ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch30-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -91,6 +94,7 @@ const bookshopBookmarkSourceFile = resolve(root, 'content', 'product-artifacts',
 const writingDeskStripSourceFile = resolve(root, 'content', 'product-artifacts', 'writing-desk-story-prompt-strip-pack.json')
 const windowSeatSceneSourceFile = resolve(root, 'content', 'product-artifacts', 'window-seat-story-scene-card-pack.json')
 const quietCornerMapSourceFile = resolve(root, 'content', 'product-artifacts', 'quiet-corner-story-map-card-pack.json')
+const porchLightSignalSourceFile = resolve(root, 'content', 'product-artifacts', 'porch-light-story-signal-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -115,6 +119,7 @@ const batch26ProductImagesBatchId = '2026-06-02-batch26-product-images'
 const batch27ProductImagesBatchId = '2026-06-02-batch27-product-images'
 const batch28ProductImagesBatchId = '2026-06-02-batch28-product-images'
 const batch29ProductImagesBatchId = '2026-06-02-batch29-product-images'
+const batch30ProductImagesBatchId = '2026-06-02-batch30-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -138,6 +143,7 @@ const bookshopBookmarkBatchId = '2026-06-02-batch26'
 const writingDeskStripBatchId = '2026-06-02-batch27'
 const windowSeatSceneBatchId = '2026-06-02-batch28'
 const quietCornerMapBatchId = '2026-06-02-batch29'
+const porchLightSignalBatchId = '2026-06-02-batch30'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -1700,6 +1706,117 @@ function validateBatch29ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch30ProductImage(image) {
+  const label = `2026-06-02-batch30-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'porch-light-story-signal-card-pack',
+    `${label}.slug must be porch-light-story-signal-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch30/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch30/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch30/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank cream paper signal cards',
+    'plain white background',
+    'zero other objects',
+    'screen-free printable porch light story signal card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'gps',
+    'navigation app',
+    'coordinates',
+    'address',
+    'house',
+    'home',
+    'street sign',
+    'real place',
+    'realistic road atlas',
+    'real-world map',
+    'outdoor scene',
+    'window',
+    'porch',
+    'doorway',
+    'building',
+    'safety sign',
+    'photo',
+    'camera',
+    'people',
+    'face',
+    'animal',
+    'plant',
+    'greenery',
+    'flower',
+    'jar',
+    'cup',
+    'mug',
+    'bowl',
+    'utensil',
+    'brush',
+    'spoon',
+    'fork',
+    'knife',
+    'pencil',
+    'pen',
+    'crayon',
+    'marker',
+    'notebook',
+    'spiral binding',
+    'ruler',
+    'scissors',
+    'calendar',
+    'clock',
+    'timer',
+    'score',
+    'star',
+    'rating',
+    'review',
+    'tabletop props',
+    'decoration',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -1889,6 +2006,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'quiet-corner-story-map-card-pack': {
       title: 'Quiet Corner Story Map Card Pack',
       pricePoint: '$31',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'porch-light-story-signal-card-pack': {
+      title: 'Porch Light Story Signal Card Pack',
+      pricePoint: '$33',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -2130,6 +2255,21 @@ function validateProduct(product, productSlugs, worldSlugs) {
     expect(
       !/\baccounts?\b|\blogins?\b|\bsign-?in\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\bschedules?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bscores?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\bphotos?\b|\bcameras?\b|\baddresses?\b|\bphone(s)?\b|\bemails?\b|\breal homes?\b|\bgps\b|\bcoordinates?\b|\broute(s)?\b|\breal child\b|\bprivate child data\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bnavigation\b|\breal-world map\b|\broad atlas\b/i.test(quietCornerRenderedText),
       `${label} static output includes account, public-posting, review/rating, tracker, private-child-data, score, timer, contact, photo, camera, real-home, route, real-navigation, publisher, franchise, or branded language.`,
+    )
+  }
+  if (product.slug === 'porch-light-story-signal-card-pack') {
+    const porchLightSummaryErrors = validateProductWorldSummaries(product, 'Porch Light Story Signal Card Pack')
+    expect(
+      porchLightSummaryErrors.length === 0,
+      `${label}.worldSummaries failed validation:\n${porchLightSummaryErrors.join('\n')}`,
+    )
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    const porchLightRenderedText = renderedHtml.replaceAll(safety, '')
+    expect(
+      !/\baccounts?\b|\blogins?\b|\bsign-?in\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\bschedules?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bscores?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\bphotos?\b|\bcameras?\b|\baddresses?\b|\bphone(s)?\b|\bemails?\b|\breal homes?\b|\bhome address\b|\bhouse(s)?\b|\bneighbors?\b|\bneighborhood(s)?\b|\bstreets?\b|\boutside\b|\boutdoors?\b|\bgps\b|\bcoordinates?\b|\broute(s)?\b|\breal child\b|\bprivate child data\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bnavigation\b|\breal-world map\b|\broad atlas\b|\bwindow safety\b|\boutdoor safety\b|\bweather safety\b|\bsafety instruction(s)?\b/i.test(porchLightRenderedText),
+      `${label} static output includes account, public-posting, review/rating, tracker, private-child-data, score, timer, contact, photo, camera, real-home, house, outdoor, route, safety-instruction, publisher, franchise, or branded language.`,
     )
   }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
@@ -2476,12 +2616,23 @@ expect(Array.isArray(batch29ProductImages.images), 'batch29 product image manife
 expect(batch29ProductImages.images.length === 1, `Expected 1 Batch 29 product image, found ${batch29ProductImages.images.length}.`)
 validateBatch29ProductImage(batch29ProductImages.images[0])
 
+expect(existsSync(batch30ProductImagesFile), `Missing Batch 30 product image manifest: ${batch30ProductImagesFile}`)
+const batch30ProductImages = readJson(batch30ProductImagesFile)
+expect(
+  batch30ProductImages.batchId === batch30ProductImagesBatchId,
+  `batch30 product image manifest batchId must be ${batch30ProductImagesBatchId}.`,
+)
+expect(batch30ProductImages.generatedAt === '2026-06-02', 'batch30 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch30ProductImages.images), 'batch30 product image manifest images must be an array.')
+expect(batch30ProductImages.images.length === 1, `Expected 1 Batch 30 product image, found ${batch30ProductImages.images.length}.`)
+validateBatch30ProductImage(batch30ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 22, `Expected 22 product records, found ${products.products.length}.`)
+expect(products.products.length === 23, `Expected 23 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -2507,6 +2658,7 @@ for (const requiredProductSlug of [
   'writing-desk-story-prompt-strip-pack',
   'window-seat-story-scene-card-pack',
   'quiet-corner-story-map-card-pack',
+  'porch-light-story-signal-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -3975,6 +4127,78 @@ for (const asset of quietCornerMapArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Quiet Corner Story Map Card Pack copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(porchLightSignalSourceFile), `Missing Batch 30 Porch Light Story Signal Card Pack source file: ${porchLightSignalSourceFile}`)
+const porchLightSignalSource = readJson(porchLightSignalSourceFile)
+expect(
+  porchLightSignalSource.batchId === porchLightSignalBatchId,
+  `Porch Light Story Signal Card Pack source batchId must be ${porchLightSignalBatchId}.`,
+)
+const porchLightSignalProduct = products.products.find((product) => product.slug === 'porch-light-story-signal-card-pack')
+expect(porchLightSignalProduct, 'Missing Porch Light Story Signal Card Pack product record for Batch 30 artifact validation.')
+const porchLightSignalSourceErrors = validatePorchLightStorySignalCardPackSource(
+  porchLightSignalSource,
+  porchLightSignalProduct,
+  worldAgeBands,
+)
+expect(
+  porchLightSignalSourceErrors.length === 0,
+  `Porch Light Story Signal Card Pack source failed validation:\n${porchLightSignalSourceErrors.join('\n')}`,
+)
+const porchLightSignalSourceFileErrors = validatePorchLightStorySignalCardPackSourceFiles(porchLightSignalSource, root)
+expect(
+  porchLightSignalSourceFileErrors.length === 0,
+  `Porch Light Story Signal Card Pack sourceFiles failed validation:\n${porchLightSignalSourceFileErrors.join('\n')}`,
+)
+const porchLightSignalExpectedPdfPages = porchLightSignalSource.cards.length + 5
+const porchLightSignalArtifactStatus = inspectArtifactFiles(root, porchLightSignalSource.artifact, {
+  expectedPdfPages: porchLightSignalExpectedPdfPages,
+})
+expect(
+  porchLightSignalArtifactStatus.valid,
+  `Porch Light Story Signal Card Pack artifacts failed validation:\n${porchLightSignalArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  porchLightSignalArtifactStatus.files.pdf.size > 100_000,
+  `Porch Light Story Signal Card Pack PDF artifact is unexpectedly small: ${porchLightSignalArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  porchLightSignalArtifactStatus.files.pdf.pageCount === porchLightSignalExpectedPdfPages,
+  `Porch Light Story Signal Card Pack PDF artifact must have ${porchLightSignalExpectedPdfPages} pages.`,
+)
+expect(
+  porchLightSignalArtifactStatus.files.zip.size > porchLightSignalArtifactStatus.files.pdf.size,
+  'Porch Light Story Signal Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const porchLightSignalCheckoutErrors = validateCheckoutReadiness(porchLightSignalProduct, porchLightSignalArtifactStatus)
+expect(
+  porchLightSignalCheckoutErrors.length === 0,
+  `Porch Light Story Signal Card Pack checkout readiness failed validation:\n${porchLightSignalCheckoutErrors.join('\n')}`,
+)
+const porchLightSignalArtifactManifest = readJson(resolve(root, porchLightSignalSource.artifact.manifestPath))
+expect(
+  porchLightSignalArtifactManifest.sourcePageCount === porchLightSignalSource.cards.length,
+  'Porch Light Story Signal Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(porchLightSignalArtifactManifest.files.assets),
+  'Porch Light Story Signal Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  porchLightSignalArtifactManifest.files.assets.length === porchLightSignalSource.worldSlugs.length,
+  'Porch Light Story Signal Card Pack artifact manifest must include one copied local image per source world.',
+)
+const porchLightSignalManifestAssetErrors = validateManifestWorldAssets(
+  porchLightSignalSource,
+  porchLightSignalArtifactManifest,
+)
+expect(
+  porchLightSignalManifestAssetErrors.length === 0,
+  `Porch Light Story Signal Card Pack artifact manifest image coverage failed validation:\n${porchLightSignalManifestAssetErrors.join('\n')}`,
+)
+for (const asset of porchLightSignalArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Porch Light Story Signal Card Pack copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length + batch26ProductImages.images.length + batch27ProductImages.images.length + batch28ProductImages.images.length + batch29ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 22 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length + batch26ProductImages.images.length + batch27ProductImages.images.length + batch28ProductImages.images.length + batch29ProductImages.images.length + batch30ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 23 product artifacts.`,
 )

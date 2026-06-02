@@ -1616,6 +1616,130 @@
           "summary": "A page-order boardwalk world for making one unclear story sequence easier to follow."
         }
       ]
+    },
+    {
+      "slug": "porch-light-story-signal-card-pack",
+      "title": "Porch Light Story Signal Card Pack",
+      "pricePoint": "$33",
+      "status": "checkout_pending",
+      "headline": "A printable signal-card pack for calm creative writing tables.",
+      "summary": "Sixteen adult-led fictional story signal cards help kids turn paper glow cues, color marks, and tiny messages into short writing starts.",
+      "heroImage": "images/plotsprout/batch30/porch-light-story-signal-card-pack.jpg",
+      "ctaLabel": "Request signal card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Porch%20Light%20Story%20Signal%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static porch light story signal card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable porch-light story signal cards",
+        "Adult setup guide",
+        "Fictional signal-card safety notes",
+        "Story signal coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led signal routines",
+        "Ten take-home signal slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one cue before a full story",
+        "A tutoring or co-op desk where writers can choose one paper signal card at a time",
+        "A family table warm-up where pointing, sketching, and one blank can start the page",
+        "A reluctant-writer activity that separates one cue from a full draft",
+        "A take-home signal slip set for finishing one invented detail offline"
+      ],
+      "parentSteps": [
+        "Choose one signal routine before the activity starts.",
+        "Set the paper, pencil, sketch, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one broad pretend setting into a make-believe story cue rather than recording private details.",
+        "Send one signal slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for matching one color cue to a pastry-table scene."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A tiny post-office world for turning one pretend mark into a message cue."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A rolling library world for changing one soft sound into a story signal."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for sorting one first, next, and last signal sequence."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup weather world for matching one mood color to a scene choice."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A notice-board world for writing one invented message and the action after it."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A lunchbox harbor world for ordering three tiny paper signal beats."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An errand-office world for giving one helper a clear signal and a kind task."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed-library world for turning one question cue into a story plan."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A railway world for making one sound cue guide a tiny train choice."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A quiet observatory world for decoding one moss message on a card."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for making a first, next, and last signal clear."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for changing one plain sentence into a stronger line."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A label tower world for hiding one question cue inside a museum label."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A craft academy world for using one setting cue before a character acts."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A page-order boardwalk world for choosing one ending cue and final line."
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,519 @@
+{
+  "batchId": "2026-06-02-batch30",
+  "generatedAt": "2026-06-02",
+  "productSlug": "porch-light-story-signal-card-pack",
+  "title": "Porch Light Story Signal Card Pack",
+  "pricePoint": "$33",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.",
+  "sessionLength": "16 printable story signal cards plus adult guide tools, signal routines, take-home signal slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/porch-light-story-signal-card-pack/Porch-Light-Story-Signal-Card-Pack.pdf",
+    "zipPath": "product-build/porch-light-story-signal-card-pack/porch-light-story-signal-card-pack.zip",
+    "sourceHtmlPath": "product-build/porch-light-story-signal-card-pack/source/porch-light-story-signal-card-pack.html",
+    "manifestPath": "product-build/porch-light-story-signal-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch30-porch-light-signal-cards-a.json",
+    "content/product-artifacts/lanes/batch30-porch-light-signal-cards-b.json",
+    "content/product-artifacts/lanes/batch30-porch-light-signal-cards-c.json",
+    "content/product-artifacts/lanes/batch30-porch-light-signal-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable paper signal cards",
+    "headline": "Porch Light Story Signal Card Pack",
+    "subhead": "Sixteen paper story signal cards turn pretend porch-light cues into screen-free story starts.",
+    "included": [
+      "16 printable porch-light signal cards",
+      "Adult setup guide",
+      "Fictional signal-card safety notes",
+      "Story signal coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led signal routines",
+      "Ten take-home signal slips",
+      "Eight optional share prompts",
+      "Local image-backed world menu",
+      "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Choose four to six paper signal cards for the table; place blank paper and pencils within reach.",
+      "Say that every porch-light mark is pretend and belongs to a made-up story setting.",
+      "Pick one writing goal: start, problem, helper, mood, or ending.",
+      "Give each writer a choice of two cards, then let the adult read the prompt aloud.",
+      "Keep the first draft short: one sentence, three sentences, or a tiny scene."
+    ],
+    "paperSignalSetup": [
+      "Print cards on plain paper or cardstock and cut along the card edges.",
+      "Sort cards into color, pattern, message, mood, object, and ending piles.",
+      "Set a pencil cup, blank slips, and a scrap-paper spot in the center.",
+      "Use a paper clip or folder to keep unused cards together between sessions.",
+      "Mark a sample card as the adult example, then invite writers to make their own signal marks."
+    ],
+    "storySignalCoaching": [
+      "Ask what the signal tells the character to notice next.",
+      "Turn one-word answers into story sentences by adding who, where, and why.",
+      "When a writer gets stuck, offer two gentle choices instead of supplying the whole idea.",
+      "Point to the card color or shape before asking for more detail.",
+      "Let funny, odd, or quiet ideas stay; the goal is a usable story seed."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented labels, role words, or blank spaces for every person on the story signal cards.",
+      "Use broad place words instead of private details or named locations.",
+      "Keep every story signal card offline with the family adult, tutor, or table host.",
+      "Sharing stays optional and limited to one invented word, sketch, or line.",
+      "Check every take-home slip for private details before it leaves the adult-led table."
+    ],
+    "familyHandoff": [
+      "Send only the paper slip and a short note about the story skill practiced.",
+      "Tell family adults the signals are fiction cues for paper stories.",
+      "Invite a writer to read one favorite sentence aloud during a calm table moment.",
+      "Suggest that families add one extra line, one title, or one ending choice.",
+      "Return slips in a folder or envelope for the next adult-led session."
+    ],
+    "reset": [
+      "Collect used cards and blank slips.",
+      "Recycle torn scraps and save clear drafts in the folder.",
+      "Shuffle each card pile so the next group sees a fresh mix.",
+      "Note which cue type helped most, then start the next session with that type."
+    ]
+  },
+  "signalRoutines": [
+    {
+      "name": "Color Glow Quickwrite",
+      "bestFor": "Warm-up sentences for ages 6-8.",
+      "steps": [
+        "Adult fans three color cue cards face up.",
+        "Writer chooses one color and says what feeling it gives the scene.",
+        "Everyone writes one sentence that uses the color signal.",
+        "Adult invites one volunteer sentence, then moves to a new card."
+      ]
+    },
+    {
+      "name": "Pattern Pass",
+      "bestFor": "Small groups practicing repeated details.",
+      "steps": [
+        "Adult gives one pattern card to the first writer.",
+        "Writer adds a sentence with a repeated mark or shape.",
+        "Pass the card to the next writer at the table.",
+        "Adult ends after each writer has added one line."
+      ]
+    },
+    {
+      "name": "Message Flip",
+      "bestFor": "Reluctant writers who need a clear next move.",
+      "steps": [
+        "Adult folds a blank slip and places it under a message cue card.",
+        "Writer writes a short fictional signal message on the slip.",
+        "Adult flips a question cue card beside it.",
+        "Writer answers as the character and turns the answer into a scene line."
+      ]
+    },
+    {
+      "name": "Mood Dimmer",
+      "bestFor": "Revising a sentence so it carries a stronger feeling.",
+      "steps": [
+        "Adult chooses one plain sentence from a draft.",
+        "Writer places a mood cue above the sentence.",
+        "Writer rewrites the sentence to match that mood.",
+        "Adult circles one stronger verb or describing word."
+      ]
+    },
+    {
+      "name": "Object Signal Swap",
+      "bestFor": "Adding concrete details to a short scene.",
+      "steps": [
+        "Adult places an object cue beside a porch-light card.",
+        "Writer names what the character carries or finds.",
+        "Writer writes one reason the object matters.",
+        "Swap the object cue and revise one noun or action."
+      ]
+    },
+    {
+      "name": "Ending Glow",
+      "bestFor": "Finishing short drafts that stop too soon.",
+      "steps": [
+        "Adult chooses an ending cue and reads it aloud.",
+        "Writer picks a quiet, funny, or surprising ending path.",
+        "Writer writes the last two lines on paper.",
+        "Adult asks what changed from the first line to the last."
+      ]
+    }
+  ],
+  "takeHomeSignalSlips": [
+    {
+      "title": "Color Glow Sentence",
+      "time": "5 minutes",
+      "skill": "color cue",
+      "direction": "Pick one pretend porch-light color and write what it means: ____________________.",
+      "familyLine": "Family adds one describing word in the blank: ____________________."
+    },
+    {
+      "title": "Band Pattern Clue",
+      "time": "6 minutes",
+      "skill": "pattern cue",
+      "direction": "Draw a paper pattern beside the signal, then write what it tells the character: ____________________.",
+      "familyLine": "Family says one extra pattern idea to add here: ____________________."
+    },
+    {
+      "title": "Tiny Message Card",
+      "time": "7 minutes",
+      "skill": "message cue",
+      "direction": "Write a three-word message from the pretend signal: ____________________.",
+      "familyLine": "Family chooses one word to make clearer: ____________________."
+    },
+    {
+      "title": "Mood Glow Shift",
+      "time": "8 minutes",
+      "skill": "mood cue",
+      "direction": "Write one line twice: first calm, then silly. Silly version: ____________________.",
+      "familyLine": "Family names the mood they heard: ____________________."
+    },
+    {
+      "title": "Object Beside the Signal",
+      "time": "6 minutes",
+      "skill": "object cue",
+      "direction": "Invent one object near the paper signal and explain why it matters: ____________________.",
+      "familyLine": "Family adds one detail about the object: ____________________."
+    },
+    {
+      "title": "First Next Last",
+      "time": "9 minutes",
+      "skill": "sequence cue",
+      "direction": "Use three short beats: first the signal appears, next ____________________, last the character decides.",
+      "familyLine": "Family fills the middle beat with a gentle twist: ____________________."
+    },
+    {
+      "title": "Sound-Like Signal",
+      "time": "5 minutes",
+      "skill": "sound cue",
+      "direction": "Make up a quiet sound for the pretend signal and write it here: ____________________.",
+      "familyLine": "Family repeats the sound softly and adds one action: ____________________."
+    },
+    {
+      "title": "Helper Glow",
+      "time": "7 minutes",
+      "skill": "helper cue",
+      "direction": "Invent a helper who understands the signal and write the helper's first idea: ____________________.",
+      "familyLine": "Family adds the helper's kind phrase: ____________________."
+    },
+    {
+      "title": "Setting Circle",
+      "time": "8 minutes",
+      "skill": "setting cue",
+      "direction": "Name a made-up setting for the card, then write one detail: ____________________.",
+      "familyLine": "Family adds one color, shape, or texture: ____________________."
+    },
+    {
+      "title": "Question Glow",
+      "time": "6 minutes",
+      "skill": "question cue",
+      "direction": "Ask the signal one story question and leave the answer for the character: ____________________.",
+      "familyLine": "Family suggests one possible answer: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "I want to read the sentence where the signal changes the character plan: ____________________.",
+    "My favorite made-up signal color is ____________________ because it makes the scene feel clear.",
+    "One pattern I used more than once was ____________________.",
+    "The kindest helper line in my story was ____________________.",
+    "The funniest object near the pretend porch-light card was ____________________.",
+    "A question my character still has is ____________________.",
+    "The ending I chose can be summed up in five words: ____________________.",
+    "One detail I revised to make clearer is ____________________."
+  ],
+  "cards": [
+    {
+      "id": "porch-signal-card-01",
+      "title": "Moon Muffin Market Color Signal",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "signalSkill": "color cue",
+      "useCase": "Adult-led table prompt for choosing one color signal before a short market tale: ____________________.",
+      "adultSetup": "Print one card for each writer, set crayons nearby, and say the porch-light motif belongs only on the paper card: ____________________.",
+      "kidDirection": "Pick one color for the signal, then use it to decide what changes in the story: ____________________.",
+      "signalFrontPrompt": "Front: Color the pretend paper porch-light signal with one story color: ____________________.",
+      "signalBackPrompt": "Back: That color tells the Moon Muffin Market clerk to set out ____________________.",
+      "storySignalPrompt": "When the signal glows on the paper card, the next customer asks for ____________________.",
+      "firstLineSignal": "First line: The moon muffins turned ____________________ just before the market bell.",
+      "revisionNudge": "Add one color clue that changes what a character does: ____________________.",
+      "quietOptionLine": "Quiet option: Point to your chosen color and write only one word: ____________________.",
+      "takeHomeLine": "Take-home line: At another table, ask an adult to name one pretend market color: ____________________."
+    },
+    {
+      "id": "porch-signal-card-02",
+      "title": "Puddle Planet Post Office Message Signal",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "signalSkill": "message cue",
+      "useCase": "Adult-led paper prompt for turning a tiny pretend message into a story choice: ____________________.",
+      "adultSetup": "Print the card, fold it once, set pencils nearby, and keep every helper made up for the page: ____________________.",
+      "kidDirection": "Write or draw a tiny pretend message, then decide what the puddle parcel should do next: ____________________.",
+      "signalFrontPrompt": "Front: Draw a dot, dash, or swirl on the pretend paper porch-light stamp: ____________________.",
+      "signalBackPrompt": "Back: The Puddle Planet sorter reads it as this message: ____________________.",
+      "storySignalPrompt": "The paper signal tells the puddle parcel to visit this made-up place: ____________________.",
+      "firstLineSignal": "First line: The puddle parcel wobbled when it read, ____________________.",
+      "revisionNudge": "Add a clearer message clue so the helper knows what to do: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the message mark first, then label it: ____________________.",
+      "takeHomeLine": "Take-home line: Share one pretend post-office message starter with an adult: ____________________."
+    },
+    {
+      "id": "porch-signal-card-03",
+      "title": "Buttonwood Library Train Sound Signal",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "signalSkill": "sound cue",
+      "useCase": "Adult-led printable prompt for using one gentle sound cue to start a library train scene: ____________________.",
+      "adultSetup": "Place the printed card beside blank paper, invite one soft sound effect, and turn it into a story clue: ____________________.",
+      "kidDirection": "Choose the signal sound and decide what it tells one book, cart, or character to do: ____________________.",
+      "signalFrontPrompt": "Front: Mark the pretend paper porch-light signal with a sound sign: ____________________.",
+      "signalBackPrompt": "Back: In Buttonwood Library Train, that sound means the book cart should ____________________.",
+      "storySignalPrompt": "When the signal sound repeats, one shelf book begins to ____________________.",
+      "firstLineSignal": "First line: The quiet train car heard ____________________ from the tallest stack.",
+      "revisionNudge": "Add one sound cue before the surprise so readers can predict it: ____________________.",
+      "quietOptionLine": "Quiet option: Tap the rhythm on the table, then write the sound word: ____________________.",
+      "takeHomeLine": "Take-home line: Ask an adult for a gentle library sound to borrow: ____________________."
+    },
+    {
+      "id": "porch-signal-card-04",
+      "title": "Button Bakery Map Mixup Sequence Signal",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "signalSkill": "sequence cue",
+      "useCase": "Adult-led paper card for ordering three silly bakery clues before drafting: ____________________.",
+      "adultSetup": "Print the card and provide three small paper arrows or number dots for a fictional table sequence: ____________________.",
+      "kidDirection": "Put the clues in first, next, and last order, then write the mixup scene: ____________________.",
+      "signalFrontPrompt": "Front: Number the pretend paper porch-light crumbs in the order they blink: ____________________.",
+      "signalBackPrompt": "Back: The Button Bakery mixup begins when crumb number one points to ____________________.",
+      "storySignalPrompt": "Use the signal order to move from mixup to fix: first ____________________, next ____________________, last ____________________.",
+      "firstLineSignal": "First line: The button baker followed crumb one and found ____________________ instead of icing.",
+      "revisionNudge": "Check the order clue; add one missing middle step: ____________________.",
+      "quietOptionLine": "Quiet option: Circle first, next, or last, then write the chosen step: ____________________.",
+      "takeHomeLine": "Take-home line: Tell an adult the funniest paper mixup: ____________________."
+    },
+    {
+      "id": "porch-signal-card-05",
+      "title": "Teacup Town Weather Mood Signal",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "signalSkill": "mood cue",
+      "useCase": "Adult-led printable card for matching a pretend weather mood to a character choice: ____________________.",
+      "adultSetup": "Print the card and set blue, yellow, gray, and green crayons nearby for fictional table writing: ____________________.",
+      "kidDirection": "Pick one weather mood for the signal, then show how it changes the teacup tale: ____________________.",
+      "signalFrontPrompt": "Front: Shade the pretend paper porch-light teacup with a weather mood: ____________________.",
+      "signalBackPrompt": "Back: In Teacup Town, that mood makes the cafe table feel ____________________.",
+      "storySignalPrompt": "The signal changes how the tiny cup keeper speaks: ____________________.",
+      "firstLineSignal": "First line: The teacup sky looked ____________________ when the spoon parade paused.",
+      "revisionNudge": "Add one mood word and one object that matches it: ____________________.",
+      "quietOptionLine": "Quiet option: Pick a color silently and write the mood it makes: ____________________.",
+      "takeHomeLine": "Take-home line: Ask an adult which pretend weather mood fits a teacup tale: ____________________."
+    },
+    {
+      "id": "porch-signal-card-06",
+      "title": "Pocket Park Board Signal",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "signalSkill": "message cue",
+      "useCase": "Adult-led offline paper-only warm-up for a family table, tutoring table, or classroom writing center: ____________________.",
+      "adultSetup": "Set out the pretend porch-light card, one pencil, and a small paper display board for made-up story work: ____________________.",
+      "kidDirection": "Choose one tiny message for the board, then write what a character does after reading it: ____________________.",
+      "signalFrontPrompt": "Front: The pretend porch-light turns on beside the pocket-park board when the message says: ____________________.",
+      "signalBackPrompt": "Back: The small print on the board gives one surprising detail: ____________________.",
+      "storySignalPrompt": "Story signal: A character reads the paper signal and decides to bring: ____________________.",
+      "firstLineSignal": "First line: When the pocket-park board glowed on the card, the reader saw, ____________________.",
+      "revisionNudge": "Revision: Add one word that makes the board message clearer: ____________________.",
+      "quietOptionLine": "Quiet option: Point to the signal and write one whisper-sized clue: ____________________.",
+      "takeHomeLine": "Take-home line: Retell the pocket-park message and add one new helper: ____________________."
+    },
+    {
+      "id": "porch-signal-card-07",
+      "title": "Spoon Ferry Lunchbox Signal",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "signalSkill": "sequence cue",
+      "useCase": "Adult-led offline paper-only sequence practice for a silly lunchbox harbor scene: ____________________.",
+      "adultSetup": "Place the card near paper lunch tokens and name the spoon ferry as a pretend tabletop boat: ____________________.",
+      "kidDirection": "Put three lunch tokens in order, then write how the ferry captain follows the signal: ____________________.",
+      "signalFrontPrompt": "Front: Draw or name the first lunch token the spoon ferry picks up: ____________________.",
+      "signalBackPrompt": "Back: The pretend porch-light pattern tells the next stop is for: ____________________.",
+      "storySignalPrompt": "Story signal: The ferry must carry three tiny lunch items in this order: ____________________.",
+      "firstLineSignal": "First line: The spoon ferry tapped the lunchbox dock and the captain called, ____________________.",
+      "revisionNudge": "Revision: Add a middle step that makes the lunchbox harbor trip easier to follow: ____________________.",
+      "quietOptionLine": "Quiet option: Number three tiny items without speaking: ____________________.",
+      "takeHomeLine": "Take-home line: Tell the spoon ferry sequence with a new snack clue: ____________________."
+    },
+    {
+      "id": "porch-signal-card-08",
+      "title": "Acorn Errand Office Signal",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "signalSkill": "helper cue",
+      "useCase": "Adult-led offline paper-only helper practice for a family, tutoring, or classroom writing table: ____________________.",
+      "adultSetup": "Set out three paper errand slips and one pretend porch-light card for an invented office scene: ____________________.",
+      "kidDirection": "Pick an office helper and one acorn task, then write how the helper reads the pretend signal: ____________________.",
+      "signalFrontPrompt": "Front: The pretend porch-light card points to the helper badge labeled: ____________________.",
+      "signalBackPrompt": "Back: The errand office file asks for one missing object: ____________________.",
+      "storySignalPrompt": "Story signal: The helper sees a paper signal and chooses to carry: ____________________.",
+      "firstLineSignal": "First line: At the Acorn Avenue errand office, the signal blinked for ____________________.",
+      "revisionNudge": "Revision: Add one kind action the helper takes before the errand ends: ____________________.",
+      "quietOptionLine": "Quiet option: Circle a helper cue and write one object name: ____________________.",
+      "takeHomeLine": "Take-home line: Share the errand office problem and the helper solution: ____________________."
+    },
+    {
+      "id": "porch-signal-card-09",
+      "title": "Seed Library Question Signal",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "signalSkill": "question cue",
+      "useCase": "Adult-led offline paper-only question-making practice using a fictional seed library and paper room: ____________________.",
+      "adultSetup": "Place four paper seed labels around a table page and keep every label invented: ____________________.",
+      "kidDirection": "Write a question that the seed librarian must answer before the story can move on: ____________________.",
+      "signalFrontPrompt": "Front: The pretend porch-light card marks the seed drawer with this question: ____________________.",
+      "signalBackPrompt": "Back: The paper room card answers with one tiny clue: ____________________.",
+      "storySignalPrompt": "Story signal: Before choosing a seed packet, the librarian asks: ____________________.",
+      "firstLineSignal": "First line: In the seed library room, a paper light blinked over the question, ____________________.",
+      "revisionNudge": "Revision: Add one reason the question matters to the story plan: ____________________.",
+      "quietOptionLine": "Quiet option: Write a question mark clue on the blank card: ____________________.",
+      "takeHomeLine": "Take-home line: Ask your seed-library question, then answer it with one new clue: ____________________."
+    },
+    {
+      "id": "porch-signal-card-10",
+      "title": "Rain Gauge Railway Signal",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "signalSkill": "sound cue",
+      "useCase": "Adult-led offline paper-only sound-word practice for a family, tutoring, or classroom writing table: ____________________.",
+      "adultSetup": "Set out paper rail tiles, a pretend rain gauge label, and the porch-light card for a fictional railway scene: ____________________.",
+      "kidDirection": "Choose a sound for the pretend gauge, then write how the railway keeper interprets it: ____________________.",
+      "signalFrontPrompt": "Front: The pretend porch-light card shines next to the rain gauge sound word: ____________________.",
+      "signalBackPrompt": "Back: The railway card explains what that sound means in the story: ____________________.",
+      "storySignalPrompt": "Story signal: When the gauge goes ____________________, the tiny train must change its plan.",
+      "firstLineSignal": "First line: The paper rain gauge clicked twice, and the railway keeper said, ____________________.",
+      "revisionNudge": "Revision: Add one sound detail before the keeper makes a choice: ____________________.",
+      "quietOptionLine": "Quiet option: Write a soft sound cue without saying it aloud: ____________________.",
+      "takeHomeLine": "Take-home line: Repeat the rain-gauge sound and add one new railway idea: ____________________."
+    },
+    {
+      "id": "porch-signal-card-11",
+      "title": "Moss Message Observatory Signal",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "signalSkill": "message cue",
+      "useCase": "Adult-led writing table for decoding secret nature notes in fiction: ____________________.",
+      "adultSetup": "Set out green crayons and one paper porch-light card per writer; the signal exists only on the page: ____________________.",
+      "kidDirection": "Invent a moss code, then use it to start a short observatory scene: ____________________.",
+      "signalFrontPrompt": "On the paper porch-light front, draw three moss symbols that mean: ____________________.",
+      "signalBackPrompt": "On the back, explain the secret moss message in one sentence: ____________________.",
+      "storySignalPrompt": "The observatory helper spots a moss message glowing on the signal card: ____________________.",
+      "firstLineSignal": "First line: The moss letters changed when ____________________.",
+      "revisionNudge": "Add one clue that makes the message easier to understand: ____________________.",
+      "quietOptionLine": "Quiet option: Circle one moss mark and write what it whispers: ____________________.",
+      "takeHomeLine": "Take-home line: Ask an adult to trade one pretend signal word with you: ____________________."
+    },
+    {
+      "id": "porch-signal-card-12",
+      "title": "Tidepool Timekeepers Lab Signal",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "signalSkill": "sequence cue",
+      "useCase": "Adult-led practice for beginning, middle, and ending order with lab helpers and tiny tidepool clocks: ____________________.",
+      "adultSetup": "Place three blank slips labeled first, next, and last beside each paper card: ____________________.",
+      "kidDirection": "Make a tidepool clock signal, then write what changes at each step: ____________________.",
+      "signalFrontPrompt": "On the paper porch-light front, sketch a tidepool clock showing first, next, last: ____________________.",
+      "signalBackPrompt": "On the back, write what each clock mark means: ____________________.",
+      "storySignalPrompt": "A lab timekeeper taps the signal card when the tidepool clock says: ____________________.",
+      "firstLineSignal": "First line: The tiniest clock in the lab clicked because ____________________.",
+      "revisionNudge": "Add a middle step so the change makes sense: ____________________.",
+      "quietOptionLine": "Quiet option: Write one soft lab sound the clock makes: ____________________.",
+      "takeHomeLine": "Take-home line: Tell an adult the three-step signal in order: ____________________."
+    },
+    {
+      "id": "porch-signal-card-13",
+      "title": "Revision River Ferry Signal",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "signalSkill": "revision cue",
+      "useCase": "Adult-led draft practice for swapping weak words for sharper story details: ____________________.",
+      "adultSetup": "Give each writer a draft sentence and a paper porch-light ferry card with three clearer-detail spaces: ____________________.",
+      "kidDirection": "Pretend the ferry carries one sentence across Revision River, improving it at each dock: ____________________.",
+      "signalFrontPrompt": "On the paper porch-light front, write the sentence before the ferry fixes it: ____________________.",
+      "signalBackPrompt": "On the back, write the stronger ferry version: ____________________.",
+      "storySignalPrompt": "The ferry captain raises the signal card when one sentence needs: ____________________.",
+      "firstLineSignal": "First line: The ferry would not leave until ____________________.",
+      "revisionNudge": "Replace one plain word with a word that gives a clearer picture: ____________________.",
+      "quietOptionLine": "Quiet option: Underline the word you changed and write the new word: ____________________.",
+      "takeHomeLine": "Take-home line: Show an adult one sentence before and after: ____________________."
+    },
+    {
+      "id": "porch-signal-card-14",
+      "title": "Clue Label Tower Museum Signal",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "signalSkill": "question cue",
+      "useCase": "Adult-led writing for museum mystery labels that make readers ask useful questions: ____________________.",
+      "adultSetup": "Set out small paper label strips and one porch-light card, then invent a pretend museum object: ____________________.",
+      "kidDirection": "Name one object, hide one clue in its label, then write the scene: ____________________.",
+      "signalFrontPrompt": "On the paper porch-light front, draw a museum label with one missing fact: ____________________.",
+      "signalBackPrompt": "On the back, write the question a visitor should ask: ____________________.",
+      "storySignalPrompt": "At the tower museum, the signal card points to a label that asks: ____________________.",
+      "firstLineSignal": "First line: The label on the tallest shelf asked ____________________.",
+      "revisionNudge": "Add one clue that points to the answer without saying it: ____________________.",
+      "quietOptionLine": "Quiet option: Write only the mystery question for now: ____________________.",
+      "takeHomeLine": "Take-home line: Ask an adult to answer your label question with a silly guess: ____________________."
+    },
+    {
+      "id": "porch-signal-card-15",
+      "title": "Compass Craft Academy Signal",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "signalSkill": "setting cue",
+      "useCase": "Adult-led setting practice before a character acts: ____________________.",
+      "adultSetup": "Give each writer a paper compass rose and a porch-light card, then pick one academy zone from the page list: ____________________.",
+      "kidDirection": "Spin your pencil over the compass rose, choose one direction word, and build a craft-academy scene from it: ____________________.",
+      "signalFrontPrompt": "On the paper porch-light front, mark the compass word that opens the scene: ____________________.",
+      "signalBackPrompt": "On the back, list two setting details for that academy zone: ____________________.",
+      "storySignalPrompt": "The craft academy signal points the character toward a place called: ____________________.",
+      "firstLineSignal": "First line: The compass needle pointed to the craft table where ____________________.",
+      "revisionNudge": "Add one sound, smell, or texture to make the setting clearer: ____________________.",
+      "quietOptionLine": "Quiet option: Write the compass word and one object beside it: ____________________.",
+      "takeHomeLine": "Take-home line: Tell an adult which setting detail changed the scene: ____________________."
+    },
+    {
+      "id": "porch-signal-card-16",
+      "title": "Binding Day Boardwalk Signal",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "signalSkill": "ending cue",
+      "useCase": "Adult-led ending practice for a handmade mini story: ____________________.",
+      "adultSetup": "Fold two sheets into a booklet and add one paper porch-light ending card for a fiction-only table scene: ____________________.",
+      "kidDirection": "Choose how the final signal glows, then write the ending and a title: ____________________.",
+      "signalFrontPrompt": "On the paper porch-light front, draw the final signal shape for Binding Day: ____________________.",
+      "signalBackPrompt": "On the back, write what changed by the last page: ____________________.",
+      "storySignalPrompt": "At the boardwalk binder booth, the last signal means: ____________________.",
+      "firstLineSignal": "First line: On Binding Day, the booklet would be finished after ____________________.",
+      "revisionNudge": "Add one ending detail that shows how the character feels now: ____________________.",
+      "quietOptionLine": "Quiet option: Write the final sentence first: ____________________.",
+      "takeHomeLine": "Take-home line: Read an adult your ending and ask for one kind word to add: ____________________."
+    }
+  ]
+}

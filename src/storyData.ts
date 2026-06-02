@@ -446,6 +446,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable quiet-corner story map cards with adult guide tools, map routines, and take-home map slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'porch-light-story-signal-card-pack',
+    title: 'Porch Light Story Signal Card Pack',
+    pricePoint: '$33',
+    description:
+      'Sixteen printable porch-light story signal cards with adult guide tools, signal routines, and take-home signal slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

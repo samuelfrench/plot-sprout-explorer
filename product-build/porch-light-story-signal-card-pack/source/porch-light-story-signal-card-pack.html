@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Porch Light Story Signal Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #25313a;
+        --muted: #59636a;
+        --paper: #fffdf8;
+        --line: #d9cfbc;
+        --plum: #7d496c;
+        --green: #3f715f;
+        --gold: #d2a84a;
+        --blue: #3f6f93;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 32px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.4px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(63, 113, 95, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(125, 73, 108, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--plum); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .format-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--plum); font-size: 6.9px; }
+      .story-signal-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .format-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .format-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-signal-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-signal-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(63, 113, 95, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--plum);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper signal cards</p>
+        <h1>Porch Light Story Signal Card Pack</h1>
+        <p>Sixteen paper story signal cards turn pretend porch-light cues into screen-free story starts.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable story signal cards plus adult guide tools, signal routines, take-home signal slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$33</span>
+        <h2>Included</h2>
+        <ul><li>16 printable porch-light signal cards</li>
+<li>Adult setup guide</li>
+<li>Fictional signal-card safety notes</li>
+<li>Story signal coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led signal routines</li>
+<li>Ten take-home signal slips</li>
+<li>Eight optional share prompts</li>
+<li>Local image-backed world menu</li>
+<li>Provider-ready PDF, source HTML, README, manifest, and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story signal coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Choose four to six paper signal cards for the table; place blank paper and pencils within reach.</li>
+<li>Say that every porch-light mark is pretend and belongs to a made-up story setting.</li>
+<li>Pick one writing goal: start, problem, helper, mood, or ending.</li>
+<li>Give each writer a choice of two cards, then let the adult read the prompt aloud.</li>
+<li>Keep the first draft short: one sentence, three sentences, or a tiny scene.</li></ul></article>
+        <article class="guide-card"><h3>Paper signal setup</h3><ul><li>Print cards on plain paper or cardstock and cut along the card edges.</li>
+<li>Sort cards into color, pattern, message, mood, object, and ending piles.</li>
+<li>Set a pencil cup, blank slips, and a scrap-paper spot in the center.</li>
+<li>Use a paper clip or folder to keep unused cards together between sessions.</li>
+<li>Mark a sample card as the adult example, then invite writers to make their own signal marks.</li></ul></article>
+        <article class="guide-card"><h3>Story signal coaching</h3><ul><li>Ask what the signal tells the character to notice next.</li>
+<li>Turn one-word answers into story sentences by adding who, where, and why.</li>
+<li>When a writer gets stuck, offer two gentle choices instead of supplying the whole idea.</li>
+<li>Point to the card color or shape before asking for more detail.</li>
+<li>Let funny, odd, or quiet ideas stay; the goal is a usable story seed.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Use invented labels, role words, or blank spaces for every person on the story signal cards.</li>
+<li>Use broad place words instead of private details or named locations.</li>
+<li>Keep every story signal card offline with the family adult, tutor, or table host.</li>
+<li>Sharing stays optional and limited to one invented word, sketch, or line.</li>
+<li>Check every take-home slip for private details before it leaves the adult-led table.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send only the paper slip and a short note about the story skill practiced.</li>
+<li>Tell family adults the signals are fiction cues for paper stories.</li>
+<li>Invite a writer to read one favorite sentence aloud during a calm table moment.</li>
+<li>Suggest that families add one extra line, one title, or one ending choice.</li>
+<li>Return slips in a folder or envelope for the next adult-led session.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect used cards and blank slips.</li>
+<li>Recycle torn scraps and save clear drafts in the folder.</li>
+<li>Shuffle each card pile so the next group sees a fresh mix.</li>
+<li>Note which cue type helped most, then start the next session with that type.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper signal card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen story-signal-card worlds</h2>
+      <p>Pick a world image, then turn one invented signal cue into a story start.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page format-page">
+      <p class="page-kicker">Signal routines</p>
+      <h2>Choose the paper signal rhythm</h2>
+      <div class="format-grid">
+    <article class="small-card">
+      <h3>Color Glow Quickwrite</h3>
+      <p>Warm-up sentences for ages 6-8.</p>
+      <ol><li>Adult fans three color cue cards face up.</li>
+<li>Writer chooses one color and says what feeling it gives the scene.</li>
+<li>Everyone writes one sentence that uses the color signal.</li>
+<li>Adult invites one volunteer sentence, then moves to a new card.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Pattern Pass</h3>
+      <p>Small groups practicing repeated details.</p>
+      <ol><li>Adult gives one pattern card to the first writer.</li>
+<li>Writer adds a sentence with a repeated mark or shape.</li>
+<li>Pass the card to the next writer at the table.</li>
+<li>Adult ends after each writer has added one line.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Message Flip</h3>
+      <p>Reluctant writers who need a clear next move.</p>
+      <ol><li>Adult folds a blank slip and places it under a message cue card.</li>
+<li>Writer writes a short fictional signal message on the slip.</li>
+<li>Adult flips a question cue card beside it.</li>
+<li>Writer answers as the character and turns the answer into a scene line.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Mood Dimmer</h3>
+      <p>Revising a sentence so it carries a stronger feeling.</p>
+      <ol><li>Adult chooses one plain sentence from a draft.</li>
+<li>Writer places a mood cue above the sentence.</li>
+<li>Writer rewrites the sentence to match that mood.</li>
+<li>Adult circles one stronger verb or describing word.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Object Signal Swap</h3>
+      <p>Adding concrete details to a short scene.</p>
+      <ol><li>Adult places an object cue beside a porch-light card.</li>
+<li>Writer names what the character carries or finds.</li>
+<li>Writer writes one reason the object matters.</li>
+<li>Swap the object cue and revise one noun or action.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Ending Glow</h3>
+      <p>Finishing short drafts that stop too soon.</p>
+      <ol><li>Adult chooses an ending cue and reads it aloud.</li>
+<li>Writer picks a quiet, funny, or surprising ending path.</li>
+<li>Writer writes the last two lines on paper.</li>
+<li>Adult asks what changed from the first line to the last.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home signal slips</p>
+      <h2>Finish one story signal later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | color cue</p>
+      <h3>Color Glow Sentence</h3>
+      <p>Pick one pretend porch-light color and write what it means: ____________________.</p>
+      <p>Family adds one describing word in the blank: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | pattern cue</p>
+      <h3>Band Pattern Clue</h3>
+      <p>Draw a paper pattern beside the signal, then write what it tells the character: ____________________.</p>
+      <p>Family says one extra pattern idea to add here: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">7 minutes | message cue</p>
+      <h3>Tiny Message Card</h3>
+      <p>Write a three-word message from the pretend signal: ____________________.</p>
+      <p>Family chooses one word to make clearer: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">8 minutes | mood cue</p>
+      <h3>Mood Glow Shift</h3>
+      <p>Write one line twice: first calm, then silly. Silly version: ____________________.</p>
+      <p>Family names the mood they heard: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | object cue</p>
+      <h3>Object Beside the Signal</h3>
+      <p>Invent one object near the paper signal and explain why it matters: ____________________.</p>
+      <p>Family adds one detail about the object: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">9 minutes | sequence cue</p>
+      <h3>First Next Last</h3>
+      <p>Use three short beats: first the signal appears, next ____________________, last the character decides.</p>
+      <p>Family fills the middle beat with a gentle twist: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | sound cue</p>
+      <h3>Sound-Like Signal</h3>
+      <p>Make up a quiet sound for the pretend signal and write it here: ____________________.</p>
+      <p>Family repeats the sound softly and adds one action: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">7 minutes | helper cue</p>
+      <h3>Helper Glow</h3>
+      <p>Invent a helper who understands the signal and write the helper&#39;s first idea: ____________________.</p>
+      <p>Family adds the helper&#39;s kind phrase: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">8 minutes | setting cue</p>
+      <h3>Setting Circle</h3>
+      <p>Name a made-up setting for the card, then write one detail: ____________________.</p>
+      <p>Family adds one color, shape, or texture: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | question cue</p>
+      <h3>Question Glow</h3>
+      <p>Ask the signal one story question and leave the answer for the character: ____________________.</p>
+      <p>Family suggests one possible answer: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>I want to read the sentence where the signal changes the character plan: ____________________.</li>
+<li>My favorite made-up signal color is ____________________ because it makes the scene feel clear.</li>
+<li>One pattern I used more than once was ____________________.</li>
+<li>The kindest helper line in my story was ____________________.</li>
+<li>The funniest object near the pretend porch-light card was ____________________.</li>
+<li>A question my character still has is ____________________.</li>
+<li>The ending I chose can be summed up in five words: ____________________.</li>
+<li>One detail I revised to make clearer is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 1 | Ages 6-8 | color cue</div>
+      <h2>Moon Muffin Market Color Signal</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one card for each writer, set crayons nearby, and say the porch-light motif belongs only on the paper card: ____________________.</p>
+      <p class="kid-direction">Pick one color for the signal, then use it to decide what changes in the story: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>Front: Color the pretend paper porch-light signal with one story color: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>Back: That color tells the Moon Muffin Market clerk to set out ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>When the signal glows on the paper card, the next customer asks for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The moon muffins turned ____________________ just before the market bell.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one color clue that changes what a character does: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to your chosen color and write only one word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At another table, ask an adult to name one pretend market color: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 2 | Ages 6-8 | message cue</div>
+      <h2>Puddle Planet Post Office Message Signal</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold it once, set pencils nearby, and keep every helper made up for the page: ____________________.</p>
+      <p class="kid-direction">Write or draw a tiny pretend message, then decide what the puddle parcel should do next: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>Front: Draw a dot, dash, or swirl on the pretend paper porch-light stamp: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>Back: The Puddle Planet sorter reads it as this message: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>The paper signal tells the puddle parcel to visit this made-up place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The puddle parcel wobbled when it read, ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add a clearer message clue so the helper knows what to do: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw the message mark first, then label it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Share one pretend post-office message starter with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 3 | Ages 7-9 | sound cue</div>
+      <h2>Buttonwood Library Train Sound Signal</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place the printed card beside blank paper, invite one soft sound effect, and turn it into a story clue: ____________________.</p>
+      <p class="kid-direction">Choose the signal sound and decide what it tells one book, cart, or character to do: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>Front: Mark the pretend paper porch-light signal with a sound sign: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>Back: In Buttonwood Library Train, that sound means the book cart should ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>When the signal sound repeats, one shelf book begins to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The quiet train car heard ____________________ from the tallest stack.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one sound cue before the surprise so readers can predict it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Tap the rhythm on the table, then write the sound word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Ask an adult for a gentle library sound to borrow: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 4 | Ages 7-9 | sequence cue</div>
+      <h2>Button Bakery Map Mixup Sequence Signal</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and provide three small paper arrows or number dots for a fictional table sequence: ____________________.</p>
+      <p class="kid-direction">Put the clues in first, next, and last order, then write the mixup scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>Front: Number the pretend paper porch-light crumbs in the order they blink: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>Back: The Button Bakery mixup begins when crumb number one points to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>Use the signal order to move from mixup to fix: first ____________________, next ____________________, last ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The button baker followed crumb one and found ____________________ instead of icing.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Check the order clue; add one missing middle step: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle first, next, or last, then write the chosen step: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Tell an adult the funniest paper mixup: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 5 | Ages 7-8 | mood cue</div>
+      <h2>Teacup Town Weather Mood Signal</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and set blue, yellow, gray, and green crayons nearby for fictional table writing: ____________________.</p>
+      <p class="kid-direction">Pick one weather mood for the signal, then show how it changes the teacup tale: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>Front: Shade the pretend paper porch-light teacup with a weather mood: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>Back: In Teacup Town, that mood makes the cafe table feel ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>The signal changes how the tiny cup keeper speaks: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The teacup sky looked ____________________ when the spoon parade paused.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one mood word and one object that matches it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Pick a color silently and write the mood it makes: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Ask an adult which pretend weather mood fits a teacup tale: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 6 | Ages 7-9 | message cue</div>
+      <h2>Pocket Park Board Signal</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Set out the pretend porch-light card, one pencil, and a small paper display board for made-up story work: ____________________.</p>
+      <p class="kid-direction">Choose one tiny message for the board, then write what a character does after reading it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>Front: The pretend porch-light turns on beside the pocket-park board when the message says: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>Back: The small print on the board gives one surprising detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>Story signal: A character reads the paper signal and decides to bring: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: When the pocket-park board glowed on the card, the reader saw, ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision: Add one word that makes the board message clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to the signal and write one whisper-sized clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Retell the pocket-park message and add one new helper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 7 | Ages 7-9 | sequence cue</div>
+      <h2>Spoon Ferry Lunchbox Signal</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place the card near paper lunch tokens and name the spoon ferry as a pretend tabletop boat: ____________________.</p>
+      <p class="kid-direction">Put three lunch tokens in order, then write how the ferry captain follows the signal: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>Front: Draw or name the first lunch token the spoon ferry picks up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>Back: The pretend porch-light pattern tells the next stop is for: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>Story signal: The ferry must carry three tiny lunch items in this order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The spoon ferry tapped the lunchbox dock and the captain called, ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision: Add a middle step that makes the lunchbox harbor trip easier to follow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number three tiny items without speaking: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Tell the spoon ferry sequence with a new snack clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 8 | Ages 7-9 | helper cue</div>
+      <h2>Acorn Errand Office Signal</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Set out three paper errand slips and one pretend porch-light card for an invented office scene: ____________________.</p>
+      <p class="kid-direction">Pick an office helper and one acorn task, then write how the helper reads the pretend signal: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>Front: The pretend porch-light card points to the helper badge labeled: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>Back: The errand office file asks for one missing object: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>Story signal: The helper sees a paper signal and chooses to carry: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: At the Acorn Avenue errand office, the signal blinked for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision: Add one kind action the helper takes before the errand ends: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle a helper cue and write one object name: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Share the errand office problem and the helper solution: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 9 | Ages 8-10 | question cue</div>
+      <h2>Seed Library Question Signal</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place four paper seed labels around a table page and keep every label invented: ____________________.</p>
+      <p class="kid-direction">Write a question that the seed librarian must answer before the story can move on: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>Front: The pretend porch-light card marks the seed drawer with this question: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>Back: The paper room card answers with one tiny clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>Story signal: Before choosing a seed packet, the librarian asks: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: In the seed library room, a paper light blinked over the question, ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision: Add one reason the question matters to the story plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write a question mark clue on the blank card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Ask your seed-library question, then answer it with one new clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 10 | Ages 8-10 | sound cue</div>
+      <h2>Rain Gauge Railway Signal</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Set out paper rail tiles, a pretend rain gauge label, and the porch-light card for a fictional railway scene: ____________________.</p>
+      <p class="kid-direction">Choose a sound for the pretend gauge, then write how the railway keeper interprets it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>Front: The pretend porch-light card shines next to the rain gauge sound word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>Back: The railway card explains what that sound means in the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>Story signal: When the gauge goes ____________________, the tiny train must change its plan.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The paper rain gauge clicked twice, and the railway keeper said, ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision: Add one sound detail before the keeper makes a choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write a soft sound cue without saying it aloud: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Repeat the rain-gauge sound and add one new railway idea: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 11 | Ages 8-10 | message cue</div>
+      <h2>Moss Message Observatory Signal</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Set out green crayons and one paper porch-light card per writer; the signal exists only on the page: ____________________.</p>
+      <p class="kid-direction">Invent a moss code, then use it to start a short observatory scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>On the paper porch-light front, draw three moss symbols that mean: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>On the back, explain the secret moss message in one sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>The observatory helper spots a moss message glowing on the signal card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The moss letters changed when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one clue that makes the message easier to understand: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle one moss mark and write what it whispers: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Ask an adult to trade one pretend signal word with you: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 12 | Ages 8-10 | sequence cue</div>
+      <h2>Tidepool Timekeepers Lab Signal</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place three blank slips labeled first, next, and last beside each paper card: ____________________.</p>
+      <p class="kid-direction">Make a tidepool clock signal, then write what changes at each step: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>On the paper porch-light front, sketch a tidepool clock showing first, next, last: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>On the back, write what each clock mark means: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>A lab timekeeper taps the signal card when the tidepool clock says: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The tiniest clock in the lab clicked because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add a middle step so the change makes sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write one soft lab sound the clock makes: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Tell an adult the three-step signal in order: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 13 | Ages 10-11 | revision cue</div>
+      <h2>Revision River Ferry Signal</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Give each writer a draft sentence and a paper porch-light ferry card with three clearer-detail spaces: ____________________.</p>
+      <p class="kid-direction">Pretend the ferry carries one sentence across Revision River, improving it at each dock: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>On the paper porch-light front, write the sentence before the ferry fixes it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>On the back, write the stronger ferry version: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>The ferry captain raises the signal card when one sentence needs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The ferry would not leave until ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Replace one plain word with a word that gives a clearer picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Underline the word you changed and write the new word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Show an adult one sentence before and after: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 14 | Ages 10-11 | question cue</div>
+      <h2>Clue Label Tower Museum Signal</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Set out small paper label strips and one porch-light card, then invent a pretend museum object: ____________________.</p>
+      <p class="kid-direction">Name one object, hide one clue in its label, then write the scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>On the paper porch-light front, draw a museum label with one missing fact: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>On the back, write the question a visitor should ask: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>At the tower museum, the signal card points to a label that asks: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The label on the tallest shelf asked ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one clue that points to the answer without saying it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write only the mystery question for now: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Ask an adult to answer your label question with a silly guess: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 15 | Ages 10-11 | setting cue</div>
+      <h2>Compass Craft Academy Signal</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Give each writer a paper compass rose and a porch-light card, then pick one academy zone from the page list: ____________________.</p>
+      <p class="kid-direction">Spin your pencil over the compass rose, choose one direction word, and build a craft-academy scene from it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>On the paper porch-light front, mark the compass word that opens the scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>On the back, list two setting details for that academy zone: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>The craft academy signal points the character toward a place called: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: The compass needle pointed to the craft table where ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one sound, smell, or texture to make the setting clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write the compass word and one object beside it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Tell an adult which setting detail changed the scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-signal-card-page">
+      <div class="page-kicker">Story Signal Card 16 | Ages 10-11 | ending cue</div>
+      <h2>Binding Day Boardwalk Signal</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Fold two sheets into a booklet and add one paper porch-light ending card for a fiction-only table scene: ____________________.</p>
+      <p class="kid-direction">Choose how the final signal glows, then write the ending and a title: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Signal front</h3>
+      <p>On the paper porch-light front, draw the final signal shape for Binding Day: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Signal back</h3>
+      <p>On the back, write what changed by the last page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story signal</h3>
+      <p>At the boardwalk binder booth, the last signal means: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line signal</h3>
+      <p>First line: On Binding Day, the booklet would be finished after ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one ending detail that shows how the character feels now: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write the final sentence first: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Read an adult your ending and ask for one kind word to add: ____________________.</p>
+    </section>
+  </body>
+</html>

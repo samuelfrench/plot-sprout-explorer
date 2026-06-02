@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-02-batch30-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "porch-light-story-signal-card-pack",
+      "title": "Porch Light Story Signal Card Pack product image",
+      "purpose": "Static product page hero for the porch light story signal card pack.",
+      "seed": 26063033,
+      "prompt": "family-friendly flat lay product image of blank cream paper signal cards on a plain white background, cards show only soft abstract glow-like shapes with no readable marks, zero other objects, screen-free printable porch light story signal card pack, warm natural light, clean catalog composition, no text, no letters, no labels, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, phone, tablet, laptop, computer, screen, device, gps, navigation app, coordinates, address, house, home, street sign, real place, realistic road atlas, real-world map, outdoor scene, window, porch, doorway, building, safety sign, photo, camera, people, face, animal, plant, greenery, flower, jar, cup, mug, bowl, utensil, brush, spoon, fork, knife, pencil, pen, crayon, marker, notebook, spiral binding, ruler, scissors, calendar, clock, timer, score, star, rating, review, tabletop props, decoration",
+      "outputJpeg": "public/images/plotsprout/batch30/porch-light-story-signal-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch30/porch-light-story-signal-card-pack.webp",
+      "sidecar": "content/image-runs/batch30/porch-light-story-signal-card-pack.json"
+    }
+  ]
+}

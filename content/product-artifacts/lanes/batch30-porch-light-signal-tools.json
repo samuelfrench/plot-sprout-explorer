@@ -1,0 +1,189 @@
+{
+  "adultGuide": {
+    "beforeSession": [
+      "Choose four to six paper signal cards for the table; place blank paper and pencils within reach.",
+      "Say that every porch-light mark is pretend and belongs to a made-up story setting.",
+      "Pick one writing goal: start, problem, helper, mood, or ending.",
+      "Give each writer a choice of two cards, then let the adult read the prompt aloud.",
+      "Keep the first draft short: one sentence, three sentences, or a tiny scene."
+    ],
+    "paperSignalSetup": [
+      "Print cards on plain paper or cardstock and cut along the card edges.",
+      "Sort cards into color, pattern, message, mood, object, and ending piles.",
+      "Set a pencil cup, blank slips, and a scrap-paper spot in the center.",
+      "Use a paper clip or folder to keep unused cards together between sessions.",
+      "Mark a sample card as the adult example, then invite writers to make their own signal marks."
+    ],
+    "storySignalCoaching": [
+      "Ask what the signal tells the character to notice next.",
+      "Turn one-word answers into story sentences by adding who, where, and why.",
+      "When a writer gets stuck, offer two gentle choices instead of supplying the whole idea.",
+      "Point to the card color or shape before asking for more detail.",
+      "Let funny, odd, or quiet ideas stay; the goal is a usable story seed."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented labels, role words, or blank spaces for every person on the story signal cards.",
+      "Use broad place words instead of private details or named locations.",
+      "Keep every story signal card offline with the family adult, tutor, or table host.",
+      "Sharing stays optional and limited to one invented word, sketch, or line.",
+      "Check every take-home slip for private details before it leaves the adult-led table."
+    ],
+    "familyHandoff": [
+      "Send only the paper slip and a short note about the story skill practiced.",
+      "Tell family adults the signals are fiction cues for paper stories.",
+      "Invite a writer to read one favorite sentence aloud during a calm table moment.",
+      "Suggest that families add one extra line, one title, or one ending choice.",
+      "Return slips in a folder or envelope for the next adult-led session."
+    ],
+    "reset": [
+      "Collect used cards and blank slips.",
+      "Recycle torn scraps and save clear drafts in the folder.",
+      "Shuffle each card pile so the next group sees a fresh mix.",
+      "Note which cue type helped most, then start the next session with that type."
+    ]
+  },
+  "signalRoutines": [
+    {
+      "name": "Color Glow Quickwrite",
+      "bestFor": "Warm-up sentences for ages 6-8.",
+      "steps": [
+        "Adult fans three color cue cards face up.",
+        "Writer chooses one color and says what feeling it gives the scene.",
+        "Everyone writes one sentence that uses the color signal.",
+        "Adult invites one volunteer sentence, then moves to a new card."
+      ]
+    },
+    {
+      "name": "Pattern Pass",
+      "bestFor": "Small groups practicing repeated details.",
+      "steps": [
+        "Adult gives one pattern card to the first writer.",
+        "Writer adds a sentence with a repeated mark or shape.",
+        "Pass the card to the next writer at the table.",
+        "Adult ends after each writer has added one line."
+      ]
+    },
+    {
+      "name": "Message Flip",
+      "bestFor": "Reluctant writers who need a clear next move.",
+      "steps": [
+        "Adult folds a blank slip and places it under a message cue card.",
+        "Writer writes a short fictional signal message on the slip.",
+        "Adult flips a question cue card beside it.",
+        "Writer answers as the character and turns the answer into a scene line."
+      ]
+    },
+    {
+      "name": "Mood Dimmer",
+      "bestFor": "Revising a sentence so it carries a stronger feeling.",
+      "steps": [
+        "Adult chooses one plain sentence from a draft.",
+        "Writer places a mood cue above the sentence.",
+        "Writer rewrites the sentence to match that mood.",
+        "Adult circles one stronger verb or describing word."
+      ]
+    },
+    {
+      "name": "Object Signal Swap",
+      "bestFor": "Adding concrete details to a short scene.",
+      "steps": [
+        "Adult places an object cue beside a porch-light card.",
+        "Writer names what the character carries or finds.",
+        "Writer writes one reason the object matters.",
+        "Swap the object cue and revise one noun or action."
+      ]
+    },
+    {
+      "name": "Ending Glow",
+      "bestFor": "Finishing short drafts that stop too soon.",
+      "steps": [
+        "Adult chooses an ending cue and reads it aloud.",
+        "Writer picks a quiet, funny, or surprising ending path.",
+        "Writer writes the last two lines on paper.",
+        "Adult asks what changed from the first line to the last."
+      ]
+    }
+  ],
+  "takeHomeSignalSlips": [
+    {
+      "title": "Color Glow Sentence",
+      "time": "5 minutes",
+      "skill": "color cue",
+      "direction": "Pick one pretend porch-light color and write what it means: ____________________.",
+      "familyLine": "Family adds one describing word in the blank: ____________________."
+    },
+    {
+      "title": "Band Pattern Clue",
+      "time": "6 minutes",
+      "skill": "pattern cue",
+      "direction": "Draw a paper pattern beside the signal, then write what it tells the character: ____________________.",
+      "familyLine": "Family says one extra pattern idea to add here: ____________________."
+    },
+    {
+      "title": "Tiny Message Card",
+      "time": "7 minutes",
+      "skill": "message cue",
+      "direction": "Write a three-word message from the pretend signal: ____________________.",
+      "familyLine": "Family chooses one word to make clearer: ____________________."
+    },
+    {
+      "title": "Mood Glow Shift",
+      "time": "8 minutes",
+      "skill": "mood cue",
+      "direction": "Write one line twice: first calm, then silly. Silly version: ____________________.",
+      "familyLine": "Family names the mood they heard: ____________________."
+    },
+    {
+      "title": "Object Beside the Signal",
+      "time": "6 minutes",
+      "skill": "object cue",
+      "direction": "Invent one object near the paper signal and explain why it matters: ____________________.",
+      "familyLine": "Family adds one detail about the object: ____________________."
+    },
+    {
+      "title": "First Next Last",
+      "time": "9 minutes",
+      "skill": "sequence cue",
+      "direction": "Use three short beats: first the signal appears, next ____________________, last the character decides.",
+      "familyLine": "Family fills the middle beat with a gentle twist: ____________________."
+    },
+    {
+      "title": "Sound-Like Signal",
+      "time": "5 minutes",
+      "skill": "sound cue",
+      "direction": "Make up a quiet sound for the pretend signal and write it here: ____________________.",
+      "familyLine": "Family repeats the sound softly and adds one action: ____________________."
+    },
+    {
+      "title": "Helper Glow",
+      "time": "7 minutes",
+      "skill": "helper cue",
+      "direction": "Invent a helper who understands the signal and write the helper's first idea: ____________________.",
+      "familyLine": "Family adds the helper's kind phrase: ____________________."
+    },
+    {
+      "title": "Setting Circle",
+      "time": "8 minutes",
+      "skill": "setting cue",
+      "direction": "Name a made-up setting for the card, then write one detail: ____________________.",
+      "familyLine": "Family adds one color, shape, or texture: ____________________."
+    },
+    {
+      "title": "Question Glow",
+      "time": "6 minutes",
+      "skill": "question cue",
+      "direction": "Ask the signal one story question and leave the answer for the character: ____________________.",
+      "familyLine": "Family suggests one possible answer: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "I want to read the sentence where the signal changes the character plan: ____________________.",
+    "My favorite made-up signal color is ____________________ because it makes the scene feel clear.",
+    "One pattern I used more than once was ____________________.",
+    "The kindest helper line in my story was ____________________.",
+    "The funniest object near the pretend porch-light card was ____________________.",
+    "A question my character still has is ____________________.",
+    "The ending I chose can be summed up in five words: ____________________.",
+    "One detail I revised to make clearer is ____________________."
+  ]
+}
