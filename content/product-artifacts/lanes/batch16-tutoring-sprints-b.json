@@ -1,0 +1,281 @@
+{
+  "laneId": "batch16-tutoring-sprints-b",
+  "productSlug": "tutoring-center-story-sprint-pack",
+  "title": "Tutoring Center Story Sprint Pack - Middle Sprint Lane",
+  "generatedAt": "2026-06-02",
+  "sprints": [
+    {
+      "id": "tutoring-acorn-avenue-errand-order",
+      "title": "Acorn Avenue Errand Order Sprint",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "sprintSkill": "Sequence details and three-sentence draft",
+      "sessionFit": "12-minute warmup for one-to-one or pair tutoring.",
+      "tutorSetup": "Print one page, choose three errand slips, and set a pencil beside the route box.",
+      "kidDirection": "Sort the acorn errands, add one exact detail for each stop, and draft the helper note.",
+      "coachingPrompt": "Ask which stop must happen first, then have the writer point to the detail that proves it.",
+      "pageSections": [
+        {
+          "heading": "Errand Clues",
+          "lines": [
+            "The first leaf slip asks for ____________________.",
+            "The second leaf slip belongs near ____________________.",
+            "The third leaf slip gives the clue ____________________."
+          ]
+        },
+        {
+          "heading": "Best Order",
+          "lines": [
+            "First, the acorn clerk should ____________________.",
+            "Next, the helper needs to ____________________.",
+            "Last, the route finishes at ____________________."
+          ]
+        },
+        {
+          "heading": "Short Draft",
+          "lines": [
+            "My opening sentence starts with ____________________.",
+            "My middle sentence adds the detail ____________________.",
+            "My final sentence explains ____________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "One sequence word I used well is ____________________.",
+      "extensionLine": "Add a fourth stop that changes the route by ____________________."
+    },
+    {
+      "id": "tutoring-button-bakery-clear-map",
+      "title": "Button Bakery Clear Map Sprint",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "sprintSkill": "Map clues, exact nouns, and clear order",
+      "sessionFit": "10-minute table warmup before a longer writing turn.",
+      "tutorSetup": "Draw a quick bakery path with three turns, then hand the writer the fill-in page.",
+      "kidDirection": "Fix the bakery map by choosing clear clues, ordering the turns, and writing a tidy route draft.",
+      "coachingPrompt": "Ask the writer to replace one vague word with a thing readers can picture.",
+      "pageSections": [
+        {
+          "heading": "Bakery Clues",
+          "lines": [
+            "The crumb map starts beside ____________________.",
+            "The button tray rolls toward ____________________.",
+            "The clearest bakery clue is ____________________."
+          ]
+        },
+        {
+          "heading": "Route Turns",
+          "lines": [
+            "Turn one goes past ____________________.",
+            "Turn two stops near ____________________.",
+            "Turn three ends beside ____________________."
+          ]
+        },
+        {
+          "heading": "Map Draft",
+          "lines": [
+            "First, the cart helper notices ____________________.",
+            "Next, the helper follows ____________________.",
+            "The map mixup is fixed when ____________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "The exact noun that helped my map is ____________________.",
+      "extensionLine": "Add one new bakery clue that points to ____________________."
+    },
+    {
+      "id": "tutoring-rain-gauge-railway-log",
+      "title": "Rain Gauge Railway Log Sprint",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "sprintSkill": "Observation details, cause, and next step",
+      "sessionFit": "15-minute tutoring warmup for detail work and short explanatory drafting.",
+      "tutorSetup": "Set out the page, mark three imaginary gauge levels, and invite the writer to choose one route.",
+      "kidDirection": "Read the gauge clue, choose the railway stops, and draft a log that explains the route.",
+      "coachingPrompt": "Ask what changed, why it matters, and which detail should appear before the next step.",
+      "pageSections": [
+        {
+          "heading": "Gauge Details",
+          "lines": [
+            "The rain gauge shows ____________________.",
+            "The first weather detail is ____________________.",
+            "The railway ticket points toward ____________________."
+          ]
+        },
+        {
+          "heading": "Route Cause",
+          "lines": [
+            "The water sample moves because ____________________.",
+            "The switch changes the route near ____________________.",
+            "The next stop needs a note about ____________________."
+          ]
+        },
+        {
+          "heading": "Railway Log",
+          "lines": [
+            "First, the conductor checks ____________________.",
+            "Then, the railway carries ____________________.",
+            "The log should end with ____________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "One cause-and-effect phrase I used is ____________________.",
+      "extensionLine": "Add a second gauge clue that changes the next stop to ____________________."
+    },
+    {
+      "id": "tutoring-rain-boot-route-sequence",
+      "title": "Rain Boot Route Sequence Sprint",
+      "worldSlug": "rain-boot-route-rangers",
+      "ageBand": "7-9",
+      "sprintSkill": "Transition words and route details",
+      "sessionFit": "10-minute quick start for a hesitant writer or small pair.",
+      "tutorSetup": "Circle three route spots on the page and model one transition word aloud.",
+      "kidDirection": "Choose a boot route, add dry path details, and write the ranger message in order.",
+      "coachingPrompt": "Ask the writer to say the route aloud once, then write the words in the same order.",
+      "pageSections": [
+        {
+          "heading": "Route Spots",
+          "lines": [
+            "The boot route begins at ____________________.",
+            "The dry stepping spot is ____________________.",
+            "The puddle reflection shows ____________________."
+          ]
+        },
+        {
+          "heading": "Order Words",
+          "lines": [
+            "First, the ranger checks ____________________.",
+            "After that, the ranger follows ____________________.",
+            "Finally, the route reaches ____________________."
+          ]
+        },
+        {
+          "heading": "Ranger Draft",
+          "lines": [
+            "My first sentence tells about ____________________.",
+            "My second sentence adds the detail ____________________.",
+            "My last sentence gives the message ____________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "The transition word that made my route clearer is ____________________.",
+      "extensionLine": "Add one route sign that warns the ranger to check ____________________."
+    },
+    {
+      "id": "tutoring-pocket-park-notice-detail",
+      "title": "Pocket Park Notice Detail Sprint",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "sprintSkill": "Specific details and short notice drafting",
+      "sessionFit": "12-minute tutoring page for detail practice before independent writing.",
+      "tutorSetup": "Offer three tiny notice choices and have the writer underline the clearest one.",
+      "kidDirection": "Pick one park notice, add exact park details, and draft the helper's next message.",
+      "coachingPrompt": "Ask which detail readers need first so the helper knows what to do.",
+      "pageSections": [
+        {
+          "heading": "Notice Choice",
+          "lines": [
+            "The park notice asks for ____________________.",
+            "The helper should look near ____________________.",
+            "The missing detail on the notice is ____________________."
+          ]
+        },
+        {
+          "heading": "Park Details",
+          "lines": [
+            "The bottle-cap bench sits beside ____________________.",
+            "The pebble path curves around ____________________.",
+            "The tiny sign points toward ____________________."
+          ]
+        },
+        {
+          "heading": "Helper Message",
+          "lines": [
+            "First, the helper reads ____________________.",
+            "Next, the helper adds ____________________.",
+            "The clearer park message says ____________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "The detail that made my notice clearer is ____________________.",
+      "extensionLine": "Write a second notice that asks for ____________________."
+    },
+    {
+      "id": "tutoring-penny-path-direction-draft",
+      "title": "Penny Path Direction Draft Sprint",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "sprintSkill": "Direction words, clue order, and concise drafting",
+      "sessionFit": "10-minute warmup for direction language and sentence order.",
+      "tutorSetup": "Point to the compass shop, mark two path turns, and ask the writer to choose the final stop.",
+      "kidDirection": "Follow the button compass, order the clues, and write a short direction draft.",
+      "coachingPrompt": "Ask the writer to test the route by tracing each turn with a finger before drafting.",
+      "pageSections": [
+        {
+          "heading": "Compass Start",
+          "lines": [
+            "The compass needle points toward ____________________.",
+            "The penny path begins beside ____________________.",
+            "The shop clue shows ____________________."
+          ]
+        },
+        {
+          "heading": "Direction Clues",
+          "lines": [
+            "Go around ____________________.",
+            "Stop when you see ____________________.",
+            "Turn toward ____________________."
+          ]
+        },
+        {
+          "heading": "Route Draft",
+          "lines": [
+            "First, the helper follows ____________________.",
+            "Next, the compass changes when ____________________.",
+            "The final direction says ____________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "The direction word I used clearly is ____________________.",
+      "extensionLine": "Add a new compass clue that leads to ____________________."
+    },
+    {
+      "id": "tutoring-seed-library-map-note",
+      "title": "Seed Library Map Note Sprint",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "sprintSkill": "Observation notes, sequence, and concise revision",
+      "sessionFit": "15-minute tutoring sprint for short draft planning and revision.",
+      "tutorSetup": "Set the map page beside a pencil, then ask the writer to choose one seed drawer and one route.",
+      "kidDirection": "Choose a seed drawer, map the route, and draft a return note with exact observations.",
+      "coachingPrompt": "Ask the writer to keep the best observation and remove one extra word before the final line.",
+      "pageSections": [
+        {
+          "heading": "Seed Drawer",
+          "lines": [
+            "The seed drawer label says ____________________.",
+            "The packet contains ____________________.",
+            "The first map mark shows ____________________."
+          ]
+        },
+        {
+          "heading": "Map Route",
+          "lines": [
+            "First, the route passes ____________________.",
+            "Next, the map turns near ____________________.",
+            "Last, the route arrives at ____________________."
+          ]
+        },
+        {
+          "heading": "Return Note",
+          "lines": [
+            "The best observation is ____________________.",
+            "One word I can remove is ____________________.",
+            "My revised seed note says ____________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "The observation I kept in my final note is ____________________.",
+      "extensionLine": "Add a second seed drawer that changes the route by ____________________."
+    }
+  ]
+}
