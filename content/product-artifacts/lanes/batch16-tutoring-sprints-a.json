@@ -1,0 +1,242 @@
+{
+  "laneId": "batch16-tutoring-sprints-a",
+  "productSlug": "tutoring-center-story-sprint-pack",
+  "title": "Tutoring Center Story Sprint Pack - Lower Sprint Lane",
+  "generatedAt": "2026-06-02",
+  "sprints": [
+    {
+      "id": "lower-sprint-moon-muffin-market-smell-map",
+      "title": "Moon Muffin Market Smell Map",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "sprintSkill": "setting detail",
+      "sessionFit": "10-minute one-to-one warmup for a hesitant writer who can pick from concrete food and light details.",
+      "tutorSetup": "Print one page, set out a pencil, and offer two market choices before writing starts.",
+      "kidDirection": "Pick one muffin stall, add three tiny market details, and write one keeper sentence.",
+      "coachingPrompt": "Ask which detail the reader can smell, see, or hear before asking for a full sentence.",
+      "pageSections": [
+        {
+          "heading": "Market Start",
+          "lines": [
+            "The moon muffin stall smells like ____________________________.",
+            "The stall light looks like ____________________________.",
+            "The crumb path leads to ____________________________."
+          ]
+        },
+        {
+          "heading": "Tiny Job",
+          "lines": [
+            "The muffin helper carries ____________________________.",
+            "The helpful muffin can fix ____________________________.",
+            "The market bell tells everyone to ____________________________."
+          ]
+        },
+        {
+          "heading": "Keeper Sentence",
+          "lines": [
+            "First, the helper notices ____________________________.",
+            "Next, the helper chooses ____________________________.",
+            "My best market sentence is ____________________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "One market detail I want to keep is ____________________________.",
+      "extensionLine": "Add one more smell, color, or sound: ____________________________."
+    },
+    {
+      "id": "lower-sprint-puddle-planet-post-office-stamp-route",
+      "title": "Puddle Planet Stamp Route",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "sprintSkill": "sequence",
+      "sessionFit": "10-minute tutoring warmup for a writer who needs a first, next, last path.",
+      "tutorSetup": "Print one page, draw three small boxes on scrap paper, and let the writer point to a route choice.",
+      "kidDirection": "Choose a bottle-cap stamp, plan three puddle stops, and write the delivery path in order.",
+      "coachingPrompt": "Point to the three stops and ask what happens first, next, and last.",
+      "pageSections": [
+        {
+          "heading": "Stamp Pick",
+          "lines": [
+            "The bottle-cap stamp shows ____________________________.",
+            "The stamp means the note goes to ____________________________.",
+            "The puddle planet has ____________________________."
+          ]
+        },
+        {
+          "heading": "Route Stops",
+          "lines": [
+            "First, the mail cart rolls past ____________________________.",
+            "Next, the leaf boat floats near ____________________________.",
+            "Last, the note lands beside ____________________________."
+          ]
+        },
+        {
+          "heading": "Path Line",
+          "lines": [
+            "The mixed-up route starts when ____________________________.",
+            "The kind fix is to ____________________________.",
+            "My clear route sentence is ____________________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "The order word that helped me most is ____________________________.",
+      "extensionLine": "Add one new puddle stop after the last stop: ____________________________."
+    },
+    {
+      "id": "lower-sprint-buttonwood-library-train-ticket-rule",
+      "title": "Buttonwood Library Train Ticket Rule",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "sprintSkill": "rule and reason",
+      "sessionFit": "12-minute tutoring warmup for a writer who can make one simple rule and explain why it helps.",
+      "tutorSetup": "Print one page, offer two train-stop choices, and model one short because sentence.",
+      "kidDirection": "Make a ticket rule, choose a train stop, and write why the rule helps the tiny train.",
+      "coachingPrompt": "Ask what the train needs to do calmly, then help the writer finish the because line.",
+      "pageSections": [
+        {
+          "heading": "Ticket Rule",
+          "lines": [
+            "The ticket rule says each rider must ____________________________.",
+            "The ticket color is ____________________________.",
+            "The rule helps because ____________________________."
+          ]
+        },
+        {
+          "heading": "Train Stop",
+          "lines": [
+            "The Buttonwood train stops at ____________________________.",
+            "The shelf beside the stop holds ____________________________.",
+            "The quiet bell reminds riders to ____________________________."
+          ]
+        },
+        {
+          "heading": "Reason Line",
+          "lines": [
+            "Without the rule, the train might ____________________________.",
+            "With the rule, the train can ____________________________.",
+            "My rule sentence is ____________________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "The rule I wrote clearly is ____________________________.",
+      "extensionLine": "Add one more reason the rule helps: ____________________________."
+    },
+    {
+      "id": "lower-sprint-cloudberry-clocktower-missing-minute",
+      "title": "Cloudberry Clocktower Missing Minute",
+      "worldSlug": "cloudberry-clocktower",
+      "ageBand": "8-10",
+      "sprintSkill": "small problem and fix",
+      "sessionFit": "12-minute tutoring warmup for a writer who needs a concrete problem before drafting.",
+      "tutorSetup": "Print one page, set a quiet timer, and let the writer choose a berry, bell, or stair detail.",
+      "kidDirection": "Pick one missing minute, show where it went, and write the fix in one short scene.",
+      "coachingPrompt": "Ask what changed at the clocktower and what small fix would help right away.",
+      "pageSections": [
+        {
+          "heading": "Clock Clue",
+          "lines": [
+            "The missing minute is hiding near ____________________________.",
+            "The clockberry color is ____________________________.",
+            "The tower stair points toward ____________________________."
+          ]
+        },
+        {
+          "heading": "Small Fix",
+          "lines": [
+            "The bell helper tries ____________________________.",
+            "The minute moves when ____________________________.",
+            "The clocktower feels calmer because ____________________________."
+          ]
+        },
+        {
+          "heading": "Scene Line",
+          "lines": [
+            "At first, the clock shows ____________________________.",
+            "Then the helper notices ____________________________.",
+            "My fix sentence is ____________________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "The clearest fix in my scene is ____________________________.",
+      "extensionLine": "Add one clocktower sound or color: ____________________________."
+    },
+    {
+      "id": "lower-sprint-tiny-lantern-reef-glow-path",
+      "title": "Tiny Lantern Reef Glow Path",
+      "worldSlug": "tiny-lantern-reef",
+      "ageBand": "8-10",
+      "sprintSkill": "direction words",
+      "sessionFit": "12-minute tutoring warmup for a writer who benefits from a map-like path and short direction words.",
+      "tutorSetup": "Print one page, draw a simple three-dot path, and invite the writer to trace it before writing.",
+      "kidDirection": "Choose a reef lantern, mark three glow stops, and write how the paper boat moves.",
+      "coachingPrompt": "Ask the writer to use beside, under, around, or past in one line.",
+      "pageSections": [
+        {
+          "heading": "Lantern Pick",
+          "lines": [
+            "The tiny lantern glows beside ____________________________.",
+            "The paper boat carries ____________________________.",
+            "The reef path begins under ____________________________."
+          ]
+        },
+        {
+          "heading": "Glow Stops",
+          "lines": [
+            "The first glow stop is near ____________________________.",
+            "The second glow stop curves around ____________________________.",
+            "The last glow stop waits past ____________________________."
+          ]
+        },
+        {
+          "heading": "Boat Line",
+          "lines": [
+            "The boat moves slowly when ____________________________.",
+            "The lantern keeper points to ____________________________.",
+            "My reef direction sentence is ____________________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "The direction word I used best is ____________________________.",
+      "extensionLine": "Add one new glow stop with a direction word: ____________________________."
+    },
+    {
+      "id": "lower-sprint-pencil-dragon-academy-door-redraw",
+      "title": "Pencil Dragon Academy Door Redraw",
+      "worldSlug": "pencil-dragon-academy",
+      "ageBand": "10-11",
+      "sprintSkill": "revision choice",
+      "sessionFit": "12-minute tutoring warmup for a writer who can improve one sentence without starting over.",
+      "tutorSetup": "Print one page, give one pencil and one eraser, and say the goal is one better line.",
+      "kidDirection": "Sketch a door idea in words, spot one confusing part, and redraw the sentence with a clearer choice.",
+      "coachingPrompt": "Ask what the door should do, then offer one add, move, or replace choice.",
+      "pageSections": [
+        {
+          "heading": "Door Idea",
+          "lines": [
+            "The pencil door opens toward ____________________________.",
+            "The dragon pencil marks ____________________________.",
+            "The first sentence idea is ____________________________."
+          ]
+        },
+        {
+          "heading": "Clearer Choice",
+          "lines": [
+            "One confusing part is ____________________________.",
+            "I can add, move, or replace ____________________________.",
+            "The clearer word I choose is ____________________________."
+          ]
+        },
+        {
+          "heading": "Redraw Line",
+          "lines": [
+            "Before revision, the door seemed ____________________________.",
+            "After revision, the door shows ____________________________.",
+            "My redrawn sentence is ____________________________."
+          ]
+        }
+      ],
+      "wrapUpLine": "One word I improved is ____________________________.",
+      "extensionLine": "Add one clearer academy detail to the sentence: ____________________________."
+    }
+  ]
+}
