@@ -20,6 +20,7 @@ export const familyGameNightStoryCardDeckProductSlug = 'family-game-night-story-
 export const grandparentStoryVisitKitProductSlug = 'grandparent-story-visit-kit'
 export const thankYouNoteStoryPostcardPackProductSlug = 'thank-you-note-story-postcard-pack'
 export const natureWalkStoryFieldNotesKitProductSlug = 'nature-walk-story-field-notes-kit'
+export const backyardStorySeedPacketKitProductSlug = 'backyard-story-seed-packet-kit'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -194,6 +195,14 @@ const requiredNatureWalkStoryFieldNotesKitArtifactPaths = {
   sourceHtmlPath:
     'product-build/nature-walk-story-field-notes-kit/source/nature-walk-story-field-notes-kit.html',
   manifestPath: 'product-build/nature-walk-story-field-notes-kit/manifest.json',
+}
+
+const requiredBackyardStorySeedPacketKitArtifactPaths = {
+  pdfPath: 'product-build/backyard-story-seed-packet-kit/Backyard-Story-Seed-Packet-Kit.pdf',
+  zipPath: 'product-build/backyard-story-seed-packet-kit/backyard-story-seed-packet-kit.zip',
+  sourceHtmlPath:
+    'product-build/backyard-story-seed-packet-kit/source/backyard-story-seed-packet-kit.html',
+  manifestPath: 'product-build/backyard-story-seed-packet-kit/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -3689,6 +3698,290 @@ export function validateNatureWalkStoryFieldNotesKitSourceFiles(source, rootDir 
   return errors
 }
 
+const backyardSeedPacketSkills = new Set([
+  'setting seed',
+  'character seed',
+  'object seed',
+  'sequence seed',
+  'revision seed',
+  'sensory seed',
+])
+
+const backyardSeedSlipTimes = new Set(['5 minutes', '6 minutes', '7 minutes', '8 minutes', '9 minutes'])
+
+function validateNoUnsafeBackyardSeedLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const accountText = rawText
+    .replace(/\bUse broad place labels and invented details instead of exact place details\./gi, '')
+    .replace(/\bOrganize pages with symbols, color tabs, or plain folders instead of private identifiers\./gi, '')
+    .replace(/\bKeep packet pages offline, printable, and handled by the adult leader, writer, or family\./gi, '')
+    .replace(/\bKeep pages offline, printable, and handled by the adult leader, writer, or family\./gi, '')
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+  pushIf(
+    errors,
+    /\baccounts?\b|\blogins?\b|\blog in\b|\bupload(s|ed|ing)?\b|\bpublic publishing\b|\bpublish online\b|\bgps\b|\bcoordinates?\b|\bexact address\b|\baddresses?\b|\bphone(s)?\b|\bemails?\b|\bphotos?\b|\bcameras?\b|\bchild names?\b|\bstudent names?\b|\bfull names?\b|\brosters?\b|\battendance\b|\bsign-?in\b|\bbehavior reports?\b|\bhouse numbers?\b|\blicense plates?\b|\bvehicle plates?\b|\bschool names?\b|\bexact location\b|\broute\b/i.test(
+      accountText,
+    ),
+    `${label} includes account, upload, public-publishing, location-tracking, exact-place, contact, photo, child-profile, roster, attendance, sign-in, or behavior-report language.`,
+  )
+
+  const safetyText = rawText
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+    .replace(/\bpaper story seed(s)?\b/gi, '')
+    .replace(/\bstory seed(s)?\b/gi, '')
+    .replace(/\bpaper seed packet(s)?\b/gi, '')
+    .replace(/\bpaper packet(s)?\b/gi, '')
+    .replace(/\blook, listen, point, sketch, or imagine\b/gi, '')
+    .replace(/\bpoint, sketch, dictate, or write\b/gi, '')
+  pushIf(
+    errors,
+    /\bmedical\b|\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b|\btherapy\b|\btherapist(s)?\b|\bdiagnos(is|e|es|ed|ing|tic)\b|\bgrief\b|\bassessment(s)?\b|\bgrade(s|d|book)?\b|\bscore(s|d|book)?\b|\bguarantee(s|d)?\b|\bguaranteed\b|\bcontest(s)?\b|\bprizes?\b|\btimer(s)?\b|\btimed\b|\bgambling\b|\bbet(s|ting)?\b|\bcasino(s)?\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bchurch(es)?\b|\btemple(s)?\b|\bmosque(s)?\b|\bsynagogue(s)?\b|\bprayer(s)?\b|\bjesus\b|\bgod\b|\bromance\b|\bkiss(ing)?\b|\bdating\b|\bweapon(s)?\b|\bgun(s)?\b|\bsword(s)?\b|\bfight(ing)?\b|\bkill(s|ed|ing)?\b|\bblood\b|\bhorror\b|\bbranded\b|\bbrand(ed)? character(s)?\b|\bad(s)? targeted to children\b|\banimal contact\b|\binsect contact\b|\bfeed(s|ing)? animals?\b|\btouch(ing)? animals?\b|\btouch(ing)? insects?\b|\bforag(e|ing)\b|\btast(e|ing)? plants?\b|\beat(ing)? plants?\b|\bplant identification\b|\bidentify plants?\b|\bplant(ing)? seeds?\b|\bwater(ing)? plants?\b|\bsoil handling\b|\btouch(ing)? soil\b|\bsoil\b|\bgarden tools?\b|\btrowel(s)?\b|\bshovel(s)?\b|\bscissors?\b|\bknife\b|\bfertilizer(s)?\b|\bpesticide(s)?\b|\bsolar ovens?\b|\bwarm snacks?\b|\bcross(ing)? streets?\b|\bwater entry\b|\benter water\b|\bweather hazard\b|\bclimb(s|ed|ing)?\b|\bjump(s|ed|ing)?\b|\brun(s|ning)?\b|\broughhouse\b|\bwrestl(e|ing)\b|\bblindfold(s|ed)?\b|\bstairs?\b|\bflames?\b|\bmatchstick(s)?\b|\blighter(s)?\b/i.test(
+      safetyText,
+    ),
+    `${label} includes medical, legal, therapy, diagnosis, grief, assessment, grade, score, guaranteed-outcome, contest, prize, timer-pressure, gambling, politics, religion, romance, weapon, violence, branded, ad-targeting, animal-contact, foraging, tasting, plant-identification, real-gardening, street-crossing, water-entry, weather-risk, or unsafe physical language.`,
+  )
+}
+
+function validateBackyardSeedPacket(packet, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, packetIds, errors) {
+  const label = `seedPackets[${index}]`
+  pushIf(errors, !isObject(packet), `${label} must be an object.`)
+  if (!isObject(packet)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'seedPacketSkill',
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'packetLabelPrompt',
+    'detailSeedsPrompt',
+    'storySeedPrompt',
+    'sproutSentencePath',
+    'revisionNudge',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    validateString(packet[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(packet.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(packet.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, !packet.id.startsWith('backyard-seed-packet-'), `${label}.id must start with backyard-seed-packet-.`)
+    pushIf(errors, packetIds.has(packet.id), `${label}.id is duplicated.`)
+    packetIds.add(packet.id)
+  }
+  pushIf(errors, !backyardSeedPacketSkills.has(packet.seedPacketSkill), `${label}.seedPacketSkill is not allowed.`)
+  pushIf(errors, !['7-8', '7-9', '8-10', '10-11'].includes(packet.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(packet.worldSlug) && !knownWorldSlugs.has(packet.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(packet.worldSlug) && !sourceWorldSlugs.has(packet.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(packet.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(packet.ageBand) && isNonEmptyString(worldAgeBand) && packet.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${packet.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  for (const key of ['packetLabelPrompt', 'detailSeedsPrompt', 'storySeedPrompt', 'sproutSentencePath', 'revisionNudge', 'quietOptionLine', 'takeHomeLine']) {
+    pushIf(errors, isNonEmptyString(packet[key]) && !hasWritableBlank(packet[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(packet[key]) && hasSnakeCasePlaceholder(packet[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeBackyardSeedLanguage(packet, label, errors)
+}
+
+function validateBackyardPacketFormat(format, index, names, errors) {
+  const label = `packetFormats[${index}]`
+  pushIf(errors, !isObject(format), `${label} must be an object.`)
+  if (!isObject(format)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(format[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(format.name)) {
+    pushIf(errors, names.has(format.name), `${label}.name is duplicated.`)
+    names.add(format.name)
+  }
+  validateExactStringArray(format.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeBackyardSeedLanguage(format, label, errors)
+}
+
+function validateBackyardTakeHomeSeedSlip(slip, index, titles, errors) {
+  const label = `takeHomeSeedSlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(slip[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(slip.title)) {
+    pushIf(errors, titles.has(slip.title), `${label}.title is duplicated.`)
+    titles.add(slip.title)
+  }
+  pushIf(errors, !backyardSeedSlipTimes.has(slip.time), `${label}.time is not allowed.`)
+  pushIf(errors, !backyardSeedPacketSkills.has(slip.skill), `${label}.skill is not allowed.`)
+  for (const key of ['direction', 'familyLine']) {
+    pushIf(errors, isNonEmptyString(slip[key]) && !hasWritableBlank(slip[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(slip[key]) && hasSnakeCasePlaceholder(slip[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeBackyardSeedLanguage(slip, label, errors)
+}
+
+export function validateBackyardStorySeedPacketKitSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Backyard Story Seed Packet Kit source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch24', 'batchId must be 2026-06-02-batch24.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(
+    errors,
+    source.productSlug !== backyardStorySeedPacketKitProductSlug,
+    `productSlug must be ${backyardStorySeedPacketKitProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Backyard Story Seed Packet Kit', 'title must be Backyard Story Seed Packet Kit.')
+  pushIf(errors, source.pricePoint !== '$35', 'pricePoint must be $35.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Backyard Story Seed Packet source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Backyard Story Seed Packet source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Backyard Story Seed Packet source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 14, 'worldSlugs must have exactly 14 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredBackyardStorySeedPacketKitArtifactPaths, 'Backyard Story Seed Packet', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateStringArray(source.adultGuide.beforeSession, 5, 'adultGuide.beforeSession', errors)
+    validateStringArray(source.adultGuide.packetTableSetup, 5, 'adultGuide.packetTableSetup', errors)
+    validateStringArray(source.adultGuide.observationToStorySeeds, 5, 'adultGuide.observationToStorySeeds', errors)
+    validateStringArray(source.adultGuide.privacyAndSiteNotes, 5, 'adultGuide.privacyAndSiteNotes', errors)
+    validateStringArray(source.adultGuide.familyHandoff, 5, 'adultGuide.familyHandoff', errors)
+    validateStringArray(source.adultGuide.reset, 4, 'adultGuide.reset', errors)
+    validateNoUnsafeBackyardSeedLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.packetFormats), 'packetFormats must be an array.')
+  if (Array.isArray(source.packetFormats)) {
+    pushIf(errors, source.packetFormats.length !== 6, 'packetFormats must have exactly 6 entries.')
+    const names = new Set()
+    source.packetFormats.forEach((format, index) => validateBackyardPacketFormat(format, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeSeedSlips), 'takeHomeSeedSlips must be an array.')
+  if (Array.isArray(source.takeHomeSeedSlips)) {
+    pushIf(errors, source.takeHomeSeedSlips.length !== 10, 'takeHomeSeedSlips must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeSeedSlips.forEach((slip, index) => validateBackyardTakeHomeSeedSlip(slip, index, titles, errors))
+  }
+
+  validateExactStringArray(source.optionalSharePrompts, 8, 'optionalSharePrompts', errors)
+  if (Array.isArray(source.optionalSharePrompts)) {
+    source.optionalSharePrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalSharePrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalSharePrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.seedPackets), 'seedPackets must be an array.')
+  if (Array.isArray(source.seedPackets)) {
+    pushIf(errors, source.seedPackets.length !== 14, 'seedPackets must have exactly 14 entries.')
+    const packetIds = new Set()
+    const coveredWorlds = new Set()
+    source.seedPackets.forEach((packet, index) => {
+      validateBackyardSeedPacket(packet, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, packetIds, errors)
+      if (isNonEmptyString(packet?.worldSlug)) coveredWorlds.add(packet.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 14, 'seedPackets must cover at least 14 unique worlds.')
+  }
+
+  validateNoUnsafeBackyardSeedLanguage(source, 'Backyard Story Seed Packet Kit source', errors)
+  validateNoRiskyLanguage(source, 'Backyard Story Seed Packet Kit source', errors)
+  return errors
+}
+
+export function validateBackyardStorySeedPacketKitSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three seed-packet lanes and one tools lane.')
+
+  const seedPacketLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      if (Array.isArray(lane.seedPackets)) {
+        seedPacketLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 24 seed-packet lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, seedPacketLaneFiles.length !== 3, 'sourceFiles must include exactly three seed-packet lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneSeedPackets = seedPacketLaneFiles
+    .flatMap(({ lane }) => lane.seedPackets)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.seedPackets)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneSeedPackets) !== JSON.stringify(source.seedPackets),
+      'sourceFiles seed-packet lanes must reproduce seedPackets exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'packetFormats', 'takeHomeSeedSlips', 'optionalSharePrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -3817,7 +4110,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredNatureWalkStoryFieldNotesKitArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredBackyardStorySeedPacketKitArtifactPaths.pdfPath
+      ? requiredBackyardStorySeedPacketKitArtifactPaths
+      : artifact?.pdfPath === requiredNatureWalkStoryFieldNotesKitArtifactPaths.pdfPath
       ? requiredNatureWalkStoryFieldNotesKitArtifactPaths
       : artifact?.pdfPath === requiredThankYouNoteStoryPostcardPackArtifactPaths.pdfPath
       ? requiredThankYouNoteStoryPostcardPackArtifactPaths

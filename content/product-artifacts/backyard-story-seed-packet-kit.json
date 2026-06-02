@@ -1,0 +1,482 @@
+{
+  "batchId": "2026-06-02-batch24",
+  "generatedAt": "2026-06-02",
+  "productSlug": "backyard-story-seed-packet-kit",
+  "title": "Backyard Story Seed Packet Kit",
+  "pricePoint": "$35",
+  "audience": "Families, homeschool groups, tutors, library tables, co-ops, and adult-led yard-view writers ages 7-11.",
+  "sessionLength": "14 printable paper story seed packet pages plus adult guide tools, packet formats, take-home seed slips, and optional share prompts.",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/backyard-story-seed-packet-kit/Backyard-Story-Seed-Packet-Kit.pdf",
+    "zipPath": "product-build/backyard-story-seed-packet-kit/backyard-story-seed-packet-kit.zip",
+    "sourceHtmlPath": "product-build/backyard-story-seed-packet-kit/source/backyard-story-seed-packet-kit.html",
+    "manifestPath": "product-build/backyard-story-seed-packet-kit/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch24-seed-packets-a.json",
+    "content/product-artifacts/lanes/batch24-seed-packets-b.json",
+    "content/product-artifacts/lanes/batch24-seed-packets-c.json",
+    "content/product-artifacts/lanes/batch24-seed-tools.json"
+  ],
+  "worldSlugs": [
+    "teacup-town-weather-window",
+    "acorn-avenue-errand-office",
+    "pocket-park-notice-board",
+    "button-bakery-map-mixup",
+    "greenhouse-gear-garden",
+    "rain-gauge-railway",
+    "seed-library-map-room",
+    "moss-message-observatory",
+    "pantry-measurement-mystery",
+    "compass-craft-academy",
+    "almost-invention-workshop",
+    "margin-note-market",
+    "binding-day-boardwalk",
+    "index-card-theater-club"
+  ],
+  "cover": {
+    "kicker": "Printable backyard story seed packets",
+    "headline": "Backyard Story Seed Packet Kit",
+    "subhead": "Fourteen paper seed-packet pages turn broad yard-view, porch-view, window-view, table, and park-edge details into tiny story starts.",
+    "included": [
+      "14 printable paper story seed packet pages",
+      "Adult setup guide",
+      "Packet table setup notes",
+      "Observation-to-story-seed coaching moves",
+      "Privacy and site-rule notes",
+      "Family handoff notes",
+      "Pack reset notes",
+      "Six adult-led packet formats",
+      "Ten take-home seed slips",
+      "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Print the paper story seed packets, seed slips, and adult guide before the session; these are writing starters, not real seeds.",
+      "Set the adult-led rule: look, listen, point, sketch, and imagine from the yard, garden view, porch view, window view, table, or park edge.",
+      "Say that writers do not collect or touch outdoor materials; ideas come from safe looking and listening.",
+      "Choose one calm viewing option and one table writing option before writers arrive.",
+      "Keep the session screen-free, printable, offline, and short enough for one packet to become one story seed."
+    ],
+    "packetTableSetup": [
+      "Place blank paper packets, pencils, and seed slips on the table where the adult can see every page.",
+      "Set six labeled piles: setting, character, object, sequence, revision, and sensory.",
+      "Put one broad place card on the table: yard, garden view, porch view, window view, table, or park edge.",
+      "Leave space for sketches so writers can point or draw before adding words.",
+      "Keep unused packets in an adult folder so the table stays calm and screen-free."
+    ],
+    "observationToStorySeeds": [
+      "Ask each writer for one look detail, one listen detail, and one imagine detail.",
+      "Turn a color from the garden view into a setting seed with a mood word.",
+      "Turn a shape from the yard or porch view into an object seed with a job.",
+      "Turn a gentle sound from the window view or park edge into a sensory seed with a clue.",
+      "Finish each packet by choosing one sentence to save for a later printable story."
+    ],
+    "privacyAndSiteNotes": [
+      "Use only broad place words: yard, garden view, porch view, window view, table, or park edge.",
+      "Use invented character labels or role words for every person in a story.",
+      "Leave private signs, numbers, family routines, and identifying details off the packet.",
+      "Keep finished packets with the family adult, tutor, homeschool co-op adult, or library table host.",
+      "Treat the packet as paper writing work, not material for a shared site."
+    ],
+    "familyHandoff": [
+      "Give one finished paper packet and one blank seed slip to each writer.",
+      "Tell family adults that five to nine minutes is enough for one extra story seed.",
+      "Invite families to look, listen, point, sketch, and imagine from a yard, garden view, porch view, window view, table, or park edge.",
+      "Ask adults to praise one clear word, sketch, or sentence before offering one small revision idea.",
+      "Suggest keeping all packet pages together so a later writing session can reuse the strongest seed."
+    ],
+    "reset": [
+      "Collect unused paper packets, seed slips, pencils, and broad place cards.",
+      "Check finished pages for private details before they leave the table.",
+      "Recycle scrap pages that only contain warm-up marks.",
+      "Restock the adult folder with fresh packets for the next offline session."
+    ]
+  },
+  "packetFormats": [
+    {
+      "name": "Window View Setting Packet",
+      "bestFor": "A quiet family or tutoring start when the writer can observe without leaving the table.",
+      "steps": [
+        "Adult places the packet beside a clear window view and reads the paper-only reminder.",
+        "Writer looks, listens, and points to one color, shape, or quiet sound.",
+        "Writer sketches the detail inside the packet flap.",
+        "Writer turns the detail into one setting seed sentence."
+      ]
+    },
+    {
+      "name": "Garden View Character Packet",
+      "bestFor": "Writers who need a friendly character idea from safe observation.",
+      "steps": [
+        "Adult chooses one garden view and reminds the writer to observe without collecting or touching anything.",
+        "Writer points to one detail that seems calm, busy, tiny, bright, or hidden.",
+        "Writer imagines a made-up character who would notice that detail first.",
+        "Writer writes what the character wants, wonders, or carries in the story."
+      ]
+    },
+    {
+      "name": "Yard Object Packet",
+      "bestFor": "Parents and homeschool co-ops that want ordinary object prompts without outdoor handling.",
+      "steps": [
+        "Adult names the yard as the viewing choice and keeps the writing at the table.",
+        "Writer looks for one nonliving thing already visible from the chosen view.",
+        "Writer sketches it as a pretend object with a helpful job.",
+        "Writer writes one object seed with what it does in the story."
+      ]
+    },
+    {
+      "name": "Porch View Sensory Packet",
+      "bestFor": "Kids who notice sounds and textures through safe looking and listening.",
+      "steps": [
+        "Adult sets the packet at the table with porch view as the observation choice.",
+        "Writer listens for one gentle sound and looks for one color or pattern.",
+        "Writer chooses the detail that feels most story-ready.",
+        "Writer writes one sensory seed that tells what the detail might mean."
+      ]
+    },
+    {
+      "name": "Table Revision Packet",
+      "bestFor": "Library tables or tutors helping writers strengthen a seed they already started.",
+      "steps": [
+        "Adult places an earlier paper packet and a blank revision slip on the table.",
+        "Writer reads or hears one sentence from the packet.",
+        "Writer adds one clearer look, listen, sketch, or imagine detail.",
+        "Writer copies the stronger sentence into the revision seed space."
+      ]
+    },
+    {
+      "name": "Park Edge Sequence Packet",
+      "bestFor": "Adult-led groups that can sit or stand at a park edge and write one short beginning path.",
+      "steps": [
+        "Adult chooses the park edge view and keeps the group beside the adult.",
+        "Writer looks left, center, and right while staying with the adult.",
+        "Writer picks three safe-to-see details and orders them as first, next, and later.",
+        "Writer writes one sequence seed that uses those three details."
+      ]
+    }
+  ],
+  "takeHomeSeedSlips": [
+    {
+      "title": "Yard Setting Seed",
+      "time": "5 minutes",
+      "skill": "setting seed",
+      "direction": "Look from the yard or window view. Write one color or shape you notice: ____________________. Make it a made-up setting detail: ____________________.",
+      "familyLine": "Our setting seed makes the place feel ____________________."
+    },
+    {
+      "title": "Garden View Character Seed",
+      "time": "6 minutes",
+      "skill": "character seed",
+      "direction": "Look at the garden view without collecting anything. Imagine who would notice one detail first: ____________________. That character wants ____________________.",
+      "familyLine": "The character would begin by asking ____________________."
+    },
+    {
+      "title": "Table Object Seed",
+      "time": "7 minutes",
+      "skill": "object seed",
+      "direction": "Choose one paper packet picture or table object. It looks like ____________________. In the story, its job is ____________________.",
+      "familyLine": "Our object seed matters because ____________________."
+    },
+    {
+      "title": "First Next Later Seed",
+      "time": "8 minutes",
+      "skill": "sequence seed",
+      "direction": "Use one yard or porch view detail. First ____________________. Next ____________________. Later ____________________.",
+      "familyLine": "The step we want to write more about is ____________________."
+    },
+    {
+      "title": "Add One Look Detail",
+      "time": "5 minutes",
+      "skill": "revision seed",
+      "direction": "Reread a seed sentence. Add one look detail here: ____________________. New sentence: ____________________.",
+      "familyLine": "The revision made the sentence clearer by adding ____________________."
+    },
+    {
+      "title": "Sound From the Window View",
+      "time": "6 minutes",
+      "skill": "sensory seed",
+      "direction": "Listen from the window view. One gentle sound is ____________________. In the story, it means ____________________.",
+      "familyLine": "The sound clue tells the character ____________________."
+    },
+    {
+      "title": "Park Edge Place Seed",
+      "time": "7 minutes",
+      "skill": "setting seed",
+      "direction": "Look from the park edge and choose one safe-to-see detail: ____________________. Turn it into a setting seed: ____________________.",
+      "familyLine": "This setting seed should feel ____________________."
+    },
+    {
+      "title": "Helpful Object Seed",
+      "time": "8 minutes",
+      "skill": "object seed",
+      "direction": "Point to one nonliving thing visible from the yard or table. It could become ____________________. Its story job is ____________________.",
+      "familyLine": "The object helps when ____________________."
+    },
+    {
+      "title": "Quiet Character Choice",
+      "time": "9 minutes",
+      "skill": "character seed",
+      "direction": "Imagine a character who stays calm and notices carefully. The character notices ____________________ and decides ____________________.",
+      "familyLine": "The character choice we like is ____________________."
+    },
+    {
+      "title": "Better Ending Seed",
+      "time": "6 minutes",
+      "skill": "revision seed",
+      "direction": "Choose one ending idea. Add a clearer setting, object, or sound detail: ____________________. Better ending: ____________________.",
+      "familyLine": "The ending now feels more finished because ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Show one packet title or sketch if you choose: ____________________.",
+    "Read one setting seed from the paper packet: ____________________.",
+    "Point to the detail that became a story clue: ____________________.",
+    "Tell which broad place word helped today: ____________________.",
+    "Share one made-up character choice without private details: ____________________.",
+    "Show one object seed and its story job: ____________________.",
+    "Name one sentence that improved after revision: ____________________.",
+    "Keep the packet private today and mark the seed you want to save: ____________________."
+  ],
+  "seedPackets": [
+    {
+      "id": "backyard-seed-packet-01",
+      "title": "Teacup Window Weather Packet",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "seedPacketSkill": "sensory seed",
+      "useCase": "Adult-led, screen-free, offline printable paper story seed packet for turning a yard or window view into sensory writing, not real seeds.",
+      "adultSetup": "Print one packet, set it on the table, choose a yard or window view, and remind the kid this is paper-only, with look, listen, point, sketch, and imagine choices.",
+      "kidDirection": "Look through the window view or across the yard. Pick one color, one sound, and one pretend weather-window message for Teacup Town.",
+      "packetLabelPrompt": "Packet label: Teacup Town saves today's paper story seed as ____________________.",
+      "detailSeedsPrompt": "Detail seeds: I can look at color ____________________, listen for sound ____________________, and sketch shape ____________________.",
+      "storySeedPrompt": "Story seed: A tiny window watcher sees ____________________ and imagines the town needs a calmer plan.",
+      "sproutSentencePath": "Sprout sentence path: First the watcher notices ____________________. Then the window clue seems to say ____________________. Last the watcher writes ____________________.",
+      "revisionNudge": "Revision nudge: Add one sensory word to make the window view clearer: ____________________.",
+      "quietOptionLine": "Quiet option: Point to one safe detail and write only one tiny label: ____________________.",
+      "takeHomeLine": "Take-home line: At the table, turn this paper story seed into three sentences about ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-02",
+      "title": "Acorn Errand Desk Character Packet",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "seedPacketSkill": "character seed",
+      "useCase": "Adult-led, screen-free, offline printable paper story seed packet for inventing a helpful character from a yard, porch view, or table detail.",
+      "adultSetup": "Print one packet, place it on the table or clipboard, choose a yard or porch view, and keep the activity paper-only, look-only, and imagination-led.",
+      "kidDirection": "Look, listen, point, sketch, and imagine one careful Acorn errand helper who notices a safe detail from your view.",
+      "packetLabelPrompt": "Packet label: The Acorn errand desk files a paper story seed named ____________________.",
+      "detailSeedsPrompt": "Character seeds: helper job ____________________, careful habit ____________________, small worry ____________________.",
+      "storySeedPrompt": "Story seed: The errand helper notices ____________________ and decides the message needs a kinder character choice.",
+      "sproutSentencePath": "Sprout sentence path: My helper wants ____________________, checks ____________________, and chooses to say ____________________.",
+      "revisionNudge": "Revision nudge: Replace a plain character word with a more exact describing word: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch the helper's badge shape, then write one character word: ____________________.",
+      "takeHomeLine": "Take-home line: At the table, tell a short Acorn errand story starring ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-03",
+      "title": "Pocket Park Setting Packet",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "seedPacketSkill": "setting seed",
+      "useCase": "Adult-led, screen-free, offline printable paper story seed packet for building a Pocket Park setting from a yard, garden view, table, or park edge.",
+      "adultSetup": "Print one packet, choose a yard, garden view, table, or park edge, and invite looking, listening, pointing, sketching, and imagining only.",
+      "kidDirection": "Imagine the Pocket Park board needs one setting clue. Look for a broad detail, point to it, then sketch how it changes the scene.",
+      "packetLabelPrompt": "Packet label: Pocket Park pins a paper story seed for the setting called ____________________.",
+      "detailSeedsPrompt": "Setting seeds: I can sketch a line ____________________, a color ____________________, and a quiet sound ____________________.",
+      "storySeedPrompt": "Story seed: A new notice appears beside ____________________, changing how the tiny park setting feels.",
+      "sproutSentencePath": "Sprout sentence path: The setting starts as ____________________. A new detail changes it to ____________________. My character feels ____________________.",
+      "revisionNudge": "Revision nudge: Add one view-safe detail that helps the reader picture the setting: ____________________.",
+      "quietOptionLine": "Quiet option: Point to one shape, sketch it small, and name it here: ____________________.",
+      "takeHomeLine": "Take-home line: At the table, use this setting seed to write about ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-04",
+      "title": "Button Bakery Order Mix-Up Packet",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "seedPacketSkill": "sequence seed",
+      "useCase": "Adult-led, screen-free, offline printable paper story seed packet for shaping a beginning, middle, and ending from porch view, table, or yard details.",
+      "adultSetup": "Print one packet, fold it like a pretend bakery wrapper, choose a table, porch view, or yard, and keep the work paper-only and eyes-only.",
+      "kidDirection": "Look, listen, point, sketch, and imagine three safe details you can see from one view; make them the order of a Button Bakery mix-up.",
+      "packetLabelPrompt": "Packet label: Button Bakery wraps a paper story seed called ____________________.",
+      "detailSeedsPrompt": "Sequence seeds: beginning detail ____________________, middle clue ____________________, ending choice ____________________.",
+      "storySeedPrompt": "Story seed: The bakery note points first to ____________________, but the next clue changes the order.",
+      "sproutSentencePath": "Sprout sentence path: First ____________________. Next ____________________. Finally ____________________.",
+      "revisionNudge": "Revision nudge: Add one reason the middle clue belongs after the beginning: ____________________.",
+      "quietOptionLine": "Quiet option: Number three boxes silently, then write the first box word: ____________________.",
+      "takeHomeLine": "Take-home line: At the table, turn the three clues into a Button Bakery scene about ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-05",
+      "title": "Greenhouse Gear Revision Packet",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "seedPacketSkill": "revision seed",
+      "useCase": "Adult-led, screen-free, offline printable paper story seed packet for using a garden view or window view pattern to revise one story sentence.",
+      "adultSetup": "Print one packet, choose a garden view, window view, or table, and keep it paper-only while the kid looks, listens, sketches, points, and imagines.",
+      "kidDirection": "Look for a repeating shape, color, or sound in the garden view. Imagine Greenhouse Gear Garden uses that pattern to make a draft clearer.",
+      "packetLabelPrompt": "Packet label: Greenhouse Gear Garden stores a paper story seed named ____________________.",
+      "detailSeedsPrompt": "Revision seeds: repeated shape ____________________, repeated sound ____________________, sentence to improve ____________________.",
+      "storySeedPrompt": "Story seed: The gear keeper hears ____________________ repeat and realizes one story sentence needs a clearer pattern.",
+      "sproutSentencePath": "Sprout sentence path: Draft sentence: ____________________. Better detail: ____________________. Revised sentence: ____________________.",
+      "revisionNudge": "Revision nudge: Make the revised sentence stronger by adding one exact sound, color, or shape: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch the pattern silently, then revise one word here: ____________________.",
+      "takeHomeLine": "Take-home line: At the table, use this paper story seed to polish a Greenhouse Gear Garden paragraph about ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-06",
+      "title": "Rain Gauge Railway Sequence Packet",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "seedPacketSkill": "sequence seed",
+      "useCase": "Adult-led, screen-free printable packet for turning three yard or window view details into a clear beginning, middle, and ending.",
+      "adultSetup": "Print one paper story seed packet, fold it on the table, choose a yard, garden view, porch view, or window view, and keep the activity eyes-and-ears only.",
+      "kidDirection": "Look, listen, point to three broad clues, sketch them in order, and imagine each one as a tiny railway signal.",
+      "packetLabelPrompt": "My paper railway seed packet is labeled ____________________ because one safe clue looks like a tiny train signal.",
+      "detailSeedsPrompt": "Sketch three story seeds: first clue ____________________, next clue ____________________, final clue ____________________.",
+      "storySeedPrompt": "A careful railway helper notices the gauge card change when ____________________.",
+      "sproutSentencePath": "First ____________________; next ____________________; finally ____________________, so the helper writes one calm story note.",
+      "revisionNudge": "Revise by adding one sound, color, or order word to the middle step: ____________________.",
+      "quietOptionLine": "Quiet option: point to the three clues, sketch one, and write only the final word: ____________________.",
+      "takeHomeLine": "Take-home seed: From a table or window view, imagine one tiny railway line and write ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-07",
+      "title": "Seed Library Map Room Object Packet",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "seedPacketSkill": "object seed",
+      "useCase": "Adult-led, offline printable packet for making one table, porch view, or garden view detail become the key object in a map-room story.",
+      "adultSetup": "Print one paper story seed packet, place it on the table, and remind the writer that this is pretend packet work, not a gardening activity.",
+      "kidDirection": "Look at one broad detail, point to it, sketch a pretend label, and imagine why the Seed Library Map Room needs that object.",
+      "packetLabelPrompt": "This paper seed packet belongs in the drawer labeled ____________________.",
+      "detailSeedsPrompt": "Object seeds: shape ____________________, pattern ____________________, map mark ____________________.",
+      "storySeedPrompt": "The map room opens a folded card and finds ____________________ inside.",
+      "sproutSentencePath": "The object looks like ____________________, but it acts like ____________________, so the keeper decides ____________________.",
+      "revisionNudge": "Revise by adding one exact size, color, or placement detail to the object: ____________________.",
+      "quietOptionLine": "Quiet option: sketch the object first, then write its quiet label here: ____________________.",
+      "takeHomeLine": "Take-home seed: At a table, choose one ordinary object and turn it into a map-room clue: ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-08",
+      "title": "Moss Message Observatory Sensory Packet",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "seedPacketSkill": "sensory seed",
+      "useCase": "Adult-led, screen-free printable packet for turning a garden view, park edge, or window view into safe sensory description.",
+      "adultSetup": "Print one paper story seed packet, choose a calm garden view, park edge, or window view, and keep the writing based on looking, listening, and imagining.",
+      "kidDirection": "Look for a color, listen for a quiet sound, point to a pattern, sketch it, and imagine it as an observatory message.",
+      "packetLabelPrompt": "The observatory packet is labeled with this quiet message: ____________________.",
+      "detailSeedsPrompt": "Sensory seeds I can safely notice: color ____________________, pattern ____________________, sound ____________________.",
+      "storySeedPrompt": "A paper observatory note repeats when ____________________ appears in the view.",
+      "sproutSentencePath": "The observer sees ____________________, listens for ____________________, and imagines the message means ____________________.",
+      "revisionNudge": "Revise one plain description by adding a sharper sensory word: ____________________.",
+      "quietOptionLine": "Quiet option: point silently to one pattern, sketch it, and write the message word: ____________________.",
+      "takeHomeLine": "Take-home seed: From a window view, turn one color or sound into an observatory clue: ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-09",
+      "title": "Pantry Measurement Setting Packet",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "seedPacketSkill": "setting seed",
+      "useCase": "Adult-led, offline printable packet for building a setting from shape, count, and table details.",
+      "adultSetup": "Print one paper story seed packet, use a table, porch view, shelf view, or window view, and keep it as paper imagination only.",
+      "kidDirection": "Look at one shape, count one small group, point to one ordinary object, sketch the scene, and imagine a pantry mystery.",
+      "packetLabelPrompt": "My paper pantry packet is labeled ____________________.",
+      "detailSeedsPrompt": "Setting seeds: shape ____________________, counted group ____________________, ordinary object ____________________.",
+      "storySeedPrompt": "The pantry mystery begins when the paper label beside ____________________ changes to ____________________.",
+      "sproutSentencePath": "In the pantry scene, ____________________ sits near ____________________, while ____________________ makes the setting feel new.",
+      "revisionNudge": "Revise by adding one where-detail so the reader can picture the shelf or table: ____________________.",
+      "quietOptionLine": "Quiet option: sketch the shape first, then write one setting word: ____________________.",
+      "takeHomeLine": "Take-home seed: At a table, turn one shape or counted detail into a setting sentence: ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-10",
+      "title": "Compass Craft Academy Revision Packet",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "seedPacketSkill": "revision seed",
+      "useCase": "Adult-led, screen-free printable packet for older writers who need to revise vague movement into clearer story direction.",
+      "adultSetup": "Print one paper story seed packet, set it on the table, choose a yard, porch view, garden view, window view, or park edge, and invite pointing and sketching only.",
+      "kidDirection": "Look for one direction clue, point to it, sketch a simple map mark, imagine a clearer scene, and revise one plain sentence.",
+      "packetLabelPrompt": "Compass Craft packet label: this revision seed points toward ____________________.",
+      "detailSeedsPrompt": "Revision seeds: vague line ____________________, clearer direction ____________________, stronger choice ____________________.",
+      "storySeedPrompt": "A mapmaker at the academy fixes a confusing scene by noticing ____________________.",
+      "sproutSentencePath": "Plain sentence: The helper went there. Revised sentence: The helper moved toward ____________________ because ____________________.",
+      "revisionNudge": "Replace a vague word with a precise direction, distance, or mood word: ____________________.",
+      "quietOptionLine": "Quiet option: revise one sentence silently and underline the clearer clue: ____________________.",
+      "takeHomeLine": "Take-home seed: Use the revised clue as the turning point in a compass-academy scene: ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-11",
+      "title": "Almost Invention Workshop Step Packet",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "seedPacketSkill": "sequence seed",
+      "useCase": "Adult-led, screen-free, printable, offline paper packet for older writers to turn a yard, garden view, porch view, or table detail into a clear test-and-revise sequence.",
+      "adultSetup": "Print the paper packet, set one pencil on the table, choose a yard, garden view, porch view, window view, table, or park edge, and keep the work to look, listen, point, sketch, and imagine.",
+      "kidDirection": "Look for one visible or audible detail, imagine it as a nearly useful paper invention, and arrange the idea into three clear steps before revising one step.",
+      "packetLabelPrompt": "Packet label: My almost-invention is designed for ____________________.",
+      "detailSeedsPrompt": "Detail seeds: I can use a shape detail ____________________, a sound detail ____________________, and a clear verb ____________________.",
+      "storySeedPrompt": "Story seed: A workshop tester realizes the paper invention almost works when ____________________.",
+      "sproutSentencePath": "Sprout sentence path: First ____________________; then the test shows ____________________; because of that, the inventor changes ____________________.",
+      "revisionNudge": "Revision nudge: Shorten or clarify one step so a reader can follow it: ____________________.",
+      "quietOptionLine": "Quiet option: Point to one detail, sketch the paper invention, and write the revised step here: ____________________.",
+      "takeHomeLine": "Take-home line: Use the clearest step to start a short workshop scene about ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-12",
+      "title": "Margin Note Market Revision Packet",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "seedPacketSkill": "revision seed",
+      "useCase": "Adult-led, screen-free, printable, offline paper packet for turning a yard, garden view, window view, or table detail into kind, specific revision work.",
+      "adultSetup": "Print the paper packet, choose a yard, garden view, porch view, window view, table, or park edge, and remind the writer to look, listen, point, sketch, and imagine only.",
+      "kidDirection": "Look or listen for one broad detail, imagine it as a note from Margin Note Market, and change a vague comment into one useful revision task.",
+      "packetLabelPrompt": "Packet label: The margin note I found says ____________________.",
+      "detailSeedsPrompt": "Detail seeds: A specific word to improve is ____________________, a clearer detail is ____________________, and a kind question is ____________________.",
+      "storySeedPrompt": "Story seed: At Margin Note Market, a writer receives a vague note and turns it into this useful next task: ____________________.",
+      "sproutSentencePath": "Sprout sentence path: The first note says ____________________; the writer asks ____________________; the revised line becomes ____________________.",
+      "revisionNudge": "Revision nudge: Replace one fuzzy comment with a precise action the writer can try: ____________________.",
+      "quietOptionLine": "Quiet option: Work silently at the table and revise only one sentence: ____________________.",
+      "takeHomeLine": "Take-home line: Use this margin note to improve one story paragraph: ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-13",
+      "title": "Binding Day Boardwalk Order Packet",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "seedPacketSkill": "sequence seed",
+      "useCase": "Adult-led, screen-free, printable, offline paper packet for older writers to use a yard, window view, porch view, or table detail as the order clue for a finished mini story.",
+      "adultSetup": "Print the paper packet, choose a yard, garden view, porch view, window view, table, or park edge, and keep the activity to look, listen, point, sketch, and imagine.",
+      "kidDirection": "Look for one detail that suggests a beginning, middle, or ending, then imagine it as the clue that fixes a finished paper packet's order.",
+      "packetLabelPrompt": "Packet label: My Binding Day packet promises a story about ____________________.",
+      "detailSeedsPrompt": "Detail seeds: The opening clue is ____________________, the turning detail is ____________________, and the final image is ____________________.",
+      "storySeedPrompt": "Story seed: On Binding Day, a finished paper packet feels out of order until the writer notices ____________________.",
+      "sproutSentencePath": "Sprout sentence path: The first page shows ____________________; the middle page changes when ____________________; the final page lands on ____________________.",
+      "revisionNudge": "Revision nudge: Rearrange one sentence or add a clearer bridge between two moments: ____________________.",
+      "quietOptionLine": "Quiet option: Number three paper page ideas, then write the bridge sentence here: ____________________.",
+      "takeHomeLine": "Take-home line: Use the final image to polish the ending of a tiny story: ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-14",
+      "title": "Index Card Theater Cue Packet",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "seedPacketSkill": "character seed",
+      "useCase": "Adult-led, screen-free, printable, offline paper packet for using a table, porch view, window view, or park edge detail to build a two-line scene with a clear character choice.",
+      "adultSetup": "Print the paper packet, choose a yard, garden view, porch view, window view, table, or park edge, and keep the writing based on look, listen, point, sketch, and imagine.",
+      "kidDirection": "Point to one broad detail, imagine it as an index card cue, and write two lines where the second line changes what the character chooses next.",
+      "packetLabelPrompt": "Packet label: The index card cue for my character is ____________________.",
+      "detailSeedsPrompt": "Detail seeds: My setting clue is ____________________, my character wants ____________________, and the second line changes ____________________.",
+      "storySeedPrompt": "Story seed: At Index Card Theater Club, two cards create a scene when one character chooses ____________________.",
+      "sproutSentencePath": "Sprout sentence path: First the character expects ____________________; then another line reveals ____________________; after that, the scene points toward ____________________.",
+      "revisionNudge": "Revision nudge: Add one action or setting cue that shows the character choice without explaining too much: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch two blank cards and write only the line that changes the scene: ____________________.",
+      "takeHomeLine": "Take-home line: Use the strongest cue to write a short table scene about ____________________."
+    }
+  ]
+}

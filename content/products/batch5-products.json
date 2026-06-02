@@ -871,6 +871,121 @@
         "Turn one broad detail into a make-believe story clue rather than recording exact place information.",
         "Send home one field card with a single finish blank so families can continue the story offline."
       ]
+    },
+    {
+      "slug": "backyard-story-seed-packet-kit",
+      "title": "Backyard Story Seed Packet Kit",
+      "pricePoint": "$35",
+      "status": "checkout_pending",
+      "headline": "A printable backyard writing kit that turns safe yard-view details into paper story seeds.",
+      "summary": "Fourteen adult-led paper seed packet pages help kids notice broad view details, sketch tiny clues, draft a story seed, and revise one clear sentence.",
+      "heroImage": "images/plotsprout/batch24/backyard-story-seed-packet-kit.jpg",
+      "ctaLabel": "Request seed packet kit launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Backyard%20Story%20Seed%20Packet%20Kit",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static backyard story seed packet kit page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "acorn-avenue-errand-office",
+        "pocket-park-notice-board",
+        "button-bakery-map-mixup",
+        "greenhouse-gear-garden",
+        "rain-gauge-railway",
+        "seed-library-map-room",
+        "moss-message-observatory",
+        "pantry-measurement-mystery",
+        "compass-craft-academy",
+        "almost-invention-workshop",
+        "margin-note-market",
+        "binding-day-boardwalk",
+        "index-card-theater-club"
+      ],
+      "includedPages": [
+        "Fourteen printable paper story seed packet pages",
+        "Adult setup guide",
+        "Packet table setup notes",
+        "Observation-to-story-seed coaching moves",
+        "Privacy and site-rule notes",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six adult-led packet formats",
+        "Ten take-home seed slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool yard-view writing session that needs story practice instead of a report",
+        "A library, co-op, or tutoring table with screen-free printable writing pages",
+        "A family porch, window, table, or park-edge activity with adult guidance",
+        "A reluctant-writer warm-up where pointing and sketching can come before sentences",
+        "A take-home seed slip set for finishing one invented story detail offline"
+      ],
+      "parentSteps": [
+        "Choose one adult-approved view and one paper packet before the activity starts.",
+        "Set the look, listen, point, sketch, and imagine rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one broad detail into a make-believe story clue rather than recording exact place information.",
+        "Send home one seed slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A window-view world for turning one color, one sound, and one pretend message into a sensory story seed."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "A helpful errand-desk world for inventing a careful character from one broad view detail."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A tiny notice-board world for making one safe-to-see shape or sound change the setting."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A paper bakery-wrapper world for ordering three visible clues into first, next, and finally."
+        },
+        {
+          "slug": "greenhouse-gear-garden",
+          "summary": "A pretend gear-garden world for revising one sentence with a clearer shape, sound, or color."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A tiny railway-signal world for arranging three broad clues into a beginning, middle, and ending."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A paper map-room world for turning one ordinary visible object into a make-believe clue."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A quiet observatory world for changing one color, pattern, or sound into sensory description."
+        },
+        {
+          "slug": "pantry-measurement-mystery",
+          "summary": "A pantry-table world for turning one shape, one count, and one ordinary object into a story setting clue."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A revision-academy world for replacing a vague direction with a clearer story movement."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "summary": "A paper invention world for arranging a nearly useful idea into three clear story steps."
+        },
+        {
+          "slug": "margin-note-market",
+          "summary": "A revision-market world for turning one vague note into a kind, specific next writing move."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A paper page-order world for using one broad clue to improve a tiny story ending."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "summary": "A two-card theater world for using one view detail to shape a clear character choice."
+        }
+      ]
     }
   ]
 }

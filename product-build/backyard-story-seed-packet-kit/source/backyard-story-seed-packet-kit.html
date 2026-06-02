@@ -1,0 +1,992 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backyard Story Seed Packet Kit</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #243135;
+        --muted: #59666a;
+        --paper: #fffdf8;
+        --line: #c9d9ce;
+        --leaf: #39735c;
+        --gold: #e2b84a;
+        --blue: #327889;
+        --berry: #a9445b;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.1px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 11ch; font-size: 34px; }
+      h2 { margin-bottom: 0.05in; font-size: 18px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.7px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(57, 115, 92, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(57, 115, 92, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--gold); }
+      .guide-page { border-top: 0.16in solid var(--leaf); font-size: 6.9px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.9px; }
+      .format-page { border-top: 0.16in solid var(--blue); font-size: 7.15px; }
+      .slip-page { border-top: 0.16in solid var(--berry); font-size: 7px; }
+      .seed-packet-page { font-size: 7.72px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--leaf);
+        font-size: 6.7px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .format-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.034in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.035in; }
+      .format-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .seed-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .seed-slip p { margin-bottom: 0.022in; }
+      .seed-packet-page figure { float: right; width: 1.38in; margin: 0 0 0.05in 0.09in; }
+      .seed-packet-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--leaf); font-size: 6.6px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--leaf); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.034in;
+      }
+      .field-block p {
+        min-height: 0.29in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(57, 115, 92, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--berry);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable backyard story seed packets</p>
+        <h1>Backyard Story Seed Packet Kit</h1>
+        <p>Fourteen paper seed-packet pages turn broad yard-view, porch-view, window-view, table, and park-edge details into tiny story starts.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, library tables, co-ops, and adult-led yard-view writers ages 7-11.</p>
+        <p><strong>Format:</strong> 14 printable paper story seed packet pages plus adult guide tools, packet formats, take-home seed slips, and optional share prompts.</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$35</span>
+        <h2>Included</h2>
+        <ul><li>14 printable paper story seed packet pages</li>
+<li>Adult setup guide</li>
+<li>Packet table setup notes</li>
+<li>Observation-to-story-seed coaching moves</li>
+<li>Privacy and site-rule notes</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led packet formats</li>
+<li>Ten take-home seed slips</li>
+<li>Provider-ready PDF, source HTML, README, manifest, and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Observation-to-story seeds</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the paper story seed packets, seed slips, and adult guide before the session; these are writing starters, not real seeds.</li>
+<li>Set the adult-led rule: look, listen, point, sketch, and imagine from the yard, garden view, porch view, window view, table, or park edge.</li>
+<li>Say that writers do not collect or touch outdoor materials; ideas come from safe looking and listening.</li>
+<li>Choose one calm viewing option and one table writing option before writers arrive.</li>
+<li>Keep the session screen-free, printable, offline, and short enough for one packet to become one story seed.</li></ul></article>
+        <article class="guide-card"><h3>Packet table setup</h3><ul><li>Place blank paper packets, pencils, and seed slips on the table where the adult can see every page.</li>
+<li>Set six labeled piles: setting, character, object, sequence, revision, and sensory.</li>
+<li>Put one broad place card on the table: yard, garden view, porch view, window view, table, or park edge.</li>
+<li>Leave space for sketches so writers can point or draw before adding words.</li>
+<li>Keep unused packets in an adult folder so the table stays calm and screen-free.</li></ul></article>
+        <article class="guide-card"><h3>Observation-to-story seeds</h3><ul><li>Ask each writer for one look detail, one listen detail, and one imagine detail.</li>
+<li>Turn a color from the garden view into a setting seed with a mood word.</li>
+<li>Turn a shape from the yard or porch view into an object seed with a job.</li>
+<li>Turn a gentle sound from the window view or park edge into a sensory seed with a clue.</li>
+<li>Finish each packet by choosing one sentence to save for a later printable story.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and site notes</h3><ul><li>Use only broad place words: yard, garden view, porch view, window view, table, or park edge.</li>
+<li>Use invented character labels or role words for every person in a story.</li>
+<li>Leave private signs, numbers, family routines, and identifying details off the packet.</li>
+<li>Keep finished packets with the family adult, tutor, homeschool co-op adult, or library table host.</li>
+<li>Treat the packet as paper writing work, not material for a shared site.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Give one finished paper packet and one blank seed slip to each writer.</li>
+<li>Tell family adults that five to nine minutes is enough for one extra story seed.</li>
+<li>Invite families to look, listen, point, sketch, and imagine from a yard, garden view, porch view, window view, table, or park edge.</li>
+<li>Ask adults to praise one clear word, sketch, or sentence before offering one small revision idea.</li>
+<li>Suggest keeping all packet pages together so a later writing session can reuse the strongest seed.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect unused paper packets, seed slips, pencils, and broad place cards.</li>
+<li>Check finished pages for private details before they leave the table.</li>
+<li>Recycle scrap pages that only contain warm-up marks.</li>
+<li>Restock the adult folder with fresh packets for the next offline session.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper packet at a time. Keep every story detail broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Fourteen seed-packet worlds</h2>
+      <p>Pick a world image, then turn one calm broad detail into a fictional story clue.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Greenhouse Gear Garden</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Almost Invention Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article></div>
+    </section>
+    <section class="pack-page format-page">
+      <p class="page-kicker">Packet formats</p>
+      <h2>Choose the paper packet rhythm</h2>
+      <div class="format-grid">
+    <article class="small-card">
+      <h3>Window View Setting Packet</h3>
+      <p>A quiet family or tutoring start when the writer can observe without leaving the table.</p>
+      <ol><li>Adult places the packet beside a clear window view and reads the paper-only reminder.</li>
+<li>Writer looks, listens, and points to one color, shape, or quiet sound.</li>
+<li>Writer sketches the detail inside the packet flap.</li>
+<li>Writer turns the detail into one setting seed sentence.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Garden View Character Packet</h3>
+      <p>Writers who need a friendly character idea from safe observation.</p>
+      <ol><li>Adult chooses one garden view and reminds the writer to observe without collecting or touching anything.</li>
+<li>Writer points to one detail that seems calm, busy, tiny, bright, or hidden.</li>
+<li>Writer imagines a made-up character who would notice that detail first.</li>
+<li>Writer writes what the character wants, wonders, or carries in the story.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Yard Object Packet</h3>
+      <p>Parents and homeschool co-ops that want ordinary object prompts without outdoor handling.</p>
+      <ol><li>Adult names the yard as the viewing choice and keeps the writing at the table.</li>
+<li>Writer looks for one nonliving thing already visible from the chosen view.</li>
+<li>Writer sketches it as a pretend object with a helpful job.</li>
+<li>Writer writes one object seed with what it does in the story.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Porch View Sensory Packet</h3>
+      <p>Kids who notice sounds and textures through safe looking and listening.</p>
+      <ol><li>Adult sets the packet at the table with porch view as the observation choice.</li>
+<li>Writer listens for one gentle sound and looks for one color or pattern.</li>
+<li>Writer chooses the detail that feels most story-ready.</li>
+<li>Writer writes one sensory seed that tells what the detail might mean.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Table Revision Packet</h3>
+      <p>Library tables or tutors helping writers strengthen a seed they already started.</p>
+      <ol><li>Adult places an earlier paper packet and a blank revision slip on the table.</li>
+<li>Writer reads or hears one sentence from the packet.</li>
+<li>Writer adds one clearer look, listen, sketch, or imagine detail.</li>
+<li>Writer copies the stronger sentence into the revision seed space.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Park Edge Sequence Packet</h3>
+      <p>Adult-led groups that can sit or stand at a park edge and write one short beginning path.</p>
+      <ol><li>Adult chooses the park edge view and keeps the group beside the adult.</li>
+<li>Writer looks left, center, and right while staying with the adult.</li>
+<li>Writer picks three safe-to-see details and orders them as first, next, and later.</li>
+<li>Writer writes one sequence seed that uses those three details.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home seed slips</p>
+      <h2>Finish one story seed later</h2>
+      <div class="slip-grid">
+    <article class="seed-slip">
+      <p class="card-kicker">5 minutes | setting seed</p>
+      <h3>Yard Setting Seed</h3>
+      <p>Look from the yard or window view. Write one color or shape you notice: ____________________. Make it a made-up setting detail: ____________________.</p>
+      <p>Our setting seed makes the place feel ____________________.</p>
+    </article>
+
+    <article class="seed-slip">
+      <p class="card-kicker">6 minutes | character seed</p>
+      <h3>Garden View Character Seed</h3>
+      <p>Look at the garden view without collecting anything. Imagine who would notice one detail first: ____________________. That character wants ____________________.</p>
+      <p>The character would begin by asking ____________________.</p>
+    </article>
+
+    <article class="seed-slip">
+      <p class="card-kicker">7 minutes | object seed</p>
+      <h3>Table Object Seed</h3>
+      <p>Choose one paper packet picture or table object. It looks like ____________________. In the story, its job is ____________________.</p>
+      <p>Our object seed matters because ____________________.</p>
+    </article>
+
+    <article class="seed-slip">
+      <p class="card-kicker">8 minutes | sequence seed</p>
+      <h3>First Next Later Seed</h3>
+      <p>Use one yard or porch view detail. First ____________________. Next ____________________. Later ____________________.</p>
+      <p>The step we want to write more about is ____________________.</p>
+    </article>
+
+    <article class="seed-slip">
+      <p class="card-kicker">5 minutes | revision seed</p>
+      <h3>Add One Look Detail</h3>
+      <p>Reread a seed sentence. Add one look detail here: ____________________. New sentence: ____________________.</p>
+      <p>The revision made the sentence clearer by adding ____________________.</p>
+    </article>
+
+    <article class="seed-slip">
+      <p class="card-kicker">6 minutes | sensory seed</p>
+      <h3>Sound From the Window View</h3>
+      <p>Listen from the window view. One gentle sound is ____________________. In the story, it means ____________________.</p>
+      <p>The sound clue tells the character ____________________.</p>
+    </article>
+
+    <article class="seed-slip">
+      <p class="card-kicker">7 minutes | setting seed</p>
+      <h3>Park Edge Place Seed</h3>
+      <p>Look from the park edge and choose one safe-to-see detail: ____________________. Turn it into a setting seed: ____________________.</p>
+      <p>This setting seed should feel ____________________.</p>
+    </article>
+
+    <article class="seed-slip">
+      <p class="card-kicker">8 minutes | object seed</p>
+      <h3>Helpful Object Seed</h3>
+      <p>Point to one nonliving thing visible from the yard or table. It could become ____________________. Its story job is ____________________.</p>
+      <p>The object helps when ____________________.</p>
+    </article>
+
+    <article class="seed-slip">
+      <p class="card-kicker">9 minutes | character seed</p>
+      <h3>Quiet Character Choice</h3>
+      <p>Imagine a character who stays calm and notices carefully. The character notices ____________________ and decides ____________________.</p>
+      <p>The character choice we like is ____________________.</p>
+    </article>
+
+    <article class="seed-slip">
+      <p class="card-kicker">6 minutes | revision seed</p>
+      <h3>Better Ending Seed</h3>
+      <p>Choose one ending idea. Add a clearer setting, object, or sound detail: ____________________. Better ending: ____________________.</p>
+      <p>The ending now feels more finished because ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Show one packet title or sketch if you choose: ____________________.</li>
+<li>Read one setting seed from the paper packet: ____________________.</li>
+<li>Point to the detail that became a story clue: ____________________.</li>
+<li>Tell which broad place word helped today: ____________________.</li>
+<li>Share one made-up character choice without private details: ____________________.</li>
+<li>Show one object seed and its story job: ____________________.</li>
+<li>Name one sentence that improved after revision: ____________________.</li>
+<li>Keep the packet private today and mark the seed you want to save: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 1 | Ages 7-8 | sensory seed</div>
+      <h2>Teacup Window Weather Packet</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one packet, set it on the table, choose a yard or window view, and remind the kid this is paper-only, with look, listen, point, sketch, and imagine choices.</p>
+      <p class="kid-direction">Look through the window view or across the yard. Pick one color, one sound, and one pretend weather-window message for Teacup Town.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>Packet label: Teacup Town saves today&#39;s paper story seed as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Detail seeds: I can look at color ____________________, listen for sound ____________________, and sketch shape ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A tiny window watcher sees ____________________ and imagines the town needs a calmer plan.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>Sprout sentence path: First the watcher notices ____________________. Then the window clue seems to say ____________________. Last the watcher writes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one sensory word to make the window view clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to one safe detail and write only one tiny label: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At the table, turn this paper story seed into three sentences about ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 2 | Ages 7-9 | character seed</div>
+      <h2>Acorn Errand Desk Character Packet</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one packet, place it on the table or clipboard, choose a yard or porch view, and keep the activity paper-only, look-only, and imagination-led.</p>
+      <p class="kid-direction">Look, listen, point, sketch, and imagine one careful Acorn errand helper who notices a safe detail from your view.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>Packet label: The Acorn errand desk files a paper story seed named ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Character seeds: helper job ____________________, careful habit ____________________, small worry ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The errand helper notices ____________________ and decides the message needs a kinder character choice.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>Sprout sentence path: My helper wants ____________________, checks ____________________, and chooses to say ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace a plain character word with a more exact describing word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the helper&#39;s badge shape, then write one character word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At the table, tell a short Acorn errand story starring ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 3 | Ages 7-9 | setting seed</div>
+      <h2>Pocket Park Setting Packet</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one packet, choose a yard, garden view, table, or park edge, and invite looking, listening, pointing, sketching, and imagining only.</p>
+      <p class="kid-direction">Imagine the Pocket Park board needs one setting clue. Look for a broad detail, point to it, then sketch how it changes the scene.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>Packet label: Pocket Park pins a paper story seed for the setting called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Setting seeds: I can sketch a line ____________________, a color ____________________, and a quiet sound ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A new notice appears beside ____________________, changing how the tiny park setting feels.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>Sprout sentence path: The setting starts as ____________________. A new detail changes it to ____________________. My character feels ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one view-safe detail that helps the reader picture the setting: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to one shape, sketch it small, and name it here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At the table, use this setting seed to write about ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 4 | Ages 7-9 | sequence seed</div>
+      <h2>Button Bakery Order Mix-Up Packet</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one packet, fold it like a pretend bakery wrapper, choose a table, porch view, or yard, and keep the work paper-only and eyes-only.</p>
+      <p class="kid-direction">Look, listen, point, sketch, and imagine three safe details you can see from one view; make them the order of a Button Bakery mix-up.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>Packet label: Button Bakery wraps a paper story seed called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Sequence seeds: beginning detail ____________________, middle clue ____________________, ending choice ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The bakery note points first to ____________________, but the next clue changes the order.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>Sprout sentence path: First ____________________. Next ____________________. Finally ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one reason the middle clue belongs after the beginning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number three boxes silently, then write the first box word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At the table, turn the three clues into a Button Bakery scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 5 | Ages 8-10 | revision seed</div>
+      <h2>Greenhouse Gear Revision Packet</h2>
+      <figure>
+        <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+        <figcaption>Greenhouse Gear Garden</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one packet, choose a garden view, window view, or table, and keep it paper-only while the kid looks, listens, sketches, points, and imagines.</p>
+      <p class="kid-direction">Look for a repeating shape, color, or sound in the garden view. Imagine Greenhouse Gear Garden uses that pattern to make a draft clearer.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>Packet label: Greenhouse Gear Garden stores a paper story seed named ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Revision seeds: repeated shape ____________________, repeated sound ____________________, sentence to improve ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The gear keeper hears ____________________ repeat and realizes one story sentence needs a clearer pattern.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>Sprout sentence path: Draft sentence: ____________________. Better detail: ____________________. Revised sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Make the revised sentence stronger by adding one exact sound, color, or shape: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the pattern silently, then revise one word here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At the table, use this paper story seed to polish a Greenhouse Gear Garden paragraph about ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 6 | Ages 8-10 | sequence seed</div>
+      <h2>Rain Gauge Railway Sequence Packet</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one paper story seed packet, fold it on the table, choose a yard, garden view, porch view, or window view, and keep the activity eyes-and-ears only.</p>
+      <p class="kid-direction">Look, listen, point to three broad clues, sketch them in order, and imagine each one as a tiny railway signal.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>My paper railway seed packet is labeled ____________________ because one safe clue looks like a tiny train signal.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Sketch three story seeds: first clue ____________________, next clue ____________________, final clue ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>A careful railway helper notices the gauge card change when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>First ____________________; next ____________________; finally ____________________, so the helper writes one calm story note.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise by adding one sound, color, or order word to the middle step: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: point to the three clues, sketch one, and write only the final word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home seed: From a table or window view, imagine one tiny railway line and write ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 7 | Ages 8-10 | object seed</div>
+      <h2>Seed Library Map Room Object Packet</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one paper story seed packet, place it on the table, and remind the writer that this is pretend packet work, not a gardening activity.</p>
+      <p class="kid-direction">Look at one broad detail, point to it, sketch a pretend label, and imagine why the Seed Library Map Room needs that object.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>This paper seed packet belongs in the drawer labeled ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Object seeds: shape ____________________, pattern ____________________, map mark ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>The map room opens a folded card and finds ____________________ inside.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>The object looks like ____________________, but it acts like ____________________, so the keeper decides ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise by adding one exact size, color, or placement detail to the object: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: sketch the object first, then write its quiet label here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home seed: At a table, choose one ordinary object and turn it into a map-room clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 8 | Ages 8-10 | sensory seed</div>
+      <h2>Moss Message Observatory Sensory Packet</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one paper story seed packet, choose a calm garden view, park edge, or window view, and keep the writing based on looking, listening, and imagining.</p>
+      <p class="kid-direction">Look for a color, listen for a quiet sound, point to a pattern, sketch it, and imagine it as an observatory message.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>The observatory packet is labeled with this quiet message: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Sensory seeds I can safely notice: color ____________________, pattern ____________________, sound ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>A paper observatory note repeats when ____________________ appears in the view.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>The observer sees ____________________, listens for ____________________, and imagines the message means ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise one plain description by adding a sharper sensory word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: point silently to one pattern, sketch it, and write the message word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home seed: From a window view, turn one color or sound into an observatory clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 9 | Ages 8-10 | setting seed</div>
+      <h2>Pantry Measurement Setting Packet</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one paper story seed packet, use a table, porch view, shelf view, or window view, and keep it as paper imagination only.</p>
+      <p class="kid-direction">Look at one shape, count one small group, point to one ordinary object, sketch the scene, and imagine a pantry mystery.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>My paper pantry packet is labeled ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Setting seeds: shape ____________________, counted group ____________________, ordinary object ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>The pantry mystery begins when the paper label beside ____________________ changes to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>In the pantry scene, ____________________ sits near ____________________, while ____________________ makes the setting feel new.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise by adding one where-detail so the reader can picture the shelf or table: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: sketch the shape first, then write one setting word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home seed: At a table, turn one shape or counted detail into a setting sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 10 | Ages 10-11 | revision seed</div>
+      <h2>Compass Craft Academy Revision Packet</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one paper story seed packet, set it on the table, choose a yard, porch view, garden view, window view, or park edge, and invite pointing and sketching only.</p>
+      <p class="kid-direction">Look for one direction clue, point to it, sketch a simple map mark, imagine a clearer scene, and revise one plain sentence.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>Compass Craft packet label: this revision seed points toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Revision seeds: vague line ____________________, clearer direction ____________________, stronger choice ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>A mapmaker at the academy fixes a confusing scene by noticing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>Plain sentence: The helper went there. Revised sentence: The helper moved toward ____________________ because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Replace a vague word with a precise direction, distance, or mood word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: revise one sentence silently and underline the clearer clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home seed: Use the revised clue as the turning point in a compass-academy scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 11 | Ages 10-11 | sequence seed</div>
+      <h2>Almost Invention Workshop Step Packet</h2>
+      <figure>
+        <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+        <figcaption>Almost Invention Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the paper packet, set one pencil on the table, choose a yard, garden view, porch view, window view, table, or park edge, and keep the work to look, listen, point, sketch, and imagine.</p>
+      <p class="kid-direction">Look for one visible or audible detail, imagine it as a nearly useful paper invention, and arrange the idea into three clear steps before revising one step.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>Packet label: My almost-invention is designed for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Detail seeds: I can use a shape detail ____________________, a sound detail ____________________, and a clear verb ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A workshop tester realizes the paper invention almost works when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>Sprout sentence path: First ____________________; then the test shows ____________________; because of that, the inventor changes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Shorten or clarify one step so a reader can follow it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to one detail, sketch the paper invention, and write the revised step here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use the clearest step to start a short workshop scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 12 | Ages 10-11 | revision seed</div>
+      <h2>Margin Note Market Revision Packet</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the paper packet, choose a yard, garden view, porch view, window view, table, or park edge, and remind the writer to look, listen, point, sketch, and imagine only.</p>
+      <p class="kid-direction">Look or listen for one broad detail, imagine it as a note from Margin Note Market, and change a vague comment into one useful revision task.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>Packet label: The margin note I found says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Detail seeds: A specific word to improve is ____________________, a clearer detail is ____________________, and a kind question is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: At Margin Note Market, a writer receives a vague note and turns it into this useful next task: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>Sprout sentence path: The first note says ____________________; the writer asks ____________________; the revised line becomes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one fuzzy comment with a precise action the writer can try: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Work silently at the table and revise only one sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this margin note to improve one story paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 13 | Ages 10-11 | sequence seed</div>
+      <h2>Binding Day Boardwalk Order Packet</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the paper packet, choose a yard, garden view, porch view, window view, table, or park edge, and keep the activity to look, listen, point, sketch, and imagine.</p>
+      <p class="kid-direction">Look for one detail that suggests a beginning, middle, or ending, then imagine it as the clue that fixes a finished paper packet&#39;s order.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>Packet label: My Binding Day packet promises a story about ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Detail seeds: The opening clue is ____________________, the turning detail is ____________________, and the final image is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: On Binding Day, a finished paper packet feels out of order until the writer notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>Sprout sentence path: The first page shows ____________________; the middle page changes when ____________________; the final page lands on ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Rearrange one sentence or add a clearer bridge between two moments: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number three paper page ideas, then write the bridge sentence here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use the final image to polish the ending of a tiny story: ____________________.</p>
+    </section>
+
+    <section class="pack-page seed-packet-page">
+      <div class="page-kicker">Paper Packet 14 | Ages 10-11 | character seed</div>
+      <h2>Index Card Theater Cue Packet</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the paper packet, choose a yard, garden view, porch view, window view, table, or park edge, and keep the writing based on look, listen, point, sketch, and imagine.</p>
+      <p class="kid-direction">Point to one broad detail, imagine it as an index card cue, and write two lines where the second line changes what the character chooses next.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Packet label</h3>
+      <p>Packet label: The index card cue for my character is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail seeds</h3>
+      <p>Detail seeds: My setting clue is ____________________, my character wants ____________________, and the second line changes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: At Index Card Theater Club, two cards create a scene when one character chooses ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sprout sentence path</h3>
+      <p>Sprout sentence path: First the character expects ____________________; then another line reveals ____________________; after that, the scene points toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one action or setting cue that shows the character choice without explaining too much: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch two blank cards and write only the line that changes the scene: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use the strongest cue to write a short table scene about ____________________.</p>
+    </section>
+  </body>
+</html>

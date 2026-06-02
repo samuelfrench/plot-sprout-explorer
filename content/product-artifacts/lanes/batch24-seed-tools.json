@@ -1,0 +1,190 @@
+{
+  "laneId": "batch24-seed-tools",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the paper story seed packets, seed slips, and adult guide before the session; these are writing starters, not real seeds.",
+      "Set the adult-led rule: look, listen, point, sketch, and imagine from the yard, garden view, porch view, window view, table, or park edge.",
+      "Say that writers do not collect or touch outdoor materials; ideas come from safe looking and listening.",
+      "Choose one calm viewing option and one table writing option before writers arrive.",
+      "Keep the session screen-free, printable, offline, and short enough for one packet to become one story seed."
+    ],
+    "packetTableSetup": [
+      "Place blank paper packets, pencils, and seed slips on the table where the adult can see every page.",
+      "Set six labeled piles: setting, character, object, sequence, revision, and sensory.",
+      "Put one broad place card on the table: yard, garden view, porch view, window view, table, or park edge.",
+      "Leave space for sketches so writers can point or draw before adding words.",
+      "Keep unused packets in an adult folder so the table stays calm and screen-free."
+    ],
+    "observationToStorySeeds": [
+      "Ask each writer for one look detail, one listen detail, and one imagine detail.",
+      "Turn a color from the garden view into a setting seed with a mood word.",
+      "Turn a shape from the yard or porch view into an object seed with a job.",
+      "Turn a gentle sound from the window view or park edge into a sensory seed with a clue.",
+      "Finish each packet by choosing one sentence to save for a later printable story."
+    ],
+    "privacyAndSiteNotes": [
+      "Use only broad place words: yard, garden view, porch view, window view, table, or park edge.",
+      "Use invented character labels or role words for every person in a story.",
+      "Leave private signs, numbers, family routines, and identifying details off the packet.",
+      "Keep finished packets with the family adult, tutor, homeschool co-op adult, or library table host.",
+      "Treat the packet as paper writing work, not material for a shared site."
+    ],
+    "familyHandoff": [
+      "Give one finished paper packet and one blank seed slip to each writer.",
+      "Tell family adults that five to nine minutes is enough for one extra story seed.",
+      "Invite families to look, listen, point, sketch, and imagine from a yard, garden view, porch view, window view, table, or park edge.",
+      "Ask adults to praise one clear word, sketch, or sentence before offering one small revision idea.",
+      "Suggest keeping all packet pages together so a later writing session can reuse the strongest seed."
+    ],
+    "reset": [
+      "Collect unused paper packets, seed slips, pencils, and broad place cards.",
+      "Check finished pages for private details before they leave the table.",
+      "Recycle scrap pages that only contain warm-up marks.",
+      "Restock the adult folder with fresh packets for the next offline session."
+    ]
+  },
+  "packetFormats": [
+    {
+      "name": "Window View Setting Packet",
+      "bestFor": "A quiet family or tutoring start when the writer can observe without leaving the table.",
+      "steps": [
+        "Adult places the packet beside a clear window view and reads the paper-only reminder.",
+        "Writer looks, listens, and points to one color, shape, or quiet sound.",
+        "Writer sketches the detail inside the packet flap.",
+        "Writer turns the detail into one setting seed sentence."
+      ]
+    },
+    {
+      "name": "Garden View Character Packet",
+      "bestFor": "Writers who need a friendly character idea from safe observation.",
+      "steps": [
+        "Adult chooses one garden view and reminds the writer to observe without collecting or touching anything.",
+        "Writer points to one detail that seems calm, busy, tiny, bright, or hidden.",
+        "Writer imagines a made-up character who would notice that detail first.",
+        "Writer writes what the character wants, wonders, or carries in the story."
+      ]
+    },
+    {
+      "name": "Yard Object Packet",
+      "bestFor": "Parents and homeschool co-ops that want ordinary object prompts without outdoor handling.",
+      "steps": [
+        "Adult names the yard as the viewing choice and keeps the writing at the table.",
+        "Writer looks for one nonliving thing already visible from the chosen view.",
+        "Writer sketches it as a pretend object with a helpful job.",
+        "Writer writes one object seed with what it does in the story."
+      ]
+    },
+    {
+      "name": "Porch View Sensory Packet",
+      "bestFor": "Kids who notice sounds and textures through safe looking and listening.",
+      "steps": [
+        "Adult sets the packet at the table with porch view as the observation choice.",
+        "Writer listens for one gentle sound and looks for one color or pattern.",
+        "Writer chooses the detail that feels most story-ready.",
+        "Writer writes one sensory seed that tells what the detail might mean."
+      ]
+    },
+    {
+      "name": "Table Revision Packet",
+      "bestFor": "Library tables or tutors helping writers strengthen a seed they already started.",
+      "steps": [
+        "Adult places an earlier paper packet and a blank revision slip on the table.",
+        "Writer reads or hears one sentence from the packet.",
+        "Writer adds one clearer look, listen, sketch, or imagine detail.",
+        "Writer copies the stronger sentence into the revision seed space."
+      ]
+    },
+    {
+      "name": "Park Edge Sequence Packet",
+      "bestFor": "Adult-led groups that can sit or stand at a park edge and write one short beginning path.",
+      "steps": [
+        "Adult chooses the park edge view and keeps the group beside the adult.",
+        "Writer looks left, center, and right while staying with the adult.",
+        "Writer picks three safe-to-see details and orders them as first, next, and later.",
+        "Writer writes one sequence seed that uses those three details."
+      ]
+    }
+  ],
+  "takeHomeSeedSlips": [
+    {
+      "title": "Yard Setting Seed",
+      "time": "5 minutes",
+      "skill": "setting seed",
+      "direction": "Look from the yard or window view. Write one color or shape you notice: ____________________. Make it a made-up setting detail: ____________________.",
+      "familyLine": "Our setting seed makes the place feel ____________________."
+    },
+    {
+      "title": "Garden View Character Seed",
+      "time": "6 minutes",
+      "skill": "character seed",
+      "direction": "Look at the garden view without collecting anything. Imagine who would notice one detail first: ____________________. That character wants ____________________.",
+      "familyLine": "The character would begin by asking ____________________."
+    },
+    {
+      "title": "Table Object Seed",
+      "time": "7 minutes",
+      "skill": "object seed",
+      "direction": "Choose one paper packet picture or table object. It looks like ____________________. In the story, its job is ____________________.",
+      "familyLine": "Our object seed matters because ____________________."
+    },
+    {
+      "title": "First Next Later Seed",
+      "time": "8 minutes",
+      "skill": "sequence seed",
+      "direction": "Use one yard or porch view detail. First ____________________. Next ____________________. Later ____________________.",
+      "familyLine": "The step we want to write more about is ____________________."
+    },
+    {
+      "title": "Add One Look Detail",
+      "time": "5 minutes",
+      "skill": "revision seed",
+      "direction": "Reread a seed sentence. Add one look detail here: ____________________. New sentence: ____________________.",
+      "familyLine": "The revision made the sentence clearer by adding ____________________."
+    },
+    {
+      "title": "Sound From the Window View",
+      "time": "6 minutes",
+      "skill": "sensory seed",
+      "direction": "Listen from the window view. One gentle sound is ____________________. In the story, it means ____________________.",
+      "familyLine": "The sound clue tells the character ____________________."
+    },
+    {
+      "title": "Park Edge Place Seed",
+      "time": "7 minutes",
+      "skill": "setting seed",
+      "direction": "Look from the park edge and choose one safe-to-see detail: ____________________. Turn it into a setting seed: ____________________.",
+      "familyLine": "This setting seed should feel ____________________."
+    },
+    {
+      "title": "Helpful Object Seed",
+      "time": "8 minutes",
+      "skill": "object seed",
+      "direction": "Point to one nonliving thing visible from the yard or table. It could become ____________________. Its story job is ____________________.",
+      "familyLine": "The object helps when ____________________."
+    },
+    {
+      "title": "Quiet Character Choice",
+      "time": "9 minutes",
+      "skill": "character seed",
+      "direction": "Imagine a character who stays calm and notices carefully. The character notices ____________________ and decides ____________________.",
+      "familyLine": "The character choice we like is ____________________."
+    },
+    {
+      "title": "Better Ending Seed",
+      "time": "6 minutes",
+      "skill": "revision seed",
+      "direction": "Choose one ending idea. Add a clearer setting, object, or sound detail: ____________________. Better ending: ____________________.",
+      "familyLine": "The ending now feels more finished because ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Show one packet title or sketch if you choose: ____________________.",
+    "Read one setting seed from the paper packet: ____________________.",
+    "Point to the detail that became a story clue: ____________________.",
+    "Tell which broad place word helped today: ____________________.",
+    "Share one made-up character choice without private details: ____________________.",
+    "Show one object seed and its story job: ____________________.",
+    "Name one sentence that improved after revision: ____________________.",
+    "Keep the packet private today and mark the seed you want to save: ____________________."
+  ]
+}

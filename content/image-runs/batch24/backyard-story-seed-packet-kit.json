@@ -1,0 +1,20 @@
+{
+  "slug": "backyard-story-seed-packet-kit",
+  "prompt": "minimal family-friendly product mockup flat lay, only blank cream envelopes, blank folded paper cards, plain pastel color swatches, warm wooden tabletop, large empty center, zero markings, zero writing, no text, no labels, no writing tools, no pencils, no pens, no crayons, no scissors, no bottles, no cups, no leaves, no plants, no seeds, no people, no faces, no animals, no letters, no numbers, no logos, no watermark, no branded characters, no scary harm, no weapons, no phone, no tablet, no device, no map, no GPS, no route, no address, screen-free printable backyard story seed packet kit",
+  "negativePrompt": "text, readable writing, letters, numbers, logo, watermark, signature, label, markings, pen, pencil, crayon, scissors, bottle, cup, notebook, phone, tablet, computer, screen, device, electronics, leaf, leaves, plants, seeds, twig, stick, people, face, animal, scary, horror, weapon, violence, brand character, blurry, low resolution",
+  "model": "sd_xl_base_1.0.safetensors img2img from constrained paper-only layout",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 36,
+  "guidance": 4.5,
+  "strength": 0.04,
+  "seed": 26062455,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch24/backyard-story-seed-packet-kit.jpg",
+  "outputWebp": "public/images/plotsprout/batch24/backyard-story-seed-packet-kit.webp",
+  "manifest": "content/image-queue/2026-06-02-batch24-product-images.json",
+  "title": "Backyard Story Seed Packet Kit",
+  "mode": "local-sdxl-img2img-constrained-layout-polish"
+}

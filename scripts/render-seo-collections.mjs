@@ -712,6 +712,7 @@ function renderWorldGallery(manifest, worlds) {
 
 function renderProductPage(product, worlds) {
   const canonical = `${siteRoot}/${product.slug}/`
+  const productWorldSummaries = new Map((product.worldSummaries ?? []).map((item) => [item.slug, item.summary]))
   const referencedWorlds = product.worldSlugs.map((slug) => {
     const world = worlds.get(slug)
     if (!world) fail(`Unknown product world slug in ${product.slug}: ${slug}`)
@@ -723,7 +724,7 @@ function renderProductPage(product, worlds) {
         <article class="world-card">
           <span>Ages ${escapeHtml(world.ageBand)} | ${escapeHtml(world.seoLane ?? 'starter world')}</span>
           <h3>${escapeHtml(world.title)}</h3>
-          <p>${escapeHtml(world.premise)}</p>
+          <p>${escapeHtml(productWorldSummaries.get(world.slug) ?? world.premise)}</p>
         </article>`,
     )
     .join('\n')

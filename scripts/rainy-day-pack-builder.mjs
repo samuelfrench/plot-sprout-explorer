@@ -411,6 +411,7 @@ export function buildProductArtifactManifest(source, files, options = {}) {
       source.visitQuests?.length ??
       source.postcards?.length ??
       source.fieldNotes?.length ??
+      source.seedPackets?.length ??
       0,
     fulfillmentNote:
       options.fulfillmentNote ??

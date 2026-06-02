@@ -398,6 +398,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Twelve printable nature-walk field notes with adult guide tools, walk formats, and take-home field cards.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'backyard-story-seed-packet-kit',
+    title: 'Backyard Story Seed Packet Kit',
+    pricePoint: '$35',
+    description:
+      'Fourteen paper story seed packet pages with adult guide tools, packet formats, and take-home seed slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

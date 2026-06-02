@@ -1,0 +1,73 @@
+{
+  "laneId": "batch24-seed-packets-c",
+  "seedPackets": [
+    {
+      "id": "backyard-seed-packet-11",
+      "title": "Almost Invention Workshop Step Packet",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "seedPacketSkill": "sequence seed",
+      "useCase": "Adult-led, screen-free, printable, offline paper packet for older writers to turn a yard, garden view, porch view, or table detail into a clear test-and-revise sequence.",
+      "adultSetup": "Print the paper packet, set one pencil on the table, choose a yard, garden view, porch view, window view, table, or park edge, and keep the work to look, listen, point, sketch, and imagine.",
+      "kidDirection": "Look for one visible or audible detail, imagine it as a nearly useful paper invention, and arrange the idea into three clear steps before revising one step.",
+      "packetLabelPrompt": "Packet label: My almost-invention is designed for ____________________.",
+      "detailSeedsPrompt": "Detail seeds: I can use a shape detail ____________________, a sound detail ____________________, and a clear verb ____________________.",
+      "storySeedPrompt": "Story seed: A workshop tester realizes the paper invention almost works when ____________________.",
+      "sproutSentencePath": "Sprout sentence path: First ____________________; then the test shows ____________________; because of that, the inventor changes ____________________.",
+      "revisionNudge": "Revision nudge: Shorten or clarify one step so a reader can follow it: ____________________.",
+      "quietOptionLine": "Quiet option: Point to one detail, sketch the paper invention, and write the revised step here: ____________________.",
+      "takeHomeLine": "Take-home line: Use the clearest step to start a short workshop scene about ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-12",
+      "title": "Margin Note Market Revision Packet",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "seedPacketSkill": "revision seed",
+      "useCase": "Adult-led, screen-free, printable, offline paper packet for turning a yard, garden view, window view, or table detail into kind, specific revision work.",
+      "adultSetup": "Print the paper packet, choose a yard, garden view, porch view, window view, table, or park edge, and remind the writer to look, listen, point, sketch, and imagine only.",
+      "kidDirection": "Look or listen for one broad detail, imagine it as a note from Margin Note Market, and change a vague comment into one useful revision task.",
+      "packetLabelPrompt": "Packet label: The margin note I found says ____________________.",
+      "detailSeedsPrompt": "Detail seeds: A specific word to improve is ____________________, a clearer detail is ____________________, and a kind question is ____________________.",
+      "storySeedPrompt": "Story seed: At Margin Note Market, a writer receives a vague note and turns it into this useful next task: ____________________.",
+      "sproutSentencePath": "Sprout sentence path: The first note says ____________________; the writer asks ____________________; the revised line becomes ____________________.",
+      "revisionNudge": "Revision nudge: Replace one fuzzy comment with a precise action the writer can try: ____________________.",
+      "quietOptionLine": "Quiet option: Work silently at the table and revise only one sentence: ____________________.",
+      "takeHomeLine": "Take-home line: Use this margin note to improve one story paragraph: ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-13",
+      "title": "Binding Day Boardwalk Order Packet",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "seedPacketSkill": "sequence seed",
+      "useCase": "Adult-led, screen-free, printable, offline paper packet for older writers to use a yard, window view, porch view, or table detail as the order clue for a finished mini story.",
+      "adultSetup": "Print the paper packet, choose a yard, garden view, porch view, window view, table, or park edge, and keep the activity to look, listen, point, sketch, and imagine.",
+      "kidDirection": "Look for one detail that suggests a beginning, middle, or ending, then imagine it as the clue that fixes a finished paper packet's order.",
+      "packetLabelPrompt": "Packet label: My Binding Day packet promises a story about ____________________.",
+      "detailSeedsPrompt": "Detail seeds: The opening clue is ____________________, the turning detail is ____________________, and the final image is ____________________.",
+      "storySeedPrompt": "Story seed: On Binding Day, a finished paper packet feels out of order until the writer notices ____________________.",
+      "sproutSentencePath": "Sprout sentence path: The first page shows ____________________; the middle page changes when ____________________; the final page lands on ____________________.",
+      "revisionNudge": "Revision nudge: Rearrange one sentence or add a clearer bridge between two moments: ____________________.",
+      "quietOptionLine": "Quiet option: Number three paper page ideas, then write the bridge sentence here: ____________________.",
+      "takeHomeLine": "Take-home line: Use the final image to polish the ending of a tiny story: ____________________."
+    },
+    {
+      "id": "backyard-seed-packet-14",
+      "title": "Index Card Theater Cue Packet",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "seedPacketSkill": "character seed",
+      "useCase": "Adult-led, screen-free, printable, offline paper packet for using a table, porch view, window view, or park edge detail to build a two-line scene with a clear character choice.",
+      "adultSetup": "Print the paper packet, choose a yard, garden view, porch view, window view, table, or park edge, and keep the writing based on look, listen, point, sketch, and imagine.",
+      "kidDirection": "Point to one broad detail, imagine it as an index card cue, and write two lines where the second line changes what the character chooses next.",
+      "packetLabelPrompt": "Packet label: The index card cue for my character is ____________________.",
+      "detailSeedsPrompt": "Detail seeds: My setting clue is ____________________, my character wants ____________________, and the second line changes ____________________.",
+      "storySeedPrompt": "Story seed: At Index Card Theater Club, two cards create a scene when one character chooses ____________________.",
+      "sproutSentencePath": "Sprout sentence path: First the character expects ____________________; then another line reveals ____________________; after that, the scene points toward ____________________.",
+      "revisionNudge": "Revision nudge: Add one action or setting cue that shows the character choice without explaining too much: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch two blank cards and write only the line that changes the scene: ____________________.",
+      "takeHomeLine": "Take-home line: Use the strongest cue to write a short table scene about ____________________."
+    }
+  ]
+}

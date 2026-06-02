@@ -3,6 +3,8 @@ import { resolve } from 'node:path'
 
 import { containsActiveCheckoutLanguage } from './content-policy.mjs'
 import {
+  validateBackyardStorySeedPacketKitSource,
+  validateBackyardStorySeedPacketKitSourceFiles,
   validateAfterSchoolStoryClubKitSource,
   inspectArtifactFiles,
   validateBirthdayPartyKitSource,
@@ -49,6 +51,7 @@ const batch20ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch21ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch21-product-images.json')
 const batch22ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch22-product-images.json')
 const batch23ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch23-product-images.json')
+const batch24ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch24-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -66,6 +69,7 @@ const familyGameNightSourceFile = resolve(root, 'content', 'product-artifacts', 
 const grandparentVisitSourceFile = resolve(root, 'content', 'product-artifacts', 'grandparent-story-visit-kit.json')
 const thankYouSourceFile = resolve(root, 'content', 'product-artifacts', 'thank-you-note-story-postcard-pack.json')
 const natureWalkSourceFile = resolve(root, 'content', 'product-artifacts', 'nature-walk-story-field-notes-kit.json')
+const backyardSeedSourceFile = resolve(root, 'content', 'product-artifacts', 'backyard-story-seed-packet-kit.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -84,6 +88,7 @@ const batch20ProductImagesBatchId = '2026-06-02-batch20-product-images'
 const batch21ProductImagesBatchId = '2026-06-02-batch21-product-images'
 const batch22ProductImagesBatchId = '2026-06-02-batch22-product-images'
 const batch23ProductImagesBatchId = '2026-06-02-batch23-product-images'
+const batch24ProductImagesBatchId = '2026-06-02-batch24-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -101,6 +106,7 @@ const familyGameNightBatchId = '2026-06-02-batch20'
 const grandparentVisitBatchId = '2026-06-02-batch21'
 const thankYouBatchId = '2026-06-02-batch22'
 const natureWalkBatchId = '2026-06-02-batch23'
+const backyardSeedBatchId = '2026-06-02-batch24'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -1151,6 +1157,63 @@ function validateBatch23ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch24ProductImage(image) {
+  const label = `2026-06-02-batch24-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(image.slug === 'backyard-story-seed-packet-kit', `${label}.slug must be backyard-story-seed-packet-kit.`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch24/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch24/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch24/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'no text',
+    'no letters',
+    'no labels',
+    'no logos',
+    'no watermark',
+    'no branded characters',
+    'no scary harm',
+    'no weapons',
+    'no writing tools',
+    'no pencils',
+    'no pens',
+    'no crayons',
+    'no people',
+    'no faces',
+    'no animals',
+    'no phone',
+    'no tablet',
+    'no device',
+    'no map',
+    'no gps',
+    'no route',
+    'no address',
+    'screen-free printable backyard story seed packet kit',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -1297,6 +1360,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
       minParentSteps: 5,
       maxWorldSlugs: 12,
     },
+    'backyard-story-seed-packet-kit': {
+      title: 'Backyard Story Seed Packet Kit',
+      pricePoint: '$35',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 14,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -1314,6 +1385,35 @@ function validateProduct(product, productSlugs, worldSlugs) {
   for (const worldSlug of product.worldSlugs) {
     expect(worldSlugs.has(worldSlug), `${label}.worldSlugs references unknown world slug ${worldSlug}.`)
   }
+  if (product.slug === 'backyard-story-seed-packet-kit') {
+    const offScopeBackyardLanguage =
+      /\bseed swaps?\b|\bcompost\b|\bwatering cans?\b|\bseedlings?\b|\bsolar ovens?\b|\bwarm snacks?\b|\bplanting seeds?\b|\bwatering plants?\b|\bsoil\b|\bgarden tools?\b|\bforaging\b|\btasting plants?\b|\bplant identification\b/i
+    expect(Array.isArray(product.worldSummaries), `${label}.worldSummaries must be an array.`)
+    expect(
+      product.worldSummaries.length === product.worldSlugs.length,
+      `${label}.worldSummaries must cover every linked world.`,
+    )
+    const expectedSummarySlugs = new Set(product.worldSlugs)
+    const seenSummarySlugs = new Set()
+    product.worldSummaries.forEach((summary, index) => {
+      expect(typeof summary === 'object' && summary !== null, `${label}.worldSummaries[${index}] must be an object.`)
+      validateString(summary.slug, `${label}.worldSummaries[${index}].slug`)
+      validateString(summary.summary, `${label}.worldSummaries[${index}].summary`)
+      expect(
+        expectedSummarySlugs.has(summary.slug),
+        `${label}.worldSummaries[${index}].slug must match a linked world slug.`,
+      )
+      expect(!seenSummarySlugs.has(summary.slug), `${label}.worldSummaries[${index}].slug is duplicated.`)
+      seenSummarySlugs.add(summary.slug)
+      expect(
+        !offScopeBackyardLanguage.test(summary.summary),
+        `${label}.worldSummaries[${index}].summary includes real-gardening, experiment, foraging, tasting, or plant-identification language.`,
+      )
+    })
+    for (const worldSlug of product.worldSlugs) {
+      expect(seenSummarySlugs.has(worldSlug), `${label}.worldSummaries missing linked world slug ${worldSlug}.`)
+    }
+  }
   validateMinList(product.includedPages, expectedProduct.minIncludedPages, `${label}.includedPages`)
   validateMinList(product.useCases, expectedProduct.minUseCases, `${label}.useCases`)
   validateMinList(product.parentSteps, expectedProduct.minParentSteps, `${label}.parentSteps`)
@@ -1328,6 +1428,15 @@ function validateProduct(product, productSlugs, worldSlugs) {
   expect(renderedHtml.includes(product.title), `${label} static output missing product title.`)
   expect(renderedHtml.includes(product.pricePoint), `${label} static output missing price.`)
   expect(renderedHtml.includes(product.checkoutNote), `${label} static output missing checkout note.`)
+  if (product.slug === 'backyard-story-seed-packet-kit') {
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    expect(
+      !/\bseed swaps?\b|\bcompost\b|\bwatering cans?\b|\bseedlings?\b|\bsolar ovens?\b|\bwarm snacks?\b|\bplanting seeds?\b|\bwatering plants?\b|\bsoil\b|\bgarden tools?\b|\bforaging\b|\btasting plants?\b|\bplant identification\b/i.test(renderedHtml),
+      `${label} static output includes real-gardening, experiment, foraging, tasting, or plant-identification language.`,
+    )
+  }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
   validateString(metaDescription, `${label} rendered meta description`)
   expect(
@@ -1606,12 +1715,23 @@ expect(Array.isArray(batch23ProductImages.images), 'batch23 product image manife
 expect(batch23ProductImages.images.length === 1, `Expected 1 Batch 23 product image, found ${batch23ProductImages.images.length}.`)
 validateBatch23ProductImage(batch23ProductImages.images[0])
 
+expect(existsSync(batch24ProductImagesFile), `Missing Batch 24 product image manifest: ${batch24ProductImagesFile}`)
+const batch24ProductImages = readJson(batch24ProductImagesFile)
+expect(
+  batch24ProductImages.batchId === batch24ProductImagesBatchId,
+  `batch24 product image manifest batchId must be ${batch24ProductImagesBatchId}.`,
+)
+expect(batch24ProductImages.generatedAt === '2026-06-02', 'batch24 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch24ProductImages.images), 'batch24 product image manifest images must be an array.')
+expect(batch24ProductImages.images.length === 1, `Expected 1 Batch 24 product image, found ${batch24ProductImages.images.length}.`)
+validateBatch24ProductImage(batch24ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 16, `Expected 16 product records, found ${products.products.length}.`)
+expect(products.products.length === 17, `Expected 17 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -1631,6 +1751,7 @@ for (const requiredProductSlug of [
   'grandparent-story-visit-kit',
   'thank-you-note-story-postcard-pack',
   'nature-walk-story-field-notes-kit',
+  'backyard-story-seed-packet-kit',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -2673,6 +2794,75 @@ for (const asset of natureWalkArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Nature Walk Story Field Notes Kit copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(backyardSeedSourceFile), `Missing Batch 24 Backyard Story Seed Packet Kit source file: ${backyardSeedSourceFile}`)
+const backyardSeedSource = readJson(backyardSeedSourceFile)
+expect(
+  backyardSeedSource.batchId === backyardSeedBatchId,
+  `Backyard Story Seed Packet Kit source batchId must be ${backyardSeedBatchId}.`,
+)
+const backyardSeedProduct = products.products.find((product) => product.slug === 'backyard-story-seed-packet-kit')
+expect(backyardSeedProduct, 'Missing Backyard Story Seed Packet Kit product record for Batch 24 artifact validation.')
+const backyardSeedSourceErrors = validateBackyardStorySeedPacketKitSource(
+  backyardSeedSource,
+  backyardSeedProduct,
+  worldAgeBands,
+)
+expect(
+  backyardSeedSourceErrors.length === 0,
+  `Backyard Story Seed Packet Kit source failed validation:\n${backyardSeedSourceErrors.join('\n')}`,
+)
+const backyardSeedSourceFileErrors = validateBackyardStorySeedPacketKitSourceFiles(backyardSeedSource, root)
+expect(
+  backyardSeedSourceFileErrors.length === 0,
+  `Backyard Story Seed Packet Kit sourceFiles failed validation:\n${backyardSeedSourceFileErrors.join('\n')}`,
+)
+const backyardSeedExpectedPdfPages = backyardSeedSource.seedPackets.length + 5
+const backyardSeedArtifactStatus = inspectArtifactFiles(root, backyardSeedSource.artifact, {
+  expectedPdfPages: backyardSeedExpectedPdfPages,
+})
+expect(
+  backyardSeedArtifactStatus.valid,
+  `Backyard Story Seed Packet Kit artifacts failed validation:\n${backyardSeedArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  backyardSeedArtifactStatus.files.pdf.size > 100_000,
+  `Backyard Story Seed Packet Kit PDF artifact is unexpectedly small: ${backyardSeedArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  backyardSeedArtifactStatus.files.pdf.pageCount === backyardSeedExpectedPdfPages,
+  `Backyard Story Seed Packet Kit PDF artifact must have ${backyardSeedExpectedPdfPages} pages.`,
+)
+expect(
+  backyardSeedArtifactStatus.files.zip.size > backyardSeedArtifactStatus.files.pdf.size,
+  'Backyard Story Seed Packet Kit ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const backyardSeedCheckoutErrors = validateCheckoutReadiness(backyardSeedProduct, backyardSeedArtifactStatus)
+expect(
+  backyardSeedCheckoutErrors.length === 0,
+  `Backyard Story Seed Packet Kit checkout readiness failed validation:\n${backyardSeedCheckoutErrors.join('\n')}`,
+)
+const backyardSeedArtifactManifest = readJson(resolve(root, backyardSeedSource.artifact.manifestPath))
+expect(
+  backyardSeedArtifactManifest.sourcePageCount === backyardSeedSource.seedPackets.length,
+  'Backyard Story Seed Packet Kit artifact manifest sourcePageCount must match source seedPackets.',
+)
+expect(
+  Array.isArray(backyardSeedArtifactManifest.files.assets),
+  'Backyard Story Seed Packet Kit artifact manifest files.assets must be an array.',
+)
+expect(
+  backyardSeedArtifactManifest.files.assets.length === backyardSeedSource.worldSlugs.length,
+  'Backyard Story Seed Packet Kit artifact manifest must include one copied local image per source world.',
+)
+const backyardSeedManifestAssetErrors = validateManifestWorldAssets(backyardSeedSource, backyardSeedArtifactManifest)
+expect(
+  backyardSeedManifestAssetErrors.length === 0,
+  `Backyard Story Seed Packet Kit artifact manifest image coverage failed validation:\n${backyardSeedManifestAssetErrors.join('\n')}`,
+)
+for (const asset of backyardSeedArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Backyard Story Seed Packet Kit copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 16 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 17 product artifacts.`,
 )

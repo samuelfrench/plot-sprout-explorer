@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch24-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "backyard-story-seed-packet-kit",
+      "title": "Backyard Story Seed Packet Kit",
+      "purpose": "Product hero image for the Batch 24 printable backyard story seed packet kit.",
+      "prompt": "minimal family-friendly product mockup flat lay, only blank cream envelopes, blank folded paper cards, plain pastel color swatches, warm wooden tabletop, large empty center, zero markings, zero writing, no text, no labels, no writing tools, no pencils, no pens, no crayons, no scissors, no bottles, no cups, no leaves, no plants, no seeds, no people, no faces, no animals, no letters, no numbers, no logos, no watermark, no branded characters, no scary harm, no weapons, no phone, no tablet, no device, no map, no GPS, no route, no address, screen-free printable backyard story seed packet kit",
+      "outputJpeg": "public/images/plotsprout/batch24/backyard-story-seed-packet-kit.jpg",
+      "outputWebp": "public/images/plotsprout/batch24/backyard-story-seed-packet-kit.webp",
+      "sidecar": "content/image-runs/batch24/backyard-story-seed-packet-kit.json",
+      "seed": 26062455
+    }
+  ]
+}
