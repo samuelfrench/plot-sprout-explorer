@@ -1,0 +1,1095 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Museum Day Story Notebook Kit</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #17343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #b9d1c8;
+        --teal: #2c7a78;
+        --coral: #e96d3d;
+        --gold: #f2c14f;
+        --blue: #2b7f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 10.9px;
+        line-height: 1.14;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 12ch; font-size: 37px; }
+      h2 { margin-bottom: 0.05in; font-size: 21px; }
+      h3 { margin-bottom: 0.025in; font-size: 11.2px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.12in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.18in;
+        gap: 0.22in;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--teal);
+        font-size: 8.55px;
+      }
+      .world-page {
+        border-top: 0.16in solid var(--gold);
+        font-size: 8.45px;
+      }
+      .routine-page {
+        border-top: 0.16in solid var(--blue);
+        font-size: 8.8px;
+      }
+      .slip-page {
+        border-top: 0.16in solid var(--coral);
+        font-size: 8.9px;
+      }
+      .notebook-page {
+        font-size: 10px;
+      }
+      .page-kicker, .kicker, .world-intro span, .slip-card span {
+        color: var(--teal);
+        font-size: 8.2px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      .cover-page ul, .guide-page ul, .routine-page ul {
+        margin: 0;
+        padding-left: 0.18in;
+      }
+      .cover-meta {
+        display: grid;
+        gap: 0.08in;
+        align-content: start;
+      }
+      .guide-grid, .routine-grid, .slip-grid, .world-grid {
+        display: grid;
+        gap: 0.07in;
+      }
+      .guide-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
+      .routine-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .slip-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .world-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+      }
+      .guide-card, .routine-card, .slip-card, .world-intro, .worksheet-section {
+        padding: 0.055in;
+        background: rgba(255, 255, 255, 0.78);
+        border: 1px solid var(--line);
+      }
+      .world-intro img {
+        width: 100%;
+        aspect-ratio: 1.42 / 1;
+        object-fit: cover;
+        margin-bottom: 0.035in;
+      }
+      .world-page .world-intro {
+        padding: 0.045in;
+      }
+      .world-page .world-intro img {
+        aspect-ratio: 1.7 / 1;
+      }
+      .notebook-page figure {
+        float: right;
+        width: 1.62in;
+        margin: 0 0 0.06in 0.12in;
+      }
+      .notebook-page figure img {
+        width: 100%;
+        aspect-ratio: 1.25 / 1;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--teal);
+        font-size: 7.4px;
+        font-weight: 900;
+      }
+      .kid-direction, .adult-note {
+        margin-bottom: 0.055in;
+        padding: 0.055in;
+        background: white;
+        border-left: 0.06in solid var(--gold);
+      }
+      .adult-note {
+        border-left-color: var(--teal);
+      }
+      .quest-meta {
+        display: grid;
+        grid-template-columns: 0.96in 1fr;
+        gap: 0.04in;
+        margin-bottom: 0.055in;
+        color: var(--ink);
+        font-size: 8.2px;
+        font-weight: 900;
+      }
+      .quest-meta span {
+        padding: 0.035in;
+        background: rgba(242, 193, 79, 0.2);
+        border: 1px solid var(--line);
+      }
+      .worksheet-sections {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.055in;
+      }
+      .write-line {
+        min-height: 0.21in;
+        margin-bottom: 0.025in;
+        padding-bottom: 0.02in;
+        border-bottom: 1px solid rgba(44, 122, 120, 0.16);
+      }
+      .wrap-line, .extension-line, .take-home-line {
+        margin-bottom: 0.035in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.82);
+        border: 1px dashed var(--line);
+      }
+      .extension-line { border-color: var(--blue); }
+      .take-home-line { border-color: var(--coral); }
+      .share-grid {
+        columns: 2;
+      }
+      .footer-note {
+        margin-top: 0.08in;
+        font-size: 8.2px;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable museum day writing notebook</p>
+        <h1>Museum Day Story Notebook Kit</h1>
+        <p>Fifteen observation-to-fiction notebook pages for field trips, co-ops, and family learning days.</p>
+        <p><strong>Audience:</strong> Homeschool co-ops, family learning days, museum educators, field-trip organizers, and library or gallery writing tables for ages 7-11.</p>
+        <p><strong>Format:</strong> 15 printable observation-to-fiction notebook pages plus adult visit tools</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$37</span>
+        <h2>Included</h2>
+        <ul><li>15 story notebook pages</li>
+<li>Before-visit planning guide</li>
+<li>Adult table setup checklist</li>
+<li>Observation-to-story prompts</li>
+<li>Quiet participation notes</li>
+<li>No-data use notes</li>
+<li>Family handoff notes</li>
+<li>Six museum-day visit formats</li>
+<li>Ten take-home observation cards</li>
+<li>Eight optional family-share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Use the notebook day</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before visit</h3><ul><li>Print one adult copy, the planned notebook pages, and a small stack of take-home observation cards before the group arrives.</li>
+<li>Choose one calm gallery focus such as shape, pattern, object use, texture, or setting detail for the first writing table.</li>
+<li>Prepare pencils, clipboards, plain folders, and a quiet choice bank so the activity can run without devices.</li>
+<li>Review any venue rules with the adult team and keep the writing task at tables, benches, or approved education spaces.</li>
+<li>Plan a short adult model that turns one observed detail into an invented story clue without using personal facts.</li></ul></article>
+        <article class="guide-card"><h3>Table setup</h3><ul><li>Place only the active notebook page, pencil, and one choice strip at each seat so the table stays uncluttered.</li>
+<li>Keep extra cards, spare pages, and folders in an adult supply stack until the group is ready for them.</li>
+<li>Use color tabs, symbols, or blank folders for simple sorting instead of private identifiers.</li>
+<li>Set a quiet table option where participants can sketch, point, or write one short line before joining a larger task.</li>
+<li>Leave clear space for clipboards and printed pages so the writing table works in a museum, gallery, co-op, or library room.</li></ul></article>
+        <article class="guide-card"><h3>Observation to story</h3><ul><li>Start with one visible detail such as a color, material, shape, shadow, pattern, label-free object, or room feature.</li>
+<li>Ask writers to turn that detail into an invented setting, helper, object clue, or small friendly mix-up.</li>
+<li>Offer two adult-created options when someone is stuck, and keep every story detail make-believe.</li>
+<li>Move from observation to fiction in small steps: notice, choose, imagine, write, and mark one detail to keep.</li>
+<li>Use neutral language such as maker, guide, visitor, collector, builder, or messenger for invented roles.</li></ul></article>
+        <article class="guide-card"><h3>Quiet participation</h3><ul><li>Allow participation by pointing to a choice, circling a detail, sketching a label, dictating one phrase, or writing privately.</li>
+<li>Let anyone pass during sharing while still completing a notebook page or take-home card.</li>
+<li>Offer a silent five-minute observation card when the room is busy or the group needs a settled reset.</li>
+<li>Invite partners to share only a title, object clue, or setting detail instead of a full draft.</li>
+<li>Keep adult support focused on the printed prompt, the observed detail, and the next small story step.</li></ul></article>
+        <article class="guide-card"><h3>No-data use</h3><ul><li>This kit uses no personal lists, personal labels, digital collection, image collection, or web-sharing step.</li>
+<li>Use invented places, invented roles, and ordinary objects rather than personal facts.</li>
+<li>Keep every page offline, printable, and handled by the adult leader, participant, or family.</li>
+<li>Organize pages with symbols, color tabs, or plain folders instead of private identifiers.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send home the notebook page, one optional observation card, and a note that the story details are invented.</li>
+<li>Mark one simple next step such as add a title, add one detail, or finish the ending.</li>
+<li>Tell families the card can be completed by pointing, sketching, dictating, or writing one short line.</li>
+<li>Keep any sharing optional and focused on a printed page, sketch, title, object clue, or invented setting.</li></ul></article>
+      </div>
+      <p class="footer-note">Use these pages offline for adult-guided museum days. Keep finished pages in folders or send them home.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Image-backed world menu</h2>
+      <p>Pick one notebook page at a time. Each page uses one invented world image so observation details become fiction without personal data or online sharing.</p>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <div>
+        <span>Ages 7-8</span>
+        <h3>Teacup Town Weather Window</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Spoon Ferry Lunchbox Harbor</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Pocket Park Notice Board</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Button Bakery Map Mix-Up</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Penny Path Compass Shop</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Tidepool Timekeepers Lab</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Greenhouse Gear Garden</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Pantry Measurement Mystery</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Rain Gauge Railway</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Seed Library Map Room</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Revision River Ferry</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Clue Label Tower Museum</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Compass Craft Academy</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Almost Invention Workshop</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Index Card Theater Club</h3>
+      </div>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Visit tools</p>
+      <h2>Visit formats and optional family-share prompts</h2>
+      <div class="routine-grid">
+    <article class="routine-card">
+      <h3>One-Room Detail Hunt</h3>
+      <p><strong>Best for:</strong> Short family visits, co-op gallery blocks, or museum educator tables that need one focused observation loop.</p>
+      <ol><li>Adult leader chooses one room or display area and names the focus: shape, color, pattern, material, or object use.</li>
+<li>Participants silently notice one detail and mark it on the printed notebook page.</li>
+<li>Adult leader models how that detail could become an invented story clue.</li>
+<li>Writers draft a short setting or object line before moving to the next page.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Table-First Museum Writing</h3>
+      <p><strong>Best for:</strong> Education rooms, gallery tables, library museum days, or groups that start seated before viewing.</p>
+      <ol><li>Adult leader gives each writer a choice bank with invented roles and ordinary objects.</li>
+<li>Writers pick one role and one object before observing a display or printed image set.</li>
+<li>Adult leader asks for one visible detail that can connect to the chosen object.</li>
+<li>Writers combine the three choices into a two-sentence story start.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Sketch Then Sentence</h3>
+      <p><strong>Best for:</strong> Quiet participants, mixed-age family groups, and busy gallery moments where speaking is optional.</p>
+      <ol><li>Adult leader asks writers to sketch one safe visible shape or pattern on the notebook page.</li>
+<li>Writers label the sketch with one describing word or adult-offered choice.</li>
+<li>Adult leader shows how the label can become an invented place, clue, or helper job.</li>
+<li>Writers add one sentence that uses the sketch without copying any private information.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Object Clue Circle</h3>
+      <p><strong>Best for:</strong> Small groups with a museum educator, co-op adult, or family leader guiding a shared table.</p>
+      <ol><li>Adult leader places four ordinary object cards in the center of the table.</li>
+<li>Participants choose one object card and connect it to one observed color, shape, or texture.</li>
+<li>Adult leader invites optional pointing or short spoken choices while recording only invented options.</li>
+<li>Writers turn the object and detail into one friendly story problem and one next action.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Three-Stop Notebook Path</h3>
+      <p><strong>Best for:</strong> Longer field-trip table blocks where adults can guide three approved stops without rushing.</p>
+      <ol><li>Adult leader marks three approved stops: a detail stop, an object stop, and a story ending stop.</li>
+<li>Writers add one note or sketch at each stop on the same notebook page.</li>
+<li>Adult leader helps writers order the three notes as first, next, and last.</li>
+<li>Writers draft a tiny story path and underline the clearest detail.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Exit Table Wrap-Up</h3>
+      <p><strong>Best for:</strong> The final 10 minutes of a museum day, gallery lesson, or family learning visit.</p>
+      <ol><li>Adult leader asks writers to stop at the end of the line or sketch they are working on.</li>
+<li>Writers mark one observed detail and one invented story idea they want to keep.</li>
+<li>Adult leader offers one take-home observation card that matches the marked idea.</li>
+<li>Pages go into plain folders before the table is reset for the next group.</li></ol>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul class="share-grid"><li>Show one sketch, title, or observed detail from the notebook page.</li>
+<li>Read one invented sentence aloud, or ask a grown-up to read it.</li>
+<li>Point to one object clue and explain how it helps the story.</li>
+<li>Share one setting detail that came from a shape, color, pattern, or material.</li>
+<li>Tell which story step came first, next, or last.</li>
+<li>Show one word you made clearer after the visit.</li>
+<li>Describe one calm ending choice from the invented story.</li>
+<li>Pass today and keep the page private while the family notices one finished detail.</li></ul>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Visit tools</p>
+      <h2>Take-home observation cards</h2>
+      <div class="slip-grid">
+    <article class="slip-card">
+      <span>6 minutes | setting detail</span>
+      <h3>Shape to Setting</h3>
+      <p>Choose one shape you noticed and turn it into an invented place: ____________________.</p>
+      <p>A grown-up can ask what the place feels or looks like: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | plot clue</span>
+      <h3>Pattern Clue</h3>
+      <p>Pick one pattern from your notebook and make it a story clue: ____________________.</p>
+      <p>A grown-up can ask how the clue helps the helper: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | character action</span>
+      <h3>Object Helper</h3>
+      <p>Turn one ordinary object into something an invented helper can use: ____________________.</p>
+      <p>A grown-up can offer two possible helper actions here: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>5 minutes | sensory detail</span>
+      <h3>Quiet Color Line</h3>
+      <p>Write one sentence that uses a color from the visit in a make-believe scene: ____________________.</p>
+      <p>A grown-up can ask which word makes the color easier to picture: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>8 minutes | description</span>
+      <h3>Material Match</h3>
+      <p>Choose a material such as paper, wood, stone, cloth, clay, or metal and describe it: ____________________.</p>
+      <p>A grown-up can ask whether the material feels smooth, rough, light, or heavy: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>8 minutes | sequence</span>
+      <h3>First Next Last Visit</h3>
+      <p>Write first, next, and last for three invented story steps from one observed detail: ____________________.</p>
+      <p>A grown-up can point to the step that should become longer: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>9 minutes | dialogue</span>
+      <h3>Gallery Guide Reply</h3>
+      <p>Write two short lines between an invented guide and an invented visitor: ____________________.</p>
+      <p>A grown-up can read one role while the writer chooses the reply: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>5 minutes | main idea</span>
+      <h3>Title From a Detail</h3>
+      <p>Write three possible titles using one detail from the notebook page: ____________________.</p>
+      <p>A grown-up can ask which title gives the clearest story clue: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>8 minutes | ending choice</span>
+      <h3>Kind Ending Card</h3>
+      <p>Add a calm ending where the invented helper uses one observed detail wisely: ____________________.</p>
+      <p>A grown-up can ask what changed by the end of the story: ____________________.</p>
+    </article>
+
+    <article class="slip-card">
+      <span>7 minutes | story planning</span>
+      <h3>Next Museum Seed</h3>
+      <p>Invent one place, one helper, one object, and one small mix-up for another museum story: ____________________.</p>
+      <p>A grown-up can add one extra visible detail to the seed: ____________________.</p>
+    </article></div>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 1 | Ages 7-8</div>
+      <h2>Teacup Town Weather Window Exhibit Clues</h2>
+      <figure><img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration"><figcaption>Teacup Town Weather Window</figcaption></figure>
+      <p class="kid-direction">Choose one color or shape from a display, turn it into teacup weather, and write what the tiny helper notices.</p>
+      <p class="adult-note">Ask, &quot;Which exhibit clue could become weather in Teacup Town?&quot; Then model one short because sentence.</p>
+      <div class="quest-meta">
+        <span>turning one exhibit clue into a weather detail</span>
+        <span>15-minute adult-led museum or gallery table page for younger writers after a quiet look at one color, shape, pattern, or display object.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, set out pencils, invite one quiet sketch from a pretend exhibit clue, and keep the writing at the table.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Exhibit Clue</h3>
+          <p class="write-line">The exhibit clue I noticed was a color: ____________________.</p>
+<p class="write-line">The display object shape looked like ____________________.</p>
+<p class="write-line">The quiet sketch on my page shows ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Weather Window</h3>
+          <p class="write-line">In Teacup Town, that clue turns into weather called ____________________.</p>
+<p class="write-line">The spoon-shaped window fogs up with ____________________.</p>
+<p class="write-line">The tiny room corner changes when ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tiny Story Note</h3>
+          <p class="write-line">First, the weather watcher points to ____________________.</p>
+<p class="write-line">Next, the helper writes a label that says ____________________.</p>
+<p class="write-line">My museum-day story sentence is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Share line: One exhibit clue I turned into weather was ____________________.</p>
+      <p class="wrap-line">Wrap-up line: The detail that made my teacup scene clearer was ____________________.</p>
+      <p class="extension-line">Quiet option: Skip sharing and finish this quiet sketch label: ____________________.</p>
+      <p class="take-home-line">Take-home prompt: At home, add one new color clue for Teacup Town: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 2 | Ages 7-9</div>
+      <h2>Spoon Ferry Lunchbox Harbor Display Log</h2>
+      <figure><img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration"><figcaption>Spoon Ferry Lunchbox Harbor</figcaption></figure>
+      <p class="kid-direction">Pick one display object clue, imagine it as harbor cargo, and write a short ferry log.</p>
+      <p class="adult-note">Ask which object, color, or pattern could belong on a tiny spoon ferry, then help writers add one setting word.</p>
+      <div class="quest-meta">
+        <span>using a display object to build a setting</span>
+        <span>18-minute adult-led field-trip table page for turning one invented museum observation into a harbor setting.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, choose a nearby display color or shape as a shared example, and remind writers to invent all places and labels.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Display Object</h3>
+          <p class="write-line">The display object I choose has this shape: ____________________.</p>
+<p class="write-line">The label clue I can invent for it says ____________________.</p>
+<p class="write-line">A pattern on the object reminds me of ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Lunchbox Harbor</h3>
+          <p class="write-line">The spoon ferry docks beside a harbor corner with ____________________.</p>
+<p class="write-line">The cargo on the ferry is ____________________.</p>
+<p class="write-line">The lunchbox map marks the route with ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ferry Log</h3>
+          <p class="write-line">First, the ferry helper checks the clue called ____________________.</p>
+<p class="write-line">Next, the harbor display glows with the color ____________________.</p>
+<p class="write-line">The ferry log ending says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Share line: The museum object clue I used for harbor cargo was ____________________.</p>
+      <p class="wrap-line">Wrap-up line: The setting detail I can picture best is ____________________.</p>
+      <p class="extension-line">Quiet option: Draw the route silently, then add this map word: ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Add one new display object to the ferry log: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 3 | Ages 7-9</div>
+      <h2>Pocket Park Notice Board Label Notes</h2>
+      <figure><img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration"><figcaption>Pocket Park Notice Board</figcaption></figure>
+      <p class="kid-direction">Choose an exhibit clue, invent a pocket park notice, and explain why the helper posts it.</p>
+      <p class="adult-note">Ask, &quot;What could this label remind a tiny park helper to do?&quot; Then guide one because line.</p>
+      <div class="quest-meta">
+        <span>turning a label clue into a message and reason</span>
+        <span>18-minute adult-led museum table activity for writers who can invent a notice from a color, map, pattern, or label.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, point to one general label style without copying specific wording, and keep every notice fictional.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Label Clue</h3>
+          <p class="write-line">The invented label clue begins with the word ____________________.</p>
+<p class="write-line">The color on the display makes me think of ____________________.</p>
+<p class="write-line">The pattern I noticed looks like ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Pocket Park Notice</h3>
+          <p class="write-line">The first pocket park notice asks for ____________________.</p>
+<p class="write-line">The notice board map points toward ____________________.</p>
+<p class="write-line">The quiet room corner becomes a park spot called ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Reason Note</h3>
+          <p class="write-line">This notice helps because ____________________.</p>
+<p class="write-line">The pocket park helper carries ____________________.</p>
+<p class="write-line">The final message on the board says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Share line: The notice I can read from my notebook is ____________________.</p>
+      <p class="wrap-line">Wrap-up line: The reason that made my notice clear was ____________________.</p>
+      <p class="extension-line">Quiet option: Copy one notice quietly here: ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Add one home observation that could become a pocket park notice: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 4 | Ages 7-9</div>
+      <h2>Button Bakery Map Mix-Up Gallery Route</h2>
+      <figure><img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration"><figcaption>Button Bakery Map Mix-Up</figcaption></figure>
+      <p class="kid-direction">Choose a map, shape, or display clue, imagine it as a bakery route, and fix the mixed-up directions.</p>
+      <p class="adult-note">Ask writers to replace a vague route with one object, one color, and one direction word from their observation.</p>
+      <div class="quest-meta">
+        <span>turning map observations into clear story directions</span>
+        <span>20-minute adult-led gallery or museum table page for using one invented map clue and three clear route steps.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, offer beside, around, past, and near as direction words, and keep the route on paper only.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Gallery Map Clue</h3>
+          <p class="write-line">The museum map clue I noticed looks like ____________________.</p>
+<p class="write-line">The shape that could become a bakery path is ____________________.</p>
+<p class="write-line">The color tab on my pretend route is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Bakery Mix-Up</h3>
+          <p class="write-line">The crumb path points the wrong way toward ____________________.</p>
+<p class="write-line">The button baker checks a display object shaped like ____________________.</p>
+<p class="write-line">The mixed-up label says to stop near ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Fixed Directions</h3>
+          <p class="write-line">First, follow the map past ____________________.</p>
+<p class="write-line">Next, turn around the bakery pattern called ____________________.</p>
+<p class="write-line">The fixed route ends beside ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Share line: The route clue I can share from my map is ____________________.</p>
+      <p class="wrap-line">Wrap-up line: The direction word that helped my story was ____________________.</p>
+      <p class="extension-line">Quiet option: Trace the route silently, then finish this bakery clue: ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Add one new map clue for the Button Bakery route: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 5 | Ages 7-9</div>
+      <h2>Penny Path Compass Shop Observation Card</h2>
+      <figure><img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration"><figcaption>Penny Path Compass Shop</figcaption></figure>
+      <p class="kid-direction">Pick one observation clue, pretend it points a compass, and write three directions for Penny Path.</p>
+      <p class="adult-note">Ask which clue would point north, south, east, or west in a pretend compass shop, then help choose one route detail.</p>
+      <div class="quest-meta">
+        <span>using observation words to write a compass route</span>
+        <span>20-minute adult-led museum-day notebook page for turning quiet sketch details into a simple compass-shop route.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, place pencils at the table, invite one color, shape, map, or label observation, and keep sharing optional.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Observation Card</h3>
+          <p class="write-line">The observation card starts with a color called ____________________.</p>
+<p class="write-line">The quiet sketch shape on my card is ____________________.</p>
+<p class="write-line">The label clue I invented says ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Compass Shop</h3>
+          <p class="write-line">The penny compass points toward ____________________.</p>
+<p class="write-line">The shop display holds an object shaped like ____________________.</p>
+<p class="write-line">The route pattern on the floor looks like ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Penny Path Route</h3>
+          <p class="write-line">First, follow the compass past ____________________.</p>
+<p class="write-line">Next, step near the map mark called ____________________.</p>
+<p class="write-line">The route ends at a room corner with ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Share line: The compass clue I can share is ____________________.</p>
+      <p class="wrap-line">Wrap-up line: The observation word that helped my route was ____________________.</p>
+      <p class="extension-line">Quiet option: Finish only this compass label for now: ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Add one new observation card clue for Penny Path: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 6 | Ages 8-10</div>
+      <h2>Tidepool Timekeepers Lab Display Clock</h2>
+      <figure><img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration"><figcaption>Tidepool Timekeepers Lab</figcaption></figure>
+      <p class="kid-direction">Notice a tidepool exhibit clue, add time-order details, and turn the display into a tiny lab story note.</p>
+      <p class="adult-note">Ask the writer what changed first, what changed next, and which label clue belongs in the story.</p>
+      <div class="quest-meta">
+        <span>Turning timed observations into story order</span>
+        <span>Adult-led museum or gallery table page for a calm exhibit-clue stop, color noticing, and a short fiction note.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print one page per writer, choose a quiet display corner, and point out one label, one pattern, and one object shape before writing.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Exhibit Clock</h3>
+          <p class="write-line">The tidepool exhibit clue shows a time near ____________________.</p>
+<p class="write-line">The display color that changes first is ____________________.</p>
+<p class="write-line">The object shape I notice on the label is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Observation Order</h3>
+          <p class="write-line">First, the lab helper records ____________________.</p>
+<p class="write-line">Next, the tide pattern points toward ____________________.</p>
+<p class="write-line">Last, the quiet sketch should show ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Fiction Note</h3>
+          <p class="write-line">The timekeeper&#39;s notebook begins with ____________________.</p>
+<p class="write-line">The exhibit clue becomes important because ____________________.</p>
+<p class="write-line">My final tidepool story note says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The time-order detail I can share from this page is ____________________.</p>
+      <p class="wrap-line">One museum observation I turned into fiction was ____________________.</p>
+      <p class="extension-line">For a quiet option, sketch the tide pattern first and label ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Find a safe household object shape and imagine its exhibit clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 7 | Ages 8-10</div>
+      <h2>Greenhouse Gear Garden Label Design</h2>
+      <figure><img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration"><figcaption>Greenhouse Gear Garden</figcaption></figure>
+      <p class="kid-direction">Choose a greenhouse gear from the display, describe what it helps, and write how it changes the garden story.</p>
+      <p class="adult-note">Ask which exhibit clue shows the gear&#39;s job and which pattern proves the garden needs a small adjustment.</p>
+      <div class="quest-meta">
+        <span>Explaining how a display detail changes a made-up machine</span>
+        <span>Adult-led museum-day notebook page for a design display, shape hunt, and table-friendly story explanation.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the page, set pencils beside the viewing spot, and invite writers to compare one gear shape, one plant color, and one short label.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Display Gear</h3>
+          <p class="write-line">The greenhouse gear shape looks like ____________________.</p>
+<p class="write-line">The plant color beside it is ____________________.</p>
+<p class="write-line">The exhibit label makes me wonder about ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Helpful Job</h3>
+          <p class="write-line">This gear helps the garden by ____________________.</p>
+<p class="write-line">The pattern on the display shows ____________________.</p>
+<p class="write-line">The room corner clue suggests ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Story Adjustment</h3>
+          <p class="write-line">The garden helper notices ____________________.</p>
+<p class="write-line">The gear should change because ____________________.</p>
+<p class="write-line">My final greenhouse story note says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The design detail I can share from this display is ____________________.</p>
+      <p class="wrap-line">One label clue that helped my story was ____________________.</p>
+      <p class="extension-line">For a quiet option, draw the gear shape and add the word ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Invent a helpful gear for a room corner at home: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 8 | Ages 8-10</div>
+      <h2>Pantry Measurement Mystery Object Chart</h2>
+      <figure><img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration"><figcaption>Pantry Measurement Mystery</figcaption></figure>
+      <p class="kid-direction">Study the pantry-style exhibit clue, compare the measurement pattern, and write the reason behind the mystery.</p>
+      <p class="adult-note">Ask what changed, what stayed the same, and which object detail gives the best evidence.</p>
+      <div class="quest-meta">
+        <span>Using evidence words from observed objects</span>
+        <span>Adult-led gallery or field-trip table page for comparing an object, a label, and a simple measurement pattern.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print pages, choose a calm display with safe viewing space, and have writers notice one object size, one color, and one label clue.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Object Clues</h3>
+          <p class="write-line">The pantry object on display looks like ____________________.</p>
+<p class="write-line">The label clue gives the amount ____________________.</p>
+<p class="write-line">The color or shape that stands out is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Measurement Pattern</h3>
+          <p class="write-line">The chart pattern seems to change near ____________________.</p>
+<p class="write-line">One exhibit clue that gives evidence is ____________________.</p>
+<p class="write-line">The mystery helper should compare ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Reason Note</h3>
+          <p class="write-line">The cause word I want to use is ____________________.</p>
+<p class="write-line">The object detail matters because ____________________.</p>
+<p class="write-line">My final pantry mystery note says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The evidence detail I can share from this notebook page is ____________________.</p>
+      <p class="wrap-line">One measurement pattern I explained was ____________________.</p>
+      <p class="extension-line">For a quiet option, circle one label clue and finish ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Compare two safe kitchen objects and write one made-up clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 9 | Ages 8-10</div>
+      <h2>Rain Gauge Railway Map Route</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Follow the rain-gauge exhibit clue, choose map words, and write the railway route as a story note.</p>
+      <p class="adult-note">Ask which direction word belongs first, which display object changes the route, and where the story should stop.</p>
+      <div class="quest-meta">
+        <span>Building a route with map words and observation clues</span>
+        <span>Adult-led museum-day page for a map display, weather pattern noticing, and a short route-to-story draft.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the route page, point to one map shape and one display label, and keep the writing table clear for quiet sketching.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Map Display</h3>
+          <p class="write-line">The rain-gauge display shows ____________________.</p>
+<p class="write-line">The map shape points toward ____________________.</p>
+<p class="write-line">The label clue near the route says ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Railway Route</h3>
+          <p class="write-line">The railway begins beside ____________________.</p>
+<p class="write-line">The route turns after the pattern of ____________________.</p>
+<p class="write-line">The next station should be near ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Conductor Story</h3>
+          <p class="write-line">The conductor notices the exhibit clue ____________________.</p>
+<p class="write-line">The map word that guides the story is ____________________.</p>
+<p class="write-line">My final railway route note says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The map word I can share from this route is ____________________.</p>
+      <p class="wrap-line">One display clue that moved my story forward was ____________________.</p>
+      <p class="extension-line">For a quiet option, trace the route with a pencil and mark ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Draw a tiny room map and add one pretend railway stop: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 10 | Ages 8-10</div>
+      <h2>Seed Library Map Room Catalog Card</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="kid-direction">Pick a seed-library exhibit clue, add a map-room detail, and write what the catalog helper should do next.</p>
+      <p class="adult-note">Ask how the setting detail changes the helper&#39;s next action and which label clue should be saved in the notebook.</p>
+      <div class="quest-meta">
+        <span>Connecting a setting clue to the next story action</span>
+        <span>Adult-led museum, gallery, or field-trip table page for a catalog-style display, quiet sketch, and next-action writing.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Print the catalog page, choose a display with labels or cases, and ask writers to notice one map mark, one object, and one color.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Catalog Display</h3>
+          <p class="write-line">The seed-library object on display is ____________________.</p>
+<p class="write-line">The catalog label points to ____________________.</p>
+<p class="write-line">The color or pattern I notice is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Room Clue</h3>
+          <p class="write-line">The map mark appears beside ____________________.</p>
+<p class="write-line">The quiet sketch should include ____________________.</p>
+<p class="write-line">The exhibit clue makes the room feel like ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Next Action</h3>
+          <p class="write-line">The catalog helper should first ____________________.</p>
+<p class="write-line">The next action matters because ____________________.</p>
+<p class="write-line">My final seed library note says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">The setting clue I can share from this catalog page is ____________________.</p>
+      <p class="wrap-line">One next-action phrase I wrote was ____________________.</p>
+      <p class="extension-line">For a quiet option, make a small map mark and write ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Turn one shelf or drawer at home into a pretend catalog clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 11 | Ages 10-11</div>
+      <h2>Revision River Ferry Display Revision</h2>
+      <figure><img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration"><figcaption>Revision River Ferry</figcaption></figure>
+      <p class="kid-direction">Turn one museum observation into a draft ending, revise it once, and make the final line echo an earlier clue.</p>
+      <p class="adult-note">Ask which exhibit clue should matter at the ending and which extra detail can drift away from the ferry route.</p>
+      <div class="quest-meta">
+        <span>Revise an observed display detail into a clearer story ending.</span>
+        <span>Adult-led upper-age notebook page for a quiet museum, gallery, or field-trip table after looking at one display.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Invite each writer to choose one exhibit clue, one color, and one shape from a display, then return to the table before writing.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Observation Dock</h3>
+          <p class="write-line">The exhibit clue I noticed first was ____________________.</p>
+<p class="write-line">The color or shape that could return later is ____________________.</p>
+<p class="write-line">A quiet display detail I might leave out is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Revision Ferry</h3>
+          <p class="write-line">My first ending idea is ____________________.</p>
+<p class="write-line">One detail I can move closer to the ending is ____________________.</p>
+<p class="write-line">The ending becomes clearer when ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Final Dock</h3>
+          <p class="write-line">My revised final sentence begins with ____________________.</p>
+<p class="write-line">The observation that echoes the start is ____________________.</p>
+<p class="write-line">The story feeling at the final dock is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Share the exhibit clue that returned in your ending: ____________________.</p>
+      <p class="wrap-line">The revision choice that made my page clearer was ____________________.</p>
+      <p class="extension-line">Skip sharing and copy only the revised final line here: ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Notice one display pattern elsewhere and add it to this ending: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 12 | Ages 10-11</div>
+      <h2>Clue Label Tower Focused Label</h2>
+      <figure><img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration"><figcaption>Clue Label Tower Museum</figcaption></figure>
+      <p class="kid-direction">Choose one object clue, decide what readers should notice first, and write a short invented label for a story museum.</p>
+      <p class="adult-note">Ask which clue earns the first sentence, which detail is only decoration, and how the label can stay clear.</p>
+      <div class="quest-meta">
+        <span>Select one useful observation and shape it into a concise exhibit label.</span>
+        <span>Adult-led notebook page for older writers after a short look at one object, case, wall display, or room corner.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Point out that real labels stay brief, then ask writers to invent a new label from one observed clue without copying museum text.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Clue Sort</h3>
+          <p class="write-line">The object or display I chose is ____________________.</p>
+<p class="write-line">The strongest clue on or near it is ____________________.</p>
+<p class="write-line">A color, shape, or pattern I noticed is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Label Choice</h3>
+          <p class="write-line">Visitors in my story should notice first that ____________________.</p>
+<p class="write-line">The detail I will not squeeze into the label is ____________________.</p>
+<p class="write-line">The label needs to explain why ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Tower Label</h3>
+          <p class="write-line">My invented exhibit label begins with ____________________.</p>
+<p class="write-line">The clearest label word I used is ____________________.</p>
+<p class="write-line">A nearby story object could be ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Share one focused label word or point to it on your page: ____________________.</p>
+      <p class="wrap-line">The observation I chose instead of many details was ____________________.</p>
+      <p class="extension-line">Work quietly by writing only the final exhibit label here: ____________________.</p>
+      <p class="take-home-line">Take-home prompt: At home, write a new label for an ordinary object using one clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 13 | Ages 10-11</div>
+      <h2>Compass Craft Gallery Route</h2>
+      <figure><img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration"><figcaption>Compass Craft Academy</figcaption></figure>
+      <p class="kid-direction">Map three museum observations into a story route and draft the sentence that turns the route toward its ending.</p>
+      <p class="adult-note">Ask which stop changes the route and which map word helps the reader follow the paragraph.</p>
+      <div class="quest-meta">
+        <span>Use map language to turn three observations into a story route.</span>
+        <span>Adult-led upper-age page for a museum-day table after a guided pause near a map, doorway, display row, or room corner.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Have writers mark three safe observation stops in order: one start, one turn, and one finish, then keep all writing at the table.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Route Stops</h3>
+          <p class="write-line">My first observation stop is near ____________________.</p>
+<p class="write-line">The route turns when I notice ____________________.</p>
+<p class="write-line">The finish stop should show readers ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Compass Words</h3>
+          <p class="write-line">A map word that fits this route is ____________________.</p>
+<p class="write-line">The detail that points the paragraph forward is ____________________.</p>
+<p class="write-line">The sentence that explains the turn is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Academy Route</h3>
+          <p class="write-line">My story route starts with ____________________.</p>
+<p class="write-line">The middle turn changes the plan because ____________________.</p>
+<p class="write-line">The ending lands beside ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Share the map word that helped your story route move: ____________________.</p>
+      <p class="wrap-line">The observation that became my turning point was ____________________.</p>
+      <p class="extension-line">Stay silent and draw three route dots, then write the turning sentence: ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Make a three-stop route from another room or shelf and name the turn: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 14 | Ages 10-11</div>
+      <h2>Almost Invention Workshop Test Note</h2>
+      <figure><img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration"><figcaption>Almost Invention Workshop</figcaption></figure>
+      <p class="kid-direction">Invent a small almost-invention from one museum clue, put three steps in order, and write a test note for the next draft.</p>
+      <p class="adult-note">Ask where a reader might get confused and which step needs a clearer order, label, or reason.</p>
+      <div class="quest-meta">
+        <span>Transform an observed object or pattern into ordered instructions and a test note.</span>
+        <span>Adult-led notebook page for upper-age writers after noticing one object, tool shape, display pattern, or design detail.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Ask writers to sketch or name one harmless observed design detail, then imagine a paper-only almost-invention inspired by it.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Design Clue</h3>
+          <p class="write-line">The observed object, shape, or pattern is ____________________.</p>
+<p class="write-line">The job this detail seems to do is ____________________.</p>
+<p class="write-line">My paper-only almost-invention could help with ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Step Order</h3>
+          <p class="write-line">The first instruction should tell readers to ____________________.</p>
+<p class="write-line">The step that belongs in the middle is ____________________.</p>
+<p class="write-line">The final step should check whether ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Test Note</h3>
+          <p class="write-line">The almost-invention works best when ____________________.</p>
+<p class="write-line">The part that needs a clearer label is ____________________.</p>
+<p class="write-line">My workshop test note says ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Share one instruction step that became easier to follow: ____________________.</p>
+      <p class="wrap-line">The design clue that shaped my almost-invention was ____________________.</p>
+      <p class="extension-line">Work quietly by revising one step and writing it here: ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Find one safe household pattern and turn it into an invented step: ____________________.</p>
+    </section>
+
+    <section class="pack-page notebook-page">
+      <div class="page-kicker">Notebook 15 | Ages 10-11</div>
+      <h2>Index Card Theater Room Cues</h2>
+      <figure><img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration"><figcaption>Index Card Theater Club</figcaption></figure>
+      <p class="kid-direction">Turn three museum room cues into a tiny scene, write two lines, and make the second line change the direction.</p>
+      <p class="adult-note">Ask what the first line expects, what the reply changes, and which observed cue makes the turn visible.</p>
+      <div class="quest-meta">
+        <span>Use observed setting cues to build a short scene with a clear turn.</span>
+        <span>Adult-led upper-age notebook page for a table near a gallery, lobby, exhibit room, or quiet sketch area.</span>
+      </div>
+      <p><strong>Adult setup:</strong> Have writers notice three room cues such as light, shape, display order, or label placement, then arrange them like scene cards.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Room Cue Cards</h3>
+          <p class="write-line">The first room cue I noticed is ____________________.</p>
+<p class="write-line">The cue that changes the scene is ____________________.</p>
+<p class="write-line">The final cue should reveal ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Dialogue Turn</h3>
+          <p class="write-line">The first line of the scene is ____________________.</p>
+<p class="write-line">The reply changes the plan when ____________________.</p>
+<p class="write-line">A quiet stage action from the room is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Theater Finish</h3>
+          <p class="write-line">The turning point becomes clear because ____________________.</p>
+<p class="write-line">One cue word I can revise is ____________________.</p>
+<p class="write-line">My final museum theater line is ____________________.</p>
+        </section></div>
+      <p class="wrap-line">Share the room cue that turned your scene, or point to it: ____________________.</p>
+      <p class="wrap-line">The moment that changed my tiny scene was ____________________.</p>
+      <p class="extension-line">Skip read-aloud time and write your strongest scene line here: ____________________.</p>
+      <p class="take-home-line">Take-home prompt: Arrange three quiet room cues at home and write the turn: ____________________.</p>
+    </section>
+  </body>
+</html>

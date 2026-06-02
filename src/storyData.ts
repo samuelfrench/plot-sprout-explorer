@@ -358,6 +358,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Eighteen adult-led after-school club sessions with director tools, quiet options, and take-home prompt cards.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'museum-day-story-notebook-kit',
+    title: 'Museum Day Story Notebook Kit',
+    pricePoint: '$37',
+    description:
+      'Fifteen adult-led museum-day notebook pages with visit tools, observation cards, and family handoff prompts.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

@@ -1,0 +1,18 @@
+{
+  "slug": "museum-day-story-notebook-kit",
+  "prompt": "no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device, family-friendly flat lay, screen-free printable museum day writing notebook kit, blank white notebook pages, blank observation cards, pencils, blank folders, color tabs",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, printed markings, icon, symbol, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26061938,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch19/museum-day-story-notebook-kit.jpg",
+  "outputWebp": "public/images/plotsprout/batch19/museum-day-story-notebook-kit.webp",
+  "manifest": "content/image-queue/2026-06-02-batch19-product-images.json",
+  "title": "Museum Day Story Notebook Kit"
+}

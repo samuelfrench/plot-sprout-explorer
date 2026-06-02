@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch19-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "museum-day-story-notebook-kit",
+      "title": "Museum Day Story Notebook Kit",
+      "purpose": "Static paid product hero image for the checkout-pending museum-day printable kit.",
+      "seed": 26061938,
+      "prompt": "no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device, family-friendly flat lay, screen-free printable museum day writing notebook kit, blank white notebook pages, blank observation cards, pencils, blank folders, color tabs",
+      "outputJpeg": "public/images/plotsprout/batch19/museum-day-story-notebook-kit.jpg",
+      "outputWebp": "public/images/plotsprout/batch19/museum-day-story-notebook-kit.webp",
+      "sidecar": "content/image-runs/batch19/museum-day-story-notebook-kit.json"
+    }
+  ]
+}

@@ -1,0 +1,211 @@
+{
+  "laneId": "batch19-museum-notebook-pages-a",
+  "productSlug": "museum-day-story-notebook-kit",
+  "pages": [
+    {
+      "id": "museum-day-teacup-town-weather-window",
+      "title": "Teacup Town Weather Window Exhibit Clues",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "notebookSkill": "turning one exhibit clue into a weather detail",
+      "visitFit": "15-minute adult-led museum or gallery table page for younger writers after a quiet look at one color, shape, pattern, or display object.",
+      "adultSetup": "Print the page, set out pencils, invite one quiet sketch from a pretend exhibit clue, and keep the writing at the table.",
+      "kidDirection": "Choose one color or shape from a display, turn it into teacup weather, and write what the tiny helper notices.",
+      "guidePrompt": "Ask, \"Which exhibit clue could become weather in Teacup Town?\" Then model one short because sentence.",
+      "pageSections": [
+        {
+          "heading": "Exhibit Clue",
+          "lines": [
+            "The exhibit clue I noticed was a color: ____________________.",
+            "The display object shape looked like ____________________.",
+            "The quiet sketch on my page shows ____________________."
+          ]
+        },
+        {
+          "heading": "Weather Window",
+          "lines": [
+            "In Teacup Town, that clue turns into weather called ____________________.",
+            "The spoon-shaped window fogs up with ____________________.",
+            "The tiny room corner changes when ____________________."
+          ]
+        },
+        {
+          "heading": "Tiny Story Note",
+          "lines": [
+            "First, the weather watcher points to ____________________.",
+            "Next, the helper writes a label that says ____________________.",
+            "My museum-day story sentence is ____________________."
+          ]
+        }
+      ],
+      "shareLine": "Share line: One exhibit clue I turned into weather was ____________________.",
+      "wrapUpLine": "Wrap-up line: The detail that made my teacup scene clearer was ____________________.",
+      "quietOptionLine": "Quiet option: Skip sharing and finish this quiet sketch label: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: At home, add one new color clue for Teacup Town: ____________________."
+    },
+    {
+      "id": "museum-day-spoon-ferry-lunchbox-harbor",
+      "title": "Spoon Ferry Lunchbox Harbor Display Log",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "notebookSkill": "using a display object to build a setting",
+      "visitFit": "18-minute adult-led field-trip table page for turning one invented museum observation into a harbor setting.",
+      "adultSetup": "Print the page, choose a nearby display color or shape as a shared example, and remind writers to invent all places and labels.",
+      "kidDirection": "Pick one display object clue, imagine it as harbor cargo, and write a short ferry log.",
+      "guidePrompt": "Ask which object, color, or pattern could belong on a tiny spoon ferry, then help writers add one setting word.",
+      "pageSections": [
+        {
+          "heading": "Display Object",
+          "lines": [
+            "The display object I choose has this shape: ____________________.",
+            "The label clue I can invent for it says ____________________.",
+            "A pattern on the object reminds me of ____________________."
+          ]
+        },
+        {
+          "heading": "Lunchbox Harbor",
+          "lines": [
+            "The spoon ferry docks beside a harbor corner with ____________________.",
+            "The cargo on the ferry is ____________________.",
+            "The lunchbox map marks the route with ____________________."
+          ]
+        },
+        {
+          "heading": "Ferry Log",
+          "lines": [
+            "First, the ferry helper checks the clue called ____________________.",
+            "Next, the harbor display glows with the color ____________________.",
+            "The ferry log ending says ____________________."
+          ]
+        }
+      ],
+      "shareLine": "Share line: The museum object clue I used for harbor cargo was ____________________.",
+      "wrapUpLine": "Wrap-up line: The setting detail I can picture best is ____________________.",
+      "quietOptionLine": "Quiet option: Draw the route silently, then add this map word: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one new display object to the ferry log: ____________________."
+    },
+    {
+      "id": "museum-day-pocket-park-notice-board",
+      "title": "Pocket Park Notice Board Label Notes",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "notebookSkill": "turning a label clue into a message and reason",
+      "visitFit": "18-minute adult-led museum table activity for writers who can invent a notice from a color, map, pattern, or label.",
+      "adultSetup": "Print the page, point to one general label style without copying specific wording, and keep every notice fictional.",
+      "kidDirection": "Choose an exhibit clue, invent a pocket park notice, and explain why the helper posts it.",
+      "guidePrompt": "Ask, \"What could this label remind a tiny park helper to do?\" Then guide one because line.",
+      "pageSections": [
+        {
+          "heading": "Label Clue",
+          "lines": [
+            "The invented label clue begins with the word ____________________.",
+            "The color on the display makes me think of ____________________.",
+            "The pattern I noticed looks like ____________________."
+          ]
+        },
+        {
+          "heading": "Pocket Park Notice",
+          "lines": [
+            "The first pocket park notice asks for ____________________.",
+            "The notice board map points toward ____________________.",
+            "The quiet room corner becomes a park spot called ____________________."
+          ]
+        },
+        {
+          "heading": "Reason Note",
+          "lines": [
+            "This notice helps because ____________________.",
+            "The pocket park helper carries ____________________.",
+            "The final message on the board says ____________________."
+          ]
+        }
+      ],
+      "shareLine": "Share line: The notice I can read from my notebook is ____________________.",
+      "wrapUpLine": "Wrap-up line: The reason that made my notice clear was ____________________.",
+      "quietOptionLine": "Quiet option: Copy one notice quietly here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one home observation that could become a pocket park notice: ____________________."
+    },
+    {
+      "id": "museum-day-button-bakery-map-mixup",
+      "title": "Button Bakery Map Mix-Up Gallery Route",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "notebookSkill": "turning map observations into clear story directions",
+      "visitFit": "20-minute adult-led gallery or museum table page for using one invented map clue and three clear route steps.",
+      "adultSetup": "Print the page, offer beside, around, past, and near as direction words, and keep the route on paper only.",
+      "kidDirection": "Choose a map, shape, or display clue, imagine it as a bakery route, and fix the mixed-up directions.",
+      "guidePrompt": "Ask writers to replace a vague route with one object, one color, and one direction word from their observation.",
+      "pageSections": [
+        {
+          "heading": "Gallery Map Clue",
+          "lines": [
+            "The museum map clue I noticed looks like ____________________.",
+            "The shape that could become a bakery path is ____________________.",
+            "The color tab on my pretend route is ____________________."
+          ]
+        },
+        {
+          "heading": "Bakery Mix-Up",
+          "lines": [
+            "The crumb path points the wrong way toward ____________________.",
+            "The button baker checks a display object shaped like ____________________.",
+            "The mixed-up label says to stop near ____________________."
+          ]
+        },
+        {
+          "heading": "Fixed Directions",
+          "lines": [
+            "First, follow the map past ____________________.",
+            "Next, turn around the bakery pattern called ____________________.",
+            "The fixed route ends beside ____________________."
+          ]
+        }
+      ],
+      "shareLine": "Share line: The route clue I can share from my map is ____________________.",
+      "wrapUpLine": "Wrap-up line: The direction word that helped my story was ____________________.",
+      "quietOptionLine": "Quiet option: Trace the route silently, then finish this bakery clue: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one new map clue for the Button Bakery route: ____________________."
+    },
+    {
+      "id": "museum-day-penny-path-compass-shop",
+      "title": "Penny Path Compass Shop Observation Card",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "notebookSkill": "using observation words to write a compass route",
+      "visitFit": "20-minute adult-led museum-day notebook page for turning quiet sketch details into a simple compass-shop route.",
+      "adultSetup": "Print the page, place pencils at the table, invite one color, shape, map, or label observation, and keep sharing optional.",
+      "kidDirection": "Pick one observation clue, pretend it points a compass, and write three directions for Penny Path.",
+      "guidePrompt": "Ask which clue would point north, south, east, or west in a pretend compass shop, then help choose one route detail.",
+      "pageSections": [
+        {
+          "heading": "Observation Card",
+          "lines": [
+            "The observation card starts with a color called ____________________.",
+            "The quiet sketch shape on my card is ____________________.",
+            "The label clue I invented says ____________________."
+          ]
+        },
+        {
+          "heading": "Compass Shop",
+          "lines": [
+            "The penny compass points toward ____________________.",
+            "The shop display holds an object shaped like ____________________.",
+            "The route pattern on the floor looks like ____________________."
+          ]
+        },
+        {
+          "heading": "Penny Path Route",
+          "lines": [
+            "First, follow the compass past ____________________.",
+            "Next, step near the map mark called ____________________.",
+            "The route ends at a room corner with ____________________."
+          ]
+        }
+      ],
+      "shareLine": "Share line: The compass clue I can share is ____________________.",
+      "wrapUpLine": "Wrap-up line: The observation word that helped my route was ____________________.",
+      "quietOptionLine": "Quiet option: Finish only this compass label for now: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Add one new observation card clue for Penny Path: ____________________."
+    }
+  ]
+}

@@ -15,6 +15,7 @@ export const substituteTeacherStationPackProductSlug = 'substitute-teacher-story
 export const tutoringCenterSprintPackProductSlug = 'tutoring-center-story-sprint-pack'
 export const summerCampStoryCircleKitProductSlug = 'summer-camp-story-circle-kit'
 export const afterSchoolStoryClubKitProductSlug = 'after-school-story-club-starter-kit'
+export const museumDayStoryNotebookKitProductSlug = 'museum-day-story-notebook-kit'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -152,6 +153,13 @@ const requiredAfterSchoolStoryClubArtifactPaths = {
   zipPath: 'product-build/after-school-story-club-starter-kit/after-school-story-club-starter-kit.zip',
   sourceHtmlPath: 'product-build/after-school-story-club-starter-kit/source/after-school-story-club-starter-kit.html',
   manifestPath: 'product-build/after-school-story-club-starter-kit/manifest.json',
+}
+
+const requiredMuseumDayStoryNotebookArtifactPaths = {
+  pdfPath: 'product-build/museum-day-story-notebook-kit/Museum-Day-Story-Notebook-Kit.pdf',
+  zipPath: 'product-build/museum-day-story-notebook-kit/museum-day-story-notebook-kit.zip',
+  sourceHtmlPath: 'product-build/museum-day-story-notebook-kit/source/museum-day-story-notebook-kit.html',
+  manifestPath: 'product-build/museum-day-story-notebook-kit/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -2219,6 +2227,234 @@ export function validateAfterSchoolStoryClubKitSource(source, product, knownWorl
   return errors
 }
 
+function validateNoUnsafeMuseumDayLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const text = rawText
+    .replace(/\bno\s+accounts?\b/gi, '')
+    .replace(/\bno\s+child accounts?\b/gi, '')
+    .replace(/\bno\s+student data\b/gi, '')
+    .replace(/\bno\s+data use\b/gi, '')
+    .replace(/\bno\s+uploads?\b/gi, '')
+    .replace(/\bno\s+public publishing\b/gi, '')
+    .replace(/\bwithout\s+accounts?\b/gi, '')
+    .replace(/\bwithout\s+child accounts?\b/gi, '')
+    .replace(/\bwithout\s+student data\b/gi, '')
+    .replace(/\bwithout\s+uploads?\b/gi, '')
+    .replace(/\bwithout\s+public publishing\b/gi, '')
+    .replace(/\bkeep names off pages\b/gi, '')
+    .replace(/\bkeep pages offline\b/gi, '')
+    .replace(/\binvented names only\b/gi, '')
+    .replace(/\binvented choices only\b/gi, '')
+  pushIf(
+    errors,
+    /\brosters?\b|\battendance\b|\bsign-?in\b|\bchild names?\b|\bstudent names?\b|\binitials\b|\bsurnames?\b|\bschool names?\b|\bphotos?\b|\baddresses?\b|\bbehavior reports?\b|\bupload(s|ed|ing)?\b|\baccounts?\b|\blogins?\b|\blog in\b|\bpublic publishing\b|\bpublish online\b|\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\bdiagnos(is|e|es|ed|ing|tic)\b|\btherapy\b|\btherapist\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b|\bassessment(s)?\b|\bgrade(s|d|book)?\b|\bscore(s|d|book)?\b|\bguarantee(s|d)?\b|\bguaranteed\b/i.test(
+      text,
+    ),
+    `${label} includes roster, attendance, sign-in, child-name, photo, address, behavior, medical, legal, therapy, diagnosis, assessment, grade, score, or guaranteed-outcome language.`,
+  )
+  pushIf(
+    errors,
+    /\bemergency\b|\btraffic\b|\bcross(ing)? the street\b|\brun across\b|\bparking lot(s)?\b|\bmeet outside\b|\bsolo travel\b|\bunaccompanied\b|\bcliff(s)?\b|\brope course(s)?\b|\bswim(ming)?\b|\bdeep water\b|\bopen water\b|\bcampfires?\b|\bfire pit(s)?\b|\bflames?\b|\bmatchstick(s)?\b|\blighter(s)?\b|\bknife|knives\b/i.test(
+      rawText,
+    ),
+    `${label} includes unsafe travel, outdoor-risk, or emergency instruction language.`,
+  )
+}
+
+function validateMuseumNotebookPage(page, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, pageIds, errors) {
+  const label = `pages[${index}]`
+  pushIf(errors, !isObject(page), `${label} must be an object.`)
+  if (!isObject(page)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'notebookSkill',
+    'visitFit',
+    'adultSetup',
+    'kidDirection',
+    'guidePrompt',
+    'shareLine',
+    'wrapUpLine',
+    'quietOptionLine',
+    'takeHomePromptLine',
+  ]) {
+    validateString(page[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(page.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(page.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, !page.id.startsWith('museum-day-'), `${label}.id must start with museum-day-.`)
+    pushIf(errors, pageIds.has(page.id), `${label}.id is duplicated.`)
+    pageIds.add(page.id)
+  }
+
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '9-11', '10-11'].includes(page.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(page.worldSlug) && !knownWorldSlugs.has(page.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(page.worldSlug) && !sourceWorldSlugs.has(page.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(page.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(page.ageBand) && isNonEmptyString(worldAgeBand) && page.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${page.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  pushIf(errors, !Array.isArray(page.pageSections), `${label}.pageSections must be an array.`)
+  if (Array.isArray(page.pageSections)) {
+    pushIf(errors, page.pageSections.length !== 3, `${label}.pageSections must have exactly 3 entries.`)
+    page.pageSections.forEach((section, sectionIndex) => {
+      const sectionLabel = `${label}.pageSections[${sectionIndex}]`
+      pushIf(errors, !isObject(section), `${sectionLabel} must be an object.`)
+      if (!isObject(section)) return
+      validateString(section.heading, `${sectionLabel}.heading`, errors)
+      validateExactStringArray(section.lines, 3, `${sectionLabel}.lines`, errors)
+      if (Array.isArray(section.lines)) {
+        section.lines.forEach((line, lineIndex) => {
+          pushIf(errors, isNonEmptyString(line) && !hasWritableBlank(line), `${sectionLabel}.lines[${lineIndex}] must include a writable blank.`)
+        })
+      }
+    })
+  }
+
+  for (const key of ['shareLine', 'wrapUpLine', 'quietOptionLine', 'takeHomePromptLine']) {
+    pushIf(errors, isNonEmptyString(page[key]) && !hasWritableBlank(page[key]), `${label}.${key} must include a writable blank.`)
+  }
+  validateNoUnsafeMuseumDayLanguage(page, label, errors)
+}
+
+function validateVisitFormat(format, index, names, errors) {
+  const label = `visitFormats[${index}]`
+  pushIf(errors, !isObject(format), `${label} must be an object.`)
+  if (!isObject(format)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(format[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(format.name)) {
+    pushIf(errors, names.has(format.name), `${label}.name is duplicated.`)
+    names.add(format.name)
+  }
+  validateExactStringArray(format.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeMuseumDayLanguage(format, label, errors)
+}
+
+function validateTakeHomeObservationCard(card, index, titles, errors) {
+  const label = `takeHomeObservationCards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(card.title)) {
+    pushIf(errors, titles.has(card.title), `${label}.title is duplicated.`)
+    titles.add(card.title)
+  }
+  pushIf(errors, isNonEmptyString(card.direction) && !hasWritableBlank(card.direction), `${label}.direction must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(card.direction) && hasSnakeCasePlaceholder(card.direction), `${label}.direction must use human-readable text, not snake_case placeholders.`)
+  pushIf(errors, isNonEmptyString(card.familyLine) && !hasWritableBlank(card.familyLine), `${label}.familyLine must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(card.familyLine) && hasSnakeCasePlaceholder(card.familyLine), `${label}.familyLine must use human-readable text, not snake_case placeholders.`)
+  validateNoUnsafeMuseumDayLanguage(card, label, errors)
+}
+
+export function validateMuseumDayStoryNotebookKitSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Museum Day Story Notebook Kit source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch19', 'batchId must be 2026-06-02-batch19.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(
+    errors,
+    source.productSlug !== museumDayStoryNotebookKitProductSlug,
+    `productSlug must be ${museumDayStoryNotebookKitProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Museum Day Story Notebook Kit', 'title must be Museum Day Story Notebook Kit.')
+  pushIf(errors, source.pricePoint !== '$37', 'pricePoint must be $37.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Museum Day source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Museum Day source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Museum Day source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 15, 'worldSlugs must have exactly 15 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredMuseumDayStoryNotebookArtifactPaths, 'Museum Day', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateExactStringArray(source.adultGuide.beforeVisit, 5, 'adultGuide.beforeVisit', errors)
+    validateExactStringArray(source.adultGuide.tableSetup, 5, 'adultGuide.tableSetup', errors)
+    validateExactStringArray(source.adultGuide.observationToStory, 5, 'adultGuide.observationToStory', errors)
+    validateExactStringArray(source.adultGuide.quietParticipation, 5, 'adultGuide.quietParticipation', errors)
+    validateExactStringArray(source.adultGuide.noDataUse, 4, 'adultGuide.noDataUse', errors)
+    validateExactStringArray(source.adultGuide.familyHandoff, 4, 'adultGuide.familyHandoff', errors)
+    validateNoUnsafeMuseumDayLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.visitFormats), 'visitFormats must be an array.')
+  if (Array.isArray(source.visitFormats)) {
+    pushIf(errors, source.visitFormats.length !== 6, 'visitFormats must have exactly 6 entries.')
+    const names = new Set()
+    source.visitFormats.forEach((format, index) => validateVisitFormat(format, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeObservationCards), 'takeHomeObservationCards must be an array.')
+  if (Array.isArray(source.takeHomeObservationCards)) {
+    pushIf(errors, source.takeHomeObservationCards.length !== 10, 'takeHomeObservationCards must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeObservationCards.forEach((card, index) => validateTakeHomeObservationCard(card, index, titles, errors))
+  }
+
+  validateExactStringArray(source.optionalFamilySharePrompts, 8, 'optionalFamilySharePrompts', errors)
+
+  pushIf(errors, !Array.isArray(source.pages), 'pages must be an array.')
+  if (Array.isArray(source.pages)) {
+    pushIf(errors, source.pages.length !== 15, 'pages must have exactly 15 entries.')
+    const pageIds = new Set()
+    const coveredWorlds = new Set()
+    source.pages.forEach((page, index) => {
+      validateMuseumNotebookPage(page, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, pageIds, errors)
+      if (isNonEmptyString(page?.worldSlug)) coveredWorlds.add(page.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 15, 'pages must cover at least 15 unique worlds.')
+  }
+
+  validateNoUnsafeMuseumDayLanguage(source, 'Museum Day Story Notebook Kit source', errors)
+  validateNoFamilySafetyLanguage(source, 'Museum Day Story Notebook Kit source', errors)
+  validateNoRiskyLanguage(source, 'Museum Day Story Notebook Kit source', errors)
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -2347,7 +2583,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredAfterSchoolStoryClubArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredMuseumDayStoryNotebookArtifactPaths.pdfPath
+      ? requiredMuseumDayStoryNotebookArtifactPaths
+      : artifact?.pdfPath === requiredAfterSchoolStoryClubArtifactPaths.pdfPath
       ? requiredAfterSchoolStoryClubArtifactPaths
       : artifact?.pdfPath === requiredSummerCampStoryCircleArtifactPaths.pdfPath
       ? requiredSummerCampStoryCircleArtifactPaths

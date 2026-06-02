@@ -1,0 +1,211 @@
+{
+  "laneId": "batch19-museum-notebook-pages-c",
+  "productSlug": "museum-day-story-notebook-kit",
+  "pages": [
+    {
+      "id": "museum-day-revision-river-ferry-display-revision",
+      "title": "Revision River Ferry Display Revision",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "notebookSkill": "Revise an observed display detail into a clearer story ending.",
+      "visitFit": "Adult-led upper-age notebook page for a quiet museum, gallery, or field-trip table after looking at one display.",
+      "adultSetup": "Invite each writer to choose one exhibit clue, one color, and one shape from a display, then return to the table before writing.",
+      "kidDirection": "Turn one museum observation into a draft ending, revise it once, and make the final line echo an earlier clue.",
+      "guidePrompt": "Ask which exhibit clue should matter at the ending and which extra detail can drift away from the ferry route.",
+      "pageSections": [
+        {
+          "heading": "Observation Dock",
+          "lines": [
+            "The exhibit clue I noticed first was ____________________.",
+            "The color or shape that could return later is ____________________.",
+            "A quiet display detail I might leave out is ____________________."
+          ]
+        },
+        {
+          "heading": "Revision Ferry",
+          "lines": [
+            "My first ending idea is ____________________.",
+            "One detail I can move closer to the ending is ____________________.",
+            "The ending becomes clearer when ____________________."
+          ]
+        },
+        {
+          "heading": "Final Dock",
+          "lines": [
+            "My revised final sentence begins with ____________________.",
+            "The observation that echoes the start is ____________________.",
+            "The story feeling at the final dock is ____________________."
+          ]
+        }
+      ],
+      "shareLine": "Share the exhibit clue that returned in your ending: ____________________.",
+      "wrapUpLine": "The revision choice that made my page clearer was ____________________.",
+      "quietOptionLine": "Skip sharing and copy only the revised final line here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Notice one display pattern elsewhere and add it to this ending: ____________________."
+    },
+    {
+      "id": "museum-day-clue-label-tower-focused-label",
+      "title": "Clue Label Tower Focused Label",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "notebookSkill": "Select one useful observation and shape it into a concise exhibit label.",
+      "visitFit": "Adult-led notebook page for older writers after a short look at one object, case, wall display, or room corner.",
+      "adultSetup": "Point out that real labels stay brief, then ask writers to invent a new label from one observed clue without copying museum text.",
+      "kidDirection": "Choose one object clue, decide what readers should notice first, and write a short invented label for a story museum.",
+      "guidePrompt": "Ask which clue earns the first sentence, which detail is only decoration, and how the label can stay clear.",
+      "pageSections": [
+        {
+          "heading": "Clue Sort",
+          "lines": [
+            "The object or display I chose is ____________________.",
+            "The strongest clue on or near it is ____________________.",
+            "A color, shape, or pattern I noticed is ____________________."
+          ]
+        },
+        {
+          "heading": "Label Choice",
+          "lines": [
+            "Visitors in my story should notice first that ____________________.",
+            "The detail I will not squeeze into the label is ____________________.",
+            "The label needs to explain why ____________________."
+          ]
+        },
+        {
+          "heading": "Tower Label",
+          "lines": [
+            "My invented exhibit label begins with ____________________.",
+            "The clearest label word I used is ____________________.",
+            "A nearby story object could be ____________________."
+          ]
+        }
+      ],
+      "shareLine": "Share one focused label word or point to it on your page: ____________________.",
+      "wrapUpLine": "The observation I chose instead of many details was ____________________.",
+      "quietOptionLine": "Work quietly by writing only the final exhibit label here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: At home, write a new label for an ordinary object using one clue: ____________________."
+    },
+    {
+      "id": "museum-day-compass-craft-gallery-route",
+      "title": "Compass Craft Gallery Route",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "notebookSkill": "Use map language to turn three observations into a story route.",
+      "visitFit": "Adult-led upper-age page for a museum-day table after a guided pause near a map, doorway, display row, or room corner.",
+      "adultSetup": "Have writers mark three safe observation stops in order: one start, one turn, and one finish, then keep all writing at the table.",
+      "kidDirection": "Map three museum observations into a story route and draft the sentence that turns the route toward its ending.",
+      "guidePrompt": "Ask which stop changes the route and which map word helps the reader follow the paragraph.",
+      "pageSections": [
+        {
+          "heading": "Route Stops",
+          "lines": [
+            "My first observation stop is near ____________________.",
+            "The route turns when I notice ____________________.",
+            "The finish stop should show readers ____________________."
+          ]
+        },
+        {
+          "heading": "Compass Words",
+          "lines": [
+            "A map word that fits this route is ____________________.",
+            "The detail that points the paragraph forward is ____________________.",
+            "The sentence that explains the turn is ____________________."
+          ]
+        },
+        {
+          "heading": "Academy Route",
+          "lines": [
+            "My story route starts with ____________________.",
+            "The middle turn changes the plan because ____________________.",
+            "The ending lands beside ____________________."
+          ]
+        }
+      ],
+      "shareLine": "Share the map word that helped your story route move: ____________________.",
+      "wrapUpLine": "The observation that became my turning point was ____________________.",
+      "quietOptionLine": "Stay silent and draw three route dots, then write the turning sentence: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Make a three-stop route from another room or shelf and name the turn: ____________________."
+    },
+    {
+      "id": "museum-day-almost-invention-workshop-test-note",
+      "title": "Almost Invention Workshop Test Note",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "notebookSkill": "Transform an observed object or pattern into ordered instructions and a test note.",
+      "visitFit": "Adult-led notebook page for upper-age writers after noticing one object, tool shape, display pattern, or design detail.",
+      "adultSetup": "Ask writers to sketch or name one harmless observed design detail, then imagine a paper-only almost-invention inspired by it.",
+      "kidDirection": "Invent a small almost-invention from one museum clue, put three steps in order, and write a test note for the next draft.",
+      "guidePrompt": "Ask where a reader might get confused and which step needs a clearer order, label, or reason.",
+      "pageSections": [
+        {
+          "heading": "Design Clue",
+          "lines": [
+            "The observed object, shape, or pattern is ____________________.",
+            "The job this detail seems to do is ____________________.",
+            "My paper-only almost-invention could help with ____________________."
+          ]
+        },
+        {
+          "heading": "Step Order",
+          "lines": [
+            "The first instruction should tell readers to ____________________.",
+            "The step that belongs in the middle is ____________________.",
+            "The final step should check whether ____________________."
+          ]
+        },
+        {
+          "heading": "Test Note",
+          "lines": [
+            "The almost-invention works best when ____________________.",
+            "The part that needs a clearer label is ____________________.",
+            "My workshop test note says ____________________."
+          ]
+        }
+      ],
+      "shareLine": "Share one instruction step that became easier to follow: ____________________.",
+      "wrapUpLine": "The design clue that shaped my almost-invention was ____________________.",
+      "quietOptionLine": "Work quietly by revising one step and writing it here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Find one safe household pattern and turn it into an invented step: ____________________."
+    },
+    {
+      "id": "museum-day-index-card-theater-room-cues",
+      "title": "Index Card Theater Room Cues",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "notebookSkill": "Use observed setting cues to build a short scene with a clear turn.",
+      "visitFit": "Adult-led upper-age notebook page for a table near a gallery, lobby, exhibit room, or quiet sketch area.",
+      "adultSetup": "Have writers notice three room cues such as light, shape, display order, or label placement, then arrange them like scene cards.",
+      "kidDirection": "Turn three museum room cues into a tiny scene, write two lines, and make the second line change the direction.",
+      "guidePrompt": "Ask what the first line expects, what the reply changes, and which observed cue makes the turn visible.",
+      "pageSections": [
+        {
+          "heading": "Room Cue Cards",
+          "lines": [
+            "The first room cue I noticed is ____________________.",
+            "The cue that changes the scene is ____________________.",
+            "The final cue should reveal ____________________."
+          ]
+        },
+        {
+          "heading": "Dialogue Turn",
+          "lines": [
+            "The first line of the scene is ____________________.",
+            "The reply changes the plan when ____________________.",
+            "A quiet stage action from the room is ____________________."
+          ]
+        },
+        {
+          "heading": "Theater Finish",
+          "lines": [
+            "The turning point becomes clear because ____________________.",
+            "One cue word I can revise is ____________________.",
+            "My final museum theater line is ____________________."
+          ]
+        }
+      ],
+      "shareLine": "Share the room cue that turned your scene, or point to it: ____________________.",
+      "wrapUpLine": "The moment that changed my tiny scene was ____________________.",
+      "quietOptionLine": "Skip read-aloud time and write your strongest scene line here: ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Arrange three quiet room cues at home and write the turn: ____________________."
+    }
+  ]
+}

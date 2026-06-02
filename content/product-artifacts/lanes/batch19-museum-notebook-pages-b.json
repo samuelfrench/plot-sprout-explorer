@@ -1,0 +1,211 @@
+{
+  "laneId": "batch19-museum-notebook-pages-b",
+  "productSlug": "museum-day-story-notebook-kit",
+  "pages": [
+    {
+      "id": "museum-day-tidepool-timekeepers-lab-display-clock",
+      "title": "Tidepool Timekeepers Lab Display Clock",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "notebookSkill": "Turning timed observations into story order",
+      "visitFit": "Adult-led museum or gallery table page for a calm exhibit-clue stop, color noticing, and a short fiction note.",
+      "adultSetup": "Print one page per writer, choose a quiet display corner, and point out one label, one pattern, and one object shape before writing.",
+      "kidDirection": "Notice a tidepool exhibit clue, add time-order details, and turn the display into a tiny lab story note.",
+      "guidePrompt": "Ask the writer what changed first, what changed next, and which label clue belongs in the story.",
+      "pageSections": [
+        {
+          "heading": "Exhibit Clock",
+          "lines": [
+            "The tidepool exhibit clue shows a time near ____________________.",
+            "The display color that changes first is ____________________.",
+            "The object shape I notice on the label is ____________________."
+          ]
+        },
+        {
+          "heading": "Observation Order",
+          "lines": [
+            "First, the lab helper records ____________________.",
+            "Next, the tide pattern points toward ____________________.",
+            "Last, the quiet sketch should show ____________________."
+          ]
+        },
+        {
+          "heading": "Fiction Note",
+          "lines": [
+            "The timekeeper's notebook begins with ____________________.",
+            "The exhibit clue becomes important because ____________________.",
+            "My final tidepool story note says ____________________."
+          ]
+        }
+      ],
+      "shareLine": "The time-order detail I can share from this page is ____________________.",
+      "wrapUpLine": "One museum observation I turned into fiction was ____________________.",
+      "quietOptionLine": "For a quiet option, sketch the tide pattern first and label ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Find a safe household object shape and imagine its exhibit clue: ____________________."
+    },
+    {
+      "id": "museum-day-greenhouse-gear-garden-label-design",
+      "title": "Greenhouse Gear Garden Label Design",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "notebookSkill": "Explaining how a display detail changes a made-up machine",
+      "visitFit": "Adult-led museum-day notebook page for a design display, shape hunt, and table-friendly story explanation.",
+      "adultSetup": "Print the page, set pencils beside the viewing spot, and invite writers to compare one gear shape, one plant color, and one short label.",
+      "kidDirection": "Choose a greenhouse gear from the display, describe what it helps, and write how it changes the garden story.",
+      "guidePrompt": "Ask which exhibit clue shows the gear's job and which pattern proves the garden needs a small adjustment.",
+      "pageSections": [
+        {
+          "heading": "Display Gear",
+          "lines": [
+            "The greenhouse gear shape looks like ____________________.",
+            "The plant color beside it is ____________________.",
+            "The exhibit label makes me wonder about ____________________."
+          ]
+        },
+        {
+          "heading": "Helpful Job",
+          "lines": [
+            "This gear helps the garden by ____________________.",
+            "The pattern on the display shows ____________________.",
+            "The room corner clue suggests ____________________."
+          ]
+        },
+        {
+          "heading": "Story Adjustment",
+          "lines": [
+            "The garden helper notices ____________________.",
+            "The gear should change because ____________________.",
+            "My final greenhouse story note says ____________________."
+          ]
+        }
+      ],
+      "shareLine": "The design detail I can share from this display is ____________________.",
+      "wrapUpLine": "One label clue that helped my story was ____________________.",
+      "quietOptionLine": "For a quiet option, draw the gear shape and add the word ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Invent a helpful gear for a room corner at home: ____________________."
+    },
+    {
+      "id": "museum-day-pantry-measurement-mystery-object-chart",
+      "title": "Pantry Measurement Mystery Object Chart",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "notebookSkill": "Using evidence words from observed objects",
+      "visitFit": "Adult-led gallery or field-trip table page for comparing an object, a label, and a simple measurement pattern.",
+      "adultSetup": "Print pages, choose a calm display with safe viewing space, and have writers notice one object size, one color, and one label clue.",
+      "kidDirection": "Study the pantry-style exhibit clue, compare the measurement pattern, and write the reason behind the mystery.",
+      "guidePrompt": "Ask what changed, what stayed the same, and which object detail gives the best evidence.",
+      "pageSections": [
+        {
+          "heading": "Object Clues",
+          "lines": [
+            "The pantry object on display looks like ____________________.",
+            "The label clue gives the amount ____________________.",
+            "The color or shape that stands out is ____________________."
+          ]
+        },
+        {
+          "heading": "Measurement Pattern",
+          "lines": [
+            "The chart pattern seems to change near ____________________.",
+            "One exhibit clue that gives evidence is ____________________.",
+            "The mystery helper should compare ____________________."
+          ]
+        },
+        {
+          "heading": "Reason Note",
+          "lines": [
+            "The cause word I want to use is ____________________.",
+            "The object detail matters because ____________________.",
+            "My final pantry mystery note says ____________________."
+          ]
+        }
+      ],
+      "shareLine": "The evidence detail I can share from this notebook page is ____________________.",
+      "wrapUpLine": "One measurement pattern I explained was ____________________.",
+      "quietOptionLine": "For a quiet option, circle one label clue and finish ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Compare two safe kitchen objects and write one made-up clue: ____________________."
+    },
+    {
+      "id": "museum-day-rain-gauge-railway-map-route",
+      "title": "Rain Gauge Railway Map Route",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "notebookSkill": "Building a route with map words and observation clues",
+      "visitFit": "Adult-led museum-day page for a map display, weather pattern noticing, and a short route-to-story draft.",
+      "adultSetup": "Print the route page, point to one map shape and one display label, and keep the writing table clear for quiet sketching.",
+      "kidDirection": "Follow the rain-gauge exhibit clue, choose map words, and write the railway route as a story note.",
+      "guidePrompt": "Ask which direction word belongs first, which display object changes the route, and where the story should stop.",
+      "pageSections": [
+        {
+          "heading": "Map Display",
+          "lines": [
+            "The rain-gauge display shows ____________________.",
+            "The map shape points toward ____________________.",
+            "The label clue near the route says ____________________."
+          ]
+        },
+        {
+          "heading": "Railway Route",
+          "lines": [
+            "The railway begins beside ____________________.",
+            "The route turns after the pattern of ____________________.",
+            "The next station should be near ____________________."
+          ]
+        },
+        {
+          "heading": "Conductor Story",
+          "lines": [
+            "The conductor notices the exhibit clue ____________________.",
+            "The map word that guides the story is ____________________.",
+            "My final railway route note says ____________________."
+          ]
+        }
+      ],
+      "shareLine": "The map word I can share from this route is ____________________.",
+      "wrapUpLine": "One display clue that moved my story forward was ____________________.",
+      "quietOptionLine": "For a quiet option, trace the route with a pencil and mark ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Draw a tiny room map and add one pretend railway stop: ____________________."
+    },
+    {
+      "id": "museum-day-seed-library-map-room-catalog-card",
+      "title": "Seed Library Map Room Catalog Card",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "notebookSkill": "Connecting a setting clue to the next story action",
+      "visitFit": "Adult-led museum, gallery, or field-trip table page for a catalog-style display, quiet sketch, and next-action writing.",
+      "adultSetup": "Print the catalog page, choose a display with labels or cases, and ask writers to notice one map mark, one object, and one color.",
+      "kidDirection": "Pick a seed-library exhibit clue, add a map-room detail, and write what the catalog helper should do next.",
+      "guidePrompt": "Ask how the setting detail changes the helper's next action and which label clue should be saved in the notebook.",
+      "pageSections": [
+        {
+          "heading": "Catalog Display",
+          "lines": [
+            "The seed-library object on display is ____________________.",
+            "The catalog label points to ____________________.",
+            "The color or pattern I notice is ____________________."
+          ]
+        },
+        {
+          "heading": "Map Room Clue",
+          "lines": [
+            "The map mark appears beside ____________________.",
+            "The quiet sketch should include ____________________.",
+            "The exhibit clue makes the room feel like ____________________."
+          ]
+        },
+        {
+          "heading": "Next Action",
+          "lines": [
+            "The catalog helper should first ____________________.",
+            "The next action matters because ____________________.",
+            "My final seed library note says ____________________."
+          ]
+        }
+      ],
+      "shareLine": "The setting clue I can share from this catalog page is ____________________.",
+      "wrapUpLine": "One next-action phrase I wrote was ____________________.",
+      "quietOptionLine": "For a quiet option, make a small map mark and write ____________________.",
+      "takeHomePromptLine": "Take-home prompt: Turn one shelf or drawer at home into a pretend catalog clue: ____________________."
+    }
+  ]
+}

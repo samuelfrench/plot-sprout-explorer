@@ -53,8 +53,9 @@ describe('storyData', () => {
       'tutoring-center-story-sprint-pack',
       'summer-camp-story-circle-kit',
       'after-school-story-club-starter-kit',
+      'museum-day-story-notebook-kit',
     ])
-    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19', '$17', '$11', '$23', '$39', '$49', '$59', '$69'])
+    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79', '$19', '$17', '$11', '$23', '$39', '$49', '$59', '$69', '$37'])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
     }

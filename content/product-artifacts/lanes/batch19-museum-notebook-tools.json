@@ -1,0 +1,190 @@
+{
+  "laneId": "batch19-museum-notebook-tools",
+  "productSlug": "museum-day-story-notebook-kit",
+  "adultGuide": {
+    "beforeVisit": [
+      "Print one adult copy, the planned notebook pages, and a small stack of take-home observation cards before the group arrives.",
+      "Choose one calm gallery focus such as shape, pattern, object use, texture, or setting detail for the first writing table.",
+      "Prepare pencils, clipboards, plain folders, and a quiet choice bank so the activity can run without devices.",
+      "Review any venue rules with the adult team and keep the writing task at tables, benches, or approved education spaces.",
+      "Plan a short adult model that turns one observed detail into an invented story clue without using personal facts."
+    ],
+    "tableSetup": [
+      "Place only the active notebook page, pencil, and one choice strip at each seat so the table stays uncluttered.",
+      "Keep extra cards, spare pages, and folders in an adult supply stack until the group is ready for them.",
+      "Use color tabs, symbols, or blank folders for simple sorting instead of private identifiers.",
+      "Set a quiet table option where participants can sketch, point, or write one short line before joining a larger task.",
+      "Leave clear space for clipboards and printed pages so the writing table works in a museum, gallery, co-op, or library room."
+    ],
+    "observationToStory": [
+      "Start with one visible detail such as a color, material, shape, shadow, pattern, label-free object, or room feature.",
+      "Ask writers to turn that detail into an invented setting, helper, object clue, or small friendly mix-up.",
+      "Offer two adult-created options when someone is stuck, and keep every story detail make-believe.",
+      "Move from observation to fiction in small steps: notice, choose, imagine, write, and mark one detail to keep.",
+      "Use neutral language such as maker, guide, visitor, collector, builder, or messenger for invented roles."
+    ],
+    "quietParticipation": [
+      "Allow participation by pointing to a choice, circling a detail, sketching a label, dictating one phrase, or writing privately.",
+      "Let anyone pass during sharing while still completing a notebook page or take-home card.",
+      "Offer a silent five-minute observation card when the room is busy or the group needs a settled reset.",
+      "Invite partners to share only a title, object clue, or setting detail instead of a full draft.",
+      "Keep adult support focused on the printed prompt, the observed detail, and the next small story step."
+    ],
+    "noDataUse": [
+      "This kit uses no personal lists, personal labels, digital collection, image collection, or web-sharing step.",
+      "Use invented places, invented roles, and ordinary objects rather than personal facts.",
+      "Keep every page offline, printable, and handled by the adult leader, participant, or family.",
+      "Organize pages with symbols, color tabs, or plain folders instead of private identifiers."
+    ],
+    "familyHandoff": [
+      "Send home the notebook page, one optional observation card, and a note that the story details are invented.",
+      "Mark one simple next step such as add a title, add one detail, or finish the ending.",
+      "Tell families the card can be completed by pointing, sketching, dictating, or writing one short line.",
+      "Keep any sharing optional and focused on a printed page, sketch, title, object clue, or invented setting."
+    ]
+  },
+  "visitFormats": [
+    {
+      "name": "One-Room Detail Hunt",
+      "bestFor": "Short family visits, co-op gallery blocks, or museum educator tables that need one focused observation loop.",
+      "steps": [
+        "Adult leader chooses one room or display area and names the focus: shape, color, pattern, material, or object use.",
+        "Participants silently notice one detail and mark it on the printed notebook page.",
+        "Adult leader models how that detail could become an invented story clue.",
+        "Writers draft a short setting or object line before moving to the next page."
+      ]
+    },
+    {
+      "name": "Table-First Museum Writing",
+      "bestFor": "Education rooms, gallery tables, library museum days, or groups that start seated before viewing.",
+      "steps": [
+        "Adult leader gives each writer a choice bank with invented roles and ordinary objects.",
+        "Writers pick one role and one object before observing a display or printed image set.",
+        "Adult leader asks for one visible detail that can connect to the chosen object.",
+        "Writers combine the three choices into a two-sentence story start."
+      ]
+    },
+    {
+      "name": "Sketch Then Sentence",
+      "bestFor": "Quiet participants, mixed-age family groups, and busy gallery moments where speaking is optional.",
+      "steps": [
+        "Adult leader asks writers to sketch one safe visible shape or pattern on the notebook page.",
+        "Writers label the sketch with one describing word or adult-offered choice.",
+        "Adult leader shows how the label can become an invented place, clue, or helper job.",
+        "Writers add one sentence that uses the sketch without copying any private information."
+      ]
+    },
+    {
+      "name": "Object Clue Circle",
+      "bestFor": "Small groups with a museum educator, co-op adult, or family leader guiding a shared table.",
+      "steps": [
+        "Adult leader places four ordinary object cards in the center of the table.",
+        "Participants choose one object card and connect it to one observed color, shape, or texture.",
+        "Adult leader invites optional pointing or short spoken choices while recording only invented options.",
+        "Writers turn the object and detail into one friendly story problem and one next action."
+      ]
+    },
+    {
+      "name": "Three-Stop Notebook Path",
+      "bestFor": "Longer field-trip table blocks where adults can guide three approved stops without rushing.",
+      "steps": [
+        "Adult leader marks three approved stops: a detail stop, an object stop, and a story ending stop.",
+        "Writers add one note or sketch at each stop on the same notebook page.",
+        "Adult leader helps writers order the three notes as first, next, and last.",
+        "Writers draft a tiny story path and underline the clearest detail."
+      ]
+    },
+    {
+      "name": "Exit Table Wrap-Up",
+      "bestFor": "The final 10 minutes of a museum day, gallery lesson, or family learning visit.",
+      "steps": [
+        "Adult leader asks writers to stop at the end of the line or sketch they are working on.",
+        "Writers mark one observed detail and one invented story idea they want to keep.",
+        "Adult leader offers one take-home observation card that matches the marked idea.",
+        "Pages go into plain folders before the table is reset for the next group."
+      ]
+    }
+  ],
+  "takeHomeObservationCards": [
+    {
+      "title": "Shape to Setting",
+      "time": "6 minutes",
+      "skill": "setting detail",
+      "direction": "Choose one shape you noticed and turn it into an invented place: ____________________.",
+      "familyLine": "A grown-up can ask what the place feels or looks like: ____________________."
+    },
+    {
+      "title": "Pattern Clue",
+      "time": "7 minutes",
+      "skill": "plot clue",
+      "direction": "Pick one pattern from your notebook and make it a story clue: ____________________.",
+      "familyLine": "A grown-up can ask how the clue helps the helper: ____________________."
+    },
+    {
+      "title": "Object Helper",
+      "time": "7 minutes",
+      "skill": "character action",
+      "direction": "Turn one ordinary object into something an invented helper can use: ____________________.",
+      "familyLine": "A grown-up can offer two possible helper actions here: ____________________."
+    },
+    {
+      "title": "Quiet Color Line",
+      "time": "5 minutes",
+      "skill": "sensory detail",
+      "direction": "Write one sentence that uses a color from the visit in a make-believe scene: ____________________.",
+      "familyLine": "A grown-up can ask which word makes the color easier to picture: ____________________."
+    },
+    {
+      "title": "Material Match",
+      "time": "8 minutes",
+      "skill": "description",
+      "direction": "Choose a material such as paper, wood, stone, cloth, clay, or metal and describe it: ____________________.",
+      "familyLine": "A grown-up can ask whether the material feels smooth, rough, light, or heavy: ____________________."
+    },
+    {
+      "title": "First Next Last Visit",
+      "time": "8 minutes",
+      "skill": "sequence",
+      "direction": "Write first, next, and last for three invented story steps from one observed detail: ____________________.",
+      "familyLine": "A grown-up can point to the step that should become longer: ____________________."
+    },
+    {
+      "title": "Gallery Guide Reply",
+      "time": "9 minutes",
+      "skill": "dialogue",
+      "direction": "Write two short lines between an invented guide and an invented visitor: ____________________.",
+      "familyLine": "A grown-up can read one role while the writer chooses the reply: ____________________."
+    },
+    {
+      "title": "Title From a Detail",
+      "time": "5 minutes",
+      "skill": "main idea",
+      "direction": "Write three possible titles using one detail from the notebook page: ____________________.",
+      "familyLine": "A grown-up can ask which title gives the clearest story clue: ____________________."
+    },
+    {
+      "title": "Kind Ending Card",
+      "time": "8 minutes",
+      "skill": "ending choice",
+      "direction": "Add a calm ending where the invented helper uses one observed detail wisely: ____________________.",
+      "familyLine": "A grown-up can ask what changed by the end of the story: ____________________."
+    },
+    {
+      "title": "Next Museum Seed",
+      "time": "7 minutes",
+      "skill": "story planning",
+      "direction": "Invent one place, one helper, one object, and one small mix-up for another museum story: ____________________.",
+      "familyLine": "A grown-up can add one extra visible detail to the seed: ____________________."
+    }
+  ],
+  "optionalFamilySharePrompts": [
+    "Show one sketch, title, or observed detail from the notebook page.",
+    "Read one invented sentence aloud, or ask a grown-up to read it.",
+    "Point to one object clue and explain how it helps the story.",
+    "Share one setting detail that came from a shape, color, pattern, or material.",
+    "Tell which story step came first, next, or last.",
+    "Show one word you made clearer after the visit.",
+    "Describe one calm ending choice from the invented story.",
+    "Pass today and keep the page private while the family notices one finished detail."
+  ]
+}

@@ -587,6 +587,64 @@
         "Let participants write, sketch labels, point to choices, dictate one phrase, or pass during sharing.",
         "Send home one prompt card when the club ends so families can extend the invented story offline."
       ]
+    },
+    {
+      "slug": "museum-day-story-notebook-kit",
+      "title": "Museum Day Story Notebook Kit",
+      "pricePoint": "$37",
+      "status": "checkout_pending",
+      "headline": "A printable museum-day notebook kit for field trips, co-ops, and family learning days.",
+      "summary": "Fifteen adult-led notebook pages turn museum, gallery, and field-trip observations into short invented story notes with quiet options and take-home cards.",
+      "heroImage": "images/plotsprout/batch19/museum-day-story-notebook-kit.jpg",
+      "ctaLabel": "Request museum kit launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Museum%20Day%20Story%20Notebook%20Kit",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static museum-day kit page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "spoon-ferry-lunchbox-harbor",
+        "pocket-park-notice-board",
+        "button-bakery-map-mixup",
+        "penny-path-compass-shop",
+        "tidepool-timekeepers-lab",
+        "greenhouse-gear-garden",
+        "pantry-measurement-mystery",
+        "rain-gauge-railway",
+        "seed-library-map-room",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "almost-invention-workshop",
+        "index-card-theater-club"
+      ],
+      "includedPages": [
+        "Fifteen printable museum-day story notebook pages",
+        "Before-visit planning guide",
+        "Adult table setup checklist",
+        "Observation-to-story coaching notes",
+        "Quiet participation options",
+        "No-data use notes",
+        "Family handoff notes",
+        "Six repeatable visit formats",
+        "Ten take-home observation cards",
+        "Eight optional family-share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool co-op museum day that needs a printable writing table",
+        "A family learning visit where kids need a short observation-to-fiction task",
+        "A library or gallery education room with screen-free notebook pages",
+        "A field-trip organizer planning quiet adult-led writing blocks",
+        "A take-home observation card set for continuing invented stories offline"
+      ],
+      "parentSteps": [
+        "Choose one visit format before the group arrives so the writing stop starts quickly.",
+        "Print only the notebook pages needed for the day and keep the rest in an adult folder.",
+        "Place pencils, clipboards, and the active page at the table before writers begin.",
+        "Let participants point, sketch, dictate, write one line, or pass during optional sharing.",
+        "Send home one observation card when the visit ends so families can extend the invented story offline."
+      ]
     }
   ]
 }
