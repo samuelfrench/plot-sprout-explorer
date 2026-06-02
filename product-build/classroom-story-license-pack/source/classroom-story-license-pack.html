@@ -1,0 +1,1705 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Classroom Story License Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.36in; }
+      :root {
+        --ink: #17343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #b6d4cf;
+        --teal: #2c7a78;
+        --coral: #ec6f3f;
+        --gold: #f2c14f;
+        --blue: #2b7f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 12.8px;
+        line-height: 1.28;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 11ch; font-size: 38px; }
+      h2 { margin-bottom: 0.07in; font-size: 24px; }
+      h3 { margin-bottom: 0.035in; font-size: 13px; }
+      p, li { color: var(--muted); }
+      img {
+        display: block;
+        max-width: 100%;
+        border: 1px solid var(--line);
+      }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.13in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.35in;
+        gap: 0.23in;
+        border-top: 0.15in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.15in solid var(--teal);
+        font-size: 10.8px;
+      }
+      .rubric-page {
+        border-top: 0.15in solid var(--blue);
+        font-size: 10.3px;
+      }
+      .extension-page {
+        border-top: 0.15in solid var(--coral);
+        font-size: 10.2px;
+      }
+      .page-kicker, .kicker, .world-intro span, .extension-card span {
+        color: var(--teal);
+        font-size: 9.6px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.86in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 900;
+      }
+      .included-grid, .setup-grid, .world-grid, .extension-grid, .card-grid {
+        display: grid;
+        gap: 0.07in;
+      }
+      .included-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .setup-grid, .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .world-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+      .extension-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .included-grid li, .setup-grid li, .card-grid section, .writing-box, .rubric-note,
+      .extension-card, .rubric-row, .world-intro {
+        padding: 0.05in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .included-grid li, .setup-grid li { list-style: none; }
+      .included-grid li {
+        min-height: 0.36in;
+        font-size: 10px;
+        line-height: 1.16;
+      }
+      .world-intro {
+        min-height: auto;
+      }
+      .world-intro img, .world-intro p { display: none; }
+      .world-intro h3 {
+        margin: 0;
+        font-size: 9.1px;
+        line-height: 1.06;
+      }
+      .student-prompt {
+        min-height: 0.56in;
+        padding: 0.08in;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-weight: 900;
+      }
+      figure {
+        float: right;
+        width: 1.68in;
+        margin: 0 0 0.05in 0.1in;
+      }
+      figure img {
+        width: 1.68in;
+        height: 0.94in;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--muted);
+        font-size: 9px;
+      }
+      .write-line {
+        min-height: 0.18in;
+        margin-bottom: 0.035in;
+        padding-bottom: 0.03in;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .rubric-note {
+        margin-top: 0.07in;
+        border-color: #e5bc7c;
+        background: #fff4dc;
+      }
+      .rubric-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.07in;
+      }
+      .rubric-row h3, .extension-card h3 { margin-bottom: 0.02in; }
+      .rubric-row ol {
+        margin: 0;
+        padding-left: 0.15in;
+      }
+      .footer-note {
+        margin-top: 0.07in;
+        padding-top: 0.07in;
+        border-top: 2px solid var(--gold);
+        color: var(--muted);
+        font-size: 9.6px;
+      }
+      @media screen {
+        body { padding: 24px; background: #dfeee7; }
+        .pack-page {
+          width: 8.5in;
+          margin: 0 auto 24px;
+          box-shadow: 0 18px 40px rgba(20, 31, 43, 0.18);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable classroom writing license</p>
+        <h1>Thirty story stations for one busy classroom</h1>
+        <p>Prompt cards, routines, extension activities, and a practical rubric for repeated short-story practice.</p>
+        <div class="badge">$79</div>
+        <p><strong>Best for:</strong> Elementary teachers, homeschool co-ops, tutors, and substitute folders serving reluctant writers ages 7-11.</p>
+        <p><strong>Format:</strong> 30 printable prompt cards, five classroom routines, ten extension activities, and a four-criterion rubric</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div>
+        <h2>Inside</h2>
+        <ul class="included-grid"><li>30 prompt cards across setting, choice, sequence, dialogue, revision, sensory detail, problem-solution, ending, sentence variety, and peer sharing</li>
+<li>Five classroom routines for launch, station rotation, quick conference, sentence share, and co-op circle</li>
+<li>Five setup notes for preparing card trays, story maps, feedback sticky notes, and weekly focus cards</li>
+<li>Ten extension activities for fast finishers, small groups, substitute folders, and co-op tables</li>
+<li>Four-criterion rubric for concrete details, clear sequence, character choice, and revision move</li>
+<li>Local image-backed world menu for visual station setup</li>
+<li>Partner share moves that keep sharing low-pressure and specific</li>
+<li>Printable source HTML for provider review</li>
+<li>Provider-ready ZIP artifact</li>
+<li>Offline teacher-facing language for paper-only classroom use</li>
+<li>Portfolio-friendly writing evidence across 30 cards</li>
+<li>Reusable license-pack structure for future classroom bundles</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Teacher setup</p>
+      <h2>Run repeatable writing stations</h2>
+      <div class="setup-grid">
+        <div>
+          <h3>Setup</h3>
+          <ol><li>Print the prompt cards in small sets, cut them apart, and band each set by routine: warm-up, station, partner talk, or extension.</li>
+<li>Prepare a class tray with blank story maps, half-page draft sheets, colored pencils, and sticky notes labeled add, move, replace, and explain.</li>
+<li>Choose six cards for the week before class starts: two easy starters, two detail builders, one partner activity, and one fast-finisher challenge.</li>
+<li>Post the four rubric words on the board with student-friendly reminders: details, order, choice, and revise.</li>
+<li>Plan to score one rubric criterion per writing block so feedback stays fast, specific, and usable for the next draft.</li></ol>
+        </div>
+        <div>
+          <h3>Classroom routines</h3>
+          <ol><li>Monday launch: read one prompt card, model a two-sentence story start, then let students draft privately for eight quiet minutes.</li>
+<li>Station rotation: place four prompt cards at table groups for setting, problem, character choice, and revision so students collect one idea from each stop.</li>
+<li>Quick conference line: while students write, meet with five students for one minute each and ask what changed because of the character&#39;s choice.</li>
+<li>Friday sentence share: students choose one revised sentence to read to a partner, then name the detail they added or clarified.</li>
+<li>Homeschool co-op circle: each child brings a finished paragraph, points to one concrete detail, and records one next-step revision before taking the page home.</li></ol>
+        </div>
+      </div>
+      <h3>World menu</h3>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Acorn Avenue Errand Office</h3>
+        <p>A desk inside a hollow acorn sorts tiny neighborhood errands: return a borrowed thimble, update the snack map, and deliver cheerful notes before the lunch bell.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Almost Invention Workshop</h3>
+        <p>Inventors bring almost-working ideas to a workshop where revision is treated like testing, adjusting, and trying again.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Binding Day Boardwalk</h3>
+        <p>On Binding Day, young authors prepare finished pieces for a boardwalk showcase with covers, blurbs, pages, and author notes.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Button Bakery Map Mix-Up</h3>
+        <p>A bakery the size of a lunchbox sells button-shaped rolls, and every customer gets a crumb map to the next helpful errand.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Buttonwood Library Train</h3>
+        <p>A pocket-sized train circles a library tree and stops at shelves that grow new questions overnight.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Cloudberry Clocktower</h3>
+        <p>A clocktower above the town grows berries that keep time, but the breakfast hour has gone missing.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Clue Label Tower Museum</h3>
+        <p>Inside a tall museum of everyday objects, each exhibit opens when its short label explains the one clue visitors should notice.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Compass Craft Academy</h3>
+        <p>At a school for story cartographers, students learn to plan routes before writing the journey.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Greenhouse Gear Garden</h3>
+        <p>Behind the school garden is a greenhouse where friendly gears turn compost drums, lift watering cans, and open roof vents whenever seedlings need more air.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Index Card Theater Club</h3>
+        <p>A tabletop theater club uses index cards, cue lights, and tiny stage pieces to turn scattered scenes into one clear performance plan.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Margin Note Market</h3>
+        <p>At a bustling market for feedback, every stall trades clear margin notes that help writers make the next draft stronger.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <div>
+        <span>Ages 6-8</span>
+        <h3>Moon Muffin Market</h3>
+        <p>A tiny night market opens whenever the moon smells cinnamon, and every stall sells a pastry with a secret job.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Moss Message Observatory</h3>
+        <p>A quiet forest observatory studies moss patches that change shade after rain, leaving soft patterns for careful observers to sketch in field notebooks.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Pantry Measurement Mystery</h3>
+        <p>In a sunny kitchen pantry, measuring spoons, recipe cards, and labeled jars help young bakers solve why every batch of morning muffins rises to a different height.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pencil-dragon-academy.jpg" alt="Pencil Dragon Academy illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Pencil Dragon Academy</h3>
+        <p>Young pencil dragons learn to sketch doors, revise maps, and erase mistakes without erasing the lesson.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Penny Path Compass Shop</h3>
+        <p>A cheerful compass shop on Penny Path rents button compasses to kids who need to find tiny errands hiding between snack stands and mailbox rows.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Pocket Park Notice Board</h3>
+        <p>A park small enough to fit in a jacket pocket uses a notice board for seed swaps, bench reservations, picnic lists, and cheerful cleanup reminders.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <div>
+        <span>Ages 6-8</span>
+        <h3>Puddle Planet Post Office</h3>
+        <p>After rain, sidewalk puddles become tiny planets where cheerful mail carriers deliver messages in bottle caps.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Rain Boot Route Rangers</h3>
+        <p>A pair of rain boots becomes a traveling route office whenever puddles appear, helping tiny shopkeepers choose dry paths for deliveries.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Rain Gauge Railway</h3>
+        <p>A tiny railway crosses a backyard weather station, carrying raindrop samples, cloud notes, and garden alerts between labeled posts after every shower.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Revision River Ferry</h3>
+        <p>A paper ferry carries young editors between draft islands, where every stop reveals a stronger way to shape a story.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Seed Library Map Room</h3>
+        <p>Inside a community seed library, drawers open onto maps showing where beans climbed, carrots curved, and sunflowers turned their faces through the season.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Solar Oven Picnic Station</h3>
+        <p>On a bright meadow table, kids test cardboard solar ovens that warm snacks by angle, timing, shiny panels, and careful notes instead of plugs.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Spoon Ferry Lunchbox Harbor</h3>
+        <p>At Lunchbox Harbor, spoon ferries carry menu cards, snack orders, and polite dockside dialogue between tiny cracker cafes.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <div>
+        <span>Ages 7-8</span>
+        <h3>Teacup Town Weather Window</h3>
+        <p>Inside a blue teacup, a tiny town checks the weather through a spoon-shaped window and plans errands around drizzle, sunbeams, and toast-scented fog.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Tidepool Timekeepers Lab</h3>
+        <p>At the edge of a quiet bay, a floating field lab keeps track of tide minutes, shell shadows, and which tiny pools refill first after the moon tugs the water.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Tiny Lantern Reef</h3>
+        <p>Under a dock, tiny lanterns guide paper boats through a reef made of lost buttons and sea glass.</p>
+      </div>
+    </article></div>
+      <p class="footer-note">Use these pages offline for adult-guided classroom writing practice with no accounts, no uploads, and no public sharing.</p>
+    </section>
+    <section class="pack-page rubric-page">
+      <p class="page-kicker">Teacher tools</p>
+      <h2>Four-criterion rubric</h2>
+      <div class="rubric-grid">
+        <article class="rubric-row">
+          <h3>Concrete details</h3>
+          <p>The draft includes observable nouns, actions, and sensory details a reader can picture without teacher explanation.</p>
+          <ol>
+            <li><strong>Beginning:</strong> Names a place or object but gives few details the reader can picture.</li>
+<li><strong>Developing:</strong> Adds one or two specific details, though some sentences still stay general.</li>
+<li><strong>Secure:</strong> Uses several concrete details that make the setting, object, or action easy to imagine.</li>
+<li><strong>Extending:</strong> Chooses precise details that also reveal mood, character thinking, or what matters in the scene.</li>
+          </ol>
+        </article>
+
+        <article class="rubric-row">
+          <h3>Clear sequence</h3>
+          <p>The reader can follow what happens first, next, after the character&#39;s choice, and at the end.</p>
+          <ol>
+            <li><strong>Beginning:</strong> Lists events or ideas, but the order is hard to follow.</li>
+<li><strong>Developing:</strong> Shows a beginning and ending, with one middle event that may need a clearer connection.</li>
+<li><strong>Secure:</strong> Organizes events in a clear order using time words, cause-and-effect, or paragraph flow.</li>
+<li><strong>Extending:</strong> Controls pacing by slowing down the important choice and moving quickly through smaller steps.</li>
+          </ol>
+        </article>
+
+        <article class="rubric-row">
+          <h3>Character choice</h3>
+          <p>The character makes a visible decision that changes what happens next in the story.</p>
+          <ol>
+            <li><strong>Beginning:</strong> The character is present, but the story mostly happens around them.</li>
+<li><strong>Developing:</strong> The character makes a choice, though the result is only partly explained.</li>
+<li><strong>Secure:</strong> The character makes a clear choice and the next event follows from that decision.</li>
+<li><strong>Extending:</strong> The choice shows what the character values and creates a more satisfying ending.</li>
+          </ol>
+        </article>
+
+        <article class="rubric-row">
+          <h3>Revision move</h3>
+          <p>The student can point to a specific change made after rereading, feedback, or teacher conference.</p>
+          <ol>
+            <li><strong>Beginning:</strong> Rereads the draft but makes no visible change yet.</li>
+<li><strong>Developing:</strong> Fixes or adds a small part when prompted by the teacher or partner.</li>
+<li><strong>Secure:</strong> Names and completes one useful revision move: add, move, replace, or explain.</li>
+<li><strong>Extending:</strong> Makes a purposeful revision and can explain how it helps the reader understand the story.</li>
+          </ol>
+        </article></div>
+      <p class="footer-note">Score one criterion per writing block. The pack is built for fast feedback on visible writing moves.</p>
+    </section>
+    <section class="pack-page extension-page">
+      <p class="page-kicker">Teacher tools</p>
+      <h2>Extension activity menu</h2>
+      <div class="extension-grid">
+        <article class="extension-card">
+          <span>15 minutes</span>
+          <h3>Detail Detective Walk</h3>
+          <p><strong>Teacher:</strong> Read one prompt card aloud, then send students to notice three classroom-safe details they can borrow for the setting.</p>
+          <p><strong>Output:</strong> A three-item detail bank with one color, one texture, and one tiny action ready for a story draft.</p>
+        </article>
+
+        <article class="extension-card">
+          <span>20 minutes</span>
+          <h3>Sequence Strip Build</h3>
+          <p><strong>Teacher:</strong> Give pairs four blank strips and ask them to arrange a clear beginning, middle, choice, and ending before writing.</p>
+          <p><strong>Output:</strong> A taped four-strip sequence plan with order words and one sentence on each strip.</p>
+        </article>
+
+        <article class="extension-card">
+          <span>25 minutes</span>
+          <h3>Choice Crossroads</h3>
+          <p><strong>Teacher:</strong> Pause after the story problem and chart two kind, practical choices the character could make.</p>
+          <p><strong>Output:</strong> A short paragraph explaining the chosen path and one result that follows from it.</p>
+        </article>
+
+        <article class="extension-card">
+          <span>15 minutes</span>
+          <h3>Setting Sound Map</h3>
+          <p><strong>Teacher:</strong> Invite students to sketch a simple setting map and label quiet, busy, soft, and surprising sounds.</p>
+          <p><strong>Output:</strong> A labeled setting map plus two sentences that use sound to make the scene clearer.</p>
+        </article>
+
+        <article class="extension-card">
+          <span>20 minutes</span>
+          <h3>Dialogue Tag Team</h3>
+          <p><strong>Teacher:</strong> Model one polite question and one helpful answer, then have partners build a tiny exchange for their characters.</p>
+          <p><strong>Output:</strong> Four lines of dialogue with speaker names and one action tag that shows what a character is doing.</p>
+        </article>
+
+        <article class="extension-card">
+          <span>10 minutes</span>
+          <h3>Prop Card Sort</h3>
+          <p><strong>Teacher:</strong> Name five ordinary story objects and ask students to sort them into helpful, confusing, or clue categories.</p>
+          <p><strong>Output:</strong> A three-column prop sort with one sentence explaining how one object changes the story.</p>
+        </article>
+
+        <article class="extension-card">
+          <span>15 minutes</span>
+          <h3>Revision Sticky Note</h3>
+          <p><strong>Teacher:</strong> Ask students to mark one draft spot with add, move, replace, or explain, then make only that revision.</p>
+          <p><strong>Output:</strong> One revised sentence and a sticky note naming the exact revision move used.</p>
+        </article>
+
+        <article class="extension-card">
+          <span>30 minutes</span>
+          <h3>Ending Three Ways</h3>
+          <p><strong>Teacher:</strong> List three ending types: solve it, learn from it, or invite the next adventure, then let students test all three.</p>
+          <p><strong>Output:</strong> Three possible endings for the same draft, with a star beside the clearest ending.</p>
+        </article>
+
+        <article class="extension-card">
+          <span>15 minutes</span>
+          <h3>Partner Question Pass</h3>
+          <p><strong>Teacher:</strong> Give each partner one question stem: What did the character notice, choose, change, or wonder?</p>
+          <p><strong>Output:</strong> One partner question answered in writing and one draft detail improved because of it.</p>
+        </article>
+
+        <article class="extension-card">
+          <span>45 minutes</span>
+          <h3>Mini Conference Tracker</h3>
+          <p><strong>Teacher:</strong> Meet with small groups and record one rubric strength plus one next move for each student while the rest complete card-based drafting.</p>
+          <p><strong>Output:</strong> A conference slip with one strength, one revision target, and a completed draft section.</p>
+        </article></div>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 1 | setting detail</div>
+      <h2>Acorn Avenue Setting Clues</h2>
+      <figure><img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration"><figcaption>Acorn Avenue Errand Office</figcaption></figure>
+      <p class="student-prompt">Describe Acorn Avenue on a busy errand morning so a reader can picture where your helper is going.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>leafy desk</li>
+<li>tiny mail cart</li>
+<li>squirrel bell</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Post this card at a writing station and ask students to circle one route choice before drafting.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The first place my helper sees is ____________________</p>
+<p class="write-line">A tiny sign on the route says ____________________</p>
+<p class="write-line">The path feels busy because ____________________</p>
+<p class="write-line">One extra setting detail I will add is ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Ask partners to point to the clearest place detail without correcting the draft.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Have students sketch a two-stop map and label one detail from their writing.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The draft includes at least two concrete place details that match the chosen route.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 2 | character choice</div>
+      <h2>Button Bakery Choice Helper</h2>
+      <figure><img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration"><figcaption>Button Bakery Map Mix-Up</figcaption></figure>
+      <p class="student-prompt">Write about a bakery helper who must choose the best way to fix a mixed-up crumb map.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>turn the map</li>
+<li>ask the baker</li>
+<li>follow warm crumbs</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Give students thirty seconds to choose a bakery job before they write the scene.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">My helper notices the map problem when ____________________</p>
+<p class="write-line">The choice my helper makes is ____________________</p>
+<p class="write-line">This choice is smart because ____________________</p>
+<p class="write-line">Another choice my helper could try is ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Invite students to read only the sentence that explains why the choice makes sense.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students trade cards and list one kind consequence of a different choice.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The writing names a clear character choice and gives a reason for it.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 3 | sequence</div>
+      <h2>Teacup Town Forecast Order</h2>
+      <figure><img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration"><figcaption>Teacup Town Weather Window</figcaption></figure>
+      <p class="student-prompt">Create a Teacup Town forecast scene that shows what happens first, next, and last.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>steam cloud</li>
+<li>spoon window</li>
+<li>cup bridge</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Ask students to number the three choices before completing the writing lines.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">First, the weather watcher sees ____________________</p>
+<p class="write-line">Next, the town changes its plan by ____________________</p>
+<p class="write-line">After that, my character helps by ____________________</p>
+<p class="write-line">Last, the forecast note says ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Have partners hold up one, two, and three fingers as the sequence is read.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students add a fourth step that still fits the order of the scene.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The draft uses sequence language to show events in a logical order.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 4 | dialogue</div>
+      <h2>Pocket Park Notice Chat</h2>
+      <figure><img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration"><figcaption>Pocket Park Notice Board</figcaption></figure>
+      <p class="student-prompt">Write a friendly conversation about which notice should go on the Pocket Park board first.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>lost mitten</li>
+<li>picnic rule</li>
+<li>garden meeting</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Model one spoken line with quotation marks before students write their own park notice conversation.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The first speaker says ____________________</p>
+<p class="write-line">The second speaker answers ____________________</p>
+<p class="write-line">The notice board question is ____________________</p>
+<p class="write-line">The conversation helps because ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Let pairs read the two spoken lines quietly using classroom voices.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students revise one line so it sounds more like the speaker who says it.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The dialogue includes two speakers and moves the notice-board problem forward.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 5 | revision</div>
+      <h2>Penny Path Clearer Sentence</h2>
+      <figure><img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration"><figcaption>Penny Path Compass Shop</figcaption></figure>
+      <p class="student-prompt">Help the compass shop owner revise a confusing direction into a sentence travelers can follow.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>shine clue</li>
+<li>street corner</li>
+<li>shop window</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Ask students to draft one quick direction sentence, then improve it with a clearer clue.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">My first direction sentence is ____________________</p>
+<p class="write-line">The confusing part is ____________________</p>
+<p class="write-line">I can make it clearer by adding ____________________</p>
+<p class="write-line">My revised direction sentence is ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Ask students to show a partner only the before-and-after change.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students underline the exact words they added during revision.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The revised sentence is more specific than the first sentence.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 6 | sensory detail</div>
+      <h2>Rain Boot Route Sense Walk</h2>
+      <figure><img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration"><figcaption>Rain Boot Route Rangers</figcaption></figure>
+      <p class="student-prompt">Describe a Rain Boot Route Rangers walk using safe sound, sight, or touch details.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>plink sound</li>
+<li>bright puddle</li>
+<li>squishy path</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Read the choices aloud and have students pick one sense to emphasize in their route description.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">My route begins with this sound ____________________</p>
+<p class="write-line">The brightest thing I see is ____________________</p>
+<p class="write-line">The path feels like ____________________</p>
+<p class="write-line">The sensory detail that helps most is ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Invite students to read one sensory phrase while classmates listen for the sense used.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students add one color word and one texture word to the same scene.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The writing uses at least two sensory details connected to the route.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 7 | problem-solution</div>
+      <h2>Tidepool Lab Problem Fix</h2>
+      <figure><img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration"><figcaption>Tidepool Timekeepers Lab</figcaption></figure>
+      <p class="student-prompt">Write about a tidepool lab note that does not match and how the timekeepers solve it calmly.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>shell clock</li>
+<li>pebble chart</li>
+<li>water mark</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Have students mark P for problem and S for solution beside their lines after writing.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The lab problem begins when ____________________</p>
+<p class="write-line">The clue that helps is ____________________</p>
+<p class="write-line">The timekeepers solve it by ____________________</p>
+<p class="write-line">The lab is ready again because ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Ask partners to identify the problem sentence and the solution sentence.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students add a labeled diagram that shows the clue used to solve the problem.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The writing states a problem and a matching solution.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 8 | ending choice</div>
+      <h2>Greenhouse Gear Ending Choice</h2>
+      <figure><img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration"><figcaption>Greenhouse Gear Garden</figcaption></figure>
+      <p class="student-prompt">Write an ending for a greenhouse story where the helper decides what the gears should do next.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>quiet ending</li>
+<li>surprise ending</li>
+<li>team ending</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Ask students to choose the ending mood before drafting the final four lines.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">At the end, the greenhouse helper chooses ____________________</p>
+<p class="write-line">The gears respond by ____________________</p>
+<p class="write-line">The plants show the ending is working when ____________________</p>
+<p class="write-line">My final sentence will leave the reader thinking ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Let students name their ending mood before reading the final sentence.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students write a second possible ending with a different mood.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The ending choice fits the greenhouse problem and gives the scene a clear finish.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 9 | sentence variety</div>
+      <h2>Pantry Measurement Sentence Mix</h2>
+      <figure><img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration"><figcaption>Pantry Measurement Mystery</figcaption></figure>
+      <p class="student-prompt">Tell a pantry mystery moment using different kinds of sentences so the writing does not sound the same each time.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>measuring cup</li>
+<li>crumb trail</li>
+<li>recipe card</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Write short, medium, and question on the board before students complete the pantry scene.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">My short sentence is ____________________</p>
+<p class="write-line">My longer detail sentence is ____________________</p>
+<p class="write-line">My question sentence is ____________________</p>
+<p class="write-line">The sentence I like best is ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Ask students to read two sentences and let a partner name how they are different.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students reorder their sentences and choose which order sounds clearest.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The draft includes at least two sentence lengths or sentence types.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 10 | peer sharing</div>
+      <h2>Rain Gauge Railway Table Share</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="student-prompt">Prepare one Rain Gauge Railway sentence you are comfortable sharing with a partner or small table group.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>train stop</li>
+<li>rain number</li>
+<li>ticket note</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Use this card after a five-minute quickwrite and set a timer for quiet partner sharing.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The sentence I might share is ____________________</p>
+<p class="write-line">The part I want listeners to notice is ____________________</p>
+<p class="write-line">One question I can ask a partner is ____________________</p>
+<p class="write-line">One kind response I can give is ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Students may read one sentence, point to one line, or pass while still listening.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students use one partner response to add a clearer rain or railway detail.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student prepares a shareable sentence and participates in a respectful response routine.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 11 | setting detail</div>
+      <h2>Seed Drawer Map Details</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="student-prompt">Describe the seed library map room so a classmate can picture where the hidden garden note belongs.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>bean drawer</li>
+<li>carrot aisle</li>
+<li>sunflower table</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Place three seed packets or blank index cards at the writing table and ask students to point to one map-room detail before they write.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The first place I notice in the map room is ____________________</p>
+<p class="write-line">A tiny object on the table looks like ____________________</p>
+<p class="write-line">The map clue is tucked beside ____________________</p>
+<p class="write-line">My setting helps the story because ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Ask partners to trade papers and underline one detail they can picture clearly.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students add a small map label in the margin and write one sentence explaining it.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student includes at least three concrete setting details tied to the story task.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 12 | problem-solution</div>
+      <h2>Solar Oven Picnic Fix</h2>
+      <figure><img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration"><figcaption>Solar Oven Picnic Station</figcaption></figure>
+      <p class="student-prompt">Help the picnic team choose a fair fix when one solar oven warms a snack faster than the others.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>tilt the panel</li>
+<li>move the marker</li>
+<li>check the timer</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Draw a quick three-step test chart on the board with problem, try, and result columns.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The picnic station problem is ____________________</p>
+<p class="write-line">My hero tries this first fix: ____________________</p>
+<p class="write-line">The result shows ____________________</p>
+<p class="write-line">The fair solution for the team is ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Have students read only their solution sentence to a table partner.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students sketch a before-and-after test card with one label for each change.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student names a clear problem and connects the solution to evidence from the scene.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 13 | sensory detail</div>
+      <h2>Moss Observatory Senses</h2>
+      <figure><img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration"><figcaption>Moss Message Observatory</figcaption></figure>
+      <p class="student-prompt">Write a calm observatory scene where moss details help your hero understand a nature message.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>silver rain dot</li>
+<li>soft green patch</li>
+<li>twig shadow</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Invite students to list quiet forest words for sight, touch, sound, and smell before drafting.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The moss looks ____________________</p>
+<p class="write-line">The observatory air feels ____________________</p>
+<p class="write-line">A quiet sound nearby is ____________________</p>
+<p class="write-line">The sensory clue tells my hero ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Invite volunteers to share one sensory word, not the whole paragraph.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students revise one plain word into a more exact sensory word.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student uses sensory details that make the observatory scene more specific.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 14 | dialogue</div>
+      <h2>Spoon Ferry Dock Dialogue</h2>
+      <figure><img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration"><figcaption>Spoon Ferry Lunchbox Harbor</figcaption></figure>
+      <p class="student-prompt">Write a short dockside conversation that helps the spoon ferry deliver the right lunchbox order.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>cracker dock</li>
+<li>grape buoy</li>
+<li>napkin menu</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Model one polite question and one helpful answer on the board before students write their own lines.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The ferry cook asks this question: ____________________</p>
+<p class="write-line">The dock helper answers with: ____________________</p>
+<p class="write-line">My hero says this polite line: ____________________</p>
+<p class="write-line">The conversation solves ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Partners read the three spoken lines in quiet voices and check whether the order makes sense.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students add one action tag that shows who is speaking without using a name.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student writes dialogue that sounds polite and moves the scene forward.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 15 | character choice</div>
+      <h2>Museum Label Choice</h2>
+      <figure><img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration"><figcaption>Clue Label Tower Museum</figcaption></figure>
+      <p class="student-prompt">Decide which exhibit label your curator should write first so visitors notice the best clue.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>button compass</li>
+<li>paper telescope</li>
+<li>ribbon ruler</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Show students how a museum curator chooses one clue to place first and one clue to save for later.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">My curator chooses the exhibit called ____________________</p>
+<p class="write-line">The label should mention ____________________</p>
+<p class="write-line">The curator waits to reveal ____________________</p>
+<p class="write-line">This choice helps visitors because ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Students hold up one finger for first, second, or third clue choice before discussing with a partner.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students write a second version of the label for younger museum visitors.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student explains a character choice with a reason connected to the visitor experience.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 16 | sequence</div>
+      <h2>Compass Craft Route Order</h2>
+      <figure><img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration"><figcaption>Compass Craft Academy</figcaption></figure>
+      <p class="student-prompt">Plan the order of stops for a craft-academy map route that leads to a finished story project.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>thread path</li>
+<li>paper bridge</li>
+<li>color corner</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Give students three sticky notes or paper scraps so they can physically order the route before writing.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">First, my map route goes to ____________________</p>
+<p class="write-line">Next, the compass points toward ____________________</p>
+<p class="write-line">After that, my hero checks ____________________</p>
+<p class="write-line">The final stop is important because ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Students compare only their first and final stops with a nearby writer.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students add transition words above each line and read the route again.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student uses ordered steps that make the route easy to follow.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 17 | sentence variety</div>
+      <h2>Almost Invention Sentence Test</h2>
+      <figure><img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration"><figcaption>Almost Invention Workshop</figcaption></figure>
+      <p class="student-prompt">Test an almost-invention by writing sentences that do not all start or sound the same.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>cardboard gear</li>
+<li>paper lever</li>
+<li>button dial</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Write a short sentence, a longer because sentence, and a question sentence on the board as examples.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">My short sentence: ____________________</p>
+<p class="write-line">My because sentence: ____________________</p>
+<p class="write-line">My question sentence: ____________________</p>
+<p class="write-line">My best invention sentence is ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Ask students to star the sentence type they used least and share that one with a partner.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students combine two short sentences into one smoother sentence.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student tries at least three sentence patterns while staying on the same invention idea.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 18 | ending choice</div>
+      <h2>Binding Day Ending Choice</h2>
+      <figure><img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration"><figcaption>Binding Day Boardwalk</figcaption></figure>
+      <p class="student-prompt">Write an ending for Binding Day that shows how the finished booklet is shared in the classroom.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>helpful ending</li>
+<li>funny ending</li>
+<li>thoughtful ending</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Ask students to choose whether their booklet ending should feel helpful, funny, or thoughtful before they write.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">At the boardwalk table, the finished booklet shows ____________________</p>
+<p class="write-line">My hero chooses to end with ____________________</p>
+<p class="write-line">The class notices ____________________</p>
+<p class="write-line">The final sentence of my story is ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Students read their final sentence only and let partners name the ending feeling.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students draft a second ending with a different feeling and circle the stronger one.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student writes an ending that matches the story action and leaves a clear final feeling.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 19 | peer sharing</div>
+      <h2>Index Card Theater Table Share</h2>
+      <figure><img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration"><figcaption>Index Card Theater Club</figcaption></figure>
+      <p class="student-prompt">Prepare a tiny theater-club share that lets a partner understand your scene without reading the whole story.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>scene title</li>
+<li>favorite line</li>
+<li>prop clue</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Arrange students in pairs and give each writer one index card for a scene title or favorite line.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">My scene is called ____________________</p>
+<p class="write-line">One line I can share is ____________________</p>
+<p class="write-line">One prop or action that helps is ____________________</p>
+<p class="write-line">A kind question for my partner is ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Partners share one card each, then say one thing they understood clearly.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students add a tiny cue mark where a reader should pause.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student selects a short shareable piece and responds to a peer with a kind question or comment.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 20 | revision</div>
+      <h2>Revision River Two-Pass</h2>
+      <figure><img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration"><figcaption>Revision River Ferry</figcaption></figure>
+      <p class="student-prompt">Ride the revision ferry by changing one sentence so it becomes clearer and more interesting.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>add a detail</li>
+<li>swap a verb</li>
+<li>trim extra words</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Tell students to pick one sentence from yesterday or from a quick draft and copy it onto the first line.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">My first sentence is ____________________</p>
+<p class="write-line">The revision move I chose is ____________________</p>
+<p class="write-line">My revised sentence is ____________________</p>
+<p class="write-line">The revised version is clearer because ____________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Students point to the changed word or phrase instead of reading the whole draft aloud.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Students make one more small revision and label it with the move they used.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student makes a visible revision and can explain how the change improves the sentence.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 21 | setting detail</div>
+      <h2>Moon Muffin Market Stall Details</h2>
+      <figure><img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration"><figcaption>Moon Muffin Market</figcaption></figure>
+      <p class="student-prompt">Write about a moonlit muffin stall where your character notices one detail that helps the whole market run smoothly.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>crumb bell</li>
+<li>silver apron</li>
+<li>star basket</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Place this card at a description station and ask students to add three market details before drafting.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The stall looks like ________________________________</p>
+<p class="write-line">The first helpful detail is ________________________________</p>
+<p class="write-line">My character notices ________________________________</p>
+<p class="write-line">The market feels ________________________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Invite students to read only their strongest setting detail to a partner.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Have students circle one vague word and replace it with a more exact market detail.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The writing includes at least three concrete setting details tied to the market scene.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 22 | character choice</div>
+      <h2>Puddle Planet Delivery Choice</h2>
+      <figure><img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration"><figcaption>Puddle Planet Post Office</figcaption></figure>
+      <p class="student-prompt">Write about a post office on Puddle Planet where your character must choose the fairest way to sort a mixed-up stack of cheerful notes.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>color order</li>
+<li>puddle stamps</li>
+<li>neighbor route</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Ask students to pick one delivery decision and explain why the character chooses it.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">My character needs to choose ________________________________</p>
+<p class="write-line">One reason for this choice is ________________________________</p>
+<p class="write-line">Another choice could be ________________________________</p>
+<p class="write-line">The choice helps because ________________________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Ask partners to name the choice they heard and one reason that made sense.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Add a thought bubble that shows what the character considers before deciding.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The writing names a clear character choice and gives a reason connected to the scene.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 23 | sequence</div>
+      <h2>Buttonwood Library Train Sequence</h2>
+      <figure><img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration"><figcaption>Buttonwood Library Train</figcaption></figure>
+      <p class="student-prompt">Write the order of events as a tiny library train carries book carts to the right reading rooms.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>map car</li>
+<li>quiet whistle</li>
+<li>bookmark tunnel</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Have students number the four writing lines before they draft so the events stay in order.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">First, the train ________________________________</p>
+<p class="write-line">Next, the book cart ________________________________</p>
+<p class="write-line">Then, the reading room ________________________________</p>
+<p class="write-line">Finally, everyone knows ________________________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Have students swap cards and point to the word that shows each step in order.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Add one transition word to each line without changing the order.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The writing uses a clear beginning, middle steps, and ending in logical order.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 24 | dialogue</div>
+      <h2>Cloudberry Clocktower Polite Dialogue</h2>
+      <figure><img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration"><figcaption>Cloudberry Clocktower</figcaption></figure>
+      <p class="student-prompt">Write a short conversation at Cloudberry Clocktower where two helpers calmly decide how to reset the snack-time chimes.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>clock keeper</li>
+<li>berry baker</li>
+<li>cloud painter</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Model one line of polite dialogue, then have students write two speakers with different jobs.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">One helper says ________________________________</p>
+<p class="write-line">The other helper asks ________________________________</p>
+<p class="write-line">My character answers ________________________________</p>
+<p class="write-line">The chimes sound ________________________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Let pairs read the dialogue quietly, each taking one speaker&#39;s line.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Revise one line so it sounds more like the speaker&#39;s job.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The dialogue includes at least two speakers and moves the clocktower problem forward.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 25 | revision</div>
+      <h2>Tiny Lantern Reef Revision Dive</h2>
+      <figure><img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration"><figcaption>Tiny Lantern Reef</figcaption></figure>
+      <p class="student-prompt">Revise a reef scene so readers can understand how the tiny lanterns guide a friendly sea parade.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>glow path</li>
+<li>shell sign</li>
+<li>bubble map</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Give students a first sentence to improve and ask them to revise for clarity rather than length.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">My first sentence is ________________________________</p>
+<p class="write-line">One unclear word is ________________________________</p>
+<p class="write-line">I can make it clearer by adding ________________________________</p>
+<p class="write-line">My revised sentence is ________________________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Ask students to share the one word or detail they changed, not the whole draft.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Use a colored pencil to underline the added revision detail.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student identifies a specific change and improves clarity in the revised sentence.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 26 | sensory detail</div>
+      <h2>Pencil Dragon Academy Sense Notes</h2>
+      <figure><img src="assets/pencil-dragon-academy.jpg" alt="Pencil Dragon Academy illustration"><figcaption>Pencil Dragon Academy</figcaption></figure>
+      <p class="student-prompt">Write about a Pencil Dragon Academy lesson where careful sense details help a student remember the next writing step.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>scratchy pencil</li>
+<li>warm paper</li>
+<li>cedar shelf</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Ask students to use at least two senses before writing the academy scene.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">I can see ________________________________</p>
+<p class="write-line">I can hear ________________________________</p>
+<p class="write-line">I can feel or smell ________________________________</p>
+<p class="write-line">These details help because ________________________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Invite students to trade cards and star one sensory detail they can picture clearly.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Add one more sense detail to the line that feels thinnest.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The writing uses two or more sensory details that fit the academy setting.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 27 | problem-solution</div>
+      <h2>Margin Note Market Problem Fix</h2>
+      <figure><img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration"><figcaption>Margin Note Market</figcaption></figure>
+      <p class="student-prompt">Write about a market in the margins of a notebook where tiny notes get out of order and your character finds a fair fix.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>sticky tabs</li>
+<li>page arrows</li>
+<li>label basket</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Have students state the market problem in one sentence before choosing a calm solution.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The problem is ________________________________</p>
+<p class="write-line">My character tries ________________________________</p>
+<p class="write-line">The solution works when ________________________________</p>
+<p class="write-line">The market learns ________________________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Ask volunteers to read only the problem and solution lines as a quick pair check.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Draw a before-and-after margin note to show how the fix changes the market.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The writing connects a specific problem to a specific solution that fits the notebook market.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 28 | ending choice</div>
+      <h2>Pocket Park Notice Board Ending</h2>
+      <figure><img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration"><figcaption>Pocket Park Notice Board</figcaption></figure>
+      <p class="student-prompt">Write an ending for a pocket park story where the final notice helps everyone understand the shared plan.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>garden sign</li>
+<li>lost button</li>
+<li>picnic list</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Ask students to draft two possible endings and choose the one that best matches the park notice.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">One ending could be ________________________________</p>
+<p class="write-line">Another ending could be ________________________________</p>
+<p class="write-line">I choose this ending because ________________________________</p>
+<p class="write-line">The final notice says ________________________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Let students hold up one or two fingers to show which ending they chose before explaining.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Add a final sentence that shows how the park feels after the notice is read.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The chosen ending matches the earlier story problem and explains why it fits.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 29 | sentence variety</div>
+      <h2>Greenhouse Gear Garden Sentence Mix</h2>
+      <figure><img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration"><figcaption>Greenhouse Gear Garden</figcaption></figure>
+      <p class="student-prompt">Write a greenhouse gear note using different kinds of sentences so the garden helpers can follow the plan.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>short note</li>
+<li>longer detail</li>
+<li>kind question</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Display short, medium, and question sentence examples before students draft the greenhouse note.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">A short sentence: ________________________________</p>
+<p class="write-line">A longer sentence with a detail: ________________________________</p>
+<p class="write-line">A question sentence: ________________________________</p>
+<p class="write-line">My favorite sentence is ________________________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Ask partners to tap once for a short sentence and twice for a longer sentence.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Revise one sentence beginning so not every line starts the same way.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The writing includes varied sentence lengths or types that remain clear.</p>
+    </section>
+
+    <section class="pack-page prompt-card-page">
+      <div class="page-kicker">Prompt card 30 | peer sharing</div>
+      <h2>Solar Oven Picnic Station Share Card</h2>
+      <figure><img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration"><figcaption>Solar Oven Picnic Station</figcaption></figure>
+      <p class="student-prompt">Write a picnic station scene you can share with a partner, showing how the solar oven team prepares a fair test snack.</p>
+      <div class="card-grid">
+        <section>
+          <h3>Choices</h3>
+          <ul><li>shade timer</li>
+<li>foil flap</li>
+<li>snack tray</li></ul>
+        </section>
+        <section>
+          <h3>Teacher setup</h3>
+          <p>Set a two-minute partner share and remind students to respond with one noticed detail and one question.</p>
+        </section>
+      </div>
+      <section class="writing-box">
+        <h3>Draft on the card</h3>
+        <p class="write-line">The picnic team prepares ________________________________</p>
+<p class="write-line">The fair test detail is ________________________________</p>
+<p class="write-line">A detail I want my partner to notice is ________________________________</p>
+<p class="write-line">A question I can ask my partner is ________________________________</p>
+      </section>
+      <div class="card-grid">
+        <section>
+          <h3>Share move</h3>
+          <p>Partners give one quiet compliment about a clear detail and ask one curious question.</p>
+        </section>
+        <section>
+          <h3>Extension</h3>
+          <p>Add a peer suggestion box where the writer can choose one idea to try next.</p>
+        </section>
+      </div>
+      <p class="rubric-note"><strong>Look for:</strong> The student prepares a shareable scene and includes a specific detail for peer response.</p>
+    </section>
+  </body>
+</html>

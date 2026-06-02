@@ -48,6 +48,7 @@ Builds provider-upload-ready PDF, source HTML, manifest, and ZIP files. These ar
 ```bash
 npm run product:rainy-day-pack
 npm run product:homeschool-season-bundle
+npm run product:classroom-license-pack
 ```
 
 ## Safety

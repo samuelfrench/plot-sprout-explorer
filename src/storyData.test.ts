@@ -40,12 +40,13 @@ describe('storyData', () => {
     expect(prompt).toContain('storybook illustration')
   })
 
-  it('exposes checkout-pending product links for both paid printable bundles', () => {
+  it('exposes checkout-pending product links for all paid printable bundles', () => {
     expect(productLinks.map((product) => product.slug)).toEqual([
       'rainy-day-story-quest-pack',
       'homeschool-season-story-bundle',
+      'classroom-story-license-pack',
     ])
-    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29'])
+    expect(productLinks.map((product) => product.pricePoint)).toEqual(['$9', '$29', '$79'])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
     }

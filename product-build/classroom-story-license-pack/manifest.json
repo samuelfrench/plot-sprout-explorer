@@ -1,0 +1,168 @@
+{
+  "batchId": "2026-06-02-batch9",
+  "generatedAt": "2026-06-02",
+  "productSlug": "classroom-story-license-pack",
+  "title": "Classroom Story License Pack",
+  "pricePoint": "$79",
+  "sourcePageCount": 30,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/classroom-story-license-pack/Classroom-Story-License-Pack.pdf",
+      "sha256": "7427f6e2f851aec09813fa923b8de99b6e95f938b35a1914e9b5d9ae3ad7d088",
+      "size": 8397521
+    },
+    "zip": {
+      "path": "product-build/classroom-story-license-pack/classroom-story-license-pack.zip",
+      "sha256": "7892dede701e89231fad33232d586a5e4c839caece5e4467a2d9ea4dc3847f5b",
+      "size": 16243569
+    },
+    "sourceHtml": {
+      "path": "product-build/classroom-story-license-pack/source/classroom-story-license-pack.html",
+      "sha256": "6342430e31268c7998ec2c105ce9456b9ef46512642a36dbcb00163462a36ce6",
+      "size": 79847
+    },
+    "readme": {
+      "path": "product-build/classroom-story-license-pack/README.txt",
+      "sha256": "3aba65fdd65bab68e8fefb83e111da14c42c1cbfa5ed48940bfdb26536630df9",
+      "size": 532
+    },
+    "assets": [
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/cloudberry-clocktower.jpg",
+        "sha256": "3204161ea211c5e28ca7cfeae6e7cfc97be61f53ca978a3606435351731ad6e3",
+        "size": 366382
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/moon-muffin-market.jpg",
+        "sha256": "9fd7c9a4e3584529222c481ce419c67545a98a4ab788f08742ac19df11f0f962",
+        "size": 238603
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/pantry-measurement-mystery.jpg",
+        "sha256": "b85111fa750c89e60fc21133ea09e431a26a010d8ff24db7c4baa305c3ff3f73",
+        "size": 287571
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/pencil-dragon-academy.jpg",
+        "sha256": "a6cbedee60bf72546acee4677a2b5f6a4214f1ee1feaafde681e739bf71da612",
+        "size": 404513
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/puddle-planet-post-office.jpg",
+        "sha256": "abf1065c54d207cce767bd8a5081e2483bfa37fc4a7d9a476bd65f4e5c914e44",
+        "size": 304692
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/solar-oven-picnic-station.jpg",
+        "sha256": "9742a1d469b45961d9634dc0fb6e722bf60c2f8beb872eb9790da8b21e9300be",
+        "size": 299058
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      },
+      {
+        "path": "product-build/classroom-story-license-pack/source/assets/tiny-lantern-reef.jpg",
+        "sha256": "2fc79f2835c185ed4110b7edfab6921ab3a004b059837733502ddc7d407d370f",
+        "size": 326494
+      }
+    ]
+  }
+}

@@ -60,7 +60,7 @@ function App() {
         </div>
 
         <div className="control-strip" aria-label="Age band">
-          {['6-8', '7-9', '8-10', '10-12'].map((band) => (
+          {['6-8', '7-9', '8-10', '10-11'].map((band) => (
             <button
               key={band}
               type="button"

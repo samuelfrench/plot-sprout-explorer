@@ -38,6 +38,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Batch 6 documented the checkout-provider decision path: hosted checkout links first, recommended order Creem, Dodo Payments, Stripe Payment Links, then Polar Checkout Links, with the product staying `checkout_pending` until Sam chooses a provider and supplies a real hosted checkout URL after the pack artifact exists.
 - [x] 2026-06-02: Batch 7 built the actual Rainy Day Story Quest Pack source, PDF, ZIP, manifest, and provider-upload-ready folder, plus one missing local RTX 4090 product image and validation that product artifacts exist before checkout wiring.
 - [x] 2026-06-02: Batch 8 built the `$29` Homeschool Season Story Bundle static product page, source JSON, PDF, ZIP, manifest, provider-upload-ready folder, and validation that checkout stays pending.
+- [x] 2026-06-02: Batch 9 built the `$79` Classroom Story License Pack static product page, 30-card source JSON from four subagent lanes, 34-page PDF, ZIP, manifest, provider-ready folder, and validation that checkout stays pending.
 
 ## In Progress
 
@@ -53,7 +54,8 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] Batch 6: Choose the checkout provider path and define the exact safe wiring steps for the $9 pack.
 - [x] Batch 7: Build the Rainy Day Story Quest Pack PDF/source pages/ZIP or provider-upload-ready folder, then add validation that checkout cannot be marked ready without the artifact.
 - [x] Batch 8: Build the `$29` Homeschool Season Story Bundle with 12 printable quests, static product page, PDF/source/ZIP artifact, and validation that checkout stays pending.
-- [ ] Batch 9: Add the chosen hosted checkout URL, provider-host allowlist, and CTA copy after Sam chooses the provider; do not add custom checkout/webhook endpoints.
+- [x] Batch 9: Build the `$79` Classroom Story License Pack with 30 prompt cards, rubric, extension activities, static product page, PDF/source/ZIP artifact, and validation that checkout stays pending.
+- [ ] Batch 10: Add the chosen hosted checkout URL, provider-host allowlist, and CTA copy after Sam chooses the provider; do not add custom checkout/webhook endpoints.
 
 ## Product Gates
 
@@ -69,5 +71,5 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] $9 printable "Rainy Day Story Quest Pack" landing page.
 - [x] $9 printable "Rainy Day Story Quest Pack" PDF/source/ZIP artifact.
 - [x] $29 homeschool season bundle with 12 printable quests.
-- [ ] $79 classroom license pack with 30 prompts, rubric, and extension activities.
+- [x] $79 classroom license pack with 30 prompts, rubric, and extension activities.
 - [ ] Parent email capture for weekly printable quest drops.

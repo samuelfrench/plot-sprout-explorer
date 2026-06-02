@@ -9,6 +9,7 @@ import {
   inspectConfiguredArtifactFiles,
   inspectArtifactFiles,
   validateCheckoutReadiness,
+  validateClassroomLicenseSource,
   validateManifestWorldAssets,
   validatePackSource,
   validateSeasonBundleSource,
@@ -178,6 +179,120 @@ function validSeasonBundleSource() {
         },
       ],
     })),
+  }
+}
+
+function classroomPromptCard(id, worldSlug, skillFocus = 'setting detail') {
+  return {
+    id,
+    worldSlug,
+    title: id.split('-').join(' '),
+    skillFocus,
+    teacherSetup: 'Place the prompt card beside a partner talk mat and read the first choice aloud.',
+    studentPrompt: 'Choose one tiny place detail, one helpful character choice, and one clear ending before you draft.',
+    choiceSet: ['quiet clue', 'helpful map', 'surprise note'],
+    writingLines: [
+      'Setting detail: ____________________________',
+      'Character choice: ____________________________',
+      'Problem step: ____________________________',
+      'Ending sentence: ____________________________',
+    ],
+    shareMove: 'Ask partners to read only the sentence with the clearest detail.',
+    extension: 'Turn the card into a two-scene comic plan before drafting again.',
+    rubricLookFor: 'Student includes one concrete setting detail and one clear character choice.',
+  }
+}
+
+function validClassroomLicenseSource() {
+  const worldSlugs = [
+    'acorn-avenue-errand-office',
+    'button-bakery-map-mixup',
+    'teacup-town-weather-window',
+    'pocket-park-notice-board',
+    'penny-path-compass-shop',
+    'rain-boot-route-rangers',
+    'seed-library-map-room',
+    'solar-oven-picnic-station',
+    'moss-message-observatory',
+    'spoon-ferry-lunchbox-harbor',
+    'clue-label-tower-museum',
+    'compass-craft-academy',
+  ]
+  const skillFocuses = [
+    'setting detail',
+    'character choice',
+    'sequence',
+    'dialogue',
+    'revision',
+    'sensory detail',
+    'problem-solution',
+    'ending choice',
+    'sentence variety',
+    'peer sharing',
+  ]
+
+  return {
+    batchId: '2026-06-02-batch9',
+    generatedAt: '2026-06-02',
+    productSlug: 'classroom-story-license-pack',
+    title: 'Classroom Story License Pack',
+    pricePoint: '$79',
+    audience: 'Elementary teachers, homeschool co-ops, and tutors running repeatable writing stations for ages 7-11.',
+    sessionLength: '30 prompt cards, teacher routines, extension activities, and a four-criterion rubric',
+    safetyNote: safety,
+    artifact: {
+      pdfPath: 'product-build/classroom-story-license-pack/Classroom-Story-License-Pack.pdf',
+      zipPath: 'product-build/classroom-story-license-pack/classroom-story-license-pack.zip',
+      sourceHtmlPath: 'product-build/classroom-story-license-pack/source/classroom-story-license-pack.html',
+      manifestPath: 'product-build/classroom-story-license-pack/manifest.json',
+    },
+    worldSlugs,
+    cover: {
+      kicker: 'Printable classroom writing license',
+      headline: 'Thirty story stations for one busy classroom',
+      subhead: 'Prompt cards, teacher routines, extension activities, and a practical rubric.',
+      included: [
+        '30 prompt cards',
+        'Teacher setup guide',
+        'Station rotation routine',
+        'Four-criterion rubric',
+        'Extension activity menu',
+        'Partner share moves',
+        'Printable source pages',
+        'Local image-backed world menu',
+        'Substitute folder directions',
+        'Co-op license note',
+        'Portfolio tracker',
+        'Revision mini-lessons',
+      ],
+    },
+    classroomRoutines: ['Station rotation', 'Partner talk', 'Quiet draft', 'Teacher conference', 'Share circle'],
+    teacherSetup: ['Print cards.', 'Cut card sheets.', 'Set station bins.', 'Pick four focus cards.', 'Save samples.'],
+    extensionActivities: Array.from({ length: 10 }, (_, index) => ({
+      id: `extension-${index + 1}`,
+      title: `Extension ${index + 1}`,
+      minutes: 20,
+      teacherMove: 'Model one concrete detail before students try the extension.',
+      studentOutput: 'One revised paragraph with a clearer setting detail.',
+      usesPromptCards: index % 2 === 0,
+    })),
+    rubric: {
+      levels: ['Beginning', 'Developing', 'Secure', 'Extending'],
+      criteria: ['Concrete details', 'Clear sequence', 'Character choice', 'Revision move'].map((name) => ({
+        id: name.toLowerCase().replaceAll(' ', '-'),
+        name,
+        lookFor: `Teacher can point to the student's ${name.toLowerCase()} on the draft.`,
+        levels: {
+          Beginning: 'The draft names the skill but needs a teacher prompt to show it clearly.',
+          Developing: 'The draft shows the skill once with partial clarity.',
+          Secure: 'The draft shows the skill clearly in the story.',
+          Extending: 'The draft uses the skill clearly and improves one connected sentence.',
+        },
+      })),
+    },
+    promptCards: Array.from({ length: 30 }, (_, index) =>
+      classroomPromptCard(`card-${String(index + 1).padStart(2, '0')}`, worldSlugs[index % worldSlugs.length], skillFocuses[index % skillFocuses.length]),
+    ),
   }
 }
 
@@ -392,5 +507,40 @@ describe('product artifact policy', () => {
     )
 
     expect(errors).toContain('Homeschool Season Story Bundle artifact manifest missing copied image for greenhouse-gear-garden.')
+  })
+
+  it('validates the Classroom Story License Pack source with 30 prompt cards, rubric, extensions, and checkout-pending artifact paths', () => {
+    const source = validClassroomLicenseSource()
+    const product = {
+      slug: 'classroom-story-license-pack',
+      title: 'Classroom Story License Pack',
+      pricePoint: '$79',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateClassroomLicenseSource(source, product, new Set(source.worldSlugs))).toEqual([])
+  })
+
+  it('rejects Classroom Story License prompt-card duplicates and incomplete teacher tools', () => {
+    const source = validClassroomLicenseSource()
+    source.promptCards[1].id = source.promptCards[0].id
+    source.extensionActivities = source.extensionActivities.slice(0, 9)
+    source.rubric.criteria = source.rubric.criteria.slice(0, 3)
+    const product = {
+      slug: 'classroom-story-license-pack',
+      title: 'Classroom Story License Pack',
+      pricePoint: '$79',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateClassroomLicenseSource(source, product, new Set(source.worldSlugs))).toEqual(
+      expect.arrayContaining([
+        'promptCards[1].id is duplicated.',
+        'extensionActivities must have exactly 10 entries.',
+        'rubric.criteria must have exactly 4 entries.',
+      ]),
+    )
   })
 })

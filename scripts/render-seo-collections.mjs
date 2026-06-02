@@ -1,6 +1,8 @@
 import { existsSync, mkdirSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
 import { resolve } from 'node:path'
 
+import { starterWorlds } from './starter-worlds.mjs'
+
 const root = resolve(import.meta.dirname, '..')
 const collectionPath = resolve(root, 'content', 'seo-collections', 'batch2-collections.json')
 const miniUnitsPath = resolve(root, 'content', 'mini-units', 'batch3-mini-units.json')
@@ -37,6 +39,12 @@ function escapeHtml(value) {
 
 function loadWorlds() {
   const worlds = new Map()
+  for (const world of starterWorlds) {
+    worlds.set(world.slug, {
+      ...world,
+      seoLane: 'starter world',
+    })
+  }
   for (const file of readdirSync(worldsDir).filter((item) => /^batch1-.+\.json$/.test(item))) {
     const data = readJson(resolve(worldsDir, file))
     for (const world of data.worlds) {
@@ -713,7 +721,7 @@ function renderProductPage(product, worlds) {
     .map(
       (world) => `
         <article class="world-card">
-          <span>Ages ${escapeHtml(world.ageBand)} | ${escapeHtml(world.seoLane)}</span>
+          <span>Ages ${escapeHtml(world.ageBand)} | ${escapeHtml(world.seoLane ?? 'starter world')}</span>
           <h3>${escapeHtml(world.title)}</h3>
           <p>${escapeHtml(world.premise)}</p>
         </article>`,

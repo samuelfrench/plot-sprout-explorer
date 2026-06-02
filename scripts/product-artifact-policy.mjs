@@ -6,6 +6,7 @@ import { containsActiveCheckoutLanguage } from './content-policy.mjs'
 
 export const rainyDayProductSlug = 'rainy-day-story-quest-pack'
 export const seasonBundleProductSlug = 'homeschool-season-story-bundle'
+export const classroomLicenseProductSlug = 'classroom-story-license-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -31,7 +32,28 @@ const requiredSeasonBundleArtifactPaths = {
   manifestPath: 'product-build/homeschool-season-story-bundle/manifest.json',
 }
 
+const requiredClassroomLicenseArtifactPaths = {
+  pdfPath: 'product-build/classroom-story-license-pack/Classroom-Story-License-Pack.pdf',
+  zipPath: 'product-build/classroom-story-license-pack/classroom-story-license-pack.zip',
+  sourceHtmlPath: 'product-build/classroom-story-license-pack/source/classroom-story-license-pack.html',
+  manifestPath: 'product-build/classroom-story-license-pack/manifest.json',
+}
+
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
+const allowedSkillFocuses = new Set([
+  'setting detail',
+  'character choice',
+  'sequence',
+  'dialogue',
+  'revision',
+  'sensory detail',
+  'problem-solution',
+  'ending choice',
+  'sentence variety',
+  'peer sharing',
+])
+const requiredRubricLevels = ['Beginning', 'Developing', 'Secure', 'Extending']
+const requiredRubricCriteria = ['Concrete details', 'Clear sequence', 'Character choice', 'Revision move']
 
 function isObject(value) {
   return Boolean(value) && typeof value === 'object' && !Array.isArray(value)
@@ -53,6 +75,13 @@ function validateStringArray(value, minLength, label, errors) {
   pushIf(errors, !Array.isArray(value), `${label} must be an array.`)
   if (!Array.isArray(value)) return
   pushIf(errors, value.length < minLength, `${label} must have at least ${minLength} entries.`)
+  value.forEach((item, index) => validateString(item, `${label}[${index}]`, errors))
+}
+
+function validateExactStringArray(value, expectedLength, label, errors) {
+  pushIf(errors, !Array.isArray(value), `${label} must be an array.`)
+  if (!Array.isArray(value)) return
+  pushIf(errors, value.length !== expectedLength, `${label} must have exactly ${expectedLength} entries.`)
   value.forEach((item, index) => validateString(item, `${label}[${index}]`, errors))
 }
 
@@ -317,6 +346,164 @@ export function validateSeasonBundleSource(source, product, knownWorldSlugs) {
   return errors
 }
 
+function validateClassroomPromptCard(card, index, sourceWorldSlugs, knownWorldSlugs, cardIds, errors) {
+  const label = `promptCards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  for (const key of [
+    'id',
+    'worldSlug',
+    'title',
+    'skillFocus',
+    'teacherSetup',
+    'studentPrompt',
+    'shareMove',
+    'extension',
+    'rubricLookFor',
+  ]) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(card.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(card.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+    cardIds.add(card.id)
+  }
+  pushIf(errors, isNonEmptyString(card.skillFocus) && !allowedSkillFocuses.has(card.skillFocus), `${label}.skillFocus is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  validateExactStringArray(card.choiceSet, 3, `${label}.choiceSet`, errors)
+  validateExactStringArray(card.writingLines, 4, `${label}.writingLines`, errors)
+  if (Array.isArray(card.writingLines)) {
+    card.writingLines.forEach((line, lineIndex) => {
+      pushIf(errors, isNonEmptyString(line) && !/_+/.test(line), `${label}.writingLines[${lineIndex}] must include writing blanks.`)
+    })
+  }
+}
+
+function validateClassroomExtension(activity, index, activityIds, errors) {
+  const label = `extensionActivities[${index}]`
+  pushIf(errors, !isObject(activity), `${label} must be an object.`)
+  if (!isObject(activity)) return
+  for (const key of ['id', 'title', 'teacherMove', 'studentOutput']) {
+    validateString(activity[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(activity.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(activity.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, activityIds.has(activity.id), `${label}.id is duplicated.`)
+    activityIds.add(activity.id)
+  }
+  pushIf(errors, !Number.isInteger(activity.minutes), `${label}.minutes must be an integer.`)
+  if (Number.isInteger(activity.minutes)) {
+    pushIf(errors, activity.minutes < 10 || activity.minutes > 45, `${label}.minutes must be between 10 and 45.`)
+  }
+  pushIf(errors, typeof activity.usesPromptCards !== 'boolean', `${label}.usesPromptCards must be a boolean.`)
+}
+
+function validateClassroomRubric(rubric, errors) {
+  pushIf(errors, !isObject(rubric), 'rubric must be an object.')
+  if (!isObject(rubric)) return
+
+  pushIf(errors, !sameStringSet(rubric.levels, requiredRubricLevels), 'rubric.levels must cover Beginning, Developing, Secure, and Extending.')
+  pushIf(errors, !Array.isArray(rubric.criteria), 'rubric.criteria must be an array.')
+  if (!Array.isArray(rubric.criteria)) return
+  pushIf(errors, rubric.criteria.length !== 4, 'rubric.criteria must have exactly 4 entries.')
+  const names = rubric.criteria.map((criterion) => criterion?.name)
+  pushIf(errors, !sameStringSet(names, requiredRubricCriteria), 'rubric.criteria must cover the required classroom criteria.')
+  const criterionIds = new Set()
+  rubric.criteria.forEach((criterion, index) => {
+    const label = `rubric.criteria[${index}]`
+    pushIf(errors, !isObject(criterion), `${label} must be an object.`)
+    if (!isObject(criterion)) return
+    for (const key of ['id', 'name', 'lookFor']) {
+      validateString(criterion[key], `${label}.${key}`, errors)
+    }
+    if (isNonEmptyString(criterion.id)) {
+      pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(criterion.id), `${label}.id must be lowercase kebab-case.`)
+      pushIf(errors, criterionIds.has(criterion.id), `${label}.id is duplicated.`)
+      criterionIds.add(criterion.id)
+    }
+    pushIf(errors, !isObject(criterion.levels), `${label}.levels must be an object.`)
+    if (isObject(criterion.levels)) {
+      for (const level of requiredRubricLevels) {
+        validateString(criterion.levels[level], `${label}.levels.${level}`, errors)
+      }
+    }
+  })
+}
+
+export function validateClassroomLicenseSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Classroom license source must be an object.')
+  if (!isObject(source)) return errors
+
+  const worldSlugs = knownWorldSlugs instanceof Set ? knownWorldSlugs : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch9', 'batchId must be 2026-06-02-batch9.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(errors, source.productSlug !== classroomLicenseProductSlug, `productSlug must be ${classroomLicenseProductSlug}.`)
+  pushIf(errors, source.title !== 'Classroom Story License Pack', 'title must be Classroom Story License Pack.')
+  pushIf(errors, source.pricePoint !== '$79', 'pricePoint must be $79.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Classroom license source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Classroom license source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Classroom license source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(source.worldSlugs ?? [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length < 10, 'worldSlugs must have at least 10 entries.')
+    pushIf(errors, source.worldSlugs.length > 30, 'worldSlugs must have no more than 30 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredClassroomLicenseArtifactPaths, 'Classroom license', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 12, 'cover.included', errors)
+  }
+
+  validateExactStringArray(source.classroomRoutines, 5, 'classroomRoutines', errors)
+  validateExactStringArray(source.teacherSetup, 5, 'teacherSetup', errors)
+
+  pushIf(errors, !Array.isArray(source.extensionActivities), 'extensionActivities must be an array.')
+  if (Array.isArray(source.extensionActivities)) {
+    pushIf(errors, source.extensionActivities.length !== 10, 'extensionActivities must have exactly 10 entries.')
+    const activityIds = new Set()
+    source.extensionActivities.forEach((activity, index) => validateClassroomExtension(activity, index, activityIds, errors))
+  }
+
+  validateClassroomRubric(source.rubric, errors)
+
+  pushIf(errors, !Array.isArray(source.promptCards), 'promptCards must be an array.')
+  if (Array.isArray(source.promptCards)) {
+    pushIf(errors, source.promptCards.length !== 30, 'promptCards must have exactly 30 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.promptCards.forEach((card, index) => {
+      validateClassroomPromptCard(card, index, sourceWorldSlugs, worldSlugs, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 10, 'promptCards must cover at least 10 unique worlds.')
+  }
+
+  validateNoRiskyLanguage(source, 'Classroom Story License Pack source', errors)
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -445,7 +632,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredSeasonBundleArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredClassroomLicenseArtifactPaths.pdfPath
+      ? requiredClassroomLicenseArtifactPaths
+      : artifact?.pdfPath === requiredSeasonBundleArtifactPaths.pdfPath
       ? requiredSeasonBundleArtifactPaths
       : requiredArtifactPaths
   return inspectConfiguredArtifactFiles(root, artifact, expectedPaths, options)

@@ -159,7 +159,7 @@ export const questWorlds: QuestWorld[] = [
   {
     slug: 'pencil-dragon-academy',
     title: 'Pencil Dragon Academy',
-    ageBand: '10-12',
+    ageBand: '10-11',
     premise:
       'Young pencil dragons learn to sketch doors, revise maps, and erase mistakes without erasing the lesson.',
     prompts: [
@@ -284,6 +284,14 @@ export const productLinks: FeaturedProductLink[] = [
     pricePoint: '$29',
     description:
       'Twelve seasonal printable quests for homeschool families building a year of short story practice.',
+    note: 'No checkout, accounts, uploads, or public publishing are enabled.',
+  },
+  {
+    slug: 'classroom-story-license-pack',
+    title: 'Classroom Story License Pack',
+    pricePoint: '$79',
+    description:
+      'Thirty classroom prompt cards with teacher routines, extension activities, and a four-criterion writing rubric.',
     note: 'No checkout, accounts, uploads, or public publishing are enabled.',
   },
 ]

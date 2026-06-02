@@ -4,11 +4,13 @@ import { resolve } from 'node:path'
 import { containsActiveCheckoutLanguage } from './content-policy.mjs'
 import {
   inspectArtifactFiles,
+  validateClassroomLicenseSource,
   validateCheckoutReadiness,
   validateManifestWorldAssets,
   validatePackSource,
   validateSeasonBundleSource,
 } from './product-artifact-policy.mjs'
+import { starterWorlds } from './starter-worlds.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const worldsDir = resolve(root, 'content', 'worlds')
@@ -21,6 +23,7 @@ const batch7ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
+const classroomLicenseSourceFile = resolve(root, 'content', 'product-artifacts', 'classroom-story-license-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -29,6 +32,8 @@ const batch7ProductImagesBatchId = '2026-06-02-batch7-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
+const classroomLicenseBatchId = '2026-06-02-batch9'
+const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 const seoLanes = new Set([
@@ -511,6 +516,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
       minParentSteps: 4,
       maxWorldSlugs: 12,
     },
+    'classroom-story-license-pack': {
+      title: 'Classroom Story License Pack',
+      pricePoint: '$79',
+      minIncludedPages: 12,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 30,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -552,6 +565,10 @@ function validateProduct(product, productSlugs, worldSlugs) {
     !/[,:;-]$/.test(metaDescription),
     `${label} rendered meta description must not end on dangling punctuation.`,
   )
+  expect(
+    /[.!?]$/.test(metaDescription),
+    `${label} rendered meta description must be a complete sentence.`,
+  )
 }
 
 for (const dir of [worldsDir, kitsDir]) {
@@ -566,6 +583,17 @@ expect(kitFiles.length === 3, `Expected 3 Batch 1 kit files, found ${kitFiles.le
 const worldSlugs = new Set()
 const worldSources = new Map()
 let worldCount = 0
+
+for (const world of starterWorlds) {
+  const label = `starter-worlds.mjs:${world.slug ?? 'missing-slug'}`
+  validateString(world.slug, `${label}.slug`)
+  validateString(world.title, `${label}.title`)
+  validateString(world.ageBand, `${label}.ageBand`)
+  validateString(world.premise, `${label}.premise`)
+  expect(allowedStarterAgeBands.has(world.ageBand), `${label}.ageBand is not allowed.`)
+  worldSlugs.add(world.slug)
+  worldSources.set(world.slug, 'scripts/starter-worlds.mjs')
+}
 
 for (const file of worldFiles) {
   const data = readJson(resolve(worldsDir, file))
@@ -664,10 +692,10 @@ const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 2, `Expected 2 product records, found ${products.products.length}.`)
+expect(products.products.length === 3, `Expected 3 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
-for (const requiredProductSlug of ['rainy-day-story-quest-pack', 'homeschool-season-story-bundle']) {
+for (const requiredProductSlug of ['rainy-day-story-quest-pack', 'homeschool-season-story-bundle', 'classroom-story-license-pack']) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
 
@@ -790,6 +818,66 @@ for (const asset of seasonBundleArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Homeschool Season copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(classroomLicenseSourceFile), `Missing Batch 9 Classroom license source file: ${classroomLicenseSourceFile}`)
+const classroomLicenseSource = readJson(classroomLicenseSourceFile)
+expect(
+  classroomLicenseSource.batchId === classroomLicenseBatchId,
+  `Classroom license source batchId must be ${classroomLicenseBatchId}.`,
+)
+const classroomLicenseProduct = products.products.find((product) => product.slug === 'classroom-story-license-pack')
+expect(classroomLicenseProduct, 'Missing Classroom Story License product record for Batch 9 artifact validation.')
+const classroomLicenseSourceErrors = validateClassroomLicenseSource(classroomLicenseSource, classroomLicenseProduct, worldSlugs)
+expect(
+  classroomLicenseSourceErrors.length === 0,
+  `Classroom Story License source failed validation:\n${classroomLicenseSourceErrors.join('\n')}`,
+)
+const classroomExpectedPdfPages = classroomLicenseSource.promptCards.length + 4
+const classroomArtifactStatus = inspectArtifactFiles(root, classroomLicenseSource.artifact, {
+  expectedPdfPages: classroomExpectedPdfPages,
+})
+expect(
+  classroomArtifactStatus.valid,
+  `Classroom Story License artifacts failed validation:\n${classroomArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  classroomArtifactStatus.files.pdf.size > 150_000,
+  `Classroom Story License PDF artifact is unexpectedly small: ${classroomArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  classroomArtifactStatus.files.pdf.pageCount === classroomExpectedPdfPages,
+  `Classroom Story License PDF artifact must have ${classroomExpectedPdfPages} pages.`,
+)
+expect(
+  classroomArtifactStatus.files.zip.size > classroomArtifactStatus.files.pdf.size,
+  'Classroom Story License ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const classroomCheckoutErrors = validateCheckoutReadiness(classroomLicenseProduct, classroomArtifactStatus)
+expect(
+  classroomCheckoutErrors.length === 0,
+  `Classroom Story License checkout readiness failed validation:\n${classroomCheckoutErrors.join('\n')}`,
+)
+const classroomArtifactManifest = readJson(resolve(root, classroomLicenseSource.artifact.manifestPath))
+expect(
+  classroomArtifactManifest.sourcePageCount === classroomLicenseSource.promptCards.length,
+  'Classroom Story License artifact manifest sourcePageCount must match source prompt cards.',
+)
+expect(
+  Array.isArray(classroomArtifactManifest.files.assets),
+  'Classroom Story License artifact manifest files.assets must be an array.',
+)
+expect(
+  classroomArtifactManifest.files.assets.length === classroomLicenseSource.worldSlugs.length,
+  'Classroom Story License artifact manifest must include one copied local image per product world.',
+)
+const classroomManifestAssetErrors = validateManifestWorldAssets(classroomLicenseSource, classroomArtifactManifest)
+expect(
+  classroomManifestAssetErrors.length === 0,
+  `Classroom Story License artifact manifest image coverage failed validation:\n${classroomManifestAssetErrors.join('\n')}`,
+)
+for (const asset of classroomArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Classroom Story License copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length} local world images, ${productSlugs.size} static product pages, 2 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length} local world images, ${productSlugs.size} static product pages, 3 product artifacts.`,
 )
