@@ -128,7 +128,7 @@ Run:
 
 Run local preview and Playwright smoke for `/`, `/road-trip-story-quest-pack/`, and the four existing product pages at desktop and mobile widths. Check console errors and overflow.
 
-- [ ] **Step 4: Commit, push, and deploy**
+- [x] **Step 4: Commit, push, and deploy**
 
 Commit the whole Batch 11 as one batch commit, push to `origin/main`, confirm GitHub Actions deploy success on the local runner, and run a live smoke on the new product route.
 
