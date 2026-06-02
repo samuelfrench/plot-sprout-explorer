@@ -1740,6 +1740,130 @@
           "summary": "A page-order boardwalk world for choosing one ending cue and final line."
         }
       ]
+    },
+    {
+      "slug": "pencil-case-story-switch-card-pack",
+      "title": "Pencil Case Story Switch Card Pack",
+      "pricePoint": "$35",
+      "status": "checkout_pending",
+      "headline": "A printable switch-card pack for screen-free pencil-case stories.",
+      "summary": "Sixteen adult-led fictional story switch cards help kids flip viewpoint, object, mood, order, question, verb, and ending choices into short writing starts.",
+      "heroImage": "images/plotsprout/batch31/pencil-case-story-switch-card-pack.jpg",
+      "ctaLabel": "Request story switch card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Pencil%20Case%20Story%20Switch%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static pencil case story switch card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable pencil-case story switch cards",
+        "Adult setup guide",
+        "Fictional switch-card safety notes",
+        "Story switch coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led switch routines",
+        "Ten take-home switch slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one playful switch before a full story",
+        "A tutoring or co-op desk where writers can choose one paper switch card at a time",
+        "A family table warm-up where pointing, sketching, and one blank can start the page",
+        "A reluctant-writer activity that separates one story change from a full draft",
+        "A take-home switch slip set for finishing one invented detail offline"
+      ],
+      "parentSteps": [
+        "Choose one switch routine before the activity starts.",
+        "Set the paper, pencil, sketch, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one pretend pencil-case choice into a make-believe story change rather than recording private details.",
+        "Send one switch slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for flipping the teller from one pencil-case voice to another."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A tiny post-office world for swapping one paper parcel object and noticing what changes."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A rolling library world for moving one story event to a new place in the order."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for changing one pretend mix-up into a new problem."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup weather world for changing one scene mood without changing the setting."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A notice-board world for flipping the narrator of one tiny announcement."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A lunchbox harbor world for swapping the ferry cargo and revising the dock moment."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An errand-office world for using one mood dial to change a paper scene."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed-library world for renumbering three story steps into a clearer order."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A railway world for choosing between two fictional endings and planting one clue."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A quiet observatory world for retelling one moment from a different paper voice."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for flipping the order of three small lab moments."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for switching a plain sentence into a sharper line."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A label tower world for turning one label into a useful story question."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A craft academy world for replacing one plain verb with a more visible action."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A page-order boardwalk world for testing two endings on a pretend booklet."
+        }
+      ]
     }
   ]
 }

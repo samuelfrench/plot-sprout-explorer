@@ -1,0 +1,189 @@
+{
+  "adultGuide": {
+    "beforeSession": [
+      "Print, cut, and stack the story switch cards before the group begins.",
+      "Choose 6 to 10 switch cards for the age range and time available.",
+      "Place blank paper, pencils, and the switch stack in the center of the table.",
+      "Explain that every switch changes a made-up story, not a real event.",
+      "Start with one sample sentence so everyone sees how a switch works on paper."
+    ],
+    "paperSwitchSetup": [
+      "Use each card as a paper toggle: read the old choice, then flip to the new choice.",
+      "Keep one story draft page beside the switch cards so changes stay visible.",
+      "Let the adult leader draw the first switch, then invite writers to choose later switches.",
+      "Limit each round to one switch so the story does not become crowded.",
+      "Set aside a reset pile for cards that are too hard for the current story."
+    ],
+    "storySwitchCoaching": [
+      "Ask, \"What changed on the page?\" before asking for more writing.",
+      "Treat every switch as an experiment, not a correction.",
+      "Invite short answers first: one word, one sentence, then one new detail.",
+      "Read the before-and-after lines aloud so writers can hear the change.",
+      "When a writer stalls, offer two paper choices and let them point."
+    ],
+    "privacyAndSafetyNotes": [
+      "Keep all writing on paper and in the room or folder chosen by the adult.",
+      "Use invented names, pretend places, and imaginary pencil case objects.",
+      "Skip any card that pulls the story away from make-believe.",
+      "Keep examples gentle: funny, curious, surprising, or cozy.",
+      "Do not require anyone to read aloud; sharing is always optional."
+    ],
+    "familyHandoff": [
+      "Send one finished switch card and one blank slip for a short home round.",
+      "Tell families the goal is a playful change, not perfect spelling.",
+      "Invite families to read the before line and the switched line aloud.",
+      "Suggest a 5 to 10 minute pencil case story round.",
+      "Keep extra blank slips ready for writers who want another switch."
+    ],
+    "reset": [
+      "Sort cards by switch type after the session.",
+      "Recycle damaged slips and reprint only the pages that need replacing.",
+      "Return unfinished stories to each writer or the adult folder.",
+      "Move any confusing card to the check pile before the next use."
+    ]
+  },
+  "switchRoutines": [
+    {
+      "name": "Pencil Case Quick Flip",
+      "bestFor": "A 5 to 10 minute warm-up",
+      "steps": [
+        "Write one simple story sentence on paper.",
+        "Draw one switch card and read the toggle aloud.",
+        "Change only the part named on the card.",
+        "Read the old sentence and new sentence back to back."
+      ]
+    },
+    {
+      "name": "Two-Switch Story Stretch",
+      "bestFor": "Turning a tiny idea into a short scene",
+      "steps": [
+        "Start with a character, setting, and one small problem.",
+        "Choose two switch cards from different skills.",
+        "Apply the first switch in one sentence.",
+        "Apply the second switch in a new sentence and circle the better change."
+      ]
+    },
+    {
+      "name": "Mood And Color Toggle",
+      "bestFor": "Adding description without long lectures",
+      "steps": [
+        "Pick a plain sentence from the draft.",
+        "Draw one mood switch and one color switch.",
+        "Add one feeling word and one color detail.",
+        "Underline the words that made the scene easier to picture."
+      ]
+    },
+    {
+      "name": "Problem Helper Swap",
+      "bestFor": "Helping a stuck story move forward",
+      "steps": [
+        "Find the moment where the story stops.",
+        "Draw a problem switch and choose a new pretend trouble.",
+        "Draw a helper switch and add a gentle helper.",
+        "Write the next two sentences using both changes."
+      ]
+    },
+    {
+      "name": "Sequence Shuffle",
+      "bestFor": "Practicing beginning, middle, and end",
+      "steps": [
+        "Write three short story beats on separate paper strips.",
+        "Draw a sequence switch card.",
+        "Move one strip to a new spot.",
+        "Read the new order and decide what sentence must be added."
+      ]
+    },
+    {
+      "name": "Ending Switch Lab",
+      "bestFor": "Revising a draft ending",
+      "steps": [
+        "Read the last two sentences of the story.",
+        "Draw an ending switch card.",
+        "Write a second ending under the first one.",
+        "Choose the ending that best fits the story mood."
+      ]
+    }
+  ],
+  "takeHomeSwitchSlips": [
+    {
+      "title": "Tiny Narrator Flip",
+      "time": "5 minutes",
+      "skill": "viewpoint switch",
+      "direction": "Write one sentence about a pencil case explorer. Now tell the same moment from ____________________.",
+      "familyLine": "The viewpoint switch changed the story by ____________________."
+    },
+    {
+      "title": "Pocket Object Swap",
+      "time": "5 minutes",
+      "skill": "object switch",
+      "direction": "Circle one object in the story. Swap it for ____________________ and write the sentence again.",
+      "familyLine": "The new object made the story feel ____________________."
+    },
+    {
+      "title": "Mood Meter Move",
+      "time": "6 minutes",
+      "skill": "mood switch",
+      "direction": "Pick a story sentence. Change the mood to ____________________ and add two matching words.",
+      "familyLine": "We noticed the mood switch when ____________________."
+    },
+    {
+      "title": "Color Lens Card",
+      "time": "5 minutes",
+      "skill": "color switch",
+      "direction": "Add a color switch to one made-up pencil case item: ____________________.",
+      "familyLine": "The color detail helped us picture ____________________."
+    },
+    {
+      "title": "First Next Last Shuffle",
+      "time": "7 minutes",
+      "skill": "sequence switch",
+      "direction": "Write three story beats. Move ____________________ to a new spot and read the order aloud.",
+      "familyLine": "The sequence switch made the story clearer because ____________________."
+    },
+    {
+      "title": "Problem Button",
+      "time": "6 minutes",
+      "skill": "problem switch",
+      "direction": "Give the character a tiny pretend problem: ____________________. Then write the next sentence.",
+      "familyLine": "The problem switch gave the story ____________________."
+    },
+    {
+      "title": "Helper From the Case",
+      "time": "6 minutes",
+      "skill": "helper switch",
+      "direction": "Add a helpful pencil case object named ____________________ and let it offer one idea.",
+      "familyLine": "The helper switch worked because ____________________."
+    },
+    {
+      "title": "New Tiny Setting",
+      "time": "6 minutes",
+      "skill": "setting switch",
+      "direction": "Move the story to a pretend place inside the pencil case: ____________________.",
+      "familyLine": "The setting switch changed what the character could see: ____________________."
+    },
+    {
+      "title": "Verb Spark",
+      "time": "5 minutes",
+      "skill": "verb switch",
+      "direction": "Replace a plain action word with ____________________ and read the sentence aloud.",
+      "familyLine": "The verb switch made the action feel ____________________."
+    },
+    {
+      "title": "Ending Toggle",
+      "time": "7 minutes",
+      "skill": "ending switch",
+      "direction": "Write a second ending where the final surprise is ____________________.",
+      "familyLine": "We chose this ending because ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "The switch that changed my story most was ____________________.",
+    "Before the switch, my story felt ____________________; after the switch, it felt ____________________.",
+    "My made-up pencil case item became ____________________.",
+    "The funniest paper toggle was ____________________.",
+    "The best helper in my story was ____________________.",
+    "One sentence I want to read aloud is ____________________.",
+    "The switch I would use again is ____________________.",
+    "My next story switch should change ____________________."
+  ]
+}

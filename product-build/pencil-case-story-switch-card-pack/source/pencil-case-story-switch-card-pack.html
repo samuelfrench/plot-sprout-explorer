@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencil Case Story Switch Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-switch-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-switch-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-switch-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper switch cards</p>
+        <h1>Pencil Case Story Switch Card Pack</h1>
+        <p>Sixteen paper story switch cards turn pretend pencil-case choices into screen-free story starts.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable story switch cards plus adult guide tools, switch routines, take-home switch slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$35</span>
+        <h2>Included</h2>
+        <ul><li>16 printable pencil-case switch cards</li>
+<li>Adult setup guide</li>
+<li>Fictional switch-card safety notes</li>
+<li>Story switch coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led switch routines</li>
+<li>Ten take-home switch slips</li>
+<li>Eight optional share prompts</li>
+<li>Local image-backed world menu</li>
+<li>Provider-ready PDF, source HTML, README, manifest, and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story switch coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print, cut, and stack the story switch cards before the group begins.</li>
+<li>Choose 6 to 10 switch cards for the age range and time available.</li>
+<li>Place blank paper, pencils, and the switch stack in the center of the table.</li>
+<li>Explain that every switch changes a made-up story, not a real event.</li>
+<li>Start with one sample sentence so everyone sees how a switch works on paper.</li></ul></article>
+        <article class="guide-card"><h3>Paper switch setup</h3><ul><li>Use each card as a paper toggle: read the old choice, then flip to the new choice.</li>
+<li>Keep one story draft page beside the switch cards so changes stay visible.</li>
+<li>Let the adult leader draw the first switch, then invite writers to choose later switches.</li>
+<li>Limit each round to one switch so the story does not become crowded.</li>
+<li>Set aside a reset pile for cards that are too hard for the current story.</li></ul></article>
+        <article class="guide-card"><h3>Story switch coaching</h3><ul><li>Ask, &quot;What changed on the page?&quot; before asking for more writing.</li>
+<li>Treat every switch as an experiment, not a correction.</li>
+<li>Invite short answers first: one word, one sentence, then one new detail.</li>
+<li>Read the before-and-after lines aloud so writers can hear the change.</li>
+<li>When a writer stalls, offer two paper choices and let them point.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Keep all writing on paper and in the room or folder chosen by the adult.</li>
+<li>Use invented names, pretend places, and imaginary pencil case objects.</li>
+<li>Skip any card that pulls the story away from make-believe.</li>
+<li>Keep examples gentle: funny, curious, surprising, or cozy.</li>
+<li>Do not require anyone to read aloud; sharing is always optional.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one finished switch card and one blank slip for a short home round.</li>
+<li>Tell families the goal is a playful change, not perfect spelling.</li>
+<li>Invite families to read the before line and the switched line aloud.</li>
+<li>Suggest a 5 to 10 minute pencil case story round.</li>
+<li>Keep extra blank slips ready for writers who want another switch.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Sort cards by switch type after the session.</li>
+<li>Recycle damaged slips and reprint only the pages that need replacing.</li>
+<li>Return unfinished stories to each writer or the adult folder.</li>
+<li>Move any confusing card to the check pile before the next use.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper switch card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen story-switch-card worlds</h2>
+      <p>Pick a world image, then turn one invented pencil-case choice into a story start.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Switch routines</p>
+      <h2>Choose the paper switch rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Pencil Case Quick Flip</h3>
+      <p>A 5 to 10 minute warm-up</p>
+      <ol><li>Write one simple story sentence on paper.</li>
+<li>Draw one switch card and read the toggle aloud.</li>
+<li>Change only the part named on the card.</li>
+<li>Read the old sentence and new sentence back to back.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Two-Switch Story Stretch</h3>
+      <p>Turning a tiny idea into a short scene</p>
+      <ol><li>Start with a character, setting, and one small problem.</li>
+<li>Choose two switch cards from different skills.</li>
+<li>Apply the first switch in one sentence.</li>
+<li>Apply the second switch in a new sentence and circle the better change.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Mood And Color Toggle</h3>
+      <p>Adding description without long lectures</p>
+      <ol><li>Pick a plain sentence from the draft.</li>
+<li>Draw one mood switch and one color switch.</li>
+<li>Add one feeling word and one color detail.</li>
+<li>Underline the words that made the scene easier to picture.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Problem Helper Swap</h3>
+      <p>Helping a stuck story move forward</p>
+      <ol><li>Find the moment where the story stops.</li>
+<li>Draw a problem switch and choose a new pretend trouble.</li>
+<li>Draw a helper switch and add a gentle helper.</li>
+<li>Write the next two sentences using both changes.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sequence Shuffle</h3>
+      <p>Practicing beginning, middle, and end</p>
+      <ol><li>Write three short story beats on separate paper strips.</li>
+<li>Draw a sequence switch card.</li>
+<li>Move one strip to a new spot.</li>
+<li>Read the new order and decide what sentence must be added.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Ending Switch Lab</h3>
+      <p>Revising a draft ending</p>
+      <ol><li>Read the last two sentences of the story.</li>
+<li>Draw an ending switch card.</li>
+<li>Write a second ending under the first one.</li>
+<li>Choose the ending that best fits the story mood.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home switch slips</p>
+      <h2>Finish one story switch later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | viewpoint switch</p>
+      <h3>Tiny Narrator Flip</h3>
+      <p>Write one sentence about a pencil case explorer. Now tell the same moment from ____________________.</p>
+      <p>The viewpoint switch changed the story by ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | object switch</p>
+      <h3>Pocket Object Swap</h3>
+      <p>Circle one object in the story. Swap it for ____________________ and write the sentence again.</p>
+      <p>The new object made the story feel ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | mood switch</p>
+      <h3>Mood Meter Move</h3>
+      <p>Pick a story sentence. Change the mood to ____________________ and add two matching words.</p>
+      <p>We noticed the mood switch when ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | color switch</p>
+      <h3>Color Lens Card</h3>
+      <p>Add a color switch to one made-up pencil case item: ____________________.</p>
+      <p>The color detail helped us picture ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">7 minutes | sequence switch</p>
+      <h3>First Next Last Shuffle</h3>
+      <p>Write three story beats. Move ____________________ to a new spot and read the order aloud.</p>
+      <p>The sequence switch made the story clearer because ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | problem switch</p>
+      <h3>Problem Button</h3>
+      <p>Give the character a tiny pretend problem: ____________________. Then write the next sentence.</p>
+      <p>The problem switch gave the story ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | helper switch</p>
+      <h3>Helper From the Case</h3>
+      <p>Add a helpful pencil case object named ____________________ and let it offer one idea.</p>
+      <p>The helper switch worked because ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | setting switch</p>
+      <h3>New Tiny Setting</h3>
+      <p>Move the story to a pretend place inside the pencil case: ____________________.</p>
+      <p>The setting switch changed what the character could see: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | verb switch</p>
+      <h3>Verb Spark</h3>
+      <p>Replace a plain action word with ____________________ and read the sentence aloud.</p>
+      <p>The verb switch made the action feel ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">7 minutes | ending switch</p>
+      <h3>Ending Toggle</h3>
+      <p>Write a second ending where the final surprise is ____________________.</p>
+      <p>We chose this ending because ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>The switch that changed my story most was ____________________.</li>
+<li>Before the switch, my story felt ____________________; after the switch, it felt ____________________.</li>
+<li>My made-up pencil case item became ____________________.</li>
+<li>The funniest paper toggle was ____________________.</li>
+<li>The best helper in my story was ____________________.</li>
+<li>One sentence I want to read aloud is ____________________.</li>
+<li>The switch I would use again is ____________________.</li>
+<li>My next story switch should change ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 1 | Ages 6-8 | viewpoint switch</div>
+      <h2>Moon Muffin Market Viewpoint Flip</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, place two pencils like a paper switch, and name two pretend tellers: a moon muffin sign and a pocket eraser: ____________________.</p>
+      <p class="kid-direction">Circle one teller, write one sentence, then flip the paper switch and tell the same moment another way: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: The moon muffin sign says, &#39;I notice ____________________ first.&#39;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: The pocket eraser says, &#39;I would gently fix ____________________.&#39;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>Story switch: Swap the storyteller from sign to eraser, but keep the market moment pretend: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line switch: &#39;At Moon Muffin Market, my pencil case opened and ____________________ began to tell the story.&#39;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one clue that shows who is talking without naming them: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to the teller you choose and write only one word clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Reuse the card to retell a moon market moment from a new pencil-case voice: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 2 | Ages 6-8 | object switch</div>
+      <h2>Puddle Planet Parcel Object Swap</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw two paper parcel boxes, and place a pencil cap and paper clip beside the pretend counter: ____________________.</p>
+      <p class="kid-direction">Choose which pencil-case object matters first, then switch it and write what changes in the story: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: The pencil cap carries a tiny cloud stamp for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: The paper clip carries a folded puddle note about ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>Story switch: Swap the object from pencil cap to paper clip, but keep the pretend post office job simple: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line switch: &#39;On Puddle Planet, the post office drawer rattled when ____________________ rolled forward.&#39;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Make the chosen object do one clear story job before the ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the object and write one label beside it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Take this card home and invent one more pencil-case parcel object: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 3 | Ages 7-9 | sequence switch</div>
+      <h2>Buttonwood Library Train Order Switch</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold the switch line, and ask the writer to mark three paper train cars A, B, and C: ____________________.</p>
+      <p class="kid-direction">Write three tiny events, then switch the last event to the front and check what feels different: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: Car one opens with a buttonwood shelf bell and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: The last car goes first, so ____________________ is now the beginning.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>Story switch: Swap the order of beginning, middle, and ending while keeping the same library train: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line switch: &#39;The Buttonwood Library Train clicked its pencil wheels when ____________________.&#39;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one time word so the new order is easy to follow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number the three events silently and rewrite only the new first line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Save the card and try the same order switch with a new library train scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 4 | Ages 7-9 | problem switch</div>
+      <h2>Button Bakery Mix-Up Problem Switch</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, set out colored pencils, and draw two simple paper labels for the button counter: ____________________.</p>
+      <p class="kid-direction">Choose one mix-up, write how the helper notices it, then switch to a different mix-up: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: The mix-up is a missing button label that should say ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: The mix-up is a dotted paper line that points to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>Story switch: Swap the problem from missing label to mixed-up color key, and keep every detail fictional: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line switch: &#39;In Button Bakery, the pencil case snapped open when the paper map showed ____________________.&#39;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Give the new problem one small clue before anyone solves it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw the clue box and write just the changed problem: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this card to switch one more Button Bakery mix-up on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 5 | Ages 7-8 | mood switch</div>
+      <h2>Teacup Town Mood Window Switch</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw one teacup window, and place two pencil color swatches beside it: ____________________.</p>
+      <p class="kid-direction">Pick one mood for the window, write a first line, then switch the mood and revise the same moment: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: The weather window feels curious because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: The weather window feels patient because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>Story switch: Swap the mood from curious to patient while keeping the same teacup town setting: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line switch: &#39;In Teacup Town, the pencil case clicked shut just as the weather window showed ____________________.&#39;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one plain feeling word with a detail the reader can picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Shade a tiny color square and write one mood clue under it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Try the mood switch again with a new weather-window clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 6 | Ages 7-9 | viewpoint switch</div>
+      <h2>Notice Board Narrator Flip</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place a pencil, eraser, and paper clip beside the card. Adult circles the narrator before writing starts: ____________________.</p>
+      <p class="kid-direction">Pick who tells the story, then write what the notice board announces in the tiny park: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: Tell it as the stubby pencil who wrote the newest notice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: Tell it as the silver clip holding the wiggly notice still: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>After two sentences, switch to the other narrator and show what they noticed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: On the pocket-park board, a note appeared that said ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one sentence where the new narrator spots a detail the first one missed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to pencil or clip, then draw one tiny notice before writing: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Ask an adult to circle tomorrow&#39;s narrator choice on this paper card: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 7 | Ages 7-9 | object switch</div>
+      <h2>Spoon Ferry Cargo Swap</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Set out two pencil-case objects and read both cargo choices aloud. Circle one: ____________________.</p>
+      <p class="kid-direction">Write about the spoon ferry carrying one pencil-case cargo across the paper harbor: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: The spoon ferry carries eraser crates tied with a ribbon: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: The spoon ferry carries paper-clip anchors in a tiny lid box: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>Halfway through, swap the cargo and explain what changes on the harbor dock: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: At Lunchbox Harbor, the spoon ferry rang its pencil bell for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one new sound, shape, or silly dock rule caused by the cargo swap: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw the ferry cargo first, then label it with one word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At home, retell the harbor trip with a new pencil-case cargo: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 8 | Ages 7-9 | mood switch</div>
+      <h2>Acorn Avenue Mood Dial</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult reads both mood choices, then lets the child mark one with a pencil dot: ____________________.</p>
+      <p class="kid-direction">Write an Acorn Avenue errand where a pencil-case item changes the office mood: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: The errand office feels busy, bright, and full of tapping pencils: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: The errand office feels calm, careful, and full of soft eraser pats: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>Switch the mood after the acorn clerk opens the drawer, then rewrite the next moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: The acorn clerk slid a note across the desk that asked for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Underline one sentence and change two words so the new mood is clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle busy or calm, then copy three mood words onto the card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Ask an adult to choose a new office mood for a second version: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 9 | Ages 8-10 | sequence switch</div>
+      <h2>Seed Library Order Toggle</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult numbers three paper steps with the child before the story begins: ____________________.</p>
+      <p class="kid-direction">Write the seed-library map-room scene in the order chosen on the card: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: First open the pencil case, next unfold the paper map, last choose a seed tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: First choose a seed tag, next open the pencil case, last mark the paper map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>Switch the order and explain how the map-room helper reacts to the new first step: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: In the Seed Library Map Room, the ruler shelf pointed toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one sentence that uses first, next, or last to make the new order easy to follow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number three tiny boxes before writing the full scene: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Bring the card home and ask an adult to renumber the three story steps: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 10 | Ages 8-10 | ending switch</div>
+      <h2>Rain Gauge Railway Ending Lever</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult reads both endings and places a pencil beside the chosen lever line: ____________________.</p>
+      <p class="kid-direction">Write a rain-gauge railway story, then choose the ending switch before the last sentence: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: Ending A: the ruler platform measures a perfect pretend raindrop pattern: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: Ending B: the pencil-ticket machine prints a surprise station name: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>Flip the ending switch and write a second last sentence without changing the beginning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: The Rain Gauge Railway whistle clicked softly beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise the middle by planting one clue that makes the new ending feel earned: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw the ending lever and write only the final sentence first: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Ask an adult to pick Ending A or Ending B for a family retell: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 11 | Ages 8-10 | viewpoint switch</div>
+      <h2>Moss Message Pencil Voice Switch</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, set out one pencil and a small paper tab, then choose pencil voice or moss voice together: ____________________.</p>
+      <p class="kid-direction">Flip the paper switch and write the same observatory moment from the voice you picked: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: Tell the scene as the pencil inside the case noticing moss letters on the observatory wall: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: Tell the same scene as the moss message waiting to be read: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>The story changes when the viewpoint switch flips because the new voice notices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: From the pencil case, I noticed the moss message had ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Reread one sentence and add a clue that proves who is telling it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle pencil voice or moss voice, then write only one whisper line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Retell one moment at home using the other paper voice: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 12 | Ages 8-10 | sequence switch</div>
+      <h2>Tidepool Timekeepers Eraser Order Switch</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and place three pencil-case slips beside it: pencil mark, eraser puff, ruler line: ____________________.</p>
+      <p class="kid-direction">Choose one order for the slips, then write what the tidepool timekeepers do first, next, and last: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: Order A begins with the pencil mark, then the eraser puff, then the ruler line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: Order B begins with the ruler line, then the pencil mark, then the eraser puff: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>When the order switch flips, the tiny lab clock changes the story by: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: The tidepool clock clicked just as the pencil mark showed ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Check that the middle moment connects the first and last moment clearly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number the three slips silently before writing the next event: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Take the card home and try the other order in one new sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 13 | Ages 10-11 | revision switch</div>
+      <h2>Revision River Sharpener Switch</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw a tiny paper ferry, and ask the writer to move one sentence from dull to clearer: ____________________.</p>
+      <p class="kid-direction">Write a plain sentence on the front, flip the switch, and sharpen it on the back: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: Before the ferry crossing, the sentence says something plain like: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: After the ferry crossing, the sharpened sentence adds a precise object, action, or feeling: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>The story switch works when the ferry carries one weak detail away and brings back: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: The ferry would not leave Revision River until the pencil sharpened ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Replace one vague word with a concrete pencil-case or river detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Underline only the word you changed, then write the new word here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Show an adult the before sentence and the sharper sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 14 | Ages 10-11 | question switch</div>
+      <h2>Clue Label Question Tab Switch</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, set out a pencil and one blank paper label, then invent a tower museum object: ____________________.</p>
+      <p class="kid-direction">Write a label on the front, flip the tab, and turn the label into a question for the scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: The museum label names an invented object with one missing fact: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: The question asks what the label has not explained yet: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>The story changes when the question switch makes the character wonder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: The label on the tower shelf made my pencil pause because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one clue that points toward the answer without giving it away: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write only the strongest question first: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Ask an adult for one silly answer to your fictional label question: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 15 | Ages 10-11 | verb switch</div>
+      <h2>Compass Craft Verb Dial Switch</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and draw a paper compass dial with pencil-case verbs such as sketch, trace, fold, shade, and label: ____________________.</p>
+      <p class="kid-direction">Pick one verb for the front, flip the dial, then rewrite the same moment with a stronger verb: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: The first craft-academy action verb is ____________________, and it makes the character seem ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: The replacement verb is ____________________, and it changes the scene by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>When the verb switch flips, the pencil-case action changes what the character does with: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: At the compass craft table, the pencil chose to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Choose a verb readers can picture, then remove one plain action word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: List two possible verbs before choosing one: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Take the card home and switch one more verb in your scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-switch-card-page">
+      <div class="page-kicker">Story Switch Card 16 | Ages 10-11 | ending switch</div>
+      <h2>Binding Day Binder Clip Ending Switch</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold a small paper booklet, and use a pencil-case clip as the pretend ending switch: ____________________.</p>
+      <p class="kid-direction">Write Ending A on the front, flip the paper switch, then write Ending B on the back: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Switch front</h3>
+      <p>Front switch: Ending A ties the boardwalk booklet together by showing what changed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Switch back</h3>
+      <p>Back switch: Ending B closes the booklet with a final object, line, or choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story switch</h3>
+      <p>The story switch changes the ending when the binder clip snaps onto: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line switch</h3>
+      <p>First line: On Binding Day, the last page waited for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Pick the ending that answers the biggest story question, then add one final detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write the final sentence first, then decide which ending it belongs to: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Read both endings to an adult and mark the one you would keep: ____________________.</p>
+    </section>
+  </body>
+</html>

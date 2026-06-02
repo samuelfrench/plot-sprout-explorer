@@ -454,6 +454,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable porch-light story signal cards with adult guide tools, signal routines, and take-home signal slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'pencil-case-story-switch-card-pack',
+    title: 'Pencil Case Story Switch Card Pack',
+    pricePoint: '$35',
+    description:
+      'Sixteen printable pencil-case story switch cards with adult guide tools, switch routines, and take-home switch slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

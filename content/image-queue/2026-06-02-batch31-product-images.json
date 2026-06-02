@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-02-batch31-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "pencil-case-story-switch-card-pack",
+      "title": "Pencil Case Story Switch Card Pack product image",
+      "purpose": "Static product page hero for the pencil case story switch card pack.",
+      "seed": 26063135,
+      "prompt": "family-friendly flat lay product image of blank cream paper switch cards beside a closed unbranded pencil case on a plain white background, cards show only soft abstract toggle shapes with no readable marks, screen-free printable pencil case story switch card pack, warm natural light, clean catalog composition, no text, no letters, no labels, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no phone, no tablet, no device, no QR code",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, phone, tablet, laptop, computer, screen, device, app interface, school login, account login, portal, qr code, upload icon, camera, photo, gps, navigation app, coordinates, address, house, home, street sign, real place, real-world map, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, branded character, franchise, copyright character, people, face, animal, food, snack, medicine, weapon, violence, scary scene, outdoor scene, window, doorway, building, safety sign",
+      "outputJpeg": "public/images/plotsprout/batch31/pencil-case-story-switch-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch31/pencil-case-story-switch-card-pack.webp",
+      "sidecar": "content/image-runs/batch31/pencil-case-story-switch-card-pack.json"
+    }
+  ]
+}
