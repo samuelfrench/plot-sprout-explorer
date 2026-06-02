@@ -318,6 +318,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Eight quiet, low-mess writing quests for restaurants, lobbies, sibling activities, pickup lines, and gates.',
     note: 'No checkout, accounts, uploads, or public publishing are enabled.',
   },
+  {
+    slug: 'library-story-club-kit',
+    title: 'Library Story Club Kit',
+    pricePoint: '$23',
+    description:
+      'Ten adult-led story club sessions with facilitator tools for libraries, co-ops, tutoring groups, and classrooms.',
+    note: 'No checkout, accounts, uploads, or public publishing are enabled.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

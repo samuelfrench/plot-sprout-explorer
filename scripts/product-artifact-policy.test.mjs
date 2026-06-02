@@ -13,6 +13,7 @@ import {
   validateClassroomLicenseSource,
   validateManifestWorldAssets,
   validatePackSource,
+  validateLibraryStoryClubKitSource,
   validateRoadTripPackSource,
   validateSeasonBundleSource,
   validateWaitingRoomPackSource,
@@ -618,6 +619,115 @@ function validWaitingRoomSource() {
   }
 }
 
+function libraryClubSession(id, worldSlug, ageBand) {
+  return {
+    id,
+    title: id.split('-').join(' '),
+    worldSlug,
+    ageBand,
+    clubUse: 'Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.',
+    setupMinutes: '6 minutes',
+    groupMode: 'Small group table',
+    kidDirection: 'Choose one setting detail, one helper choice, and one sentence to draft before optional sharing.',
+    facilitatorNote: 'Keep the session offline, use first names only if spoken, and let pointing or drawing count as planning.',
+    materials: ['printed club page', 'pencil', 'folder', 'small choice cards'],
+    pageSections: ['Club Setup', 'Story Choice', 'Take-Home Line'].map((heading) => ({
+      heading,
+      lines: [
+        `${heading} detail: ____________________________`,
+        `${heading} choice: ____________________________`,
+        `${heading} sentence: ____________________________`,
+      ],
+    })),
+    takeHomeLine: 'Save this club page in the folder and finish one sentence at home.',
+  }
+}
+
+function validLibraryStoryClubSource() {
+  const worldSlugs = [
+    'buttonwood-library-train',
+    'pocket-park-notice-board',
+    'penny-path-compass-shop',
+    'acorn-avenue-errand-office',
+    'seed-library-map-room',
+    'index-card-theater-club',
+    'margin-note-market',
+    'clue-label-tower-museum',
+    'revision-river-ferry',
+    'compass-craft-academy',
+  ]
+  const worldAges = new Map([
+    ['buttonwood-library-train', '7-9'],
+    ['pocket-park-notice-board', '7-9'],
+    ['penny-path-compass-shop', '7-9'],
+    ['acorn-avenue-errand-office', '7-9'],
+    ['seed-library-map-room', '8-10'],
+    ['index-card-theater-club', '10-11'],
+    ['margin-note-market', '10-11'],
+    ['clue-label-tower-museum', '10-11'],
+    ['revision-river-ferry', '10-11'],
+    ['compass-craft-academy', '10-11'],
+  ])
+
+  return {
+    source: {
+      batchId: '2026-06-02-batch14',
+      generatedAt: '2026-06-02',
+      productSlug: 'library-story-club-kit',
+      title: 'Library Story Club Kit',
+      pricePoint: '$23',
+      audience: "Children's librarians, homeschool co-op leaders, tutors, and elementary teachers running adult-led writing clubs for ages 7-11.",
+      sessionLength: '10 printable club sessions plus adult facilitation tools',
+      safetyNote: safety,
+      artifact: {
+        pdfPath: 'product-build/library-story-club-kit/Library-Story-Club-Kit.pdf',
+        zipPath: 'product-build/library-story-club-kit/library-story-club-kit.zip',
+        sourceHtmlPath: 'product-build/library-story-club-kit/source/library-story-club-kit.html',
+        manifestPath: 'product-build/library-story-club-kit/manifest.json',
+      },
+      worldSlugs,
+      cover: {
+        kicker: 'Printable library writing club kit',
+        headline: 'Library Story Club Kit',
+        subhead: 'Ten adult-led story club sessions for library tables, homeschool co-ops, tutoring groups, and classroom writing clubs.',
+        included: [
+          '10 printable club sessions',
+          'Facilitator setup guide',
+          'Group norms',
+          'Materials checklist',
+          'Timing menu',
+          'Take-home routine',
+          'Five club routines',
+          'Eight extension activities',
+          'Six optional share prompts',
+          'Provider-ready ZIP artifact',
+        ],
+      },
+      facilitatorGuide: {
+        setup: ['Print one packet per child.', 'Choose two session pages.', 'Set out pencils.', 'Keep folders private.', 'Explain optional sharing.'],
+        groupNorms: ['Use quiet voices.', 'Share only made-up details.', 'Pass when needed.', 'Listen kindly.', 'Keep pages in folders.'],
+        materials: ['Printed session pages.', 'Pencils.', 'Folders.', 'Choice cards.', 'Timer.'],
+        timing: ['5 minutes to choose.', '8 minutes to plan.', '12 minutes to draft.', '5 minutes to revise.', '5 minutes for optional sharing.'],
+        takeHome: ['Folder unfinished pages.', 'Mark one blank.', 'Send one finish prompt.', 'Skip online sharing.'],
+      },
+      clubRoutines: Array.from({ length: 5 }, (_, index) => ({
+        name: `Club Routine ${index + 1}`,
+        bestFor: 'Adult-led story club table.',
+        steps: ['Set one page.', 'Pick one detail.', 'Write one line.', 'Save the folder.'],
+      })),
+      extensionActivities: Array.from({ length: 8 }, (_, index) => ({
+        title: `Club Extension ${index + 1}`,
+        time: '10 minutes',
+        direction: 'Add one concrete detail to the club session draft.',
+        writingSkill: 'setting detail',
+      })),
+      sharePrompts: ['Read one invented line.', 'Point to a setting detail.', 'Name a helper choice.', 'Share one revised word.', 'Pass and listen.', 'Choose one take-home blank.'],
+      sessions: worldSlugs.map((worldSlug, index) => libraryClubSession(`library-session-${index + 1}`, worldSlug, worldAges.get(worldSlug))),
+    },
+    worldAges,
+  }
+}
+
 describe('product artifact policy', () => {
   it('validates the Rainy Day pack source against the product record and required world coverage', () => {
     const product = {
@@ -1038,6 +1148,55 @@ describe('product artifact policy', () => {
       expect.arrayContaining([
         'setupGuide includes medical, emergency, legal, diagnosis, therapy, or treatment language.',
         'Waiting Room Story Quest Pack source includes medical, emergency, legal, diagnosis, therapy, or treatment language.',
+      ]),
+    )
+  })
+
+  it('validates the Library Story Club Kit source with matching world age bands and writable session blanks', () => {
+    const { source, worldAges } = validLibraryStoryClubSource()
+    const product = {
+      slug: 'library-story-club-kit',
+      title: 'Library Story Club Kit',
+      pricePoint: '$23',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateLibraryStoryClubKitSource(source, product, worldAges)).toEqual([])
+  })
+
+  it('rejects Library Story Club session lines that do not provide writable blanks', () => {
+    const { source, worldAges } = validLibraryStoryClubSource()
+    source.sessions[0].pageSections[0].lines[0] = 'The club table starts with one quiet detail.'
+    const product = {
+      slug: 'library-story-club-kit',
+      title: 'Library Story Club Kit',
+      pricePoint: '$23',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateLibraryStoryClubKitSource(source, product, worldAges)).toContain(
+      'sessions[0].pageSections[0].lines[0] must include a writable blank.',
+    )
+  })
+
+  it('rejects Library Story Club source that drifts into patron records, uploads, or public publishing', () => {
+    const { source, worldAges } = validLibraryStoryClubSource()
+    source.facilitatorGuide.setup[0] = 'Collect library-card numbers on a sign-in sheet and upload story photos for public publishing.'
+    const product = {
+      slug: 'library-story-club-kit',
+      title: 'Library Story Club Kit',
+      pricePoint: '$23',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateLibraryStoryClubKitSource(source, product, worldAges)).toEqual(
+      expect.arrayContaining([
+        'facilitatorGuide includes patron records, library-card data, sign-in sheet, photo, upload, account, or public publishing language.',
+        'Library Story Club Kit source includes account, login, upload, or public publishing language.',
+        'Library Story Club Kit source includes patron records, library-card data, sign-in sheet, photo, upload, account, or public publishing language.',
       ]),
     )
   })

@@ -1,0 +1,83 @@
+{
+  "batchId": "2026-06-02-batch14",
+  "generatedAt": "2026-06-02",
+  "productSlug": "library-story-club-kit",
+  "title": "Library Story Club Kit",
+  "pricePoint": "$23",
+  "sourcePageCount": 10,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/library-story-club-kit/Library-Story-Club-Kit.pdf",
+      "sha256": "7fa1b51f09198adceb9e38b12ca09b1de3277e0b2506e119aea06c08db4e605e",
+      "size": 3070824
+    },
+    "zip": {
+      "path": "product-build/library-story-club-kit/library-story-club-kit.zip",
+      "sha256": "c90c86092bf4449626270182df2ba33223109e057c82c0879d17fe4754355594",
+      "size": 5903656
+    },
+    "sourceHtml": {
+      "path": "product-build/library-story-club-kit/source/library-story-club-kit.html",
+      "sha256": "5fe7b7ab753ac4e266cd39d316ba72a417cc52844058c3019059a23e8ec64535",
+      "size": 39852
+    },
+    "readme": {
+      "path": "product-build/library-story-club-kit/README.txt",
+      "sha256": "9e47fb881a6b4600c6429cff8530b9191c96c4d4e96ba2bfdad33b0ba3598825",
+      "size": 485
+    },
+    "assets": [
+      {
+        "path": "product-build/library-story-club-kit/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/library-story-club-kit/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/library-story-club-kit/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/library-story-club-kit/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/library-story-club-kit/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/library-story-club-kit/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/library-story-club-kit/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/library-story-club-kit/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/library-story-club-kit/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/library-story-club-kit/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      }
+    ]
+  }
+}

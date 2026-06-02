@@ -1,0 +1,168 @@
+{
+  "batchId": "2026-06-02-batch14",
+  "generatedAt": "2026-06-02",
+  "lane": "library club tools",
+  "cover": {
+    "kicker": "Printable adult-led story club kit",
+    "headline": "Library Story Club Kit",
+    "subhead": "A $23 printable toolkit for librarians, co-op leaders, classroom teachers, and tutors running calm short-story sessions with no devices or private data collection.",
+    "included": [
+      "Adult setup checklist",
+      "Five group norms for calm story work",
+      "Printable materials list",
+      "Five timing plans for short club blocks",
+      "Take-home folder guidance",
+      "Five repeatable club routines",
+      "Eight extension activities",
+      "Six optional share prompts",
+      "Support moves for hesitant writers",
+      "Quiet cleanup and reset notes"
+    ]
+  },
+  "facilitatorGuide": {
+    "setup": [
+      "Print one session packet per participant plus a few spare draft pages, then stack each packet in use order before the group arrives.",
+      "Choose one club routine and one extension activity in advance so the session does not depend on last-minute sorting.",
+      "Place pencils, plain paper, and choice slips in the center of each table before writers sit down.",
+      "Use table numbers or simple symbols only if labels are needed for folders.",
+      "Open with a brief adult model that shows one setting detail, one helpful choice, and one clear ending."
+    ],
+    "groupNorms": [
+      "Everyone may write, draw, point to a choice, or dictate one sentence to the adult leader.",
+      "Listen quietly when someone shares and respond to the writing, not to personal details.",
+      "Keep stories fictional and use invented places, invented characters, and ordinary objects.",
+      "Pass is always allowed during sharing; a listener role still counts as participation.",
+      "Ask for help by pointing to a prompt, underlining a stuck spot, or choosing between two adult-offered options."
+    ],
+    "materials": [
+      "Printed club packets with session pages, draft pages, extension pages, and optional share prompts.",
+      "Sharpened pencils, erasers, colored pencils, sticky notes, plain folders, and one timer visible to the adult leader.",
+      "A small table supply bin for each group with only quiet materials that can be cleaned up quickly.",
+      "Blank index-size slips for title tests, detail banks, and next-step notes.",
+      "A leader copy with the timing plan, group norms, and backup extension activities clipped together."
+    ],
+    "timing": [
+      "30-minute club: 5 minutes for welcome and norms, 7 minutes for story choices, 12 minutes for drafting, 4 minutes for quiet revision, and 2 minutes for cleanup.",
+      "45-minute club: 5 minutes for setup, 10 minutes for adult-led prompt launch, 15 minutes for drafting, 8 minutes for extension work, and 7 minutes for optional sharing.",
+      "60-minute club: 8 minutes for warm-up, 12 minutes for routine steps, 20 minutes for writing, 10 minutes for extension, 5 minutes for share prompts, and 5 minutes for take-home reset.",
+      "Drop-in version: run a 10-minute detail bank, a 10-minute mini draft, and a 5-minute folder finish so participants can leave at natural breaks.",
+      "Tutoring version: use 5 minutes for choice talk, 15 minutes for guided writing, 10 minutes for revision, and 5 minutes for reading one sentence back."
+    ],
+    "takeHome": [
+      "Send pages home in a plain folder with one clear finish job marked by the adult leader.",
+      "Keep unfinished work private unless the participant chooses to share during the session.",
+      "Include one optional family prompt that asks for an invented setting, object, or ending rather than personal information.",
+      "Store leftover blank pages with the club supplies so the next session can begin without reprinting the whole kit."
+    ]
+  },
+  "clubRoutines": [
+    {
+      "name": "Welcome Table Detail Bank",
+      "bestFor": "The first 10 minutes of a library, co-op, classroom, or tutoring club when arrivals are uneven.",
+      "steps": [
+        "Adult places one draft page and one detail-bank slip at each seat before the session begins.",
+        "Writers list or sketch one color, one object, one sound, and one quiet action from an invented setting.",
+        "Adult circulates and offers two simple choices to anyone who is stuck.",
+        "Each writer circles one detail to carry into the main story prompt."
+      ]
+    },
+    {
+      "name": "Whole-Group Story Launch",
+      "bestFor": "Mixed-age groups that need a shared start before independent writing.",
+      "steps": [
+        "Adult reads the session prompt aloud and shows two printed choice slips for the setting.",
+        "The group chooses by pointing, raising a hand, or quietly naming one option.",
+        "Adult writes the shared choice on a visible page and models one short opening sentence.",
+        "Writers adapt the shared choice on their own pages with one different detail."
+      ]
+    },
+    {
+      "name": "Quiet Partner Polish",
+      "bestFor": "Small groups with writers who can read one line to a partner or adult helper.",
+      "steps": [
+        "Each writer chooses one sentence, sketch label, or dictated line to show a partner.",
+        "The listener names one clear detail and asks one neutral question about the next action.",
+        "The writer adds one noun, verb, or setting word based on the question.",
+        "Adult closes the routine by asking everyone to mark one sentence they want to keep."
+      ]
+    },
+    {
+      "name": "Station-to-Story Rotation",
+      "bestFor": "Longer club sessions with two or more tables and one adult leader plus helpers.",
+      "steps": [
+        "Adult sets four stations: setting, helper, small mix-up, and ending choice.",
+        "Groups spend four minutes at each station adding one note to their own page.",
+        "After the final station, writers return to seats and order the four notes first, next, then, and last.",
+        "Writers draft a short story using the ordered notes while adults help with spelling only when asked."
+      ]
+    },
+    {
+      "name": "Folder Finish Reset",
+      "bestFor": "The last 8 minutes when a club needs a calm ending and clean handoff.",
+      "steps": [
+        "Adult asks writers to stop at the end of the sentence they are working on.",
+        "Writers mark one finished part with a star or underline and one unfinished part with a sticky note.",
+        "Adult gives one next-step choice: add a title, add an ending, or add one clearer detail.",
+        "Pages go into folders before supplies are collected and tables are reset."
+      ]
+    }
+  ],
+  "extensionActivities": [
+    {
+      "title": "Shelf-Shape Setting Map",
+      "time": "12 minutes",
+      "direction": "Writers draw a simple shelf, table, cart, or room shape and label three invented story stops with one calm detail at each stop.",
+      "writingSkill": "setting sequence"
+    },
+    {
+      "title": "Title Three Ways",
+      "time": "8 minutes",
+      "direction": "Writers create three possible titles: one with a place, one with an object, and one with an action, then choose the clearest title.",
+      "writingSkill": "main idea"
+    },
+    {
+      "title": "Object-to-Helper Sort",
+      "time": "10 minutes",
+      "direction": "Writers choose three ordinary objects from a printed list and sort them into setting detail, helpful item, and ending clue.",
+      "writingSkill": "story structure"
+    },
+    {
+      "title": "Quiet Action Ladder",
+      "time": "12 minutes",
+      "direction": "Writers list three small actions a character could take, then number them in an order that makes the story easier to follow.",
+      "writingSkill": "sequence"
+    },
+    {
+      "title": "Dialogue Without Names",
+      "time": "15 minutes",
+      "direction": "Writers draft four short lines between two invented characters using role labels such as guide and maker instead of personal labels.",
+      "writingSkill": "dialogue"
+    },
+    {
+      "title": "Revision Sticky Move",
+      "time": "10 minutes",
+      "direction": "Writers place a sticky note beside one sentence and choose one revision move: add, move, replace, or explain.",
+      "writingSkill": "revision"
+    },
+    {
+      "title": "Read-Aloud Line Test",
+      "time": "8 minutes",
+      "direction": "Adult reads one volunteer sentence aloud while the writer listens for a word to keep and a word to make clearer.",
+      "writingSkill": "word choice"
+    },
+    {
+      "title": "Ending Choice Pair",
+      "time": "12 minutes",
+      "direction": "Writers draft two possible endings for the same story: one that solves the mix-up and one that invites another small adventure.",
+      "writingSkill": "ending choice"
+    }
+  ],
+  "sharePrompts": [
+    "Read one sentence that shows a clear setting detail.",
+    "Point to one sketch, title, or word bank item and tell how it helps the story.",
+    "Ask an adult to read one line while you name the word you chose carefully.",
+    "Share one revision move you made: add, move, replace, or explain.",
+    "Tell the group one next action your invented character could take.",
+    "Pass today and listen for one clear detail in another writer's story."
+  ]
+}

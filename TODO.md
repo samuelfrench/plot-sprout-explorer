@@ -45,6 +45,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Batch 11 deployed from commit `e746373` via local runner at `2026-06-02T09:48:45Z`; live GitHub Pages desktop/mobile smoke passed for `/`, `/road-trip-story-quest-pack/`, `/birthday-party-story-quest-kit/`, `/classroom-story-license-pack/`, `/homeschool-season-story-bundle/`, and `/rainy-day-story-quest-pack/`.
 - [x] 2026-06-02: Batch 13 built the `$11` Waiting Room Story Quest Pack static product page, 8-quest source JSON from three subagent lanes, local RTX 4090 product image, 12-page PDF, ZIP, manifest, provider-ready folder, full `npm run verify`, desktop/mobile local smoke for all product pages, and spec/code-quality review passes; checkout stays pending.
 - [x] 2026-06-02: Batch 13 deployed from commit `420a041` via local runner run `26813534542` / job `79049406273`, completed `2026-06-02T10:21:01Z`; live GitHub Pages desktop/mobile smoke passed for `/waiting-room-story-quest-pack/` with image load, no console warnings/errors, and no horizontal overflow.
+- [x] 2026-06-02: Batch 14 built the `$23` Library Story Club Kit static product page, 10-session source JSON from three gpt-5.5/xhigh lanes, local RTX 4090 product image, 14-page PDF, ZIP, manifest, provider-ready folder, full `npm run verify`, and desktop/mobile local smoke for all product pages; checkout stays pending.
 
 ## In Progress
 
@@ -64,6 +65,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] Batch 10: Build the `$19` Birthday Party Story Quest Kit with 8 party-table quests, adult setup tools, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 11: Build the `$17` Road Trip Story Quest Pack with 8 travel-friendly quests, adult setup tools, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 13: Build the `$11` Waiting Room Story Quest Pack with 8 quiet waiting quests, adult setup tools, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
+- [x] Batch 14: Build the `$23` Library Story Club Kit with 10 adult-led club sessions, facilitator tools, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [ ] Batch 12: Add the chosen hosted checkout URL, provider-host allowlist, and CTA copy after Sam chooses the provider; do not add custom checkout/webhook endpoints.
 
 ## Product Gates
@@ -84,4 +86,5 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] $19 birthday party story quest kit with 8 printable party-table quests and adult setup tools.
 - [x] $17 road trip story quest pack with 8 printable travel quests and adult setup tools.
 - [x] $11 waiting room story quest pack with 8 quiet printable waiting quests and adult setup tools.
+- [x] $23 library story club kit with 10 adult-led club sessions and facilitator tools.
 - [ ] Parent email capture for weekly printable quest drops.

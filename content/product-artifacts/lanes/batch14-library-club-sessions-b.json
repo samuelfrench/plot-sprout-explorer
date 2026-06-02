@@ -1,0 +1,227 @@
+{
+  "batchId": "2026-06-02-batch14",
+  "generatedAt": "2026-06-02",
+  "lane": "library club sessions B",
+  "sessions": [
+    {
+      "id": "library-index-card-theater-scene-cues",
+      "title": "Index Card Theater Scene Cues",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "clubUse": "Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.",
+      "setupMinutes": "7 minutes",
+      "groupMode": "small groups at a writing table",
+      "kidDirection": "Arrange three scene cue choices, then write the line that helps the next scene make sense.",
+      "facilitatorNote": "Keep the cards face up, invite quiet pointing before writing, and make the read-back optional.",
+      "takeHomeLine": "Save this scene-cue page in a folder so one cue can become a longer theater story later.",
+      "materials": [
+        "printed theater club session page",
+        "pencils",
+        "three cue-choice cards",
+        "folder for finished pages"
+      ],
+      "pageSections": [
+        {
+          "heading": "Scene Card Order",
+          "lines": [
+            "The first scene card shows ____________________.",
+            "The turning scene changes when ____________________.",
+            "The final scene should help readers notice ____________________."
+          ]
+        },
+        {
+          "heading": "Cue Line Choices",
+          "lines": [
+            "An action cue I can add is ____________________.",
+            "A dialogue cue that fits the scene is ____________________.",
+            "A setting cue that makes the stage clearer is ____________________."
+          ]
+        },
+        {
+          "heading": "Club Page Finish",
+          "lines": [
+            "The cue that connects my scenes best is ____________________.",
+            "One word I can revise for clarity is ____________________.",
+            "My final theater-club sentence is ____________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-margin-note-market-feedback-menu",
+      "title": "Margin Note Market Feedback Menu",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "clubUse": "Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.",
+      "setupMinutes": "6 minutes",
+      "groupMode": "guided feedback table",
+      "kidDirection": "Turn a vague market note into a kind, specific revision task for a made-up writer.",
+      "facilitatorNote": "Use sample notes only, keep all feedback about invented pages, and let each child choose one task to finish.",
+      "takeHomeLine": "Save this feedback-menu page to use as a calm revision checklist for a future draft.",
+      "materials": [
+        "printed margin note market page",
+        "pencils",
+        "sample feedback strips",
+        "folder for take-home pages"
+      ],
+      "pageSections": [
+        {
+          "heading": "Market Note Sort",
+          "lines": [
+            "The vague note on the stall says ____________________.",
+            "The writing skill this note should help is ____________________.",
+            "A kinder, clearer note could begin with ____________________."
+          ]
+        },
+        {
+          "heading": "Specific Revision Task",
+          "lines": [
+            "The writer should add one exact detail about ____________________.",
+            "The sentence that needs a clearer order is ____________________.",
+            "The next revision step should be ____________________."
+          ]
+        },
+        {
+          "heading": "Club Reflection",
+          "lines": [
+            "The most useful feedback word on my page is ____________________.",
+            "One note I would choose for my own draft is ____________________.",
+            "My final market feedback line is ____________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-clue-label-tower-curator-cards",
+      "title": "Clue Label Tower Curator Cards",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "clubUse": "Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.",
+      "setupMinutes": "8 minutes",
+      "groupMode": "curator pairs with adult check-ins",
+      "kidDirection": "Choose everyday-object clues and write short labels that tell readers what to notice first.",
+      "facilitatorNote": "Offer harmless classroom or table objects as inspiration, then keep the final labels invented and brief.",
+      "takeHomeLine": "Save this curator-card page so one label can become a short museum scene at home.",
+      "materials": [
+        "printed clue label tower page",
+        "pencils",
+        "object clue cards",
+        "small table tray"
+      ],
+      "pageSections": [
+        {
+          "heading": "Object Clue Picks",
+          "lines": [
+            "The object I choose for the first exhibit is ____________________.",
+            "The clue visitors should notice first is ____________________.",
+            "A detail that does not belong on the label is ____________________."
+          ]
+        },
+        {
+          "heading": "Label Drafting",
+          "lines": [
+            "My label should explain why ____________________.",
+            "The clearest museum word I can use is ____________________.",
+            "One sentence label for this exhibit is ____________________."
+          ]
+        },
+        {
+          "heading": "Curator Finish",
+          "lines": [
+            "The next exhibit card should connect to ____________________.",
+            "One confusing label word I can replace is ____________________.",
+            "My final tower museum line is ____________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-revision-river-draft-ferry",
+      "title": "Revision River Draft Ferry",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "clubUse": "Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.",
+      "setupMinutes": "7 minutes",
+      "groupMode": "adult-led revision station",
+      "kidDirection": "Move one scene stop, add one useful detail, and write a clearer ferry route sentence.",
+      "facilitatorNote": "Frame revision as rearranging choices on a made-up ferry map, not judging a child's personal draft.",
+      "takeHomeLine": "Save this ferry page as a take-home revision map for a future story scene.",
+      "materials": [
+        "printed revision river page",
+        "pencils",
+        "three draft-island cards",
+        "folder for finished pages"
+      ],
+      "pageSections": [
+        {
+          "heading": "Draft Island Stops",
+          "lines": [
+            "The opening island shows ____________________.",
+            "The middle island feels clearer after ____________________.",
+            "The finish island should remind readers about ____________________."
+          ]
+        },
+        {
+          "heading": "Ferry Revision Move",
+          "lines": [
+            "One scene stop I might move is ____________________.",
+            "The reason this move helps the reader is ____________________.",
+            "A detail I can add to connect the route is ____________________."
+          ]
+        },
+        {
+          "heading": "Clear Route Line",
+          "lines": [
+            "The ferry crosses the draft river when ____________________.",
+            "One sentence I can make more exact is ____________________.",
+            "My final revision river line is ____________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-compass-craft-story-route",
+      "title": "Compass Craft Story Route",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "clubUse": "Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.",
+      "setupMinutes": "8 minutes",
+      "groupMode": "route-planning table",
+      "kidDirection": "Plan a beginning, middle, and finish route, then revise the turning point so the story path is easy to follow.",
+      "facilitatorNote": "Keep route choices limited to three cards, ask one guiding question at a time, and let saving the page count as completion.",
+      "takeHomeLine": "Save this route page to finish the first paragraph of a Compass Craft Academy story later.",
+      "materials": [
+        "printed compass craft route page",
+        "pencils",
+        "three route-stop cards",
+        "colored pencil for the chosen path"
+      ],
+      "pageSections": [
+        {
+          "heading": "Story Route Map",
+          "lines": [
+            "The beginning route stop is ____________________.",
+            "The middle route stop changes the plan because ____________________.",
+            "The finish route stop should show ____________________."
+          ]
+        },
+        {
+          "heading": "Turning Point Check",
+          "lines": [
+            "The most important choice on the route is ____________________.",
+            "The choice matters because ____________________.",
+            "A detail that can guide readers through the turn is ____________________."
+          ]
+        },
+        {
+          "heading": "Academy Finish",
+          "lines": [
+            "One route label I can make clearer is ____________________.",
+            "The sentence I want to draft first is ____________________.",
+            "My final compass craft line is ____________________."
+          ]
+        }
+      ]
+    }
+  ]
+}

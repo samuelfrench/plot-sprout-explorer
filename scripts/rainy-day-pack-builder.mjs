@@ -399,7 +399,7 @@ export function buildProductArtifactManifest(source, files, options = {}) {
     productSlug: source.productSlug,
     title: source.title,
     pricePoint: source.pricePoint,
-    sourcePageCount: source.pages?.length ?? source.promptCards?.length ?? source.quests?.length ?? 0,
+    sourcePageCount: source.pages?.length ?? source.promptCards?.length ?? source.quests?.length ?? source.sessions?.length ?? 0,
     fulfillmentNote:
       options.fulfillmentNote ??
       'provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.',

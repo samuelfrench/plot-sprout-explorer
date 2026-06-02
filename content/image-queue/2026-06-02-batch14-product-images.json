@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch14-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "library-story-club-kit",
+      "title": "Library Story Club Kit product image",
+      "purpose": "Static product hero for the $23 Library Story Club Kit page.",
+      "prompt": "family-friendly flat lay, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, blank club pages, colored pencils, simple folders, book-like shapes, pastel table, no markings",
+      "outputJpeg": "public/images/plotsprout/batch14/library-story-club-kit.jpg",
+      "outputWebp": "public/images/plotsprout/batch14/library-story-club-kit.webp",
+      "sidecar": "content/image-runs/batch14/library-story-club-kit.json",
+      "seed": 26061423
+    }
+  ]
+}

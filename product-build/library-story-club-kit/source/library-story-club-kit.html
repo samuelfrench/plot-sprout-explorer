@@ -1,0 +1,784 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Story Club Kit</title>
+    <style>
+      @page { size: Letter; margin: 0.36in; }
+      :root {
+        --ink: #17343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #b6d4cf;
+        --teal: #2c7a78;
+        --coral: #ec6f3f;
+        --gold: #f2c14f;
+        --blue: #2b7f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 12px;
+        line-height: 1.24;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 11ch; font-size: 40px; }
+      h2 { margin-bottom: 0.06in; font-size: 24px; }
+      h3 { margin-bottom: 0.03in; font-size: 12.4px; }
+      p, li { color: var(--muted); }
+      img {
+        display: block;
+        max-width: 100%;
+        border: 1px solid var(--line);
+      }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.13in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.2in;
+        gap: 0.22in;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--teal);
+        font-size: 8.8px;
+      }
+      .share-page {
+        border-top: 0.16in solid var(--coral);
+        font-size: 10.1px;
+      }
+      .extension-page {
+        border-top: 0.16in solid var(--blue);
+        font-size: 10.2px;
+      }
+      .page-kicker, .kicker, .world-intro span, .extension-card span {
+        color: var(--teal);
+        font-size: 9.2px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 900;
+      }
+      .included-grid, .setup-grid, .world-grid, .routine-grid, .extension-grid, .share-grid {
+        display: grid;
+        gap: 0.07in;
+      }
+      .included-grid { grid-template-columns: 1fr; }
+      .setup-grid, .routine-grid, .extension-grid, .share-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .guide-page h2 { font-size: 20px; }
+      .guide-page h3 { font-size: 10.2px; }
+      .guide-page .setup-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 0.045in;
+      }
+      .guide-page .world-grid {
+        grid-template-columns: repeat(5, minmax(0, 1fr));
+        gap: 0.045in;
+      }
+      .guide-page li { line-height: 1.13; }
+      .guide-page .footer-note {
+        margin-top: 0.04in;
+        padding-top: 0.04in;
+        font-size: 8.5px;
+      }
+      .included-grid li, .setup-grid li, .share-grid li, .routine-card, .extension-card,
+      .world-intro, .worksheet-section, .kid-direction, .adult-note, .take-home, .quest-meta {
+        padding: 0.05in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .included-grid li, .setup-grid li, .share-grid li { list-style: none; }
+      .world-intro img, .world-intro p { display: none; }
+      .world-intro h3 { margin: 0; font-size: 9px; line-height: 1.04; }
+      .kid-direction {
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .adult-note {
+        border-color: #e5bc7c;
+        background: #fff4dc;
+      }
+      .quest-meta {
+        display: grid;
+        grid-template-columns: 0.7in 0.95in 1fr;
+        gap: 0.04in;
+        color: var(--ink);
+        font-size: 9.4px;
+        font-weight: 900;
+      }
+      figure {
+        float: right;
+        width: 1.64in;
+        margin: 0 0 0.05in 0.1in;
+      }
+      figure img {
+        width: 1.64in;
+        height: 0.92in;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--muted);
+        font-size: 8.8px;
+      }
+      .write-line {
+        min-height: 0.2in;
+        margin-bottom: 0.035in;
+        padding-bottom: 0.03in;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .footer-note {
+        margin-top: 0.07in;
+        padding-top: 0.07in;
+        border-top: 2px solid var(--gold);
+        color: var(--muted);
+        font-size: 9.3px;
+      }
+      @media screen {
+        body { padding: 24px; background: #dfeee7; }
+        .pack-page {
+          width: 8.5in;
+          margin: 0 auto 24px;
+          box-shadow: 0 18px 40px rgba(20, 31, 43, 0.18);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable adult-led story club kit</p>
+        <h1>Library Story Club Kit</h1>
+        <p>A $23 printable toolkit for librarians, co-op leaders, classroom teachers, and tutors running calm short-story sessions with no devices or private data collection.</p>
+        <div class="badge">$23</div>
+        <p><strong>Best for:</strong> Children&#39;s librarians, homeschool co-op leaders, tutors, and elementary teachers running adult-led writing clubs for ages 7-11.</p>
+        <p><strong>Format:</strong> 10 printable club sessions plus adult facilitation tools</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div>
+        <h2>Inside</h2>
+        <ul class="included-grid"><li>Adult setup checklist</li>
+<li>Five group norms for calm story work</li>
+<li>Printable materials list</li>
+<li>Five timing plans for short club blocks</li>
+<li>Take-home folder guidance</li>
+<li>Five repeatable club routines</li>
+<li>Eight extension activities</li>
+<li>Six optional share prompts</li>
+<li>Support moves for hesitant writers</li>
+<li>Quiet cleanup and reset notes</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult setup</p>
+      <h2>Run the story club</h2>
+      <div class="setup-grid">
+        <div>
+          <h3>Setup</h3>
+          <ol><li>Print one session packet per participant plus a few spare draft pages, then stack each packet in use order before the group arrives.</li>
+<li>Choose one club routine and one extension activity in advance so the session does not depend on last-minute sorting.</li>
+<li>Place pencils, plain paper, and choice slips in the center of each table before writers sit down.</li>
+<li>Use table numbers or simple symbols only if labels are needed for folders.</li>
+<li>Open with a brief adult model that shows one setting detail, one helpful choice, and one clear ending.</li></ol>
+        </div>
+        <div>
+          <h3>Group norms</h3>
+          <ol><li>Everyone may write, draw, point to a choice, or dictate one sentence to the adult leader.</li>
+<li>Listen quietly when someone shares and respond to the writing, not to personal details.</li>
+<li>Keep stories fictional and use invented places, invented characters, and ordinary objects.</li>
+<li>Pass is always allowed during sharing; a listener role still counts as participation.</li>
+<li>Ask for help by pointing to a prompt, underlining a stuck spot, or choosing between two adult-offered options.</li></ol>
+        </div>
+        <div>
+          <h3>Materials</h3>
+          <ol><li>Printed club packets with session pages, draft pages, extension pages, and optional share prompts.</li>
+<li>Sharpened pencils, erasers, colored pencils, sticky notes, plain folders, and one timer visible to the adult leader.</li>
+<li>A small table supply bin for each group with only quiet materials that can be cleaned up quickly.</li>
+<li>Blank index-size slips for title tests, detail banks, and next-step notes.</li>
+<li>A leader copy with the timing plan, group norms, and backup extension activities clipped together.</li></ol>
+        </div>
+        <div>
+          <h3>Timing</h3>
+          <ol><li>30-minute club: 5 minutes for welcome and norms, 7 minutes for story choices, 12 minutes for drafting, 4 minutes for quiet revision, and 2 minutes for cleanup.</li>
+<li>45-minute club: 5 minutes for setup, 10 minutes for adult-led prompt launch, 15 minutes for drafting, 8 minutes for extension work, and 7 minutes for optional sharing.</li>
+<li>60-minute club: 8 minutes for warm-up, 12 minutes for routine steps, 20 minutes for writing, 10 minutes for extension, 5 minutes for share prompts, and 5 minutes for take-home reset.</li>
+<li>Drop-in version: run a 10-minute detail bank, a 10-minute mini draft, and a 5-minute folder finish so participants can leave at natural breaks.</li>
+<li>Tutoring version: use 5 minutes for choice talk, 15 minutes for guided writing, 10 minutes for revision, and 5 minutes for reading one sentence back.</li></ol>
+        </div>
+        <div>
+          <h3>Take-home</h3>
+          <ol><li>Send pages home in a plain folder with one clear finish job marked by the adult leader.</li>
+<li>Keep unfinished work private unless the participant chooses to share during the session.</li>
+<li>Include one optional family prompt that asks for an invented setting, object, or ending rather than personal information.</li>
+<li>Store leftover blank pages with the club supplies so the next session can begin without reprinting the whole kit.</li></ol>
+        </div>
+      </div>
+      <h3>World menu</h3>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Buttonwood Library Train</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Pocket Park Notice Board</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Penny Path Compass Shop</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Acorn Avenue Errand Office</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Seed Library Map Room</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Index Card Theater Club</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Margin Note Market</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Clue Label Tower Museum</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Revision River Ferry</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Compass Craft Academy</h3>
+      </div>
+    </article></div>
+      <p class="footer-note">Use these pages offline for adult-guided writing clubs. Keep finished work in family folders.</p>
+    </section>
+    <section class="pack-page share-page">
+      <p class="page-kicker">Club tools</p>
+      <h2>Routines and optional share prompts</h2>
+      <div class="routine-grid">
+    <article class="routine-card">
+      <h3>Welcome Table Detail Bank</h3>
+      <p><strong>Best for:</strong> The first 10 minutes of a library, co-op, classroom, or tutoring club when arrivals are uneven.</p>
+      <ol><li>Adult places one draft page and one detail-bank slip at each seat before the session begins.</li>
+<li>Writers list or sketch one color, one object, one sound, and one quiet action from an invented setting.</li>
+<li>Adult circulates and offers two simple choices to anyone who is stuck.</li>
+<li>Each writer circles one detail to carry into the main story prompt.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Whole-Group Story Launch</h3>
+      <p><strong>Best for:</strong> Mixed-age groups that need a shared start before independent writing.</p>
+      <ol><li>Adult reads the session prompt aloud and shows two printed choice slips for the setting.</li>
+<li>The group chooses by pointing, raising a hand, or quietly naming one option.</li>
+<li>Adult writes the shared choice on a visible page and models one short opening sentence.</li>
+<li>Writers adapt the shared choice on their own pages with one different detail.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Quiet Partner Polish</h3>
+      <p><strong>Best for:</strong> Small groups with writers who can read one line to a partner or adult helper.</p>
+      <ol><li>Each writer chooses one sentence, sketch label, or dictated line to show a partner.</li>
+<li>The listener names one clear detail and asks one neutral question about the next action.</li>
+<li>The writer adds one noun, verb, or setting word based on the question.</li>
+<li>Adult closes the routine by asking everyone to mark one sentence they want to keep.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Station-to-Story Rotation</h3>
+      <p><strong>Best for:</strong> Longer club sessions with two or more tables and one adult leader plus helpers.</p>
+      <ol><li>Adult sets four stations: setting, helper, small mix-up, and ending choice.</li>
+<li>Groups spend four minutes at each station adding one note to their own page.</li>
+<li>After the final station, writers return to seats and order the four notes first, next, then, and last.</li>
+<li>Writers draft a short story using the ordered notes while adults help with spelling only when asked.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Folder Finish Reset</h3>
+      <p><strong>Best for:</strong> The last 8 minutes when a club needs a calm ending and clean handoff.</p>
+      <ol><li>Adult asks writers to stop at the end of the sentence they are working on.</li>
+<li>Writers mark one finished part with a star or underline and one unfinished part with a sticky note.</li>
+<li>Adult gives one next-step choice: add a title, add an ending, or add one clearer detail.</li>
+<li>Pages go into folders before supplies are collected and tables are reset.</li></ol>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul class="share-grid"><li>Read one sentence that shows a clear setting detail.</li>
+<li>Point to one sketch, title, or word bank item and tell how it helps the story.</li>
+<li>Ask an adult to read one line while you name the word you chose carefully.</li>
+<li>Share one revision move you made: add, move, replace, or explain.</li>
+<li>Tell the group one next action your invented character could take.</li>
+<li>Pass today and listen for one clear detail in another writer&#39;s story.</li></ul>
+    </section>
+    <section class="pack-page extension-page">
+      <p class="page-kicker">Club tools</p>
+      <h2>Extension activity menu</h2>
+      <div class="extension-grid">
+    <article class="extension-card">
+      <span>12 minutes | setting sequence</span>
+      <h3>Shelf-Shape Setting Map</h3>
+      <p>Writers draw a simple shelf, table, cart, or room shape and label three invented story stops with one calm detail at each stop.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>8 minutes | main idea</span>
+      <h3>Title Three Ways</h3>
+      <p>Writers create three possible titles: one with a place, one with an object, and one with an action, then choose the clearest title.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>10 minutes | story structure</span>
+      <h3>Object-to-Helper Sort</h3>
+      <p>Writers choose three ordinary objects from a printed list and sort them into setting detail, helpful item, and ending clue.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>12 minutes | sequence</span>
+      <h3>Quiet Action Ladder</h3>
+      <p>Writers list three small actions a character could take, then number them in an order that makes the story easier to follow.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>15 minutes | dialogue</span>
+      <h3>Dialogue Without Names</h3>
+      <p>Writers draft four short lines between two invented characters using role labels such as guide and maker instead of personal labels.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>10 minutes | revision</span>
+      <h3>Revision Sticky Move</h3>
+      <p>Writers place a sticky note beside one sentence and choose one revision move: add, move, replace, or explain.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>8 minutes | word choice</span>
+      <h3>Read-Aloud Line Test</h3>
+      <p>Adult reads one volunteer sentence aloud while the writer listens for a word to keep and a word to make clearer.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>12 minutes | ending choice</span>
+      <h3>Ending Choice Pair</h3>
+      <p>Writers draft two possible endings for the same story: one that solves the mix-up and one that invites another small adventure.</p>
+    </article></div>
+    </section>
+
+    <section class="pack-page session-page">
+      <div class="page-kicker">Club session 1 | Small group table</div>
+      <h2>Buttonwood Library Train Route</h2>
+      <figure><img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration"><figcaption>Buttonwood Library Train</figcaption></figure>
+      <p class="kid-direction">Choose one train stop, add three quiet library details, and write a short route note for the next reader.</p>
+      <p class="adult-note">Keep the session fictional and materials on the table; use table symbols if writers choose to share aloud.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>8 minutes setup</span>
+        <span>Adult-led 40-minute story club session for a library program, co-op table, classroom center, or tutoring group using printed pages only.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Train Stop</h3>
+          <p class="write-line">The Buttonwood train stops beside ____________________________.</p>
+<p class="write-line">The quiet platform detail is ____________________________.</p>
+<p class="write-line">The route marker points toward ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Reading Car</h3>
+          <p class="write-line">Inside the reading car, the seat looks like ____________________________.</p>
+<p class="write-line">The page basket holds ____________________________.</p>
+<p class="write-line">The soft announcement says ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Route Note</h3>
+          <p class="write-line">First, the helper checks ____________________________.</p>
+<p class="write-line">Next, the helper carries ____________________________.</p>
+<p class="write-line">The note for the next reader says ____________________________.</p>
+        </section></div>
+      <p class="take-home">Take this page home and add one more Buttonwood Library train stop with an adult.</p>
+    </section>
+
+    <section class="pack-page session-page">
+      <div class="page-kicker">Club session 2 | Circle then table work</div>
+      <h2>Pocket Park Notice Circle</h2>
+      <figure><img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration"><figcaption>Pocket Park Notice Board</figcaption></figure>
+      <p class="kid-direction">Invent three park notices, choose the clearest one, and write what the pocket park helper does next.</p>
+      <p class="adult-note">Invite children to suggest ordinary objects or colors; skip any personal details from real families or real places.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>7 minutes setup</span>
+        <span>Printable circle-time writing page for an adult-led library club, classroom station, co-op meetup, or tutoring warmup.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Notice Ideas</h3>
+          <p class="write-line">The first tiny notice asks for ____________________________.</p>
+<p class="write-line">The second tiny notice points to ____________________________.</p>
+<p class="write-line">The third tiny notice reminds everyone about ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Park Clues</h3>
+          <p class="write-line">The bottle-cap bench is near ____________________________.</p>
+<p class="write-line">The pebble path curves around ____________________________.</p>
+<p class="write-line">The mint-leaf shade covers ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Helper Message</h3>
+          <p class="write-line">First, the helper reads ____________________________.</p>
+<p class="write-line">Next, the helper adds ____________________________.</p>
+<p class="write-line">The clearest park message says ____________________________.</p>
+        </section></div>
+      <p class="take-home">Take this notice page home and finish the Pocket Park message board later.</p>
+    </section>
+
+    <section class="pack-page session-page">
+      <div class="page-kicker">Club session 3 | Partner map talk</div>
+      <h2>Penny Path Compass Table</h2>
+      <figure><img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration"><figcaption>Penny Path Compass Shop</figcaption></figure>
+      <p class="kid-direction">Pick a compass clue, draw a penny path, and write three clear directions for a careful shop helper.</p>
+      <p class="adult-note">Pair children for one quiet idea share, then return pages to individual writing so every child keeps their own work.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>9 minutes setup</span>
+        <span>Adult-led printable direction-writing session for a library story club, co-op writing table, classroom group, or tutoring lesson.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Compass Clue</h3>
+          <p class="write-line">The compass needle points toward ____________________________.</p>
+<p class="write-line">The penny path begins beside ____________________________.</p>
+<p class="write-line">The shop window shows ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Path Map</h3>
+          <p class="write-line">The first turn goes around ____________________________.</p>
+<p class="write-line">The second turn stops near ____________________________.</p>
+<p class="write-line">The final path mark looks like ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Direction Card</h3>
+          <p class="write-line">First, walk past ____________________________.</p>
+<p class="write-line">Next, check the compass for ____________________________.</p>
+<p class="write-line">The direction card ends with ____________________________.</p>
+        </section></div>
+      <p class="take-home">Take this compass page home and add a new Penny Path shop direction.</p>
+    </section>
+
+    <section class="pack-page session-page">
+      <div class="page-kicker">Club session 4 | Facilitator demo then solo page</div>
+      <h2>Acorn Avenue Errand Desk</h2>
+      <figure><img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration"><figcaption>Acorn Avenue Errand Office</figcaption></figure>
+      <p class="kid-direction">Sort three friendly errand slips, choose a helpful order, and write the desk note that explains the route.</p>
+      <p class="adult-note">Model one invented errand on a shared scrap, then steer every label toward invented places and fictional details.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>8 minutes setup</span>
+        <span>Printable adult-led story club session for a library program, tutoring table, co-op meeting, or classroom writing block.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Errand Slips</h3>
+          <p class="write-line">The first leaf slip needs ____________________________.</p>
+<p class="write-line">The second leaf slip belongs at ____________________________.</p>
+<p class="write-line">The third leaf slip is marked with ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Desk Sort</h3>
+          <p class="write-line">The acorn drawer holds ____________________________.</p>
+<p class="write-line">The route list starts with ____________________________.</p>
+<p class="write-line">The helper chooses the order because ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Desk Note</h3>
+          <p class="write-line">First, the helper carries ____________________________.</p>
+<p class="write-line">Next, the helper checks ____________________________.</p>
+<p class="write-line">The finished desk note says ____________________________.</p>
+        </section></div>
+      <p class="take-home">Take this errand page home and finish one more Acorn Avenue desk note.</p>
+    </section>
+
+    <section class="pack-page session-page">
+      <div class="page-kicker">Club session 5 | Small group planning with individual drafts</div>
+      <h2>Seed Library Map Room</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="kid-direction">Choose a seed drawer, add observation clues to a garden map, and write a return note for the next gardener.</p>
+      <p class="adult-note">Keep the seed library fictional and observation-based; use invented gardens and fictional notes only.</p>
+      <div class="quest-meta">
+        <span>Ages 8-10</span>
+        <span>10 minutes setup</span>
+        <span>Adult-led 45-minute printable story club session for older elementary library groups, co-ops, classrooms, or tutoring groups.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Seed Drawer</h3>
+          <p class="write-line">The seed drawer label says ____________________________.</p>
+<p class="write-line">The packet map unfolds toward ____________________________.</p>
+<p class="write-line">The first garden clue shows ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Observations</h3>
+          <p class="write-line">The bean row curves near ____________________________.</p>
+<p class="write-line">The sunflower route points past ____________________________.</p>
+<p class="write-line">The spacing note explains ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Return Note</h3>
+          <p class="write-line">First, the mapper records ____________________________.</p>
+<p class="write-line">Next, the mapper compares ____________________________.</p>
+<p class="write-line">The return note for the next gardener says ____________________________.</p>
+        </section></div>
+      <p class="take-home">Take this map page home and add one more Seed Library observation note.</p>
+    </section>
+
+    <section class="pack-page session-page">
+      <div class="page-kicker">Club session 6 | small groups at a writing table</div>
+      <h2>Index Card Theater Scene Cues</h2>
+      <figure><img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration"><figcaption>Index Card Theater Club</figcaption></figure>
+      <p class="kid-direction">Arrange three scene cue choices, then write the line that helps the next scene make sense.</p>
+      <p class="adult-note">Keep the cards face up, invite quiet pointing before writing, and make the read-back optional.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>7 minutes setup</span>
+        <span>Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Scene Card Order</h3>
+          <p class="write-line">The first scene card shows ____________________.</p>
+<p class="write-line">The turning scene changes when ____________________.</p>
+<p class="write-line">The final scene should help readers notice ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Cue Line Choices</h3>
+          <p class="write-line">An action cue I can add is ____________________.</p>
+<p class="write-line">A dialogue cue that fits the scene is ____________________.</p>
+<p class="write-line">A setting cue that makes the stage clearer is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Club Page Finish</h3>
+          <p class="write-line">The cue that connects my scenes best is ____________________.</p>
+<p class="write-line">One word I can revise for clarity is ____________________.</p>
+<p class="write-line">My final theater-club sentence is ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this scene-cue page in a folder so one cue can become a longer theater story later.</p>
+    </section>
+
+    <section class="pack-page session-page">
+      <div class="page-kicker">Club session 7 | guided feedback table</div>
+      <h2>Margin Note Market Feedback Menu</h2>
+      <figure><img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration"><figcaption>Margin Note Market</figcaption></figure>
+      <p class="kid-direction">Turn a vague market note into a kind, specific revision task for a made-up writer.</p>
+      <p class="adult-note">Use sample notes only, keep all feedback about invented pages, and let each child choose one task to finish.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>6 minutes setup</span>
+        <span>Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Market Note Sort</h3>
+          <p class="write-line">The vague note on the stall says ____________________.</p>
+<p class="write-line">The writing skill this note should help is ____________________.</p>
+<p class="write-line">A kinder, clearer note could begin with ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Specific Revision Task</h3>
+          <p class="write-line">The writer should add one exact detail about ____________________.</p>
+<p class="write-line">The sentence that needs a clearer order is ____________________.</p>
+<p class="write-line">The next revision step should be ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Club Reflection</h3>
+          <p class="write-line">The most useful feedback word on my page is ____________________.</p>
+<p class="write-line">One note I would choose for my own draft is ____________________.</p>
+<p class="write-line">My final market feedback line is ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this feedback-menu page to use as a calm revision checklist for a future draft.</p>
+    </section>
+
+    <section class="pack-page session-page">
+      <div class="page-kicker">Club session 8 | curator pairs with adult check-ins</div>
+      <h2>Clue Label Tower Curator Cards</h2>
+      <figure><img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration"><figcaption>Clue Label Tower Museum</figcaption></figure>
+      <p class="kid-direction">Choose everyday-object clues and write short labels that tell readers what to notice first.</p>
+      <p class="adult-note">Offer harmless classroom or table objects as inspiration, then keep the final labels invented and brief.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>8 minutes setup</span>
+        <span>Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Object Clue Picks</h3>
+          <p class="write-line">The object I choose for the first exhibit is ____________________.</p>
+<p class="write-line">The clue visitors should notice first is ____________________.</p>
+<p class="write-line">A detail that does not belong on the label is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Label Drafting</h3>
+          <p class="write-line">My label should explain why ____________________.</p>
+<p class="write-line">The clearest museum word I can use is ____________________.</p>
+<p class="write-line">One sentence label for this exhibit is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Curator Finish</h3>
+          <p class="write-line">The next exhibit card should connect to ____________________.</p>
+<p class="write-line">One confusing label word I can replace is ____________________.</p>
+<p class="write-line">My final tower museum line is ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this curator-card page so one label can become a short museum scene at home.</p>
+    </section>
+
+    <section class="pack-page session-page">
+      <div class="page-kicker">Club session 9 | adult-led revision station</div>
+      <h2>Revision River Draft Ferry</h2>
+      <figure><img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration"><figcaption>Revision River Ferry</figcaption></figure>
+      <p class="kid-direction">Move one scene stop, add one useful detail, and write a clearer ferry route sentence.</p>
+      <p class="adult-note">Frame revision as rearranging choices on a made-up ferry map, not judging a child&#39;s personal draft.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>7 minutes setup</span>
+        <span>Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Draft Island Stops</h3>
+          <p class="write-line">The opening island shows ____________________.</p>
+<p class="write-line">The middle island feels clearer after ____________________.</p>
+<p class="write-line">The finish island should remind readers about ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ferry Revision Move</h3>
+          <p class="write-line">One scene stop I might move is ____________________.</p>
+<p class="write-line">The reason this move helps the reader is ____________________.</p>
+<p class="write-line">A detail I can add to connect the route is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Clear Route Line</h3>
+          <p class="write-line">The ferry crosses the draft river when ____________________.</p>
+<p class="write-line">One sentence I can make more exact is ____________________.</p>
+<p class="write-line">My final revision river line is ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this ferry page as a take-home revision map for a future story scene.</p>
+    </section>
+
+    <section class="pack-page session-page">
+      <div class="page-kicker">Club session 10 | route-planning table</div>
+      <h2>Compass Craft Story Route</h2>
+      <figure><img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration"><figcaption>Compass Craft Academy</figcaption></figure>
+      <p class="kid-direction">Plan a beginning, middle, and finish route, then revise the turning point so the story path is easy to follow.</p>
+      <p class="adult-note">Keep route choices limited to three cards, ask one guiding question at a time, and let saving the page count as completion.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>8 minutes setup</span>
+        <span>Adult-led printable story club session for a library table, homeschool co-op, tutoring group, or classroom writing club.</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Story Route Map</h3>
+          <p class="write-line">The beginning route stop is ____________________.</p>
+<p class="write-line">The middle route stop changes the plan because ____________________.</p>
+<p class="write-line">The finish route stop should show ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Turning Point Check</h3>
+          <p class="write-line">The most important choice on the route is ____________________.</p>
+<p class="write-line">The choice matters because ____________________.</p>
+<p class="write-line">A detail that can guide readers through the turn is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Academy Finish</h3>
+          <p class="write-line">One route label I can make clearer is ____________________.</p>
+<p class="write-line">The sentence I want to draft first is ____________________.</p>
+<p class="write-line">My final compass craft line is ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this route page to finish the first paragraph of a Compass Craft Academy story later.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,227 @@
+{
+  "batchId": "2026-06-02-batch14",
+  "generatedAt": "2026-06-02",
+  "lane": "library club sessions A",
+  "sessions": [
+    {
+      "id": "library-club-buttonwood-train-route",
+      "title": "Buttonwood Library Train Route",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "clubUse": "Adult-led 40-minute story club session for a library program, co-op table, classroom center, or tutoring group using printed pages only.",
+      "setupMinutes": "8 minutes",
+      "groupMode": "Small group table",
+      "kidDirection": "Choose one train stop, add three quiet library details, and write a short route note for the next reader.",
+      "facilitatorNote": "Keep the session fictional and materials on the table; use table symbols if writers choose to share aloud.",
+      "takeHomeLine": "Take this page home and add one more Buttonwood Library train stop with an adult.",
+      "materials": [
+        "Printed train route page",
+        "Pencil",
+        "Two colored pencils",
+        "Small paper strip for a route marker"
+      ],
+      "pageSections": [
+        {
+          "heading": "Train Stop",
+          "lines": [
+            "The Buttonwood train stops beside ____________________________.",
+            "The quiet platform detail is ____________________________.",
+            "The route marker points toward ____________________________."
+          ]
+        },
+        {
+          "heading": "Reading Car",
+          "lines": [
+            "Inside the reading car, the seat looks like ____________________________.",
+            "The page basket holds ____________________________.",
+            "The soft announcement says ____________________________."
+          ]
+        },
+        {
+          "heading": "Route Note",
+          "lines": [
+            "First, the helper checks ____________________________.",
+            "Next, the helper carries ____________________________.",
+            "The note for the next reader says ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-club-pocket-park-notice-circle",
+      "title": "Pocket Park Notice Circle",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "clubUse": "Printable circle-time writing page for an adult-led library club, classroom station, co-op meetup, or tutoring warmup.",
+      "setupMinutes": "7 minutes",
+      "groupMode": "Circle then table work",
+      "kidDirection": "Invent three park notices, choose the clearest one, and write what the pocket park helper does next.",
+      "facilitatorNote": "Invite children to suggest ordinary objects or colors; skip any personal details from real families or real places.",
+      "takeHomeLine": "Take this notice page home and finish the Pocket Park message board later.",
+      "materials": [
+        "Printed pocket park page",
+        "Pencil",
+        "Three sticky note strips",
+        "Green colored pencil"
+      ],
+      "pageSections": [
+        {
+          "heading": "Notice Ideas",
+          "lines": [
+            "The first tiny notice asks for ____________________________.",
+            "The second tiny notice points to ____________________________.",
+            "The third tiny notice reminds everyone about ____________________________."
+          ]
+        },
+        {
+          "heading": "Park Clues",
+          "lines": [
+            "The bottle-cap bench is near ____________________________.",
+            "The pebble path curves around ____________________________.",
+            "The mint-leaf shade covers ____________________________."
+          ]
+        },
+        {
+          "heading": "Helper Message",
+          "lines": [
+            "First, the helper reads ____________________________.",
+            "Next, the helper adds ____________________________.",
+            "The clearest park message says ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-club-penny-path-compass-table",
+      "title": "Penny Path Compass Table",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "clubUse": "Adult-led printable direction-writing session for a library story club, co-op writing table, classroom group, or tutoring lesson.",
+      "setupMinutes": "9 minutes",
+      "groupMode": "Partner map talk",
+      "kidDirection": "Pick a compass clue, draw a penny path, and write three clear directions for a careful shop helper.",
+      "facilitatorNote": "Pair children for one quiet idea share, then return pages to individual writing so every child keeps their own work.",
+      "takeHomeLine": "Take this compass page home and add a new Penny Path shop direction.",
+      "materials": [
+        "Printed compass shop page",
+        "Pencil",
+        "Copper or brown colored pencil",
+        "Small blank direction card"
+      ],
+      "pageSections": [
+        {
+          "heading": "Compass Clue",
+          "lines": [
+            "The compass needle points toward ____________________________.",
+            "The penny path begins beside ____________________________.",
+            "The shop window shows ____________________________."
+          ]
+        },
+        {
+          "heading": "Path Map",
+          "lines": [
+            "The first turn goes around ____________________________.",
+            "The second turn stops near ____________________________.",
+            "The final path mark looks like ____________________________."
+          ]
+        },
+        {
+          "heading": "Direction Card",
+          "lines": [
+            "First, walk past ____________________________.",
+            "Next, check the compass for ____________________________.",
+            "The direction card ends with ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-club-acorn-avenue-errand-desk",
+      "title": "Acorn Avenue Errand Desk",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "clubUse": "Printable adult-led story club session for a library program, tutoring table, co-op meeting, or classroom writing block.",
+      "setupMinutes": "8 minutes",
+      "groupMode": "Facilitator demo then solo page",
+      "kidDirection": "Sort three friendly errand slips, choose a helpful order, and write the desk note that explains the route.",
+      "facilitatorNote": "Model one invented errand on a shared scrap, then steer every label toward invented places and fictional details.",
+      "takeHomeLine": "Take this errand page home and finish one more Acorn Avenue desk note.",
+      "materials": [
+        "Printed errand desk page",
+        "Pencil",
+        "Three paper errand slips",
+        "Yellow colored pencil"
+      ],
+      "pageSections": [
+        {
+          "heading": "Errand Slips",
+          "lines": [
+            "The first leaf slip needs ____________________________.",
+            "The second leaf slip belongs at ____________________________.",
+            "The third leaf slip is marked with ____________________________."
+          ]
+        },
+        {
+          "heading": "Desk Sort",
+          "lines": [
+            "The acorn drawer holds ____________________________.",
+            "The route list starts with ____________________________.",
+            "The helper chooses the order because ____________________________."
+          ]
+        },
+        {
+          "heading": "Desk Note",
+          "lines": [
+            "First, the helper carries ____________________________.",
+            "Next, the helper checks ____________________________.",
+            "The finished desk note says ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "library-club-seed-library-map-room",
+      "title": "Seed Library Map Room",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "clubUse": "Adult-led 45-minute printable story club session for older elementary library groups, co-ops, classrooms, or tutoring groups.",
+      "setupMinutes": "10 minutes",
+      "groupMode": "Small group planning with individual drafts",
+      "kidDirection": "Choose a seed drawer, add observation clues to a garden map, and write a return note for the next gardener.",
+      "facilitatorNote": "Keep the seed library fictional and observation-based; use invented gardens and fictional notes only.",
+      "takeHomeLine": "Take this map page home and add one more Seed Library observation note.",
+      "materials": [
+        "Printed seed map page",
+        "Pencil",
+        "Two colored pencils",
+        "Small folded map insert"
+      ],
+      "pageSections": [
+        {
+          "heading": "Seed Drawer",
+          "lines": [
+            "The seed drawer label says ____________________________.",
+            "The packet map unfolds toward ____________________________.",
+            "The first garden clue shows ____________________________."
+          ]
+        },
+        {
+          "heading": "Map Observations",
+          "lines": [
+            "The bean row curves near ____________________________.",
+            "The sunflower route points past ____________________________.",
+            "The spacing note explains ____________________________."
+          ]
+        },
+        {
+          "heading": "Return Note",
+          "lines": [
+            "First, the mapper records ____________________________.",
+            "Next, the mapper compares ____________________________.",
+            "The return note for the next gardener says ____________________________."
+          ]
+        }
+      ]
+    }
+  ]
+}

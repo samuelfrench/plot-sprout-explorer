@@ -10,6 +10,7 @@ export const classroomLicenseProductSlug = 'classroom-story-license-pack'
 export const birthdayPartyProductSlug = 'birthday-party-story-quest-kit'
 export const roadTripProductSlug = 'road-trip-story-quest-pack'
 export const waitingRoomProductSlug = 'waiting-room-story-quest-pack'
+export const libraryStoryClubProductSlug = 'library-story-club-kit'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -61,6 +62,13 @@ const requiredWaitingRoomArtifactPaths = {
   zipPath: 'product-build/waiting-room-story-quest-pack/waiting-room-story-quest-pack.zip',
   sourceHtmlPath: 'product-build/waiting-room-story-quest-pack/source/waiting-room-story-quest-pack.html',
   manifestPath: 'product-build/waiting-room-story-quest-pack/manifest.json',
+}
+
+const requiredLibraryStoryClubArtifactPaths = {
+  pdfPath: 'product-build/library-story-club-kit/Library-Story-Club-Kit.pdf',
+  zipPath: 'product-build/library-story-club-kit/library-story-club-kit.zip',
+  sourceHtmlPath: 'product-build/library-story-club-kit/source/library-story-club-kit.html',
+  manifestPath: 'product-build/library-story-club-kit/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -1054,6 +1062,196 @@ export function validateWaitingRoomPackSource(source, product, knownWorldSlugs) 
   return errors
 }
 
+function validateNoUnsafeLibraryClubLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const text = rawText
+    .replace(/\bskip online sharing\b/gi, '')
+    .replace(/\bno online sharing\b/gi, '')
+    .replace(/\bwithout online sharing\b/gi, '')
+    .replace(/\bno uploads?\b/gi, '')
+    .replace(/\bno public publishing\b/gi, '')
+    .replace(/\bwithout public publishing\b/gi, '')
+  pushIf(
+    errors,
+    /\bpatron records?\b|\blibrary-?card\b|\bsign-?in sheets?\b|\bphotos?\b|\bsurnames?\b|\baddresses?\b|\bschool names?\b|\bonline sharing\b|\bupload(s|ed|ing)?\b|\baccounts?\b|\blogins?\b|\blog in\b|\bpublic publishing\b|\bpublish online\b/i.test(
+      text,
+    ),
+    `${label} includes patron records, library-card data, sign-in sheet, photo, upload, account, or public publishing language.`,
+  )
+  pushIf(
+    errors,
+    /\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\bdiagnos(is|e|es|ed|ing)\b|\btherapy\b|\btherapist\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b/i.test(
+      rawText,
+    ),
+    `${label} includes medical, emergency, legal, diagnosis, therapy, or treatment language.`,
+  )
+}
+
+function validateLibraryClubSession(session, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, sessionIds, errors) {
+  const label = `sessions[${index}]`
+  pushIf(errors, !isObject(session), `${label} must be an object.`)
+  if (!isObject(session)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'clubUse',
+    'setupMinutes',
+    'groupMode',
+    'kidDirection',
+    'facilitatorNote',
+    'takeHomeLine',
+  ]) {
+    validateString(session[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(session.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(session.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, sessionIds.has(session.id), `${label}.id is duplicated.`)
+    sessionIds.add(session.id)
+  }
+
+  pushIf(errors, !['7-8', '7-9', '8-10', '9-11', '10-11'].includes(session.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(session.worldSlug) && !knownWorldSlugs.has(session.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(session.worldSlug) && !sourceWorldSlugs.has(session.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(session.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(session.ageBand) && isNonEmptyString(worldAgeBand) && session.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${session.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  validateExactStringArray(session.materials, 4, `${label}.materials`, errors)
+
+  pushIf(errors, !Array.isArray(session.pageSections), `${label}.pageSections must be an array.`)
+  if (Array.isArray(session.pageSections)) {
+    pushIf(errors, session.pageSections.length !== 3, `${label}.pageSections must have exactly 3 entries.`)
+    session.pageSections.forEach((section, sectionIndex) => {
+      const sectionLabel = `${label}.pageSections[${sectionIndex}]`
+      pushIf(errors, !isObject(section), `${sectionLabel} must be an object.`)
+      if (!isObject(section)) return
+      validateString(section.heading, `${sectionLabel}.heading`, errors)
+      validateExactStringArray(section.lines, 3, `${sectionLabel}.lines`, errors)
+      if (Array.isArray(section.lines)) {
+        section.lines.forEach((line, lineIndex) => {
+          pushIf(errors, isNonEmptyString(line) && !/_+/.test(line), `${sectionLabel}.lines[${lineIndex}] must include a writable blank.`)
+        })
+      }
+    })
+  }
+
+  validateNoUnsafeLibraryClubLanguage(session, label, errors)
+}
+
+function validateLibraryClubRoutine(routine, index, routineNames, errors) {
+  const label = `clubRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.name)) {
+    pushIf(errors, routineNames.has(routine.name), `${label}.name is duplicated.`)
+    routineNames.add(routine.name)
+  }
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeLibraryClubLanguage(routine, label, errors)
+}
+
+export function validateLibraryStoryClubKitSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Library Story Club Kit source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch14', 'batchId must be 2026-06-02-batch14.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(errors, source.productSlug !== libraryStoryClubProductSlug, `productSlug must be ${libraryStoryClubProductSlug}.`)
+  pushIf(errors, source.title !== 'Library Story Club Kit', 'title must be Library Story Club Kit.')
+  pushIf(errors, source.pricePoint !== '$23', 'pricePoint must be $23.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Library Story Club source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Library Story Club source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Library Story Club source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 10, 'worldSlugs must have exactly 10 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredLibraryStoryClubArtifactPaths, 'Library Story Club', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.facilitatorGuide), 'facilitatorGuide must be an object.')
+  if (isObject(source.facilitatorGuide)) {
+    validateExactStringArray(source.facilitatorGuide.setup, 5, 'facilitatorGuide.setup', errors)
+    validateExactStringArray(source.facilitatorGuide.groupNorms, 5, 'facilitatorGuide.groupNorms', errors)
+    validateExactStringArray(source.facilitatorGuide.materials, 5, 'facilitatorGuide.materials', errors)
+    validateExactStringArray(source.facilitatorGuide.timing, 5, 'facilitatorGuide.timing', errors)
+    validateExactStringArray(source.facilitatorGuide.takeHome, 4, 'facilitatorGuide.takeHome', errors)
+    validateNoUnsafeLibraryClubLanguage(source.facilitatorGuide, 'facilitatorGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.clubRoutines), 'clubRoutines must be an array.')
+  if (Array.isArray(source.clubRoutines)) {
+    pushIf(errors, source.clubRoutines.length !== 5, 'clubRoutines must have exactly 5 entries.')
+    const names = new Set()
+    source.clubRoutines.forEach((routine, index) => validateLibraryClubRoutine(routine, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.extensionActivities), 'extensionActivities must be an array.')
+  if (Array.isArray(source.extensionActivities)) {
+    pushIf(errors, source.extensionActivities.length !== 8, 'extensionActivities must have exactly 8 entries.')
+    const titles = new Set()
+    source.extensionActivities.forEach((activity, index) => validateBirthdayExtension(activity, index, titles, errors))
+  }
+
+  validateExactStringArray(source.sharePrompts, 6, 'sharePrompts', errors)
+
+  pushIf(errors, !Array.isArray(source.sessions), 'sessions must be an array.')
+  if (Array.isArray(source.sessions)) {
+    pushIf(errors, source.sessions.length !== 10, 'sessions must have exactly 10 entries.')
+    const sessionIds = new Set()
+    const coveredWorlds = new Set()
+    source.sessions.forEach((session, index) => {
+      validateLibraryClubSession(session, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, sessionIds, errors)
+      if (isNonEmptyString(session?.worldSlug)) coveredWorlds.add(session.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 10, 'sessions must cover at least 10 unique worlds.')
+  }
+
+  validateNoUnsafeLibraryClubLanguage(source, 'Library Story Club Kit source', errors)
+  validateNoRiskyLanguage(source, 'Library Story Club Kit source', errors)
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -1182,7 +1380,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredWaitingRoomArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredLibraryStoryClubArtifactPaths.pdfPath
+      ? requiredLibraryStoryClubArtifactPaths
+      : artifact?.pdfPath === requiredWaitingRoomArtifactPaths.pdfPath
       ? requiredWaitingRoomArtifactPaths
       : artifact?.pdfPath === requiredRoadTripArtifactPaths.pdfPath
       ? requiredRoadTripArtifactPaths

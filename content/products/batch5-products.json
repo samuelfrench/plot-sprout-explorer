@@ -302,6 +302,56 @@
         "Let the child point, draw, dictate, write one line, or save the page for home.",
         "Close the folder immediately when the wait ends and share later at a table or at home."
       ]
+    },
+    {
+      "slug": "library-story-club-kit",
+      "title": "Library Story Club Kit",
+      "pricePoint": "$23",
+      "status": "checkout_pending",
+      "headline": "A printable adult-led writing club kit for libraries, co-ops, tutoring groups, and classrooms.",
+      "summary": "Ten story club sessions give leaders a calm routine, concrete world choices, short drafting pages, revision moves, and take-home folder steps.",
+      "heroImage": "images/plotsprout/batch14/library-story-club-kit.jpg",
+      "ctaLabel": "Request library club kit launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Library%20Story%20Club%20Kit",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static library club kit page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "buttonwood-library-train",
+        "pocket-park-notice-board",
+        "penny-path-compass-shop",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "index-card-theater-club",
+        "margin-note-market",
+        "clue-label-tower-museum",
+        "revision-river-ferry",
+        "compass-craft-academy"
+      ],
+      "includedPages": [
+        "Ten printable story club session pages",
+        "Adult setup checklist for library, co-op, classroom, and tutoring groups",
+        "Five group norms for calm story work",
+        "Printable materials list and table supply plan",
+        "Five timing plans for 30, 45, 60, drop-in, and tutoring sessions",
+        "Take-home folder guidance",
+        "Five repeatable club routines",
+        "Eight extension activity cards",
+        "Six optional share prompts",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A children's library writing club that needs a screen-free packet",
+        "A homeschool co-op table that needs repeatable short-story sessions",
+        "A tutoring group for writers who need concrete choices before drafting",
+        "A classroom club or enrichment block that saves finished pages in folders"
+      ],
+      "parentSteps": [
+        "Print one packet per participant plus a few spare draft pages.",
+        "Choose one club routine and one session before the group starts.",
+        "Let writers point, sketch, dictate, draft, revise, or pass during optional sharing.",
+        "Mark one clear finish job on any unfinished page before it goes home.",
+        "Reset the table supplies and save unused pages for the next club meeting."
+      ]
     }
   ]
 }
