@@ -46,10 +46,10 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Batch 13 built the `$11` Waiting Room Story Quest Pack static product page, 8-quest source JSON from three subagent lanes, local RTX 4090 product image, 12-page PDF, ZIP, manifest, provider-ready folder, full `npm run verify`, desktop/mobile local smoke for all product pages, and spec/code-quality review passes; checkout stays pending.
 - [x] 2026-06-02: Batch 13 deployed from commit `420a041` via local runner run `26813534542` / job `79049406273`, completed `2026-06-02T10:21:01Z`; live GitHub Pages desktop/mobile smoke passed for `/waiting-room-story-quest-pack/` with image load, no console warnings/errors, and no horizontal overflow.
 - [x] 2026-06-02: Batch 14 built the `$23` Library Story Club Kit static product page, 10-session source JSON from three gpt-5.5/xhigh lanes, local RTX 4090 product image, 14-page PDF, ZIP, manifest, provider-ready folder, full `npm run verify`, desktop/mobile local smoke for all product pages, spec PASS + quality PASS, and deploy run `26814922767` / job `79054163033` succeeded; live GitHub Pages desktop/mobile smoke passed for `/library-story-club-kit/`; checkout stays pending.
+- [x] 2026-06-02: Batch 15 built the `$39` Substitute Teacher Story Station Pack static product page, 12-station source JSON from gpt-5.5/xhigh lanes plus local fallback for one disconnected lane, local RTX 4090 product image, 16-page PDF, 6.6MB ZIP, manifest, provider-ready folder, full `npm run verify`, desktop/mobile local smoke for all product pages, spec PASS + quality PASS, and deploy run `26817646522` / job `79063437700` succeeded; live GitHub Pages desktop/mobile smoke passed for `/substitute-teacher-story-station-pack/`; checkout stays pending.
 
 ## In Progress
 
-- [ ] Batch 15 deploy closeout: `$39` Substitute Teacher Story Station Pack is locally built and verified with PDF/source/ZIP, local RTX 4090 product image, full `npm run verify`, desktop/mobile local smoke, and spec/quality review approvals; push-triggered deploy and live smoke still need final evidence.
 - [ ] External checkout gate: wire hosted checkout only after Sam chooses the provider and supplies the real provider-hosted URL.
 
 ## Next Content Batches
