@@ -147,10 +147,10 @@ Run local preview and Playwright smoke for `/`, `/waiting-room-story-quest-pack/
 
 Run a spec-compliance and quality review. Fix blocking findings before commit.
 
-- [ ] **Step 5: Commit, push, and deploy**
+- [x] **Step 5: Commit, push, and deploy**
 
 Commit the whole Batch 13 as one batch commit, push to `origin/main`, confirm GitHub Actions deploy success on the local runner, and run a live smoke on the new product route.
 
-- [ ] **Step 6: Update TODO and memory**
+- [x] **Step 6: Update TODO and memory**
 
 Record Batch 13 completion, deploy evidence, validation evidence, local GPU image use, subagent use, and billable-service state. Keep checkout provider-gated.

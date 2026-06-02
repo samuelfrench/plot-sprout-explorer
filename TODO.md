@@ -44,6 +44,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Batch 11 built the `$17` Road Trip Story Quest Pack static product page, 8-quest source JSON from three subagent lanes, local RTX 4090 product image, 12-page PDF, ZIP, manifest, provider-ready folder, and validation that checkout stays pending.
 - [x] 2026-06-02: Batch 11 deployed from commit `e746373` via local runner at `2026-06-02T09:48:45Z`; live GitHub Pages desktop/mobile smoke passed for `/`, `/road-trip-story-quest-pack/`, `/birthday-party-story-quest-kit/`, `/classroom-story-license-pack/`, `/homeschool-season-story-bundle/`, and `/rainy-day-story-quest-pack/`.
 - [x] 2026-06-02: Batch 13 built the `$11` Waiting Room Story Quest Pack static product page, 8-quest source JSON from three subagent lanes, local RTX 4090 product image, 12-page PDF, ZIP, manifest, provider-ready folder, full `npm run verify`, desktop/mobile local smoke for all product pages, and spec/code-quality review passes; checkout stays pending.
+- [x] 2026-06-02: Batch 13 deployed from commit `420a041` via local runner run `26813534542` / job `79049406273`, completed `2026-06-02T10:21:01Z`; live GitHub Pages desktop/mobile smoke passed for `/waiting-room-story-quest-pack/` with image load, no console warnings/errors, and no horizontal overflow.
 
 ## In Progress
 
