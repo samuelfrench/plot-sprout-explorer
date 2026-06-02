@@ -1,0 +1,543 @@
+{
+  "batchId": "2026-06-02-batch11",
+  "generatedAt": "2026-06-02",
+  "productSlug": "road-trip-story-quest-pack",
+  "title": "Road Trip Story Quest Pack",
+  "pricePoint": "$17",
+  "audience": "Parents, grandparents, homeschool families, tutors, and co-op leaders planning adult-guided travel writing for ages 7-11.",
+  "sessionLength": "8 printable travel quests plus adult setup tools",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/road-trip-story-quest-pack/Road-Trip-Story-Quest-Pack.pdf",
+    "zipPath": "product-build/road-trip-story-quest-pack/road-trip-story-quest-pack.zip",
+    "sourceHtmlPath": "product-build/road-trip-story-quest-pack/source/road-trip-story-quest-pack.html",
+    "manifestPath": "product-build/road-trip-story-quest-pack/manifest.json"
+  },
+  "worldSlugs": [
+    "acorn-avenue-errand-office",
+    "button-bakery-map-mixup",
+    "spoon-ferry-lunchbox-harbor",
+    "rain-boot-route-rangers",
+    "rain-gauge-railway",
+    "tidepool-timekeepers-lab",
+    "seed-library-map-room",
+    "compass-craft-academy"
+  ],
+  "sourceLanes": [
+    "content/product-artifacts/lanes/batch11-road-trip-quests-a.json",
+    "content/product-artifacts/lanes/batch11-road-trip-quests-b.json",
+    "content/product-artifacts/lanes/batch11-road-trip-tools.json"
+  ],
+  "cover": {
+    "kicker": "Adult guide for printable travel writing",
+    "headline": "Road Trip Story Quest Pack",
+    "subhead": "No-screen routines for car passengers, rest stops, hotels, waiting rooms, and family visits.",
+    "included": [
+      "Before-you-go print checklist",
+      "Passenger-only car setup notes",
+      "Rest stop story reset routine",
+      "Hotel quiet-time writing routine",
+      "Waiting room prompt routine",
+      "Family visit story bridge",
+      "Clipboard and pencil packing list",
+      "Route detail noticing prompts",
+      "Short-session timing guide",
+      "Older passenger helper roles",
+      "Eight travel extension activities",
+      "Six optional group share cards"
+    ]
+  },
+  "setupGuide": {
+    "beforeYouGo": [
+      "Print one packet per child plus two spare packets, then clip each set in order: route map, quest page, draft page, extension page, and share card.",
+      "Pack pencils, colored pencils, two clipboards, a small folder, sticky notes, and a plain envelope for loose cards.",
+      "Choose three prompts before departure so passengers can start without sorting papers in a moving vehicle.",
+      "Write only first names or initials on folders, and avoid addresses, phone numbers, room numbers, or private family details.",
+      "Tell children they may write, draw, dictate to a non-driving adult, or save a page for the next stop."
+    ],
+    "inTheCar": [
+      "Give reading and timing jobs only to a non-driving adult or an older passenger who is comfortable helping.",
+      "Keep all pages in one seat-back folder so passengers can reach them without interrupting the trip flow.",
+      "Use short passenger rounds: notice three outside details, circle one prompt, then add one sentence or sketch.",
+      "If the vehicle gets bumpy, pause writing and switch to quiet oral planning until the next stop.",
+      "When only one adult is present, prepare choices before leaving and save adult-led sharing for parked moments."
+    ],
+    "restStopHotel": [
+      "At rest stops, use five minutes for movement first, then two minutes for a quick setting note before getting back in the vehicle.",
+      "Keep writing pages on clipboards or a clean table so snack spills do not reach the packet.",
+      "In hotels, set a quiet page basket on a desk or nightstand with pencils already sharpened.",
+      "Use lobby, breakfast area, or room downtime for revision jobs that need adult attention.",
+      "Before sleep, ask each child to mark the page they want to continue tomorrow and tuck it back into the folder."
+    ],
+    "visitDay": [
+      "Before visiting relatives, choose prompts that use places, objects, and memories in broad terms, not private personal details.",
+      "Invite relatives to offer simple travel words, place details, or old-fashioned object names without making anyone share more than they want.",
+      "Use the visit as a listening day if writing energy is low: children can collect three detail words and draft later.",
+      "After the visit, help each child turn one kind moment, meal detail, or household object into a story setting note."
+    ]
+  },
+  "travelRoutines": [
+    {
+      "name": "Passenger Window Noticing Loop",
+      "bestFor": "Back-seat passengers during a calm daytime stretch with a non-driving helper available.",
+      "steps": [
+        "Before the vehicle moves, choose one page and circle the setting box passengers will fill later.",
+        "A non-driving helper invites passengers to silently notice one color, one shape, and one moving detail outside.",
+        "Passengers add the three details as words or sketches when their hands feel steady.",
+        "At the next stop, each child turns one detail into a first sentence for the quest page."
+      ]
+    },
+    {
+      "name": "Mile-Marker Mini Quest",
+      "bestFor": "Long highway stretches when children need a tiny task that ends quickly.",
+      "steps": [
+        "Before departure, tuck three small marker cards into each packet: place, helper, and surprise.",
+        "A passenger picks one card at a time and gives everyone two quiet minutes to add a word or sketch.",
+        "After all three cards are used, children draw a line connecting the words in story order.",
+        "During the next parked break, adults help turn the three notes into a four-sentence mini quest."
+      ]
+    },
+    {
+      "name": "Rest Stop Story Reset",
+      "bestFor": "Parking lots, picnic tables, travel centers, and outdoor benches after everyone has moved around.",
+      "steps": [
+        "Let children stretch, use the restroom, and drink water before asking for any writing.",
+        "Give each child one sticky note and ask for one setting detail from the stop.",
+        "Place the sticky note on the draft page beside the sentence where it belongs.",
+        "Set a three-minute timer for adding that detail before packing the folder again."
+      ]
+    },
+    {
+      "name": "Hotel Desk Draft Time",
+      "bestFor": "Evening hotel downtime, rainy afternoons, or early mornings before departure.",
+      "steps": [
+        "Place the packet, pencils, and one extension page on a clean desk or table.",
+        "Ask each child to choose a finish job: title, setting sentence, helper choice, or ending.",
+        "Work quietly for ten minutes while an adult answers spelling or order questions.",
+        "Close by circling one sentence to keep and one blank to finish on the next travel day."
+      ]
+    },
+    {
+      "name": "Relative Visit Story Bridge",
+      "bestFor": "Visits with grandparents, cousins, aunts, uncles, or family friends.",
+      "steps": [
+        "Before the visit, choose one broad prompt about a kitchen, porch, yard, shelf, or travel bag.",
+        "Ask a relative for one ordinary object word or place detail the child may borrow for fiction.",
+        "Children write the borrowed word in a detail bank without recording private stories or personal labels.",
+        "After the visit, each child uses the borrowed word in one new setting or character-choice sentence."
+      ]
+    }
+  ],
+  "extensionActivities": [
+    {
+      "title": "Route Shape Setting Map",
+      "time": "12 minutes",
+      "direction": "Children draw the trip route as a simple line, then place three invented story stops along it with one detail at each stop.",
+      "writingSkill": "setting sequence"
+    },
+    {
+      "title": "Road Sign Noun Swap",
+      "time": "8 minutes",
+      "direction": "At a parked stop, children list five nouns seen nearby and swap two plain nouns for more exact ones.",
+      "writingSkill": "precise nouns"
+    },
+    {
+      "title": "Snack Color Detail List",
+      "time": "10 minutes",
+      "direction": "Before snacks are opened, children name three colors and two textures they can use in a travel scene.",
+      "writingSkill": "sensory detail"
+    },
+    {
+      "title": "Waiting Room Quiet Draft",
+      "time": "15 minutes",
+      "direction": "In a waiting room, children choose one low-noise action for a character and write three calm sentences about what changes next.",
+      "writingSkill": "action and result"
+    },
+    {
+      "title": "Hotel Room Object Sort",
+      "time": "12 minutes",
+      "direction": "Children pick three ordinary room objects and sort them into setting detail, helpful item, or ending clue.",
+      "writingSkill": "story structure"
+    },
+    {
+      "title": "Postcard Without an Address",
+      "time": "15 minutes",
+      "direction": "Children write a pretend postcard from an invented travel stop using no real address, then add one story problem and one kind ending.",
+      "writingSkill": "audience and purpose"
+    },
+    {
+      "title": "Relative Object Word Bank",
+      "time": "10 minutes",
+      "direction": "With permission, children ask a relative for three ordinary object words and use one in a fictional scene.",
+      "writingSkill": "detail gathering"
+    },
+    {
+      "title": "Detour Ending Card",
+      "time": "12 minutes",
+      "direction": "Children imagine a small change in the plan, then write two possible endings: one practical ending and one funny ending.",
+      "writingSkill": "ending choice"
+    }
+  ],
+  "groupShareCards": [
+    "At a stop or indoors, read one travel detail you added and name the sense it uses.",
+    "Show one map mark and explain what could happen there in the next scene.",
+    "Ask a non-driving passenger or adult to read one sentence for you while you point to the matching sketch.",
+    "Share one object word you borrowed from the trip and tell how it helps the story.",
+    "Choose one listener to suggest a clearer noun, action, or setting detail for your next revision.",
+    "Pass today and take the listener role: notice one strong detail from another person's story."
+  ],
+  "quests": [
+    {
+      "id": "acorn-avenue-mile-marker-errand",
+      "title": "Acorn Avenue Mile-Marker Errand",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "travelUse": "car ride",
+      "setupMinutes": "5 minutes",
+      "travelMode": "Back-seat passenger",
+      "kidDirection": "Pick one window clue, add it to the errand list, and write what the acorn clerk checks first.",
+      "adultNote": "Give the child a clipboard or firm book, then invite quiet pointing to one outside detail before writing.",
+      "takeHomeLine": "Save this page as the first errand slip for a small Acorn Avenue travel story.",
+      "materials": [
+        "Printed errand quest page",
+        "Pencil",
+        "Colored pencil set",
+        "Clipboard or firm book"
+      ],
+      "pageSections": [
+        {
+          "heading": "Window Clue",
+          "lines": [
+            "The road sign shape looks like ____________________________.",
+            "The cloud clue for Acorn Avenue is ____________________________.",
+            "The color I notice most is ____________________________."
+          ]
+        },
+        {
+          "heading": "Errand List",
+          "lines": [
+            "The acorn clerk needs ____________________________.",
+            "The tiny office drawer holds ____________________________.",
+            "The most important note says ____________________________."
+          ]
+        },
+        {
+          "heading": "Next Stop",
+          "lines": [
+            "First, the clerk checks ____________________________.",
+            "Next, the helper carries ____________________________.",
+            "The errand ends at ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "button-bakery-rest-stop-route",
+      "title": "Button Bakery Rest Stop Route",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "travelUse": "rest stop",
+      "setupMinutes": "6 minutes",
+      "travelMode": "Rest stop table",
+      "kidDirection": "Draw a simple bakery path, then write three clear clues that help the button cart arrive.",
+      "adultNote": "Use the table time for one short map chat, then let the child finish the fill-ins at their own pace.",
+      "takeHomeLine": "Save this route page as the map piece for a Button Bakery travel story.",
+      "materials": [
+        "Printed bakery route page",
+        "Pencil",
+        "Two crayons",
+        "Small paper napkin for a crumb map"
+      ],
+      "pageSections": [
+        {
+          "heading": "Bakery Path",
+          "lines": [
+            "The button cart starts beside ____________________________.",
+            "The crumb trail turns near ____________________________.",
+            "The bakery counter waits by ____________________________."
+          ]
+        },
+        {
+          "heading": "Map Mixup",
+          "lines": [
+            "The mixed-up map points toward ____________________________.",
+            "The clearest clue on the table is ____________________________.",
+            "The cart helper asks about ____________________________."
+          ]
+        },
+        {
+          "heading": "Clear Route",
+          "lines": [
+            "First, roll past ____________________________.",
+            "Next, look for ____________________________.",
+            "Last, set the button tray on ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spoon-ferry-hotel-lunchbox-log",
+      "title": "Spoon Ferry Hotel Lunchbox Log",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "travelUse": "hotel table",
+      "setupMinutes": "5 minutes",
+      "travelMode": "Hotel desk",
+      "kidDirection": "Choose a lunchbox cargo, label the harbor stops, and write the ferry's final note.",
+      "adultNote": "Set out only one pencil and two colors so the hotel desk stays simple and easy to reset.",
+      "takeHomeLine": "Save this harbor log as the middle scene of a Spoon Ferry travel story.",
+      "materials": [
+        "Printed harbor log page",
+        "Pencil",
+        "Blue crayon",
+        "Folded index card for a lunchbox label"
+      ],
+      "pageSections": [
+        {
+          "heading": "Lunchbox Cargo",
+          "lines": [
+            "The spoon ferry carries ____________________________.",
+            "The lunchbox label says ____________________________.",
+            "The snack clue smells like ____________________________."
+          ]
+        },
+        {
+          "heading": "Harbor Stops",
+          "lines": [
+            "Stop one is the ____________________________ dock.",
+            "Stop two has a ____________________________ sign.",
+            "Stop three waits beside ____________________________."
+          ]
+        },
+        {
+          "heading": "Ferry Note",
+          "lines": [
+            "The ferry helper notices ____________________________.",
+            "The smoothest route goes around ____________________________.",
+            "The final harbor note says ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rain-boot-visit-day-route-card",
+      "title": "Rain Boot Visit-Day Route Card",
+      "worldSlug": "rain-boot-route-rangers",
+      "ageBand": "7-9",
+      "travelUse": "relative visit",
+      "setupMinutes": "5 minutes",
+      "travelMode": "Visit-day table",
+      "kidDirection": "Mark three puddle stops, pick a helpful boot ranger, and write the route card ending.",
+      "adultNote": "Let cousins or siblings each name one pretend puddle, then keep the writing page with one child at a time.",
+      "takeHomeLine": "Save this route card as a finished Rain Boot Rangers travel page.",
+      "materials": [
+        "Printed route card page",
+        "Pencil",
+        "Green crayon",
+        "Three paper puddle markers"
+      ],
+      "pageSections": [
+        {
+          "heading": "Puddle Stops",
+          "lines": [
+            "Puddle stop one is shaped like ____________________________.",
+            "Puddle stop two is beside ____________________________.",
+            "Puddle stop three reflects ____________________________."
+          ]
+        },
+        {
+          "heading": "Boot Ranger",
+          "lines": [
+            "My boot ranger carries ____________________________.",
+            "The ranger checks the route card for ____________________________.",
+            "The kind reminder on the card says ____________________________."
+          ]
+        },
+        {
+          "heading": "Route Ending",
+          "lines": [
+            "First, step around ____________________________.",
+            "Next, follow the dry edge near ____________________________.",
+            "The visit-day route ends with ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rain-gauge-railway-route-report",
+      "title": "Rain Gauge Railway Route Report",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "travelUse": "car ride",
+      "setupMinutes": "5 minutes",
+      "travelMode": "Back-seat passenger",
+      "kidDirection": "Use the route map and weather clues to plan a tiny railway report with a clear first-next-final order.",
+      "adultNote": "Clip the page to a firm folder and invite the child to collect quiet window observations between writing lines.",
+      "takeHomeLine": "Save this route report as a travel-page starter for a weather railway story.",
+      "materials": [
+        "printed rain railway route page",
+        "pencil",
+        "clipboard or firm folder",
+        "window observation strip"
+      ],
+      "pageSections": [
+        {
+          "heading": "Route Map Clues",
+          "lines": [
+            "On the route map, the rain-gauge station is near ____________________.",
+            "A window detail that could become a cloud note is ____________________.",
+            "The tiny railway should carry the sample toward ____________________."
+          ]
+        },
+        {
+          "heading": "Weather Sequence",
+          "lines": [
+            "First, the gauge number shows ____________________.",
+            "Next, the railway switches toward ____________________.",
+            "Finally, the garden report explains ____________________."
+          ]
+        },
+        {
+          "heading": "Revision And Share",
+          "lines": [
+            "One vague travel word I can replace is ____________________.",
+            "The clearer detail I will add is ____________________.",
+            "A kind line I can share later is ____________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tidepool-timekeepers-rest-stop-log",
+      "title": "Tidepool Timekeepers Rest Stop Log",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "travelUse": "rest stop",
+      "setupMinutes": "6 minutes",
+      "travelMode": "Rest stop table",
+      "kidDirection": "Compare three tidepool lab notes, choose the most useful observation, and write what the timekeepers should check next.",
+      "adultNote": "Use one short table session and let the child point to the strongest clue before drafting the ending.",
+      "takeHomeLine": "Save this lab log as a careful-observation page from the road trip.",
+      "materials": [
+        "printed tidepool lab log",
+        "pencil",
+        "three pebble clue cards",
+        "small envelope for finished notes"
+      ],
+      "pageSections": [
+        {
+          "heading": "Lab Observation Stop",
+          "lines": [
+            "The first tidepool note measures ____________________.",
+            "The shell-shadow detail I notice is ____________________.",
+            "The pebble notebook adds ____________________."
+          ]
+        },
+        {
+          "heading": "Compare The Clues",
+          "lines": [
+            "The notes match because ____________________.",
+            "The notes differ when ____________________.",
+            "The timekeepers should check ____________________ before deciding."
+          ]
+        },
+        {
+          "heading": "Ending Revision",
+          "lines": [
+            "My first ending idea is ____________________.",
+            "A stronger ending detail is ____________________.",
+            "One kind question for a family reader is ____________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seed-library-hotel-map-catalog",
+      "title": "Seed Library Hotel Map Catalog",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "travelUse": "hotel table",
+      "setupMinutes": "5 minutes",
+      "travelMode": "Hotel desk",
+      "kidDirection": "Turn a folded route map into three seed catalog clues and arrange them into a beginning, middle, and ending.",
+      "adultNote": "Set out the page with two quiet color choices and ask the child to circle the clue that should begin the story.",
+      "takeHomeLine": "Save this map catalog page as a take-home seed-library scene plan.",
+      "materials": [
+        "printed seed library map page",
+        "pencil",
+        "two colored pencils",
+        "folded route-map scrap"
+      ],
+      "pageSections": [
+        {
+          "heading": "Map Room Setup",
+          "lines": [
+            "The seed drawer label says ____________________.",
+            "The folded route map shows ____________________.",
+            "A garden observation written on the edge is ____________________."
+          ]
+        },
+        {
+          "heading": "Catalog Order",
+          "lines": [
+            "Beginning clue: ____________________.",
+            "Middle clue that changes the map: ____________________.",
+            "Ending clue for the next gardener: ____________________."
+          ]
+        },
+        {
+          "heading": "Polish The Page",
+          "lines": [
+            "One map detail I can make more exact is ____________________.",
+            "The sentence I want to revise is ____________________.",
+            "A kind sharing note for this page is ____________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compass-craft-visit-day-route-map",
+      "title": "Compass Craft Visit-Day Route Map",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "travelUse": "relative visit",
+      "setupMinutes": "7 minutes",
+      "travelMode": "Visit-day table",
+      "kidDirection": "Design a story route with scene stops, revise the turning point, and prepare one polished line to share kindly.",
+      "adultNote": "Offer a quiet table window and let the child decide whether to read one finished line or simply save the page.",
+      "takeHomeLine": "Save this route map as the planning page for a longer Compass Craft Academy story.",
+      "materials": [
+        "printed compass route map",
+        "pencil",
+        "three scene-stop cards",
+        "colored thread or yarn piece"
+      ],
+      "pageSections": [
+        {
+          "heading": "Academy Route Plan",
+          "lines": [
+            "The first scene stop on my route is ____________________.",
+            "The middle stop should turn the story because ____________________.",
+            "The final stop shows the reader ____________________."
+          ]
+        },
+        {
+          "heading": "Scene Details",
+          "lines": [
+            "A craft-table object that matters is ____________________.",
+            "A map-room detail I will repeat is ____________________.",
+            "The route choice my hero explains is ____________________."
+          ]
+        },
+        {
+          "heading": "Revision And Kind Share",
+          "lines": [
+            "The line I will revise for clarity is ____________________.",
+            "My stronger version says ____________________.",
+            "One kind comment I can ask for is ____________________."
+          ]
+        }
+      ]
+    }
+  ]
+}

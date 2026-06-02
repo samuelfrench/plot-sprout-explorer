@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch11-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "road-trip-story-quest-pack",
+      "title": "Road Trip Story Quest Pack product image",
+      "purpose": "Static product hero for the $17 Road Trip Story Quest Pack page.",
+      "prompt": "family-friendly flat lay, two blank white papers, colored pencils, simple paper road cutouts, warm daylight, polished kids product illustration, blank white paper only, no text, no letters, no numbers, no labels, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals",
+      "outputJpeg": "public/images/plotsprout/batch11/road-trip-story-quest-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch11/road-trip-story-quest-pack.webp",
+      "sidecar": "content/image-runs/batch11/road-trip-story-quest-pack.json",
+      "seed": 26061124
+    }
+  ]
+}

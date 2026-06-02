@@ -8,6 +8,7 @@ export const rainyDayProductSlug = 'rainy-day-story-quest-pack'
 export const seasonBundleProductSlug = 'homeschool-season-story-bundle'
 export const classroomLicenseProductSlug = 'classroom-story-license-pack'
 export const birthdayPartyProductSlug = 'birthday-party-story-quest-kit'
+export const roadTripProductSlug = 'road-trip-story-quest-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -45,6 +46,13 @@ const requiredBirthdayPartyArtifactPaths = {
   zipPath: 'product-build/birthday-party-story-quest-kit/birthday-party-story-quest-kit.zip',
   sourceHtmlPath: 'product-build/birthday-party-story-quest-kit/source/birthday-party-story-quest-kit.html',
   manifestPath: 'product-build/birthday-party-story-quest-kit/manifest.json',
+}
+
+const requiredRoadTripArtifactPaths = {
+  pdfPath: 'product-build/road-trip-story-quest-pack/Road-Trip-Story-Quest-Pack.pdf',
+  zipPath: 'product-build/road-trip-story-quest-pack/road-trip-story-quest-pack.zip',
+  sourceHtmlPath: 'product-build/road-trip-story-quest-pack/source/road-trip-story-quest-pack.html',
+  manifestPath: 'product-build/road-trip-story-quest-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -331,7 +339,7 @@ export function validateSeasonBundleSource(source, product, knownWorldSlugs) {
       ['spring', 0],
       ['summer', 0],
     ])
-    const sourceWorldSet = new Set(source.worldSlugs ?? [])
+    const sourceWorldSet = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
     source.pages.forEach((page, index) => {
       validatePage(page, index, worldSlugs, new Map(), pageIds, errors)
       validateString(page.season, `pages[${index}].season`, errors)
@@ -463,7 +471,7 @@ export function validateClassroomLicenseSource(source, product, knownWorldSlugs)
   pushIf(errors, product?.pricePoint !== source.pricePoint, 'Classroom license source pricePoint must match product.pricePoint.')
 
   pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
-  const sourceWorldSlugs = new Set(source.worldSlugs ?? [])
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
   if (Array.isArray(source.worldSlugs)) {
     pushIf(errors, source.worldSlugs.length < 10, 'worldSlugs must have at least 10 entries.')
     pushIf(errors, source.worldSlugs.length > 30, 'worldSlugs must have no more than 30 entries.')
@@ -623,7 +631,7 @@ export function validateBirthdayPartyKitSource(source, product, knownWorldSlugs)
   pushIf(errors, product?.pricePoint !== source.pricePoint, 'Birthday Party source pricePoint must match product.pricePoint.')
 
   pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
-  const sourceWorldSlugs = new Set(source.worldSlugs ?? [])
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
   if (Array.isArray(source.worldSlugs)) {
     pushIf(errors, source.worldSlugs.length < 6, 'worldSlugs must have at least 6 entries.')
     pushIf(errors, source.worldSlugs.length > 10, 'worldSlugs must have no more than 10 entries.')
@@ -681,6 +689,182 @@ export function validateBirthdayPartyKitSource(source, product, knownWorldSlugs)
   }
 
   validateNoRiskyLanguage(source, 'Birthday Party Story Quest Kit source', errors)
+  return errors
+}
+
+function validateNoUnsafeTravelLanguage(value, label, errors) {
+  const text = JSON.stringify(value).replace(/\bnon-driving\b/gi, 'passenger')
+  pushIf(
+    errors,
+    /\bwhile driving\b|\bbehind the wheel\b|\b(?:ask|asking|tell|telling|have|having|invite|inviting|prompt|prompting)\s+(?:the\s+)?driver\b|\bdriver\s+to\b/i.test(
+      text,
+    ),
+    `${label} includes driver-facing facilitation language.`,
+  )
+}
+
+function validateRoadTripQuest(quest, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, questIds, errors) {
+  const label = `quests[${index}]`
+  pushIf(errors, !isObject(quest), `${label} must be an object.`)
+  if (!isObject(quest)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'travelUse',
+    'setupMinutes',
+    'travelMode',
+    'kidDirection',
+    'adultNote',
+    'takeHomeLine',
+  ]) {
+    validateString(quest[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(quest.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(quest.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, questIds.has(quest.id), `${label}.id is duplicated.`)
+    questIds.add(quest.id)
+  }
+
+  pushIf(errors, !['7-8', '7-9', '8-10', '9-11', '10-11'].includes(quest.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(quest.worldSlug) && !knownWorldSlugs.has(quest.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(quest.worldSlug) && !sourceWorldSlugs.has(quest.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(quest.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(quest.ageBand) && isNonEmptyString(worldAgeBand) && quest.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${quest.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  validateExactStringArray(quest.materials, 4, `${label}.materials`, errors)
+
+  pushIf(errors, !Array.isArray(quest.pageSections), `${label}.pageSections must be an array.`)
+  if (Array.isArray(quest.pageSections)) {
+    pushIf(errors, quest.pageSections.length !== 3, `${label}.pageSections must have exactly 3 entries.`)
+    quest.pageSections.forEach((section, sectionIndex) => {
+      const sectionLabel = `${label}.pageSections[${sectionIndex}]`
+      pushIf(errors, !isObject(section), `${sectionLabel} must be an object.`)
+      if (!isObject(section)) return
+      validateString(section.heading, `${sectionLabel}.heading`, errors)
+      validateExactStringArray(section.lines, 3, `${sectionLabel}.lines`, errors)
+      if (Array.isArray(section.lines)) {
+        section.lines.forEach((line, lineIndex) => {
+          pushIf(errors, isNonEmptyString(line) && !/_+/.test(line), `${sectionLabel}.lines[${lineIndex}] must include a writable blank.`)
+        })
+      }
+    })
+  }
+
+  validateNoUnsafeTravelLanguage(quest, label, errors)
+}
+
+function validateRoadTripRoutine(routine, index, routineNames, errors) {
+  const label = `travelRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.name)) {
+    pushIf(errors, routineNames.has(routine.name), `${label}.name is duplicated.`)
+    routineNames.add(routine.name)
+  }
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeTravelLanguage(routine, label, errors)
+}
+
+export function validateRoadTripPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Road Trip Story Quest Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch11', 'batchId must be 2026-06-02-batch11.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(errors, source.productSlug !== roadTripProductSlug, `productSlug must be ${roadTripProductSlug}.`)
+  pushIf(errors, source.title !== 'Road Trip Story Quest Pack', 'title must be Road Trip Story Quest Pack.')
+  pushIf(errors, source.pricePoint !== '$17', 'pricePoint must be $17.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Road Trip source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Road Trip source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Road Trip source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length < 6, 'worldSlugs must have at least 6 entries.')
+    pushIf(errors, source.worldSlugs.length > 10, 'worldSlugs must have no more than 10 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredRoadTripArtifactPaths, 'Road Trip', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.setupGuide), 'setupGuide must be an object.')
+  if (isObject(source.setupGuide)) {
+    validateExactStringArray(source.setupGuide.beforeYouGo, 5, 'setupGuide.beforeYouGo', errors)
+    validateExactStringArray(source.setupGuide.inTheCar, 5, 'setupGuide.inTheCar', errors)
+    validateExactStringArray(source.setupGuide.restStopHotel, 5, 'setupGuide.restStopHotel', errors)
+    validateExactStringArray(source.setupGuide.visitDay, 4, 'setupGuide.visitDay', errors)
+    validateNoUnsafeTravelLanguage(source.setupGuide, 'setupGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.travelRoutines), 'travelRoutines must be an array.')
+  if (Array.isArray(source.travelRoutines)) {
+    pushIf(errors, source.travelRoutines.length !== 5, 'travelRoutines must have exactly 5 entries.')
+    const names = new Set()
+    source.travelRoutines.forEach((routine, index) => validateRoadTripRoutine(routine, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.extensionActivities), 'extensionActivities must be an array.')
+  if (Array.isArray(source.extensionActivities)) {
+    pushIf(errors, source.extensionActivities.length !== 8, 'extensionActivities must have exactly 8 entries.')
+    const titles = new Set()
+    source.extensionActivities.forEach((activity, index) => validateBirthdayExtension(activity, index, titles, errors))
+  }
+
+  validateExactStringArray(source.groupShareCards, 6, 'groupShareCards', errors)
+
+  pushIf(errors, !Array.isArray(source.quests), 'quests must be an array.')
+  if (Array.isArray(source.quests)) {
+    pushIf(errors, source.quests.length !== 8, 'quests must have exactly 8 entries.')
+    const questIds = new Set()
+    const coveredWorlds = new Set()
+    source.quests.forEach((quest, index) => {
+      validateRoadTripQuest(quest, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, questIds, errors)
+      if (isNonEmptyString(quest?.worldSlug)) coveredWorlds.add(quest.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 8, 'quests must cover at least 8 unique worlds.')
+  }
+
+  validateNoUnsafeTravelLanguage(source, 'Road Trip Story Quest Pack source', errors)
+  validateNoRiskyLanguage(source, 'Road Trip Story Quest Pack source', errors)
   return errors
 }
 
@@ -812,7 +996,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredBirthdayPartyArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredRoadTripArtifactPaths.pdfPath
+      ? requiredRoadTripArtifactPaths
+      : artifact?.pdfPath === requiredBirthdayPartyArtifactPaths.pdfPath
       ? requiredBirthdayPartyArtifactPaths
       : artifact?.pdfPath === requiredClassroomLicenseArtifactPaths.pdfPath
       ? requiredClassroomLicenseArtifactPaths

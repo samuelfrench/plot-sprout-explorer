@@ -1,0 +1,73 @@
+{
+  "batchId": "2026-06-02-batch11",
+  "generatedAt": "2026-06-02",
+  "productSlug": "road-trip-story-quest-pack",
+  "title": "Road Trip Story Quest Pack",
+  "pricePoint": "$17",
+  "sourcePageCount": 8,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/road-trip-story-quest-pack/Road-Trip-Story-Quest-Pack.pdf",
+      "sha256": "374249e48a60c95eef70b1d5b12f031a16822eba4970e79edf4ebf9829be6ff1",
+      "size": 2614438
+    },
+    "zip": {
+      "path": "product-build/road-trip-story-quest-pack/road-trip-story-quest-pack.zip",
+      "sha256": "c78d1cc1ac6d5ed1ed53079aa61c4745f693341a254bed7aa9f627d5ffbc66a6",
+      "size": 5018279
+    },
+    "sourceHtml": {
+      "path": "product-build/road-trip-story-quest-pack/source/road-trip-story-quest-pack.html",
+      "sha256": "546ebb8e8ef95af02062559da582245ff248b63ed8fdbce7f30135188fe644c8",
+      "size": 33008
+    },
+    "readme": {
+      "path": "product-build/road-trip-story-quest-pack/README.txt",
+      "sha256": "bebc7f0f3a5716d2d141539f06c3570b8b73b7d5b7ec9b664f3dc96a80f2abb4",
+      "size": 483
+    },
+    "assets": [
+      {
+        "path": "product-build/road-trip-story-quest-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/road-trip-story-quest-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/road-trip-story-quest-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/road-trip-story-quest-pack/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/road-trip-story-quest-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/road-trip-story-quest-pack/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/road-trip-story-quest-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/road-trip-story-quest-pack/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      }
+    ]
+  }
+}

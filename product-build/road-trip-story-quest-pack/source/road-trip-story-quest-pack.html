@@ -1,0 +1,676 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Road Trip Story Quest Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.36in; }
+      :root {
+        --ink: #17343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #b6d4cf;
+        --teal: #2c7a78;
+        --coral: #ec6f3f;
+        --gold: #f2c14f;
+        --blue: #2b7f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 12px;
+        line-height: 1.24;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 11ch; font-size: 40px; }
+      h2 { margin-bottom: 0.06in; font-size: 24px; }
+      h3 { margin-bottom: 0.03in; font-size: 12.4px; }
+      p, li { color: var(--muted); }
+      img {
+        display: block;
+        max-width: 100%;
+        border: 1px solid var(--line);
+      }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.13in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(44, 122, 120, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.2in;
+        gap: 0.22in;
+        border-top: 0.16in solid var(--gold);
+      }
+      .guide-page {
+        border-top: 0.16in solid var(--teal);
+        font-size: 10.6px;
+      }
+      .share-page {
+        border-top: 0.16in solid var(--coral);
+        font-size: 10.1px;
+      }
+      .extension-page {
+        border-top: 0.16in solid var(--blue);
+        font-size: 10.2px;
+      }
+      .page-kicker, .kicker, .world-intro span, .extension-card span {
+        color: var(--teal);
+        font-size: 9.2px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-size: 21px;
+        font-weight: 900;
+      }
+      .included-grid, .setup-grid, .world-grid, .routine-grid, .extension-grid, .share-grid {
+        display: grid;
+        gap: 0.07in;
+      }
+      .included-grid { grid-template-columns: 1fr; }
+      .setup-grid, .routine-grid, .extension-grid, .share-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+      .included-grid li, .setup-grid li, .share-grid li, .routine-card, .extension-card,
+      .world-intro, .worksheet-section, .kid-direction, .adult-note, .take-home, .quest-meta {
+        padding: 0.05in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .included-grid li, .setup-grid li, .share-grid li { list-style: none; }
+      .world-intro img, .world-intro p { display: none; }
+      .world-intro h3 { margin: 0; font-size: 9px; line-height: 1.04; }
+      .kid-direction {
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .adult-note {
+        border-color: #e5bc7c;
+        background: #fff4dc;
+      }
+      .quest-meta {
+        display: grid;
+        grid-template-columns: 0.7in 0.95in 1fr;
+        gap: 0.04in;
+        color: var(--ink);
+        font-size: 9.4px;
+        font-weight: 900;
+      }
+      figure {
+        float: right;
+        width: 1.64in;
+        margin: 0 0 0.05in 0.1in;
+      }
+      figure img {
+        width: 1.64in;
+        height: 0.92in;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--muted);
+        font-size: 8.8px;
+      }
+      .write-line {
+        min-height: 0.2in;
+        margin-bottom: 0.035in;
+        padding-bottom: 0.03in;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .footer-note {
+        margin-top: 0.07in;
+        padding-top: 0.07in;
+        border-top: 2px solid var(--gold);
+        color: var(--muted);
+        font-size: 9.3px;
+      }
+      @media screen {
+        body { padding: 24px; background: #dfeee7; }
+        .pack-page {
+          width: 8.5in;
+          margin: 0 auto 24px;
+          box-shadow: 0 18px 40px rgba(20, 31, 43, 0.18);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Adult guide for printable travel writing</p>
+        <h1>Road Trip Story Quest Pack</h1>
+        <p>No-screen routines for car passengers, rest stops, hotels, waiting rooms, and family visits.</p>
+        <div class="badge">$17</div>
+        <p><strong>Best for:</strong> Parents, grandparents, homeschool families, tutors, and co-op leaders planning adult-guided travel writing for ages 7-11.</p>
+        <p><strong>Format:</strong> 8 printable travel quests plus adult setup tools</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div>
+        <h2>Inside</h2>
+        <ul class="included-grid"><li>Before-you-go print checklist</li>
+<li>Passenger-only car setup notes</li>
+<li>Rest stop story reset routine</li>
+<li>Hotel quiet-time writing routine</li>
+<li>Waiting room prompt routine</li>
+<li>Family visit story bridge</li>
+<li>Clipboard and pencil packing list</li>
+<li>Route detail noticing prompts</li>
+<li>Short-session timing guide</li>
+<li>Older passenger helper roles</li>
+<li>Eight travel extension activities</li>
+<li>Six optional group share cards</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult setup</p>
+      <h2>Run the travel pack</h2>
+      <div class="setup-grid">
+        <div>
+          <h3>Before you go</h3>
+          <ol><li>Print one packet per child plus two spare packets, then clip each set in order: route map, quest page, draft page, extension page, and share card.</li>
+<li>Pack pencils, colored pencils, two clipboards, a small folder, sticky notes, and a plain envelope for loose cards.</li>
+<li>Choose three prompts before departure so passengers can start without sorting papers in a moving vehicle.</li>
+<li>Write only first names or initials on folders, and avoid addresses, phone numbers, room numbers, or private family details.</li>
+<li>Tell children they may write, draw, dictate to a non-driving adult, or save a page for the next stop.</li></ol>
+        </div>
+        <div>
+          <h3>In the car</h3>
+          <ol><li>Give reading and timing jobs only to a non-driving adult or an older passenger who is comfortable helping.</li>
+<li>Keep all pages in one seat-back folder so passengers can reach them without interrupting the trip flow.</li>
+<li>Use short passenger rounds: notice three outside details, circle one prompt, then add one sentence or sketch.</li>
+<li>If the vehicle gets bumpy, pause writing and switch to quiet oral planning until the next stop.</li>
+<li>When only one adult is present, prepare choices before leaving and save adult-led sharing for parked moments.</li></ol>
+        </div>
+        <div>
+          <h3>Rest stop or hotel</h3>
+          <ol><li>At rest stops, use five minutes for movement first, then two minutes for a quick setting note before getting back in the vehicle.</li>
+<li>Keep writing pages on clipboards or a clean table so snack spills do not reach the packet.</li>
+<li>In hotels, set a quiet page basket on a desk or nightstand with pencils already sharpened.</li>
+<li>Use lobby, breakfast area, or room downtime for revision jobs that need adult attention.</li>
+<li>Before sleep, ask each child to mark the page they want to continue tomorrow and tuck it back into the folder.</li></ol>
+        </div>
+        <div>
+          <h3>Visit day</h3>
+          <ol><li>Before visiting relatives, choose prompts that use places, objects, and memories in broad terms, not private personal details.</li>
+<li>Invite relatives to offer simple travel words, place details, or old-fashioned object names without making anyone share more than they want.</li>
+<li>Use the visit as a listening day if writing energy is low: children can collect three detail words and draft later.</li>
+<li>After the visit, help each child turn one kind moment, meal detail, or household object into a story setting note.</li></ol>
+        </div>
+      </div>
+      <h3>World menu</h3>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Acorn Avenue Errand Office</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Button Bakery Map Mix-Up</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Spoon Ferry Lunchbox Harbor</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Rain Boot Route Rangers</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Rain Gauge Railway</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Tidepool Timekeepers Lab</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Seed Library Map Room</h3>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <div>
+        <span>Ages 10-11</span>
+        <h3>Compass Craft Academy</h3>
+      </div>
+    </article></div>
+      <p class="footer-note">Use these pages offline for adult-guided travel writing with no accounts, no uploads, and no public sharing.</p>
+    </section>
+    <section class="pack-page share-page">
+      <p class="page-kicker">Travel tools</p>
+      <h2>Routines and share cards</h2>
+      <div class="routine-grid">
+    <article class="routine-card">
+      <h3>Passenger Window Noticing Loop</h3>
+      <p><strong>Best for:</strong> Back-seat passengers during a calm daytime stretch with a non-driving helper available.</p>
+      <ol><li>Before the vehicle moves, choose one page and circle the setting box passengers will fill later.</li>
+<li>A non-driving helper invites passengers to silently notice one color, one shape, and one moving detail outside.</li>
+<li>Passengers add the three details as words or sketches when their hands feel steady.</li>
+<li>At the next stop, each child turns one detail into a first sentence for the quest page.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Mile-Marker Mini Quest</h3>
+      <p><strong>Best for:</strong> Long highway stretches when children need a tiny task that ends quickly.</p>
+      <ol><li>Before departure, tuck three small marker cards into each packet: place, helper, and surprise.</li>
+<li>A passenger picks one card at a time and gives everyone two quiet minutes to add a word or sketch.</li>
+<li>After all three cards are used, children draw a line connecting the words in story order.</li>
+<li>During the next parked break, adults help turn the three notes into a four-sentence mini quest.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Rest Stop Story Reset</h3>
+      <p><strong>Best for:</strong> Parking lots, picnic tables, travel centers, and outdoor benches after everyone has moved around.</p>
+      <ol><li>Let children stretch, use the restroom, and drink water before asking for any writing.</li>
+<li>Give each child one sticky note and ask for one setting detail from the stop.</li>
+<li>Place the sticky note on the draft page beside the sentence where it belongs.</li>
+<li>Set a three-minute timer for adding that detail before packing the folder again.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Hotel Desk Draft Time</h3>
+      <p><strong>Best for:</strong> Evening hotel downtime, rainy afternoons, or early mornings before departure.</p>
+      <ol><li>Place the packet, pencils, and one extension page on a clean desk or table.</li>
+<li>Ask each child to choose a finish job: title, setting sentence, helper choice, or ending.</li>
+<li>Work quietly for ten minutes while an adult answers spelling or order questions.</li>
+<li>Close by circling one sentence to keep and one blank to finish on the next travel day.</li></ol>
+    </article>
+
+    <article class="routine-card">
+      <h3>Relative Visit Story Bridge</h3>
+      <p><strong>Best for:</strong> Visits with grandparents, cousins, aunts, uncles, or family friends.</p>
+      <ol><li>Before the visit, choose one broad prompt about a kitchen, porch, yard, shelf, or travel bag.</li>
+<li>Ask a relative for one ordinary object word or place detail the child may borrow for fiction.</li>
+<li>Children write the borrowed word in a detail bank without recording private stories or personal labels.</li>
+<li>After the visit, each child uses the borrowed word in one new setting or character-choice sentence.</li></ol>
+    </article></div>
+      <h3>Group share cards</h3>
+      <ul class="share-grid"><li>At a stop or indoors, read one travel detail you added and name the sense it uses.</li>
+<li>Show one map mark and explain what could happen there in the next scene.</li>
+<li>Ask a non-driving passenger or adult to read one sentence for you while you point to the matching sketch.</li>
+<li>Share one object word you borrowed from the trip and tell how it helps the story.</li>
+<li>Choose one listener to suggest a clearer noun, action, or setting detail for your next revision.</li>
+<li>Pass today and take the listener role: notice one strong detail from another person&#39;s story.</li></ul>
+    </section>
+    <section class="pack-page extension-page">
+      <p class="page-kicker">Travel tools</p>
+      <h2>Extension activity menu</h2>
+      <div class="extension-grid">
+    <article class="extension-card">
+      <span>12 minutes | setting sequence</span>
+      <h3>Route Shape Setting Map</h3>
+      <p>Children draw the trip route as a simple line, then place three invented story stops along it with one detail at each stop.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>8 minutes | precise nouns</span>
+      <h3>Road Sign Noun Swap</h3>
+      <p>At a parked stop, children list five nouns seen nearby and swap two plain nouns for more exact ones.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>10 minutes | sensory detail</span>
+      <h3>Snack Color Detail List</h3>
+      <p>Before snacks are opened, children name three colors and two textures they can use in a travel scene.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>15 minutes | action and result</span>
+      <h3>Waiting Room Quiet Draft</h3>
+      <p>In a waiting room, children choose one low-noise action for a character and write three calm sentences about what changes next.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>12 minutes | story structure</span>
+      <h3>Hotel Room Object Sort</h3>
+      <p>Children pick three ordinary room objects and sort them into setting detail, helpful item, or ending clue.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>15 minutes | audience and purpose</span>
+      <h3>Postcard Without an Address</h3>
+      <p>Children write a pretend postcard from an invented travel stop using no real address, then add one story problem and one kind ending.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>10 minutes | detail gathering</span>
+      <h3>Relative Object Word Bank</h3>
+      <p>With permission, children ask a relative for three ordinary object words and use one in a fictional scene.</p>
+    </article>
+
+    <article class="extension-card">
+      <span>12 minutes | ending choice</span>
+      <h3>Detour Ending Card</h3>
+      <p>Children imagine a small change in the plan, then write two possible endings: one practical ending and one funny ending.</p>
+    </article></div>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Travel quest 1 | Back-seat passenger</div>
+      <h2>Acorn Avenue Mile-Marker Errand</h2>
+      <figure><img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration"><figcaption>Acorn Avenue Errand Office</figcaption></figure>
+      <p class="kid-direction">Pick one window clue, add it to the errand list, and write what the acorn clerk checks first.</p>
+      <p class="adult-note">Give the child a clipboard or firm book, then invite quiet pointing to one outside detail before writing.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>5 minutes setup</span>
+        <span>car ride</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Window Clue</h3>
+          <p class="write-line">The road sign shape looks like ____________________________.</p>
+<p class="write-line">The cloud clue for Acorn Avenue is ____________________________.</p>
+<p class="write-line">The color I notice most is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Errand List</h3>
+          <p class="write-line">The acorn clerk needs ____________________________.</p>
+<p class="write-line">The tiny office drawer holds ____________________________.</p>
+<p class="write-line">The most important note says ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Next Stop</h3>
+          <p class="write-line">First, the clerk checks ____________________________.</p>
+<p class="write-line">Next, the helper carries ____________________________.</p>
+<p class="write-line">The errand ends at ____________________________.</p>
+        </section></div>
+      <p class="take-home">Save this page as the first errand slip for a small Acorn Avenue travel story.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Travel quest 2 | Rest stop table</div>
+      <h2>Button Bakery Rest Stop Route</h2>
+      <figure><img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration"><figcaption>Button Bakery Map Mix-Up</figcaption></figure>
+      <p class="kid-direction">Draw a simple bakery path, then write three clear clues that help the button cart arrive.</p>
+      <p class="adult-note">Use the table time for one short map chat, then let the child finish the fill-ins at their own pace.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>6 minutes setup</span>
+        <span>rest stop</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Bakery Path</h3>
+          <p class="write-line">The button cart starts beside ____________________________.</p>
+<p class="write-line">The crumb trail turns near ____________________________.</p>
+<p class="write-line">The bakery counter waits by ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Mixup</h3>
+          <p class="write-line">The mixed-up map points toward ____________________________.</p>
+<p class="write-line">The clearest clue on the table is ____________________________.</p>
+<p class="write-line">The cart helper asks about ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Clear Route</h3>
+          <p class="write-line">First, roll past ____________________________.</p>
+<p class="write-line">Next, look for ____________________________.</p>
+<p class="write-line">Last, set the button tray on ____________________________.</p>
+        </section></div>
+      <p class="take-home">Save this route page as the map piece for a Button Bakery travel story.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Travel quest 3 | Hotel desk</div>
+      <h2>Spoon Ferry Hotel Lunchbox Log</h2>
+      <figure><img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration"><figcaption>Spoon Ferry Lunchbox Harbor</figcaption></figure>
+      <p class="kid-direction">Choose a lunchbox cargo, label the harbor stops, and write the ferry&#39;s final note.</p>
+      <p class="adult-note">Set out only one pencil and two colors so the hotel desk stays simple and easy to reset.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>5 minutes setup</span>
+        <span>hotel table</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Lunchbox Cargo</h3>
+          <p class="write-line">The spoon ferry carries ____________________________.</p>
+<p class="write-line">The lunchbox label says ____________________________.</p>
+<p class="write-line">The snack clue smells like ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Harbor Stops</h3>
+          <p class="write-line">Stop one is the ____________________________ dock.</p>
+<p class="write-line">Stop two has a ____________________________ sign.</p>
+<p class="write-line">Stop three waits beside ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ferry Note</h3>
+          <p class="write-line">The ferry helper notices ____________________________.</p>
+<p class="write-line">The smoothest route goes around ____________________________.</p>
+<p class="write-line">The final harbor note says ____________________________.</p>
+        </section></div>
+      <p class="take-home">Save this harbor log as the middle scene of a Spoon Ferry travel story.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Travel quest 4 | Visit-day table</div>
+      <h2>Rain Boot Visit-Day Route Card</h2>
+      <figure><img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration"><figcaption>Rain Boot Route Rangers</figcaption></figure>
+      <p class="kid-direction">Mark three puddle stops, pick a helpful boot ranger, and write the route card ending.</p>
+      <p class="adult-note">Let cousins or siblings each name one pretend puddle, then keep the writing page with one child at a time.</p>
+      <div class="quest-meta">
+        <span>Ages 7-9</span>
+        <span>5 minutes setup</span>
+        <span>relative visit</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Puddle Stops</h3>
+          <p class="write-line">Puddle stop one is shaped like ____________________________.</p>
+<p class="write-line">Puddle stop two is beside ____________________________.</p>
+<p class="write-line">Puddle stop three reflects ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Boot Ranger</h3>
+          <p class="write-line">My boot ranger carries ____________________________.</p>
+<p class="write-line">The ranger checks the route card for ____________________________.</p>
+<p class="write-line">The kind reminder on the card says ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Route Ending</h3>
+          <p class="write-line">First, step around ____________________________.</p>
+<p class="write-line">Next, follow the dry edge near ____________________________.</p>
+<p class="write-line">The visit-day route ends with ____________________________.</p>
+        </section></div>
+      <p class="take-home">Save this route card as a finished Rain Boot Rangers travel page.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Travel quest 5 | Back-seat passenger</div>
+      <h2>Rain Gauge Railway Route Report</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Use the route map and weather clues to plan a tiny railway report with a clear first-next-final order.</p>
+      <p class="adult-note">Clip the page to a firm folder and invite the child to collect quiet window observations between writing lines.</p>
+      <div class="quest-meta">
+        <span>Ages 8-10</span>
+        <span>5 minutes setup</span>
+        <span>car ride</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Route Map Clues</h3>
+          <p class="write-line">On the route map, the rain-gauge station is near ____________________.</p>
+<p class="write-line">A window detail that could become a cloud note is ____________________.</p>
+<p class="write-line">The tiny railway should carry the sample toward ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Weather Sequence</h3>
+          <p class="write-line">First, the gauge number shows ____________________.</p>
+<p class="write-line">Next, the railway switches toward ____________________.</p>
+<p class="write-line">Finally, the garden report explains ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Revision And Share</h3>
+          <p class="write-line">One vague travel word I can replace is ____________________.</p>
+<p class="write-line">The clearer detail I will add is ____________________.</p>
+<p class="write-line">A kind line I can share later is ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this route report as a travel-page starter for a weather railway story.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Travel quest 6 | Rest stop table</div>
+      <h2>Tidepool Timekeepers Rest Stop Log</h2>
+      <figure><img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration"><figcaption>Tidepool Timekeepers Lab</figcaption></figure>
+      <p class="kid-direction">Compare three tidepool lab notes, choose the most useful observation, and write what the timekeepers should check next.</p>
+      <p class="adult-note">Use one short table session and let the child point to the strongest clue before drafting the ending.</p>
+      <div class="quest-meta">
+        <span>Ages 8-10</span>
+        <span>6 minutes setup</span>
+        <span>rest stop</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Lab Observation Stop</h3>
+          <p class="write-line">The first tidepool note measures ____________________.</p>
+<p class="write-line">The shell-shadow detail I notice is ____________________.</p>
+<p class="write-line">The pebble notebook adds ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Compare The Clues</h3>
+          <p class="write-line">The notes match because ____________________.</p>
+<p class="write-line">The notes differ when ____________________.</p>
+<p class="write-line">The timekeepers should check ____________________ before deciding.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ending Revision</h3>
+          <p class="write-line">My first ending idea is ____________________.</p>
+<p class="write-line">A stronger ending detail is ____________________.</p>
+<p class="write-line">One kind question for a family reader is ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this lab log as a careful-observation page from the road trip.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Travel quest 7 | Hotel desk</div>
+      <h2>Seed Library Hotel Map Catalog</h2>
+      <figure><img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration"><figcaption>Seed Library Map Room</figcaption></figure>
+      <p class="kid-direction">Turn a folded route map into three seed catalog clues and arrange them into a beginning, middle, and ending.</p>
+      <p class="adult-note">Set out the page with two quiet color choices and ask the child to circle the clue that should begin the story.</p>
+      <div class="quest-meta">
+        <span>Ages 8-10</span>
+        <span>5 minutes setup</span>
+        <span>hotel table</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Map Room Setup</h3>
+          <p class="write-line">The seed drawer label says ____________________.</p>
+<p class="write-line">The folded route map shows ____________________.</p>
+<p class="write-line">A garden observation written on the edge is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Catalog Order</h3>
+          <p class="write-line">Beginning clue: ____________________.</p>
+<p class="write-line">Middle clue that changes the map: ____________________.</p>
+<p class="write-line">Ending clue for the next gardener: ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Polish The Page</h3>
+          <p class="write-line">One map detail I can make more exact is ____________________.</p>
+<p class="write-line">The sentence I want to revise is ____________________.</p>
+<p class="write-line">A kind sharing note for this page is ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this map catalog page as a take-home seed-library scene plan.</p>
+    </section>
+
+    <section class="pack-page quest-page">
+      <div class="page-kicker">Travel quest 8 | Visit-day table</div>
+      <h2>Compass Craft Visit-Day Route Map</h2>
+      <figure><img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration"><figcaption>Compass Craft Academy</figcaption></figure>
+      <p class="kid-direction">Design a story route with scene stops, revise the turning point, and prepare one polished line to share kindly.</p>
+      <p class="adult-note">Offer a quiet table window and let the child decide whether to read one finished line or simply save the page.</p>
+      <div class="quest-meta">
+        <span>Ages 10-11</span>
+        <span>7 minutes setup</span>
+        <span>relative visit</span>
+      </div>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Academy Route Plan</h3>
+          <p class="write-line">The first scene stop on my route is ____________________.</p>
+<p class="write-line">The middle stop should turn the story because ____________________.</p>
+<p class="write-line">The final stop shows the reader ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Scene Details</h3>
+          <p class="write-line">A craft-table object that matters is ____________________.</p>
+<p class="write-line">A map-room detail I will repeat is ____________________.</p>
+<p class="write-line">The route choice my hero explains is ____________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Revision And Kind Share</h3>
+          <p class="write-line">The line I will revise for clarity is ____________________.</p>
+<p class="write-line">My stronger version says ____________________.</p>
+<p class="write-line">One kind comment I can ask for is ____________________.</p>
+        </section></div>
+      <p class="take-home">Save this route map as the planning page for a longer Compass Craft Academy story.</p>
+    </section>
+  </body>
+</html>

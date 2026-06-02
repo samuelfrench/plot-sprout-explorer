@@ -1,0 +1,184 @@
+{
+  "batchId": "2026-06-02-batch11",
+  "generatedAt": "2026-06-02",
+  "productSlug": "road-trip-story-quest-pack",
+  "lane": "road-trip-quests-a",
+  "quests": [
+    {
+      "id": "acorn-avenue-mile-marker-errand",
+      "title": "Acorn Avenue Mile-Marker Errand",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "travelUse": "car ride",
+      "setupMinutes": "5 minutes",
+      "travelMode": "Back-seat passenger",
+      "kidDirection": "Pick one window clue, add it to the errand list, and write what the acorn clerk checks first.",
+      "adultNote": "Give the child a clipboard or firm book, then invite quiet pointing to one outside detail before writing.",
+      "takeHomeLine": "Save this page as the first errand slip for a small Acorn Avenue travel story.",
+      "materials": [
+        "Printed errand quest page",
+        "Pencil",
+        "Colored pencil set",
+        "Clipboard or firm book"
+      ],
+      "pageSections": [
+        {
+          "heading": "Window Clue",
+          "lines": [
+            "The road sign shape looks like ____________________________.",
+            "The cloud clue for Acorn Avenue is ____________________________.",
+            "The color I notice most is ____________________________."
+          ]
+        },
+        {
+          "heading": "Errand List",
+          "lines": [
+            "The acorn clerk needs ____________________________.",
+            "The tiny office drawer holds ____________________________.",
+            "The most important note says ____________________________."
+          ]
+        },
+        {
+          "heading": "Next Stop",
+          "lines": [
+            "First, the clerk checks ____________________________.",
+            "Next, the helper carries ____________________________.",
+            "The errand ends at ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "button-bakery-rest-stop-route",
+      "title": "Button Bakery Rest Stop Route",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "travelUse": "rest stop",
+      "setupMinutes": "6 minutes",
+      "travelMode": "Rest stop table",
+      "kidDirection": "Draw a simple bakery path, then write three clear clues that help the button cart arrive.",
+      "adultNote": "Use the table time for one short map chat, then let the child finish the fill-ins at their own pace.",
+      "takeHomeLine": "Save this route page as the map piece for a Button Bakery travel story.",
+      "materials": [
+        "Printed bakery route page",
+        "Pencil",
+        "Two crayons",
+        "Small paper napkin for a crumb map"
+      ],
+      "pageSections": [
+        {
+          "heading": "Bakery Path",
+          "lines": [
+            "The button cart starts beside ____________________________.",
+            "The crumb trail turns near ____________________________.",
+            "The bakery counter waits by ____________________________."
+          ]
+        },
+        {
+          "heading": "Map Mixup",
+          "lines": [
+            "The mixed-up map points toward ____________________________.",
+            "The clearest clue on the table is ____________________________.",
+            "The cart helper asks about ____________________________."
+          ]
+        },
+        {
+          "heading": "Clear Route",
+          "lines": [
+            "First, roll past ____________________________.",
+            "Next, look for ____________________________.",
+            "Last, set the button tray on ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "spoon-ferry-hotel-lunchbox-log",
+      "title": "Spoon Ferry Hotel Lunchbox Log",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "travelUse": "hotel table",
+      "setupMinutes": "5 minutes",
+      "travelMode": "Hotel desk",
+      "kidDirection": "Choose a lunchbox cargo, label the harbor stops, and write the ferry's final note.",
+      "adultNote": "Set out only one pencil and two colors so the hotel desk stays simple and easy to reset.",
+      "takeHomeLine": "Save this harbor log as the middle scene of a Spoon Ferry travel story.",
+      "materials": [
+        "Printed harbor log page",
+        "Pencil",
+        "Blue crayon",
+        "Folded index card for a lunchbox label"
+      ],
+      "pageSections": [
+        {
+          "heading": "Lunchbox Cargo",
+          "lines": [
+            "The spoon ferry carries ____________________________.",
+            "The lunchbox label says ____________________________.",
+            "The snack clue smells like ____________________________."
+          ]
+        },
+        {
+          "heading": "Harbor Stops",
+          "lines": [
+            "Stop one is the ____________________________ dock.",
+            "Stop two has a ____________________________ sign.",
+            "Stop three waits beside ____________________________."
+          ]
+        },
+        {
+          "heading": "Ferry Note",
+          "lines": [
+            "The ferry helper notices ____________________________.",
+            "The smoothest route goes around ____________________________.",
+            "The final harbor note says ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rain-boot-visit-day-route-card",
+      "title": "Rain Boot Visit-Day Route Card",
+      "worldSlug": "rain-boot-route-rangers",
+      "ageBand": "7-9",
+      "travelUse": "relative visit",
+      "setupMinutes": "5 minutes",
+      "travelMode": "Visit-day table",
+      "kidDirection": "Mark three puddle stops, pick a helpful boot ranger, and write the route card ending.",
+      "adultNote": "Let cousins or siblings each name one pretend puddle, then keep the writing page with one child at a time.",
+      "takeHomeLine": "Save this route card as a finished Rain Boot Rangers travel page.",
+      "materials": [
+        "Printed route card page",
+        "Pencil",
+        "Green crayon",
+        "Three paper puddle markers"
+      ],
+      "pageSections": [
+        {
+          "heading": "Puddle Stops",
+          "lines": [
+            "Puddle stop one is shaped like ____________________________.",
+            "Puddle stop two is beside ____________________________.",
+            "Puddle stop three reflects ____________________________."
+          ]
+        },
+        {
+          "heading": "Boot Ranger",
+          "lines": [
+            "My boot ranger carries ____________________________.",
+            "The ranger checks the route card for ____________________________.",
+            "The kind reminder on the card says ____________________________."
+          ]
+        },
+        {
+          "heading": "Route Ending",
+          "lines": [
+            "First, step around ____________________________.",
+            "Next, follow the dry edge near ____________________________.",
+            "The visit-day route ends with ____________________________."
+          ]
+        }
+      ]
+    }
+  ]
+}

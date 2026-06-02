@@ -9,6 +9,7 @@ import {
   validateCheckoutReadiness,
   validateManifestWorldAssets,
   validatePackSource,
+  validateRoadTripPackSource,
   validateSeasonBundleSource,
 } from './product-artifact-policy.mjs'
 import { starterWorlds } from './starter-worlds.mjs'
@@ -22,22 +23,26 @@ const miniUnitsFile = resolve(root, 'content', 'mini-units', 'batch3-mini-units.
 const batch4ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch4-world-images.json')
 const batch7ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch7-product-images.json')
 const batch10ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch10-product-images.json')
+const batch11ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch11-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
 const classroomLicenseSourceFile = resolve(root, 'content', 'product-artifacts', 'classroom-story-license-pack.json')
 const birthdayPartySourceFile = resolve(root, 'content', 'product-artifacts', 'birthday-party-story-quest-kit.json')
+const roadTripSourceFile = resolve(root, 'content', 'product-artifacts', 'road-trip-story-quest-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
 const batch4ImagesBatchId = '2026-06-02-batch4'
 const batch7ProductImagesBatchId = '2026-06-02-batch7-product-images'
 const batch10ProductImagesBatchId = '2026-06-02-batch10-product-images'
+const batch11ProductImagesBatchId = '2026-06-02-batch11-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
 const classroomLicenseBatchId = '2026-06-02-batch9'
 const birthdayPartyBatchId = '2026-06-02-batch10'
+const roadTripBatchId = '2026-06-02-batch11'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -529,6 +534,50 @@ function validateBatch10ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch11ProductImage(image) {
+  const label = `2026-06-02-batch11-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(image.slug === 'road-trip-story-quest-pack', `${label}.slug must be road-trip-story-quest-pack.`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch11/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch11/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch11/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'no text',
+    'no letters',
+    'no logos',
+    'no watermark',
+    'no branded characters',
+    'no scary harm',
+    'no weapons',
+    'no people',
+    'no faces',
+    'no animals',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar.seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -574,6 +623,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'birthday-party-story-quest-kit': {
       title: 'Birthday Party Story Quest Kit',
       pricePoint: '$19',
+      minIncludedPages: 9,
+      minUseCases: 4,
+      minParentSteps: 5,
+      maxWorldSlugs: 10,
+    },
+    'road-trip-story-quest-pack': {
+      title: 'Road Trip Story Quest Pack',
+      pricePoint: '$17',
       minIncludedPages: 9,
       minUseCases: 4,
       minParentSteps: 5,
@@ -756,12 +813,23 @@ expect(Array.isArray(batch10ProductImages.images), 'batch10 product image manife
 expect(batch10ProductImages.images.length === 1, `Expected 1 Batch 10 product image, found ${batch10ProductImages.images.length}.`)
 validateBatch10ProductImage(batch10ProductImages.images[0])
 
+expect(existsSync(batch11ProductImagesFile), `Missing Batch 11 product image manifest: ${batch11ProductImagesFile}`)
+const batch11ProductImages = readJson(batch11ProductImagesFile)
+expect(
+  batch11ProductImages.batchId === batch11ProductImagesBatchId,
+  `batch11 product image manifest batchId must be ${batch11ProductImagesBatchId}.`,
+)
+expect(batch11ProductImages.generatedAt === '2026-06-02', 'batch11 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch11ProductImages.images), 'batch11 product image manifest images must be an array.')
+expect(batch11ProductImages.images.length === 1, `Expected 1 Batch 11 product image, found ${batch11ProductImages.images.length}.`)
+validateBatch11ProductImage(batch11ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 4, `Expected 4 product records, found ${products.products.length}.`)
+expect(products.products.length === 5, `Expected 5 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -769,6 +837,7 @@ for (const requiredProductSlug of [
   'homeschool-season-story-bundle',
   'classroom-story-license-pack',
   'birthday-party-story-quest-kit',
+  'road-trip-story-quest-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -1012,6 +1081,66 @@ for (const asset of birthdayPartyArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Birthday Party Story Quest Kit copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(roadTripSourceFile), `Missing Batch 11 Road Trip pack source file: ${roadTripSourceFile}`)
+const roadTripSource = readJson(roadTripSourceFile)
+expect(
+  roadTripSource.batchId === roadTripBatchId,
+  `Road Trip pack source batchId must be ${roadTripBatchId}.`,
+)
+const roadTripProduct = products.products.find((product) => product.slug === 'road-trip-story-quest-pack')
+expect(roadTripProduct, 'Missing Road Trip product record for Batch 11 artifact validation.')
+const roadTripSourceErrors = validateRoadTripPackSource(roadTripSource, roadTripProduct, worldAgeBands)
+expect(
+  roadTripSourceErrors.length === 0,
+  `Road Trip Story Quest Pack source failed validation:\n${roadTripSourceErrors.join('\n')}`,
+)
+const roadTripExpectedPdfPages = roadTripSource.quests.length + 4
+const roadTripArtifactStatus = inspectArtifactFiles(root, roadTripSource.artifact, {
+  expectedPdfPages: roadTripExpectedPdfPages,
+})
+expect(
+  roadTripArtifactStatus.valid,
+  `Road Trip Story Quest Pack artifacts failed validation:\n${roadTripArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  roadTripArtifactStatus.files.pdf.size > 100_000,
+  `Road Trip Story Quest Pack PDF artifact is unexpectedly small: ${roadTripArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  roadTripArtifactStatus.files.pdf.pageCount === roadTripExpectedPdfPages,
+  `Road Trip Story Quest Pack PDF artifact must have ${roadTripExpectedPdfPages} pages.`,
+)
+expect(
+  roadTripArtifactStatus.files.zip.size > roadTripArtifactStatus.files.pdf.size,
+  'Road Trip Story Quest Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const roadTripCheckoutErrors = validateCheckoutReadiness(roadTripProduct, roadTripArtifactStatus)
+expect(
+  roadTripCheckoutErrors.length === 0,
+  `Road Trip Story Quest Pack checkout readiness failed validation:\n${roadTripCheckoutErrors.join('\n')}`,
+)
+const roadTripArtifactManifest = readJson(resolve(root, roadTripSource.artifact.manifestPath))
+expect(
+  roadTripArtifactManifest.sourcePageCount === roadTripSource.quests.length,
+  'Road Trip Story Quest Pack artifact manifest sourcePageCount must match source quests.',
+)
+expect(
+  Array.isArray(roadTripArtifactManifest.files.assets),
+  'Road Trip Story Quest Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  roadTripArtifactManifest.files.assets.length === roadTripSource.worldSlugs.length,
+  'Road Trip Story Quest Pack artifact manifest must include one copied local image per product world.',
+)
+const roadTripManifestAssetErrors = validateManifestWorldAssets(roadTripSource, roadTripArtifactManifest)
+expect(
+  roadTripManifestAssetErrors.length === 0,
+  `Road Trip Story Quest Pack artifact manifest image coverage failed validation:\n${roadTripManifestAssetErrors.join('\n')}`,
+)
+for (const asset of roadTripArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Road Trip Story Quest Pack copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 4 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 5 product artifacts.`,
 )

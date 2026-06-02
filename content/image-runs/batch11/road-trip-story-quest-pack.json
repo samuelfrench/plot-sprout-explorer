@@ -1,0 +1,18 @@
+{
+  "slug": "road-trip-story-quest-pack",
+  "prompt": "family-friendly flat lay, two blank white papers, colored pencils, simple paper road cutouts, warm daylight, polished kids product illustration, blank white paper only, no text, no letters, no numbers, no labels, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26061124,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch11/road-trip-story-quest-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch11/road-trip-story-quest-pack.webp",
+  "manifest": "content/image-queue/2026-06-02-batch11-product-images.json",
+  "title": "Road Trip Story Quest Pack product image"
+}

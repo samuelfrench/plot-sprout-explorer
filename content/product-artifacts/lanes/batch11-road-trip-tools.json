@@ -1,0 +1,164 @@
+{
+  "batchId": "2026-06-02-batch11",
+  "generatedAt": "2026-06-02",
+  "productSlug": "road-trip-story-quest-pack",
+  "lane": "road-trip-tools",
+  "cover": {
+    "kicker": "Adult guide for printable travel writing",
+    "headline": "Road Trip Story Quest Pack",
+    "subhead": "No-screen routines for car passengers, rest stops, hotels, waiting rooms, and family visits.",
+    "included": [
+      "Before-you-go print checklist",
+      "Passenger-only car setup notes",
+      "Rest stop story reset routine",
+      "Hotel quiet-time writing routine",
+      "Waiting room prompt routine",
+      "Family visit story bridge",
+      "Clipboard and pencil packing list",
+      "Route detail noticing prompts",
+      "Short-session timing guide",
+      "Older passenger helper roles",
+      "Eight travel extension activities",
+      "Six optional group share cards"
+    ]
+  },
+  "setupGuide": {
+    "beforeYouGo": [
+      "Print one packet per child plus two spare packets, then clip each set in order: route map, quest page, draft page, extension page, and share card.",
+      "Pack pencils, colored pencils, two clipboards, a small folder, sticky notes, and a plain envelope for loose cards.",
+      "Choose three prompts before departure so passengers can start without sorting papers in a moving vehicle.",
+      "Write only first names or initials on folders, and avoid addresses, phone numbers, room numbers, or private family details.",
+      "Tell children they may write, draw, dictate to a non-driving adult, or save a page for the next stop."
+    ],
+    "inTheCar": [
+      "Give reading and timing jobs only to a non-driving adult or an older passenger who is comfortable helping.",
+      "Keep all pages in one seat-back folder so passengers can reach them without interrupting the trip flow.",
+      "Use short passenger rounds: notice three outside details, circle one prompt, then add one sentence or sketch.",
+      "If the vehicle gets bumpy, pause writing and switch to quiet oral planning until the next stop.",
+      "When only one adult is present, prepare choices before leaving and save adult-led sharing for parked moments."
+    ],
+    "restStopHotel": [
+      "At rest stops, use five minutes for movement first, then two minutes for a quick setting note before getting back in the vehicle.",
+      "Keep writing pages on clipboards or a clean table so snack spills do not reach the packet.",
+      "In hotels, set a quiet page basket on a desk or nightstand with pencils already sharpened.",
+      "Use lobby, breakfast area, or room downtime for revision jobs that need adult attention.",
+      "Before sleep, ask each child to mark the page they want to continue tomorrow and tuck it back into the folder."
+    ],
+    "visitDay": [
+      "Before visiting relatives, choose prompts that use places, objects, and memories in broad terms, not private personal details.",
+      "Invite relatives to offer simple travel words, place details, or old-fashioned object names without making anyone share more than they want.",
+      "Use the visit as a listening day if writing energy is low: children can collect three detail words and draft later.",
+      "After the visit, help each child turn one kind moment, meal detail, or household object into a story setting note."
+    ]
+  },
+  "travelRoutines": [
+    {
+      "name": "Passenger Window Noticing Loop",
+      "bestFor": "Back-seat passengers during a calm daytime stretch with a non-driving helper available.",
+      "steps": [
+        "Before the vehicle moves, choose one page and circle the setting box passengers will fill later.",
+        "A non-driving helper invites passengers to silently notice one color, one shape, and one moving detail outside.",
+        "Passengers add the three details as words or sketches when their hands feel steady.",
+        "At the next stop, each child turns one detail into a first sentence for the quest page."
+      ]
+    },
+    {
+      "name": "Mile-Marker Mini Quest",
+      "bestFor": "Long highway stretches when children need a tiny task that ends quickly.",
+      "steps": [
+        "Before departure, tuck three small marker cards into each packet: place, helper, and surprise.",
+        "A passenger picks one card at a time and gives everyone two quiet minutes to add a word or sketch.",
+        "After all three cards are used, children draw a line connecting the words in story order.",
+        "During the next parked break, adults help turn the three notes into a four-sentence mini quest."
+      ]
+    },
+    {
+      "name": "Rest Stop Story Reset",
+      "bestFor": "Parking lots, picnic tables, travel centers, and outdoor benches after everyone has moved around.",
+      "steps": [
+        "Let children stretch, use the restroom, and drink water before asking for any writing.",
+        "Give each child one sticky note and ask for one setting detail from the stop.",
+        "Place the sticky note on the draft page beside the sentence where it belongs.",
+        "Set a three-minute timer for adding that detail before packing the folder again."
+      ]
+    },
+    {
+      "name": "Hotel Desk Draft Time",
+      "bestFor": "Evening hotel downtime, rainy afternoons, or early mornings before departure.",
+      "steps": [
+        "Place the packet, pencils, and one extension page on a clean desk or table.",
+        "Ask each child to choose a finish job: title, setting sentence, helper choice, or ending.",
+        "Work quietly for ten minutes while an adult answers spelling or order questions.",
+        "Close by circling one sentence to keep and one blank to finish on the next travel day."
+      ]
+    },
+    {
+      "name": "Relative Visit Story Bridge",
+      "bestFor": "Visits with grandparents, cousins, aunts, uncles, or family friends.",
+      "steps": [
+        "Before the visit, choose one broad prompt about a kitchen, porch, yard, shelf, or travel bag.",
+        "Ask a relative for one ordinary object word or place detail the child may borrow for fiction.",
+        "Children write the borrowed word in a detail bank without recording private stories or personal labels.",
+        "After the visit, each child uses the borrowed word in one new setting or character-choice sentence."
+      ]
+    }
+  ],
+  "extensionActivities": [
+    {
+      "title": "Route Shape Setting Map",
+      "time": "12 minutes",
+      "direction": "Children draw the trip route as a simple line, then place three invented story stops along it with one detail at each stop.",
+      "writingSkill": "setting sequence"
+    },
+    {
+      "title": "Road Sign Noun Swap",
+      "time": "8 minutes",
+      "direction": "At a parked stop, children list five nouns seen nearby and swap two plain nouns for more exact ones.",
+      "writingSkill": "precise nouns"
+    },
+    {
+      "title": "Snack Color Detail List",
+      "time": "10 minutes",
+      "direction": "Before snacks are opened, children name three colors and two textures they can use in a travel scene.",
+      "writingSkill": "sensory detail"
+    },
+    {
+      "title": "Waiting Room Quiet Draft",
+      "time": "15 minutes",
+      "direction": "In a waiting room, children choose one low-noise action for a character and write three calm sentences about what changes next.",
+      "writingSkill": "action and result"
+    },
+    {
+      "title": "Hotel Room Object Sort",
+      "time": "12 minutes",
+      "direction": "Children pick three ordinary room objects and sort them into setting detail, helpful item, or ending clue.",
+      "writingSkill": "story structure"
+    },
+    {
+      "title": "Postcard Without an Address",
+      "time": "15 minutes",
+      "direction": "Children write a pretend postcard from an invented travel stop using no real address, then add one story problem and one kind ending.",
+      "writingSkill": "audience and purpose"
+    },
+    {
+      "title": "Relative Object Word Bank",
+      "time": "10 minutes",
+      "direction": "With permission, children ask a relative for three ordinary object words and use one in a fictional scene.",
+      "writingSkill": "detail gathering"
+    },
+    {
+      "title": "Detour Ending Card",
+      "time": "12 minutes",
+      "direction": "Children imagine a small change in the plan, then write two possible endings: one practical ending and one funny ending.",
+      "writingSkill": "ending choice"
+    }
+  ],
+  "groupShareCards": [
+    "At a stop or indoors, read one travel detail you added and name the sense it uses.",
+    "Show one map mark and explain what could happen there in the next scene.",
+    "Ask a non-driving passenger or adult to read one sentence for you while you point to the matching sketch.",
+    "Share one object word you borrowed from the trip and tell how it helps the story.",
+    "Choose one listener to suggest a clearer noun, action, or setting detail for your next revision.",
+    "Pass today and take the listener role: notice one strong detail from another person's story."
+  ]
+}

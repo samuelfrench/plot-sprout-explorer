@@ -206,6 +206,54 @@
         "Let children point, draw, dictate, write, or pass during optional sharing.",
         "Send the folder home with one clear finish step if the story is not complete."
       ]
+    },
+    {
+      "slug": "road-trip-story-quest-pack",
+      "title": "Road Trip Story Quest Pack",
+      "pricePoint": "$17",
+      "status": "checkout_pending",
+      "headline": "A printable travel writing kit for car rides, rest stops, hotel desks, and visit days.",
+      "summary": "Eight travel-friendly story quests turn route watching, snack breaks, hotel tables, and family visits into short finished writing pages.",
+      "heroImage": "images/plotsprout/batch11/road-trip-story-quest-pack.jpg",
+      "ctaLabel": "Request road trip pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Road%20Trip%20Story%20Quest%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static road trip pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "acorn-avenue-errand-office",
+        "button-bakery-map-mixup",
+        "spoon-ferry-lunchbox-harbor",
+        "rain-boot-route-rangers",
+        "rain-gauge-railway",
+        "tidepool-timekeepers-lab",
+        "seed-library-map-room",
+        "compass-craft-academy"
+      ],
+      "includedPages": [
+        "Eight printable road trip quest pages",
+        "Before-you-go adult setup checklist",
+        "Passenger prompt routine",
+        "Rest stop writing routine",
+        "Hotel desk finish routine",
+        "Visit-day share routine",
+        "Waiting room micro-quest routine",
+        "Eight travel extension activity cards",
+        "Six optional group-share cards",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A car passenger activity that does not require a screen",
+        "A rest stop or hotel table writing station",
+        "A homeschool travel journal alternative with concrete story choices",
+        "A waiting-room or visit-day writing packet for reluctant writers"
+      ],
+      "parentSteps": [
+        "Print the pack before leaving and clip one quest set together for each child.",
+        "Use only passenger-safe prompts in the car and save longer writing for stops.",
+        "Let the child point, circle, sketch, dictate, or write one line before asking for more.",
+        "Put finished pages into the travel folder before changing locations.",
+        "Use one share card after the car is parked, at a table, or during a calm visit."
+      ]
     }
   ]
 }

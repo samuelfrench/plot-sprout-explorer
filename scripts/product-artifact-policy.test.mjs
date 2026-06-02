@@ -13,6 +13,7 @@ import {
   validateClassroomLicenseSource,
   validateManifestWorldAssets,
   validatePackSource,
+  validateRoadTripPackSource,
   validateSeasonBundleSource,
   writeStoredZip,
 } from './product-artifact-policy.mjs'
@@ -407,6 +408,110 @@ function validBirthdayPartySource() {
   }
 }
 
+function roadTripQuest(id, worldSlug, ageBand) {
+  return {
+    id,
+    title: id.split('-').join(' '),
+    worldSlug,
+    ageBand,
+    travelUse: 'Rest stop table writing station with a short folder page.',
+    setupMinutes: '5 minutes',
+    travelMode: 'Rest stop table',
+    kidDirection: 'Choose one travel detail and write one sentence for the folder.',
+    adultNote: 'Read choices aloud after stopping and let children point before writing.',
+    materials: ['printed quest page', 'pencils', 'folder', 'route card'],
+    pageSections: ['Place', 'Route', 'Ending'].map((heading) => ({
+      heading,
+      lines: [
+        `${heading} detail: ____________________________`,
+        `${heading} choice: ____________________________`,
+        `${heading} sentence: ____________________________`,
+      ],
+    })),
+    takeHomeLine: 'Save this page in the travel folder as a finished quest start.',
+  }
+}
+
+function validRoadTripSource() {
+  const worldSlugs = [
+    'acorn-avenue-errand-office',
+    'button-bakery-map-mixup',
+    'spoon-ferry-lunchbox-harbor',
+    'rain-boot-route-rangers',
+    'rain-gauge-railway',
+    'tidepool-timekeepers-lab',
+    'seed-library-map-room',
+    'compass-craft-academy',
+  ]
+  const worldAges = new Map([
+    ['acorn-avenue-errand-office', '7-9'],
+    ['button-bakery-map-mixup', '7-9'],
+    ['spoon-ferry-lunchbox-harbor', '7-9'],
+    ['rain-boot-route-rangers', '7-9'],
+    ['rain-gauge-railway', '8-10'],
+    ['tidepool-timekeepers-lab', '8-10'],
+    ['seed-library-map-room', '8-10'],
+    ['compass-craft-academy', '10-11'],
+  ])
+
+  return {
+    source: {
+      batchId: '2026-06-02-batch11',
+      generatedAt: '2026-06-02',
+      productSlug: 'road-trip-story-quest-pack',
+      title: 'Road Trip Story Quest Pack',
+      pricePoint: '$17',
+      audience: 'Parents and homeschool families planning adult-guided travel writing for ages 7-11.',
+      sessionLength: '8 printable travel quests plus adult setup tools',
+      safetyNote: safety,
+      artifact: {
+        pdfPath: 'product-build/road-trip-story-quest-pack/Road-Trip-Story-Quest-Pack.pdf',
+        zipPath: 'product-build/road-trip-story-quest-pack/road-trip-story-quest-pack.zip',
+        sourceHtmlPath: 'product-build/road-trip-story-quest-pack/source/road-trip-story-quest-pack.html',
+        manifestPath: 'product-build/road-trip-story-quest-pack/manifest.json',
+      },
+      worldSlugs,
+      cover: {
+        kicker: 'Printable road trip writing kit',
+        headline: 'Road Trip Story Quest Pack',
+        subhead: 'Eight short quests for travel stops, hotel desks, and visit days.',
+        included: [
+          '8 travel quests',
+          'Adult setup guide',
+          'Before-you-go checklist',
+          'Passenger prompt routine',
+          'Rest stop routine',
+          'Hotel desk routine',
+          'Visit-day routine',
+          'Share cards',
+          'Source HTML',
+          'ZIP artifact',
+        ],
+      },
+      setupGuide: {
+        beforeYouGo: ['Print packets.', 'Clip pages.', 'Pack pencils.', 'Choose first quest.', 'Store finished pages.'],
+        inTheCar: ['Use passenger prompts.', 'Circle before writing.', 'Pause for turns.', 'Save loose pages.', 'Finish at a stop.'],
+        restStopHotel: ['Pick a table.', 'Read choices aloud.', 'Write three lines.', 'Add one color.', 'Pack the folder.'],
+        visitDay: ['Choose one card.', 'Read one line.', 'Invite a listener.', 'Save the page.'],
+      },
+      travelRoutines: Array.from({ length: 5 }, (_, index) => ({
+        name: `Routine ${index + 1}`,
+        bestFor: 'Rest stop or hotel table.',
+        steps: ['Set page.', 'Pick card.', 'Write line.', 'Folder page.'],
+      })),
+      extensionActivities: Array.from({ length: 8 }, (_, index) => ({
+        title: `Extension ${index + 1}`,
+        time: '10 minutes',
+        direction: 'Add one concrete detail to the travel quest page.',
+        writingSkill: 'setting detail',
+      })),
+      groupShareCards: ['Read one line.', 'Show a map.', 'Ask an adult.', 'Name a card.', 'Pick a detail.', 'Pass and listen.'],
+      quests: worldSlugs.map((worldSlug, index) => roadTripQuest(`travel-quest-${index + 1}`, worldSlug, worldAges.get(worldSlug))),
+    },
+    worldAges,
+  }
+}
+
 describe('product artifact policy', () => {
   it('validates the Rainy Day pack source against the product record and required world coverage', () => {
     const product = {
@@ -699,6 +804,87 @@ describe('product artifact policy', () => {
 
     expect(validateBirthdayPartyKitSource(source, product, worldAges)).toContain(
       'quests[0].pageSections[0].lines[0] must include a writable blank.',
+    )
+  })
+
+  it('validates the Road Trip Story Quest Pack source with matching world age bands and writable quest blanks', () => {
+    const { source, worldAges } = validRoadTripSource()
+    const product = {
+      slug: 'road-trip-story-quest-pack',
+      title: 'Road Trip Story Quest Pack',
+      pricePoint: '$17',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateRoadTripPackSource(source, product, worldAges)).toEqual([])
+  })
+
+  it('returns Road Trip validation errors instead of throwing when worldSlugs is not an array', () => {
+    const { source, worldAges } = validRoadTripSource()
+    source.worldSlugs = { bad: 'shape' }
+    const product = {
+      slug: 'road-trip-story-quest-pack',
+      title: 'Road Trip Story Quest Pack',
+      pricePoint: '$17',
+      status: 'checkout_pending',
+      worldSlugs: [],
+    }
+
+    expect(() => validateRoadTripPackSource(source, product, worldAges)).not.toThrow()
+    expect(validateRoadTripPackSource(source, product, worldAges)).toEqual(
+      expect.arrayContaining(['worldSlugs must be an array.']),
+    )
+  })
+
+  it('rejects Road Trip quests whose age band does not match the referenced world', () => {
+    const { source, worldAges } = validRoadTripSource()
+    source.quests[7].ageBand = '9-11'
+    const product = {
+      slug: 'road-trip-story-quest-pack',
+      title: 'Road Trip Story Quest Pack',
+      pricePoint: '$17',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateRoadTripPackSource(source, product, worldAges)).toContain(
+      'quests[7].ageBand must match compass-craft-academy ageBand 10-11.',
+    )
+  })
+
+  it('rejects Road Trip quest lines that do not provide writable blanks', () => {
+    const { source, worldAges } = validRoadTripSource()
+    source.quests[0].pageSections[0].lines[0] = 'The route card starts at the window.'
+    const product = {
+      slug: 'road-trip-story-quest-pack',
+      title: 'Road Trip Story Quest Pack',
+      pricePoint: '$17',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateRoadTripPackSource(source, product, worldAges)).toContain(
+      'quests[0].pageSections[0].lines[0] must include a writable blank.',
+    )
+  })
+
+  it('rejects Road Trip adult tools that ask a driver to facilitate', () => {
+    const { source, worldAges } = validRoadTripSource()
+    source.setupGuide.inTheCar[0] = 'Ask the driver to read the first prompt while driving.'
+    const product = {
+      slug: 'road-trip-story-quest-pack',
+      title: 'Road Trip Story Quest Pack',
+      pricePoint: '$17',
+      status: 'checkout_pending',
+      worldSlugs: source.worldSlugs,
+    }
+
+    expect(validateRoadTripPackSource(source, product, worldAges)).toEqual(
+      expect.arrayContaining([
+        'setupGuide includes driver-facing facilitation language.',
+        'Road Trip Story Quest Pack source includes driver-facing facilitation language.',
+      ]),
     )
   })
 })

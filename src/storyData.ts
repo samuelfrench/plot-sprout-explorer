@@ -302,6 +302,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Eight party-table writing quests with adult setup tools, routines, extensions, and take-home folder steps.',
     note: 'No checkout, accounts, uploads, or public publishing are enabled.',
   },
+  {
+    slug: 'road-trip-story-quest-pack',
+    title: 'Road Trip Story Quest Pack',
+    pricePoint: '$17',
+    description:
+      'Eight travel-friendly writing quests for car passengers, rest stops, hotel desks, and visit-day tables.',
+    note: 'No checkout, accounts, uploads, or public publishing are enabled.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

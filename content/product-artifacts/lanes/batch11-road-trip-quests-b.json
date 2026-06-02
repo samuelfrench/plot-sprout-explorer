@@ -1,0 +1,184 @@
+{
+  "batchId": "2026-06-02-batch11",
+  "generatedAt": "2026-06-02",
+  "productSlug": "road-trip-story-quest-pack",
+  "lane": "road-trip-quests-b",
+  "quests": [
+    {
+      "id": "rain-gauge-railway-route-report",
+      "title": "Rain Gauge Railway Route Report",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "travelUse": "car ride",
+      "setupMinutes": "5 minutes",
+      "travelMode": "Back-seat passenger",
+      "kidDirection": "Use the route map and weather clues to plan a tiny railway report with a clear first-next-final order.",
+      "adultNote": "Clip the page to a firm folder and invite the child to collect quiet window observations between writing lines.",
+      "takeHomeLine": "Save this route report as a travel-page starter for a weather railway story.",
+      "materials": [
+        "printed rain railway route page",
+        "pencil",
+        "clipboard or firm folder",
+        "window observation strip"
+      ],
+      "pageSections": [
+        {
+          "heading": "Route Map Clues",
+          "lines": [
+            "On the route map, the rain-gauge station is near ____________________.",
+            "A window detail that could become a cloud note is ____________________.",
+            "The tiny railway should carry the sample toward ____________________."
+          ]
+        },
+        {
+          "heading": "Weather Sequence",
+          "lines": [
+            "First, the gauge number shows ____________________.",
+            "Next, the railway switches toward ____________________.",
+            "Finally, the garden report explains ____________________."
+          ]
+        },
+        {
+          "heading": "Revision And Share",
+          "lines": [
+            "One vague travel word I can replace is ____________________.",
+            "The clearer detail I will add is ____________________.",
+            "A kind line I can share later is ____________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "tidepool-timekeepers-rest-stop-log",
+      "title": "Tidepool Timekeepers Rest Stop Log",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "travelUse": "rest stop",
+      "setupMinutes": "6 minutes",
+      "travelMode": "Rest stop table",
+      "kidDirection": "Compare three tidepool lab notes, choose the most useful observation, and write what the timekeepers should check next.",
+      "adultNote": "Use one short table session and let the child point to the strongest clue before drafting the ending.",
+      "takeHomeLine": "Save this lab log as a careful-observation page from the road trip.",
+      "materials": [
+        "printed tidepool lab log",
+        "pencil",
+        "three pebble clue cards",
+        "small envelope for finished notes"
+      ],
+      "pageSections": [
+        {
+          "heading": "Lab Observation Stop",
+          "lines": [
+            "The first tidepool note measures ____________________.",
+            "The shell-shadow detail I notice is ____________________.",
+            "The pebble notebook adds ____________________."
+          ]
+        },
+        {
+          "heading": "Compare The Clues",
+          "lines": [
+            "The notes match because ____________________.",
+            "The notes differ when ____________________.",
+            "The timekeepers should check ____________________ before deciding."
+          ]
+        },
+        {
+          "heading": "Ending Revision",
+          "lines": [
+            "My first ending idea is ____________________.",
+            "A stronger ending detail is ____________________.",
+            "One kind question for a family reader is ____________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "seed-library-hotel-map-catalog",
+      "title": "Seed Library Hotel Map Catalog",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "travelUse": "hotel table",
+      "setupMinutes": "5 minutes",
+      "travelMode": "Hotel desk",
+      "kidDirection": "Turn a folded route map into three seed catalog clues and arrange them into a beginning, middle, and ending.",
+      "adultNote": "Set out the page with two quiet color choices and ask the child to circle the clue that should begin the story.",
+      "takeHomeLine": "Save this map catalog page as a take-home seed-library scene plan.",
+      "materials": [
+        "printed seed library map page",
+        "pencil",
+        "two colored pencils",
+        "folded route-map scrap"
+      ],
+      "pageSections": [
+        {
+          "heading": "Map Room Setup",
+          "lines": [
+            "The seed drawer label says ____________________.",
+            "The folded route map shows ____________________.",
+            "A garden observation written on the edge is ____________________."
+          ]
+        },
+        {
+          "heading": "Catalog Order",
+          "lines": [
+            "Beginning clue: ____________________.",
+            "Middle clue that changes the map: ____________________.",
+            "Ending clue for the next gardener: ____________________."
+          ]
+        },
+        {
+          "heading": "Polish The Page",
+          "lines": [
+            "One map detail I can make more exact is ____________________.",
+            "The sentence I want to revise is ____________________.",
+            "A kind sharing note for this page is ____________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "compass-craft-visit-day-route-map",
+      "title": "Compass Craft Visit-Day Route Map",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "travelUse": "relative visit",
+      "setupMinutes": "7 minutes",
+      "travelMode": "Visit-day table",
+      "kidDirection": "Design a story route with scene stops, revise the turning point, and prepare one polished line to share kindly.",
+      "adultNote": "Offer a quiet table window and let the child decide whether to read one finished line or simply save the page.",
+      "takeHomeLine": "Save this route map as the planning page for a longer Compass Craft Academy story.",
+      "materials": [
+        "printed compass route map",
+        "pencil",
+        "three scene-stop cards",
+        "colored thread or yarn piece"
+      ],
+      "pageSections": [
+        {
+          "heading": "Academy Route Plan",
+          "lines": [
+            "The first scene stop on my route is ____________________.",
+            "The middle stop should turn the story because ____________________.",
+            "The final stop shows the reader ____________________."
+          ]
+        },
+        {
+          "heading": "Scene Details",
+          "lines": [
+            "A craft-table object that matters is ____________________.",
+            "A map-room detail I will repeat is ____________________.",
+            "The route choice my hero explains is ____________________."
+          ]
+        },
+        {
+          "heading": "Revision And Kind Share",
+          "lines": [
+            "The line I will revise for clarity is ____________________.",
+            "My stronger version says ____________________.",
+            "One kind comment I can ask for is ____________________."
+          ]
+        }
+      ]
+    }
+  ]
+}
