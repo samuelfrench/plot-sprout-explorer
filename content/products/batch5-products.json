@@ -1110,6 +1110,130 @@
           "summary": "A revision ferry world for moving one sentence from vague to specific."
         }
       ]
+    },
+    {
+      "slug": "bookshop-story-bookmark-pack",
+      "title": "Bookshop Story Bookmark Pack",
+      "pricePoint": "$25",
+      "status": "checkout_pending",
+      "headline": "A printable bookmark pack that turns invented shelf clues into story starts.",
+      "summary": "Sixteen adult-led paper bookmarks help kids turn pretend bookshop details into short creative writing prompts.",
+      "heroImage": "images/plotsprout/batch26/bookshop-story-bookmark-pack.jpg",
+      "ctaLabel": "Request bookmark pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Bookshop%20Story%20Bookmark%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static bookshop story bookmark pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "acorn-avenue-errand-office",
+        "penny-path-compass-shop",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "compass-craft-academy",
+        "almost-invention-workshop",
+        "margin-note-market",
+        "binding-day-boardwalk",
+        "index-card-theater-club",
+        "clue-label-tower-museum",
+        "revision-river-ferry"
+      ],
+      "includedPages": [
+        "Sixteen printable story bookmarks",
+        "Adult setup guide",
+        "Bookshop safety notes",
+        "Shelf-clue story coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led bookmark formats",
+        "Ten take-home bookmark slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs a small printable prompt before a full story",
+        "A library, co-op, or tutoring table with screen-free bookmark writing pages",
+        "A family reading-corner activity where sketches can come before sentences",
+        "A reluctant-writer activity that separates one clue from a full draft",
+        "A take-home bookmark slip set for finishing one invented detail offline"
+      ],
+      "parentSteps": [
+        "Choose one bookmark format before the activity starts.",
+        "Set the paper, pencil, sketch, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one broad shelf detail into a make-believe story clue rather than recording private information.",
+        "Send home one bookmark slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post-office world for choosing one tiny place clue before drafting a first line."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A rolling library world for inventing a helpful character with one careful habit."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A weather-window world for turning one color, sound, or texture into a story clue."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A notice-board world for giving one small object a clear job in the story."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An errand-office world for arranging first, next, and final story steps."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "summary": "A compass-shop world for revising one sentence with a clearer direction detail."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A paper map-room world for assigning one invented shelf clue a useful story job."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A railway world for building a gentle sensory clue from one pattern or sound."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A quiet observatory world for naming the mood of one invented shelf corner."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass academy world for planning a bookmark path in three calm steps."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "summary": "A nearly useful invention world for turning a draft line into a clearer clue."
+        },
+        {
+          "slug": "margin-note-market",
+          "summary": "A margin-note market world for shaping one invented character choice."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A page-order boardwalk world for choosing which clue belongs first."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "summary": "A two-card theater world for using one prop clue to reveal character."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A label tower world for making one sensory clue easier for a reader to picture."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for moving one bookmark line from vague to specific."
+        }
+      ]
     }
   ]
 }

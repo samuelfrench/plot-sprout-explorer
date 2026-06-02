@@ -158,6 +158,7 @@ def manifest_jobs(path: Path, limit: int | None) -> list[dict[str, Any]]:
                 "outputWebp": item["outputWebp"],
                 "sidecar": item["sidecar"],
                 "seed": seed,
+                "negativePrompt": item.get("negativePrompt"),
                 "manifest": str(manifest_path.relative_to(ROOT)),
                 "title": item.get("title"),
                 "ageBand": item.get("ageBand"),
@@ -174,6 +175,81 @@ def outputs_exist(job: dict[str, Any]) -> bool:
     output_webp = ROOT / job["outputWebp"] if job.get("outputWebp") else None
     sidecar = ROOT / job["sidecar"]
     return output_jpeg.exists() and (output_webp is None or output_webp.exists()) and sidecar.exists()
+
+
+def generate_job(
+    pipe: StableDiffusionXLPipeline,
+    generator: torch.Generator,
+    job: dict[str, Any],
+    skip_existing: bool = False,
+) -> dict[str, Any] | None:
+    slug = job["slug"]
+    prompt = job["prompt"]
+    seed = job["seed"]
+    output_jpeg = ROOT / job["outputJpeg"]
+    output_webp = ROOT / job["outputWebp"] if job.get("outputWebp") else None
+    sidecar_path = ROOT / job["sidecar"]
+    negative_prompt = job.get("negativePrompt") or NEGATIVE_PROMPT
+    if skip_existing and outputs_exist(job):
+        print(f"Skipping {slug}; outputs already exist.")
+        return None
+
+    output_jpeg.parent.mkdir(parents=True, exist_ok=True)
+    if output_webp:
+        output_webp.parent.mkdir(parents=True, exist_ok=True)
+    sidecar_path.parent.mkdir(parents=True, exist_ok=True)
+    generator.manual_seed(seed)
+    start = time.time()
+    print(f"Generating {slug} ({WIDTH}x{HEIGHT}, {STEPS} steps, seed {seed})")
+    image = pipe(
+        prompt=prompt,
+        negative_prompt=negative_prompt,
+        width=WIDTH,
+        height=HEIGHT,
+        num_inference_steps=STEPS,
+        guidance_scale=GUIDANCE,
+        generator=generator,
+    ).images[0]
+
+    image.save(output_jpeg, "JPEG", quality=JPEG_QUALITY, optimize=True)
+    if output_webp:
+        image.save(output_webp, "WEBP", quality=WEBP_QUALITY, method=6)
+
+    elapsed_seconds = round(time.time() - start, 2)
+    sidecar = {
+        "slug": slug,
+        "prompt": prompt,
+        "negativePrompt": negative_prompt,
+        "model": "sd_xl_base_1.0.safetensors",
+        "vae": SDXL_VAE_REPO,
+        "width": WIDTH,
+        "height": HEIGHT,
+        "steps": STEPS,
+        "guidance": GUIDANCE,
+        "seed": seed,
+        "jpegQuality": JPEG_QUALITY,
+        "webpQuality": WEBP_QUALITY if output_webp else None,
+        "outputJpeg": str(output_jpeg.relative_to(ROOT)),
+        "outputWebp": str(output_webp.relative_to(ROOT)) if output_webp else None,
+    }
+    if job.get("mode") == "starter":
+        sidecar["elapsedSeconds"] = elapsed_seconds
+        sidecar["output"] = str(output_jpeg.relative_to(ROOT))
+    for key in ["manifest", "title", "ageBand", "seoLane", "sourceWorldFile"]:
+        if job.get(key):
+            sidecar[key] = job[key]
+    sidecar_path.write_text(
+        json.dumps(
+            sidecar,
+            indent=2,
+        )
+        + "\n"
+    )
+    print(f"Saved {output_jpeg}")
+    if output_webp:
+        print(f"Saved {output_webp}")
+    print(f"Saved {sidecar_path}")
+    return sidecar
 
 
 def main() -> None:
@@ -193,71 +269,7 @@ def main() -> None:
     generator = torch.Generator(device="cuda")
 
     for job in jobs:
-        slug = job["slug"]
-        prompt = job["prompt"]
-        seed = job["seed"]
-        output_jpeg = ROOT / job["outputJpeg"]
-        output_webp = ROOT / job["outputWebp"] if job.get("outputWebp") else None
-        sidecar_path = ROOT / job["sidecar"]
-        if args.skip_existing and outputs_exist(job):
-            print(f"Skipping {slug}; outputs already exist.")
-            continue
-
-        output_jpeg.parent.mkdir(parents=True, exist_ok=True)
-        if output_webp:
-            output_webp.parent.mkdir(parents=True, exist_ok=True)
-        sidecar_path.parent.mkdir(parents=True, exist_ok=True)
-        generator.manual_seed(seed)
-        start = time.time()
-        print(f"Generating {slug} ({WIDTH}x{HEIGHT}, {STEPS} steps, seed {seed})")
-        image = pipe(
-            prompt=prompt,
-            negative_prompt=NEGATIVE_PROMPT,
-            width=WIDTH,
-            height=HEIGHT,
-            num_inference_steps=STEPS,
-            guidance_scale=GUIDANCE,
-            generator=generator,
-        ).images[0]
-
-        image.save(output_jpeg, "JPEG", quality=JPEG_QUALITY, optimize=True)
-        if output_webp:
-            image.save(output_webp, "WEBP", quality=WEBP_QUALITY, method=6)
-
-        elapsed_seconds = round(time.time() - start, 2)
-        sidecar = {
-            "slug": slug,
-            "prompt": prompt,
-            "negativePrompt": NEGATIVE_PROMPT,
-            "model": "sd_xl_base_1.0.safetensors",
-            "vae": SDXL_VAE_REPO,
-            "width": WIDTH,
-            "height": HEIGHT,
-            "steps": STEPS,
-            "guidance": GUIDANCE,
-            "seed": seed,
-            "jpegQuality": JPEG_QUALITY,
-            "webpQuality": WEBP_QUALITY if output_webp else None,
-            "outputJpeg": str(output_jpeg.relative_to(ROOT)),
-            "outputWebp": str(output_webp.relative_to(ROOT)) if output_webp else None,
-        }
-        if job.get("mode") == "starter":
-            sidecar["elapsedSeconds"] = elapsed_seconds
-            sidecar["output"] = str(output_jpeg.relative_to(ROOT))
-        for key in ["manifest", "title", "ageBand", "seoLane", "sourceWorldFile"]:
-            if job.get(key):
-                sidecar[key] = job[key]
-        sidecar_path.write_text(
-            json.dumps(
-                sidecar,
-                indent=2,
-            )
-            + "\n"
-        )
-        print(f"Saved {output_jpeg}")
-        if output_webp:
-            print(f"Saved {output_webp}")
-        print(f"Saved {sidecar_path}")
+        generate_job(pipe, generator, job, skip_existing=args.skip_existing)
 
 
 if __name__ == "__main__":

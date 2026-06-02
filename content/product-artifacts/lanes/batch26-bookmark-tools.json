@@ -1,0 +1,190 @@
+{
+  "laneId": "batch26-bookmark-tools",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the bookmark prompts, take-home slips, and adult guide before the session.",
+      "Set the adult-led rule: writers use paper bookmarks, pencils, sketches, and short story words only.",
+      "Choose one bookmark format before writers begin so every child has one clear writing path.",
+      "Say that a bookmark can hold a setting, character, object, sequence, revision, or sensory clue for a made-up story.",
+      "Keep the session screen-free, quiet, and focused on one small bookmark that can start a later story."
+    ],
+    "bookmarkSetup": [
+      "Place blank bookmarks, pencils, and take-home slips where the adult can see every page.",
+      "Set six labeled piles: setting bookmark, character bookmark, object bookmark, sequence bookmark, revision bookmark, and sensory bookmark.",
+      "Use broad bookshop words only, such as shelf, corner, table, sign, window, counter, or reading chair.",
+      "Leave space on each bookmark for a title, one sketch, three short lines, and one story sentence.",
+      "Keep extra bookmarks in an adult folder so the writing surface stays paper-only and simple."
+    ],
+    "shelfStoryCoaching": [
+      "Ask for one broad shelf place first, then turn it into a made-up setting with a mood word.",
+      "Ask for one invented character role who is looking for, carrying, noticing, or sorting something.",
+      "Ask for one pretend object from the shelf area and give it a story job.",
+      "Ask for first, next, and finally lines when the writer needs a clear beginning path.",
+      "Ask the writer to improve one sentence by adding a clearer look, sound, pattern, or texture word."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented names, role words, or blank labels for every person on the bookmark.",
+      "Use broad place words instead of named locations, room numbers, route details, schedules, or private routines.",
+      "Keep all bookmark writing fictional and paper-only; do not collect contact details or personal facts.",
+      "Keep finished bookmarks with the family adult, tutor, co-op adult, or classroom adult.",
+      "Check every take-home slip for identifying details before it leaves the adult-led table."
+    ],
+    "familyHandoff": [
+      "Send one finished bookmark and one blank take-home bookmark slip with each writer.",
+      "Tell family adults that five to nine quiet minutes is enough for one extra bookmark prompt.",
+      "Invite the family adult to ask for one shelf place, one invented character, and one pretend object.",
+      "Ask adults to praise one clear word, sketch, or sentence before suggesting one small revision.",
+      "Suggest keeping bookmarks together so the writer can reuse the strongest clue in a later printable story."
+    ],
+    "reset": [
+      "Collect unused bookmarks, slips, pencils, and broad place cards.",
+      "Check finished bookmarks for private details before they go home.",
+      "Recycle scrap pages that only hold warm-up marks.",
+      "Restock the adult folder with fresh blank bookmarks for the next offline session."
+    ]
+  },
+  "bookmarkFormats": [
+    {
+      "name": "Setting Bookmark",
+      "bestFor": "Writers who need a small bookshop place before inventing action.",
+      "steps": [
+        "Adult points to one broad shelf, table, window, or corner word on the bookmark.",
+        "Writer chooses a made-up setting name without using a real shop name.",
+        "Writer adds one mood word and one look detail to the bookmark.",
+        "Writer writes one sentence showing where the story begins."
+      ]
+    },
+    {
+      "name": "Character Bookmark",
+      "bestFor": "Kids who like inventing roles, questions, and small choices.",
+      "steps": [
+        "Adult asks the writer to choose an invented bookshop role, such as finder, sorter, helper, or mapmaker.",
+        "Writer gives the character one question or choice.",
+        "Writer sketches one clue about what the character notices.",
+        "Writer writes one sentence about what the character does first."
+      ]
+    },
+    {
+      "name": "Object Bookmark",
+      "bestFor": "Families turning ordinary shelf ideas into useful story objects.",
+      "steps": [
+        "Adult asks the writer to invent one shelf object or choose one from a printed idea list.",
+        "Writer gives the object one story job, such as guiding, hiding, reminding, or sorting.",
+        "Writer adds one detail about how the object looks, feels, or sounds.",
+        "Writer writes one sentence showing why the object matters."
+      ]
+    },
+    {
+      "name": "Sequence Bookmark",
+      "bestFor": "Writers who need a tiny beginning, middle, and ending path.",
+      "steps": [
+        "Adult points to the first, next, and finally lines on the bookmark.",
+        "Writer chooses one shelf place and one invented character.",
+        "Writer fills the three lines with calm story steps.",
+        "Writer circles the step that should become the first full paragraph."
+      ]
+    },
+    {
+      "name": "Revision Bookmark",
+      "bestFor": "Writers strengthening one sentence from an earlier bookmark or draft.",
+      "steps": [
+        "Adult places the earlier sentence beside a blank revision bookmark.",
+        "Writer chooses one clearer look, sound, pattern, or feeling word.",
+        "Writer copies the sentence and adds the clearer detail.",
+        "Writer underlines the word or phrase that improved the sentence most."
+      ]
+    },
+    {
+      "name": "Sensory Bookmark",
+      "bestFor": "Quiet writers who notice color, sound, shape, pattern, or texture words.",
+      "steps": [
+        "Adult asks the writer to choose one gentle sensory word from the paper prompt list.",
+        "Writer pairs that word with a shelf place, object, or invented character.",
+        "Writer sketches the detail in the bookmark corner.",
+        "Writer writes one sentence where the sensory detail becomes a story clue."
+      ]
+    }
+  ],
+  "takeHomeBookmarkSlips": [
+    {
+      "title": "Shelf Place Start",
+      "time": "5 minutes",
+      "skill": "setting bookmark",
+      "direction": "Choose a broad bookshop place: ____________________. Add one mood word for the story setting: ____________________.",
+      "familyLine": "Our setting bookmark makes the place feel ____________________."
+    },
+    {
+      "title": "Corner Character",
+      "time": "6 minutes",
+      "skill": "character bookmark",
+      "direction": "Invent a character role for a shelf story: ____________________. Give that character one question: ____________________.",
+      "familyLine": "The character question we want to keep is ____________________."
+    },
+    {
+      "title": "Object With a Job",
+      "time": "7 minutes",
+      "skill": "object bookmark",
+      "direction": "Invent one pretend shelf object: ____________________. Its story job is ____________________.",
+      "familyLine": "The object matters because ____________________."
+    },
+    {
+      "title": "First Next Finally",
+      "time": "8 minutes",
+      "skill": "sequence bookmark",
+      "direction": "Plan three story steps. First ____________________. Next ____________________. Finally ____________________.",
+      "familyLine": "The step we would write more about is ____________________."
+    },
+    {
+      "title": "Stronger Shelf Sentence",
+      "time": "5 minutes",
+      "skill": "revision bookmark",
+      "direction": "Copy one bookmark sentence: ____________________. Add one clearer shelf detail: ____________________.",
+      "familyLine": "The revision helped because ____________________."
+    },
+    {
+      "title": "Quiet Sound Clue",
+      "time": "6 minutes",
+      "skill": "sensory bookmark",
+      "direction": "Choose one gentle sound word for the story: ____________________. The sound tells the character ____________________.",
+      "familyLine": "Our sound clue points toward ____________________."
+    },
+    {
+      "title": "Pattern On the Page",
+      "time": "7 minutes",
+      "skill": "sensory bookmark",
+      "direction": "Choose one safe pattern, such as dots, lines, bands, or repeats: ____________________. In the story it means ____________________.",
+      "familyLine": "The pattern detail makes us wonder ____________________."
+    },
+    {
+      "title": "Better Beginning",
+      "time": "8 minutes",
+      "skill": "revision bookmark",
+      "direction": "Write a beginning sentence: ____________________. Add one setting or object detail: ____________________.",
+      "familyLine": "The beginning now shows ____________________."
+    },
+    {
+      "title": "Character Finds Object",
+      "time": "9 minutes",
+      "skill": "character bookmark",
+      "direction": "Invent a character: ____________________. Give the character one pretend object to find: ____________________.",
+      "familyLine": "The character will use the object to ____________________."
+    },
+    {
+      "title": "Tiny Bookmark Story",
+      "time": "6 minutes",
+      "skill": "sequence bookmark",
+      "direction": "Write one setting, one character, and one object. Setting: ____________________. Character: ____________________. Object: ____________________.",
+      "familyLine": "The tiny bookmark story we would continue is ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Read one setting clue from your bookmark if you choose: ____________________.",
+    "Show one paper sketch from the bookmark: ____________________.",
+    "Name the broad shelf place that helped your story: ____________________.",
+    "Share one invented character role without private details: ____________________.",
+    "Tell the story job of one pretend object: ____________________.",
+    "Read the first, next, or finally line you like best: ____________________.",
+    "Name one detail that made a sentence clearer: ____________________.",
+    "Mark one bookmark clue you want to save for later writing: ____________________."
+  ]
+}

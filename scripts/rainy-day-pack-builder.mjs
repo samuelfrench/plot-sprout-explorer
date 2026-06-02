@@ -413,6 +413,7 @@ export function buildProductArtifactManifest(source, files, options = {}) {
       source.fieldNotes?.length ??
       source.seedPackets?.length ??
       source.recipeCards?.length ??
+      source.bookmarks?.length ??
       0,
     fulfillmentNote:
       options.fulfillmentNote ??

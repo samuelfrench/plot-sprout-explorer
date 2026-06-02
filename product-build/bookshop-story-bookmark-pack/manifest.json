@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-02-batch26",
+  "generatedAt": "2026-06-02",
+  "productSlug": "bookshop-story-bookmark-pack",
+  "title": "Bookshop Story Bookmark Pack",
+  "pricePoint": "$25",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/bookshop-story-bookmark-pack/Bookshop-Story-Bookmark-Pack.pdf",
+      "sha256": "f8bb60e707827ff314a2eddac814c26ae20213dfc93581ba2b513c1decd7b90b",
+      "size": 4738696
+    },
+    "zip": {
+      "path": "product-build/bookshop-story-bookmark-pack/bookshop-story-bookmark-pack.zip",
+      "sha256": "c1e65ea9d8818e13e2bccb7609c677dfed92ec63d5d255885254d1b46164f782",
+      "size": 9054504
+    },
+    "sourceHtml": {
+      "path": "product-build/bookshop-story-bookmark-pack/source/bookshop-story-bookmark-pack.html",
+      "sha256": "b95f2303806f56694ed88835735cefd2a1249cf0180265b44c78ffc2fc2f1206",
+      "size": 53254
+    },
+    "readme": {
+      "path": "product-build/bookshop-story-bookmark-pack/README.txt",
+      "sha256": "5596d0521f4f9b159b0de004bbebadb76df69e855f8008fcb24163f2ffcca1cb",
+      "size": 535
+    },
+    "assets": [
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/puddle-planet-post-office.jpg",
+        "sha256": "abf1065c54d207cce767bd8a5081e2483bfa37fc4a7d9a476bd65f4e5c914e44",
+        "size": 304692
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/bookshop-story-bookmark-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      }
+    ]
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-02-batch26-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "bookshop-story-bookmark-pack",
+      "title": "Bookshop Story Bookmark Pack",
+      "purpose": "Product hero image for the Batch 26 printable bookshop story bookmark pack.",
+      "prompt": "family-friendly studio flat lay: ONLY blank cream paper bookmark strips and blank folded bookmark slips, arranged neatly on a plain white background, no tabletop props, no decoration. No plants, no pots, no jars, no cups, no bowls, no brushes, no utensils, no pencils, no pens, no crayons, no notebooks, no spiral binding, no scissors, no knives, no text, no letters, no labels, no logos, no watermark, no book covers, no real book titles, no author names, no publisher marks, no public reviews, no ratings, no stars, no food, no people, no faces, no animals, no phone, no tablet, no device, no map, no GPS, no route, no address, screen-free printable bookshop story bookmark pack",
+      "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, printed markings, icon, symbol, plant, potted plant, greenery, jar, cup, mug, bowl, utensil, brush, spoon, fork, knife, pencil, pen, crayon, marker, notebook, spiral binding, ruler, scissors, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+      "outputJpeg": "public/images/plotsprout/batch26/bookshop-story-bookmark-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch26/bookshop-story-bookmark-pack.webp",
+      "sidecar": "content/image-runs/batch26/bookshop-story-bookmark-pack.json",
+      "seed": 26062634
+    }
+  ]
+}

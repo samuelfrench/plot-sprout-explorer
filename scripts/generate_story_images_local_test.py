@@ -1,0 +1,134 @@
+#!/usr/bin/env python3
+"""Unit tests for the local Plot Sprout image generator.
+
+These tests deliberately avoid loading SDXL or touching CUDA.
+"""
+
+from __future__ import annotations
+
+import json
+import sys
+import tempfile
+import unittest
+from pathlib import Path
+
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+
+from generate_story_images_local import NEGATIVE_PROMPT, ROOT, generate_job, manifest_jobs
+
+
+class FakeGenerator:
+    def __init__(self) -> None:
+        self.seed = None
+
+    def manual_seed(self, seed: int) -> None:
+        self.seed = seed
+
+
+class FakeImage:
+    def __init__(self) -> None:
+        self.saved = []
+
+    def save(self, path: Path, image_format: str, **_kwargs) -> None:
+        self.saved.append((path, image_format))
+        Path(path).write_bytes(f"fake {image_format}".encode("utf8"))
+
+
+class FakePipeline:
+    def __init__(self) -> None:
+        self.calls = []
+        self.image = FakeImage()
+
+    def __call__(self, **kwargs):
+        self.calls.append(kwargs)
+        return type("FakePipelineResult", (), {"images": [self.image]})()
+
+
+class ImageGeneratorConfigTest(unittest.TestCase):
+    def test_manifest_jobs_preserves_per_image_negative_prompt(self) -> None:
+        custom_negative_prompt = "custom batch-only negative prompt"
+        with tempfile.TemporaryDirectory(dir=ROOT) as temp_dir:
+            manifest_path = Path(temp_dir) / "manifest.json"
+            manifest_path.write_text(
+                json.dumps(
+                    {
+                        "images": [
+                            {
+                                "slug": "sample-product",
+                                "prompt": "family-friendly blank printable product image",
+                                "outputJpeg": "public/images/plotsprout/test/sample-product.jpg",
+                                "outputWebp": "public/images/plotsprout/test/sample-product.webp",
+                                "sidecar": "content/image-runs/test/sample-product.json",
+                                "seed": 12345,
+                                "negativePrompt": custom_negative_prompt,
+                            }
+                        ]
+                    }
+                )
+            )
+
+            [job] = manifest_jobs(manifest_path, limit=None)
+
+        self.assertEqual(job["negativePrompt"], custom_negative_prompt)
+
+    def test_global_negative_prompt_does_not_block_common_story_props(self) -> None:
+        prompt_terms = {part.strip().lower() for part in NEGATIVE_PROMPT.split(",")}
+        batch_specific_terms = {
+            "plant",
+            "potted plant",
+            "greenery",
+            "jar",
+            "cup",
+            "mug",
+            "bowl",
+            "utensil",
+            "brush",
+            "spoon",
+            "fork",
+            "knife",
+            "pencil",
+            "pen",
+            "crayon",
+            "marker",
+            "notebook",
+            "spiral binding",
+            "ruler",
+            "scissors",
+        }
+
+        self.assertEqual(prompt_terms & batch_specific_terms, set())
+
+    def test_generate_job_uses_manifest_negative_prompt_for_pipeline_and_sidecar(self) -> None:
+        custom_negative_prompt = "custom batch-only negative prompt"
+        with tempfile.TemporaryDirectory(dir=ROOT) as temp_dir:
+            temp_root = Path(temp_dir).relative_to(ROOT)
+            job = {
+                "slug": "sample-product",
+                "prompt": "family-friendly blank printable product image",
+                "outputJpeg": str(temp_root / "sample-product.jpg"),
+                "outputWebp": str(temp_root / "sample-product.webp"),
+                "sidecar": str(temp_root / "sample-product.json"),
+                "seed": 12345,
+                "negativePrompt": custom_negative_prompt,
+                "mode": "manifest",
+                "manifest": "content/image-queue/test-manifest.json",
+                "title": "Sample Product",
+            }
+            pipe = FakePipeline()
+            generator = FakeGenerator()
+
+            sidecar = generate_job(pipe, generator, job)
+
+            sidecar_path = ROOT / job["sidecar"]
+            written_sidecar = json.loads(sidecar_path.read_text())
+
+        self.assertEqual(generator.seed, 12345)
+        self.assertEqual(pipe.calls[0]["negative_prompt"], custom_negative_prompt)
+        self.assertEqual(sidecar["negativePrompt"], custom_negative_prompt)
+        self.assertEqual(written_sidecar["negativePrompt"], custom_negative_prompt)
+        self.assertEqual(written_sidecar["manifest"], "content/image-queue/test-manifest.json")
+        self.assertNotIn("elapsedSeconds", written_sidecar)
+
+
+if __name__ == "__main__":
+    unittest.main()

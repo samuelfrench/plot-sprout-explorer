@@ -9,7 +9,8 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run --testTimeout 15000",
-    "verify": "npm run render:seo && npm run verify:actions && npm run verify:content && npm run lint && npm run test && npm run build",
+    "test:image-generator": "PYTHONDONTWRITEBYTECODE=1 python3 scripts/generate_story_images_local_test.py",
+    "verify": "npm run render:seo && npm run verify:actions && npm run verify:content && npm run lint && npm run test:image-generator && npm run test && npm run build",
     "verify:actions": "node scripts/verify-workflows.mjs",
     "verify:content": "node scripts/validate-content-batch.mjs",
     "content:batch": "node scripts/create-content-batch.mjs",
@@ -32,6 +33,7 @@
     "image:batch23": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch23-product-images.json",
     "image:batch24": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch24-product-images.json",
     "image:batch25": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch25-product-images.json",
+    "image:batch26": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch26-product-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -49,7 +51,8 @@
     "product:thank-you-postcard-pack": "node scripts/thank-you-note-story-postcard-pack-builder.mjs",
     "product:nature-walk-kit": "node scripts/nature-walk-story-field-notes-kit-builder.mjs",
     "product:backyard-seed-kit": "node scripts/backyard-story-seed-packet-kit-builder.mjs",
-    "product:kitchen-recipe-deck": "node scripts/kitchen-table-story-recipe-card-deck-builder.mjs"
+    "product:kitchen-recipe-deck": "node scripts/kitchen-table-story-recipe-card-deck-builder.mjs",
+    "product:bookshop-bookmark-pack": "node scripts/bookshop-story-bookmark-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

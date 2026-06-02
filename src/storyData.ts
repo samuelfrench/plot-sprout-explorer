@@ -414,6 +414,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen paper story recipe cards with adult guide tools, card formats, and take-home recipe slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'bookshop-story-bookmark-pack',
+    title: 'Bookshop Story Bookmark Pack',
+    pricePoint: '$25',
+    description:
+      'Sixteen printable story bookmarks with adult guide tools, bookmark formats, and take-home bookmark slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

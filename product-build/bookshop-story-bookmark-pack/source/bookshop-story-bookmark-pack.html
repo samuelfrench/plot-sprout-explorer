@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookshop Story Bookmark Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #25313a;
+        --muted: #59636a;
+        --paper: #fffdf8;
+        --line: #d9cfbc;
+        --plum: #7d496c;
+        --green: #3f715f;
+        --gold: #d2a84a;
+        --blue: #3f6f93;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 32px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.4px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(63, 113, 95, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(125, 73, 108, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--plum); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .format-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--plum); font-size: 6.9px; }
+      .bookmark-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .format-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .format-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .bookmark-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .bookmark-slip p { margin-bottom: 0.022in; }
+      .bookmark-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .bookmark-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(63, 113, 95, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--plum);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable bookshop story bookmarks</p>
+        <h1>Bookshop Story Bookmark Pack</h1>
+        <p>Sixteen paper bookmark prompts turn invented shelf clues into screen-free story starts.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, library tables, and adult-led bookmark writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable story bookmarks plus adult guide tools, bookmark formats, take-home bookmark slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$25</span>
+        <h2>Included</h2>
+        <ul><li>16 printable story bookmarks</li>
+<li>Adult setup guide</li>
+<li>Bookshop safety notes</li>
+<li>Shelf-clue story coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led bookmark formats</li>
+<li>Ten take-home bookmark slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Shelf-clue story coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the bookmark prompts, take-home slips, and adult guide before the session.</li>
+<li>Set the adult-led rule: writers use paper bookmarks, pencils, sketches, and short story words only.</li>
+<li>Choose one bookmark format before writers begin so every child has one clear writing path.</li>
+<li>Say that a bookmark can hold a setting, character, object, sequence, revision, or sensory clue for a made-up story.</li>
+<li>Keep the session screen-free, quiet, and focused on one small bookmark that can start a later story.</li></ul></article>
+        <article class="guide-card"><h3>Bookmark setup</h3><ul><li>Place blank bookmarks, pencils, and take-home slips where the adult can see every page.</li>
+<li>Set six labeled piles: setting bookmark, character bookmark, object bookmark, sequence bookmark, revision bookmark, and sensory bookmark.</li>
+<li>Use broad bookshop words only, such as shelf, corner, table, sign, window, counter, or reading chair.</li>
+<li>Leave space on each bookmark for a title, one sketch, three short lines, and one story sentence.</li>
+<li>Keep extra bookmarks in an adult folder so the writing surface stays paper-only and simple.</li></ul></article>
+        <article class="guide-card"><h3>Shelf-clue story coaching</h3><ul><li>Ask for one broad shelf place first, then turn it into a made-up setting with a mood word.</li>
+<li>Ask for one invented character role who is looking for, carrying, noticing, or sorting something.</li>
+<li>Ask for one pretend object from the shelf area and give it a story job.</li>
+<li>Ask for first, next, and finally lines when the writer needs a clear beginning path.</li>
+<li>Ask the writer to improve one sentence by adding a clearer look, sound, pattern, or texture word.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Use invented names, role words, or blank labels for every person on the bookmark.</li>
+<li>Use broad place words instead of named locations, room numbers, route details, schedules, or private routines.</li>
+<li>Keep all bookmark writing fictional and paper-only; do not collect contact details or personal facts.</li>
+<li>Keep finished bookmarks with the family adult, tutor, co-op adult, or classroom adult.</li>
+<li>Check every take-home slip for identifying details before it leaves the adult-led table.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one finished bookmark and one blank take-home bookmark slip with each writer.</li>
+<li>Tell family adults that five to nine quiet minutes is enough for one extra bookmark prompt.</li>
+<li>Invite the family adult to ask for one shelf place, one invented character, and one pretend object.</li>
+<li>Ask adults to praise one clear word, sketch, or sentence before suggesting one small revision.</li>
+<li>Suggest keeping bookmarks together so the writer can reuse the strongest clue in a later printable story.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect unused bookmarks, slips, pencils, and broad place cards.</li>
+<li>Check finished bookmarks for private details before they go home.</li>
+<li>Recycle scrap pages that only hold warm-up marks.</li>
+<li>Restock the adult folder with fresh blank bookmarks for the next offline session.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper bookmark at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen bookmark worlds</h2>
+      <p>Pick a world image, then turn one invented shelf clue into a story start.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Almost Invention Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article></div>
+    </section>
+    <section class="pack-page format-page">
+      <p class="page-kicker">Bookmark formats</p>
+      <h2>Choose the paper bookmark rhythm</h2>
+      <div class="format-grid">
+    <article class="small-card">
+      <h3>Setting Bookmark</h3>
+      <p>Writers who need a small bookshop place before inventing action.</p>
+      <ol><li>Adult points to one broad shelf, table, window, or corner word on the bookmark.</li>
+<li>Writer chooses a made-up setting name without using a real shop name.</li>
+<li>Writer adds one mood word and one look detail to the bookmark.</li>
+<li>Writer writes one sentence showing where the story begins.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Character Bookmark</h3>
+      <p>Kids who like inventing roles, questions, and small choices.</p>
+      <ol><li>Adult asks the writer to choose an invented bookshop role, such as finder, sorter, helper, or mapmaker.</li>
+<li>Writer gives the character one question or choice.</li>
+<li>Writer sketches one clue about what the character notices.</li>
+<li>Writer writes one sentence about what the character does first.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Object Bookmark</h3>
+      <p>Families turning ordinary shelf ideas into useful story objects.</p>
+      <ol><li>Adult asks the writer to invent one shelf object or choose one from a printed idea list.</li>
+<li>Writer gives the object one story job, such as guiding, hiding, reminding, or sorting.</li>
+<li>Writer adds one detail about how the object looks, feels, or sounds.</li>
+<li>Writer writes one sentence showing why the object matters.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sequence Bookmark</h3>
+      <p>Writers who need a tiny beginning, middle, and ending path.</p>
+      <ol><li>Adult points to the first, next, and finally lines on the bookmark.</li>
+<li>Writer chooses one shelf place and one invented character.</li>
+<li>Writer fills the three lines with calm story steps.</li>
+<li>Writer circles the step that should become the first full paragraph.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Revision Bookmark</h3>
+      <p>Writers strengthening one sentence from an earlier bookmark or draft.</p>
+      <ol><li>Adult places the earlier sentence beside a blank revision bookmark.</li>
+<li>Writer chooses one clearer look, sound, pattern, or feeling word.</li>
+<li>Writer copies the sentence and adds the clearer detail.</li>
+<li>Writer underlines the word or phrase that improved the sentence most.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sensory Bookmark</h3>
+      <p>Quiet writers who notice color, sound, shape, pattern, or texture words.</p>
+      <ol><li>Adult asks the writer to choose one gentle sensory word from the paper prompt list.</li>
+<li>Writer pairs that word with a shelf place, object, or invented character.</li>
+<li>Writer sketches the detail in the bookmark corner.</li>
+<li>Writer writes one sentence where the sensory detail becomes a story clue.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home bookmark slips</p>
+      <h2>Finish one story clue later</h2>
+      <div class="slip-grid">
+    <article class="bookmark-slip">
+      <p class="card-kicker">5 minutes | setting bookmark</p>
+      <h3>Shelf Place Start</h3>
+      <p>Choose a broad bookshop place: ____________________. Add one mood word for the story setting: ____________________.</p>
+      <p>Our setting bookmark makes the place feel ____________________.</p>
+    </article>
+
+    <article class="bookmark-slip">
+      <p class="card-kicker">6 minutes | character bookmark</p>
+      <h3>Corner Character</h3>
+      <p>Invent a character role for a shelf story: ____________________. Give that character one question: ____________________.</p>
+      <p>The character question we want to keep is ____________________.</p>
+    </article>
+
+    <article class="bookmark-slip">
+      <p class="card-kicker">7 minutes | object bookmark</p>
+      <h3>Object With a Job</h3>
+      <p>Invent one pretend shelf object: ____________________. Its story job is ____________________.</p>
+      <p>The object matters because ____________________.</p>
+    </article>
+
+    <article class="bookmark-slip">
+      <p class="card-kicker">8 minutes | sequence bookmark</p>
+      <h3>First Next Finally</h3>
+      <p>Plan three story steps. First ____________________. Next ____________________. Finally ____________________.</p>
+      <p>The step we would write more about is ____________________.</p>
+    </article>
+
+    <article class="bookmark-slip">
+      <p class="card-kicker">5 minutes | revision bookmark</p>
+      <h3>Stronger Shelf Sentence</h3>
+      <p>Copy one bookmark sentence: ____________________. Add one clearer shelf detail: ____________________.</p>
+      <p>The revision helped because ____________________.</p>
+    </article>
+
+    <article class="bookmark-slip">
+      <p class="card-kicker">6 minutes | sensory bookmark</p>
+      <h3>Quiet Sound Clue</h3>
+      <p>Choose one gentle sound word for the story: ____________________. The sound tells the character ____________________.</p>
+      <p>Our sound clue points toward ____________________.</p>
+    </article>
+
+    <article class="bookmark-slip">
+      <p class="card-kicker">7 minutes | sensory bookmark</p>
+      <h3>Pattern On the Page</h3>
+      <p>Choose one safe pattern, such as dots, lines, bands, or repeats: ____________________. In the story it means ____________________.</p>
+      <p>The pattern detail makes us wonder ____________________.</p>
+    </article>
+
+    <article class="bookmark-slip">
+      <p class="card-kicker">8 minutes | revision bookmark</p>
+      <h3>Better Beginning</h3>
+      <p>Write a beginning sentence: ____________________. Add one setting or object detail: ____________________.</p>
+      <p>The beginning now shows ____________________.</p>
+    </article>
+
+    <article class="bookmark-slip">
+      <p class="card-kicker">9 minutes | character bookmark</p>
+      <h3>Character Finds Object</h3>
+      <p>Invent a character: ____________________. Give the character one pretend object to find: ____________________.</p>
+      <p>The character will use the object to ____________________.</p>
+    </article>
+
+    <article class="bookmark-slip">
+      <p class="card-kicker">6 minutes | sequence bookmark</p>
+      <h3>Tiny Bookmark Story</h3>
+      <p>Write one setting, one character, and one object. Setting: ____________________. Character: ____________________. Object: ____________________.</p>
+      <p>The tiny bookmark story we would continue is ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Read one setting clue from your bookmark if you choose: ____________________.</li>
+<li>Show one paper sketch from the bookmark: ____________________.</li>
+<li>Name the broad shelf place that helped your story: ____________________.</li>
+<li>Share one invented character role without private details: ____________________.</li>
+<li>Tell the story job of one pretend object: ____________________.</li>
+<li>Read the first, next, or finally line you like best: ____________________.</li>
+<li>Name one detail that made a sentence clearer: ____________________.</li>
+<li>Mark one bookmark clue you want to save for later writing: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 1 | Ages 6-8 | setting bookmark</div>
+      <h2>Puddle Planet Setting Slip</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark, set out a pencil, and ask the kid to sketch the puddle post office before writing. Keep every message pretend and every choice story-only.</p>
+      <p class="kid-direction">Imagine a small post office on Puddle Planet. Choose where it sits, what it looks like, and what tiny place detail changes the story.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Bookmark front: The Puddle Planet post office sits beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Bookmark back: Add one setting clue from the puddle path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A pretend letter floats past ____________________ and makes the whole place feel different.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: The puddle post office opened when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one plain place word with a clearer setting word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch one puddle shape, then label it here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At home, add one new setting detail near the post office: ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 2 | Ages 7-9 | character bookmark</div>
+      <h2>Buttonwood Train Character Ticket</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark and invite a quick character ticket-mark sketch first. Ask for a pretend job, one habit, and one small choice the character can make.</p>
+      <p class="kid-direction">Imagine a quiet helper riding the Buttonwood Library Train. Give the helper a job, a habit, and a reason to notice a book cart mix-up.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Bookmark front: My Buttonwood Library Train helper is named ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Bookmark back: The helper&#39;s careful habit is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The train slows near ____________________, and the helper notices a story problem.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: On the library train, ____________________ always checked the tiny ticket shelf.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one exact character action readers can picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the helper&#39;s ticket mark, then write one character word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At home, give the helper one new library-train job: ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 3 | Ages 7-8 | sensory bookmark</div>
+      <h2>Teacup Weather Sensory Strip</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark and place it near a table or window view. Ask for one color, one soft sound, and one pretend texture before the first sentence.</p>
+      <p class="kid-direction">Imagine Teacup Town watches the weather window for story clues. Choose details a reader could see, hear, or imagine touching.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Bookmark front: The weather window glows the color of ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Bookmark back: The tiny weather sound is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: When the window showed ____________________, Teacup Town knew a small plan had to change.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: The teacup window clicked softly as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one sensory word that makes the weather clue clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw one tiny weather mark and label its feeling: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At home, add a new color, sound, or texture to ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 4 | Ages 7-9 | object bookmark</div>
+      <h2>Pocket Park Object Marker</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark and ask the kid to draw one object that could fit on a notice board. Then ask how that object helps the story move.</p>
+      <p class="kid-direction">Imagine a tiny object pinned near the Pocket Park notice board. Decide what it is, where it came from, and what job it has in the scene.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Bookmark front: The object pinned to the Pocket Park board is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Bookmark back: This object helps the story because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A park helper finds ____________________ beside the notice board and follows its clue.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: Under the Pocket Park sign, ____________________ waited for someone to notice.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one vague object word with an exact noun: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the object silently, then write its tiny job: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At home, add a second board object called ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 5 | Ages 7-9 | sequence bookmark</div>
+      <h2>Acorn Errand Sequence Tab</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark and draw three small boxes on scrap paper if helpful. Ask the kid to choose the first errand clue, the turn, and the ending choice.</p>
+      <p class="kid-direction">Imagine the Acorn Avenue errand office has three pretend notes to sort. Put them in an order that makes the story easy to follow.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Bookmark front: First errand clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Bookmark back: Middle turn: ____________________. Ending choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The acorn clerk begins with ____________________, but the next note changes the route.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: First ____________________. Then ____________________. Last ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one reason the middle event belongs after the first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number three tiny boxes and fill only box one: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At home, retell the errand with a new final stop: ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 6 | Ages 7-9 | revision bookmark</div>
+      <h2>Penny Path Revision Ribbon</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark and ask for one short draft sentence first. Then invite the kid to choose a stronger direction word, object word, or setting detail.</p>
+      <p class="kid-direction">Imagine the Penny Path compass shop has a sentence that almost works. Keep the main idea and make one part clearer.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Bookmark front: My draft sentence says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Bookmark back: The clearer detail I can add is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The compass keeper points toward ____________________, and one sentence needs a sharper clue.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: Draft: ____________________. Better detail: ____________________. Revised line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Circle one word to keep, then replace one dull word with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Rewrite only one word from the draft here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At home, revise one compass-shop sentence about ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 7 | Ages 8-10 | object bookmark</div>
+      <h2>Seed Drawer Object Bookmark</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print and trim one bookmark, set it with a pencil, and remind the writer that every drawer, label, and map mark is pretend.</p>
+      <p class="kid-direction">Choose one tiny object clue, sketch its label, and imagine why the Seed Library Map Room needs it today.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Front prompt: The object on this bookmark is a seed drawer clue called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Back prompt: Add three object details: shape ____________________, label ____________________, hidden job ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The map keeper opens the drawer and finds ____________________ where the label should be.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: On the map-room table, ____________________ points toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one exact object detail so the clue feels easier to picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the object first, then write only its label here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Turn one paper scrap into a map-room object clue named ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 8 | Ages 8-10 | sensory bookmark</div>
+      <h2>Rain Gauge Railway Sensory Bookmark</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark, place it beside a pencil, and invite the writer to use safe noticing and imagination only.</p>
+      <p class="kid-direction">Pick one color, one soft sound, and one imagined texture, then make them part of a tiny railway signal.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Front prompt: The rain gauge signal looks ____________________ and sounds like ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Back prompt: Sensory notes: color ____________________, soft sound ____________________, imagined texture ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The railway helper pauses when the gauge line changes to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: By the little railway, ____________________ makes the quiet signal feel important.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one plain describing word with a sharper sensory word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to one color silently, sketch a line, and write ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use one safe sound or color as the first railway clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 9 | Ages 8-10 | setting bookmark</div>
+      <h2>Moss Message Setting Bookmark</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark, set it on the table with a pencil, and ask the writer to invent a small observatory scene on paper.</p>
+      <p class="kid-direction">Choose where the observatory sits, add one pattern, and write what the moss message changes in the scene.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Front prompt: The observatory setting begins beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Back prompt: Setting notes: nearby place ____________________, pattern ____________________, message spot ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The moss message appears on ____________________ just as the observer notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: In the quiet observatory, ____________________ waits near ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one where-detail to make the setting clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw the setting outline, then label one quiet place: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At another table, start a setting sentence with this place clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 10 | Ages 10-11 | sequence bookmark</div>
+      <h2>Compass Craft Sequence Bookmark</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark, provide a pencil, and ask the writer to sketch three simple route marks before writing.</p>
+      <p class="kid-direction">Name a start mark, a middle turn, and a final place, then arrange them into a clear academy sequence.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Front prompt: The compass route begins at ____________________ and points toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Back prompt: Sequence marks: first ____________________, next ____________________, finally ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A compass crafter changes the route when ____________________ appears between two marks.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: First ____________________, next ____________________, finally ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one precise direction word or distance clue to the middle step: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number the three route marks, then write the strongest one: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this route order to begin a compass academy paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 11 | Ages 10-11 | revision bookmark</div>
+      <h2>Almost Invention Revision Bookmark</h2>
+      <figure>
+        <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+        <figcaption>Almost Invention Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark, set it with a pencil, and invite the writer to draft one plain invention sentence before improving it.</p>
+      <p class="kid-direction">Write the plain sentence, circle the weakest word, and replace it with a sharper noun, action, or detail.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Front prompt: My almost invention is called ____________________, but it still needs ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Back prompt: Revision notes: plain word ____________________, sharper word ____________________, clearer detail ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The workshop helper improves the invention after noticing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: Plain line: ____________________. Revised line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one vague word with a precise noun, action, or detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Underline one word silently, then write the clearer replacement: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Keep the revised line as the opening of an almost-invention story: ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 12 | Ages 10-11 | character bookmark</div>
+      <h2>Margin Note Market Character Bookmark</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark strip, set out pencils and blank paper, and invite the writer to imagine a pretend market where every stall trades helpful story notes.</p>
+      <p class="kid-direction">Invent a character who receives one margin note, then show how the note changes what the character chooses next.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Front prompt: My character arrives at Margin Note Market carrying a note that says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Back prompt: The note changes the character&#39;s next choice by making them ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A careful note trader gives the character one question that changes the scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First-line path: The character wanted ____________________, but the market note pointed toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one visible habit, gesture, or object that shows the character&#39;s choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write only the character&#39;s changed choice on the bookmark back: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this bookmark later to start a character scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 13 | Ages 10-11 | sequence bookmark</div>
+      <h2>Binding Day Boardwalk Sequence Bookmark</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark strip, place pencils and scrap paper nearby, and ask the writer to picture a bright boardwalk where blank pages wait in order.</p>
+      <p class="kid-direction">Choose three page moments for a pretend boardwalk story, then write the order that makes the ending feel earned.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Front prompt: The first boardwalk page shows ____________________, and the next page must explain ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Back prompt: My final page belongs after ____________________ because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A finished booklet feels out of order until one page clue reveals ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First-line path: First ____________________; next ____________________; finally the boardwalk page lands on ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add a bridge sentence that explains why one moment follows the last: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number three tiny page ideas, then write only the middle turn: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use the final page clue to polish a tiny ending about ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 14 | Ages 10-11 | character bookmark</div>
+      <h2>Index Card Theater Character Bookmark</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark strip, set out paper and pencils, and invite the writer to imagine a tiny tabletop theater built from blank index cards.</p>
+      <p class="kid-direction">Give one character a goal, write two short lines, and let the second line change what the character decides to do.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Front prompt: My character steps onto the index-card stage wanting ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Back prompt: The stage cue that changes the character&#39;s choice is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: Two index cards create a scene when one character quietly decides ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First-line path: The first line says ____________________; the reply reveals ____________________; the choice turns toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one explanation with an action the reader can see on the paper stage: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write only the two spoken lines, then underline the line that changes the choice: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use the clearest stage cue to begin a short scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 15 | Ages 10-11 | sensory bookmark</div>
+      <h2>Clue Label Tower Sensory Bookmark</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark strip, provide pencils and blank paper, and ask the writer to imagine a quiet tower museum filled with unlabeled ordinary clues.</p>
+      <p class="kid-direction">Invent one exhibit label, then choose sensory details that help a reader picture the clue without needing a real place or real object name.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Front prompt: The tower label names an exhibit shaped like ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Back prompt: The exhibit has a color ____________________, a texture ____________________, and a quiet sound ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A museum helper notices one tiny label clue that points toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First-line path: The label looks like ____________________; the room feels ____________________; the clue suggests ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one plain describing word with a sharper sensory detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the label first, then write one sensory sentence here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this label later to build a quiet tower scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page bookmark-page">
+      <div class="page-kicker">Paper Bookmark 16 | Ages 10-11 | revision bookmark</div>
+      <h2>Revision River Ferry Bookmark</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one bookmark strip, set out pencils and paper, and invite the writer to imagine a calm ferry carrying draft sentences across a river of blank pages.</p>
+      <p class="kid-direction">Pick one earlier story clue, draft a final sentence, and revise the ending so the clue returns in a clearer way.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Front prompt</h3>
+      <p>Front prompt: The earlier story clue I want to bring back is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Back prompt</h3>
+      <p>Back prompt: My revised final sentence carries that clue across the river by saying ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A ferry guide finds an old draft clue floating beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First-line path: At the beginning, the clue was ____________________; near the ferry, it returns as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Trim one extra phrase or add one clearer ending image: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle one final sentence on paper, then copy the revised version here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this revised ending to finish a tiny story about ____________________.</p>
+    </section>
+  </body>
+</html>

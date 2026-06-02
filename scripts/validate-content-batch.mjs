@@ -5,6 +5,8 @@ import { containsActiveCheckoutLanguage } from './content-policy.mjs'
 import {
   validateBackyardStorySeedPacketKitSource,
   validateBackyardStorySeedPacketKitSourceFiles,
+  validateBookshopStoryBookmarkPackSource,
+  validateBookshopStoryBookmarkPackSourceFiles,
   validateKitchenTableStoryRecipeCardDeckSource,
   validateKitchenTableStoryRecipeCardDeckSourceFiles,
   validateAfterSchoolStoryClubKitSource,
@@ -55,6 +57,7 @@ const batch22ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch23ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch23-product-images.json')
 const batch24ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch24-product-images.json')
 const batch25ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch25-product-images.json')
+const batch26ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch26-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -74,6 +77,7 @@ const thankYouSourceFile = resolve(root, 'content', 'product-artifacts', 'thank-
 const natureWalkSourceFile = resolve(root, 'content', 'product-artifacts', 'nature-walk-story-field-notes-kit.json')
 const backyardSeedSourceFile = resolve(root, 'content', 'product-artifacts', 'backyard-story-seed-packet-kit.json')
 const kitchenRecipeSourceFile = resolve(root, 'content', 'product-artifacts', 'kitchen-table-story-recipe-card-deck.json')
+const bookshopBookmarkSourceFile = resolve(root, 'content', 'product-artifacts', 'bookshop-story-bookmark-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -94,6 +98,7 @@ const batch22ProductImagesBatchId = '2026-06-02-batch22-product-images'
 const batch23ProductImagesBatchId = '2026-06-02-batch23-product-images'
 const batch24ProductImagesBatchId = '2026-06-02-batch24-product-images'
 const batch25ProductImagesBatchId = '2026-06-02-batch25-product-images'
+const batch26ProductImagesBatchId = '2026-06-02-batch26-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -113,6 +118,7 @@ const thankYouBatchId = '2026-06-02-batch22'
 const natureWalkBatchId = '2026-06-02-batch23'
 const backyardSeedBatchId = '2026-06-02-batch24'
 const kitchenRecipeBatchId = '2026-06-02-batch25'
+const bookshopBookmarkBatchId = '2026-06-02-batch26'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -1284,6 +1290,98 @@ function validateBatch25ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch26ProductImage(image) {
+  const label = `2026-06-02-batch26-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(image.slug === 'bookshop-story-bookmark-pack', `${label}.slug must be bookshop-story-bookmark-pack.`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch26/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch26/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch26/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank cream paper bookmark strips',
+    'no text',
+    'no letters',
+    'no labels',
+    'no logos',
+    'no watermark',
+    'no book covers',
+    'no real book titles',
+    'no author names',
+    'no publisher marks',
+    'no public reviews',
+    'no ratings',
+    'no stars',
+    'no pencils',
+    'no pens',
+    'no crayons',
+    'no scissors',
+    'no knives',
+    'no food',
+    'no people',
+    'no faces',
+    'no animals',
+    'no phone',
+    'no tablet',
+    'no device',
+    'no map',
+    'no gps',
+    'no route',
+    'no address',
+    'screen-free printable bookshop story bookmark pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'plant',
+    'potted plant',
+    'greenery',
+    'jar',
+    'cup',
+    'mug',
+    'bowl',
+    'utensil',
+    'brush',
+    'spoon',
+    'fork',
+    'knife',
+    'pencil',
+    'pen',
+    'crayon',
+    'marker',
+    'notebook',
+    'spiral binding',
+    'ruler',
+    'scissors',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -1446,6 +1544,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
       minParentSteps: 5,
       maxWorldSlugs: 16,
     },
+    'bookshop-story-bookmark-pack': {
+      title: 'Bookshop Story Bookmark Pack',
+      pricePoint: '$25',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -1521,6 +1627,35 @@ function validateProduct(product, productSlugs, worldSlugs) {
       expect(seenSummarySlugs.has(worldSlug), `${label}.worldSummaries missing linked world slug ${worldSlug}.`)
     }
   }
+  if (product.slug === 'bookshop-story-bookmark-pack') {
+    const offScopeBookshopLanguage =
+      /\baccounts?\b|\blogins?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\breal book titles?\b|\bauthor names?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bbestseller(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b/i
+    expect(Array.isArray(product.worldSummaries), `${label}.worldSummaries must be an array.`)
+    expect(
+      product.worldSummaries.length === product.worldSlugs.length,
+      `${label}.worldSummaries must cover every linked world.`,
+    )
+    const expectedSummarySlugs = new Set(product.worldSlugs)
+    const seenSummarySlugs = new Set()
+    product.worldSummaries.forEach((summary, index) => {
+      expect(typeof summary === 'object' && summary !== null, `${label}.worldSummaries[${index}] must be an object.`)
+      validateString(summary.slug, `${label}.worldSummaries[${index}].slug`)
+      validateString(summary.summary, `${label}.worldSummaries[${index}].summary`)
+      expect(
+        expectedSummarySlugs.has(summary.slug),
+        `${label}.worldSummaries[${index}].slug must match a linked world slug.`,
+      )
+      expect(!seenSummarySlugs.has(summary.slug), `${label}.worldSummaries[${index}].slug is duplicated.`)
+      seenSummarySlugs.add(summary.slug)
+      expect(
+        !offScopeBookshopLanguage.test(summary.summary),
+        `${label}.worldSummaries[${index}].summary includes account, public-posting, review/rating, real-book, author, publisher, franchise, or branded language.`,
+      )
+    })
+    for (const worldSlug of product.worldSlugs) {
+      expect(seenSummarySlugs.has(worldSlug), `${label}.worldSummaries missing linked world slug ${worldSlug}.`)
+    }
+  }
   validateMinList(product.includedPages, expectedProduct.minIncludedPages, `${label}.includedPages`)
   validateMinList(product.useCases, expectedProduct.minUseCases, `${label}.useCases`)
   validateMinList(product.parentSteps, expectedProduct.minParentSteps, `${label}.parentSteps`)
@@ -1551,6 +1686,15 @@ function validateProduct(product, productSlugs, worldSlugs) {
     expect(
       !/\bfood prep\b|\bserve food\b|\breal recipe advice\b|\brecipe instructions\b|\bcook(s|ed|ing)?\b|\bbak(e|es|ed|ing)\b|\btast(e|es|ed|ing)?\b|\beat(s|en|ing)?\b|\bstove(s)?\b|\boven(s)?\b|\bmicrowave(s)?\b|\bflame(s)?\b|\bknife\b|\bknives\b|\bscissors?\b|\ballerg(y|ies|en|ens|ic)\b|\bnutrition\b|\bdiet(s|ing|ary)?\b/i.test(renderedHtml),
       `${label} static output includes real table-task, tasting, allergen, nutrition, or diet language.`,
+    )
+  }
+  if (product.slug === 'bookshop-story-bookmark-pack') {
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    expect(
+      !/\baccounts?\b|\blogins?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\breal book titles?\b|\bauthor names?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bbestseller(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b/i.test(renderedHtml),
+      `${label} static output includes account, public-posting, review/rating, real-book, author, publisher, franchise, or branded language.`,
     )
   }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
@@ -1853,12 +1997,23 @@ expect(Array.isArray(batch25ProductImages.images), 'batch25 product image manife
 expect(batch25ProductImages.images.length === 1, `Expected 1 Batch 25 product image, found ${batch25ProductImages.images.length}.`)
 validateBatch25ProductImage(batch25ProductImages.images[0])
 
+expect(existsSync(batch26ProductImagesFile), `Missing Batch 26 product image manifest: ${batch26ProductImagesFile}`)
+const batch26ProductImages = readJson(batch26ProductImagesFile)
+expect(
+  batch26ProductImages.batchId === batch26ProductImagesBatchId,
+  `batch26 product image manifest batchId must be ${batch26ProductImagesBatchId}.`,
+)
+expect(batch26ProductImages.generatedAt === '2026-06-02', 'batch26 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch26ProductImages.images), 'batch26 product image manifest images must be an array.')
+expect(batch26ProductImages.images.length === 1, `Expected 1 Batch 26 product image, found ${batch26ProductImages.images.length}.`)
+validateBatch26ProductImage(batch26ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 18, `Expected 18 product records, found ${products.products.length}.`)
+expect(products.products.length === 19, `Expected 19 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -1880,6 +2035,7 @@ for (const requiredProductSlug of [
   'nature-walk-story-field-notes-kit',
   'backyard-story-seed-packet-kit',
   'kitchen-table-story-recipe-card-deck',
+  'bookshop-story-bookmark-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -3060,6 +3216,78 @@ for (const asset of kitchenRecipeArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Kitchen Table Story Recipe Card Deck copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(bookshopBookmarkSourceFile), `Missing Batch 26 Bookshop Story Bookmark Pack source file: ${bookshopBookmarkSourceFile}`)
+const bookshopBookmarkSource = readJson(bookshopBookmarkSourceFile)
+expect(
+  bookshopBookmarkSource.batchId === bookshopBookmarkBatchId,
+  `Bookshop Story Bookmark Pack source batchId must be ${bookshopBookmarkBatchId}.`,
+)
+const bookshopBookmarkProduct = products.products.find((product) => product.slug === 'bookshop-story-bookmark-pack')
+expect(bookshopBookmarkProduct, 'Missing Bookshop Story Bookmark Pack product record for Batch 26 artifact validation.')
+const bookshopBookmarkSourceErrors = validateBookshopStoryBookmarkPackSource(
+  bookshopBookmarkSource,
+  bookshopBookmarkProduct,
+  worldAgeBands,
+)
+expect(
+  bookshopBookmarkSourceErrors.length === 0,
+  `Bookshop Story Bookmark Pack source failed validation:\n${bookshopBookmarkSourceErrors.join('\n')}`,
+)
+const bookshopBookmarkSourceFileErrors = validateBookshopStoryBookmarkPackSourceFiles(bookshopBookmarkSource, root)
+expect(
+  bookshopBookmarkSourceFileErrors.length === 0,
+  `Bookshop Story Bookmark Pack sourceFiles failed validation:\n${bookshopBookmarkSourceFileErrors.join('\n')}`,
+)
+const bookshopBookmarkExpectedPdfPages = bookshopBookmarkSource.bookmarks.length + 5
+const bookshopBookmarkArtifactStatus = inspectArtifactFiles(root, bookshopBookmarkSource.artifact, {
+  expectedPdfPages: bookshopBookmarkExpectedPdfPages,
+})
+expect(
+  bookshopBookmarkArtifactStatus.valid,
+  `Bookshop Story Bookmark Pack artifacts failed validation:\n${bookshopBookmarkArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  bookshopBookmarkArtifactStatus.files.pdf.size > 100_000,
+  `Bookshop Story Bookmark Pack PDF artifact is unexpectedly small: ${bookshopBookmarkArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  bookshopBookmarkArtifactStatus.files.pdf.pageCount === bookshopBookmarkExpectedPdfPages,
+  `Bookshop Story Bookmark Pack PDF artifact must have ${bookshopBookmarkExpectedPdfPages} pages.`,
+)
+expect(
+  bookshopBookmarkArtifactStatus.files.zip.size > bookshopBookmarkArtifactStatus.files.pdf.size,
+  'Bookshop Story Bookmark Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const bookshopBookmarkCheckoutErrors = validateCheckoutReadiness(bookshopBookmarkProduct, bookshopBookmarkArtifactStatus)
+expect(
+  bookshopBookmarkCheckoutErrors.length === 0,
+  `Bookshop Story Bookmark Pack checkout readiness failed validation:\n${bookshopBookmarkCheckoutErrors.join('\n')}`,
+)
+const bookshopBookmarkArtifactManifest = readJson(resolve(root, bookshopBookmarkSource.artifact.manifestPath))
+expect(
+  bookshopBookmarkArtifactManifest.sourcePageCount === bookshopBookmarkSource.bookmarks.length,
+  'Bookshop Story Bookmark Pack artifact manifest sourcePageCount must match source bookmarks.',
+)
+expect(
+  Array.isArray(bookshopBookmarkArtifactManifest.files.assets),
+  'Bookshop Story Bookmark Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  bookshopBookmarkArtifactManifest.files.assets.length === bookshopBookmarkSource.worldSlugs.length,
+  'Bookshop Story Bookmark Pack artifact manifest must include one copied local image per source world.',
+)
+const bookshopBookmarkManifestAssetErrors = validateManifestWorldAssets(
+  bookshopBookmarkSource,
+  bookshopBookmarkArtifactManifest,
+)
+expect(
+  bookshopBookmarkManifestAssetErrors.length === 0,
+  `Bookshop Story Bookmark Pack artifact manifest image coverage failed validation:\n${bookshopBookmarkManifestAssetErrors.join('\n')}`,
+)
+for (const asset of bookshopBookmarkArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Bookshop Story Bookmark Pack copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 18 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length + batch26ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 19 product artifacts.`,
 )
