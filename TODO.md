@@ -34,10 +34,11 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] 2026-06-02: Batch 3 generated 10 homeschool/classroom mini-units with lesson flow, teacher notes, assessment notes, printable-kit direction, and no student-account requirements.
 - [x] 2026-06-02: Added static `/mini-units/` hub and 10 crawlable mini-unit pages with Batch 3 content validation.
 - [x] 2026-06-02: Batch 4 generated 20 local RTX 4090 world images for top Batch 1 worlds, saved JPEG/WebP assets, prompt sidecars, manifest, static `/world-gallery/` page, and validator coverage.
+- [x] 2026-06-02: Batch 5 added the static `$9` Rainy Day Story Quest Pack product page with checkout-pending/provider-pending copy, homepage link, renderer output, and content validation.
 
 ## In Progress
 
-- [ ] Batch 5 monetization page for the $9 printable "Rainy Day Story Quest Pack".
+- [ ] Batch 6 checkout-provider decision note and checkout wiring plan, without enabling checkout until provider choice is explicit.
 
 ## Next Content Batches
 
@@ -45,7 +46,8 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] Batch 2: Generate SEO collection pages for `creative writing prompts for kids`, `story writing worksheets`, `reluctant writer activities`, and `homeschool writing prompts`.
 - [x] Batch 3: Generate 10 homeschool/classroom mini-units with teacher notes and no student-account requirements.
 - [x] Batch 4: Generate 20 local GPU images for top worlds, save JPEG/WebP assets, and record prompt sidecars.
-- [ ] Batch 5: Build the first purchase-ready static product page for a $9 printable quest pack, without enabling checkout until a provider is selected.
+- [x] Batch 5: Build the first purchase-ready static product page for a $9 printable quest pack, without enabling checkout until a provider is selected.
+- [ ] Batch 6: Choose the checkout provider path and define the exact safe wiring steps for the $9 pack.
 
 ## Product Gates
 

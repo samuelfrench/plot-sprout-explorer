@@ -47,6 +47,14 @@ export type WorldGalleryLink = {
   note: string
 }
 
+export type FeaturedProductLink = {
+  slug: string
+  title: string
+  pricePoint: string
+  description: string
+  note: string
+}
+
 const defaultSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 
@@ -259,4 +267,13 @@ export const worldGalleryLink: WorldGalleryLink = {
   description:
     'Twenty local RTX 4090 world images for printable quests, classroom packets, and static SEO pages.',
   note: 'Images are generated locally and committed with prompt sidecars.',
+}
+
+export const featuredProductLink: FeaturedProductLink = {
+  slug: 'rainy-day-story-quest-pack',
+  title: 'Rainy Day Story Quest Pack',
+  pricePoint: '$9',
+  description:
+    'A static product page for a rainy-day printable quest pack, ready for checkout wiring after a provider is selected.',
+  note: 'No checkout, accounts, uploads, or public publishing are enabled.',
 }

@@ -14,6 +14,7 @@ import { useMemo, useState } from 'react'
 import './App.css'
 import {
   buildQuestPack,
+  featuredProductLink,
   miniUnitHubLink,
   questWorlds,
   seoCollectionLinks,
@@ -161,6 +162,20 @@ function App() {
           Browse local art
           <ArrowRight size={18} aria-hidden="true" />
         </a>
+      </section>
+
+      <section className="product-section" aria-labelledby="product-title">
+        <div>
+          <p className="eyebrow">First printable offer</p>
+          <h2 id="product-title">{featuredProductLink.title}</h2>
+        </div>
+        <p>{featuredProductLink.description}</p>
+        <p className="product-price">{featuredProductLink.pricePoint}</p>
+        <a className="product-link" href={pagePath(featuredProductLink.slug)}>
+          Preview the pack
+          <ArrowRight size={18} aria-hidden="true" />
+        </a>
+        <p className="product-note">{featuredProductLink.note}</p>
       </section>
 
       <section id="project-engine" className="ops-grid" aria-label="Project engine">

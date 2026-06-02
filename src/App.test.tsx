@@ -58,4 +58,14 @@ describe('App', () => {
       expect.stringContaining('world-gallery'),
     )
   })
+
+  it('links to the static rainy day product page without active checkout', () => {
+    render(<App />)
+
+    expect(screen.getByRole('heading', { name: /Rainy Day Story Quest Pack/i })).toBeInTheDocument()
+    expect(screen.getByRole('link', { name: /Preview the pack/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('rainy-day-story-quest-pack'),
+    )
+  })
 })

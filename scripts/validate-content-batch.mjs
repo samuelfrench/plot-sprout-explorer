@@ -1,6 +1,8 @@
 import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 
+import { containsActiveCheckoutLanguage } from './content-policy.mjs'
+
 const root = resolve(import.meta.dirname, '..')
 const worldsDir = resolve(root, 'content', 'worlds')
 const kitsDir = resolve(root, 'content', 'printable-kits')
@@ -8,10 +10,12 @@ const seoCollectionsDir = resolve(root, 'content', 'seo-collections')
 const seoCollectionsFile = resolve(seoCollectionsDir, 'batch2-collections.json')
 const miniUnitsFile = resolve(root, 'content', 'mini-units', 'batch3-mini-units.json')
 const batch4ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch4-world-images.json')
+const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
 const batch4ImagesBatchId = '2026-06-02-batch4'
+const productsBatchId = '2026-06-02-batch5'
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 const seoLanes = new Set([
@@ -417,6 +421,54 @@ function validateBatch4Image(image, imageSlugs, worldSlugs, worldSources) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateProduct(product, productSlugs, worldSlugs) {
+  const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
+  for (const key of [
+    'slug',
+    'title',
+    'pricePoint',
+    'status',
+    'headline',
+    'summary',
+    'heroImage',
+    'ctaLabel',
+    'ctaHref',
+    'checkoutNote',
+    'safetyNote',
+  ]) {
+    validateString(product[key], `${label}.${key}`)
+  }
+  expect(product.slug === 'rainy-day-story-quest-pack', `${label}.slug must be rainy-day-story-quest-pack.`)
+  expect(product.title === 'Rainy Day Story Quest Pack', `${label}.title mismatch.`)
+  expect(product.pricePoint === '$9', `${label}.pricePoint must be $9.`)
+  expect(product.status === 'checkout_pending', `${label}.status must be checkout_pending.`)
+  expect(!productSlugs.has(product.slug), `${label}.slug is duplicated across Batch 5 products.`)
+  productSlugs.add(product.slug)
+  expect(product.heroImage.startsWith('images/plotsprout/'), `${label}.heroImage must use a committed local image.`)
+  expect(product.ctaHref.startsWith('mailto:'), `${label}.ctaHref must be mailto while checkout is pending.`)
+  expect(/provider|checkout.*pending|checkout.*selected/i.test(product.checkoutNote), `${label}.checkoutNote must say checkout/provider is pending.`)
+  expect(product.safetyNote.includes(safety), `${label}.safetyNote missing required safety sentence.`)
+  validateMinList(product.worldSlugs, 3, `${label}.worldSlugs`)
+  expect(product.worldSlugs.length <= 5, `${label}.worldSlugs must have no more than 5 entries.`)
+  for (const worldSlug of product.worldSlugs) {
+    expect(worldSlugs.has(worldSlug), `${label}.worldSlugs references unknown world slug ${worldSlug}.`)
+  }
+  validateMinList(product.includedPages, 6, `${label}.includedPages`)
+  validateMinList(product.useCases, 3, `${label}.useCases`)
+  validateMinList(product.parentSteps, 3, `${label}.parentSteps`)
+
+  expect(!containsActiveCheckoutLanguage(product), `${label} includes active checkout or payment-provider language.`)
+  expect(!/student accounts?|login|log in|public publishing|publish online|upload/i.test(JSON.stringify(product)), `${label} includes account, upload, or public publishing language.`)
+  validateNoBannedTerms(product, label)
+
+  const renderedPath = resolve(root, 'public', product.slug, 'index.html')
+  expect(existsSync(renderedPath), `${label} static output is missing: ${renderedPath}`)
+  const renderedHtml = readFileSync(renderedPath, 'utf8')
+  expect(renderedHtml.includes(product.title), `${label} static output missing product title.`)
+  expect(renderedHtml.includes(product.pricePoint), `${label} static output missing price.`)
+  expect(renderedHtml.includes(product.checkoutNote), `${label} static output missing checkout note.`)
+}
+
 for (const dir of [worldsDir, kitsDir]) {
   expect(existsSync(dir), `Missing content directory: ${dir}`)
 }
@@ -511,6 +563,15 @@ for (const image of batch4Images.images) {
   )
 }
 
+expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
+const products = readJson(productsFile)
+expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
+expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
+expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
+expect(products.products.length === 1, `Expected 1 Batch 5 product, found ${products.products.length}.`)
+const productSlugs = new Set()
+products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size} local world images.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size} local world images, ${productSlugs.size} static product page.`,
 )

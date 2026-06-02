@@ -1,0 +1,44 @@
+{
+  "batchId": "2026-06-02-batch5",
+  "generatedAt": "2026-06-02",
+  "products": [
+    {
+      "slug": "rainy-day-story-quest-pack",
+      "title": "Rainy Day Story Quest Pack",
+      "pricePoint": "$9",
+      "status": "checkout_pending",
+      "headline": "A printable rainy-day writing pack for one quiet afternoon.",
+      "summary": "Four weather-and-water quest worlds give reluctant writers a concrete map, a few tiny errands, and a short ending choice instead of a blank page.",
+      "heroImage": "images/plotsprout/batch4/rain-gauge-railway.jpg",
+      "ctaLabel": "Request launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Rainy%20Day%20Story%20Quest%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "rain-gauge-railway",
+        "spoon-ferry-lunchbox-harbor",
+        "rain-boot-route-rangers"
+      ],
+      "includedPages": [
+        "Rainy-day route map",
+        "Tiny forecast cards",
+        "Puddle reflection description page",
+        "Snack delivery dialogue sheet",
+        "Weather clue sentence builder",
+        "Kind ending choice cards",
+        "Parent guide for a 35-minute writing session"
+      ],
+      "useCases": [
+        "A low-pressure writing activity when kids are stuck indoors",
+        "A homeschool language arts warm-up with weather observation",
+        "A tutoring or classroom station for short narrative practice"
+      ],
+      "parentSteps": [
+        "Pick one world and read the first prompt aloud.",
+        "Let the child point, circle, or label before writing full sentences.",
+        "End with two kind choices and let the child choose the ending."
+      ]
+    }
+  ]
+}

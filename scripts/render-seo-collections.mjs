@@ -5,6 +5,7 @@ const root = resolve(import.meta.dirname, '..')
 const collectionPath = resolve(root, 'content', 'seo-collections', 'batch2-collections.json')
 const miniUnitsPath = resolve(root, 'content', 'mini-units', 'batch3-mini-units.json')
 const batch4ImagesPath = resolve(root, 'content', 'image-queue', '2026-06-02-batch4-world-images.json')
+const productsPath = resolve(root, 'content', 'products', 'batch5-products.json')
 const worldsDir = resolve(root, 'content', 'worlds')
 const publicDir = resolve(root, 'public')
 const siteRoot = 'https://samuelfrench.github.io/plot-sprout-explorer'
@@ -692,6 +693,183 @@ function renderWorldGallery(manifest, worlds) {
 `
 }
 
+function renderProductPage(product, worlds) {
+  const canonical = `${siteRoot}/${product.slug}/`
+  const referencedWorlds = product.worldSlugs.map((slug) => {
+    const world = worlds.get(slug)
+    if (!world) fail(`Unknown product world slug in ${product.slug}: ${slug}`)
+    return world
+  })
+  const worldCards = referencedWorlds
+    .map(
+      (world) => `
+        <article class="world-card">
+          <span>Ages ${escapeHtml(world.ageBand)} | ${escapeHtml(world.seoLane)}</span>
+          <h3>${escapeHtml(world.title)}</h3>
+          <p>${escapeHtml(world.premise)}</p>
+        </article>`,
+    )
+    .join('\n')
+
+  return `<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>${escapeHtml(product.title)} | Plot Sprout Explorer</title>
+    <meta name="description" content="${escapeHtml(product.summary).slice(0, 158)}">
+    <link rel="canonical" href="${canonical}">
+    <link rel="icon" type="image/svg+xml" href="${basePath}favicon.svg">
+    <style>
+      :root {
+        --ink: #19343a;
+        --muted: #52656b;
+        --panel: #fdf8ef;
+        --line: #bfd8d2;
+        --coral: #ec6f3f;
+        --teal: #2c7a78;
+        --gold: #f2c14f;
+        color: var(--ink);
+        background:
+          linear-gradient(135deg, rgba(29, 157, 178, 0.18), transparent 36rem),
+          linear-gradient(135deg, #f7fbf4 0%, #e8f6f1 46%, #fff7eb 100%);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 17px;
+        line-height: 1.5;
+      }
+      * { box-sizing: border-box; }
+      body { min-width: 320px; margin: 0; }
+      main { width: min(1120px, calc(100% - 28px)); margin: 0 auto; padding: 28px 0; }
+      a { color: inherit; }
+      h1, h2, h3 { margin: 0; line-height: 1.08; }
+      h1 {
+        max-width: 13ch;
+        font-family: Georgia, Times New Roman, serif;
+        font-size: clamp(2.2rem, 7vw, 5.4rem);
+      }
+      h2 { font-size: clamp(1.35rem, 3vw, 2rem); }
+      p, li { color: var(--muted); }
+      .hero, .panel, .world-card {
+        border: 1px solid var(--line);
+        background: color-mix(in srgb, var(--panel) 92%, white);
+        box-shadow: 0 18px 45px rgba(20, 31, 43, 0.08);
+      }
+      .hero {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr) minmax(260px, 0.72fr);
+        gap: 22px;
+        padding: 24px;
+        border-top: 8px solid var(--gold);
+      }
+      .eyebrow, .world-card span {
+        color: var(--teal);
+        font-size: 0.76rem;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .hero img {
+        width: 100%;
+        min-height: 280px;
+        aspect-ratio: 7 / 4;
+        object-fit: cover;
+        border: 1px solid var(--line);
+        background: #dfeee7;
+      }
+      .price {
+        display: inline-grid;
+        min-width: 92px;
+        min-height: 58px;
+        place-items: center;
+        margin: 12px 0;
+        background: #fff;
+        border: 2px solid var(--ink);
+        color: var(--ink);
+        font-size: 1.8rem;
+        font-weight: 900;
+      }
+      .button {
+        display: inline-flex;
+        min-height: 44px;
+        align-items: center;
+        justify-content: center;
+        padding: 0 16px;
+        color: #fff;
+        font-weight: 900;
+        text-decoration: none;
+        background: var(--coral);
+        border: 1px solid #9c3f29;
+        border-radius: 7px;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+        gap: 14px;
+        margin-top: 18px;
+      }
+      .panel, .world-card { padding: 18px; }
+      .panel ul, .panel ol { padding-left: 1.2rem; }
+      .world-card {
+        min-height: 210px;
+        background: #fff;
+        border-top: 7px solid var(--teal);
+      }
+      .notice {
+        border-top: 7px solid var(--coral);
+      }
+      footer { padding: 24px 0 8px; color: var(--muted); }
+      @media (max-width: 880px) {
+        .hero, .grid { grid-template-columns: 1fr; }
+        .hero img { min-height: auto; }
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Static product page | checkout pending</p>
+          <h1>${escapeHtml(product.title)}</h1>
+          <div class="price">${escapeHtml(product.pricePoint)}</div>
+          <p><strong>${escapeHtml(product.headline)}</strong></p>
+          <p>${escapeHtml(product.summary)}</p>
+          <a class="button" href="${escapeHtml(product.ctaHref)}">${escapeHtml(product.ctaLabel)}</a>
+        </div>
+        <img src="${basePath}${escapeHtml(product.heroImage)}" alt="">
+      </section>
+      <section class="panel notice">
+        <h2>Checkout status</h2>
+        <p>${escapeHtml(product.checkoutNote)}</p>
+      </section>
+      <div class="grid">
+        <section class="panel">
+          <h2>Included pages</h2>
+          <ul>${renderList(product.includedPages)}</ul>
+        </section>
+        <section class="panel">
+          <h2>Best uses</h2>
+          <ul>${renderList(product.useCases)}</ul>
+        </section>
+        <section class="panel">
+          <h2>Parent steps</h2>
+          <ol>${renderList(product.parentSteps)}</ol>
+        </section>
+      </div>
+      <section class="panel">
+        <h2>Quest worlds in the pack</h2>
+        <div class="grid">${worldCards}</div>
+      </section>
+      <section class="panel">
+        <h2>Safety</h2>
+        <p>${escapeHtml(product.safetyNote)}</p>
+      </section>
+      <footer><a href="${basePath}">Plot Sprout Explorer</a> product pages stay static until checkout wiring is deliberately selected.</footer>
+    </main>
+  </body>
+</html>
+`
+}
+
 if (!existsSync(collectionPath)) {
   fail(`Missing SEO collection source: ${collectionPath}`)
 }
@@ -731,3 +909,15 @@ const galleryDir = resolve(publicDir, 'world-gallery')
 mkdirSync(galleryDir, { recursive: true })
 writeFileSync(resolve(galleryDir, 'index.html'), renderWorldGallery(batch4Images, worlds))
 console.log('Rendered world-gallery/index.html')
+
+if (!existsSync(productsPath)) {
+  fail(`Missing Batch 5 products source: ${productsPath}`)
+}
+
+const products = readJson(productsPath)
+for (const product of products.products) {
+  const productDir = resolve(publicDir, product.slug)
+  mkdirSync(productDir, { recursive: true })
+  writeFileSync(resolve(productDir, 'index.html'), renderProductPage(product, worlds))
+  console.log(`Rendered ${product.slug}/index.html`)
+}
