@@ -1,0 +1,276 @@
+{
+  "batchId": "2026-06-02-batch1",
+  "lane": "lower",
+  "worlds": [
+    {
+      "slug": "acorn-avenue-errand-office",
+      "title": "Acorn Avenue Errand Office",
+      "ageBand": "7-9",
+      "premise": "A desk inside a hollow acorn sorts tiny neighborhood errands: return a borrowed thimble, update the snack map, and deliver cheerful notes before the lunch bell.",
+      "prompts": [
+        "Opening prompt: Your hero opens the acorn desk drawer and finds three errand slips written on leaf paper.",
+        "Twist prompt: Halfway through the route, the snack map unfolds into a new street that was not there this morning.",
+        "Ending-choice prompt: Does your hero finish the errands in order, or ask the neighbors to trade jobs and make a better plan?"
+      ],
+      "heroChoices": [
+        "Leaf-list clerk with a tiny clipboard",
+        "Button-badge route helper",
+        "Crayon cartographer on a pencil scooter"
+      ],
+      "settingDetails": [
+        "A cork board covered with acorn-shell pushpins",
+        "Mailbox cubbies labeled by breakfast foods",
+        "A sidewalk map drawn in washable chalk"
+      ],
+      "conflict": "The errand slips are correct, but the route makes everyone walk in circles unless the hero notices the shared shortcut.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$9 printable kit: errand-card cutouts, neighborhood route map, kindness receipt page, and parent guide for reluctant writers.",
+      "imagePrompt": "family-friendly Acorn Avenue Errand Office scene, cozy hollow acorn civic errand desk, tiny mail cubbies, chalk route map, leaf-paper task slips, cheerful neighborhood shopfronts, warm morning light, polished local SDXL/FLUX children's storybook illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "seoLane": "reluctant writer activities",
+      "kitTheme": "tiny civic errands"
+    },
+    {
+      "slug": "button-bakery-map-mixup",
+      "title": "Button Bakery Map Mix-Up",
+      "ageBand": "7-9",
+      "premise": "A bakery the size of a lunchbox sells button-shaped rolls, and every customer gets a crumb map to the next helpful errand.",
+      "prompts": [
+        "Opening prompt: Your hero buys one warm button roll and finds a crumb map tucked under the plate.",
+        "Twist prompt: A breeze flips the map upside down, turning the bakery route into a silly shop-to-shop scavenger path.",
+        "Ending-choice prompt: Does your hero follow the upside-down map, or redraw it with clues from the shopkeepers?"
+      ],
+      "heroChoices": [
+        "Apron map reader with floury sleeves",
+        "Jam-jar delivery helper",
+        "Napkin-note detective"
+      ],
+      "settingDetails": [
+        "Rolling-pin street signs",
+        "Jam jars used as window lamps",
+        "A counter bell that dings when someone says please"
+      ],
+      "conflict": "The bakery's snack deliveries will arrive late unless the hero turns the mixed-up map into clear directions.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$9 printable kit: bakery map worksheet, shopkeeper clue cards, snack-review writing page, and family story-night recipe prompt.",
+      "imagePrompt": "family-friendly Button Bakery Map Mix-Up scene, lunchbox-sized bakery with button rolls, crumb trail map, jam jar lamps, tiny cheerful shops along a cozy street, bright watercolor-and-gouache look, polished local SDXL/FLUX children's publishing illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "seoLane": "creative writing prompts for kids",
+      "kitTheme": "cheerful shop maps"
+    },
+    {
+      "slug": "teacup-town-weather-window",
+      "title": "Teacup Town Weather Window",
+      "ageBand": "7-8",
+      "premise": "Inside a blue teacup, a tiny town checks the weather through a spoon-shaped window and plans errands around drizzle, sunbeams, and toast-scented fog.",
+      "prompts": [
+        "Opening prompt: Your hero wakes up beside the spoon window and writes down the first three weather clues.",
+        "Twist prompt: The forecast cards slide into the wrong pockets, so the umbrella shop prepares for sunshine and the picnic cart prepares for drizzle.",
+        "Ending-choice prompt: Does your hero fix the forecast board alone, or invite each shop to add one weather clue?"
+      ],
+      "heroChoices": [
+        "Teaspoon weather watcher",
+        "Sugar-cube sign painter",
+        "Tiny umbrella shop helper"
+      ],
+      "settingDetails": [
+        "Steam clouds shaped like commas",
+        "Cup-handle bridge with bead railings",
+        "Sugar-cube benches outside the umbrella shop"
+      ],
+      "conflict": "Teacup Town needs one clear forecast so the shops can set out the right snacks and supplies.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$29 homeschool bundle: weather observation writing sheets, mini map, forecast cards, and revision prompts.",
+      "imagePrompt": "family-friendly Teacup Town Weather Window scene, tiny town inside a blue teacup, spoon-shaped weather window, sugar cube benches, cheerful umbrella shop, soft steam clouds, cozy kitchen-light fantasy, polished local SDXL/FLUX storybook illustration for ages 7-9, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "seoLane": "homeschool writing prompts",
+      "kitTheme": "weather errands"
+    },
+    {
+      "slug": "sticker-station-mail-cart",
+      "title": "Sticker Station Mail Cart",
+      "ageBand": "7-9",
+      "premise": "A rolling greeting cart visits a sticker shop, a pencil repair nook, and a tiny lost-and-found counter where every short note needs the right friendly mood.",
+      "prompts": [
+        "Opening prompt: Your hero checks the greeting cart and finds three blank notes that need a sticker, a first sentence, and a kind sign-off.",
+        "Twist prompt: The sticker machine starts choosing moods based on sounds, so a squeaky wheel makes every note seem surprised.",
+        "Ending-choice prompt: Does your hero write a new greeting for each note, or ask each shop to choose the mood it wants?"
+      ],
+      "heroChoices": [
+        "Sticker mood sorter with a rainbow satchel",
+        "Pencil repair greeting writer",
+        "Lost-and-found note helper"
+      ],
+      "settingDetails": [
+        "A cart wheel that squeaks in rhymes",
+        "Sticker sheets sorted by weather",
+        "A lost-and-found bowl full of tiny mittens"
+      ],
+      "conflict": "The cart cannot finish its route until every note has a greeting that matches its mood and receiver.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$9 printable kit: greeting-note cards, sticker mood choices, lost-and-found dialogue starters, and parent note for short daily prompts.",
+      "imagePrompt": "family-friendly Sticker Station Mail Cart scene, rolling tiny greeting cart beside cheerful sticker shop and pencil repair nook, colorful blank note cards, lost-and-found counter, bright practical lighting, polished local SDXL/FLUX kids illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "seoLane": "story writing worksheets",
+      "kitTheme": "greeting notes and dialogue mood"
+    },
+    {
+      "slug": "spoon-ferry-lunchbox-harbor",
+      "title": "Spoon Ferry Lunchbox Harbor",
+      "ageBand": "7-9",
+      "premise": "At Lunchbox Harbor, spoon ferries carry menu cards, snack orders, and polite dockside dialogue between tiny cracker cafes.",
+      "prompts": [
+        "Opening prompt: Your hero boards the spoon ferry with three snack orders and one blank menu card.",
+        "Twist prompt: Two cafes use the same snack words in different ways, so the hero must ask better questions before writing the orders.",
+        "Ending-choice prompt: Does your hero write a clearer menu, or create a short dialogue between the dock workers and the ferry cook?"
+      ],
+      "heroChoices": [
+        "Spoon ferry order taker",
+        "Napkin-menu writer",
+        "Snack dialogue helper"
+      ],
+      "settingDetails": [
+        "Cracker docks tied with twisty ties",
+        "A lunchbox lid painted like a sky",
+        "Grape-buoy markers bobbing in apple-juice water"
+      ],
+      "conflict": "The lunch orders are friendly but unclear, and the hero must rewrite them so every cafe knows what to make.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$29 printable homeschool bundle: lunchbox menu cards, snack-order revision sheet, dockside dialogue prompts, and sequence-writing practice.",
+      "imagePrompt": "family-friendly Spoon Ferry Lunchbox Harbor scene, tiny spoon ferry in a lunchbox harbor, cracker cafes, napkin menu cards, grape buoy markers, apple-juice water, whimsical household-object world, polished local SDXL/FLUX storybook art, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "seoLane": "homeschool writing prompts",
+      "kitTheme": "menu orders and dockside dialogue"
+    },
+    {
+      "slug": "pocket-park-notice-board",
+      "title": "Pocket Park Notice Board",
+      "ageBand": "7-9",
+      "premise": "A park small enough to fit in a jacket pocket uses a notice board for seed swaps, bench reservations, picnic lists, and cheerful cleanup reminders.",
+      "prompts": [
+        "Opening prompt: Your hero arrives at Pocket Park and reads the newest notice pinned with a daisy stem.",
+        "Twist prompt: A squirrel-shaped cloud casts shade over half the board, hiding the second half of every message.",
+        "Ending-choice prompt: Does your hero write temporary replacement notices, or organize a park walk to gather the missing details?"
+      ],
+      "heroChoices": [
+        "Notice-board helper with daisy pins",
+        "Pocket park map maker",
+        "Picnic-list checker"
+      ],
+      "settingDetails": [
+        "Bottle-cap benches under mint leaves",
+        "A pebble path with hopscotch numbers",
+        "A notice board made from a matchbox lid"
+      ],
+      "conflict": "The park's small errands are all friendly, but unclear notices send helpers to the wrong corners.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$79 classroom pack: pocket-park notice templates, civic errand role cards, map-reading worksheet, and teacher extension activity.",
+      "imagePrompt": "family-friendly Pocket Park Notice Board scene, miniature park inside a jacket pocket, matchbox-lid notice board, bottle-cap benches, mint leaf trees, pebble path, bright civic errand atmosphere, polished local SDXL/FLUX children's illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "seoLane": "story writing worksheets",
+      "kitTheme": "notice board errands"
+    },
+    {
+      "slug": "mitten-market-lost-ticket",
+      "title": "Mitten Market Lost Ticket",
+      "ageBand": "7-8",
+      "premise": "In a cozy mitten-shaped market, tiny stalls trade cocoa tokens, yarn maps, and warm snack tickets for helpful errands.",
+      "prompts": [
+        "Opening prompt: Your hero finds a soft blue ticket beside the cocoa token jar and needs to learn which stall it belongs to.",
+        "Twist prompt: The yarn map curls itself into a mitten maze with one warm clue at each turn.",
+        "Ending-choice prompt: Does your hero follow the yarn maze, or ask the stall owners to describe what they are missing?"
+      ],
+      "heroChoices": [
+        "Yarn-map reader",
+        "Cocoa token counter",
+        "Mitten stall helper"
+      ],
+      "settingDetails": [
+        "Thumb-shaped cocoa counter",
+        "Yarn roads stitched through the floor",
+        "Snack tickets clipped to clothespin flags"
+      ],
+      "conflict": "The lost ticket must be returned before the market can count its snack orders for the afternoon.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$9 printable kit: lost-ticket mystery page, mitten-market map, snack token counters, and early-writer sentence starters.",
+      "imagePrompt": "family-friendly Mitten Market Lost Ticket scene, cozy mitten-shaped indoor market, tiny cocoa stall, yarn roads, snack tickets on clothespin flags, warm textile detail, polished local SDXL/FLUX storybook illustration for young writers, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "seoLane": "creative writing prompts for kids",
+      "kitTheme": "cozy market mystery"
+    },
+    {
+      "slug": "rain-boot-route-rangers",
+      "title": "Rain Boot Route Rangers",
+      "ageBand": "7-9",
+      "premise": "A pair of rain boots becomes a traveling route office whenever puddles appear, helping tiny shopkeepers choose dry paths for deliveries.",
+      "prompts": [
+        "Opening prompt: Your hero steps into the rain boot route office and sees delivery paths drawn in raindrops.",
+        "Twist prompt: The raindrop paths keep sliding down the boot wall, making every route shorter than it should be.",
+        "Ending-choice prompt: Does your hero copy the routes onto leaf cards, or build a new path using puddle reflections?"
+      ],
+      "heroChoices": [
+        "Raindrop route ranger",
+        "Leaf-card dispatcher",
+        "Puddle reflection mapper"
+      ],
+      "settingDetails": [
+        "Boot-lace handrails",
+        "A heel desk with a tiny umbrella stand",
+        "Puddle mirrors that show nearby shop doors"
+      ],
+      "conflict": "Snack crates and mail pouches are ready, but the delivery paths will not stay still long enough to follow.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$29 homeschool bundle: weather-writing route cards, rain-boot map grid, delivery-order worksheet, and descriptive-weather prompts.",
+      "imagePrompt": "family-friendly Rain Boot Route Rangers scene, inside a bright yellow rain boot route office, raindrop maps, boot-lace handrails, tiny umbrella stand, puddle reflection path clues, cheerful rainy-day errand mood, polished local SDXL/FLUX children's illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "seoLane": "reluctant writer activities",
+      "kitTheme": "rainy route planning"
+    },
+    {
+      "slug": "paperclip-plaza-parcel-day",
+      "title": "Paperclip Plaza Parcel Day",
+      "ageBand": "7-9",
+      "premise": "Paperclip Plaza holds Parcel Day every Friday, when tiny household-object shops swap neatly bundled notes, snack coupons, and map pieces.",
+      "prompts": [
+        "Opening prompt: Your hero receives a parcel wrapped with a paperclip handle and a tag showing only a tiny map symbol.",
+        "Twist prompt: Every shop in the plaza has the same symbol today, but each one uses it for a different helpful job.",
+        "Ending-choice prompt: Does your hero open the parcel at the plaza table, or deliver it by matching the symbol to the best errand?"
+      ],
+      "heroChoices": [
+        "Paperclip parcel carrier",
+        "Coupon counter helper",
+        "Map-symbol matcher"
+      ],
+      "settingDetails": [
+        "Binder-clip awnings above the shops",
+        "Sticky-note sidewalks in careful squares",
+        "A parcel table made from a coaster"
+      ],
+      "conflict": "The plaza needs a clear symbol key before the parcels can reach the right tiny shops.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$79 classroom pack: symbol-key worksheet, parcel-writing cards, shop role-play prompts, and printable small-group map activity.",
+      "imagePrompt": "family-friendly Paperclip Plaza Parcel Day scene, miniature plaza made from paperclips, binder-clip shop awnings, sticky-note sidewalks, tiny parcels and snack coupon bundles, cozy tabletop world, polished local SDXL/FLUX children's storybook illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "seoLane": "story writing worksheets",
+      "kitTheme": "parcel sorting"
+    },
+    {
+      "slug": "penny-path-compass-shop",
+      "title": "Penny Path Compass Shop",
+      "ageBand": "7-9",
+      "premise": "A cheerful compass shop on Penny Path rents button compasses to kids who need to find tiny errands hiding between snack stands and mailbox rows.",
+      "prompts": [
+        "Opening prompt: Your hero borrows a button compass and receives one tiny errand written on a folded receipt.",
+        "Twist prompt: The compass points toward the kindest next step instead of north, which changes the route after every helpful choice.",
+        "Ending-choice prompt: Does your hero trust the changing compass, or make a new map that explains each kind turn?"
+      ],
+      "heroChoices": [
+        "Button-compass borrower",
+        "Receipt-route writer",
+        "Snack-stand direction helper"
+      ],
+      "settingDetails": [
+        "Penny stepping stones in front of the shop",
+        "Compass needles shaped like tiny spoons",
+        "Mailbox rows sorted by snack color"
+      ],
+      "conflict": "The errands are easy one by one, but the compass changes direction whenever the hero helps someone.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$9 printable kit: compass-choice cards, Penny Path map, receipt-sized prompt slips, and parent guide for three-sentence stories.",
+      "imagePrompt": "family-friendly Penny Path Compass Shop scene, cheerful tiny compass shop on a penny-stone path, button compasses, snack stands, neat mailbox rows, receipt-sized errand slips, sunny tabletop fantasy, polished local SDXL/FLUX storybook illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "seoLane": "creative writing prompts for kids",
+      "kitTheme": "compass errands"
+    }
+  ]
+}

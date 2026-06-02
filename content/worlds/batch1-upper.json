@@ -1,0 +1,276 @@
+{
+  "batchId": "2026-06-02-batch1",
+  "lane": "upper",
+  "worlds": [
+    {
+      "slug": "revision-river-ferry",
+      "title": "Revision River Ferry",
+      "ageBand": "10-11",
+      "premise": "A paper ferry carries young editors between draft islands, where every stop reveals a stronger way to shape a story.",
+      "prompts": [
+        "Opening prompt: Your hero boards the Revision River Ferry with a messy first draft, three colored pencils, and a map that only shows the beginning.",
+        "Twist prompt: The ferry will not cross the comma-current until the hero moves one scene, cuts one extra detail, and adds one clue that matters later.",
+        "Ending-choice prompt: Choose the final dock: a polished chapter reading, a peer editor exchange, or a quiet author note explaining the best revision."
+      ],
+      "heroChoices": [
+        "A structure scout who spots missing bridges between scenes",
+        "A detail sorter who decides what stays, moves, or leaves",
+        "A ferry apprentice who turns feedback into calm next steps"
+      ],
+      "settingDetails": [
+        "Draft islands labeled Opening, Middle, Turn, and Finish",
+        "Floating sticky-note buoys that mark confusing paragraphs",
+        "A ferry bell that rings only when a revision makes the story clearer"
+      ],
+      "conflict": "The ferry route is out of order, so the hero must rebuild the story sequence without blaming any writer for the messy draft.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "Printable $9 revision ferry kit with scene cards, a cut-or-keep checklist, peer feedback slips, and a final draft reflection page.",
+      "imagePrompt": "Polished local FLUX/SDXL illustration of a cozy paper ferry on a bright river of draft pages, colorful revision buoys, pencil oars, cheerful editorial tools, warm classroom-adventure mood, high detail, soft daylight, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "story writing worksheets",
+      "kitTheme": "Revision sequencing and peer feedback"
+    },
+    {
+      "slug": "clue-label-tower-museum",
+      "title": "Clue Label Tower Museum",
+      "ageBand": "10-11",
+      "premise": "Inside a tall museum of everyday objects, each exhibit opens when its short label explains the one clue visitors should notice.",
+      "prompts": [
+        "Opening prompt: Your hero becomes the morning curator and finds three exhibit labels attached to the wrong ordinary objects.",
+        "Twist prompt: One object gives a clue that changes what the label should explain, so the hero must rewrite it in one clear sentence.",
+        "Ending-choice prompt: End with the hero writing the final exhibit label, arranging the clue objects, or choosing one object for a short paragraph."
+      ],
+      "heroChoices": [
+        "A clue curator who notices the detail visitors should see first",
+        "An object sorter who matches labels to tiny mysteries",
+        "A gallery helper who turns choices into one clear sentence"
+      ],
+      "settingDetails": [
+        "Glass cases holding a button, a key, a cracked teacup, and a feather",
+        "A spiral stair of tiny clue shelves and label drawers",
+        "Quiet choice cards that help teams sort objects without arguing"
+      ],
+      "conflict": "The museum can open only if each object has a label that points to the right clue and leaves out distracting details.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "Classroom-ready $29 clue-label museum pack with object cards, one-sentence label frames, sorting mats, and short paragraph planning sheets.",
+      "imagePrompt": "Polished local FLUX/SDXL illustration of a bright whimsical tower museum with everyday object cases, blank label cards, spiral clue shelves, clipboards, calm young curators, rich colors, inviting educational fantasy style, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "creative writing prompts for kids",
+      "kitTheme": "Clue labels and short explanatory paragraphs"
+    },
+    {
+      "slug": "compass-craft-academy",
+      "title": "Compass Craft Academy",
+      "ageBand": "10-11",
+      "premise": "At a school for story cartographers, students learn to plan routes before writing the journey.",
+      "prompts": [
+        "Opening prompt: Your hero arrives at Compass Craft Academy and receives a blank map, a class schedule, and a story route that starts in the wrong place.",
+        "Twist prompt: The map gains shortcuts whenever the hero combines two similar scenes and adds a stronger turning point in the middle.",
+        "Ending-choice prompt: Choose whether the hero submits a route map, teaches a new student the structure, or writes the first page from the finished map."
+      ],
+      "heroChoices": [
+        "A route designer who builds beginnings, middles, and endings",
+        "A craft-school mentor who explains choices with kindness",
+        "A compass keeper who helps groups choose with clear criteria"
+      ],
+      "settingDetails": [
+        "Hallways shaped like story arcs and chapter paths",
+        "A map room with rulers, stamps, colored threads, and scene tiles",
+        "Workshop tables named Setting, Goal, Problem, Turn, and Finish"
+      ],
+      "conflict": "The academy showcase needs one readable story map, but every team has too many routes and must choose using shared criteria.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "Homeschool $29 story-structure bundle with map templates, scene-route tiles, revision passes, and parent facilitation notes.",
+      "imagePrompt": "Polished local FLUX/SDXL illustration of a warm craft academy map room, huge tabletop story map, compasses, colored thread routes, notebooks, windows full of daylight, handcrafted fantasy classroom feel, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "homeschool writing prompts",
+      "kitTheme": "Story mapping and structural planning"
+    },
+    {
+      "slug": "almost-invention-workshop",
+      "title": "Almost Invention Workshop",
+      "ageBand": "10-11",
+      "premise": "Inventors bring almost-working ideas to a workshop where revision is treated like testing, adjusting, and trying again.",
+      "prompts": [
+        "Opening prompt: Your hero enters the Almost Invention Workshop with a notebook full of half-finished ideas and one invention that nearly solves a silly problem.",
+        "Twist prompt: The invention works only after the hero rewrites the instructions in a clearer order and adds one missing explanation.",
+        "Ending-choice prompt: Decide whether the hero demonstrates the invention, publishes the instruction card, or starts a second prototype from feedback."
+      ],
+      "heroChoices": [
+        "A prototype planner who turns messy notes into steps",
+        "A workshop tester who notices where readers get confused",
+        "A materials organizer who keeps decisions calm with a checklist"
+      ],
+      "settingDetails": [
+        "Benches covered with cardboard gears, paper tubes, clips, and labels",
+        "A testing wall with slots for Draft, Try, Revise, and Share",
+        "A quiet idea shelf where unfinished plans are treated as useful"
+      ],
+      "conflict": "The workshop fair starts soon, and the hero must turn an almost invention into a clear process that someone else can follow.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "Printable $9 invention-writing kit with prototype cards, procedural writing pages, test notes, and revise-and-retry reflection sheets.",
+      "imagePrompt": "Polished local FLUX/SDXL illustration of a cheerful invention workshop with cardboard gears, paper prototypes, tidy tool trays, notebooks, testing charts without readable words, cozy maker-space lighting, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "reluctant writer activities",
+      "kitTheme": "Procedural writing through invention testing"
+    },
+    {
+      "slug": "appendix-archive-lab",
+      "title": "Appendix Archive Lab",
+      "ageBand": "10-11",
+      "premise": "A hidden archive stores maps, notes, glossaries, timelines, and side details that help writers build believable worlds.",
+      "prompts": [
+        "Opening prompt: Your hero is invited to the Appendix Archive Lab to organize a box of notes from an unfinished fantasy setting.",
+        "Twist prompt: The archive drawers rearrange themselves when the hero separates useful world details from facts that distract from the main story.",
+        "Ending-choice prompt: Finish with the hero creating a glossary, a timeline, or a setting guide that helps the next writer continue the tale."
+      ],
+      "heroChoices": [
+        "An archive indexer who gives every useful note a purpose",
+        "A timeline keeper who checks cause and effect",
+        "A setting guide who helps teammates choose details respectfully"
+      ],
+      "settingDetails": [
+        "Rolling ladders beside shelves of maps, field notes, and labeled boxes",
+        "A timeline table with colored cards for causes and results",
+        "A glossary cabinet that opens when a confusing term gets explained"
+      ],
+      "conflict": "The archive has too many fascinating details, and the hero must decide what supports the story instead of crowding it.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "Homeschool $29 worldbuilding archive bundle with timeline strips, glossary cards, detail filters, and setting consistency worksheets.",
+      "imagePrompt": "Polished local FLUX/SDXL illustration of a friendly archive lab with rolling ladders, map drawers, timeline cards, glowing desk lamps, paper folders, young archivists organizing notes, cozy academic fantasy mood, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "homeschool writing prompts",
+      "kitTheme": "Worldbuilding notes and supporting details"
+    },
+    {
+      "slug": "chapter-gate-greenhouse",
+      "title": "Chapter Gate Greenhouse",
+      "ageBand": "10-11",
+      "premise": "In a greenhouse of growing chapters, transitions act like gates that help readers move from one scene to the next.",
+      "prompts": [
+        "Opening prompt: Your hero tends the Chapter Gate Greenhouse, where each plant bed is a scene waiting for the right transition gate.",
+        "Twist prompt: A shortcut path sends readers in circles, so the hero must add transition clues and move one scene to a better spot.",
+        "Ending-choice prompt: End by choosing a chapter order, writing a bridge paragraph, or leaving a gardener note for the next draft."
+      ],
+      "heroChoices": [
+        "A chapter gardener who grows scenes in a useful order",
+        "A transition builder who connects ideas smoothly",
+        "A greenhouse scheduler who uses turn-taking cards for decisions"
+      ],
+      "settingDetails": [
+        "Scene beds marked by color, mood, and purpose",
+        "Glass gates that open when one paragraph leads clearly to the next",
+        "A compost bin for extra ideas that may fit another story later"
+      ],
+      "conflict": "Readers keep looping back to the same scene, so the hero must repair the order without throwing away every good idea.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "Printable $9 chapter-structure kit with scene bed cards, transition stems, order planners, and revision reflection prompts.",
+      "imagePrompt": "Polished local FLUX/SDXL illustration of a sunlit greenhouse where chapter scenes grow as paper plants, glass transition gates, colored garden beds, notebooks, pencils, calm imaginative learning atmosphere, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "story writing worksheets",
+      "kitTheme": "Transitions and chapter order"
+    },
+    {
+      "slug": "margin-note-market",
+      "title": "Margin Note Market",
+      "ageBand": "10-11",
+      "premise": "At a bustling market for feedback, every stall trades clear margin notes that help writers make the next draft stronger.",
+      "prompts": [
+        "Opening prompt: Your hero opens a tiny stall at Margin Note Market and must help three writers turn vague feedback into useful revision tasks.",
+        "Twist prompt: A basket of notes says only good, confusing, or more, so the hero rewrites each note into a specific action.",
+        "Ending-choice prompt: Choose whether the hero creates a feedback menu, hosts a quiet swap circle, or writes a thank-you note to a careful reviewer."
+      ],
+      "heroChoices": [
+        "A feedback translator who turns vague comments into useful steps",
+        "A market route planner who keeps review stations orderly",
+        "A calm-choice host who uses tokens so everyone gets a turn"
+      ],
+      "settingDetails": [
+        "Stalls for Clarity, Detail, Order, Voice, and Ending",
+        "Color-coded note cards sorted by praise, question, and suggestion",
+        "A bell-free review circle where writers point to choices instead of talking over each other"
+      ],
+      "conflict": "The market is full of feedback, but the hero must sort it into helpful, specific, and kind revision actions.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "Classroom $29 peer-review pack with margin note sentence starters, feedback station signs, writer response sheets, and calm discussion routines.",
+      "imagePrompt": "Polished local FLUX/SDXL illustration of an imaginative paper market with feedback stalls, colorful note cards, pencils, clipboards, friendly young writers trading revision ideas, bright handmade classroom fantasy style, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "reluctant writer activities",
+      "kitTheme": "Specific feedback and revision choices"
+    },
+    {
+      "slug": "blue-pencil-observatory",
+      "title": "Blue Pencil Observatory",
+      "ageBand": "10-11",
+      "premise": "A hilltop observatory uses blue-pencil lenses to spot pacing gaps, repeated ideas, and scenes that need sharper focus.",
+      "prompts": [
+        "Opening prompt: Your hero climbs to Blue Pencil Observatory with a draft that feels too fast in one place and too slow in another.",
+        "Twist prompt: Through the revision lens, the hero discovers that a quiet detail from the opening should return near the ending.",
+        "Ending-choice prompt: Decide whether the hero revises for pacing, strengthens the repeated detail, or writes a star log explaining the changes."
+      ],
+      "heroChoices": [
+        "A pacing astronomer who measures slow, quick, and balanced scenes",
+        "A pattern tracker who notices details worth bringing back",
+        "A lens assistant who leads silent rating rounds before editing"
+      ],
+      "settingDetails": [
+        "Telescopes with blue-pencil lenses pointed at floating draft pages",
+        "Star charts for pacing, pattern, voice, and clarity",
+        "A revision dome where writers mark changes before touching the final draft"
+      ],
+      "conflict": "The observatory cannot chart the story sky until the hero balances pace and returns one important detail at the right moment.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "Printable $9 blue-pencil revision toolkit with pacing meters, detail echo trackers, edit-pass checklists, and final reflection slips.",
+      "imagePrompt": "Polished local FLUX/SDXL illustration of a cozy hilltop observatory with blue-pencil telescopes, floating draft pages, star charts without readable words, warm night-sky colors, thoughtful young editors, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "creative writing prompts for kids",
+      "kitTheme": "Pacing, patterns, and edit passes"
+    },
+    {
+      "slug": "binding-day-boardwalk",
+      "title": "Binding Day Boardwalk",
+      "ageBand": "10-11",
+      "premise": "On Binding Day, young authors prepare finished pieces for a boardwalk showcase with covers, blurbs, pages, and author notes.",
+      "prompts": [
+        "Opening prompt: Your hero arrives at Binding Day Boardwalk with a finished story packet that still needs a title, order, and back-cover blurb.",
+        "Twist prompt: The page order makes the ending less clear, so the hero must rearrange the packet and write a blurb that promises the right kind of story.",
+        "Ending-choice prompt: Choose whether the hero hosts a table reading, designs a process display, or creates a publishing checklist for future authors."
+      ],
+      "heroChoices": [
+        "A booklet designer who checks title, order, cover, and blurb",
+        "A showcase planner who makes finished work easy to browse",
+        "A publication helper who uses checklists instead of last-minute panic"
+      ],
+      "settingDetails": [
+        "Boardwalk tables for drafts, covers, blurbs, author notes, and final copies",
+        "A gentle page-order carousel that reveals missing pieces",
+        "A quiet celebration wall for process notes and favorite revisions"
+      ],
+      "conflict": "The showcase opens soon, and the hero must make the story packet complete, clear, and ready to share with invited readers.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "Classroom $79 publishing-process pack with booklet templates, blurb practice pages, revision logs, showcase labels, and teacher rubrics.",
+      "imagePrompt": "Polished local FLUX/SDXL illustration of a sunny creative boardwalk with booklet-making tables, cover mockups without readable words, paper garlands, organized publishing stations, cheerful classroom showcase mood, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "story writing worksheets",
+      "kitTheme": "Publishing process and final presentation"
+    },
+    {
+      "slug": "index-card-theater-club",
+      "title": "Index Card Theater Club",
+      "ageBand": "10-11",
+      "premise": "A tabletop theater club uses index cards, cue lights, and tiny stage pieces to turn scattered scenes into one clear performance plan.",
+      "prompts": [
+        "Opening prompt: Your hero joins Index Card Theater Club and receives twelve scene cards, two cue lights, and one missing stage direction.",
+        "Twist prompt: The scene cards make sense only after the hero adds a line of dialogue that shows what changed.",
+        "Ending-choice prompt: Finish by writing the stage direction, arranging three scene cards, or drafting the narrator's closing cue."
+      ],
+      "heroChoices": [
+        "A scene-card arranger who finds the clearest order",
+        "A dialogue cue writer who shows feelings through action",
+        "A stage manager who uses quiet cards to help teams choose"
+      ],
+      "settingDetails": [
+        "A shoebox stage with paper curtains and movable scene pieces",
+        "Index cards clipped to string lights in beginning, turn, and finish rows",
+        "Cue-light tokens for action, dialogue, setting, and ending"
+      ],
+      "conflict": "The club has strong scene ideas, but the performance feels jumpy until the hero adds cues that connect each moment.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "Homeschool $29 scene-cue writing bundle with index-card planners, dialogue cue pages, stage direction prompts, and revision reflection sheets.",
+      "imagePrompt": "Polished local FLUX/SDXL illustration of a bright tabletop theater club with index cards, paper curtains, cue lights, movable scene pieces, pencils, young writers arranging a story performance plan, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "homeschool writing prompts",
+      "kitTheme": "Scene order, dialogue cues, and stage directions"
+    }
+  ]
+}

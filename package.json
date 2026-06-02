@@ -9,8 +9,9 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "test": "vitest run",
-    "verify": "npm run verify:actions && npm run lint && npm run test && npm run build",
+    "verify": "npm run verify:actions && npm run verify:content && npm run lint && npm run test && npm run build",
     "verify:actions": "node scripts/verify-workflows.mjs",
+    "verify:content": "node scripts/validate-content-batch.mjs",
     "content:batch": "node scripts/create-content-batch.mjs",
     "image:starter": "python3 scripts/generate_story_images_local.py"
   },

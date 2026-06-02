@@ -1,0 +1,54 @@
+{
+  "batchId": "2026-06-02-batch1",
+  "lane": "upper",
+  "kits": [
+    {
+      "slug": "blue-pencil-revision-mini-kit",
+      "worldSlug": "blue-pencil-observatory",
+      "title": "Blue Pencil Revision Mini Kit",
+      "pricePoint": "$9",
+      "pages": [
+        "Pacing Telescope Meter",
+        "Detail Echo Tracker",
+        "Blue Pencil Edit Pass",
+        "Revision Star Log",
+        "Final Draft Reflection Slip"
+      ],
+      "parentNote": "Use this as a short, low-pressure revision session after a child already has a rough draft.",
+      "classroomExtension": "Run three silent rating rounds for pace, repeated details, and clarity before students choose one edit pass.",
+      "upsell": "Companion option: add the $29 homeschool revision bundle with extra drafts, peer review cards, and weekly writing routines."
+    },
+    {
+    "slug": "clue-label-gallery-pack",
+    "worldSlug": "clue-label-tower-museum",
+    "title": "Clue Label Gallery Pack",
+    "pricePoint": "$29",
+    "pages": [
+      "Everyday Object Clue Cards",
+      "One-Sentence Exhibit Label Frame",
+      "Relevant Detail Sorting Mat",
+      "Quiet Choice Card Set",
+      "Short Museum Paragraph Draft Page"
+    ],
+    "parentNote": "Use this when a child needs a concrete object-based way to write one clear explanation.",
+    "classroomExtension": "Set up table galleries where students sort object clues, write one exhibit label, and expand it into a short paragraph.",
+    "upsell": "Companion option: add the $79 classroom writing-process license for rubrics, station signs, and reusable showcase templates."
+    },
+    {
+      "slug": "binding-day-classroom-license",
+      "worldSlug": "binding-day-boardwalk",
+      "title": "Binding Day Classroom License Pack",
+      "pricePoint": "$79",
+      "pages": [
+        "Final Packet Checklist",
+        "Back-Cover Blurb Builder",
+        "Author Process Note",
+        "Showcase Table Label Sheet",
+        "Teacher Publishing Rubric"
+      ],
+      "parentNote": "Use this at the end of a writing unit when the goal is finishing, organizing, and sharing work clearly.",
+      "classroomExtension": "Turn the room into a publishing boardwalk with stations for page order, blurbs, author notes, and final reflection.",
+      "upsell": "Companion option: add seasonal classroom packs that reuse the same publishing checklist with new world themes."
+    }
+  ]
+}

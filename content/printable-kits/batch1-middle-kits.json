@@ -1,0 +1,54 @@
+{
+  "batchId": "2026-06-02-batch1",
+  "lane": "middle",
+  "kits": [
+    {
+      "slug": "tidepool-timekeepers-field-kit",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "title": "Tidepool Timekeepers Field Kit",
+      "pricePoint": "$29",
+      "pages": [
+        "Tidepool Lab Story Starter",
+        "Shell-Shadow Measurement Log",
+        "Pebble Notebook Clue Cards",
+        "Moon Chart Ending Choices",
+        "Revise With Evidence Checklist"
+      ],
+      "parentNote": "Use the measurement log first, then let the story grow from one real or imagined observation.",
+      "classroomExtension": "Pairs compare two tide notes, mark which details are evidence, and write one shared ending choice.",
+      "upsell": "Seasonal homeschool bundle adds pond, rain, and compost field notebook quests with matching observation pages."
+    },
+    {
+      "slug": "greenhouse-gear-classroom-pack",
+      "worldSlug": "greenhouse-gear-garden",
+      "title": "Greenhouse Gear Classroom Pack",
+      "pricePoint": "$79",
+      "pages": [
+        "Greenhouse Systems Story Map",
+        "Seedling Schedule Planner",
+        "Friendly Gear Redesign Sheet",
+        "Plant Point-of-View Prompt Cards",
+        "Small-Group Revision Rubric"
+      ],
+      "parentNote": "Best for writers who like making diagrams before drafting; start with the gear redesign sheet.",
+      "classroomExtension": "Groups assign engineer, gardener, note keeper, and reader roles before presenting one revised greenhouse schedule.",
+      "upsell": "Class license expansion adds ten more garden engineering prompts, editable rubrics, and substitute-ready lesson notes."
+    },
+    {
+      "slug": "pantry-measurement-mini-kit",
+      "worldSlug": "pantry-measurement-mystery",
+      "title": "Pantry Measurement Mini Kit",
+      "pricePoint": "$9",
+      "pages": [
+        "Pantry Mystery Opening Page",
+        "Muffin Height Graph",
+        "Level-Spoon Test Notes",
+        "Recipe Change Prompt Cards",
+        "Kitchen Ending Choice Sheet"
+      ],
+      "parentNote": "Keep the task short by asking for three strong sentences on each page instead of a full story at once.",
+      "classroomExtension": "Students sort recipe details into measurement, time, and observation columns before drafting their pantry explanation.",
+      "upsell": "Kitchen science bundle adds solar oven, orchard pulley, and recipe revision quests for a four-week writing unit."
+    }
+  ]
+}

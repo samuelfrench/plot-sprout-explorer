@@ -1,0 +1,276 @@
+{
+  "batchId": "2026-06-02-batch1",
+  "lane": "middle",
+  "worlds": [
+    {
+      "slug": "tidepool-timekeepers-lab",
+      "title": "Tidepool Timekeepers Lab",
+      "ageBand": "8-10",
+      "premise": "At the edge of a quiet bay, a floating field lab keeps track of tide minutes, shell shadows, and which tiny pools refill first after the moon tugs the water.",
+      "prompts": [
+        "Opening prompt: Start with your hero arriving at the tidepool lab and noticing that every measuring cup has a different tide time written on it.",
+        "Twist prompt: A polite crab brings a pebble notebook showing that one pool has been filling in reverse order all week.",
+        "Ending-choice prompt: End by choosing whether your hero adjusts the moon chart, interviews the barnacles, or builds a better tide ruler."
+      ],
+      "heroChoices": [
+        "Tide chart apprentice",
+        "Shell-shadow measurer",
+        "Pebble notebook keeper"
+      ],
+      "settingDetails": [
+        "Glass jars marked with low-tide and high-tide lines",
+        "Seaweed flags that lean toward the next observation spot",
+        "A driftwood workbench with waterproof pencils tied by string"
+      ],
+      "conflict": "The lab's morning tide notes do not match the water marks, so the team must compare measurements before the next gentle wave arrives.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$29 homeschool bundle with tide-table writing pages, field notebook templates, shell-shadow measurement activities, and three ending-choice worksheets.",
+      "imagePrompt": "Local FLUX/SDXL prompt, polished family-friendly children's publishing illustration of a floating tidepool measurement lab at a calm rocky bay, driftwood workbench, jars with water lines, shell rulers, seaweed flags, curious nature-system details, warm morning light, crisp handcrafted texture, 1344x768, no text, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "homeschool writing prompts",
+      "kitTheme": "Tide timing, observation notes, and measurement-based endings"
+    },
+    {
+      "slug": "greenhouse-gear-garden",
+      "title": "Greenhouse Gear Garden",
+      "ageBand": "8-10",
+      "premise": "Behind the school garden is a greenhouse where friendly gears turn compost drums, lift watering cans, and open roof vents whenever seedlings need more air.",
+      "prompts": [
+        "Opening prompt: Write the first page of your hero's garden notebook as they test the greenhouse's seedling-lift machine.",
+        "Twist prompt: The gears begin turning in a helpful but surprising pattern that waters the tall plants before the tiny sprouts.",
+        "Ending-choice prompt: Finish by choosing whether your hero redesigns the gear order, writes new plant labels, or asks the seedlings what schedule they prefer."
+      ],
+      "heroChoices": [
+        "Seedling systems tester",
+        "Compost gear designer",
+        "Greenhouse schedule keeper"
+      ],
+      "settingDetails": [
+        "Roof vents shaped like notebook tabs",
+        "Watering-can tracks that click softly along the floor",
+        "Seed trays sorted by height, leaf shape, and sprout date"
+      ],
+      "conflict": "The greenhouse is working kindly but inefficiently, and the plants need a fair schedule that matches size, sunlight, and soil moisture.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$79 classroom pack with engineering-design story cards, plant schedule worksheets, revision rubrics, and small-group greenhouse-planning prompts.",
+      "imagePrompt": "Local FLUX/SDXL prompt, polished family-friendly children's editorial illustration of a bright greenhouse gear garden, friendly mechanical watering rails, compost drum with gentle hand-crank, seed trays, leaf measurement tags, field notebook on a bench, practical engineering and nature systems, soft daylight, detailed but uncluttered, 1344x768, no text, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "story writing worksheets",
+      "kitTheme": "Garden engineering, plant schedules, and revision through design choices"
+    },
+    {
+      "slug": "pantry-measurement-mystery",
+      "title": "Pantry Measurement Mystery",
+      "ageBand": "8-10",
+      "premise": "In a sunny kitchen pantry, measuring spoons, recipe cards, and labeled jars help young bakers solve why every batch of morning muffins rises to a different height.",
+      "prompts": [
+        "Opening prompt: Begin with your hero opening the pantry notebook and finding three muffin-height charts from the same recipe.",
+        "Twist prompt: A tiny flour scoop admits it has been using heaping spoonfuls because level spoonfuls felt too plain.",
+        "Ending-choice prompt: End by choosing whether your hero rewrites the recipe, invents a fair measuring test, or turns the mistake into a new kitchen chart."
+      ],
+      "heroChoices": [
+        "Recipe chart detective",
+        "Level-spoon tester",
+        "Muffin-height recorder"
+      ],
+      "settingDetails": [
+        "A cooling rack arranged like a bar graph",
+        "Jars with scoop marks in neat pencil",
+        "A timer that ticks only after someone predicts the result"
+      ],
+      "conflict": "The pantry helpers disagree about which measurement changed the muffins, so the hero must compare notes instead of guessing.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$9 printable kitchen writing kit with recipe-change prompts, measurement vocabulary cards, muffin graph pages, and a parent-guided baking-note extension.",
+      "imagePrompt": "Local FLUX/SDXL prompt, polished family-friendly children's illustration of a sunny kitchen pantry measurement mystery, jars, measuring spoons, muffin-height chart, cooling rack like a graph, recipe notebook, warm practical light, cheerful kitchen science mood, handcrafted detail, 1344x768, no text, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "reluctant writer activities",
+      "kitTheme": "Kitchen measurement, cause-and-effect writing, and evidence notes"
+    },
+    {
+      "slug": "rain-gauge-railway",
+      "title": "Rain Gauge Railway",
+      "ageBand": "8-10",
+      "premise": "A tiny railway crosses a backyard weather station, carrying raindrop samples, cloud notes, and garden alerts between labeled posts after every shower.",
+      "prompts": [
+        "Opening prompt: Start with your hero checking the rain gauge and finding a train ticket stamped with tomorrow's rainfall amount.",
+        "Twist prompt: The railway switches send the water samples to the shade garden instead of the vegetable bed.",
+        "Ending-choice prompt: Finish by choosing whether your hero maps the route, recalibrates the gauge, or writes a weather report from the train's point of view."
+      ],
+      "heroChoices": [
+        "Rain-route conductor",
+        "Cloud sample sorter",
+        "Garden forecast writer"
+      ],
+      "settingDetails": [
+        "Clear rain tubes marked by quarter inches",
+        "Mini bridges over mulch paths",
+        "Weather flags clipped to tomato cages"
+      ],
+      "conflict": "The garden receives the right amount of rain in the wrong places, and the railway timetable must be checked against real measurements.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$29 homeschool weather-writing bundle with rain gauge logs, railway map prompts, measurement conversion practice, and paragraph-planning pages.",
+      "imagePrompt": "Local FLUX/SDXL prompt, polished family-friendly children's publishing illustration of a backyard rain gauge railway, tiny train carrying clear water samples, garden beds, weather flags, labeled measuring tubes, cloud observation notebook, fresh after-rain colors, gentle engineering details, 1344x768, no text, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "creative writing prompts for kids",
+      "kitTheme": "Weather measurement, garden systems, and map-based story planning"
+    },
+    {
+      "slug": "compost-clock-workshop",
+      "title": "Compost Clock Workshop",
+      "ageBand": "8-10",
+      "premise": "Under a garden shed, a workshop clock uses leaf layers, peel calendars, and worm tunnels to teach how yesterday's scraps become next season's soil.",
+      "prompts": [
+        "Opening prompt: Write your hero's first workshop note after they discover the compost clock has skipped from Monday leaves to Friday soil.",
+        "Twist prompt: A worm tunnel map shows that the layers are not lost; they are simply being read from bottom to top.",
+        "Ending-choice prompt: End by choosing whether your hero builds a layer dial, interviews the worm cartographers, or writes a compost recipe for the next season."
+      ],
+      "heroChoices": [
+        "Layer dial builder",
+        "Worm tunnel cartographer",
+        "Soil recipe writer"
+      ],
+      "settingDetails": [
+        "Leaf pages stacked like calendar sheets",
+        "A hand-crank clock face divided into brown and green layers",
+        "Tiny flags marking where scraps become crumbly soil"
+      ],
+      "conflict": "The compost clock is measuring change too quickly, and the workshop needs a clearer way to show slow nature time.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$29 printable homeschool bundle with compost-layer story pages, slow-time observation logs, sequencing cards, and seasonal garden-writing extensions.",
+      "imagePrompt": "Local FLUX/SDXL prompt, polished family-friendly children's illustration of a cozy compost clock workshop under a garden shed, leaf-layer calendar, hand-crank clock face, worm tunnel map, soil sample jars, field notebook, warm earthy palette balanced with garden greens, educational nature-system detail, 1344x768, no text, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "homeschool writing prompts",
+      "kitTheme": "Compost systems, sequencing, slow change, and explanatory writing"
+    },
+    {
+      "slug": "seed-library-map-room",
+      "title": "Seed Library Map Room",
+      "ageBand": "8-10",
+      "premise": "Inside a community seed library, drawers open onto maps showing where beans climbed, carrots curved, and sunflowers turned their faces through the season.",
+      "prompts": [
+        "Opening prompt: Begin with your hero borrowing a seed packet that contains a folded map instead of planting instructions.",
+        "Twist prompt: The map changes whenever the hero records a real observation from the garden bed.",
+        "Ending-choice prompt: Finish by choosing whether your hero updates the seed catalog, follows the sunflower route, or writes a return note for the next gardener."
+      ],
+      "heroChoices": [
+        "Seed packet mapper",
+        "Catalog card writer",
+        "Sunflower route tracker"
+      ],
+      "settingDetails": [
+        "Wooden drawers labeled by season and plant job",
+        "Foldout garden maps with ruler marks along the edges",
+        "A return basket for field notebooks and seed stories"
+      ],
+      "conflict": "The library can only lend next year's seeds if this year's maps explain what each plant learned from soil, sunlight, and spacing.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$79 classroom pack with seed-library role cards, garden map worksheets, observation-to-paragraph organizers, and take-home planting story pages.",
+      "imagePrompt": "Local FLUX/SDXL prompt, polished family-friendly children's publishing illustration of a community seed library map room, wooden seed drawers, foldout garden maps, ruler edges, catalog cards, seed packets, field notebooks, sunlit tables, nature systems and classroom-ready detail, 1344x768, no text, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "story writing worksheets",
+      "kitTheme": "Seed saving, garden mapping, observation paragraphs, and classroom roles"
+    },
+    {
+      "slug": "solar-oven-picnic-station",
+      "title": "Solar Oven Picnic Station",
+      "ageBand": "8-10",
+      "premise": "On a bright meadow table, kids test cardboard solar ovens that warm snacks by angle, timing, shiny panels, and careful notes instead of plugs.",
+      "prompts": [
+        "Opening prompt: Start with your hero setting a timer and writing the first temperature prediction for the picnic station.",
+        "Twist prompt: A cloud diary reveals that the warmest snack was not in the biggest oven but in the oven with the best angle.",
+        "Ending-choice prompt: End by choosing whether your hero changes the panel angle, creates a fair test chart, or writes a picnic guide for the next team."
+      ],
+      "heroChoices": [
+        "Sun-angle engineer",
+        "Temperature chart keeper",
+        "Picnic test planner"
+      ],
+      "settingDetails": [
+        "Cardboard ovens lined with shiny panels",
+        "Thermometers clipped to recipe cards",
+        "A meadow clock marked with sun-shadow arrows"
+      ],
+      "conflict": "The picnic team has three oven designs and one sunny afternoon, so the hero must make the test fair enough to trust.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$29 homeschool STEM-writing bundle with solar oven story prompts, test planning sheets, temperature chart pages, and reflection cards.",
+      "imagePrompt": "Local FLUX/SDXL prompt, polished family-friendly children's editorial illustration of a solar oven picnic station in a meadow, cardboard ovens with reflective panels, thermometers, recipe cards, sun-shadow arrows, field notebook, friendly engineering and measurement focus, bright clean afternoon light, 1344x768, no text, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "reluctant writer activities",
+      "kitTheme": "Solar energy, fair tests, time checks, and reflective writing"
+    },
+    {
+      "slug": "moss-message-observatory",
+      "title": "Moss Message Observatory",
+      "ageBand": "8-10",
+      "premise": "A quiet forest observatory studies moss patches that change shade after rain, leaving soft patterns for careful observers to sketch in field notebooks.",
+      "prompts": [
+        "Opening prompt: Write your hero's first moss sketch entry after they notice one patch is arranged like a question mark.",
+        "Twist prompt: The pattern changes only when the notebook includes the exact shade, moisture, and time of day.",
+        "Ending-choice prompt: Finish by choosing whether your hero makes a shade scale, follows the damp trail, or writes a field guide page for the observatory shelf."
+      ],
+      "heroChoices": [
+        "Moss shade sketcher",
+        "Moisture scale maker",
+        "Forest notebook curator"
+      ],
+      "settingDetails": [
+        "Magnifying glasses hanging from cedar pegs",
+        "Moss color swatches from pale green to deep emerald",
+        "A quiet observation deck with rain-date stamps"
+      ],
+      "conflict": "The observatory needs enough careful details to tell whether the moss message is about shade, rain, or the path of afternoon light.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$9 printable field notebook kit with moss shade scales, observation-entry prompts, gentle mystery cards, and descriptive-word banks.",
+      "imagePrompt": "Local FLUX/SDXL prompt, polished family-friendly children's illustration of a peaceful moss message observatory in a bright forest, observation deck, moss color swatches, magnifying glasses, rain-date stamps, field notebook sketches, gentle nature mystery, soft green light with varied natural colors, 1344x768, no text, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "creative writing prompts for kids",
+      "kitTheme": "Field notebooks, sensory description, moss observations, and gentle clues"
+    },
+    {
+      "slug": "orchard-pulley-post",
+      "title": "Orchard Pulley Post",
+      "ageBand": "8-10",
+      "premise": "In a hillside orchard, a pulley basket carries apple notes, harvest counts, and recipe requests between tree platforms and the kitchen window.",
+      "prompts": [
+        "Opening prompt: Begin with your hero receiving a basket note that lists more apples than the tree platform actually counted.",
+        "Twist prompt: The pulley rope stretches differently when the basket carries apples, notebooks, or cinnamon jars.",
+        "Ending-choice prompt: End by choosing whether your hero recalibrates the rope, changes the basket labels, or writes a harvest report for the kitchen team."
+      ],
+      "heroChoices": [
+        "Pulley basket tester",
+        "Harvest count reporter",
+        "Kitchen-window messenger"
+      ],
+      "settingDetails": [
+        "Tree platforms with chalk tally boards",
+        "A rope scale tied beside the kitchen window",
+        "Apple baskets sorted by size, color, and recipe plan"
+      ],
+      "conflict": "The orchard's harvest notes are useful but inconsistent, and the kitchen needs accurate counts before choosing which recipe to print.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$29 printable writing kit with pulley-system diagrams, harvest tally pages, kitchen recipe prompts, and measurement revision cards.",
+      "imagePrompt": "Local FLUX/SDXL prompt, polished family-friendly children's publishing illustration of a hillside orchard pulley post, apple baskets, rope scale, tree platforms with tally boards, kitchen window, harvest notebook, friendly engineering and food-system details, crisp autumn light, 1344x768, no text, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "story writing worksheets",
+      "kitTheme": "Simple machines, harvest counts, kitchen planning, and revision"
+    },
+    {
+      "slug": "pond-bridge-blueprint-club",
+      "title": "Pond Bridge Blueprint Club",
+      "ageBand": "8-10",
+      "premise": "A club of young planners designs tiny pond bridges for beetle carts, leaf boats, and frog observation routes while measuring width, weight, and wobble.",
+      "prompts": [
+        "Opening prompt: Start with your hero opening the blueprint folder and finding three bridge designs with three different wobble ratings.",
+        "Twist prompt: The strongest bridge is not the longest one; it is the one with careful supports placed where the pond edge bends.",
+        "Ending-choice prompt: Finish by choosing whether your hero revises the blueprint, builds a test model, or writes a bridge-use guide for the pond club."
+      ],
+      "heroChoices": [
+        "Bridge blueprint reviser",
+        "Wobble rating recorder",
+        "Pond route planner"
+      ],
+      "settingDetails": [
+        "Graph paper clipped to a waterproof board",
+        "Leaf boats parked beside measuring strings",
+        "Pebble test weights sorted in tiny trays"
+      ],
+      "conflict": "The club wants a bridge that works for different pond travelers, so the hero must balance careful measurements with a clear written plan.",
+      "safety": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "productAngle": "$79 classroom engineering-writing pack with bridge blueprint pages, measurement logs, peer feedback cards, and final explanation templates.",
+      "imagePrompt": "Local FLUX/SDXL prompt, polished family-friendly children's editorial illustration of a pond bridge blueprint club, graph paper on waterproof board, tiny bridge models, measuring strings, leaf boats, pebble test weights, friendly engineering beside a natural pond, clear afternoon light, 1344x768, no text, no logos, no watermark, no branded characters, no scary harm, no weapons.",
+      "seoLane": "reluctant writer activities",
+      "kitTheme": "Blueprint writing, pond habitats, measurement logs, and explanation paragraphs"
+    }
+  ]
+}

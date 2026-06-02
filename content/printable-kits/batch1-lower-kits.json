@@ -1,0 +1,70 @@
+{
+  "batchId": "2026-06-02-batch1",
+  "lane": "lower",
+  "kits": [
+    {
+      "slug": "acorn-avenue-errand-pack",
+      "worldSlug": "acorn-avenue-errand-office",
+      "title": "Acorn Avenue Tiny Errand Pack",
+      "pricePoint": "$9",
+      "pages": [
+        "Acorn Avenue Route Map",
+        "Leaf-Paper Errand Cards",
+        "Neighbor Shortcut Planner",
+        "Kindness Receipt Writing Page",
+        "Parent Guide: Three-Sentence Errands"
+      ],
+      "parentNote": "Use one errand card at a time and let the child answer with fragments, labels, or full sentences before building a short story.",
+      "classroomExtension": "Set up three desk stations as tiny neighbors, then have pairs trade route maps and check whether the directions are clear.",
+      "upsell": "$29 lower-grade neighborhood writing bundle with six more civic errand maps and reusable route cards."
+    },
+    {
+      "slug": "teacup-town-weather-bundle",
+      "worldSlug": "teacup-town-weather-window",
+      "title": "Teacup Town Weather Writing Bundle",
+      "pricePoint": "$29",
+      "pages": [
+        "Spoon Window Weather Log",
+        "Forecast Pocket Sorting Cards",
+        "Umbrella Shop Errand Map",
+        "Weather Clue Sentence Builder",
+        "Homeschool Guide: Revise the Forecast"
+      ],
+      "parentNote": "Start with real weather outside, then have the child transfer one detail into Teacup Town before writing the errand.",
+      "classroomExtension": "Create a shared forecast board and let small groups revise one mixed-up shop notice for clarity.",
+      "upsell": "$79 classroom weather-and-map writing pack with station signs, rubric, and extension tasks."
+    },
+    {
+      "slug": "pocket-park-notice-classroom-pack",
+      "worldSlug": "pocket-park-notice-board",
+      "title": "Pocket Park Notice Board Classroom Pack",
+      "pricePoint": "$79",
+      "pages": [
+        "Pocket Park Mini Map",
+        "Notice Board Message Templates",
+        "Seed Swap and Picnic Errand Cards",
+        "Small-Group Route Check Sheet",
+        "Teacher Guide: Civic Notes Without Lectures"
+      ],
+      "parentNote": "For home use, pick two notice templates and ask the child to make each one clearer, shorter, or kinder.",
+      "classroomExtension": "Assign park roles, rotate the notice board, and have students rewrite unclear messages into useful directions.",
+      "upsell": "$79 license includes permission to print for one classroom plus the follow-up Parcel Day symbol-key activity."
+    },
+    {
+      "slug": "rain-boot-route-weather-pack",
+      "worldSlug": "rain-boot-route-rangers",
+      "title": "Rain Boot Route Rangers Weather Pack",
+      "pricePoint": "$29",
+      "pages": [
+        "Rain Boot Route Office Map",
+        "Sliding Raindrop Path Cards",
+        "Snack Crate Delivery Order",
+        "Puddle Reflection Description Page",
+        "Parent Guide: Rainy-Day Writing Loop"
+      ],
+      "parentNote": "Let the child move route cards by hand before writing so the story problem feels like a small puzzle, not a blank page.",
+      "classroomExtension": "Use the route cards as a sequencing center, then ask students to explain why their final route works.",
+      "upsell": "$79 classroom route-planning collection with extra maps for mail, snacks, weather, and shop errands."
+    }
+  ]
+}
