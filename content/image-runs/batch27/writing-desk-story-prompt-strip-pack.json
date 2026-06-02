@@ -1,0 +1,19 @@
+{
+  "slug": "writing-desk-story-prompt-strip-pack",
+  "prompt": "family-friendly studio flat lay, ONLY blank cream paper prompt strips and blank folded desk strips, arranged neatly on a plain white background, minimalist catalog product image, zero other objects, screen-free printable writing desk story prompt strip pack",
+  "negativePrompt": "text, readable writing, letters, labels, logo, watermark, signature, scary, horror, weapon, violence, brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, printed markings, icon, symbol, plant, potted plant, greenery, flower, jar, cup, mug, bowl, utensil, brush, spoon, fork, knife, pencil, pen, crayon, marker, notebook, spiral binding, ruler, scissors, calendar, clock, timer, score, star, rating, review, food, people, face, animal, map, gps, route, address, tabletop props, decoration, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26062722,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch27/writing-desk-story-prompt-strip-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch27/writing-desk-story-prompt-strip-pack.webp",
+  "manifest": "content/image-queue/2026-06-02-batch27-product-images.json",
+  "title": "Writing Desk Story Prompt Strip Pack",
+  "postProcessing": "Cropped and padded the clean generated paper area after rejecting off-scope stationery props in earlier full-frame outputs."
+}

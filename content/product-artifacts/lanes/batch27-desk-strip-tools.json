@@ -1,0 +1,191 @@
+{
+  "batchId": "2026-06-02-batch27",
+  "lane": "desk-strip-tools",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the desk strips, take-home strips, and adult guide before writers arrive.",
+      "Set the adult-led rule: every choice stays on paper with pencils, sketches, and short story words.",
+      "Choose one strip routine before the session so each writer has one clear path.",
+      "Say that a desk strip can hold a setting, character, object, sequence, revision, or sensory clue for a made-up story.",
+      "Keep the session offline, calm, and focused on one small strip that can start later drafting."
+    ],
+    "deskSetup": [
+      "Place blank desk strips, pencils, and take-home strips where the adult can see every page.",
+      "Set six labeled piles: setting strip, character strip, object strip, sequence strip, revision strip, and sensory strip.",
+      "Use broad desk words only, such as drawer, lamp, pencil cup, notebook, paper tray, shelf, or corner.",
+      "Leave room on each strip for a title, one small sketch, three short lines, and one story sentence.",
+      "Keep extra strips in an adult folder so the writing area stays paper-only and easy to reset."
+    ],
+    "stripStoryCoaching": [
+      "Ask for one broad desk place first, then turn it into a made-up setting with one mood word.",
+      "Ask for one invented character role who is looking for, carrying, sorting, fixing, or noticing something.",
+      "Ask for one pretend desk object and give it a story job such as guiding, hiding, reminding, or sorting.",
+      "Ask for first, next, and finally lines when the writer needs a clean beginning path.",
+      "Ask the writer to improve one sentence by adding a clearer look, sound, shape, pattern, or texture word."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented names, role words, or blank labels for every person on the strips.",
+      "Use broad place words instead of named locations, route details, room numbers, or private routines.",
+      "Keep all desk-strip writing fictional, adult-led, offline, and paper-only.",
+      "Keep finished strips with the family adult, tutor, co-op adult, or classroom adult.",
+      "Check every take-home strip for identifying details before it leaves the adult-led table."
+    ],
+    "familyHandoff": [
+      "Send one finished desk strip and one blank take-home desk strip with each writer.",
+      "Tell family adults that five to nine quiet minutes is enough for one extra strip prompt.",
+      "Invite the family adult to ask for one desk place, one invented character, and one pretend object.",
+      "Ask adults to praise one clear word, sketch, or sentence before suggesting one small revision.",
+      "Suggest keeping strips together so the writer can reuse the strongest clue in a later printable story."
+    ],
+    "reset": [
+      "Collect unused strips, take-home strips, pencils, and broad desk-word cards.",
+      "Check finished strips for private details before they go home.",
+      "Recycle scrap pages that only hold warm-up marks.",
+      "Restock the adult folder with fresh blank desk strips for the next offline session."
+    ]
+  },
+  "stripRoutines": [
+    {
+      "name": "Setting Strip",
+      "bestFor": "Writers who need one small place before inventing action.",
+      "steps": [
+        "Adult points to one broad desk word on the paper strip.",
+        "Writer chooses a made-up setting name without using a real location.",
+        "Writer adds one mood word and one look detail to the strip.",
+        "Writer writes one sentence showing where the story begins."
+      ]
+    },
+    {
+      "name": "Character Strip",
+      "bestFor": "Kids who like inventing roles, questions, and small choices.",
+      "steps": [
+        "Adult asks the writer to choose an invented desk-world role, such as sorter, finder, keeper, or messenger.",
+        "Writer gives the character one question or choice.",
+        "Writer sketches one clue about what the character notices.",
+        "Writer writes one sentence about what the character does first."
+      ]
+    },
+    {
+      "name": "Object Strip",
+      "bestFor": "Families turning ordinary desk ideas into useful story objects.",
+      "steps": [
+        "Adult asks the writer to invent one pretend desk object or choose one from a printed idea list.",
+        "Writer gives the object one story job, such as guiding, hiding, reminding, or sorting.",
+        "Writer adds one detail about how the object looks, feels, or sounds.",
+        "Writer writes one sentence showing why the object matters."
+      ]
+    },
+    {
+      "name": "Sequence Strip",
+      "bestFor": "Writers who need a tiny beginning, middle, and ending path.",
+      "steps": [
+        "Adult points to the first, next, and finally lines on the strip.",
+        "Writer chooses one desk place and one invented character.",
+        "Writer fills the three lines with calm story steps.",
+        "Writer circles the step that should become the first full paragraph."
+      ]
+    },
+    {
+      "name": "Revision Strip",
+      "bestFor": "Writers strengthening one sentence from an earlier strip or draft.",
+      "steps": [
+        "Adult places the earlier sentence beside a blank revision strip.",
+        "Writer chooses one clearer look, sound, shape, pattern, or texture word.",
+        "Writer copies the sentence and adds the clearer detail.",
+        "Writer underlines the word or phrase that improved the sentence most."
+      ]
+    },
+    {
+      "name": "Sensory Strip",
+      "bestFor": "Quiet writers who notice color, sound, shape, pattern, or texture words.",
+      "steps": [
+        "Adult asks the writer to choose one gentle sensory word from the paper prompt list.",
+        "Writer pairs that word with a desk place, object, or invented character.",
+        "Writer sketches the detail in the strip corner.",
+        "Writer writes one sentence where the sensory detail becomes a story clue."
+      ]
+    }
+  ],
+  "takeHomeDeskStrips": [
+    {
+      "title": "Drawer Place Start",
+      "time": "5 minutes",
+      "skill": "setting strip",
+      "direction": "Choose a broad desk place: ____________________. Add one mood word for the story setting: ____________________.",
+      "familyLine": "Our desk setting begins to feel ____________________."
+    },
+    {
+      "title": "Lamp Corner Character",
+      "time": "6 minutes",
+      "skill": "character strip",
+      "direction": "Invent a character role for a desk story: ____________________. Give that character one question: ____________________.",
+      "familyLine": "The character question we want to keep is ____________________."
+    },
+    {
+      "title": "Object With a Job",
+      "time": "7 minutes",
+      "skill": "object strip",
+      "direction": "Invent one pretend desk object: ____________________. Its story job is ____________________.",
+      "familyLine": "The object matters because ____________________."
+    },
+    {
+      "title": "First Next Finally",
+      "time": "8 minutes",
+      "skill": "sequence strip",
+      "direction": "Plan three story steps. First ____________________. Next ____________________. Finally ____________________.",
+      "familyLine": "The step we would write more about is ____________________."
+    },
+    {
+      "title": "Stronger Desk Sentence",
+      "time": "5 minutes",
+      "skill": "revision strip",
+      "direction": "Copy one desk-strip sentence: ____________________. Add one clearer desk detail: ____________________.",
+      "familyLine": "The revision helped because ____________________."
+    },
+    {
+      "title": "Quiet Sound Clue",
+      "time": "6 minutes",
+      "skill": "sensory strip",
+      "direction": "Choose one gentle sound word for the story: ____________________. The sound tells the character ____________________.",
+      "familyLine": "Our sound clue points toward ____________________."
+    },
+    {
+      "title": "Pattern On the Strip",
+      "time": "7 minutes",
+      "skill": "sensory strip",
+      "direction": "Choose one safe pattern, such as dots, lines, bands, or repeats: ____________________. In the story it means ____________________.",
+      "familyLine": "The pattern detail makes us wonder ____________________."
+    },
+    {
+      "title": "Better Beginning",
+      "time": "8 minutes",
+      "skill": "revision strip",
+      "direction": "Write a beginning sentence: ____________________. Add one setting or object detail: ____________________.",
+      "familyLine": "The beginning now shows ____________________."
+    },
+    {
+      "title": "Character Finds Object",
+      "time": "9 minutes",
+      "skill": "character strip",
+      "direction": "Invent a character: ____________________. Give the character one pretend object to find: ____________________.",
+      "familyLine": "The character will use the object to ____________________."
+    },
+    {
+      "title": "Tiny Desk Story",
+      "time": "6 minutes",
+      "skill": "sequence strip",
+      "direction": "Write one setting, one character, and one object. Setting: ____________________. Character: ____________________. Object: ____________________.",
+      "familyLine": "The tiny desk story we would continue is ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Read one setting clue from your desk strip if you choose: ____________________.",
+    "Show one paper sketch from the strip: ____________________.",
+    "Name the broad desk place that helped your story: ____________________.",
+    "Share one invented character role without private details: ____________________.",
+    "Tell the story job of one pretend object: ____________________.",
+    "Read the first, next, or finally line you like best: ____________________.",
+    "Name one detail that made a sentence clearer: ____________________.",
+    "Mark one desk-strip clue you want to save for later writing: ____________________."
+  ]
+}

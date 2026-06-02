@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-02-batch27-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "writing-desk-story-prompt-strip-pack",
+      "title": "Writing Desk Story Prompt Strip Pack",
+      "purpose": "Product hero image for the Batch 27 printable writing desk story prompt strip pack.",
+      "prompt": "family-friendly studio flat lay, ONLY blank cream paper prompt strips and blank folded desk strips, arranged neatly on a plain white background, minimalist catalog product image, zero other objects, screen-free printable writing desk story prompt strip pack",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, signature, scary, horror, weapon, violence, brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, printed markings, icon, symbol, plant, potted plant, greenery, flower, jar, cup, mug, bowl, utensil, brush, spoon, fork, knife, pencil, pen, crayon, marker, notebook, spiral binding, ruler, scissors, calendar, clock, timer, score, star, rating, review, food, people, face, animal, map, gps, route, address, tabletop props, decoration, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+      "outputJpeg": "public/images/plotsprout/batch27/writing-desk-story-prompt-strip-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch27/writing-desk-story-prompt-strip-pack.webp",
+      "sidecar": "content/image-runs/batch27/writing-desk-story-prompt-strip-pack.json",
+      "seed": 26062722
+    }
+  ]
+}

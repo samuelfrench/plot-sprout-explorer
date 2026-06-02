@@ -23,6 +23,7 @@ export const natureWalkStoryFieldNotesKitProductSlug = 'nature-walk-story-field-
 export const backyardStorySeedPacketKitProductSlug = 'backyard-story-seed-packet-kit'
 export const kitchenTableStoryRecipeCardDeckProductSlug = 'kitchen-table-story-recipe-card-deck'
 export const bookshopStoryBookmarkPackProductSlug = 'bookshop-story-bookmark-pack'
+export const writingDeskStoryPromptStripPackProductSlug = 'writing-desk-story-prompt-strip-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -220,6 +221,14 @@ const requiredBookshopStoryBookmarkPackArtifactPaths = {
   zipPath: 'product-build/bookshop-story-bookmark-pack/bookshop-story-bookmark-pack.zip',
   sourceHtmlPath: 'product-build/bookshop-story-bookmark-pack/source/bookshop-story-bookmark-pack.html',
   manifestPath: 'product-build/bookshop-story-bookmark-pack/manifest.json',
+}
+
+const requiredWritingDeskStoryPromptStripPackArtifactPaths = {
+  pdfPath: 'product-build/writing-desk-story-prompt-strip-pack/Writing-Desk-Story-Prompt-Strip-Pack.pdf',
+  zipPath: 'product-build/writing-desk-story-prompt-strip-pack/writing-desk-story-prompt-strip-pack.zip',
+  sourceHtmlPath:
+    'product-build/writing-desk-story-prompt-strip-pack/source/writing-desk-story-prompt-strip-pack.html',
+  manifestPath: 'product-build/writing-desk-story-prompt-strip-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -4597,6 +4606,311 @@ export function validateBookshopStoryBookmarkPackSourceFiles(source, rootDir = r
   return errors
 }
 
+const writingDeskStripSkills = new Set([
+  'setting strip',
+  'character strip',
+  'object strip',
+  'sequence strip',
+  'dialogue strip',
+  'revision strip',
+  'sensory strip',
+  'object clue strip',
+  'choice strip',
+  'setting detail strip',
+  'pattern strip',
+  'sensory detail strip',
+  'object detail strip',
+  'character choice strip',
+  'clarity strip',
+])
+
+const writingDeskStripTimes = new Set(['5 minutes', '6 minutes', '7 minutes', '8 minutes', '9 minutes'])
+
+function validateNoUnsafeWritingDeskStripLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const accountText = rawText
+    .replace(/\bUse invented names, role words, or blank labels for every person on the strips\./gi, '')
+    .replace(/\bUse invented names, role words, or blank labels for every person on the strip(s)?\./gi, '')
+    .replace(/\bUse broad place words instead of named locations, route details, room numbers, or private routines\./gi, '')
+    .replace(/\bUse broad place words instead of exact room names, group names, or addresses\./gi, '')
+    .replace(/\bKeep every strip offline with the family adult, tutor, or table host\./gi, '')
+    .replace(/\bKeep all desk-strip writing fictional, adult-led, offline, and paper-only\./gi, '')
+    .replace(/\bKeep finished strips with the family adult, tutor, co-op adult, or classroom adult\./gi, '')
+    .replace(/\bCheck every take-home strip for identifying details before it leaves the adult-led table\./gi, '')
+    .replace(/\bCheck every take-home strip for private details before it leaves the adult-led table\./gi, '')
+    .replace(/\bCheck finished strips for private details before they go home\./gi, '')
+    .replace(/\bSharing stays optional and limited to one invented word, sketch, or line\./gi, '')
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+  pushIf(
+    errors,
+    /\baccounts?\b|\blogins?\b|\blog in\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic posting\b|\bpublic publishing\b|\bpublish online\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\bsocial\b|\bgps\b|\bcoordinates?\b|\bexact address\b|\baddresses?\b|\bphone(s)?\b|\bemails?\b|\bphotos?\b|\bcameras?\b|\bchild names?\b|\bstudent names?\b|\bfull names?\b|\brosters?\b|\battendance\b|\bsign-?in\b|\bbehavior reports?\b|\bhouse numbers?\b|\blicense plates?\b|\bvehicle plates?\b|\bexact location\b|\bexact places?\b|\bexact schedules?\b|\bschedules?\b|\btracker(s)?\b|\btracking\b|\bprivate child data\b|\bpersonal facts?\b|\bgrade(s|d|book)?\b|\bscore(s|d|book)?\b/i.test(
+      accountText,
+    ),
+    `${label} includes account, upload, public-posting, review/rating, exact-place, contact, photo, child-profile, grade, score, roster, attendance, sign-in, behavior-report, tracker, schedule, or private-child-data language.`,
+  )
+
+  const safetyText = rawText
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+    .replace(/\bnot a tracking tool\b/gi, '')
+    .replace(/\bfictional, adult-led, offline, and paper-only\b/gi, '')
+    .replace(/\bmade-up story\b/gi, '')
+  pushIf(
+    errors,
+    /\bHarry Potter\b|\bJ\.?\s*K\.?\s*Rowling\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bbestseller(s)?\b|\bcopyright(ed)?\b|\bbrand(ed)? character(s)?\b|\blogos?\b|\breal book titles?\b|\breal author names?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bmedical\b|\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b|\btherapy\b|\btherapist(s)?\b|\bdiagnos(is|e|es|ed|ing|tic)\b|\bgrief\b|\bassessment(s)?\b|\bgrade(s|d|book)?\b|\bscore(s|d|book)?\b|\bguarantee(s|d)?\b|\bguaranteed\b|\bcontest(s)?\b|\bprizes?\b|\btimer(s)?\b|\btimed\b|\bgambling\b|\bbet(s|ting)?\b|\bcasino(s)?\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bchurch(es)?\b|\btemple(s)?\b|\bmosque(s)?\b|\bsynagogue(s)?\b|\bprayer(s)?\b|\bjesus\b|\bgod\b|\bromance\b|\bkiss(ing)?\b|\bdating\b|\bweapon(s)?\b|\bgun(s)?\b|\bsword(s)?\b|\bfight(ing)?\b|\bkill(s|ed|ing)?\b|\bblood\b|\bhorror\b|\bad(s)? targeted to children\b|\bclimb(s|ed|ing)?\b|\bjump(s|ed|ing)?\b|\brun(s|ning)?\b|\broughhouse\b|\bwrestl(e|ing)\b|\bblindfold(s|ed)?\b|\bstairs?\b|\bmatchstick(s)?\b|\blighter(s)?\b/i.test(
+      safetyText,
+    ),
+    `${label} includes real book title, author, publisher, franchise, branded/copyrighted, review/rating, medical, legal, therapy, diagnosis, grief, assessment, grade, score, guaranteed-outcome, contest, prize, timer-pressure, gambling, politics, religion, romance, weapon, violence, ad-targeting, or unsafe physical language.`,
+  )
+}
+
+function validateWritingDeskStrip(strip, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, stripIds, errors) {
+  const label = `strips[${index}]`
+  pushIf(errors, !isObject(strip), `${label} must be an object.`)
+  if (!isObject(strip)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'stripSkill',
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'stripFrontPrompt',
+    'stripBackPrompt',
+    'storySeedPrompt',
+    'firstLinePath',
+    'revisionNudge',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    validateString(strip[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(strip.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(strip.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, !strip.id.startsWith('writing-desk-strip-'), `${label}.id must start with writing-desk-strip-.`)
+    pushIf(errors, stripIds.has(strip.id), `${label}.id is duplicated.`)
+    stripIds.add(strip.id)
+  }
+  pushIf(errors, !writingDeskStripSkills.has(strip.stripSkill), `${label}.stripSkill is not allowed.`)
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(strip.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(strip.worldSlug) && !knownWorldSlugs.has(strip.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(strip.worldSlug) && !sourceWorldSlugs.has(strip.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(strip.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(strip.ageBand) && isNonEmptyString(worldAgeBand) && strip.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${strip.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  for (const key of [
+    'stripFrontPrompt',
+    'stripBackPrompt',
+    'storySeedPrompt',
+    'firstLinePath',
+    'revisionNudge',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    pushIf(errors, isNonEmptyString(strip[key]) && !hasWritableBlank(strip[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(strip[key]) && hasSnakeCasePlaceholder(strip[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeWritingDeskStripLanguage(strip, label, errors)
+}
+
+function validateWritingDeskStripRoutine(routine, index, names, errors) {
+  const label = `stripRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.name)) {
+    pushIf(errors, names.has(routine.name), `${label}.name is duplicated.`)
+    names.add(routine.name)
+  }
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeWritingDeskStripLanguage(routine, label, errors)
+}
+
+function validateTakeHomeDeskStrip(slip, index, titles, errors) {
+  const label = `takeHomeDeskStrips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(slip[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(slip.title)) {
+    pushIf(errors, titles.has(slip.title), `${label}.title is duplicated.`)
+    titles.add(slip.title)
+  }
+  pushIf(errors, !writingDeskStripTimes.has(slip.time), `${label}.time is not allowed.`)
+  pushIf(errors, !writingDeskStripSkills.has(slip.skill), `${label}.skill is not allowed.`)
+  for (const key of ['direction', 'familyLine']) {
+    pushIf(errors, isNonEmptyString(slip[key]) && !hasWritableBlank(slip[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(slip[key]) && hasSnakeCasePlaceholder(slip[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeWritingDeskStripLanguage(slip, label, errors)
+}
+
+export function validateWritingDeskStoryPromptStripPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Writing Desk Story Prompt Strip Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch27', 'batchId must be 2026-06-02-batch27.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(
+    errors,
+    source.productSlug !== writingDeskStoryPromptStripPackProductSlug,
+    `productSlug must be ${writingDeskStoryPromptStripPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Writing Desk Story Prompt Strip Pack', 'title must be Writing Desk Story Prompt Strip Pack.')
+  pushIf(errors, source.pricePoint !== '$27', 'pricePoint must be $27.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Writing Desk Story Prompt Strip Pack source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Writing Desk Story Prompt Strip Pack source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Writing Desk Story Prompt Strip Pack source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 18, 'worldSlugs must have exactly 18 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredWritingDeskStoryPromptStripPackArtifactPaths, 'Writing Desk Story Prompt Strip Pack', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateStringArray(source.adultGuide.beforeSession, 5, 'adultGuide.beforeSession', errors)
+    validateStringArray(source.adultGuide.deskSetup, 5, 'adultGuide.deskSetup', errors)
+    validateStringArray(source.adultGuide.stripStoryCoaching, 5, 'adultGuide.stripStoryCoaching', errors)
+    validateStringArray(source.adultGuide.privacyAndSafetyNotes, 5, 'adultGuide.privacyAndSafetyNotes', errors)
+    validateStringArray(source.adultGuide.familyHandoff, 5, 'adultGuide.familyHandoff', errors)
+    validateStringArray(source.adultGuide.reset, 4, 'adultGuide.reset', errors)
+    validateNoUnsafeWritingDeskStripLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.stripRoutines), 'stripRoutines must be an array.')
+  if (Array.isArray(source.stripRoutines)) {
+    pushIf(errors, source.stripRoutines.length !== 6, 'stripRoutines must have exactly 6 entries.')
+    const names = new Set()
+    source.stripRoutines.forEach((routine, index) => validateWritingDeskStripRoutine(routine, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeDeskStrips), 'takeHomeDeskStrips must be an array.')
+  if (Array.isArray(source.takeHomeDeskStrips)) {
+    pushIf(errors, source.takeHomeDeskStrips.length !== 10, 'takeHomeDeskStrips must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeDeskStrips.forEach((strip, index) => validateTakeHomeDeskStrip(strip, index, titles, errors))
+  }
+
+  validateExactStringArray(source.optionalSharePrompts, 8, 'optionalSharePrompts', errors)
+  if (Array.isArray(source.optionalSharePrompts)) {
+    source.optionalSharePrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalSharePrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalSharePrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.strips), 'strips must be an array.')
+  if (Array.isArray(source.strips)) {
+    pushIf(errors, source.strips.length !== 18, 'strips must have exactly 18 entries.')
+    const stripIds = new Set()
+    const coveredWorlds = new Set()
+    source.strips.forEach((strip, index) => {
+      validateWritingDeskStrip(strip, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, stripIds, errors)
+      if (isNonEmptyString(strip?.worldSlug)) coveredWorlds.add(strip.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 18, 'strips must cover at least 18 unique worlds.')
+  }
+
+  validateNoUnsafeWritingDeskStripLanguage(source, 'Writing Desk Story Prompt Strip Pack source', errors)
+  validateNoRiskyLanguage(source, 'Writing Desk Story Prompt Strip Pack source', errors)
+  return errors
+}
+
+export function validateWritingDeskStoryPromptStripPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three strip lanes and one tools lane.')
+
+  const stripLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      if (Array.isArray(lane.strips)) {
+        stripLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 27 strip lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, stripLaneFiles.length !== 3, 'sourceFiles must include exactly three strip lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneStrips = stripLaneFiles
+    .flatMap(({ lane }) => lane.strips)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.strips)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneStrips) !== JSON.stringify(source.strips),
+      'sourceFiles strip lanes must reproduce strips exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'stripRoutines', 'takeHomeDeskStrips', 'optionalSharePrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -4725,7 +5039,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredBookshopStoryBookmarkPackArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredWritingDeskStoryPromptStripPackArtifactPaths.pdfPath
+      ? requiredWritingDeskStoryPromptStripPackArtifactPaths
+      : artifact?.pdfPath === requiredBookshopStoryBookmarkPackArtifactPaths.pdfPath
       ? requiredBookshopStoryBookmarkPackArtifactPaths
       : artifact?.pdfPath === requiredKitchenTableStoryRecipeCardDeckArtifactPaths.pdfPath
       ? requiredKitchenTableStoryRecipeCardDeckArtifactPaths

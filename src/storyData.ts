@@ -422,6 +422,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable story bookmarks with adult guide tools, bookmark formats, and take-home bookmark slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'writing-desk-story-prompt-strip-pack',
+    title: 'Writing Desk Story Prompt Strip Pack',
+    pricePoint: '$27',
+    description:
+      'Eighteen printable desk prompt strips with adult guide tools, strip routines, and take-home desk strips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

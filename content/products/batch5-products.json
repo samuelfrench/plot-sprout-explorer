@@ -1234,6 +1234,140 @@
           "summary": "A revision ferry world for moving one bookmark line from vague to specific."
         }
       ]
+    },
+    {
+      "slug": "writing-desk-story-prompt-strip-pack",
+      "title": "Writing Desk Story Prompt Strip Pack",
+      "pricePoint": "$27",
+      "status": "checkout_pending",
+      "headline": "A printable prompt-strip pack for turning desk clues into story starts.",
+      "summary": "Eighteen adult-led paper strips help kids turn pretend writing-desk details into short creative writing prompts.",
+      "heroImage": "images/plotsprout/batch27/writing-desk-story-prompt-strip-pack.jpg",
+      "ctaLabel": "Request prompt strip launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Writing%20Desk%20Story%20Prompt%20Strip%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static writing desk story prompt strip pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "pencil-dragon-academy",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "acorn-avenue-errand-office",
+        "penny-path-compass-shop",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "almost-invention-workshop",
+        "margin-note-market",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Eighteen printable writing desk prompt strips",
+        "Adult setup guide",
+        "Writing desk safety notes",
+        "Desk-clue story coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led strip routines",
+        "Ten take-home desk strips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one small prompt before a full story",
+        "A tutoring or co-op desk where writers can choose one paper strip at a time",
+        "A family writing warm-up where pointing, sketching, and one blank can start the page",
+        "A reluctant-writer activity that separates one desk clue from a full draft",
+        "A take-home desk strip set for finishing one invented detail offline"
+      ],
+      "parentSteps": [
+        "Choose one strip routine before the activity starts.",
+        "Set the paper, pencil, sketch, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one broad desk detail into a make-believe story clue rather than recording private information.",
+        "Send home one desk strip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for choosing one desk setting clue before drafting a first line."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A tiny post-office world for inventing a careful character role and one question."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A rolling library world for arranging a small beginning path from one desk strip."
+        },
+        {
+          "slug": "pencil-dragon-academy",
+          "summary": "A pencil dragon world for giving one paper object a useful story job."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A weather-window world for turning one color, sound, or texture into a desk clue."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A notice-board world for revising one short strip line with a clearer detail."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An errand-office world for labeling one invented desk object with a story job."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "summary": "A compass-shop world for choosing one route word that starts a gentle scene."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A paper map-room world for placing one drawer clue inside a story setting."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A railway world for building a strip from one signal, sound, or pattern."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A quiet observatory world for noticing one message shape before drafting."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for ordering first, next, and final strip details."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for moving one sentence from vague to specific."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A label tower world for making one sensory clue easier for a reader to picture."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass academy world for planning a desk-strip path in three calm steps."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "summary": "A nearly useful invention world for testing one object clue before drafting."
+        },
+        {
+          "slug": "margin-note-market",
+          "summary": "A margin-note market world for shaping one character choice from a strip."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A page-order boardwalk world for choosing which clearer line belongs first."
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,554 @@
+{
+  "batchId": "2026-06-02-batch27",
+  "generatedAt": "2026-06-02",
+  "productSlug": "writing-desk-story-prompt-strip-pack",
+  "title": "Writing Desk Story Prompt Strip Pack",
+  "pricePoint": "$27",
+  "audience": "Families, homeschool groups, tutors, library tables, and adult-led writing desk writers ages 6-11.",
+  "sessionLength": "18 printable prompt strips plus adult guide tools, strip routines, take-home desk strips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/writing-desk-story-prompt-strip-pack/Writing-Desk-Story-Prompt-Strip-Pack.pdf",
+    "zipPath": "product-build/writing-desk-story-prompt-strip-pack/writing-desk-story-prompt-strip-pack.zip",
+    "sourceHtmlPath": "product-build/writing-desk-story-prompt-strip-pack/source/writing-desk-story-prompt-strip-pack.html",
+    "manifestPath": "product-build/writing-desk-story-prompt-strip-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch27-desk-strips-a.json",
+    "content/product-artifacts/lanes/batch27-desk-strips-b.json",
+    "content/product-artifacts/lanes/batch27-desk-strips-c.json",
+    "content/product-artifacts/lanes/batch27-desk-strip-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "pencil-dragon-academy",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "acorn-avenue-errand-office",
+    "penny-path-compass-shop",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "almost-invention-workshop",
+    "margin-note-market",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable writing desk prompt strips",
+    "headline": "Writing Desk Story Prompt Strip Pack",
+    "subhead": "Eighteen paper prompt strips turn pretend desk clues into screen-free story starts.",
+    "included": [
+      "18 printable writing desk prompt strips",
+      "Adult setup guide",
+      "Writing desk safety notes",
+      "Desk-strip story coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led strip routines",
+      "Ten take-home desk strips",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Print the desk strips, take-home strips, and adult guide before writers arrive.",
+      "Set the adult-led rule: every choice stays on paper with pencils, sketches, and short story words.",
+      "Choose one strip routine before the session so each writer has one clear path.",
+      "Say that a desk strip can hold a setting, character, object, sequence, revision, or sensory clue for a made-up story.",
+      "Keep the session offline, calm, and focused on one small strip that can start later drafting."
+    ],
+    "deskSetup": [
+      "Place blank desk strips, pencils, and take-home strips where the adult can see every page.",
+      "Set six labeled piles: setting strip, character strip, object strip, sequence strip, revision strip, and sensory strip.",
+      "Use broad desk words only, such as drawer, lamp, pencil cup, notebook, paper tray, shelf, or corner.",
+      "Leave room on each strip for a title, one small sketch, three short lines, and one story sentence.",
+      "Keep extra strips in an adult folder so the writing area stays paper-only and easy to reset."
+    ],
+    "stripStoryCoaching": [
+      "Ask for one broad desk place first, then turn it into a made-up setting with one mood word.",
+      "Ask for one invented character role who is looking for, carrying, sorting, fixing, or noticing something.",
+      "Ask for one pretend desk object and give it a story job such as guiding, hiding, reminding, or sorting.",
+      "Ask for first, next, and finally lines when the writer needs a clean beginning path.",
+      "Ask the writer to improve one sentence by adding a clearer look, sound, shape, pattern, or texture word."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented names, role words, or blank labels for every person on the strips.",
+      "Use broad place words instead of named locations, route details, room numbers, or private routines.",
+      "Keep all desk-strip writing fictional, adult-led, offline, and paper-only.",
+      "Keep finished strips with the family adult, tutor, co-op adult, or classroom adult.",
+      "Check every take-home strip for identifying details before it leaves the adult-led table."
+    ],
+    "familyHandoff": [
+      "Send one finished desk strip and one blank take-home desk strip with each writer.",
+      "Tell family adults that five to nine quiet minutes is enough for one extra strip prompt.",
+      "Invite the family adult to ask for one desk place, one invented character, and one pretend object.",
+      "Ask adults to praise one clear word, sketch, or sentence before suggesting one small revision.",
+      "Suggest keeping strips together so the writer can reuse the strongest clue in a later printable story."
+    ],
+    "reset": [
+      "Collect unused strips, take-home strips, pencils, and broad desk-word cards.",
+      "Check finished strips for private details before they go home.",
+      "Recycle scrap pages that only hold warm-up marks.",
+      "Restock the adult folder with fresh blank desk strips for the next offline session."
+    ]
+  },
+  "stripRoutines": [
+    {
+      "name": "Setting Strip",
+      "bestFor": "Writers who need one small place before inventing action.",
+      "steps": [
+        "Adult points to one broad desk word on the paper strip.",
+        "Writer chooses a made-up setting name without using a real location.",
+        "Writer adds one mood word and one look detail to the strip.",
+        "Writer writes one sentence showing where the story begins."
+      ]
+    },
+    {
+      "name": "Character Strip",
+      "bestFor": "Kids who like inventing roles, questions, and small choices.",
+      "steps": [
+        "Adult asks the writer to choose an invented desk-world role, such as sorter, finder, keeper, or messenger.",
+        "Writer gives the character one question or choice.",
+        "Writer sketches one clue about what the character notices.",
+        "Writer writes one sentence about what the character does first."
+      ]
+    },
+    {
+      "name": "Object Strip",
+      "bestFor": "Families turning ordinary desk ideas into useful story objects.",
+      "steps": [
+        "Adult asks the writer to invent one pretend desk object or choose one from a printed idea list.",
+        "Writer gives the object one story job, such as guiding, hiding, reminding, or sorting.",
+        "Writer adds one detail about how the object looks, feels, or sounds.",
+        "Writer writes one sentence showing why the object matters."
+      ]
+    },
+    {
+      "name": "Sequence Strip",
+      "bestFor": "Writers who need a tiny beginning, middle, and ending path.",
+      "steps": [
+        "Adult points to the first, next, and finally lines on the strip.",
+        "Writer chooses one desk place and one invented character.",
+        "Writer fills the three lines with calm story steps.",
+        "Writer circles the step that should become the first full paragraph."
+      ]
+    },
+    {
+      "name": "Revision Strip",
+      "bestFor": "Writers strengthening one sentence from an earlier strip or draft.",
+      "steps": [
+        "Adult places the earlier sentence beside a blank revision strip.",
+        "Writer chooses one clearer look, sound, shape, pattern, or texture word.",
+        "Writer copies the sentence and adds the clearer detail.",
+        "Writer underlines the word or phrase that improved the sentence most."
+      ]
+    },
+    {
+      "name": "Sensory Strip",
+      "bestFor": "Quiet writers who notice color, sound, shape, pattern, or texture words.",
+      "steps": [
+        "Adult asks the writer to choose one gentle sensory word from the paper prompt list.",
+        "Writer pairs that word with a desk place, object, or invented character.",
+        "Writer sketches the detail in the strip corner.",
+        "Writer writes one sentence where the sensory detail becomes a story clue."
+      ]
+    }
+  ],
+  "takeHomeDeskStrips": [
+    {
+      "title": "Drawer Place Start",
+      "time": "5 minutes",
+      "skill": "setting strip",
+      "direction": "Choose a broad desk place: ____________________. Add one mood word for the story setting: ____________________.",
+      "familyLine": "Our desk setting begins to feel ____________________."
+    },
+    {
+      "title": "Lamp Corner Character",
+      "time": "6 minutes",
+      "skill": "character strip",
+      "direction": "Invent a character role for a desk story: ____________________. Give that character one question: ____________________.",
+      "familyLine": "The character question we want to keep is ____________________."
+    },
+    {
+      "title": "Object With a Job",
+      "time": "7 minutes",
+      "skill": "object strip",
+      "direction": "Invent one pretend desk object: ____________________. Its story job is ____________________.",
+      "familyLine": "The object matters because ____________________."
+    },
+    {
+      "title": "First Next Finally",
+      "time": "8 minutes",
+      "skill": "sequence strip",
+      "direction": "Plan three story steps. First ____________________. Next ____________________. Finally ____________________.",
+      "familyLine": "The step we would write more about is ____________________."
+    },
+    {
+      "title": "Stronger Desk Sentence",
+      "time": "5 minutes",
+      "skill": "revision strip",
+      "direction": "Copy one desk-strip sentence: ____________________. Add one clearer desk detail: ____________________.",
+      "familyLine": "The revision helped because ____________________."
+    },
+    {
+      "title": "Quiet Sound Clue",
+      "time": "6 minutes",
+      "skill": "sensory strip",
+      "direction": "Choose one gentle sound word for the story: ____________________. The sound tells the character ____________________.",
+      "familyLine": "Our sound clue points toward ____________________."
+    },
+    {
+      "title": "Pattern On the Strip",
+      "time": "7 minutes",
+      "skill": "sensory strip",
+      "direction": "Choose one safe pattern, such as dots, lines, bands, or repeats: ____________________. In the story it means ____________________.",
+      "familyLine": "The pattern detail makes us wonder ____________________."
+    },
+    {
+      "title": "Better Beginning",
+      "time": "8 minutes",
+      "skill": "revision strip",
+      "direction": "Write a beginning sentence: ____________________. Add one setting or object detail: ____________________.",
+      "familyLine": "The beginning now shows ____________________."
+    },
+    {
+      "title": "Character Finds Object",
+      "time": "9 minutes",
+      "skill": "character strip",
+      "direction": "Invent a character: ____________________. Give the character one pretend object to find: ____________________.",
+      "familyLine": "The character will use the object to ____________________."
+    },
+    {
+      "title": "Tiny Desk Story",
+      "time": "6 minutes",
+      "skill": "sequence strip",
+      "direction": "Write one setting, one character, and one object. Setting: ____________________. Character: ____________________. Object: ____________________.",
+      "familyLine": "The tiny desk story we would continue is ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Read one setting clue from your desk strip if you choose: ____________________.",
+    "Show one paper sketch from the strip: ____________________.",
+    "Name the broad desk place that helped your story: ____________________.",
+    "Share one invented character role without private details: ____________________.",
+    "Tell the story job of one pretend object: ____________________.",
+    "Read the first, next, or finally line you like best: ____________________.",
+    "Name one detail that made a sentence clearer: ____________________.",
+    "Mark one desk-strip clue you want to save for later writing: ____________________."
+  ],
+  "strips": [
+    {
+      "id": "writing-desk-strip-01",
+      "title": "Moon Market Setting Strip",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "stripSkill": "setting strip",
+      "useCase": "Adult-led, offline, paper-only creative writing strip for choosing one small desk setting clue: ____________________.",
+      "adultSetup": "Print the strip, place it beside a pencil, and invite one quick market sketch before the writer fills this blank: ____________________.",
+      "kidDirection": "Imagine a pretend moon market on the writing desk, then choose one gentle place detail to write here: ____________________.",
+      "stripFrontPrompt": "Strip front: The Moon Muffin Market stall sits beside ____________________.",
+      "stripBackPrompt": "Strip back: This setting clue makes the market feel ____________________.",
+      "storySeedPrompt": "Story seed: A tiny market sign points toward ____________________, and a small story begins.",
+      "firstLinePath": "First line path: At the moon market, I noticed ____________________, then the stall changed because ____________________.",
+      "revisionNudge": "Revision nudge: Replace one plain place word with a clearer setting word: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch one stall shape first, then label it here: ____________________.",
+      "takeHomeLine": "Take-home line: At another table, add one new moon market detail: ____________________."
+    },
+    {
+      "id": "writing-desk-strip-02",
+      "title": "Puddle Planet Character Strip",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "stripSkill": "character strip",
+      "useCase": "Adult-led, offline, paper-only creative writing strip for inventing one helper and one choice: ____________________.",
+      "adultSetup": "Print the strip, set out a pencil, and ask for a tiny helper badge sketch before this blank is filled: ____________________.",
+      "kidDirection": "Imagine a pretend message helper at the Puddle Planet Post Office, then choose the helper's job: ____________________.",
+      "stripFrontPrompt": "Strip front: My Puddle Planet helper sorts pretend messages by ____________________.",
+      "stripBackPrompt": "Strip back: The helper's careful habit is ____________________.",
+      "storySeedPrompt": "Story seed: One pretend message slides past ____________________, and the helper decides what to do next.",
+      "firstLinePath": "First line path: The puddle helper checked ____________________, then chose ____________________.",
+      "revisionNudge": "Revision nudge: Add one exact character action a reader can picture: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch the helper badge, then write one character word: ____________________.",
+      "takeHomeLine": "Take-home line: At home, invent one more pretend message for ____________________."
+    },
+    {
+      "id": "writing-desk-strip-03",
+      "title": "Buttonwood Train Sequence Strip",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "stripSkill": "sequence strip",
+      "useCase": "Adult-led, offline, paper-only creative writing strip for arranging a beginning, turn, and finish: ____________________.",
+      "adultSetup": "Print the strip and draw three small boxes on scrap paper if helpful; the writer starts with this clue: ____________________.",
+      "kidDirection": "Imagine the Buttonwood Library Train has three shelf clues out of order, then choose the first one: ____________________.",
+      "stripFrontPrompt": "Strip front: First train clue: ____________________.",
+      "stripBackPrompt": "Strip back: Middle turn: ____________________. Final stop: ____________________.",
+      "storySeedPrompt": "Story seed: The library train rolls past ____________________, but the next shelf clue changes the route.",
+      "firstLinePath": "First line path: First ____________________. Then ____________________. Last ____________________.",
+      "revisionNudge": "Revision nudge: Add one reason the middle clue belongs after the first: ____________________.",
+      "quietOptionLine": "Quiet option: Number three small boxes and fill only box one: ____________________.",
+      "takeHomeLine": "Take-home line: At home, retell the train route with a new final clue: ____________________."
+    },
+    {
+      "id": "writing-desk-strip-04",
+      "title": "Pencil Dragon Academy Object Strip",
+      "worldSlug": "pencil-dragon-academy",
+      "ageBand": "10-11",
+      "stripSkill": "object strip",
+      "useCase": "Adult-led, offline, paper-only creative writing strip for giving one desk object a story job: ____________________.",
+      "adultSetup": "Print the strip, point to one ordinary pencil or paper tool, and keep the invented object name here: ____________________.",
+      "kidDirection": "Imagine Pencil Dragon Academy keeps a tiny desk tool for story practice, then name the object: ____________________.",
+      "stripFrontPrompt": "Strip front: The academy desk object is called ____________________.",
+      "stripBackPrompt": "Strip back: This object helps the scene by ____________________.",
+      "storySeedPrompt": "Story seed: A pencil dragon finds ____________________ on the desk and uses it to solve a small story mix-up.",
+      "firstLinePath": "First line path: On the academy desk, ____________________ waited beside ____________________.",
+      "revisionNudge": "Revision nudge: Replace one vague object word with an exact noun: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch the object silently, then write its tiny job: ____________________.",
+      "takeHomeLine": "Take-home line: At another desk, add a second helpful object called ____________________."
+    },
+    {
+      "id": "writing-desk-strip-05",
+      "title": "Teacup Weather Sensory Strip",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "stripSkill": "sensory strip",
+      "useCase": "Adult-led, offline, paper-only creative writing strip for adding color, sound, or texture to a scene: ____________________.",
+      "adultSetup": "Print the strip near a table or window view and ask for one pretend sensory clue before this blank: ____________________.",
+      "kidDirection": "Imagine Teacup Town watches a weather window on the writing desk, then choose one clue readers can picture: ____________________.",
+      "stripFrontPrompt": "Strip front: The weather window glows the color of ____________________.",
+      "stripBackPrompt": "Strip back: The tiny weather sound is ____________________.",
+      "storySeedPrompt": "Story seed: When the window showed ____________________, Teacup Town changed one small plan.",
+      "firstLinePath": "First line path: The teacup window clicked softly as ____________________.",
+      "revisionNudge": "Revision nudge: Add one sensory word that makes the weather clue clearer: ____________________.",
+      "quietOptionLine": "Quiet option: Draw one tiny weather mark and label its feeling: ____________________.",
+      "takeHomeLine": "Take-home line: At home, add a new color, sound, or texture to ____________________."
+    },
+    {
+      "id": "writing-desk-strip-06",
+      "title": "Pocket Park Revision Strip",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "stripSkill": "revision strip",
+      "useCase": "Adult-led, offline, paper-only creative writing strip for improving one short notice-board sentence: ____________________.",
+      "adultSetup": "Print the strip, ask for one draft line, and invite the writer to make one detail clearer here: ____________________.",
+      "kidDirection": "Imagine the Pocket Park notice board has a sentence that almost works, then choose one word to improve: ____________________.",
+      "stripFrontPrompt": "Strip front: My draft notice says ____________________.",
+      "stripBackPrompt": "Strip back: The clearer detail I can add is ____________________.",
+      "storySeedPrompt": "Story seed: A new notice appears beside ____________________, and one sentence needs a sharper clue.",
+      "firstLinePath": "First line path: Draft: ____________________. Better detail: ____________________. Revised line: ____________________.",
+      "revisionNudge": "Revision nudge: Circle one word to keep, then replace one dull word with ____________________.",
+      "quietOptionLine": "Quiet option: Rewrite only one word from the draft here: ____________________.",
+      "takeHomeLine": "Take-home line: At home, revise one pocket park sentence about ____________________."
+    },
+    {
+      "id": "writing-desk-strip-07",
+      "title": "Acorn Errand Label Strip",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "stripSkill": "object clue strip",
+      "useCase": "Adult-led offline paper strip for turning one pretend errand-office object into a short story start.",
+      "adultSetup": "Print one strip, place it with a pencil, and invite the writer to fill one pretend errand label: ____________________.",
+      "kidDirection": "Invent one tiny desk object for Acorn Avenue, then write what errand it helps with: ____________________.",
+      "stripFrontPrompt": "Front prompt: The errand office object on my desk strip is ____________________.",
+      "stripBackPrompt": "Back prompt: This object belongs in the drawer marked ____________________ because ____________________.",
+      "storySeedPrompt": "Story seed: A small helper finds ____________________ tucked under the errand counter.",
+      "firstLinePath": "First line path: At Acorn Avenue Errand Office, ____________________ is waiting beside ____________________.",
+      "revisionNudge": "Revision nudge: Add one exact object detail that makes the errand clearer: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch the object first, then label it with one word: ____________________.",
+      "takeHomeLine": "Take-home line: Start another errand story with this desk object: ____________________."
+    },
+    {
+      "id": "writing-desk-strip-08",
+      "title": "Penny Path Compass Choice Strip",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "stripSkill": "choice strip",
+      "useCase": "Adult-led offline paper strip for helping a writer choose one pretend direction and one story reason.",
+      "adultSetup": "Print one strip, set it on the writing desk, and choose a safe pretend compass mark to fill in: ____________________.",
+      "kidDirection": "Pick one compass mark in the Penny Path shop and decide what it points toward: ____________________.",
+      "stripFrontPrompt": "Front prompt: My compass shop mark points toward ____________________.",
+      "stripBackPrompt": "Back prompt: The shopkeeper notices the mark change when ____________________.",
+      "storySeedPrompt": "Story seed: A penny-sized compass turns toward ____________________ instead of the usual shelf.",
+      "firstLinePath": "First line path: Inside the Penny Path Compass Shop, ____________________ points to ____________________.",
+      "revisionNudge": "Revision nudge: Replace one plain direction with a clearer route clue: ____________________.",
+      "quietOptionLine": "Quiet option: Draw one arrow, then write the place it points to: ____________________.",
+      "takeHomeLine": "Take-home line: Use this compass clue to begin a new paper story: ____________________."
+    },
+    {
+      "id": "writing-desk-strip-09",
+      "title": "Seed Library Drawer Strip",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "stripSkill": "setting detail strip",
+      "useCase": "Adult-led offline paper strip for building a calm map-room setting from one invented drawer detail.",
+      "adultSetup": "Print the strip, place it beside a blank sheet, and ask the writer to invent a drawer label: ____________________.",
+      "kidDirection": "Name one map-room drawer, add one setting detail, and write why it matters today: ____________________.",
+      "stripFrontPrompt": "Front prompt: The drawer label in the Seed Library Map Room reads ____________________.",
+      "stripBackPrompt": "Back prompt: Inside the drawer, the map shows ____________________ near ____________________.",
+      "storySeedPrompt": "Story seed: The seed map changes after someone adds ____________________ to the drawer.",
+      "firstLinePath": "First line path: In the map room, ____________________ waits under the label ____________________.",
+      "revisionNudge": "Revision nudge: Add one where-detail so the reader can picture the map room: ____________________.",
+      "quietOptionLine": "Quiet option: Outline the drawer shape, then write its label: ____________________.",
+      "takeHomeLine": "Take-home line: At another desk, add one new map-room clue: ____________________."
+    },
+    {
+      "id": "writing-desk-strip-10",
+      "title": "Rain Gauge Signal Strip",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "stripSkill": "sensory strip",
+      "useCase": "Adult-led offline paper strip for collecting color, sound, and motion words before a short railway scene.",
+      "adultSetup": "Print one strip, keep it paper-only, and ask the writer to choose a soft signal word: ____________________.",
+      "kidDirection": "Choose one color, one quiet sound, and one small movement for the rain-gauge railway: ____________________.",
+      "stripFrontPrompt": "Front prompt: The rain gauge signal looks ____________________ and sounds like ____________________.",
+      "stripBackPrompt": "Back prompt: The railway helper understands the signal because ____________________.",
+      "storySeedPrompt": "Story seed: The gauge line rises to ____________________, and the little railway changes course.",
+      "firstLinePath": "First line path: Beside the Rain Gauge Railway, ____________________ makes the signal feel important.",
+      "revisionNudge": "Revision nudge: Trade one vague describing word for a sharper sensory word: ____________________.",
+      "quietOptionLine": "Quiet option: Circle one color word, then copy it here: ____________________.",
+      "takeHomeLine": "Take-home line: Begin a railway scene with this safe signal detail: ____________________."
+    },
+    {
+      "id": "writing-desk-strip-11",
+      "title": "Moss Message Pattern Strip",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "stripSkill": "pattern strip",
+      "useCase": "Adult-led offline paper strip for turning one pretend moss pattern into a clear story clue.",
+      "adultSetup": "Print the strip, set a pencil beside it, and invite the writer to invent one moss pattern: ____________________.",
+      "kidDirection": "Design a pretend moss message, then write what the observatory helper notices first: ____________________.",
+      "stripFrontPrompt": "Front prompt: The moss message pattern looks like ____________________.",
+      "stripBackPrompt": "Back prompt: The pattern repeats near ____________________ and seems to mean ____________________.",
+      "storySeedPrompt": "Story seed: A new moss mark appears on ____________________ just before ____________________.",
+      "firstLinePath": "First line path: At the quiet observatory, ____________________ appears beside ____________________.",
+      "revisionNudge": "Revision nudge: Add one repeated shape, line, or texture to make the pattern clearer: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the pattern quietly, then name it: ____________________.",
+      "takeHomeLine": "Take-home line: Save this moss pattern as the first clue in another story: ____________________."
+    },
+    {
+      "id": "writing-desk-strip-12",
+      "title": "Tidepool Lab Sequence Strip",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "stripSkill": "sequence strip",
+      "useCase": "Adult-led offline paper strip for planning a first, next, and finally path inside a pretend tidepool lab.",
+      "adultSetup": "Print one strip, place it with a pencil, and ask the writer to choose the first lab note: ____________________.",
+      "kidDirection": "Write three paper-only tidepool lab steps: first ____________________, next ____________________, finally ____________________.",
+      "stripFrontPrompt": "Front prompt: The tidepool lab note begins with ____________________.",
+      "stripBackPrompt": "Back prompt: Sequence path: first ____________________, next ____________________, finally ____________________.",
+      "storySeedPrompt": "Story seed: The lab helper changes the order after noticing ____________________ in the tidepool tray.",
+      "firstLinePath": "First line path: First ____________________, next ____________________, finally ____________________.",
+      "revisionNudge": "Revision nudge: Add one clear transition word or step detail to the middle: ____________________.",
+      "quietOptionLine": "Quiet option: Number the three steps, then write the strongest one: ____________________.",
+      "takeHomeLine": "Take-home line: Use this sequence to start a new tidepool lab paragraph: ____________________."
+    },
+    {
+      "id": "writing-desk-strip-13",
+      "title": "Revision River Ferry Ending Strip",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "stripSkill": "revision strip",
+      "useCase": "Adult-led, offline paper strip for shaping a revised ending from one earlier clue: ____________________.",
+      "adultSetup": "Print one prompt strip, place it beside blank paper, and ask the writer to choose a pretend draft clue to carry across the ferry: ____________________.",
+      "kidDirection": "Pick one clue from an imagined first draft, then rewrite the final line so the clue returns in a clearer way: ____________________.",
+      "stripFrontPrompt": "Front prompt: The draft clue waiting beside Revision River is ____________________.",
+      "stripBackPrompt": "Back prompt: My clearer final sentence brings that clue back by saying ____________________.",
+      "storySeedPrompt": "Story seed: The ferry guide finds a folded draft strip floating near ____________________.",
+      "firstLinePath": "First-line path: At first, the clue looked like ____________________; by the ferry, it means ____________________.",
+      "revisionNudge": "Revision nudge: Cut one extra phrase or add one sharper ending image here: ____________________.",
+      "quietOptionLine": "Quiet option: Copy only the revised final words onto the strip: ____________________.",
+      "takeHomeLine": "Take-home line: Use this strip later to finish a short paper story about ____________________."
+    },
+    {
+      "id": "writing-desk-strip-14",
+      "title": "Clue Label Tower Detail Strip",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "stripSkill": "sensory detail strip",
+      "useCase": "Adult-led, offline paper strip for turning one invented museum label into a concrete story detail: ____________________.",
+      "adultSetup": "Print one strip and set out pencils; the adult names the pretend tower room while the writer fills the first label blank: ____________________.",
+      "kidDirection": "Invent one exhibit label, then add three details that let a reader picture it without using any real place name: ____________________.",
+      "stripFrontPrompt": "Front prompt: The tower label says this exhibit is called ____________________.",
+      "stripBackPrompt": "Back prompt: The label needs a shape ____________________, a color ____________________, and a quiet sound ____________________.",
+      "storySeedPrompt": "Story seed: A museum helper notices the label points toward ____________________.",
+      "firstLinePath": "First-line path: The label looked ordinary until ____________________ made the room feel ____________________.",
+      "revisionNudge": "Revision nudge: Replace one plain detail with a sharper color, texture, or shape: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch the label box first, then write one exact detail: ____________________.",
+      "takeHomeLine": "Take-home line: Use this label strip to start a quiet tower scene about ____________________."
+    },
+    {
+      "id": "writing-desk-strip-15",
+      "title": "Compass Craft Academy Route Strip",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "stripSkill": "sequence strip",
+      "useCase": "Adult-led, offline paper strip for arranging a short story route with a start, turn, and landing place: ____________________.",
+      "adultSetup": "Print one strip, place it beside a pencil, and ask the writer to mark three pretend compass points before drafting: ____________________.",
+      "kidDirection": "Name a start mark, a middle turn, and a final landing place, then turn the route into a clear story path: ____________________.",
+      "stripFrontPrompt": "Front prompt: The compass route begins at ____________________ and turns when ____________________.",
+      "stripBackPrompt": "Back prompt: The final place on my route is ____________________ because ____________________.",
+      "storySeedPrompt": "Story seed: A compass crafter changes the academy route when ____________________ appears between two marks.",
+      "firstLinePath": "First-line path: First ____________________; next ____________________; finally ____________________.",
+      "revisionNudge": "Revision nudge: Add one precise direction word or distance clue to the middle turn: ____________________.",
+      "quietOptionLine": "Quiet option: Number three route marks, then write only the middle one: ____________________.",
+      "takeHomeLine": "Take-home line: Use this route strip later to draft a paragraph about ____________________."
+    },
+    {
+      "id": "writing-desk-strip-16",
+      "title": "Almost Invention Workshop Test Strip",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "stripSkill": "object detail strip",
+      "useCase": "Adult-led, offline paper strip for improving a pretend invention idea with one clearer object detail: ____________________.",
+      "adultSetup": "Print one strip and give the writer scratch paper for a plain invention sentence before the clearer detail blank: ____________________.",
+      "kidDirection": "Invent something that almost works, then add the missing detail that makes the story problem easier to picture: ____________________.",
+      "stripFrontPrompt": "Front prompt: My almost invention is called ____________________, and it almost works when ____________________.",
+      "stripBackPrompt": "Back prompt: The missing part, label, or test detail is ____________________.",
+      "storySeedPrompt": "Story seed: The workshop helper realizes the invention needs ____________________ before the next paper test.",
+      "firstLinePath": "First-line path: The first test looked like ____________________, but the better test shows ____________________.",
+      "revisionNudge": "Revision nudge: Replace one vague word with a precise noun, action, or material: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the invention shape, then label only the missing part: ____________________.",
+      "takeHomeLine": "Take-home line: Use this strip later to write an almost-invention scene about ____________________."
+    },
+    {
+      "id": "writing-desk-strip-17",
+      "title": "Margin Note Market Choice Strip",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "stripSkill": "character choice strip",
+      "useCase": "Adult-led, offline paper strip for building a character choice from one helpful pretend margin note: ____________________.",
+      "adultSetup": "Print one prompt strip, set out pencils, and tell the writer every note, stall, and character name can be invented on paper: ____________________.",
+      "kidDirection": "Write the margin note a character receives, then show how it changes the next choice in the scene: ____________________.",
+      "stripFrontPrompt": "Front prompt: My character receives a margin note that says ____________________.",
+      "stripBackPrompt": "Back prompt: Because of the note, the character chooses to ____________________.",
+      "storySeedPrompt": "Story seed: At Margin Note Market, one folded note asks this question: ____________________.",
+      "firstLinePath": "First-line path: The character wanted ____________________, but the note pointed toward ____________________.",
+      "revisionNudge": "Revision nudge: Add one visible action that proves the character made a new choice: ____________________.",
+      "quietOptionLine": "Quiet option: Write only the changed choice on the back of the strip: ____________________.",
+      "takeHomeLine": "Take-home line: Use this strip later to start a character scene about ____________________."
+    },
+    {
+      "id": "writing-desk-strip-18",
+      "title": "Binding Day Boardwalk Clarity Strip",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "stripSkill": "clarity strip",
+      "useCase": "Adult-led, offline paper strip for choosing one clearer sentence from an imagined boardwalk draft: ____________________.",
+      "adultSetup": "Print one strip and place it beside blank paper; the adult asks for one pretend boardwalk sentence to sharpen: ____________________.",
+      "kidDirection": "Write a sentence from the boardwalk draft, then use the strip to make the meaning clearer for a reader: ____________________.",
+      "stripFrontPrompt": "Front prompt: The boardwalk draft begins with this cloudy sentence: ____________________.",
+      "stripBackPrompt": "Back prompt: My clearer revision sentence says ____________________.",
+      "storySeedPrompt": "Story seed: A revision mark appears beside ____________________ and changes what the young author understands.",
+      "firstLinePath": "First-line path: The first sentence said ____________________; the clearer sentence shows ____________________.",
+      "revisionNudge": "Revision nudge: Swap one fuzzy word for a precise noun, verb, or detail: ____________________.",
+      "quietOptionLine": "Quiet option: Underline one word silently, then write the clearer replacement here: ____________________.",
+      "takeHomeLine": "Take-home line: Use this strip later to polish a short boardwalk scene about ____________________."
+    }
+  ]
+}
