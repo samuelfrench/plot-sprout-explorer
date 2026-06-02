@@ -1,0 +1,193 @@
+{
+  "batchId": "2026-06-02-batch28",
+  "lane": "window-scene-tools",
+  "generatedAt": "2026-06-02",
+  "productSlug": "window-seat-story-scene-card-pack",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the scene cards, take-home scene slips, and adult guide before writers arrive.",
+      "Set the adult-led rule: every idea stays on paper with pencils, sketches, and short story words.",
+      "Explain that window-seat means a pretend framed view or imagined window view only.",
+      "Choose one scene routine before the session so each writer has one clear paper path.",
+      "Keep the session offline, calm, and focused on one small scene card that can start later drafting."
+    ],
+    "windowSeatSetup": [
+      "Place blank scene cards, pencils, broad view-word cards, and slips where the adult can see every page.",
+      "Set six labeled piles: setting scene, character scene, choice scene, sequence scene, sensory scene, and revision scene.",
+      "Use broad view words only, such as sky, tree, path, hill, garden, porch, sign, bench, or curtain.",
+      "Leave room on each card for a title, one paper window frame, three scene notes, and one story sentence.",
+      "Keep extra scene cards in an adult folder so the writing area stays paper-only and easy to reset."
+    ],
+    "sceneStoryCoaching": [
+      "Ask for one pretend view first, then turn it into a made-up setting with one mood word.",
+      "Ask for one invented character role who notices, carries, waits, sorts, or chooses something in the scene.",
+      "Ask for one pretend object inside the framed view and give it a story job.",
+      "Ask for first, next, and finally lines when the writer needs a clean scene sequence.",
+      "Ask the writer to improve one sentence by adding a clearer look, sound, pattern, label, or texture word."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented names, role words, or blank labels for every person on the scene cards.",
+      "Use broad place words instead of private details, named locations, schedules, or personal routines.",
+      "Keep all window-seat writing fictional, adult-led, offline, and paper-only.",
+      "The adult keeps finished pages in the family folder, tutor folder, co-op folder, or classroom folder.",
+      "Check every take-home scene slip for private details before it leaves the adult-led table."
+    ],
+    "familyHandoff": [
+      "Send one finished scene card and one blank take-home scene slip with each writer.",
+      "Tell family adults that five to nine quiet minutes is enough for one extra scene prompt.",
+      "Invite the family adult to ask for one pretend view, one invented character, and one pretend object.",
+      "Ask adults to praise one clear word, sketch, or sentence before suggesting one small revision.",
+      "Suggest keeping scene cards together so the writer can reuse the strongest framed-view clue in a later printable story."
+    ],
+    "reset": [
+      "Collect unused scene cards, take-home scene slips, pencils, and broad view-word cards.",
+      "Check finished scene cards for private details before they go with the family adult.",
+      "Recycle scrap pages that only hold warm-up marks.",
+      "Restock the adult folder with fresh blank scene cards for the next offline session."
+    ]
+  },
+  "sceneRoutines": [
+    {
+      "name": "Setting Scene",
+      "bestFor": "Writers who need one framed place before inventing action.",
+      "steps": [
+        "Adult points to one broad view word on the paper scene card.",
+        "Writer draws a simple pretend window frame around the imagined view.",
+        "Writer adds one mood word and one look detail to the setting scene.",
+        "Writer writes one sentence showing where the story begins."
+      ]
+    },
+    {
+      "name": "Character Scene",
+      "bestFor": "Kids who like inventing roles, questions, and small choices.",
+      "steps": [
+        "Adult asks the writer to choose an invented role, such as finder, watcher, sorter, keeper, or helper.",
+        "Writer gives the character one question about the imagined view.",
+        "Writer sketches one clue the character notices in the framed scene.",
+        "Writer writes one sentence about what the character does first."
+      ]
+    },
+    {
+      "name": "Choice Scene",
+      "bestFor": "Families turning a quiet view into a clear story decision.",
+      "steps": [
+        "Adult asks the writer to mark two calm choices on the scene card.",
+        "Writer chooses one invented character who must pick between the choices.",
+        "Writer adds one reason the chosen path fits the scene.",
+        "Writer writes one sentence that shows the choice without naming a private place."
+      ]
+    },
+    {
+      "name": "Sequence Scene",
+      "bestFor": "Writers who need a tiny beginning, middle, and ending path.",
+      "steps": [
+        "Adult points to the first, next, and finally lines on the scene card.",
+        "Writer chooses one pretend view and one invented character.",
+        "Writer fills the three lines with calm story steps.",
+        "Writer circles the step that should become the first full paragraph."
+      ]
+    },
+    {
+      "name": "Sensory Scene",
+      "bestFor": "Quiet writers who notice color, sound, shape, pattern, or texture words.",
+      "steps": [
+        "Adult asks the writer to choose one gentle sensory word from the paper prompt list.",
+        "Writer pairs that word with a pretend view, object, or invented character.",
+        "Writer sketches the detail inside the paper window frame.",
+        "Writer writes one sentence where the sensory detail becomes a story clue."
+      ]
+    },
+    {
+      "name": "Revision Scene",
+      "bestFor": "Writers strengthening one scene sentence from an earlier card or draft.",
+      "steps": [
+        "Adult places the earlier sentence beside a blank revision scene card.",
+        "Writer chooses one clearer look, sound, label, pattern, or texture word.",
+        "Writer copies the sentence and adds the clearer detail.",
+        "Writer underlines the word or phrase that improved the sentence most."
+      ]
+    }
+  ],
+  "takeHomeSceneSlips": [
+    {
+      "title": "Framed View Start",
+      "time": "5 minutes",
+      "skill": "setting scene",
+      "direction": "Choose a pretend framed view: ____________________. Add one mood word for the setting: ____________________.",
+      "familyLine": "Our setting scene begins to feel ____________________."
+    },
+    {
+      "title": "Window-View Character",
+      "time": "6 minutes",
+      "skill": "character scene",
+      "direction": "Invent a character role for the scene: ____________________. Give that character one question: ____________________.",
+      "familyLine": "The character question we want to keep is ____________________."
+    },
+    {
+      "title": "Object In the Frame",
+      "time": "7 minutes",
+      "skill": "object scene",
+      "direction": "Invent one pretend object in the framed view: ____________________. Its story job is ____________________.",
+      "familyLine": "The object matters because ____________________."
+    },
+    {
+      "title": "First Next Finally",
+      "time": "8 minutes",
+      "skill": "sequence scene",
+      "direction": "Plan three scene steps. First ____________________. Next ____________________. Finally ____________________.",
+      "familyLine": "The step we would write more about is ____________________."
+    },
+    {
+      "title": "Clearer Scene Sentence",
+      "time": "5 minutes",
+      "skill": "revision scene",
+      "direction": "Copy one scene sentence: ____________________. Add one clearer view detail: ____________________.",
+      "familyLine": "The revision helped because ____________________."
+    },
+    {
+      "title": "Sound In the Scene",
+      "time": "6 minutes",
+      "skill": "sensory scene",
+      "direction": "Choose one gentle sound word for the imagined view: ____________________. The sound tells the character ____________________.",
+      "familyLine": "Our sound clue points toward ____________________."
+    },
+    {
+      "title": "Pattern In the View",
+      "time": "7 minutes",
+      "skill": "pattern scene",
+      "direction": "Choose one calm pattern, such as dots, lines, bands, or repeats: ____________________. In the story it means ____________________.",
+      "familyLine": "The pattern detail makes us wonder ____________________."
+    },
+    {
+      "title": "Choice At the Frame",
+      "time": "8 minutes",
+      "skill": "choice scene",
+      "direction": "Write two calm choices for an invented character: ____________________. Choose the one that fits the scene: ____________________.",
+      "familyLine": "The choice changes the scene by ____________________."
+    },
+    {
+      "title": "Label the Scene",
+      "time": "9 minutes",
+      "skill": "label scene",
+      "direction": "Add three paper labels to the framed view. Label one: ____________________. Label two: ____________________. Label three: ____________________.",
+      "familyLine": "The label we want to use in a sentence is ____________________."
+    },
+    {
+      "title": "Tiny Window Story",
+      "time": "6 minutes",
+      "skill": "clarity scene",
+      "direction": "Write one setting, one character, and one object. Setting: ____________________. Character: ____________________. Object: ____________________.",
+      "familyLine": "The tiny scene story we would continue is ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Read one setting clue from your scene card if you choose: ____________________.",
+    "Show one paper sketch from the framed view: ____________________.",
+    "Name the broad view word that helped your story: ____________________.",
+    "Share one invented character role without private details: ____________________.",
+    "Tell the story job of one pretend object: ____________________.",
+    "Read the first, next, or finally line you like best: ____________________.",
+    "Name one detail that made a sentence clearer: ____________________.",
+    "Mark one scene-card clue you want to save for later writing: ____________________."
+  ]
+}

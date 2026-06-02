@@ -9,6 +9,8 @@ import {
   validateBookshopStoryBookmarkPackSourceFiles,
   validateKitchenTableStoryRecipeCardDeckSource,
   validateKitchenTableStoryRecipeCardDeckSourceFiles,
+  validateWindowSeatStorySceneCardPackSource,
+  validateWindowSeatStorySceneCardPackSourceFiles,
   validateWritingDeskStoryPromptStripPackSource,
   validateWritingDeskStoryPromptStripPackSourceFiles,
   validateAfterSchoolStoryClubKitSource,
@@ -61,6 +63,7 @@ const batch24ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch25ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch25-product-images.json')
 const batch26ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch26-product-images.json')
 const batch27ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch27-product-images.json')
+const batch28ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch28-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -82,6 +85,7 @@ const backyardSeedSourceFile = resolve(root, 'content', 'product-artifacts', 'ba
 const kitchenRecipeSourceFile = resolve(root, 'content', 'product-artifacts', 'kitchen-table-story-recipe-card-deck.json')
 const bookshopBookmarkSourceFile = resolve(root, 'content', 'product-artifacts', 'bookshop-story-bookmark-pack.json')
 const writingDeskStripSourceFile = resolve(root, 'content', 'product-artifacts', 'writing-desk-story-prompt-strip-pack.json')
+const windowSeatSceneSourceFile = resolve(root, 'content', 'product-artifacts', 'window-seat-story-scene-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -104,6 +108,7 @@ const batch24ProductImagesBatchId = '2026-06-02-batch24-product-images'
 const batch25ProductImagesBatchId = '2026-06-02-batch25-product-images'
 const batch26ProductImagesBatchId = '2026-06-02-batch26-product-images'
 const batch27ProductImagesBatchId = '2026-06-02-batch27-product-images'
+const batch28ProductImagesBatchId = '2026-06-02-batch28-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -125,6 +130,7 @@ const backyardSeedBatchId = '2026-06-02-batch24'
 const kitchenRecipeBatchId = '2026-06-02-batch25'
 const bookshopBookmarkBatchId = '2026-06-02-batch26'
 const writingDeskStripBatchId = '2026-06-02-batch27'
+const windowSeatSceneBatchId = '2026-06-02-batch28'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -1481,6 +1487,108 @@ function validateBatch27ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch28ProductImage(image) {
+  const label = `2026-06-02-batch28-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'window-seat-story-scene-card-pack',
+    `${label}.slug must be window-seat-story-scene-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch28/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch28/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch28/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank cream paper scene cards',
+    'plain white background',
+    'zero other objects',
+    'screen-free printable window seat story scene card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'plant',
+    'potted plant',
+    'greenery',
+    'flower',
+    'jar',
+    'cup',
+    'mug',
+    'bowl',
+    'utensil',
+    'brush',
+    'spoon',
+    'fork',
+    'knife',
+    'pencil',
+    'pen',
+    'crayon',
+    'marker',
+    'notebook',
+    'spiral binding',
+    'ruler',
+    'scissors',
+    'calendar',
+    'clock',
+    'timer',
+    'score',
+    'star',
+    'rating',
+    'review',
+    'people',
+    'face',
+    'animal',
+    'map',
+    'gps',
+    'route',
+    'address',
+    'house',
+    'real window',
+    'camera',
+    'photo',
+    'tabletop props',
+    'decoration',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -1659,6 +1767,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
       minParentSteps: 5,
       maxWorldSlugs: 18,
     },
+    'window-seat-story-scene-card-pack': {
+      title: 'Window Seat Story Scene Card Pack',
+      pricePoint: '$29',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -1792,6 +1908,35 @@ function validateProduct(product, productSlugs, worldSlugs) {
       expect(seenSummarySlugs.has(worldSlug), `${label}.worldSummaries missing linked world slug ${worldSlug}.`)
     }
   }
+  if (product.slug === 'window-seat-story-scene-card-pack') {
+    const offScopeWindowSeatLanguage =
+      /\baccounts?\b|\blogins?\b|\bsign-?in\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\bschedules?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bscores?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\bphotos?\b|\bcameras?\b|\baddresses?\b|\bphone(s)?\b|\bemails?\b|\breal homes?\b|\bgps\b|\bcoordinates?\b|\broute(s)?\b|\breal child\b|\bprivate child data\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bwindow safety\b|\bweather safety\b/i
+    expect(Array.isArray(product.worldSummaries), `${label}.worldSummaries must be an array.`)
+    expect(
+      product.worldSummaries.length === product.worldSlugs.length,
+      `${label}.worldSummaries must cover every linked world.`,
+    )
+    const expectedSummarySlugs = new Set(product.worldSlugs)
+    const seenSummarySlugs = new Set()
+    product.worldSummaries.forEach((summary, index) => {
+      expect(typeof summary === 'object' && summary !== null, `${label}.worldSummaries[${index}] must be an object.`)
+      validateString(summary.slug, `${label}.worldSummaries[${index}].slug`)
+      validateString(summary.summary, `${label}.worldSummaries[${index}].summary`)
+      expect(
+        expectedSummarySlugs.has(summary.slug),
+        `${label}.worldSummaries[${index}].slug must match a linked world slug.`,
+      )
+      expect(!seenSummarySlugs.has(summary.slug), `${label}.worldSummaries[${index}].slug is duplicated.`)
+      seenSummarySlugs.add(summary.slug)
+      expect(
+        !offScopeWindowSeatLanguage.test(summary.summary),
+        `${label}.worldSummaries[${index}].summary includes account, public-posting, review/rating, tracker, private-child-data, score, timer, contact, photo, camera, real-home, route, publisher, franchise, branded, window-safety, or weather-safety language.`,
+      )
+    })
+    for (const worldSlug of product.worldSlugs) {
+      expect(seenSummarySlugs.has(worldSlug), `${label}.worldSummaries missing linked world slug ${worldSlug}.`)
+    }
+  }
   validateMinList(product.includedPages, expectedProduct.minIncludedPages, `${label}.includedPages`)
   validateMinList(product.useCases, expectedProduct.minUseCases, `${label}.useCases`)
   validateMinList(product.parentSteps, expectedProduct.minParentSteps, `${label}.parentSteps`)
@@ -1841,6 +1986,16 @@ function validateProduct(product, productSlugs, worldSlugs) {
     expect(
       !/\baccounts?\b|\blogins?\b|\bsign-?in\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\bschedules?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bscores?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\bphotos?\b|\bcameras?\b|\baddresses?\b|\bphone(s)?\b|\bemails?\b|\breal child\b|\bprivate child data\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b/i.test(writingDeskRenderedText),
       `${label} static output includes account, public-posting, review/rating, tracker, private-child-data, score, timer, contact, photo, publisher, franchise, or branded language.`,
+    )
+  }
+  if (product.slug === 'window-seat-story-scene-card-pack') {
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    const windowSeatRenderedText = renderedHtml.replaceAll(safety, '')
+    expect(
+      !/\baccounts?\b|\blogins?\b|\bsign-?in\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\bschedules?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bscores?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\bphotos?\b|\bcameras?\b|\baddresses?\b|\bphone(s)?\b|\bemails?\b|\breal homes?\b|\bgps\b|\bcoordinates?\b|\broute(s)?\b|\breal child\b|\bprivate child data\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bwindow safety\b|\bweather safety\b/i.test(windowSeatRenderedText),
+      `${label} static output includes account, public-posting, review/rating, tracker, private-child-data, score, timer, contact, photo, camera, real-home, route, publisher, franchise, branded, window-safety, or weather-safety language.`,
     )
   }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
@@ -2165,12 +2320,23 @@ expect(Array.isArray(batch27ProductImages.images), 'batch27 product image manife
 expect(batch27ProductImages.images.length === 1, `Expected 1 Batch 27 product image, found ${batch27ProductImages.images.length}.`)
 validateBatch27ProductImage(batch27ProductImages.images[0])
 
+expect(existsSync(batch28ProductImagesFile), `Missing Batch 28 product image manifest: ${batch28ProductImagesFile}`)
+const batch28ProductImages = readJson(batch28ProductImagesFile)
+expect(
+  batch28ProductImages.batchId === batch28ProductImagesBatchId,
+  `batch28 product image manifest batchId must be ${batch28ProductImagesBatchId}.`,
+)
+expect(batch28ProductImages.generatedAt === '2026-06-02', 'batch28 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch28ProductImages.images), 'batch28 product image manifest images must be an array.')
+expect(batch28ProductImages.images.length === 1, `Expected 1 Batch 28 product image, found ${batch28ProductImages.images.length}.`)
+validateBatch28ProductImage(batch28ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 20, `Expected 20 product records, found ${products.products.length}.`)
+expect(products.products.length === 21, `Expected 21 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -2194,6 +2360,7 @@ for (const requiredProductSlug of [
   'kitchen-table-story-recipe-card-deck',
   'bookshop-story-bookmark-pack',
   'writing-desk-story-prompt-strip-pack',
+  'window-seat-story-scene-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -3518,6 +3685,78 @@ for (const asset of writingDeskStripArtifactManifest.files.assets) {
   validateImageFile(resolve(root, asset.path), `Writing Desk Story Prompt Strip Pack copied artifact image ${asset.path}`, 'jpeg')
 }
 
+expect(existsSync(windowSeatSceneSourceFile), `Missing Batch 28 Window Seat Story Scene Card Pack source file: ${windowSeatSceneSourceFile}`)
+const windowSeatSceneSource = readJson(windowSeatSceneSourceFile)
+expect(
+  windowSeatSceneSource.batchId === windowSeatSceneBatchId,
+  `Window Seat Story Scene Card Pack source batchId must be ${windowSeatSceneBatchId}.`,
+)
+const windowSeatSceneProduct = products.products.find((product) => product.slug === 'window-seat-story-scene-card-pack')
+expect(windowSeatSceneProduct, 'Missing Window Seat Story Scene Card Pack product record for Batch 28 artifact validation.')
+const windowSeatSceneSourceErrors = validateWindowSeatStorySceneCardPackSource(
+  windowSeatSceneSource,
+  windowSeatSceneProduct,
+  worldAgeBands,
+)
+expect(
+  windowSeatSceneSourceErrors.length === 0,
+  `Window Seat Story Scene Card Pack source failed validation:\n${windowSeatSceneSourceErrors.join('\n')}`,
+)
+const windowSeatSceneSourceFileErrors = validateWindowSeatStorySceneCardPackSourceFiles(windowSeatSceneSource, root)
+expect(
+  windowSeatSceneSourceFileErrors.length === 0,
+  `Window Seat Story Scene Card Pack sourceFiles failed validation:\n${windowSeatSceneSourceFileErrors.join('\n')}`,
+)
+const windowSeatSceneExpectedPdfPages = windowSeatSceneSource.cards.length + 5
+const windowSeatSceneArtifactStatus = inspectArtifactFiles(root, windowSeatSceneSource.artifact, {
+  expectedPdfPages: windowSeatSceneExpectedPdfPages,
+})
+expect(
+  windowSeatSceneArtifactStatus.valid,
+  `Window Seat Story Scene Card Pack artifacts failed validation:\n${windowSeatSceneArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  windowSeatSceneArtifactStatus.files.pdf.size > 100_000,
+  `Window Seat Story Scene Card Pack PDF artifact is unexpectedly small: ${windowSeatSceneArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  windowSeatSceneArtifactStatus.files.pdf.pageCount === windowSeatSceneExpectedPdfPages,
+  `Window Seat Story Scene Card Pack PDF artifact must have ${windowSeatSceneExpectedPdfPages} pages.`,
+)
+expect(
+  windowSeatSceneArtifactStatus.files.zip.size > windowSeatSceneArtifactStatus.files.pdf.size,
+  'Window Seat Story Scene Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const windowSeatSceneCheckoutErrors = validateCheckoutReadiness(windowSeatSceneProduct, windowSeatSceneArtifactStatus)
+expect(
+  windowSeatSceneCheckoutErrors.length === 0,
+  `Window Seat Story Scene Card Pack checkout readiness failed validation:\n${windowSeatSceneCheckoutErrors.join('\n')}`,
+)
+const windowSeatSceneArtifactManifest = readJson(resolve(root, windowSeatSceneSource.artifact.manifestPath))
+expect(
+  windowSeatSceneArtifactManifest.sourcePageCount === windowSeatSceneSource.cards.length,
+  'Window Seat Story Scene Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(windowSeatSceneArtifactManifest.files.assets),
+  'Window Seat Story Scene Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  windowSeatSceneArtifactManifest.files.assets.length === windowSeatSceneSource.worldSlugs.length,
+  'Window Seat Story Scene Card Pack artifact manifest must include one copied local image per source world.',
+)
+const windowSeatSceneManifestAssetErrors = validateManifestWorldAssets(
+  windowSeatSceneSource,
+  windowSeatSceneArtifactManifest,
+)
+expect(
+  windowSeatSceneManifestAssetErrors.length === 0,
+  `Window Seat Story Scene Card Pack artifact manifest image coverage failed validation:\n${windowSeatSceneManifestAssetErrors.join('\n')}`,
+)
+for (const asset of windowSeatSceneArtifactManifest.files.assets) {
+  validateImageFile(resolve(root, asset.path), `Window Seat Story Scene Card Pack copied artifact image ${asset.path}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length + batch26ProductImages.images.length + batch27ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 20 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length + batch26ProductImages.images.length + batch27ProductImages.images.length + batch28ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 21 product artifacts.`,
 )

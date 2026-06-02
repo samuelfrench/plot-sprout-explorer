@@ -430,6 +430,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Eighteen printable desk prompt strips with adult guide tools, strip routines, and take-home desk strips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'window-seat-story-scene-card-pack',
+    title: 'Window Seat Story Scene Card Pack',
+    pricePoint: '$29',
+    description:
+      'Sixteen printable window-seat scene cards with adult guide tools, scene routines, and take-home scene slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

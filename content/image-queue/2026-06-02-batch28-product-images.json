@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-02-batch28-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "window-seat-story-scene-card-pack",
+      "title": "Window Seat Story Scene Card Pack",
+      "purpose": "Product hero image for the Batch 28 printable window seat story scene card pack.",
+      "prompt": "family-friendly studio flat lay, ONLY blank cream paper scene cards shaped like simple window frames and blank take-home slips, arranged neatly on a plain white background, minimalist catalog product image, zero other objects, screen-free printable window seat story scene card pack",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, signature, scary, horror, weapon, violence, brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, printed markings, icon, symbol, plant, potted plant, greenery, flower, jar, cup, mug, bowl, utensil, brush, spoon, fork, knife, pencil, pen, crayon, marker, notebook, spiral binding, ruler, scissors, calendar, clock, timer, score, star, rating, review, people, face, animal, map, gps, route, address, house, apartment, real room, real window, curtain cord, camera, photo, tabletop props, decoration, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+      "outputJpeg": "public/images/plotsprout/batch28/window-seat-story-scene-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch28/window-seat-story-scene-card-pack.webp",
+      "sidecar": "content/image-runs/batch28/window-seat-story-scene-card-pack.json",
+      "seed": 26062829
+    }
+  ]
+}

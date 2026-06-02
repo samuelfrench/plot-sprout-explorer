@@ -1,0 +1,1089 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Window Seat Story Scene Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #25313a;
+        --muted: #59636a;
+        --paper: #fffdf8;
+        --line: #d9cfbc;
+        --plum: #7d496c;
+        --green: #3f715f;
+        --gold: #d2a84a;
+        --blue: #3f6f93;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 32px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.4px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(63, 113, 95, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(125, 73, 108, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--plum); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .format-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--plum); font-size: 6.9px; }
+      .scene-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .format-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .format-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .scene-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .scene-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(63, 113, 95, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--plum);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable window-seat scene cards</p>
+        <h1>Window Seat Story Scene Card Pack</h1>
+        <p>Sixteen paper scene cards turn pretend framed views into screen-free story starts.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable scene cards plus adult guide tools, scene routines, take-home scene slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$29</span>
+        <h2>Included</h2>
+        <ul><li>16 printable window-seat scene cards</li>
+<li>Adult setup guide</li>
+<li>Pretend framed-view safety notes</li>
+<li>Scene story coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led scene routines</li>
+<li>Ten take-home scene slips</li>
+<li>Eight optional share prompts</li>
+<li>Local image-backed world menu</li>
+<li>Provider-ready PDF, source HTML, README, manifest, and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Scene story coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the scene cards, take-home scene slips, and adult guide before writers arrive.</li>
+<li>Set the adult-led rule: every idea stays on paper with pencils, sketches, and short story words.</li>
+<li>Explain that window-seat means a pretend framed view or imagined window view only.</li>
+<li>Choose one scene routine before the session so each writer has one clear paper path.</li>
+<li>Keep the session offline, calm, and focused on one small scene card that can start later drafting.</li></ul></article>
+        <article class="guide-card"><h3>Window-seat setup</h3><ul><li>Place blank scene cards, pencils, broad view-word cards, and slips where the adult can see every page.</li>
+<li>Set six labeled piles: setting scene, character scene, choice scene, sequence scene, sensory scene, and revision scene.</li>
+<li>Use broad view words only, such as sky, tree, path, hill, garden, porch, sign, bench, or curtain.</li>
+<li>Leave room on each card for a title, one paper window frame, three scene notes, and one story sentence.</li>
+<li>Keep extra scene cards in an adult folder so the writing area stays paper-only and easy to reset.</li></ul></article>
+        <article class="guide-card"><h3>Scene story coaching</h3><ul><li>Ask for one pretend view first, then turn it into a made-up setting with one mood word.</li>
+<li>Ask for one invented character role who notices, carries, waits, sorts, or chooses something in the scene.</li>
+<li>Ask for one pretend object inside the framed view and give it a story job.</li>
+<li>Ask for first, next, and finally lines when the writer needs a clean scene sequence.</li>
+<li>Ask the writer to improve one sentence by adding a clearer look, sound, pattern, label, or texture word.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Use invented names, role words, or blank labels for every person on the scene cards.</li>
+<li>Use broad place words instead of private details, named locations, schedules, or personal routines.</li>
+<li>Keep all window-seat writing fictional, adult-led, offline, and paper-only.</li>
+<li>The adult keeps finished pages in the family folder, tutor folder, co-op folder, or classroom folder.</li>
+<li>Check every take-home scene slip for private details before it leaves the adult-led table.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one finished scene card and one blank take-home scene slip with each writer.</li>
+<li>Tell family adults that five to nine quiet minutes is enough for one extra scene prompt.</li>
+<li>Invite the family adult to ask for one pretend view, one invented character, and one pretend object.</li>
+<li>Ask adults to praise one clear word, sketch, or sentence before suggesting one small revision.</li>
+<li>Suggest keeping scene cards together so the writer can reuse the strongest framed-view clue in a later printable story.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect unused scene cards, take-home scene slips, pencils, and broad view-word cards.</li>
+<li>Check finished scene cards for private details before they go with the family adult.</li>
+<li>Recycle scrap pages that only hold warm-up marks.</li>
+<li>Restock the adult folder with fresh blank scene cards for the next offline session.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen scene-card worlds</h2>
+      <p>Pick a world image, then turn one invented scene clue into a story start.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Almost Invention Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page format-page">
+      <p class="page-kicker">Scene routines</p>
+      <h2>Choose the paper scene rhythm</h2>
+      <div class="format-grid">
+    <article class="small-card">
+      <h3>Setting Scene</h3>
+      <p>Writers who need one framed place before inventing action.</p>
+      <ol><li>Adult points to one broad view word on the paper scene card.</li>
+<li>Writer draws a simple pretend window frame around the imagined view.</li>
+<li>Writer adds one mood word and one look detail to the setting scene.</li>
+<li>Writer writes one sentence showing where the story begins.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Character Scene</h3>
+      <p>Kids who like inventing roles, questions, and small choices.</p>
+      <ol><li>Adult asks the writer to choose an invented role, such as finder, watcher, sorter, keeper, or helper.</li>
+<li>Writer gives the character one question about the imagined view.</li>
+<li>Writer sketches one clue the character notices in the framed scene.</li>
+<li>Writer writes one sentence about what the character does first.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Choice Scene</h3>
+      <p>Families turning a quiet view into a clear story decision.</p>
+      <ol><li>Adult asks the writer to mark two calm choices on the scene card.</li>
+<li>Writer chooses one invented character who must pick between the choices.</li>
+<li>Writer adds one reason the chosen path fits the scene.</li>
+<li>Writer writes one sentence that shows the choice without naming a private place.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sequence Scene</h3>
+      <p>Writers who need a tiny beginning, middle, and ending path.</p>
+      <ol><li>Adult points to the first, next, and finally lines on the scene card.</li>
+<li>Writer chooses one pretend view and one invented character.</li>
+<li>Writer fills the three lines with calm story steps.</li>
+<li>Writer circles the step that should become the first full paragraph.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sensory Scene</h3>
+      <p>Quiet writers who notice color, sound, shape, pattern, or texture words.</p>
+      <ol><li>Adult asks the writer to choose one gentle sensory word from the paper prompt list.</li>
+<li>Writer pairs that word with a pretend view, object, or invented character.</li>
+<li>Writer sketches the detail inside the paper window frame.</li>
+<li>Writer writes one sentence where the sensory detail becomes a story clue.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Revision Scene</h3>
+      <p>Writers strengthening one scene sentence from an earlier card or draft.</p>
+      <ol><li>Adult places the earlier sentence beside a blank revision scene card.</li>
+<li>Writer chooses one clearer look, sound, label, pattern, or texture word.</li>
+<li>Writer copies the sentence and adds the clearer detail.</li>
+<li>Writer underlines the word or phrase that improved the sentence most.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home scene slips</p>
+      <h2>Finish one story clue later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | setting scene</p>
+      <h3>Framed View Start</h3>
+      <p>Choose a pretend framed view: ____________________. Add one mood word for the setting: ____________________.</p>
+      <p>Our setting scene begins to feel ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | character scene</p>
+      <h3>Window-View Character</h3>
+      <p>Invent a character role for the scene: ____________________. Give that character one question: ____________________.</p>
+      <p>The character question we want to keep is ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">7 minutes | object scene</p>
+      <h3>Object In the Frame</h3>
+      <p>Invent one pretend object in the framed view: ____________________. Its story job is ____________________.</p>
+      <p>The object matters because ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">8 minutes | sequence scene</p>
+      <h3>First Next Finally</h3>
+      <p>Plan three scene steps. First ____________________. Next ____________________. Finally ____________________.</p>
+      <p>The step we would write more about is ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | revision scene</p>
+      <h3>Clearer Scene Sentence</h3>
+      <p>Copy one scene sentence: ____________________. Add one clearer view detail: ____________________.</p>
+      <p>The revision helped because ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | sensory scene</p>
+      <h3>Sound In the Scene</h3>
+      <p>Choose one gentle sound word for the imagined view: ____________________. The sound tells the character ____________________.</p>
+      <p>Our sound clue points toward ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">7 minutes | pattern scene</p>
+      <h3>Pattern In the View</h3>
+      <p>Choose one calm pattern, such as dots, lines, bands, or repeats: ____________________. In the story it means ____________________.</p>
+      <p>The pattern detail makes us wonder ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">8 minutes | choice scene</p>
+      <h3>Choice At the Frame</h3>
+      <p>Write two calm choices for an invented character: ____________________. Choose the one that fits the scene: ____________________.</p>
+      <p>The choice changes the scene by ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">9 minutes | label scene</p>
+      <h3>Label the Scene</h3>
+      <p>Add three paper labels to the framed view. Label one: ____________________. Label two: ____________________. Label three: ____________________.</p>
+      <p>The label we want to use in a sentence is ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | clarity scene</p>
+      <h3>Tiny Window Story</h3>
+      <p>Write one setting, one character, and one object. Setting: ____________________. Character: ____________________. Object: ____________________.</p>
+      <p>The tiny scene story we would continue is ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Read one setting clue from your scene card if you choose: ____________________.</li>
+<li>Show one paper sketch from the framed view: ____________________.</li>
+<li>Name the broad view word that helped your story: ____________________.</li>
+<li>Share one invented character role without private details: ____________________.</li>
+<li>Tell the story job of one pretend object: ____________________.</li>
+<li>Read the first, next, or finally line you like best: ____________________.</li>
+<li>Name one detail that made a sentence clearer: ____________________.</li>
+<li>Mark one scene-card clue you want to save for later writing: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 1 | Ages 6-8 | setting scene</div>
+      <h2>Moon Market Framed Setting</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold it like a small window frame, and ask the child to sketch one market detail before writing: ____________________.</p>
+      <p class="kid-direction">Pretend you are looking through an imaginary window at the Moon Muffin Market; write the first place detail you see: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: Through the pretend frame, the Moon Muffin Market has a stall beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: Add one color, shape, or sign that makes this market setting clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A small muffin cart appears in the framed view beside ____________________, and the setting gives the story its first clue.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: From the window-seat story frame, I saw ____________________, then the market felt ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one plain place word with a clearer setting word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch one stall shape first, then label the setting detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: On another paper, add one new Moon Market view detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 2 | Ages 6-8 | character scene</div>
+      <h2>Puddle Planet Helper View</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw a small frame on scrap paper, and invite one helper badge sketch before this blank: ____________________.</p>
+      <p class="kid-direction">Imagine the window view shows one Puddle Planet helper; give the helper a job and a tiny choice: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: The Puddle Planet helper sorts pretend messages by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: The helper&#39;s careful habit is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A pretend message drifts into the framed view near ____________________, and the helper decides what to do next.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: The puddle helper checked ____________________, then chose ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one exact character action a reader can picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the helper badge, then write one character word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: On another paper, invent one more pretend message for ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 3 | Ages 7-9 | movement scene</div>
+      <h2>Buttonwood Train Movement View</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and draw three small frame boxes so the writer can sketch start, pause, and next motion: ____________________.</p>
+      <p class="kid-direction">Imagine the Buttonwood Library Train moving through a story window; choose what shifts, stops, or rolls by: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: The library train begins moving when the shelf marker points toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: The next motion in the framed view is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The Buttonwood Library Train moves past ____________________, then pauses for one shelf clue.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: First the train moved toward ____________________. Next it paused beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one clear movement word so the scene changes on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number two tiny frame boxes, then fill only the first motion: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: On another paper, add one new train motion that begins with ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 4 | Ages 7-8 | sensory scene</div>
+      <h2>Teacup Town Sensory View</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card near a table view and ask for one pretend sensory clue before the writer fills this blank: ____________________.</p>
+      <p class="kid-direction">Imagine Teacup Town&#39;s framed view shows one story clue; choose a color, sound, or texture: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: The teacup weather window glows the color of ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: The tiny sound in the framed view is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: When the pretend window glowed ____________________, Teacup Town changed one small plan.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: The teacup window clicked softly as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one sensory word that makes the window scene clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw one tiny weather mark and label its feeling: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: On another paper, add a new color, sound, or texture to ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 5 | Ages 7-9 | notice scene</div>
+      <h2>Pocket Park Notice View</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw a small board shape, and ask the writer to choose one pretend notice clue: ____________________.</p>
+      <p class="kid-direction">Imagine a tiny Pocket Park board inside a story window; write what the pretend notice asks a character to notice: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: The Pocket Park notice says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: The clue beside the notice is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A park helper sees a made-up notice about ____________________, and the framed scene changes.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: Under the Pocket Park board, ____________________ waited for someone to notice.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one vague notice word with a clearer story word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Copy only one notice word neatly into the blank: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: On another paper, make one second pretend notice about ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 6 | Ages 7-9 | object scene</div>
+      <h2>Spoon Ferry Object View</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw a simple frame around the harbor prompt, and ask for one story-only object: ____________________.</p>
+      <p class="kid-direction">Imagine an invented window view of Lunchbox Harbor; pick one object the spoon ferry carries: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: In the framed harbor view, the spoon ferry carries ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: This object helps the scene because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The spoon ferry arrives with ____________________, and the harbor helper changes one small plan.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: At Lunchbox Harbor, the spoon ferry brought ____________________ to the edge of ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one vague object word with an exact noun or detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the object first, then write its tiny job: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: On another paper, add a second ferry object called ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 7 | Ages 7-9 | setting scene</div>
+      <h2>Framed Errand Office Scene</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw a simple pretend window frame at the top, and ask the writer to fill the first thing seen: ____________________.</p>
+      <p class="kid-direction">Look through the pretend frame and choose one office shelf, counter, or label that starts the scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Front prompt: Through the pretend window frame, the Acorn Avenue Errand Office shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Back prompt: Add one nearby object, one helper, and one label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A small errand waits on the sill marked ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: From the window seat, I can see ____________________ beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one exact paper-scene detail inside the pretend frame: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the frame first, then write one label: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Fold the card and start a new errand-office view with ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 8 | Ages 7-9 | choice scene</div>
+      <h2>Compass Shop Choice Scene</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, add a pencil dot inside the pretend frame, and have the writer choose the compass mark: ____________________.</p>
+      <p class="kid-direction">Pick one compass mark in the imagined window view and decide what changes on the shop shelf: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Front prompt: In the pretend window view, the compass needle points toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Back prompt: The shop helper must choose between ____________________ and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A penny compass changes direction after someone writes ____________________ on a tag.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: The compass in the framed shop view turns toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Make the choice clearer by naming one reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw two arrows quietly, then circle the one that points to ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Use the chosen arrow as the start of another paper scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 9 | Ages 8-10 | character scene</div>
+      <h2>Seed Library Helper Scene</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, mark a small pretend window frame, and ask the writer to name the helper&#39;s job: ____________________.</p>
+      <p class="kid-direction">Imagine one Seed Library helper in the framed view and write what they carry on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Front prompt: Through the pretend frame, the Seed Library helper is holding ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Back prompt: Character notes: name ____________________, careful job ____________________, map-room clue ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The helper notices a drawer card that says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: At the map-room table, ____________________ holds ____________________ like it matters.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one action that shows what the helper wants next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the helper&#39;s hands first, then label what they hold: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Start another character scene with the helper carrying ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 10 | Ages 8-10 | sequence scene</div>
+      <h2>Rain Gauge Railway Sequence Scene</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw three small frame boxes, and invite the writer to fill the first box: ____________________.</p>
+      <p class="kid-direction">In the imagined window view, write what happens first, next, and last at the rain-gauge railway: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Front prompt: First the gauge line shows ____________________, next the railway sign shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Back prompt: Sequence scene: first ____________________, next ____________________, last ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The tiny railway changes its plan when the gauge marker reaches ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: From the pretend window seat, first I notice ____________________, then I notice ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one transition word or small action between two steps: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number the three boxes, then write the clearest step: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Save the three-step view for a new railway paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 11 | Ages 8-10 | pattern scene</div>
+      <h2>Moss Message Pattern Scene</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, invite the writer to draw a quiet framed view, and choose one repeating mark: ____________________.</p>
+      <p class="kid-direction">Design one moss-message pattern in the imagined window view and write what it might mean in the scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Front prompt: The moss pattern in the pretend frame repeats like ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Back prompt: Pattern notes: first mark ____________________, repeat mark ____________________, clue meaning ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: The observatory helper copies the moss message onto paper and discovers ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First line path: In the observatory window view, ____________________ repeats beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one shape, line, or texture so the pattern is easier to follow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw the pattern silently, then name it with two words: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Use the pattern as the first clue in another paper scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 12 | Ages 8-10 | setting scene</div>
+      <h2>Tidepool Timekeepers Framed Lab Scene</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one scene card, set out pencils, and ask the writer to imagine the frame shows a tiny lab shelf beside ____________________.</p>
+      <p class="kid-direction">Look through an imagined window frame into the Tidepool Timekeepers Lab, then write one clear setting clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: Through the pretend frame, the tidepool lab first shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: This setting feels busy, calm, or curious because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A tidepool timekeeper checks a paper chart when the framed view reveals ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First-line path: From the window seat, the lab looked like ____________________, and the first clue was ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Add one exact color, shape, or sound that makes the lab easier to picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the framed lab first, then label one setting clue here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Save this card to continue a tidepool lab scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 13 | Ages 10-11 | revision scene</div>
+      <h2>Revision River Ferry Framed Scene</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one scene card and ask the writer to place a pretend draft sentence inside the window frame: ____________________.</p>
+      <p class="kid-direction">Imagine the ferry passing through a framed view, then revise one draft line so the reader sees it clearly: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: The first draft view of Revision River Ferry says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: My clearer ferry view changes that line to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A ferry guide spots a draft page drifting near ____________________ and asks for a clearer scene.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First-line path: The old sentence showed ____________________; the revised sentence shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Cut one extra phrase or add one precise ferry detail here: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Underline one word silently, then write the clearer replacement here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Save this card to polish a ferry scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 14 | Ages 10-11 | label scene</div>
+      <h2>Clue Label Tower Museum Window Label</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one scene card, draw a simple frame on scrap paper if helpful, and ask for one exhibit label idea: ____________________.</p>
+      <p class="kid-direction">Imagine a tower museum label seen through a pretend frame, then add details that make the clue clear: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: The label inside the framed tower view names an exhibit called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: The label needs a shape ____________________, a texture ____________________, and a clue ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A museum helper notices the label changes when the frame points toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First-line path: The label looked ordinary until ____________________ made the tower scene feel ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one plain label word with a sharper shape, texture, or action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch the label box first, then write one exact clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Save this card to begin a quiet tower scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 15 | Ages 10-11 | object scene</div>
+      <h2>Almost Invention Workshop Object View</h2>
+      <figure>
+        <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+        <figcaption>Almost Invention Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one scene card and invite the writer to place a made-up invention inside the pretend frame: ____________________.</p>
+      <p class="kid-direction">Imagine a workshop object seen from a window seat, then name what part almost works and what detail matters: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: In the framed workshop view, the almost invention is called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: The part that almost works is ____________________, and the missing detail is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A workshop helper notices the object changes when ____________________ is added to the paper plan.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First-line path: The first test looked like ____________________, but the better scene shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Replace one vague object word with a precise noun, part, or action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw the invention shape silently, then label the most important part: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Save this card to write an almost-invention scene about ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-card-page">
+      <div class="page-kicker">Scene Card 16 | Ages 10-11 | clarity scene</div>
+      <h2>Binding Day Boardwalk Clear Scene</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one scene card, set out blank paper, and ask the writer to place one cloudy sentence in the frame: ____________________.</p>
+      <p class="kid-direction">Imagine Binding Day Boardwalk through a framed view, then rewrite one unclear sentence with a stronger detail: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Scene front</h3>
+      <p>Scene front: The cloudy boardwalk sentence in the frame says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Scene back</h3>
+      <p>Scene back: My clearer boardwalk sentence says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>Story seed: A page binder pauses beside ____________________ because one sentence needs a clearer scene.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First line path</h3>
+      <p>First-line path: The first line said ____________________; the clearer line shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revision nudge: Swap one fuzzy word for a precise noun, verb, or visible detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Work silently by copying only the clearer sentence here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Save this card to finish a boardwalk scene about ____________________.</p>
+    </section>
+  </body>
+</html>

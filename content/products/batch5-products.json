@@ -1368,6 +1368,130 @@
           "summary": "A page-order boardwalk world for choosing which clearer line belongs first."
         }
       ]
+    },
+    {
+      "slug": "window-seat-story-scene-card-pack",
+      "title": "Window Seat Story Scene Card Pack",
+      "pricePoint": "$29",
+      "status": "checkout_pending",
+      "headline": "A printable scene-card pack for turning pretend framed views into story starts.",
+      "summary": "Sixteen adult-led paper scene cards help kids turn imagined window-seat views into short creative writing prompts.",
+      "heroImage": "images/plotsprout/batch28/window-seat-story-scene-card-pack.jpg",
+      "ctaLabel": "Request scene card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Window%20Seat%20Story%20Scene%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static window seat story scene card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "penny-path-compass-shop",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "almost-invention-workshop",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable window-seat scene cards",
+        "Adult setup guide",
+        "Pretend framed-view safety notes",
+        "Scene story coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led scene routines",
+        "Ten take-home scene slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one small scene before a full story",
+        "A tutoring or co-op desk where writers can choose one paper scene card at a time",
+        "A family writing warm-up where pointing, sketching, and one blank can start the page",
+        "A reluctant-writer activity that separates one view clue from a full draft",
+        "A take-home scene slip set for finishing one invented detail offline"
+      ],
+      "parentSteps": [
+        "Choose one scene routine before the activity starts.",
+        "Set the paper, pencil, sketch, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one broad pretend view into a make-believe story clue rather than recording private information.",
+        "Send home one scene slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for choosing one framed setting clue before drafting a first line."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A tiny post-office world for inventing a careful helper role and one question."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A rolling library world for arranging a gentle motion scene from one framed view."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A weather-window world for turning one color, sound, or texture into a scene clue."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A notice-board world for writing one invented sign and the clue beside it."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A lunchbox harbor world for giving one pretend object a useful story job."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An errand-office world for placing one broad shelf, counter, or label in a scene."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "summary": "A compass-shop world for choosing one calm direction clue that starts a scene."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A paper map-room world for inventing one helper and one carried clue."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A railway world for building a first, next, and last view sequence."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A quiet observatory world for turning one repeating pattern into a scene clue."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for making one framed setting feel clear and curious."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for moving one scene sentence from fuzzy to specific."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A label tower world for adding a sharper shape, texture, or clue to a scene."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "summary": "A nearly useful invention world for giving one object a clear story job."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A page-order boardwalk world for making one unclear scene easier to follow."
+        }
+      ]
     }
   ]
 }
