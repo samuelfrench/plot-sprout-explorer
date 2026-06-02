@@ -1,0 +1,190 @@
+{
+  "laneId": "batch23-nature-tools",
+  "adultGuide": {
+    "beforeWalk": [
+      "Choose one familiar outdoor space that can be watched calmly from one adult-approved area.",
+      "Set the rule before stepping out: look, listen, point, and leave living things undisturbed.",
+      "Give each child one pencil, one clipboard, and one field note sheet with wide blank lines.",
+      "Pick one printed Plot Sprout world picture to carry as the story bridge from real detail to fiction.",
+      "Name the walk mission in one sentence: today we are finding details, not finishing a whole story."
+    ],
+    "fieldTableSetup": [
+      "Use a flat table, bench, or clipboard stack with pencils, crayons, and printed note pages within adult reach.",
+      "Make four clear boxes on the main page: I notice, It could mean, Story job, and My sentence.",
+      "Keep the writing blanks large so a reluctant writer can add single words, sketches, or short phrases.",
+      "Place the printed Plot Sprout world picture at the top so every observation has a fiction doorway.",
+      "Add one adult note line for reminders such as slow down, pick one detail, or save this idea for later."
+    ],
+    "observationToStory": [
+      "Turn color into mood: a dull gray pebble can make a quiet gate, a bright leaf can make a cheerful signal.",
+      "Turn shape into job: a curled twig can become a tiny bridge, a flat stone can become a message board.",
+      "Turn pattern into rule: if three things repeat, ask what rule the made-up world follows.",
+      "Turn sound into clue: a rustle, tap, hum, or crunch can become a hint that something is about to change.",
+      "Ask for one real detail and one made-up detail in the same sentence so observation becomes story."
+    ],
+    "privacyAndSiteNotes": [
+      "Use initials, first-name-only labels, or blank page labels for pages that leave the house.",
+      "Use broad place words such as yard, park, garden, porch, or field table instead of identifying details.",
+      "Skip house numbers, license plates, school names, and signs that identify a private place.",
+      "Use fictional names for all people in the story, even when the idea starts from a real outing.",
+      "Keep finished pages in the family folder or classroom folder unless an adult chooses a private handoff."
+    ],
+    "familyHandoff": [
+      "Send one field card home with the child and mark the easiest next blank for a family adult to fill in.",
+      "Tell the family adult that five to nine calm minutes is enough; the goal is one vivid story detail.",
+      "Ask the family adult to notice one specific line the child wrote instead of correcting the whole page.",
+      "Invite the family to add one fictional twist from a broad observation, such as color, shape, sound, or pattern.",
+      "Keep the completed card with the kit pages so the child can reuse the detail in a later printable story."
+    ],
+    "reset": [
+      "Gather pencils, clipboards, printed world pictures, and unused field cards into one labeled folder.",
+      "Check pages for identifying details before they go home or into a shared classroom stack.",
+      "Recycle scrap pages that only contain warm-up marks and keep pages with story-ready details.",
+      "Restock wide-blank field cards so the next walk can begin without setup delay."
+    ]
+  },
+  "walkFormats": [
+    {
+      "name": "Backyard Micro-Walk",
+      "bestFor": "Families with a small outdoor space and writers who need a low-pressure start.",
+      "steps": [
+        "Adult chooses the watching area and reminds everyone to look and listen without disturbing living things.",
+        "Child points to three still details: one color, one shape, and one pattern.",
+        "Adult asks what this detail could do in a made-up world after each observation.",
+        "Child writes one favorite detail on the field page before going back inside."
+      ]
+    },
+    {
+      "name": "Park Bench Circle",
+      "bestFor": "Groups that need a seated, calm, adult-led format.",
+      "steps": [
+        "Adult picks one bench or sitting spot and hands out field pages.",
+        "Everyone looks outward and silently chooses one detail from near, middle, and far view.",
+        "Adult leads a round where each child turns one detail into a story job.",
+        "Each child writes one sentence that starts with a real observation and ends with fiction."
+      ]
+    },
+    {
+      "name": "Window-to-Yard Scan",
+      "bestFor": "Home days when staying indoors is the best fit.",
+      "steps": [
+        "Adult places the printed world picture beside a clear window view.",
+        "Child chooses one outdoor detail they can see without leaving the room.",
+        "Adult asks which Plot Sprout world could use that detail and why.",
+        "Child fills one field card with the real detail, the made-up use, and one story question."
+      ]
+    },
+    {
+      "name": "Texture Hunt From a Distance",
+      "bestFor": "Kids who like sorting and need simple choices.",
+      "steps": [
+        "Adult describes four texture choices: smooth, rough, lined, and speckled.",
+        "Child points to one example of each without picking anything up.",
+        "Adult helps the child choose the texture that feels most story-ready.",
+        "Child writes a sentence where that texture becomes a clue, tool, or setting detail."
+      ]
+    },
+    {
+      "name": "Sound and Shade Stroll",
+      "bestFor": "Quiet writers who notice sound before they notice objects.",
+      "steps": [
+        "Adult leads a slow walk within the chosen outdoor space.",
+        "Everyone pauses twice to listen for gentle sounds and notice light or shade.",
+        "Child chooses one sound or shade detail and gives it a fictional job.",
+        "Adult brings the group back to the writing spot for one short field-note sentence."
+      ]
+    },
+    {
+      "name": "Object Hero Loop",
+      "bestFor": "Writers who like turning ordinary things into story helpers.",
+      "steps": [
+        "Adult asks each child to choose one nonliving object they can see clearly.",
+        "Writer describes what the object looks like using two plain details.",
+        "Adult asks what helpful job the object could have in a Plot Sprout world.",
+        "Child writes a hero object line with a blank for one extra detail to add later."
+      ]
+    }
+  ],
+  "takeHomeFieldCards": [
+    {
+      "title": "Leaf Shape Setting",
+      "time": "5 minutes",
+      "skill": "setting detail",
+      "direction": "Notice one leaf shape from a safe viewing spot. Write the shape here: ____________________. Now make it part of a story setting: ____________________.",
+      "familyLine": "In our story, the leaf shape made the place feel ____________________."
+    },
+    {
+      "title": "Three-Thing Pattern",
+      "time": "6 minutes",
+      "skill": "pattern noticing",
+      "direction": "Find a pattern with three similar details, such as color, size, or spacing. The pattern I noticed is ____________________. The story rule it suggests is ____________________.",
+      "familyLine": "Our family added this pattern rule: ____________________."
+    },
+    {
+      "title": "Pebble With a Job",
+      "time": "7 minutes",
+      "skill": "object-to-story",
+      "direction": "Choose one small nonliving object you can see. It looks like ____________________. In the story, its job is ____________________.",
+      "familyLine": "The object became important when ____________________."
+    },
+    {
+      "title": "Start, Middle, Later",
+      "time": "8 minutes",
+      "skill": "sequence path",
+      "direction": "Write a tiny story path from one observation. First ____________________. Next ____________________. Later ____________________.",
+      "familyLine": "The part we would act out first is ____________________."
+    },
+    {
+      "title": "Add One Clear Detail",
+      "time": "5 minutes",
+      "skill": "revision detail",
+      "direction": "Reread one sentence from your field notes. Add one color, shape, or sound detail here: ____________________. Revised sentence: ____________________.",
+      "familyLine": "The new detail made the sentence clearer because ____________________."
+    },
+    {
+      "title": "Sound Clue",
+      "time": "6 minutes",
+      "skill": "sensory detail",
+      "direction": "Listen from an adult-approved spot and name one gentle sound. The sound is ____________________. In the story, it means ____________________.",
+      "familyLine": "Our made-up sound clue would tell the character ____________________."
+    },
+    {
+      "title": "Shadow Door",
+      "time": "7 minutes",
+      "skill": "setting detail",
+      "direction": "Look for one patch of shade or light. It looks like ____________________. In a Plot Sprout world, it could be a doorway to ____________________.",
+      "familyLine": "The doorway should open only when ____________________."
+    },
+    {
+      "title": "Repeated Color Signal",
+      "time": "8 minutes",
+      "skill": "pattern noticing",
+      "direction": "Find one color that appears more than once. The color is ____________________. The message it sends in the story is ____________________.",
+      "familyLine": "Our color signal means ____________________."
+    },
+    {
+      "title": "Ordinary Thing, Strange Use",
+      "time": "9 minutes",
+      "skill": "object-to-story",
+      "direction": "Pick one ordinary thing you can see from where you stand. It is ____________________. Give it a surprising story use: ____________________.",
+      "familyLine": "The surprising use we like best is ____________________."
+    },
+    {
+      "title": "Better Ending Detail",
+      "time": "6 minutes",
+      "skill": "revision detail",
+      "direction": "Choose one ending sentence or final idea. Add one detail that shows where the character is: ____________________. New ending: ____________________.",
+      "familyLine": "The ending now feels more complete because ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "My favorite real detail was ____________________ because it helped the story feel clear.",
+    "One made-up detail we added was ____________________.",
+    "The setting changed when we noticed ____________________.",
+    "A pattern I found was ____________________.",
+    "The object that became important was ____________________.",
+    "A sentence I want to keep is ____________________.",
+    "The next story question I would ask is ____________________.",
+    "A family detail we can add later is ____________________."
+  ]
+}

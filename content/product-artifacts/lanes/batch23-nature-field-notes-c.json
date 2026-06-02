@@ -1,0 +1,73 @@
+{
+  "laneId": "batch23-nature-field-notes-c",
+  "fieldNotes": [
+    {
+      "id": "nature-field-note-09",
+      "title": "Seed Shelf Clue Catalog",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "fieldNoteSkill": "setting detail",
+      "useCase": "A yard, garden edge, or park stop where a writer can notice seeds, leaves, labels, shelves, or tiny natural collections without collecting anything.",
+      "adultSetup": "Print one page, bring a pencil, and choose a safe familiar outdoor area. Remind the child to observe with eyes and ears only, then use invented story labels.",
+      "kidDirection": "Stand with your adult and choose three broad nature details. Pretend they belong in a tiny seed library that needs one new story clue.",
+      "noticePrompt": "I notice one tiny shape, color, or sound near the seed shelf: ____________________.",
+      "detailBankPrompt": "Three field details I can borrow for my story are ____________________, ____________________, and ____________________.",
+      "storySeed": "A careful keeper finds a seed packet labeled with this mystery: ____________________.",
+      "sentencePath": "First the keeper notices ____________________; next the room changes by ____________________; then the keeper writes ____________________.",
+      "revisionNudge": "Add one stronger setting detail to show where the seed clue rests: ____________________.",
+      "quietOptionLine": "Quiet option: circle one detail and copy it into a whisper-small story line: ____________________.",
+      "takeHomeLine": "At home, turn your best field detail into the first line of a seed-library tale: ____________________."
+    },
+    {
+      "id": "nature-field-note-10",
+      "title": "Moss Signal Pattern Watch",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "fieldNoteSkill": "pattern noticing",
+      "useCase": "A shaded safe stop with visible moss, bark, stone, or grass texture where the writer can notice repeating shapes from one standing spot.",
+      "adultSetup": "Print the field note and choose a quiet observation spot with clear adult boundaries. Use broad labels and keep hands to yourself.",
+      "kidDirection": "Look for a pattern that repeats, almost repeats, or changes suddenly. Turn that pattern into a secret observatory message.",
+      "noticePrompt": "I notice a repeating shape or color pattern that looks like ____________________.",
+      "detailBankPrompt": "My pattern bank has tiny dots ____________________, soft lines ____________________, and a surprise gap ____________________.",
+      "storySeed": "The observatory receives a soft message that repeats this clue: ____________________.",
+      "sentencePath": "First the message appears as ____________________; next it repeats near ____________________; then my character understands ____________________.",
+      "revisionNudge": "Revise one plain detail by adding pattern words such as speckled, lined, clustered, or faded: ____________________.",
+      "quietOptionLine": "Quiet option: point silently to one pattern, then write the message it might mean: ____________________.",
+      "takeHomeLine": "At home, make the pattern become a clue in a short observatory scene: ____________________."
+    },
+    {
+      "id": "nature-field-note-11",
+      "title": "Sun Patch Scene Steps",
+      "worldSlug": "solar-oven-picnic-station",
+      "ageBand": "8-10",
+      "fieldNoteSkill": "sequence path",
+      "useCase": "A porch, yard, or park table where writers can watch how light and shade sit near a paper plate, leaf, pebble, or other simple object.",
+      "adultSetup": "Print the page, bring a pencil, and choose an adult-approved spot. This is a looking-and-writing activity with no heat tools.",
+      "kidDirection": "Pick one object to become the station's important story prop. Notice what is beside it, above it, and changed around it.",
+      "noticePrompt": "I notice the sun-and-shade line sits beside ____________________.",
+      "detailBankPrompt": "Object detail: ____________________; texture detail: ____________________; shadow shape: ____________________.",
+      "storySeed": "A station helper sets down a harmless story object that changes when the light moves: ____________________.",
+      "sentencePath": "Start with ____________________; after a small change, add ____________________; end when the character decides ____________________.",
+      "revisionNudge": "Add one when-word or after-word so the scene happens in a clearer order: ____________________.",
+      "quietOptionLine": "Quiet option: draw three tiny boxes, then write only the middle scene step: ____________________.",
+      "takeHomeLine": "At home, rewrite the scene as a three-step mini adventure: ____________________."
+    },
+    {
+      "id": "nature-field-note-12",
+      "title": "Compass Academy Revision Lab",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "fieldNoteSkill": "revision detail",
+      "useCase": "An adult-guided outdoor writing stop where older kids practice turning vague direction words into clearer story movement from one safe standing spot.",
+      "adultSetup": "Print the note and mark a calm standing area. The writer stays with the adult and uses pointing, noticing, and pencil work only.",
+      "kidDirection": "Choose one direction clue from what you can safely see. Use it to revise a plain sentence into a sharper story moment.",
+      "noticePrompt": "From one safe standing spot, I notice a left, right, front, or back detail: ____________________.",
+      "detailBankPrompt": "Direction word: ____________________; object clue: ____________________; mood word: ____________________.",
+      "storySeed": "A trainee at the academy fixes a confusing clue by adding this direction detail: ____________________.",
+      "sentencePath": "Plain line: The helper went over there. Better line: The helper turned toward ____________________ because ____________________.",
+      "revisionNudge": "Replace one vague word with a clearer direction or distance word: ____________________.",
+      "quietOptionLine": "Quiet option: revise only one sentence silently and underline the clearer clue: ____________________.",
+      "takeHomeLine": "At home, use your revised clue as the turning point in a compass-academy scene: ____________________."
+    }
+  ]
+}

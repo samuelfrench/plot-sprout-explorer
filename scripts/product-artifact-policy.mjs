@@ -19,6 +19,7 @@ export const museumDayStoryNotebookKitProductSlug = 'museum-day-story-notebook-k
 export const familyGameNightStoryCardDeckProductSlug = 'family-game-night-story-card-deck'
 export const grandparentStoryVisitKitProductSlug = 'grandparent-story-visit-kit'
 export const thankYouNoteStoryPostcardPackProductSlug = 'thank-you-note-story-postcard-pack'
+export const natureWalkStoryFieldNotesKitProductSlug = 'nature-walk-story-field-notes-kit'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -185,6 +186,14 @@ const requiredThankYouNoteStoryPostcardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/thank-you-note-story-postcard-pack/source/thank-you-note-story-postcard-pack.html',
   manifestPath: 'product-build/thank-you-note-story-postcard-pack/manifest.json',
+}
+
+const requiredNatureWalkStoryFieldNotesKitArtifactPaths = {
+  pdfPath: 'product-build/nature-walk-story-field-notes-kit/Nature-Walk-Story-Field-Notes-Kit.pdf',
+  zipPath: 'product-build/nature-walk-story-field-notes-kit/nature-walk-story-field-notes-kit.zip',
+  sourceHtmlPath:
+    'product-build/nature-walk-story-field-notes-kit/source/nature-walk-story-field-notes-kit.html',
+  manifestPath: 'product-build/nature-walk-story-field-notes-kit/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -3382,6 +3391,304 @@ export function validateThankYouNoteStoryPostcardPackSourceFiles(source, rootDir
   return errors
 }
 
+const natureWalkFieldNoteSkills = new Set([
+  'safe observation',
+  'setting detail',
+  'pattern noticing',
+  'object-to-story',
+  'sequence path',
+  'revision detail',
+])
+
+const natureWalkTakeHomeSkills = new Set([
+  'setting detail',
+  'pattern noticing',
+  'object-to-story',
+  'sequence path',
+  'revision detail',
+  'sensory detail',
+])
+
+const natureWalkTakeHomeTimes = new Set(['5 minutes', '6 minutes', '7 minutes', '8 minutes', '9 minutes'])
+
+function validateNoUnsafeNatureWalkLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const accountText = rawText
+    .replace(/\bUse broad place words such as yard, park, garden, porch, or field table instead of identifying details\./gi, '')
+    .replace(/\bSkip house numbers, license plates, school names, and signs that identify a private place\./gi, '')
+    .replace(/\bUse initials, first-name-only labels, or blank page labels for pages that leave the house\./gi, '')
+    .replace(/\bUse fictional names for all people in the story, even when the idea starts from a real outing\./gi, '')
+    .replace(/\bKeep finished pages in the family folder or classroom folder unless an adult chooses a private handoff\./gi, '')
+    .replace(/\bCheck pages for identifying details before they go home or into a shared classroom stack\./gi, '')
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+    .replace(/\bwithout collecting items\b/gi, '')
+    .replace(/\bwithout collecting anything\b/gi, '')
+  pushIf(
+    errors,
+    /\baccounts?\b|\blogins?\b|\blog in\b|\bupload(s|ed|ing)?\b|\bpublic publishing\b|\bpublish online\b|\bgps\b|\bcoordinates?\b|\bexact address\b|\baddresses?\b|\bphone(s)?\b|\bemails?\b|\bphotos?\b|\bcameras?\b|\bchild names?\b|\bstudent names?\b|\bfull names?\b|\brosters?\b|\battendance\b|\bsign-?in\b|\bbehavior reports?\b|\bhouse numbers?\b|\blicense plates?\b|\bvehicle plates?\b|\bschool names?\b|\bexact location\b|\broute\b/i.test(
+      accountText,
+    ),
+    `${label} includes account, upload, public-publishing, location-tracking, exact-place, contact, photo, child-profile, roster, attendance, sign-in, or behavior-report language.`,
+  )
+
+  const safetyText = rawText
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+    .replace(/\bwithout disturbing living things\b/gi, '')
+    .replace(/\bleave living things undisturbed\b/gi, '')
+    .replace(/\bkeep hands to yourself\b/gi, '')
+    .replace(/\blook only\b/gi, '')
+    .replace(/\beyes-only rule\b/gi, '')
+    .replace(/\bobserve with eyes and ears only\b/gi, '')
+    .replace(/\bwithout picking anything up\b/gi, '')
+  pushIf(
+    errors,
+    /\bmedical\b|\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b|\btherapy\b|\btherapist(s)?\b|\bdiagnos(is|e|es|ed|ing|tic)\b|\bgrief\b|\bassessment(s)?\b|\bgrade(s|d|book)?\b|\bscore(s|d|book)?\b|\bguarantee(s|d)?\b|\bguaranteed\b|\bcontest(s)?\b|\bprizes?\b|\btimer(s)?\b|\btimed\b|\bgambling\b|\bbet(s|ting)?\b|\bcasino(s)?\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bchurch(es)?\b|\btemple(s)?\b|\bmosque(s)?\b|\bsynagogue(s)?\b|\bprayer(s)?\b|\bjesus\b|\bgod\b|\bromance\b|\bkiss(ing)?\b|\bdating\b|\bweapon(s)?\b|\bgun(s)?\b|\bsword(s)?\b|\bfight(ing)?\b|\bkill(s|ed|ing)?\b|\bblood\b|\bhorror\b|\bbranded\b|\bbrand(ed)? character(s)?\b|\bad(s)? targeted to children\b|\banimal contact\b|\bfeed(s|ing)? animals?\b|\btouch(ing)? animals?\b|\bforag(e|ing)\b|\btast(e|ing)? plants?\b|\beat(ing)? plants?\b|\bcross(ing)? streets?\b|\bwater entry\b|\benter water\b|\bweather hazard\b|\bclimb(s|ed|ing)?\b|\bjump(s|ed|ing)?\b|\brun(s|ning)?\b|\broughhouse\b|\bwrestl(e|ing)\b|\bblindfold(s|ed)?\b|\bstairs?\b|\bflames?\b|\bmatchstick(s)?\b|\blighter(s)?\b/i.test(
+      safetyText,
+    ),
+    `${label} includes medical, legal, therapy, diagnosis, grief, assessment, grade, score, guaranteed-outcome, contest, prize, timer-pressure, gambling, politics, religion, romance, weapon, violence, branded, ad-targeting, animal-contact, foraging, tasting, street-crossing, water-entry, weather-risk, or unsafe physical language.`,
+  )
+}
+
+function validateNatureWalkFieldNote(note, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, noteIds, errors) {
+  const label = `fieldNotes[${index}]`
+  pushIf(errors, !isObject(note), `${label} must be an object.`)
+  if (!isObject(note)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'fieldNoteSkill',
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'noticePrompt',
+    'detailBankPrompt',
+    'storySeed',
+    'sentencePath',
+    'revisionNudge',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    validateString(note[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(note.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(note.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(errors, !note.id.startsWith('nature-field-note-'), `${label}.id must start with nature-field-note-.`)
+    pushIf(errors, noteIds.has(note.id), `${label}.id is duplicated.`)
+    noteIds.add(note.id)
+  }
+  pushIf(errors, !natureWalkFieldNoteSkills.has(note.fieldNoteSkill), `${label}.fieldNoteSkill is not allowed.`)
+  pushIf(errors, !['7-8', '7-9', '8-10', '10-11'].includes(note.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(note.worldSlug) && !knownWorldSlugs.has(note.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(note.worldSlug) && !sourceWorldSlugs.has(note.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(note.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(note.ageBand) && isNonEmptyString(worldAgeBand) && note.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${note.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  for (const key of ['noticePrompt', 'detailBankPrompt', 'storySeed', 'sentencePath', 'revisionNudge', 'quietOptionLine', 'takeHomeLine']) {
+    pushIf(errors, isNonEmptyString(note[key]) && !hasWritableBlank(note[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(note[key]) && hasSnakeCasePlaceholder(note[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeNatureWalkLanguage(note, label, errors)
+}
+
+function validateNatureWalkFormat(format, index, names, errors) {
+  const label = `walkFormats[${index}]`
+  pushIf(errors, !isObject(format), `${label} must be an object.`)
+  if (!isObject(format)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(format[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(format.name)) {
+    pushIf(errors, names.has(format.name), `${label}.name is duplicated.`)
+    names.add(format.name)
+  }
+  validateExactStringArray(format.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeNatureWalkLanguage(format, label, errors)
+}
+
+function validateNatureWalkTakeHomeCard(card, index, titles, errors) {
+  const label = `takeHomeFieldCards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(card.title)) {
+    pushIf(errors, titles.has(card.title), `${label}.title is duplicated.`)
+    titles.add(card.title)
+  }
+  pushIf(errors, !natureWalkTakeHomeTimes.has(card.time), `${label}.time is not allowed.`)
+  pushIf(errors, !natureWalkTakeHomeSkills.has(card.skill), `${label}.skill is not allowed.`)
+  for (const key of ['direction', 'familyLine']) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeNatureWalkLanguage(card, label, errors)
+}
+
+export function validateNatureWalkStoryFieldNotesKitSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Nature Walk Story Field Notes Kit source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-02-batch23', 'batchId must be 2026-06-02-batch23.')
+  pushIf(errors, source.generatedAt !== '2026-06-02', 'generatedAt must be 2026-06-02.')
+  pushIf(
+    errors,
+    source.productSlug !== natureWalkStoryFieldNotesKitProductSlug,
+    `productSlug must be ${natureWalkStoryFieldNotesKitProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Nature Walk Story Field Notes Kit', 'title must be Nature Walk Story Field Notes Kit.')
+  pushIf(errors, source.pricePoint !== '$33', 'pricePoint must be $33.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Nature Walk Story Field Notes source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Nature Walk Story Field Notes source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Nature Walk Story Field Notes source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 12, 'worldSlugs must have exactly 12 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredNatureWalkStoryFieldNotesKitArtifactPaths, 'Nature Walk Story Field Notes', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateStringArray(source.adultGuide.beforeWalk, 5, 'adultGuide.beforeWalk', errors)
+    validateStringArray(source.adultGuide.fieldTableSetup, 5, 'adultGuide.fieldTableSetup', errors)
+    validateStringArray(source.adultGuide.observationToStory, 5, 'adultGuide.observationToStory', errors)
+    validateStringArray(source.adultGuide.privacyAndSiteNotes, 5, 'adultGuide.privacyAndSiteNotes', errors)
+    validateStringArray(source.adultGuide.familyHandoff, 5, 'adultGuide.familyHandoff', errors)
+    validateStringArray(source.adultGuide.reset, 4, 'adultGuide.reset', errors)
+    validateNoUnsafeNatureWalkLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.walkFormats), 'walkFormats must be an array.')
+  if (Array.isArray(source.walkFormats)) {
+    pushIf(errors, source.walkFormats.length !== 6, 'walkFormats must have exactly 6 entries.')
+    const names = new Set()
+    source.walkFormats.forEach((format, index) => validateNatureWalkFormat(format, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeFieldCards), 'takeHomeFieldCards must be an array.')
+  if (Array.isArray(source.takeHomeFieldCards)) {
+    pushIf(errors, source.takeHomeFieldCards.length !== 10, 'takeHomeFieldCards must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeFieldCards.forEach((card, index) => validateNatureWalkTakeHomeCard(card, index, titles, errors))
+  }
+
+  validateExactStringArray(source.optionalSharePrompts, 8, 'optionalSharePrompts', errors)
+  if (Array.isArray(source.optionalSharePrompts)) {
+    source.optionalSharePrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalSharePrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalSharePrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.fieldNotes), 'fieldNotes must be an array.')
+  if (Array.isArray(source.fieldNotes)) {
+    pushIf(errors, source.fieldNotes.length !== 12, 'fieldNotes must have exactly 12 entries.')
+    const noteIds = new Set()
+    const coveredWorlds = new Set()
+    source.fieldNotes.forEach((note, index) => {
+      validateNatureWalkFieldNote(note, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, noteIds, errors)
+      if (isNonEmptyString(note?.worldSlug)) coveredWorlds.add(note.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 12, 'fieldNotes must cover at least 12 unique worlds.')
+  }
+
+  validateNoUnsafeNatureWalkLanguage(source, 'Nature Walk Story Field Notes Kit source', errors)
+  validateNoRiskyLanguage(source, 'Nature Walk Story Field Notes Kit source', errors)
+  return errors
+}
+
+export function validateNatureWalkStoryFieldNotesKitSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three field-note lanes and one tools lane.')
+
+  const fieldNoteLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      if (Array.isArray(lane.fieldNotes)) {
+        fieldNoteLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 23 field-note lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, fieldNoteLaneFiles.length !== 3, 'sourceFiles must include exactly three field-note lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneFieldNotes = fieldNoteLaneFiles
+    .flatMap(({ lane }) => lane.fieldNotes)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.fieldNotes)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneFieldNotes) !== JSON.stringify(source.fieldNotes),
+      'sourceFiles field-note lanes must reproduce fieldNotes exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'walkFormats', 'takeHomeFieldCards', 'optionalSharePrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -3510,7 +3817,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredThankYouNoteStoryPostcardPackArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredNatureWalkStoryFieldNotesKitArtifactPaths.pdfPath
+      ? requiredNatureWalkStoryFieldNotesKitArtifactPaths
+      : artifact?.pdfPath === requiredThankYouNoteStoryPostcardPackArtifactPaths.pdfPath
       ? requiredThankYouNoteStoryPostcardPackArtifactPaths
       : artifact?.pdfPath === requiredGrandparentStoryVisitKitArtifactPaths.pdfPath
       ? requiredGrandparentStoryVisitKitArtifactPaths

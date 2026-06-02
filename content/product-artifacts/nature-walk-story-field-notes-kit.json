@@ -1,0 +1,446 @@
+{
+  "batchId": "2026-06-02-batch23",
+  "generatedAt": "2026-06-02",
+  "productSlug": "nature-walk-story-field-notes-kit",
+  "title": "Nature Walk Story Field Notes Kit",
+  "pricePoint": "$33",
+  "audience": "Families, homeschool groups, tutors, co-ops, library tables, and calm field-day groups guiding ages 7-11.",
+  "sessionLength": "12 printable nature-walk field notes plus adult guide tools, walk formats, and take-home field cards",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch23-nature-field-notes-a.json",
+    "content/product-artifacts/lanes/batch23-nature-field-notes-b.json",
+    "content/product-artifacts/lanes/batch23-nature-field-notes-c.json",
+    "content/product-artifacts/lanes/batch23-nature-tools.json"
+  ],
+  "artifact": {
+    "pdfPath": "product-build/nature-walk-story-field-notes-kit/Nature-Walk-Story-Field-Notes-Kit.pdf",
+    "zipPath": "product-build/nature-walk-story-field-notes-kit/nature-walk-story-field-notes-kit.zip",
+    "sourceHtmlPath": "product-build/nature-walk-story-field-notes-kit/source/nature-walk-story-field-notes-kit.html",
+    "manifestPath": "product-build/nature-walk-story-field-notes-kit/manifest.json"
+  },
+  "worldSlugs": [
+    "teacup-town-weather-window",
+    "acorn-avenue-errand-office",
+    "pocket-park-notice-board",
+    "button-bakery-map-mixup",
+    "spoon-ferry-lunchbox-harbor",
+    "penny-path-compass-shop",
+    "greenhouse-gear-garden",
+    "rain-gauge-railway",
+    "seed-library-map-room",
+    "moss-message-observatory",
+    "solar-oven-picnic-station",
+    "compass-craft-academy"
+  ],
+  "cover": {
+    "kicker": "Printable nature walk story field notes",
+    "headline": "Nature Walk Story Field Notes Kit",
+    "subhead": "Twelve printable field-note pages that turn safe outdoor observations into tiny story scenes.",
+    "included": [
+      "12 printable story field-note pages",
+      "Adult setup guide",
+      "Field table setup notes",
+      "Observation-to-story coaching moves",
+      "Privacy and site-rule notes",
+      "Family handoff notes",
+      "Six adult-led walk formats",
+      "Ten take-home field cards",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeWalk": [
+      "Choose one familiar outdoor space that can be watched calmly from one adult-approved area.",
+      "Set the rule before stepping out: look, listen, point, and leave living things undisturbed.",
+      "Give each child one pencil, one clipboard, and one field note sheet with wide blank lines.",
+      "Pick one printed Plot Sprout world picture to carry as the story bridge from real detail to fiction.",
+      "Name the walk mission in one sentence: today we are finding details, not finishing a whole story."
+    ],
+    "fieldTableSetup": [
+      "Use a flat table, bench, or clipboard stack with pencils, crayons, and printed note pages within adult reach.",
+      "Make four clear boxes on the main page: I notice, It could mean, Story job, and My sentence.",
+      "Keep the writing blanks large so a reluctant writer can add single words, sketches, or short phrases.",
+      "Place the printed Plot Sprout world picture at the top so every observation has a fiction doorway.",
+      "Add one adult note line for reminders such as slow down, pick one detail, or save this idea for later."
+    ],
+    "observationToStory": [
+      "Turn color into mood: a dull gray pebble can make a quiet gate, a bright leaf can make a cheerful signal.",
+      "Turn shape into job: a curled twig can become a tiny bridge, a flat stone can become a message board.",
+      "Turn pattern into rule: if three things repeat, ask what rule the made-up world follows.",
+      "Turn sound into clue: a rustle, tap, hum, or crunch can become a hint that something is about to change.",
+      "Ask for one real detail and one made-up detail in the same sentence so observation becomes story."
+    ],
+    "privacyAndSiteNotes": [
+      "Use initials, first-name-only labels, or blank page labels for pages that leave the house.",
+      "Use broad place words such as yard, park, garden, porch, or field table instead of identifying details.",
+      "Skip house numbers, license plates, school names, and signs that identify a private place.",
+      "Use fictional names for all people in the story, even when the idea starts from a real outing.",
+      "Keep finished pages in the family folder or classroom folder unless an adult chooses a private handoff."
+    ],
+    "familyHandoff": [
+      "Send one field card home with the child and mark the easiest next blank for a family adult to fill in.",
+      "Tell the family adult that five to nine calm minutes is enough; the goal is one vivid story detail.",
+      "Ask the family adult to notice one specific line the child wrote instead of correcting the whole page.",
+      "Invite the family to add one fictional twist from a broad observation, such as color, shape, sound, or pattern.",
+      "Keep the completed card with the kit pages so the child can reuse the detail in a later printable story."
+    ],
+    "reset": [
+      "Gather pencils, clipboards, printed world pictures, and unused field cards into one labeled folder.",
+      "Check pages for identifying details before they go home or into a shared classroom stack.",
+      "Recycle scrap pages that only contain warm-up marks and keep pages with story-ready details.",
+      "Restock wide-blank field cards so the next walk can begin without setup delay."
+    ]
+  },
+  "walkFormats": [
+    {
+      "name": "Backyard Micro-Walk",
+      "bestFor": "Families with a small outdoor space and writers who need a low-pressure start.",
+      "steps": [
+        "Adult chooses the watching area and reminds everyone to look and listen without disturbing living things.",
+        "Child points to three still details: one color, one shape, and one pattern.",
+        "Adult asks what this detail could do in a made-up world after each observation.",
+        "Child writes one favorite detail on the field page before going back inside."
+      ]
+    },
+    {
+      "name": "Park Bench Circle",
+      "bestFor": "Groups that need a seated, calm, adult-led format.",
+      "steps": [
+        "Adult picks one bench or sitting spot and hands out field pages.",
+        "Everyone looks outward and silently chooses one detail from near, middle, and far view.",
+        "Adult leads a round where each child turns one detail into a story job.",
+        "Each child writes one sentence that starts with a real observation and ends with fiction."
+      ]
+    },
+    {
+      "name": "Window-to-Yard Scan",
+      "bestFor": "Home days when staying indoors is the best fit.",
+      "steps": [
+        "Adult places the printed world picture beside a clear window view.",
+        "Child chooses one outdoor detail they can see without leaving the room.",
+        "Adult asks which Plot Sprout world could use that detail and why.",
+        "Child fills one field card with the real detail, the made-up use, and one story question."
+      ]
+    },
+    {
+      "name": "Texture Hunt From a Distance",
+      "bestFor": "Kids who like sorting and need simple choices.",
+      "steps": [
+        "Adult describes four texture choices: smooth, rough, lined, and speckled.",
+        "Child points to one example of each without picking anything up.",
+        "Adult helps the child choose the texture that feels most story-ready.",
+        "Child writes a sentence where that texture becomes a clue, tool, or setting detail."
+      ]
+    },
+    {
+      "name": "Sound and Shade Stroll",
+      "bestFor": "Quiet writers who notice sound before they notice objects.",
+      "steps": [
+        "Adult leads a slow walk within the chosen outdoor space.",
+        "Everyone pauses twice to listen for gentle sounds and notice light or shade.",
+        "Child chooses one sound or shade detail and gives it a fictional job.",
+        "Adult brings the group back to the writing spot for one short field-note sentence."
+      ]
+    },
+    {
+      "name": "Object Hero Loop",
+      "bestFor": "Writers who like turning ordinary things into story helpers.",
+      "steps": [
+        "Adult asks each child to choose one nonliving object they can see clearly.",
+        "Writer describes what the object looks like using two plain details.",
+        "Adult asks what helpful job the object could have in a Plot Sprout world.",
+        "Child writes a hero object line with a blank for one extra detail to add later."
+      ]
+    }
+  ],
+  "takeHomeFieldCards": [
+    {
+      "title": "Leaf Shape Setting",
+      "time": "5 minutes",
+      "skill": "setting detail",
+      "direction": "Notice one leaf shape from a safe viewing spot. Write the shape here: ____________________. Now make it part of a story setting: ____________________.",
+      "familyLine": "In our story, the leaf shape made the place feel ____________________."
+    },
+    {
+      "title": "Three-Thing Pattern",
+      "time": "6 minutes",
+      "skill": "pattern noticing",
+      "direction": "Find a pattern with three similar details, such as color, size, or spacing. The pattern I noticed is ____________________. The story rule it suggests is ____________________.",
+      "familyLine": "Our family added this pattern rule: ____________________."
+    },
+    {
+      "title": "Pebble With a Job",
+      "time": "7 minutes",
+      "skill": "object-to-story",
+      "direction": "Choose one small nonliving object you can see. It looks like ____________________. In the story, its job is ____________________.",
+      "familyLine": "The object became important when ____________________."
+    },
+    {
+      "title": "Start, Middle, Later",
+      "time": "8 minutes",
+      "skill": "sequence path",
+      "direction": "Write a tiny story path from one observation. First ____________________. Next ____________________. Later ____________________.",
+      "familyLine": "The part we would act out first is ____________________."
+    },
+    {
+      "title": "Add One Clear Detail",
+      "time": "5 minutes",
+      "skill": "revision detail",
+      "direction": "Reread one sentence from your field notes. Add one color, shape, or sound detail here: ____________________. Revised sentence: ____________________.",
+      "familyLine": "The new detail made the sentence clearer because ____________________."
+    },
+    {
+      "title": "Sound Clue",
+      "time": "6 minutes",
+      "skill": "sensory detail",
+      "direction": "Listen from an adult-approved spot and name one gentle sound. The sound is ____________________. In the story, it means ____________________.",
+      "familyLine": "Our made-up sound clue would tell the character ____________________."
+    },
+    {
+      "title": "Shadow Door",
+      "time": "7 minutes",
+      "skill": "setting detail",
+      "direction": "Look for one patch of shade or light. It looks like ____________________. In a Plot Sprout world, it could be a doorway to ____________________.",
+      "familyLine": "The doorway should open only when ____________________."
+    },
+    {
+      "title": "Repeated Color Signal",
+      "time": "8 minutes",
+      "skill": "pattern noticing",
+      "direction": "Find one color that appears more than once. The color is ____________________. The message it sends in the story is ____________________.",
+      "familyLine": "Our color signal means ____________________."
+    },
+    {
+      "title": "Ordinary Thing, Strange Use",
+      "time": "9 minutes",
+      "skill": "object-to-story",
+      "direction": "Pick one ordinary thing you can see from where you stand. It is ____________________. Give it a surprising story use: ____________________.",
+      "familyLine": "The surprising use we like best is ____________________."
+    },
+    {
+      "title": "Better Ending Detail",
+      "time": "6 minutes",
+      "skill": "revision detail",
+      "direction": "Choose one ending sentence or final idea. Add one detail that shows where the character is: ____________________. New ending: ____________________.",
+      "familyLine": "The ending now feels more complete because ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "My favorite real detail was ____________________ because it helped the story feel clear.",
+    "One made-up detail we added was ____________________.",
+    "The setting changed when we noticed ____________________.",
+    "A pattern I found was ____________________.",
+    "The object that became important was ____________________.",
+    "A sentence I want to keep is ____________________.",
+    "The next story question I would ask is ____________________.",
+    "A family detail we can add later is ____________________."
+  ],
+  "fieldNotes": [
+    {
+      "id": "nature-field-note-01",
+      "title": "Teacup Window Leaf Watch",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "fieldNoteSkill": "safe observation",
+      "useCase": "A printable yard or park-edge page for helping a young writer turn one watched detail into a tiny Teacup Town story.",
+      "adultSetup": "Print the page, bring one pencil, choose a calm outdoor spot, set an eyes-only rule for living things, and keep the group together.",
+      "kidDirection": "Stand or sit beside your adult. Choose one detail you can see from your spot and imagine how a tiny teacup neighbor would notice it.",
+      "noticePrompt": "I noticed one outdoor thing from my safe spot: ____________________.",
+      "detailBankPrompt": "Three soft details I can add are color ____________________, shape ____________________, and sound ____________________.",
+      "storySeed": "In Teacup Town, the window helper spotted ____________________ and thought it meant a tiny surprise was coming.",
+      "sentencePath": "First the helper saw ____________________. Then the teacup neighbor wondered ____________________. At last they decided ____________________.",
+      "revisionNudge": "Make one sentence clearer by adding a color or size detail here: ____________________.",
+      "quietOptionLine": "Quiet option: point to one detail, then write only three words about it: ____________________.",
+      "takeHomeLine": "At home, tell someone how the Teacup Town window clue became ____________________."
+    },
+    {
+      "id": "nature-field-note-02",
+      "title": "Acorn Avenue Errand Clue",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "fieldNoteSkill": "setting detail",
+      "useCase": "A printable field note for turning one yard or park detail into a setting clue for an Acorn Avenue errand story.",
+      "adultSetup": "Print the page, bring one pencil, choose a calm yard or park bench area, and remind the child to observe without collecting items.",
+      "kidDirection": "Pretend Acorn Avenue has a tiny errand office. Look for one ordinary outdoor clue that could change the day's message.",
+      "noticePrompt": "The outdoor clue I noticed for the errand office is ____________________.",
+      "detailBankPrompt": "The clue's color is ____________________, its texture looks ____________________, and it sits near ____________________.",
+      "storySeed": "The Acorn Avenue clerk found ____________________ on the errand shelf and had to send a careful message.",
+      "sentencePath": "The clerk needed ____________________, but the outdoor clue showed ____________________, so the new errand became ____________________.",
+      "revisionNudge": "Add one setting detail that tells where the clerk is standing: ____________________.",
+      "quietOptionLine": "Quiet option: draw a small box around your favorite clue word and copy it here: ____________________.",
+      "takeHomeLine": "At home, turn the errand clue into a two-sentence story about ____________________."
+    },
+    {
+      "id": "nature-field-note-03",
+      "title": "Pocket Park Pattern Board",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "fieldNoteSkill": "pattern noticing",
+      "useCase": "A printable yard or park observation page for finding repeated shapes, colors, or sounds and turning them into a story clue.",
+      "adultSetup": "Print the page, use a clipboard if available, and choose a calm patch where the child can see repeated details without moving far.",
+      "kidDirection": "Look for a pattern: same shape, same color, same spacing, or a repeated sound. Then pretend it belongs on the Pocket Park board.",
+      "noticePrompt": "A pattern I noticed is ____________________.",
+      "detailBankPrompt": "The pattern repeats like ____________________, changes near ____________________, and makes the park feel ____________________.",
+      "storySeed": "On the Pocket Park board, someone left a pretend note that said the pattern of ____________________ was a secret story clue.",
+      "sentencePath": "I saw ____________________. It repeated when ____________________. My character used the pattern to decide ____________________.",
+      "revisionNudge": "Circle the plainest word in your story and replace it with a clearer pattern word: ____________________.",
+      "quietOptionLine": "Quiet option: make three tiny marks for the pattern, then name it here: ____________________.",
+      "takeHomeLine": "At home, ask someone to guess which pattern started the story: ____________________."
+    },
+    {
+      "id": "nature-field-note-04",
+      "title": "Button Bakery Direction Mix-Up",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "fieldNoteSkill": "sequence path",
+      "useCase": "A printable field note for building a three-part story sequence from safe outdoor details near a yard, porch, or park seat.",
+      "adultSetup": "Print the page, bring one pencil, and choose an outdoor spot with three visible features such as a bench, planter, and tree.",
+      "kidDirection": "Pretend the Button Bakery note got mixed up. Use three things you can see to build the order of the story.",
+      "noticePrompt": "Thing one I see is ____________________, thing two is ____________________, and thing three is ____________________.",
+      "detailBankPrompt": "My three story moments feel like quiet ____________________, silly ____________________, and surprising ____________________.",
+      "storySeed": "In Button Bakery, a mixed-up note sent the helper from ____________________ to ____________________ before the true clue appeared.",
+      "sentencePath": "First ____________________. Next ____________________. Finally ____________________.",
+      "revisionNudge": "Add one why word so the order makes sense: because ____________________.",
+      "quietOptionLine": "Quiet option: number three outdoor details, then write the one that starts the story: ____________________.",
+      "takeHomeLine": "At home, retell how the Button Bakery helper fixed the mix-up with ____________________."
+    },
+    {
+      "id": "nature-field-note-05",
+      "title": "Harbor Picnic Clue Page",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "fieldNoteSkill": "safe observation",
+      "useCase": "Yard or park walk page for turning safe looking clues into a short harbor scene.",
+      "adultSetup": "Print one page, choose a calm outdoor view, and remind the kid to look only and stay with the grown-up.",
+      "kidDirection": "Find three broad clues you can see or hear, then pretend one belongs in Spoon Ferry Lunchbox Harbor.",
+      "noticePrompt": "I notice a tiny harbor clue: ____________________.",
+      "detailBankPrompt": "Collect three safe details: color ____________________, shape ____________________, sound ____________________.",
+      "storySeed": "A lunchbox ferry captain finds ____________________ beside the pretend dock.",
+      "sentencePath": "First ____________________, then ____________________, so the captain decides ____________________.",
+      "revisionNudge": "Add one clearer color, size, or sound to the quietest sentence: ____________________.",
+      "quietOptionLine": "Quiet version: whisper your detail to the grown-up, then write one word: ____________________.",
+      "takeHomeLine": "At home, turn your best outdoor clue into one story sentence: ____________________."
+    },
+    {
+      "id": "nature-field-note-06",
+      "title": "Compass Shop Detail Page",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "fieldNoteSkill": "setting detail",
+      "useCase": "Printable walk stop for building a tiny shop setting from broad outdoor details.",
+      "adultSetup": "Print the page and choose a safe standing spot with a clear view of sky, ground, plants, or garden edges.",
+      "kidDirection": "Look for details that could belong in Penny Path Compass Shop, then write them as setting clues.",
+      "noticePrompt": "The compass shop window might show ____________________.",
+      "detailBankPrompt": "Setting bank: color clue ____________________, line clue ____________________, tiny sound ____________________.",
+      "storySeed": "A pocket compass refuses to point until the shopkeeper notices ____________________.",
+      "sentencePath": "The shopkeeper sees ____________________, wonders ____________________, and chooses ____________________.",
+      "revisionNudge": "Replace one plain word with a sharper outdoor detail: ____________________.",
+      "quietOptionLine": "Quiet version: choose one clue silently and write it here: ____________________.",
+      "takeHomeLine": "At home, use your compass clue to open a two-sentence story: ____________________."
+    },
+    {
+      "id": "nature-field-note-07",
+      "title": "Greenhouse Gear Pattern Page",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "fieldNoteSkill": "pattern noticing",
+      "useCase": "Adult-guided yard or park page for turning repeated nature details into a story signal.",
+      "adultSetup": "Print one page, choose a garden view or porch view, and keep the activity looking only.",
+      "kidDirection": "Find something that repeats in shape, color, spacing, or sound, then turn that pattern into a story clue.",
+      "noticePrompt": "I notice something that repeats: ____________________.",
+      "detailBankPrompt": "Pattern bank: shape ____________________, color ____________________, spacing ____________________.",
+      "storySeed": "A tiny greenhouse machine begins humming when ____________________ repeats three times.",
+      "sentencePath": "First the pattern is ____________________, next it changes to ____________________, finally the helper writes ____________________.",
+      "revisionNudge": "Add one more pattern detail to the sentence that feels too plain: ____________________.",
+      "quietOptionLine": "Quiet version: choose one repeating thing silently and write it: ____________________.",
+      "takeHomeLine": "At home, use your pattern as the secret signal in a garden story: ____________________."
+    },
+    {
+      "id": "nature-field-note-08",
+      "title": "Rain Gauge Railway Step Page",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "fieldNoteSkill": "sequence path",
+      "useCase": "Printable field note for arranging three outdoor clues into a beginning, middle, and ending.",
+      "adultSetup": "Print the page and choose a dry, calm viewing spot after light rain or during a normal outdoor walk.",
+      "kidDirection": "Pick three visible clues and pretend each one is a tiny railway stop in order.",
+      "noticePrompt": "The first rain-gauge clue I notice is ____________________.",
+      "detailBankPrompt": "Sequence bank: first clue ____________________, next clue ____________________, last clue ____________________.",
+      "storySeed": "A railway conductor's rain gauge clicks when ____________________ appears beside the track.",
+      "sentencePath": "First ____________________, next ____________________, after that ____________________, so the train helper ____________________.",
+      "revisionNudge": "Add one sound or movement word to the middle step: ____________________.",
+      "quietOptionLine": "Quiet version: tap each step on the page, then write the final clue: ____________________.",
+      "takeHomeLine": "At home, write a three-step railway scene from broad outdoor clues: ____________________."
+    },
+    {
+      "id": "nature-field-note-09",
+      "title": "Seed Shelf Clue Catalog",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "fieldNoteSkill": "setting detail",
+      "useCase": "A yard, garden edge, or park stop where a writer can notice seeds, leaves, labels, shelves, or tiny natural collections without collecting anything.",
+      "adultSetup": "Print one page, bring a pencil, and choose a safe familiar outdoor area. Remind the child to observe with eyes and ears only, then use invented story labels.",
+      "kidDirection": "Stand with your adult and choose three broad nature details. Pretend they belong in a tiny seed library that needs one new story clue.",
+      "noticePrompt": "I notice one tiny shape, color, or sound near the seed shelf: ____________________.",
+      "detailBankPrompt": "Three field details I can borrow for my story are ____________________, ____________________, and ____________________.",
+      "storySeed": "A careful keeper finds a seed packet labeled with this mystery: ____________________.",
+      "sentencePath": "First the keeper notices ____________________; next the room changes by ____________________; then the keeper writes ____________________.",
+      "revisionNudge": "Add one stronger setting detail to show where the seed clue rests: ____________________.",
+      "quietOptionLine": "Quiet option: circle one detail and copy it into a whisper-small story line: ____________________.",
+      "takeHomeLine": "At home, turn your best field detail into the first line of a seed-library tale: ____________________."
+    },
+    {
+      "id": "nature-field-note-10",
+      "title": "Moss Signal Pattern Watch",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "fieldNoteSkill": "pattern noticing",
+      "useCase": "A shaded safe stop with visible moss, bark, stone, or grass texture where the writer can notice repeating shapes from one standing spot.",
+      "adultSetup": "Print the field note and choose a quiet observation spot with clear adult boundaries. Use broad labels and keep hands to yourself.",
+      "kidDirection": "Look for a pattern that repeats, almost repeats, or changes suddenly. Turn that pattern into a secret observatory message.",
+      "noticePrompt": "I notice a repeating shape or color pattern that looks like ____________________.",
+      "detailBankPrompt": "My pattern bank has tiny dots ____________________, soft lines ____________________, and a surprise gap ____________________.",
+      "storySeed": "The observatory receives a soft message that repeats this clue: ____________________.",
+      "sentencePath": "First the message appears as ____________________; next it repeats near ____________________; then my character understands ____________________.",
+      "revisionNudge": "Revise one plain detail by adding pattern words such as speckled, lined, clustered, or faded: ____________________.",
+      "quietOptionLine": "Quiet option: point silently to one pattern, then write the message it might mean: ____________________.",
+      "takeHomeLine": "At home, make the pattern become a clue in a short observatory scene: ____________________."
+    },
+    {
+      "id": "nature-field-note-11",
+      "title": "Sun Patch Scene Steps",
+      "worldSlug": "solar-oven-picnic-station",
+      "ageBand": "8-10",
+      "fieldNoteSkill": "sequence path",
+      "useCase": "A porch, yard, or park table where writers can watch how light and shade sit near a paper plate, leaf, pebble, or other simple object.",
+      "adultSetup": "Print the page, bring a pencil, and choose an adult-approved spot. This is a looking-and-writing activity with no heat tools.",
+      "kidDirection": "Pick one object to become the station's important story prop. Notice what is beside it, above it, and changed around it.",
+      "noticePrompt": "I notice the sun-and-shade line sits beside ____________________.",
+      "detailBankPrompt": "Object detail: ____________________; texture detail: ____________________; shadow shape: ____________________.",
+      "storySeed": "A station helper sets down a harmless story object that changes when the light moves: ____________________.",
+      "sentencePath": "Start with ____________________; after a small change, add ____________________; end when the character decides ____________________.",
+      "revisionNudge": "Add one when-word or after-word so the scene happens in a clearer order: ____________________.",
+      "quietOptionLine": "Quiet option: draw three tiny boxes, then write only the middle scene step: ____________________.",
+      "takeHomeLine": "At home, rewrite the scene as a three-step mini adventure: ____________________."
+    },
+    {
+      "id": "nature-field-note-12",
+      "title": "Compass Academy Revision Lab",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "fieldNoteSkill": "revision detail",
+      "useCase": "An adult-guided outdoor writing stop where older kids practice turning vague direction words into clearer story movement from one safe standing spot.",
+      "adultSetup": "Print the note and mark a calm standing area. The writer stays with the adult and uses pointing, noticing, and pencil work only.",
+      "kidDirection": "Choose one direction clue from what you can safely see. Use it to revise a plain sentence into a sharper story moment.",
+      "noticePrompt": "From one safe standing spot, I notice a left, right, front, or back detail: ____________________.",
+      "detailBankPrompt": "Direction word: ____________________; object clue: ____________________; mood word: ____________________.",
+      "storySeed": "A trainee at the academy fixes a confusing clue by adding this direction detail: ____________________.",
+      "sentencePath": "Plain line: The helper went over there. Better line: The helper turned toward ____________________ because ____________________.",
+      "revisionNudge": "Replace one vague word with a clearer direction or distance word: ____________________.",
+      "quietOptionLine": "Quiet option: revise only one sentence silently and underline the clearer clue: ____________________.",
+      "takeHomeLine": "At home, use your revised clue as the turning point in a compass-academy scene: ____________________."
+    }
+  ]
+}

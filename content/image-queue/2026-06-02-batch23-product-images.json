@@ -1,0 +1,16 @@
+{
+  "batchId": "2026-06-02-batch23-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "nature-walk-story-field-notes-kit",
+      "title": "Nature Walk Story Field Notes Kit",
+      "purpose": "Product hero image for the Batch 23 printable nature-walk story field notes kit.",
+      "prompt": "family-friendly flat lay, no writing tools, no pencils, no pens, no crayons, no keyboard, no computer, no electronics, blank cream paper cards with zero markings, paper leaf cutouts, pebble cutouts, smooth plain color swatches, wooden table, soft daylight, polished product mockup, no text, no letters, no numbers, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device, no map, no GPS, no route, no address, screen-free printable nature walk story field notes kit",
+      "outputJpeg": "public/images/plotsprout/batch23/nature-walk-story-field-notes-kit.jpg",
+      "outputWebp": "public/images/plotsprout/batch23/nature-walk-story-field-notes-kit.webp",
+      "sidecar": "content/image-runs/batch23/nature-walk-story-field-notes-kit.json",
+      "seed": 26062377
+    }
+  ]
+}

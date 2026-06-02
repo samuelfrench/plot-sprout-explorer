@@ -390,6 +390,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable thank-you story postcards with adult guide tools, revision prompts, and optional share prompts.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'nature-walk-story-field-notes-kit',
+    title: 'Nature Walk Story Field Notes Kit',
+    pricePoint: '$33',
+    description:
+      'Twelve printable nature-walk field notes with adult guide tools, walk formats, and take-home field cards.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

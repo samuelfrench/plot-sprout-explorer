@@ -1,0 +1,73 @@
+{
+  "laneId": "batch23-nature-field-notes-b",
+  "fieldNotes": [
+    {
+      "id": "nature-field-note-05",
+      "title": "Harbor Picnic Clue Page",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "fieldNoteSkill": "safe observation",
+      "useCase": "Yard or park walk page for turning safe looking clues into a short harbor scene.",
+      "adultSetup": "Print one page, choose a calm outdoor view, and remind the kid to look only and stay with the grown-up.",
+      "kidDirection": "Find three broad clues you can see or hear, then pretend one belongs in Spoon Ferry Lunchbox Harbor.",
+      "noticePrompt": "I notice a tiny harbor clue: ____________________.",
+      "detailBankPrompt": "Collect three safe details: color ____________________, shape ____________________, sound ____________________.",
+      "storySeed": "A lunchbox ferry captain finds ____________________ beside the pretend dock.",
+      "sentencePath": "First ____________________, then ____________________, so the captain decides ____________________.",
+      "revisionNudge": "Add one clearer color, size, or sound to the quietest sentence: ____________________.",
+      "quietOptionLine": "Quiet version: whisper your detail to the grown-up, then write one word: ____________________.",
+      "takeHomeLine": "At home, turn your best outdoor clue into one story sentence: ____________________."
+    },
+    {
+      "id": "nature-field-note-06",
+      "title": "Compass Shop Detail Page",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "fieldNoteSkill": "setting detail",
+      "useCase": "Printable walk stop for building a tiny shop setting from broad outdoor details.",
+      "adultSetup": "Print the page and choose a safe standing spot with a clear view of sky, ground, plants, or garden edges.",
+      "kidDirection": "Look for details that could belong in Penny Path Compass Shop, then write them as setting clues.",
+      "noticePrompt": "The compass shop window might show ____________________.",
+      "detailBankPrompt": "Setting bank: color clue ____________________, line clue ____________________, tiny sound ____________________.",
+      "storySeed": "A pocket compass refuses to point until the shopkeeper notices ____________________.",
+      "sentencePath": "The shopkeeper sees ____________________, wonders ____________________, and chooses ____________________.",
+      "revisionNudge": "Replace one plain word with a sharper outdoor detail: ____________________.",
+      "quietOptionLine": "Quiet version: choose one clue silently and write it here: ____________________.",
+      "takeHomeLine": "At home, use your compass clue to open a two-sentence story: ____________________."
+    },
+    {
+      "id": "nature-field-note-07",
+      "title": "Greenhouse Gear Pattern Page",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "fieldNoteSkill": "pattern noticing",
+      "useCase": "Adult-guided yard or park page for turning repeated nature details into a story signal.",
+      "adultSetup": "Print one page, choose a garden view or porch view, and keep the activity looking only.",
+      "kidDirection": "Find something that repeats in shape, color, spacing, or sound, then turn that pattern into a story clue.",
+      "noticePrompt": "I notice something that repeats: ____________________.",
+      "detailBankPrompt": "Pattern bank: shape ____________________, color ____________________, spacing ____________________.",
+      "storySeed": "A tiny greenhouse machine begins humming when ____________________ repeats three times.",
+      "sentencePath": "First the pattern is ____________________, next it changes to ____________________, finally the helper writes ____________________.",
+      "revisionNudge": "Add one more pattern detail to the sentence that feels too plain: ____________________.",
+      "quietOptionLine": "Quiet version: choose one repeating thing silently and write it: ____________________.",
+      "takeHomeLine": "At home, use your pattern as the secret signal in a garden story: ____________________."
+    },
+    {
+      "id": "nature-field-note-08",
+      "title": "Rain Gauge Railway Step Page",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "fieldNoteSkill": "sequence path",
+      "useCase": "Printable field note for arranging three outdoor clues into a beginning, middle, and ending.",
+      "adultSetup": "Print the page and choose a dry, calm viewing spot after light rain or during a normal outdoor walk.",
+      "kidDirection": "Pick three visible clues and pretend each one is a tiny railway stop in order.",
+      "noticePrompt": "The first rain-gauge clue I notice is ____________________.",
+      "detailBankPrompt": "Sequence bank: first clue ____________________, next clue ____________________, last clue ____________________.",
+      "storySeed": "A railway conductor's rain gauge clicks when ____________________ appears beside the track.",
+      "sentencePath": "First ____________________, next ____________________, after that ____________________, so the train helper ____________________.",
+      "revisionNudge": "Add one sound or movement word to the middle step: ____________________.",
+      "quietOptionLine": "Quiet version: tap each step on the page, then write the final clue: ____________________.",
+      "takeHomeLine": "At home, write a three-step railway scene from broad outdoor clues: ____________________."
+    }
+  ]
+}

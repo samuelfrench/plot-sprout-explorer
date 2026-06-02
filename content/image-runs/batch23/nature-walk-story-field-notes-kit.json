@@ -1,0 +1,18 @@
+{
+  "slug": "nature-walk-story-field-notes-kit",
+  "prompt": "family-friendly flat lay, no writing tools, no pencils, no pens, no crayons, no keyboard, no computer, no electronics, blank cream paper cards with zero markings, paper leaf cutouts, pebble cutouts, smooth plain color swatches, wooden table, soft daylight, polished product mockup, no text, no letters, no numbers, no logos, no watermark, no branded characters, no scary harm, no weapons, no people, no faces, no animals, no phone, no tablet, no device, no map, no GPS, no route, no address, screen-free printable nature walk story field notes kit",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, printed markings, icon, symbol, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26062377,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch23/nature-walk-story-field-notes-kit.jpg",
+  "outputWebp": "public/images/plotsprout/batch23/nature-walk-story-field-notes-kit.webp",
+  "manifest": "content/image-queue/2026-06-02-batch23-product-images.json",
+  "title": "Nature Walk Story Field Notes Kit"
+}

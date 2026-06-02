@@ -1,0 +1,93 @@
+{
+  "batchId": "2026-06-02-batch23",
+  "generatedAt": "2026-06-02",
+  "productSlug": "nature-walk-story-field-notes-kit",
+  "title": "Nature Walk Story Field Notes Kit",
+  "pricePoint": "$33",
+  "sourcePageCount": 12,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/nature-walk-story-field-notes-kit/Nature-Walk-Story-Field-Notes-Kit.pdf",
+      "sha256": "8f8175c8f0ed6325c73aa08d12acbac803d15cbb6021a790f02113d49471924f",
+      "size": 3775977
+    },
+    "zip": {
+      "path": "product-build/nature-walk-story-field-notes-kit/nature-walk-story-field-notes-kit.zip",
+      "sha256": "1653f0aa3b91e2d3c08909ddea781dae7ab2c6192d9cfadd2637c12f112dc66b",
+      "size": 7218586
+    },
+    "sourceHtml": {
+      "path": "product-build/nature-walk-story-field-notes-kit/source/nature-walk-story-field-notes-kit.html",
+      "sha256": "26a151fdea36d0c0755ac891e9f5b92b31ffa52eb0c47627bf29c27082cfd772",
+      "size": 44451
+    },
+    "readme": {
+      "path": "product-build/nature-walk-story-field-notes-kit/README.txt",
+      "sha256": "d31e3d3624f7e184a803d5414f9fd72f265644166c59fae25c432d22ba71ef8f",
+      "size": 538
+    },
+    "assets": [
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/solar-oven-picnic-station.jpg",
+        "sha256": "9742a1d469b45961d9634dc0fb6e722bf60c2f8beb872eb9790da8b21e9300be",
+        "size": 299058
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/nature-walk-story-field-notes-kit/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      }
+    ]
+  }
+}

@@ -816,6 +816,61 @@
         "Ask for one exact kindness detail before asking for a full note.",
         "Use one revision strip to polish the note, then let the family copy or deliver it offline."
       ]
+    },
+    {
+      "slug": "nature-walk-story-field-notes-kit",
+      "title": "Nature Walk Story Field Notes Kit",
+      "pricePoint": "$33",
+      "status": "checkout_pending",
+      "headline": "A printable nature-walk field notes kit that turns safe observations into story scenes.",
+      "summary": "Twelve adult-led field-note pages help kids notice broad outdoor details, make a detail bank, draft a tiny story path, and revise one clear sentence.",
+      "heroImage": "images/plotsprout/batch23/nature-walk-story-field-notes-kit.jpg",
+      "ctaLabel": "Request field notes kit launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Nature%20Walk%20Story%20Field%20Notes%20Kit",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static nature walk field notes kit page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "acorn-avenue-errand-office",
+        "pocket-park-notice-board",
+        "button-bakery-map-mixup",
+        "spoon-ferry-lunchbox-harbor",
+        "penny-path-compass-shop",
+        "greenhouse-gear-garden",
+        "rain-gauge-railway",
+        "seed-library-map-room",
+        "moss-message-observatory",
+        "solar-oven-picnic-station",
+        "compass-craft-academy"
+      ],
+      "includedPages": [
+        "Twelve printable nature-walk story field-note pages",
+        "Adult setup guide",
+        "Field table setup notes",
+        "Observation-to-story coaching moves",
+        "Privacy and site-rule notes",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six adult-led walk formats",
+        "Ten take-home field cards",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool nature walk that needs story writing instead of a science report",
+        "A library or co-op field-day table with screen-free writing pages",
+        "A tutoring activity for reluctant writers who need concrete details before drafting",
+        "A family yard, porch, park, or window-view writing activity with adult guidance",
+        "A take-home field card set for continuing an invented story offline"
+      ],
+      "parentSteps": [
+        "Choose one adult-approved observation spot and one field note page before the activity starts.",
+        "Set the look, listen, point, and leave-living-things-undisturbed rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one broad detail into a make-believe story clue rather than recording exact place information.",
+        "Send home one field card with a single finish blank so families can continue the story offline."
+      ]
     }
   ]
 }

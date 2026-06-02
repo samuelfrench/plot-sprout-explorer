@@ -1,0 +1,73 @@
+{
+  "laneId": "batch23-nature-field-notes-a",
+  "fieldNotes": [
+    {
+      "id": "nature-field-note-01",
+      "title": "Teacup Window Leaf Watch",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "fieldNoteSkill": "safe observation",
+      "useCase": "A printable yard or park-edge page for helping a young writer turn one watched detail into a tiny Teacup Town story.",
+      "adultSetup": "Print the page, bring one pencil, choose a calm outdoor spot, set an eyes-only rule for living things, and keep the group together.",
+      "kidDirection": "Stand or sit beside your adult. Choose one detail you can see from your spot and imagine how a tiny teacup neighbor would notice it.",
+      "noticePrompt": "I noticed one outdoor thing from my safe spot: ____________________.",
+      "detailBankPrompt": "Three soft details I can add are color ____________________, shape ____________________, and sound ____________________.",
+      "storySeed": "In Teacup Town, the window helper spotted ____________________ and thought it meant a tiny surprise was coming.",
+      "sentencePath": "First the helper saw ____________________. Then the teacup neighbor wondered ____________________. At last they decided ____________________.",
+      "revisionNudge": "Make one sentence clearer by adding a color or size detail here: ____________________.",
+      "quietOptionLine": "Quiet option: point to one detail, then write only three words about it: ____________________.",
+      "takeHomeLine": "At home, tell someone how the Teacup Town window clue became ____________________."
+    },
+    {
+      "id": "nature-field-note-02",
+      "title": "Acorn Avenue Errand Clue",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "fieldNoteSkill": "setting detail",
+      "useCase": "A printable field note for turning one yard or park detail into a setting clue for an Acorn Avenue errand story.",
+      "adultSetup": "Print the page, bring one pencil, choose a calm yard or park bench area, and remind the child to observe without collecting items.",
+      "kidDirection": "Pretend Acorn Avenue has a tiny errand office. Look for one ordinary outdoor clue that could change the day's message.",
+      "noticePrompt": "The outdoor clue I noticed for the errand office is ____________________.",
+      "detailBankPrompt": "The clue's color is ____________________, its texture looks ____________________, and it sits near ____________________.",
+      "storySeed": "The Acorn Avenue clerk found ____________________ on the errand shelf and had to send a careful message.",
+      "sentencePath": "The clerk needed ____________________, but the outdoor clue showed ____________________, so the new errand became ____________________.",
+      "revisionNudge": "Add one setting detail that tells where the clerk is standing: ____________________.",
+      "quietOptionLine": "Quiet option: draw a small box around your favorite clue word and copy it here: ____________________.",
+      "takeHomeLine": "At home, turn the errand clue into a two-sentence story about ____________________."
+    },
+    {
+      "id": "nature-field-note-03",
+      "title": "Pocket Park Pattern Board",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "fieldNoteSkill": "pattern noticing",
+      "useCase": "A printable yard or park observation page for finding repeated shapes, colors, or sounds and turning them into a story clue.",
+      "adultSetup": "Print the page, use a clipboard if available, and choose a calm patch where the child can see repeated details without moving far.",
+      "kidDirection": "Look for a pattern: same shape, same color, same spacing, or a repeated sound. Then pretend it belongs on the Pocket Park board.",
+      "noticePrompt": "A pattern I noticed is ____________________.",
+      "detailBankPrompt": "The pattern repeats like ____________________, changes near ____________________, and makes the park feel ____________________.",
+      "storySeed": "On the Pocket Park board, someone left a pretend note that said the pattern of ____________________ was a secret story clue.",
+      "sentencePath": "I saw ____________________. It repeated when ____________________. My character used the pattern to decide ____________________.",
+      "revisionNudge": "Circle the plainest word in your story and replace it with a clearer pattern word: ____________________.",
+      "quietOptionLine": "Quiet option: make three tiny marks for the pattern, then name it here: ____________________.",
+      "takeHomeLine": "At home, ask someone to guess which pattern started the story: ____________________."
+    },
+    {
+      "id": "nature-field-note-04",
+      "title": "Button Bakery Direction Mix-Up",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "fieldNoteSkill": "sequence path",
+      "useCase": "A printable field note for building a three-part story sequence from safe outdoor details near a yard, porch, or park seat.",
+      "adultSetup": "Print the page, bring one pencil, and choose an outdoor spot with three visible features such as a bench, planter, and tree.",
+      "kidDirection": "Pretend the Button Bakery note got mixed up. Use three things you can see to build the order of the story.",
+      "noticePrompt": "Thing one I see is ____________________, thing two is ____________________, and thing three is ____________________.",
+      "detailBankPrompt": "My three story moments feel like quiet ____________________, silly ____________________, and surprising ____________________.",
+      "storySeed": "In Button Bakery, a mixed-up note sent the helper from ____________________ to ____________________ before the true clue appeared.",
+      "sentencePath": "First ____________________. Next ____________________. Finally ____________________.",
+      "revisionNudge": "Add one why word so the order makes sense: because ____________________.",
+      "quietOptionLine": "Quiet option: number three outdoor details, then write the one that starts the story: ____________________.",
+      "takeHomeLine": "At home, retell how the Button Bakery helper fixed the mix-up with ____________________."
+    }
+  ]
+}

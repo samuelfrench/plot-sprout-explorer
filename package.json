@@ -29,6 +29,7 @@
     "image:batch20": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch20-product-images.json",
     "image:batch21": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch21-product-images.json",
     "image:batch22": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch22-product-images.json",
+    "image:batch23": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch23-product-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -43,7 +44,8 @@
     "product:museum-day-kit": "node scripts/museum-day-story-notebook-kit-builder.mjs",
     "product:family-game-night-deck": "node scripts/family-game-night-story-card-deck-builder.mjs",
     "product:grandparent-visit-kit": "node scripts/grandparent-story-visit-kit-builder.mjs",
-    "product:thank-you-postcard-pack": "node scripts/thank-you-note-story-postcard-pack-builder.mjs"
+    "product:thank-you-postcard-pack": "node scripts/thank-you-note-story-postcard-pack-builder.mjs",
+    "product:nature-walk-kit": "node scripts/nature-walk-story-field-notes-kit-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

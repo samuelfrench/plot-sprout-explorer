@@ -1,0 +1,897 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nature Walk Story Field Notes Kit</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #243135;
+        --muted: #59666a;
+        --paper: #fffdf8;
+        --line: #c9d9ce;
+        --leaf: #39735c;
+        --gold: #e2b84a;
+        --blue: #327889;
+        --berry: #a9445b;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 9px;
+        line-height: 1.1;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 11ch; font-size: 34px; }
+      h2 { margin-bottom: 0.05in; font-size: 19px; }
+      h3 { margin-bottom: 0.025in; font-size: 9.2px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.12in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(57, 115, 92, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(57, 115, 92, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.1in; gap: 0.2in; border-top: 0.16in solid var(--gold); }
+      .guide-page { border-top: 0.16in solid var(--leaf); font-size: 7.2px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 7.35px; }
+      .walk-page { border-top: 0.16in solid var(--blue); font-size: 7.55px; }
+      .card-page { border-top: 0.16in solid var(--berry); font-size: 7.4px; }
+      .field-note-page { font-size: 8.55px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--leaf);
+        font-size: 7.1px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.15in; }
+      .cover-meta, .guide-grid, .world-grid, .walk-grid, .card-grid { display: grid; gap: 0.05in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.038in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.038in; }
+      .walk-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.045in; }
+      .card-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .field-card, .field-block {
+        padding: 0.044in;
+        background: rgba(255, 255, 255, 0.84);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.025in; }
+      .world-card h3 { font-size: 7.35px; }
+      .small-card p, .small-card li, .field-card p { margin-bottom: 0.025in; }
+      .field-note-page figure { float: right; width: 1.5in; margin: 0 0 0.055in 0.1in; }
+      .field-note-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--leaf); font-size: 7px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.045in;
+        padding: 0.045in;
+        background: white;
+        border-left: 0.06in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--leaf); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.04in;
+      }
+      .field-block p {
+        min-height: 0.31in;
+        margin-bottom: 0;
+        padding-bottom: 0.02in;
+        border-bottom: 1px solid rgba(57, 115, 92, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.052in;
+        padding: 0.05in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--berry);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.06in; font-size: 7.6px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable nature walk story field notes</p>
+        <h1>Nature Walk Story Field Notes Kit</h1>
+        <p>Twelve printable field-note pages that turn safe outdoor observations into tiny story scenes.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, co-ops, library tables, and calm field-day groups guiding ages 7-11.</p>
+        <p><strong>Format:</strong> 12 printable nature-walk field notes plus adult guide tools, walk formats, and take-home field cards</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$33</span>
+        <h2>Included</h2>
+        <ul><li>12 printable story field-note pages</li>
+<li>Adult setup guide</li>
+<li>Field table setup notes</li>
+<li>Observation-to-story coaching moves</li>
+<li>Privacy and site-rule notes</li>
+<li>Family handoff notes</li>
+<li>Six adult-led walk formats</li>
+<li>Ten take-home field cards</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Observation-to-story setup</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the walk</h3><ul><li>Choose one familiar outdoor space that can be watched calmly from one adult-approved area.</li>
+<li>Set the rule before stepping out: look, listen, point, and leave living things undisturbed.</li>
+<li>Give each child one pencil, one clipboard, and one field note sheet with wide blank lines.</li>
+<li>Pick one printed Plot Sprout world picture to carry as the story bridge from real detail to fiction.</li>
+<li>Name the walk mission in one sentence: today we are finding details, not finishing a whole story.</li></ul></article>
+        <article class="guide-card"><h3>Field table setup</h3><ul><li>Use a flat table, bench, or clipboard stack with pencils, crayons, and printed note pages within adult reach.</li>
+<li>Make four clear boxes on the main page: I notice, It could mean, Story job, and My sentence.</li>
+<li>Keep the writing blanks large so a reluctant writer can add single words, sketches, or short phrases.</li>
+<li>Place the printed Plot Sprout world picture at the top so every observation has a fiction doorway.</li>
+<li>Add one adult note line for reminders such as slow down, pick one detail, or save this idea for later.</li></ul></article>
+        <article class="guide-card"><h3>Observation-to-story</h3><ul><li>Turn color into mood: a dull gray pebble can make a quiet gate, a bright leaf can make a cheerful signal.</li>
+<li>Turn shape into job: a curled twig can become a tiny bridge, a flat stone can become a message board.</li>
+<li>Turn pattern into rule: if three things repeat, ask what rule the made-up world follows.</li>
+<li>Turn sound into clue: a rustle, tap, hum, or crunch can become a hint that something is about to change.</li>
+<li>Ask for one real detail and one made-up detail in the same sentence so observation becomes story.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and site notes</h3><ul><li>Use initials, first-name-only labels, or blank page labels for pages that leave the house.</li>
+<li>Use broad place words such as yard, park, garden, porch, or field table instead of identifying details.</li>
+<li>Skip house numbers, license plates, school names, and signs that identify a private place.</li>
+<li>Use fictional names for all people in the story, even when the idea starts from a real outing.</li>
+<li>Keep finished pages in the family folder or classroom folder unless an adult chooses a private handoff.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one field card home with the child and mark the easiest next blank for a family adult to fill in.</li>
+<li>Tell the family adult that five to nine calm minutes is enough; the goal is one vivid story detail.</li>
+<li>Ask the family adult to notice one specific line the child wrote instead of correcting the whole page.</li>
+<li>Invite the family to add one fictional twist from a broad observation, such as color, shape, sound, or pattern.</li>
+<li>Keep the completed card with the kit pages so the child can reuse the detail in a later printable story.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Gather pencils, clipboards, printed world pictures, and unused field cards into one labeled folder.</li>
+<li>Check pages for identifying details before they go home or into a shared classroom stack.</li>
+<li>Recycle scrap pages that only contain warm-up marks and keep pages with story-ready details.</li>
+<li>Restock wide-blank field cards so the next walk can begin without setup delay.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one field note at a time. Keep every story detail broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Twelve field-note worlds</h2>
+      <p>Pick a world image, then turn one calm outdoor detail into a fictional story clue.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Greenhouse Gear Garden</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Solar Oven Picnic Station</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article></div>
+    </section>
+    <section class="pack-page walk-page">
+      <p class="page-kicker">Walk formats</p>
+      <h2>Choose the observation rhythm</h2>
+      <div class="walk-grid">
+    <article class="small-card">
+      <h3>Backyard Micro-Walk</h3>
+      <p>Families with a small outdoor space and writers who need a low-pressure start.</p>
+      <ol><li>Adult chooses the watching area and reminds everyone to look and listen without disturbing living things.</li>
+<li>Child points to three still details: one color, one shape, and one pattern.</li>
+<li>Adult asks what this detail could do in a made-up world after each observation.</li>
+<li>Child writes one favorite detail on the field page before going back inside.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Park Bench Circle</h3>
+      <p>Groups that need a seated, calm, adult-led format.</p>
+      <ol><li>Adult picks one bench or sitting spot and hands out field pages.</li>
+<li>Everyone looks outward and silently chooses one detail from near, middle, and far view.</li>
+<li>Adult leads a round where each child turns one detail into a story job.</li>
+<li>Each child writes one sentence that starts with a real observation and ends with fiction.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Window-to-Yard Scan</h3>
+      <p>Home days when staying indoors is the best fit.</p>
+      <ol><li>Adult places the printed world picture beside a clear window view.</li>
+<li>Child chooses one outdoor detail they can see without leaving the room.</li>
+<li>Adult asks which Plot Sprout world could use that detail and why.</li>
+<li>Child fills one field card with the real detail, the made-up use, and one story question.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Texture Hunt From a Distance</h3>
+      <p>Kids who like sorting and need simple choices.</p>
+      <ol><li>Adult describes four texture choices: smooth, rough, lined, and speckled.</li>
+<li>Child points to one example of each without picking anything up.</li>
+<li>Adult helps the child choose the texture that feels most story-ready.</li>
+<li>Child writes a sentence where that texture becomes a clue, tool, or setting detail.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sound and Shade Stroll</h3>
+      <p>Quiet writers who notice sound before they notice objects.</p>
+      <ol><li>Adult leads a slow walk within the chosen outdoor space.</li>
+<li>Everyone pauses twice to listen for gentle sounds and notice light or shade.</li>
+<li>Child chooses one sound or shade detail and gives it a fictional job.</li>
+<li>Adult brings the group back to the writing spot for one short field-note sentence.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Object Hero Loop</h3>
+      <p>Writers who like turning ordinary things into story helpers.</p>
+      <ol><li>Adult asks each child to choose one nonliving object they can see clearly.</li>
+<li>Writer describes what the object looks like using two plain details.</li>
+<li>Adult asks what helpful job the object could have in a Plot Sprout world.</li>
+<li>Child writes a hero object line with a blank for one extra detail to add later.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page card-page">
+      <p class="page-kicker">Take-home field cards</p>
+      <h2>Finish one field detail later</h2>
+      <div class="card-grid">
+    <article class="field-card">
+      <p class="card-kicker">5 minutes | setting detail</p>
+      <h3>Leaf Shape Setting</h3>
+      <p>Notice one leaf shape from a safe viewing spot. Write the shape here: ____________________. Now make it part of a story setting: ____________________.</p>
+      <p>In our story, the leaf shape made the place feel ____________________.</p>
+    </article>
+
+    <article class="field-card">
+      <p class="card-kicker">6 minutes | pattern noticing</p>
+      <h3>Three-Thing Pattern</h3>
+      <p>Find a pattern with three similar details, such as color, size, or spacing. The pattern I noticed is ____________________. The story rule it suggests is ____________________.</p>
+      <p>Our family added this pattern rule: ____________________.</p>
+    </article>
+
+    <article class="field-card">
+      <p class="card-kicker">7 minutes | object-to-story</p>
+      <h3>Pebble With a Job</h3>
+      <p>Choose one small nonliving object you can see. It looks like ____________________. In the story, its job is ____________________.</p>
+      <p>The object became important when ____________________.</p>
+    </article>
+
+    <article class="field-card">
+      <p class="card-kicker">8 minutes | sequence path</p>
+      <h3>Start, Middle, Later</h3>
+      <p>Write a tiny story path from one observation. First ____________________. Next ____________________. Later ____________________.</p>
+      <p>The part we would act out first is ____________________.</p>
+    </article>
+
+    <article class="field-card">
+      <p class="card-kicker">5 minutes | revision detail</p>
+      <h3>Add One Clear Detail</h3>
+      <p>Reread one sentence from your field notes. Add one color, shape, or sound detail here: ____________________. Revised sentence: ____________________.</p>
+      <p>The new detail made the sentence clearer because ____________________.</p>
+    </article>
+
+    <article class="field-card">
+      <p class="card-kicker">6 minutes | sensory detail</p>
+      <h3>Sound Clue</h3>
+      <p>Listen from an adult-approved spot and name one gentle sound. The sound is ____________________. In the story, it means ____________________.</p>
+      <p>Our made-up sound clue would tell the character ____________________.</p>
+    </article>
+
+    <article class="field-card">
+      <p class="card-kicker">7 minutes | setting detail</p>
+      <h3>Shadow Door</h3>
+      <p>Look for one patch of shade or light. It looks like ____________________. In a Plot Sprout world, it could be a doorway to ____________________.</p>
+      <p>The doorway should open only when ____________________.</p>
+    </article>
+
+    <article class="field-card">
+      <p class="card-kicker">8 minutes | pattern noticing</p>
+      <h3>Repeated Color Signal</h3>
+      <p>Find one color that appears more than once. The color is ____________________. The message it sends in the story is ____________________.</p>
+      <p>Our color signal means ____________________.</p>
+    </article>
+
+    <article class="field-card">
+      <p class="card-kicker">9 minutes | object-to-story</p>
+      <h3>Ordinary Thing, Strange Use</h3>
+      <p>Pick one ordinary thing you can see from where you stand. It is ____________________. Give it a surprising story use: ____________________.</p>
+      <p>The surprising use we like best is ____________________.</p>
+    </article>
+
+    <article class="field-card">
+      <p class="card-kicker">6 minutes | revision detail</p>
+      <h3>Better Ending Detail</h3>
+      <p>Choose one ending sentence or final idea. Add one detail that shows where the character is: ____________________. New ending: ____________________.</p>
+      <p>The ending now feels more complete because ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>My favorite real detail was ____________________ because it helped the story feel clear.</li>
+<li>One made-up detail we added was ____________________.</li>
+<li>The setting changed when we noticed ____________________.</li>
+<li>A pattern I found was ____________________.</li>
+<li>The object that became important was ____________________.</li>
+<li>A sentence I want to keep is ____________________.</li>
+<li>The next story question I would ask is ____________________.</li>
+<li>A family detail we can add later is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 1 | Ages 7-8 | safe observation</div>
+      <h2>Teacup Window Leaf Watch</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the page, bring one pencil, choose a calm outdoor spot, set an eyes-only rule for living things, and keep the group together.</p>
+      <p class="kid-direction">Stand or sit beside your adult. Choose one detail you can see from your spot and imagine how a tiny teacup neighbor would notice it.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>I noticed one outdoor thing from my safe spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>Three soft details I can add are color ____________________, shape ____________________, and sound ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>In Teacup Town, the window helper spotted ____________________ and thought it meant a tiny surprise was coming.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>First the helper saw ____________________. Then the teacup neighbor wondered ____________________. At last they decided ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Make one sentence clearer by adding a color or size detail here: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: point to one detail, then write only three words about it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, tell someone how the Teacup Town window clue became ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 2 | Ages 7-9 | setting detail</div>
+      <h2>Acorn Avenue Errand Clue</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the page, bring one pencil, choose a calm yard or park bench area, and remind the child to observe without collecting items.</p>
+      <p class="kid-direction">Pretend Acorn Avenue has a tiny errand office. Look for one ordinary outdoor clue that could change the day&#39;s message.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>The outdoor clue I noticed for the errand office is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>The clue&#39;s color is ____________________, its texture looks ____________________, and it sits near ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>The Acorn Avenue clerk found ____________________ on the errand shelf and had to send a careful message.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>The clerk needed ____________________, but the outdoor clue showed ____________________, so the new errand became ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one setting detail that tells where the clerk is standing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: draw a small box around your favorite clue word and copy it here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, turn the errand clue into a two-sentence story about ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 3 | Ages 7-9 | pattern noticing</div>
+      <h2>Pocket Park Pattern Board</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the page, use a clipboard if available, and choose a calm patch where the child can see repeated details without moving far.</p>
+      <p class="kid-direction">Look for a pattern: same shape, same color, same spacing, or a repeated sound. Then pretend it belongs on the Pocket Park board.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>A pattern I noticed is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>The pattern repeats like ____________________, changes near ____________________, and makes the park feel ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>On the Pocket Park board, someone left a pretend note that said the pattern of ____________________ was a secret story clue.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>I saw ____________________. It repeated when ____________________. My character used the pattern to decide ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Circle the plainest word in your story and replace it with a clearer pattern word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: make three tiny marks for the pattern, then name it here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, ask someone to guess which pattern started the story: ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 4 | Ages 7-9 | sequence path</div>
+      <h2>Button Bakery Direction Mix-Up</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the page, bring one pencil, and choose an outdoor spot with three visible features such as a bench, planter, and tree.</p>
+      <p class="kid-direction">Pretend the Button Bakery note got mixed up. Use three things you can see to build the order of the story.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>Thing one I see is ____________________, thing two is ____________________, and thing three is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>My three story moments feel like quiet ____________________, silly ____________________, and surprising ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>In Button Bakery, a mixed-up note sent the helper from ____________________ to ____________________ before the true clue appeared.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>First ____________________. Next ____________________. Finally ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one why word so the order makes sense: because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: number three outdoor details, then write the one that starts the story: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, retell how the Button Bakery helper fixed the mix-up with ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 5 | Ages 7-9 | safe observation</div>
+      <h2>Harbor Picnic Clue Page</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one page, choose a calm outdoor view, and remind the kid to look only and stay with the grown-up.</p>
+      <p class="kid-direction">Find three broad clues you can see or hear, then pretend one belongs in Spoon Ferry Lunchbox Harbor.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>I notice a tiny harbor clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>Collect three safe details: color ____________________, shape ____________________, sound ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>A lunchbox ferry captain finds ____________________ beside the pretend dock.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>First ____________________, then ____________________, so the captain decides ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one clearer color, size, or sound to the quietest sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet version: whisper your detail to the grown-up, then write one word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, turn your best outdoor clue into one story sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 6 | Ages 7-9 | setting detail</div>
+      <h2>Compass Shop Detail Page</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the page and choose a safe standing spot with a clear view of sky, ground, plants, or garden edges.</p>
+      <p class="kid-direction">Look for details that could belong in Penny Path Compass Shop, then write them as setting clues.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>The compass shop window might show ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>Setting bank: color clue ____________________, line clue ____________________, tiny sound ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>A pocket compass refuses to point until the shopkeeper notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>The shopkeeper sees ____________________, wonders ____________________, and chooses ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Replace one plain word with a sharper outdoor detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet version: choose one clue silently and write it here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, use your compass clue to open a two-sentence story: ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 7 | Ages 8-10 | pattern noticing</div>
+      <h2>Greenhouse Gear Pattern Page</h2>
+      <figure>
+        <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+        <figcaption>Greenhouse Gear Garden</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one page, choose a garden view or porch view, and keep the activity looking only.</p>
+      <p class="kid-direction">Find something that repeats in shape, color, spacing, or sound, then turn that pattern into a story clue.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>I notice something that repeats: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>Pattern bank: shape ____________________, color ____________________, spacing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>A tiny greenhouse machine begins humming when ____________________ repeats three times.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>First the pattern is ____________________, next it changes to ____________________, finally the helper writes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one more pattern detail to the sentence that feels too plain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet version: choose one repeating thing silently and write it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, use your pattern as the secret signal in a garden story: ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 8 | Ages 8-10 | sequence path</div>
+      <h2>Rain Gauge Railway Step Page</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the page and choose a dry, calm viewing spot after light rain or during a normal outdoor walk.</p>
+      <p class="kid-direction">Pick three visible clues and pretend each one is a tiny railway stop in order.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>The first rain-gauge clue I notice is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>Sequence bank: first clue ____________________, next clue ____________________, last clue ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>A railway conductor&#39;s rain gauge clicks when ____________________ appears beside the track.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>First ____________________, next ____________________, after that ____________________, so the train helper ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one sound or movement word to the middle step: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet version: tap each step on the page, then write the final clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, write a three-step railway scene from broad outdoor clues: ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 9 | Ages 8-10 | setting detail</div>
+      <h2>Seed Shelf Clue Catalog</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print one page, bring a pencil, and choose a safe familiar outdoor area. Remind the child to observe with eyes and ears only, then use invented story labels.</p>
+      <p class="kid-direction">Stand with your adult and choose three broad nature details. Pretend they belong in a tiny seed library that needs one new story clue.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>I notice one tiny shape, color, or sound near the seed shelf: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>Three field details I can borrow for my story are ____________________, ____________________, and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>A careful keeper finds a seed packet labeled with this mystery: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>First the keeper notices ____________________; next the room changes by ____________________; then the keeper writes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one stronger setting detail to show where the seed clue rests: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: circle one detail and copy it into a whisper-small story line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, turn your best field detail into the first line of a seed-library tale: ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 10 | Ages 8-10 | pattern noticing</div>
+      <h2>Moss Signal Pattern Watch</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the field note and choose a quiet observation spot with clear adult boundaries. Use broad labels and keep hands to yourself.</p>
+      <p class="kid-direction">Look for a pattern that repeats, almost repeats, or changes suddenly. Turn that pattern into a secret observatory message.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>I notice a repeating shape or color pattern that looks like ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>My pattern bank has tiny dots ____________________, soft lines ____________________, and a surprise gap ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>The observatory receives a soft message that repeats this clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>First the message appears as ____________________; next it repeats near ____________________; then my character understands ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Revise one plain detail by adding pattern words such as speckled, lined, clustered, or faded: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: point silently to one pattern, then write the message it might mean: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, make the pattern become a clue in a short observatory scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 11 | Ages 8-10 | sequence path</div>
+      <h2>Sun Patch Scene Steps</h2>
+      <figure>
+        <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+        <figcaption>Solar Oven Picnic Station</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the page, bring a pencil, and choose an adult-approved spot. This is a looking-and-writing activity with no heat tools.</p>
+      <p class="kid-direction">Pick one object to become the station&#39;s important story prop. Notice what is beside it, above it, and changed around it.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>I notice the sun-and-shade line sits beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>Object detail: ____________________; texture detail: ____________________; shadow shape: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>A station helper sets down a harmless story object that changes when the light moves: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>Start with ____________________; after a small change, add ____________________; end when the character decides ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Add one when-word or after-word so the scene happens in a clearer order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: draw three tiny boxes, then write only the middle scene step: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, rewrite the scene as a three-step mini adventure: ____________________.</p>
+    </section>
+
+    <section class="pack-page field-note-page">
+      <div class="page-kicker">Field Note 12 | Ages 10-11 | revision detail</div>
+      <h2>Compass Academy Revision Lab</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the note and mark a calm standing area. The writer stays with the adult and uses pointing, noticing, and pencil work only.</p>
+      <p class="kid-direction">Choose one direction clue from what you can safely see. Use it to revise a plain sentence into a sharper story moment.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Notice</h3>
+      <p>From one safe standing spot, I notice a left, right, front, or back detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail bank</h3>
+      <p>Direction word: ____________________; object clue: ____________________; mood word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Story seed</h3>
+      <p>A trainee at the academy fixes a confusing clue by adding this direction detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence path</h3>
+      <p>Plain line: The helper went over there. Better line: The helper turned toward ____________________ because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision nudge</h3>
+      <p>Replace one vague word with a clearer direction or distance word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: revise only one sentence silently and underline the clearer clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">At home, use your revised clue as the turning point in a compass-academy scene: ____________________.</p>
+    </section>
+  </body>
+</html>

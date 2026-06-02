@@ -51,6 +51,7 @@ npm run image:batch19
 npm run image:batch20
 npm run image:batch21
 npm run image:batch22
+npm run image:batch23
 ```
 
 ## Build Product Artifacts
@@ -73,6 +74,7 @@ npm run product:museum-day-kit
 npm run product:family-game-night-deck
 npm run product:grandparent-visit-kit
 npm run product:thank-you-postcard-pack
+npm run product:nature-walk-kit
 ```
 
 ## Safety
