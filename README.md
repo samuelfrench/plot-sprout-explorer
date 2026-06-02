@@ -38,6 +38,15 @@ Uses local SDXL on the RTX 4090. No cloud image service.
 
 ```bash
 npm run image:starter -- --only moon-muffin-market
+npm run image:batch7
+```
+
+## Build Product Artifact
+
+Builds the provider-upload-ready Rainy Day Story Quest Pack PDF, source HTML, manifest, and ZIP. This is a local/manual product-build step and must not be scheduled in GitHub Actions.
+
+```bash
+npm run product:rainy-day-pack
 ```
 
 ## Safety

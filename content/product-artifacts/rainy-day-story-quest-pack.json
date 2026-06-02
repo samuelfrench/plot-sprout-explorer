@@ -1,0 +1,553 @@
+{
+  "batchId": "2026-06-02-batch7",
+  "generatedAt": "2026-06-02",
+  "productSlug": "rainy-day-story-quest-pack",
+  "title": "Rainy Day Story Quest Pack",
+  "pricePoint": "$9",
+  "audience": "Parents, homeschool families, tutors, and elementary teachers working with reluctant writers ages 7-11.",
+  "sessionLength": "35-45 minutes",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/rainy-day-story-quest-pack/Rainy-Day-Story-Quest-Pack.pdf",
+    "zipPath": "product-build/rainy-day-story-quest-pack/rainy-day-story-quest-pack.zip",
+    "sourceHtmlPath": "product-build/rainy-day-story-quest-pack/source/rainy-day-story-quest-pack.html",
+    "manifestPath": "product-build/rainy-day-story-quest-pack/manifest.json"
+  },
+  "worldSlugs": [
+    "teacup-town-weather-window",
+    "rain-gauge-railway",
+    "spoon-ferry-lunchbox-harbor",
+    "rain-boot-route-rangers"
+  ],
+  "cover": {
+    "kicker": "Printable rainy-day writing quest",
+    "headline": "Rainy Day Story Quest Pack",
+    "subhead": "Four tiny weather worlds help kids map, speak, describe, build sentences, choose a kind ending, and finish one short story without staring at a blank page.",
+    "included": [
+      "Rainy-day route map with dry-path choices",
+      "Tiny forecast cards for Teacup Town",
+      "Puddle reflection description page",
+      "Snack delivery dialogue sheet",
+      "Weather clue sentence builder",
+      "Kind ending choice cards",
+      "Parent and teacher guide for a 35-minute writing session"
+    ]
+  },
+  "adultGuide": {
+    "setup": [
+      "Print the pack single-sided so kids can spread pages out and point before writing.",
+      "Choose one pencil, one crayon or highlighter, and one quiet spot near a window if possible.",
+      "Keep the session offline with no accounts, no uploads, and no public sharing.",
+      "Let the child skip one page and return to it after the final story draft."
+    ],
+    "sessionFlow": [
+      {
+        "minutes": "0-5",
+        "title": "Pick the world",
+        "instruction": "Read the cover and let the child choose the first world by pointing, circling, or saying the title aloud."
+      },
+      {
+        "minutes": "5-12",
+        "title": "Map the route",
+        "instruction": "Use the route map to choose where the hero starts, stops, and notices one weather clue."
+      },
+      {
+        "minutes": "12-22",
+        "title": "Gather words",
+        "instruction": "Complete the forecast, description, dialogue, or sentence page before asking for full paragraphs."
+      },
+      {
+        "minutes": "22-35",
+        "title": "Draft the story",
+        "instruction": "Move selected words and sentences onto the final story page in beginning, middle, and ending order."
+      },
+      {
+        "minutes": "35-45",
+        "title": "Share and revise",
+        "instruction": "Ask the child to read one favorite sentence and add one clearer detail, label, or speech line."
+      }
+    ],
+    "supportMoves": [
+      "Offer two choices instead of asking an open question when the child gets stuck.",
+      "Let the child draw or label first, then turn one label into a sentence together.",
+      "Write down the child's spoken sentence exactly once, then ask them to copy or improve one word.",
+      "Use a timer for a short writing burst, but stop before the page feels crowded.",
+      "Praise a concrete move such as a clear clue, polite dialogue line, or useful map label."
+    ],
+    "extensionIdeas": [
+      "Turn the forecast cards into a second story set on a sunny day.",
+      "Use a measuring cup or real rain gauge to add one true weather note.",
+      "Let two children write different endings from the same map.",
+      "Staple the final story behind the favorite planning page for a small portfolio piece."
+    ]
+  },
+  "pages": [
+    {
+      "id": "pack-overview",
+      "title": "Start Here: Rainy Day Quest",
+      "worldSlug": "overview",
+      "type": "adult-guide",
+      "kidDirection": "Circle one world you want to visit first.",
+      "adultNote": "Use this overview to make the session feel small and choice-based.",
+      "sections": [
+        {
+          "heading": "Choose a Quest World",
+          "lines": [
+            "Teacup Town Weather Window: forecast clues in a tiny teacup.",
+            "Rain Gauge Railway: water samples, garden posts, and train switches.",
+            "Spoon Ferry Lunchbox Harbor: snack orders and polite dock talk.",
+            "Rain Boot Route Rangers: puddle maps and dry delivery paths."
+          ]
+        },
+        {
+          "heading": "Your First Pick",
+          "lines": [
+            "World I choose: ____________________________",
+            "Hero I choose: ____________________________",
+            "One weather clue I notice: ____________________________"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "adult-session-guide",
+      "title": "Adult Guide: 35-Minute Session",
+      "worldSlug": "overview",
+      "type": "adult-guide",
+      "kidDirection": "Ask your adult to read the first step aloud.",
+      "adultNote": "Run the pages as short stations, not as a test.",
+      "sections": [
+        {
+          "heading": "Low-Pressure Order",
+          "lines": [
+            "1. Pick one world.",
+            "2. Point to a map spot.",
+            "3. Circle three useful words.",
+            "4. Write one speech line.",
+            "5. Finish one short story."
+          ]
+        },
+        {
+          "heading": "When Writing Slows Down",
+          "lines": [
+            "Offer: draw it, label it, or say it first.",
+            "Prompt: Which clue helps the hero next?",
+            "Prompt: What would the helper say politely?",
+            "Stop after one clear ending."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rain-boot-route-map",
+      "title": "Rain Boot Route Map",
+      "worldSlug": "rain-boot-route-rangers",
+      "type": "map",
+      "kidDirection": "Draw a dry path through the rain boot route office.",
+      "adultNote": "Let the child solve the route by drawing arrows before writing sentences.",
+      "sections": [
+        {
+          "heading": "Map Stops",
+          "lines": [
+            "Start: heel desk",
+            "Stop 1: tiny umbrella stand",
+            "Stop 2: puddle mirror",
+            "Stop 3: nearby shop door",
+            "Finish: dry delivery shelf"
+          ]
+        },
+        {
+          "heading": "Route Choices",
+          "lines": [
+            "My safest dry path goes from ____________________________ to ____________________________.",
+            "The sliding raindrop map shows ____________________________.",
+            "The hero changes the route by ____________________________."
+          ]
+        },
+        {
+          "heading": "Map Labels",
+          "lines": [
+            "Boot-lace handrail",
+            "Leaf card",
+            "Snack crate",
+            "Mail pouch",
+            "Puddle reflection clue"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "teacup-forecast-cards",
+      "title": "Tiny Forecast Cards",
+      "worldSlug": "teacup-town-weather-window",
+      "type": "cards",
+      "kidDirection": "Fill in four tiny forecast cards for Teacup Town.",
+      "adultNote": "Cut the cards apart or let the child number them in story order.",
+      "sections": [
+        {
+          "heading": "Forecast Card 1",
+          "lines": [
+            "Weather clue: ____________________________",
+            "Shop that needs it: ____________________________",
+            "Helpful supply: ____________________________"
+          ]
+        },
+        {
+          "heading": "Forecast Card 2",
+          "lines": [
+            "Weather clue: ____________________________",
+            "Shop that needs it: ____________________________",
+            "Helpful supply: ____________________________"
+          ]
+        },
+        {
+          "heading": "Forecast Card 3",
+          "lines": [
+            "Weather clue: ____________________________",
+            "Shop that needs it: ____________________________",
+            "Helpful supply: ____________________________"
+          ]
+        },
+        {
+          "heading": "Forecast Card 4",
+          "lines": [
+            "Weather clue: ____________________________",
+            "Shop that needs it: ____________________________",
+            "Helpful supply: ____________________________"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rain-gauge-railway-switches",
+      "title": "Rain Gauge Railway Switches",
+      "worldSlug": "rain-gauge-railway",
+      "type": "worksheet",
+      "kidDirection": "Match each railway switch to the garden spot that needs the rain sample.",
+      "adultNote": "Keep the focus on clear sequencing and simple cause-and-effect writing.",
+      "sections": [
+        {
+          "heading": "Railway Clues",
+          "lines": [
+            "Rain tube amount: ____________________________",
+            "Ticket stamp: ____________________________",
+            "Wrong stop: ____________________________",
+            "Right stop: ____________________________"
+          ]
+        },
+        {
+          "heading": "Switch Notes",
+          "lines": [
+            "The train first goes to ____________________________.",
+            "The sample should go to ____________________________.",
+            "The hero checks the timetable because ____________________________.",
+            "One weather flag says ____________________________."
+          ]
+        },
+        {
+          "heading": "Garden Posts",
+          "lines": [
+            "Shade garden",
+            "Vegetable bed",
+            "Tomato cage flags",
+            "Mulch bridge",
+            "Cloud note station"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lunchbox-harbor-dialogue",
+      "title": "Snack Delivery Dialogue",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "type": "worksheet",
+      "kidDirection": "Write polite dockside dialogue that clears up a snack order.",
+      "adultNote": "Model one line aloud, then let the child complete the rest with short speech lines.",
+      "sections": [
+        {
+          "heading": "Who Is Talking",
+          "lines": [
+            "Spoon ferry order taker: ____________________________",
+            "Cracker cafe helper: ____________________________",
+            "Ferry cook: ____________________________"
+          ]
+        },
+        {
+          "heading": "Dialogue Lines",
+          "lines": [
+            "Order taker: \"Do you mean ____________________________?\"",
+            "Cafe helper: \"Please bring ____________________________.\"",
+            "Ferry cook: \"I can make it clearer by ____________________________.\"",
+            "Order taker: \"Thank you, I will write ____________________________.\""
+          ]
+        },
+        {
+          "heading": "Menu Fix",
+          "lines": [
+            "Unclear snack word: ____________________________",
+            "Clearer menu words: ____________________________",
+            "Next ferry stop: ____________________________"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "puddle-reflection-description",
+      "title": "Puddle Reflection Description",
+      "worldSlug": "rain-boot-route-rangers",
+      "type": "reflection",
+      "kidDirection": "Describe what the puddle mirror shows before the next delivery.",
+      "adultNote": "Ask for sensory details from the page, not a long paragraph.",
+      "sections": [
+        {
+          "heading": "Look Closely",
+          "lines": [
+            "In the puddle I see ____________________________.",
+            "The reflection looks bright, dim, wavy, or clear: ____________________________.",
+            "The nearby shop door has ____________________________.",
+            "The dry path turns near ____________________________."
+          ]
+        },
+        {
+          "heading": "Three Detail Words",
+          "lines": [
+            "Color word: ____________________________",
+            "Shape word: ____________________________",
+            "Weather word: ____________________________"
+          ]
+        },
+        {
+          "heading": "Description Sentence",
+          "lines": [
+            "The puddle mirror shows ____________________________ while ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "weather-clue-sentence-builder",
+      "title": "Weather Clue Sentence Builder",
+      "worldSlug": "teacup-town-weather-window",
+      "type": "worksheet",
+      "kidDirection": "Build three sentences from Teacup Town weather clues.",
+      "adultNote": "Point to one column at a time so the child can assemble sentences without guessing.",
+      "sections": [
+        {
+          "heading": "Choose a Hero",
+          "lines": [
+            "The teaspoon weather watcher",
+            "The sugar-cube sign painter",
+            "The tiny umbrella shop helper",
+            "My own hero: ____________________________"
+          ]
+        },
+        {
+          "heading": "Choose an Action",
+          "lines": [
+            "checks the spoon-shaped window",
+            "moves a forecast card",
+            "labels the sugar-cube bench",
+            "asks each shop for one clue"
+          ]
+        },
+        {
+          "heading": "Choose a Detail",
+          "lines": [
+            "because steam clouds look like commas.",
+            "when toast-scented fog fills the cup.",
+            "after drizzle taps the umbrella shop.",
+            "before the picnic cart opens."
+          ]
+        },
+        {
+          "heading": "My Sentences",
+          "lines": [
+            "1. ____________________________",
+            "2. ____________________________",
+            "3. ____________________________"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "railway-weather-report",
+      "title": "Railway Weather Report",
+      "worldSlug": "rain-gauge-railway",
+      "type": "prompt",
+      "kidDirection": "Write a short weather report from the railway conductor's view.",
+      "adultNote": "Treat this as a four-sentence bridge between planning and the final story.",
+      "sections": [
+        {
+          "heading": "Report Notes",
+          "lines": [
+            "Today the rain gauge shows ____________________________.",
+            "The train carries ____________________________.",
+            "The switch sends the sample to ____________________________.",
+            "The garden really needs ____________________________."
+          ]
+        },
+        {
+          "heading": "Four-Sentence Report",
+          "lines": [
+            "Sentence 1: ____________________________",
+            "Sentence 2: ____________________________",
+            "Sentence 3: ____________________________",
+            "Sentence 4: ____________________________"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "snack-delivery-story-plan",
+      "title": "Snack Delivery Story Plan",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "type": "worksheet",
+      "kidDirection": "Plan the beginning, middle, and ending of a spoon ferry delivery.",
+      "adultNote": "Use this page if the child prefers lunchbox details over weather measurements.",
+      "sections": [
+        {
+          "heading": "Beginning",
+          "lines": [
+            "The hero boards the spoon ferry with ____________________________.",
+            "The lunchbox harbor looks like ____________________________.",
+            "The first cafe asks for ____________________________."
+          ]
+        },
+        {
+          "heading": "Middle",
+          "lines": [
+            "The unclear snack word is ____________________________.",
+            "The hero asks ____________________________.",
+            "The clearer order says ____________________________."
+          ]
+        },
+        {
+          "heading": "Ending",
+          "lines": [
+            "The ferry delivers ____________________________.",
+            "The menu card is fixed by ____________________________.",
+            "One kind final line is ____________________________."
+          ]
+        }
+      ]
+    },
+    {
+      "id": "kind-ending-choice-cards",
+      "title": "Kind Ending Choice Cards",
+      "worldSlug": "overview",
+      "type": "cards",
+      "kidDirection": "Choose one ending card and add it to your story plan.",
+      "adultNote": "Offer two cards at a time if all four choices feel like too much.",
+      "sections": [
+        {
+          "heading": "Ending Card A",
+          "lines": [
+            "The hero invites each shop to add one helpful clue.",
+            "Best for: Teacup Town Weather Window.",
+            "My ending detail: ____________________________"
+          ]
+        },
+        {
+          "heading": "Ending Card B",
+          "lines": [
+            "The hero maps the railway route with clearer labels.",
+            "Best for: Rain Gauge Railway.",
+            "My ending detail: ____________________________"
+          ]
+        },
+        {
+          "heading": "Ending Card C",
+          "lines": [
+            "The hero rewrites the menu so every cafe understands.",
+            "Best for: Spoon Ferry Lunchbox Harbor.",
+            "My ending detail: ____________________________"
+          ]
+        },
+        {
+          "heading": "Ending Card D",
+          "lines": [
+            "The hero copies the dry route onto leaf cards.",
+            "Best for: Rain Boot Route Rangers.",
+            "My ending detail: ____________________________"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "final-rainy-day-story",
+      "title": "Final Rainy Day Story",
+      "worldSlug": "overview",
+      "type": "worksheet",
+      "kidDirection": "Use your favorite planning page to write one complete rainy-day story.",
+      "adultNote": "Accept a short complete story and ask for only one revision pass.",
+      "sections": [
+        {
+          "heading": "Title",
+          "lines": [
+            "My story title: ____________________________"
+          ]
+        },
+        {
+          "heading": "Beginning",
+          "lines": [
+            "My hero is ____________________________.",
+            "The rainy-day world is ____________________________.",
+            "The first clue is ____________________________."
+          ]
+        },
+        {
+          "heading": "Middle",
+          "lines": [
+            "The route, order, forecast, or sample gets mixed up when ____________________________.",
+            "My hero asks or notices ____________________________.",
+            "A helper says, \"____________________________.\""
+          ]
+        },
+        {
+          "heading": "Ending",
+          "lines": [
+            "My hero chooses to ____________________________.",
+            "The world is easier to understand because ____________________________.",
+            "My favorite final sentence: ____________________________"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "bonus-rainy-day-extension",
+      "title": "Bonus: Try the Quest Again",
+      "worldSlug": "rain-gauge-railway",
+      "type": "worksheet",
+      "kidDirection": "Change one small detail and make a new mini quest.",
+      "adultNote": "Use this as an optional second-day page or a fast finisher station.",
+      "sections": [
+        {
+          "heading": "Change One Thing",
+          "lines": [
+            "New weather clue: ____________________________",
+            "New route stop: ____________________________",
+            "New helper: ____________________________",
+            "New ending choice: ____________________________"
+          ]
+        },
+        {
+          "heading": "Mini Quest Cards",
+          "lines": [
+            "Teacup Town: move one forecast card to a new pocket.",
+            "Rain Gauge Railway: send one sample to a different garden post.",
+            "Lunchbox Harbor: rewrite one menu word so it is clearer.",
+            "Rain Boot Rangers: copy one sliding path onto a leaf card."
+          ]
+        },
+        {
+          "heading": "Three-Line Story",
+          "lines": [
+            "First: ____________________________",
+            "Next: ____________________________",
+            "Last: ____________________________"
+          ]
+        }
+      ]
+    }
+  ]
+}

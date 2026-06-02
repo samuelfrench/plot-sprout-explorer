@@ -1,0 +1,735 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rainy Day Story Quest Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.38in; }
+      :root {
+        --ink: #17343a;
+        --muted: #52656b;
+        --paper: #fffdf6;
+        --line: #9fcac4;
+        --rain: #2b7f92;
+        --sun: #f2c14f;
+        --coral: #e96d3d;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 14px;
+        line-height: 1.35;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        background: var(--paper);
+      }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 {
+        font-family: Georgia, Times New Roman, serif;
+        line-height: 1.02;
+      }
+      h1 { max-width: 12ch; font-size: 48px; }
+      h2 { font-size: 28px; }
+      h3 { font-size: 15px; }
+      p, li { color: var(--muted); }
+      img {
+        display: block;
+        max-width: 100%;
+        border: 1px solid var(--line);
+      }
+      .pack-page {
+        height: 9.2in;
+        padding: 0.14in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(43, 127, 146, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(43, 127, 146, 0.08) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page {
+        display: grid;
+        grid-template-columns: 1fr 2.1in;
+        gap: 0.25in;
+        align-items: start;
+      }
+      .kicker, .page-kicker, .world-intro span {
+        color: var(--rain);
+        font-size: 11px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.86in;
+        min-height: 0.52in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        color: var(--ink);
+        font-size: 22px;
+        font-weight: 900;
+      }
+      .included-grid, .world-grid, .support-grid {
+        display: grid;
+        gap: 0.12in;
+      }
+      .included-grid {
+        grid-template-columns: 1fr;
+      }
+      .world-grid, .support-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+      .included-grid li, .support-grid li {
+        min-height: 0.46in;
+        padding: 0.08in;
+        border: 1px solid var(--line);
+        background: white;
+        list-style: none;
+      }
+      .world-intro {
+        display: grid;
+        grid-template-columns: 1.35in 1fr;
+        gap: 0.12in;
+        min-height: 1.22in;
+        padding: 0.1in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .world-intro img {
+        width: 1.35in;
+        height: 0.78in;
+        object-fit: cover;
+      }
+      .image-placeholder {
+        width: 1.35in;
+        height: 0.78in;
+        border: 1px dashed var(--line);
+        background: #e8f6f1;
+      }
+      .guide-columns {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.14in;
+      }
+      .guide-box, .worksheet-section, .kid-direction, .adult-note {
+        padding: 0.09in;
+        border: 1px solid var(--line);
+        background: white;
+      }
+      .kid-direction {
+        color: var(--ink);
+        font-weight: 900;
+      }
+      .adult-note {
+        border-color: #e5bc7c;
+        background: #fff4dc;
+      }
+      figure {
+        float: right;
+        width: 1.86in;
+        margin: 0 0 0.08in 0.14in;
+      }
+      figure img {
+        width: 1.86in;
+        height: 1.04in;
+        object-fit: cover;
+      }
+      figcaption {
+        color: var(--muted);
+        font-size: 10px;
+      }
+      .worksheet-section {
+        margin-top: 0.08in;
+      }
+      .worksheet-sections {
+        clear: both;
+      }
+      .dense-page .worksheet-sections {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 0.08in;
+      }
+      .dense-page .worksheet-section {
+        margin-top: 0;
+      }
+      .write-line {
+        min-height: 0.2in;
+        margin-bottom: 0.045in;
+        padding-bottom: 0.04in;
+        border-bottom: 1px solid var(--line);
+        color: var(--ink);
+      }
+      .footer-note {
+        margin-top: 0.1in;
+        padding-top: 0.1in;
+        border-top: 2px solid var(--sun);
+        color: var(--muted);
+        font-size: 11px;
+      }
+      .guide-page {
+        font-size: 11.5px;
+      }
+      .guide-page h2 {
+        font-size: 26px;
+      }
+      .guide-page h3 {
+        margin-bottom: 0.04in;
+      }
+      .guide-page .footer-note {
+        margin-top: 0.06in;
+        padding-top: 0.06in;
+        font-size: 10px;
+      }
+      .guide-page .world-grid {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        gap: 0.06in;
+      }
+      .guide-page .world-intro {
+        display: block;
+        min-height: auto;
+        padding: 0.07in;
+      }
+      .guide-page .world-intro img {
+        display: none;
+      }
+      .guide-page .world-intro p {
+        margin-bottom: 0;
+        font-size: 10px;
+        line-height: 1.22;
+      }
+      .guide-page .support-grid li {
+        min-height: auto;
+        padding: 0.055in;
+        font-size: 10.5px;
+        line-height: 1.22;
+      }
+      @media screen {
+        body { padding: 24px; background: #dfeee7; }
+        .pack-page {
+          width: 8.5in;
+          margin: 0 auto 24px;
+          box-shadow: 0 18px 40px rgba(20, 31, 43, 0.18);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable rainy-day writing quest</p>
+        <h1>Rainy Day Story Quest Pack</h1>
+        <p>Four tiny weather worlds help kids map, speak, describe, build sentences, choose a kind ending, and finish one short story without staring at a blank page.</p>
+        <div class="badge">$9</div>
+        <p><strong>Best for:</strong> Parents, homeschool families, tutors, and elementary teachers working with reluctant writers ages 7-11.</p>
+        <p><strong>Session:</strong> 35-45 minutes</p>
+        <p>No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.</p>
+      </div>
+      <div>
+        <h2>Inside</h2>
+        <ul class="included-grid"><li>Rainy-day route map with dry-path choices</li>
+<li>Tiny forecast cards for Teacup Town</li>
+<li>Puddle reflection description page</li>
+<li>Snack delivery dialogue sheet</li>
+<li>Weather clue sentence builder</li>
+<li>Kind ending choice cards</li>
+<li>Parent and teacher guide for a 35-minute writing session</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult setup guide</p>
+      <h2>Run the rainy-day session</h2>
+      <div class="guide-columns">
+        <div class="guide-box">
+          <h3>Setup</h3>
+          <ol><li>Print the pack single-sided so kids can spread pages out and point before writing.</li>
+<li>Choose one pencil, one crayon or highlighter, and one quiet spot near a window if possible.</li>
+<li>Keep the session offline with no accounts, no uploads, and no public sharing.</li>
+<li>Let the child skip one page and return to it after the final story draft.</li></ol>
+        </div>
+        <div class="guide-box">
+          <h3>Session flow</h3>
+          <ol>
+        <li>
+          <strong>0-5 min | Pick the world:</strong>
+          Read the cover and let the child choose the first world by pointing, circling, or saying the title aloud.
+        </li>
+
+        <li>
+          <strong>5-12 min | Map the route:</strong>
+          Use the route map to choose where the hero starts, stops, and notices one weather clue.
+        </li>
+
+        <li>
+          <strong>12-22 min | Gather words:</strong>
+          Complete the forecast, description, dialogue, or sentence page before asking for full paragraphs.
+        </li>
+
+        <li>
+          <strong>22-35 min | Draft the story:</strong>
+          Move selected words and sentences onto the final story page in beginning, middle, and ending order.
+        </li>
+
+        <li>
+          <strong>35-45 min | Share and revise:</strong>
+          Ask the child to read one favorite sentence and add one clearer detail, label, or speech line.
+        </li></ol>
+        </div>
+      </div>
+      <h3>World menu</h3>
+      <div class="world-grid">
+    <article class="world-intro">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <div>
+        <span>Ages 7-8</span>
+        <h3>Teacup Town Weather Window</h3>
+        <p>Inside a blue teacup, a tiny town checks the weather through a spoon-shaped window and plans errands around drizzle, sunbeams, and toast-scented fog.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <div>
+        <span>Ages 8-10</span>
+        <h3>Rain Gauge Railway</h3>
+        <p>A tiny railway crosses a backyard weather station, carrying raindrop samples, cloud notes, and garden alerts between labeled posts after every shower.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Spoon Ferry Lunchbox Harbor</h3>
+        <p>At Lunchbox Harbor, spoon ferries carry menu cards, snack orders, and polite dockside dialogue between tiny cracker cafes.</p>
+      </div>
+    </article>
+
+    <article class="world-intro">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <div>
+        <span>Ages 7-9</span>
+        <h3>Rain Boot Route Rangers</h3>
+        <p>A pair of rain boots becomes a traveling route office whenever puddles appear, helping tiny shopkeepers choose dry paths for deliveries.</p>
+      </div>
+    </article></div>
+      <h3>Support moves</h3>
+      <ul class="support-grid"><li>Offer two choices instead of asking an open question when the child gets stuck.</li>
+<li>Let the child draw or label first, then turn one label into a sentence together.</li>
+<li>Write down the child&#39;s spoken sentence exactly once, then ask them to copy or improve one word.</li>
+<li>Use a timer for a short writing burst, but stop before the page feels crowded.</li>
+<li>Praise a concrete move such as a clear clue, polite dialogue line, or useful map label.</li></ul>
+      <h3>Extension ideas</h3>
+      <ul class="support-grid"><li>Turn the forecast cards into a second story set on a sunny day.</li>
+<li>Use a measuring cup or real rain gauge to add one true weather note.</li>
+<li>Let two children write different endings from the same map.</li>
+<li>Staple the final story behind the favorite planning page for a small portfolio piece.</li></ul>
+      <p class="footer-note">Use these pages offline. The pack is designed for adult-guided writing practice with no accounts, no uploads, and no public sharing.</p>
+    </section>
+    
+    <section class="pack-page worksheet-page">
+      <div class="page-kicker">Page 1 | adult-guide</div>
+      <h2>Start Here: Rainy Day Quest</h2>
+      
+      <p class="kid-direction">Circle one world you want to visit first.</p>
+      <p class="adult-note">Use this overview to make the session feel small and choice-based.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Choose a Quest World</h3>
+          <p class="write-line">Teacup Town Weather Window: forecast clues in a tiny teacup.</p>
+<p class="write-line">Rain Gauge Railway: water samples, garden posts, and train switches.</p>
+<p class="write-line">Spoon Ferry Lunchbox Harbor: snack orders and polite dock talk.</p>
+<p class="write-line">Rain Boot Route Rangers: puddle maps and dry delivery paths.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Your First Pick</h3>
+          <p class="write-line">World I choose: ____________________________</p>
+<p class="write-line">Hero I choose: ____________________________</p>
+<p class="write-line">One weather clue I notice: ____________________________</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page">
+      <div class="page-kicker">Page 2 | adult-guide</div>
+      <h2>Adult Guide: 35-Minute Session</h2>
+      
+      <p class="kid-direction">Ask your adult to read the first step aloud.</p>
+      <p class="adult-note">Run the pages as short stations, not as a test.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Low-Pressure Order</h3>
+          <p class="write-line">1. Pick one world.</p>
+<p class="write-line">2. Point to a map spot.</p>
+<p class="write-line">3. Circle three useful words.</p>
+<p class="write-line">4. Write one speech line.</p>
+<p class="write-line">5. Finish one short story.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>When Writing Slows Down</h3>
+          <p class="write-line">Offer: draw it, label it, or say it first.</p>
+<p class="write-line">Prompt: Which clue helps the hero next?</p>
+<p class="write-line">Prompt: What would the helper say politely?</p>
+<p class="write-line">Stop after one clear ending.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page">
+      <div class="page-kicker">Page 3 | map</div>
+      <h2>Rain Boot Route Map</h2>
+      <figure><img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration"><figcaption>Rain Boot Route Rangers</figcaption></figure>
+      <p class="kid-direction">Draw a dry path through the rain boot route office.</p>
+      <p class="adult-note">Let the child solve the route by drawing arrows before writing sentences.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Map Stops</h3>
+          <p class="write-line">Start: heel desk</p>
+<p class="write-line">Stop 1: tiny umbrella stand</p>
+<p class="write-line">Stop 2: puddle mirror</p>
+<p class="write-line">Stop 3: nearby shop door</p>
+<p class="write-line">Finish: dry delivery shelf</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Route Choices</h3>
+          <p class="write-line">My safest dry path goes from ____________________________ to ____________________________.</p>
+<p class="write-line">The sliding raindrop map shows ____________________________.</p>
+<p class="write-line">The hero changes the route by ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Map Labels</h3>
+          <p class="write-line">Boot-lace handrail</p>
+<p class="write-line">Leaf card</p>
+<p class="write-line">Snack crate</p>
+<p class="write-line">Mail pouch</p>
+<p class="write-line">Puddle reflection clue</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page dense-page">
+      <div class="page-kicker">Page 4 | cards</div>
+      <h2>Tiny Forecast Cards</h2>
+      <figure><img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration"><figcaption>Teacup Town Weather Window</figcaption></figure>
+      <p class="kid-direction">Fill in four tiny forecast cards for Teacup Town.</p>
+      <p class="adult-note">Cut the cards apart or let the child number them in story order.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Forecast Card 1</h3>
+          <p class="write-line">Weather clue: ____________________________</p>
+<p class="write-line">Shop that needs it: ____________________________</p>
+<p class="write-line">Helpful supply: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Forecast Card 2</h3>
+          <p class="write-line">Weather clue: ____________________________</p>
+<p class="write-line">Shop that needs it: ____________________________</p>
+<p class="write-line">Helpful supply: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Forecast Card 3</h3>
+          <p class="write-line">Weather clue: ____________________________</p>
+<p class="write-line">Shop that needs it: ____________________________</p>
+<p class="write-line">Helpful supply: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Forecast Card 4</h3>
+          <p class="write-line">Weather clue: ____________________________</p>
+<p class="write-line">Shop that needs it: ____________________________</p>
+<p class="write-line">Helpful supply: ____________________________</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page">
+      <div class="page-kicker">Page 5 | worksheet</div>
+      <h2>Rain Gauge Railway Switches</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Match each railway switch to the garden spot that needs the rain sample.</p>
+      <p class="adult-note">Keep the focus on clear sequencing and simple cause-and-effect writing.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Railway Clues</h3>
+          <p class="write-line">Rain tube amount: ____________________________</p>
+<p class="write-line">Ticket stamp: ____________________________</p>
+<p class="write-line">Wrong stop: ____________________________</p>
+<p class="write-line">Right stop: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Switch Notes</h3>
+          <p class="write-line">The train first goes to ____________________________.</p>
+<p class="write-line">The sample should go to ____________________________.</p>
+<p class="write-line">The hero checks the timetable because ____________________________.</p>
+<p class="write-line">One weather flag says ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Garden Posts</h3>
+          <p class="write-line">Shade garden</p>
+<p class="write-line">Vegetable bed</p>
+<p class="write-line">Tomato cage flags</p>
+<p class="write-line">Mulch bridge</p>
+<p class="write-line">Cloud note station</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page">
+      <div class="page-kicker">Page 6 | worksheet</div>
+      <h2>Snack Delivery Dialogue</h2>
+      <figure><img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration"><figcaption>Spoon Ferry Lunchbox Harbor</figcaption></figure>
+      <p class="kid-direction">Write polite dockside dialogue that clears up a snack order.</p>
+      <p class="adult-note">Model one line aloud, then let the child complete the rest with short speech lines.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Who Is Talking</h3>
+          <p class="write-line">Spoon ferry order taker: ____________________________</p>
+<p class="write-line">Cracker cafe helper: ____________________________</p>
+<p class="write-line">Ferry cook: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Dialogue Lines</h3>
+          <p class="write-line">Order taker: &quot;Do you mean ____________________________?&quot;</p>
+<p class="write-line">Cafe helper: &quot;Please bring ____________________________.&quot;</p>
+<p class="write-line">Ferry cook: &quot;I can make it clearer by ____________________________.&quot;</p>
+<p class="write-line">Order taker: &quot;Thank you, I will write ____________________________.&quot;</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Menu Fix</h3>
+          <p class="write-line">Unclear snack word: ____________________________</p>
+<p class="write-line">Clearer menu words: ____________________________</p>
+<p class="write-line">Next ferry stop: ____________________________</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page">
+      <div class="page-kicker">Page 7 | reflection</div>
+      <h2>Puddle Reflection Description</h2>
+      <figure><img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration"><figcaption>Rain Boot Route Rangers</figcaption></figure>
+      <p class="kid-direction">Describe what the puddle mirror shows before the next delivery.</p>
+      <p class="adult-note">Ask for sensory details from the page, not a long paragraph.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Look Closely</h3>
+          <p class="write-line">In the puddle I see ____________________________.</p>
+<p class="write-line">The reflection looks bright, dim, wavy, or clear: ____________________________.</p>
+<p class="write-line">The nearby shop door has ____________________________.</p>
+<p class="write-line">The dry path turns near ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Three Detail Words</h3>
+          <p class="write-line">Color word: ____________________________</p>
+<p class="write-line">Shape word: ____________________________</p>
+<p class="write-line">Weather word: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Description Sentence</h3>
+          <p class="write-line">The puddle mirror shows ____________________________ while ____________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page dense-page">
+      <div class="page-kicker">Page 8 | worksheet</div>
+      <h2>Weather Clue Sentence Builder</h2>
+      <figure><img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration"><figcaption>Teacup Town Weather Window</figcaption></figure>
+      <p class="kid-direction">Build three sentences from Teacup Town weather clues.</p>
+      <p class="adult-note">Point to one column at a time so the child can assemble sentences without guessing.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Choose a Hero</h3>
+          <p class="write-line">The teaspoon weather watcher</p>
+<p class="write-line">The sugar-cube sign painter</p>
+<p class="write-line">The tiny umbrella shop helper</p>
+<p class="write-line">My own hero: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Choose an Action</h3>
+          <p class="write-line">checks the spoon-shaped window</p>
+<p class="write-line">moves a forecast card</p>
+<p class="write-line">labels the sugar-cube bench</p>
+<p class="write-line">asks each shop for one clue</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Choose a Detail</h3>
+          <p class="write-line">because steam clouds look like commas.</p>
+<p class="write-line">when toast-scented fog fills the cup.</p>
+<p class="write-line">after drizzle taps the umbrella shop.</p>
+<p class="write-line">before the picnic cart opens.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>My Sentences</h3>
+          <p class="write-line">1. ____________________________</p>
+<p class="write-line">2. ____________________________</p>
+<p class="write-line">3. ____________________________</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page">
+      <div class="page-kicker">Page 9 | prompt</div>
+      <h2>Railway Weather Report</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Write a short weather report from the railway conductor&#39;s view.</p>
+      <p class="adult-note">Treat this as a four-sentence bridge between planning and the final story.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Report Notes</h3>
+          <p class="write-line">Today the rain gauge shows ____________________________.</p>
+<p class="write-line">The train carries ____________________________.</p>
+<p class="write-line">The switch sends the sample to ____________________________.</p>
+<p class="write-line">The garden really needs ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Four-Sentence Report</h3>
+          <p class="write-line">Sentence 1: ____________________________</p>
+<p class="write-line">Sentence 2: ____________________________</p>
+<p class="write-line">Sentence 3: ____________________________</p>
+<p class="write-line">Sentence 4: ____________________________</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page">
+      <div class="page-kicker">Page 10 | worksheet</div>
+      <h2>Snack Delivery Story Plan</h2>
+      <figure><img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration"><figcaption>Spoon Ferry Lunchbox Harbor</figcaption></figure>
+      <p class="kid-direction">Plan the beginning, middle, and ending of a spoon ferry delivery.</p>
+      <p class="adult-note">Use this page if the child prefers lunchbox details over weather measurements.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Beginning</h3>
+          <p class="write-line">The hero boards the spoon ferry with ____________________________.</p>
+<p class="write-line">The lunchbox harbor looks like ____________________________.</p>
+<p class="write-line">The first cafe asks for ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Middle</h3>
+          <p class="write-line">The unclear snack word is ____________________________.</p>
+<p class="write-line">The hero asks ____________________________.</p>
+<p class="write-line">The clearer order says ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ending</h3>
+          <p class="write-line">The ferry delivers ____________________________.</p>
+<p class="write-line">The menu card is fixed by ____________________________.</p>
+<p class="write-line">One kind final line is ____________________________.</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page dense-page">
+      <div class="page-kicker">Page 11 | cards</div>
+      <h2>Kind Ending Choice Cards</h2>
+      
+      <p class="kid-direction">Choose one ending card and add it to your story plan.</p>
+      <p class="adult-note">Offer two cards at a time if all four choices feel like too much.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Ending Card A</h3>
+          <p class="write-line">The hero invites each shop to add one helpful clue.</p>
+<p class="write-line">Best for: Teacup Town Weather Window.</p>
+<p class="write-line">My ending detail: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ending Card B</h3>
+          <p class="write-line">The hero maps the railway route with clearer labels.</p>
+<p class="write-line">Best for: Rain Gauge Railway.</p>
+<p class="write-line">My ending detail: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ending Card C</h3>
+          <p class="write-line">The hero rewrites the menu so every cafe understands.</p>
+<p class="write-line">Best for: Spoon Ferry Lunchbox Harbor.</p>
+<p class="write-line">My ending detail: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ending Card D</h3>
+          <p class="write-line">The hero copies the dry route onto leaf cards.</p>
+<p class="write-line">Best for: Rain Boot Route Rangers.</p>
+<p class="write-line">My ending detail: ____________________________</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page dense-page">
+      <div class="page-kicker">Page 12 | worksheet</div>
+      <h2>Final Rainy Day Story</h2>
+      
+      <p class="kid-direction">Use your favorite planning page to write one complete rainy-day story.</p>
+      <p class="adult-note">Accept a short complete story and ask for only one revision pass.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Title</h3>
+          <p class="write-line">My story title: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Beginning</h3>
+          <p class="write-line">My hero is ____________________________.</p>
+<p class="write-line">The rainy-day world is ____________________________.</p>
+<p class="write-line">The first clue is ____________________________.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Middle</h3>
+          <p class="write-line">The route, order, forecast, or sample gets mixed up when ____________________________.</p>
+<p class="write-line">My hero asks or notices ____________________________.</p>
+<p class="write-line">A helper says, &quot;____________________________.&quot;</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Ending</h3>
+          <p class="write-line">My hero chooses to ____________________________.</p>
+<p class="write-line">The world is easier to understand because ____________________________.</p>
+<p class="write-line">My favorite final sentence: ____________________________</p>
+        </section></div>
+    </section>
+
+    <section class="pack-page worksheet-page">
+      <div class="page-kicker">Page 13 | worksheet</div>
+      <h2>Bonus: Try the Quest Again</h2>
+      <figure><img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration"><figcaption>Rain Gauge Railway</figcaption></figure>
+      <p class="kid-direction">Change one small detail and make a new mini quest.</p>
+      <p class="adult-note">Use this as an optional second-day page or a fast finisher station.</p>
+      <div class="worksheet-sections">
+        <section class="worksheet-section">
+          <h3>Change One Thing</h3>
+          <p class="write-line">New weather clue: ____________________________</p>
+<p class="write-line">New route stop: ____________________________</p>
+<p class="write-line">New helper: ____________________________</p>
+<p class="write-line">New ending choice: ____________________________</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Mini Quest Cards</h3>
+          <p class="write-line">Teacup Town: move one forecast card to a new pocket.</p>
+<p class="write-line">Rain Gauge Railway: send one sample to a different garden post.</p>
+<p class="write-line">Lunchbox Harbor: rewrite one menu word so it is clearer.</p>
+<p class="write-line">Rain Boot Rangers: copy one sliding path onto a leaf card.</p>
+        </section>
+
+        <section class="worksheet-section">
+          <h3>Three-Line Story</h3>
+          <p class="write-line">First: ____________________________</p>
+<p class="write-line">Next: ____________________________</p>
+<p class="write-line">Last: ____________________________</p>
+        </section></div>
+    </section>
+  </body>
+</html>

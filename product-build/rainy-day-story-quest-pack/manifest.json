@@ -1,0 +1,53 @@
+{
+  "batchId": "2026-06-02-batch7",
+  "generatedAt": "2026-06-02",
+  "productSlug": "rainy-day-story-quest-pack",
+  "title": "Rainy Day Story Quest Pack",
+  "pricePoint": "$9",
+  "sourcePageCount": 13,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/rainy-day-story-quest-pack/Rainy-Day-Story-Quest-Pack.pdf",
+      "sha256": "d6e415b23915df41b8249b6aeb4eed8469c9a7b62701445be360ff21b1d2a633",
+      "size": 1296215
+    },
+    "zip": {
+      "path": "product-build/rainy-day-story-quest-pack/rainy-day-story-quest-pack.zip",
+      "sha256": "95ef91d25d9d0f1bfa13485874cc1cc208219a2e2c4c800e886aa62fe321a079",
+      "size": 2418641
+    },
+    "sourceHtml": {
+      "path": "product-build/rainy-day-story-quest-pack/source/rainy-day-story-quest-pack.html",
+      "sha256": "8d81f026c78623ce32177489e12b7fc7918ee996b1bd60b1ddeca2d113b81b40",
+      "size": 31918
+    },
+    "readme": {
+      "path": "product-build/rainy-day-story-quest-pack/README.txt",
+      "sha256": "4b20e9a55b394ae5f53e813b2809d663d6fb1749a47236d0bf3e840cfdd89db4",
+      "size": 439
+    },
+    "assets": [
+      {
+        "path": "product-build/rainy-day-story-quest-pack/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/rainy-day-story-quest-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/rainy-day-story-quest-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/rainy-day-story-quest-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      }
+    ]
+  }
+}

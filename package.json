@@ -15,7 +15,9 @@
     "content:batch": "node scripts/create-content-batch.mjs",
     "render:seo": "node scripts/render-seo-collections.mjs",
     "image:starter": "python3 scripts/generate_story_images_local.py",
-    "image:batch4": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch4-world-images.json"
+    "image:batch4": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch4-world-images.json",
+    "image:batch7": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch7-product-images.json",
+    "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

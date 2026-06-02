@@ -2,6 +2,11 @@ import { existsSync, readFileSync, readdirSync } from 'node:fs'
 import { resolve } from 'node:path'
 
 import { containsActiveCheckoutLanguage } from './content-policy.mjs'
+import {
+  inspectArtifactFiles,
+  validateCheckoutReadiness,
+  validatePackSource,
+} from './product-artifact-policy.mjs'
 
 const root = resolve(import.meta.dirname, '..')
 const worldsDir = resolve(root, 'content', 'worlds')
@@ -10,12 +15,16 @@ const seoCollectionsDir = resolve(root, 'content', 'seo-collections')
 const seoCollectionsFile = resolve(seoCollectionsDir, 'batch2-collections.json')
 const miniUnitsFile = resolve(root, 'content', 'mini-units', 'batch3-mini-units.json')
 const batch4ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch4-world-images.json')
+const batch7ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch7-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
+const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
 const batch4ImagesBatchId = '2026-06-02-batch4'
+const batch7ProductImagesBatchId = '2026-06-02-batch7-product-images'
 const productsBatchId = '2026-06-02-batch5'
+const rainyDayPackBatchId = '2026-06-02-batch7'
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 const seoLanes = new Set([
@@ -421,6 +430,49 @@ function validateBatch4Image(image, imageSlugs, worldSlugs, worldSources) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch7ProductImage(image, worldSlugs, worldSources) {
+  const label = `2026-06-02-batch7-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of [
+    'slug',
+    'title',
+    'ageBand',
+    'seoLane',
+    'sourceWorldFile',
+    'prompt',
+    'outputJpeg',
+    'outputWebp',
+    'sidecar',
+  ]) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(image.slug === 'rain-boot-route-rangers', `${label}.slug must be rain-boot-route-rangers.`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(worldSlugs.has(image.slug), `${label}.slug does not reference a Batch 1 world.`)
+  expect(image.sourceWorldFile === worldSources.get(image.slug), `${label}.sourceWorldFile does not match source world file.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch7/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch7/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch7/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of ['family-friendly', 'no text', 'no letters', 'no labels', 'no logos', 'no watermark']) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar.seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -563,6 +615,17 @@ for (const image of batch4Images.images) {
   )
 }
 
+expect(existsSync(batch7ProductImagesFile), `Missing Batch 7 product image manifest: ${batch7ProductImagesFile}`)
+const batch7ProductImages = readJson(batch7ProductImagesFile)
+expect(
+  batch7ProductImages.batchId === batch7ProductImagesBatchId,
+  `batch7 product image manifest batchId must be ${batch7ProductImagesBatchId}.`,
+)
+expect(batch7ProductImages.generatedAt === '2026-06-02', 'batch7 product image manifest generatedAt must be 2026-06-02.')
+expect(Array.isArray(batch7ProductImages.images), 'batch7 product image manifest images must be an array.')
+expect(batch7ProductImages.images.length === 1, `Expected 1 Batch 7 product image, found ${batch7ProductImages.images.length}.`)
+validateBatch7ProductImage(batch7ProductImages.images[0], worldSlugs, worldSources)
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
@@ -572,6 +635,60 @@ expect(products.products.length === 1, `Expected 1 Batch 5 product, found ${prod
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 
+expect(existsSync(rainyDayPackSourceFile), `Missing Batch 7 Rainy Day pack source file: ${rainyDayPackSourceFile}`)
+const rainyDayPackSource = readJson(rainyDayPackSourceFile)
+expect(rainyDayPackSource.batchId === rainyDayPackBatchId, `Rainy Day pack source batchId must be ${rainyDayPackBatchId}.`)
+const rainyDayProduct = products.products.find((product) => product.slug === 'rainy-day-story-quest-pack')
+expect(rainyDayProduct, 'Missing Rainy Day product record for Batch 7 artifact validation.')
+const rainyDaySourceErrors = validatePackSource(rainyDayPackSource, rainyDayProduct, worldSlugs)
+expect(
+  rainyDaySourceErrors.length === 0,
+  `Rainy Day pack source failed validation:\n${rainyDaySourceErrors.join('\n')}`,
+)
+const rainyDayExpectedPdfPages = rainyDayPackSource.pages.length + 2
+const rainyDayArtifactStatus = inspectArtifactFiles(root, rainyDayPackSource.artifact, {
+  expectedPdfPages: rainyDayExpectedPdfPages,
+})
+expect(
+  rainyDayArtifactStatus.valid,
+  `Rainy Day pack artifacts failed validation:\n${rainyDayArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  rainyDayArtifactStatus.files.pdf.size > 100_000,
+  `Rainy Day PDF artifact is unexpectedly small: ${rainyDayArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  rainyDayArtifactStatus.files.pdf.pageCount === rainyDayExpectedPdfPages,
+  `Rainy Day PDF artifact must have ${rainyDayExpectedPdfPages} pages.`,
+)
+expect(
+  rainyDayArtifactStatus.files.zip.size > rainyDayArtifactStatus.files.pdf.size,
+  'Rainy Day ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const rainyDayCheckoutErrors = validateCheckoutReadiness(rainyDayProduct, rainyDayArtifactStatus)
+expect(
+  rainyDayCheckoutErrors.length === 0,
+  `Rainy Day checkout readiness failed validation:\n${rainyDayCheckoutErrors.join('\n')}`,
+)
+const rainyDayArtifactManifest = readJson(resolve(root, rainyDayPackSource.artifact.manifestPath))
+expect(
+  rainyDayArtifactManifest.sourcePageCount === rainyDayPackSource.pages.length,
+  'Rainy Day artifact manifest sourcePageCount must match source pages.',
+)
+expect(
+  Array.isArray(rainyDayArtifactManifest.files.assets),
+  'Rainy Day artifact manifest files.assets must be an array.',
+)
+expect(
+  rainyDayArtifactManifest.files.assets.length === rainyDayPackSource.worldSlugs.length,
+  'Rainy Day artifact manifest must include one copied source image per product world.',
+)
+for (const worldSlug of rainyDayPackSource.worldSlugs) {
+  const asset = rainyDayArtifactManifest.files.assets.find((candidate) => candidate.path.includes(`${worldSlug}.jpg`))
+  expect(asset, `Rainy Day artifact manifest missing copied image for ${worldSlug}.`)
+  validateImageFile(resolve(root, asset.path), `Rainy Day copied artifact image ${worldSlug}`, 'jpeg')
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size} local world images, ${productSlugs.size} static product page.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length} local world images, ${productSlugs.size} static product page, 1 product artifact.`,
 )

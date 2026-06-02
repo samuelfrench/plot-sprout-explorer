@@ -1,0 +1,21 @@
+{
+  "slug": "rain-boot-route-rangers",
+  "prompt": "family-friendly Rain Boot Route Rangers scene, no text, no letters, no labels, no logos, no watermark, bright yellow rain boot route office, blank raindrop maps, boot-lace handrails, tiny umbrella stand, puddle reflection path clues, snack crates and mail pouches, cheerful after-rain window light, polished children's storybook illustration, handmade detail, no branded characters, no scary harm, no weapons",
+  "negativePrompt": "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, brand character, distorted faces, distorted hands, blurry, low resolution, harsh shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26060702,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch7/rain-boot-route-rangers.jpg",
+  "outputWebp": "public/images/plotsprout/batch7/rain-boot-route-rangers.webp",
+  "manifest": "content/image-queue/2026-06-02-batch7-product-images.json",
+  "title": "Rain Boot Route Rangers",
+  "ageBand": "7-9",
+  "seoLane": "reluctant writer activities",
+  "sourceWorldFile": "content/worlds/batch1-lower.json"
+}
