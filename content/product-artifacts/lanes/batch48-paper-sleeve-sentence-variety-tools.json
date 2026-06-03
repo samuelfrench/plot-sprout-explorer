@@ -1,0 +1,158 @@
+{
+  "laneId": "batch48-paper-sleeve-sentence-variety-tools",
+  "adultGuide": {
+    "title": "Paper Sleeve Story Sentence Variety Adult Guide",
+    "bullets": [
+      "Print the paper sleeve sentence variety cards, blank strips, and guide pages before the adult-led paper session.",
+      "Begin with one plain fictional sentence, then coach short sentences, stretched sentences, question sentences, starter swaps, sentence combines, rhythm checks, and final lines.",
+      "Keep every example made-up, broad, printable, offline, paper-only, and guided by an adult.",
+      "Use one sleeve strip for each sentence shape so the writer can compare rhythm without crowding the page.",
+      "Change sentence shape without adding narrow outside facts; use invented objects, broad story places, and made-up character names.",
+      "End each activity by copying one final varied fictional sentence that sounds clear, smooth, and intentional on paper."
+    ]
+  },
+  "sentenceVarietyRoutines": [
+    {
+      "name": "Short Sentence Fold",
+      "bestFor": "Turning a crowded fictional idea into one clear short sentence.",
+      "steps": [
+        "The adult writes one plain fictional idea on the sleeve strip: ____________________.",
+        "The writer underlines the one idea that matters most in the line: ____________________.",
+        "The adult asks which extra words can come out while the meaning stays clear: ____________________.",
+        "The writer writes the short sentence on a fresh strip: ____________________."
+      ]
+    },
+    {
+      "name": "Stretched Sentence Add-On",
+      "bestFor": "Adding one useful detail to a short fictional sentence.",
+      "steps": [
+        "The adult places the short sentence beside a blank stretch strip: ____________________.",
+        "The writer chooses one useful detail about an invented object, action, or broad story place: ____________________.",
+        "The adult asks where the detail fits without making the sentence crowded: ____________________.",
+        "The writer writes the stretched sentence with one added detail: ____________________."
+      ]
+    },
+    {
+      "name": "Question Sentence Turn",
+      "bestFor": "Trying a question sentence to create curiosity on paper.",
+      "steps": [
+        "The adult writes a statement from the fictional card: ____________________.",
+        "The writer chooses the wondering word that fits the sentence, such as what, why, how, or where: ____________________.",
+        "The adult asks how the statement must change so it becomes a question: ____________________.",
+        "The writer writes the question sentence with the same made-up idea: ____________________."
+      ]
+    },
+    {
+      "name": "Starter Swap Slide",
+      "bestFor": "Moving the sentence starter so two lines do not begin the same way.",
+      "steps": [
+        "The adult writes two fictional sentences that begin in a similar way: ____________________.",
+        "The writer circles the starter that can move to a new position: ____________________.",
+        "The adult asks whether an action, object, or broad story place should start the revised line: ____________________.",
+        "The writer writes the starter-swap sentence on the sleeve strip: ____________________."
+      ]
+    },
+    {
+      "name": "Sentence Combine Fold",
+      "bestFor": "Joining two tiny fictional sentences into one smoother sentence.",
+      "steps": [
+        "The adult writes two short fictional sentences on separate strips: ____________________.",
+        "The writer marks the shared idea that lets the two strips fold together: ____________________.",
+        "The adult asks which joining word or comma spot makes the combined line smooth: ____________________.",
+        "The writer writes the combined sentence as one clear line: ____________________."
+      ]
+    },
+    {
+      "name": "Rhythm Check Final Line",
+      "bestFor": "Choosing the sentence shape that sounds best before finishing.",
+      "steps": [
+        "The adult places the short, stretched, question, starter-swap, and combined options in a row: ____________________.",
+        "The writer marks the sentence that has the best paper rhythm for the pretend moment: ____________________.",
+        "The adult asks whether one word should move, change, or come out before copying the final line: ____________________.",
+        "The writer writes the final varied fictional sentence: ____________________."
+      ]
+    }
+  ],
+  "takeHomeSentenceSlips": [
+    {
+      "title": "Short Sentence Slip",
+      "time": "single sleeve pass",
+      "skill": "short sentence",
+      "direction": "Write one made-up idea as a clear short sentence: ____________________.",
+      "familyLine": "Ask which words can come out while the idea stays clear: ____________________."
+    },
+    {
+      "title": "Stretched Sentence Slip",
+      "time": "quiet pencil pass",
+      "skill": "stretched sentence",
+      "direction": "Add one useful invented detail to stretch a short sentence: ____________________.",
+      "familyLine": "Ask which detail helps the reader picture the pretend moment: ____________________."
+    },
+    {
+      "title": "Question Sentence Slip",
+      "time": "single paper pass",
+      "skill": "question sentence",
+      "direction": "Turn one fictional statement into a question sentence: ____________________.",
+      "familyLine": "Ask what the question makes the reader wonder: ____________________."
+    },
+    {
+      "title": "Starter Swap Slip",
+      "time": "fresh strip pass",
+      "skill": "starter swap",
+      "direction": "Move the starter of one fictional sentence to create a new rhythm: ____________________.",
+      "familyLine": "Ask which starter sounds strongest on paper: ____________________."
+    },
+    {
+      "title": "Sentence Combine Slip",
+      "time": "folded strip pass",
+      "skill": "sentence combine",
+      "direction": "Combine two tiny fictional sentences into one smooth line: ____________________.",
+      "familyLine": "Ask which shared idea helped the sentences fold together: ____________________."
+    },
+    {
+      "title": "Split Sentence Slip",
+      "time": "calm revision pass",
+      "skill": "split crowded sentence",
+      "direction": "Split one crowded fictional sentence into two clear sentences: ____________________.",
+      "familyLine": "Ask where the sentence should break so each idea has space: ____________________."
+    },
+    {
+      "title": "Action Starter Slip",
+      "time": "new sleeve pass",
+      "skill": "action starter",
+      "direction": "Start one fictional sentence with a clear action word: ____________________.",
+      "familyLine": "Ask how the action starter changes the rhythm of the line: ____________________."
+    },
+    {
+      "title": "Object Starter Slip",
+      "time": "paper strip pass",
+      "skill": "object starter",
+      "direction": "Start one fictional sentence with an invented object: ____________________.",
+      "familyLine": "Ask whether the object starter makes the sentence more specific: ____________________."
+    },
+    {
+      "title": "Rhythm Pair Slip",
+      "time": "two-strip pass",
+      "skill": "short and stretched pair",
+      "direction": "Write one short sentence and one stretched sentence for the same pretend idea: ____________________.",
+      "familyLine": "Ask which sentence should come first for smoother rhythm: ____________________."
+    },
+    {
+      "title": "Final Line Slip",
+      "time": "final paper pass",
+      "skill": "final varied sentence",
+      "direction": "Copy the varied fictional sentence that sounds clearest on paper: ____________________.",
+      "familyLine": "Ask what changed from the plain sentence to the final line: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the plain fictional sentence for this sleeve strip is ____________________.",
+    "Optional adult-led offline prompt: the short sentence version is ____________________.",
+    "Optional adult-led offline prompt: the stretched sentence with one useful detail is ____________________.",
+    "Optional adult-led offline prompt: the question sentence I will try is ____________________.",
+    "Optional adult-led offline prompt: the starter I moved to the front is ____________________.",
+    "Optional adult-led offline prompt: the two tiny sentences I combined are ____________________.",
+    "Optional adult-led offline prompt: the rhythm change that made the line smoother is ____________________.",
+    "Optional adult-led offline prompt: the final varied fictional sentence is ____________________."
+  ]
+}
