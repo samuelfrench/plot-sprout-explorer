@@ -1,0 +1,534 @@
+{
+  "batchId": "2026-06-03-batch36",
+  "generatedAt": "2026-06-03",
+  "productSlug": "kitchen-window-story-pov-card-pack",
+  "title": "Kitchen Window Story Point-of-View Card Pack",
+  "pricePoint": "$45",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable point-of-view cards plus adult guide tools, POV routines, take-home POV slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/kitchen-window-story-pov-card-pack/Kitchen-Window-Story-Point-of-View-Card-Pack.pdf",
+    "zipPath": "product-build/kitchen-window-story-pov-card-pack/kitchen-window-story-pov-card-pack.zip",
+    "sourceHtmlPath": "product-build/kitchen-window-story-pov-card-pack/source/kitchen-window-story-pov-card-pack.html",
+    "manifestPath": "product-build/kitchen-window-story-pov-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch36-kitchen-window-pov-cards-a.json",
+    "content/product-artifacts/lanes/batch36-kitchen-window-pov-cards-b.json",
+    "content/product-artifacts/lanes/batch36-kitchen-window-pov-cards-c.json",
+    "content/product-artifacts/lanes/batch36-kitchen-window-pov-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable paper viewpoint cards",
+    "headline": "Kitchen Window Story Point-of-View Card Pack",
+    "subhead": "Sixteen paper cards help writers retell one invented story moment from a different storyteller view.",
+    "included": [
+      "16 printable kitchen-window point-of-view cards",
+      "Adult setup guide",
+      "Fictional viewpoint safety notes",
+      "Same-scene retell coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led POV routines",
+      "Ten take-home POV slips",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Print the point-of-view cards, paper frame mats, narrator tabs, thought bubbles, and take-away slips before writers arrive.",
+      "Say clearly that kitchen window means a pretend paper frame, not anything writers inspect.",
+      "Choose invented role labels such as Teller, Watcher, Helper, Clerk, Keeper, or Object Voice.",
+      "Set pencils, blank strips, and extra narrator tabs where the adult can pass them out quickly.",
+      "Model one tiny scene twice: first with I noticed, then with the Watcher noticed."
+    ],
+    "paperViewpointSetup": [
+      "Place one kitchen-window frame mat in the center of the table as the shared pretend scene space.",
+      "Put first person, third person, observer, object voice, and closing tabs in separate paper stacks.",
+      "Use broad fictional scene words only, such as button tray, cloud cart, ribbon rail, moon bowl, and paper pantry.",
+      "Keep near-detail and far-detail boxes side by side so writers can sort what the narrator notices.",
+      "Leave a quiet swap pile for ideas that are fun but do not fit the current viewpoint."
+    ],
+    "viewpointCoaching": [
+      "Ask who is telling this part before any sentence is written.",
+      "For first person, point to I, my, and me words and keep the sentence inside that narrator's view.",
+      "For third person, use the role label and describe what the narrator can notice from the paper scene.",
+      "Use thought bubbles for invented clues only, never personal details from a writer's life.",
+      "Read the sentence once and ask what changed when the viewpoint changed."
+    ],
+    "privacyAndSafetyNotes": [
+      "Keep every activity adult-led, fictional, and on paper.",
+      "Use invented names, role labels, paper props, and made-up scene words.",
+      "Do not ask writers to identify real people, ordinary places, or personal routines.",
+      "Turn any personal detail into a pretend prop, role, color, or paper scene clue before writing.",
+      "Skip any card that stops feeling gentle, fictional, or paper-only."
+    ],
+    "familyHandoff": [
+      "Send one slip with a family adult, not a full packet.",
+      "Tell family adults the slip is for one short fictional viewpoint sentence on paper.",
+      "Invite the adult to choose a narrator tab before the writer fills the blank.",
+      "Praise clear narrator choice, detail focus, and voice fit before spelling cleanup.",
+      "Return unused slips to the folder so the next adult-led table starts with clean paper."
+    ],
+    "reset": [
+      "Sort narrator tabs, paper frame mats, thought bubbles, detail boxes, and slips into separate stacks.",
+      "Recycle scrap warm-ups and keep clean blanks for the next session.",
+      "Clear model sentences from the table so the next group starts with fresh invented choices.",
+      "Put pencils, guide sheets, and all paper pieces back in the envelope."
+    ]
+  },
+  "povRoutines": [
+    {
+      "name": "I-View Paper Frame",
+      "bestFor": "Helping writers try first person without a long draft.",
+      "steps": [
+        "Adult places the paper frame mat and one narrator tab marked I.",
+        "Writer chooses one invented role to speak from inside the pretend scene.",
+        "Writer fills one line beginning with I notice or I wonder.",
+        "Adult asks which detail only that narrator would care about."
+      ]
+    },
+    {
+      "name": "Third Person Watcher",
+      "bestFor": "Switching from I to a narrator who describes a character.",
+      "steps": [
+        "Adult replaces the I tab with a role label such as the Watcher.",
+        "Writer names one action the role can notice in the paper frame.",
+        "Writer writes one sentence using the role label instead of I.",
+        "Adult circles the words that show the narrator is not speaking as the character."
+      ]
+    },
+    {
+      "name": "Near Far Detail Sort",
+      "bestFor": "Separating tiny clues from wider scene clues.",
+      "steps": [
+        "Adult draws two boxes labeled near detail and far detail.",
+        "Writer chooses two invented scene clues from the paper word stack.",
+        "Writer places the closer-feeling clue in near and the wider clue in far.",
+        "Writer writes one sentence that uses the chosen detail on purpose."
+      ]
+    },
+    {
+      "name": "Thought Bubble Clue",
+      "bestFor": "Adding what a narrator thinks without adding personal details.",
+      "steps": [
+        "Adult gives one thought bubble and one role tab.",
+        "Writer chooses a pretend question the narrator is silently wondering.",
+        "Writer writes the thought clue in the bubble, then adds one action sentence.",
+        "Adult asks whether the thought helps the reader understand the scene."
+      ]
+    },
+    {
+      "name": "Object Voice Switch",
+      "bestFor": "Trying the same scene from a pretend object's viewpoint.",
+      "steps": [
+        "Adult chooses a harmless paper object card, such as spoon, ribbon, button, or label.",
+        "Writer gives the object one tiny job in the pretend scene.",
+        "Writer writes one line as if the object could tell the moment.",
+        "Adult helps revise one word so the object voice sounds different from a person."
+      ]
+    },
+    {
+      "name": "Closing View Choice",
+      "bestFor": "Ending a small scene from the clearest viewpoint.",
+      "steps": [
+        "Adult lays out two narrator tabs from earlier work.",
+        "Writer rereads one sentence from each viewpoint.",
+        "Writer chooses the viewpoint that makes the ending clearest.",
+        "Writer writes one final line that shows what the narrator notices last."
+      ]
+    }
+  ],
+  "takeHomePovSlips": [
+    {
+      "title": "I Notice Frame",
+      "time": "view slip",
+      "skill": "first person view",
+      "direction": "Write one sentence from an invented narrator using I: ____________________.",
+      "familyLine": "Adult asks what this narrator notices first: ____________________."
+    },
+    {
+      "title": "Watcher Tells It",
+      "time": "observer slip",
+      "skill": "third person view",
+      "direction": "Rewrite the line using a pretend role label instead of I: ____________________.",
+      "familyLine": "Adult asks which words show the narrator is watching: ____________________."
+    },
+    {
+      "title": "Close Clue Box",
+      "time": "near-detail slip",
+      "skill": "near detail",
+      "direction": "Name one tiny detail in the paper frame and use it in a sentence: ____________________.",
+      "familyLine": "Adult asks why that near detail matters to the narrator: ____________________."
+    },
+    {
+      "title": "Far Ribbon View",
+      "time": "far-detail slip",
+      "skill": "far detail",
+      "direction": "Choose one wider pretend scene detail and write what it changes: ____________________.",
+      "familyLine": "Adult asks how the far detail changes the view: ____________________."
+    },
+    {
+      "title": "Thought Bubble Wonder",
+      "time": "thought slip",
+      "skill": "thought clue",
+      "direction": "Write one invented thought the narrator keeps in a thought bubble: ____________________.",
+      "familyLine": "Adult asks what clue the thought gives the reader: ____________________."
+    },
+    {
+      "title": "Voice Filter Tab",
+      "time": "voice slip",
+      "skill": "voice filter",
+      "direction": "Pick careful, bouncy, puzzled, or proud, then write one line in that voice: ____________________.",
+      "familyLine": "Adult asks which word made the voice clear: ____________________."
+    },
+    {
+      "title": "Button Tray View",
+      "time": "object-view slip",
+      "skill": "object viewpoint",
+      "direction": "Let a pretend object tell one moment from the paper scene: ____________________.",
+      "familyLine": "Adult asks what the object noticed that a person might miss: ____________________."
+    },
+    {
+      "title": "Paper Pantry Lens",
+      "time": "setting-lens slip",
+      "skill": "setting lens",
+      "direction": "Use the setting lens to describe the paper pantry, moon bowl, or ribbon rail: ____________________.",
+      "familyLine": "Adult asks which setting clue changes the story feeling: ____________________."
+    },
+    {
+      "title": "Mood Tint Lens",
+      "time": "emotion-lens slip",
+      "skill": "emotion lens",
+      "direction": "Choose calm, curious, worried, or pleased and tint one sentence with that feeling: ____________________.",
+      "familyLine": "Adult asks which detail shows the feeling without naming it: ____________________."
+    },
+    {
+      "title": "Closing View Line",
+      "time": "closing-view slip",
+      "skill": "closing viewpoint",
+      "direction": "Finish the invented scene from the narrator who sees the best final clue: ____________________.",
+      "familyLine": "Adult asks why this viewpoint makes a good closing line: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "My narrator tab was ____________________.",
+    "The first person line I liked was ____________________.",
+    "The third person version said ____________________.",
+    "The near detail I circled was ____________________.",
+    "The far detail I used was ____________________.",
+    "My thought bubble clue was ____________________.",
+    "The object viewpoint line was ____________________.",
+    "The closing viewpoint I chose was ____________________."
+  ],
+  "cards": [
+    {
+      "id": "kitchen-window-pov-card-01",
+      "title": "Moon Muffin Market Peep",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "pointOfViewSkill": "first person view",
+      "useCase": "Adult-led printable paper card for trying an I-tell-it view in a pretend moon market; chosen narrator: ____________________.",
+      "adultSetup": "Adult: name one make-believe market role, then invite the writer to speak as that role on paper: ____________________.",
+      "kidDirection": "With your adult, write what your moon-market narrator says first: ____________________.",
+      "firstViewPrompt": "First view: I am the ____________________, and I notice a tray of glowing muffins because...",
+      "secondViewPrompt": "Second view: Now let a friendly booth helper tell the same moment; helper name: ____________________.",
+      "nearDetailPrompt": "Near detail: Add one close paper-scene detail your narrator can almost touch: ____________________.",
+      "farDetailPrompt": "Far detail: Add one far paper-scene detail near the moon arch or muffin signs: ____________________.",
+      "thoughtCluePrompt": "Thought clue: What does the narrator hope will happen with the next muffin? ____________________.",
+      "reviseViewPrompt": "Revise view: Change one sentence so it sounds more like your narrator, not you: ____________________.",
+      "quietOptionLine": "Quiet option: Point to a role picture, then copy one viewpoint sentence: ____________________.",
+      "takeHomeLine": "Carry-away line: Try one more I-tell-it sentence for a new moon snack: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-02",
+      "title": "Splash Stamp Sorter",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "pointOfViewSkill": "object viewpoint",
+      "useCase": "Adult-led printable paper card for telling a make-believe mail scene through a tiny object; object picked: ____________________.",
+      "adultSetup": "Adult: choose a paper-world item such as a stamp, satchel, puddle label, or wobble cart: ____________________.",
+      "kidDirection": "With your adult, write as the chosen object and tell what it notices: ____________________.",
+      "firstViewPrompt": "First view: I am the ____________________, waiting at the Puddle Planet mail counter.",
+      "secondViewPrompt": "Second view: A puddle clerk sees me and thinks I look like ____________________.",
+      "nearDetailPrompt": "Near detail: What small splash, fold, or shine is beside the object? ____________________.",
+      "farDetailPrompt": "Far detail: What can the object see across the pretend sorting room? ____________________.",
+      "thoughtCluePrompt": "Thought clue: What does the object secretly want before the mail cart rolls away? ____________________.",
+      "reviseViewPrompt": "Revise view: Rewrite one line so the object sounds tiny, brave, or puzzled: ____________________.",
+      "quietOptionLine": "Quiet option: Adult points to one object word; writer adds one noticing word: ____________________.",
+      "takeHomeLine": "Carry-away line: Tell one more paper scene from a pretend object view: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-03",
+      "title": "Buttonwood Lantern Car",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "pointOfViewSkill": "far detail",
+      "useCase": "Adult-led printable paper card for widening a train-library scene from close car details to a far scene view; far focus: ____________________.",
+      "adultSetup": "Adult: ask the writer to mark one close shelf detail and one distant pretend-scene feature: ____________________.",
+      "kidDirection": "With your adult, start near the library train, then pull the story view toward the far end: ____________________.",
+      "firstViewPrompt": "First view: Describe the lantern car from a reader helper's view: ____________________.",
+      "secondViewPrompt": "Second view: Describe the same car from a tiny acorn passenger's view: ____________________.",
+      "nearDetailPrompt": "Near detail: Name a close detail on a seat, shelf, ticket, or lantern: ____________________.",
+      "farDetailPrompt": "Far detail: Name something far away in the make-believe rail hall: ____________________.",
+      "thoughtCluePrompt": "Thought clue: What does the passenger wonder when the library train hums? ____________________.",
+      "reviseViewPrompt": "Revise view: Add one far detail that changes the mood of the scene: ____________________.",
+      "quietOptionLine": "Quiet option: Adult chooses near or far; writer fills one line: ____________________.",
+      "takeHomeLine": "Carry-away line: Reuse near-to-far writing on another imaginary ride: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-04",
+      "title": "Crumb Map Switcheroo",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "pointOfViewSkill": "same scene new view",
+      "useCase": "Adult-led printable paper card for retelling one bakery-map mix-up from two make-believe viewpoints; scene card name: ____________________.",
+      "adultSetup": "Adult: choose two fictional role labels, such as button baker and map mender: ____________________.",
+      "kidDirection": "With your adult, write the mix-up once, then write it again with a new storyteller: ____________________.",
+      "firstViewPrompt": "First view: The button baker thinks the map crumb means ____________________.",
+      "secondViewPrompt": "Second view: The map mender sees the same crumb and thinks ____________________.",
+      "nearDetailPrompt": "Near detail: Add one close bakery detail beside the paper map: ____________________.",
+      "farDetailPrompt": "Far detail: Add one far scene detail that both storytellers notice differently: ____________________.",
+      "thoughtCluePrompt": "Thought clue: What secret worry does the first storyteller keep tucked away? ____________________.",
+      "reviseViewPrompt": "Revise view: Circle one sentence and rewrite it for the second storyteller's voice: ____________________.",
+      "quietOptionLine": "Quiet option: Choose only one sentence to switch viewpoints: ____________________.",
+      "takeHomeLine": "Carry-away line: Try a new view switch with a pretend lost recipe card: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-05",
+      "title": "Teacup Weather Pane",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "pointOfViewSkill": "setting lens",
+      "useCase": "Adult-led printable paper card for using setting as the storyteller in a pretend teacup weather scene; setting word: ____________________.",
+      "adultSetup": "Adult: pick one make-believe weather mood, then keep all writing on the page: ____________________.",
+      "kidDirection": "With your adult, let the scene describe what changes when the weather shifts: ____________________.",
+      "firstViewPrompt": "First view: The teacup town feels ____________________ when the cloud ribbons drift by.",
+      "secondViewPrompt": "Second view: Tell the same weather moment as if the town feels the opposite: ____________________.",
+      "nearDetailPrompt": "Near detail: Add one close teacup detail, like a saucer step or spoon bridge: ____________________.",
+      "farDetailPrompt": "Far detail: Add one far make-believe weather detail above the little skyline: ____________________.",
+      "thoughtCluePrompt": "Thought clue: If the setting could think, what would it wish for the teacup people? ____________________.",
+      "reviseViewPrompt": "Revise view: Replace a plain setting word with a stronger setting lens word: ____________________.",
+      "quietOptionLine": "Quiet option: Adult names a weather mood; writer adds one setting detail: ____________________.",
+      "takeHomeLine": "Carry-away line: Use a setting lens for another tiny pretend town: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-06",
+      "title": "Pocket Park Notice Flutter",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "pointOfViewSkill": "thought clue",
+      "useCase": "Adult-led printable paper card for adding thought clues to a tiny park notice scene; hidden thought: ____________________.",
+      "adultSetup": "Adult: choose one fictional notice-board role, then ask what that role knows but has not said: ____________________.",
+      "kidDirection": "With your adult, write one action, then add a thought clue that changes how we read it: ____________________.",
+      "firstViewPrompt": "First view: A pocket-park keeper pins a tiny note that says ____________________.",
+      "secondViewPrompt": "Second view: A paper leaf watches the note and notices ____________________.",
+      "nearDetailPrompt": "Near detail: Add one close detail near the notice board, such as a round tack or ribbon tab: ____________________.",
+      "farDetailPrompt": "Far detail: Add one far pretend park detail that makes the notice feel important: ____________________.",
+      "thoughtCluePrompt": "Thought clue: What is the keeper thinking but not saying yet? ____________________.",
+      "reviseViewPrompt": "Revise view: Rewrite one action so the hidden thought is easier to guess: ____________________.",
+      "quietOptionLine": "Quiet option: Adult reads the action; writer adds one quiet thought word: ____________________.",
+      "takeHomeLine": "Carry-away line: Add one thought clue to any pretend notice scene on paper: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-07",
+      "title": "Spoon Ferry Sees the Harbor",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "pointOfViewSkill": "object viewpoint",
+      "useCase": "Use this adult-led printable paper viewpoint card to let writers tell a lunchbox-harbor scene from a pretend spoon ferry's view in the kitchen-window paper frame: ____________________.",
+      "adultSetup": "Adult: place the spoon ferry, lunchbox dock, crumb waves, and napkin flag paper pieces in the pretend frame; choose the object narrator: ____________________.",
+      "kidDirection": "With the adult, work offline on this paper card. Pretend the spoon ferry is telling the scene and write what it notices first: ____________________.",
+      "firstViewPrompt": "First view: I am the spoon ferry, and the lunchbox harbor appears like ____________________.",
+      "secondViewPrompt": "Second view: A snack-barge helper sees the same harbor and notices ____________________.",
+      "nearDetailPrompt": "Near detail: Close to the ferry, I can see ____________________.",
+      "farDetailPrompt": "Far detail: Across the paper harbor, I can see ____________________.",
+      "thoughtCluePrompt": "Thought clue: The spoon ferry thinks, If I glide carefully, ____________________.",
+      "reviseViewPrompt": "Revise view: Change 'The ferry moved' so the spoon ferry tells it: ____________________.",
+      "quietOptionLine": "Quiet option: circle one paper harbor item and finish one object-view sentence: ____________________.",
+      "takeHomeLine": "Carry-away line: try the object view again with a new pretend lunchbox cargo: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-08",
+      "title": "Acorn Cart From Two Desks",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "pointOfViewSkill": "same scene new view",
+      "useCase": "Use this adult-led printable paper viewpoint card to compare the same acorn errand scene from two invented helper desks in the kitchen-window paper frame: ____________________.",
+      "adultSetup": "Adult: set down the acorn cart, button counter, leaf stamp desk, and paper path slip; choose two helper roles: ____________________.",
+      "kidDirection": "With the adult, work offline on this paper card. Tell the acorn mix-up twice, once from each helper's view: ____________________.",
+      "firstViewPrompt": "First view: The Button Counter Helper thinks the acorn cart matters because ____________________.",
+      "secondViewPrompt": "Second view: The Leaf Stamp Helper tells the same moment and notices ____________________.",
+      "nearDetailPrompt": "Near detail: On the desk nearest the acorn cart, one clue is ____________________.",
+      "farDetailPrompt": "Far detail: At the far paper shelf, another helper can see ____________________.",
+      "thoughtCluePrompt": "Thought clue: One helper keeps thinking, The best next stop is ____________________.",
+      "reviseViewPrompt": "Revise view: Change 'The cart was confusing' into a view from one helper: ____________________.",
+      "quietOptionLine": "Quiet option: point to one helper role and write only that helper's view sentence: ____________________.",
+      "takeHomeLine": "Carry-away line: retell the same errand scene from a new pretend desk: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-09",
+      "title": "Map Room Through Seed Shelves",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "pointOfViewSkill": "setting lens",
+      "useCase": "Use this adult-led printable paper viewpoint card to help writers let the map-room setting shape what the narrator notices in a fictional kitchen-window frame: ____________________.",
+      "adultSetup": "Adult: arrange seed packet drawers, a folded garden map, blank path cards, and a small table label; choose the setting lens: ____________________.",
+      "kidDirection": "With the adult, work offline on this paper card. Choose Map Keeper, Seed Shelf Guide, or Path Card, then write what the room makes that narrator notice: ____________________.",
+      "firstViewPrompt": "First view: From the map table, the most important clue is ____________________.",
+      "secondViewPrompt": "Second view: From the seed shelf, the same clue appears as ____________________.",
+      "nearDetailPrompt": "Near detail: Beside the folded map, I notice ____________________.",
+      "farDetailPrompt": "Far detail: At the far side of the packet drawers, I notice ____________________.",
+      "thoughtCluePrompt": "Thought clue: The narrator wonders whether the missing path means ____________________.",
+      "reviseViewPrompt": "Revise view: Change 'The room had seeds' into a setting-lens sentence with one map-room clue: ____________________.",
+      "quietOptionLine": "Quiet option: choose one seed packet shape and write a setting-lens phrase beside it: ____________________.",
+      "takeHomeLine": "Carry-away line: use the same map-room setting with a new narrator role: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-10",
+      "title": "Gauge Tube Close-Up Train",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "pointOfViewSkill": "near detail",
+      "useCase": "Use this adult-led printable paper viewpoint card to start a railway scene with one close object detail before the whole fictional view: ____________________.",
+      "adultSetup": "Adult: place the clear gauge tube, bead cards, shiny rail strip, and tiny train piece in the pretend kitchen-window frame; choose the close clue: ____________________.",
+      "kidDirection": "With the adult, work offline on this paper card. Begin beside the gauge tube, then widen the view in one sentence: ____________________.",
+      "firstViewPrompt": "First view: The Gauge Checker sees the railway from beside the measuring tube and notices ____________________.",
+      "secondViewPrompt": "Second view: The Train Conductor sees the same scene from the cab and notices ____________________.",
+      "nearDetailPrompt": "Near detail: At the tube edge, one tiny clue is ____________________.",
+      "farDetailPrompt": "Far detail: Along the far rail strip, the larger pattern is ____________________.",
+      "thoughtCluePrompt": "Thought clue: The Gauge Checker suspects the clue means ____________________.",
+      "reviseViewPrompt": "Revise view: Change 'It was rainy' into a close-detail sentence about one object: ____________________.",
+      "quietOptionLine": "Quiet option: point to the tube, bead card, or rail strip and write one close-detail phrase: ____________________.",
+      "takeHomeLine": "Carry-away line: make a second railway view that begins with one tiny gauge clue: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-11",
+      "title": "Moss Signal Mind Glow",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "pointOfViewSkill": "thought clue",
+      "useCase": "Use this adult-led printable paper viewpoint card to add a narrator thought clue to a fictional observatory scene in the kitchen-window paper frame: ____________________.",
+      "adultSetup": "Adult: place moss tile cards, a dome chart, signal shapes, and two narrator labels; choose the hidden thought clue: ____________________.",
+      "kidDirection": "With the adult, work offline on this paper card. Write what the observer sees, then add one thought that hints at what they believe: ____________________.",
+      "firstViewPrompt": "First view: The Dome Observer sees the moss signal as ____________________.",
+      "secondViewPrompt": "Second view: The Note Keeper sees the same signal as ____________________.",
+      "nearDetailPrompt": "Near detail: Beside the glowing moss tile, one small sign is ____________________.",
+      "farDetailPrompt": "Far detail: Across the pretend dome chart, another sign is ____________________.",
+      "thoughtCluePrompt": "Thought clue: The observer does not say the answer yet, but thinks ____________________.",
+      "reviseViewPrompt": "Revise view: Change 'The observer was worried' into a thought clue that shows the feeling: ____________________.",
+      "quietOptionLine": "Quiet option: choose a glow, blink, or hush card and write one quiet thought on paper: ____________________.",
+      "takeHomeLine": "Carry-away line: retell the observatory moment with one new thought clue: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-12",
+      "title": "Shell Clock Paper Frame",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "pointOfViewSkill": "object viewpoint",
+      "useCase": "Adult-led printable paper viewpoint card for telling a fictional tidepool lab moment from a shell clock's view: ____________________.",
+      "adultSetup": "Print the card, fold one paper frame, and choose a pretend lab object that gets to narrate: ____________________.",
+      "kidDirection": "On paper, write what the shell clock notices before the lab helpers do: ____________________.",
+      "firstViewPrompt": "First view: The shell clock says, I notice ____________________.",
+      "secondViewPrompt": "Second view: The tide chart apprentice says, I notice ____________________.",
+      "nearDetailPrompt": "Near detail: Name one small mark beside the shell clock: ____________________.",
+      "farDetailPrompt": "Far detail: Name one pretend lab station across the page: ____________________.",
+      "thoughtCluePrompt": "Thought clue: What does the shell clock wonder about the changing water line? ____________________.",
+      "reviseViewPrompt": "Revise view: Change one sentence so it sounds more like a careful object narrator: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the shell clock first, then add one I notice line: ____________________.",
+      "takeHomeLine": "Carry-away line: Use another paper object to narrate a tiny lab moment: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-13",
+      "title": "Ferry Dock Double View",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "pointOfViewSkill": "same scene new view",
+      "useCase": "Adult-led printable paper viewpoint card for rewriting one fictional ferry scene from two story roles: ____________________.",
+      "adultSetup": "Print the card, draw two paper docks, and choose one draft crossing for both roles: ____________________.",
+      "kidDirection": "Write the scene once from the ferry guide's view, then again from the draft page's view: ____________________.",
+      "firstViewPrompt": "First view: The ferry guide sees the confusing sentence as ____________________.",
+      "secondViewPrompt": "Second view: The draft page sees the same crossing as ____________________.",
+      "nearDetailPrompt": "Near detail: Add one close paper ferry item, such as a pencil oar or note buoy: ____________________.",
+      "farDetailPrompt": "Far detail: Add one far draft island detail that changes the mood: ____________________.",
+      "thoughtCluePrompt": "Thought clue: What does the draft page hope will happen after the crossing? ____________________.",
+      "reviseViewPrompt": "Revise view: Keep the same event, but change whose eyes guide the sentence: ____________________.",
+      "quietOptionLine": "Quiet option: Circle one role and write only that role's view: ____________________.",
+      "takeHomeLine": "Carry-away line: Fold a paper ferry and retell one scene from a new view: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-14",
+      "title": "Tower Label Watcher",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "pointOfViewSkill": "observer detail",
+      "useCase": "Adult-led printable paper viewpoint card for choosing which fictional clue a tower museum observer notices first: ____________________.",
+      "adultSetup": "Print the card, stack three blank paper labels, and invent one exhibit from ordinary pretend shapes: ____________________.",
+      "kidDirection": "Write as a quiet observer who notices one clue without explaining everything at once: ____________________.",
+      "firstViewPrompt": "First view: The label keeper notices ____________________ before any other clue.",
+      "secondViewPrompt": "Second view: The tower visitor notices ____________________ instead.",
+      "nearDetailPrompt": "Near detail: Add one close label edge, smudge, color mark, or folded corner: ____________________.",
+      "farDetailPrompt": "Far detail: Add one high shelf, spiral step, or case shape across the page: ____________________.",
+      "thoughtCluePrompt": "Thought clue: What does the observer suspect the label is hiding? ____________________.",
+      "reviseViewPrompt": "Revise view: Remove one distracting detail and keep the clue the observer truly needs: ____________________.",
+      "quietOptionLine": "Quiet option: Mark only the clue the observer sees first: ____________________.",
+      "takeHomeLine": "Carry-away line: Make one paper label and write what a careful observer notices: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-15",
+      "title": "Compass Mat Room Lens",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "pointOfViewSkill": "setting lens",
+      "useCase": "Adult-led printable paper viewpoint card for seeing a fictional academy scene through the setting first: ____________________.",
+      "adultSetup": "Print the card, sketch a compass mat and two path tiles, and pick the part of the room that shapes the scene: ____________________.",
+      "kidDirection": "Start with the place, then show how the compass apprentice acts inside that paper scene: ____________________.",
+      "firstViewPrompt": "First view: Through the setting lens, the map table makes the apprentice notice ____________________.",
+      "secondViewPrompt": "Second view: Through the apprentice's view, the map table feels like ____________________.",
+      "nearDetailPrompt": "Near detail: Add one close tool on the compass mat: ____________________.",
+      "farDetailPrompt": "Far detail: Add one far wall chart, thread rack, or path shelf on the paper scene: ____________________.",
+      "thoughtCluePrompt": "Thought clue: What choice does the apprentice think the setting is asking for? ____________________.",
+      "reviseViewPrompt": "Revise view: Move one setting detail earlier so it guides the action: ____________________.",
+      "quietOptionLine": "Quiet option: Label the setting first, then write one action beside it: ____________________.",
+      "takeHomeLine": "Carry-away line: Draw a tiny compass mat and write how the place changes a choice: ____________________."
+    },
+    {
+      "id": "kitchen-window-pov-card-16",
+      "title": "Ribbon Booklet Final View",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "pointOfViewSkill": "closing viewpoint",
+      "useCase": "Adult-led printable paper viewpoint card for ending a fictional boardwalk booklet scene from the best final view: ____________________.",
+      "adultSetup": "Print the card, fold three pretend pages, and choose who gets the last view of the booklet: ____________________.",
+      "kidDirection": "Write the ending from the role that can show the booklet is complete: ____________________.",
+      "firstViewPrompt": "First view: The page binder sees the final booklet as ____________________.",
+      "secondViewPrompt": "Second view: The ribbon keeper sees the same booklet as ____________________.",
+      "nearDetailPrompt": "Near detail: Add one close paper fold, ribbon loop, or cover mark: ____________________.",
+      "farDetailPrompt": "Far detail: Add one boardwalk table or display stand on the pretend page: ____________________.",
+      "thoughtCluePrompt": "Thought clue: What does the final viewer understand about what has changed? ____________________.",
+      "reviseViewPrompt": "Revise view: Choose the view that gives the clearest ending and cross out the weaker one: ____________________.",
+      "quietOptionLine": "Quiet option: Box the final-view sentence before adding any other detail: ____________________.",
+      "takeHomeLine": "Carry-away line: Fold a paper booklet and write one closing view for its last page: ____________________."
+    }
+  ]
+}

@@ -494,6 +494,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable blanket-fort story dialogue cards with adult guide tools, dialogue routines, and take-home dialogue slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'kitchen-window-story-pov-card-pack',
+    title: 'Kitchen Window Story Point-of-View Card Pack',
+    pricePoint: '$45',
+    description:
+      'Sixteen printable kitchen-window story point-of-view cards with adult guide tools, viewpoint routines, and take-home POV slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

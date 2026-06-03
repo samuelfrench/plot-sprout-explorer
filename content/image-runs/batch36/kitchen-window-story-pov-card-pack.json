@@ -1,0 +1,18 @@
+{
+  "slug": "kitchen-window-story-pov-card-pack",
+  "prompt": "overhead studio product photo, six blank cream printable activity cards with empty rectangular guide boxes, one plain wooden pencil, matte white seamless background, clean minimal stationery mockup, no laptop, no screen, no plant, no cup, no mug, no bowl, no container, no window, no readable text, no letters, no food, no extra props, family-friendly flat lay, plain white background, unbranded cozy writing table, viewpoint guide boxes, blank cream kitchen window story point-of-view cards, screen-free printable kitchen window story point-of-view card pack",
+  "negativePrompt": "text, readable writing, letters, labels, logo, watermark, book, book cover, real book title, author name, publisher name, phone, tablet, laptop, computer, screen, device, app interface, microphone, audio recorder, camera, photo, recording, transcription, school login, account login, portal, qr code, upload icon, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, address, house, home, street, gps, child face, child portrait, plant, leaves, foliage, flower, food, snack, cup, mug, bowl, container, tableware, plate, window view, real window, windowsill, room, brand mark, franchise character, scary, weapon",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26063648,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch36/kitchen-window-story-pov-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch36/kitchen-window-story-pov-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-03-batch36-product-images.json",
+  "title": "Kitchen Window Story Point-of-View Card Pack"
+}

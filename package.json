@@ -43,6 +43,7 @@
     "image:batch33": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch33-product-images.json",
     "image:batch34": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch34-product-images.json",
     "image:batch35": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch35-product-images.json",
+    "image:batch36": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch36-product-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -70,7 +71,8 @@
     "product:notebook-margin-revision-pack": "node scripts/notebook-margin-story-revision-card-pack-builder.mjs",
     "product:desk-drawer-sequence-pack": "node scripts/desk-drawer-story-sequence-card-pack-builder.mjs",
     "product:reading-nook-cause-effect-pack": "node scripts/reading-nook-story-cause-effect-card-pack-builder.mjs",
-    "product:blanket-fort-dialogue-pack": "node scripts/blanket-fort-story-dialogue-card-pack-builder.mjs"
+    "product:blanket-fort-dialogue-pack": "node scripts/blanket-fort-story-dialogue-card-pack-builder.mjs",
+    "product:kitchen-window-pov-pack": "node scripts/kitchen-window-story-pov-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

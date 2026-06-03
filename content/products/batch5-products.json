@@ -2360,6 +2360,130 @@
           "summary": "A binding day world for closing an invented exchange."
         }
       ]
+    },
+    {
+      "slug": "kitchen-window-story-pov-card-pack",
+      "title": "Kitchen Window Story Point-of-View Card Pack",
+      "pricePoint": "$45",
+      "status": "checkout_pending",
+      "headline": "A printable point-of-view card pack for screen-free kitchen-window story views.",
+      "summary": "Sixteen adult-led kitchen-window cards help kids retell invented scenes from different points of view.",
+      "heroImage": "images/plotsprout/batch36/kitchen-window-story-pov-card-pack.jpg",
+      "ctaLabel": "Request point-of-view card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Kitchen%20Window%20Story%20Point-of-View%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static kitchen window story point-of-view card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable kitchen window story point-of-view cards",
+        "Adult setup guide",
+        "Fictional viewpoint safety notes",
+        "Same-scene retell coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led POV routines",
+        "Ten take-home POV slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one paper same-scene retell before a full story",
+        "A tutoring or co-op table where writers can fill one viewpoint card at a time",
+        "A family table warm-up where narrator labels reduce blank-page pressure",
+        "A reluctant-writer activity that separates point of view from a full draft",
+        "A take-home POV slip set for finishing one invented retell offline"
+      ],
+      "parentSteps": [
+        "Choose one POV routine before the activity starts.",
+        "Set the paper, pencil, narrator tabs, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one pretend kitchen-window detail into a make-believe narrator view rather than using personal facts.",
+        "Send one POV slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for trying a clear first-person narrator view."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for telling one mail moment from an object viewpoint."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for moving from near details to far details."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for retelling the same mix-up from two story roles."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for shaping a scene through the setting lens."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for adding a quiet thought clue to a notice moment."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for letting a pretend object tell the harbor moment."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn office world for comparing two helper views of one errand scene."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for using room details to guide what the narrator notices."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for starting a view with one close object clue."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for hiding belief inside a thought clue."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for letting a careful object narrator speak first."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for rewriting one crossing from a second story role."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue tower world for deciding which observer detail matters first."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for letting the setting guide an apprentice choice."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for choosing the clearest closing viewpoint."
+        }
+      ]
     }
   ]
 }

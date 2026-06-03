@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen Window Story Point-of-View Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-pov-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-pov-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-pov-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper viewpoint cards</p>
+        <h1>Kitchen Window Story Point-of-View Card Pack</h1>
+        <p>Sixteen paper cards help writers retell one invented story moment from a different storyteller view.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable point-of-view cards plus adult guide tools, POV routines, take-home POV slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$45</span>
+        <h2>Included</h2>
+        <ul><li>16 printable kitchen-window point-of-view cards</li>
+<li>Adult setup guide</li>
+<li>Fictional viewpoint safety notes</li>
+<li>Same-scene retell coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led POV routines</li>
+<li>Ten take-home POV slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Viewpoint coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the point-of-view cards, paper frame mats, narrator tabs, thought bubbles, and take-away slips before writers arrive.</li>
+<li>Say clearly that kitchen window means a pretend paper frame, not anything writers inspect.</li>
+<li>Choose invented role labels such as Teller, Watcher, Helper, Clerk, Keeper, or Object Voice.</li>
+<li>Set pencils, blank strips, and extra narrator tabs where the adult can pass them out quickly.</li>
+<li>Model one tiny scene twice: first with I noticed, then with the Watcher noticed.</li></ul></article>
+        <article class="guide-card"><h3>Paper point-of-view setup</h3><ul><li>Place one kitchen-window frame mat in the center of the table as the shared pretend scene space.</li>
+<li>Put first person, third person, observer, object voice, and closing tabs in separate paper stacks.</li>
+<li>Use broad fictional scene words only, such as button tray, cloud cart, ribbon rail, moon bowl, and paper pantry.</li>
+<li>Keep near-detail and far-detail boxes side by side so writers can sort what the narrator notices.</li>
+<li>Leave a quiet swap pile for ideas that are fun but do not fit the current viewpoint.</li></ul></article>
+        <article class="guide-card"><h3>Story viewpoint coaching</h3><ul><li>Ask who is telling this part before any sentence is written.</li>
+<li>For first person, point to I, my, and me words and keep the sentence inside that narrator&#39;s view.</li>
+<li>For third person, use the role label and describe what the narrator can notice from the paper scene.</li>
+<li>Use thought bubbles for invented clues only, never personal details from a writer&#39;s life.</li>
+<li>Read the sentence once and ask what changed when the viewpoint changed.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Keep every activity adult-led, fictional, and on paper.</li>
+<li>Use invented names, role labels, paper props, and made-up scene words.</li>
+<li>Do not ask writers to identify real people, ordinary places, or personal routines.</li>
+<li>Turn any personal detail into a pretend prop, role, color, or paper scene clue before writing.</li>
+<li>Skip any card that stops feeling gentle, fictional, or paper-only.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one slip with a family adult, not a full packet.</li>
+<li>Tell family adults the slip is for one short fictional viewpoint sentence on paper.</li>
+<li>Invite the adult to choose a narrator tab before the writer fills the blank.</li>
+<li>Praise clear narrator choice, detail focus, and voice fit before spelling cleanup.</li>
+<li>Return unused slips to the folder so the next adult-led table starts with clean paper.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Sort narrator tabs, paper frame mats, thought bubbles, detail boxes, and slips into separate stacks.</li>
+<li>Recycle scrap warm-ups and keep clean blanks for the next session.</li>
+<li>Clear model sentences from the table so the next group starts with fresh invented choices.</li>
+<li>Put pencils, guide sheets, and all paper pieces back in the envelope.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper POV card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen POV-card worlds</h2>
+      <p>Pick a world image, then write one fictional viewpoint sentence and one same-scene retell.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">POV routines</p>
+      <h2>Choose the paper viewpoint rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>I-View Paper Frame</h3>
+      <p>Helping writers try first person without a long draft.</p>
+      <ol><li>Adult places the paper frame mat and one narrator tab marked I.</li>
+<li>Writer chooses one invented role to speak from inside the pretend scene.</li>
+<li>Writer fills one line beginning with I notice or I wonder.</li>
+<li>Adult asks which detail only that narrator would care about.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Third Person Watcher</h3>
+      <p>Switching from I to a narrator who describes a character.</p>
+      <ol><li>Adult replaces the I tab with a role label such as the Watcher.</li>
+<li>Writer names one action the role can notice in the paper frame.</li>
+<li>Writer writes one sentence using the role label instead of I.</li>
+<li>Adult circles the words that show the narrator is not speaking as the character.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Near Far Detail Sort</h3>
+      <p>Separating tiny clues from wider scene clues.</p>
+      <ol><li>Adult draws two boxes labeled near detail and far detail.</li>
+<li>Writer chooses two invented scene clues from the paper word stack.</li>
+<li>Writer places the closer-feeling clue in near and the wider clue in far.</li>
+<li>Writer writes one sentence that uses the chosen detail on purpose.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Thought Bubble Clue</h3>
+      <p>Adding what a narrator thinks without adding personal details.</p>
+      <ol><li>Adult gives one thought bubble and one role tab.</li>
+<li>Writer chooses a pretend question the narrator is silently wondering.</li>
+<li>Writer writes the thought clue in the bubble, then adds one action sentence.</li>
+<li>Adult asks whether the thought helps the reader understand the scene.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Object Voice Switch</h3>
+      <p>Trying the same scene from a pretend object&#39;s viewpoint.</p>
+      <ol><li>Adult chooses a harmless paper object card, such as spoon, ribbon, button, or label.</li>
+<li>Writer gives the object one tiny job in the pretend scene.</li>
+<li>Writer writes one line as if the object could tell the moment.</li>
+<li>Adult helps revise one word so the object voice sounds different from a person.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Closing View Choice</h3>
+      <p>Ending a small scene from the clearest viewpoint.</p>
+      <ol><li>Adult lays out two narrator tabs from earlier work.</li>
+<li>Writer rereads one sentence from each viewpoint.</li>
+<li>Writer chooses the viewpoint that makes the ending clearest.</li>
+<li>Writer writes one final line that shows what the narrator notices last.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home POV slips</p>
+      <h2>Finish one story point-of-view later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">view slip | first person view</p>
+      <h3>I Notice Frame</h3>
+      <p>Write one sentence from an invented narrator using I: ____________________.</p>
+      <p>Adult asks what this narrator notices first: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">observer slip | third person view</p>
+      <h3>Watcher Tells It</h3>
+      <p>Rewrite the line using a pretend role label instead of I: ____________________.</p>
+      <p>Adult asks which words show the narrator is watching: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">near-detail slip | near detail</p>
+      <h3>Close Clue Box</h3>
+      <p>Name one tiny detail in the paper frame and use it in a sentence: ____________________.</p>
+      <p>Adult asks why that near detail matters to the narrator: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">far-detail slip | far detail</p>
+      <h3>Far Ribbon View</h3>
+      <p>Choose one wider pretend scene detail and write what it changes: ____________________.</p>
+      <p>Adult asks how the far detail changes the view: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">thought slip | thought clue</p>
+      <h3>Thought Bubble Wonder</h3>
+      <p>Write one invented thought the narrator keeps in a thought bubble: ____________________.</p>
+      <p>Adult asks what clue the thought gives the reader: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">voice slip | voice filter</p>
+      <h3>Voice Filter Tab</h3>
+      <p>Pick careful, bouncy, puzzled, or proud, then write one line in that voice: ____________________.</p>
+      <p>Adult asks which word made the voice clear: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">object-view slip | object viewpoint</p>
+      <h3>Button Tray View</h3>
+      <p>Let a pretend object tell one moment from the paper scene: ____________________.</p>
+      <p>Adult asks what the object noticed that a person might miss: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">setting-lens slip | setting lens</p>
+      <h3>Paper Pantry Lens</h3>
+      <p>Use the setting lens to describe the paper pantry, moon bowl, or ribbon rail: ____________________.</p>
+      <p>Adult asks which setting clue changes the story feeling: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">emotion-lens slip | emotion lens</p>
+      <h3>Mood Tint Lens</h3>
+      <p>Choose calm, curious, worried, or pleased and tint one sentence with that feeling: ____________________.</p>
+      <p>Adult asks which detail shows the feeling without naming it: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">closing-view slip | closing viewpoint</p>
+      <h3>Closing View Line</h3>
+      <p>Finish the invented scene from the narrator who sees the best final clue: ____________________.</p>
+      <p>Adult asks why this viewpoint makes a good closing line: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>My narrator tab was ____________________.</li>
+<li>The first person line I liked was ____________________.</li>
+<li>The third person version said ____________________.</li>
+<li>The near detail I circled was ____________________.</li>
+<li>The far detail I used was ____________________.</li>
+<li>My thought bubble clue was ____________________.</li>
+<li>The object viewpoint line was ____________________.</li>
+<li>The closing viewpoint I chose was ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 1 | Ages 6-8 | first person view</div>
+      <h2>Moon Muffin Market Peep</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: name one make-believe market role, then invite the writer to speak as that role on paper: ____________________.</p>
+      <p class="kid-direction">With your adult, write what your moon-market narrator says first: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: I am the ____________________, and I notice a tray of glowing muffins because...</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: Now let a friendly booth helper tell the same moment; helper name: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Add one close paper-scene detail your narrator can almost touch: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Add one far paper-scene detail near the moon arch or muffin signs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: What does the narrator hope will happen with the next muffin? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Change one sentence so it sounds more like your narrator, not you: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to a role picture, then copy one viewpoint sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Try one more I-tell-it sentence for a new moon snack: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 2 | Ages 6-8 | object viewpoint</div>
+      <h2>Splash Stamp Sorter</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: choose a paper-world item such as a stamp, satchel, puddle label, or wobble cart: ____________________.</p>
+      <p class="kid-direction">With your adult, write as the chosen object and tell what it notices: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: I am the ____________________, waiting at the Puddle Planet mail counter.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: A puddle clerk sees me and thinks I look like ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: What small splash, fold, or shine is beside the object? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: What can the object see across the pretend sorting room? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: What does the object secretly want before the mail cart rolls away? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Rewrite one line so the object sounds tiny, brave, or puzzled: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Adult points to one object word; writer adds one noticing word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Tell one more paper scene from a pretend object view: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 3 | Ages 7-9 | far detail</div>
+      <h2>Buttonwood Lantern Car</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: ask the writer to mark one close shelf detail and one distant pretend-scene feature: ____________________.</p>
+      <p class="kid-direction">With your adult, start near the library train, then pull the story view toward the far end: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: Describe the lantern car from a reader helper&#39;s view: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: Describe the same car from a tiny acorn passenger&#39;s view: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Name a close detail on a seat, shelf, ticket, or lantern: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Name something far away in the make-believe rail hall: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: What does the passenger wonder when the library train hums? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Add one far detail that changes the mood of the scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Adult chooses near or far; writer fills one line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Reuse near-to-far writing on another imaginary ride: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 4 | Ages 7-9 | same scene new view</div>
+      <h2>Crumb Map Switcheroo</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: choose two fictional role labels, such as button baker and map mender: ____________________.</p>
+      <p class="kid-direction">With your adult, write the mix-up once, then write it again with a new storyteller: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: The button baker thinks the map crumb means ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: The map mender sees the same crumb and thinks ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Add one close bakery detail beside the paper map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Add one far scene detail that both storytellers notice differently: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: What secret worry does the first storyteller keep tucked away? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Circle one sentence and rewrite it for the second storyteller&#39;s voice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Choose only one sentence to switch viewpoints: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Try a new view switch with a pretend lost recipe card: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 5 | Ages 7-8 | setting lens</div>
+      <h2>Teacup Weather Pane</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: pick one make-believe weather mood, then keep all writing on the page: ____________________.</p>
+      <p class="kid-direction">With your adult, let the scene describe what changes when the weather shifts: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: The teacup town feels ____________________ when the cloud ribbons drift by.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: Tell the same weather moment as if the town feels the opposite: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Add one close teacup detail, like a saucer step or spoon bridge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Add one far make-believe weather detail above the little skyline: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: If the setting could think, what would it wish for the teacup people? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Replace a plain setting word with a stronger setting lens word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Adult names a weather mood; writer adds one setting detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Use a setting lens for another tiny pretend town: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 6 | Ages 7-9 | thought clue</div>
+      <h2>Pocket Park Notice Flutter</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: choose one fictional notice-board role, then ask what that role knows but has not said: ____________________.</p>
+      <p class="kid-direction">With your adult, write one action, then add a thought clue that changes how we read it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: A pocket-park keeper pins a tiny note that says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: A paper leaf watches the note and notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Add one close detail near the notice board, such as a round tack or ribbon tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Add one far pretend park detail that makes the notice feel important: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: What is the keeper thinking but not saying yet? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Rewrite one action so the hidden thought is easier to guess: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Adult reads the action; writer adds one quiet thought word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Add one thought clue to any pretend notice scene on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 7 | Ages 7-9 | object viewpoint</div>
+      <h2>Spoon Ferry Sees the Harbor</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the spoon ferry, lunchbox dock, crumb waves, and napkin flag paper pieces in the pretend frame; choose the object narrator: ____________________.</p>
+      <p class="kid-direction">With the adult, work offline on this paper card. Pretend the spoon ferry is telling the scene and write what it notices first: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: I am the spoon ferry, and the lunchbox harbor appears like ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: A snack-barge helper sees the same harbor and notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Close to the ferry, I can see ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Across the paper harbor, I can see ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: The spoon ferry thinks, If I glide carefully, ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Change &#39;The ferry moved&#39; so the spoon ferry tells it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: circle one paper harbor item and finish one object-view sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: try the object view again with a new pretend lunchbox cargo: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 8 | Ages 7-9 | same scene new view</div>
+      <h2>Acorn Cart From Two Desks</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set down the acorn cart, button counter, leaf stamp desk, and paper path slip; choose two helper roles: ____________________.</p>
+      <p class="kid-direction">With the adult, work offline on this paper card. Tell the acorn mix-up twice, once from each helper&#39;s view: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: The Button Counter Helper thinks the acorn cart matters because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: The Leaf Stamp Helper tells the same moment and notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: On the desk nearest the acorn cart, one clue is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: At the far paper shelf, another helper can see ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: One helper keeps thinking, The best next stop is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Change &#39;The cart was confusing&#39; into a view from one helper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: point to one helper role and write only that helper&#39;s view sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: retell the same errand scene from a new pretend desk: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 9 | Ages 8-10 | setting lens</div>
+      <h2>Map Room Through Seed Shelves</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: arrange seed packet drawers, a folded garden map, blank path cards, and a small table label; choose the setting lens: ____________________.</p>
+      <p class="kid-direction">With the adult, work offline on this paper card. Choose Map Keeper, Seed Shelf Guide, or Path Card, then write what the room makes that narrator notice: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: From the map table, the most important clue is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: From the seed shelf, the same clue appears as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Beside the folded map, I notice ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: At the far side of the packet drawers, I notice ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: The narrator wonders whether the missing path means ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Change &#39;The room had seeds&#39; into a setting-lens sentence with one map-room clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: choose one seed packet shape and write a setting-lens phrase beside it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: use the same map-room setting with a new narrator role: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 10 | Ages 8-10 | near detail</div>
+      <h2>Gauge Tube Close-Up Train</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the clear gauge tube, bead cards, shiny rail strip, and tiny train piece in the pretend kitchen-window frame; choose the close clue: ____________________.</p>
+      <p class="kid-direction">With the adult, work offline on this paper card. Begin beside the gauge tube, then widen the view in one sentence: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: The Gauge Checker sees the railway from beside the measuring tube and notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: The Train Conductor sees the same scene from the cab and notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: At the tube edge, one tiny clue is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Along the far rail strip, the larger pattern is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: The Gauge Checker suspects the clue means ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Change &#39;It was rainy&#39; into a close-detail sentence about one object: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: point to the tube, bead card, or rail strip and write one close-detail phrase: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: make a second railway view that begins with one tiny gauge clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 11 | Ages 8-10 | thought clue</div>
+      <h2>Moss Signal Mind Glow</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place moss tile cards, a dome chart, signal shapes, and two narrator labels; choose the hidden thought clue: ____________________.</p>
+      <p class="kid-direction">With the adult, work offline on this paper card. Write what the observer sees, then add one thought that hints at what they believe: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: The Dome Observer sees the moss signal as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: The Note Keeper sees the same signal as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Beside the glowing moss tile, one small sign is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Across the pretend dome chart, another sign is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: The observer does not say the answer yet, but thinks ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Change &#39;The observer was worried&#39; into a thought clue that shows the feeling: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: choose a glow, blink, or hush card and write one quiet thought on paper: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: retell the observatory moment with one new thought clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 12 | Ages 8-10 | object viewpoint</div>
+      <h2>Shell Clock Paper Frame</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold one paper frame, and choose a pretend lab object that gets to narrate: ____________________.</p>
+      <p class="kid-direction">On paper, write what the shell clock notices before the lab helpers do: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: The shell clock says, I notice ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: The tide chart apprentice says, I notice ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Name one small mark beside the shell clock: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Name one pretend lab station across the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: What does the shell clock wonder about the changing water line? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Change one sentence so it sounds more like a careful object narrator: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw the shell clock first, then add one I notice line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Use another paper object to narrate a tiny lab moment: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 13 | Ages 10-11 | same scene new view</div>
+      <h2>Ferry Dock Double View</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw two paper docks, and choose one draft crossing for both roles: ____________________.</p>
+      <p class="kid-direction">Write the scene once from the ferry guide&#39;s view, then again from the draft page&#39;s view: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: The ferry guide sees the confusing sentence as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: The draft page sees the same crossing as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Add one close paper ferry item, such as a pencil oar or note buoy: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Add one far draft island detail that changes the mood: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: What does the draft page hope will happen after the crossing? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Keep the same event, but change whose eyes guide the sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle one role and write only that role&#39;s view: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Fold a paper ferry and retell one scene from a new view: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 14 | Ages 10-11 | observer detail</div>
+      <h2>Tower Label Watcher</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, stack three blank paper labels, and invent one exhibit from ordinary pretend shapes: ____________________.</p>
+      <p class="kid-direction">Write as a quiet observer who notices one clue without explaining everything at once: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: The label keeper notices ____________________ before any other clue.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: The tower visitor notices ____________________ instead.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Add one close label edge, smudge, color mark, or folded corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Add one high shelf, spiral step, or case shape across the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: What does the observer suspect the label is hiding? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Remove one distracting detail and keep the clue the observer truly needs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Mark only the clue the observer sees first: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Make one paper label and write what a careful observer notices: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 15 | Ages 10-11 | setting lens</div>
+      <h2>Compass Mat Room Lens</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, sketch a compass mat and two path tiles, and pick the part of the room that shapes the scene: ____________________.</p>
+      <p class="kid-direction">Start with the place, then show how the compass apprentice acts inside that paper scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: Through the setting lens, the map table makes the apprentice notice ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: Through the apprentice&#39;s view, the map table feels like ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Add one close tool on the compass mat: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Add one far wall chart, thread rack, or path shelf on the paper scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: What choice does the apprentice think the setting is asking for? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Move one setting detail earlier so it guides the action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Label the setting first, then write one action beside it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Draw a tiny compass mat and write how the place changes a choice: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-pov-card-page">
+      <div class="page-kicker">POV Card 16 | Ages 10-11 | closing viewpoint</div>
+      <h2>Ribbon Booklet Final View</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold three pretend pages, and choose who gets the last view of the booklet: ____________________.</p>
+      <p class="kid-direction">Write the ending from the role that can show the booklet is complete: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First view</h3>
+      <p>First view: The page binder sees the final booklet as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second view</h3>
+      <p>Second view: The ribbon keeper sees the same booklet as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Near detail</h3>
+      <p>Near detail: Add one close paper fold, ribbon loop, or cover mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Far detail</h3>
+      <p>Far detail: Add one boardwalk table or display stand on the pretend page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Thought clue</h3>
+      <p>Thought clue: What does the final viewer understand about what has changed? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise view</h3>
+      <p>Revise view: Choose the view that gives the clearest ending and cross out the weaker one: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Box the final-view sentence before adding any other detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Carry-away line: Fold a paper booklet and write one closing view for its last page: ____________________.</p>
+    </section>
+  </body>
+</html>

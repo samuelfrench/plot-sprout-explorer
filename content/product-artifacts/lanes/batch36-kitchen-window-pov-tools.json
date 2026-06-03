@@ -1,0 +1,190 @@
+{
+  "laneId": "batch36-kitchen-window-pov-tools",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the point-of-view cards, paper frame mats, narrator tabs, thought bubbles, and take-away slips before writers arrive.",
+      "Say clearly that kitchen window means a pretend paper frame, not anything writers inspect.",
+      "Choose invented role labels such as Teller, Watcher, Helper, Clerk, Keeper, or Object Voice.",
+      "Set pencils, blank strips, and extra narrator tabs where the adult can pass them out quickly.",
+      "Model one tiny scene twice: first with I noticed, then with the Watcher noticed."
+    ],
+    "paperViewpointSetup": [
+      "Place one kitchen-window frame mat in the center of the table as the shared pretend scene space.",
+      "Put first person, third person, observer, object voice, and closing tabs in separate paper stacks.",
+      "Use broad fictional scene words only, such as button tray, cloud cart, ribbon rail, moon bowl, and paper pantry.",
+      "Keep near-detail and far-detail boxes side by side so writers can sort what the narrator notices.",
+      "Leave a quiet swap pile for ideas that are fun but do not fit the current viewpoint."
+    ],
+    "viewpointCoaching": [
+      "Ask who is telling this part before any sentence is written.",
+      "For first person, point to I, my, and me words and keep the sentence inside that narrator's view.",
+      "For third person, use the role label and describe what the narrator can notice from the paper scene.",
+      "Use thought bubbles for invented clues only, never personal details from a writer's life.",
+      "Read the sentence once and ask what changed when the viewpoint changed."
+    ],
+    "privacyAndSafetyNotes": [
+      "Keep every activity adult-led, fictional, and on paper.",
+      "Use invented names, role labels, paper props, and made-up scene words.",
+      "Do not ask writers to identify real people, ordinary places, or personal routines.",
+      "Turn any personal detail into a pretend prop, role, color, or paper scene clue before writing.",
+      "Skip any card that stops feeling gentle, fictional, or paper-only."
+    ],
+    "familyHandoff": [
+      "Send one slip with a family adult, not a full packet.",
+      "Tell family adults the slip is for one short fictional viewpoint sentence on paper.",
+      "Invite the adult to choose a narrator tab before the writer fills the blank.",
+      "Praise clear narrator choice, detail focus, and voice fit before spelling cleanup.",
+      "Return unused slips to the folder so the next adult-led table starts with clean paper."
+    ],
+    "reset": [
+      "Sort narrator tabs, paper frame mats, thought bubbles, detail boxes, and slips into separate stacks.",
+      "Recycle scrap warm-ups and keep clean blanks for the next session.",
+      "Clear model sentences from the table so the next group starts with fresh invented choices.",
+      "Put pencils, guide sheets, and all paper pieces back in the envelope."
+    ]
+  },
+  "povRoutines": [
+    {
+      "name": "I-View Paper Frame",
+      "bestFor": "Helping writers try first person without a long draft.",
+      "steps": [
+        "Adult places the paper frame mat and one narrator tab marked I.",
+        "Writer chooses one invented role to speak from inside the pretend scene.",
+        "Writer fills one line beginning with I notice or I wonder.",
+        "Adult asks which detail only that narrator would care about."
+      ]
+    },
+    {
+      "name": "Third Person Watcher",
+      "bestFor": "Switching from I to a narrator who describes a character.",
+      "steps": [
+        "Adult replaces the I tab with a role label such as the Watcher.",
+        "Writer names one action the role can notice in the paper frame.",
+        "Writer writes one sentence using the role label instead of I.",
+        "Adult circles the words that show the narrator is not speaking as the character."
+      ]
+    },
+    {
+      "name": "Near Far Detail Sort",
+      "bestFor": "Separating tiny clues from wider scene clues.",
+      "steps": [
+        "Adult draws two boxes labeled near detail and far detail.",
+        "Writer chooses two invented scene clues from the paper word stack.",
+        "Writer places the closer-feeling clue in near and the wider clue in far.",
+        "Writer writes one sentence that uses the chosen detail on purpose."
+      ]
+    },
+    {
+      "name": "Thought Bubble Clue",
+      "bestFor": "Adding what a narrator thinks without adding personal details.",
+      "steps": [
+        "Adult gives one thought bubble and one role tab.",
+        "Writer chooses a pretend question the narrator is silently wondering.",
+        "Writer writes the thought clue in the bubble, then adds one action sentence.",
+        "Adult asks whether the thought helps the reader understand the scene."
+      ]
+    },
+    {
+      "name": "Object Voice Switch",
+      "bestFor": "Trying the same scene from a pretend object's viewpoint.",
+      "steps": [
+        "Adult chooses a harmless paper object card, such as spoon, ribbon, button, or label.",
+        "Writer gives the object one tiny job in the pretend scene.",
+        "Writer writes one line as if the object could tell the moment.",
+        "Adult helps revise one word so the object voice sounds different from a person."
+      ]
+    },
+    {
+      "name": "Closing View Choice",
+      "bestFor": "Ending a small scene from the clearest viewpoint.",
+      "steps": [
+        "Adult lays out two narrator tabs from earlier work.",
+        "Writer rereads one sentence from each viewpoint.",
+        "Writer chooses the viewpoint that makes the ending clearest.",
+        "Writer writes one final line that shows what the narrator notices last."
+      ]
+    }
+  ],
+  "takeHomePovSlips": [
+    {
+      "title": "I Notice Frame",
+      "time": "view slip",
+      "skill": "first person view",
+      "direction": "Write one sentence from an invented narrator using I: ____________________.",
+      "familyLine": "Adult asks what this narrator notices first: ____________________."
+    },
+    {
+      "title": "Watcher Tells It",
+      "time": "observer slip",
+      "skill": "third person view",
+      "direction": "Rewrite the line using a pretend role label instead of I: ____________________.",
+      "familyLine": "Adult asks which words show the narrator is watching: ____________________."
+    },
+    {
+      "title": "Close Clue Box",
+      "time": "near-detail slip",
+      "skill": "near detail",
+      "direction": "Name one tiny detail in the paper frame and use it in a sentence: ____________________.",
+      "familyLine": "Adult asks why that near detail matters to the narrator: ____________________."
+    },
+    {
+      "title": "Far Ribbon View",
+      "time": "far-detail slip",
+      "skill": "far detail",
+      "direction": "Choose one wider pretend scene detail and write what it changes: ____________________.",
+      "familyLine": "Adult asks how the far detail changes the view: ____________________."
+    },
+    {
+      "title": "Thought Bubble Wonder",
+      "time": "thought slip",
+      "skill": "thought clue",
+      "direction": "Write one invented thought the narrator keeps in a thought bubble: ____________________.",
+      "familyLine": "Adult asks what clue the thought gives the reader: ____________________."
+    },
+    {
+      "title": "Voice Filter Tab",
+      "time": "voice slip",
+      "skill": "voice filter",
+      "direction": "Pick careful, bouncy, puzzled, or proud, then write one line in that voice: ____________________.",
+      "familyLine": "Adult asks which word made the voice clear: ____________________."
+    },
+    {
+      "title": "Button Tray View",
+      "time": "object-view slip",
+      "skill": "object viewpoint",
+      "direction": "Let a pretend object tell one moment from the paper scene: ____________________.",
+      "familyLine": "Adult asks what the object noticed that a person might miss: ____________________."
+    },
+    {
+      "title": "Paper Pantry Lens",
+      "time": "setting-lens slip",
+      "skill": "setting lens",
+      "direction": "Use the setting lens to describe the paper pantry, moon bowl, or ribbon rail: ____________________.",
+      "familyLine": "Adult asks which setting clue changes the story feeling: ____________________."
+    },
+    {
+      "title": "Mood Tint Lens",
+      "time": "emotion-lens slip",
+      "skill": "emotion lens",
+      "direction": "Choose calm, curious, worried, or pleased and tint one sentence with that feeling: ____________________.",
+      "familyLine": "Adult asks which detail shows the feeling without naming it: ____________________."
+    },
+    {
+      "title": "Closing View Line",
+      "time": "closing-view slip",
+      "skill": "closing viewpoint",
+      "direction": "Finish the invented scene from the narrator who sees the best final clue: ____________________.",
+      "familyLine": "Adult asks why this viewpoint makes a good closing line: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "My narrator tab was ____________________.",
+    "The first person line I liked was ____________________.",
+    "The third person version said ____________________.",
+    "The near detail I circled was ____________________.",
+    "The far detail I used was ____________________.",
+    "My thought bubble clue was ____________________.",
+    "The object viewpoint line was ____________________.",
+    "The closing viewpoint I chose was ____________________."
+  ]
+}

@@ -21,6 +21,8 @@ import {
   validateDeskDrawerStorySequenceCardPackSourceFiles,
   validateBlanketFortStoryDialogueCardPackSource,
   validateBlanketFortStoryDialogueCardPackSourceFiles,
+  validateKitchenWindowStoryPovCardPackSource,
+  validateKitchenWindowStoryPovCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -86,6 +88,7 @@ const batch32ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch33ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-02-batch33-product-images.json')
 const batch34ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch34-product-images.json')
 const batch35ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch35-product-images.json')
+const batch36ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch36-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -115,6 +118,7 @@ const notebookMarginRevisionSourceFile = resolve(root, 'content', 'product-artif
 const deskDrawerSequenceSourceFile = resolve(root, 'content', 'product-artifacts', 'desk-drawer-story-sequence-card-pack.json')
 const readingNookCauseEffectSourceFile = resolve(root, 'content', 'product-artifacts', 'reading-nook-story-cause-effect-card-pack.json')
 const blanketFortDialogueSourceFile = resolve(root, 'content', 'product-artifacts', 'blanket-fort-story-dialogue-card-pack.json')
+const kitchenWindowPovSourceFile = resolve(root, 'content', 'product-artifacts', 'kitchen-window-story-pov-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -145,6 +149,7 @@ const batch32ProductImagesBatchId = '2026-06-02-batch32-product-images'
 const batch33ProductImagesBatchId = '2026-06-02-batch33-product-images'
 const batch34ProductImagesBatchId = '2026-06-03-batch34-product-images'
 const batch35ProductImagesBatchId = '2026-06-03-batch35-product-images'
+const batch36ProductImagesBatchId = '2026-06-03-batch36-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -174,6 +179,7 @@ const notebookMarginRevisionBatchId = '2026-06-02-batch32'
 const deskDrawerSequenceBatchId = '2026-06-02-batch33'
 const readingNookCauseEffectBatchId = '2026-06-03-batch34'
 const blanketFortDialogueBatchId = '2026-06-03-batch35'
+const kitchenWindowPovBatchId = '2026-06-03-batch36'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -2350,6 +2356,103 @@ function validateBatch35ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch36ProductImage(image) {
+  const label = `2026-06-03-batch36-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'kitchen-window-story-pov-card-pack',
+    `${label}.slug must be kitchen-window-story-pov-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch36/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch36/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch36/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank cream kitchen window story point-of-view cards',
+    'unbranded cozy writing table',
+    'viewpoint guide boxes',
+    'plain white background',
+    'screen-free printable kitchen window story point-of-view card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'book',
+    'book cover',
+    'real book title',
+    'author name',
+    'publisher name',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'app interface',
+    'microphone',
+    'audio recorder',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'school login',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'review',
+    'score',
+    'grade',
+    'timer',
+    'clock',
+    'calendar',
+    'contest',
+    'prize',
+    'address',
+    'house',
+    'home',
+    'street',
+    'gps',
+    'child face',
+    'child portrait',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -2587,6 +2690,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'blanket-fort-story-dialogue-card-pack': {
       title: 'Blanket Fort Story Dialogue Card Pack',
       pricePoint: '$43',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'kitchen-window-story-pov-card-pack': {
+      title: 'Kitchen Window Story Point-of-View Card Pack',
+      pricePoint: '$45',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -2922,6 +3033,28 @@ function validateProduct(product, productSlugs, worldSlugs) {
     expect(
       !/\baccounts?\b|\bschool accounts?\b|\blogins?\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideos?\b|\bphotos?\b|\bcameras?\b|\bphones?\b|\bdevices?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bgrading\b|\bscores?\b|\brubrics?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\baddresses?\b|\breal homes?\b|\bhome address\b|\bhouse(s)?\b|\bneighbors?\b|\bneighborhood(s)?\b|\bstreets?\b|\boutside\b|\boutdoors?\b|\bgps\b|\bcoordinates?\b|\breal route(s)?\b|\breal child\b|\breal child data\b|\bprivate child data\b|\bstudent records?\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bfood prep\b|\ballerg(y|ies|en|ens|ic)\b|\bmedical\b|\blegal\b|\btherapy\b|\bgrief\b/i.test(blanketFortRenderedText),
       `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, contact, photo, camera, real-home, outdoor, real-route, real-book-title, author, publisher, franchise, food/allergy, or unsafe professional language.`,
+    )
+  }
+  if (product.slug === 'kitchen-window-story-pov-card-pack') {
+    const kitchenWindowSummaryErrors = validateProductWorldSummaries(product, 'Kitchen Window Story Point-of-View Card Pack')
+    expect(
+      kitchenWindowSummaryErrors.length === 0,
+      `${label}.worldSummaries failed validation:\n${kitchenWindowSummaryErrors.join('\n')}`,
+    )
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    const kitchenWindowRenderedText = renderedHtml
+      .replaceAll(safety, '')
+      .replaceAll('take-home', '')
+      .replaceAll('Checkout is pending until the payment provider is selected', '')
+      .replaceAll('device-width', '')
+      .replaceAll('Kitchen Window', '')
+      .replaceAll('kitchen window', '')
+      .replaceAll('kitchen-window', '')
+    expect(
+      !/\baccounts?\b|\bschool accounts?\b|\blogins?\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideos?\b|\bphotos?\b|\bcameras?\b|\bphones?\b|\bdevices?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bgrading\b|\bscores?\b|\brubrics?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\baddresses?\b|\breal homes?\b|\bhome address\b|\bhome window(s)?\b|\breal window(s)?\b|\breal view(s)?\b|\blook out\b|\bhouse(s)?\b|\bneighbors?\b|\bneighborhood(s)?\b|\bstreets?\b|\boutside\b|\boutdoors?\b|\bgps\b|\bcoordinates?\b|\breal route(s)?\b|\bexact location\b|\bexact places?\b|\breal child\b|\breal child data\b|\bprivate child data\b|\bstudent records?\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bfood prep\b|\ballerg(y|ies|en|ens|ic)\b|\bmedical\b|\blegal\b|\btherapy\b|\bgrief\b|\bwindow safety\b|\boutdoor safety\b|\bweather safety\b/i.test(kitchenWindowRenderedText),
+      `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, contact, photo, camera, real-home/window, outdoor, real-route, exact-location, real-book-title, author, publisher, franchise, food/allergy, unsafe professional, or weather/window-safety language.`,
     )
   }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
@@ -3334,12 +3467,23 @@ expect(Array.isArray(batch35ProductImages.images), 'batch35 product image manife
 expect(batch35ProductImages.images.length === 1, `Expected 1 Batch 35 product image, found ${batch35ProductImages.images.length}.`)
 validateBatch35ProductImage(batch35ProductImages.images[0])
 
+expect(existsSync(batch36ProductImagesFile), `Missing Batch 36 product image manifest: ${batch36ProductImagesFile}`)
+const batch36ProductImages = readJson(batch36ProductImagesFile)
+expect(
+  batch36ProductImages.batchId === batch36ProductImagesBatchId,
+  `batch36 product image manifest batchId must be ${batch36ProductImagesBatchId}.`,
+)
+expect(batch36ProductImages.generatedAt === '2026-06-03', 'batch36 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch36ProductImages.images), 'batch36 product image manifest images must be an array.')
+expect(batch36ProductImages.images.length === 1, `Expected 1 Batch 36 product image, found ${batch36ProductImages.images.length}.`)
+validateBatch36ProductImage(batch36ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 28, `Expected 28 product records, found ${products.products.length}.`)
+expect(products.products.length === 29, `Expected 29 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -3371,6 +3515,7 @@ for (const requiredProductSlug of [
   'desk-drawer-story-sequence-card-pack',
   'reading-nook-story-cause-effect-card-pack',
   'blanket-fort-story-dialogue-card-pack',
+  'kitchen-window-story-pov-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -5331,6 +5476,93 @@ for (const asset of blanketFortDialogueArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(kitchenWindowPovSourceFile), `Missing Batch 36 Kitchen Window Story Point-of-View Card Pack source file: ${kitchenWindowPovSourceFile}`)
+const kitchenWindowPovSource = readJson(kitchenWindowPovSourceFile)
+expect(
+  kitchenWindowPovSource.batchId === kitchenWindowPovBatchId,
+  `Kitchen Window Story Point-of-View Card Pack source batchId must be ${kitchenWindowPovBatchId}.`,
+)
+const kitchenWindowPovProduct = products.products.find(
+  (product) => product.slug === 'kitchen-window-story-pov-card-pack',
+)
+expect(
+  kitchenWindowPovProduct,
+  'Missing Kitchen Window Story Point-of-View Card Pack product record for Batch 36 artifact validation.',
+)
+const kitchenWindowPovSourceErrors = validateKitchenWindowStoryPovCardPackSource(
+  kitchenWindowPovSource,
+  kitchenWindowPovProduct,
+  worldAgeBands,
+)
+expect(
+  kitchenWindowPovSourceErrors.length === 0,
+  `Kitchen Window Story Point-of-View Card Pack source failed validation:\n${kitchenWindowPovSourceErrors.join('\n')}`,
+)
+const kitchenWindowPovSourceFileErrors = validateKitchenWindowStoryPovCardPackSourceFiles(
+  kitchenWindowPovSource,
+  root,
+)
+expect(
+  kitchenWindowPovSourceFileErrors.length === 0,
+  `Kitchen Window Story Point-of-View Card Pack sourceFiles failed validation:\n${kitchenWindowPovSourceFileErrors.join('\n')}`,
+)
+const kitchenWindowPovExpectedPdfPages = kitchenWindowPovSource.cards.length + 5
+const kitchenWindowPovArtifactStatus = inspectArtifactFiles(root, kitchenWindowPovSource.artifact, {
+  expectedPdfPages: kitchenWindowPovExpectedPdfPages,
+})
+expect(
+  kitchenWindowPovArtifactStatus.valid,
+  `Kitchen Window Story Point-of-View Card Pack artifacts failed validation:\n${kitchenWindowPovArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  kitchenWindowPovArtifactStatus.files.pdf.size > 100_000,
+  `Kitchen Window Story Point-of-View Card Pack PDF artifact is unexpectedly small: ${kitchenWindowPovArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  kitchenWindowPovArtifactStatus.files.pdf.pageCount === kitchenWindowPovExpectedPdfPages,
+  `Kitchen Window Story Point-of-View Card Pack PDF artifact must have ${kitchenWindowPovExpectedPdfPages} pages.`,
+)
+expect(
+  kitchenWindowPovArtifactStatus.files.zip.size > kitchenWindowPovArtifactStatus.files.pdf.size,
+  'Kitchen Window Story Point-of-View Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const kitchenWindowPovCheckoutErrors = validateCheckoutReadiness(
+  kitchenWindowPovProduct,
+  kitchenWindowPovArtifactStatus,
+)
+expect(
+  kitchenWindowPovCheckoutErrors.length === 0,
+  `Kitchen Window Story Point-of-View Card Pack checkout readiness failed validation:\n${kitchenWindowPovCheckoutErrors.join('\n')}`,
+)
+const kitchenWindowPovArtifactManifest = readJson(resolve(root, kitchenWindowPovSource.artifact.manifestPath))
+expect(
+  kitchenWindowPovArtifactManifest.sourcePageCount === kitchenWindowPovSource.cards.length,
+  'Kitchen Window Story Point-of-View Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(kitchenWindowPovArtifactManifest.files.assets),
+  'Kitchen Window Story Point-of-View Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  kitchenWindowPovArtifactManifest.files.assets.length === kitchenWindowPovSource.worldSlugs.length,
+  'Kitchen Window Story Point-of-View Card Pack artifact manifest must include one copied local image per source world.',
+)
+const kitchenWindowPovManifestAssetErrors = validateManifestWorldAssets(
+  kitchenWindowPovSource,
+  kitchenWindowPovArtifactManifest,
+)
+expect(
+  kitchenWindowPovManifestAssetErrors.length === 0,
+  `Kitchen Window Story Point-of-View Card Pack artifact manifest image coverage failed validation:\n${kitchenWindowPovManifestAssetErrors.join('\n')}`,
+)
+for (const asset of kitchenWindowPovArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Kitchen Window Story Point-of-View Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length + batch26ProductImages.images.length + batch27ProductImages.images.length + batch28ProductImages.images.length + batch29ProductImages.images.length + batch30ProductImages.images.length + batch31ProductImages.images.length + batch32ProductImages.images.length + batch33ProductImages.images.length + batch34ProductImages.images.length + batch35ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 28 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length + batch26ProductImages.images.length + batch27ProductImages.images.length + batch28ProductImages.images.length + batch29ProductImages.images.length + batch30ProductImages.images.length + batch31ProductImages.images.length + batch32ProductImages.images.length + batch33ProductImages.images.length + batch34ProductImages.images.length + batch35ProductImages.images.length + batch36ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 29 product artifacts.`,
 )
