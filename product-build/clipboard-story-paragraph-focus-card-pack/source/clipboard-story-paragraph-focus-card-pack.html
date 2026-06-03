@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clipboard Story Paragraph Focus Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .paragraph-focus-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .paragraph-focus-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .paragraph-focus-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable clipboard paragraph focus cards</p>
+        <h1>Clipboard Story Paragraph Focus Card Pack</h1>
+        <p>Sixteen clipboard cards help writers keep one fictional paragraph focused with a main idea, two useful details, a linking sentence, one cut extra, and a final copied paragraph.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable paragraph focus cards plus adult guide tools, paragraph focus routines, take-home paragraph slips, and optional prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$71</span>
+        <h2>Included</h2>
+        <ul><li>16 printable clipboard paragraph focus cards</li>
+<li>Adult setup guide</li>
+<li>Fictional paragraph focus safety notes</li>
+<li>Clipboard paragraph coaching moves</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led paragraph focus routines</li>
+<li>Ten take-home paragraph slips</li>
+<li>Eight optional prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story paragraph-focus coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Clipboard Story Paragraph Focus Adult Guide</h3><ul><li>Print the clipboard paragraph focus cards, blank paragraph frames, and guide pages before the adult-led paper session.</li>
+<li>Begin with one fictional paragraph plan, then coach a main idea, two useful details, detail order, one linking sentence, one cut idea, and a final focused copy.</li>
+<li>Keep every example made-up, broad, printable, offline, paper-only, and guided by an adult.</li>
+<li>Use small paper slips so the writer can move details before copying the final paragraph.</li>
+<li>Replace narrow real facts with invented names, broad story places, and pretend objects before writing begins.</li>
+<li>End each activity by copying one focused fictional paragraph that keeps one main idea and two helpful details.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one clipboard story paragraph-focus card at a time. Keep every choice broad, invented, paper-only, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen paragraph-focus-card worlds</h2>
+      <p>Pick a world image, then shape one fictional paragraph with a pretend clipboard story paragraph-focus card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Story paragraph-focus routines</p>
+      <h2>Choose the clipboard paragraph-focus routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Main Idea Clip</h3>
+      <p>Choosing the one idea a fictional paragraph will stay about.</p>
+      <ol><li>The adult places one blank paragraph frame on the clipboard strip and writes the story topic: ____________________.</li>
+<li>The writer states the one main idea the paragraph should prove or show: ____________________.</li>
+<li>The adult asks which words in the main idea must guide every sentence: ____________________.</li>
+<li>The writer copies the main idea line at the top of the paragraph frame: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Detail Pair Sort</h3>
+      <p>Choosing two useful details and leaving out loose ideas.</p>
+      <ol><li>The adult writes four invented detail notes on small paper slips: ____________________.</li>
+<li>The writer chooses two details that clearly support the main idea: ____________________.</li>
+<li>The adult asks which other detail is interesting but belongs outside this paragraph: ____________________.</li>
+<li>The writer places the detail pair under the main idea line: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Detail Order Lineup</h3>
+      <p>Putting two useful details in the clearest order.</p>
+      <ol><li>The adult sets the two chosen details side by side below the main idea: ____________________.</li>
+<li>The writer numbers the detail that should come first and the detail that should come second: ____________________.</li>
+<li>The adult asks why that order will help the reader follow the pretend moment: ____________________.</li>
+<li>The writer copies the ordered detail notes in the paragraph frame: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Linking Sentence Bridge</h3>
+      <p>Adding one sentence that connects the main idea to the details.</p>
+      <ol><li>The adult points from the main idea to the first detail and asks for one linking sentence: ____________________.</li>
+<li>The writer drafts a linking sentence that connects the main idea to detail one: ____________________.</li>
+<li>The adult asks whether the sentence points back to the same paragraph focus: ____________________.</li>
+<li>The writer writes the linking sentence before the two detail lines: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Extra Idea Lift</h3>
+      <p>Cutting one interesting idea that pulls the paragraph away from its focus.</p>
+      <ol><li>The adult marks one sentence or note that wanders away from the main idea: ____________________.</li>
+<li>The writer explains why that extra idea can wait for another paper page: ____________________.</li>
+<li>The adult asks which word or detail should stay after the extra idea comes out: ____________________.</li>
+<li>The writer rewrites the paragraph plan with the extra idea removed: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Final Focus Copy</h3>
+      <p>Copying one focused fictional paragraph after the plan is clean.</p>
+      <ol><li>The adult reads the paragraph plan in order: main idea, linking sentence, detail one, detail two: ____________________.</li>
+<li>The writer checks that every sentence supports the same focus: ____________________.</li>
+<li>The adult asks if one word should move, change, or come out before final copying: ____________________.</li>
+<li>The writer copies the final focused fictional paragraph on a fresh sheet: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home paragraph slips</p>
+      <h2>Try one focused paragraph later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">one paper pass | main idea</p>
+      <h3>Main Idea Slip</h3>
+      <p>Write the one main idea this fictional paragraph will stay about: ____________________.</p>
+      <p>Ask what every sentence should point back to: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">two-note pass | two useful details</p>
+      <h3>Two Useful Details Slip</h3>
+      <p>List two useful invented details that support the main idea: ____________________.</p>
+      <p>Ask which two details help the reader understand the same idea: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">lineup pass | detail order</p>
+      <h3>Detail Order Slip</h3>
+      <p>Number the two details in the order the paragraph should use them: ____________________.</p>
+      <p>Ask why the first detail should come before the second: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">linking line pass | linking sentence</p>
+      <h3>Linking Sentence Slip</h3>
+      <p>Write one linking sentence between the main idea and the first detail: ____________________.</p>
+      <p>Ask how the linking sentence keeps the paragraph focused: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">cut-and-copy pass | cut one extra idea</p>
+      <h3>Extra Idea Slip</h3>
+      <p>Find one interesting extra idea that does not belong in this paragraph: ____________________.</p>
+      <p>Ask where that idea could wait on another blank paper page: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">quiet check pass | focus check</p>
+      <h3>Focus Check Slip</h3>
+      <p>Check each sentence and mark yes if it supports the main idea: ____________________.</p>
+      <p>Ask which sentence most clearly proves the paragraph focus: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">single frame pass | opening line from main idea</p>
+      <h3>Opening Line Slip</h3>
+      <p>Turn the main idea into a clear opening line for one fictional paragraph: ____________________.</p>
+      <p>Ask whether the opening line tells the reader what to expect: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">detail pair pass | detail pair sentences</p>
+      <h3>Detail Pair Slip</h3>
+      <p>Write the detail pair as two separate sentences that support one focus: ____________________.</p>
+      <p>Ask whether both detail sentences belong under the same main idea: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">final copy pass | final focused paragraph</p>
+      <h3>Final Focus Copy Slip</h3>
+      <p>Copy the final focused paragraph after one extra idea has been removed: ____________________.</p>
+      <p>Ask what changed from the loose plan to the final paragraph: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">calm polish pass | small focus polish</p>
+      <h3>Paragraph Polish Slip</h3>
+      <p>Move, change, or remove one word so the final paragraph reads more smoothly: ____________________.</p>
+      <p>Ask which small change made the paragraph easier to follow: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the main idea for this paragraph is ____________________.</li>
+<li>Optional adult-led offline prompt: detail one that supports the main idea is ____________________.</li>
+<li>Optional adult-led offline prompt: detail two that supports the main idea is ____________________.</li>
+<li>Optional adult-led offline prompt: the detail that should come first is ____________________.</li>
+<li>Optional adult-led offline prompt: the linking sentence that holds the paragraph together is ____________________.</li>
+<li>Optional adult-led offline prompt: the extra idea I will cut is ____________________.</li>
+<li>Optional adult-led offline prompt: the sentence that best keeps the focus is ____________________.</li>
+<li>Optional adult-led offline prompt: the final focused fictional paragraph is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 1 | Ages 6-8 | choose one main idea, keep two useful details, and remove one extra idea</div>
+      <h2>Moon Muffin Clipboard Counter Paragraph</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card on a clipboard with blank paper and choose one pretend market moment to focus on: ____________________.</p>
+      <p class="kid-direction">Writer: Keep the paragraph about one moon muffin idea, then choose two details that help it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: The paragraph is mostly about one glowing muffin tray at the counter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Useful detail one: Add one detail about the tray, wrapper, or tiny paper label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Useful detail two: Add one detail about what the helper notices beside the tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: Choose which useful detail should come first so the paragraph is easy to follow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: Write one sentence that connects both details back to the glowing muffin tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: Cross out one fun idea that does not help this muffin-tray paragraph: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final focused paragraph: Copy the main idea, two useful details, linking sentence, and no extra idea: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Point to the main idea and write only the two useful details first: ____________________. Later paper line: Try another focused paragraph about a moon crumb card or silver wrapper: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 2 | Ages 6-8 | stay with one puddle post idea and support it with two clear details</div>
+      <h2>Puddle Planet Clipboard Ripple Note</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set the card beside blank paper and offer one invented ripple note or shell slot moment: ____________________.</p>
+      <p class="kid-direction">Writer: Make the paragraph about one ripple note, then choose two details that belong with it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: The paragraph is mostly about a ripple note arriving at the shell slot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Useful detail one: Add one detail about the note shape, stamp wobble, or wet-looking edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Useful detail two: Add one detail about the puddle post helper sorting the note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: Decide whether the note detail or helper detail should come first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: Write one sentence that shows how both details help the ripple note idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: Cross out one extra puddle idea that pulls the paragraph away from the note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final focused paragraph: Copy one main idea, two useful details, one linking sentence, and no extra idea: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle the ripple note first, then write two matching details: ____________________. Later paper line: Try another focused paragraph about a shell slot or ripple stamp: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 3 | Ages 7-9 | build one paragraph around a clear train-ticket main idea with ordered support</div>
+      <h2>Buttonwood Clipboard Library Train Ticket</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card on a clipboard and choose one invented ticket, shelf tag, or station-card moment: ____________________.</p>
+      <p class="kid-direction">Writer: Keep the paragraph about one ticket clue and use two details that prove why it matters: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: The paragraph is mostly about a ticket clue changing the library train stop: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Useful detail one: Add one detail about the ticket mark, folded edge, or color strip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Useful detail two: Add one detail about the traveler noticing the shelf tag or station card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: Put the detail that explains the ticket clue before the detail that shows the next action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: Write one sentence that connects the ticket clue to the traveler action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: Cross out one train-side idea that sounds fun but does not support the ticket clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final focused paragraph: Copy the ticket main idea, two ordered details, linking sentence, and no extra idea: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Underline the ticket clue, then list two details before copying the paragraph: ____________________. Later paper line: Try another focused paragraph about a bookmark strip or shelf tag: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 4 | Ages 7-9 | keep a map-table paragraph focused by choosing details that solve one mix-up</div>
+      <h2>Button Bakery Clipboard Map Table Paragraph</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this card beside blank paper and keep every map-table mark pretend before the writer begins: ____________________.</p>
+      <p class="kid-direction">Writer: Focus on one bakery map-table mix-up, then choose two useful details that explain it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: The paragraph is mostly about a crumb map getting mixed up on the map table: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Useful detail one: Add one detail about the crumb dot, button marker, or ribbon path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Useful detail two: Add one detail about how the map mender spots the mix-up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: Choose whether the map mark or the map mender action should appear first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: Write one sentence that ties both details to the crumb-map mix-up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: Cross out one bakery idea that does not explain the map-table mix-up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final focused paragraph: Copy one main idea, two useful details in order, one linking sentence, and no extra idea: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Box the map-table main idea before writing two supporting details: ____________________. Later paper line: Try another focused paragraph about a button marker or ribbon path: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 5 | Ages 7-8 | write one weather-window paragraph with a clear main idea and two matching details</div>
+      <h2>Teacup Town Clipboard Weather Window Paragraph</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card on a clipboard and choose one invented cloud tag, cup sill, or forecast strip clue: ____________________.</p>
+      <p class="kid-direction">Writer: Make the paragraph about one weather-window clue and keep only details that help it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: The paragraph is mostly about a cloud tag changing the view at the weather window: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Useful detail one: Add one detail about the cloud tag shape, swirl, or paper color: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Useful detail two: Add one detail about what the tiny watcher does near the cup sill: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: Decide which detail helps the reader picture the weather-window clue first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: Write one sentence that connects the cloud tag detail and watcher detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: Cross out one Teacup Town idea that does not help the cloud-tag paragraph: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final focused paragraph: Copy the main idea, two useful details, linking sentence, and no extra idea: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw a tiny box for the main idea, then write two details under it: ____________________. Later paper line: Try another focused paragraph about a forecast strip or cup-sill card: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 6 | Ages 7-9 | focus one notice-board paragraph by linking two details to the same main idea</div>
+      <h2>Pocket Park Clipboard Notice Board Paragraph</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set the card beside blank paper and choose one invented leaf notice or board-edge moment: ____________________.</p>
+      <p class="kid-direction">Writer: Keep the paragraph about one notice-board idea and remove anything that wanders away: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: The paragraph is mostly about a leaf notice changing the pocket park board: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Useful detail one: Add one detail about the notice corner, leaf stamp, or dotted border: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Useful detail two: Add one detail about the keeper smoothing, sorting, or pointing to the notice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: Place the notice detail and keeper detail in the order that makes the paragraph clearest: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: Write one sentence that links both details back to the leaf notice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: Cross out one pocket park idea that does not belong in this notice-board paragraph: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final focused paragraph: Copy one main idea, two useful details, one linking sentence, and no extra idea: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Mark the leaf-notice main idea, then write only the two useful details: ____________________. Later paper line: Try another focused paragraph about a bench label or paper station: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 7 | Ages 7-9 | state one ferry main idea and keep two details on that idea</div>
+      <h2>Spoon Ferry Lunchbox Harbor Tray Paragraph Focus Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose a pretend spoon ferry, lid dock, or harbor tray label before writing begins: ____________________.</p>
+      <p class="kid-direction">Writer: make one main idea, add two useful ferry details, cut one extra idea, and copy a focused paragraph: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: write what this paragraph will mostly tell about the spoon ferry: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Detail 1: add one useful detail about the ferry job or pretend cargo: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Detail 2: add one useful detail about the lid dock, napkin pier, or harbor tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: number the two details 1 and 2 so the paragraph moves clearly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: write one sentence that connects the main idea to both ferry details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: cross out one idea that belongs in another paragraph, such as a sky chart or railway card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final paragraph: copy one focused paragraph with the main idea, two details, and linking sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the main idea and one detail first, then add the second detail if ready: ____________________. Take-home line: make a new spoon ferry paragraph with one main idea and two useful details: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 8 | Ages 7-9 | keep an acorn errand paragraph centered on one counter task</div>
+      <h2>Acorn Avenue Errand Counter Paragraph Focus Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose a pretend acorn slip, twig tray, or seed stamp for the counter task: ____________________.</p>
+      <p class="kid-direction">Writer: name the main counter idea, add two useful acorn details, choose their order, and trim one extra idea: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: write what the paragraph will mostly tell about the acorn errand counter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Detail 1: add one useful detail about the acorn slip, twig tray, or seed stamp: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Detail 2: add one useful detail about how the leaf helper finishes the counter task: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: decide whether the object detail or action detail should come first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: write one sentence that ties the counter task to both acorn details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: cross out one fun idea that does not help this acorn counter paragraph: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final paragraph: copy one focused acorn paragraph with the main idea, two details, and linking sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: circle the main idea and write just the two best acorn details: ____________________. Take-home line: build another acorn errand paragraph around one counter task and two useful details: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 9 | Ages 8-10 | separate the map table main idea from side details</div>
+      <h2>Seed Library Map Table Paragraph Focus Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose a pretend seed card, folded map, or shelf label for the map table: ____________________.</p>
+      <p class="kid-direction">Writer: draft one map table main idea, support it with two useful details, and remove one side idea: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: write what this paragraph will mostly explain about the seed library map table: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Detail 1: add one useful detail about the seed card, folded map, or shelf label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Detail 2: add one useful detail about how the map table helps the seed keeper choose a place on the pretend map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: put the detail that explains the map table first, then the detail that shows what changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: write one sentence that connects the main idea to both map table details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: cross out one detail that belongs to a rain railway card or moss message dome instead: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final paragraph: copy one focused seed library paragraph with the main idea, two details, and linking sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write the main idea, then list only the two details that stay on that idea: ____________________. Take-home line: make a new map table paragraph with one main idea, two details, and one extra idea cut away: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 10 | Ages 8-10 | choose detail order for a rain railway paragraph</div>
+      <h2>Rain Gauge Railway Paragraph Focus Card</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose a pretend gauge bead, rail label, or platform flag for the railway card: ____________________.</p>
+      <p class="kid-direction">Writer: keep the paragraph about one rain railway idea, add two useful details, and cut one unrelated detail: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: write what this paragraph will mostly show about the rain gauge railway: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Detail 1: add one useful detail about the gauge bead, rail label, or platform flag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Detail 2: add one useful detail about how the pretend railway action changes the card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: choose whether the gauge detail or railway action detail should come first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: write one sentence that links the main railway idea to both details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: cross out one idea that belongs to an acorn counter or harbor tray paragraph instead: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final paragraph: copy one focused rain railway paragraph with a main idea, two details, and linking sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: number the two railway details, then copy only the final focused paragraph: ____________________. Take-home line: write another rain railway paragraph by keeping one main idea and cutting one extra idea: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 11 | Ages 8-10 | link one message dome main idea to two supporting details</div>
+      <h2>Moss Message Dome Paragraph Focus Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose a pretend moss note, pebble lens, or sky chart for the message dome: ____________________.</p>
+      <p class="kid-direction">Writer: write one message dome main idea, add two useful details, choose their order, and copy the final paragraph: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: write what the paragraph will mostly tell about the moss message dome: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Detail 1: add one useful detail about the moss note, pebble lens, or sky chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Detail 2: add one useful detail about what the sky watcher understands from the message: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: place the clue detail before the understanding detail, or explain why the order should switch: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: write one sentence that connects the main message idea to both details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: cross out one seed map, ferry, or counter detail that pulls the paragraph away from the message dome: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final paragraph: copy one focused moss message paragraph with a main idea, two details, and linking sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write the main idea and two clue details before copying the full paragraph: ____________________. Take-home line: make another message dome paragraph with one main idea, two useful details, and one extra idea cut: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 12 | Ages 8-10 | keep one paragraph focused on one tidepool main idea</div>
+      <h2>Tidepool Timekeepers Table Focus Card</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside blank paper and name one gentle timekeeper table idea for the paragraph: ____________________.</p>
+      <p class="kid-direction">Writer: make one focused paragraph with a main idea, two useful details, one linking sentence, and one crossed-out extra idea: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: write what the timekeeper table is helping the tidepool helper notice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Detail 1: add one useful detail about a shell marker, pool bead, or tiny tide dial: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Detail 2: add one more detail that still fits the same tidepool main idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: choose which detail should come first so the paragraph is easy to follow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: write one sentence that ties both details back to the tidepool main idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: cross out one tidepool idea that wanders away from this paragraph: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final paragraph: copy one focused paragraph with the main idea, two ordered details, one linking sentence, and no extra idea: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write the main idea and circle the two details that belong with it: ____________________. Carry-on line: make a new tidepool paragraph that keeps every sentence on one main idea: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 13 | Ages 10-11 | trim a paragraph so every sentence supports one ferry idea</div>
+      <h2>Revision River Ferry Focus Card</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card beside blank paper and offer one invented ferry idea, such as a folded notice or a draft paddle: ____________________.</p>
+      <p class="kid-direction">Writer: choose one ferry main idea, add two details that support it, link them, and remove one side idea: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: write the one ferry idea the paragraph should carry from start to finish: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Detail 1: write one useful ferry detail about the paper dock, folded notice, or draft paddle: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Detail 2: write a second detail that supports the same ferry main idea without starting a new topic: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: decide whether the paper dock detail or the draft paddle detail should come first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: write one sentence that shows how the two ferry details work together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: cross out one side idea that would pull the paragraph away from the ferry main idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final paragraph: copy the focused ferry paragraph with one main idea, two ordered details, one linking sentence, and the extra idea removed: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: underline the main idea and put a small mark beside the two matching details: ____________________. Carry-on line: revise another ferry paragraph so each sentence carries the same idea: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 14 | Ages 10-11 | use clue labels to keep a paragraph on one point</div>
+      <h2>Clue Label Tower Focus Card</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside blank paper and choose one invented label tower clue for the writer to explain: ____________________.</p>
+      <p class="kid-direction">Writer: explain one label tower clue in a focused paragraph with two useful details and one extra idea cut away: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: write the one point the label tower clue should prove: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Detail 1: add one useful clue detail about a tag shelf, pointer strip, or folded label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Detail 2: add a second clue detail that helps prove the same main idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: choose the clue detail that should appear first so the paragraph makes sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: write one sentence that connects both clue details to the main idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: cross out one label tower idea that is interesting but not needed for this paragraph: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final paragraph: copy the focused label tower paragraph with one point, two ordered clue details, one linking sentence, and no extra idea: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: list three clue details, then cross out the one that does not fit: ____________________. Carry-on line: write a new label tower paragraph where every clue detail supports one point: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 15 | Ages 10-11 | keep craft directions focused inside one paragraph</div>
+      <h2>Compass Craft Counter Focus Card</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card beside blank paper and name one simple craft counter idea, such as a paper needle or bead marker: ____________________.</p>
+      <p class="kid-direction">Writer: keep the compass craft paragraph on one main idea, choose two fitting details, and cut one wandering detail: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: write what the craft counter helper is trying to make clear about the compass piece: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Detail 1: add one useful detail about the paper needle, fold guide, or bead marker: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Detail 2: add one more detail that helps explain the same compass craft idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: decide which craft detail should come first so the paragraph moves clearly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: write one sentence that connects the details back to the compass craft main idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: cross out one craft counter idea that starts a different paragraph: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final paragraph: copy the focused compass craft paragraph with the main idea, two ordered details, one linking sentence, and no wandering detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write the main idea, then number the two details in the order you will use: ____________________. Carry-on line: make another compass craft paragraph with one clear main idea and two useful details: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-focus-card-page">
+      <div class="page-kicker">Story Paragraph Focus Card 16 | Ages 10-11 | copy a final paragraph after cutting one extra idea</div>
+      <h2>Binding Day Boardwalk Focus Card</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside blank paper and choose one binding board idea, such as a page clasp or thread loop: ____________________.</p>
+      <p class="kid-direction">Writer: plan one focused boardwalk paragraph, put two details in order, add one linking sentence, and copy the final version: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Main idea</h3>
+      <p>Main idea: write the one binding board idea the final paragraph should explain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail one</h3>
+      <p>Detail 1: add one useful detail about a page clasp, thread loop, or booklet rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail two</h3>
+      <p>Detail 2: add a second detail that belongs with the same binding board main idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Detail order: choose which detail should come first before copying the final paragraph: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Linking sentence</h3>
+      <p>Linking sentence: write one sentence that ties the two boardwalk details back to the main idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Cut extra</h3>
+      <p>Cut extra idea: cross out one boardwalk idea that would make the paragraph lose focus: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final paragraph</h3>
+      <p>Final paragraph: copy the final focused boardwalk paragraph with one main idea, two ordered details, one linking sentence, and the extra idea left out: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: box the main idea and copy only the two details that support it: ____________________. Carry-on line: finish a new binding board paragraph by cutting one extra idea before copying it: ____________________.</p>
+    </section>
+  </body>
+</html>

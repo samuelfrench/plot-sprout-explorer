@@ -3972,6 +3972,130 @@
           "summary": "A binding day world for choosing the strongest varied boardwalk sentence."
         }
       ]
+    },
+    {
+      "slug": "clipboard-story-paragraph-focus-card-pack",
+      "title": "Clipboard Story Paragraph Focus Card Pack",
+      "pricePoint": "$71",
+      "status": "checkout_pending",
+      "headline": "A printable paragraph focus card pack for paper-only clipboard paragraph planning.",
+      "summary": "Sixteen adult-led clipboard prompts help kids keep one fictional paragraph on a main idea with two useful details, one linking sentence, and one cut extra.",
+      "heroImage": "images/plotsprout/batch49/clipboard-story-paragraph-focus-card-pack.jpg",
+      "ctaLabel": "Request paragraph focus card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Clipboard%20Story%20Paragraph%20Focus%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static clipboard story paragraph focus card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable clipboard paragraph focus cards",
+        "Adult setup guide",
+        "Fictional paragraph focus safety notes",
+        "Clipboard paragraph coaching moves",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six adult-led paragraph focus routines",
+        "Ten take-home paragraph slips",
+        "Eight optional prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one paragraph main idea before a draft",
+        "A tutoring or co-op table where writers can sort two details before writing",
+        "A warm-up where a clipboard page reduces paragraph-planning pressure",
+        "A reluctant-writer activity that separates paragraph focus from a full story",
+        "A take-home paragraph slip set for building one invented story paragraph offline"
+      ],
+      "parentSteps": [
+        "Choose one paragraph focus routine before the activity starts.",
+        "Set the paper, pencils, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full paragraph.",
+        "Turn one main idea into a fictional paragraph with two useful details and one linking sentence.",
+        "Send one paragraph slip with a single blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for keeping a glowing tray paragraph on one main idea."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for supporting one ripple-note idea with two matching details."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for ordering ticket-clue details under one paragraph focus."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for keeping a map-table mix-up paragraph on track."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for linking cloud-tag details back to one paragraph idea."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for cutting side ideas from a notice-board paragraph."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for sorting harbor-tray details into one focused paragraph."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for centering a counter task with two useful details."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for separating a map-table main idea from side details."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for choosing which gauge detail belongs first."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss message world for linking clue details to one message-dome point."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool timekeeper world for keeping every shell-detail sentence on one idea."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for trimming one paragraph so each sentence carries the same idea."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for using two tower details to prove one point."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for ordering two craft-counter details under one focus."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for copying a final paragraph after one extra idea is cut."
+        }
+      ]
     }
   ]
 }

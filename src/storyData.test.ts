@@ -83,6 +83,7 @@ describe('storyData', () => {
       'sticky-note-story-tone-card-pack',
       'washi-tape-story-word-choice-card-pack',
       'paper-sleeve-story-sentence-variety-card-pack',
+      'clipboard-story-paragraph-focus-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -126,6 +127,7 @@ describe('storyData', () => {
       '$65',
       '$67',
       '$69',
+      '$71',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)

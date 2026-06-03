@@ -47,6 +47,8 @@ import {
   validateWashiTapeStoryWordChoiceCardPackSourceFiles,
   validatePaperSleeveStorySentenceVarietyCardPackSource,
   validatePaperSleeveStorySentenceVarietyCardPackSourceFiles,
+  validateClipboardStoryParagraphFocusCardPackSource,
+  validateClipboardStoryParagraphFocusCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -125,6 +127,7 @@ const batch45ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch46ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch46-product-images.json')
 const batch47ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch47-product-images.json')
 const batch48ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch48-product-images.json')
+const batch49ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch49-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -167,6 +170,7 @@ const indexCardShowNotTellSourceFile = resolve(root, 'content', 'product-artifac
 const stickyNoteToneSourceFile = resolve(root, 'content', 'product-artifacts', 'sticky-note-story-tone-card-pack.json')
 const washiTapeWordChoiceSourceFile = resolve(root, 'content', 'product-artifacts', 'washi-tape-story-word-choice-card-pack.json')
 const paperSleeveSentenceVarietySourceFile = resolve(root, 'content', 'product-artifacts', 'paper-sleeve-story-sentence-variety-card-pack.json')
+const clipboardParagraphFocusSourceFile = resolve(root, 'content', 'product-artifacts', 'clipboard-story-paragraph-focus-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -210,6 +214,7 @@ const batch45ProductImagesBatchId = '2026-06-03-batch45-product-images'
 const batch46ProductImagesBatchId = '2026-06-03-batch46-product-images'
 const batch47ProductImagesBatchId = '2026-06-03-batch47-product-images'
 const batch48ProductImagesBatchId = '2026-06-03-batch48-product-images'
+const batch49ProductImagesBatchId = '2026-06-03-batch49-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -252,6 +257,7 @@ const indexCardShowNotTellBatchId = '2026-06-03-batch45'
 const stickyNoteToneBatchId = '2026-06-03-batch46'
 const washiTapeWordChoiceBatchId = '2026-06-03-batch47'
 const paperSleeveSentenceVarietyBatchId = '2026-06-03-batch48'
+const clipboardParagraphFocusBatchId = '2026-06-03-batch49'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -3803,6 +3809,111 @@ function validateBatch48ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch49ProductImage(image) {
+  const label = `2026-06-03-batch49-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'clipboard-story-paragraph-focus-card-pack',
+    `${label}.slug must be clipboard-story-paragraph-focus-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch49/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch49/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch49/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank clipboard',
+    'blank paragraph cards',
+    'empty writing areas',
+    'unbranded pencils',
+    'plain white background',
+    'clipboard story paragraph focus card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'coordinates',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'microphone',
+    'audio recorder',
+    'voice memo',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'contest',
+    'prize',
+    'food',
+    'tasting',
+    'allergy',
+    'medical',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar.negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -4144,6 +4255,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'paper-sleeve-story-sentence-variety-card-pack': {
       title: 'Paper Sleeve Story Sentence Variety Card Pack',
       pricePoint: '$69',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'clipboard-story-paragraph-focus-card-pack': {
+      title: 'Clipboard Story Paragraph Focus Card Pack',
+      pricePoint: '$71',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -5397,12 +5516,23 @@ expect(Array.isArray(batch48ProductImages.images), 'batch48 product image manife
 expect(batch48ProductImages.images.length === 1, `Expected 1 Batch 48 product image, found ${batch48ProductImages.images.length}.`)
 validateBatch48ProductImage(batch48ProductImages.images[0])
 
+expect(existsSync(batch49ProductImagesFile), `Missing Batch 49 product image manifest: ${batch49ProductImagesFile}`)
+const batch49ProductImages = readJson(batch49ProductImagesFile)
+expect(
+  batch49ProductImages.batchId === batch49ProductImagesBatchId,
+  `batch49 product image manifest batchId must be ${batch49ProductImagesBatchId}.`,
+)
+expect(batch49ProductImages.generatedAt === '2026-06-03', 'batch49 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch49ProductImages.images), 'batch49 product image manifest images must be an array.')
+expect(batch49ProductImages.images.length === 1, `Expected 1 Batch 49 product image, found ${batch49ProductImages.images.length}.`)
+validateBatch49ProductImage(batch49ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 41, `Expected 41 product records, found ${products.products.length}.`)
+expect(products.products.length === 42, `Expected 42 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -5447,6 +5577,7 @@ for (const requiredProductSlug of [
   'sticky-note-story-tone-card-pack',
   'washi-tape-story-word-choice-card-pack',
   'paper-sleeve-story-sentence-variety-card-pack',
+  'clipboard-story-paragraph-focus-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -8538,6 +8669,93 @@ for (const asset of paperSleeveSentenceVarietyArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(clipboardParagraphFocusSourceFile), `Missing Batch 49 Clipboard Story Paragraph Focus Card Pack source file: ${clipboardParagraphFocusSourceFile}`)
+const clipboardParagraphFocusSource = readJson(clipboardParagraphFocusSourceFile)
+expect(
+  clipboardParagraphFocusSource.batchId === clipboardParagraphFocusBatchId,
+  `Clipboard Story Paragraph Focus Card Pack source batchId must be ${clipboardParagraphFocusBatchId}.`,
+)
+const clipboardParagraphFocusProduct = products.products.find(
+  (product) => product.slug === 'clipboard-story-paragraph-focus-card-pack',
+)
+expect(
+  clipboardParagraphFocusProduct,
+  'Missing Clipboard Story Paragraph Focus Card Pack product record for Batch 49 artifact validation.',
+)
+const clipboardParagraphFocusSourceErrors = validateClipboardStoryParagraphFocusCardPackSource(
+  clipboardParagraphFocusSource,
+  clipboardParagraphFocusProduct,
+  worldAgeBands,
+)
+expect(
+  clipboardParagraphFocusSourceErrors.length === 0,
+  `Clipboard Story Paragraph Focus Card Pack source failed validation:\n${clipboardParagraphFocusSourceErrors.join('\n')}`,
+)
+const clipboardParagraphFocusSourceFileErrors = validateClipboardStoryParagraphFocusCardPackSourceFiles(
+  clipboardParagraphFocusSource,
+  root,
+)
+expect(
+  clipboardParagraphFocusSourceFileErrors.length === 0,
+  `Clipboard Story Paragraph Focus Card Pack sourceFiles failed validation:\n${clipboardParagraphFocusSourceFileErrors.join('\n')}`,
+)
+const clipboardParagraphFocusExpectedPdfPages = clipboardParagraphFocusSource.cards.length + 5
+const clipboardParagraphFocusArtifactStatus = inspectArtifactFiles(root, clipboardParagraphFocusSource.artifact, {
+  expectedPdfPages: clipboardParagraphFocusExpectedPdfPages,
+})
+expect(
+  clipboardParagraphFocusArtifactStatus.valid,
+  `Clipboard Story Paragraph Focus Card Pack artifacts failed validation:\n${clipboardParagraphFocusArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  clipboardParagraphFocusArtifactStatus.files.pdf.size > 100_000,
+  `Clipboard Story Paragraph Focus Card Pack PDF artifact is unexpectedly small: ${clipboardParagraphFocusArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  clipboardParagraphFocusArtifactStatus.files.pdf.pageCount === clipboardParagraphFocusExpectedPdfPages,
+  `Clipboard Story Paragraph Focus Card Pack PDF artifact must have ${clipboardParagraphFocusExpectedPdfPages} pages.`,
+)
+expect(
+  clipboardParagraphFocusArtifactStatus.files.zip.size > clipboardParagraphFocusArtifactStatus.files.pdf.size,
+  'Clipboard Story Paragraph Focus Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const clipboardParagraphFocusCheckoutErrors = validateCheckoutReadiness(
+  clipboardParagraphFocusProduct,
+  clipboardParagraphFocusArtifactStatus,
+)
+expect(
+  clipboardParagraphFocusCheckoutErrors.length === 0,
+  `Clipboard Story Paragraph Focus Card Pack checkout readiness failed validation:\n${clipboardParagraphFocusCheckoutErrors.join('\n')}`,
+)
+const clipboardParagraphFocusArtifactManifest = readJson(resolve(root, clipboardParagraphFocusSource.artifact.manifestPath))
+expect(
+  clipboardParagraphFocusArtifactManifest.sourcePageCount === clipboardParagraphFocusSource.cards.length,
+  'Clipboard Story Paragraph Focus Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(clipboardParagraphFocusArtifactManifest.files.assets),
+  'Clipboard Story Paragraph Focus Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  clipboardParagraphFocusArtifactManifest.files.assets.length === clipboardParagraphFocusSource.worldSlugs.length,
+  'Clipboard Story Paragraph Focus Card Pack artifact manifest must include one copied local image per source world.',
+)
+const clipboardParagraphFocusManifestAssetErrors = validateManifestWorldAssets(
+  clipboardParagraphFocusSource,
+  clipboardParagraphFocusArtifactManifest,
+)
+expect(
+  clipboardParagraphFocusManifestAssetErrors.length === 0,
+  `Clipboard Story Paragraph Focus Card Pack artifact manifest image coverage failed validation:\n${clipboardParagraphFocusManifestAssetErrors.join('\n')}`,
+)
+for (const asset of clipboardParagraphFocusArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Clipboard Story Paragraph Focus Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -8578,6 +8796,7 @@ const productImageManifests = [
   batch46ProductImages,
   batch47ProductImages,
   batch48ProductImages,
+  batch49ProductImages,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

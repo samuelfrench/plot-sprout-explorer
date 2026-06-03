@@ -1,0 +1,158 @@
+{
+  "laneId": "batch49-clipboard-paragraph-focus-tools",
+  "adultGuide": {
+    "title": "Clipboard Story Paragraph Focus Adult Guide",
+    "bullets": [
+      "Print the clipboard paragraph focus cards, blank paragraph frames, and guide pages before the adult-led paper session.",
+      "Begin with one fictional paragraph plan, then coach a main idea, two useful details, detail order, one linking sentence, one cut idea, and a final focused copy.",
+      "Keep every example made-up, broad, printable, offline, paper-only, and guided by an adult.",
+      "Use small paper slips so the writer can move details before copying the final paragraph.",
+      "Replace narrow real facts with invented names, broad story places, and pretend objects before writing begins.",
+      "End each activity by copying one focused fictional paragraph that keeps one main idea and two helpful details."
+    ]
+  },
+  "paragraphFocusRoutines": [
+    {
+      "name": "Main Idea Clip",
+      "bestFor": "Choosing the one idea a fictional paragraph will stay about.",
+      "steps": [
+        "The adult places one blank paragraph frame on the clipboard strip and writes the story topic: ____________________.",
+        "The writer states the one main idea the paragraph should prove or show: ____________________.",
+        "The adult asks which words in the main idea must guide every sentence: ____________________.",
+        "The writer copies the main idea line at the top of the paragraph frame: ____________________."
+      ]
+    },
+    {
+      "name": "Detail Pair Sort",
+      "bestFor": "Choosing two useful details and leaving out loose ideas.",
+      "steps": [
+        "The adult writes four invented detail notes on small paper slips: ____________________.",
+        "The writer chooses two details that clearly support the main idea: ____________________.",
+        "The adult asks which other detail is interesting but belongs outside this paragraph: ____________________.",
+        "The writer places the detail pair under the main idea line: ____________________."
+      ]
+    },
+    {
+      "name": "Detail Order Lineup",
+      "bestFor": "Putting two useful details in the clearest order.",
+      "steps": [
+        "The adult sets the two chosen details side by side below the main idea: ____________________.",
+        "The writer numbers the detail that should come first and the detail that should come second: ____________________.",
+        "The adult asks why that order will help the reader follow the pretend moment: ____________________.",
+        "The writer copies the ordered detail notes in the paragraph frame: ____________________."
+      ]
+    },
+    {
+      "name": "Linking Sentence Bridge",
+      "bestFor": "Adding one sentence that connects the main idea to the details.",
+      "steps": [
+        "The adult points from the main idea to the first detail and asks for one linking sentence: ____________________.",
+        "The writer drafts a linking sentence that connects the main idea to detail one: ____________________.",
+        "The adult asks whether the sentence points back to the same paragraph focus: ____________________.",
+        "The writer writes the linking sentence before the two detail lines: ____________________."
+      ]
+    },
+    {
+      "name": "Extra Idea Lift",
+      "bestFor": "Cutting one interesting idea that pulls the paragraph away from its focus.",
+      "steps": [
+        "The adult marks one sentence or note that wanders away from the main idea: ____________________.",
+        "The writer explains why that extra idea can wait for another paper page: ____________________.",
+        "The adult asks which word or detail should stay after the extra idea comes out: ____________________.",
+        "The writer rewrites the paragraph plan with the extra idea removed: ____________________."
+      ]
+    },
+    {
+      "name": "Final Focus Copy",
+      "bestFor": "Copying one focused fictional paragraph after the plan is clean.",
+      "steps": [
+        "The adult reads the paragraph plan in order: main idea, linking sentence, detail one, detail two: ____________________.",
+        "The writer checks that every sentence supports the same focus: ____________________.",
+        "The adult asks if one word should move, change, or come out before final copying: ____________________.",
+        "The writer copies the final focused fictional paragraph on a fresh sheet: ____________________."
+      ]
+    }
+  ],
+  "takeHomeParagraphSlips": [
+    {
+      "title": "Main Idea Slip",
+      "time": "one paper pass",
+      "skill": "main idea",
+      "direction": "Write the one main idea this fictional paragraph will stay about: ____________________.",
+      "familyLine": "Ask what every sentence should point back to: ____________________."
+    },
+    {
+      "title": "Two Useful Details Slip",
+      "time": "two-note pass",
+      "skill": "two useful details",
+      "direction": "List two useful invented details that support the main idea: ____________________.",
+      "familyLine": "Ask which two details help the reader understand the same idea: ____________________."
+    },
+    {
+      "title": "Detail Order Slip",
+      "time": "lineup pass",
+      "skill": "detail order",
+      "direction": "Number the two details in the order the paragraph should use them: ____________________.",
+      "familyLine": "Ask why the first detail should come before the second: ____________________."
+    },
+    {
+      "title": "Linking Sentence Slip",
+      "time": "linking line pass",
+      "skill": "linking sentence",
+      "direction": "Write one linking sentence between the main idea and the first detail: ____________________.",
+      "familyLine": "Ask how the linking sentence keeps the paragraph focused: ____________________."
+    },
+    {
+      "title": "Extra Idea Slip",
+      "time": "cut-and-copy pass",
+      "skill": "cut one extra idea",
+      "direction": "Find one interesting extra idea that does not belong in this paragraph: ____________________.",
+      "familyLine": "Ask where that idea could wait on another blank paper page: ____________________."
+    },
+    {
+      "title": "Focus Check Slip",
+      "time": "quiet check pass",
+      "skill": "focus check",
+      "direction": "Check each sentence and mark yes if it supports the main idea: ____________________.",
+      "familyLine": "Ask which sentence most clearly proves the paragraph focus: ____________________."
+    },
+    {
+      "title": "Opening Line Slip",
+      "time": "single frame pass",
+      "skill": "opening line from main idea",
+      "direction": "Turn the main idea into a clear opening line for one fictional paragraph: ____________________.",
+      "familyLine": "Ask whether the opening line tells the reader what to expect: ____________________."
+    },
+    {
+      "title": "Detail Pair Slip",
+      "time": "detail pair pass",
+      "skill": "detail pair sentences",
+      "direction": "Write the detail pair as two separate sentences that support one focus: ____________________.",
+      "familyLine": "Ask whether both detail sentences belong under the same main idea: ____________________."
+    },
+    {
+      "title": "Final Focus Copy Slip",
+      "time": "final copy pass",
+      "skill": "final focused paragraph",
+      "direction": "Copy the final focused paragraph after one extra idea has been removed: ____________________.",
+      "familyLine": "Ask what changed from the loose plan to the final paragraph: ____________________."
+    },
+    {
+      "title": "Paragraph Polish Slip",
+      "time": "calm polish pass",
+      "skill": "small focus polish",
+      "direction": "Move, change, or remove one word so the final paragraph reads more smoothly: ____________________.",
+      "familyLine": "Ask which small change made the paragraph easier to follow: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the main idea for this paragraph is ____________________.",
+    "Optional adult-led offline prompt: detail one that supports the main idea is ____________________.",
+    "Optional adult-led offline prompt: detail two that supports the main idea is ____________________.",
+    "Optional adult-led offline prompt: the detail that should come first is ____________________.",
+    "Optional adult-led offline prompt: the linking sentence that holds the paragraph together is ____________________.",
+    "Optional adult-led offline prompt: the extra idea I will cut is ____________________.",
+    "Optional adult-led offline prompt: the sentence that best keeps the focus is ____________________.",
+    "Optional adult-led offline prompt: the final focused fictional paragraph is ____________________."
+  ]
+}

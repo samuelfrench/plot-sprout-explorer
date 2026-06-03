@@ -1,0 +1,18 @@
+{
+  "slug": "clipboard-story-paragraph-focus-card-pack",
+  "prompt": "family-friendly flat lay of a blank clipboard, blank paragraph cards with empty writing areas, blank detail slips, unbranded pencils, and small blank paper guides on a seamless plain white background, no keyboard, no electronics, screen-free clipboard story paragraph focus card pack product photo, no readable text, no people",
+  "negativePrompt": "text, readable writing, letters, labels, logo, watermark, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, phone, tablet, laptop, computer, screen, device, microphone, audio recorder, voice memo, camera, photo, recording, transcription, account login, portal, qr code, upload icon, public post, public review, rating, score, grade, timer, contest, prize, food, tasting, allergy, medical, scary, weapon, fight, bullying, people, children, face, hands",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26064971,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch49/clipboard-story-paragraph-focus-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch49/clipboard-story-paragraph-focus-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-03-batch49-product-images.json",
+  "title": "Clipboard Story Paragraph Focus Card Pack"
+}

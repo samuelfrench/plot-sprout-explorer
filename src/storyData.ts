@@ -598,6 +598,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable paper sleeve story sentence variety cards with adult guide tools, sentence variety routines, and take-home sentence slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'clipboard-story-paragraph-focus-card-pack',
+    title: 'Clipboard Story Paragraph Focus Card Pack',
+    pricePoint: '$71',
+    description:
+      'Sixteen printable clipboard story paragraph focus cards with adult guide tools, paragraph focus routines, and take-home paragraph slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

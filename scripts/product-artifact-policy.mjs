@@ -48,6 +48,8 @@ export const washiTapeStoryWordChoiceCardPackProductSlug =
   'washi-tape-story-word-choice-card-pack'
 export const paperSleeveStorySentenceVarietyCardPackProductSlug =
   'paper-sleeve-story-sentence-variety-card-pack'
+export const clipboardStoryParagraphFocusCardPackProductSlug =
+  'clipboard-story-paragraph-focus-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -451,6 +453,16 @@ const requiredPaperSleeveStorySentenceVarietyCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/paper-sleeve-story-sentence-variety-card-pack/source/paper-sleeve-story-sentence-variety-card-pack.html',
   manifestPath: 'product-build/paper-sleeve-story-sentence-variety-card-pack/manifest.json',
+}
+
+const requiredClipboardStoryParagraphFocusCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/clipboard-story-paragraph-focus-card-pack/Clipboard-Story-Paragraph-Focus-Card-Pack.pdf',
+  zipPath:
+    'product-build/clipboard-story-paragraph-focus-card-pack/clipboard-story-paragraph-focus-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/clipboard-story-paragraph-focus-card-pack/source/clipboard-story-paragraph-focus-card-pack.html',
+  manifestPath: 'product-build/clipboard-story-paragraph-focus-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -12420,6 +12432,404 @@ export function validatePaperSleeveStorySentenceVarietyCardPackSourceFiles(sourc
   return errors
 }
 
+function normalizeClipboardParagraphFocusAllowedSafetyText(value) {
+  return JSON.stringify(value)
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+    .replace(/\badult-led\b/gi, '')
+    .replace(/\badult\b/gi, '')
+    .replace(/\boffline\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+    .replace(/\bfamily adult(s)?\b/gi, '')
+    .replace(/\bfamily reader(s)?\b/gi, '')
+    .replace(/\bfamily-safe\b/gi, '')
+    .replace(/\bfamily\b/gi, '')
+    .replace(/\bfamilies\b/gi, '')
+    .replace(/\bfictional\b/gi, '')
+    .replace(/\bpretend\b/gi, '')
+    .replace(/\binvented\b/gi, '')
+    .replace(/\bmade-up\b/gi, '')
+    .replace(/\bmade up\b/gi, '')
+    .replace(/\bmake-believe\b/gi, '')
+    .replace(/\bclipboard story paragraph focus card(s)?\b/gi, '')
+    .replace(/\bclipboard paragraph focus card(s)?\b/gi, '')
+    .replace(/\bparagraph focus card(s)?\b/gi, '')
+    .replace(/\bparagraph focus\b/gi, '')
+    .replace(/\bparagraph slip(s)?\b/gi, '')
+    .replace(/\bparagraph main idea(s)?\b/gi, '')
+    .replace(/\bmain idea(s)?\b/gi, '')
+    .replace(/\bdetail one\b/gi, '')
+    .replace(/\bdetail two\b/gi, '')
+    .replace(/\bmatching detail(s)?\b/gi, '')
+    .replace(/\buseful detail(s)?\b/gi, '')
+    .replace(/\bdetail order\b/gi, '')
+    .replace(/\blink(ing)? sentence(s)?\b/gi, '')
+    .replace(/\bcut extra\b/gi, '')
+    .replace(/\bside idea(s)?\b/gi, '')
+    .replace(/\bfocus check(s)?\b/gi, '')
+    .replace(/\bfinal paragraph(s)?\b/gi, '')
+    .replace(/\bone clear paragraph\b/gi, '')
+    .replace(/\bstory paragraph(s)?\b/gi, '')
+    .replace(/\bstory table(s)?\b/gi, '')
+    .replace(/\bpaper station(s)?\b/gi, '')
+    .replace(/\berrand counter(s)?\b/gi, '')
+    .replace(/\bmap table(s)?\b/gi, '')
+    .replace(/\btimekeeper table(s)?\b/gi, '')
+    .replace(/\blabel tower(s)?\b/gi, '')
+    .replace(/\bcraft counter(s)?\b/gi, '')
+    .replace(/\bbinding board(s)?\b/gi, '')
+    .replace(/\bpaper dock(s)?\b/gi, '')
+    .replace(/\bpuddle post\b/gi, '')
+    .replace(/\bbroad story labels?\b/gi, '')
+    .replace(/\bbroad story words?\b/gi, '')
+    .replace(/\bbroad invented story labels?\b/gi, '')
+    .replace(/\bpersonal place, schedule, group name, or child detail\b/gi, '')
+    .replace(/\bnarrow outside facts?\b/gi, '')
+    .replace(/\bnarrow real-world facts?\b/gi, '')
+    .replace(/\bnarrow personal facts?\b/gi, '')
+    .replace(/\bno identity details\b/gi, '')
+    .replace(/\bpuddle-planet-post-office\b/gi, '')
+    .replace(/\bacorn-avenue-errand-office\b/gi, '')
+    .replace(/\bseed-library-map-room\b/gi, '')
+    .replace(/\btidepool-timekeepers-lab\b/gi, '')
+    .replace(/\bclue-label-tower-museum\b/gi, '')
+    .replace(/\bcompass-craft-academy\b/gi, '')
+    .replace(/\bPuddle Planet Post Office\b/g, '')
+    .replace(/\bAcorn Avenue Errand Office\b/g, '')
+    .replace(/\bSeed Library Map Room\b/g, '')
+    .replace(/\bTidepool Timekeepers Lab\b/g, '')
+    .replace(/\bClue Label Tower Museum\b/g, '')
+    .replace(/\bCompass Craft Academy\b/g, '')
+}
+
+function validateNoUnsafeClipboardParagraphFocusLanguage(value, label, errors) {
+  const allowedText = normalizeClipboardParagraphFocusAllowedSafetyText(value)
+  pushIf(
+    errors,
+    /\baccounts?\b|\bschool accounts?\b|\blogins?\b|\blog in\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic posting\b|\bpublic publishing\b|\bpublish online\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\bsocial\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphone(s)?\b|\btablet(s)?\b|\blaptop(s)?\b|\bcomputer(s)?\b|\bscreen(s)?\b|\bdevice(s)?\b|\bphotos?\b|\bcameras?\b|\breal names?\b|\bfull names?\b|\bchild names?\b|\bstudent names?\b|\breal identity\b|\bidentity details?\b|\bclassrooms?\b|\bschools?\b|\bstudents?\b|\bteachers?\b|\bhomes?\b|\bhouses?\b|\bhome address\b|\bprivate rooms?\b|\breal rooms?\b|\brooms?\b|\boffices?\b|\blabs?\b|\bmuseums?\b|\bacadem(y|ies)\b|\bprivate locations?\b|\bprivate place details?\b|\bexact locations?\b|\bexact places?\b|\blocation details?\b|\blocations?\b|\bschool route(s)?\b|\breal route(s)?\b|\broutes?\b|\bgps\b|\bcoordinates?\b|\bexact address\b|\baddresses?\b|\bstreets?\b|\bhouse numbers?\b|\blicense plates?\b|\bvehicle plates?\b|\bexact schedules?\b|\bschedules?\b|\btracker(s)?\b|\btracking\b|\bprivate child data\b|\breal child data\b|\bpersonal facts?\b|\bpersonal details?\b|\bprivate profiles?\b|\bchild profiles?\b|\bstudent profiles?\b|\bprofiles?\b|\bdiar(y|ies)\b|\bjournal(s)?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bspelling grade(s)?\b|\btimer(s)?\b|\btimed\b|\bcontest(s)?\b|\bprizes?\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b|\bfood tasting\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b/i.test(
+      allowedText,
+    ),
+    `${label} includes account, upload, public-posting, review/rating, recording, transcript, microphone, phone/device/screen, photo/camera, real-identity, school/home, room, office, lab, museum, academy, address, route, GPS, location, schedule, tracker, profile, diary/journal, grade, score, timer, contest, scary/harm/bullying/fighting, or private-child-data language.`,
+  )
+  pushIf(
+    errors,
+    /\b\d+\s*(minute|minutes|min|mins)\b|\b(five|six|seven|eight|nine|ten)\s+(to\s+(five|six|seven|eight|nine|ten)\s+)?minute(s)?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes timed-duration or minute-pressure language.`,
+  )
+}
+
+function validateClipboardParagraphFocusCard(card, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, cardIds, errors) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'paragraphFocusSkill',
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'mainIdeaPrompt',
+    'detailOnePrompt',
+    'detailTwoPrompt',
+    'detailOrderPrompt',
+    'linkingSentencePrompt',
+    'cutExtraPrompt',
+    'finalParagraphPrompt',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(card.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(card.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(
+      errors,
+      !card.id.startsWith('clipboard-paragraph-focus-card-'),
+      `${label}.id must start with clipboard-paragraph-focus-card-.`,
+    )
+    pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+    cardIds.add(card.id)
+  }
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) && !/clipboard (story[- ])?paragraph[- ]focus card/i.test(card.useCase),
+    `${label}.useCase must say clipboard paragraph focus card.`,
+  )
+  pushIf(errors, isNonEmptyString(card.adultSetup) && !card.adultSetup.startsWith('Adult:'), `${label}.adultSetup must start with Adult:.`)
+
+  for (const key of [
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'mainIdeaPrompt',
+    'detailOnePrompt',
+    'detailTwoPrompt',
+    'detailOrderPrompt',
+    'linkingSentencePrompt',
+    'cutExtraPrompt',
+    'finalParagraphPrompt',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeClipboardParagraphFocusLanguage(card, label, errors)
+}
+
+function validateClipboardParagraphFocusRoutine(routine, index, names, errors) {
+  const label = `paragraphFocusRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.name)) {
+    pushIf(errors, names.has(routine.name), `${label}.name is duplicated.`)
+    names.add(routine.name)
+  }
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  if (Array.isArray(routine.steps)) {
+    routine.steps.forEach((step, stepIndex) => {
+      pushIf(errors, isNonEmptyString(step) && !hasWritableBlank(step), `${label}.steps[${stepIndex}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(step) && hasSnakeCasePlaceholder(step), `${label}.steps[${stepIndex}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+  validateNoUnsafeClipboardParagraphFocusLanguage(routine, label, errors)
+}
+
+function validateClipboardTakeHomeParagraphSlip(slip, index, titles, errors) {
+  const label = `takeHomeParagraphSlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(slip[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(slip.title)) {
+    pushIf(errors, titles.has(slip.title), `${label}.title is duplicated.`)
+    titles.add(slip.title)
+  }
+  pushIf(
+    errors,
+    isNonEmptyString(slip.time) && /\b\d+\s*(minute|minutes|min|mins)\b|\b(five|six|seven|eight|nine|ten)\s+minute(s)?\b/i.test(slip.time),
+    `${label}.time must use a non-timed take-home slip label.`,
+  )
+  for (const key of ['direction', 'familyLine']) {
+    pushIf(errors, isNonEmptyString(slip[key]) && !hasWritableBlank(slip[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(slip[key]) && hasSnakeCasePlaceholder(slip[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeClipboardParagraphFocusLanguage(slip, label, errors)
+}
+
+export function validateClipboardStoryParagraphFocusCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Clipboard Story Paragraph Focus Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-03-batch49', 'batchId must be 2026-06-03-batch49.')
+  pushIf(errors, source.generatedAt !== '2026-06-03', 'generatedAt must be 2026-06-03.')
+  pushIf(
+    errors,
+    source.productSlug !== clipboardStoryParagraphFocusCardPackProductSlug,
+    `productSlug must be ${clipboardStoryParagraphFocusCardPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Clipboard Story Paragraph Focus Card Pack', 'title must be Clipboard Story Paragraph Focus Card Pack.')
+  pushIf(errors, source.pricePoint !== '$71', 'pricePoint must be $71.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), `safetyNote must include ${requiredSafety}`)
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Clipboard Story Paragraph Focus Card Pack source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Clipboard Story Paragraph Focus Card Pack source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Clipboard Story Paragraph Focus Card Pack source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredClipboardStoryParagraphFocusCardPackArtifactPaths, 'Clipboard Story Paragraph Focus Card Pack', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    validateExactStringArray(source.adultGuide.bullets, 6, 'adultGuide.bullets', errors)
+    validateNoUnsafeClipboardParagraphFocusLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.paragraphFocusRoutines), 'paragraphFocusRoutines must be an array.')
+  if (Array.isArray(source.paragraphFocusRoutines)) {
+    pushIf(errors, source.paragraphFocusRoutines.length !== 6, 'paragraphFocusRoutines must have exactly 6 entries.')
+    const names = new Set()
+    source.paragraphFocusRoutines.forEach((routine, index) => validateClipboardParagraphFocusRoutine(routine, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeParagraphSlips), 'takeHomeParagraphSlips must be an array.')
+  if (Array.isArray(source.takeHomeParagraphSlips)) {
+    pushIf(errors, source.takeHomeParagraphSlips.length !== 10, 'takeHomeParagraphSlips must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeParagraphSlips.forEach((slip, index) => validateClipboardTakeHomeParagraphSlip(slip, index, titles, errors))
+  }
+
+  validateExactStringArray(source.optionalSharePrompts, 8, 'optionalSharePrompts', errors)
+  if (Array.isArray(source.optionalSharePrompts)) {
+    source.optionalSharePrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalSharePrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalSharePrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeClipboardParagraphFocusLanguage(prompt, `optionalSharePrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateClipboardParagraphFocusCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 16, 'cards must cover at least 16 unique worlds.')
+  }
+
+  validateNoUnsafeClipboardParagraphFocusLanguage(source, 'Clipboard Story Paragraph Focus Card Pack source', errors)
+  validateNoRiskyLanguage(source, 'Clipboard Story Paragraph Focus Card Pack source', errors)
+  return errors
+}
+
+export function validateClipboardStoryParagraphFocusCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three paragraph focus-card lanes and one tools lane.')
+
+  const expectedSourceFiles = [
+    'content/product-artifacts/lanes/batch49-clipboard-paragraph-focus-cards-a.json',
+    'content/product-artifacts/lanes/batch49-clipboard-paragraph-focus-cards-b.json',
+    'content/product-artifacts/lanes/batch49-clipboard-paragraph-focus-cards-c.json',
+    'content/product-artifacts/lanes/batch49-clipboard-paragraph-focus-tools.json',
+  ]
+  pushIf(
+    errors,
+    JSON.stringify([...source.sourceFiles].sort()) !== JSON.stringify([...expectedSourceFiles].sort()),
+    'sourceFiles must list the exact Batch 49 paragraph focus-card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedLaneId = sourceFile.split('/').at(-1)?.replace('.json', '')
+      pushIf(errors, lane.laneId !== expectedLaneId, `${sourceFile}.laneId must be ${expectedLaneId}.`)
+      if (Array.isArray(lane.cards)) {
+        const expectedRange = sourceFile.includes('-cards-a')
+          ? { min: 1, max: 6, count: 6, label: '01-06' }
+          : sourceFile.includes('-cards-b')
+          ? { min: 7, max: 11, count: 5, label: '07-11' }
+          : sourceFile.includes('-cards-c')
+          ? { min: 12, max: 16, count: 5, label: '12-16' }
+          : null
+        if (expectedRange) {
+          pushIf(
+            errors,
+            lane.cards.length !== expectedRange.count,
+            `${sourceFile} must contain exactly ${expectedRange.count} cards.`,
+          )
+          const wrongLaneCard = lane.cards.some((card) => {
+            const match = String(card?.id ?? '').match(/-(\d{2})$/)
+            const cardNumber = match ? Number(match[1]) : NaN
+            return !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max
+          })
+          pushIf(errors, wrongLaneCard, `${sourceFile} must contain only cards ${expectedRange.label}.`)
+        }
+        cardLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 49 paragraph focus-card lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three paragraph focus-card lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane.cards)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles paragraph focus-card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'paragraphFocusRoutines', 'takeHomeParagraphSlips']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+    pushIf(
+      errors,
+      JSON.stringify(toolsLane.optionalAdultPrompts) !== JSON.stringify(source.optionalSharePrompts),
+      'sourceFiles tools lane optionalAdultPrompts must reproduce optionalSharePrompts exactly.',
+    )
+  }
+
+  return errors
+}
+
 
 
 export function countPdfPages(buffer) {
@@ -12552,6 +12962,8 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
     artifact?.pdfPath === requiredDeskLampStoryProblemCardPackArtifactPaths.pdfPath
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
+      : artifact?.pdfPath === requiredClipboardStoryParagraphFocusCardPackArtifactPaths.pdfPath
+      ? requiredClipboardStoryParagraphFocusCardPackArtifactPaths
       : artifact?.pdfPath === requiredPaperSleeveStorySentenceVarietyCardPackArtifactPaths.pdfPath
       ? requiredPaperSleeveStorySentenceVarietyCardPackArtifactPaths
       : artifact?.pdfPath === requiredWashiTapeStoryWordChoiceCardPackArtifactPaths.pdfPath
