@@ -89,6 +89,7 @@ describe('storyData', () => {
       'spiral-notebook-story-final-copy-card-pack',
       'tabbed-folder-story-series-card-pack',
       'accordion-folder-story-arc-card-pack',
+      'expanding-file-story-scene-chain-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -138,6 +139,7 @@ describe('storyData', () => {
       '$77',
       '$79',
       '$81',
+      '$83',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)

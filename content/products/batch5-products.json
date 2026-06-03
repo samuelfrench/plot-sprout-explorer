@@ -4716,6 +4716,132 @@
           "summary": "A gear garden world for closing the folder with one reset note."
         }
       ]
+    },
+    {
+      "slug": "expanding-file-story-scene-chain-card-pack",
+      "title": "Expanding File Story Scene Chain Card Pack",
+      "pricePoint": "$83",
+      "status": "checkout_pending",
+      "headline": "A printable expanding file card pack for private paper scene chains.",
+      "summary": "Sixteen adult-led expanding file cards help kids connect a fictional start scene, next scene, bridge detail, change marker, return detail, and paper pocket note.",
+      "heroImage": "images/plotsprout/batch55/expanding-file-story-scene-chain-card-pack.jpg",
+      "ctaLabel": "Request scene chain card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Expanding%20File%20Story%20Scene%20Chain%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static expanding file story scene chain card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "button-bakery-map-mixup",
+        "sticker-station-mail-cart",
+        "pocket-park-notice-board",
+        "rain-boot-route-rangers",
+        "paperclip-plaza-parcel-day",
+        "solar-oven-picnic-station",
+        "moss-message-observatory",
+        "pantry-measurement-mystery",
+        "seed-library-map-room",
+        "pond-bridge-blueprint-club",
+        "revision-river-ferry",
+        "binding-day-boardwalk",
+        "margin-note-market",
+        "almost-invention-workshop",
+        "appendix-archive-lab",
+        "compass-craft-academy"
+      ],
+      "includedPages": [
+        "Sixteen printable expanding file scene-chain cards",
+        "Adult setup guide",
+        "Fictional scene-chain safety notes",
+        "Start scene prompts",
+        "Next scene prompts",
+        "Bridge detail prompts",
+        "Change marker prompts",
+        "Return detail prompts",
+        "File pocket note prompts",
+        "Six adult-led scene-chain routines",
+        "Ten take-home scene slips",
+        "Local image-backed world menu",
+        "Printable PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one quiet path from first page to later page",
+        "A tutoring or co-op table where writers sort connected page notes into visible pockets",
+        "A calm pencil activity for linking one clue, one change, and one return detail",
+        "A reluctant-writer activity that turns story continuity into six small paper routines",
+        "A take-home scene slip set for continuing one paper pocket note offline"
+      ],
+      "parentSteps": [
+        "Choose one scene-chain routine before the activity starts.",
+        "Set the expanding file, cards, blank pages, pencils, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full page note.",
+        "Move from start scene to next scene, bridge detail, change marker, return detail, and file pocket note.",
+        "Send one scene slip with a single blank so family adults can continue the paper chain offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button map world for carrying one mixed-up marker from first page to return detail."
+        },
+        {
+          "slug": "sticker-station-mail-cart",
+          "summary": "A sticker station world for moving one sort slip into a connected later page."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for saving one notice-board clue in a paper pocket."
+        },
+        {
+          "slug": "rain-boot-route-rangers",
+          "summary": "A rain boot ranger world for using one pretend boot mark across two pages."
+        },
+        {
+          "slug": "paperclip-plaza-parcel-day",
+          "summary": "A paperclip plaza world for tracking one clipped parcel tag through a small change."
+        },
+        {
+          "slug": "solar-oven-picnic-station",
+          "summary": "A solar station world for linking one paper gauge mark to a later return."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for reading one signal, changed clue, and return note."
+        },
+        {
+          "slug": "pantry-measurement-mystery",
+          "summary": "A measurement mystery world for carrying one pretend ribbon clue across pages."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed map world for bridging two scenes with one folded path clue."
+        },
+        {
+          "slug": "pond-bridge-blueprint-club",
+          "summary": "A blueprint club world for showing one sketch change and returning detail."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for tracking one clearer paper symbol across a longer chain."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding boardwalk world for linking loose page scenes with one ribbon detail."
+        },
+        {
+          "slug": "margin-note-market",
+          "summary": "A margin note market world for moving one folded note through a pretend booth chain."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "summary": "An almost invention world for connecting one repair clue to a later sketch table scene."
+        },
+        {
+          "slug": "appendix-archive-lab",
+          "summary": "An archive lab world for sorting one appendix slip into a connected return detail."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for carrying one direction arrow through a two-page chain."
+        }
+      ]
     }
   ]
 }

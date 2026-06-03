@@ -1,0 +1,18 @@
+{
+  "batchId": "2026-06-03-batch55-images",
+  "generatedAt": "2026-06-03",
+  "purpose": "Add the checkout-pending expanding file story scene chain product hero image.",
+  "images": [
+    {
+      "slug": "expanding-file-story-scene-chain-card-pack",
+      "title": "Expanding File Story Scene Chain Card Pack",
+      "purpose": "Static product hero image for the checkout-pending expanding file story scene chain card pack page.",
+      "prompt": "family-friendly studio product mockup of expanding file story scene chain card pack, orthographic top-down view, open blank expanding file with blank divider pockets, blank scene-chain cards tucked into pockets, empty writing areas, unbranded pencils, quiet printable writing kit, seamless plain white background, clean shadow, only paper folders cards and pencils, no text",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, school, classroom, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, phone, tablet, laptop, computer, screen, screens, device, devices, microphone, audio recorder, voice memo, camera, photo, recording, transcription, account login, portal, qr code, upload icon, public post, public review, rating, score, grade, timer, contest, prize, food, tasting, allergy, medical, scary, weapon, weapons, fight, bullying, plants, leaves, cups, mugs, bowls, plates, desk decor, tabletop props",
+      "seed": 260655083,
+      "outputJpeg": "public/images/plotsprout/batch55/expanding-file-story-scene-chain-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch55/expanding-file-story-scene-chain-card-pack.webp",
+      "sidecar": "content/image-runs/batch55/expanding-file-story-scene-chain-card-pack.json"
+    }
+  ]
+}

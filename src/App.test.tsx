@@ -106,5 +106,9 @@ describe('App', () => {
       'href',
       expect.stringContaining('accordion-folder-story-arc-card-pack'),
     )
+    expect(screen.getByRole('link', { name: /Preview Expanding File Story Scene Chain Card Pack/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('expanding-file-story-scene-chain-card-pack'),
+    )
   })
 })

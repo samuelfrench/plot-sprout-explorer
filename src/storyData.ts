@@ -646,6 +646,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable accordion folder story-arc cards with adult guide tools, arc routines, and take-home arc slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'expanding-file-story-scene-chain-card-pack',
+    title: 'Expanding File Story Scene Chain Card Pack',
+    pricePoint: '$83',
+    description:
+      'Sixteen printable expanding file story scene-chain cards with adult guide tools, scene-chain routines, and take-home scene slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

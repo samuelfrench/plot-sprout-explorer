@@ -40,5 +40,8 @@ describe('content batch verifier summary', () => {
 
     expect(output).toContain(`${currentLocalImageCount()} local world/product images`)
     expect(output).toContain(`${currentProductArtifactCount()} product artifacts`)
+    expect(output).toContain('75 local world/product images')
+    expect(output).toContain('48 static product pages')
+    expect(output).toContain('48 product artifacts')
   })
 })
