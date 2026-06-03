@@ -78,6 +78,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 
 ## In Progress
 
+- [ ] Batch 44: Build a `$61` Folder Tab Story Detail Card Pack with adult-led printable fictional detail prompts, no scary harm or bullying, no real school/home identity details, no private child profiles, no account/public-posting flow, no recording/camera/photo/audio/video flow, no grading/score/timer pressure, no food tasting/allergy advice, no real child data, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [ ] External checkout gate: wire hosted checkout only after Sam chooses the provider and supplies the real provider-hosted URL.
 
 ## Next Content Batches
@@ -124,6 +125,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] Batch 41: Build a `$55` Desk Lamp Story Problem Card Pack with adult-led printable fictional problem prompts, no scary harm or bullying, no real room/location/schedule details, no private child profiles, no account/public-posting flow, no real child data, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 42: Build a `$57` Paper Clip Story Solution Card Pack with adult-led printable fictional solution prompts, no scary harm or bullying, no real school/home identity details, no private child profiles, no account/public-posting flow, no grading/score/timer pressure, no real child data, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [x] Batch 43: Build a `$59` Binder Clip Story Transition Card Pack with adult-led printable fictional transition prompts, no scary harm or bullying, no real school/home identity details, no private child profiles, no account/public-posting flow, no grading/score/timer pressure, no real child data, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
+- [ ] Batch 44: Build a `$61` Folder Tab Story Detail Card Pack with adult-led printable fictional detail prompts, no scary harm or bullying, no real school/home identity details, no private child profiles, no account/public-posting flow, no recording/camera/photo/audio/video flow, no grading/score/timer pressure, no food tasting/allergy advice, no real child data, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 - [ ] Batch 12: Add the chosen hosted checkout URL, provider-host allowlist, and CTA copy after Sam chooses the provider; do not add custom checkout/webhook endpoints.
 
 ## Product Gates
@@ -174,4 +176,5 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 - [x] $55 desk lamp story problem card pack with adult-led fictional printable problem prompts and no scary harm, bullying, real room/location/schedule details, private child profiles, public posting, accounts, or real-child data.
 - [x] $57 paper clip story solution card pack with adult-led fictional printable solution prompts and no scary harm, bullying, grading, score, timer pressure, private child profiles, public posting, accounts, or real-child data.
 - [x] $59 binder clip story transition card pack with adult-led fictional printable transition prompts and no scary harm, bullying, grading, score, timer pressure, private child profiles, public posting, accounts, or real-child data.
+- [ ] $61 folder tab story detail card pack with adult-led fictional printable detail prompts and no scary harm, bullying, recording, camera/photo/audio/video flow, grading, score, timer pressure, food tasting/allergy advice, private child profiles, public posting, accounts, or real-child data.
 - [ ] Parent email capture for weekly printable quest drops.
