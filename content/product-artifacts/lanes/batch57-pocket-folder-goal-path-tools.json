@@ -1,0 +1,109 @@
+{
+  "adultGuide": {
+    "title": "Pocket Folder Goal Path Adult Guide",
+    "bullets": [
+      "Set out one pocket folder, blank pages, pencils, and a goal path card before the adult-led start: ____________________.",
+      "Choose one made-up world and remind the writer that the want, snag, first try, rethink, finish note, and pocket label all stay invented: ____________________.",
+      "Move through the goal path in order so the paper page has one clear want before any snag appears: ____________________.",
+      "Keep the adult in charge of the folder while the writer writes or dictates short paper lines: ____________________.",
+      "Use pretend characters, broad places, and invented actions only; skip real names, real places, and personal facts: ____________________.",
+      "Close by reading the finish note and adding a pocket label for a later adult-led paper pass: ____________________."
+    ]
+  },
+  "goalPathRoutines": [
+    {
+      "title": "Want Pocket Start",
+      "time": "short first-page setup",
+      "materials": "Pocket folder, blank page, pencil, and want card.",
+      "steps": [
+        "The adult opens the pocket folder and points to the want blank: ____________________.",
+        "The writer names one pretend character want for the page: ____________________.",
+        "The adult asks what makes that want clear on paper: ____________________.",
+        "The writer writes or dictates one want line on the blank page: ____________________."
+      ],
+      "adultWrapLine": "The goal path starts with this pretend want: ____________________."
+    },
+    {
+      "title": "Snag Slip Add-On",
+      "time": "one-page snag setup",
+      "materials": "Pocket folder, current page, pencil, and snag slip.",
+      "steps": [
+        "The adult rereads the want line from the paper page: ____________________.",
+        "The writer invents one small snag that gets in the character's way: ____________________.",
+        "The adult asks how the snag changes the next sentence: ____________________.",
+        "The writer writes one snag line under the want: ____________________."
+      ],
+      "adultWrapLine": "The snag gives the want this paper problem: ____________________."
+    },
+    {
+      "title": "First Try Page",
+      "time": "first action pass",
+      "materials": "Pocket folder, goal path card, blank page, and pencil.",
+      "steps": [
+        "The adult points from the snag to the first try blank: ____________________.",
+        "The writer chooses one first try the character can make: ____________________.",
+        "The adult asks what the first try looks like in one paper line: ____________________.",
+        "The writer writes the first try and tucks the page beside the snag slip: ____________________."
+      ],
+      "adultWrapLine": "The first try moves the goal path with: ____________________."
+    },
+    {
+      "title": "Rethink Fold-Back",
+      "time": "gentle change pass",
+      "materials": "Pocket folder, first try page, rethink strip, and pencil.",
+      "steps": [
+        "The adult folds back the first try page and asks what did not quite work: ____________________.",
+        "The writer names one calm rethink for the pretend character: ____________________.",
+        "The adult asks what the character will try in a new way: ____________________.",
+        "The writer writes one rethink line on the strip: ____________________."
+      ],
+      "adultWrapLine": "The rethink changes the goal path by: ____________________."
+    },
+    {
+      "title": "Finish Note Tuck-In",
+      "time": "paper close pass",
+      "materials": "Pocket folder, finish note slip, page stack, and pencil.",
+      "steps": [
+        "The adult lays the want, snag, first try, and rethink pages in order: ____________________.",
+        "The writer chooses what the pretend character understands by the end: ____________________.",
+        "The adult asks for one finish note that stays about the made-up goal path: ____________________.",
+        "The writer writes the finish note and tucks it into the pocket folder: ____________________."
+      ],
+      "adultWrapLine": "The finish note closes the goal path with: ____________________."
+    },
+    {
+      "title": "Pocket Label Sort",
+      "time": "folder label wrap",
+      "materials": "Pocket folder, label slip, pencil, and finished paper stack.",
+      "steps": [
+        "The adult points to the folded goal path pages in the pocket folder: ____________________.",
+        "The writer chooses a broad pocket label for the made-up goal path: ____________________.",
+        "The adult asks which part the label should help find later: ____________________.",
+        "The writer writes the pocket label and places it on the folder: ____________________."
+      ],
+      "adultWrapLine": "The pocket label names this goal path as: ____________________."
+    }
+  ],
+  "takeHomeGoalSlips": [
+    "Adult: open the pocket folder and ask for one pretend character want: ____________________.",
+    "Writer: the want on my goal path is: ____________________.",
+    "Adult: ask what small snag gets in the way of that want: ____________________.",
+    "Writer: the snag on the paper page is: ____________________.",
+    "Adult: point to the first try blank and ask what the character does next: ____________________.",
+    "Writer: the first try should be: ____________________.",
+    "Adult: ask what the character can rethink after the first try: ____________________.",
+    "Writer: the rethink line is: ____________________.",
+    "Adult: ask for a finish note that closes the pretend goal path: ____________________.",
+    "Writer: the pocket label for this paper stack is: ____________________."
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led paper prompt: the pretend character wants ____________________.",
+    "Optional adult-led paper prompt: the small snag is ____________________.",
+    "Optional adult-led paper prompt: the first try looks like ____________________.",
+    "Optional adult-led paper prompt: the rethink changes the plan by ____________________.",
+    "Optional adult-led paper prompt: the finish note should say ____________________.",
+    "Optional adult-led paper prompt: the pocket label can name ____________________.",
+    "Optional adult-led paper prompt: the next paper pass could start with ____________________.",
+    "Optional adult-led paper prompt: the goal path closes when ____________________."
+  ]
+}
