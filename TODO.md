@@ -82,6 +82,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 ## In Progress
 
 - [ ] External checkout gate: wire hosted checkout only after Sam chooses the provider and supplies the real provider-hosted URL.
+- [ ] Batch 47: Build a `$67` Washi Tape Story Word Choice Card Pack with adult-led printable fictional word-choice prompts, no spelling grades or score pressure, no real school/home identity details, no private child profiles or diary-style personal disclosures, no account/public-posting flow, no recording/camera/photo/audio/video/voice-memo flow, no uploads of child writing, no food tasting/allergy/medical advice, no real child data, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 
 ## Next Content Batches
 
