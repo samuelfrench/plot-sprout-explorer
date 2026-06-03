@@ -2856,6 +2856,130 @@
           "summary": "A binding day world for writing one promise line that ties the page together."
         }
       ]
+    },
+    {
+      "slug": "pencil-cup-story-opening-card-pack",
+      "title": "Pencil Cup Story Opening Card Pack",
+      "pricePoint": "$53",
+      "status": "checkout_pending",
+      "headline": "A printable opening-card pack for screen-free pretend-pencil-cup story starts.",
+      "summary": "Sixteen adult-led pencil cup cards help kids begin fictional stories with first lines, character arrivals, place doorways, questions, and revisions.",
+      "heroImage": "images/plotsprout/batch40/pencil-cup-story-opening-card-pack.jpg",
+      "ctaLabel": "Request opening card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Pencil%20Cup%20Story%20Opening%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static pencil cup story opening card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable pencil cup story opening cards",
+        "Adult setup guide",
+        "Fictional opening safety notes",
+        "Pencil cup opening coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led opening routines",
+        "Ten take-home opening slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one fictional opening before a full story",
+        "A tutoring or co-op table where writers can fill one opening card at a time",
+        "A warm-up where a pretend pencil cup idea reduces blank-page pressure",
+        "A reluctant-writer activity that separates story starts from a full draft",
+        "A take-home opening slip set for beginning one invented story offline"
+      ],
+      "parentSteps": [
+        "Choose one opening routine before the activity starts.",
+        "Set the paper, pencil, blank cup slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full first sentence.",
+        "Turn one pretend pencil cup clue into a fictional opening detail rather than using narrow real-world facts.",
+        "Send one opening slip with a single start blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for beginning with one new visitor at the pastry counter."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for turning a tiny object into the first story invitation."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for opening through one shelf doorway and a ticket clue."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for starting with one folded-map question."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for beginning with a written sound and a weather-pane change."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for opening on one tiny notice-board problem."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for starting with a harbor object and a first setting clue."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for giving the first paragraph a small story task."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for opening with a paper map symbol and invented meaning."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for beginning when the gauge shows a pretend signal."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for starting with one gentle mystery note."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for opening from one tide clue and a shell-shadow mark."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for beginning with a clear written voice on the dock."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for opening when a blank tag reveals the first clue."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for starting with one fictional choice hook."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for beginning with one promise before the pages are ready."
+        }
+      ]
     }
   ]
 }

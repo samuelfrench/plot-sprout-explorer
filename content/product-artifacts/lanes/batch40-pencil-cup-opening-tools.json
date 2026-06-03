@@ -1,0 +1,192 @@
+{
+  "laneId": "batch40-pencil-cup-opening-tools",
+  "batchId": "2026-06-03-batch40",
+  "productSlug": "pencil-cup-story-opening-card-pack",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the opening cards and choose a small stack that matches the writers' stamina for one sitting.",
+      "Set out pencils, blank paper, and a pencil cup as the shared idea holder.",
+      "Tell writers every opening must be fictional, invented, and broad enough that it does not reveal narrow real-world facts.",
+      "Preview the cards and remove any prompt that feels too close to an actual person or specific real-world detail.",
+      "Model one simple invented opening first: The green pencil leaned out of the cup and whispered, ____________________."
+    ],
+    "pencilCupOpeningSetup": [
+      "Place five pencil colors in the cup and assign each one an opening job: first line, arrival, doorway, object, or question.",
+      "Let the adult draw the pencil so the activity stays guided and low-pressure.",
+      "Keep a small scrap pile beside the cup for false starts; writers may cross out and begin again without keeping every attempt.",
+      "Use invented labels on nearby slips, such as Cloud Hall, Button Market, Moon Desk, or Acorn Station.",
+      "Ask the writer to finish one opening stem before adding plot: Today the pencil cup held ____________________."
+    ],
+    "openingCoaching": [
+      "Start with motion when a writer is stuck: The pencil rolled, pointed, tapped, slipped, or turned toward ____________________.",
+      "Ask for one clear noun before any explanation: Who or what appears first in the opening? ____________________.",
+      "Keep the first paragraph small: one sentence for the surprise, one sentence for the place, and one sentence for the first move.",
+      "When an opening sounds like a summary, ask the writer to move closer to the first moment: The first thing I noticed was ____________________.",
+      "For gentle revision, circle one word that can become more specific and replace it with an invented detail: ____________________."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use broad invented labels instead of narrow real-world facts.",
+      "Keep sharing limited to adult-led paper conversation.",
+      "Keep the activity paper-only and skip media capture.",
+      "Keep all characters fictional and avoid details that point to an actual writer.",
+      "Invite writers to skip any line they do not want to read aloud."
+    ],
+    "familyHandoff": [
+      "Send along only the chosen slip and a blank page, not a log of the writer's full writing history.",
+      "Invite family adults to ask about the made-up beginning rather than correcting spelling first.",
+      "Suggest one adult-led line: My favorite invented detail was ____________________.",
+      "Remind family adults to keep narrow real-world facts and private routines off the story page.",
+      "Keep the handoff paper-only and adult-led."
+    ],
+    "reset": [
+      "Return unused cards to the pack and recycle crossed-out scraps that contain narrow real-world facts.",
+      "Put the pencil colors back in the cup so the next session starts with the same simple choices.",
+      "Save only fictional examples that are useful for modeling future openings.",
+      "Check that take-home slips are blank except for invented story material."
+    ]
+  },
+  "openingRoutines": [
+    {
+      "name": "First Line Pencil Pull",
+      "bestFor": "Writers who need help getting the very first sentence onto the page.",
+      "steps": [
+        "The adult draws one pencil and names its job: first line.",
+        "The writer chooses a fictional sound, color, or movement from the pencil cup.",
+        "The writer completes this line: The first sign that something was different was ____________________.",
+        "The adult asks the writer to add one more sentence showing who noticed it."
+      ]
+    },
+    {
+      "name": "Cup Character Arrival",
+      "bestFor": "Starting with a character before the setting is fully known.",
+      "steps": [
+        "Choose one pencil and pretend it belongs to an invented character.",
+        "Ask what the character carries, wants, or misunderstands.",
+        "The writer completes this arrival line: Into the story came ____________________.",
+        "The adult prompts one first action, not a full backstory."
+      ]
+    },
+    {
+      "name": "Doorway Place Opening",
+      "bestFor": "Writers who like places, maps, rooms, and entrances.",
+      "steps": [
+        "Place a folded blank slip beside the pencil cup and call it a doorway.",
+        "Name an invented place that could fit behind it.",
+        "The writer completes this opening: Behind the pencil cup doorway was ____________________.",
+        "The adult asks for one detail the character sees before stepping in."
+      ]
+    },
+    {
+      "name": "Object Invitation Start",
+      "bestFor": "Turning ordinary desk objects into story starters.",
+      "steps": [
+        "Pick one paper-only object near the cup, such as an eraser, paperclip, ruler, or index card.",
+        "Ask what the object seems to invite the character to do.",
+        "The writer completes this line: The object on the desk seemed to be inviting ____________________.",
+        "The adult asks the writer to write the first yes, no, or maybe response."
+      ]
+    },
+    {
+      "name": "Opening Question Card",
+      "bestFor": "Writers who start faster when there is a mystery but no scary content.",
+      "steps": [
+        "The adult chooses a card and turns its prompt into a gentle question.",
+        "The writer answers with an invented place, object, or character.",
+        "The writer completes this question opening: Why was ____________________ waiting in the pencil cup?",
+        "The adult reminds the writer not to solve the whole question yet."
+      ]
+    },
+    {
+      "name": "First Move Revision",
+      "bestFor": "Improving a plain beginning without rewriting the whole page.",
+      "steps": [
+        "The writer underlines the first sentence of a draft opening.",
+        "The adult asks which word can become more vivid, specific, or surprising.",
+        "The writer rewrites only that sentence using this stem: This time, the opening begins with ____________________.",
+        "The adult has the writer compare both versions and choose the one that starts the story faster."
+      ]
+    }
+  ],
+  "takeHomeOpeningSlips": [
+    {
+      "title": "The Tapping Pencil",
+      "time": "One brief sitting",
+      "skill": "First line with sound",
+      "direction": "Write a fictional opening where a pencil taps three times before anything happens: ____________________.",
+      "familyLine": "Ask which invented sound should come next: ____________________."
+    },
+    {
+      "title": "New Pencil in the Cup",
+      "time": "One opening",
+      "skill": "Character arrival",
+      "direction": "Begin with a new pencil appearing in the cup and invent who placed it there: ____________________.",
+      "familyLine": "Ask what the made-up visitor wants without using a narrow real-world fact: ____________________."
+    },
+    {
+      "title": "Door Behind the Cup",
+      "time": "One short page",
+      "skill": "Place doorway",
+      "direction": "Start with a tiny doorway opening behind the pencil cup and name the invented place beyond it: ____________________.",
+      "familyLine": "Ask for one fictional detail seen through the doorway: ____________________."
+    },
+    {
+      "title": "The Object That Asked",
+      "time": "One card",
+      "skill": "Object invitation",
+      "direction": "Choose an ordinary paper-table object and write an opening where it asks for help: ____________________.",
+      "familyLine": "Ask what the character does first with the object: ____________________."
+    },
+    {
+      "title": "Question on the Label",
+      "time": "One opening",
+      "skill": "Opening question",
+      "direction": "Invent a label on the pencil cup that asks a question no one expected: ____________________.",
+      "familyLine": "Ask which word on the invented label matters most: ____________________."
+    },
+    {
+      "title": "First Move",
+      "time": "One paragraph",
+      "skill": "Action opening",
+      "direction": "Begin with a character making one small move toward the pencil cup: ____________________.",
+      "familyLine": "Ask what the move shows about the character: ____________________."
+    },
+    {
+      "title": "Color Pencil Weather",
+      "time": "One short page",
+      "skill": "Mood setting",
+      "direction": "Write a fictional opening where the color of a pencil changes the mood of an invented place: ____________________.",
+      "familyLine": "Ask which color belongs in the first sentence: ____________________."
+    },
+    {
+      "title": "Eraser Map",
+      "time": "One card",
+      "skill": "Map-free imagined place",
+      "direction": "Start with an eraser revealing a pretend map that does not match any narrow real-world place detail: ____________________.",
+      "familyLine": "Ask what invented landmark appears first: ____________________."
+    },
+    {
+      "title": "Ruler Edge Door",
+      "time": "One opening",
+      "skill": "Boundary and doorway",
+      "direction": "Begin with a ruler edge becoming the line between an ordinary desk and an invented world: ____________________.",
+      "familyLine": "Ask what waits on the fictional far side: ____________________."
+    },
+    {
+      "title": "Sharper Opening",
+      "time": "Two gentle passes",
+      "skill": "Opening revision",
+      "direction": "Rewrite a plain opening by adding one specific invented object from the pencil cup: ____________________.",
+      "familyLine": "Ask which version starts faster and why: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Read only the first sentence you want to share: ____________________.",
+    "Point to the invented word that made the opening feel alive: ____________________.",
+    "Share the fictional object that starts the story, without narrow real-world facts: ____________________.",
+    "Tell the group what the character notices first: ____________________.",
+    "Share the made-up place name from your opening: ____________________.",
+    "Read the opening question and stop before the answer: ____________________.",
+    "Name one word you revised to make the beginning clearer: ____________________.",
+    "Tell a family adult which pencil-cup idea you would use again: ____________________."
+  ]
+}

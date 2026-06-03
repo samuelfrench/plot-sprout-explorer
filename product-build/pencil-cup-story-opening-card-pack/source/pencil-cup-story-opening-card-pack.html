@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pencil Cup Story Opening Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-opening-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-opening-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-opening-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable pencil cup opening cards</p>
+        <h1>Pencil Cup Story Opening Card Pack</h1>
+        <p>Sixteen paper cards help writers begin fictional stories with first lines, character arrivals, place doorways, object invitations, opening questions, first moves, and gentle revision.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable opening cards plus adult guide tools, opening routines, take-home opening slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$53</span>
+        <h2>Included</h2>
+        <ul><li>16 printable pencil cup opening cards</li>
+<li>Adult setup guide</li>
+<li>Fictional opening safety notes</li>
+<li>Pencil cup opening coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led opening routines</li>
+<li>Ten take-home opening slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Opening coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the opening cards and choose a small stack that matches the writers&#39; stamina for one sitting.</li>
+<li>Set out pencils, blank paper, and a pencil cup as the shared idea holder.</li>
+<li>Tell writers every opening must be fictional, invented, and broad enough that it does not reveal narrow real-world facts.</li>
+<li>Preview the cards and remove any prompt that feels too close to an actual person or specific real-world detail.</li>
+<li>Model one simple invented opening first: The green pencil leaned out of the cup and whispered, ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Pencil cup opening setup</h3><ul><li>Place five pencil colors in the cup and assign each one an opening job: first line, arrival, doorway, object, or question.</li>
+<li>Let the adult draw the pencil so the activity stays guided and low-pressure.</li>
+<li>Keep a small scrap pile beside the cup for false starts; writers may cross out and begin again without keeping every attempt.</li>
+<li>Use invented labels on nearby slips, such as Cloud Hall, Button Market, Moon Desk, or Acorn Station.</li>
+<li>Ask the writer to finish one opening stem before adding plot: Today the pencil cup held ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Story opening coaching</h3><ul><li>Start with motion when a writer is stuck: The pencil rolled, pointed, tapped, slipped, or turned toward ____________________.</li>
+<li>Ask for one clear noun before any explanation: Who or what appears first in the opening? ____________________.</li>
+<li>Keep the first paragraph small: one sentence for the surprise, one sentence for the place, and one sentence for the first move.</li>
+<li>When an opening sounds like a summary, ask the writer to move closer to the first moment: The first thing I noticed was ____________________.</li>
+<li>For gentle revision, circle one word that can become more specific and replace it with an invented detail: ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Use broad invented labels instead of narrow real-world facts.</li>
+<li>Keep sharing limited to adult-led paper conversation.</li>
+<li>Keep the activity paper-only and skip media capture.</li>
+<li>Keep all characters fictional and avoid details that point to an actual writer.</li>
+<li>Invite writers to skip any line they do not want to read aloud.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send along only the chosen slip and a blank page, not a log of the writer&#39;s full writing history.</li>
+<li>Invite family adults to ask about the made-up beginning rather than correcting spelling first.</li>
+<li>Suggest one adult-led line: My favorite invented detail was ____________________.</li>
+<li>Remind family adults to keep narrow real-world facts and private routines off the story page.</li>
+<li>Keep the handoff paper-only and adult-led.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Return unused cards to the pack and recycle crossed-out scraps that contain narrow real-world facts.</li>
+<li>Put the pencil colors back in the cup so the next session starts with the same simple choices.</li>
+<li>Save only fictional examples that are useful for modeling future openings.</li>
+<li>Check that take-home slips are blank except for invented story material.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one pencil cup opening card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen opening-card worlds</h2>
+      <p>Pick a world image, then start one fictional story with a pretend pencil cup opening card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Opening routines</p>
+      <h2>Choose the pencil cup opening rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>First Line Pencil Pull</h3>
+      <p>Writers who need help getting the very first sentence onto the page.</p>
+      <ol><li>The adult draws one pencil and names its job: first line.</li>
+<li>The writer chooses a fictional sound, color, or movement from the pencil cup.</li>
+<li>The writer completes this line: The first sign that something was different was ____________________.</li>
+<li>The adult asks the writer to add one more sentence showing who noticed it.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Cup Character Arrival</h3>
+      <p>Starting with a character before the setting is fully known.</p>
+      <ol><li>Choose one pencil and pretend it belongs to an invented character.</li>
+<li>Ask what the character carries, wants, or misunderstands.</li>
+<li>The writer completes this arrival line: Into the story came ____________________.</li>
+<li>The adult prompts one first action, not a full backstory.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Doorway Place Opening</h3>
+      <p>Writers who like places, maps, rooms, and entrances.</p>
+      <ol><li>Place a folded blank slip beside the pencil cup and call it a doorway.</li>
+<li>Name an invented place that could fit behind it.</li>
+<li>The writer completes this opening: Behind the pencil cup doorway was ____________________.</li>
+<li>The adult asks for one detail the character sees before stepping in.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Object Invitation Start</h3>
+      <p>Turning ordinary desk objects into story starters.</p>
+      <ol><li>Pick one paper-only object near the cup, such as an eraser, paperclip, ruler, or index card.</li>
+<li>Ask what the object seems to invite the character to do.</li>
+<li>The writer completes this line: The object on the desk seemed to be inviting ____________________.</li>
+<li>The adult asks the writer to write the first yes, no, or maybe response.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Opening Question Card</h3>
+      <p>Writers who start faster when there is a mystery but no scary content.</p>
+      <ol><li>The adult chooses a card and turns its prompt into a gentle question.</li>
+<li>The writer answers with an invented place, object, or character.</li>
+<li>The writer completes this question opening: Why was ____________________ waiting in the pencil cup?</li>
+<li>The adult reminds the writer not to solve the whole question yet.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>First Move Revision</h3>
+      <p>Improving a plain beginning without rewriting the whole page.</p>
+      <ol><li>The writer underlines the first sentence of a draft opening.</li>
+<li>The adult asks which word can become more vivid, specific, or surprising.</li>
+<li>The writer rewrites only that sentence using this stem: This time, the opening begins with ____________________.</li>
+<li>The adult has the writer compare both versions and choose the one that starts the story faster.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home opening slips</p>
+      <h2>Start one story opening later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">One brief sitting | First line with sound</p>
+      <h3>The Tapping Pencil</h3>
+      <p>Write a fictional opening where a pencil taps three times before anything happens: ____________________.</p>
+      <p>Ask which invented sound should come next: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One opening | Character arrival</p>
+      <h3>New Pencil in the Cup</h3>
+      <p>Begin with a new pencil appearing in the cup and invent who placed it there: ____________________.</p>
+      <p>Ask what the made-up visitor wants without using a narrow real-world fact: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One short page | Place doorway</p>
+      <h3>Door Behind the Cup</h3>
+      <p>Start with a tiny doorway opening behind the pencil cup and name the invented place beyond it: ____________________.</p>
+      <p>Ask for one fictional detail seen through the doorway: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One card | Object invitation</p>
+      <h3>The Object That Asked</h3>
+      <p>Choose an ordinary paper-table object and write an opening where it asks for help: ____________________.</p>
+      <p>Ask what the character does first with the object: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One opening | Opening question</p>
+      <h3>Question on the Label</h3>
+      <p>Invent a label on the pencil cup that asks a question no one expected: ____________________.</p>
+      <p>Ask which word on the invented label matters most: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One paragraph | Action opening</p>
+      <h3>First Move</h3>
+      <p>Begin with a character making one small move toward the pencil cup: ____________________.</p>
+      <p>Ask what the move shows about the character: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One short page | Mood setting</p>
+      <h3>Color Pencil Weather</h3>
+      <p>Write a fictional opening where the color of a pencil changes the mood of an invented place: ____________________.</p>
+      <p>Ask which color belongs in the first sentence: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One card | Map-free imagined place</p>
+      <h3>Eraser Map</h3>
+      <p>Start with an eraser revealing a pretend map that does not match any narrow real-world place detail: ____________________.</p>
+      <p>Ask what invented landmark appears first: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One opening | Boundary and doorway</p>
+      <h3>Ruler Edge Door</h3>
+      <p>Begin with a ruler edge becoming the line between an ordinary desk and an invented world: ____________________.</p>
+      <p>Ask what waits on the fictional far side: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Two gentle passes | Opening revision</p>
+      <h3>Sharper Opening</h3>
+      <p>Rewrite a plain opening by adding one specific invented object from the pencil cup: ____________________.</p>
+      <p>Ask which version starts faster and why: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Read only the first sentence you want to share: ____________________.</li>
+<li>Point to the invented word that made the opening feel alive: ____________________.</li>
+<li>Share the fictional object that starts the story, without narrow real-world facts: ____________________.</li>
+<li>Tell the group what the character notices first: ____________________.</li>
+<li>Share the made-up place name from your opening: ____________________.</li>
+<li>Read the opening question and stop before the answer: ____________________.</li>
+<li>Name one word you revised to make the beginning clearer: ____________________.</li>
+<li>Tell a family adult which pencil-cup idea you would use again: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 1 | Ages 6-8 | character arrival</div>
+      <h2>Moon Muffin Pencil Tip Arrival</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside blank paper and a drawn pencil cup, then invite one invented visitor into Moon Muffin Market: ____________________.</p>
+      <p class="kid-direction">Start the story when a made-up moon muffin character steps out from behind the pencil cup: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: Write the moment the moon-market stall first notices the visitor: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: The character who arrives carrying a tiny pencil-cup clue is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place clue: The visitor arrives near the pretend moon muffin stall called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object clue: One pencil-cup object that matters in the opening is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: Why did the visitor come to the moon muffin counter today? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: The visitor gently asks the stall helper to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Add one moon-market detail that makes the arrival easier to picture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the arriving character first, then write one arrival word: ____________________. Take-home line: Use another blank page to begin a pretend market tale with one new visitor: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 2 | Ages 6-8 | object invitation</div>
+      <h2>Puddle Planet Bottle-Cap Invitation</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out blank paper and point to one pretend pencil-cup object that can become puddle mail: ____________________.</p>
+      <p class="kid-direction">Begin when the object from the pencil cup turns into a friendly invitation on Puddle Planet: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: Write the first thing the tiny puddle post office does with the invitation: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character prompt: The puddle mail helper who finds the object is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place prompt: The invitation appears beside the pretend puddle counter called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: The pencil-cup object that invites the story to begin is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: What does the invitation ask the puddle helper to try first? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: The helper places the invitation into a bottle-cap pouch and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Add one ripple, stamp, or shell-tag detail to make the object invitation clearer: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle the invitation object and copy one puddle-mail word: ____________________. Take-home line: Start another pretend mail story with one paper object that invites the plot: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 3 | Ages 7-9 | place doorway</div>
+      <h2>Buttonwood Shelf Doorway Tap</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place the card beside a drawn pencil cup and ask which pretend doorway opens near the Buttonwood Library Train: ____________________.</p>
+      <p class="kid-direction">Write the opening as if the pencil cup points toward a tiny doorway into the library train: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: Begin at the exact moment the shelf doorway taps open: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character prompt: The traveler waiting by the doorway is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: The doorway leads into the library-train stop called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object prompt: The pencil-cup clue beside the doorway is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: What shelf question is waiting on the other side of the doorway? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: The traveler steps through, listens for the library wheels, and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Add one buttonwood, ticket, bell, or bookmark detail to sharpen the doorway scene: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Sketch the doorway shape and write one word from inside it: ____________________. Take-home line: Open another pretend story by drawing a doorway first, then writing one first line: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 4 | Ages 7-9 | question hook</div>
+      <h2>Button Bakery Crumb-Map Question</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Put this card by blank paper and invite a made-up question about a folded button map: ____________________.</p>
+      <p class="kid-direction">Start the story with a question that makes the button bakery map feel curious but safe: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: Write a sentence that begins with the bakery-map question or answers part of it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character prompt: The map-mender or crumb clerk asking the question is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place prompt: The question appears at the pretend bakery-map corner called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object prompt: The pencil-cup object that marks the strange map spot is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Question hook: What does the folded button map seem to be asking? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: After the question, the map-mender gently turns the page and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Move the strongest question word closer to the first sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write only the question mark and one clue word before adding the blank: ____________________. Take-home line: Begin another pretend map tale with one question that needs a kind answer: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 5 | Ages 7-8 | sound opening</div>
+      <h2>Teacup Weather Ping at the Pane</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out the card and invite the writer to write, not capture, one tiny weather-window sound: ____________________.</p>
+      <p class="kid-direction">Begin with a sound from the pretend teacup weather window, then show what changes: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: Start with a tiny sound word from the weather pane and finish the sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character prompt: The teacup weather watcher who hears the sound is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place prompt: The sound comes from the pretend weather window called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object prompt: The pencil-cup object near the pane that makes or notices the sound is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: What gentle weather change might that sound mean? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: The watcher looks through the tiny pane and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Replace one plain sound with a teacup-town sound that feels more specific: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Tap the paper once silently, then write one sound word: ____________________. Take-home line: Start another pretend weather tale with one written sound and one tiny change: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 6 | Ages 7-9 | tiny problem</div>
+      <h2>Pocket Park Crooked Notice Dot</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside a blank pretend notice and choose one tiny paper problem that stays make-believe: ____________________.</p>
+      <p class="kid-direction">Open the pocket-park story by showing a small notice-board problem that can be solved gently: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: Write the first moment someone notices the crooked dot on the board: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character prompt: The pocket-park notice keeper who spots the tiny problem is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place prompt: The tiny problem appears at the pretend park board called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object prompt: The pencil-cup object that helps point to the problem is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: Why does the tiny notice problem matter in this invented park? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: The notice keeper smooths the paper corner and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Make the problem smaller, clearer, and easier to fix in the first paragraph: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Mark the tiny problem with a paper dot, then write one clue word: ____________________. Take-home line: Start another pretend notice-board tale with one tiny problem and one gentle first move: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 7 | Ages 7-9 | setting clue</div>
+      <h2>Spoon Ferry Crumb-Light Opening</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a pencil cup or drawn cup nearby and ask for one invented harbor detail only: ____________________.</p>
+      <p class="kid-direction">Kid: start the story by noticing where the spoon ferry waits in the pretend harbor: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: On the edge of Lunchbox Harbor, the spoon ferry waited beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: A helper arrives carrying ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: The first doorway into the story is a cracker dock, napkin pier, or lunchbox lid gate called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: Pick one tiny object that invites the story to begin: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: What clue makes the harbor feel different today? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>Next move: The helper&#39;s first gentle action is to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Add one setting clue the reader can see, hear, or touch: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write only the harbor object and one describing word: ____________________. Take-home line: A setting clue can open a pretend spoon ferry story: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 8 | Ages 7-9 | task hook</div>
+      <h2>Acorn Desk First Errand Bell</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card beside a pencil cup sketch and invite one made-up errand, not real chores or real details: ____________________.</p>
+      <p class="kid-direction">Kid: begin when the acorn desk gives the helper one small job for the story: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: The acorn desk bell rang because the tiniest errand slip said ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: A leaf-list clerk, button-badge helper, or invented visitor steps in to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: The story opens at the acorn counter where ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: The first object from the pencil cup becomes a walnut stamp, twig pen, or ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: Which task needs help before the office can settle down? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>Next move: The helper reads the slip, chooses one desk corner, and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Underline the task word and make it clearer or stranger: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle one task object and finish one short sentence: ____________________. Take-home line: A task hook gives the first paragraph a job to follow: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 9 | Ages 8-10 | map start</div>
+      <h2>Seed Drawer Foldout Beginning</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: invite a made-up map on the page and avoid narrow real-world place details: ____________________.</p>
+      <p class="kid-direction">Kid: start with one map symbol that changes how the seed library feels: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: When the drawer opened, a folded seed map showed ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: The map keeper arrives with a catalog card asking for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: The story enters through a drawer aisle, map table, or paper seed arch named ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: Choose the map object that begins the tale, such as a seed bead, ruler ribbon, paper key, or ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: Which invented map mark should the hero trust first? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>Next move: The hero studies one border, one symbol, and then ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Add a map clue that points to a fictional place, not a real one: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw one symbol and write its invented meaning here: ____________________. Take-home line: A map start can make the first scene feel ready to explore on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 10 | Ages 8-10 | weather signal</div>
+      <h2>Rain Gauge Platform Silver Signal</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a pencil cup or drawn cup beside the page and ask for invented weather, not real forecasts or plans: ____________________.</p>
+      <p class="kid-direction">Kid: begin the railway story when the gauge shows a signal no one expected: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: At Rain Gauge Railway, the silver gauge tipped toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: A rain-note conductor, cloud-sample sorter, or garden forecast writer arrives holding ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: The first scene begins at a platform, gauge shed, or puddle bridge called ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: Pick a weather object that invites the story to start, such as a blue ticket, clear tube, cloud note, or ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: What does the pretend weather signal seem to ask? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>Next move: The hero checks the gauge mark, listens to the platform bell, and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Add one weather signal before explaining what anyone does: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Mark the gauge level and write one signal word: ____________________. Take-home line: A weather signal can pull the reader into a fictional railway opening: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 11 | Ages 8-10 | mystery note</div>
+      <h2>Moss Observatory Lantern Note</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card with paper and invite only invented moss signals, sky marks, and note words: ____________________.</p>
+      <p class="kid-direction">Kid: begin when a moss note appears where the observer did not expect it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: The moss message on the observatory shelf read ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: A careful observer, pebble-lens keeper, or invented visitor arrives to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: The first doorway is a lookout step, lantern shelf, or moss arch named ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: Choose the object that carries the note, such as a moss dial, pebble lens, folded sky chart, or ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: Why would the moss leave this message today? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>Next move: The observer copies the note onto paper and then ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: Make the note more specific by adding one color, shape, or soft sound: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write the note&#39;s first two words and stop there: ____________________. Take-home line: A gentle mystery note can start a pretend observatory story: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 12 | Ages 8-10 | time clue</div>
+      <h2>Shell-Shadow Pencil Cup Clue</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: draw a pencil cup with shell pencils, then choose a pretend tide mark together: ____________________.</p>
+      <p class="kid-direction">Begin the tidepool lab story when the pencil cup shows the helper that the tide-time note has changed: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: write a sentence that starts with a tide mark, shell shadow, or jar line clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: invent the lab helper who notices the time clue first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: name the lab shelf, pool edge, driftwood desk, or jar table where the story opens: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: choose the pencil, shell tag, bead marker, or kelp ruler that invites the story to begin: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: ask what the tide clue means before anyone changes anything: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: write the helper&#39;s first calm paper-note action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: add one exact tide, shell, shadow, or jar detail so the time clue is easy to picture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw the time clue in the pencil cup, then write one opening sentence: ____________________. Take-home line: fold this card with a pencil cup sketch and add a new invented tide clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 13 | Ages 10-11 | voice start</div>
+      <h2>Patchwork Oar Voice Start</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card beside a pencil cup sketch and offer one invented ferry word to start from: ____________________.</p>
+      <p class="kid-direction">Start the ferry story in a character&#39;s written voice before explaining the whole draft problem: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: write the ferry helper&#39;s first thought, note, or announcement in a distinct voice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: invent the rider, pilot, or draft sorter who speaks first on the ferry: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: name the dock, paper ferry deck, draft island, or ripple bend where the opening begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: choose the colored pencil, oar tag, folded note, or map scrap that pulls the character aboard: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: ask what the speaker wants to revise before the ferry leaves the dock: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: write the first small ferry action that matches the speaker&#39;s voice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: replace one plain word with a sharper ferry, draft, dock, or pencil-cup word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the first voice line and underline the word that sounds most like the character: ____________________. Take-home line: carry this card with a paper pencil cup and try a new ferry voice start: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 14 | Ages 10-11 | label reveal</div>
+      <h2>Blank Tag Tower Reveal</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: draw a pencil cup with blank exhibit tags tucked inside and keep every object invented: ____________________.</p>
+      <p class="kid-direction">Open the tower museum story by letting one label reveal something the character did not expect: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: write the sentence where the pencil-cup label reveals a clue, job, or question: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: invent the curator, label sorter, or clue finder who reads the tag first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: name the tower shelf, exhibit step, label drawer, or quiet display where the story opens: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: choose the pencil, blank tag, tiny card, or paper magnifier that invites the first clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: ask why this label points to the wrong, missing, or surprising exhibit: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: write the character&#39;s first paper clue check after reading the label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: add one exact label shape, display surface, or pencil-cup detail to make the reveal clearer: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: sketch the label first, then write only the reveal sentence: ____________________. Take-home line: save this card and invent another pencil-cup label reveal on a paper slip: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 15 | Ages 10-11 | choice hook</div>
+      <h2>North-Bead Choice Hook</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: draw a paper compass beside the pencil cup and frame every direction as an invented story choice: ____________________.</p>
+      <p class="kid-direction">Start the compass craft story at the moment the character must choose which direction the pencil cup points: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: write a sentence that gives the character two possible directions before anything else happens: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: invent the map maker, craft apprentice, or path planner facing the choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: name the map room, bead table, needle hall, or compass rail where the opening begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: choose the pencil, paper needle, bead marker, folded arrow, or direction card that starts the choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: ask which direction the character should trust and why: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: write the first calm action the character takes to test one choice on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: add one clue that makes both choices feel possible but different: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: mark two compass points and write one opening choice sentence: ____________________. Take-home line: tuck this card with a pencil cup sketch and invent a new compass choice hook: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-opening-card-page">
+      <div class="page-kicker">Opening Card 16 | Ages 10-11 | promise opening</div>
+      <h2>Button-Loop Promise Opening</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: fold a blank booklet shape and draw a pencil cup holding pretend binding tools: ____________________.</p>
+      <p class="kid-direction">Open the boardwalk story by writing the promise the character wants to keep before the pages are ready: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First line</h3>
+      <p>First line: write the promise sentence that begins the booklet, boardwalk, or pencil-cup story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character arrival</h3>
+      <p>Character arrival: invent the binder, booklet helper, or page sorter who makes the promise: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place doorway</h3>
+      <p>Place doorway: name the boardwalk table, page booth, thread rail, or booklet stand where the opening begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object invitation</h3>
+      <p>Object invitation: choose the pencil, button tag, thread loop, page clasp, or folded sign that helps make the promise: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Opening question</h3>
+      <p>Opening question: ask what might make the promise tricky to keep in this invented story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First next move</h3>
+      <p>First next move: write the character&#39;s first careful step toward keeping the promise on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise opening</h3>
+      <p>Revise opening: add one boardwalk, booklet, button, or pencil-cup detail that makes the promise feel specific: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the promise and draw the object that helps keep it: ____________________. Take-home line: keep this card with a folded paper booklet and add another promise opening: ____________________.</p>
+    </section>
+  </body>
+</html>

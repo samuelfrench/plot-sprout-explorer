@@ -1,0 +1,19 @@
+{
+  "slug": "pencil-cup-story-opening-card-pack",
+  "prompt": "family-friendly flat lay, six loose blank cream printable story opening cards beside a simple unbranded pencil cup with colored pencils, empty rectangular writing areas, unbranded cozy writing table, plain white background, screen-free Pencil Cup Story Opening Card Pack product photo, no readable text, no people",
+  "negativePrompt": "text, readable writing, letters, labels, logo, watermark, illustration, drawing, line art, cartoon, person, people, child, child face, child portrait, hands, body, clothing, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, map, real map, phone, tablet, laptop, computer, screen, device, app interface, microphone, audio recorder, camera, photo, recording, transcription, school login, account login, portal, qr code, upload icon, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, brand mark, franchise character, scary, weapon",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26064053,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch40/pencil-cup-story-opening-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch40/pencil-cup-story-opening-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-03-batch40-product-images.json",
+  "postProcess": "Replaced raw SDXL tabletop render with deterministic local ImageMagick cleanup: six blank cream opening cards, pencils, and a simple unbranded pencil cup; no text.",
+  "title": "Pencil Cup Story Opening Card Pack"
+}

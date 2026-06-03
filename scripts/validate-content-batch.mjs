@@ -29,6 +29,8 @@ import {
   validatePaperTrayStorySettingCardPackSourceFiles,
   validateBackpackStoryEndingCardPackSource,
   validateBackpackStoryEndingCardPackSourceFiles,
+  validatePencilCupStoryOpeningCardPackSource,
+  validatePencilCupStoryOpeningCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -98,6 +100,7 @@ const batch36ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch37ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch37-product-images.json')
 const batch38ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch38-product-images.json')
 const batch39ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch39-product-images.json')
+const batch40ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch40-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -131,6 +134,7 @@ const kitchenWindowPovSourceFile = resolve(root, 'content', 'product-artifacts',
 const coatPocketCharacterSourceFile = resolve(root, 'content', 'product-artifacts', 'coat-pocket-story-character-card-pack.json')
 const paperTraySettingSourceFile = resolve(root, 'content', 'product-artifacts', 'paper-tray-story-setting-card-pack.json')
 const backpackEndingSourceFile = resolve(root, 'content', 'product-artifacts', 'backpack-story-ending-card-pack.json')
+const pencilCupOpeningSourceFile = resolve(root, 'content', 'product-artifacts', 'pencil-cup-story-opening-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -165,6 +169,7 @@ const batch36ProductImagesBatchId = '2026-06-03-batch36-product-images'
 const batch37ProductImagesBatchId = '2026-06-03-batch37-product-images'
 const batch38ProductImagesBatchId = '2026-06-03-batch38-product-images'
 const batch39ProductImagesBatchId = '2026-06-03-batch39-product-images'
+const batch40ProductImagesBatchId = '2026-06-03-batch40-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -198,6 +203,7 @@ const kitchenWindowPovBatchId = '2026-06-03-batch36'
 const coatPocketCharacterBatchId = '2026-06-03-batch37'
 const paperTraySettingBatchId = '2026-06-03-batch38'
 const backpackEndingBatchId = '2026-06-03-batch39'
+const pencilCupOpeningBatchId = '2026-06-03-batch40'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -2786,6 +2792,108 @@ function validateBatch39ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch40ProductImage(image) {
+  const label = `2026-06-03-batch40-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'pencil-cup-story-opening-card-pack',
+    `${label}.slug must be pencil-cup-story-opening-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch40/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch40/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch40/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'six loose blank cream printable story opening cards',
+    'unbranded cozy writing table',
+    'empty rectangular writing areas',
+    'plain white background',
+    'screen-free pencil cup story opening card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'app interface',
+    'microphone',
+    'audio recorder',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'school login',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'review',
+    'score',
+    'grade',
+    'timer',
+    'clock',
+    'calendar',
+    'contest',
+    'prize',
+    'child face',
+    'child portrait',
+    'person',
+    'hands',
+    'body',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar.negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -3055,6 +3163,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'backpack-story-ending-card-pack': {
       title: 'Backpack Story Ending Card Pack',
       pricePoint: '$51',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'pencil-cup-story-opening-card-pack': {
+      title: 'Pencil Cup Story Opening Card Pack',
+      pricePoint: '$53',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -3505,6 +3621,41 @@ function validateProduct(product, productSlugs, worldSlugs) {
       .replaceAll('seed-library-map-room', '')
     expect(
       !/\baccounts?\b|\bschool accounts?\b|\blogins?\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideos?\b|\bphotos?\b|\bcameras?\b|\bphones?\b|\bdevices?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bgrading\b|\bscores?\b|\brubrics?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\breal names?\b|\bfull names?\b|\bidentity details?\b|\bclassrooms?\b|\bschools?\b|\bstudents?\b|\bteachers?\b|\bhomes?\b|\bhouses?\b|\bhome address\b|\bprivate locations?\b|\bprivate place details?\b|\blocation details?\b|\bexact locations?\b|\bexact places?\b|\bschool route(s)?\b|\breal route(s)?\b|\broutes?\b|\baddresses?\b|\bstreets?\b|\bgps\b|\bcoordinates?\b|\breal child\b|\breal child data\b|\bprivate child data\b|\bstudent records?\b|\bprofiles?\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bfood prep\b|\ballerg(y|ies|en|ens|ic)\b|\bmedical\b|\blegal\b|\btherapy\b|\bgrief\b/i.test(backpackRenderedText),
+      `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, real-identity, real school/home details, address, route, GPS, exact-location, profile, real-book-title, author, publisher, franchise, food/allergy, or unsafe professional language.`,
+    )
+  }
+  if (product.slug === 'pencil-cup-story-opening-card-pack') {
+    const pencilCupSummaryErrors = validateProductWorldSummaries(product, 'Pencil Cup Story Opening Card Pack')
+    expect(
+      pencilCupSummaryErrors.length === 0,
+      `${label}.worldSummaries failed validation:\n${pencilCupSummaryErrors.join('\n')}`,
+    )
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    const pencilCupRenderedText = renderedHtml
+      .replaceAll(safety, '')
+      .replaceAll('take-home', '')
+      .replaceAll('Checkout is pending until the payment provider is selected', '')
+      .replaceAll('device-width', '')
+      .replaceAll('Pencil Cup Story Opening Card Pack', '')
+      .replaceAll('pencil cup story opening card pack', '')
+      .replaceAll('Pencil Cup', '')
+      .replaceAll('pencil cup', '')
+      .replaceAll('pencil-cup', '')
+      .replaceAll('opening card', '')
+      .replaceAll('opening-card', '')
+      .replaceAll('screen-free', '')
+      .replaceAll('narrow real-world facts', '')
+      .replaceAll('narrow real-world fact', '')
+      .replaceAll('Puddle Planet Post Office', '')
+      .replaceAll('puddle-planet-post-office', '')
+      .replaceAll('Acorn Avenue Errand Office', '')
+      .replaceAll('acorn-avenue-errand-office', '')
+      .replaceAll('Seed Library Map Room', '')
+      .replaceAll('seed-library-map-room', '')
+    expect(
+      !/\baccounts?\b|\bschool accounts?\b|\blogins?\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideos?\b|\bphotos?\b|\bcameras?\b|\bphones?\b|\bdevices?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bgrading\b|\bscores?\b|\brubrics?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\breal names?\b|\bfull names?\b|\bidentity details?\b|\bclassrooms?\b|\bschools?\b|\bstudents?\b|\bteachers?\b|\bhomes?\b|\bhouses?\b|\bhome address\b|\bprivate locations?\b|\bprivate place details?\b|\blocation details?\b|\bexact locations?\b|\bexact places?\b|\bschool route(s)?\b|\breal route(s)?\b|\broutes?\b|\baddresses?\b|\bstreets?\b|\bgps\b|\bcoordinates?\b|\breal child\b|\breal child data\b|\bprivate child data\b|\bstudent records?\b|\bprofiles?\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bfood prep\b|\ballerg(y|ies|en|ens|ic)\b|\bmedical\b|\blegal\b|\btherapy\b|\bgrief\b/i.test(pencilCupRenderedText),
       `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, real-identity, real school/home details, address, route, GPS, exact-location, profile, real-book-title, author, publisher, franchise, food/allergy, or unsafe professional language.`,
     )
   }
@@ -3962,12 +4113,23 @@ expect(Array.isArray(batch39ProductImages.images), 'batch39 product image manife
 expect(batch39ProductImages.images.length === 1, `Expected 1 Batch 39 product image, found ${batch39ProductImages.images.length}.`)
 validateBatch39ProductImage(batch39ProductImages.images[0])
 
+expect(existsSync(batch40ProductImagesFile), `Missing Batch 40 product image manifest: ${batch40ProductImagesFile}`)
+const batch40ProductImages = readJson(batch40ProductImagesFile)
+expect(
+  batch40ProductImages.batchId === batch40ProductImagesBatchId,
+  `batch40 product image manifest batchId must be ${batch40ProductImagesBatchId}.`,
+)
+expect(batch40ProductImages.generatedAt === '2026-06-03', 'batch40 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch40ProductImages.images), 'batch40 product image manifest images must be an array.')
+expect(batch40ProductImages.images.length === 1, `Expected 1 Batch 40 product image, found ${batch40ProductImages.images.length}.`)
+validateBatch40ProductImage(batch40ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 32, `Expected 32 product records, found ${products.products.length}.`)
+expect(products.products.length === 33, `Expected 33 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -4003,6 +4165,7 @@ for (const requiredProductSlug of [
   'coat-pocket-story-character-card-pack',
   'paper-tray-story-setting-card-pack',
   'backpack-story-ending-card-pack',
+  'pencil-cup-story-opening-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -6311,6 +6474,93 @@ for (const asset of backpackEndingArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(pencilCupOpeningSourceFile), `Missing Batch 40 Pencil Cup Story Opening Card Pack source file: ${pencilCupOpeningSourceFile}`)
+const pencilCupOpeningSource = readJson(pencilCupOpeningSourceFile)
+expect(
+  pencilCupOpeningSource.batchId === pencilCupOpeningBatchId,
+  `Pencil Cup Story Opening Card Pack source batchId must be ${pencilCupOpeningBatchId}.`,
+)
+const pencilCupOpeningProduct = products.products.find(
+  (product) => product.slug === 'pencil-cup-story-opening-card-pack',
+)
+expect(
+  pencilCupOpeningProduct,
+  'Missing Pencil Cup Story Opening Card Pack product record for Batch 40 artifact validation.',
+)
+const pencilCupOpeningSourceErrors = validatePencilCupStoryOpeningCardPackSource(
+  pencilCupOpeningSource,
+  pencilCupOpeningProduct,
+  worldAgeBands,
+)
+expect(
+  pencilCupOpeningSourceErrors.length === 0,
+  `Pencil Cup Story Opening Card Pack source failed validation:\n${pencilCupOpeningSourceErrors.join('\n')}`,
+)
+const pencilCupOpeningSourceFileErrors = validatePencilCupStoryOpeningCardPackSourceFiles(
+  pencilCupOpeningSource,
+  root,
+)
+expect(
+  pencilCupOpeningSourceFileErrors.length === 0,
+  `Pencil Cup Story Opening Card Pack sourceFiles failed validation:\n${pencilCupOpeningSourceFileErrors.join('\n')}`,
+)
+const pencilCupOpeningExpectedPdfPages = pencilCupOpeningSource.cards.length + 5
+const pencilCupOpeningArtifactStatus = inspectArtifactFiles(root, pencilCupOpeningSource.artifact, {
+  expectedPdfPages: pencilCupOpeningExpectedPdfPages,
+})
+expect(
+  pencilCupOpeningArtifactStatus.valid,
+  `Pencil Cup Story Opening Card Pack artifacts failed validation:\n${pencilCupOpeningArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  pencilCupOpeningArtifactStatus.files.pdf.size > 100_000,
+  `Pencil Cup Story Opening Card Pack PDF artifact is unexpectedly small: ${pencilCupOpeningArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  pencilCupOpeningArtifactStatus.files.pdf.pageCount === pencilCupOpeningExpectedPdfPages,
+  `Pencil Cup Story Opening Card Pack PDF artifact must have ${pencilCupOpeningExpectedPdfPages} pages.`,
+)
+expect(
+  pencilCupOpeningArtifactStatus.files.zip.size > pencilCupOpeningArtifactStatus.files.pdf.size,
+  'Pencil Cup Story Opening Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const pencilCupOpeningCheckoutErrors = validateCheckoutReadiness(
+  pencilCupOpeningProduct,
+  pencilCupOpeningArtifactStatus,
+)
+expect(
+  pencilCupOpeningCheckoutErrors.length === 0,
+  `Pencil Cup Story Opening Card Pack checkout readiness failed validation:\n${pencilCupOpeningCheckoutErrors.join('\n')}`,
+)
+const pencilCupOpeningArtifactManifest = readJson(resolve(root, pencilCupOpeningSource.artifact.manifestPath))
+expect(
+  pencilCupOpeningArtifactManifest.sourcePageCount === pencilCupOpeningSource.cards.length,
+  'Pencil Cup Story Opening Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(pencilCupOpeningArtifactManifest.files.assets),
+  'Pencil Cup Story Opening Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  pencilCupOpeningArtifactManifest.files.assets.length === pencilCupOpeningSource.worldSlugs.length,
+  'Pencil Cup Story Opening Card Pack artifact manifest must include one copied local image per source world.',
+)
+const pencilCupOpeningManifestAssetErrors = validateManifestWorldAssets(
+  pencilCupOpeningSource,
+  pencilCupOpeningArtifactManifest,
+)
+expect(
+  pencilCupOpeningManifestAssetErrors.length === 0,
+  `Pencil Cup Story Opening Card Pack artifact manifest image coverage failed validation:\n${pencilCupOpeningManifestAssetErrors.join('\n')}`,
+)
+for (const asset of pencilCupOpeningArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Pencil Cup Story Opening Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -6342,6 +6592,7 @@ const productImageManifests = [
   batch37ProductImages,
   batch38ProductImages,
   batch39ProductImages,
+  batch40ProductImages,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +
