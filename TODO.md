@@ -91,6 +91,7 @@ Plot Sprout Explorer is a family writing adventure app for reluctant writers age
 ## In Progress
 
 - [ ] External checkout gate: wire hosted checkout only after Sam chooses the provider and supplies the real provider-hosted URL.
+- [ ] Batch 56: Build a `$85` Manila Folder Story Clue Trail Card Pack with adult-led printable fictional clue-trail prompts, exact Batch51-Batch55 overlap limits, no portfolio/showcase/publishing pressure, no public/address/food terms, no real school/home identity details, no private child profiles or diary-style personal disclosures, no account/public-posting flow, no recording/camera/photo/audio/video/voice-memo flow, no uploads of child writing, no grading/score/timer pressure, no food tasting/allergy advice, no scary harm or bullying, no real child data, static product page, local product image, PDF/source/ZIP artifact, and validation that checkout stays pending.
 
 ## Next Content Batches
 
