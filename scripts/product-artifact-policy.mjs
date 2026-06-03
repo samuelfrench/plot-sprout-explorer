@@ -62,10 +62,14 @@ export const accordionFolderStoryArcCardPackProductSlug =
   'accordion-folder-story-arc-card-pack'
 export const expandingFileStorySceneChainCardPackProductSlug =
   'expanding-file-story-scene-chain-card-pack'
+export const manilaFolderStoryClueTrailCardPackProductSlug =
+  'manila-folder-story-clue-trail-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 const expandingFileStorySceneChainRequiredSafety =
+  'No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.'
+const manilaFolderStoryClueTrailRequiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.'
 
 const familySafetyBlockedTerms = [
@@ -537,6 +541,16 @@ const requiredExpandingFileStorySceneChainCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/expanding-file-story-scene-chain-card-pack/source/expanding-file-story-scene-chain-card-pack.html',
   manifestPath: 'product-build/expanding-file-story-scene-chain-card-pack/manifest.json',
+}
+
+const requiredManilaFolderStoryClueTrailCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/manila-folder-story-clue-trail-card-pack/Manila-Folder-Story-Clue-Trail-Card-Pack.pdf',
+  zipPath:
+    'product-build/manila-folder-story-clue-trail-card-pack/manila-folder-story-clue-trail-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/manila-folder-story-clue-trail-card-pack/source/manila-folder-story-clue-trail-card-pack.html',
+  manifestPath: 'product-build/manila-folder-story-clue-trail-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -15660,6 +15674,454 @@ export function validateExpandingFileStorySceneChainCardPackSourceFiles(source, 
   return errors
 }
 
+const manilaFolderStoryClueTrailCardKeys = [
+  'id',
+  'title',
+  'worldSlug',
+  'ageBand',
+  'clueSkill',
+  'useCase',
+  'adultSetup',
+  'kidDirection',
+  'firstCluePrompt',
+  'nextCluePrompt',
+  'turningCluePrompt',
+  'mismatchPrompt',
+  'returnCluePrompt',
+  'folderLabelPrompt',
+  'quietOptionLine',
+  'takeHomeLine',
+]
+
+const manilaFolderStoryClueTrailSourceFiles = [
+  'content/product-artifacts/lanes/batch56-manila-folder-clue-trail-cards-a.json',
+  'content/product-artifacts/lanes/batch56-manila-folder-clue-trail-cards-b.json',
+  'content/product-artifacts/lanes/batch56-manila-folder-clue-trail-cards-c.json',
+  'content/product-artifacts/lanes/batch56-manila-folder-clue-trail-tools.json',
+]
+
+const manilaFolderStoryClueTrailExpectedWorldSlugs = [
+  'teacup-town-weather-window',
+  'spoon-ferry-lunchbox-harbor',
+  'sticker-station-mail-cart',
+  'chapter-gate-greenhouse',
+  'paperclip-plaza-parcel-day',
+  'orchard-pulley-post',
+  'appendix-archive-lab',
+  'penny-path-compass-shop',
+  'pantry-measurement-mystery',
+  'blue-pencil-observatory',
+  'rain-gauge-railway',
+  'binding-day-boardwalk',
+  'seed-library-map-room',
+  'mitten-market-lost-ticket',
+  'cloudberry-clocktower',
+  'rain-boot-route-rangers',
+]
+
+function normalizeManilaFolderStoryClueTrailAllowedText(value) {
+  return JSON.stringify(value)
+    .replace(
+      /\bNo scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts\./gi,
+      '',
+    )
+    .replace(/\badult-led\b/gi, '')
+    .replace(/\badult\b/gi, '')
+    .replace(/\boffline\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+    .replace(/\bfamily-friendly\b/gi, '')
+    .replace(/\bfamily\b/gi, '')
+    .replace(/\bfamilies\b/gi, '')
+    .replace(/\bfictional\b/gi, '')
+    .replace(/\bpretend\b/gi, '')
+    .replace(/\binvented\b/gi, '')
+    .replace(/\bmade-up\b/gi, '')
+    .replace(/\bmade up\b/gi, '')
+    .replace(/\bbroad\b/gi, '')
+    .replace(/\bdo not ask for real schedules, rooms, names, or personal facts\b/gi, '')
+    .replace(/\bwithout using real names, places, or facts\b/gi, '')
+    .replace(/\bwith no real trip details\b/gi, '')
+    .replace(/\bwithout using real details\b/gi, '')
+    .replace(/\bmanila folder story clue trail card(s)?\b/gi, '')
+    .replace(/\bmanila folder clue trail card(s)?\b/gi, '')
+    .replace(/\bclue-trail card(s)?\b/gi, '')
+    .replace(/\bclue trail card(s)?\b/gi, '')
+    .replace(/\bmanila folder(s)?\b/gi, '')
+    .replace(/\bclue-trail(s)?\b/gi, '')
+    .replace(/\bclue trail(s)?\b/gi, '')
+    .replace(/\bfirst clue(s)?\b/gi, '')
+    .replace(/\bnext clue(s)?\b/gi, '')
+    .replace(/\bturning clue(s)?\b/gi, '')
+    .replace(/\bmismatch clue(s)?\b/gi, '')
+    .replace(/\breturn clue(s)?\b/gi, '')
+    .replace(/\bfolder label(s)?\b/gi, '')
+    .replace(/\bpage(s)?\b/gi, '')
+    .replace(/\bpaper\b/gi, '')
+    .replace(/\bblank(s)?\b/gi, '')
+    .replace(/\bnote(s)?\b/gi, '')
+    .replace(/\bclue(s)?\b/gi, '')
+    .replace(/\bteacup-town-weather-window\b/gi, '')
+    .replace(/\bspoon-ferry-lunchbox-harbor\b/gi, '')
+    .replace(/\bsticker-station-mail-cart\b/gi, '')
+    .replace(/\bchapter-gate-greenhouse\b/gi, '')
+    .replace(/\bpaperclip-plaza-parcel-day\b/gi, '')
+    .replace(/\borchard-pulley-post\b/gi, '')
+    .replace(/\bappendix-archive-lab\b/gi, '')
+    .replace(/\bpenny-path-compass-shop\b/gi, '')
+    .replace(/\bpantry-measurement-mystery\b/gi, '')
+    .replace(/\bblue-pencil-observatory\b/gi, '')
+    .replace(/\brain-gauge-railway\b/gi, '')
+    .replace(/\bbinding-day-boardwalk\b/gi, '')
+    .replace(/\bseed-library-map-room\b/gi, '')
+    .replace(/\bmitten-market-lost-ticket\b/gi, '')
+    .replace(/\bcloudberry-clocktower\b/gi, '')
+    .replace(/\brain-boot-route-rangers\b/gi, '')
+    .replace(/\bTeacup Town Weather Window\b/g, '')
+    .replace(/\bSpoon Ferry Lunchbox Harbor\b/g, '')
+    .replace(/\bSticker Station Mail Cart\b/g, '')
+    .replace(/\bChapter Gate Greenhouse\b/g, '')
+    .replace(/\bPaperclip Plaza Parcel Day\b/g, '')
+    .replace(/\bOrchard Pulley Post\b/g, '')
+    .replace(/\bAppendix Archive Lab\b/g, '')
+    .replace(/\bPenny Path Compass Shop\b/g, '')
+    .replace(/\bPantry Measurement Mystery\b/g, '')
+    .replace(/\bBlue Pencil Observatory\b/g, '')
+    .replace(/\bRain Gauge Railway\b/g, '')
+    .replace(/\bBinding Day Boardwalk\b/g, '')
+    .replace(/\bSeed Library Map Room\b/g, '')
+    .replace(/\bMitten Market Lost Ticket\b/g, '')
+    .replace(/\bCloudberry Clocktower\b/g, '')
+    .replace(/\bRain Boot Route Rangers\b/g, '')
+}
+
+function validateNoUnsafeManilaFolderStoryClueTrailLanguage(value, label, errors) {
+  const allowedText = normalizeManilaFolderStoryClueTrailAllowedText(value)
+  pushIf(
+    errors,
+    /\baccounts?\b|\bschool accounts?\b|\blogins?\b|\blog in\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic\b|\bpublish(es|ed|ing)?\b|\bpublication(s)?\b|\breviews?\b|\bratings?\b|\bcomments?\b|\bforums?\b|\bsocial\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphone(s)?\b|\btablet(s)?\b|\blaptop(s)?\b|\bcomputer(s)?\b|\bscreen(s)?\b|\bdevice(s)?\b|\bphotos?\b|\bcameras?\b|\breal names?\b|\bfull names?\b|\bstudent names?\b|\breal identity\b|\bidentity details?\b|\bschool(s)?\b|\bclassroom(s)?\b|\bhome(s)?\b|\baddress(es)?\b|\bstreets?\b|\bprivate locations?\b|\bexact locations?\b|\blocation details?\b|\bschool route(s)?\b|\breal route(s)?\b|\broute details?\b|\bgps\b|\bcoordinates?\b|\bexact schedules?\b|\bschedules?\b|\bprivate child data\b|\breal child data\b|\bpersonal facts?\b|\bpersonal details?\b|\bprivate child profile(s)?\b|\bprivate profiles?\b|\bchild profiles?\b|\bstudent profiles?\b|\bprofiles?\b|\bdiar(y|ies)\b|\bjournal(s)?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bassessment(s)?\b|\bperfect\b|\bshowcase(s|d|ing)?\b|\bportfolio(s)?\b|\bdisplay(s|ed|ing)?\b|\bspell(ing|s|ed)?\b|\btimer(s)?\b|\btimed\b|\bcontest(s)?\b|\bprizes?\b|\bpayments?\b|\bcheckout(s)?\b|\bprovider(s)?\b|\bchapter book(s)?\b|\bepisode(s)?\b|\bscreenplay(s)?\b|\bfood(s)?\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b|\bprofessional advice\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes account, upload, public, recording, audio, video, camera, photo, real-identity, school, home, address, route, GPS, schedule, location, profile, private child profile, diary, grade, score, timer, contest, publishing, showcase, portfolio, display, payment, provider, chapter book, episode, screenplay, food, allergy, medical, scary, harm, bullying, fighting, or weapon language.`,
+  )
+}
+
+function validateManilaFolderStoryClueTrailCard(
+  card,
+  index,
+  sourceWorldSlugs,
+  knownWorldSlugs,
+  knownWorldRecords,
+  cardIds,
+  errors,
+) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(card)) !== JSON.stringify(manilaFolderStoryClueTrailCardKeys),
+    `${label} must use the exact manila folder clue-trail card field order.`,
+  )
+
+  for (const key of manilaFolderStoryClueTrailCardKeys) validateString(card[key], `${label}.${key}`, errors)
+
+  if (isNonEmptyString(card.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(card.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(
+      errors,
+      !card.id.startsWith('manila-folder-clue-trail-card-'),
+      `${label}.id must start with manila-folder-clue-trail-card-.`,
+    )
+    pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+    cardIds.add(card.id)
+  }
+  pushIf(errors, !['7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) &&
+      !(/manila[- ]folder/i.test(card.useCase) && /clue[- ]trail/i.test(card.useCase) && /\bcard\b/i.test(card.useCase)),
+    `${label}.useCase must say manila folder clue-trail card.`,
+  )
+
+  for (const key of [
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'firstCluePrompt',
+    'nextCluePrompt',
+    'turningCluePrompt',
+    'mismatchPrompt',
+    'returnCluePrompt',
+    'folderLabelPrompt',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeManilaFolderStoryClueTrailLanguage(card, label, errors)
+}
+
+function validateManilaFolderStoryClueTrailRoutine(routine, index, errors) {
+  const label = `clueTrailRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(routine)) !== JSON.stringify(['title', 'time', 'materials', 'steps', 'adultWrapLine']),
+    `${label} must use the exact clue-trail routine field order.`,
+  )
+  for (const key of ['title', 'time', 'materials', 'adultWrapLine']) validateString(routine[key], `${label}.${key}`, errors)
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  if (Array.isArray(routine.steps)) {
+    routine.steps.forEach((step, stepIndex) => {
+      pushIf(errors, isNonEmptyString(step) && !hasWritableBlank(step), `${label}.steps[${stepIndex}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(step) && hasSnakeCasePlaceholder(step), `${label}.steps[${stepIndex}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+  pushIf(errors, isNonEmptyString(routine.adultWrapLine) && !hasWritableBlank(routine.adultWrapLine), `${label}.adultWrapLine must include a writable blank.`)
+  validateNoUnsafeManilaFolderStoryClueTrailLanguage(routine, label, errors)
+}
+
+export function validateManilaFolderStoryClueTrailCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Manila Folder Story Clue Trail Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-03-batch56', 'batchId must be 2026-06-03-batch56.')
+  pushIf(errors, source.generatedAt !== '2026-06-03', 'generatedAt must be 2026-06-03.')
+  pushIf(
+    errors,
+    source.productSlug !== manilaFolderStoryClueTrailCardPackProductSlug,
+    `productSlug must be ${manilaFolderStoryClueTrailCardPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Manila Folder Story Clue Trail Card Pack', 'title must be Manila Folder Story Clue Trail Card Pack.')
+  pushIf(errors, source.pricePoint !== '$85', 'pricePoint must be $85.')
+  pushIf(
+    errors,
+    !source.safetyNote?.includes(manilaFolderStoryClueTrailRequiredSafety),
+    'safetyNote must include required Batch 56 safety sentence.',
+  )
+
+  if (product) {
+    pushIf(errors, product.slug !== source.productSlug, 'product.slug must match productSlug.')
+    pushIf(errors, product.title !== source.title, 'product.title must match title.')
+    pushIf(errors, product.pricePoint !== source.pricePoint, 'product.pricePoint must match pricePoint.')
+    pushIf(errors, product.status !== 'checkout_pending', 'product.status must remain checkout_pending.')
+  }
+
+  pushIf(errors, !Array.isArray(source.sourceFiles), 'sourceFiles must be an array.')
+  if (Array.isArray(source.sourceFiles)) {
+    pushIf(
+      errors,
+      JSON.stringify([...source.sourceFiles].sort()) !== JSON.stringify([...manilaFolderStoryClueTrailSourceFiles].sort()),
+      'sourceFiles must list the exact Batch 56 clue-trail-card lane and tools files.',
+    )
+  }
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set()
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.worldSlugs) !== JSON.stringify(manilaFolderStoryClueTrailExpectedWorldSlugs),
+      'worldSlugs must use the exact Batch 56 manila folder clue-trail world order.',
+    )
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, sourceWorldSlugs.has(slug), `worldSlugs includes duplicate slug ${slug}.`)
+      sourceWorldSlugs.add(slug)
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const [batchNumber, overlapSet] of [
+      [51, batch51ExpandingFileStorySceneChainOverlapWorldSet],
+      [52, batch52ExpandingFileStorySceneChainOverlapWorldSet],
+      [53, batch53ExpandingFileStorySceneChainOverlapWorldSet],
+      [54, batch54ExpandingFileStorySceneChainOverlapWorldSet],
+      [55, new Set(expandingFileStorySceneChainExpectedWorldSlugs)],
+    ]) {
+      const overlap = source.worldSlugs.filter((slug) => overlapSet.has(slug))
+      pushIf(
+        errors,
+        overlap.length !== 7,
+        `worldSlugs must overlap exactly 7 Batch ${batchNumber} worlds; overlapping slugs: ${overlap.join(', ')}.`,
+      )
+    }
+  }
+
+  validateArtifactPaths(
+    source,
+    requiredManilaFolderStoryClueTrailCardPackArtifactPaths,
+    'Manila Folder Story Clue Trail Card Pack',
+    errors,
+  )
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) validateString(source.cover[key], `cover.${key}`, errors)
+    validateExactStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    validateExactStringArray(source.adultGuide.bullets, 6, 'adultGuide.bullets', errors)
+    if (Array.isArray(source.adultGuide.bullets)) {
+      source.adultGuide.bullets.forEach((bullet, index) => {
+        pushIf(errors, isNonEmptyString(bullet) && !hasWritableBlank(bullet), `adultGuide.bullets[${index}] must include a writable blank.`)
+      })
+    }
+    validateNoUnsafeManilaFolderStoryClueTrailLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.clueTrailRoutines), 'clueTrailRoutines must be an array.')
+  if (Array.isArray(source.clueTrailRoutines)) {
+    pushIf(errors, source.clueTrailRoutines.length !== 6, 'clueTrailRoutines must have exactly 6 entries.')
+    source.clueTrailRoutines.forEach((routine, index) => validateManilaFolderStoryClueTrailRoutine(routine, index, errors))
+  }
+
+  validateExactStringArray(source.takeHomeClueSlips, 10, 'takeHomeClueSlips', errors)
+  if (Array.isArray(source.takeHomeClueSlips)) {
+    source.takeHomeClueSlips.forEach((slip, index) => {
+      pushIf(errors, isNonEmptyString(slip) && !hasWritableBlank(slip), `takeHomeClueSlips[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(slip) && hasSnakeCasePlaceholder(slip), `takeHomeClueSlips[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeManilaFolderStoryClueTrailLanguage(slip, `takeHomeClueSlips[${index}]`, errors)
+    })
+  }
+
+  validateExactStringArray(source.optionalAdultPrompts, 8, 'optionalAdultPrompts', errors)
+  if (Array.isArray(source.optionalAdultPrompts)) {
+    source.optionalAdultPrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalAdultPrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalAdultPrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeManilaFolderStoryClueTrailLanguage(prompt, `optionalAdultPrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateManilaFolderStoryClueTrailCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size !== 16, 'cards must cover exactly 16 unique worlds.')
+  }
+
+  validateNoUnsafeManilaFolderStoryClueTrailLanguage(source, 'Manila Folder Story Clue Trail Card Pack source', errors)
+  validateNoRiskyLanguage(source, 'Manila Folder Story Clue Trail Card Pack source', errors)
+  return errors
+}
+
+export function validateManilaFolderStoryClueTrailCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three clue-trail-card lanes and one tools lane.')
+
+  pushIf(
+    errors,
+    JSON.stringify([...source.sourceFiles].sort()) !== JSON.stringify([...manilaFolderStoryClueTrailSourceFiles].sort()),
+    'sourceFiles must list the exact Batch 56 clue-trail-card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedLaneId = sourceFile.split('/').at(-1)?.replace('.json', '')
+      if (Array.isArray(lane.cards)) {
+        pushIf(errors, lane.laneId !== expectedLaneId, `${sourceFile}.laneId must be ${expectedLaneId}.`)
+        const expectedRange = sourceFile.includes('-cards-a')
+          ? { min: 1, max: 6, count: 6, label: '01-06' }
+          : sourceFile.includes('-cards-b')
+          ? { min: 7, max: 11, count: 5, label: '07-11' }
+          : sourceFile.includes('-cards-c')
+          ? { min: 12, max: 16, count: 5, label: '12-16' }
+          : null
+        if (expectedRange) {
+          pushIf(errors, lane.cards.length !== expectedRange.count, `${sourceFile} must contain exactly ${expectedRange.count} cards.`)
+          const wrongLaneCard = lane.cards.some((card) => {
+            const match = String(card?.id ?? '').match(/-(\d{2})$/)
+            const cardNumber = match ? Number(match[1]) : NaN
+            return !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max
+          })
+          pushIf(errors, wrongLaneCard, `${sourceFile} must contain only cards ${expectedRange.label}.`)
+        }
+        cardLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        pushIf(
+          errors,
+          JSON.stringify(Object.keys(lane)) !==
+            JSON.stringify(['adultGuide', 'clueTrailRoutines', 'takeHomeClueSlips', 'optionalAdultPrompts']),
+          `${sourceFile} must use the exact Batch 56 tools field order.`,
+        )
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 56 clue-trail-card lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three clue-trail-card lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane.cards)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles clue-trail-card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'clueTrailRoutines', 'takeHomeClueSlips', 'optionalAdultPrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -15848,6 +16310,8 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
     artifact?.pdfPath === requiredDeskLampStoryProblemCardPackArtifactPaths.pdfPath
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
+      : artifact?.pdfPath === requiredManilaFolderStoryClueTrailCardPackArtifactPaths.pdfPath
+      ? requiredManilaFolderStoryClueTrailCardPackArtifactPaths
       : artifact?.pdfPath === requiredExpandingFileStorySceneChainCardPackArtifactPaths.pdfPath
       ? requiredExpandingFileStorySceneChainCardPackArtifactPaths
       : artifact?.pdfPath === requiredAccordionFolderStoryArcCardPackArtifactPaths.pdfPath

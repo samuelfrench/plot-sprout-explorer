@@ -654,6 +654,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable expanding file story scene-chain cards with adult guide tools, scene-chain routines, and take-home scene slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'manila-folder-story-clue-trail-card-pack',
+    title: 'Manila Folder Story Clue Trail Card Pack',
+    pricePoint: '$85',
+    description:
+      'Sixteen printable manila folder story clue-trail cards with adult guide tools, clue-trail routines, and take-home clue slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

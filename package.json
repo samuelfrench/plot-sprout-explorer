@@ -63,6 +63,7 @@
     "image:batch53": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch53-images.json",
     "image:batch54": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch54-images.json",
     "image:batch55": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch55-images.json",
+    "image:batch56": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch56-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -110,7 +111,8 @@
     "product:spiral-notebook-final-copy-pack": "node scripts/spiral-notebook-story-final-copy-card-pack-builder.mjs",
     "product:tabbed-folder-series-pack": "node scripts/tabbed-folder-story-series-card-pack-builder.mjs",
     "product:accordion-folder-arc-pack": "node scripts/accordion-folder-story-arc-card-pack-builder.mjs",
-    "product:expanding-file-scene-chain-pack": "node scripts/expanding-file-story-scene-chain-card-pack-builder.mjs"
+    "product:expanding-file-scene-chain-pack": "node scripts/expanding-file-story-scene-chain-card-pack-builder.mjs",
+    "product:manila-folder-clue-trail-pack": "node scripts/manila-folder-story-clue-trail-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

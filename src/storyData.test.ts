@@ -90,6 +90,7 @@ describe('storyData', () => {
       'tabbed-folder-story-series-card-pack',
       'accordion-folder-story-arc-card-pack',
       'expanding-file-story-scene-chain-card-pack',
+      'manila-folder-story-clue-trail-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -140,6 +141,7 @@ describe('storyData', () => {
       '$79',
       '$81',
       '$83',
+      '$85',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)

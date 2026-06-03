@@ -110,5 +110,9 @@ describe('App', () => {
       'href',
       expect.stringContaining('expanding-file-story-scene-chain-card-pack'),
     )
+    expect(screen.getByRole('link', { name: /Preview Manila Folder Story Clue Trail Card Pack/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('manila-folder-story-clue-trail-card-pack'),
+    )
   })
 })

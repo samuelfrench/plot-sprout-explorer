@@ -4842,6 +4842,132 @@
           "summary": "A compass craft world for carrying one direction arrow through a two-page chain."
         }
       ]
+    },
+    {
+      "slug": "manila-folder-story-clue-trail-card-pack",
+      "title": "Manila Folder Story Clue Trail Card Pack",
+      "pricePoint": "$85",
+      "status": "checkout_pending",
+      "headline": "A printable manila folder card pack for private paper clue trails.",
+      "summary": "Sixteen adult-led manila folder cards help kids connect a fictional first clue, next clue, turning clue, mismatch note, return clue, and folder label.",
+      "heroImage": "images/plotsprout/batch56/manila-folder-story-clue-trail-card-pack.jpg",
+      "ctaLabel": "Request clue trail card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Manila%20Folder%20Story%20Clue%20Trail%20Card%20Pack",
+      "checkoutNote": "Checkout is pending; this static manila folder story clue trail card pack page is ready for launch wiring but does not accept orders yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "spoon-ferry-lunchbox-harbor",
+        "sticker-station-mail-cart",
+        "chapter-gate-greenhouse",
+        "paperclip-plaza-parcel-day",
+        "orchard-pulley-post",
+        "appendix-archive-lab",
+        "penny-path-compass-shop",
+        "pantry-measurement-mystery",
+        "blue-pencil-observatory",
+        "rain-gauge-railway",
+        "binding-day-boardwalk",
+        "seed-library-map-room",
+        "mitten-market-lost-ticket",
+        "cloudberry-clocktower",
+        "rain-boot-route-rangers"
+      ],
+      "includedPages": [
+        "Sixteen printable manila folder clue trail cards",
+        "Adult setup guide",
+        "Fictional clue-trail safety notes",
+        "First clue prompts",
+        "Next clue prompts",
+        "Turning clue prompts",
+        "Mismatch clue prompts",
+        "Return clue prompts",
+        "Folder label prompts",
+        "Six adult-led clue-trail routines",
+        "Ten take-home clue slips",
+        "Local image-backed world menu",
+        "Printable PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one visible clue path from first clue to later page",
+        "A tutoring or co-op table where writers connect clue notes without a screen",
+        "A calm pencil activity for linking one first clue, one turn, and one return clue",
+        "A reluctant-writer activity that turns continuity into small paper choices",
+        "A take-home clue slip set for restarting one folder label note offline"
+      ],
+      "parentSteps": [
+        "Choose one clue-trail routine before the activity starts.",
+        "Set out the manila folder, cards, blank pages, pencils, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full page note.",
+        "Move from first clue to next clue, turning clue, mismatch clue, return clue, and folder label.",
+        "Send one clue slip with a single blank so family adults can continue the paper trail offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup weather world for starting a clue trail with one window sign."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry harbor world for moving one dock clue to the next page."
+        },
+        {
+          "slug": "sticker-station-mail-cart",
+          "summary": "A sticker station world for carrying one sort slip through the trail."
+        },
+        {
+          "slug": "chapter-gate-greenhouse",
+          "summary": "A greenhouse gate world for turning one paper clue toward a clearer note."
+        },
+        {
+          "slug": "paperclip-plaza-parcel-day",
+          "summary": "A paperclip plaza world for tracking one clipped parcel clue."
+        },
+        {
+          "slug": "orchard-pulley-post",
+          "summary": "An orchard pulley world for connecting one post mark to a return clue."
+        },
+        {
+          "slug": "appendix-archive-lab",
+          "summary": "An archive lab world for sorting one appendix mark into the right clue path."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "summary": "A compass shop world for following one button compass clue."
+        },
+        {
+          "slug": "pantry-measurement-mystery",
+          "summary": "A measurement mystery world for checking one almost-matching clue."
+        },
+        {
+          "slug": "blue-pencil-observatory",
+          "summary": "A blue pencil world for turning one chart clue into a later note."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A railway world for bringing one gauge mark back into the trail."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding boardwalk world for linking one loose page clue to its label."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed map world for moving one map-room clue across paper notes."
+        },
+        {
+          "slug": "mitten-market-lost-ticket",
+          "summary": "A mitten market world for keeping a simple ticket clue connected."
+        },
+        {
+          "slug": "cloudberry-clocktower",
+          "summary": "A clocktower world for changing one tower mark into a return clue."
+        },
+        {
+          "slug": "rain-boot-route-rangers",
+          "summary": "A rain boot world for using one pretend boot print across the trail."
+        }
+      ]
     }
   ]
 }
