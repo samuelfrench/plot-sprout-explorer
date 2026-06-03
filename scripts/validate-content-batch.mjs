@@ -51,6 +51,8 @@ import {
   validateClipboardStoryParagraphFocusCardPackSourceFiles,
   validateLinedPaperStoryParagraphRevisionCardPackSource,
   validateLinedPaperStoryParagraphRevisionCardPackSourceFiles,
+  validateCompositionNotebookStoryDraftChecklistCardPackSource,
+  validateCompositionNotebookStoryDraftChecklistCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -132,6 +134,7 @@ const batch48ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch49ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch49-product-images.json')
 const batch50WorldImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch50-world-images.json')
 const batch50ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch50-product-images.json')
+const batch51ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch51-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -176,6 +179,12 @@ const washiTapeWordChoiceSourceFile = resolve(root, 'content', 'product-artifact
 const paperSleeveSentenceVarietySourceFile = resolve(root, 'content', 'product-artifacts', 'paper-sleeve-story-sentence-variety-card-pack.json')
 const clipboardParagraphFocusSourceFile = resolve(root, 'content', 'product-artifacts', 'clipboard-story-paragraph-focus-card-pack.json')
 const linedPaperParagraphRevisionSourceFile = resolve(root, 'content', 'product-artifacts', 'lined-paper-story-paragraph-revision-card-pack.json')
+const compositionNotebookDraftChecklistSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'composition-notebook-story-draft-checklist-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -222,6 +231,7 @@ const batch48ProductImagesBatchId = '2026-06-03-batch48-product-images'
 const batch49ProductImagesBatchId = '2026-06-03-batch49-product-images'
 const batch50WorldImagesBatchId = '2026-06-03-batch50-world-images'
 const batch50ProductImagesBatchId = '2026-06-03-batch50-product-images'
+const batch51ProductImagesBatchId = '2026-06-03-batch51-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -266,6 +276,7 @@ const washiTapeWordChoiceBatchId = '2026-06-03-batch47'
 const paperSleeveSentenceVarietyBatchId = '2026-06-03-batch48'
 const clipboardParagraphFocusBatchId = '2026-06-03-batch49'
 const linedPaperParagraphRevisionBatchId = '2026-06-03-batch50'
+const compositionNotebookDraftChecklistBatchId = '2026-06-03-batch51'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -4085,6 +4096,111 @@ function validateBatch50ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch51ProductImage(image) {
+  const label = `2026-06-03-batch51-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'composition-notebook-story-draft-checklist-card-pack',
+    `${label}.slug must be composition-notebook-story-draft-checklist-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch51/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch51/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch51/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank composition notebook',
+    'blank draft checklist cards',
+    'empty writing areas',
+    'unbranded pencils',
+    'plain white background',
+    'composition notebook story draft checklist card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'coordinates',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'microphone',
+    'audio recorder',
+    'voice memo',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'contest',
+    'prize',
+    'food',
+    'tasting',
+    'allergy',
+    'medical',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar.negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -4442,6 +4558,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'lined-paper-story-paragraph-revision-card-pack': {
       title: 'Lined Paper Story Paragraph Revision Card Pack',
       pricePoint: '$73',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'composition-notebook-story-draft-checklist-card-pack': {
+      title: 'Composition Notebook Story Draft Checklist Card Pack',
+      pricePoint: '$75',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -5742,12 +5866,23 @@ expect(Array.isArray(batch50ProductImages.images), 'batch50 product image manife
 expect(batch50ProductImages.images.length === 1, `Expected 1 Batch 50 product image, found ${batch50ProductImages.images.length}.`)
 validateBatch50ProductImage(batch50ProductImages.images[0])
 
+expect(existsSync(batch51ProductImagesFile), `Missing Batch 51 product image manifest: ${batch51ProductImagesFile}`)
+const batch51ProductImages = readJson(batch51ProductImagesFile)
+expect(
+  batch51ProductImages.batchId === batch51ProductImagesBatchId,
+  `batch51 product image manifest batchId must be ${batch51ProductImagesBatchId}.`,
+)
+expect(batch51ProductImages.generatedAt === '2026-06-03', 'batch51 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch51ProductImages.images), 'batch51 product image manifest images must be an array.')
+expect(batch51ProductImages.images.length === 1, `Expected 1 Batch 51 product image, found ${batch51ProductImages.images.length}.`)
+validateBatch51ProductImage(batch51ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 43, `Expected 43 product records, found ${products.products.length}.`)
+expect(products.products.length === 44, `Expected 44 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -5794,6 +5929,7 @@ for (const requiredProductSlug of [
   'paper-sleeve-story-sentence-variety-card-pack',
   'clipboard-story-paragraph-focus-card-pack',
   'lined-paper-story-paragraph-revision-card-pack',
+  'composition-notebook-story-draft-checklist-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -9071,6 +9207,104 @@ for (const asset of linedPaperParagraphRevisionArtifactManifest.files.assets) {
   )
 }
 
+expect(
+  existsSync(compositionNotebookDraftChecklistSourceFile),
+  `Missing Batch 51 Composition Notebook Story Draft Checklist Card Pack source file: ${compositionNotebookDraftChecklistSourceFile}`,
+)
+const compositionNotebookDraftChecklistSource = readJson(compositionNotebookDraftChecklistSourceFile)
+expect(
+  compositionNotebookDraftChecklistSource.batchId === compositionNotebookDraftChecklistBatchId,
+  `Composition Notebook Story Draft Checklist Card Pack source batchId must be ${compositionNotebookDraftChecklistBatchId}.`,
+)
+const compositionNotebookDraftChecklistProduct = products.products.find(
+  (product) => product.slug === 'composition-notebook-story-draft-checklist-card-pack',
+)
+expect(
+  compositionNotebookDraftChecklistProduct,
+  'Missing Composition Notebook Story Draft Checklist Card Pack product record for Batch 51 artifact validation.',
+)
+const compositionNotebookDraftChecklistSourceErrors = validateCompositionNotebookStoryDraftChecklistCardPackSource(
+  compositionNotebookDraftChecklistSource,
+  compositionNotebookDraftChecklistProduct,
+  worldAgeBands,
+)
+expect(
+  compositionNotebookDraftChecklistSourceErrors.length === 0,
+  `Composition Notebook Story Draft Checklist Card Pack source failed validation:\n${compositionNotebookDraftChecklistSourceErrors.join('\n')}`,
+)
+const compositionNotebookDraftChecklistSourceFileErrors = validateCompositionNotebookStoryDraftChecklistCardPackSourceFiles(
+  compositionNotebookDraftChecklistSource,
+  root,
+)
+expect(
+  compositionNotebookDraftChecklistSourceFileErrors.length === 0,
+  `Composition Notebook Story Draft Checklist Card Pack sourceFiles failed validation:\n${compositionNotebookDraftChecklistSourceFileErrors.join('\n')}`,
+)
+const compositionNotebookDraftChecklistExpectedPdfPages = compositionNotebookDraftChecklistSource.cards.length + 5
+const compositionNotebookDraftChecklistArtifactStatus = inspectArtifactFiles(root, compositionNotebookDraftChecklistSource.artifact, {
+  expectedPdfPages: compositionNotebookDraftChecklistExpectedPdfPages,
+  expectedZipEntries: [
+    'Composition-Notebook-Story-Draft-Checklist-Card-Pack.pdf',
+    'README.txt',
+    'source/composition-notebook-story-draft-checklist-card-pack.html',
+    ...compositionNotebookDraftChecklistSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+  ],
+})
+expect(
+  compositionNotebookDraftChecklistArtifactStatus.valid,
+  `Composition Notebook Story Draft Checklist Card Pack artifacts failed validation:\n${compositionNotebookDraftChecklistArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  compositionNotebookDraftChecklistArtifactStatus.files.pdf.size > 100_000,
+  `Composition Notebook Story Draft Checklist Card Pack PDF artifact is unexpectedly small: ${compositionNotebookDraftChecklistArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  compositionNotebookDraftChecklistArtifactStatus.files.pdf.pageCount === compositionNotebookDraftChecklistExpectedPdfPages,
+  `Composition Notebook Story Draft Checklist Card Pack PDF artifact must have ${compositionNotebookDraftChecklistExpectedPdfPages} pages.`,
+)
+expect(
+  compositionNotebookDraftChecklistArtifactStatus.files.zip.size > compositionNotebookDraftChecklistArtifactStatus.files.pdf.size,
+  'Composition Notebook Story Draft Checklist Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const compositionNotebookDraftChecklistCheckoutErrors = validateCheckoutReadiness(
+  compositionNotebookDraftChecklistProduct,
+  compositionNotebookDraftChecklistArtifactStatus,
+)
+expect(
+  compositionNotebookDraftChecklistCheckoutErrors.length === 0,
+  `Composition Notebook Story Draft Checklist Card Pack checkout readiness failed validation:\n${compositionNotebookDraftChecklistCheckoutErrors.join('\n')}`,
+)
+const compositionNotebookDraftChecklistArtifactManifest = readJson(
+  resolve(root, compositionNotebookDraftChecklistSource.artifact.manifestPath),
+)
+expect(
+  compositionNotebookDraftChecklistArtifactManifest.sourcePageCount === compositionNotebookDraftChecklistSource.cards.length,
+  'Composition Notebook Story Draft Checklist Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(compositionNotebookDraftChecklistArtifactManifest.files.assets),
+  'Composition Notebook Story Draft Checklist Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  compositionNotebookDraftChecklistArtifactManifest.files.assets.length === compositionNotebookDraftChecklistSource.worldSlugs.length,
+  'Composition Notebook Story Draft Checklist Card Pack artifact manifest must include one copied local image per source world.',
+)
+const compositionNotebookDraftChecklistManifestAssetErrors = validateManifestWorldAssets(
+  compositionNotebookDraftChecklistSource,
+  compositionNotebookDraftChecklistArtifactManifest,
+)
+expect(
+  compositionNotebookDraftChecklistManifestAssetErrors.length === 0,
+  `Composition Notebook Story Draft Checklist Card Pack artifact manifest image coverage failed validation:\n${compositionNotebookDraftChecklistManifestAssetErrors.join('\n')}`,
+)
+for (const asset of compositionNotebookDraftChecklistArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Composition Notebook Story Draft Checklist Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -9113,6 +9347,7 @@ const productImageManifests = [
   batch48ProductImages,
   batch49ProductImages,
   batch50ProductImages,
+  batch51ProductImages,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

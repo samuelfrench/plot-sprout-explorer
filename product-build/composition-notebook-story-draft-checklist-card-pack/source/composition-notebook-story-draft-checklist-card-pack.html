@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Composition Notebook Story Draft Checklist Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .draft-checklist-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .draft-checklist-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .draft-checklist-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable composition notebook draft checklist cards</p>
+        <h1>Composition Notebook Story Draft Checklist Card Pack</h1>
+        <p>Sixteen composition-notebook cards help writers check one fictional draft for a clear character, usable setting details, event order, useful details, clear sentences, and one next-draft pencil note.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable composition notebook draft checklist cards plus adult guide tools, draft checklist routines, take-home draft checklist slips, and optional prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$75</span>
+        <h2>Included</h2>
+        <ul><li>16 printable composition notebook draft checklist cards</li>
+<li>Adult setup guide</li>
+<li>Fictional draft checklist safety notes</li>
+<li>Composition notebook coaching moves</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led draft checklist routines</li>
+<li>Ten take-home draft checklist slips</li>
+<li>Eight optional prompts</li>
+<li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story draft-checklist coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Composition Notebook Story Draft Checklist Adult Guide</h3><ul><li>Print the composition notebook draft checklist cards, take-home slips, and adult guide pages before the paper-only session.</li>
+<li>Use one invented story draft at a time, then guide the writer through character, setting, sequence, useful detail, and clear-sentence checks.</li>
+<li>Keep every example broad, fictional, family-friendly, offline, and led by an adult with pencil and paper.</li>
+<li>Ask the writer to mark the composition notebook page lightly so the draft still feels workable.</li>
+<li>Keep all notes inside the pretend story world with invented names, simple places, and safe everyday objects.</li>
+<li>Finish by writing one next-draft pencil note so the writer knows the single change to try on the next pass.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one composition notebook story draft-checklist card at a time. Keep every choice broad, invented, paper-only, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen draft-checklist-card worlds</h2>
+      <p>Pick a world image, then check one fictional story draft with a pretend composition notebook draft-checklist card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Greenhouse Gear Garden</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Cloudberry Clocktower</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Orchard Pulley Post</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pond Bridge Blueprint Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Chapter Gate Greenhouse</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Story draft-checklist routines</p>
+      <h2>Choose the composition notebook draft-checklist routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Character Check Circle</h3>
+      <p>Making sure the story draft has a clear pretend character for the reader to follow.</p>
+      <ol><li>The adult asks who the main pretend character is on this composition notebook page: ____________________.</li>
+<li>The writer circles the first place that character appears in the draft: ____________________.</li>
+<li>The adult asks what the character is trying to do or notice in the story: ____________________.</li>
+<li>The writer adds one small pencil check beside the clearest character line: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Setting Check Box</h3>
+      <p>Finding whether the draft gives the reader a simple place or time clue.</p>
+      <ol><li>The adult asks where the made-up story moment seems to happen: ____________________.</li>
+<li>The writer draws a small box around the setting clue already on the page: ____________________.</li>
+<li>The adult asks which safe pretend place detail would help the reader picture the scene: ____________________.</li>
+<li>The writer writes one setting check note in the margin: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sequence Check Path</h3>
+      <p>Checking that the story events move in an order a reader can follow.</p>
+      <ol><li>The adult points to the first event in the draft and asks what happens first: ____________________.</li>
+<li>The writer numbers the next event that follows on the page: ____________________.</li>
+<li>The adult asks which event feels like the last step in the story path: ____________________.</li>
+<li>The writer marks one arrow where the sequence needs a clearer move: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Useful Detail Check</h3>
+      <p>Choosing details that help the story instead of filling the page with extra pieces.</p>
+      <ol><li>The adult asks which detail helps the reader understand the character, place, or next event: ____________________.</li>
+<li>The writer underlines one useful detail already in the draft: ____________________.</li>
+<li>The adult asks which detail feels extra or unclear for this story moment: ____________________.</li>
+<li>The writer writes one small detail note beside the line to keep or rethink: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Clear Sentence Check</h3>
+      <p>Spotting one sentence that should be easier for the reader to understand.</p>
+      <ol><li>The adult asks the writer to choose one sentence to reread slowly from the draft: ____________________.</li>
+<li>The writer points to the words that tell the main idea of that sentence: ____________________.</li>
+<li>The adult asks whether the sentence says one clear thing or needs a pencil note: ____________________.</li>
+<li>The writer places a check beside a clear sentence or a dot beside one to revisit: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Next-Draft Pencil Note</h3>
+      <p>Ending the checklist with one focused note for the next draft pass.</p>
+      <ol><li>The adult checks the character, setting, sequence, detail, and clear-sentence marks on the page: ____________________.</li>
+<li>The writer chooses the one check that would help the next draft most: ____________________.</li>
+<li>The adult asks for a short pencil note that names the next change without judging the draft: ____________________.</li>
+<li>The writer writes the next-draft note at the bottom of the composition notebook page: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home draft checklist slips</p>
+      <h2>Try one draft checklist later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">one-page check | character clarity</p>
+      <h3>Character Check Slip</h3>
+      <p>Circle where the main pretend character first appears in the draft: ____________________.</p>
+      <p>Ask what the character is trying to do or notice: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">place-clue check | setting clue</p>
+      <h3>Setting Check Slip</h3>
+      <p>Box one word or phrase that shows the pretend place or time: ____________________.</p>
+      <p>Ask what safe made-up detail would help the reader picture the setting: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">beginning check | sequence start</p>
+      <h3>First Event Slip</h3>
+      <p>Put a small 1 beside the first event in the story draft: ____________________.</p>
+      <p>Ask why that event should be first for the reader: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">middle check | sequence follow-through</p>
+      <h3>Next Event Slip</h3>
+      <p>Mark the event that should happen after the first one: ____________________.</p>
+      <p>Ask how the second event follows from the first: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">ending check | sequence finish</p>
+      <h3>Last Step Slip</h3>
+      <p>Underline the event that feels like the last step in the draft: ____________________.</p>
+      <p>Ask what lets the reader know the story moment is finished: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">detail check | useful detail</p>
+      <h3>Useful Detail Slip</h3>
+      <p>Underline one detail that helps the reader understand the story: ____________________.</p>
+      <p>Ask whether the detail helps with character, setting, or sequence: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">light margin check | detail choice</p>
+      <h3>Extra Detail Slip</h3>
+      <p>Put a small dot beside one detail that may not be needed yet: ____________________.</p>
+      <p>Ask which detail can wait for another made-up story page: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">sentence check | sentence clarity</p>
+      <h3>Clear Sentence Slip</h3>
+      <p>Place a check beside one sentence that is easy to understand: ____________________.</p>
+      <p>Ask what makes that sentence clear for the reader: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">pencil-dot check | sentence revisit</p>
+      <h3>Sentence Revisit Slip</h3>
+      <p>Put a dot beside one sentence to make clearer on the next pass: ____________________.</p>
+      <p>Ask what the sentence should help the reader know: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">final note check | next-draft focus</p>
+      <h3>Next-Draft Note Slip</h3>
+      <p>Write one next-draft pencil note at the bottom of the page: ____________________.</p>
+      <p>Ask which single change should come first on the next draft: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the main pretend character in this draft is ____________________.</li>
+<li>Optional adult-led offline prompt: the setting clue I can find on the page is ____________________.</li>
+<li>Optional adult-led offline prompt: the first event in the story draft is ____________________.</li>
+<li>Optional adult-led offline prompt: the event that should come next is ____________________.</li>
+<li>Optional adult-led offline prompt: one useful detail for the reader is ____________________.</li>
+<li>Optional adult-led offline prompt: one sentence that is clear already is ____________________.</li>
+<li>Optional adult-led offline prompt: one sentence to revisit with pencil is ____________________.</li>
+<li>Optional adult-led offline prompt: the next-draft note I will write is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 1 | Ages 7-9 | check one fictional library-train draft for a clear helper, useful place details, ordered moments, sentence clarity, and one next-draft pencil note</div>
+      <h2>Buttonwood Library Train Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a composition notebook page beside the card and choose one pretend Buttonwood Library Train draft to check: ____________________.</p>
+      <p class="kid-direction">Writer: read the draft once, then use pencil marks to show what the library-train story already has and what needs a note: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: write the made-up helper&#39;s name and the one library-train job the helper is trying to finish: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two invented train details, such as a button shelf, question card, or ticket tag, that the draft uses: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write the first train clue, the next shelf choice, and the final finished moment in order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one detail that helps the errand make sense and mark one extra detail that can wait for another story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: choose one sentence and make sure the reader can tell who is doing the action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next draft about the character, setting, sequence, detail, or sentence to improve: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to one checklist row, and the writer fills only that row before taking a short paper pause: ____________________. Take-home line: check another pretend library-train draft for a helper, place details, ordered moments, useful details, clear sentences, and one pencil note: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 2 | Ages 7-9 | check one fictional button-bakery map draft for the map helper, pretend setting clues, event order, useful details, clear sentences, and one next-draft note</div>
+      <h2>Button Bakery Map Mixup Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one composition notebook page and choose a broad pretend map-table story draft with no real place details: ____________________.</p>
+      <p class="kid-direction">Writer: use the checklist to check whether the map mixup draft is easy to follow from first clue to final fix: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the pretend map helper and write what the helper wants to sort out on the map table: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: write two invented setting details, such as a paper button marker, crumb-shaped dot, or ribbon path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write the map clue that starts the mixup, the action that follows, and the final calm map choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one map detail that helps the reader understand the mixup and mark one detail that does not help yet: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: pick one map sentence and make the subject and action clear enough to read without guessing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next draft about the helper, map place, order, detail, or sentence clarity: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads one checklist prompt aloud, and the writer answers it with a few quiet pencil words: ____________________. Take-home line: check another pretend map mixup draft for character, setting, sequence, helpful details, clear sentences, and one next-draft note: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 3 | Ages 7-8 | check one fictional weather-window draft for a named watcher, two gentle setting details, clear order, useful details, clear sentences, and one pencil note</div>
+      <h2>Teacup Town Weather Window Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card beside a composition notebook page and choose one pretend weather-window story draft to check: ____________________.</p>
+      <p class="kid-direction">Writer: look through the draft for the watcher, the window place, the order of events, and one sentence that needs to be clearer: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: write the made-up watcher&#39;s name and what the watcher is checking at the weather window: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two pretend window details, such as a cup sill, cloud tag, paper band, or tiny forecast card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write what the watcher sees first, what changes next, and how the window moment ends: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one weather-window detail that helps the scene and mark one extra detail that can stay out for now: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: choose one short sentence and make sure it tells who looks, points, sorts, or notices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next draft about the watcher, window place, order, detail, or clear sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: check only the character and setting rows first, then leave the rest for another paper pass: ____________________. Take-home line: check another pretend weather-window draft for a clear character, place, order, useful details, clear sentences, and one pencil note: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 4 | Ages 7-9 | check one fictional lunchbox-harbor draft for the ferry helper, harbor details, event order, useful story details, sentence clarity, and one next-draft note</div>
+      <h2>Spoon Ferry Lunchbox Harbor Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one composition notebook page beside the card and choose a pretend harbor draft about paper ferries and labels: ____________________.</p>
+      <p class="kid-direction">Writer: check the harbor draft for one ferry helper, a pretend place, three ordered moments, and sentences the reader can follow: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the made-up ferry helper and write the small harbor task the helper is trying to finish: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two invented harbor details, such as a spoon ferry, lunchbox pier, folded flag, or paper wave line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write the first ferry signal, the next harbor move, and the final safe docking moment in order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one harbor detail that helps the story move and mark one extra detail that does not change the draft yet: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: choose one ferry sentence and make sure the reader can tell what moves and where it goes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next draft about the helper, harbor setting, event order, useful detail, or clear sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult folds the paper in half, and the writer checks only the left-side rows first: ____________________. Take-home line: check another pretend harbor draft for character, setting, sequence, useful details, clear sentences, and one next-draft pencil note: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 5 | Ages 7-9 | check one fictional notice-board draft for a clear board keeper, invented park details, ordered notice moments, useful details, clear sentences, and one pencil note</div>
+      <h2>Pocket Park Notice Board Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a composition notebook page beside the card and choose one pretend notice-board draft with no real place details: ____________________.</p>
+      <p class="kid-direction">Writer: use pencil checks to see whether the notice-board draft has a character, place, order, useful details, and clear sentences: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: write the made-up board keeper&#39;s name and the notice-board task the keeper is trying to complete: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two invented pocket park details, such as a leaf notice, bench label, pin rail, or paper path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write which notice appears first, what the keeper does next, and how the board looks at the end: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one notice detail that belongs in this draft and mark one extra park detail that can wait: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: choose one notice-board sentence and make sure it has a clear who, what, and where: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next draft about the keeper, board setting, order, useful detail, or clear sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult asks only the final checklist question, and the writer writes one calm pencil note: ____________________. Take-home line: check another pretend notice-board draft for character, setting, sequence, useful details, clear sentences, and one next-draft note: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 6 | Ages 8-10 | check one fictional rain-gauge railway draft for a clear conductor, invented station details, event order, useful details, clear sentences, and one next-draft pencil note</div>
+      <h2>Rain Gauge Railway Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a composition notebook page and choose one pretend railway draft with made-up station and rain-gauge details: ____________________.</p>
+      <p class="kid-direction">Writer: check the draft like a paper conductor, looking for who acts, where it happens, what comes next, and which sentence needs a pencil note: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the made-up conductor or station helper and write the story job that character is trying to finish: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two invented railway details, such as a rain-gauge platform, cloud ticket, signal card, or puddle rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write the first station signal, the next railway choice, and the final arrival or solved gauge moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one railway detail that helps the draft and mark one extra detail that can move to a different story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: choose one railway sentence and make the subject, action, and place clear on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next draft about the character, station setting, sequence, useful detail, or sentence clarity: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: check the sequence row with three short phrases, then stop before copying anything new: ____________________. Take-home line: check another pretend railway draft for character, setting, sequence, useful details, clear sentences, and one next-draft pencil note: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 7 | Ages 8-10 | cross out one extra detail that does not belong</div>
+      <h2>Greenhouse Gear Garden Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+        <figcaption>Greenhouse Gear Garden</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out this card, a pencil, and one broad made-up greenhouse gear garden draft before the writer checks it: ____________________.</p>
+      <p class="kid-direction">Writer: check the pretend draft for a clear character, setting, sequence, useful details, clear sentences, and one next-draft pencil note: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the invented helper and the clear garden gear job that starts the draft: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two made-up greenhouse details, such as a gear shelf or crank table, that help the reader picture the place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write the first, next, and last draft moments so the gear garden action follows in order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one useful greenhouse gear detail and cross out one extra detail that does not belong in this draft: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: choose one sentence and make sure the reader can tell who is turning, fixing, or carrying something: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next fictional draft after checking character, setting, sequence, details, and sentences: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to one extra detail, and the writer decides whether to cross it out or keep it: ____________________. Take-home line: check another pretend garden draft for one useful detail and one detail to leave out: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 8 | Ages 8-10 | add one clear feeling word without overexplaining</div>
+      <h2>Cloudberry Clocktower Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+        <figcaption>Cloudberry Clocktower</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank composition page beside the card and choose one invented clocktower draft for a calm paper check: ____________________.</p>
+      <p class="kid-direction">Writer: read the pretend draft, then check character, setting, sequence, details, sentences, and one next-draft pencil note: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the made-up clock keeper and add one clear feeling word about the clocktower choice without explaining too much: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: write two clocktower details that help the draft feel specific but still invented: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: mark the first clock clue, the next shelf choice, and the final paper decision in order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one useful cloudberry card or clock detail that helps the draft, and leave out one extra side detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: find one sentence where the feeling word fits the action and keeps the sentence clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next fictional draft about the feeling word, sequence, or useful detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads one sentence aloud, and the writer adds only one simple feeling word on paper: ____________________. Take-home line: check another pretend clocktower draft for one feeling word that helps the reader understand the character: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 9 | Ages 8-10 | check that every sentence helps the story move</div>
+      <h2>Moss Message Observatory Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: choose one broad invented moss message observatory draft and keep the check focused on paper marks only: ____________________.</p>
+      <p class="kid-direction">Writer: check whether each sentence helps the pretend story move from character to setting to sequence to the next-draft note: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: underline the invented watcher and the clear message job that gives the draft a reason to move: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two made-up observatory details, such as a moss chart or pebble lens, that help the story action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: number the message arrival, the observatory check, and the final choice so the order is easy to follow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one detail that moves the moss message story forward and mark one detail that slows the draft down: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: read each sentence and put a small check beside the ones that help the story move: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next fictional draft about a sentence to keep, shorten, or move: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult chooses two sentences, and the writer marks which one moves the story better: ____________________. Take-home line: check another pretend observatory draft by asking whether every sentence helps the next story moment: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 10 | Ages 8-10 | find one sentence that needs a clearer subject</div>
+      <h2>Orchard Pulley Post Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+        <figcaption>Orchard Pulley Post</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the card beside one invented orchard pulley post draft and ask the writer to check one sentence at a time: ____________________.</p>
+      <p class="kid-direction">Writer: check character, setting, sequence, useful details, and clear sentences, then add one next-draft pencil note: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the pretend pulley helper and make sure the reader knows who is raising or lowering the basket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: write two invented orchard pulley post details that belong in the draft and help the reader see the place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: mark the first pulley choice, the next basket movement, and the final post note in order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one useful rope, basket, or post detail and cross out one detail that does not help this draft: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: find one sentence that starts with an unclear subject and rewrite it so the reader knows who or what acts: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next fictional draft about the clearest subject or the sentence to fix first: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to one sentence, and the writer writes only the missing who or what: ____________________. Take-home line: check another pretend pulley draft for one sentence that needs a clearer subject: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 11 | Ages 8-10 | replace one vague word with a story-specific word</div>
+      <h2>Pond Bridge Blueprint Club Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+        <figcaption>Pond Bridge Blueprint Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: choose one broad invented pond bridge blueprint club draft and keep the checklist work on printed paper and pencil: ____________________.</p>
+      <p class="kid-direction">Writer: check the pretend draft for character, setting, sequence, useful details, clearer sentences, and one next-draft pencil note: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the made-up bridge planner and the clear blueprint job that guides the draft: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two invented pond bridge blueprint details, such as a plank sketch or pebble marker, that help the reader picture the place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write the first plan choice, the next bridge check, and the final club note in story order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one useful blueprint detail and choose one vague word, such as thing or stuff, to replace with a story-specific word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: rewrite one sentence so the specific pond, bridge, or blueprint word makes the action clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note for the next fictional draft naming the vague word to replace first: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult writes two possible story-specific words, and the writer circles the one that fits the draft: ____________________. Take-home line: check another pretend blueprint draft for one vague word that can become a clearer story word: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 12 | Ages 10-11 | check that dialogue tags are easy to follow</div>
+      <h2>Revision River Ferry Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside a composition notebook page and choose one broad made-up ferry draft to check: ____________________.</p>
+      <p class="kid-direction">Writer: check the ferry draft for character, setting, order, useful details, clear dialogue tags, and one pencil note: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the made-up ferry helper and the clear job that moves the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two invented ferry setting details, such as a paper pier and folded ticket sign: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write the beginning, middle, and ending ferry moments in order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one useful ferry detail and cross out one extra detail that does not help: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: underline one spoken line and make the tag show which made-up character speaks: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one pencil note about the next ferry draft change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: complete only the character, setting, and dialogue-tag checks on paper: ____________________. Notebook line: use the same checklist with another made-up ferry draft and one clear sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 13 | Ages 10-11 | check that the final sentence feels finished</div>
+      <h2>Chapter Gate Greenhouse Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+        <figcaption>Chapter Gate Greenhouse</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a composition notebook page beside the card and choose one broad made-up chapter gate draft: ____________________.</p>
+      <p class="kid-direction">Writer: check whether the chapter gate draft has a clear helper, place, order, details, sentences, and ending note: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the made-up gate keeper and one job the keeper must finish in the draft: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: write two invented greenhouse details, such as a page shelf and pointer card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: list the first chapter clue, the next clue, and the final gate choice in order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one chapter detail that helps the draft and cross out one side detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: rewrite one unclear chapter sentence so the reader knows who found what: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: test the final sentence and write one pencil note if it needs a stronger finish: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: check only the final sentence and one useful chapter detail: ____________________. Notebook line: try the checklist again with another made-up chapter gate draft on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 14 | Ages 10-11 | make one pencil note for the next draft</div>
+      <h2>Index Card Theater Club Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a composition notebook page beside the card and choose one broad made-up theater club draft: ____________________.</p>
+      <p class="kid-direction">Writer: check what the theater club draft already has, then leave one pencil note for the next draft: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the made-up stage helper and the clear job that starts the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two invented theater details, such as a cue card rail and prop shelf: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write what happens first, what changes next, and how the theater club draft ends: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one theater detail that helps the story and cross out one extra detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: choose one cloudy sentence and rewrite it with a clearer subject and action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: write one next-draft pencil note that the writer can use later: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the next-draft pencil note after checking the character and setting: ____________________. Notebook line: carry the same paper checklist to another made-up theater club draft: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 15 | Ages 10-11 | compare two draft checklist choices</div>
+      <h2>Binding Day Boardwalk Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card beside a composition notebook page and choose one broad made-up boardwalk draft: ____________________.</p>
+      <p class="kid-direction">Writer: compare two checklist choices before choosing the pencil note that best helps the boardwalk draft: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the made-up booklet helper and compare two possible jobs for that helper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: choose two invented boardwalk details, such as a page clasp rail and paper booth: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: compare two possible next moments and write the one that follows the beginning best: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: compare two details, then circle the one that helps the draft more: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: compare two versions of one sentence and copy the version with the clearer subject: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: choose one checklist result and write it as the next-draft pencil note: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: compare only two details and one sentence before writing the pencil note: ____________________. Notebook line: use two paper choices to help another made-up boardwalk draft grow clearer: ____________________.</p>
+    </section>
+
+    <section class="pack-page draft-checklist-card-page">
+      <div class="page-kicker">Story Draft Checklist Card 16 | Ages 10-11 | copy one final checklist note before revising</div>
+      <h2>Margin Note Market Draft Checklist Card</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card beside a composition notebook page and choose one broad made-up margin note draft: ____________________.</p>
+      <p class="kid-direction">Writer: check the margin note draft, then copy one final checklist note before any longer revising: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character check</h3>
+      <p>Character check: name the made-up note seller and the clear job that belongs in this story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting check</h3>
+      <p>Setting check: list two invented market details, such as a margin-note stall and blank tag basket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sequence check</h3>
+      <p>Sequence check: write the first market moment, the next choice, and the final paper-note result: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail check</h3>
+      <p>Detail check: circle one margin detail that helps the draft and cross out one extra note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence check</h3>
+      <p>Sentence check: rewrite one market sentence so it says exactly who does the action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final draft checklist</h3>
+      <p>Final draft checklist: copy one final checklist note before the next paper revision begins: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: copy only the final checklist note after checking one character job and one setting detail: ____________________. Notebook line: save the final checklist note and use it on another made-up margin note draft: ____________________.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,502 @@
+{
+  "batchId": "2026-06-03-batch51",
+  "generatedAt": "2026-06-03",
+  "productSlug": "composition-notebook-story-draft-checklist-card-pack",
+  "title": "Composition Notebook Story Draft Checklist Card Pack",
+  "pricePoint": "$75",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable composition notebook draft checklist cards plus adult guide tools, draft checklist routines, take-home draft checklist slips, and optional prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/composition-notebook-story-draft-checklist-card-pack/Composition-Notebook-Story-Draft-Checklist-Card-Pack.pdf",
+    "zipPath": "product-build/composition-notebook-story-draft-checklist-card-pack/composition-notebook-story-draft-checklist-card-pack.zip",
+    "sourceHtmlPath": "product-build/composition-notebook-story-draft-checklist-card-pack/source/composition-notebook-story-draft-checklist-card-pack.html",
+    "manifestPath": "product-build/composition-notebook-story-draft-checklist-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch51-composition-notebook-draft-checklist-cards-a.json",
+    "content/product-artifacts/lanes/batch51-composition-notebook-draft-checklist-cards-b.json",
+    "content/product-artifacts/lanes/batch51-composition-notebook-draft-checklist-cards-c.json",
+    "content/product-artifacts/lanes/batch51-composition-notebook-draft-checklist-tools.json"
+  ],
+  "worldSlugs": [
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "spoon-ferry-lunchbox-harbor",
+    "pocket-park-notice-board",
+    "rain-gauge-railway",
+    "greenhouse-gear-garden",
+    "cloudberry-clocktower",
+    "moss-message-observatory",
+    "orchard-pulley-post",
+    "pond-bridge-blueprint-club",
+    "revision-river-ferry",
+    "chapter-gate-greenhouse",
+    "index-card-theater-club",
+    "binding-day-boardwalk",
+    "margin-note-market"
+  ],
+  "cover": {
+    "kicker": "Printable composition notebook draft checklist cards",
+    "headline": "Composition Notebook Story Draft Checklist Card Pack",
+    "subhead": "Sixteen composition-notebook cards help writers check one fictional draft for a clear character, usable setting details, event order, useful details, clear sentences, and one next-draft pencil note.",
+    "included": [
+      "16 printable composition notebook draft checklist cards",
+      "Adult setup guide",
+      "Fictional draft checklist safety notes",
+      "Composition notebook coaching moves",
+      "Family handoff notes",
+      "Pack reset notes",
+      "Six adult-led draft checklist routines",
+      "Ten take-home draft checklist slips",
+      "Eight optional prompts",
+      "Printable PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "title": "Composition Notebook Story Draft Checklist Adult Guide",
+    "bullets": [
+      "Print the composition notebook draft checklist cards, take-home slips, and adult guide pages before the paper-only session.",
+      "Use one invented story draft at a time, then guide the writer through character, setting, sequence, useful detail, and clear-sentence checks.",
+      "Keep every example broad, fictional, family-friendly, offline, and led by an adult with pencil and paper.",
+      "Ask the writer to mark the composition notebook page lightly so the draft still feels workable.",
+      "Keep all notes inside the pretend story world with invented names, simple places, and safe everyday objects.",
+      "Finish by writing one next-draft pencil note so the writer knows the single change to try on the next pass."
+    ]
+  },
+  "draftChecklistRoutines": [
+    {
+      "name": "Character Check Circle",
+      "bestFor": "Making sure the story draft has a clear pretend character for the reader to follow.",
+      "steps": [
+        "The adult asks who the main pretend character is on this composition notebook page: ____________________.",
+        "The writer circles the first place that character appears in the draft: ____________________.",
+        "The adult asks what the character is trying to do or notice in the story: ____________________.",
+        "The writer adds one small pencil check beside the clearest character line: ____________________."
+      ]
+    },
+    {
+      "name": "Setting Check Box",
+      "bestFor": "Finding whether the draft gives the reader a simple place or time clue.",
+      "steps": [
+        "The adult asks where the made-up story moment seems to happen: ____________________.",
+        "The writer draws a small box around the setting clue already on the page: ____________________.",
+        "The adult asks which safe pretend place detail would help the reader picture the scene: ____________________.",
+        "The writer writes one setting check note in the margin: ____________________."
+      ]
+    },
+    {
+      "name": "Sequence Check Path",
+      "bestFor": "Checking that the story events move in an order a reader can follow.",
+      "steps": [
+        "The adult points to the first event in the draft and asks what happens first: ____________________.",
+        "The writer numbers the next event that follows on the page: ____________________.",
+        "The adult asks which event feels like the last step in the story path: ____________________.",
+        "The writer marks one arrow where the sequence needs a clearer move: ____________________."
+      ]
+    },
+    {
+      "name": "Useful Detail Check",
+      "bestFor": "Choosing details that help the story instead of filling the page with extra pieces.",
+      "steps": [
+        "The adult asks which detail helps the reader understand the character, place, or next event: ____________________.",
+        "The writer underlines one useful detail already in the draft: ____________________.",
+        "The adult asks which detail feels extra or unclear for this story moment: ____________________.",
+        "The writer writes one small detail note beside the line to keep or rethink: ____________________."
+      ]
+    },
+    {
+      "name": "Clear Sentence Check",
+      "bestFor": "Spotting one sentence that should be easier for the reader to understand.",
+      "steps": [
+        "The adult asks the writer to choose one sentence to reread slowly from the draft: ____________________.",
+        "The writer points to the words that tell the main idea of that sentence: ____________________.",
+        "The adult asks whether the sentence says one clear thing or needs a pencil note: ____________________.",
+        "The writer places a check beside a clear sentence or a dot beside one to revisit: ____________________."
+      ]
+    },
+    {
+      "name": "Next-Draft Pencil Note",
+      "bestFor": "Ending the checklist with one focused note for the next draft pass.",
+      "steps": [
+        "The adult checks the character, setting, sequence, detail, and clear-sentence marks on the page: ____________________.",
+        "The writer chooses the one check that would help the next draft most: ____________________.",
+        "The adult asks for a short pencil note that names the next change without judging the draft: ____________________.",
+        "The writer writes the next-draft note at the bottom of the composition notebook page: ____________________."
+      ]
+    }
+  ],
+  "takeHomeDraftChecklistSlips": [
+    {
+      "title": "Character Check Slip",
+      "time": "one-page check",
+      "skill": "character clarity",
+      "direction": "Circle where the main pretend character first appears in the draft: ____________________.",
+      "familyLine": "Ask what the character is trying to do or notice: ____________________."
+    },
+    {
+      "title": "Setting Check Slip",
+      "time": "place-clue check",
+      "skill": "setting clue",
+      "direction": "Box one word or phrase that shows the pretend place or time: ____________________.",
+      "familyLine": "Ask what safe made-up detail would help the reader picture the setting: ____________________."
+    },
+    {
+      "title": "First Event Slip",
+      "time": "beginning check",
+      "skill": "sequence start",
+      "direction": "Put a small 1 beside the first event in the story draft: ____________________.",
+      "familyLine": "Ask why that event should be first for the reader: ____________________."
+    },
+    {
+      "title": "Next Event Slip",
+      "time": "middle check",
+      "skill": "sequence follow-through",
+      "direction": "Mark the event that should happen after the first one: ____________________.",
+      "familyLine": "Ask how the second event follows from the first: ____________________."
+    },
+    {
+      "title": "Last Step Slip",
+      "time": "ending check",
+      "skill": "sequence finish",
+      "direction": "Underline the event that feels like the last step in the draft: ____________________.",
+      "familyLine": "Ask what lets the reader know the story moment is finished: ____________________."
+    },
+    {
+      "title": "Useful Detail Slip",
+      "time": "detail check",
+      "skill": "useful detail",
+      "direction": "Underline one detail that helps the reader understand the story: ____________________.",
+      "familyLine": "Ask whether the detail helps with character, setting, or sequence: ____________________."
+    },
+    {
+      "title": "Extra Detail Slip",
+      "time": "light margin check",
+      "skill": "detail choice",
+      "direction": "Put a small dot beside one detail that may not be needed yet: ____________________.",
+      "familyLine": "Ask which detail can wait for another made-up story page: ____________________."
+    },
+    {
+      "title": "Clear Sentence Slip",
+      "time": "sentence check",
+      "skill": "sentence clarity",
+      "direction": "Place a check beside one sentence that is easy to understand: ____________________.",
+      "familyLine": "Ask what makes that sentence clear for the reader: ____________________."
+    },
+    {
+      "title": "Sentence Revisit Slip",
+      "time": "pencil-dot check",
+      "skill": "sentence revisit",
+      "direction": "Put a dot beside one sentence to make clearer on the next pass: ____________________.",
+      "familyLine": "Ask what the sentence should help the reader know: ____________________."
+    },
+    {
+      "title": "Next-Draft Note Slip",
+      "time": "final note check",
+      "skill": "next-draft focus",
+      "direction": "Write one next-draft pencil note at the bottom of the page: ____________________.",
+      "familyLine": "Ask which single change should come first on the next draft: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Optional adult-led offline prompt: the main pretend character in this draft is ____________________.",
+    "Optional adult-led offline prompt: the setting clue I can find on the page is ____________________.",
+    "Optional adult-led offline prompt: the first event in the story draft is ____________________.",
+    "Optional adult-led offline prompt: the event that should come next is ____________________.",
+    "Optional adult-led offline prompt: one useful detail for the reader is ____________________.",
+    "Optional adult-led offline prompt: one sentence that is clear already is ____________________.",
+    "Optional adult-led offline prompt: one sentence to revisit with pencil is ____________________.",
+    "Optional adult-led offline prompt: the next-draft note I will write is ____________________."
+  ],
+  "cards": [
+    {
+      "id": "composition-notebook-draft-checklist-card-01",
+      "title": "Buttonwood Library Train Draft Checklist Card",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "draftChecklistSkill": "check one fictional library-train draft for a clear helper, useful place details, ordered moments, sentence clarity, and one next-draft pencil note",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one invented library-train story draft on paper only: ____________________.",
+      "adultSetup": "Adult: place a composition notebook page beside the card and choose one pretend Buttonwood Library Train draft to check: ____________________.",
+      "kidDirection": "Writer: read the draft once, then use pencil marks to show what the library-train story already has and what needs a note: ____________________.",
+      "characterCheckPrompt": "Character check: write the made-up helper's name and the one library-train job the helper is trying to finish: ____________________.",
+      "settingCheckPrompt": "Setting check: list two invented train details, such as a button shelf, question card, or ticket tag, that the draft uses: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write the first train clue, the next shelf choice, and the final finished moment in order: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one detail that helps the errand make sense and mark one extra detail that can wait for another story: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: choose one sentence and make sure the reader can tell who is doing the action: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next draft about the character, setting, sequence, detail, or sentence to improve: ____________________.",
+      "quietOptionLine": "Quiet option: adult points to one checklist row, and the writer fills only that row before taking a short paper pause: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend library-train draft for a helper, place details, ordered moments, useful details, clear sentences, and one pencil note: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-02",
+      "title": "Button Bakery Map Mixup Draft Checklist Card",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "draftChecklistSkill": "check one fictional button-bakery map draft for the map helper, pretend setting clues, event order, useful details, clear sentences, and one next-draft note",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one invented button-bakery map mixup draft on paper only: ____________________.",
+      "adultSetup": "Adult: set out one composition notebook page and choose a broad pretend map-table story draft with no real place details: ____________________.",
+      "kidDirection": "Writer: use the checklist to check whether the map mixup draft is easy to follow from first clue to final fix: ____________________.",
+      "characterCheckPrompt": "Character check: name the pretend map helper and write what the helper wants to sort out on the map table: ____________________.",
+      "settingCheckPrompt": "Setting check: write two invented setting details, such as a paper button marker, crumb-shaped dot, or ribbon path: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write the map clue that starts the mixup, the action that follows, and the final calm map choice: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one map detail that helps the reader understand the mixup and mark one detail that does not help yet: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: pick one map sentence and make the subject and action clear enough to read without guessing: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next draft about the helper, map place, order, detail, or sentence clarity: ____________________.",
+      "quietOptionLine": "Quiet option: adult reads one checklist prompt aloud, and the writer answers it with a few quiet pencil words: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend map mixup draft for character, setting, sequence, helpful details, clear sentences, and one next-draft note: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-03",
+      "title": "Teacup Town Weather Window Draft Checklist Card",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "draftChecklistSkill": "check one fictional weather-window draft for a named watcher, two gentle setting details, clear order, useful details, clear sentences, and one pencil note",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one invented Teacup Town weather-window draft on paper only: ____________________.",
+      "adultSetup": "Adult: place the card beside a composition notebook page and choose one pretend weather-window story draft to check: ____________________.",
+      "kidDirection": "Writer: look through the draft for the watcher, the window place, the order of events, and one sentence that needs to be clearer: ____________________.",
+      "characterCheckPrompt": "Character check: write the made-up watcher's name and what the watcher is checking at the weather window: ____________________.",
+      "settingCheckPrompt": "Setting check: list two pretend window details, such as a cup sill, cloud tag, paper band, or tiny forecast card: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write what the watcher sees first, what changes next, and how the window moment ends: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one weather-window detail that helps the scene and mark one extra detail that can stay out for now: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: choose one short sentence and make sure it tells who looks, points, sorts, or notices: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next draft about the watcher, window place, order, detail, or clear sentence: ____________________.",
+      "quietOptionLine": "Quiet option: check only the character and setting rows first, then leave the rest for another paper pass: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend weather-window draft for a clear character, place, order, useful details, clear sentences, and one pencil note: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-04",
+      "title": "Spoon Ferry Lunchbox Harbor Draft Checklist Card",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "draftChecklistSkill": "check one fictional lunchbox-harbor draft for the ferry helper, harbor details, event order, useful story details, sentence clarity, and one next-draft note",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one invented spoon-ferry lunchbox harbor draft on paper only: ____________________.",
+      "adultSetup": "Adult: set one composition notebook page beside the card and choose a pretend harbor draft about paper ferries and labels: ____________________.",
+      "kidDirection": "Writer: check the harbor draft for one ferry helper, a pretend place, three ordered moments, and sentences the reader can follow: ____________________.",
+      "characterCheckPrompt": "Character check: name the made-up ferry helper and write the small harbor task the helper is trying to finish: ____________________.",
+      "settingCheckPrompt": "Setting check: list two invented harbor details, such as a spoon ferry, lunchbox pier, folded flag, or paper wave line: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write the first ferry signal, the next harbor move, and the final safe docking moment in order: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one harbor detail that helps the story move and mark one extra detail that does not change the draft yet: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: choose one ferry sentence and make sure the reader can tell what moves and where it goes: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next draft about the helper, harbor setting, event order, useful detail, or clear sentence: ____________________.",
+      "quietOptionLine": "Quiet option: adult folds the paper in half, and the writer checks only the left-side rows first: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend harbor draft for character, setting, sequence, useful details, clear sentences, and one next-draft pencil note: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-05",
+      "title": "Pocket Park Notice Board Draft Checklist Card",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "draftChecklistSkill": "check one fictional notice-board draft for a clear board keeper, invented park details, ordered notice moments, useful details, clear sentences, and one pencil note",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one invented pocket park notice-board draft on paper only: ____________________.",
+      "adultSetup": "Adult: place a composition notebook page beside the card and choose one pretend notice-board draft with no real place details: ____________________.",
+      "kidDirection": "Writer: use pencil checks to see whether the notice-board draft has a character, place, order, useful details, and clear sentences: ____________________.",
+      "characterCheckPrompt": "Character check: write the made-up board keeper's name and the notice-board task the keeper is trying to complete: ____________________.",
+      "settingCheckPrompt": "Setting check: list two invented pocket park details, such as a leaf notice, bench label, pin rail, or paper path: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write which notice appears first, what the keeper does next, and how the board looks at the end: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one notice detail that belongs in this draft and mark one extra park detail that can wait: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: choose one notice-board sentence and make sure it has a clear who, what, and where: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next draft about the keeper, board setting, order, useful detail, or clear sentence: ____________________.",
+      "quietOptionLine": "Quiet option: adult asks only the final checklist question, and the writer writes one calm pencil note: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend notice-board draft for character, setting, sequence, useful details, clear sentences, and one next-draft note: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-06",
+      "title": "Rain Gauge Railway Draft Checklist Card",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "draftChecklistSkill": "check one fictional rain-gauge railway draft for a clear conductor, invented station details, event order, useful details, clear sentences, and one next-draft pencil note",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one invented rain-gauge railway story draft on paper only: ____________________.",
+      "adultSetup": "Adult: set out a composition notebook page and choose one pretend railway draft with made-up station and rain-gauge details: ____________________.",
+      "kidDirection": "Writer: check the draft like a paper conductor, looking for who acts, where it happens, what comes next, and which sentence needs a pencil note: ____________________.",
+      "characterCheckPrompt": "Character check: name the made-up conductor or station helper and write the story job that character is trying to finish: ____________________.",
+      "settingCheckPrompt": "Setting check: list two invented railway details, such as a rain-gauge platform, cloud ticket, signal card, or puddle rail: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write the first station signal, the next railway choice, and the final arrival or solved gauge moment: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one railway detail that helps the draft and mark one extra detail that can move to a different story: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: choose one railway sentence and make the subject, action, and place clear on the page: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next draft about the character, station setting, sequence, useful detail, or sentence clarity: ____________________.",
+      "quietOptionLine": "Quiet option: check the sequence row with three short phrases, then stop before copying anything new: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend railway draft for character, setting, sequence, useful details, clear sentences, and one next-draft pencil note: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-07",
+      "title": "Greenhouse Gear Garden Draft Checklist Card",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "draftChecklistSkill": "cross out one extra detail that does not belong",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one fictional greenhouse gear garden story draft on paper: ____________________.",
+      "adultSetup": "Adult: set out this card, a pencil, and one broad made-up greenhouse gear garden draft before the writer checks it: ____________________.",
+      "kidDirection": "Writer: check the pretend draft for a clear character, setting, sequence, useful details, clear sentences, and one next-draft pencil note: ____________________.",
+      "characterCheckPrompt": "Character check: name the invented helper and the clear garden gear job that starts the draft: ____________________.",
+      "settingCheckPrompt": "Setting check: list two made-up greenhouse details, such as a gear shelf or crank table, that help the reader picture the place: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write the first, next, and last draft moments so the gear garden action follows in order: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one useful greenhouse gear detail and cross out one extra detail that does not belong in this draft: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: choose one sentence and make sure the reader can tell who is turning, fixing, or carrying something: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next fictional draft after checking character, setting, sequence, details, and sentences: ____________________.",
+      "quietOptionLine": "Quiet option: adult points to one extra detail, and the writer decides whether to cross it out or keep it: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend garden draft for one useful detail and one detail to leave out: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-08",
+      "title": "Cloudberry Clocktower Draft Checklist Card",
+      "worldSlug": "cloudberry-clocktower",
+      "ageBand": "8-10",
+      "draftChecklistSkill": "add one clear feeling word without overexplaining",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one fictional cloudberry clocktower story draft on paper: ____________________.",
+      "adultSetup": "Adult: place a blank composition page beside the card and choose one invented clocktower draft for a calm paper check: ____________________.",
+      "kidDirection": "Writer: read the pretend draft, then check character, setting, sequence, details, sentences, and one next-draft pencil note: ____________________.",
+      "characterCheckPrompt": "Character check: name the made-up clock keeper and add one clear feeling word about the clocktower choice without explaining too much: ____________________.",
+      "settingCheckPrompt": "Setting check: write two clocktower details that help the draft feel specific but still invented: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: mark the first clock clue, the next shelf choice, and the final paper decision in order: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one useful cloudberry card or clock detail that helps the draft, and leave out one extra side detail: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: find one sentence where the feeling word fits the action and keeps the sentence clear: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next fictional draft about the feeling word, sequence, or useful detail: ____________________.",
+      "quietOptionLine": "Quiet option: adult reads one sentence aloud, and the writer adds only one simple feeling word on paper: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend clocktower draft for one feeling word that helps the reader understand the character: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-09",
+      "title": "Moss Message Observatory Draft Checklist Card",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "draftChecklistSkill": "check that every sentence helps the story move",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one fictional moss message observatory story draft on paper: ____________________.",
+      "adultSetup": "Adult: choose one broad invented moss message observatory draft and keep the check focused on paper marks only: ____________________.",
+      "kidDirection": "Writer: check whether each sentence helps the pretend story move from character to setting to sequence to the next-draft note: ____________________.",
+      "characterCheckPrompt": "Character check: underline the invented watcher and the clear message job that gives the draft a reason to move: ____________________.",
+      "settingCheckPrompt": "Setting check: list two made-up observatory details, such as a moss chart or pebble lens, that help the story action: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: number the message arrival, the observatory check, and the final choice so the order is easy to follow: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one detail that moves the moss message story forward and mark one detail that slows the draft down: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: read each sentence and put a small check beside the ones that help the story move: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next fictional draft about a sentence to keep, shorten, or move: ____________________.",
+      "quietOptionLine": "Quiet option: adult chooses two sentences, and the writer marks which one moves the story better: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend observatory draft by asking whether every sentence helps the next story moment: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-10",
+      "title": "Orchard Pulley Post Draft Checklist Card",
+      "worldSlug": "orchard-pulley-post",
+      "ageBand": "8-10",
+      "draftChecklistSkill": "find one sentence that needs a clearer subject",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one fictional orchard pulley post story draft on paper: ____________________.",
+      "adultSetup": "Adult: set the card beside one invented orchard pulley post draft and ask the writer to check one sentence at a time: ____________________.",
+      "kidDirection": "Writer: check character, setting, sequence, useful details, and clear sentences, then add one next-draft pencil note: ____________________.",
+      "characterCheckPrompt": "Character check: name the pretend pulley helper and make sure the reader knows who is raising or lowering the basket: ____________________.",
+      "settingCheckPrompt": "Setting check: write two invented orchard pulley post details that belong in the draft and help the reader see the place: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: mark the first pulley choice, the next basket movement, and the final post note in order: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one useful rope, basket, or post detail and cross out one detail that does not help this draft: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: find one sentence that starts with an unclear subject and rewrite it so the reader knows who or what acts: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next fictional draft about the clearest subject or the sentence to fix first: ____________________.",
+      "quietOptionLine": "Quiet option: adult points to one sentence, and the writer writes only the missing who or what: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend pulley draft for one sentence that needs a clearer subject: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-11",
+      "title": "Pond Bridge Blueprint Club Draft Checklist Card",
+      "worldSlug": "pond-bridge-blueprint-club",
+      "ageBand": "8-10",
+      "draftChecklistSkill": "replace one vague word with a story-specific word",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one fictional pond bridge blueprint club story draft on paper: ____________________.",
+      "adultSetup": "Adult: choose one broad invented pond bridge blueprint club draft and keep the checklist work on printed paper and pencil: ____________________.",
+      "kidDirection": "Writer: check the pretend draft for character, setting, sequence, useful details, clearer sentences, and one next-draft pencil note: ____________________.",
+      "characterCheckPrompt": "Character check: name the made-up bridge planner and the clear blueprint job that guides the draft: ____________________.",
+      "settingCheckPrompt": "Setting check: list two invented pond bridge blueprint details, such as a plank sketch or pebble marker, that help the reader picture the place: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write the first plan choice, the next bridge check, and the final club note in story order: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one useful blueprint detail and choose one vague word, such as thing or stuff, to replace with a story-specific word: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: rewrite one sentence so the specific pond, bridge, or blueprint word makes the action clearer: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note for the next fictional draft naming the vague word to replace first: ____________________.",
+      "quietOptionLine": "Quiet option: adult writes two possible story-specific words, and the writer circles the one that fits the draft: ____________________.",
+      "takeHomeLine": "Take-home line: check another pretend blueprint draft for one vague word that can become a clearer story word: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-12",
+      "title": "Revision River Ferry Draft Checklist Card",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "draftChecklistSkill": "check that dialogue tags are easy to follow",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one fictional revision river ferry story draft on paper: ____________________.",
+      "adultSetup": "Adult: place this card beside a composition notebook page and choose one broad made-up ferry draft to check: ____________________.",
+      "kidDirection": "Writer: check the ferry draft for character, setting, order, useful details, clear dialogue tags, and one pencil note: ____________________.",
+      "characterCheckPrompt": "Character check: name the made-up ferry helper and the clear job that moves the story: ____________________.",
+      "settingCheckPrompt": "Setting check: list two invented ferry setting details, such as a paper pier and folded ticket sign: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write the beginning, middle, and ending ferry moments in order: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one useful ferry detail and cross out one extra detail that does not help: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: underline one spoken line and make the tag show which made-up character speaks: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one pencil note about the next ferry draft change: ____________________.",
+      "quietOptionLine": "Quiet option: complete only the character, setting, and dialogue-tag checks on paper: ____________________.",
+      "takeHomeLine": "Notebook line: use the same checklist with another made-up ferry draft and one clear sentence: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-13",
+      "title": "Chapter Gate Greenhouse Draft Checklist Card",
+      "worldSlug": "chapter-gate-greenhouse",
+      "ageBand": "10-11",
+      "draftChecklistSkill": "check that the final sentence feels finished",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one fictional chapter gate greenhouse draft on paper: ____________________.",
+      "adultSetup": "Adult: set a composition notebook page beside the card and choose one broad made-up chapter gate draft: ____________________.",
+      "kidDirection": "Writer: check whether the chapter gate draft has a clear helper, place, order, details, sentences, and ending note: ____________________.",
+      "characterCheckPrompt": "Character check: name the made-up gate keeper and one job the keeper must finish in the draft: ____________________.",
+      "settingCheckPrompt": "Setting check: write two invented greenhouse details, such as a page shelf and pointer card: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: list the first chapter clue, the next clue, and the final gate choice in order: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one chapter detail that helps the draft and cross out one side detail: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: rewrite one unclear chapter sentence so the reader knows who found what: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: test the final sentence and write one pencil note if it needs a stronger finish: ____________________.",
+      "quietOptionLine": "Quiet option: check only the final sentence and one useful chapter detail: ____________________.",
+      "takeHomeLine": "Notebook line: try the checklist again with another made-up chapter gate draft on paper: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-14",
+      "title": "Index Card Theater Club Draft Checklist Card",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "draftChecklistSkill": "make one pencil note for the next draft",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one fictional index card theater story draft on paper: ____________________.",
+      "adultSetup": "Adult: place a composition notebook page beside the card and choose one broad made-up theater club draft: ____________________.",
+      "kidDirection": "Writer: check what the theater club draft already has, then leave one pencil note for the next draft: ____________________.",
+      "characterCheckPrompt": "Character check: name the made-up stage helper and the clear job that starts the story: ____________________.",
+      "settingCheckPrompt": "Setting check: list two invented theater details, such as a cue card rail and prop shelf: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write what happens first, what changes next, and how the theater club draft ends: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one theater detail that helps the story and cross out one extra detail: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: choose one cloudy sentence and rewrite it with a clearer subject and action: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: write one next-draft pencil note that the writer can use later: ____________________.",
+      "quietOptionLine": "Quiet option: write only the next-draft pencil note after checking the character and setting: ____________________.",
+      "takeHomeLine": "Notebook line: carry the same paper checklist to another made-up theater club draft: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-15",
+      "title": "Binding Day Boardwalk Draft Checklist Card",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "draftChecklistSkill": "compare two draft checklist choices",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one fictional binding day boardwalk draft on paper: ____________________.",
+      "adultSetup": "Adult: set this card beside a composition notebook page and choose one broad made-up boardwalk draft: ____________________.",
+      "kidDirection": "Writer: compare two checklist choices before choosing the pencil note that best helps the boardwalk draft: ____________________.",
+      "characterCheckPrompt": "Character check: name the made-up booklet helper and compare two possible jobs for that helper: ____________________.",
+      "settingCheckPrompt": "Setting check: choose two invented boardwalk details, such as a page clasp rail and paper booth: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: compare two possible next moments and write the one that follows the beginning best: ____________________.",
+      "detailCheckPrompt": "Detail check: compare two details, then circle the one that helps the draft more: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: compare two versions of one sentence and copy the version with the clearer subject: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: choose one checklist result and write it as the next-draft pencil note: ____________________.",
+      "quietOptionLine": "Quiet option: compare only two details and one sentence before writing the pencil note: ____________________.",
+      "takeHomeLine": "Notebook line: use two paper choices to help another made-up boardwalk draft grow clearer: ____________________."
+    },
+    {
+      "id": "composition-notebook-draft-checklist-card-16",
+      "title": "Margin Note Market Draft Checklist Card",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "draftChecklistSkill": "copy one final checklist note before revising",
+      "useCase": "Adult-led printable composition notebook draft checklist card for checking one fictional margin note market story draft on paper: ____________________.",
+      "adultSetup": "Adult: place the card beside a composition notebook page and choose one broad made-up margin note draft: ____________________.",
+      "kidDirection": "Writer: check the margin note draft, then copy one final checklist note before any longer revising: ____________________.",
+      "characterCheckPrompt": "Character check: name the made-up note seller and the clear job that belongs in this story: ____________________.",
+      "settingCheckPrompt": "Setting check: list two invented market details, such as a margin-note stall and blank tag basket: ____________________.",
+      "sequenceCheckPrompt": "Sequence check: write the first market moment, the next choice, and the final paper-note result: ____________________.",
+      "detailCheckPrompt": "Detail check: circle one margin detail that helps the draft and cross out one extra note: ____________________.",
+      "sentenceCheckPrompt": "Sentence check: rewrite one market sentence so it says exactly who does the action: ____________________.",
+      "finalDraftChecklistPrompt": "Final draft checklist: copy one final checklist note before the next paper revision begins: ____________________.",
+      "quietOptionLine": "Quiet option: copy only the final checklist note after checking one character job and one setting detail: ____________________.",
+      "takeHomeLine": "Notebook line: save the final checklist note and use it on another made-up margin note draft: ____________________."
+    }
+  ]
+}

@@ -4220,6 +4220,130 @@
           "summary": "A chapter-gate greenhouse world for revising a transition paragraph on paper."
         }
       ]
+    },
+    {
+      "slug": "composition-notebook-story-draft-checklist-card-pack",
+      "title": "Composition Notebook Story Draft Checklist Card Pack",
+      "pricePoint": "$75",
+      "status": "checkout_pending",
+      "headline": "A printable draft checklist card pack for paper-only composition notebook story drafts.",
+      "summary": "Sixteen adult-led composition notebook cards help kids check one fictional draft for character, setting, sequence, details, sentences, and one next note.",
+      "heroImage": "images/plotsprout/batch51/composition-notebook-story-draft-checklist-card-pack.jpg",
+      "ctaLabel": "Request draft checklist card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Composition%20Notebook%20Story%20Draft%20Checklist%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static composition notebook story draft checklist card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "spoon-ferry-lunchbox-harbor",
+        "pocket-park-notice-board",
+        "rain-gauge-railway",
+        "greenhouse-gear-garden",
+        "cloudberry-clocktower",
+        "moss-message-observatory",
+        "orchard-pulley-post",
+        "pond-bridge-blueprint-club",
+        "revision-river-ferry",
+        "chapter-gate-greenhouse",
+        "index-card-theater-club",
+        "binding-day-boardwalk",
+        "margin-note-market"
+      ],
+      "includedPages": [
+        "Sixteen printable composition notebook draft checklist cards",
+        "Adult setup guide",
+        "Fictional draft checklist safety notes",
+        "Composition notebook coaching moves",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six adult-led draft checklist routines",
+        "Ten take-home draft checklist slips",
+        "Eight optional prompts",
+        "Local image-backed world menu",
+        "Printable PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one simple check before the next story draft",
+        "A tutoring or co-op table where writers can mark character, setting, and sequence on paper",
+        "A calm pencil activity for checking useful details without asking for a full rewrite",
+        "A reluctant-writer activity that turns draft checking into six small paper checks",
+        "A take-home checklist slip set for continuing one next-draft note offline"
+      ],
+      "parentSteps": [
+        "Choose one draft checklist routine before the activity starts.",
+        "Set the composition notebook draft, checklist card, pencils, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Move from character to setting, sequence, useful detail, clear sentence, and next-draft note.",
+        "Send one draft checklist slip with a single blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A buttonwood train world for checking whether one library-train draft has a clear helper."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button map world for checking a mix-up draft with one clear place clue."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup weather world for checking the first, next, and last draft moments."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for choosing which harbor detail helps the draft."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for checking whether each sentence helps the notice draft."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for making the draft subject and action easier to follow."
+        },
+        {
+          "slug": "greenhouse-gear-garden",
+          "summary": "A greenhouse gear world for replacing one vague draft word with a useful object."
+        },
+        {
+          "slug": "cloudberry-clocktower",
+          "summary": "A cloudberry clocktower world for checking that dialogue tags are easy to follow."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss message world for deciding whether the final draft sentence feels finished."
+        },
+        {
+          "slug": "orchard-pulley-post",
+          "summary": "An orchard pulley world for writing one pencil note for the next draft."
+        },
+        {
+          "slug": "pond-bridge-blueprint-club",
+          "summary": "A pond bridge world for comparing two checklist choices before marking the draft."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision river world for copying one final checklist note before another pass."
+        },
+        {
+          "slug": "chapter-gate-greenhouse",
+          "summary": "A chapter gate world for checking whether order, details, and ending fit together."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "summary": "An index-card theater world for writing one next-draft pencil note on paper."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for comparing two draft checklist choices before copying."
+        },
+        {
+          "slug": "margin-note-market",
+          "summary": "A margin note world for carrying one checklist note into the next draft."
+        }
+      ]
     }
   ]
 }

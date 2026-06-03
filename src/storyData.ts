@@ -614,6 +614,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable lined paper story paragraph revision cards with adult guide tools, paragraph revision routines, and take-home paragraph revision slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'composition-notebook-story-draft-checklist-card-pack',
+    title: 'Composition Notebook Story Draft Checklist Card Pack',
+    pricePoint: '$75',
+    description:
+      'Sixteen printable composition notebook story draft checklist cards with adult guide tools, draft checklist routines, and take-home draft checklist slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

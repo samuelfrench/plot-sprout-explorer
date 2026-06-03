@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-03-batch51-product-images",
+  "generatedAt": "2026-06-03",
+  "images": [
+    {
+      "slug": "composition-notebook-story-draft-checklist-card-pack",
+      "title": "Composition Notebook Story Draft Checklist Card Pack",
+      "purpose": "Static product hero image for the checkout-pending composition notebook draft checklist card pack page.",
+      "prompt": "family-friendly flat lay of blank composition notebook story draft checklist card pack, blank composition notebook, blank draft checklist cards, empty writing areas, unbranded pencils, small paper tabs, quiet printable writing kit, plain white background, soft natural light, realistic product photography, no text",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, phone, tablet, laptop, computer, screen, device, microphone, audio recorder, voice memo, camera, photo, recording, transcription, account login, portal, qr code, upload icon, public post, public review, rating, score, grade, timer, contest, prize, food, tasting, allergy, medical, scary, weapon, fight, bullying",
+      "seed": 26065175,
+      "outputJpeg": "public/images/plotsprout/batch51/composition-notebook-story-draft-checklist-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch51/composition-notebook-story-draft-checklist-card-pack.webp",
+      "sidecar": "content/image-runs/batch51/composition-notebook-story-draft-checklist-card-pack.json"
+    }
+  ]
+}

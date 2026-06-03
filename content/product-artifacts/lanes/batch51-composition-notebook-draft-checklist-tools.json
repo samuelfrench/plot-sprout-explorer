@@ -1,0 +1,158 @@
+{
+  "laneId": "batch51-composition-notebook-draft-checklist-tools",
+  "adultGuide": {
+    "title": "Composition Notebook Story Draft Checklist Adult Guide",
+    "bullets": [
+      "Print the composition notebook draft checklist cards, take-home slips, and adult guide pages before the paper-only session.",
+      "Use one invented story draft at a time, then guide the writer through character, setting, sequence, useful detail, and clear-sentence checks.",
+      "Keep every example broad, fictional, family-friendly, offline, and led by an adult with pencil and paper.",
+      "Ask the writer to mark the composition notebook page lightly so the draft still feels workable.",
+      "Keep all notes inside the pretend story world with invented names, simple places, and safe everyday objects.",
+      "Finish by writing one next-draft pencil note so the writer knows the single change to try on the next pass."
+    ]
+  },
+  "draftChecklistRoutines": [
+    {
+      "name": "Character Check Circle",
+      "bestFor": "Making sure the story draft has a clear pretend character for the reader to follow.",
+      "steps": [
+        "The adult asks who the main pretend character is on this composition notebook page: ____________________.",
+        "The writer circles the first place that character appears in the draft: ____________________.",
+        "The adult asks what the character is trying to do or notice in the story: ____________________.",
+        "The writer adds one small pencil check beside the clearest character line: ____________________."
+      ]
+    },
+    {
+      "name": "Setting Check Box",
+      "bestFor": "Finding whether the draft gives the reader a simple place or time clue.",
+      "steps": [
+        "The adult asks where the made-up story moment seems to happen: ____________________.",
+        "The writer draws a small box around the setting clue already on the page: ____________________.",
+        "The adult asks which safe pretend place detail would help the reader picture the scene: ____________________.",
+        "The writer writes one setting check note in the margin: ____________________."
+      ]
+    },
+    {
+      "name": "Sequence Check Path",
+      "bestFor": "Checking that the story events move in an order a reader can follow.",
+      "steps": [
+        "The adult points to the first event in the draft and asks what happens first: ____________________.",
+        "The writer numbers the next event that follows on the page: ____________________.",
+        "The adult asks which event feels like the last step in the story path: ____________________.",
+        "The writer marks one arrow where the sequence needs a clearer move: ____________________."
+      ]
+    },
+    {
+      "name": "Useful Detail Check",
+      "bestFor": "Choosing details that help the story instead of filling the page with extra pieces.",
+      "steps": [
+        "The adult asks which detail helps the reader understand the character, place, or next event: ____________________.",
+        "The writer underlines one useful detail already in the draft: ____________________.",
+        "The adult asks which detail feels extra or unclear for this story moment: ____________________.",
+        "The writer writes one small detail note beside the line to keep or rethink: ____________________."
+      ]
+    },
+    {
+      "name": "Clear Sentence Check",
+      "bestFor": "Spotting one sentence that should be easier for the reader to understand.",
+      "steps": [
+        "The adult asks the writer to choose one sentence to reread slowly from the draft: ____________________.",
+        "The writer points to the words that tell the main idea of that sentence: ____________________.",
+        "The adult asks whether the sentence says one clear thing or needs a pencil note: ____________________.",
+        "The writer places a check beside a clear sentence or a dot beside one to revisit: ____________________."
+      ]
+    },
+    {
+      "name": "Next-Draft Pencil Note",
+      "bestFor": "Ending the checklist with one focused note for the next draft pass.",
+      "steps": [
+        "The adult checks the character, setting, sequence, detail, and clear-sentence marks on the page: ____________________.",
+        "The writer chooses the one check that would help the next draft most: ____________________.",
+        "The adult asks for a short pencil note that names the next change without judging the draft: ____________________.",
+        "The writer writes the next-draft note at the bottom of the composition notebook page: ____________________."
+      ]
+    }
+  ],
+  "takeHomeDraftChecklistSlips": [
+    {
+      "title": "Character Check Slip",
+      "time": "one-page check",
+      "skill": "character clarity",
+      "direction": "Circle where the main pretend character first appears in the draft: ____________________.",
+      "familyLine": "Ask what the character is trying to do or notice: ____________________."
+    },
+    {
+      "title": "Setting Check Slip",
+      "time": "place-clue check",
+      "skill": "setting clue",
+      "direction": "Box one word or phrase that shows the pretend place or time: ____________________.",
+      "familyLine": "Ask what safe made-up detail would help the reader picture the setting: ____________________."
+    },
+    {
+      "title": "First Event Slip",
+      "time": "beginning check",
+      "skill": "sequence start",
+      "direction": "Put a small 1 beside the first event in the story draft: ____________________.",
+      "familyLine": "Ask why that event should be first for the reader: ____________________."
+    },
+    {
+      "title": "Next Event Slip",
+      "time": "middle check",
+      "skill": "sequence follow-through",
+      "direction": "Mark the event that should happen after the first one: ____________________.",
+      "familyLine": "Ask how the second event follows from the first: ____________________."
+    },
+    {
+      "title": "Last Step Slip",
+      "time": "ending check",
+      "skill": "sequence finish",
+      "direction": "Underline the event that feels like the last step in the draft: ____________________.",
+      "familyLine": "Ask what lets the reader know the story moment is finished: ____________________."
+    },
+    {
+      "title": "Useful Detail Slip",
+      "time": "detail check",
+      "skill": "useful detail",
+      "direction": "Underline one detail that helps the reader understand the story: ____________________.",
+      "familyLine": "Ask whether the detail helps with character, setting, or sequence: ____________________."
+    },
+    {
+      "title": "Extra Detail Slip",
+      "time": "light margin check",
+      "skill": "detail choice",
+      "direction": "Put a small dot beside one detail that may not be needed yet: ____________________.",
+      "familyLine": "Ask which detail can wait for another made-up story page: ____________________."
+    },
+    {
+      "title": "Clear Sentence Slip",
+      "time": "sentence check",
+      "skill": "sentence clarity",
+      "direction": "Place a check beside one sentence that is easy to understand: ____________________.",
+      "familyLine": "Ask what makes that sentence clear for the reader: ____________________."
+    },
+    {
+      "title": "Sentence Revisit Slip",
+      "time": "pencil-dot check",
+      "skill": "sentence revisit",
+      "direction": "Put a dot beside one sentence to make clearer on the next pass: ____________________.",
+      "familyLine": "Ask what the sentence should help the reader know: ____________________."
+    },
+    {
+      "title": "Next-Draft Note Slip",
+      "time": "final note check",
+      "skill": "next-draft focus",
+      "direction": "Write one next-draft pencil note at the bottom of the page: ____________________.",
+      "familyLine": "Ask which single change should come first on the next draft: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the main pretend character in this draft is ____________________.",
+    "Optional adult-led offline prompt: the setting clue I can find on the page is ____________________.",
+    "Optional adult-led offline prompt: the first event in the story draft is ____________________.",
+    "Optional adult-led offline prompt: the event that should come next is ____________________.",
+    "Optional adult-led offline prompt: one useful detail for the reader is ____________________.",
+    "Optional adult-led offline prompt: one sentence that is clear already is ____________________.",
+    "Optional adult-led offline prompt: one sentence to revisit with pencil is ____________________.",
+    "Optional adult-led offline prompt: the next-draft note I will write is ____________________."
+  ]
+}

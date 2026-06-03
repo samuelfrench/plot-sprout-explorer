@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-03-batch51",
+  "generatedAt": "2026-06-03",
+  "productSlug": "composition-notebook-story-draft-checklist-card-pack",
+  "title": "Composition Notebook Story Draft Checklist Card Pack",
+  "pricePoint": "$75",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/composition-notebook-story-draft-checklist-card-pack/Composition-Notebook-Story-Draft-Checklist-Card-Pack.pdf",
+      "sha256": "230a668e0b0ab61f08a45a19b22df9a441f48ae88f2eae6f5cc214710e368e73",
+      "size": 4903676
+    },
+    "zip": {
+      "path": "product-build/composition-notebook-story-draft-checklist-card-pack/composition-notebook-story-draft-checklist-card-pack.zip",
+      "sha256": "d7bff72b1837937922321c2bcef61c187e59c653613d13c1d15fd84f9ddd9bfb",
+      "size": 9393760
+    },
+    "sourceHtml": {
+      "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/composition-notebook-story-draft-checklist-card-pack.html",
+      "sha256": "346ffd414c7bb161bc98232041e79a5227a64d9b62a652f7bffafc116d6febd7",
+      "size": 60332
+    },
+    "readme": {
+      "path": "product-build/composition-notebook-story-draft-checklist-card-pack/README.txt",
+      "sha256": "d742dbffaf2509731158908d64274e552d81594103b183efcd24bac8509fcd64",
+      "size": 637
+    },
+    "assets": [
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/chapter-gate-greenhouse.jpg",
+        "sha256": "2a34e6f4bafcaaf422f06aa11146c3d4247b0b7cd76b3fd207dffcb11aa2b2d1",
+        "size": 289788
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/cloudberry-clocktower.jpg",
+        "sha256": "3204161ea211c5e28ca7cfeae6e7cfc97be61f53ca978a3606435351731ad6e3",
+        "size": 366382
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/orchard-pulley-post.jpg",
+        "sha256": "7a51a3f1f4413db9566324b67ca123c16f482d925b5246204786bcfedeb5e1da",
+        "size": 214727
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/pond-bridge-blueprint-club.jpg",
+        "sha256": "0fe8f3c9f82671ca8e6daa82a2c54eeda4d2c86d0d1e65a86e366df3f5f0f707",
+        "size": 238332
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/composition-notebook-story-draft-checklist-card-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      }
+    ]
+  }
+}
