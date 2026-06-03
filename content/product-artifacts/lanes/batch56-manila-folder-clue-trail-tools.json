@@ -1,0 +1,109 @@
+{
+  "adultGuide": {
+    "title": "Manila Folder Clue Trail Adult Guide",
+    "bullets": [
+      "Set out one manila folder, blank pages, pencils, and a paper clue trail card before the adult-led start: ____________________.",
+      "Choose one made-up world and remind the writer that every clue stays invented, broad, and paper-only: ____________________.",
+      "Move through first clue, next clue, turning clue, mismatch clue, return clue, and folder label in order: ____________________.",
+      "Keep the adult in charge of the folder while the child writes or dictates short page notes: ____________________.",
+      "Use pretend objects, places, and actions only; do not ask for real schedules, rooms, names, or personal facts: ____________________.",
+      "Close by reading the folder label and choosing one next-page clue for a later adult-led paper pass: ____________________."
+    ]
+  },
+  "clueTrailRoutines": [
+    {
+      "title": "First Clue Folder Start",
+      "time": "short first-page setup",
+      "materials": "Manila folder, blank page, pencil, and first-clue card.",
+      "steps": [
+        "The adult opens the manila folder and points to the first clue blank: ____________________.",
+        "The child chooses one made-up object, place hint, or action: ____________________.",
+        "The adult asks how that clue starts the pretend page: ____________________.",
+        "The child writes or dictates one first clue line on paper: ____________________."
+      ],
+      "adultWrapLine": "The clue trail begins with this pretend first clue: ____________________."
+    },
+    {
+      "title": "Next Clue Step",
+      "time": "one-page continuation",
+      "materials": "Manila folder, current page, next blank page, and pencil.",
+      "steps": [
+        "The adult points from the first clue to the next clue blank: ____________________.",
+        "The child chooses one clue that follows on paper: ____________________.",
+        "The adult asks what should stay connected from the first clue: ____________________.",
+        "The child writes one next clue line on the page: ____________________."
+      ],
+      "adultWrapLine": "The next clue follows because: ____________________."
+    },
+    {
+      "title": "Turning Clue Pass",
+      "time": "gentle clue turn",
+      "materials": "Manila folder, clue card, pencil, and small paper strip.",
+      "steps": [
+        "The adult rereads the first two paper clues: ____________________.",
+        "The child invents one calm turn that changes the clue trail: ____________________.",
+        "The adult asks what the page should notice after the turn: ____________________.",
+        "The child writes the turning clue on a paper strip: ____________________."
+      ],
+      "adultWrapLine": "The turning clue changes the paper trail with: ____________________."
+    },
+    {
+      "title": "Mismatch Check",
+      "time": "connection check",
+      "materials": "Manila folder, two clue notes, and mismatch blank.",
+      "steps": [
+        "The adult points to one clue that almost fits the page: ____________________.",
+        "The child names what feels mismatched in the pretend trail: ____________________.",
+        "The adult asks how a new paper clue could fix the connection: ____________________.",
+        "The child writes the mismatch clue and one repair idea: ____________________."
+      ],
+      "adultWrapLine": "The mismatch clue now needs this paper fix: ____________________."
+    },
+    {
+      "title": "Return Clue Loop",
+      "time": "continuity return",
+      "materials": "Earlier page, blank page, pencil, and manila folder.",
+      "steps": [
+        "The adult reopens one earlier clue from the folder: ____________________.",
+        "The child chooses a pretend clue to bring back: ____________________.",
+        "The adult asks where the returning clue belongs on the next page: ____________________.",
+        "The child writes one return clue line that connects the trail: ____________________."
+      ],
+      "adultWrapLine": "The return clue brings back this pretend piece: ____________________."
+    },
+    {
+      "title": "Folder Label Close",
+      "time": "paper wrap pass",
+      "materials": "Manila folder, folder label slip, page stack, and pencil.",
+      "steps": [
+        "The adult lays the clue trail pages beside the manila folder: ____________________.",
+        "The child chooses a broad pretend folder label for the trail: ____________________.",
+        "The adult reads the label and asks what next-page clue it suggests: ____________________.",
+        "The child tucks the folder label slip into the manila folder: ____________________."
+      ],
+      "adultWrapLine": "The folder label closes this clue trail with: ____________________."
+    }
+  ],
+  "takeHomeClueSlips": [
+    "Adult: open the manila folder and ask for one pretend first clue: ____________________.",
+    "Child: the first clue on my paper trail is: ____________________.",
+    "Adult: point from the first clue to the next clue blank: ____________________.",
+    "Child: the next clue should show: ____________________.",
+    "Adult: ask what calm turning clue changes the page: ____________________.",
+    "Child: my turning clue says: ____________________.",
+    "Adult: ask which clue almost fits but needs a repair note: ____________________.",
+    "Child: the mismatch clue can be fixed by: ____________________.",
+    "Adult: reread one earlier clue and ask what can return: ____________________.",
+    "Child: the folder label for this pretend trail is: ____________________."
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led paper prompt: the first clue in the manila folder is ____________________.",
+    "Optional adult-led paper prompt: the next clue follows because ____________________.",
+    "Optional adult-led paper prompt: the turning clue changes the page when ____________________.",
+    "Optional adult-led paper prompt: the mismatch clue needs this repair ____________________.",
+    "Optional adult-led paper prompt: the return clue brings back ____________________.",
+    "Optional adult-led paper prompt: the folder label should say ____________________.",
+    "Optional adult-led paper prompt: the next page clue could be ____________________.",
+    "Optional adult-led paper prompt: the clue trail closes with ____________________."
+  ]
+}
