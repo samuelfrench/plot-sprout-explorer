@@ -1,0 +1,160 @@
+{
+  "laneId": "batch43-binder-clip-transition-tools",
+  "batchId": "2026-06-03-batch43",
+  "productSlug": "binder-clip-story-transition-card-pack",
+  "adultGuide": {
+    "title": "Binder Clip Transition Card Adult Guide",
+    "bullets": [
+      "Print the transition cards, blank slips, and guide before the adult-led paper session.",
+      "Use binder clips only as paper props for holding, grouping, or pointing to invented story moments.",
+      "Keep every story detail fictional, broad, offline, and guided by an adult.",
+      "Choose one before moment, one after moment, and one binder-clip job so the transition has a clear bridge.",
+      "Replace any personal place, schedule, group name, or child detail with a made-up story label.",
+      "Send along only blank slips or invented examples with no identity details."
+    ]
+  },
+  "transitionRoutines": [
+    {
+      "name": "Before-After Clip Bridge",
+      "bestFor": "Writers who need a clear bridge between two invented story moments.",
+      "steps": [
+        "The adult names the pretend before moment and after moment from one card.",
+        "The writer chooses a binder-clip job: hold, join, point, or flip.",
+        "The adult asks what changes between the two pretend moments.",
+        "The writer writes one bridge sentence for the transition: ____________________."
+      ]
+    },
+    {
+      "name": "Meanwhile Clip Turn",
+      "bestFor": "Moving between two made-up scenes without adding outside facts.",
+      "steps": [
+        "The adult places two slips side by side and clips a blank slip between them.",
+        "The writer chooses a broad transition word such as meanwhile, later, or nearby.",
+        "The adult asks what the reader needs to know before the next scene starts.",
+        "The writer writes one fictional meanwhile sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Later Clip Stack",
+      "bestFor": "Showing a gentle passage from one story beat to the next.",
+      "steps": [
+        "The adult stacks the before slip under the after slip with a binder clip.",
+        "The writer names one made-up change that happened between the slips.",
+        "The adult asks whether the change is small enough for one sentence.",
+        "The writer writes one later sentence that explains the change: ____________________."
+      ]
+    },
+    {
+      "name": "Object Thread",
+      "bestFor": "Using one invented object to connect two story moments.",
+      "steps": [
+        "The adult points to the binder clip and asks what pretend object it can stand for.",
+        "The writer chooses one broad object job such as marker, handle, tag, or hinge.",
+        "The adult asks how the object appears in both story moments.",
+        "The writer writes one transition using the object thread: ____________________."
+      ]
+    },
+    {
+      "name": "Scene Swap Clip",
+      "bestFor": "Changing scenes while keeping places fictional and broad.",
+      "steps": [
+        "The adult labels one slip old scene and one slip new scene.",
+        "The writer chooses one invented place label with no narrow outside details.",
+        "The adult asks what signal tells the reader the scene has changed.",
+        "The writer writes one scene-swap transition sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Mood-to-Action Bridge",
+      "bestFor": "Connecting how an invented character feels to the next gentle action.",
+      "steps": [
+        "The adult asks which pretend feeling starts the transition.",
+        "The writer chooses one calm action that follows from that feeling.",
+        "The adult clips the feeling slip to the action slip as a paper bridge.",
+        "The writer writes one feeling-to-action transition: ____________________."
+      ]
+    }
+  ],
+  "takeHomeTransitionSlips": [
+    {
+      "title": "Clip the Gap",
+      "time": "One paper pass",
+      "skill": "bridge sentence",
+      "direction": "Write one sentence that clips a pretend before moment to a pretend after moment: ____________________.",
+      "familyLine": "Ask which two made-up moments the sentence connects: ____________________."
+    },
+    {
+      "title": "Meanwhile Slip",
+      "time": "Brief adult-led pass",
+      "skill": "meanwhile transition",
+      "direction": "Invent a meanwhile sentence that moves to another fictional scene: ____________________.",
+      "familyLine": "Ask what the reader learns before the next scene begins: ____________________."
+    },
+    {
+      "title": "Later Stack",
+      "time": "Single printable slip",
+      "skill": "passage of story time",
+      "direction": "Write a later sentence that explains one small made-up change: ____________________.",
+      "familyLine": "Ask what changed between the two pretend story beats: ____________________."
+    },
+    {
+      "title": "Object Thread",
+      "time": "One pencil pass",
+      "skill": "object connection",
+      "direction": "Use one invented object as a thread between two story moments: ____________________.",
+      "familyLine": "Ask how the object appears in both moments: ____________________."
+    },
+    {
+      "title": "Scene Swap",
+      "time": "Short paper pass",
+      "skill": "scene transition",
+      "direction": "Write a scene-swap line that moves to a broad invented place: ____________________.",
+      "familyLine": "Ask what word tells the reader the scene changed: ____________________."
+    },
+    {
+      "title": "Then Because",
+      "time": "Calm story pass",
+      "skill": "cause transition",
+      "direction": "Use then because to connect one fictional choice to the next moment: ____________________.",
+      "familyLine": "Ask which choice made the next moment happen: ____________________."
+    },
+    {
+      "title": "Feeling Bridge",
+      "time": "Quiet paper pass",
+      "skill": "feeling-to-action transition",
+      "direction": "Write how an invented character moves from a feeling to a gentle action: ____________________.",
+      "familyLine": "Ask which action matches the pretend feeling: ____________________."
+    },
+    {
+      "title": "Flip the Slip",
+      "time": "Fresh slip pass",
+      "skill": "turning point transition",
+      "direction": "Write a line that flips from one made-up idea to a new made-up idea: ____________________.",
+      "familyLine": "Ask what changed after the flip: ____________________."
+    },
+    {
+      "title": "Same Place, New Beat",
+      "time": "Single card pass",
+      "skill": "within-scene transition",
+      "direction": "Keep the broad invented place the same and write the next story beat: ____________________.",
+      "familyLine": "Ask what stayed the same while the story moved ahead: ____________________."
+    },
+    {
+      "title": "Clip and Clarify",
+      "time": "Second pencil pass",
+      "skill": "clearer transition revision",
+      "direction": "Revise one transition word so the next moment is easier to follow: ____________________.",
+      "familyLine": "Ask which word made the story bridge clearer: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the transition word I chose is ____________________.",
+    "Optional adult-led offline prompt: the binder clip connects these two pretend moments: ____________________.",
+    "Optional adult-led offline prompt: the before moment changes when ____________________.",
+    "Optional adult-led offline prompt: the after moment begins with ____________________.",
+    "Optional adult-led offline prompt: my object thread is ____________________.",
+    "Optional adult-led offline prompt: the broad invented place changes to ____________________.",
+    "Optional adult-led offline prompt: the character's gentle next action is ____________________.",
+    "Optional adult-led offline prompt: an adult can add one made-up bridge word here: ____________________."
+  ]
+}
