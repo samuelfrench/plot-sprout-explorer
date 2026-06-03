@@ -39,6 +39,7 @@
     "image:batch29": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch29-product-images.json",
     "image:batch30": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch30-product-images.json",
     "image:batch31": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch31-product-images.json",
+    "image:batch32": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-02-batch32-product-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -62,7 +63,8 @@
     "product:window-seat-scene-pack": "node scripts/window-seat-story-scene-card-pack-builder.mjs",
     "product:quiet-corner-map-pack": "node scripts/quiet-corner-story-map-card-pack-builder.mjs",
     "product:porch-light-signal-pack": "node scripts/porch-light-story-signal-card-pack-builder.mjs",
-    "product:pencil-case-switch-pack": "node scripts/pencil-case-story-switch-card-pack-builder.mjs"
+    "product:pencil-case-switch-pack": "node scripts/pencil-case-story-switch-card-pack-builder.mjs",
+    "product:notebook-margin-revision-pack": "node scripts/notebook-margin-story-revision-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

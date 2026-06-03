@@ -462,6 +462,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable pencil-case story switch cards with adult guide tools, switch routines, and take-home switch slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'notebook-margin-story-revision-card-pack',
+    title: 'Notebook Margin Story Revision Card Pack',
+    pricePoint: '$37',
+    description:
+      'Sixteen printable notebook-margin story revision cards with adult guide tools, revision routines, and take-home revision slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

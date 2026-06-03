@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-02-batch32",
+  "generatedAt": "2026-06-02",
+  "productSlug": "notebook-margin-story-revision-card-pack",
+  "title": "Notebook Margin Story Revision Card Pack",
+  "pricePoint": "$37",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/notebook-margin-story-revision-card-pack/Notebook-Margin-Story-Revision-Card-Pack.pdf",
+      "sha256": "c682364ec06796914c60f8e229db998d59367edb492916b281068b9c57cef09e",
+      "size": 4809916
+    },
+    "zip": {
+      "path": "product-build/notebook-margin-story-revision-card-pack/notebook-margin-story-revision-card-pack.zip",
+      "sha256": "c81409ed80b33cdb9545bbe72c5f3f31d5889485f2ed5e620cd4db6295e0fc46",
+      "size": 9209818
+    },
+    "sourceHtml": {
+      "path": "product-build/notebook-margin-story-revision-card-pack/source/notebook-margin-story-revision-card-pack.html",
+      "sha256": "8b6c761a11af0033461e2672001ceed1fc43d1571598ebef98fd8a6c50a1367f",
+      "size": 51906
+    },
+    "readme": {
+      "path": "product-build/notebook-margin-story-revision-card-pack/README.txt",
+      "sha256": "29515569021f0ae6ee9e25a53c00f942555aa94387235515fed2beea2be8b1fc",
+      "size": 571
+    },
+    "assets": [
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/moon-muffin-market.jpg",
+        "sha256": "9fd7c9a4e3584529222c481ce419c67545a98a4ab788f08742ac19df11f0f962",
+        "size": 238603
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/puddle-planet-post-office.jpg",
+        "sha256": "abf1065c54d207cce767bd8a5081e2483bfa37fc4a7d9a476bd65f4e5c914e44",
+        "size": 304692
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      },
+      {
+        "path": "product-build/notebook-margin-story-revision-card-pack/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      }
+    ]
+  }
+}

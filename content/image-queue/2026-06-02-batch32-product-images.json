@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-02-batch32-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "notebook-margin-story-revision-card-pack",
+      "title": "Notebook Margin Story Revision Card Pack product image",
+      "purpose": "Static product hero for the checkout-pending notebook margin story revision card pack page.",
+      "seed": 26063239,
+      "prompt": "family-friendly flat lay product image, six rectangular blank cream notebook-margin revision cards fanned beside an open unbranded notebook with wide blank margins and one plain wooden pencil, each card has only faint empty margin guide lines with no writing, plain white background, clean catalog product photography, screen-free printable notebook margin story revision card pack",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, phone, tablet, laptop, computer, screen, device, app interface, school login, account login, portal, QR code, upload icon, camera, photo, GPS, navigation app, coordinates, address, house, home, street sign, real place, real-world map, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, branded character, franchise, copyright character, people, face, animal, plant, potted plant, greenery, flower, decorative props, round coaster, circular cards, food, snack, medicine, weapon, violence, scary scene, outdoor scene, window, doorway, building, safety sign",
+      "outputJpeg": "public/images/plotsprout/batch32/notebook-margin-story-revision-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch32/notebook-margin-story-revision-card-pack.webp",
+      "sidecar": "content/image-runs/batch32/notebook-margin-story-revision-card-pack.json"
+    }
+  ]
+}

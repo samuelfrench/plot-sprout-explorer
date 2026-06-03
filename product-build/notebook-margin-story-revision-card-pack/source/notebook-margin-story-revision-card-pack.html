@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notebook Margin Story Revision Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-revision-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-revision-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-revision-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper revision cards</p>
+        <h1>Notebook Margin Story Revision Card Pack</h1>
+        <p>Sixteen paper story revision cards turn notebook-margin notes into screen-free draft upgrades.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable story revision cards plus adult guide tools, revision routines, take-home revision slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$37</span>
+        <h2>Included</h2>
+        <ul><li>16 printable notebook-margin revision cards</li>
+<li>Adult setup guide</li>
+<li>Fictional revision-card safety notes</li>
+<li>Revision move coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led revision routines</li>
+<li>Ten take-home revision slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Revision move coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the notebook margin revision cards, take-home slips, and a small stack of blank draft pages.</li>
+<li>Choose one fiction draft or one starter sentence before the writer sits down.</li>
+<li>Set pencils, erasers, blank strips, and paper clips on the table so the whole routine stays screen-free.</li>
+<li>Explain that margin notes are tiny helpful marks for made-up stories.</li>
+<li>Pick one revision focus for the round: detail, word swap, order, setting, character, or ending.</li></ul></article>
+        <article class="guide-card"><h3>Paper revision setup</h3><ul><li>Fold each draft page so the right side has a clear margin for adult-written prompts.</li>
+<li>Keep the adult guide beside the paper stack and choose only one card at a time.</li>
+<li>Use short margin marks such as add one detail, swap one word, stretch this sentence, or move this line.</li>
+<li>Ask the writer to make the change on paper near the original line so the old and new versions stay visible.</li>
+<li>Place skipped cards in a later pile without stopping the writing flow.</li></ul></article>
+        <article class="guide-card"><h3>Story revision coaching</h3><ul><li>Treat each margin note as a choice, not a correction.</li>
+<li>Read the original line, add one small change, then read both lines aloud.</li>
+<li>Offer two concrete options when a writer freezes: a color or a sound, a shorter word or a stronger word.</li>
+<li>Praise the visible change on the paper before inviting another change.</li>
+<li>Stop after two or three useful changes so the draft still feels like the writer&#39;s story.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Keep every page offline in the folder chosen by the adult leader.</li>
+<li>Use invented names, pretend places, and made-up notebook objects.</li>
+<li>Redirect any personal-life sentence into a fictional detail before it goes on the page.</li>
+<li>Do not require reading aloud; the adult can point to one revised word instead.</li>
+<li>Skip any card that pulls the story away from gentle fiction.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one paper slip and one revised sentence home in a folder.</li>
+<li>Tell family adults the task is one small fiction change, not perfect spelling.</li>
+<li>Invite the adult at home to ask what changed in the margin note.</li>
+<li>Suggest a five to nine minute table round with pencil and paper only.</li>
+<li>Keep unfinished slips for a later adult-led session.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect unused cards, slips, pencils, and draft pages.</li>
+<li>Return finished pages to the writer or adult folder.</li>
+<li>Recycle scrap paper that only has warm-up marks.</li>
+<li>Sort the card stack by revision focus before the next session.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper revision card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen story-revision-card worlds</h2>
+      <p>Pick a world image, then turn one invented notebook-margin choice into a story start.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Revision routines</p>
+      <h2>Choose the paper revision rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Margin Dot Detail</h3>
+      <p>Adding one clear picture detail to a plain line.</p>
+      <ol><li>Adult places a dot in the paper margin beside one plain sentence.</li>
+<li>Writer adds one color, shape, sound, or texture word near that line.</li>
+<li>Writer copies the sentence with the new detail below it.</li>
+<li>Adult asks which word made the picture clearer.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Word Swap Ladder</h3>
+      <p>Replacing tired words without a long lesson.</p>
+      <ol><li>Adult underlines one simple word in the draft.</li>
+<li>Writer lists three possible swaps in the margin.</li>
+<li>Writer chooses one swap and rewrites only that sentence.</li>
+<li>Adult reads both versions and asks which one fits the made-up scene.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sentence Stretch Strip</h3>
+      <p>Writers with very short drafts.</p>
+      <ol><li>Adult draws a bracket around one short sentence.</li>
+<li>Writer answers who, where, or what else in the margin.</li>
+<li>Writer adds the answer to the sentence without changing the whole draft.</li>
+<li>Adult circles the added phrase so the stretch is visible.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Order Arrow Move</h3>
+      <p>Drafts where events feel out of sequence.</p>
+      <ol><li>Adult writes first, next, finally on three small paper strips.</li>
+<li>Writer places one story sentence under each strip.</li>
+<li>Writer moves one strip to a clearer spot.</li>
+<li>Adult asks what linking word the moved line now needs.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Question In The Margin</h3>
+      <p>Adding a next sentence when the story stalls.</p>
+      <ol><li>Adult writes one gentle question in the margin.</li>
+<li>Writer answers the question with one fictional detail.</li>
+<li>Writer turns that answer into the next story sentence.</li>
+<li>Adult draws an arrow from the question to the new sentence.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Ending Tuck-In</h3>
+      <p>Drafts that stop suddenly.</p>
+      <ol><li>Adult brackets the last line and chooses one ending card.</li>
+<li>Writer adds one final object, sound, or choice in the margin.</li>
+<li>Writer writes a new closing line that uses the margin idea.</li>
+<li>Adult reads the old last line and the new last line.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home revision slips</p>
+      <h2>Finish one story revision later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | detail revision</p>
+      <h3>Margin Detail Dot</h3>
+      <p>Choose one plain story sentence and add one tiny visual detail in the margin: ____________________.</p>
+      <p>Family adult names the detail that made the scene clearer: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | word swap revision</p>
+      <h3>Swap A Small Word</h3>
+      <p>Underline one word and replace it with a stronger fiction word: ____________________.</p>
+      <p>Family adult hears the new word and writes what changed: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | sentence stretch</p>
+      <h3>Stretch The Line</h3>
+      <p>Add who, where, or what else to one short sentence: ____________________.</p>
+      <p>Family adult points to the added phrase here: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">7 minutes | order revision</p>
+      <h3>First Next Finally</h3>
+      <p>Move one story beat to a clearer place and write the new order: ____________________.</p>
+      <p>Family adult says which part now comes first: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | question revision</p>
+      <h3>Margin Question</h3>
+      <p>Write one question the character could answer next: ____________________.</p>
+      <p>Family adult suggests one possible answer: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">8 minutes | setting revision</p>
+      <h3>Place Closer</h3>
+      <p>Add one setting clue beside a line in the margin: ____________________.</p>
+      <p>Family adult says what the setting feels like now: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">7 minutes | character revision</p>
+      <h3>Character Notice</h3>
+      <p>Add one thing the character notices or chooses in the margin: ____________________.</p>
+      <p>Family adult names the character clue they heard: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">8 minutes | object revision</p>
+      <h3>Object Job</h3>
+      <p>Give one pretend object a job in the story: ____________________.</p>
+      <p>Family adult says why the object matters: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">6 minutes | mood revision</p>
+      <h3>Mood Mark</h3>
+      <p>Change one line so the mood feels calm, silly, curious, or cozy: ____________________.</p>
+      <p>Family adult names the mood that came through: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">5 minutes | sound revision</p>
+      <h3>Sound In The Edge</h3>
+      <p>Add one gentle sound word in the notebook margin: ____________________.</p>
+      <p>Family adult repeats the sound and adds one action: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>One revision mark I used today was ____________________.</li>
+<li>The line that became clearer was ____________________.</li>
+<li>My best word swap was ____________________.</li>
+<li>A detail I added in the margin was ____________________.</li>
+<li>The character changed when I added ____________________.</li>
+<li>The setting became easier to picture after ____________________.</li>
+<li>The ending I tucked in was ____________________.</li>
+<li>Next time I want a margin card about ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 1 | Ages 6-8 | detail revision</div>
+      <h2>Moon Muffin Market Detail Sprinkle</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold the margin strip beside a blank page, and name one made-up muffin stall together: ____________________.</p>
+      <p class="kid-direction">Write one short market line, then use the margin to add a small color, shape, or smell detail: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Draw or write one tiny moon muffin detail beside the line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The Moon Muffin Market opened when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Add one exact detail that makes the muffin easy to picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: The Moon Muffin Market opened when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Point to the new detail and say what picture it adds: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Add only one margin word before rewriting the line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this card again with a new pretend moon muffin detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 2 | Ages 6-8 | word swap revision</div>
+      <h2>Puddle Planet Parcel Word Swap</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, place it beside notebook paper, and circle one plain word the writer can trade: ____________________.</p>
+      <p class="kid-direction">Write a puddle parcel line, choose one plain word, and swap it for a juicier pretend word: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: List two replacement words for the puddle parcel: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The puddle parcel moved across the counter and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Replace one plain word with a clearer splashy word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: The puddle parcel ____________________ across the counter and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Underline the swapped word and check that the sentence still makes sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Whisper the two word choices to an adult, then write one: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Try one more word swap for a new Puddle Planet parcel: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 3 | Ages 7-9 | sentence stretch</div>
+      <h2>Buttonwood Library Train Sentence Stretch</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw a tiny train-car box in the notebook margin, and choose where the extra clue can ride: ____________________.</p>
+      <p class="kid-direction">Write one Buttonwood Library Train sentence, then stretch it by adding where, when, or why: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Pick one stretch clue for the train car: where, when, or why: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The Buttonwood Library Train rolled past ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Stretch the sentence with one clue from the margin box: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: The Buttonwood Library Train rolled past ____________________ because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Read both lines and circle the one that gives the reader more help: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write only the extra clue in the margin before the full new line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Stretch another library train sentence with a different clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 4 | Ages 7-9 | order revision</div>
+      <h2>Button Bakery Map Mix-Up Order Fix</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw three crumb dots in the margin, and ask the writer to number what happens first, next, and last: ____________________.</p>
+      <p class="kid-direction">Write a mixed-up bakery sentence, then number the margin crumbs and rewrite the events in a smoother order: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Number the three paper crumb clues first, next, and last: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The map was fixed after the button tray moved and the baker found ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Put the bakery events in the order a reader needs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: First ____________________, next ____________________, and last ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Trace the three crumb numbers and make sure no step is missing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number only the crumbs first, then write the new first step: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this order card for another pretend Button Bakery map mix-up: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 5 | Ages 7-8 | mood revision</div>
+      <h2>Teacup Town Weather Window Mood Tint</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, place two color pencils nearby, and let the writer choose one gentle weather mood for the margin: ____________________.</p>
+      <p class="kid-direction">Write one weather-window line, then revise it so the mood feels clearer through color, sound, or motion: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Choose one mood tint for the teacup window: calm, curious, or bright: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The Teacup Town weather window showed ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Add one mood clue without naming the feeling directly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: The Teacup Town weather window showed ____________________, and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Point to the word or detail that shows the mood best: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Shade one tiny margin square, then write the mood clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Try the mood tint again with a new pretend window scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 6 | Ages 7-9 | setting revision</div>
+      <h2>Pocket Park Tiny Bench Detail</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and ask the writer to draw one small park mark in the notebook margin before writing: ____________________.</p>
+      <p class="kid-direction">Find a plain park sentence and add one tiny bench, leaf, sign, or path clue beside it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Sketch one pocket-park detail that belongs beside the notice board: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The notice board stood in the park while ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Add one place detail before the action so the reader can picture the tiny park: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: Beside the notice board, ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does the new detail show where the story is happening without naming the park again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to the margin drawing and copy one detail word into the sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this card again with a new pretend park object in the margin: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 7 | Ages 7-9 | word swap revision</div>
+      <h2>Spoon Ferry Word Swap</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and place two pencils beside the draft line so the writer can choose one stronger word: ____________________.</p>
+      <p class="kid-direction">Underline one plain word about the spoon ferry, then trade it for a word with a clearer picture: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Write two ferry words in the notebook margin, then circle the livelier one: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The spoon ferry moved across Lunchbox Harbor with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Swap moved for a word like glided, bobbed, slid, or another fitting harbor word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: The spoon ferry ____________________ across Lunchbox Harbor with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does the swapped word make the ferry easier to imagine: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle only one word in the margin and whisper it to the adult helper: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Try one more word swap on a new pretend lunchbox harbor sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 8 | Ages 7-9 | character revision</div>
+      <h2>Acorn Avenue Helper Clue</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and ask the writer to choose one pretend office helper before changing the line: ____________________.</p>
+      <p class="kid-direction">Give the Acorn Avenue helper one action, tool, or habit that shows who they are: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Draw or list one helper clue, such as a stamp pad, tiny clipboard, or careful tap: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The helper at Acorn Avenue said the errand was ready: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Add one helper clue before the helper speaks so the character feels specific: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: The helper with ____________________ said the errand was ready: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Can someone tell something about the helper from the new clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Choose the helper clue by pointing, then write only the changed phrase: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Save this card for another pretend office helper with a different clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 9 | Ages 8-10 | order revision</div>
+      <h2>Seed Map Step Order</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and have the writer number three tiny margin boxes before revising the line: ____________________.</p>
+      <p class="kid-direction">Choose which map-room action happens first, next, and last, then rewrite the sentence in that order: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Number three seed-library steps in the margin: choose tag, unfold map, mark shelf: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The map room helper marked the shelf after the tag and map were ready: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Rewrite the line so the steps happen in the same order as your margin numbers: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: First ____________________, next ____________________, and last ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Do the margin numbers match the new sentence order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number the boxes only, then ask the adult to read the order aloud: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use this card to reorder three steps in a new seed-library map scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 10 | Ages 8-10 | sound revision</div>
+      <h2>Rain Gauge Railway Sound Line</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and invite the writer to list two soft railway sounds in the margin before revising: ____________________.</p>
+      <p class="kid-direction">Add one sound that fits the rain-gauge train, station, ticket, rail, or tiny raindrop meter: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Write one railway sound word and one rain-gauge sound word in the margin: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The Rain Gauge Railway train arrived at the little platform: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Add one sound near the train arrival so the line feels more alive: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: With a ____________________, the Rain Gauge Railway train arrived at the little platform: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does the added sound fit the gentle railway scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Tap the sound rhythm once on the paper, then write the sound word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Try this card again with a new pretend train sound in the margin: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 11 | Ages 8-10 | question revision</div>
+      <h2>Moss Message Question Curl</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold the margin strip, and pick one moss message that still needs an answer: ____________________.</p>
+      <p class="kid-direction">Write a question in the margin that makes the observatory scene clearer or more surprising: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: What does the moss message make the watcher wonder next? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The moss message glowed on the observatory stone and said ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Add one question word, who, what, where, when, why, or how, to open a better story door: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: The watcher leaned closer and asked, ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does the question point to a detail the next sentence can answer? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write only the question word and one moss clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use the same margin trick on another pretend message: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 12 | Ages 8-10 | detail revision</div>
+      <h2>Tidepool Timekeepers Tiny Detail</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and invite the writer to choose one pretend lab item, shell clock, bubble jar, or kelp ruler: ____________________.</p>
+      <p class="kid-direction">Place one small detail in the margin, then add it to the draft line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Which tiny tidepool item shows the timekeepers are busy? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The tidepool timekeepers hurried across the table before the bell rang: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Add one size, color, sound, or motion detail that readers can picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: The tidepool timekeepers hurried past ____________________ before the bell rang.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does the new detail help the lab feel specific instead of plain? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle one lab item and write only its best describing word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Add one more pretend lab detail in a notebook margin later: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 13 | Ages 10-11 | word swap revision</div>
+      <h2>Revision River Word Ferry</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw a small margin ferry, and choose one flat word to send across the river: ____________________.</p>
+      <p class="kid-direction">Write the old word on the ferry, then land it as a stronger word in the new line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Which word feels too plain for the river ferry scene? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The ferry moved across the river with a big thing in its basket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Swap one plain word for a concrete word that names the object, action, or feeling: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: The ferry ____________________ across the river with ____________________ in its basket.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Did the swapped word make the scene easier to imagine? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write old word arrow new word in the margin: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Try one more word ferry swap on a different sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 14 | Ages 10-11 | order revision</div>
+      <h2>Clue Label Tower Order Arrow</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and ask the writer to number three pretend label clues in the margin: ____________________.</p>
+      <p class="kid-direction">Put the clues in the order a museum helper would notice them, then rewrite the line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Which clue should appear first, the label, the shelf, or the hidden tag? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The hidden tag, tall shelf, and blue label all gave the helper a clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Move the clue that readers need first to the front of the sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: First the helper noticed ____________________, then ____________________, and finally ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does the new order make the tower mystery easier to follow? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write 1, 2, 3 beside the clues before changing the line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use margin numbers to sort three clues in another invented museum scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 15 | Ages 10-11 | setting revision</div>
+      <h2>Compass Craft Setting Edge</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card and choose one academy corner, map table, ribbon shelf, tool bench, or compass mat: ____________________.</p>
+      <p class="kid-direction">Use the margin to name where the action happens, then fold that place cue into the sentence: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: Where exactly in Compass Craft Academy does this moment happen? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: The apprentice tested the compass before choosing the next path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Add one place cue and one nearby object so the setting has edges: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: Beside ____________________, the apprentice tested the compass before choosing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Can a reader point to the place in the scene after your change? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw a tiny place box and label the nearest object: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Add one place cue to another academy sentence on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-revision-card-page">
+      <div class="page-kicker">Story Revision Card 16 | Ages 10-11 | ending revision</div>
+      <h2>Binding Day Last-Line Knot</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold the margin like a booklet flap, and choose one final object from the boardwalk table: ____________________.</p>
+      <p class="kid-direction">Write the ending object in the margin, then use it to make the last line feel complete: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Margin prompt</h3>
+      <p>Margin prompt: What final object can tie the Binding Day booklet together? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Draft line</h3>
+      <p>Draft line: At the end of Binding Day, everyone looked at the finished booklet: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revision move</h3>
+      <p>Revision move: Add one final object, action, or choice that shows what changed by the end: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>New line</h3>
+      <p>New line: At the end of Binding Day, ____________________ showed that the booklet was ready.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does the last line feel connected to the first important idea? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write the final object first, then build one ending sentence around it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Try a new last-line knot for another pretend booklet ending: ____________________.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,189 @@
+{
+  "adultGuide": {
+    "beforeSession": [
+      "Print the notebook margin revision cards, take-home slips, and a small stack of blank draft pages.",
+      "Choose one fiction draft or one starter sentence before the writer sits down.",
+      "Set pencils, erasers, blank strips, and paper clips on the table so the whole routine stays screen-free.",
+      "Explain that margin notes are tiny helpful marks for made-up stories.",
+      "Pick one revision focus for the round: detail, word swap, order, setting, character, or ending."
+    ],
+    "paperRevisionSetup": [
+      "Fold each draft page so the right side has a clear margin for adult-written prompts.",
+      "Keep the adult guide beside the paper stack and choose only one card at a time.",
+      "Use short margin marks such as add one detail, swap one word, stretch this sentence, or move this line.",
+      "Ask the writer to make the change on paper near the original line so the old and new versions stay visible.",
+      "Place skipped cards in a later pile without stopping the writing flow."
+    ],
+    "revisionCoaching": [
+      "Treat each margin note as a choice, not a correction.",
+      "Read the original line, add one small change, then read both lines aloud.",
+      "Offer two concrete options when a writer freezes: a color or a sound, a shorter word or a stronger word.",
+      "Praise the visible change on the paper before inviting another change.",
+      "Stop after two or three useful changes so the draft still feels like the writer's story."
+    ],
+    "privacyAndSafetyNotes": [
+      "Keep every page offline in the folder chosen by the adult leader.",
+      "Use invented names, pretend places, and made-up notebook objects.",
+      "Redirect any personal-life sentence into a fictional detail before it goes on the page.",
+      "Do not require reading aloud; the adult can point to one revised word instead.",
+      "Skip any card that pulls the story away from gentle fiction."
+    ],
+    "familyHandoff": [
+      "Send one paper slip and one revised sentence home in a folder.",
+      "Tell family adults the task is one small fiction change, not perfect spelling.",
+      "Invite the adult at home to ask what changed in the margin note.",
+      "Suggest a five to nine minute table round with pencil and paper only.",
+      "Keep unfinished slips for a later adult-led session."
+    ],
+    "reset": [
+      "Collect unused cards, slips, pencils, and draft pages.",
+      "Return finished pages to the writer or adult folder.",
+      "Recycle scrap paper that only has warm-up marks.",
+      "Sort the card stack by revision focus before the next session."
+    ]
+  },
+  "revisionRoutines": [
+    {
+      "name": "Margin Dot Detail",
+      "bestFor": "Adding one clear picture detail to a plain line.",
+      "steps": [
+        "Adult places a dot in the paper margin beside one plain sentence.",
+        "Writer adds one color, shape, sound, or texture word near that line.",
+        "Writer copies the sentence with the new detail below it.",
+        "Adult asks which word made the picture clearer."
+      ]
+    },
+    {
+      "name": "Word Swap Ladder",
+      "bestFor": "Replacing tired words without a long lesson.",
+      "steps": [
+        "Adult underlines one simple word in the draft.",
+        "Writer lists three possible swaps in the margin.",
+        "Writer chooses one swap and rewrites only that sentence.",
+        "Adult reads both versions and asks which one fits the made-up scene."
+      ]
+    },
+    {
+      "name": "Sentence Stretch Strip",
+      "bestFor": "Writers with very short drafts.",
+      "steps": [
+        "Adult draws a bracket around one short sentence.",
+        "Writer answers who, where, or what else in the margin.",
+        "Writer adds the answer to the sentence without changing the whole draft.",
+        "Adult circles the added phrase so the stretch is visible."
+      ]
+    },
+    {
+      "name": "Order Arrow Move",
+      "bestFor": "Drafts where events feel out of sequence.",
+      "steps": [
+        "Adult writes first, next, finally on three small paper strips.",
+        "Writer places one story sentence under each strip.",
+        "Writer moves one strip to a clearer spot.",
+        "Adult asks what linking word the moved line now needs."
+      ]
+    },
+    {
+      "name": "Question In The Margin",
+      "bestFor": "Adding a next sentence when the story stalls.",
+      "steps": [
+        "Adult writes one gentle question in the margin.",
+        "Writer answers the question with one fictional detail.",
+        "Writer turns that answer into the next story sentence.",
+        "Adult draws an arrow from the question to the new sentence."
+      ]
+    },
+    {
+      "name": "Ending Tuck-In",
+      "bestFor": "Drafts that stop suddenly.",
+      "steps": [
+        "Adult brackets the last line and chooses one ending card.",
+        "Writer adds one final object, sound, or choice in the margin.",
+        "Writer writes a new closing line that uses the margin idea.",
+        "Adult reads the old last line and the new last line."
+      ]
+    }
+  ],
+  "takeHomeRevisionSlips": [
+    {
+      "title": "Margin Detail Dot",
+      "time": "5 minutes",
+      "skill": "detail revision",
+      "direction": "Choose one plain story sentence and add one tiny visual detail in the margin: ____________________.",
+      "familyLine": "Family adult names the detail that made the scene clearer: ____________________."
+    },
+    {
+      "title": "Swap A Small Word",
+      "time": "5 minutes",
+      "skill": "word swap revision",
+      "direction": "Underline one word and replace it with a stronger fiction word: ____________________.",
+      "familyLine": "Family adult hears the new word and writes what changed: ____________________."
+    },
+    {
+      "title": "Stretch The Line",
+      "time": "6 minutes",
+      "skill": "sentence stretch",
+      "direction": "Add who, where, or what else to one short sentence: ____________________.",
+      "familyLine": "Family adult points to the added phrase here: ____________________."
+    },
+    {
+      "title": "First Next Finally",
+      "time": "7 minutes",
+      "skill": "order revision",
+      "direction": "Move one story beat to a clearer place and write the new order: ____________________.",
+      "familyLine": "Family adult says which part now comes first: ____________________."
+    },
+    {
+      "title": "Margin Question",
+      "time": "6 minutes",
+      "skill": "question revision",
+      "direction": "Write one question the character could answer next: ____________________.",
+      "familyLine": "Family adult suggests one possible answer: ____________________."
+    },
+    {
+      "title": "Place Closer",
+      "time": "8 minutes",
+      "skill": "setting revision",
+      "direction": "Add one setting clue beside a line in the margin: ____________________.",
+      "familyLine": "Family adult says what the setting feels like now: ____________________."
+    },
+    {
+      "title": "Character Notice",
+      "time": "7 minutes",
+      "skill": "character revision",
+      "direction": "Add one thing the character notices or chooses in the margin: ____________________.",
+      "familyLine": "Family adult names the character clue they heard: ____________________."
+    },
+    {
+      "title": "Object Job",
+      "time": "8 minutes",
+      "skill": "object revision",
+      "direction": "Give one pretend object a job in the story: ____________________.",
+      "familyLine": "Family adult says why the object matters: ____________________."
+    },
+    {
+      "title": "Mood Mark",
+      "time": "6 minutes",
+      "skill": "mood revision",
+      "direction": "Change one line so the mood feels calm, silly, curious, or cozy: ____________________.",
+      "familyLine": "Family adult names the mood that came through: ____________________."
+    },
+    {
+      "title": "Sound In The Edge",
+      "time": "5 minutes",
+      "skill": "sound revision",
+      "direction": "Add one gentle sound word in the notebook margin: ____________________.",
+      "familyLine": "Family adult repeats the sound and adds one action: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "One revision mark I used today was ____________________.",
+    "The line that became clearer was ____________________.",
+    "My best word swap was ____________________.",
+    "A detail I added in the margin was ____________________.",
+    "The character changed when I added ____________________.",
+    "The setting became easier to picture after ____________________.",
+    "The ending I tucked in was ____________________.",
+    "Next time I want a margin card about ____________________."
+  ]
+}

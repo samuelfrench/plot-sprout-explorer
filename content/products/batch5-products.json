@@ -1864,6 +1864,130 @@
           "summary": "A page-order boardwalk world for testing two endings on a pretend booklet."
         }
       ]
+    },
+    {
+      "slug": "notebook-margin-story-revision-card-pack",
+      "title": "Notebook Margin Story Revision Card Pack",
+      "pricePoint": "$37",
+      "status": "checkout_pending",
+      "headline": "A printable revision-card pack for screen-free notebook-margin story upgrades.",
+      "summary": "Sixteen adult-led notebook-margin revision cards help kids add details, swap words, stretch sentences, reorder moments, and strengthen endings.",
+      "heroImage": "images/plotsprout/batch32/notebook-margin-story-revision-card-pack.jpg",
+      "ctaLabel": "Request revision card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Notebook%20Margin%20Story%20Revision%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static notebook margin story revision card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable notebook-margin story revision cards",
+        "Adult setup guide",
+        "Fictional revision-card safety notes",
+        "Revision move coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led revision routines",
+        "Ten take-home revision slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one small revision move before a full story",
+        "A tutoring or co-op desk where writers can choose one paper revision card at a time",
+        "A family table warm-up where pointing, sketching, and one blank can improve a line",
+        "A reluctant-writer activity that separates one revision choice from a full draft",
+        "A take-home revision slip set for finishing one invented detail offline"
+      ],
+      "parentSteps": [
+        "Choose one revision routine before the activity starts.",
+        "Set paper, pencils, blank margin space, and the imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one notebook-margin note into a make-believe story improvement rather than recording personal facts.",
+        "Send one revision slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for adding one sensory detail to a pastry-table sentence."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A tiny post-office world for swapping one plain parcel word with a brighter one."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A rolling library world for stretching one short train sentence with a new image."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for putting three story beats into a clearer order."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup weather world for changing the mood tint of one paper scene."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A notice-board world for revising a setting edge before the character acts."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A lunchbox harbor world for replacing one ferry word with a more exact choice."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An errand-office world for adding one helper clue to a character moment."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed-library world for reordering three map-room steps into a clean path."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A railway world for adding one sound line that makes the scene easier to hear."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A quiet observatory world for turning one moss message into a story question."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for adding one small detail to a careful lab moment."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for carrying one plain word to a sharper story line."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A label tower world for placing three clue labels in a better order."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A craft academy world for improving one setting edge before a scene begins."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A page-order boardwalk world for testing one stronger final line."
+        }
+      ]
     }
   ]
 }

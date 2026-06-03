@@ -1,0 +1,518 @@
+{
+  "batchId": "2026-06-02-batch32",
+  "generatedAt": "2026-06-02",
+  "productSlug": "notebook-margin-story-revision-card-pack",
+  "title": "Notebook Margin Story Revision Card Pack",
+  "pricePoint": "$37",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable story revision cards plus adult guide tools, revision routines, take-home revision slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/notebook-margin-story-revision-card-pack/Notebook-Margin-Story-Revision-Card-Pack.pdf",
+    "zipPath": "product-build/notebook-margin-story-revision-card-pack/notebook-margin-story-revision-card-pack.zip",
+    "sourceHtmlPath": "product-build/notebook-margin-story-revision-card-pack/source/notebook-margin-story-revision-card-pack.html",
+    "manifestPath": "product-build/notebook-margin-story-revision-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch32-notebook-margin-revision-cards-a.json",
+    "content/product-artifacts/lanes/batch32-notebook-margin-revision-cards-b.json",
+    "content/product-artifacts/lanes/batch32-notebook-margin-revision-cards-c.json",
+    "content/product-artifacts/lanes/batch32-notebook-margin-revision-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable paper revision cards",
+    "headline": "Notebook Margin Story Revision Card Pack",
+    "subhead": "Sixteen paper story revision cards turn notebook-margin notes into screen-free draft upgrades.",
+    "included": [
+      "16 printable notebook-margin revision cards",
+      "Adult setup guide",
+      "Fictional revision-card safety notes",
+      "Revision move coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led revision routines",
+      "Ten take-home revision slips",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Print the notebook margin revision cards, take-home slips, and a small stack of blank draft pages.",
+      "Choose one fiction draft or one starter sentence before the writer sits down.",
+      "Set pencils, erasers, blank strips, and paper clips on the table so the whole routine stays screen-free.",
+      "Explain that margin notes are tiny helpful marks for made-up stories.",
+      "Pick one revision focus for the round: detail, word swap, order, setting, character, or ending."
+    ],
+    "paperRevisionSetup": [
+      "Fold each draft page so the right side has a clear margin for adult-written prompts.",
+      "Keep the adult guide beside the paper stack and choose only one card at a time.",
+      "Use short margin marks such as add one detail, swap one word, stretch this sentence, or move this line.",
+      "Ask the writer to make the change on paper near the original line so the old and new versions stay visible.",
+      "Place skipped cards in a later pile without stopping the writing flow."
+    ],
+    "revisionCoaching": [
+      "Treat each margin note as a choice, not a correction.",
+      "Read the original line, add one small change, then read both lines aloud.",
+      "Offer two concrete options when a writer freezes: a color or a sound, a shorter word or a stronger word.",
+      "Praise the visible change on the paper before inviting another change.",
+      "Stop after two or three useful changes so the draft still feels like the writer's story."
+    ],
+    "privacyAndSafetyNotes": [
+      "Keep every page offline in the folder chosen by the adult leader.",
+      "Use invented names, pretend places, and made-up notebook objects.",
+      "Redirect any personal-life sentence into a fictional detail before it goes on the page.",
+      "Do not require reading aloud; the adult can point to one revised word instead.",
+      "Skip any card that pulls the story away from gentle fiction."
+    ],
+    "familyHandoff": [
+      "Send one paper slip and one revised sentence home in a folder.",
+      "Tell family adults the task is one small fiction change, not perfect spelling.",
+      "Invite the adult at home to ask what changed in the margin note.",
+      "Suggest a five to nine minute table round with pencil and paper only.",
+      "Keep unfinished slips for a later adult-led session."
+    ],
+    "reset": [
+      "Collect unused cards, slips, pencils, and draft pages.",
+      "Return finished pages to the writer or adult folder.",
+      "Recycle scrap paper that only has warm-up marks.",
+      "Sort the card stack by revision focus before the next session."
+    ]
+  },
+  "revisionRoutines": [
+    {
+      "name": "Margin Dot Detail",
+      "bestFor": "Adding one clear picture detail to a plain line.",
+      "steps": [
+        "Adult places a dot in the paper margin beside one plain sentence.",
+        "Writer adds one color, shape, sound, or texture word near that line.",
+        "Writer copies the sentence with the new detail below it.",
+        "Adult asks which word made the picture clearer."
+      ]
+    },
+    {
+      "name": "Word Swap Ladder",
+      "bestFor": "Replacing tired words without a long lesson.",
+      "steps": [
+        "Adult underlines one simple word in the draft.",
+        "Writer lists three possible swaps in the margin.",
+        "Writer chooses one swap and rewrites only that sentence.",
+        "Adult reads both versions and asks which one fits the made-up scene."
+      ]
+    },
+    {
+      "name": "Sentence Stretch Strip",
+      "bestFor": "Writers with very short drafts.",
+      "steps": [
+        "Adult draws a bracket around one short sentence.",
+        "Writer answers who, where, or what else in the margin.",
+        "Writer adds the answer to the sentence without changing the whole draft.",
+        "Adult circles the added phrase so the stretch is visible."
+      ]
+    },
+    {
+      "name": "Order Arrow Move",
+      "bestFor": "Drafts where events feel out of sequence.",
+      "steps": [
+        "Adult writes first, next, finally on three small paper strips.",
+        "Writer places one story sentence under each strip.",
+        "Writer moves one strip to a clearer spot.",
+        "Adult asks what linking word the moved line now needs."
+      ]
+    },
+    {
+      "name": "Question In The Margin",
+      "bestFor": "Adding a next sentence when the story stalls.",
+      "steps": [
+        "Adult writes one gentle question in the margin.",
+        "Writer answers the question with one fictional detail.",
+        "Writer turns that answer into the next story sentence.",
+        "Adult draws an arrow from the question to the new sentence."
+      ]
+    },
+    {
+      "name": "Ending Tuck-In",
+      "bestFor": "Drafts that stop suddenly.",
+      "steps": [
+        "Adult brackets the last line and chooses one ending card.",
+        "Writer adds one final object, sound, or choice in the margin.",
+        "Writer writes a new closing line that uses the margin idea.",
+        "Adult reads the old last line and the new last line."
+      ]
+    }
+  ],
+  "takeHomeRevisionSlips": [
+    {
+      "title": "Margin Detail Dot",
+      "time": "5 minutes",
+      "skill": "detail revision",
+      "direction": "Choose one plain story sentence and add one tiny visual detail in the margin: ____________________.",
+      "familyLine": "Family adult names the detail that made the scene clearer: ____________________."
+    },
+    {
+      "title": "Swap A Small Word",
+      "time": "5 minutes",
+      "skill": "word swap revision",
+      "direction": "Underline one word and replace it with a stronger fiction word: ____________________.",
+      "familyLine": "Family adult hears the new word and writes what changed: ____________________."
+    },
+    {
+      "title": "Stretch The Line",
+      "time": "6 minutes",
+      "skill": "sentence stretch",
+      "direction": "Add who, where, or what else to one short sentence: ____________________.",
+      "familyLine": "Family adult points to the added phrase here: ____________________."
+    },
+    {
+      "title": "First Next Finally",
+      "time": "7 minutes",
+      "skill": "order revision",
+      "direction": "Move one story beat to a clearer place and write the new order: ____________________.",
+      "familyLine": "Family adult says which part now comes first: ____________________."
+    },
+    {
+      "title": "Margin Question",
+      "time": "6 minutes",
+      "skill": "question revision",
+      "direction": "Write one question the character could answer next: ____________________.",
+      "familyLine": "Family adult suggests one possible answer: ____________________."
+    },
+    {
+      "title": "Place Closer",
+      "time": "8 minutes",
+      "skill": "setting revision",
+      "direction": "Add one setting clue beside a line in the margin: ____________________.",
+      "familyLine": "Family adult says what the setting feels like now: ____________________."
+    },
+    {
+      "title": "Character Notice",
+      "time": "7 minutes",
+      "skill": "character revision",
+      "direction": "Add one thing the character notices or chooses in the margin: ____________________.",
+      "familyLine": "Family adult names the character clue they heard: ____________________."
+    },
+    {
+      "title": "Object Job",
+      "time": "8 minutes",
+      "skill": "object revision",
+      "direction": "Give one pretend object a job in the story: ____________________.",
+      "familyLine": "Family adult says why the object matters: ____________________."
+    },
+    {
+      "title": "Mood Mark",
+      "time": "6 minutes",
+      "skill": "mood revision",
+      "direction": "Change one line so the mood feels calm, silly, curious, or cozy: ____________________.",
+      "familyLine": "Family adult names the mood that came through: ____________________."
+    },
+    {
+      "title": "Sound In The Edge",
+      "time": "5 minutes",
+      "skill": "sound revision",
+      "direction": "Add one gentle sound word in the notebook margin: ____________________.",
+      "familyLine": "Family adult repeats the sound and adds one action: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "One revision mark I used today was ____________________.",
+    "The line that became clearer was ____________________.",
+    "My best word swap was ____________________.",
+    "A detail I added in the margin was ____________________.",
+    "The character changed when I added ____________________.",
+    "The setting became easier to picture after ____________________.",
+    "The ending I tucked in was ____________________.",
+    "Next time I want a margin card about ____________________."
+  ],
+  "cards": [
+    {
+      "id": "notebook-margin-revision-card-01",
+      "title": "Moon Muffin Market Detail Sprinkle",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "revisionSkill": "detail revision",
+      "useCase": "Adult-led printable notebook-margin revision card for adding one tiny market detail to a fictional moon muffin line: ____________________.",
+      "adultSetup": "Print the card, fold the margin strip beside a blank page, and name one made-up muffin stall together: ____________________.",
+      "kidDirection": "Write one short market line, then use the margin to add a small color, shape, or smell detail: ____________________.",
+      "marginPrompt": "Margin prompt: Draw or write one tiny moon muffin detail beside the line: ____________________.",
+      "draftLinePrompt": "Draft line: The Moon Muffin Market opened when ____________________.",
+      "revisionMovePrompt": "Revision move: Add one exact detail that makes the muffin easy to picture: ____________________.",
+      "newLinePrompt": "New line: The Moon Muffin Market opened when ____________________.",
+      "checkBackPrompt": "Check back: Point to the new detail and say what picture it adds: ____________________.",
+      "quietOptionLine": "Quiet option: Add only one margin word before rewriting the line: ____________________.",
+      "takeHomeLine": "Take-home line: Use this card again with a new pretend moon muffin detail: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-02",
+      "title": "Puddle Planet Parcel Word Swap",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "revisionSkill": "word swap revision",
+      "useCase": "Adult-led printable notebook-margin revision card for swapping one plain parcel word in a fictional puddle post office line: ____________________.",
+      "adultSetup": "Print the card, place it beside notebook paper, and circle one plain word the writer can trade: ____________________.",
+      "kidDirection": "Write a puddle parcel line, choose one plain word, and swap it for a juicier pretend word: ____________________.",
+      "marginPrompt": "Margin prompt: List two replacement words for the puddle parcel: ____________________.",
+      "draftLinePrompt": "Draft line: The puddle parcel moved across the counter and ____________________.",
+      "revisionMovePrompt": "Revision move: Replace one plain word with a clearer splashy word: ____________________.",
+      "newLinePrompt": "New line: The puddle parcel ____________________ across the counter and ____________________.",
+      "checkBackPrompt": "Check back: Underline the swapped word and check that the sentence still makes sense: ____________________.",
+      "quietOptionLine": "Quiet option: Whisper the two word choices to an adult, then write one: ____________________.",
+      "takeHomeLine": "Take-home line: Try one more word swap for a new Puddle Planet parcel: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-03",
+      "title": "Buttonwood Library Train Sentence Stretch",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "revisionSkill": "sentence stretch",
+      "useCase": "Adult-led printable notebook-margin revision card for stretching a fictional library train sentence with one useful clue: ____________________.",
+      "adultSetup": "Print the card, draw a tiny train-car box in the notebook margin, and choose where the extra clue can ride: ____________________.",
+      "kidDirection": "Write one Buttonwood Library Train sentence, then stretch it by adding where, when, or why: ____________________.",
+      "marginPrompt": "Margin prompt: Pick one stretch clue for the train car: where, when, or why: ____________________.",
+      "draftLinePrompt": "Draft line: The Buttonwood Library Train rolled past ____________________.",
+      "revisionMovePrompt": "Revision move: Stretch the sentence with one clue from the margin box: ____________________.",
+      "newLinePrompt": "New line: The Buttonwood Library Train rolled past ____________________ because ____________________.",
+      "checkBackPrompt": "Check back: Read both lines and circle the one that gives the reader more help: ____________________.",
+      "quietOptionLine": "Quiet option: Write only the extra clue in the margin before the full new line: ____________________.",
+      "takeHomeLine": "Take-home line: Stretch another library train sentence with a different clue: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-04",
+      "title": "Button Bakery Map Mix-Up Order Fix",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "revisionSkill": "order revision",
+      "useCase": "Adult-led printable notebook-margin revision card for putting a fictional Button Bakery mix-up line into clearer story order: ____________________.",
+      "adultSetup": "Print the card, draw three crumb dots in the margin, and ask the writer to number what happens first, next, and last: ____________________.",
+      "kidDirection": "Write a mixed-up bakery sentence, then number the margin crumbs and rewrite the events in a smoother order: ____________________.",
+      "marginPrompt": "Margin prompt: Number the three paper crumb clues first, next, and last: ____________________.",
+      "draftLinePrompt": "Draft line: The map was fixed after the button tray moved and the baker found ____________________.",
+      "revisionMovePrompt": "Revision move: Put the bakery events in the order a reader needs: ____________________.",
+      "newLinePrompt": "New line: First ____________________, next ____________________, and last ____________________.",
+      "checkBackPrompt": "Check back: Trace the three crumb numbers and make sure no step is missing: ____________________.",
+      "quietOptionLine": "Quiet option: Number only the crumbs first, then write the new first step: ____________________.",
+      "takeHomeLine": "Take-home line: Use this order card for another pretend Button Bakery map mix-up: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-05",
+      "title": "Teacup Town Weather Window Mood Tint",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "revisionSkill": "mood revision",
+      "useCase": "Adult-led printable notebook-margin revision card for changing the mood of a fictional Teacup Town weather-window line: ____________________.",
+      "adultSetup": "Print the card, place two color pencils nearby, and let the writer choose one gentle weather mood for the margin: ____________________.",
+      "kidDirection": "Write one weather-window line, then revise it so the mood feels clearer through color, sound, or motion: ____________________.",
+      "marginPrompt": "Margin prompt: Choose one mood tint for the teacup window: calm, curious, or bright: ____________________.",
+      "draftLinePrompt": "Draft line: The Teacup Town weather window showed ____________________.",
+      "revisionMovePrompt": "Revision move: Add one mood clue without naming the feeling directly: ____________________.",
+      "newLinePrompt": "New line: The Teacup Town weather window showed ____________________, and ____________________.",
+      "checkBackPrompt": "Check back: Point to the word or detail that shows the mood best: ____________________.",
+      "quietOptionLine": "Quiet option: Shade one tiny margin square, then write the mood clue: ____________________.",
+      "takeHomeLine": "Take-home line: Try the mood tint again with a new pretend window scene: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-06",
+      "title": "Pocket Park Tiny Bench Detail",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "revisionSkill": "setting revision",
+      "useCase": "Adult-led printable notebook-margin revision card for adding a clearer pretend pocket-park place clue: ____________________.",
+      "adultSetup": "Print the card and ask the writer to draw one small park mark in the notebook margin before writing: ____________________.",
+      "kidDirection": "Find a plain park sentence and add one tiny bench, leaf, sign, or path clue beside it: ____________________.",
+      "marginPrompt": "Margin prompt: Sketch one pocket-park detail that belongs beside the notice board: ____________________.",
+      "draftLinePrompt": "Draft line: The notice board stood in the park while ____________________.",
+      "revisionMovePrompt": "Revision move: Add one place detail before the action so the reader can picture the tiny park: ____________________.",
+      "newLinePrompt": "New line: Beside the notice board, ____________________.",
+      "checkBackPrompt": "Check back: Does the new detail show where the story is happening without naming the park again: ____________________.",
+      "quietOptionLine": "Quiet option: Point to the margin drawing and copy one detail word into the sentence: ____________________.",
+      "takeHomeLine": "Take-home line: Use this card again with a new pretend park object in the margin: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-07",
+      "title": "Spoon Ferry Word Swap",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "revisionSkill": "word swap revision",
+      "useCase": "Adult-led printable notebook-margin revision card for swapping one plain harbor word for a sharper pretend word: ____________________.",
+      "adultSetup": "Print the card and place two pencils beside the draft line so the writer can choose one stronger word: ____________________.",
+      "kidDirection": "Underline one plain word about the spoon ferry, then trade it for a word with a clearer picture: ____________________.",
+      "marginPrompt": "Margin prompt: Write two ferry words in the notebook margin, then circle the livelier one: ____________________.",
+      "draftLinePrompt": "Draft line: The spoon ferry moved across Lunchbox Harbor with ____________________.",
+      "revisionMovePrompt": "Revision move: Swap moved for a word like glided, bobbed, slid, or another fitting harbor word: ____________________.",
+      "newLinePrompt": "New line: The spoon ferry ____________________ across Lunchbox Harbor with ____________________.",
+      "checkBackPrompt": "Check back: Does the swapped word make the ferry easier to imagine: ____________________.",
+      "quietOptionLine": "Quiet option: Circle only one word in the margin and whisper it to the adult helper: ____________________.",
+      "takeHomeLine": "Take-home line: Try one more word swap on a new pretend lunchbox harbor sentence: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-08",
+      "title": "Acorn Avenue Helper Clue",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "revisionSkill": "character revision",
+      "useCase": "Adult-led printable notebook-margin revision card for adding a clear fictional helper clue in an errand office scene: ____________________.",
+      "adultSetup": "Print the card and ask the writer to choose one pretend office helper before changing the line: ____________________.",
+      "kidDirection": "Give the Acorn Avenue helper one action, tool, or habit that shows who they are: ____________________.",
+      "marginPrompt": "Margin prompt: Draw or list one helper clue, such as a stamp pad, tiny clipboard, or careful tap: ____________________.",
+      "draftLinePrompt": "Draft line: The helper at Acorn Avenue said the errand was ready: ____________________.",
+      "revisionMovePrompt": "Revision move: Add one helper clue before the helper speaks so the character feels specific: ____________________.",
+      "newLinePrompt": "New line: The helper with ____________________ said the errand was ready: ____________________.",
+      "checkBackPrompt": "Check back: Can someone tell something about the helper from the new clue: ____________________.",
+      "quietOptionLine": "Quiet option: Choose the helper clue by pointing, then write only the changed phrase: ____________________.",
+      "takeHomeLine": "Take-home line: Save this card for another pretend office helper with a different clue: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-09",
+      "title": "Seed Map Step Order",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "revisionSkill": "order revision",
+      "useCase": "Adult-led printable notebook-margin revision card for putting a fictional map-room moment into a clearer order: ____________________.",
+      "adultSetup": "Print the card and have the writer number three tiny margin boxes before revising the line: ____________________.",
+      "kidDirection": "Choose which map-room action happens first, next, and last, then rewrite the sentence in that order: ____________________.",
+      "marginPrompt": "Margin prompt: Number three seed-library steps in the margin: choose tag, unfold map, mark shelf: ____________________.",
+      "draftLinePrompt": "Draft line: The map room helper marked the shelf after the tag and map were ready: ____________________.",
+      "revisionMovePrompt": "Revision move: Rewrite the line so the steps happen in the same order as your margin numbers: ____________________.",
+      "newLinePrompt": "New line: First ____________________, next ____________________, and last ____________________.",
+      "checkBackPrompt": "Check back: Do the margin numbers match the new sentence order: ____________________.",
+      "quietOptionLine": "Quiet option: Number the boxes only, then ask the adult to read the order aloud: ____________________.",
+      "takeHomeLine": "Take-home line: Use this card to reorder three steps in a new seed-library map scene: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-10",
+      "title": "Rain Gauge Railway Sound Line",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "revisionSkill": "sound revision",
+      "useCase": "Adult-led printable notebook-margin revision card for adding a make-believe railway sound to a notebook draft: ____________________.",
+      "adultSetup": "Print the card and invite the writer to list two soft railway sounds in the margin before revising: ____________________.",
+      "kidDirection": "Add one sound that fits the rain-gauge train, station, ticket, rail, or tiny raindrop meter: ____________________.",
+      "marginPrompt": "Margin prompt: Write one railway sound word and one rain-gauge sound word in the margin: ____________________.",
+      "draftLinePrompt": "Draft line: The Rain Gauge Railway train arrived at the little platform: ____________________.",
+      "revisionMovePrompt": "Revision move: Add one sound near the train arrival so the line feels more alive: ____________________.",
+      "newLinePrompt": "New line: With a ____________________, the Rain Gauge Railway train arrived at the little platform: ____________________.",
+      "checkBackPrompt": "Check back: Does the added sound fit the gentle railway scene: ____________________.",
+      "quietOptionLine": "Quiet option: Tap the sound rhythm once on the paper, then write the sound word: ____________________.",
+      "takeHomeLine": "Take-home line: Try this card again with a new pretend train sound in the margin: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-11",
+      "title": "Moss Message Question Curl",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "revisionSkill": "question revision",
+      "useCase": "Adult-led printable notebook-margin revision card for adding one useful question beside a fictional moss message scene: ____________________.",
+      "adultSetup": "Print the card, fold the margin strip, and pick one moss message that still needs an answer: ____________________.",
+      "kidDirection": "Write a question in the margin that makes the observatory scene clearer or more surprising: ____________________.",
+      "marginPrompt": "Margin prompt: What does the moss message make the watcher wonder next? ____________________.",
+      "draftLinePrompt": "Draft line: The moss message glowed on the observatory stone and said ____________________.",
+      "revisionMovePrompt": "Revision move: Add one question word, who, what, where, when, why, or how, to open a better story door: ____________________.",
+      "newLinePrompt": "New line: The watcher leaned closer and asked, ____________________.",
+      "checkBackPrompt": "Check back: Does the question point to a detail the next sentence can answer? ____________________.",
+      "quietOptionLine": "Quiet option: Write only the question word and one moss clue: ____________________.",
+      "takeHomeLine": "Take-home line: Use the same margin trick on another pretend message: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-12",
+      "title": "Tidepool Timekeepers Tiny Detail",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "revisionSkill": "detail revision",
+      "useCase": "Adult-led printable notebook-margin revision card for adding one tiny lab detail to a fictional tidepool scene: ____________________.",
+      "adultSetup": "Print the card and invite the writer to choose one pretend lab item, shell clock, bubble jar, or kelp ruler: ____________________.",
+      "kidDirection": "Place one small detail in the margin, then add it to the draft line: ____________________.",
+      "marginPrompt": "Margin prompt: Which tiny tidepool item shows the timekeepers are busy? ____________________.",
+      "draftLinePrompt": "Draft line: The tidepool timekeepers hurried across the table before the bell rang: ____________________.",
+      "revisionMovePrompt": "Revision move: Add one size, color, sound, or motion detail that readers can picture: ____________________.",
+      "newLinePrompt": "New line: The tidepool timekeepers hurried past ____________________ before the bell rang.",
+      "checkBackPrompt": "Check back: Does the new detail help the lab feel specific instead of plain? ____________________.",
+      "quietOptionLine": "Quiet option: Circle one lab item and write only its best describing word: ____________________.",
+      "takeHomeLine": "Take-home line: Add one more pretend lab detail in a notebook margin later: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-13",
+      "title": "Revision River Word Ferry",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "revisionSkill": "word swap revision",
+      "useCase": "Adult-led printable notebook-margin revision card for swapping one vague word in a fictional ferry sentence: ____________________.",
+      "adultSetup": "Print the card, draw a small margin ferry, and choose one flat word to send across the river: ____________________.",
+      "kidDirection": "Write the old word on the ferry, then land it as a stronger word in the new line: ____________________.",
+      "marginPrompt": "Margin prompt: Which word feels too plain for the river ferry scene? ____________________.",
+      "draftLinePrompt": "Draft line: The ferry moved across the river with a big thing in its basket: ____________________.",
+      "revisionMovePrompt": "Revision move: Swap one plain word for a concrete word that names the object, action, or feeling: ____________________.",
+      "newLinePrompt": "New line: The ferry ____________________ across the river with ____________________ in its basket.",
+      "checkBackPrompt": "Check back: Did the swapped word make the scene easier to imagine? ____________________.",
+      "quietOptionLine": "Quiet option: Write old word arrow new word in the margin: ____________________.",
+      "takeHomeLine": "Take-home line: Try one more word ferry swap on a different sentence: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-14",
+      "title": "Clue Label Tower Order Arrow",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "revisionSkill": "order revision",
+      "useCase": "Adult-led printable notebook-margin revision card for moving a fictional tower clue into a clearer order: ____________________.",
+      "adultSetup": "Print the card and ask the writer to number three pretend label clues in the margin: ____________________.",
+      "kidDirection": "Put the clues in the order a museum helper would notice them, then rewrite the line: ____________________.",
+      "marginPrompt": "Margin prompt: Which clue should appear first, the label, the shelf, or the hidden tag? ____________________.",
+      "draftLinePrompt": "Draft line: The hidden tag, tall shelf, and blue label all gave the helper a clue: ____________________.",
+      "revisionMovePrompt": "Revision move: Move the clue that readers need first to the front of the sentence: ____________________.",
+      "newLinePrompt": "New line: First the helper noticed ____________________, then ____________________, and finally ____________________.",
+      "checkBackPrompt": "Check back: Does the new order make the tower mystery easier to follow? ____________________.",
+      "quietOptionLine": "Quiet option: Write 1, 2, 3 beside the clues before changing the line: ____________________.",
+      "takeHomeLine": "Take-home line: Use margin numbers to sort three clues in another invented museum scene: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-15",
+      "title": "Compass Craft Setting Edge",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "revisionSkill": "setting revision",
+      "useCase": "Adult-led printable notebook-margin revision card for adding a clearer fictional craft-academy place cue: ____________________.",
+      "adultSetup": "Print the card and choose one academy corner, map table, ribbon shelf, tool bench, or compass mat: ____________________.",
+      "kidDirection": "Use the margin to name where the action happens, then fold that place cue into the sentence: ____________________.",
+      "marginPrompt": "Margin prompt: Where exactly in Compass Craft Academy does this moment happen? ____________________.",
+      "draftLinePrompt": "Draft line: The apprentice tested the compass before choosing the next path: ____________________.",
+      "revisionMovePrompt": "Revision move: Add one place cue and one nearby object so the setting has edges: ____________________.",
+      "newLinePrompt": "New line: Beside ____________________, the apprentice tested the compass before choosing ____________________.",
+      "checkBackPrompt": "Check back: Can a reader point to the place in the scene after your change? ____________________.",
+      "quietOptionLine": "Quiet option: Draw a tiny place box and label the nearest object: ____________________.",
+      "takeHomeLine": "Take-home line: Add one place cue to another academy sentence on paper: ____________________."
+    },
+    {
+      "id": "notebook-margin-revision-card-16",
+      "title": "Binding Day Last-Line Knot",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "revisionSkill": "ending revision",
+      "useCase": "Adult-led printable notebook-margin revision card for strengthening the last line of a fictional boardwalk booklet: ____________________.",
+      "adultSetup": "Print the card, fold the margin like a booklet flap, and choose one final object from the boardwalk table: ____________________.",
+      "kidDirection": "Write the ending object in the margin, then use it to make the last line feel complete: ____________________.",
+      "marginPrompt": "Margin prompt: What final object can tie the Binding Day booklet together? ____________________.",
+      "draftLinePrompt": "Draft line: At the end of Binding Day, everyone looked at the finished booklet: ____________________.",
+      "revisionMovePrompt": "Revision move: Add one final object, action, or choice that shows what changed by the end: ____________________.",
+      "newLinePrompt": "New line: At the end of Binding Day, ____________________ showed that the booklet was ready.",
+      "checkBackPrompt": "Check back: Does the last line feel connected to the first important idea? ____________________.",
+      "quietOptionLine": "Quiet option: Write the final object first, then build one ending sentence around it: ____________________.",
+      "takeHomeLine": "Take-home line: Try a new last-line knot for another pretend booklet ending: ____________________."
+    }
+  ]
+}
