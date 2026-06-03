@@ -1,5 +1,5 @@
 import { execFileSync } from 'node:child_process'
-import { readdirSync, readFileSync } from 'node:fs'
+import { copyFileSync, mkdirSync, readdirSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { describe, expect, it } from 'vitest'
@@ -31,6 +31,19 @@ function currentProductArtifactCount() {
   ).length
 }
 
+function runVerifierExpectingFailure() {
+  try {
+    execFileSync('node', ['scripts/validate-content-batch.mjs'], {
+      cwd: root,
+      encoding: 'utf8',
+      stdio: 'pipe',
+    })
+  } catch (error) {
+    return `${error.stdout ?? ''}${error.stderr ?? ''}`
+  }
+  throw new Error('Expected content verifier to fail.')
+}
+
 describe('content batch verifier summary', () => {
   it('reports image and artifact totals from the current manifests', () => {
     const output = execFileSync('node', ['scripts/validate-content-batch.mjs'], {
@@ -43,5 +56,101 @@ describe('content batch verifier summary', () => {
     expect(output).toContain('75 local world/product images')
     expect(output).toContain('48 static product pages')
     expect(output).toContain('48 product artifacts')
+  })
+
+  it('fails closed if a Batch55 generated image exists before the static page is rendered', () => {
+    const imageManifest = readJson('content/image-queue/2026-06-03-batch55-images.json').images[0]
+    const imagePath = resolve(
+      root,
+      'public/images/plotsprout/batch55/expanding-file-story-scene-chain-card-pack.jpg',
+    )
+    const webpPath = resolve(
+      root,
+      'public/images/plotsprout/batch55/expanding-file-story-scene-chain-card-pack.webp',
+    )
+    const sidecarPath = resolve(
+      root,
+      'content/image-runs/batch55/expanding-file-story-scene-chain-card-pack.json',
+    )
+    const productPageDir = resolve(root, 'public/expanding-file-story-scene-chain-card-pack')
+    const productPagePath = resolve(productPageDir, 'index.html')
+
+    rmSync(imagePath, { force: true })
+    rmSync(webpPath, { force: true })
+    rmSync(sidecarPath, { force: true })
+    rmSync(productPageDir, { recursive: true, force: true })
+    mkdirSync(dirname(imagePath), { recursive: true })
+    mkdirSync(dirname(sidecarPath), { recursive: true })
+    copyFileSync(resolve(root, 'public/images/plotsprout/batch54/accordion-folder-story-arc-card-pack.jpg'), imagePath)
+    copyFileSync(resolve(root, 'public/images/plotsprout/batch54/accordion-folder-story-arc-card-pack.webp'), webpPath)
+    writeFileSync(
+      sidecarPath,
+      `${JSON.stringify(
+        {
+          slug: imageManifest.slug,
+          prompt: imageManifest.prompt,
+          negativePrompt: imageManifest.negativePrompt,
+          steps: 42,
+          seed: imageManifest.seed,
+          outputJpeg: imageManifest.outputJpeg,
+          outputWebp: imageManifest.outputWebp,
+        },
+        null,
+        2,
+      )}\n`,
+    )
+
+    try {
+      const output = runVerifierExpectingFailure()
+      expect(output).toContain('static output is missing after Batch 55 generated outputs started')
+    } finally {
+      rmSync(imagePath, { force: true })
+      rmSync(webpPath, { force: true })
+      rmSync(sidecarPath, { force: true })
+      rmSync(productPagePath, { force: true })
+      rmSync(productPageDir, { recursive: true, force: true })
+    }
+  })
+
+  it('fails closed if Batch55 artifact generation leaves a partial artifact set', () => {
+    const artifactDir = resolve(root, 'product-build/expanding-file-story-scene-chain-card-pack')
+    const pdfPath = resolve(artifactDir, 'Expanding-File-Story-Scene-Chain-Card-Pack.pdf')
+    const product = readJson('content/products/batch5-products.json').products.find(
+      (candidate) => candidate.slug === 'expanding-file-story-scene-chain-card-pack',
+    )
+    const productPageDir = resolve(root, 'public/expanding-file-story-scene-chain-card-pack')
+    const productPagePath = resolve(productPageDir, 'index.html')
+
+    rmSync(artifactDir, { recursive: true, force: true })
+    rmSync(productPageDir, { recursive: true, force: true })
+    mkdirSync(artifactDir, { recursive: true })
+    mkdirSync(productPageDir, { recursive: true })
+    writeFileSync(pdfPath, '%PDF-1.7\n%%EOF\n')
+    writeFileSync(
+      productPagePath,
+      [
+        '<!doctype html>',
+        '<html lang="en">',
+        '<head>',
+        `<title>${product.title}</title>`,
+        `<meta name="description" content="${product.summary}.">`,
+        '</head>',
+        '<body>',
+        `<h1>${product.title}</h1>`,
+        `<p>${product.pricePoint}</p>`,
+        `<p>${product.checkoutNote}</p>`,
+        '</body>',
+        '</html>',
+      ].join('\n'),
+    )
+
+    try {
+      const output = runVerifierExpectingFailure()
+      expect(output).toContain('artifact set is incomplete after artifact generation started')
+      expect(output).toContain('expanding-file-story-scene-chain-card-pack.zip')
+    } finally {
+      rmSync(artifactDir, { recursive: true, force: true })
+      rmSync(productPageDir, { recursive: true, force: true })
+    }
   })
 })

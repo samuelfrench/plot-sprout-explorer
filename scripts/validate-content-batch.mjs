@@ -504,6 +504,14 @@ function validateImageFile(path, label, format) {
   expect(dimensions.height >= 768, `${label} height ${dimensions.height} is smaller than 768.`)
 }
 
+function anyPathExists(paths) {
+  return paths.some((path) => existsSync(path))
+}
+
+function allPathsExist(paths) {
+  return paths.every((path) => existsSync(path))
+}
+
 function validateWorld(world, file, slugs) {
   const label = `${file}:${world.slug ?? 'missing-slug'}`
   for (const key of [
@@ -4694,7 +4702,7 @@ function validateBatch55Image(image, imageSlugs) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
-function validateProduct(product, productSlugs, worldSlugs) {
+function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
     'slug',
@@ -5270,6 +5278,9 @@ function validateProduct(product, productSlugs, worldSlugs) {
 
   const renderedPath = resolve(root, 'public', product.slug, 'index.html')
   if (!existsSync(renderedPath)) {
+    if (product.slug === 'expanding-file-story-scene-chain-card-pack' && options.batch55GenerationStarted) {
+      fail(`${label} static output is missing after Batch 55 generated outputs started: ${renderedPath}`)
+    }
     expect(
       product.slug === 'expanding-file-story-scene-chain-card-pack',
       `${label} static output is missing: ${renderedPath}`,
@@ -6471,6 +6482,11 @@ expect(
   batch55ImageSlugs.has('expanding-file-story-scene-chain-card-pack'),
   'Batch 55 images missing expanding-file-story-scene-chain-card-pack.',
 )
+const batch55ImagePaths = batch55Images.images.flatMap((image) => [
+  resolve(root, image.outputJpeg),
+  resolve(root, image.outputWebp),
+  resolve(root, image.sidecar),
+])
 
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
@@ -6479,7 +6495,24 @@ expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt 
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
 expect(products.products.length === 48, `Expected 48 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
-products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
+let batch55GeneratedOutputPaths = [...batch55ImagePaths]
+const batch55ProductRecord = products.products.find(
+  (product) => product.slug === 'expanding-file-story-scene-chain-card-pack',
+)
+if (batch55ProductRecord) {
+  batch55GeneratedOutputPaths.push(resolve(root, 'public', batch55ProductRecord.slug, 'index.html'))
+}
+const productArtifactPathForGeneration = resolve(root, 'content', 'product-artifacts', 'expanding-file-story-scene-chain-card-pack.json')
+if (existsSync(productArtifactPathForGeneration)) {
+  const artifactSourceForGeneration = readJson(productArtifactPathForGeneration)
+  batch55GeneratedOutputPaths.push(
+    ...Object.values(artifactSourceForGeneration.artifact ?? {}).map((relativePath) => resolve(root, relativePath)),
+  )
+}
+const batch55GenerationStarted = anyPathExists(batch55GeneratedOutputPaths)
+products.products.forEach((product) =>
+  validateProduct(product, productSlugs, worldSlugs, { batch55GenerationStarted }),
+)
 for (const requiredProductSlug of [
   'rainy-day-story-quest-pack',
   'homeschool-season-story-bundle',
@@ -10225,10 +10258,17 @@ expect(
   expandingFileStorySceneChainSourceFileErrors.length === 0,
   `Expanding File Story Scene Chain Card Pack sourceFiles failed validation:\n${expandingFileStorySceneChainSourceFileErrors.join('\n')}`,
 )
-const expandingFileStorySceneChainArtifactFilesExist = Object.values(expandingFileStorySceneChainSource.artifact).every(
-  (relativePath) => existsSync(resolve(root, relativePath)),
+const expandingFileStorySceneChainArtifactPaths = Object.values(expandingFileStorySceneChainSource.artifact).map((relativePath) =>
+  resolve(root, relativePath),
 )
-if (expandingFileStorySceneChainArtifactFilesExist) {
+const expandingFileStorySceneChainAnyArtifactFilesExist = anyPathExists(expandingFileStorySceneChainArtifactPaths)
+if (expandingFileStorySceneChainAnyArtifactFilesExist) {
+  for (const artifactPath of expandingFileStorySceneChainArtifactPaths) {
+    expect(
+      existsSync(artifactPath),
+      `Expanding File Story Scene Chain Card Pack artifact set is incomplete after artifact generation started: ${artifactPath}`,
+    )
+  }
   const expandingFileStorySceneChainExpectedPdfPages = expandingFileStorySceneChainSource.cards.length + 5
   const expandingFileStorySceneChainArtifactStatus = inspectArtifactFiles(root, expandingFileStorySceneChainSource.artifact, {
     expectedPdfPages: expandingFileStorySceneChainExpectedPdfPages,
