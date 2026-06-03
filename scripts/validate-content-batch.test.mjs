@@ -72,9 +72,9 @@ describe('content batch verifier summary', () => {
 
     expect(output).toContain(`${currentLocalImageCount()} local world/product images`)
     expect(output).toContain(`${currentProductArtifactCount()} product artifacts`)
-    expect(output).toContain('76 local world/product images')
-    expect(output).toContain('49 static product pages')
-    expect(output).toContain('49 product artifacts')
+    expect(output).toContain('77 local world/product images')
+    expect(output).toContain('50 static product pages')
+    expect(output).toContain('50 product artifacts')
   })
 
   it('fails closed if a Batch55 generated image exists before the static page is rendered', () => {

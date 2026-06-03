@@ -4968,6 +4968,132 @@
           "summary": "A rain boot world for using one pretend boot print across the trail."
         }
       ]
+    },
+    {
+      "slug": "pocket-folder-story-goal-path-card-pack",
+      "title": "Pocket Folder Story Goal Path Card Pack",
+      "pricePoint": "$87",
+      "status": "checkout_pending",
+      "headline": "A printable pocket folder card pack for private paper goal paths.",
+      "summary": "Sixteen adult-led pocket folder cards help kids connect a fictional want, small snag, first try, rethink, finish note, and pocket label.",
+      "heroImage": "images/plotsprout/batch57/pocket-folder-story-goal-path-card-pack.jpg",
+      "ctaLabel": "Request goal path card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Pocket%20Folder%20Story%20Goal%20Path%20Card%20Pack",
+      "checkoutNote": "Checkout is pending; this static pocket folder story goal path card pack page is prepared for launch notice requests but does not accept orders yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "acorn-avenue-errand-office",
+        "pocket-park-notice-board",
+        "mitten-market-lost-ticket",
+        "penny-path-compass-shop",
+        "rain-boot-route-rangers",
+        "greenhouse-gear-garden",
+        "moss-message-observatory",
+        "rain-gauge-railway",
+        "pond-bridge-blueprint-club",
+        "compost-clock-workshop",
+        "chapter-gate-greenhouse",
+        "binding-day-boardwalk",
+        "blue-pencil-observatory",
+        "index-card-theater-club",
+        "compass-craft-academy",
+        "almost-invention-workshop"
+      ],
+      "includedPages": [
+        "Sixteen printable pocket folder goal path cards",
+        "Adult setup guide",
+        "Fictional goal-path safety notes",
+        "Want prompts",
+        "Small snag prompts",
+        "First try prompts",
+        "Rethink prompts",
+        "Finish note prompts",
+        "Pocket label prompts",
+        "Six adult-led goal-path routines",
+        "Ten take-home goal slips",
+        "Local image-backed world menu",
+        "Printable PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one visible path from want to finish note",
+        "A tutoring or co-op table where writers connect one pretend goal without a screen",
+        "A calm pencil activity for linking one snag, one first try, and one rethink",
+        "A reluctant-writer activity that turns plot movement into small paper choices",
+        "A take-home goal slip set for restarting one pocket label note offline"
+      ],
+      "parentSteps": [
+        "Choose one goal-path routine before the activity starts.",
+        "Set out the pocket folder, cards, blank pages, pencils, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full page note.",
+        "Move from want to snag, first try, rethink, finish note, and pocket label.",
+        "Send one goal slip with a single blank so family adults can continue the paper path offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for carrying one helper want through a small office snag."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for turning one notice-board want into a clearer path."
+        },
+        {
+          "slug": "mitten-market-lost-ticket",
+          "summary": "A mitten market world for moving one lost-ticket want through a gentle snag."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "summary": "A compass shop world for checking one first try against a better direction mark."
+        },
+        {
+          "slug": "rain-boot-route-rangers",
+          "summary": "A rain boot world for guiding one ranger want toward a finish note."
+        },
+        {
+          "slug": "greenhouse-gear-garden",
+          "summary": "A greenhouse gear world for linking one gear-tag want to a calmer rethink."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for reading one message want through a paper snag."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A railway gauge world for moving one rail helper want toward a pocket label."
+        },
+        {
+          "slug": "pond-bridge-blueprint-club",
+          "summary": "A blueprint club world for turning one bridge idea into a connected goal path."
+        },
+        {
+          "slug": "compost-clock-workshop",
+          "summary": "A workshop clock world for sorting one mark, one first try, and one rethink."
+        },
+        {
+          "slug": "chapter-gate-greenhouse",
+          "summary": "A greenhouse gate world for carrying one longer want to a calm stopping point."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding boardwalk world for connecting one page-stack want to a folder label."
+        },
+        {
+          "slug": "blue-pencil-observatory",
+          "summary": "A blue pencil world for marking one chart want through a clearer finish note."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "summary": "An index card theater world for sorting one card keeper want into a path."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for bending one maze want toward a new paper choice."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "summary": "An almost-invention world for making one workshop want useful by the end."
+        }
+      ]
     }
   ]
 }

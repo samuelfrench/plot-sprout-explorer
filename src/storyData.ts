@@ -662,6 +662,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable manila folder story clue-trail cards with adult guide tools, clue-trail routines, and take-home clue slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'pocket-folder-story-goal-path-card-pack',
+    title: 'Pocket Folder Story Goal Path Card Pack',
+    pricePoint: '$87',
+    description:
+      'Sixteen printable pocket folder story goal-path cards with adult guide tools, goal-path routines, and take-home goal slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

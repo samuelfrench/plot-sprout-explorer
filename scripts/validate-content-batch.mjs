@@ -63,6 +63,8 @@ import {
   validateExpandingFileStorySceneChainCardPackSourceFiles,
   validateManilaFolderStoryClueTrailCardPackSource,
   validateManilaFolderStoryClueTrailCardPackSourceFiles,
+  validatePocketFolderStoryGoalPathCardPackSource,
+  validatePocketFolderStoryGoalPathCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -150,6 +152,7 @@ const batch53ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-ba
 const batch54ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch54-images.json')
 const batch55ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch55-images.json')
 const batch56ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch56-images.json')
+const batch57ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch57-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -230,6 +233,12 @@ const manilaFolderStoryClueTrailSourceFile = resolve(
   'product-artifacts',
   'manila-folder-story-clue-trail-card-pack.json',
 )
+const pocketFolderStoryGoalPathSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'pocket-folder-story-goal-path-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -282,6 +291,7 @@ const batch53ImagesBatchId = '2026-06-03-batch53-images'
 const batch54ImagesBatchId = '2026-06-03-batch54-images'
 const batch55ImagesBatchId = '2026-06-03-batch55-images'
 const batch56ImagesBatchId = '2026-06-03-batch56-images'
+const batch57ImagesBatchId = '2026-06-03-batch57-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -336,6 +346,7 @@ const safety =
 const expandingFileStorySceneChainSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.'
 const manilaFolderStoryClueTrailSafety = expandingFileStorySceneChainSafety
+const pocketFolderStoryGoalPathSafety = expandingFileStorySceneChainSafety
 const seoLanes = new Set([
   'creative writing prompts for kids',
   'story writing worksheets',
@@ -430,6 +441,7 @@ function validateNoBannedTerms(record, label) {
     .replaceAll(safety, '')
     .replaceAll(expandingFileStorySceneChainSafety, '')
     .replaceAll(manilaFolderStoryClueTrailSafety, '')
+    .replaceAll(pocketFolderStoryGoalPathSafety, '')
     .replace(/\bno\s+weapon(s)?\b/gi, '')
     .replace(/\bno\s+branded characters\b/gi, '')
     .replace(/\bno\s+scary harm\b/gi, '')
@@ -4794,6 +4806,90 @@ function validateBatch56Image(image, imageSlugs) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch57Image(image, imageSlugs) {
+  const label = `2026-06-03-batch57-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(
+    image.slug === 'pocket-folder-story-goal-path-card-pack',
+    `${label}.slug must be pocket-folder-story-goal-path-card-pack.`,
+  )
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 57 images.`)
+  imageSlugs.add(image.slug)
+  expect(image.outputJpeg === `public/images/plotsprout/batch57/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch57/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch57/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  expect(
+    image.prompt ===
+      'family-friendly top-down close-cropped catalog product photo on seamless white background, blank two-pocket paper folder, blank off-white goal path card stack, blank pocket label slips, quiet printable paper kit mockup, no writing',
+    `${label}.prompt must match the approved Batch57 hero prompt.`,
+  )
+  for (const phrase of [
+    'text',
+    'labels',
+    'logo',
+    'spiral binding',
+    'notebook',
+    'school',
+    'home',
+    'address',
+    'route',
+    'gps',
+    'schedule',
+    'screens',
+    'devices',
+    'public',
+    'upload',
+    'recording',
+    'camera',
+    'photo',
+    'audio',
+    'video',
+    'voice memo',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'food',
+    'allergy',
+    'medical',
+    'scary',
+    'weapons',
+    'bullying',
+    'plants',
+    'cups',
+    'bowls',
+    'desk decor',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  const generatedFileExists = [jpegPath, webpPath, sidecarPath].some((filePath) => existsSync(filePath))
+  if (!generatedFileExists) return
+
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -5204,6 +5300,14 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       minParentSteps: 5,
       maxWorldSlugs: 16,
     },
+    'pocket-folder-story-goal-path-card-pack': {
+      title: 'Pocket Folder Story Goal Path Card Pack',
+      pricePoint: '$87',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -5217,7 +5321,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   expect(/provider|checkout.*pending|checkout.*selected/i.test(product.checkoutNote), `${label}.checkoutNote must say checkout/provider is pending.`)
   const requiredProductSafety =
     product.slug === 'expanding-file-story-scene-chain-card-pack' ||
-    product.slug === 'manila-folder-story-clue-trail-card-pack'
+    product.slug === 'manila-folder-story-clue-trail-card-pack' ||
+    product.slug === 'pocket-folder-story-goal-path-card-pack'
       ? expandingFileStorySceneChainSafety
       : safety
   expect(product.safetyNote.includes(requiredProductSafety), `${label}.safetyNote missing required safety sentence.`)
@@ -5381,6 +5486,9 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
 
   const renderedPath = resolve(root, 'public', product.slug, 'index.html')
   if (!existsSync(renderedPath)) {
+    if (product.slug === 'pocket-folder-story-goal-path-card-pack' && options.batch57GenerationStarted) {
+      fail(`${label} static output is missing after Batch 57 generated outputs started: ${renderedPath}`)
+    }
     if (product.slug === 'manila-folder-story-clue-trail-card-pack' && options.batch56GenerationStarted) {
       fail(`${label} static output is missing after Batch 56 generated outputs started: ${renderedPath}`)
     }
@@ -5389,7 +5497,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
     }
     expect(
       product.slug === 'expanding-file-story-scene-chain-card-pack' ||
-        product.slug === 'manila-folder-story-clue-trail-card-pack',
+        product.slug === 'manila-folder-story-clue-trail-card-pack' ||
+        product.slug === 'pocket-folder-story-goal-path-card-pack',
       `${label} static output is missing: ${renderedPath}`,
     )
     return
@@ -6616,12 +6725,33 @@ const batch56ImagePaths = batch56Images.images.flatMap((image) => [
   resolve(root, image.sidecar),
 ])
 
+expect(existsSync(batch57ImagesFile), `Missing Batch 57 image manifest: ${batch57ImagesFile}`)
+const batch57Images = readJson(batch57ImagesFile)
+expect(
+  batch57Images.batchId === batch57ImagesBatchId,
+  `batch57 image manifest batchId must be ${batch57ImagesBatchId}.`,
+)
+expect(batch57Images.generatedAt === '2026-06-03', 'batch57 image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch57Images.images), 'batch57 image manifest images must be an array.')
+expect(batch57Images.images.length === 1, `Expected 1 Batch 57 image, found ${batch57Images.images.length}.`)
+const batch57ImageSlugs = new Set()
+batch57Images.images.forEach((image) => validateBatch57Image(image, batch57ImageSlugs))
+expect(
+  batch57ImageSlugs.has('pocket-folder-story-goal-path-card-pack'),
+  'Batch 57 images missing pocket-folder-story-goal-path-card-pack.',
+)
+const batch57ImagePaths = batch57Images.images.flatMap((image) => [
+  resolve(root, image.outputJpeg),
+  resolve(root, image.outputWebp),
+  resolve(root, image.sidecar),
+])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 49, `Expected 49 product records, found ${products.products.length}.`)
+expect(products.products.length === 50, `Expected 50 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 let batch55GeneratedOutputPaths = [...batch55ImagePaths]
 const batch55ProductRecord = products.products.find(
@@ -6653,8 +6783,27 @@ if (existsSync(batch56ProductArtifactPathForGeneration)) {
   )
 }
 const batch56GenerationStarted = anyPathExists(batch56GeneratedOutputPaths)
+let batch57GeneratedOutputPaths = [...batch57ImagePaths]
+const batch57ProductRecord = products.products.find(
+  (product) => product.slug === 'pocket-folder-story-goal-path-card-pack',
+)
+if (batch57ProductRecord) {
+  batch57GeneratedOutputPaths.push(resolve(root, 'public', batch57ProductRecord.slug, 'index.html'))
+}
+const batch57ProductArtifactPathForGeneration = resolve(root, 'content', 'product-artifacts', 'pocket-folder-story-goal-path-card-pack.json')
+if (existsSync(batch57ProductArtifactPathForGeneration)) {
+  const artifactSourceForGeneration = readJson(batch57ProductArtifactPathForGeneration)
+  batch57GeneratedOutputPaths.push(
+    ...Object.values(artifactSourceForGeneration.artifact ?? {}).map((relativePath) => resolve(root, relativePath)),
+  )
+}
+const batch57GenerationStarted = anyPathExists(batch57GeneratedOutputPaths)
 products.products.forEach((product) =>
-  validateProduct(product, productSlugs, worldSlugs, { batch55GenerationStarted, batch56GenerationStarted }),
+  validateProduct(product, productSlugs, worldSlugs, {
+    batch55GenerationStarted,
+    batch56GenerationStarted,
+    batch57GenerationStarted,
+  }),
 )
 for (const requiredProductSlug of [
   'rainy-day-story-quest-pack',
@@ -6706,6 +6855,7 @@ for (const requiredProductSlug of [
   'accordion-folder-story-arc-card-pack',
   'expanding-file-story-scene-chain-card-pack',
   'manila-folder-story-clue-trail-card-pack',
+  'pocket-folder-story-goal-path-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -10585,6 +10735,122 @@ if (manilaFolderStoryClueTrailAnyArtifactFilesExist) {
   }
 }
 
+expect(
+  existsSync(pocketFolderStoryGoalPathSourceFile),
+  `Missing Batch 57 Pocket Folder Story Goal Path Card Pack source file: ${pocketFolderStoryGoalPathSourceFile}`,
+)
+const pocketFolderStoryGoalPathSource = readJson(pocketFolderStoryGoalPathSourceFile)
+expect(
+  pocketFolderStoryGoalPathSource.batchId === '2026-06-03-batch57',
+  'Pocket Folder Story Goal Path Card Pack source batchId must be 2026-06-03-batch57.',
+)
+const pocketFolderStoryGoalPathProduct = products.products.find(
+  (product) => product.slug === 'pocket-folder-story-goal-path-card-pack',
+)
+expect(
+  pocketFolderStoryGoalPathProduct,
+  'Missing Pocket Folder Story Goal Path Card Pack product record for Batch 57 artifact validation.',
+)
+const pocketFolderStoryGoalPathSourceErrors = validatePocketFolderStoryGoalPathCardPackSource(
+  pocketFolderStoryGoalPathSource,
+  pocketFolderStoryGoalPathProduct,
+  worldAgeBands,
+)
+expect(
+  pocketFolderStoryGoalPathSourceErrors.length === 0,
+  `Pocket Folder Story Goal Path Card Pack source failed validation:\n${pocketFolderStoryGoalPathSourceErrors.join('\n')}`,
+)
+const pocketFolderStoryGoalPathSourceFileErrors = validatePocketFolderStoryGoalPathCardPackSourceFiles(
+  pocketFolderStoryGoalPathSource,
+  root,
+)
+expect(
+  pocketFolderStoryGoalPathSourceFileErrors.length === 0,
+  `Pocket Folder Story Goal Path Card Pack sourceFiles failed validation:\n${pocketFolderStoryGoalPathSourceFileErrors.join('\n')}`,
+)
+const pocketFolderStoryGoalPathSummaryErrors = validateProductWorldSummaries(
+  pocketFolderStoryGoalPathProduct,
+  'Pocket Folder Story Goal Path Card Pack',
+)
+expect(
+  pocketFolderStoryGoalPathSummaryErrors.length === 0,
+  `Pocket Folder Story Goal Path Card Pack world summaries failed validation:\n${pocketFolderStoryGoalPathSummaryErrors.join('\n')}`,
+)
+const pocketFolderStoryGoalPathArtifactPaths = Object.values(pocketFolderStoryGoalPathSource.artifact).map((relativePath) =>
+  resolve(root, relativePath),
+)
+const pocketFolderStoryGoalPathAnyArtifactFilesExist = anyPathExists(pocketFolderStoryGoalPathArtifactPaths)
+if (pocketFolderStoryGoalPathAnyArtifactFilesExist) {
+  for (const artifactPath of pocketFolderStoryGoalPathArtifactPaths) {
+    expect(
+      existsSync(artifactPath),
+      `Pocket Folder Story Goal Path Card Pack artifact set is incomplete after artifact generation started: ${artifactPath}`,
+    )
+  }
+  const pocketFolderStoryGoalPathExpectedPdfPages = pocketFolderStoryGoalPathSource.cards.length + 5
+  const pocketFolderStoryGoalPathArtifactStatus = inspectArtifactFiles(root, pocketFolderStoryGoalPathSource.artifact, {
+    expectedPdfPages: pocketFolderStoryGoalPathExpectedPdfPages,
+    expectedZipEntries: [
+      'Pocket-Folder-Story-Goal-Path-Card-Pack.pdf',
+      'README.txt',
+      'source/pocket-folder-story-goal-path-card-pack.html',
+      ...pocketFolderStoryGoalPathSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+    ],
+  })
+  expect(
+    pocketFolderStoryGoalPathArtifactStatus.valid,
+    `Pocket Folder Story Goal Path Card Pack artifacts failed validation:\n${pocketFolderStoryGoalPathArtifactStatus.errors.join('\n')}`,
+  )
+  expect(
+    pocketFolderStoryGoalPathArtifactStatus.files.pdf.size > 100_000,
+    `Pocket Folder Story Goal Path Card Pack PDF artifact is unexpectedly small: ${pocketFolderStoryGoalPathArtifactStatus.files.pdf.size} bytes.`,
+  )
+  expect(
+    pocketFolderStoryGoalPathArtifactStatus.files.pdf.pageCount === pocketFolderStoryGoalPathExpectedPdfPages,
+    `Pocket Folder Story Goal Path Card Pack PDF artifact must have ${pocketFolderStoryGoalPathExpectedPdfPages} pages.`,
+  )
+  expect(
+    pocketFolderStoryGoalPathArtifactStatus.files.zip.size > pocketFolderStoryGoalPathArtifactStatus.files.pdf.size,
+    'Pocket Folder Story Goal Path Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+  )
+  const pocketFolderStoryGoalPathCheckoutErrors = validateCheckoutReadiness(
+    pocketFolderStoryGoalPathProduct,
+    pocketFolderStoryGoalPathArtifactStatus,
+  )
+  expect(
+    pocketFolderStoryGoalPathCheckoutErrors.length === 0,
+    `Pocket Folder Story Goal Path Card Pack checkout readiness failed validation:\n${pocketFolderStoryGoalPathCheckoutErrors.join('\n')}`,
+  )
+  const pocketFolderStoryGoalPathArtifactManifest = readJson(resolve(root, pocketFolderStoryGoalPathSource.artifact.manifestPath))
+  expect(
+    pocketFolderStoryGoalPathArtifactManifest.sourcePageCount === pocketFolderStoryGoalPathSource.cards.length,
+    'Pocket Folder Story Goal Path Card Pack artifact manifest sourcePageCount must match source cards.',
+  )
+  expect(
+    Array.isArray(pocketFolderStoryGoalPathArtifactManifest.files.assets),
+    'Pocket Folder Story Goal Path Card Pack artifact manifest files.assets must be an array.',
+  )
+  expect(
+    pocketFolderStoryGoalPathArtifactManifest.files.assets.length === pocketFolderStoryGoalPathSource.worldSlugs.length,
+    'Pocket Folder Story Goal Path Card Pack artifact manifest must include one copied local image per source world.',
+  )
+  const pocketFolderStoryGoalPathManifestAssetErrors = validateManifestWorldAssets(
+    pocketFolderStoryGoalPathSource,
+    pocketFolderStoryGoalPathArtifactManifest,
+  )
+  expect(
+    pocketFolderStoryGoalPathManifestAssetErrors.length === 0,
+    `Pocket Folder Story Goal Path Card Pack artifact manifest image coverage failed validation:\n${pocketFolderStoryGoalPathManifestAssetErrors.join('\n')}`,
+  )
+  for (const asset of pocketFolderStoryGoalPathArtifactManifest.files.assets) {
+    validateImageFile(
+      resolve(root, asset.path),
+      `Pocket Folder Story Goal Path Card Pack copied artifact image ${asset.path}`,
+      'jpeg',
+    )
+  }
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -10633,6 +10899,7 @@ const productImageManifests = [
   batch54Images,
   batch55Images,
   batch56Images,
+  batch57Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +
