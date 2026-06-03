@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index Card Story Show-Not-Tell Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-show-not-tell-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-show-not-tell-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-show-not-tell-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable index card show-not-tell cards</p>
+        <h1>Index Card Story Show-Not-Tell Card Pack</h1>
+        <p>Sixteen paper cards help writers turn plain fictional lines into visible clues, object actions, place signals, gestures, texture details, and revised sentences.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable show-not-tell cards plus adult guide tools, show-not-tell routines, take-home show slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$63</span>
+        <h2>Included</h2>
+        <ul><li>16 printable index card show-not-tell cards</li>
+<li>Adult setup guide</li>
+<li>Fictional show-not-tell safety notes</li>
+<li>Index card coaching moves</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led show-not-tell routines</li>
+<li>Ten take-home show slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Show-not-tell coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Index Card Show-Not-Tell Adult Guide</h3><ul><li>Print the index cards, blank clue rows, and revision slips before the adult-led paper session.</li>
+<li>Begin with one plain line and coach the writer to show it through visible clue, object action, place signal, character gesture, and paper-safe sound or texture detail.</li>
+<li>Keep every example fictional, broad, offline, and guided by an adult.</li>
+<li>Use one card per sentence so the page stays small enough for ages 7-11.</li>
+<li>Replace any actual person detail or narrow outside fact with a made-up name, broad story place, or pretend object.</li>
+<li>End each card with a revised sentence that shows the idea without naming it too directly.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one index card show-not-tell card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen show-not-tell-card worlds</h2>
+      <p>Pick a world image, then start one fictional story with a pretend index card show-not-tell card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Show-not-tell routines</p>
+      <h2>Choose the index card show-not-tell rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Plain Line Clue Row</h3>
+      <p>Writers who tell the idea first and need a simple path toward showing it.</p>
+      <ol><li>The adult reads one plain line from an index card.</li>
+<li>The writer names the idea the line currently tells.</li>
+<li>The adult points to five clue slots: visible clue, object action, place signal, character gesture, and sound/texture detail.</li>
+<li>The writer writes one revised sentence using two clue slots: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Object Action Swap</h3>
+      <p>Turning a flat sentence into a sentence with a visible story object.</p>
+      <ol><li>The adult circles the object in a plain line.</li>
+<li>The writer chooses one gentle action the object can do, such as lean, tap, wobble, or slide.</li>
+<li>The adult asks what the object action helps the reader notice.</li>
+<li>The writer writes one object action sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Place Signal Pass</h3>
+      <p>Showing a broad fictional place without naming it too plainly.</p>
+      <ol><li>The adult covers the direct place word in a plain line.</li>
+<li>The writer chooses a place signal such as an arch, shelf, banner, puddle, or lantern.</li>
+<li>The adult asks what the signal tells the reader about the pretend place.</li>
+<li>The writer writes one place signal sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Gesture Before Feeling</h3>
+      <p>Replacing a named feeling with a character gesture the reader can see.</p>
+      <ol><li>The adult reads a plain line that tells how a fictional character feels.</li>
+<li>The writer chooses one character gesture, such as toe tapping, sleeve smoothing, or eyebrow lifting.</li>
+<li>The adult asks which feeling the gesture lets the reader infer.</li>
+<li>The writer writes one gesture-first sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sound Texture Thread</h3>
+      <p>Adding one paper-safe sound or texture detail to make the moment easier to imagine.</p>
+      <ol><li>The adult rereads the plain line and asks where a tiny sensory clue could fit.</li>
+<li>The writer chooses one sound word or texture phrase a reader can imagine from print.</li>
+<li>The adult asks whether the clue supports the visible action instead of distracting from it.</li>
+<li>The writer writes one sound or texture detail sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Revised Sentence Stack</h3>
+      <p>Combining the strongest clues into one clear revised sentence.</p>
+      <ol><li>The adult places the plain line at the top of the index card stack.</li>
+<li>The writer chooses the strongest visible clue and one supporting clue.</li>
+<li>The adult asks which telling word can be removed.</li>
+<li>The writer writes the final revised sentence: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home show slips</p>
+      <h2>Start one story shown line later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">One paper pass | plain line revision</p>
+      <h3>Plain Line Flip</h3>
+      <p>Start with a made-up plain line and revise it into one visible clue sentence: ____________________.</p>
+      <p>Ask which clue replaced the telling word: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Brief adult-led pass | visible clue</p>
+      <h3>Visible Clue Card</h3>
+      <p>Choose one visible clue that shows a pretend idea without naming it directly: ____________________.</p>
+      <p>Ask what the reader can picture first: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single printable slip | object action</p>
+      <h3>Object Action Card</h3>
+      <p>Make a fictional object do one gentle action that shows the moment: ____________________.</p>
+      <p>Ask what the object action helps show: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One pencil pass | place signal</p>
+      <h3>Place Signal Card</h3>
+      <p>Add one broad place signal to show where the pretend moment happens: ____________________.</p>
+      <p>Ask which signal tells the reader about the place: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Calm paper pass | character gesture</p>
+      <h3>Character Gesture Card</h3>
+      <p>Replace a named feeling with one visible character gesture: ____________________.</p>
+      <p>Ask which feeling the gesture shows: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Short paper pass | paper-safe sound detail</p>
+      <h3>Sound Detail Card</h3>
+      <p>Add one printable sound word that supports the fictional action: ____________________.</p>
+      <p>Ask how the sound helps the reader imagine the moment: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Quiet slip pass | texture detail</p>
+      <h3>Texture Detail Card</h3>
+      <p>Add one texture detail that makes the pretend object easier to picture: ____________________.</p>
+      <p>Ask which texture word makes the object clearer: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Fresh card pass | showing emotion</p>
+      <h3>Feeling Without Saying It</h3>
+      <p>Show a fictional feeling through a clue, action, or gesture instead of naming it: ____________________.</p>
+      <p>Ask which clue shows the feeling best: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single card pass | combining clues</p>
+      <h3>Clue Pair Sentence</h3>
+      <p>Combine one visible clue and one object action into a revised sentence: ____________________.</p>
+      <p>Ask how the two clues work together: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Second pencil pass | revised sentence</p>
+      <h3>Final Revision Slip</h3>
+      <p>Rewrite one plain fictional sentence as a stronger revised sentence: ____________________.</p>
+      <p>Ask what changed from telling to showing: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the plain line I will revise is ____________________.</li>
+<li>Optional adult-led offline prompt: one visible clue that shows the idea is ____________________.</li>
+<li>Optional adult-led offline prompt: the object action I chose is ____________________.</li>
+<li>Optional adult-led offline prompt: the place signal that tells where the pretend moment happens is ____________________.</li>
+<li>Optional adult-led offline prompt: the character gesture that shows the feeling is ____________________.</li>
+<li>Optional adult-led offline prompt: one paper-safe sound or texture detail is ____________________.</li>
+<li>Optional adult-led offline prompt: the telling word I removed is ____________________.</li>
+<li>Optional adult-led offline prompt: my revised sentence is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 1 | Ages 6-8 | replace a feeling word with one visible clue</div>
+      <h2>Moon Muffin Index Card Glow Clue</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place the card beside blank paper and read the plain line before the writer adds clues: ____________________.</p>
+      <p class="kid-direction">Writer: Show the market helper&#39;s feeling with things a reader can see on the pretend counter: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The moon muffin helper felt proud of the new tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Add one glow mark, neat stack, or careful label that shows the proud feeling: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Let the tray, muffin wrapper, or crumb card tilt, shine, slide, or stand in a clear way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one pretend market sign, counter mat, or moon tag near the tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the helper straightening, pointing, nodding, or holding the tray with care: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: Add one paper-safe rustle, soft tap, smooth wrapper, or crumbly edge detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying proud, write what the helper does beside the glowing tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Change the plain line so the reader can infer the feeling from one clue and one action: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the tray clue first, then write one shown sentence under it: ____________________. Extra paper line: Make another moon-muffin feeling visible with one object clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 2 | Ages 6-8 | show waiting with object motion</div>
+      <h2>Puddle Planet Index Card Ripple Wait</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Read the plain line and invite the writer to add pretend mail clues instead of naming the feeling: ____________________.</p>
+      <p class="kid-direction">Writer: Show that the puddle mail helper is waiting by moving the note, stamp, or puddle mark: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The puddle mail helper was impatient for the next note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Add one repeated glance at a ripple mark, curled note edge, or empty paper bin: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Make the pretend note drip, wobble, fold, tap, or float beside the helper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one puddle-mail counter, shell slot, or round sorting mat that shows where the waiting happens: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the helper tapping two fingers, leaning forward, or lining up stamps again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: Add one plip, paper flutter, slick edge, or soft stamp press detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying impatient, write what the helper keeps doing with the note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Turn the plain line into a clue sentence with one moving object and one helper gesture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Sketch three small ripple marks, then choose one for the sentence: ____________________. Extra paper line: Show another puddle-mail wait without naming the feeling: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 3 | Ages 7-9 | show uncertainty through a pause and prop</div>
+      <h2>Buttonwood Index Card Ticket Pause</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place the card beside blank paper and ask the writer to show uncertainty with a ticket clue: ____________________.</p>
+      <p class="kid-direction">Writer: Make the traveler seem unsure by showing what happens to the ticket and shelf tag: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The traveler was unsure which library train stop to choose: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Add one crossed-out shelf tag, bent ticket corner, or paused bookmark strip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Let the ticket twist, hover, slide halfway, or rest between two pretend stop cards: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one broad train bench, rolling shelf, or station card that frames the choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the traveler turning the ticket over, squinting at a tag, or holding still: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: Add one page whisper, wooden click, smooth ticket edge, or paper rasp detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying unsure, write how the traveler handles the ticket between two choices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Replace the plain feeling word with one visible ticket clue and one pause action: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the ticket between two shelf tags before writing the shown sentence: ____________________. Extra paper line: Show another library-train choice with a prop and a pause: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 4 | Ages 7-9 | show confusion with mismatched place clues</div>
+      <h2>Button Bakery Index Card Map Mix</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Read the plain line and invite the writer to show the mix-up with marks on a pretend map: ____________________.</p>
+      <p class="kid-direction">Writer: Show that the map-mender is confused by using mismatched marks, folds, and gestures: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The map-mender was confused by the bakery map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Add one button mark beside the wrong crumb dot, folded corner, or upside-down label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Make the map crinkle, flip, buckle, or slide away from the correct paper tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one pretend bakery counter, map table, or tray label that helps the reader see the mix-up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the map-mender tilting the page, tracing a loop, or stopping with one finger on a mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: Add one paper crinkle, dry fold line, soft button tap, or dusty crumb edge detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying confused, write what does not match on the map and how the mender reacts: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Change the plain line into a sentence with one mismatched clue and one clear action: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle two map marks first, then write which one looks out of place: ____________________. Extra paper line: Show another map mix-up with one place clue and one object action: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 5 | Ages 7-8 | show curiosity through looking and texture</div>
+      <h2>Teacup Town Index Card Weather Peek</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place the card beside blank paper and ask for one pretend weather-window clue the writer can show: ____________________.</p>
+      <p class="kid-direction">Writer: Show the watcher&#39;s curiosity through looking, touching the paper pane, and noticing texture: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The weather watcher was curious about the tiny cloud: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Add one nose-near pane, tiny cloud tag, tilted cup mark, or lifted paper shade: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Let the cloud card drift, quiver, stick, or slide across the pretend pane: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one Teacup Town sill, weather strip, or small forecast card near the window: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the watcher leaning close, raising eyebrows, or holding a finger just above the pane: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: Add one papery swish, smooth pane, misty edge, or soft cup clink detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying curious, write how the watcher studies the moving cloud card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Make the plain line visible with one weather clue, one looking gesture, and one texture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the tiny cloud tag, then write what the watcher notices first: ____________________. Extra paper line: Show another Teacup Town feeling through a weather clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 6 | Ages 7-9 | revise a told mood into board clues</div>
+      <h2>Pocket Park Index Card Notice Cheer</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Read the plain line and invite the writer to show the cheerful mood with board details: ____________________.</p>
+      <p class="kid-direction">Writer: Show the notice keeper&#39;s cheerful mood through the paper board, posted note, and gesture: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The notice keeper felt cheerful about the new park sign: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Add one bright border, straightened corner, leaf stamp, or small drawn burst on the notice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Make the notice flutter, snap flat, slide into place, or lift on one corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one pocket-park board edge, bench card, or paper path marker that keeps the scene grounded: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the keeper smoothing the notice, stepping back, or giving a small pleased nod: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: Add one crisp paper snap, bark-like board texture, smooth pin head, or leafy scratch detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying cheerful, write what the keeper does after the notice sits straight: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Trade the told mood for one notice-board clue, one object motion, and one gesture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the notice corner first, then write the shown mood sentence: ____________________. Extra paper line: Show another pocket-park mood with a board clue and a gesture: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 7 | Ages 7-9 | turn a feeling into ferry clues</div>
+      <h2>Spoon Ferry Flag Clue Show Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card beside blank index cards and choose one pretend harbor feeling to show with clues: ____________________.</p>
+      <p class="kid-direction">Writer: read the plain line, then show the feeling through ferry clues instead of naming it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The spoon ferry was excited. Mark the plain idea you will show instead: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: show excitement with a bouncing paper flag, tilted lid dock, or bright napkin sail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: make the spoon ferry tap a cracker dock, nudge a cargo tag, or slide toward the flag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: show the lunchbox harbor with a lid dock, napkin tide strip, or cracker pier: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: show the ferry helper leaning forward, pointing both hands, or lifting a tiny flag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: add a paper-safe clink, soft rustle, smooth spoon shine, or crisp cracker edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying excited, write: The spoon ferry ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: replace one feeling word with two visible harbor clues and one small action: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw the ferry flag, circle one clue, and write one shown sentence: ____________________. Carry-out line: make a new spoon ferry sentence that shows a feeling without naming it: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 8 | Ages 7-9 | show a puzzled clerk through paper action</div>
+      <h2>Acorn Avenue Slip Shuffle Show Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card with two invented acorn slips and pick one gentle feeling for the clerk to show: ____________________.</p>
+      <p class="kid-direction">Writer: show the clerk&#39;s feeling through slip marks, desk items, and gestures instead of naming it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The leaf clerk felt puzzled. Underline the feeling you will show with clues: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: show puzzlement with crossed slip corners, mismatched seed marks, or a tilted leaf label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: make one acorn slip flip over, slide under a seed tag, or bump a twig tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: show the errand office with a twig tray, seed counter, stamp pad, or paper shelf: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: show the leaf clerk tapping a cap, squinting at a mark, or holding two slips apart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: add a paper-safe leaf rustle, dry slip scrape, smooth acorn cap, or soft stamp thump: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying puzzled, write: The leaf clerk ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: trade the named feeling for one slip clue, one object move, and one clerk gesture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw two slips, add one mismatched mark, and write a shown sentence: ____________________. Carry-out line: invent another acorn office line that shows a feeling with paper clues: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 9 | Ages 8-10 | show curiosity with map-table evidence</div>
+      <h2>Seed Library Map Table Curiosity Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a pretend seed map, a shelf label, and this card so the writer can show curiosity on paper: ____________________.</p>
+      <p class="kid-direction">Writer: show curiosity through a seed card, folded map edge, shelf clue, or keeper gesture: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The seed keeper was curious. Choose the clue that will show it first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: show curiosity with a circled bean symbol, lifted map flap, or tiny shelf label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: make the seed card slide beside the folded map, or make a paper marker point to one symbol: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: show the seed-library map table with a shelf row, card pocket, folded map corner, or label strip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: show the seed keeper leaning close, tracing a symbol, or pausing with a pencil above the card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: add a paper-safe map crinkle, dry seed rattle, smooth card edge, or soft shelf tap: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying curious, write: The seed keeper ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: remove the named feeling and add one map-table clue plus one keeper gesture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: sketch one map-table symbol, add one keeper gesture, and write the shown line: ____________________. Carry-out line: create another seed-library map table sentence that shows a feeling with clues: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 10 | Ages 8-10 | show careful action with signal details</div>
+      <h2>Rain Gauge Railway Careful Signal Card</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card beside a pretend rain gauge sketch and choose one careful railway moment to show: ____________________.</p>
+      <p class="kid-direction">Writer: show the conductor&#39;s careful choice through gauge marks, platform clues, and hand movement: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The rain conductor was careful. Pick the signal detail that will show it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: show careful attention with an even gauge mark, straight flag card, or lined-up rail label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: make the flag card lift halfway, the gauge bead settle, or the platform note slide into place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: show the railway setting with a glass gauge stand, puddle platform, paper rail, or cloud card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: show the conductor holding one finger still, checking the mark twice, or lowering a flag slowly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: add a paper-safe drip patter, slick gauge shine, flag flutter, or smooth rail edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying careful, write: The rain conductor ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: replace the named trait with one gauge clue, one object action, and one steady gesture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw one signal card beside a gauge mark and write a shown sentence: ____________________. Carry-out line: make another rain railway line that shows a trait through platform clues: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 11 | Ages 8-10 | show wonder with observatory clues</div>
+      <h2>Moss Message Observatory Wonder Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside a pretend moss note, pebble lens, and lantern card for a gentle show-not-tell rewrite: ____________________.</p>
+      <p class="kid-direction">Writer: show wonder through the moss note, sky chart, lantern card, and watcher gesture instead of naming it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The sky watcher felt amazed. Choose what the reader will see first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: show amazement with widened eyes, a raised lantern card, or a glowing moss-shaped mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: make the pebble lens roll toward the note, the lantern card tilt, or the chart corner lift: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: show the observatory with a moss step, sky shelf, paper chart, or pebble lens tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: show the sky watcher holding both hands still, leaning close, or pointing without speaking: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Sound or texture: add a paper-safe pebble click, soft moss fuzz, lantern-card rustle, or smooth chart edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of saying amazed, write: The sky watcher ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: remove the named feeling and add one moss clue, one object action, and one watcher gesture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw one moss mark and one watcher gesture, then write the shown sentence: ____________________. Carry-out line: invent another moss observatory sentence that shows wonder with paper clues: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 12 | Ages 8-10 | turn readiness into visible tidepool clues</div>
+      <h2>Tidepool Timekeeper Shell-Clock Clues</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one pretend index card beside the tidepool prompt and invite small paper details, keeping the whole scene invented: ____________________.</p>
+      <p class="kid-direction">Start with the plain line, then show the timekeeper&#39;s moment through clues instead of naming the feeling: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The tidepool timekeeper was ready. Copy or change the plain sentence before adding clues: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Show readiness with one shell mark, bead dial, tide strip, or tiny flag the reader can see: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Make the shell clock, bead dial, or paper flag do one small thing that proves the moment has started: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one tidepool shelf, pool rim, note tray, or jar line that signals the lab is set for the next step: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the timekeeper&#39;s readiness with one hand, chin, pencil, or shoulder movement: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Paper-safe sound or texture: Add a soft click, shell scrape, ripple mark, smooth shell, or gritty card edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of naming readiness, write: The tidepool timekeeper ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Remove one feeling word and replace it with one visible shell-clock clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle one tidepool clue and write the revised show sentence on the card: ____________________. Carry-on line: Use a fresh index card to show a tidepool helper being ready without naming the feeling: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 13 | Ages 10-11 | replace a feeling claim with revision evidence</div>
+      <h2>Revision River Ferry Draft Wake</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one pretend ferry draft card and ask for clues that show the helper thinking through a change: ____________________.</p>
+      <p class="kid-direction">Change the plain ferry line by adding what the helper sees, adjusts, touches, or compares on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The ferry helper was confused. Copy or change the plain sentence before showing the confusion: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Show confusion with one crossed-out draft word, tilted sign, ripple arrow, or mismatched ferry tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Make the draft card, folded oar token, rope tag, or ferry note shift, tap, slide, or point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one dock card, deck plank mark, river margin, or signpost clue that shows where the draft problem appears: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the helper&#39;s confusion with one brow, finger, pause, or pencil movement: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Paper-safe sound or texture: Add a pencil scratch, soft paper flap, rope rub, ripple line, or damp-looking card edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of naming confusion, write: The ferry helper ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Trade the feeling word for two ferry clues, one from an object and one from the helper: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Underline the plain word and write one ferry clue that shows it without saying it: ____________________. Carry-on line: Try one more ferry sentence where the draft change is shown through a paper clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 14 | Ages 10-11 | show curiosity through labels and display clues</div>
+      <h2>Clue Label Tower Museum Pointer Glow</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card beside a made-up tower label and invite one clue trail that stays fictional and paper-only: ____________________.</p>
+      <p class="kid-direction">Show what makes the clue keeper curious by using labels, objects, and gestures instead of naming curiosity: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The clue keeper was curious. Copy or change the plain sentence before building visible evidence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Show curiosity with one crooked label, bright pointer strip, tiny question mark, or lifted display tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Make the label card, pointer strip, display tag, or clue drawer move, tilt, unfold, or reveal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one tower shelf, display step, glassy case, or label rail clue that pulls attention to the mystery: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the keeper&#39;s curiosity with one lean, squint, careful reach, or pencil hover: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Paper-safe sound or texture: Add a paper whisper, label peel, smooth case shine, dusty edge, or crisp card bend: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of naming curiosity, write: The clue keeper ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Replace the feeling word with one label clue and one keeper gesture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw a tiny label box, then write the clue that shows the keeper wants to know more: ____________________. Carry-on line: Create another tower sentence where a label shows curiosity before the character says anything: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 15 | Ages 10-11 | show careful choice through object action</div>
+      <h2>Compass Craft Academy Steady Needle</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place two invented compass-craft options beside the card and ask for clues that show careful choosing: ____________________.</p>
+      <p class="kid-direction">Show the crafter being careful by naming what the paper compass does and how the character checks it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The compass crafter was careful. Copy or change the plain sentence before showing the care: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Show careful work with one aligned arrow, centered bead, tiny fold mark, or neat pencil tick: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Make the paper needle, bead marker, folded arrow, or compass card swivel, settle, pause, or line up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one craft bench, supply tray, marker rail, or folded-paper stand that shows where the careful choice happens: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the crafter&#39;s care with one slow breath, narrowed eyes, steady hand, or second check: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Paper-safe sound or texture: Add a soft paper creak, bead tap, smooth fold, pencil tick, or crisp card corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of naming care, write: The compass crafter ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Replace the plain adjective with one compass action and one small checking gesture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Mark the careful object action first, then write the revised sentence below it: ____________________. Carry-on line: Invent another compass-craft sentence where careful choice appears through a tool clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-show-not-tell-card-page">
+      <div class="page-kicker">Show-Not-Tell Card 16 | Ages 10-11 | show pride through a promise and page detail</div>
+      <h2>Binding Day Boardwalk Clasp Promise</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a pretend folded-page card beside this prompt and keep the promise small, kind, and fully invented: ____________________.</p>
+      <p class="kid-direction">Show the page helper&#39;s pride through a careful object detail and a gentle action, without naming the feeling: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain line</h3>
+      <p>Plain line: The page helper felt proud. Copy or change the plain sentence before showing pride through details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Visible clue</h3>
+      <p>Visible clue: Show pride with one straightened clasp, neat thread loop, polished page edge, or tucked promise slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object action</h3>
+      <p>Object action: Make the booklet clasp, folded page, thread loop, or sign card close, shine, settle, or line up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place signal</h3>
+      <p>Place signal: Add one boardwalk rail, booklet stand, paper booth, or page table clue that shows the promise has been kept: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character gesture</h3>
+      <p>Character gesture: Show the helper&#39;s pride with one small nod, careful smile, lifted chin, or gentle pat on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound or texture</h3>
+      <p>Paper-safe sound or texture: Add a clasp click, thread brush, smooth page edge, crisp fold, or soft card tap: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Instead of naming pride, write: The page helper ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise show-not-tell</h3>
+      <p>Revise show: Replace the feeling word with one kept-promise clue and one page-helper gesture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Choose one clasp or page clue, then write a sentence that shows pride silently: ____________________. Carry-on line: Make one more boardwalk index card where a page detail shows a gentle promise kept: ____________________.</p>
+    </section>
+  </body>
+</html>

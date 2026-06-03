@@ -566,6 +566,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable folder tab story detail cards with adult guide tools, detail routines, and take-home detail slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'index-card-story-show-not-tell-card-pack',
+    title: 'Index Card Story Show-Not-Tell Card Pack',
+    pricePoint: '$63',
+    description:
+      'Sixteen printable index card story show-not-tell cards with adult guide tools, show routines, and take-home show slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

@@ -3476,6 +3476,130 @@
           "summary": "A binding day world for filing one gentle promise detail into a page action."
         }
       ]
+    },
+    {
+      "slug": "index-card-story-show-not-tell-card-pack",
+      "title": "Index Card Story Show-Not-Tell Card Pack",
+      "pricePoint": "$63",
+      "status": "checkout_pending",
+      "headline": "A printable show-not-tell card pack for paper-only fictional index card story clues.",
+      "summary": "Sixteen adult-led index card prompts help kids replace plain lines with visible clues, object actions, gestures, and revised sentences.",
+      "heroImage": "images/plotsprout/batch45/index-card-story-show-not-tell-card-pack.jpg",
+      "ctaLabel": "Request show-not-tell card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Index%20Card%20Story%20Show-Not-Tell%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static index card story show-not-tell card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable index card story show-not-tell cards",
+        "Adult setup guide",
+        "Fictional show-not-tell safety notes",
+        "Index card clue coaching moves",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six adult-led show-not-tell routines",
+        "Ten take-home show slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one visible clue before a story sentence",
+        "A tutoring or co-op table where writers can fill one index card at a time",
+        "A warm-up where a small paper card reduces blank-page pressure",
+        "A reluctant-writer activity that separates clue choice from a full draft",
+        "A take-home show slip set for building one invented story offline"
+      ],
+      "parentSteps": [
+        "Choose one show-not-tell routine before the activity starts.",
+        "Set the paper, pencils, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one plain line into a fictional clue rather than using narrow real-world facts.",
+        "Send one show slip with a single blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for showing pride with one glowing tray clue."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for showing waiting with ripples and paper-note motion."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for showing uncertainty through a ticket pause."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for showing confusion with mismatched map-table clues."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for showing curiosity with a lifted shade and cloud clue."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for showing cheer with notice-board clues and motion."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for showing excitement with a flag, dock, and small action."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for showing puzzlement through shuffled paper slips."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for showing curiosity with a folded map-table clue."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for showing careful action through gauge and flag signals."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for showing wonder with a lens, chart, and gesture."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for showing readiness with shell-clock clues."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for showing confusion with draft marks and ferry clues."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for showing curiosity with pointer strips and display tags."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for showing care with aligned arrows and steady gestures."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for showing pride with a clasp, page edge, and promise slip."
+        }
+      ]
     }
   ]
 }
