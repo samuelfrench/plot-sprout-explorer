@@ -82,5 +82,9 @@ describe('App', () => {
       'href',
       expect.stringContaining('birthday-party-story-quest-kit'),
     )
+    expect(screen.getByRole('link', { name: /Preview Clipboard Story Paragraph Focus Card Pack/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('clipboard-story-paragraph-focus-card-pack'),
+    )
   })
 })

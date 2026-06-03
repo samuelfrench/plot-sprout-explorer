@@ -12837,6 +12837,61 @@ export function countPdfPages(buffer) {
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
 }
 
+function readZipCentralDirectoryEntryNames(buffer) {
+  const endOfCentralDirectorySignature = 0x06054b50
+  const centralDirectorySignature = 0x02014b50
+  const minimumEndOfCentralDirectorySize = 22
+  const maximumCommentSize = 0xffff
+  const searchStart = Math.max(0, buffer.length - minimumEndOfCentralDirectorySize - maximumCommentSize)
+  let endOffset = -1
+  for (let offset = buffer.length - minimumEndOfCentralDirectorySize; offset >= searchStart; offset -= 1) {
+    if (buffer.readUInt32LE(offset) === endOfCentralDirectorySignature) {
+      endOffset = offset
+      break
+    }
+  }
+  if (endOffset < 0) {
+    throw new Error('missing end of central directory')
+  }
+
+  const entryCount = buffer.readUInt16LE(endOffset + 10)
+  const centralDirectoryOffset = buffer.readUInt32LE(endOffset + 16)
+  let offset = centralDirectoryOffset
+  const names = []
+  for (let index = 0; index < entryCount; index += 1) {
+    if (offset + 46 > buffer.length || buffer.readUInt32LE(offset) !== centralDirectorySignature) {
+      throw new Error('invalid central directory entry')
+    }
+    const nameLength = buffer.readUInt16LE(offset + 28)
+    const extraLength = buffer.readUInt16LE(offset + 30)
+    const commentLength = buffer.readUInt16LE(offset + 32)
+    const nameStart = offset + 46
+    const nameEnd = nameStart + nameLength
+    if (nameEnd > buffer.length) {
+      throw new Error('truncated central directory entry name')
+    }
+    names.push(buffer.toString('utf8', nameStart, nameEnd))
+    offset = nameEnd + extraLength + commentLength
+  }
+  return names
+}
+
+function validateZipEntryNames(buffer, relativePath, expectedEntries, errors, fileRecord) {
+  let entryNames = []
+  try {
+    entryNames = readZipCentralDirectoryEntryNames(buffer)
+  } catch (error) {
+    errors.push(`${relativePath} does not have a readable ZIP central directory: ${error.message}.`)
+    return
+  }
+  fileRecord.entries = entryNames
+  const actual = [...entryNames].sort()
+  const expected = [...expectedEntries].sort()
+  if (JSON.stringify(actual) !== JSON.stringify(expected)) {
+    errors.push(`${relativePath} ZIP entries must be exactly ${expected.join(', ')}.`)
+  }
+}
+
 function sha256(buffer) {
   return createHash('sha256').update(buffer).digest('hex')
 }
@@ -12936,6 +12991,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
     }
     if (key === 'zipPath' && buffer.subarray(0, 2).toString('ascii') !== 'PK') {
       errors.push(`${relativePath} is not a ZIP artifact.`)
+    }
+    if (key === 'zipPath' && Array.isArray(options.expectedZipEntries)) {
+      validateZipEntryNames(buffer, relativePath, options.expectedZipEntries, errors, files[label])
     }
     if (key === 'sourceHtmlPath' && !buffer.toString('utf8', 0, Math.min(buffer.length, 120)).toLowerCase().includes('<!doctype html')) {
       errors.push(`${relativePath} is not a source HTML artifact.`)

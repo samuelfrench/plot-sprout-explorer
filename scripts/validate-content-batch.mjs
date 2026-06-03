@@ -8702,6 +8702,12 @@ expect(
 const clipboardParagraphFocusExpectedPdfPages = clipboardParagraphFocusSource.cards.length + 5
 const clipboardParagraphFocusArtifactStatus = inspectArtifactFiles(root, clipboardParagraphFocusSource.artifact, {
   expectedPdfPages: clipboardParagraphFocusExpectedPdfPages,
+  expectedZipEntries: [
+    'Clipboard-Story-Paragraph-Focus-Card-Pack.pdf',
+    'README.txt',
+    'source/clipboard-story-paragraph-focus-card-pack.html',
+    ...clipboardParagraphFocusSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+  ],
 })
 expect(
   clipboardParagraphFocusArtifactStatus.valid,

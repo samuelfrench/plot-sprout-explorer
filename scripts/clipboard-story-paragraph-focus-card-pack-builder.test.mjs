@@ -67,6 +67,15 @@ function sha256(path) {
   return createHash('sha256').update(readFileSync(path)).digest('hex')
 }
 
+function expectedZipEntries(source) {
+  return [
+    'Clipboard-Story-Paragraph-Focus-Card-Pack.pdf',
+    'README.txt',
+    'source/clipboard-story-paragraph-focus-card-pack.html',
+    ...source.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+  ]
+}
+
 function card(index, worldSlug, ageBand) {
   return {
     id: `clipboard-paragraph-focus-card-${String(index).padStart(2, '0')}`,
@@ -351,9 +360,12 @@ describe('Clipboard Story Paragraph Focus Card Pack policy', () => {
         { flag: 'wx' },
       )
 
-      expect(inspectArtifactFiles(tempRoot, source.artifact, { expectedPdfPages: source.cards.length + 5 }).valid).toBe(
-        true,
-      )
+      const artifactStatus = inspectArtifactFiles(tempRoot, source.artifact, {
+        expectedPdfPages: source.cards.length + 5,
+        expectedZipEntries: expectedZipEntries(source),
+      })
+      expect(artifactStatus.valid).toBe(false)
+      expect(artifactStatus.errors.join('\n')).toContain('does not have a readable ZIP central directory')
     } finally {
       rmSync(tempRoot, { recursive: true, force: true })
     }
@@ -402,7 +414,12 @@ describe('Clipboard Story Paragraph Focus Card Pack policy', () => {
       expect(readFileSync(secondOutput.paths.manifestPath, 'utf8')).toBe(
         readFileSync(output.paths.manifestPath, 'utf8'),
       )
-      expect(inspectArtifactFiles(tempRoot, output.source.artifact, { expectedPdfPages: 21 }).valid).toBe(true)
+      expect(
+        inspectArtifactFiles(tempRoot, output.source.artifact, {
+          expectedPdfPages: 21,
+          expectedZipEntries: expectedZipEntries(output.source),
+        }).valid,
+      ).toBe(true)
     } finally {
       rmSync(tempRoot, { recursive: true, force: true })
     }
