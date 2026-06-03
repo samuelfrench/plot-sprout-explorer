@@ -478,6 +478,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable desk-drawer story sequence cards with adult guide tools, sequence routines, and take-home sequence slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'reading-nook-story-cause-effect-card-pack',
+    title: 'Reading Nook Story Cause-and-Effect Card Pack',
+    pricePoint: '$41',
+    description:
+      'Sixteen printable reading-nook story cause/effect cards with adult guide tools, cause/effect routines, and take-home cause/effect slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

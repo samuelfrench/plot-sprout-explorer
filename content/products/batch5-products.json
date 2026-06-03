@@ -2112,6 +2112,130 @@
           "summary": "A page-order boardwalk world for making the final steps of a pretend booklet feel complete."
         }
       ]
+    },
+    {
+      "slug": "reading-nook-story-cause-effect-card-pack",
+      "title": "Reading Nook Story Cause-and-Effect Card Pack",
+      "pricePoint": "$41",
+      "status": "checkout_pending",
+      "headline": "A printable cause-and-effect card pack for screen-free reading nook story links.",
+      "summary": "Sixteen adult-led reading nook cards help kids connect clear causes to gentle story effects.",
+      "heroImage": "images/plotsprout/batch34/reading-nook-story-cause-effect-card-pack.jpg",
+      "ctaLabel": "Request cause/effect card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Reading%20Nook%20Story%20Cause-and-Effect%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static reading nook story cause-and-effect card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable reading nook story cause-and-effect cards",
+        "Adult setup guide",
+        "Fictional cause/effect safety notes",
+        "Because and so sentence coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led cause/effect routines",
+        "Ten take-home cause/effect slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one paper why-and-what-changed link before a full story",
+        "A tutoring or co-op nook where writers can fill one cause/effect card at a time",
+        "A family table warm-up where because and so boxes reduce blank-page pressure",
+        "A reluctant-writer activity that separates story logic from a full draft",
+        "A take-home cause/effect slip set for finishing one invented story link offline"
+      ],
+      "parentSteps": [
+        "Choose one cause/effect routine before the activity starts.",
+        "Set the paper, pencil, blank slips, pretend page cards, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one pretend reading nook detail into a make-believe cause/effect link rather than recording personal facts.",
+        "Send one cause/effect slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for finding what caused a tiny tray wobble."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for naming the direct effect after a stamp slips."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for building one invented because statement."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for turning a paper path mixup into a so result."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for showing how an invented setting creates an effect."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for linking a notice cause to the next two effects."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for testing how one object causes a harbor change."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn office world for connecting a character choice to a result."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for finding the problem that causes a map-room effect."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for showing how a reaction changes the next event."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for identifying the first cause in a quiet chain."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for naming the final result after a shell marker moves."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for writing a stronger because statement."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue tower world for finding the direct effect of one label move."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for showing how a choice causes a paper result."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for linking causes and effects into a final page result."
+        }
+      ]
     }
   ]
 }

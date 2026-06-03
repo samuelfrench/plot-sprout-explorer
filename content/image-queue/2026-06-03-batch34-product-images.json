@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-03-batch34-product-images",
+  "generatedAt": "2026-06-03",
+  "images": [
+    {
+      "slug": "reading-nook-story-cause-effect-card-pack",
+      "title": "Reading Nook Story Cause-and-Effect Card Pack product image",
+      "purpose": "Static product hero for the checkout-pending reading nook story cause-and-effect card pack page.",
+      "seed": 26063443,
+      "prompt": "family-friendly flat lay, six plain unadorned blank cream reading nook story cause-and-effect cards, empty because-so arrow guide boxes, no writing, no text, no decoration, no plant, unbranded cushion corner, one plain wooden pencil, plain white background, screen-free printable reading nook story cause-and-effect card pack",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, book, book cover, real book title, author name, publisher name, plant, leaf, leaves, foliage, greenery, floral border, decorative leaves, ornament, ornate border, publisher name, phone, tablet, laptop, computer, screen, device, app interface, school login, account login, portal, QR code, upload icon, camera, photo, GPS, navigation app, coordinates, address, house, home, street sign, real place, real-world map, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, branded character, franchise, copyright character, people, face, animal, food, snack, medicine, weapon, violence, scary scene, outdoor scene, window, doorway, building, safety sign",
+      "outputJpeg": "public/images/plotsprout/batch34/reading-nook-story-cause-effect-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch34/reading-nook-story-cause-effect-card-pack.webp",
+      "sidecar": "content/image-runs/batch34/reading-nook-story-cause-effect-card-pack.json"
+    }
+  ]
+}

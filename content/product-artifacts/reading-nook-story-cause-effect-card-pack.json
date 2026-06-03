@@ -1,0 +1,534 @@
+{
+  "batchId": "2026-06-03-batch34",
+  "generatedAt": "2026-06-03",
+  "productSlug": "reading-nook-story-cause-effect-card-pack",
+  "title": "Reading Nook Story Cause-and-Effect Card Pack",
+  "pricePoint": "$41",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable story cause-and-effect cards plus adult guide tools, cause/effect routines, take-home cause/effect slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/reading-nook-story-cause-effect-card-pack/Reading-Nook-Story-Cause-Effect-Card-Pack.pdf",
+    "zipPath": "product-build/reading-nook-story-cause-effect-card-pack/reading-nook-story-cause-effect-card-pack.zip",
+    "sourceHtmlPath": "product-build/reading-nook-story-cause-effect-card-pack/source/reading-nook-story-cause-effect-card-pack.html",
+    "manifestPath": "product-build/reading-nook-story-cause-effect-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch34-reading-nook-cause-effect-cards-a.json",
+    "content/product-artifacts/lanes/batch34-reading-nook-cause-effect-cards-b.json",
+    "content/product-artifacts/lanes/batch34-reading-nook-cause-effect-cards-c.json",
+    "content/product-artifacts/lanes/batch34-reading-nook-cause-effect-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable paper cause-and-effect cards",
+    "headline": "Reading Nook Story Cause-and-Effect Card Pack",
+    "subhead": "Sixteen paper cards help writers connect a pretend reading nook cause to a clear fictional result.",
+    "included": [
+      "16 printable reading-nook cause-and-effect cards",
+      "Adult setup guide",
+      "Fictional cause/effect safety notes",
+      "Cause/effect coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led cause/effect routines",
+      "Ten take-home cause/effect slips",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Lay out paper cause cards, effect cards, blank cover shapes, cushion corner labels, and pencils before writers arrive.",
+      "Explain that every reading nook detail is pretend and paper-only, not a report about any real reading item or person.",
+      "Invite each writer to choose one cozy prop card, such as lamp glow, paper bookmark, or soft rug sketch.",
+      "Keep blank lines short so writers ages 7-11 can finish one clear cause and one result at a time.",
+      "Place extra because, so, and then arrow strips near the adult guide spot for quick help."
+    ],
+    "paperCauseEffectSetup": [
+      "Put cause cards on the left and effect cards on the right with a wide arrow lane between them.",
+      "Use one pretend page card as the shared story space for the group.",
+      "Add small paper tokens for cushion squeak, lamp glow, blanket fold, and paper bookmark.",
+      "Keep a discard stack for silly ideas that do not fit the current chain.",
+      "Give each writer one blank pair card so the adult can model cause first, effect second."
+    ],
+    "causeEffectCoaching": [
+      "Ask, What changed first, and what happened right after it?",
+      "Point to the paper arrow and have the writer say because before filling the line.",
+      "If the effect feels too broad, ask for one tiny visible result on the pretend page.",
+      "If a cause feels missing, offer two paper prop choices and let the writer pick one.",
+      "Read the pair aloud once and check that the effect could happen because of that cause."
+    ],
+    "privacyAndSafetyNotes": [
+      "Keep all work on paper and within the adult-led group.",
+      "Use pretend role labels when a label is needed.",
+      "Keep every blank cover shape invented, with no actual reading labels.",
+      "This paper pack keeps finished pages with the family adult.",
+      "Collect slips at the end only if families choose to keep them in the folder."
+    ],
+    "familyHandoff": [
+      "Send one slip with one clear blank line, not a long worksheet.",
+      "Tell families the card is for a short paper story talk led by an adult.",
+      "Invite the writer to explain the cause first, then the effect, using the paper arrow.",
+      "Ask adults to praise the link, not spelling or neatness.",
+      "Return any unused cards to the folder so the next table can use them."
+    ],
+    "reset": [
+      "Sort cause, effect, arrow, and prop cards into separate paper stacks.",
+      "Recycle torn blanks and keep clean blanks for the next group.",
+      "Clear adult examples if one was used; keep no writer details.",
+      "Put the reading nook labels back in the envelope with pencils and arrow strips."
+    ]
+  },
+  "causeEffectRoutines": [
+    {
+      "name": "Lamp Glow Because Pair",
+      "bestFor": "Writers who need one simple cause and one direct effect.",
+      "steps": [
+        "Adult places a lamp glow card on the cause side.",
+        "Writer chooses one effect card that could happen on the pretend page.",
+        "Together, say the sentence with because and point across the arrow.",
+        "Writer copies the pair onto a blank cover shape and adds one cozy detail."
+      ]
+    },
+    {
+      "name": "Cushion Corner So Chain",
+      "bestFor": "Small groups ready to link three paper events.",
+      "steps": [
+        "Place a cushion corner card, an arrow, and two blank effect cards in a row.",
+        "Adult fills the first cause with a tiny change, such as the cushion squeaks.",
+        "Each writer adds one so result that follows the card before it.",
+        "Read the chain once and remove any card that does not follow clearly."
+      ]
+    },
+    {
+      "name": "Paper Bookmark Choice Turn",
+      "bestFor": "Character-choice cause practice without personal data.",
+      "steps": [
+        "Put two paper bookmark choice cards face up.",
+        "Writer picks one pretend character action, such as saving a page or moving a ribbon.",
+        "Adult asks what the action changes in the reading nook scene.",
+        "Writer writes the direct effect on the matching card."
+      ]
+    },
+    {
+      "name": "Blank Cover Object Clue",
+      "bestFor": "Linking an object to a story result.",
+      "steps": [
+        "Adult shows one blank cover shape and three object cards.",
+        "Writer chooses the object that causes the clearest change.",
+        "Group names the effect in five words or fewer.",
+        "Writer draws an arrow from object to effect and reads it aloud."
+      ]
+    },
+    {
+      "name": "Pretend Page Problem Path",
+      "bestFor": "Turning a mild paper problem into a clean result.",
+      "steps": [
+        "Place one pretend page problem card in the center.",
+        "Adult asks what caused the problem inside the fictional page.",
+        "Writer adds a paper cause card to the left.",
+        "Writer adds one result to the right that solves or changes the problem."
+      ]
+    },
+    {
+      "name": "Soft Rug Reaction Link",
+      "bestFor": "Practicing how a character reacts after something happens.",
+      "steps": [
+        "Adult places a soft rug event card and a reaction card together.",
+        "Writer says what happened first using one clear cause.",
+        "Writer chooses a calm reaction effect that fits the event.",
+        "Adult helps turn both parts into one because sentence."
+      ]
+    }
+  ],
+  "takeHomeCauseEffectSlips": [
+    {
+      "title": "Lamp Glow Cause Card",
+      "time": "one-card slip",
+      "skill": "clear cause",
+      "direction": "Choose one pretend reading nook change and write what caused it: ____________________.",
+      "familyLine": "Adult asks, What happened because of that cause: ____________________."
+    },
+    {
+      "title": "Cushion Because Line",
+      "time": "because slip",
+      "skill": "because statement",
+      "direction": "Finish the sentence: The cushion corner changed because ____________________.",
+      "familyLine": "Adult reads the line aloud and asks for one matching effect: ____________________."
+    },
+    {
+      "title": "Paper Bookmark So Result",
+      "time": "so slip",
+      "skill": "so result",
+      "direction": "Write a cause, then add so to show the result: ____________________.",
+      "familyLine": "Adult asks whether the result follows the cause: ____________________."
+    },
+    {
+      "title": "Three Card Chain",
+      "time": "chain slip",
+      "skill": "cause-and-effect chain",
+      "direction": "Make a three-card chain with cause, effect, and next effect: ____________________.",
+      "familyLine": "Adult points to each arrow while the writer explains: ____________________."
+    },
+    {
+      "title": "Lamp Arrow Match",
+      "time": "effect arrow slip",
+      "skill": "direct effect",
+      "direction": "Draw an arrow from a lamp glow cause to one direct effect: ____________________.",
+      "familyLine": "Adult asks the writer to say the arrow sentence: ____________________."
+    },
+    {
+      "title": "Bookmark Choice Cause",
+      "time": "choice slip",
+      "skill": "character choice cause",
+      "direction": "Pick one pretend character choice in the nook and show what it changes: ____________________.",
+      "familyLine": "Adult asks why that choice caused the effect: ____________________."
+    },
+    {
+      "title": "Cozy Setting Effect",
+      "time": "setting slip",
+      "skill": "setting effect",
+      "direction": "Use cushion corner, soft rug, or lamp glow as the setting cause: ____________________.",
+      "familyLine": "Adult asks what changes because the setting is that way: ____________________."
+    },
+    {
+      "title": "Object Makes It Happen",
+      "time": "object slip",
+      "skill": "object cause",
+      "direction": "Choose paper bookmark, blank cover shape, or folded note as the object cause: ____________________.",
+      "familyLine": "Adult asks what the object makes happen on the pretend page: ____________________."
+    },
+    {
+      "title": "Tiny Problem Cause",
+      "time": "problem-result slip",
+      "skill": "problem cause",
+      "direction": "Write a tiny paper problem and the cause behind it: ____________________.",
+      "familyLine": "Adult asks for one gentle result that follows: ____________________."
+    },
+    {
+      "title": "Final Result Link",
+      "time": "final result slip",
+      "skill": "final result",
+      "direction": "Finish a cause-and-effect chain with the final result: ____________________.",
+      "familyLine": "Adult asks which first cause led to the ending: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "My clearest cause was ____________________.",
+    "The effect that followed was ____________________.",
+    "My because sentence is ____________________.",
+    "My so sentence is ____________________.",
+    "The reading nook prop that caused a change was ____________________.",
+    "The pretend page changed when ____________________.",
+    "One effect in my chain led to ____________________.",
+    "The final result of my cozy story chain was ____________________."
+  ],
+  "cards": [
+    {
+      "id": "reading-nook-cause-effect-card-01",
+      "title": "Moon Muffin Tray Wobble",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "causeEffectSkill": "clear cause",
+      "useCase": "Adult-led printable cause-and-effect card for a cozy reading nook table where a paper market scene needs one clear reason before anything changes: ____________________.",
+      "adultSetup": "Place the paper card beside a pretend page, a paper bookmark, and one blank cover shape, then point to the moon muffin tray clue: ____________________.",
+      "kidDirection": "Read the tiny market moment, choose the one clear cause, and write it in the lamp glow space: ____________________.",
+      "causePrompt": "What made the moon muffin tray wobble at the paper counter: ____________________.",
+      "effectPrompt": "What happened right after the tray wobbled: ____________________.",
+      "becausePrompt": "Finish the sentence: The tray wobbled because ____________________.",
+      "soPrompt": "Finish the sentence: The tray wobbled, so ____________________.",
+      "chainPrompt": "Link the first cause to the next tiny market event: ____________________.",
+      "checkBackPrompt": "Check back to the pretend page and circle the clue that proves your cause: ____________________.",
+      "quietOptionLine": "Quiet option: whisper the cause to the adult leader, then write only the key words: ____________________.",
+      "takeHomeLine": "Carry-away line: use the same moon muffin cause with a new paper-card effect: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-02",
+      "title": "Puddle Planet Envelope Plop",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "causeEffectSkill": "direct effect",
+      "useCase": "Adult-led printable cause-and-effect card for a cushion corner where writers name the direct effect of one invented puddle-planet cause: ____________________.",
+      "adultSetup": "Set out the card with a pretend page, paper envelope shape, and lamp glow marker, then read the puddle clue aloud: ____________________.",
+      "kidDirection": "Look at the cause on the paper card and write the direct effect that would happen next: ____________________.",
+      "causePrompt": "Cause: the puddle stamp slid off the envelope shape; add one detail that explains why: ____________________.",
+      "effectPrompt": "What direct effect happens when the puddle stamp slides away: ____________________.",
+      "becausePrompt": "Finish the sentence: The stamp slid away because ____________________.",
+      "soPrompt": "Finish the sentence: The puddle stamp slid away, so ____________________.",
+      "chainPrompt": "Make a short chain from stamp slip to envelope change: ____________________.",
+      "checkBackPrompt": "Check back to the paper clue and tell which effect matches it best: ____________________.",
+      "quietOptionLine": "Quiet option: point to the direct effect first, then copy it into the blank: ____________________.",
+      "takeHomeLine": "Carry-away line: draw a new envelope shape and give it one direct effect: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-03",
+      "title": "Buttonwood Library Train Pause",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "causeEffectSkill": "because statement",
+      "useCase": "Adult-led printable cause-and-effect card for a reading nook rail scene where writers build one clear because statement with invented page labels only: ____________________.",
+      "adultSetup": "Place the card near a blank cover shape and a paper bookmark, then invite the writer to notice the train pause clue: ____________________.",
+      "kidDirection": "Write a full because statement that connects the train pause to one invented cause: ____________________.",
+      "causePrompt": "What caused the Buttonwood Library Train to pause by the cushion shelf: ____________________.",
+      "effectPrompt": "What changed in the quiet rail scene after the train paused: ____________________.",
+      "becausePrompt": "Finish the sentence: The Buttonwood Library Train paused because ____________________.",
+      "soPrompt": "Finish the sentence: The train paused, so ____________________.",
+      "chainPrompt": "Add one more linked step after the pause: ____________________.",
+      "checkBackPrompt": "Check your because statement against the pretend page clue and fix one word if needed: ____________________.",
+      "quietOptionLine": "Quiet option: say the because statement softly, then write the final version: ____________________.",
+      "takeHomeLine": "Carry-away line: make another rail-scene because statement on a fresh paper card: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-04",
+      "title": "Button Bakery Paper Map Mixup",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "causeEffectSkill": "so result",
+      "useCase": "Adult-led printable cause-and-effect card for a cozy paper bakery scene where writers turn one map mixup into a clear so result: ____________________.",
+      "adultSetup": "Lay the card beside a pretend page and a tiny paper path map, then mark the button bakery mixup clue: ____________________.",
+      "kidDirection": "Read the cause, then write the result that begins after the word so: ____________________.",
+      "causePrompt": "What caused the button bakery paper path map to turn the wrong way: ____________________.",
+      "effectPrompt": "What changed at the paper counter after the map turned the wrong way: ____________________.",
+      "becausePrompt": "Finish the sentence: The path map turned the wrong way because ____________________.",
+      "soPrompt": "Finish the sentence: The path map turned the wrong way, so ____________________.",
+      "chainPrompt": "Add one more result after your so sentence: ____________________.",
+      "checkBackPrompt": "Check back to the blank cover shape scene and underline the result clue: ____________________.",
+      "quietOptionLine": "Quiet option: choose the so result from two adult-read choices, then write it: ____________________.",
+      "takeHomeLine": "Carry-away line: reuse the paper path map with a new so result: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-05",
+      "title": "Teacup Town Weather Window",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "causeEffectSkill": "setting effect",
+      "useCase": "Adult-led printable cause-and-effect card for a lamp glow nook where writers show how an invented setting changes what happens: ____________________.",
+      "adultSetup": "Set the card near a pretend page and choose one paper weather window setting before the writer adds the effect: ____________________.",
+      "kidDirection": "Name the setting first, then tell what effect it has on the Teacup Town scene: ____________________.",
+      "causePrompt": "What setting detail appears in the Teacup Town weather window: ____________________.",
+      "effectPrompt": "What effect does that setting have on the paper teacup cart or cushion corner: ____________________.",
+      "becausePrompt": "Finish the sentence: The scene changed because the weather window showed ____________________.",
+      "soPrompt": "Finish the sentence: The weather window changed the setting, so ____________________.",
+      "chainPrompt": "Connect setting to action to final nook detail: ____________________.",
+      "checkBackPrompt": "Check back to the pretend page and make sure the effect fits the setting: ____________________.",
+      "quietOptionLine": "Quiet option: point to the setting picture, then write only the effect words: ____________________.",
+      "takeHomeLine": "Carry-away line: try a different paper weather window and write its effect: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-06",
+      "title": "Pocket Park Notice Board Chain",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "causeEffectSkill": "cause-and-effect chain",
+      "useCase": "Adult-led printable cause-and-effect card for a paper-only reading nook park where writers link three invented events in order: ____________________.",
+      "adultSetup": "Place the fictional notice board card beside a paper bookmark and blank cover shape, then model one cause leading to one effect: ____________________.",
+      "kidDirection": "Write a cause, its effect, and the next effect so the pocket park chain makes sense: ____________________.",
+      "causePrompt": "What first cause appears on the pocket park notice board slip: ____________________.",
+      "effectPrompt": "What effect happens right after that first cause: ____________________.",
+      "becausePrompt": "Finish the sentence: The pocket park changed because ____________________.",
+      "soPrompt": "Finish the sentence: The first notice slip changed, so ____________________.",
+      "chainPrompt": "Build the chain: first cause, first effect, next effect: ____________________.",
+      "checkBackPrompt": "Check back to the pretend page and make sure each link follows from the one before it: ____________________.",
+      "quietOptionLine": "Quiet option: tap each paper link in order before writing the chain: ____________________.",
+      "takeHomeLine": "Carry-away line: fold a fresh paper card and make a new three-link chain: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-07",
+      "title": "Spoon Ferry Lunchbox Harbor",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "causeEffectSkill": "object cause",
+      "useCase": "Adult-led printable cause-and-effect card for showing how one tiny object changes a pretend lunchbox harbor story in the cushion corner: ____________________.",
+      "adultSetup": "Place the paper card near a blank cover shape and ask the writer to choose one object for the spoon ferry to carry: ____________________.",
+      "kidDirection": "Write what the object does first, then write the story effect that happens next in the pretend page scene: ____________________.",
+      "causePrompt": "Object cause: The spoon ferry's special cargo is ____________________.",
+      "effectPrompt": "Effect: When that cargo tips, slides, or shines, the harbor changes by ____________________.",
+      "becausePrompt": "Because the object ____________________, the crumb dock crew decides to ____________________.",
+      "soPrompt": "So the ferry guide changes the crossing path by ____________________.",
+      "chainPrompt": "Chain it: object, ferry choice, harbor effect; write the middle link: ____________________.",
+      "checkBackPrompt": "Check back: Does the final effect clearly happen because of ____________________.",
+      "quietOptionLine": "Quiet option: Draw the object on a paper bookmark and label its effect ____________________.",
+      "takeHomeLine": "Carry-away line: Tell the spoon ferry cause-and-effect story with one because sentence about ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-08",
+      "title": "Acorn Avenue Errand Office",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "causeEffectSkill": "character choice cause",
+      "useCase": "Adult-led printable cause-and-effect card for connecting one invented character choice to an errand-office result under the lamp glow: ____________________.",
+      "adultSetup": "Set the card in the cushion corner and choose a pretend clerk, messenger, or tray keeper together: ____________________.",
+      "kidDirection": "Write the character's choice first, then write what changes in the paper office because of it: ____________________.",
+      "causePrompt": "Character choice cause: The acorn clerk chooses to sort ____________________ first.",
+      "effectPrompt": "Effect: Because of that choice, the errand office ____________________.",
+      "becausePrompt": "Because the character chooses ____________________, another worker notices ____________________.",
+      "soPrompt": "So the paper errand changes in this way: ____________________.",
+      "chainPrompt": "Chain it: choice, office reaction, new errand result; add the missing reaction: ____________________.",
+      "checkBackPrompt": "Check back: Can the effect happen only after the character chooses ____________________.",
+      "quietOptionLine": "Quiet option: Fold a tiny paper ticket and write the choice on it: ____________________.",
+      "takeHomeLine": "Carry-away line: Retell the errand-office cause using because and so with ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-09",
+      "title": "Seed Library Map Room",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "causeEffectSkill": "problem cause",
+      "useCase": "Adult-led printable cause-and-effect card for turning one invented map-room problem into a clear story chain on paper: ____________________.",
+      "adultSetup": "Place a blank cover shape beside the card and draw one pretend shelf mark, folded map square, or seed packet: ____________________.",
+      "kidDirection": "Write the problem first, then show how it causes the next map-room effect in the pretend page: ____________________.",
+      "causePrompt": "Problem cause: The map-room problem starts when ____________________.",
+      "effectPrompt": "Effect: Because that problem happens, the seed shelf guide must ____________________.",
+      "becausePrompt": "Because the problem ____________________, the map room changes by ____________________.",
+      "soPrompt": "So the next clue appears on ____________________.",
+      "chainPrompt": "Chain it: problem, first effect, second effect; write the link that makes the chain make sense: ____________________.",
+      "checkBackPrompt": "Check back: Underline the problem that causes ____________________.",
+      "quietOptionLine": "Quiet option: Sketch two paper map squares and mark the one that causes ____________________.",
+      "takeHomeLine": "Carry-away line: Explain the seed-library problem in one because sentence about ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-10",
+      "title": "Rain Gauge Railway",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "causeEffectSkill": "reaction effect",
+      "useCase": "Adult-led printable cause-and-effect card for showing how one character reaction changes a pretend railway scene on paper: ____________________.",
+      "adultSetup": "Place a paper strip as the railway line beside the card and name one make-believe rain-gauge signal: ____________________.",
+      "kidDirection": "Write the reaction first, then explain the effect that follows in the railway story: ____________________.",
+      "causePrompt": "Reaction cause: When the gauge card tilts, the conductor reacts by ____________________.",
+      "effectPrompt": "Effect: That reaction makes the paper train ____________________.",
+      "becausePrompt": "Because the conductor reacts by ____________________, the platform crew changes ____________________.",
+      "soPrompt": "So the rain-gauge railway scene ends with ____________________.",
+      "chainPrompt": "Chain it: signal, reaction, effect; add the reaction that connects both sides: ____________________.",
+      "checkBackPrompt": "Check back: Does the final effect clearly grow from the reaction to ____________________.",
+      "quietOptionLine": "Quiet option: Draw one arrow from the reaction card to ____________________.",
+      "takeHomeLine": "Carry-away line: Say the railway effect aloud using because or so with ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-11",
+      "title": "Moss Message Observatory",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "causeEffectSkill": "first cause",
+      "useCase": "Adult-led printable cause-and-effect card for finding the first cause in a quiet moss-message observatory story: ____________________.",
+      "adultSetup": "Set the card near a paper telescope strip and remind the writer the observatory exists only in the reading nook: ____________________.",
+      "kidDirection": "Find the first cause before writing later effects, then keep the chain in order on the paper card: ____________________.",
+      "causePrompt": "First cause: The moss on the lens changes when ____________________.",
+      "effectPrompt": "Effect: That first change makes the observer notice ____________________.",
+      "becausePrompt": "Because the first cause is ____________________, the moss message later ____________________.",
+      "soPrompt": "So the observatory helper decides to ____________________.",
+      "chainPrompt": "Chain it: first cause, message change, final choice; write the first cause again: ____________________.",
+      "checkBackPrompt": "Check back: If you remove the first cause, which effect would disappear: ____________________.",
+      "quietOptionLine": "Quiet option: Put a small box around the first cause on the pretend page: ____________________.",
+      "takeHomeLine": "Carry-away line: Retell the moss-message chain beginning with the first cause: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-12",
+      "title": "Tidepool Lab Final Shell",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "causeEffectSkill": "final result",
+      "useCase": "Adult-led printable cause-and-effect card for naming the final result after a pretend tidepool lab change in a paper-only reading nook: ____________________.",
+      "adultSetup": "Print the card, set a paper bookmark beside the lamp glow, and point to the last blank as the final result space: ____________________.",
+      "kidDirection": "Read the invented cause, then write what finally changes on the pretend page: ____________________.",
+      "causePrompt": "Cause: The tidepool lab crew moves the shell marker from the gray tray to ____________________.",
+      "effectPrompt": "Effect: The direct change on the pretend page is ____________________.",
+      "becausePrompt": "Because the shell marker changes places, the lab note now says ____________________.",
+      "soPrompt": "So the final result at the cushion corner is ____________________.",
+      "chainPrompt": "Chain: shell marker moves, label changes, final result becomes ____________________.",
+      "checkBackPrompt": "Look back: Does your final result answer what changed after the first cause: ____________________.",
+      "quietOptionLine": "Quiet option: Circle the cause and write only the final result in the blank: ____________________.",
+      "takeHomeLine": "Carry-away line: On another paper slip, write one cause and its final result: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-13",
+      "title": "Revision River Because Ferry",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "causeEffectSkill": "because statement",
+      "useCase": "Adult-led printable cause-and-effect card for building a because statement on a fictional ferry page in the reading nook: ____________________.",
+      "adultSetup": "Print the card, draw two paper ferry docks, and choose one plain pretend sentence to improve: ____________________.",
+      "kidDirection": "Write a because statement that explains why the ferry sentence changes before it lands: ____________________.",
+      "causePrompt": "Cause: The Revision River ferry finds a foggy detail beside ____________________.",
+      "effectPrompt": "Effect: The sentence becomes clearer when ____________________.",
+      "becausePrompt": "Because the ferry swaps the foggy detail for a sharper one, ____________________.",
+      "soPrompt": "So the far-dock sentence now helps the reader picture ____________________.",
+      "chainPrompt": "Chain: foggy detail appears, ferry pauses, clearer detail arrives because ____________________.",
+      "checkBackPrompt": "Look back: Does your because statement connect one cause to one clear effect: ____________________.",
+      "quietOptionLine": "Quiet option: Write only the words after because, then read the full sentence softly: ____________________.",
+      "takeHomeLine": "Carry-away line: Fold a paper slip and write one because statement for a pretend page: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-14",
+      "title": "Clue Label Direct Result",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "causeEffectSkill": "direct effect",
+      "useCase": "Adult-led printable cause-and-effect card for finding the direct effect of an invented clue label move in a paper museum nook: ____________________.",
+      "adultSetup": "Print the card, stack three blank label shapes, and remind the writer that every clue is invented: ____________________.",
+      "kidDirection": "Name the one effect that happens right after the clue label changes places: ____________________.",
+      "causePrompt": "Cause: The tower guide moves the blue clue label beside ____________________.",
+      "effectPrompt": "Effect: The direct result is that the next label now shows ____________________.",
+      "becausePrompt": "Because the blue clue label moved, the paper exhibit points to ____________________.",
+      "soPrompt": "So the reader can tell that the first clue directly caused ____________________.",
+      "chainPrompt": "Chain: label moves, clue points, direct effect appears as ____________________.",
+      "checkBackPrompt": "Look back: Did you choose the effect that happens right after the label move: ____________________.",
+      "quietOptionLine": "Quiet option: Draw one arrow from the cause label to the direct effect label: ____________________.",
+      "takeHomeLine": "Carry-away line: Use two paper scraps to show a cause and its direct effect: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-15",
+      "title": "Compass Craft Choice Cause",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "causeEffectSkill": "character choice cause",
+      "useCase": "Adult-led printable cause-and-effect card for showing how a character choice causes a compass craft result: ____________________.",
+      "adultSetup": "Print the card, place a blank cover shape under the lamp glow, and draw a small paper compass dial: ____________________.",
+      "kidDirection": "Choose what the compass maker decides, then explain what that choice causes next: ____________________.",
+      "causePrompt": "Cause: The compass maker chooses ____________________ for the center mark.",
+      "effectPrompt": "Effect: That choice makes the paper compass point toward ____________________.",
+      "becausePrompt": "Because the character picked that center mark, the compass craft now ____________________.",
+      "soPrompt": "So the academy page changes by adding ____________________.",
+      "chainPrompt": "Chain: character choice, compass shift, new story result: ____________________.",
+      "checkBackPrompt": "Look back: Can the effect happen only because of the character choice you wrote: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the compass choice first, then write the caused result: ____________________.",
+      "takeHomeLine": "Carry-away line: Make a tiny paper compass and name one choice that causes a result: ____________________."
+    },
+    {
+      "id": "reading-nook-cause-effect-card-16",
+      "title": "Binding Day Paper Chain",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "causeEffectSkill": "cause-and-effect chain",
+      "useCase": "Adult-led printable cause-and-effect card for linking several invented boardwalk page events into one cause-and-effect chain: ____________________.",
+      "adultSetup": "Print the card, fold three pretend pages, and place them in a small paper stack near the cushion corner: ____________________.",
+      "kidDirection": "Write each cause and effect so one result becomes the next cause in the chain: ____________________.",
+      "causePrompt": "Cause: On Binding Day, the first loose page slides beside ____________________.",
+      "effectPrompt": "Effect: The paper helper notices ____________________ and changes the page order.",
+      "becausePrompt": "Because the page order changes, the blank cover shape now needs ____________________.",
+      "soPrompt": "So the next boardwalk step is ____________________.",
+      "chainPrompt": "Chain: loose page, changed order, cover fix, final page result: ____________________.",
+      "checkBackPrompt": "Look back: Does each effect become the reason for the next step in your chain: ____________________.",
+      "quietOptionLine": "Quiet option: Use arrows between four short phrases instead of full sentences: ____________________.",
+      "takeHomeLine": "Carry-away line: Stack three scrap pages and write a cause-and-effect chain for them: ____________________."
+    }
+  ]
+}
