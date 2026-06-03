@@ -80,6 +80,7 @@ describe('storyData', () => {
       'binder-clip-story-transition-card-pack',
       'folder-tab-story-detail-card-pack',
       'index-card-story-show-not-tell-card-pack',
+      'sticky-note-story-tone-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -120,6 +121,7 @@ describe('storyData', () => {
       '$59',
       '$61',
       '$63',
+      '$65',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)

@@ -41,6 +41,8 @@ import {
   validateFolderTabStoryDetailCardPackSourceFiles,
   validateIndexCardStoryShowNotTellCardPackSource,
   validateIndexCardStoryShowNotTellCardPackSourceFiles,
+  validateStickyNoteStoryToneCardPackSource,
+  validateStickyNoteStoryToneCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -116,6 +118,7 @@ const batch42ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch43ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch43-product-images.json')
 const batch44ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch44-product-images.json')
 const batch45ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch45-product-images.json')
+const batch46ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch46-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -155,6 +158,7 @@ const paperClipSolutionSourceFile = resolve(root, 'content', 'product-artifacts'
 const binderClipTransitionSourceFile = resolve(root, 'content', 'product-artifacts', 'binder-clip-story-transition-card-pack.json')
 const folderTabDetailSourceFile = resolve(root, 'content', 'product-artifacts', 'folder-tab-story-detail-card-pack.json')
 const indexCardShowNotTellSourceFile = resolve(root, 'content', 'product-artifacts', 'index-card-story-show-not-tell-card-pack.json')
+const stickyNoteToneSourceFile = resolve(root, 'content', 'product-artifacts', 'sticky-note-story-tone-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -195,6 +199,7 @@ const batch42ProductImagesBatchId = '2026-06-03-batch42-product-images'
 const batch43ProductImagesBatchId = '2026-06-03-batch43-product-images'
 const batch44ProductImagesBatchId = '2026-06-03-batch44-product-images'
 const batch45ProductImagesBatchId = '2026-06-03-batch45-product-images'
+const batch46ProductImagesBatchId = '2026-06-03-batch46-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -234,6 +239,7 @@ const paperClipSolutionBatchId = '2026-06-03-batch42'
 const binderClipTransitionBatchId = '2026-06-03-batch43'
 const folderTabDetailBatchId = '2026-06-03-batch44'
 const indexCardShowNotTellBatchId = '2026-06-03-batch45'
+const stickyNoteToneBatchId = '2026-06-03-batch46'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -3472,6 +3478,110 @@ function validateBatch45ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch46ProductImage(image) {
+  const label = `2026-06-03-batch46-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'sticky-note-story-tone-card-pack',
+    `${label}.slug must be sticky-note-story-tone-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch46/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch46/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch46/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'twelve blank pastel sticky notes',
+    'empty writing areas',
+    'unbranded pencils',
+    'plain white background',
+    'screen-free sticky note story tone card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'coordinates',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'microphone',
+    'audio recorder',
+    'voice memo',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'contest',
+    'prize',
+    'food',
+    'tasting',
+    'allergy',
+    'medical',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar.negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -3789,6 +3899,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'index-card-story-show-not-tell-card-pack': {
       title: 'Index Card Story Show-Not-Tell Card Pack',
       pricePoint: '$63',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'sticky-note-story-tone-card-pack': {
+      title: 'Sticky Note Story Tone Card Pack',
+      pricePoint: '$65',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -5009,12 +5127,23 @@ expect(Array.isArray(batch45ProductImages.images), 'batch45 product image manife
 expect(batch45ProductImages.images.length === 1, `Expected 1 Batch 45 product image, found ${batch45ProductImages.images.length}.`)
 validateBatch45ProductImage(batch45ProductImages.images[0])
 
+expect(existsSync(batch46ProductImagesFile), `Missing Batch 46 product image manifest: ${batch46ProductImagesFile}`)
+const batch46ProductImages = readJson(batch46ProductImagesFile)
+expect(
+  batch46ProductImages.batchId === batch46ProductImagesBatchId,
+  `batch46 product image manifest batchId must be ${batch46ProductImagesBatchId}.`,
+)
+expect(batch46ProductImages.generatedAt === '2026-06-03', 'batch46 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch46ProductImages.images), 'batch46 product image manifest images must be an array.')
+expect(batch46ProductImages.images.length === 1, `Expected 1 Batch 46 product image, found ${batch46ProductImages.images.length}.`)
+validateBatch46ProductImage(batch46ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 38, `Expected 38 product records, found ${products.products.length}.`)
+  expect(products.products.length === 39, `Expected 39 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -5056,6 +5185,7 @@ for (const requiredProductSlug of [
   'binder-clip-story-transition-card-pack',
   'folder-tab-story-detail-card-pack',
   'index-card-story-show-not-tell-card-pack',
+  'sticky-note-story-tone-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -7886,6 +8016,93 @@ for (const asset of indexCardShowNotTellArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(stickyNoteToneSourceFile), `Missing Batch 46 Sticky Note Story Tone Card Pack source file: ${stickyNoteToneSourceFile}`)
+const stickyNoteToneSource = readJson(stickyNoteToneSourceFile)
+expect(
+  stickyNoteToneSource.batchId === stickyNoteToneBatchId,
+  `Sticky Note Story Tone Card Pack source batchId must be ${stickyNoteToneBatchId}.`,
+)
+const stickyNoteToneProduct = products.products.find(
+  (product) => product.slug === 'sticky-note-story-tone-card-pack',
+)
+expect(
+  stickyNoteToneProduct,
+  'Missing Sticky Note Story Tone Card Pack product record for Batch 46 artifact validation.',
+)
+const stickyNoteToneSourceErrors = validateStickyNoteStoryToneCardPackSource(
+  stickyNoteToneSource,
+  stickyNoteToneProduct,
+  worldAgeBands,
+)
+expect(
+  stickyNoteToneSourceErrors.length === 0,
+  `Sticky Note Story Tone Card Pack source failed validation:\n${stickyNoteToneSourceErrors.join('\n')}`,
+)
+const stickyNoteToneSourceFileErrors = validateStickyNoteStoryToneCardPackSourceFiles(
+  stickyNoteToneSource,
+  root,
+)
+expect(
+  stickyNoteToneSourceFileErrors.length === 0,
+  `Sticky Note Story Tone Card Pack sourceFiles failed validation:\n${stickyNoteToneSourceFileErrors.join('\n')}`,
+)
+const stickyNoteToneExpectedPdfPages = stickyNoteToneSource.cards.length + 5
+const stickyNoteToneArtifactStatus = inspectArtifactFiles(root, stickyNoteToneSource.artifact, {
+  expectedPdfPages: stickyNoteToneExpectedPdfPages,
+})
+expect(
+  stickyNoteToneArtifactStatus.valid,
+  `Sticky Note Story Tone Card Pack artifacts failed validation:\n${stickyNoteToneArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  stickyNoteToneArtifactStatus.files.pdf.size > 100_000,
+  `Sticky Note Story Tone Card Pack PDF artifact is unexpectedly small: ${stickyNoteToneArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  stickyNoteToneArtifactStatus.files.pdf.pageCount === stickyNoteToneExpectedPdfPages,
+  `Sticky Note Story Tone Card Pack PDF artifact must have ${stickyNoteToneExpectedPdfPages} pages.`,
+)
+expect(
+  stickyNoteToneArtifactStatus.files.zip.size > stickyNoteToneArtifactStatus.files.pdf.size,
+  'Sticky Note Story Tone Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const stickyNoteToneCheckoutErrors = validateCheckoutReadiness(
+  stickyNoteToneProduct,
+  stickyNoteToneArtifactStatus,
+)
+expect(
+  stickyNoteToneCheckoutErrors.length === 0,
+  `Sticky Note Story Tone Card Pack checkout readiness failed validation:\n${stickyNoteToneCheckoutErrors.join('\n')}`,
+)
+const stickyNoteToneArtifactManifest = readJson(resolve(root, stickyNoteToneSource.artifact.manifestPath))
+expect(
+  stickyNoteToneArtifactManifest.sourcePageCount === stickyNoteToneSource.cards.length,
+  'Sticky Note Story Tone Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(stickyNoteToneArtifactManifest.files.assets),
+  'Sticky Note Story Tone Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  stickyNoteToneArtifactManifest.files.assets.length === stickyNoteToneSource.worldSlugs.length,
+  'Sticky Note Story Tone Card Pack artifact manifest must include one copied local image per source world.',
+)
+const stickyNoteToneManifestAssetErrors = validateManifestWorldAssets(
+  stickyNoteToneSource,
+  stickyNoteToneArtifactManifest,
+)
+expect(
+  stickyNoteToneManifestAssetErrors.length === 0,
+  `Sticky Note Story Tone Card Pack artifact manifest image coverage failed validation:\n${stickyNoteToneManifestAssetErrors.join('\n')}`,
+)
+for (const asset of stickyNoteToneArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Sticky Note Story Tone Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -7923,6 +8140,7 @@ const productImageManifests = [
   batch43ProductImages,
   batch44ProductImages,
   batch45ProductImages,
+  batch46ProductImages,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

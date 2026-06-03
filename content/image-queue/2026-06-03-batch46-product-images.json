@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-03-batch46-product-images",
+  "generatedAt": "2026-06-03",
+  "images": [
+    {
+      "slug": "sticky-note-story-tone-card-pack",
+      "title": "Sticky Note Story Tone Card Pack",
+      "purpose": "Static product page hero and printable-pack shelf image",
+      "prompt": "family-friendly flat lay, twelve blank pastel sticky notes with empty writing areas arranged beside unbranded pencils and tiny paper tone clue tokens, unbranded cozy writing table, plain white background, screen-free Sticky Note Story Tone Card Pack product photo, no readable text, no people",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, illustration, drawing, line art, cartoon, person, people, child, child face, child portrait, hands, body, clothing, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, map, real map, phone, tablet, laptop, computer, screen, device, app interface, microphone, audio recorder, voice memo, camera, photo, recording, transcription, school login, account login, portal, qr code, upload icon, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, food, tasting, allergy, medical, brand mark, franchise character, scary, weapon, fight, bullying",
+      "seed": 26064665,
+      "outputJpeg": "public/images/plotsprout/batch46/sticky-note-story-tone-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch46/sticky-note-story-tone-card-pack.webp",
+      "sidecar": "content/image-runs/batch46/sticky-note-story-tone-card-pack.json"
+    }
+  ]
+}

@@ -574,6 +574,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable index card story show-not-tell cards with adult guide tools, show routines, and take-home show slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'sticky-note-story-tone-card-pack',
+    title: 'Sticky Note Story Tone Card Pack',
+    pricePoint: '$65',
+    description:
+      'Sixteen printable sticky note story tone cards with adult guide tools, tone routines, and take-home tone slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

@@ -3600,6 +3600,130 @@
           "summary": "A binding day world for showing pride with a clasp, page edge, and promise slip."
         }
       ]
+    },
+    {
+      "slug": "sticky-note-story-tone-card-pack",
+      "title": "Sticky Note Story Tone Card Pack",
+      "pricePoint": "$65",
+      "status": "checkout_pending",
+      "headline": "A printable story tone card pack for paper-only fictional sticky note revisions.",
+      "summary": "Sixteen adult-led sticky note prompts help kids revise neutral lines with clearer story tone.",
+      "heroImage": "images/plotsprout/batch46/sticky-note-story-tone-card-pack.jpg",
+      "ctaLabel": "Request story tone card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Sticky%20Note%20Story%20Tone%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static sticky note story tone card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable sticky note story tone cards",
+        "Adult setup guide",
+        "Fictional story tone safety notes",
+        "Sticky note tone coaching moves",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six adult-led story tone routines",
+        "Ten take-home tone slips",
+        "Eight optional prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one tone choice before a story sentence",
+        "A tutoring or co-op table where writers can revise one sticky note at a time",
+        "A warm-up where a small paper note reduces blank-page pressure",
+        "A reluctant-writer activity that separates tone choice from a full draft",
+        "A take-home tone slip set for building one invented story offline"
+      ],
+      "parentSteps": [
+        "Choose one story tone routine before the activity starts.",
+        "Set the paper, pencils, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one neutral line into a fictional tone clue rather than using narrow real-world facts.",
+        "Send one tone slip with a single blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for making a tray line feel warm, excited, or careful."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for changing a mail line with ripple words and stamp cues."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for adjusting a ticket line with quiet or busy tone."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for setting tone with map-table marks and crumb labels."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for shifting tone through cloud cues and window gestures."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for using notice-board words to make a line cheerful or careful."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for shaping tone with dock cues, flags, and lunchbox details."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for making a note line patient, rushed, or careful."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for setting tone with a folded map-table clue."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for creating careful tone through gauge and platform cues."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for making a line feel curious or awed with object signals."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for shifting a shell-note line between calm and lively."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for turning one draft line patient, playful, or focused."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for setting formal or playful tone with display tags."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for making a tool line sound confident or cautious."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for making a page promise feel warm, grand, or quiet."
+        }
+      ]
     }
   ]
 }

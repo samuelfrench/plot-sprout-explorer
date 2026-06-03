@@ -1,0 +1,158 @@
+{
+  "laneId": "batch46-sticky-note-tone-tools",
+  "adultGuide": {
+    "title": "Sticky Note Story Tone Adult Guide",
+    "bullets": [
+      "Print the sticky-note tone cards, blank revision slips, and adult guide pages before the adult-led paper session.",
+      "Begin with one neutral fictional line, then coach tone through word choice, object signal, place cue, character gesture, sentence frame, and revised sentence.",
+      "Keep every example made-up, broad, offline, printable, and guided by an adult.",
+      "Use one sticky note for each tone move so the writer can move, compare, and revise small pieces without crowding the page.",
+      "Replace narrow outside details with pretend names, broad story places, and invented objects before writing begins.",
+      "End each activity by choosing the revised sentence that makes the story feel calm, curious, cheerful, formal, playful, or gentle on the page."
+    ]
+  },
+  "toneRoutines": [
+    {
+      "name": "Neutral Line Lift",
+      "bestFor": "Starting tone work from a plain fictional sentence.",
+      "steps": [
+        "The adult places one neutral line sticky at the top of the page: ____________________.",
+        "The writer chooses a safe tone word such as calm, curious, cheerful, formal, playful, or gentle: ____________________.",
+        "The adult asks which plain word could shift toward that tone: ____________________.",
+        "The writer rewrites the line with one tone-matching word choice: ____________________."
+      ]
+    },
+    {
+      "name": "Word Choice Swap",
+      "bestFor": "Changing the feel of a sentence without changing the story event.",
+      "steps": [
+        "The adult circles one plain verb or describing word in the neutral line: ____________________.",
+        "The writer lists two softer, brighter, quieter, or more formal word choices: ____________________.",
+        "The adult asks which choice best matches the intended tone: ____________________.",
+        "The writer writes the revised word choice in the sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Object Signal Sticky",
+      "bestFor": "Letting a pretend object carry part of the tone.",
+      "steps": [
+        "The adult adds a blank sticky for one invented object signal: ____________________.",
+        "The writer chooses a gentle object action, such as shimmer, lean, fold, hover, or settle: ____________________.",
+        "The adult asks what tone the object signal gives the moment: ____________________.",
+        "The writer writes one object-signal sentence that keeps the line fictional: ____________________."
+      ]
+    },
+    {
+      "name": "Place Cue Shift",
+      "bestFor": "Using a broad pretend place cue to support tone.",
+      "steps": [
+        "The adult names the broad pretend place already in the neutral line: ____________________.",
+        "The writer adds one place cue, such as a lantern edge, counter mat, shelf tag, paper arch, or table mark: ____________________.",
+        "The adult asks whether the cue makes the tone feel calmer, brighter, quieter, or more formal: ____________________.",
+        "The writer revises the sentence with the place cue included: ____________________."
+      ]
+    },
+    {
+      "name": "Gesture Tone Pass",
+      "bestFor": "Showing tone through a fictional character's visible movement.",
+      "steps": [
+        "The adult points to where a character gesture could fit in the neutral line: ____________________.",
+        "The writer chooses one safe gesture, such as smoothing a note, tilting a tag, stepping back, or raising eyebrows: ____________________.",
+        "The adult asks what tone the gesture gives the sentence: ____________________.",
+        "The writer writes the gesture into a revised tone sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Frame and Final",
+      "bestFor": "Turning separate tone choices into one finished sentence.",
+      "steps": [
+        "The adult offers a sentence frame such as When the object moved, the character did something small: ____________________.",
+        "The writer fills the frame with one tone word choice, one object signal, and one gesture: ____________________.",
+        "The adult asks which extra word can be removed so the tone stays clear: ____________________.",
+        "The writer writes the final revised sentence on the last sticky note: ____________________."
+      ]
+    }
+  ],
+  "takeHomeToneSlips": [
+    {
+      "title": "Neutral Line Slip",
+      "time": "One paper pass",
+      "skill": "neutral line",
+      "direction": "Write one made-up neutral line that can be revised for tone: ____________________.",
+      "familyLine": "Ask which tone the line could take next: ____________________."
+    },
+    {
+      "title": "Tone Word Slip",
+      "time": "Brief adult-led pass",
+      "skill": "tone choice",
+      "direction": "Choose one safe tone word for the pretend sentence, such as calm, curious, cheerful, formal, playful, or gentle: ____________________.",
+      "familyLine": "Ask what the chosen tone should make the story feel like: ____________________."
+    },
+    {
+      "title": "Word Choice Slip",
+      "time": "Single printable slip",
+      "skill": "word choice",
+      "direction": "Swap one plain word for a word that better matches the chosen tone: ____________________.",
+      "familyLine": "Ask which word changed the feel of the sentence most clearly: ____________________."
+    },
+    {
+      "title": "Object Signal Slip",
+      "time": "Quiet pencil pass",
+      "skill": "object signal",
+      "direction": "Add one invented object signal that helps show the sentence tone: ____________________.",
+      "familyLine": "Ask what the object signal makes the reader notice: ____________________."
+    },
+    {
+      "title": "Place Cue Slip",
+      "time": "One sticky note pass",
+      "skill": "place cue",
+      "direction": "Add one broad pretend place cue that supports the tone without naming a narrow place: ____________________.",
+      "familyLine": "Ask which cue helps the pretend place feel clear: ____________________."
+    },
+    {
+      "title": "Gesture Slip",
+      "time": "Calm paper pass",
+      "skill": "character gesture",
+      "direction": "Give a made-up character one visible gesture that matches the tone: ____________________.",
+      "familyLine": "Ask what tone the gesture shows on the page: ____________________."
+    },
+    {
+      "title": "Sentence Frame Slip",
+      "time": "Fresh slip pass",
+      "skill": "sentence frame",
+      "direction": "Use a sentence frame to combine one object signal and one gesture: ____________________.",
+      "familyLine": "Ask which part of the frame carries the tone best: ____________________."
+    },
+    {
+      "title": "Tone Pair Slip",
+      "time": "Second pencil pass",
+      "skill": "combining tone clues",
+      "direction": "Pair one word choice with one place cue so the tone stays steady: ____________________.",
+      "familyLine": "Ask how the two tone clues work together: ____________________."
+    },
+    {
+      "title": "Remove One Word Slip",
+      "time": "Short revision pass",
+      "skill": "tone revision",
+      "direction": "Remove one extra word from the revised sentence so the tone feels cleaner: ____________________.",
+      "familyLine": "Ask which removed word made the sentence stronger: ____________________."
+    },
+    {
+      "title": "Final Tone Slip",
+      "time": "Final paper pass",
+      "skill": "revised sentence",
+      "direction": "Write the final revised sentence with a clear tone, object signal, place cue, and gesture: ____________________.",
+      "familyLine": "Ask what changed from the neutral line to the revised sentence: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the neutral line for this sticky note is ____________________.",
+    "Optional adult-led offline prompt: the tone word I chose for the made-up moment is ____________________.",
+    "Optional adult-led offline prompt: one word choice that fits the tone is ____________________.",
+    "Optional adult-led offline prompt: the invented object signal that shows tone is ____________________.",
+    "Optional adult-led offline prompt: the broad pretend place cue for the sentence is ____________________.",
+    "Optional adult-led offline prompt: the character gesture that supports the tone is ____________________.",
+    "Optional adult-led offline prompt: the sentence frame I will fill is ____________________.",
+    "Optional adult-led offline prompt: the final revised tone sentence is ____________________."
+  ]
+}
