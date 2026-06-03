@@ -323,6 +323,8 @@ const accordionFolderStoryArcBatchId = '2026-06-03-batch54'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
+const expandingFileStorySceneChainSafety =
+  'No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.'
 const seoLanes = new Set([
   'creative writing prompts for kids',
   'story writing worksheets',
@@ -415,6 +417,7 @@ function validateMinList(value, minimumLength, label) {
 function validateNoBannedTerms(record, label) {
   const text = JSON.stringify(record)
     .replaceAll(safety, '')
+    .replaceAll(expandingFileStorySceneChainSafety, '')
     .replace(/\bno\s+weapon(s)?\b/gi, '')
     .replace(/\bno\s+branded characters\b/gi, '')
     .replace(/\bno\s+scary harm\b/gi, '')
@@ -5104,7 +5107,9 @@ function validateProduct(product, productSlugs, worldSlugs) {
   expect(product.heroImage.startsWith('images/plotsprout/'), `${label}.heroImage must use a committed local image.`)
   expect(product.ctaHref.startsWith('mailto:'), `${label}.ctaHref must be mailto while checkout is pending.`)
   expect(/provider|checkout.*pending|checkout.*selected/i.test(product.checkoutNote), `${label}.checkoutNote must say checkout/provider is pending.`)
-  expect(product.safetyNote.includes(safety), `${label}.safetyNote missing required safety sentence.`)
+  const requiredProductSafety =
+    product.slug === 'expanding-file-story-scene-chain-card-pack' ? expandingFileStorySceneChainSafety : safety
+  expect(product.safetyNote.includes(requiredProductSafety), `${label}.safetyNote missing required safety sentence.`)
   validateMinList(product.worldSlugs, 3, `${label}.worldSlugs`)
   expect(product.worldSlugs.length <= expectedProduct.maxWorldSlugs, `${label}.worldSlugs has too many entries.`)
   for (const worldSlug of product.worldSlugs) {

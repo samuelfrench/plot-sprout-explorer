@@ -415,8 +415,8 @@ function writeReadme(source, paths = expandingFileStorySceneChainBuildPaths()) {
     '- source/assets/*.jpg',
     '',
     'Fulfillment note:',
-    'Place the ZIP in a hosted product only after Sam chooses the provider.',
-    'Do not add a public download URL to the static site.',
+    'Hold the ZIP for Sam until the sales path is chosen.',
+    'Do not add a download URL to the static site.',
     '',
   ].join('\n')
   writeFileSync(paths.readmePath, text)

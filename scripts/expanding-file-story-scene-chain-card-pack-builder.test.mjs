@@ -17,7 +17,7 @@ import {
 
 const root = resolve(import.meta.dirname, '..')
 const safety =
-  'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
+  'No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.'
 
 const sourceFiles = [
   'content/product-artifacts/lanes/batch55-expanding-file-scene-chain-cards-a.json',
@@ -469,11 +469,13 @@ describe('Expanding File Story Scene Chain Card Pack policy', () => {
       const pdfPath = join(targetBuildDir, 'Expanding-File-Story-Scene-Chain-Card-Pack.pdf')
       const zipPath = join(targetBuildDir, 'expanding-file-story-scene-chain-card-pack.zip')
       const manifestPath = join(targetBuildDir, 'manifest.json')
+      const readmePath = join(targetBuildDir, 'README.txt')
 
       expect(existsSync(htmlPath)).toBe(true)
       expect(existsSync(pdfPath)).toBe(true)
       expect(existsSync(zipPath)).toBe(true)
       expect(existsSync(manifestPath)).toBe(true)
+      expect(readFileSync(readmePath, 'utf8')).not.toMatch(/\b(provider|public|real child)\b/i)
       expect(output.source.productSlug).toBe('expanding-file-story-scene-chain-card-pack')
       expect(output.manifest.productSlug).toBe('expanding-file-story-scene-chain-card-pack')
       expect(output.manifest.files.pdf.sha256).toBe(sha256(pdfPath))
@@ -567,6 +569,9 @@ describe('Expanding File Story Scene Chain Card Pack policy', () => {
       heroImage: 'images/plotsprout/batch55/expanding-file-story-scene-chain-card-pack.jpg',
     })
     expect(productRecord.ctaHref).toMatch(/^mailto:/)
+    expect(`${productRecord.checkoutNote}\n${productRecord.safetyNote}`).not.toMatch(
+      /\b(provider|payment|public|real child)\b/i,
+    )
   })
 
   it('defines one local-only Batch55 product hero image manifest entry', () => {

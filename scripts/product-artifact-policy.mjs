@@ -65,6 +65,8 @@ export const expandingFileStorySceneChainCardPackProductSlug =
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
+const expandingFileStorySceneChainRequiredSafety =
+  'No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.'
 
 const familySafetyBlockedTerms = [
   /\bweapon(s)?\b/i,
@@ -15243,6 +15245,10 @@ const batch54ExpandingFileStorySceneChainOverlapWorldSet = new Set([
 function normalizeExpandingFileStorySceneChainAllowedText(value) {
   return JSON.stringify(value)
     .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+    .replace(
+      /\bNo scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts\./gi,
+      '',
+    )
     .replace(/\badult-led\b/gi, '')
     .replace(/\badult\b/gi, '')
     .replace(/\boffline\b/gi, '')
@@ -15455,7 +15461,11 @@ export function validateExpandingFileStorySceneChainCardPackSource(source, produ
   )
   pushIf(errors, source.title !== 'Expanding File Story Scene Chain Card Pack', 'title must be Expanding File Story Scene Chain Card Pack.')
   pushIf(errors, source.pricePoint !== '$83', 'pricePoint must be $83.')
-  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include required safety sentence.')
+  pushIf(
+    errors,
+    !source.safetyNote?.includes(expandingFileStorySceneChainRequiredSafety),
+    'safetyNote must include required Batch 55 safety sentence.',
+  )
 
   if (product) {
     pushIf(errors, product.slug !== source.productSlug, 'product.slug must match productSlug.')
