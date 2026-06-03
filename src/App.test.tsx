@@ -98,5 +98,9 @@ describe('App', () => {
       'href',
       expect.stringContaining('spiral-notebook-story-final-copy-card-pack'),
     )
+    expect(screen.getByRole('link', { name: /Preview Tabbed Folder Story Series Card Pack/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('tabbed-folder-story-series-card-pack'),
+    )
   })
 })

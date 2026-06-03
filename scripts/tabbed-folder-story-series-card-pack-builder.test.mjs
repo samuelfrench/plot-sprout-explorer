@@ -192,7 +192,7 @@ function expectedZipEntries(source) {
 
 function card(index, worldSlug, ageBand) {
   return {
-    id: `tabbed-folder-story-series-card-${String(index).padStart(2, '0')}`,
+    id: `tabbed-folder-series-card-${String(index).padStart(2, '0')}`,
     title: `Tabbed Folder Story Series Card ${index}`,
     worldSlug,
     ageBand,
@@ -279,24 +279,25 @@ function validSource(overrides = {}) {
       ],
     },
     seriesRoutines: Array.from({ length: 6 }, (_, index) => ({
-      name: `Story Series Routine ${index + 1}`,
-      bestFor: 'A calm adult-led tabbed folder moment with one fictional story page to continue.',
-      steps: [
+      id: `story-series-routine-${index + 1}`,
+      title: `Story Series Routine ${index + 1}`,
+      time: 'quiet folder pass',
+      adultSteps: [
         'Adult chooses one pretend page and one tabbed folder story-series card: ____________________.',
         'Writer marks the page-one anchor and one returning character note: ____________________.',
         'Writer carries one setting detail or clue label to the next page: ____________________.',
         'Adult stores the page and next-page note in the folder pocket: ____________________.',
       ],
-    })),
-    takeHomeSeriesSlips: Array.from({ length: 10 }, (_, index) => ({
-      title: `Story Series Take-Home Slip ${index + 1}`,
-      time: 'one quiet folder pass',
-      skill: 'carry one fictional story-series detail to the next paper page',
-      direction:
-        'Choose one pretend folder page and add one next-page note that keeps the story series steady: ____________________.',
       familyLine: 'Family adult note: the returning story-series detail was ____________________.',
     })),
-    optionalAdultPrompts: Array.from(
+    takeHomeSeriesSlips: Array.from({ length: 10 }, (_, index) => ({
+      id: `story-series-slip-${index + 1}`,
+      title: `Story Series Take-Home Slip ${index + 1}`,
+      adultLine: 'Adult: choose one pretend folder page to continue: ____________________.',
+      childLine: 'Child: the detail I will bring back is: ____________________.',
+      nextStepLine: 'Next page: add one note that keeps the story steady: ____________________.',
+    })),
+    optionalSharePrompts: Array.from(
       { length: 8 },
       (_, index) =>
         `Optional adult prompt ${index + 1}: point to one private paper detail that can return later: ____________________.`,
@@ -354,7 +355,7 @@ function writeLaneFiles(tempRoot, source, laneIdOverrides = {}) {
           adultGuide: source.adultGuide,
           seriesRoutines: source.seriesRoutines,
           takeHomeSeriesSlips: source.takeHomeSeriesSlips,
-          optionalAdultPrompts: source.optionalAdultPrompts,
+          optionalAdultPrompts: source.optionalSharePrompts,
         }
       : {
           laneId,
@@ -474,7 +475,7 @@ describe('Tabbed Folder Story Series Card Pack policy', () => {
       {
         term: 'public',
         mutate(source) {
-          source.optionalAdultPrompts[0] = 'Optional adult prompt 1: public note goes here: ____________________.'
+          source.optionalSharePrompts[0] = 'Optional adult prompt 1: public note goes here: ____________________.'
         },
       },
       {

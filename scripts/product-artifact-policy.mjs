@@ -56,6 +56,8 @@ export const compositionNotebookStoryDraftChecklistCardPackProductSlug =
   'composition-notebook-story-draft-checklist-card-pack'
 export const spiralNotebookStoryFinalCopyCardPackProductSlug =
   'spiral-notebook-story-final-copy-card-pack'
+export const tabbedFolderStorySeriesCardPackProductSlug =
+  'tabbed-folder-story-series-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -499,6 +501,16 @@ const requiredSpiralNotebookStoryFinalCopyCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/spiral-notebook-story-final-copy-card-pack/source/spiral-notebook-story-final-copy-card-pack.html',
   manifestPath: 'product-build/spiral-notebook-story-final-copy-card-pack/manifest.json',
+}
+
+const requiredTabbedFolderStorySeriesCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/tabbed-folder-story-series-card-pack/Tabbed-Folder-Story-Series-Card-Pack.pdf',
+  zipPath:
+    'product-build/tabbed-folder-story-series-card-pack/tabbed-folder-story-series-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/tabbed-folder-story-series-card-pack/source/tabbed-folder-story-series-card-pack.html',
+  manifestPath: 'product-build/tabbed-folder-story-series-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -8414,6 +8426,9 @@ function normalizePaperTrayAllowedSafetyText(value) {
     .replace(/\badult\b/gi, '')
     .replace(/\boffline\b/gi, '')
     .replace(/\bpaper-only\b/gi, '')
+    .replace(/\bno screens?\b/gi, '')
+    .replace(/\bwithout screens?\b/gi, '')
+    .replace(/\bscreen-free\b/gi, '')
     .replace(/\btake-home\b/gi, '')
     .replace(/\bfamily adult\b/gi, '')
     .replace(/\bfamily reader\b/gi, '')
@@ -8746,6 +8761,9 @@ function normalizeBackpackEndingAllowedSafetyText(value) {
     .replace(/\badult\b/gi, '')
     .replace(/\boffline\b/gi, '')
     .replace(/\bpaper-only\b/gi, '')
+    .replace(/\bno screens?\b/gi, '')
+    .replace(/\bwithout screens?\b/gi, '')
+    .replace(/\bscreen-free\b/gi, '')
     .replace(/\btake-home\b/gi, '')
     .replace(/\bfamily adult(s)?\b/gi, '')
     .replace(/\bfamily reader(s)?\b/gi, '')
@@ -14007,6 +14025,505 @@ export function validateSpiralNotebookStoryFinalCopyCardPackSourceFiles(source, 
   return errors
 }
 
+const tabbedFolderStorySeriesCardKeys = [
+  'id',
+  'title',
+  'worldSlug',
+  'ageBand',
+  'seriesSkill',
+  'useCase',
+  'adultSetup',
+  'kidDirection',
+  'pageOneAnchorPrompt',
+  'characterReturnPrompt',
+  'settingReturnPrompt',
+  'clueCarryPrompt',
+  'pageTurnPrompt',
+  'seriesWrapPrompt',
+  'quietOptionLine',
+  'takeHomeLine',
+]
+
+const tabbedFolderStorySeriesSourceFiles = [
+  'content/product-artifacts/lanes/batch53-tabbed-folder-story-series-cards-a.json',
+  'content/product-artifacts/lanes/batch53-tabbed-folder-story-series-cards-b.json',
+  'content/product-artifacts/lanes/batch53-tabbed-folder-story-series-cards-c.json',
+  'content/product-artifacts/lanes/batch53-tabbed-folder-story-series-tools.json',
+]
+
+const batch50TabbedFolderStorySeriesOverlapWorldSet = new Set([
+  'penny-path-compass-shop',
+  'sticker-station-mail-cart',
+  'mitten-market-lost-ticket',
+  'paperclip-plaza-parcel-day',
+  'greenhouse-gear-garden',
+  'pantry-measurement-mystery',
+  'solar-oven-picnic-station',
+  'compost-clock-workshop',
+  'orchard-pulley-post',
+  'pond-bridge-blueprint-club',
+  'cloudberry-clocktower',
+  'tiny-lantern-reef',
+  'almost-invention-workshop',
+  'margin-note-market',
+  'index-card-theater-club',
+  'chapter-gate-greenhouse',
+])
+
+const batch51TabbedFolderStorySeriesOverlapWorldSet = new Set([
+  'buttonwood-library-train',
+  'button-bakery-map-mixup',
+  'teacup-town-weather-window',
+  'spoon-ferry-lunchbox-harbor',
+  'pocket-park-notice-board',
+  'rain-gauge-railway',
+  'greenhouse-gear-garden',
+  'cloudberry-clocktower',
+  'moss-message-observatory',
+  'orchard-pulley-post',
+  'pond-bridge-blueprint-club',
+  'revision-river-ferry',
+  'chapter-gate-greenhouse',
+  'index-card-theater-club',
+  'binding-day-boardwalk',
+  'margin-note-market',
+])
+
+const batch52TabbedFolderStorySeriesOverlapWorldSet = new Set([
+  'moon-muffin-market',
+  'buttonwood-library-train',
+  'button-bakery-map-mixup',
+  'teacup-town-weather-window',
+  'spoon-ferry-lunchbox-harbor',
+  'pocket-park-notice-board',
+  'moss-message-observatory',
+  'revision-river-ferry',
+  'tiny-lantern-reef',
+  'mitten-market-lost-ticket',
+  'paperclip-plaza-parcel-day',
+  'penny-path-compass-shop',
+  'pantry-measurement-mystery',
+  'compost-clock-workshop',
+  'almost-invention-workshop',
+  'blue-pencil-observatory',
+])
+
+function normalizeTabbedFolderStorySeriesAllowedText(value) {
+  return JSON.stringify(value)
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+    .replace(/\badult-led\b/gi, '')
+    .replace(/\badult\b/gi, '')
+    .replace(/\boffline\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\bno screens?\b/gi, '')
+    .replace(/\bwithout screens?\b/gi, '')
+    .replace(/\bscreen-free\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+    .replace(/\bfamily adult(s)?\b/gi, '')
+    .replace(/\bfamily reader(s)?\b/gi, '')
+    .replace(/\bfamily-safe\b/gi, '')
+    .replace(/\bfamily\b/gi, '')
+    .replace(/\bfamilies\b/gi, '')
+    .replace(/\bfictional\b/gi, '')
+    .replace(/\bpretend\b/gi, '')
+    .replace(/\binvented\b/gi, '')
+    .replace(/\bmade-up\b/gi, '')
+    .replace(/\bmade up\b/gi, '')
+    .replace(/\bmake-believe\b/gi, '')
+    .replace(/\btabbed folder story-series card(s)?\b/gi, '')
+    .replace(/\btabbed folder story series card(s)?\b/gi, '')
+    .replace(/\bstory-series card(s)?\b/gi, '')
+    .replace(/\bstory series card(s)?\b/gi, '')
+    .replace(/\btabbed folder(s)?\b/gi, '')
+    .replace(/\bstory folder(s)?\b/gi, '')
+    .replace(/\bstory-series\b/gi, '')
+    .replace(/\bstory series\b/gi, '')
+    .replace(/\bpage-one\b/gi, '')
+    .replace(/\bpage one\b/gi, '')
+    .replace(/\bnext-page\b/gi, '')
+    .replace(/\bnext page\b/gi, '')
+    .replace(/\bpage turn(s)?\b/gi, '')
+    .replace(/\bclue label(s)?\b/gi, '')
+    .replace(/\bpaper page(s)?\b/gi, '')
+    .replace(/\btrack(s|ed|ing)?\b/gi, '')
+    .replace(/\bstar wheel\b/gi, '')
+    .replace(/\bstar tag\b/gi, '')
+    .replace(/\bstars?\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\bHome Tab Label Slip\b/g, '')
+    .replace(/\bchapter-gate-greenhouse\b/gi, '')
+    .replace(/\bbinding-day-boardwalk\b/gi, '')
+    .replace(/\bindex-card-theater-club\b/gi, '')
+    .replace(/\bmargin-note-market\b/gi, '')
+    .replace(/\brevision-river-ferry\b/gi, '')
+    .replace(/\bblue-pencil-observatory\b/gi, '')
+    .replace(/\bappendix-archive-lab\b/gi, '')
+    .replace(/\bclue-label-tower-museum\b/gi, '')
+    .replace(/\bcompass-craft-academy\b/gi, '')
+    .replace(/\bseed-library-map-room\b/gi, '')
+    .replace(/\btidepool-timekeepers-lab\b/gi, '')
+    .replace(/\bacorn-avenue-errand-office\b/gi, '')
+    .replace(/\brain-boot-route-rangers\b/gi, '')
+    .replace(/\bbuttonwood-library-train\b/gi, '')
+    .replace(/\bcloudberry-clocktower\b/gi, '')
+    .replace(/\bmoon-muffin-market\b/gi, '')
+    .replace(/\bChapter Gate Greenhouse\b/g, '')
+    .replace(/\bBinding Day Boardwalk\b/g, '')
+    .replace(/\bIndex Card Theater Club\b/g, '')
+    .replace(/\bMargin Note Market\b/g, '')
+    .replace(/\bRevision River Ferry\b/g, '')
+    .replace(/\bBlue Pencil Observatory\b/g, '')
+    .replace(/\bAppendix Archive Lab\b/g, '')
+    .replace(/\bClue Label Tower Museum\b/g, '')
+    .replace(/\bCompass Craft Academy\b/g, '')
+    .replace(/\bSeed Library Map Room\b/g, '')
+    .replace(/\bTidepool Timekeepers Lab\b/g, '')
+    .replace(/\bAcorn Avenue Errand Office\b/g, '')
+    .replace(/\bRain Boot Route Rangers\b/g, '')
+    .replace(/\bButtonwood Library Train\b/g, '')
+    .replace(/\bCloudberry Clocktower\b/g, '')
+    .replace(/\bMoon Muffin Market\b/g, '')
+    .replace(/\blabs?\b|\bmuseums?\b|\bacadem(y|ies)\b|\boffices?\b|\broutes?\b|\brooms?\b|\bhomes?\b/gi, '')
+}
+
+function validateNoUnsafeTabbedFolderStorySeriesLanguage(value, label, errors) {
+  const allowedText = normalizeTabbedFolderStorySeriesAllowedText(value)
+  pushIf(
+    errors,
+    /\baccounts?\b|\bschool accounts?\b|\blogins?\b|\blog in\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic posting\b|\bpublic publishing\b|\bpublish online\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\bsocial\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphone(s)?\b|\btablet(s)?\b|\blaptop(s)?\b|\bcomputer(s)?\b|\bscreen(s)?\b|\bdevice(s)?\b|\bphotos?\b|\bcameras?\b|\breal names?\b|\bfull names?\b|\bchild names?\b|\bstudent names?\b|\breal identity\b|\bidentity details?\b|\bclassrooms?\b|\bschools?\b|\bstudents?\b|\bteachers?\b|\bhome address\b|\bprivate locations?\b|\bprivate place details?\b|\bexact locations?\b|\bexact places?\b|\blocation details?\b|\blocations?\b|\bschool route(s)?\b|\breal route(s)?\b|\bgps\b|\bcoordinates?\b|\bexact address\b|\baddress(es)?\b|\bstreets?\b|\bhouse numbers?\b|\blicense plates?\b|\bvehicle plates?\b|\bexact schedules?\b|\bschedules?\b|\btracker(s)?\b|\btracking\b|\bprivate child data\b|\breal child data\b|\bpersonal facts?\b|\bpersonal details?\b|\bprivate child profile(s)?\b|\bprivate profiles?\b|\bchild profiles?\b|\bstudent profiles?\b|\bprofiles?\b|\bdiar(y|ies)\b|\bjournal(s)?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bspelling grade(s)?\b|\btimer(s)?\b|\btimed\b|\bcontest(s)?\b|\bprizes?\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b|\bfood tasting\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b/i.test(
+      allowedText,
+    ),
+    `${label} includes account, upload, public, recording, audio, video, camera, photo, real-identity, school, address, route, location, schedule, profile, private child profile, diary, grade, score, timer, contest, food, allergy, medical, scary, harm, bullying, fighting, or weapon language.`,
+  )
+  pushIf(
+    errors,
+    /\bpublic\b|\bpublish(es|ed|ing)?\b|\bpublication(s)?\b|\bshowcase(s|d|ing)?\b|\bportfolio(s)?\b|\bdisplay(s|ed|ing)?\b|\bperfect\b|\brubric(s)?\b|\bassessment(s)?\b|\bspell(ing|s|ed)?\b|\bpayments?\b|\bcheckout(s)?\b|\bchapter book(s)?\b|\bepisode(s)?\b|\bfoods?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes public, publish, publication, showcase, portfolio, display, perfect, rubric, assessment, spelling, payment, checkout, chapter book, episode, or food language.`,
+  )
+  pushIf(
+    errors,
+    /\b\d+\s*(minute|minutes|min|mins)\b|\b(five|six|seven|eight|nine|ten)\s+(to\s+(five|six|seven|eight|nine|ten)\s+)?minute(s)?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes timed-duration or minute-pressure language.`,
+  )
+}
+
+function validateTabbedFolderStorySeriesCard(
+  card,
+  index,
+  sourceWorldSlugs,
+  knownWorldSlugs,
+  knownWorldRecords,
+  cardIds,
+  errors,
+) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(card)) !== JSON.stringify(tabbedFolderStorySeriesCardKeys),
+    `${label} must use the exact tabbed folder story-series card field order.`,
+  )
+
+  for (const key of tabbedFolderStorySeriesCardKeys) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(card.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(card.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(
+      errors,
+      !card.id.startsWith('tabbed-folder-series-card-'),
+      `${label}.id must start with tabbed-folder-series-card-.`,
+    )
+    pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+    cardIds.add(card.id)
+  }
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) &&
+      !(/tabbed[- ]folder/i.test(card.useCase) && /story[- ]series/i.test(card.useCase) && /\bcard\b/i.test(card.useCase)),
+    `${label}.useCase must say tabbed folder story-series card.`,
+  )
+  pushIf(errors, isNonEmptyString(card.adultSetup) && !card.adultSetup.startsWith('Adult:'), `${label}.adultSetup must start with Adult:.`)
+
+  for (const key of [
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'pageOneAnchorPrompt',
+    'characterReturnPrompt',
+    'settingReturnPrompt',
+    'clueCarryPrompt',
+    'pageTurnPrompt',
+    'seriesWrapPrompt',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeTabbedFolderStorySeriesLanguage(card, label, errors)
+}
+
+function validateTabbedFolderStorySeriesRoutine(routine, index, ids, errors) {
+  const label = `seriesRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['id', 'title', 'time', 'familyLine']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.id)) {
+    pushIf(errors, ids.has(routine.id), `${label}.id is duplicated.`)
+    ids.add(routine.id)
+  }
+  validateExactStringArray(routine.adultSteps, 4, `${label}.adultSteps`, errors)
+  if (Array.isArray(routine.adultSteps)) {
+    routine.adultSteps.forEach((step, stepIndex) => {
+      pushIf(errors, isNonEmptyString(step) && !hasWritableBlank(step), `${label}.adultSteps[${stepIndex}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(step) && hasSnakeCasePlaceholder(step), `${label}.adultSteps[${stepIndex}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+  pushIf(errors, isNonEmptyString(routine.familyLine) && !hasWritableBlank(routine.familyLine), `${label}.familyLine must include a writable blank.`)
+  validateNoUnsafeTabbedFolderStorySeriesLanguage(routine, label, errors)
+}
+
+function validateTabbedFolderTakeHomeSeriesSlip(slip, index, ids, errors) {
+  const label = `takeHomeSeriesSlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  for (const key of ['id', 'title', 'adultLine', 'childLine', 'nextStepLine']) {
+    validateString(slip[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(slip.id)) {
+    pushIf(errors, ids.has(slip.id), `${label}.id is duplicated.`)
+    ids.add(slip.id)
+  }
+  for (const key of ['adultLine', 'childLine', 'nextStepLine']) {
+    pushIf(errors, isNonEmptyString(slip[key]) && !hasWritableBlank(slip[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(slip[key]) && hasSnakeCasePlaceholder(slip[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeTabbedFolderStorySeriesLanguage(slip, label, errors)
+}
+
+export function validateTabbedFolderStorySeriesCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Tabbed Folder Story Series Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-03-batch53', 'batchId must be 2026-06-03-batch53.')
+  pushIf(errors, source.generatedAt !== '2026-06-03', 'generatedAt must be 2026-06-03.')
+  pushIf(
+    errors,
+    source.productSlug !== tabbedFolderStorySeriesCardPackProductSlug,
+    `productSlug must be ${tabbedFolderStorySeriesCardPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Tabbed Folder Story Series Card Pack', 'title must be Tabbed Folder Story Series Card Pack.')
+  pushIf(errors, source.pricePoint !== '$79', 'pricePoint must be $79.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), `safetyNote must include ${requiredSafety}`)
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Tabbed Folder Story Series Card Pack source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Tabbed Folder Story Series Card Pack source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Tabbed Folder Story Series Card Pack source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    const batch50Overlap = source.worldSlugs.filter((slug) => batch50TabbedFolderStorySeriesOverlapWorldSet.has(slug))
+    pushIf(
+      errors,
+      batch50Overlap.length > 7,
+      `worldSlugs must reuse no more than 7 Batch 50 worlds; overlapping slugs: ${batch50Overlap.join(', ')}.`,
+    )
+    const batch51Overlap = source.worldSlugs.filter((slug) => batch51TabbedFolderStorySeriesOverlapWorldSet.has(slug))
+    pushIf(
+      errors,
+      batch51Overlap.length > 7,
+      `worldSlugs must reuse no more than 7 Batch 51 worlds; overlapping slugs: ${batch51Overlap.join(', ')}.`,
+    )
+    const batch52Overlap = source.worldSlugs.filter((slug) => batch52TabbedFolderStorySeriesOverlapWorldSet.has(slug))
+    pushIf(
+      errors,
+      batch52Overlap.length > 7,
+      `worldSlugs must reuse no more than 7 Batch 52 worlds; overlapping slugs: ${batch52Overlap.join(', ')}.`,
+    )
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(
+    source,
+    requiredTabbedFolderStorySeriesCardPackArtifactPaths,
+    'Tabbed Folder Story Series Card Pack',
+    errors,
+  )
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) validateString(source.cover[key], `cover.${key}`, errors)
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    validateExactStringArray(source.adultGuide.bullets, 6, 'adultGuide.bullets', errors)
+    validateNoUnsafeTabbedFolderStorySeriesLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.seriesRoutines), 'seriesRoutines must be an array.')
+  if (Array.isArray(source.seriesRoutines)) {
+    pushIf(errors, source.seriesRoutines.length !== 6, 'seriesRoutines must have exactly 6 entries.')
+    const ids = new Set()
+    source.seriesRoutines.forEach((routine, index) => validateTabbedFolderStorySeriesRoutine(routine, index, ids, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeSeriesSlips), 'takeHomeSeriesSlips must be an array.')
+  if (Array.isArray(source.takeHomeSeriesSlips)) {
+    pushIf(errors, source.takeHomeSeriesSlips.length !== 10, 'takeHomeSeriesSlips must have exactly 10 entries.')
+    const ids = new Set()
+    source.takeHomeSeriesSlips.forEach((slip, index) => validateTabbedFolderTakeHomeSeriesSlip(slip, index, ids, errors))
+  }
+
+  validateExactStringArray(source.optionalSharePrompts, 8, 'optionalSharePrompts', errors)
+  if (Array.isArray(source.optionalSharePrompts)) {
+    source.optionalSharePrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalSharePrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalSharePrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeTabbedFolderStorySeriesLanguage(prompt, `optionalSharePrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateTabbedFolderStorySeriesCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 16, 'cards must cover at least 16 unique worlds.')
+  }
+
+  validateNoUnsafeTabbedFolderStorySeriesLanguage(source, 'Tabbed Folder Story Series Card Pack source', errors)
+  validateNoRiskyLanguage(source, 'Tabbed Folder Story Series Card Pack source', errors)
+  return errors
+}
+
+export function validateTabbedFolderStorySeriesCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three story-series-card lanes and one tools lane.')
+
+  pushIf(
+    errors,
+    JSON.stringify([...source.sourceFiles].sort()) !== JSON.stringify([...tabbedFolderStorySeriesSourceFiles].sort()),
+    'sourceFiles must list the exact Batch 53 story-series-card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedLaneId = sourceFile.split('/').at(-1)?.replace('.json', '')
+      pushIf(errors, lane.laneId !== expectedLaneId, `${sourceFile}.laneId must be ${expectedLaneId}.`)
+      if (Array.isArray(lane.cards)) {
+        const expectedRange = sourceFile.includes('-cards-a')
+          ? { min: 1, max: 6, count: 6, label: '01-06' }
+          : sourceFile.includes('-cards-b')
+          ? { min: 7, max: 11, count: 5, label: '07-11' }
+          : sourceFile.includes('-cards-c')
+          ? { min: 12, max: 16, count: 5, label: '12-16' }
+          : null
+        if (expectedRange) {
+          pushIf(errors, lane.cards.length !== expectedRange.count, `${sourceFile} must contain exactly ${expectedRange.count} cards.`)
+          const wrongLaneCard = lane.cards.some((card) => {
+            const match = String(card?.id ?? '').match(/-(\d{2})$/)
+            const cardNumber = match ? Number(match[1]) : NaN
+            return !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max
+          })
+          pushIf(errors, wrongLaneCard, `${sourceFile} must contain only cards ${expectedRange.label}.`)
+        }
+        cardLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 53 story-series-card lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three story-series-card lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane.cards)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles story-series-card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'seriesRoutines', 'takeHomeSeriesSlips']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+    pushIf(
+      errors,
+      JSON.stringify(toolsLane.optionalAdultPrompts) !== JSON.stringify(source.optionalSharePrompts),
+      'sourceFiles tools lane optionalAdultPrompts must reproduce optionalSharePrompts exactly.',
+    )
+  }
+
+  return errors
+}
+
 
 
 export function countPdfPages(buffer) {
@@ -14197,6 +14714,8 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
     artifact?.pdfPath === requiredDeskLampStoryProblemCardPackArtifactPaths.pdfPath
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
+      : artifact?.pdfPath === requiredTabbedFolderStorySeriesCardPackArtifactPaths.pdfPath
+      ? requiredTabbedFolderStorySeriesCardPackArtifactPaths
       : artifact?.pdfPath === requiredSpiralNotebookStoryFinalCopyCardPackArtifactPaths.pdfPath
       ? requiredSpiralNotebookStoryFinalCopyCardPackArtifactPaths
       : artifact?.pdfPath === requiredCompositionNotebookStoryDraftChecklistCardPackArtifactPaths.pdfPath

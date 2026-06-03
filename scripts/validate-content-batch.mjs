@@ -55,6 +55,8 @@ import {
   validateCompositionNotebookStoryDraftChecklistCardPackSourceFiles,
   validateSpiralNotebookStoryFinalCopyCardPackSource,
   validateSpiralNotebookStoryFinalCopyCardPackSourceFiles,
+  validateTabbedFolderStorySeriesCardPackSource,
+  validateTabbedFolderStorySeriesCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -138,6 +140,7 @@ const batch50WorldImagesFile = resolve(root, 'content', 'image-queue', '2026-06-
 const batch50ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch50-product-images.json')
 const batch51ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch51-product-images.json')
 const batch52ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch52-images.json')
+const batch53ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch53-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -194,6 +197,12 @@ const spiralNotebookFinalCopySourceFile = resolve(
   'product-artifacts',
   'spiral-notebook-story-final-copy-card-pack.json',
 )
+const tabbedFolderStorySeriesSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'tabbed-folder-story-series-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -242,6 +251,7 @@ const batch50WorldImagesBatchId = '2026-06-03-batch50-world-images'
 const batch50ProductImagesBatchId = '2026-06-03-batch50-product-images'
 const batch51ProductImagesBatchId = '2026-06-03-batch51-product-images'
 const batch52ImagesBatchId = '2026-06-03-batch52-images'
+const batch53ImagesBatchId = '2026-06-03-batch53-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -288,6 +298,7 @@ const clipboardParagraphFocusBatchId = '2026-06-03-batch49'
 const linedPaperParagraphRevisionBatchId = '2026-06-03-batch50'
 const compositionNotebookDraftChecklistBatchId = '2026-06-03-batch51'
 const spiralNotebookFinalCopyBatchId = '2026-06-03-batch52'
+const tabbedFolderStorySeriesBatchId = '2026-06-03-batch53'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -4345,6 +4356,140 @@ function validateBatch52Image(image, imageSlugs, worldSlugs, worldSources) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch53Image(image, imageSlugs, worldSlugs, worldSources) {
+  const label = `2026-06-03-batch53-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(image.slug), `${label}.slug must be lowercase kebab-case.`)
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 53 images.`)
+  imageSlugs.add(image.slug)
+
+  if (image.slug === 'appendix-archive-lab') {
+    for (const key of ['ageBand', 'seoLane', 'sourceWorldFile']) validateString(image[key], `${label}.${key}`)
+    expect(worldSlugs.has(image.slug), `${label}.slug does not reference a Batch 1 world.`)
+    expect(image.sourceWorldFile === worldSources.get(image.slug), `${label}.sourceWorldFile does not match source world file.`)
+    expect(image.outputJpeg === `public/images/plotsprout/batch53-worlds/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+    expect(image.outputWebp === `public/images/plotsprout/batch53-worlds/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+    expect(image.sidecar === `content/image-runs/batch53-worlds/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+    for (const phrase of [
+      'family-friendly',
+      'appendix archive lab',
+      'blank folder pages',
+      'tabbed folder stack',
+      'no text',
+      'no letters',
+      'no logos',
+      'no watermark',
+      'no branded characters',
+      'no scary harm',
+      'no weapons',
+    ]) {
+      expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+    }
+  } else {
+    expect(
+      image.slug === 'tabbed-folder-story-series-card-pack',
+      `${label}.slug must be appendix-archive-lab or tabbed-folder-story-series-card-pack.`,
+    )
+    expect(image.outputJpeg === `public/images/plotsprout/batch53/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+    expect(image.outputWebp === `public/images/plotsprout/batch53/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+    expect(image.sidecar === `content/image-runs/batch53/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+    for (const phrase of [
+      'family-friendly',
+      'orthographic top-down view',
+      'blank tabbed folder',
+      'blank story-series cards',
+      'empty writing areas',
+      'unbranded pencils',
+      'plain white background',
+      'tabbed folder story series card pack',
+    ]) {
+      expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+    }
+  }
+
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'coordinates',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'microphone',
+    'audio recorder',
+    'voice memo',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'contest',
+    'prize',
+    'food',
+    'tasting',
+    'allergy',
+    'medical',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -4718,6 +4863,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'spiral-notebook-story-final-copy-card-pack': {
       title: 'Spiral Notebook Story Final Copy Card Pack',
       pricePoint: '$77',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'tabbed-folder-story-series-card-pack': {
+      title: 'Tabbed Folder Story Series Card Pack',
+      pricePoint: '$79',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -6044,12 +6197,27 @@ for (const expectedSlug of ['blue-pencil-observatory', 'spiral-notebook-story-fi
   expect(batch52ImageSlugs.has(expectedSlug), `Batch 52 images missing ${expectedSlug}.`)
 }
 
+expect(existsSync(batch53ImagesFile), `Missing Batch 53 image manifest: ${batch53ImagesFile}`)
+const batch53Images = readJson(batch53ImagesFile)
+expect(
+  batch53Images.batchId === batch53ImagesBatchId,
+  `batch53 image manifest batchId must be ${batch53ImagesBatchId}.`,
+)
+expect(batch53Images.generatedAt === '2026-06-03', 'batch53 image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch53Images.images), 'batch53 image manifest images must be an array.')
+expect(batch53Images.images.length === 2, `Expected 2 Batch 53 images, found ${batch53Images.images.length}.`)
+const batch53ImageSlugs = new Set()
+batch53Images.images.forEach((image) => validateBatch53Image(image, batch53ImageSlugs, worldSlugs, worldSources))
+for (const expectedSlug of ['appendix-archive-lab', 'tabbed-folder-story-series-card-pack']) {
+  expect(batch53ImageSlugs.has(expectedSlug), `Batch 53 images missing ${expectedSlug}.`)
+}
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 45, `Expected 45 product records, found ${products.products.length}.`)
+expect(products.products.length === 46, `Expected 46 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -6098,6 +6266,7 @@ for (const requiredProductSlug of [
   'lined-paper-story-paragraph-revision-card-pack',
   'composition-notebook-story-draft-checklist-card-pack',
   'spiral-notebook-story-final-copy-card-pack',
+  'tabbed-folder-story-series-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -9569,6 +9738,102 @@ for (const asset of spiralNotebookFinalCopyArtifactManifest.files.assets) {
   )
 }
 
+expect(
+  existsSync(tabbedFolderStorySeriesSourceFile),
+  `Missing Batch 53 Tabbed Folder Story Series Card Pack source file: ${tabbedFolderStorySeriesSourceFile}`,
+)
+const tabbedFolderStorySeriesSource = readJson(tabbedFolderStorySeriesSourceFile)
+expect(
+  tabbedFolderStorySeriesSource.batchId === tabbedFolderStorySeriesBatchId,
+  `Tabbed Folder Story Series Card Pack source batchId must be ${tabbedFolderStorySeriesBatchId}.`,
+)
+const tabbedFolderStorySeriesProduct = products.products.find(
+  (product) => product.slug === 'tabbed-folder-story-series-card-pack',
+)
+expect(
+  tabbedFolderStorySeriesProduct,
+  'Missing Tabbed Folder Story Series Card Pack product record for Batch 53 artifact validation.',
+)
+const tabbedFolderStorySeriesSourceErrors = validateTabbedFolderStorySeriesCardPackSource(
+  tabbedFolderStorySeriesSource,
+  tabbedFolderStorySeriesProduct,
+  worldAgeBands,
+)
+expect(
+  tabbedFolderStorySeriesSourceErrors.length === 0,
+  `Tabbed Folder Story Series Card Pack source failed validation:\n${tabbedFolderStorySeriesSourceErrors.join('\n')}`,
+)
+const tabbedFolderStorySeriesSourceFileErrors = validateTabbedFolderStorySeriesCardPackSourceFiles(
+  tabbedFolderStorySeriesSource,
+  root,
+)
+expect(
+  tabbedFolderStorySeriesSourceFileErrors.length === 0,
+  `Tabbed Folder Story Series Card Pack sourceFiles failed validation:\n${tabbedFolderStorySeriesSourceFileErrors.join('\n')}`,
+)
+const tabbedFolderStorySeriesExpectedPdfPages = tabbedFolderStorySeriesSource.cards.length + 5
+const tabbedFolderStorySeriesArtifactStatus = inspectArtifactFiles(root, tabbedFolderStorySeriesSource.artifact, {
+  expectedPdfPages: tabbedFolderStorySeriesExpectedPdfPages,
+  expectedZipEntries: [
+    'Tabbed-Folder-Story-Series-Card-Pack.pdf',
+    'README.txt',
+    'source/tabbed-folder-story-series-card-pack.html',
+    ...tabbedFolderStorySeriesSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+  ],
+})
+expect(
+  tabbedFolderStorySeriesArtifactStatus.valid,
+  `Tabbed Folder Story Series Card Pack artifacts failed validation:\n${tabbedFolderStorySeriesArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  tabbedFolderStorySeriesArtifactStatus.files.pdf.size > 100_000,
+  `Tabbed Folder Story Series Card Pack PDF artifact is unexpectedly small: ${tabbedFolderStorySeriesArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  tabbedFolderStorySeriesArtifactStatus.files.pdf.pageCount === tabbedFolderStorySeriesExpectedPdfPages,
+  `Tabbed Folder Story Series Card Pack PDF artifact must have ${tabbedFolderStorySeriesExpectedPdfPages} pages.`,
+)
+expect(
+  tabbedFolderStorySeriesArtifactStatus.files.zip.size > tabbedFolderStorySeriesArtifactStatus.files.pdf.size,
+  'Tabbed Folder Story Series Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const tabbedFolderStorySeriesCheckoutErrors = validateCheckoutReadiness(
+  tabbedFolderStorySeriesProduct,
+  tabbedFolderStorySeriesArtifactStatus,
+)
+expect(
+  tabbedFolderStorySeriesCheckoutErrors.length === 0,
+  `Tabbed Folder Story Series Card Pack checkout readiness failed validation:\n${tabbedFolderStorySeriesCheckoutErrors.join('\n')}`,
+)
+const tabbedFolderStorySeriesArtifactManifest = readJson(resolve(root, tabbedFolderStorySeriesSource.artifact.manifestPath))
+expect(
+  tabbedFolderStorySeriesArtifactManifest.sourcePageCount === tabbedFolderStorySeriesSource.cards.length,
+  'Tabbed Folder Story Series Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(tabbedFolderStorySeriesArtifactManifest.files.assets),
+  'Tabbed Folder Story Series Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  tabbedFolderStorySeriesArtifactManifest.files.assets.length === tabbedFolderStorySeriesSource.worldSlugs.length,
+  'Tabbed Folder Story Series Card Pack artifact manifest must include one copied local image per source world.',
+)
+const tabbedFolderStorySeriesManifestAssetErrors = validateManifestWorldAssets(
+  tabbedFolderStorySeriesSource,
+  tabbedFolderStorySeriesArtifactManifest,
+)
+expect(
+  tabbedFolderStorySeriesManifestAssetErrors.length === 0,
+  `Tabbed Folder Story Series Card Pack artifact manifest image coverage failed validation:\n${tabbedFolderStorySeriesManifestAssetErrors.join('\n')}`,
+)
+for (const asset of tabbedFolderStorySeriesArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Tabbed Folder Story Series Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -9613,6 +9878,7 @@ const productImageManifests = [
   batch50ProductImages,
   batch51ProductImages,
   batch52Images,
+  batch53Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

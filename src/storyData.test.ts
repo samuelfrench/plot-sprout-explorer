@@ -87,6 +87,7 @@ describe('storyData', () => {
       'lined-paper-story-paragraph-revision-card-pack',
       'composition-notebook-story-draft-checklist-card-pack',
       'spiral-notebook-story-final-copy-card-pack',
+      'tabbed-folder-story-series-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -134,6 +135,7 @@ describe('storyData', () => {
       '$73',
       '$75',
       '$77',
+      '$79',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)

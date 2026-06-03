@@ -4468,6 +4468,130 @@
           "summary": "A blue pencil observatory world for writing one adult-led note for the next paper pass."
         }
       ]
+    },
+    {
+      "slug": "tabbed-folder-story-series-card-pack",
+      "title": "Tabbed Folder Story Series Card Pack",
+      "pricePoint": "$79",
+      "status": "checkout_pending",
+      "headline": "A printable tabbed folder card pack for private paper story series.",
+      "summary": "Sixteen adult-led tabbed folder cards help kids keep one fictional story connected across paper pages with returning characters, settings, and clues.",
+      "heroImage": "images/plotsprout/batch53/tabbed-folder-story-series-card-pack.jpg",
+      "ctaLabel": "Request story series card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Tabbed%20Folder%20Story%20Series%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static tabbed folder story series card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "chapter-gate-greenhouse",
+        "binding-day-boardwalk",
+        "index-card-theater-club",
+        "margin-note-market",
+        "revision-river-ferry",
+        "blue-pencil-observatory",
+        "appendix-archive-lab",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "seed-library-map-room",
+        "tidepool-timekeepers-lab",
+        "acorn-avenue-errand-office",
+        "rain-boot-route-rangers",
+        "buttonwood-library-train",
+        "cloudberry-clocktower",
+        "moon-muffin-market"
+      ],
+      "includedPages": [
+        "Sixteen printable tabbed folder story-series cards",
+        "Adult setup guide",
+        "Fictional story-series safety notes",
+        "Tabbed folder continuity moves",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six adult-led story-series routines",
+        "Ten take-home story-series slips",
+        "Eight optional adult prompts",
+        "Local image-backed world menu",
+        "Printable PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one story folder to stay connected across paper pages",
+        "A tutoring or co-op table where writers carry one character, setting, and clue forward",
+        "A calm pencil activity for planning the next page without starting a new story",
+        "A reluctant-writer activity that turns continuity into six small paper routines",
+        "A take-home story-series slip set for continuing one folder note offline"
+      ],
+      "parentSteps": [
+        "Choose one story-series routine before the activity starts.",
+        "Set the tabbed folder, cards, blank pages, pencils, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full page note.",
+        "Move from page-one anchor to character return, setting return, clue carry, page turn, and series wrap.",
+        "Send one story-series slip with a single blank so family adults can continue the folder offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "chapter-gate-greenhouse",
+          "summary": "A chapter gate world for anchoring page one before the next folder page."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding boardwalk world for bringing a helper and rail marker back page by page."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "summary": "A theater club world for carrying one clue card through the same folder story."
+        },
+        {
+          "slug": "margin-note-market",
+          "summary": "A margin note world for tracking a helper, place detail, and folded clue."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision river world for moving one ferry clue into the next page."
+        },
+        {
+          "slug": "blue-pencil-observatory",
+          "summary": "A blue pencil observatory world for returning to one watcher and sky-room detail."
+        },
+        {
+          "slug": "appendix-archive-lab",
+          "summary": "An archive lab world for keeping a helper, shelf, and paper clue connected."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue tower world for moving one paper label through several pages."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for keeping one pretend goal steady across pages."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed map world for carrying one guide and map clue forward."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool timekeeper world for keeping one helper, place, and clue connected."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for returning to one helper and paper clue."
+        },
+        {
+          "slug": "rain-boot-route-rangers",
+          "summary": "A rain boot ranger world for carrying a clue along a pretend path."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for bringing one rider and stop detail back calmly."
+        },
+        {
+          "slug": "cloudberry-clocktower",
+          "summary": "A cloudberry clocktower world for remembering what changed across pages."
+        },
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for ending with one quiet next-page idea."
+        }
+      ]
     }
   ]
 }

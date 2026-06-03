@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-03-batch53",
+  "generatedAt": "2026-06-03",
+  "productSlug": "tabbed-folder-story-series-card-pack",
+  "title": "Tabbed Folder Story Series Card Pack",
+  "pricePoint": "$79",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/tabbed-folder-story-series-card-pack/Tabbed-Folder-Story-Series-Card-Pack.pdf",
+      "sha256": "eaec127e8905f404e7e1796ea6cefc727fb02ff7d522f36ca92dba0a78c4010c",
+      "size": 5044927
+    },
+    "zip": {
+      "path": "product-build/tabbed-folder-story-series-card-pack/tabbed-folder-story-series-card-pack.zip",
+      "sha256": "41b7ebef62b495656b2d69b119de74db081b0db9b6f00ae8aa6dbf6aa7001cf7",
+      "size": 9674898
+    },
+    "sourceHtml": {
+      "path": "product-build/tabbed-folder-story-series-card-pack/source/tabbed-folder-story-series-card-pack.html",
+      "sha256": "07a57e1ed8372b7d86abd073509def30c9091968ccd17ac64c997590ac88fc2e",
+      "size": 62834
+    },
+    "readme": {
+      "path": "product-build/tabbed-folder-story-series-card-pack/README.txt",
+      "sha256": "33f5422366215ba76521ddffb22b8fb5a770ac2ac6c4682eab91320e81e7426d",
+      "size": 567
+    },
+    "assets": [
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/appendix-archive-lab.jpg",
+        "sha256": "b98def39163f848890045a4790bdae486d811fbdf1d967156eb0e7a5a0a74b4c",
+        "size": 291030
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/blue-pencil-observatory.jpg",
+        "sha256": "63eb8f59349d2a8b64c553669fffd66268a0560919cef1d9bb41a57addc880ae",
+        "size": 286058
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/chapter-gate-greenhouse.jpg",
+        "sha256": "2a34e6f4bafcaaf422f06aa11146c3d4247b0b7cd76b3fd207dffcb11aa2b2d1",
+        "size": 289788
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/cloudberry-clocktower.jpg",
+        "sha256": "3204161ea211c5e28ca7cfeae6e7cfc97be61f53ca978a3606435351731ad6e3",
+        "size": 366382
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/moon-muffin-market.jpg",
+        "sha256": "9fd7c9a4e3584529222c481ce419c67545a98a4ab788f08742ac19df11f0f962",
+        "size": 238603
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/tabbed-folder-story-series-card-pack/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      }
+    ]
+  }
+}

@@ -1,0 +1,1081 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabbed Folder Story Series Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-series-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-series-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-series-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable tabbed folder story-series cards</p>
+        <h1>Tabbed Folder Story Series Card Pack</h1>
+        <p>Sixteen tabbed folder cards help writers keep one fictional story series steady across private paper pages by returning to characters, settings, clue labels, and page-turn notes.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable tabbed folder story-series cards plus adult guide tools, series routines, take-home series slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$79</span>
+        <h2>Included</h2>
+        <ul><li>16 printable tabbed folder story-series cards</li>
+<li>Adult setup guide</li>
+<li>Fictional story-series safety notes</li>
+<li>Tabbed folder continuity moves</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led story-series routines</li>
+<li>Ten take-home story-series slips</li>
+<li>Eight optional adult prompts</li>
+<li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story-series coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Tabbed Folder Story Series Adult Guide</h3><ul><li>Setup: choose one story folder, add three to five paper tabs, and label each tab with a simple story series part: ____________________.</li>
+<li>Materials: keep blank pages, pencils, tab cards, paper clips, and a folder note sheet nearby before the adult-led session begins: ____________________.</li>
+<li>Steps: help the writer place the current page behind the right tab, reread the last page softly, then plan the next page on paper: ____________________.</li>
+<li>Safety: keep every name, place, and problem inside a made-up story world, and do not place child work online or ask for private details: ____________________.</li>
+<li>Continuity: use the tab cards to track who is in the story series, what changed, and what the next page should remember: ____________________.</li>
+<li>Reset: when the session ends, tuck loose pages into the story folder, mark the next tab to use, and write one adult reminder for later: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one tabbed folder story-series card at a time. Keep every choice broad, invented, paper-only, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen story-series-card worlds</h2>
+      <p>Pick a world image, then check one fictional story draft with a pretend tabbed folder story-series card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Chapter Gate Greenhouse</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Blue Pencil Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Appendix Archive Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Rain Boot Route Rangers</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Cloudberry Clocktower</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Story-series routines</p>
+      <h2>Choose the tabbed folder story series routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">short folder start</p>
+      <h3>Tab Check-In</h3>
+      <ol><li>The adult opens the story folder and asks which tab holds the current page: ____________________.</li>
+<li>The child points to the tab and names the made-up story series part: ____________________.</li>
+<li>The adult reads the last two paper notes under that tab: ____________________.</li>
+<li>The child chooses one note that must stay true on the next page: ____________________.</li></ol>
+      <p>Today this story folder tab needs to remember: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">quiet reread pass</p>
+      <h3>Last Page Echo</h3>
+      <ol><li>The adult reads the last page from the story folder while the child follows with a finger: ____________________.</li>
+<li>The child circles one pretend character, place, or object that should return: ____________________.</li>
+<li>The adult asks what changed on that last page: ____________________.</li>
+<li>The child starts the next page by echoing one small detail without copying the whole line: ____________________.</li></ol>
+      <p>The next page will echo this detail from the last page: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">paper continuity note</p>
+      <h3>Series Thread Card</h3>
+      <ol><li>The adult hands over one tab card for the story series thread: ____________________.</li>
+<li>The child writes the thread in a short phrase, such as lost key, moon map, or tiny boat: ____________________.</li>
+<li>The adult asks how that thread appears on the current page: ____________________.</li>
+<li>The child writes one next page reminder on the same tab card: ____________________.</li></ol>
+      <p>The story series thread we are carrying forward is: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">page-to-page planning</p>
+      <h3>Next Page Bridge</h3>
+      <ol><li>The adult asks what the current page leaves unfinished in the pretend story: ____________________.</li>
+<li>The child says one gentle question the next page can answer: ____________________.</li>
+<li>The adult writes the question on a tab card and places it before the blank page: ____________________.</li>
+<li>The child begins the next page with one sentence that answers or follows the question: ____________________.</li></ol>
+      <p>Our next page will answer or follow this question: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">multi-page order check</p>
+      <h3>Folder Order Walk</h3>
+      <ol><li>The adult spreads the story folder pages in order beside the tabs: ____________________.</li>
+<li>The child taps each page and says what happened there in one short phrase: ____________________.</li>
+<li>The adult asks which page the new page should follow: ____________________.</li>
+<li>The child places the new page behind the right tab and writes the page label: ____________________.</li></ol>
+      <p>This new page belongs after: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">calm stopping point</p>
+      <h3>Gentle Series Reset</h3>
+      <ol><li>The adult asks which page is done enough for today and places it in the story folder: ____________________.</li>
+<li>The child chooses one tab card that needs a reminder for the next session: ____________________.</li>
+<li>The adult writes a simple restart line, such as begin with the map or ask about the lantern: ____________________.</li>
+<li>The child closes the folder and names the next page idea in one paper note: ____________________.</li></ol>
+      <p>Next time, this story series can restart with: ____________________.</p>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home story series slips</p>
+      <h2>Try one story series later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story series slip</p>
+      <h3>Home Tab Label Slip</h3>
+      <p>Adult: help choose a clear tab label for the current story folder section: ____________________.</p>
+      <p>Child: my tab label says: ____________________.</p>
+      <p>Next page: put the new page behind this tab: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story series slip</p>
+      <h3>Returning Detail Slip</h3>
+      <p>Adult: ask which pretend detail should return from the last page: ____________________.</p>
+      <p>Child: the detail I will bring back is: ____________________.</p>
+      <p>Next page: use that detail in one new sentence: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story series slip</p>
+      <h3>Character Thread Slip</h3>
+      <p>Adult: point to the tab card that tracks one made-up character: ____________________.</p>
+      <p>Child: this character still wants or needs: ____________________.</p>
+      <p>Next page: show one tiny action from that character: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story series slip</p>
+      <h3>Place Reminder Slip</h3>
+      <p>Adult: ask which pretend place should stay the same across pages: ____________________.</p>
+      <p>Child: my story place reminder is: ____________________.</p>
+      <p>Next page: add one matching place detail: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story series slip</p>
+      <h3>Object Carryover Slip</h3>
+      <p>Adult: help find one made-up object that should carry into the next page: ____________________.</p>
+      <p>Child: the object I am carrying forward is: ____________________.</p>
+      <p>Next page: let the object help or change something: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story series slip</p>
+      <h3>Question Bridge Slip</h3>
+      <p>Adult: write one gentle story question on a tab card: ____________________.</p>
+      <p>Child: my next page question is: ____________________.</p>
+      <p>Next page: answer the question with one story action: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story series slip</p>
+      <h3>Page Order Slip</h3>
+      <p>Adult: lay out the story folder pages and ask where the new page belongs: ____________________.</p>
+      <p>Child: this page comes after: ____________________.</p>
+      <p>Next page: write the page label before starting: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story series slip</p>
+      <h3>Same World Slip</h3>
+      <p>Adult: ask what rule or detail makes this story world feel connected: ____________________.</p>
+      <p>Child: one thing that stays true in my story series is: ____________________.</p>
+      <p>Next page: keep that rule or detail in the new scene: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story series slip</p>
+      <h3>Small Change Slip</h3>
+      <p>Adult: ask what small change should happen next without losing the story thread: ____________________.</p>
+      <p>Child: the small change I choose is: ____________________.</p>
+      <p>Next page: write the change after one familiar detail: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story series slip</p>
+      <h3>Restart Note Slip</h3>
+      <p>Adult: write one restart note before closing the story folder: ____________________.</p>
+      <p>Child: next time I want to begin with: ____________________.</p>
+      <p>Next page: read this note first, then write one new line: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the story folder tab we are using today is ____________________.</li>
+<li>Optional adult-led offline prompt: the last page detail to remember is ____________________.</li>
+<li>Optional adult-led offline prompt: the next page should begin after ____________________.</li>
+<li>Optional adult-led offline prompt: the story series thread on this tab card is ____________________.</li>
+<li>Optional adult-led offline prompt: one made-up character needs to remember ____________________.</li>
+<li>Optional adult-led offline prompt: one pretend place detail that stays true is ____________________.</li>
+<li>Optional adult-led offline prompt: the small change for the next page is ____________________.</li>
+<li>Optional adult-led offline prompt: the restart note for this story folder is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 1 | Ages 10-11 | keep a private paper-only greenhouse story series connected across tabbed folder pages with a strong first-page anchor, returning character, returning setting signal, carried clue, next page turn, and gentle wrap</div>
+      <h2>Chapter Gate Greenhouse Story Series Card</h2>
+      <figure>
+        <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+        <figcaption>Chapter Gate Greenhouse</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place three blank pages inside the story folder, label one tab Greenhouse Gate, and keep all planning on paper only: ____________________.</p>
+      <p class="kid-direction">Writer: build a quiet story series where each page returns to the greenhouse gate, one helper, and one clue that changes a little: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write the first page so it names the greenhouse gate, the careful keeper, and the odd paper tag found near the glass: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: choose one made-up character who comes back on each page with a small new job or question: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: choose one greenhouse detail, such as a fogged pane, seed drawer, or brass latch, to return on every page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: carry one harmless clue from the first page to the next page and write how it changes or points somewhere new: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: end this page with a paper-only reason to open the next tab in the story folder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Series wrap: on the final page, bring back the keeper, the gate detail, and the carried clue so the story series feels calmly finished: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to one tab, and the writer adds only one return detail on the page before pausing: ____________________. Take-home line: start another greenhouse story series in a story folder with a page one anchor, a returning character, and one clue for the next page: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 2 | Ages 10-11 | guide a private paper-only boardwalk story series through tabbed folder pages by connecting the first page, returning character choice, repeated setting marker, carried clue, page turn, and ending return</div>
+      <h2>Binding Day Boardwalk Story Series Card</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: prepare a story folder with three or four tabs, one blank page behind each tab, and a small paper line for series notes: ____________________.</p>
+      <p class="kid-direction">Writer: make each boardwalk page feel connected by returning to the same helper, the same walkway marker, and one clue that moves forward: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write a first page where the boardwalk helper finds a loose binding strip beside a painted rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: write the helper&#39;s name and one habit that readers can notice again on the next page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: choose one boardwalk marker, such as a painted rail, ticket nook, or tide bell, to appear on every page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: carry the binding strip clue into the next page and decide what new mark, fold, or note it shows: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: finish this page with a quiet question that sends the helper to the next page tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Series wrap: close the story series by returning to the boardwalk marker and using the carried clue to settle the helper&#39;s paper task: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: choose only one tab and write the repeated boardwalk marker on that page: ____________________. Take-home line: make a new boardwalk story series with page one, a returning helper, a setting marker, and a clue that reaches the next page: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 3 | Ages 10-11 | support a private paper-only theater-club story series by tracking continuity across folder tabs with page one anchor details, returning cast choices, repeated room signals, carried clue cards, page turns, and final return</div>
+      <h2>Index Card Theater Club Story Series Card</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: put blank pages behind the story folder tabs and add one small index card for the series clue list: ____________________.</p>
+      <p class="kid-direction">Writer: write a made-up theater-club story series where each page brings back the same helper, room signal, and clue card: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write the first page with the backstage helper, the folded curtain plan, and one index card clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: choose one club helper who returns on each page and write what changes about that helper&#39;s plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: pick one theater-room detail, such as a chalk mark, curtain cord, or prop shelf, to return on every page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: move one index card clue from page one into the next page and add one new detail beside it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: end the page with a choice that points to the next tab in the story folder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Series wrap: on the last page, bring the helper, theater-room detail, and clue card together for a calm story series ending: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult names one return detail, and the writer writes only that detail on the current page: ____________________. Take-home line: start a new theater-club story series with one page one anchor, one returning helper, one repeated room detail, and one clue for the next page: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 4 | Ages 10-11 | help a private paper-only market story series stay connected by using folder tabs for page one anchors, returning characters, repeated setting notes, clue carryover, page turns, and final series wrap</div>
+      <h2>Margin Note Market Story Series Card</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a story folder on the table, add blank pages behind tabs, and leave a wide paper margin for series notes: ____________________.</p>
+      <p class="kid-direction">Writer: use the margin to track what must return on the next page: the helper, the market detail, and the clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write a first page where the margin-note keeper finds a folded tag beside a ribbon cart in the market lane: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: write the keeper&#39;s name in the margin and choose one action the keeper repeats on later pages: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: choose one market-lane detail, such as a ribbon cart, bell post, or paper awning, to return on each page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: carry the folded tag clue into the next page and write what the margin note adds to it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: end the page with a small written signal that tells the reader which tab comes next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Series wrap: use the final page to bring back the keeper, the market-lane detail, and the folded tag in one settled moment: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the margin note for one page, then let the story folder rest: ____________________. Take-home line: make another margin-note market story series by tracking a returning helper, setting detail, and clue across each next page: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 5 | Ages 10-11 | guide a private paper-only river-ferry story series with tabbed folder continuity through a clear first page, returning ferry helper, repeated river marker, carried clue, next page turn, and final return</div>
+      <h2>Revision River Ferry Story Series Card</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: put several blank pages in the story folder, label tabs for each page, and set aside one paper note strip for continuity marks: ____________________.</p>
+      <p class="kid-direction">Writer: follow the ferry across the pages, keeping the same helper, river marker, and clue visible as the story series moves on: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write a first page where the ferry helper notices a blue revision mark on a folded river pass: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: choose one ferry helper who returns on every page and write what the helper learns or changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: choose one river marker, such as a dock bell, current line, or ferry post, to return on each page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: carry the blue revision mark into the next page and decide what it points to on the ferry route: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: end this page as the ferry reaches a tabbed stop that belongs on the next page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Series wrap: on the final page, return to the river marker and use the carried clue to finish the ferry helper&#39;s paper journey: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult chooses one tabbed stop, and the writer adds only the ferry helper&#39;s return line: ____________________. Take-home line: start a new river-ferry story series with a page one anchor, a returning helper, a repeated river marker, and one clue for the next page: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 6 | Ages 10-11 | support a private paper-only observatory story series by using folder tabs to track page one anchors, returning characters, repeated sky-room details, carried clues, page turns, and a connected final page</div>
+      <h2>Blue Pencil Observatory Story Series Card</h2>
+      <figure>
+        <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+        <figcaption>Blue Pencil Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: prepare a story folder with a tab for each page and place a blue pencil beside a paper continuity note strip: ____________________.</p>
+      <p class="kid-direction">Writer: build an observatory story series where the same watcher, sky-room detail, and pencil clue return from page to page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write the first page with the observatory watcher, the blue pencil mark, and the first sky-room question: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: write the watcher&#39;s name and one careful habit that can return on every page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: choose one observatory detail, such as a star wheel, dome latch, or map shelf, to return on each page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: carry the blue pencil clue to the next page and add what the watcher notices beside it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: end this page with a note that points the watcher toward the next tab in the story folder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Series wrap: finish the story series by bringing back the watcher, observatory detail, and blue pencil clue in one connected final page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the continuity note strip, and the writer fills only one returning detail: ____________________. Take-home line: create another observatory story series with one page one anchor, one returning watcher, one setting detail, and one clue for the next page: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 7 | Ages 10-11 | keep a multi-page archive lab story series steady with a named tab, returning helper, setting notes, and one carried clue</div>
+      <h2>Appendix Archive Lab Story Series Card</h2>
+      <figure>
+        <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+        <figcaption>Appendix Archive Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card in the story folder, choose the appendix archive lab tab, and set out two blank pages for a gentle series plan: ____________________.</p>
+      <p class="kid-direction">Writer: start page one, then use the tab to help the helper, lab setting, and clue return on the next page of the story series: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write the first page so the archive helper, the appendix shelf, and the lab job are clear before the next page begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: choose one helper who comes back on each page, then write the small habit or tool that helps readers know it is the same character: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: add one lab detail that can return under the same story folder tab, such as a paper drawer, margin map, or lamp label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: carry one gentle clue from page one to the next page, and write where it waits inside the appendix archive lab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: end the page with a quiet reason to turn to the next page, such as a missing label, new drawer, or note under the tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Story series wrap: on the last page, bring back the helper, lab setting, and carried clue so the story folder feels complete: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the tab, and the writer adds only one return detail for the next page: ____________________. Take-home line: continue a paper-only archive lab story series in a story folder by carrying one helper, one setting detail, and one clue to the next page: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 8 | Ages 10-11 | build story series continuity by using a tabbed folder to track labels, returning museum roles, and clues that move page by page</div>
+      <h2>Clue Label Tower Museum Story Series Card</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank card behind the story folder tab and ask the writer to name one tower museum label that can guide several pages: ____________________.</p>
+      <p class="kid-direction">Writer: use the tab to remember which museum helper returns, where the tower setting stays, and which clue moves to the next page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write the first page so the tower museum, the clue label, and the first helper job are easy to follow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: write one detail that brings the same museum helper back on the next page without changing the story series path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: choose one tower museum place that stays under the tab, such as a label stair, archive rail, or quiet map wall: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: copy the clue label onto the story folder card, then carry it into the next page with one new thing it helps reveal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: end the page with a soft question about the label so the next page has a clear reason to begin: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Story series wrap: finish by connecting the first clue label, the returning helper, and the tower museum place on the final page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult writes the clue label on the tab, and the writer adds only one sentence for the next page: ____________________. Take-home line: keep a tower museum story series in a story folder by moving one clue label from page to next page on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 9 | Ages 10-11 | use a story folder tab to hold route notes, returning academy characters, and compass clues for a multi-page story series</div>
+      <h2>Compass Craft Academy Story Series Card</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out the story folder, mark the compass craft academy tab, and invite the writer to choose one paper compass clue: ____________________.</p>
+      <p class="kid-direction">Writer: write page one, then let the tab help you bring back the same academy helper, room, and compass clue on the next page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write the first page so the academy helper, the compass craft table, and the first direction clue are clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: decide how the same helper returns on each page, such as checking the compass card or sorting the craft strips: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: keep one academy place steady under the tab, such as a north shelf, folded map desk, or quiet practice hall: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: carry one compass clue from page one to the next page and write how it changes the helper&#39;s plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: end the page when the compass points toward a new paper sign, giving the next page a calm starting point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Story series wrap: bring the compass clue, academy helper, and return setting together so the final page answers the first page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult circles one tab note, and the writer adds only the next page direction sentence: ____________________. Take-home line: build another paper-only compass story series by keeping one tab note for the helper, place, and clue on every page: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 10 | Ages 8-10 | track a gentle multi-page map room story series with one tab for the returning guide, room detail, and carried map clue</div>
+      <h2>Seed Library Map Room Story Series Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card in the story folder, mark the seed library map room tab, and set out page one plus a next page sheet: ____________________.</p>
+      <p class="kid-direction">Writer: start page one with a map room guide, then use the tab to bring the guide and clue back on the next page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write page one so the guide, the seed library map room, and the first map clue are all named: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: choose one guide who returns on the next page, and write one gentle action that belongs to that guide: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: pick one map room detail for the story folder tab, such as a folded path card, drawer mark, or table corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: move one map clue from page one to the next page and write where the guide keeps it in the story folder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: end the page with a small map choice so the next page can begin without starting a new story series: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Story series wrap: on the final page, return to the guide, the map room detail, and the clue that started the story series: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult names the tab, and the writer adds one map room sentence for the next page: ____________________. Take-home line: keep a paper-only map room story series in a story folder by carrying one guide and one clue to the next page: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 11 | Ages 8-10 | guide a paper-only lab story series with a tab for returning tidepool helpers, setting markers, and a clue that stays connected</div>
+      <h2>Tidepool Timekeepers Lab Story Series Card</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the story folder open to the tidepool timekeepers lab tab and place page one beside a next page sheet: ____________________.</p>
+      <p class="kid-direction">Writer: write page one, then use the tab to help the same lab helper, tidepool place, and clue return on the next page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Page one anchor: write page one so the lab helper, tidepool work spot, and first clue are easy to find later: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Character return: choose the helper who comes back on the next page, and write one small job the helper keeps doing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Setting return: add one tidepool lab detail to the tab, such as a shell tray, waterline card, or sand map mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Clue carry: carry one clue from page one to the next page and write how the helper keeps it connected to the lab work: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Page turn: end the page with a quiet tide mark or lab note that invites the next page to continue the same story series: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Story series wrap: finish by returning to the tidepool lab detail, the same helper, and the clue from the first page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the story folder tab, and the writer writes only one clue sentence for the next page: ____________________. Take-home line: continue a paper-only tidepool lab story series by using a tab to carry one helper, one place, and one clue page by page: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 12 | Ages 7-9 | keep a fictional story series steady across several paper pages by returning the same character, setting, and carried clue inside one tabbed story folder</div>
+      <h2>Acorn Avenue Errand Office Story Series Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work private and offline, place this card in a story folder tab, and choose page one for a made-up errand-office task: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, write page one, then use the same tab to help the next page remember what returns: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Adult asks: On page one, name the errand office, the first errand slip, and the tab where this story series belongs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Adult asks: Choose one errand helper who must return on the next page and write one thing they always carry: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Adult asks: Pick one Acorn Avenue place, such as the tiny desk or the acorn-stamp shelf, that will return in the story folder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Adult asks: Carry one small paper clue from page to next page, such as a stamped acorn mark or folded note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Adult asks: At the bottom of the page, write a next page promise that tells what the helper will check under this tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Adult asks: After several pages, reread the story series and circle where the helper, office place, and paper clue stayed connected: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write page one and one next page note inside the story folder tab: ____________________. Folder line: keep the Acorn Avenue pages together under one tab and add a new errand clue on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 13 | Ages 7-9 | build a private paper story series by tracking one ranger team, one pretend rainy path, and one clue that moves from page to next page</div>
+      <h2>Rain Boot Route Rangers Story Series Card</h2>
+      <figure>
+        <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+        <figcaption>Rain Boot Route Rangers</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work offline, label one story folder tab for the rangers, and set out two blank pages: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, make page one for the ranger team, then let the next page continue the same paper trail: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Adult asks: On page one, introduce the rain-boot rangers, their pretend path, and the story folder tab name: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Adult asks: Pick one ranger who returns on every page and write one steady habit, tool, or careful signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Adult asks: Choose one rainy path spot, such as a boot rack bridge or puddle-marker post, to return on the next page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Adult asks: Carry one paper clue forward, such as a drawn boot print, ribbon mark, or bent leaf sign: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Adult asks: Write a next page line that tells which clue the rangers will follow when they open this tab again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Adult asks: Reread the pages in the story folder and mark how the ranger, rainy spot, and clue made one story series: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the ranger name, one rainy spot, and one next page clue: ____________________. Folder line: add one more Rain Boot Route Rangers page under the same tab with a returning clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 14 | Ages 7-9 | connect a gentle paper story series by using a tabbed story folder to track one library-train rider, one returning car, and one carried clue</div>
+      <h2>Buttonwood Library Train Story Series Card</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work private and offline, label a story folder tab, and place page one beside a pencil: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, begin the library train page, then use the tab to keep the next page connected: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Adult asks: On page one, name the Buttonwood Library Train, one rider, and the folder tab that will hold the story series: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Adult asks: Choose one rider, conductor, or shelf helper who returns on the next page and write their small job: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Adult asks: Pick one train place, such as the buttonwood bench car or the quiet card table, that returns in the story folder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Adult asks: Carry one clue from page to next page, such as a brass button ticket, bookmark slip, or tiny track mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Adult asks: Write a next page line that tells where the train will stop when this tab opens again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Adult asks: At the end of the story series, point to the pages where the rider, train place, and clue stayed together: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw the tab label, then write one rider sentence and one next page stop: ____________________. Folder line: keep the Buttonwood Library Train pages under one tab and add a new paper stop later: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 15 | Ages 8-10 | manage story series continuity by using a tabbed story folder to repeat a central character, clocktower setting detail, carried clue, and next-page question</div>
+      <h2>Cloudberry Clocktower Story Series Card</h2>
+      <figure>
+        <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+        <figcaption>Cloudberry Clocktower</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work private and offline, label a story folder tab, and choose the first clocktower page to start: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, make each page connect to the page before it so the story series feels continuous on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Adult asks: On page one, set the Cloudberry Clocktower scene, name the main character, and write the tab title: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Adult asks: Decide what the main character notices each time they return, then add that reminder to the next page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Adult asks: Choose one clocktower detail, such as the cloud bell, stair window, or minute hand mark, to repeat across pages: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Adult asks: Carry one clue forward, such as a paper gear sketch or cloud-shaped note, and write how it changes on the next page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Adult asks: End the page with a next page question that belongs under this tab and points toward the carried clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Adult asks: Reread the story folder pages and underline where the character, clocktower detail, and clue made one story series: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write one page one anchor and one next page question under the same tab: ____________________. Folder line: add another Cloudberry Clocktower page that brings back the same character and clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-series-card-page">
+      <div class="page-kicker">Story Series Card 16 | Ages 6-8 | start a gentle paper story series with a tabbed story folder by repeating one market helper, one moonlit stall, and one safe pretend clue</div>
+      <h2>Moon Muffin Market Story Series Card</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work private and offline, place this card under a story folder tab, and give the child one blank page: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, write page one about the moonlit market, then save the next page idea under the same tab: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Page one anchor</h3>
+      <p>Adult asks: On page one, name the Moon Muffin Market, one helper, and the story folder tab that keeps the pages together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character return</h3>
+      <p>Adult asks: Choose one market helper who comes back on the next page and write one kind job they do with paper signs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Setting return</h3>
+      <p>Adult asks: Pick one moonlit stall detail, such as a silver bell, folded awning, or star tag, to return on the next page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clue carry</h3>
+      <p>Adult asks: Carry one pretend clue from page to next page, such as a crescent token, paper label, or tiny lantern mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page turn</h3>
+      <p>Adult asks: Write a next page line that tells what the helper will check when this tab opens again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Series wrap</h3>
+      <p>Adult asks: Reread the story series pages and tap where the helper, market place, and paper clue show up again: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write one helper sentence and one next page clue for the story folder: ____________________. Folder line: keep the Moon Muffin Market pages under one tab and add another gentle paper clue later: ____________________.</p>
+    </section>
+  </body>
+</html>

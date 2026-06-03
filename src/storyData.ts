@@ -630,6 +630,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable spiral notebook story final-copy cards with adult guide tools, final-copy routines, and take-home final-copy slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'tabbed-folder-story-series-card-pack',
+    title: 'Tabbed Folder Story Series Card Pack',
+    pricePoint: '$79',
+    description:
+      'Sixteen printable tabbed folder story-series cards with adult guide tools, series routines, and take-home series slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

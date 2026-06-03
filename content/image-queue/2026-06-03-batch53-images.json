@@ -1,0 +1,32 @@
+{
+  "batchId": "2026-06-03-batch53-images",
+  "generatedAt": "2026-06-03",
+  "purpose": "Add the Batch 53 appendix archive lab world image plus the checkout-pending tabbed folder story-series product hero image.",
+  "images": [
+    {
+      "slug": "appendix-archive-lab",
+      "title": "Appendix Archive Lab",
+      "purpose": "Local world image for the Batch 53 tabbed folder story-series card pack.",
+      "ageBand": "10-11",
+      "seoLane": "homeschool writing prompts",
+      "sourceWorldFile": "content/worlds/batch1-upper.json",
+      "prompt": "family-friendly appendix archive lab scene, blank folder pages, paper archive drawers, soft desk lamp, tabbed folder stack, careful pencil marks shown as blank spaces, cozy polished children's storybook illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, phone, tablet, laptop, computer, screen, device, microphone, audio recorder, voice memo, camera, photo, recording, transcription, account login, portal, qr code, upload icon, public post, public review, rating, score, grade, timer, contest, prize, food, tasting, allergy, medical, scary, weapon, fight, bullying",
+      "seed": 260653021,
+      "outputJpeg": "public/images/plotsprout/batch53-worlds/appendix-archive-lab.jpg",
+      "outputWebp": "public/images/plotsprout/batch53-worlds/appendix-archive-lab.webp",
+      "sidecar": "content/image-runs/batch53-worlds/appendix-archive-lab.json"
+    },
+    {
+      "slug": "tabbed-folder-story-series-card-pack",
+      "title": "Tabbed Folder Story Series Card Pack",
+      "purpose": "Static product hero image for the checkout-pending tabbed folder story-series card pack page.",
+      "prompt": "family-friendly studio product mockup of tabbed folder story series card pack, orthographic top-down view, open blank tabbed folder with three visible colored tabs, blank story-series cards tucked into paper pockets, empty writing areas, unbranded pencils, quiet printable writing kit, seamless plain white background, clean shadow, only paper and pencils, no text",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, phone, tablet, laptop, computer, screen, device, microphone, audio recorder, voice memo, camera, photo, recording, transcription, account login, portal, qr code, upload icon, public post, public review, rating, score, grade, timer, contest, prize, food, tasting, allergy, medical, scary, weapon, fight, bullying, plants, leaves, bowls, cups, plates, seeds, desk decor, pots",
+      "seed": 260653081,
+      "outputJpeg": "public/images/plotsprout/batch53/tabbed-folder-story-series-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch53/tabbed-folder-story-series-card-pack.webp",
+      "sidecar": "content/image-runs/batch53/tabbed-folder-story-series-card-pack.json"
+    }
+  ]
+}
