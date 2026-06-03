@@ -331,6 +331,18 @@ function validSource(overrides = {}) {
   }
 }
 
+function sourceFromCommittedLaneFiles() {
+  const [laneA, laneB, laneC] = sourceFiles.slice(0, 3).map(readJson)
+  const tools = readJson(sourceFiles[3])
+  return validSource({
+    cards: [...laneA.cards, ...laneB.cards, ...laneC.cards],
+    adultGuide: tools.adultGuide,
+    goalPathRoutines: tools.goalPathRoutines,
+    takeHomeGoalSlips: tools.takeHomeGoalSlips,
+    optionalAdultPrompts: tools.optionalAdultPrompts,
+  })
+}
+
 function withWorldReplacement(source, batchNumber) {
   const batchSet = new Set(batchWorldSlugs(batchNumber))
   const replaceIndex = source.worldSlugs.findIndex((slug) => batchSet.has(slug))
@@ -597,6 +609,126 @@ describe('Pocket Folder Story Goal Path Card Pack policy', () => {
           source.adultGuide.bullets[1] = 'Attach a private child profile to the first pocket label: ____________________.'
         },
       },
+      {
+        term: 'election',
+        mutate(source) {
+          source.cards[14].wantPrompt = 'Want: write how the helper wants to win an election: ____________________.'
+        },
+      },
+      {
+        term: 'prayer',
+        mutate(source) {
+          source.cards[15].finishNotePrompt = 'Finish note: add a prayer to close the page: ____________________.'
+        },
+      },
+      {
+        term: 'bet',
+        mutate(source) {
+          source.goalPathRoutines[2].adultWrapLine = 'The first try includes a bet about the paper goal path: ____________________.'
+        },
+      },
+      {
+        term: 'Pokemon',
+        mutate(source) {
+          source.cards[0].kidDirection = 'Writer: make the helper a Pokemon character on paper: ____________________.'
+        },
+      },
+      {
+        term: 'school name',
+        mutate(source) {
+          source.cards[1].adultSetup = 'Adult: write the real school name before the goal path starts: ____________________.'
+        },
+      },
+      {
+        term: 'home address',
+        mutate(source) {
+          source.cards[2].pocketLabelPrompt = 'Pocket label: include the home address on the folder: ____________________.'
+        },
+      },
+      {
+        term: 'teacher name',
+        mutate(source) {
+          source.cards[3].takeHomeLine = 'Take-home line: add the teacher name to the path: ____________________.'
+        },
+      },
+      {
+        term: 'camera',
+        mutate(source) {
+          source.cards[4].firstTryPrompt = 'First try: turn on the camera before writing: ____________________.'
+        },
+      },
+      {
+        term: 'photo',
+        mutate(source) {
+          source.cards[5].rethinkPrompt = 'Rethink: attach a photo to the goal path: ____________________.'
+        },
+      },
+      {
+        term: 'audio',
+        mutate(source) {
+          source.cards[6].quietOptionLine = 'Quiet option: save an audio clip first: ____________________.'
+        },
+      },
+      {
+        term: 'video',
+        mutate(source) {
+          source.cards[7].wantPrompt = 'Want: make a video about the pretend want: ____________________.'
+        },
+      },
+      {
+        term: 'allergy',
+        mutate(source) {
+          source.takeHomeGoalSlips[1] = 'Child: write allergy advice on the paper path: ____________________.'
+        },
+      },
+      {
+        term: 'medical',
+        mutate(source) {
+          source.optionalAdultPrompts[1] = 'Optional adult-led paper prompt: add medical advice before the first try: ____________________.'
+        },
+      },
+      {
+        term: 'diary',
+        mutate(source) {
+          source.cards[8].finishNotePrompt = 'Finish note: copy this into a private diary: ____________________.'
+        },
+      },
+      {
+        term: 'student profile',
+        mutate(source) {
+          source.adultGuide.bullets[2] = 'Add this page to the student profile after the pocket label: ____________________.'
+        },
+      },
+      {
+        term: 'personal disclosure',
+        mutate(source) {
+          source.cards[9].kidDirection = 'Writer: add a personal disclosure before inventing the helper: ____________________.'
+        },
+      },
+      {
+        term: 'provider',
+        mutate(source) {
+          source.cover.subhead = 'Use this provider handoff after the goal path is complete.'
+        },
+      },
+      {
+        term: 'payment',
+        mutate(source) {
+          source.sessionLength = '16 printable cards with payment setup notes for adults.'
+        },
+      },
+      {
+        term: 'checkout',
+        mutate(source) {
+          source.cover.included[0] = 'Checkout-ready pocket folder card file'
+        },
+      },
+      {
+        term: 'Stripe',
+        mutate(source) {
+          source.cover.included[1] = 'Stripe setup note for the product page'
+        },
+      },
     ]
 
     for (const { term, mutate } of cases) {
@@ -717,6 +849,27 @@ describe('Pocket Folder Story Goal Path Card Pack policy', () => {
     } finally {
       rmSync(tempRoot, { recursive: true, force: true })
     }
+  })
+
+  it('validates committed Batch57 lane source files from the repository', () => {
+    const source = sourceFromCommittedLaneFiles()
+
+    expect(source.cards).toHaveLength(16)
+    expect(source.cards.map((entry) => [entry.id, entry.worldSlug, entry.ageBand])).toEqual(
+      worldSlugs.map((slug, index) => [
+        `pocket-folder-goal-path-card-${String(index + 1).padStart(2, '0')}`,
+        slug,
+        worldAges[slug],
+      ]),
+    )
+    for (const card of source.cards) expect(Object.keys(card)).toEqual(cardKeys)
+    expect(source.adultGuide.bullets).toHaveLength(6)
+    expect(source.goalPathRoutines).toHaveLength(6)
+    expect(source.goalPathRoutines.every((routine) => routine.steps.length === 4)).toBe(true)
+    expect(source.takeHomeGoalSlips).toHaveLength(10)
+    expect(source.optionalAdultPrompts).toHaveLength(8)
+    expect(validatePocketFolderStoryGoalPathCardPackSource(source, productForSource(source), knownWorldAges)).toEqual([])
+    expect(validatePocketFolderStoryGoalPathCardPackSourceFiles(source, root)).toEqual([])
   })
 
   it('rejects copied source files that point at the wrong Batch57 lanes', () => {
