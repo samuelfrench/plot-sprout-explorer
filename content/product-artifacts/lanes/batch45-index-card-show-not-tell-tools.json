@@ -1,0 +1,158 @@
+{
+  "laneId": "batch45-index-card-show-not-tell-tools",
+  "adultGuide": {
+    "title": "Index Card Show-Not-Tell Adult Guide",
+    "bullets": [
+      "Print the index cards, blank clue rows, and revision slips before the adult-led paper session.",
+      "Begin with one plain line and coach the writer to show it through visible clue, object action, place signal, character gesture, and paper-safe sound or texture detail.",
+      "Keep every example fictional, broad, offline, and guided by an adult.",
+      "Use one card per sentence so the page stays small enough for ages 7-11.",
+      "Replace any actual person detail or narrow outside fact with a made-up name, broad story place, or pretend object.",
+      "End each card with a revised sentence that shows the idea without naming it too directly."
+    ]
+  },
+  "showRoutines": [
+    {
+      "name": "Plain Line Clue Row",
+      "bestFor": "Writers who tell the idea first and need a simple path toward showing it.",
+      "steps": [
+        "The adult reads one plain line from an index card.",
+        "The writer names the idea the line currently tells.",
+        "The adult points to five clue slots: visible clue, object action, place signal, character gesture, and sound/texture detail.",
+        "The writer writes one revised sentence using two clue slots: ____________________."
+      ]
+    },
+    {
+      "name": "Object Action Swap",
+      "bestFor": "Turning a flat sentence into a sentence with a visible story object.",
+      "steps": [
+        "The adult circles the object in a plain line.",
+        "The writer chooses one gentle action the object can do, such as lean, tap, wobble, or slide.",
+        "The adult asks what the object action helps the reader notice.",
+        "The writer writes one object action sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Place Signal Pass",
+      "bestFor": "Showing a broad fictional place without naming it too plainly.",
+      "steps": [
+        "The adult covers the direct place word in a plain line.",
+        "The writer chooses a place signal such as an arch, shelf, banner, puddle, or lantern.",
+        "The adult asks what the signal tells the reader about the pretend place.",
+        "The writer writes one place signal sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Gesture Before Feeling",
+      "bestFor": "Replacing a named feeling with a character gesture the reader can see.",
+      "steps": [
+        "The adult reads a plain line that tells how a fictional character feels.",
+        "The writer chooses one character gesture, such as toe tapping, sleeve smoothing, or eyebrow lifting.",
+        "The adult asks which feeling the gesture lets the reader infer.",
+        "The writer writes one gesture-first sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Sound Texture Thread",
+      "bestFor": "Adding one paper-safe sound or texture detail to make the moment easier to imagine.",
+      "steps": [
+        "The adult rereads the plain line and asks where a tiny sensory clue could fit.",
+        "The writer chooses one sound word or texture phrase a reader can imagine from print.",
+        "The adult asks whether the clue supports the visible action instead of distracting from it.",
+        "The writer writes one sound or texture detail sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Revised Sentence Stack",
+      "bestFor": "Combining the strongest clues into one clear revised sentence.",
+      "steps": [
+        "The adult places the plain line at the top of the index card stack.",
+        "The writer chooses the strongest visible clue and one supporting clue.",
+        "The adult asks which telling word can be removed.",
+        "The writer writes the final revised sentence: ____________________."
+      ]
+    }
+  ],
+  "takeHomeShowSlips": [
+    {
+      "title": "Plain Line Flip",
+      "time": "One paper pass",
+      "skill": "plain line revision",
+      "direction": "Start with a made-up plain line and revise it into one visible clue sentence: ____________________.",
+      "familyLine": "Ask which clue replaced the telling word: ____________________."
+    },
+    {
+      "title": "Visible Clue Card",
+      "time": "Brief adult-led pass",
+      "skill": "visible clue",
+      "direction": "Choose one visible clue that shows a pretend idea without naming it directly: ____________________.",
+      "familyLine": "Ask what the reader can picture first: ____________________."
+    },
+    {
+      "title": "Object Action Card",
+      "time": "Single printable slip",
+      "skill": "object action",
+      "direction": "Make a fictional object do one gentle action that shows the moment: ____________________.",
+      "familyLine": "Ask what the object action helps show: ____________________."
+    },
+    {
+      "title": "Place Signal Card",
+      "time": "One pencil pass",
+      "skill": "place signal",
+      "direction": "Add one broad place signal to show where the pretend moment happens: ____________________.",
+      "familyLine": "Ask which signal tells the reader about the place: ____________________."
+    },
+    {
+      "title": "Character Gesture Card",
+      "time": "Calm paper pass",
+      "skill": "character gesture",
+      "direction": "Replace a named feeling with one visible character gesture: ____________________.",
+      "familyLine": "Ask which feeling the gesture shows: ____________________."
+    },
+    {
+      "title": "Sound Detail Card",
+      "time": "Short paper pass",
+      "skill": "paper-safe sound detail",
+      "direction": "Add one printable sound word that supports the fictional action: ____________________.",
+      "familyLine": "Ask how the sound helps the reader imagine the moment: ____________________."
+    },
+    {
+      "title": "Texture Detail Card",
+      "time": "Quiet slip pass",
+      "skill": "texture detail",
+      "direction": "Add one texture detail that makes the pretend object easier to picture: ____________________.",
+      "familyLine": "Ask which texture word makes the object clearer: ____________________."
+    },
+    {
+      "title": "Feeling Without Saying It",
+      "time": "Fresh card pass",
+      "skill": "showing emotion",
+      "direction": "Show a fictional feeling through a clue, action, or gesture instead of naming it: ____________________.",
+      "familyLine": "Ask which clue shows the feeling best: ____________________."
+    },
+    {
+      "title": "Clue Pair Sentence",
+      "time": "Single card pass",
+      "skill": "combining clues",
+      "direction": "Combine one visible clue and one object action into a revised sentence: ____________________.",
+      "familyLine": "Ask how the two clues work together: ____________________."
+    },
+    {
+      "title": "Final Revision Slip",
+      "time": "Second pencil pass",
+      "skill": "revised sentence",
+      "direction": "Rewrite one plain fictional sentence as a stronger revised sentence: ____________________.",
+      "familyLine": "Ask what changed from telling to showing: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the plain line I will revise is ____________________.",
+    "Optional adult-led offline prompt: one visible clue that shows the idea is ____________________.",
+    "Optional adult-led offline prompt: the object action I chose is ____________________.",
+    "Optional adult-led offline prompt: the place signal that tells where the pretend moment happens is ____________________.",
+    "Optional adult-led offline prompt: the character gesture that shows the feeling is ____________________.",
+    "Optional adult-led offline prompt: one paper-safe sound or texture detail is ____________________.",
+    "Optional adult-led offline prompt: the telling word I removed is ____________________.",
+    "Optional adult-led offline prompt: my revised sentence is ____________________."
+  ]
+}
