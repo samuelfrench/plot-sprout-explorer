@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-03-batch44-product-images",
+  "generatedAt": "2026-06-03",
+  "images": [
+    {
+      "slug": "folder-tab-story-detail-card-pack",
+      "title": "Folder Tab Story Detail Card Pack",
+      "purpose": "Static product page hero and printable-pack shelf image",
+      "prompt": "family-friendly flat lay, six blank cream printable story detail cards beside colorful unbranded folder tabs and pencils, empty rectangular writing areas, unbranded cozy writing table, plain white background, screen-free Folder Tab Story Detail Card Pack product photo, no readable text, no people",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, illustration, drawing, line art, cartoon, person, people, child, child face, child portrait, hands, body, clothing, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, map, real map, phone, tablet, laptop, computer, screen, device, app interface, microphone, audio recorder, camera, photo, recording, transcription, school login, account login, portal, qr code, upload icon, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, food, tasting, allergy, medical, brand mark, franchise character, scary, weapon, fight, bullying",
+      "seed": 26064461,
+      "outputJpeg": "public/images/plotsprout/batch44/folder-tab-story-detail-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch44/folder-tab-story-detail-card-pack.webp",
+      "sidecar": "content/image-runs/batch44/folder-tab-story-detail-card-pack.json"
+    }
+  ]
+}

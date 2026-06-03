@@ -78,6 +78,7 @@ describe('storyData', () => {
       'desk-lamp-story-problem-card-pack',
       'paper-clip-story-solution-card-pack',
       'binder-clip-story-transition-card-pack',
+      'folder-tab-story-detail-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -116,6 +117,7 @@ describe('storyData', () => {
       '$55',
       '$57',
       '$59',
+      '$61',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)

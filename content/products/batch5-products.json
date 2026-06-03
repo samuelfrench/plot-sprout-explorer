@@ -3352,6 +3352,130 @@
           "summary": "A binding day world for turning a pretend promise into one gentle page action."
         }
       ]
+    },
+    {
+      "slug": "folder-tab-story-detail-card-pack",
+      "title": "Folder Tab Story Detail Card Pack",
+      "pricePoint": "$61",
+      "status": "checkout_pending",
+      "headline": "A printable detail-card pack for paper-only fictional folder-tab story clues.",
+      "summary": "Sixteen adult-led folder tab cards help kids add object traits, place clues, character actions, mood signals, and revision lines.",
+      "heroImage": "images/plotsprout/batch44/folder-tab-story-detail-card-pack.jpg",
+      "ctaLabel": "Request detail card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Folder%20Tab%20Story%20Detail%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static folder tab story detail card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable folder tab story detail cards",
+        "Adult setup guide",
+        "Fictional detail safety notes",
+        "Folder tab detail coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led detail routines",
+        "Ten take-home detail slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one useful detail before a story sentence",
+        "A tutoring or co-op table where writers can fill one folder tab card at a time",
+        "A warm-up where a pretend tab prop reduces blank-page pressure",
+        "A reluctant-writer activity that separates detail choice from a full draft",
+        "A take-home detail slip set for building one invented story offline"
+      ],
+      "parentSteps": [
+        "Choose one detail routine before the activity starts.",
+        "Set the paper, pencils, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one pretend folder tab label into a fictional detail rather than using narrow real-world facts.",
+        "Send one detail slip with a single blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for filing one tiny muffin clue under a clear folder tab."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for sorting one ripple-note detail into a pretend message scene."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for turning one ticket or shelf clue into the next traveler action."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for comparing two small map details before the scene moves forward."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for using one visible weather clue to show a gentle story mood."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for revising one notice-board clue into a sharper fictional detail."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for making one harbor label, flag, or container detail easy to picture."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for sorting one paper-slip detail by a clear tab label."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for anchoring one pretend map-table clue on a folder tab."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for connecting one signal detail to a broad platform setting."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for sharpening one message detail with a visible clue."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for ordering one shell-clock detail before the next story moment."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for comparing a broad draft detail with a clearer paper choice."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for pointing one display label toward the detail readers should notice."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for sorting two paper choices into one useful story detail."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for filing one gentle promise detail into a page action."
+        }
+      ]
     }
   ]
 }

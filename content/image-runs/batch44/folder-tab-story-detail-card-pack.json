@@ -1,0 +1,19 @@
+{
+  "slug": "folder-tab-story-detail-card-pack",
+  "prompt": "family-friendly flat lay, six blank cream printable story detail cards beside colorful unbranded folder tabs and pencils, empty rectangular writing areas, unbranded cozy writing table, plain white background, screen-free Folder Tab Story Detail Card Pack product photo, no readable text, no people",
+  "negativePrompt": "text, readable writing, letters, labels, logo, watermark, illustration, drawing, line art, cartoon, person, people, child, child face, child portrait, hands, body, clothing, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, map, real map, phone, tablet, laptop, computer, screen, device, app interface, microphone, audio recorder, camera, photo, recording, transcription, school login, account login, portal, qr code, upload icon, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, food, tasting, allergy, medical, brand mark, franchise character, scary, weapon, fight, bullying",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 26064461,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch44/folder-tab-story-detail-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch44/folder-tab-story-detail-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-03-batch44-product-images.json",
+  "title": "Folder Tab Story Detail Card Pack",
+  "postProcess": "Local ImageMagick cleanup replaced off-scope SDXL device/cup output with six blank printable detail cards, colorful folder tabs, and pencils only."
+}

@@ -91,7 +91,7 @@
       "adultSetup": "Adult: Print the card and choose one pretend weather clue to write on the folder tab: ____________________.",
       "kidDirection": "Writer: Use the folder tab to keep one weather-window detail in the scene: ____________________.",
       "focusDetailPrompt": "Focus detail: The tab label should name the weather clue that changes how the scene feels: ____________________.",
-      "objectTraitPrompt": "Object trait: The weather clue has one swirl, dot, stripe, shimmer, or paper-tag shape: ____________________.",
+      "objectTraitPrompt": "Object trait: The weather clue has one swirl, dot, band, shimmer, or paper-tag shape: ____________________.",
       "placeDetailPrompt": "Place detail: The Teacup Town window area shows one sill card, cloud label, or tiny forecast strip: ____________________.",
       "characterActionPrompt": "Character action: The watcher points, files, sorts, or compares the weather detail beside: ____________________.",
       "moodSignalPrompt": "Mood signal: The weather detail makes the moment feel cozy, crisp, curious, or bright because: ____________________.",

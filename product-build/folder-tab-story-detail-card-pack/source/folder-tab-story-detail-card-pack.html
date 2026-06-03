@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folder Tab Story Detail Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-detail-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-detail-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-detail-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable folder tab detail cards</p>
+        <h1>Folder Tab Story Detail Card Pack</h1>
+        <p>Sixteen paper cards help writers file one fictional detail at a time, then turn that detail into a clearer story sentence.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable detail cards plus adult guide tools, detail routines, take-home detail slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$61</span>
+        <h2>Included</h2>
+        <ul><li>16 printable folder tab detail cards</li>
+<li>Adult setup guide</li>
+<li>Fictional detail safety notes</li>
+<li>Folder tab detail coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led detail routines</li>
+<li>Ten take-home detail slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Detail coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Folder Tab Detail Card Adult Guide</h3><ul><li>Print the detail cards, blank slips, and folder-tab labels before the adult-led paper session.</li>
+<li>Use folder tabs as paper props for labeling, sorting, pointing, filing, comparing, and revising invented story details.</li>
+<li>Keep every detail fictional, broad, offline, and guided by an adult.</li>
+<li>Focus detail work on visual clues, story objects, gentle actions, and mood words.</li>
+<li>Replace narrow outside facts with made-up tab labels before anyone writes.</li>
+<li>Send along only blank slips or invented examples that use made-up people and broad pretend places.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one folder tab detail card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen detail-card worlds</h2>
+      <p>Pick a world image, then start one fictional story with a pretend folder tab detail card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Detail routines</p>
+      <h2>Choose the folder tab detail rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Label the Detail</h3>
+      <p>Writers who need one clear story detail before drafting.</p>
+      <ol><li>The adult places a blank folder tab beside one detail card.</li>
+<li>The writer chooses a broad tab label such as color, object, action, or mood.</li>
+<li>The adult asks which made-up detail belongs under that label.</li>
+<li>The writer writes one matching fictional detail: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sort Three Details</h3>
+      <p>Choosing useful details without crowding a sentence.</p>
+      <ol><li>The adult lays out three blank slips and names one invented scene.</li>
+<li>The writer sorts slips into visual, object, and action tabs.</li>
+<li>The adult asks which tab gives the reader the clearest clue.</li>
+<li>The writer writes the chosen detail under the tab: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Point to the Clue</h3>
+      <p>Adding a detail that helps the reader notice one story clue.</p>
+      <ol><li>The adult uses a folder tab as a pointer beside a made-up story object.</li>
+<li>The writer names what the pointer helps the reader notice.</li>
+<li>The adult asks whether the clue is visual, action, object, or mood.</li>
+<li>The writer writes one pointed clue sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>File by Mood</h3>
+      <p>Connecting a gentle mood word to a visible story detail.</p>
+      <ol><li>The adult labels two tabs calm and curious.</li>
+<li>The writer chooses one invented object or action for each tab.</li>
+<li>The adult asks which tab better fits the next story moment.</li>
+<li>The writer files one mood detail into a sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Compare and Choose</h3>
+      <p>Replacing a vague detail with a clearer fictional one.</p>
+      <ol><li>The adult places two invented detail slips under one folder tab.</li>
+<li>The writer compares which slip is easier to picture.</li>
+<li>The adult asks what makes the clearer detail useful.</li>
+<li>The writer writes the clearer revised detail: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Revise the Tab</h3>
+      <p>Changing a too-broad label into a stronger story-detail label.</p>
+      <ol><li>The adult reads the current folder-tab label aloud.</li>
+<li>The writer chooses a more specific invented label that stays broad and safe.</li>
+<li>The adult asks which detail now belongs under the revised label.</li>
+<li>The writer writes the revised tab detail: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home detail slips</p>
+      <h2>Start one story detail later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">One paper pass | visual detail</p>
+      <h3>Color Tab</h3>
+      <p>Label a pretend color tab and write one fictional detail under it: ____________________.</p>
+      <p>Ask which color clue helps the story picture: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Brief adult-led pass | object detail</p>
+      <h3>Object Tab</h3>
+      <p>File one made-up object under a folder tab and add one story detail: ____________________.</p>
+      <p>Ask what the object helps the reader notice: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single printable slip | action detail</p>
+      <h3>Action Tab</h3>
+      <p>Sort one gentle fictional action onto a tab and write it in a sentence: ____________________.</p>
+      <p>Ask which action makes the moment easier to picture: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Quiet paper pass | mood detail</p>
+      <h3>Mood Tab</h3>
+      <p>Choose a calm mood tab and add one visible made-up clue for it: ____________________.</p>
+      <p>Ask which clue shows the mood on the page: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One pencil pass | clue detail</p>
+      <h3>Tiny Clue Tab</h3>
+      <p>Point a folder tab at one tiny fictional clue and write the clue clearly: ____________________.</p>
+      <p>Ask what the pointer helps the reader see: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Short paper pass | detail choice</p>
+      <h3>Compare Tabs</h3>
+      <p>Compare two invented details and choose the one that is easier to picture: ____________________.</p>
+      <p>Ask why that detail belongs on the folder tab: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Fresh slip pass | label revision</p>
+      <h3>Revise a Label</h3>
+      <p>Revise a vague tab label into a clearer made-up story label: ____________________.</p>
+      <p>Ask which label made the detail clearer: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Calm story pass | broad setting detail</p>
+      <h3>File the Setting Hint</h3>
+      <p>File one broad invented setting hint under a folder tab: ____________________.</p>
+      <p>Ask what hint tells the reader where the pretend moment happens: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single card pass | combined detail</p>
+      <h3>Object Plus Action</h3>
+      <p>Put one made-up object and one gentle action under the same tab: ____________________.</p>
+      <p>Ask how the object and action fit together: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Second pencil pass | detail revision</p>
+      <h3>Detail Swap</h3>
+      <p>Swap a plain invented detail for a clearer visual story detail: ____________________.</p>
+      <p>Ask which swapped detail gives the reader more to picture: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the folder-tab label I chose is ____________________.</li>
+<li>Optional adult-led offline prompt: one visual story detail under this tab is ____________________.</li>
+<li>Optional adult-led offline prompt: the invented object I filed is ____________________.</li>
+<li>Optional adult-led offline prompt: the gentle action detail I sorted is ____________________.</li>
+<li>Optional adult-led offline prompt: the mood clue I pointed to is ____________________.</li>
+<li>Optional adult-led offline prompt: the clearer detail after comparing is ____________________.</li>
+<li>Optional adult-led offline prompt: the revised tab label is ____________________.</li>
+<li>Optional adult-led offline prompt: an adult can add one broad made-up detail here: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 1 | Ages 6-8 | name one tiny object detail</div>
+      <h2>Moon Muffin Folder Tab Crumb Detail</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print the card, add a paper folder tab label, and invite one made-up market detail to sort: ____________________.</p>
+      <p class="kid-direction">Writer: Point to the folder tab, choose one moon-muffin detail, and add it to the scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The folder tab label names the detail the reader should notice first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The moon muffin has one tiny shape, color, edge, or sparkle that feels important: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The pretend market counter shows one small sign, tray, or paper tag beside the muffin: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The helper points, sorts, files, or compares the muffin detail with: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: The detail makes the market moment feel quiet, busy, bright, or curious because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: The tiny moon-muffin detail is easy to notice because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which one muffin detail should stay on the folder tab for this scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Make the detail clearer by adding one paper label, color word, or size word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the folder tab first, then write one moon-muffin detail on it: ____________________. Extra paper line: File another pretend market detail under a new folder tab: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 2 | Ages 6-8 | sort one clue by label</div>
+      <h2>Puddle Planet Folder Tab Ripple Note</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside blank paper and name one pretend ripple note for the folder tab: ____________________.</p>
+      <p class="kid-direction">Writer: Label the folder tab, then choose one puddle-mail detail that belongs under it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The folder tab tells the reader to notice one puddle-mail clue before anything else: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The pretend note has one ripple mark, stamp shape, folded corner, or shiny edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The Puddle Planet mail desk includes one paper bin, shell label, or round mat: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The mail helper files, taps, turns, or compares the note detail with: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: The clue makes the mail moment feel calm, bouncy, careful, or surprised because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: The puddle note looks different when the writer adds: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which ripple-note detail should the folder tab help the reader track: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Add one more pretend mail clue so the tab label feels precise: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Sketch the note corner and write one folder-tab label beside it: ____________________. Extra paper line: Sort another made-up puddle note by one clear detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 3 | Ages 7-9 | connect detail to action</div>
+      <h2>Buttonwood Folder Tab Ticket Detail</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print the card and choose one invented ticket, shelf tag, or bookmark strip for the folder tab: ____________________.</p>
+      <p class="kid-direction">Writer: Use the tabbed detail to show what the traveler notices and does next: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The folder tab should name the detail that guides the library-train scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The ticket, shelf tag, or bookmark has one texture, mark, color, or folded edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The Buttonwood Library Train stop includes one broad shelf, bench, bell card, or paper sign: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The traveler points to, files, compares, or slides the tabbed detail toward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: The detail gives the scene a steady, puzzled, cheerful, or careful feeling because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: The traveler notices the tabbed detail, so the next action is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which ticket or shelf detail should the reader remember later: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Replace a plain word with a sharper detail from the folder tab: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw a ticket tab and add one clear describing word: ____________________. Extra paper line: File one new library-train detail and use it in a sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 4 | Ages 7-9 | compare two small details</div>
+      <h2>Button Bakery Folder Tab Map Mark</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out the card with a folded pretend map and invite one button mark to label on the folder tab: ____________________.</p>
+      <p class="kid-direction">Writer: Compare the tabbed map detail with another small bakery detail in the scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The folder tab names the map detail that should stand out in the scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The map has one button mark, crumb-shaped dot, fold line, or tiny arrow shape: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The bakery-map table includes one paper tray, tab stack, pretend counter, or label strip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The map-mender sorts, files, points to, or compares the marked detail with: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: The detail makes the map moment feel neat, mixed-up, bright, or thoughtful because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: The first map detail differs from the second detail because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which button-bakery detail should the folder tab help compare: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Make the comparison clearer by adding one size, color, or placement word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Mark two paper tabs, then circle the detail that matters most: ____________________. Extra paper line: Compare two new pretend bakery-map details on a fresh tab: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 5 | Ages 7-8 | show mood with a visible clue</div>
+      <h2>Teacup Town Folder Tab Weather Detail</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print the card and choose one pretend weather clue to write on the folder tab: ____________________.</p>
+      <p class="kid-direction">Writer: Use the folder tab to keep one weather-window detail in the scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The tab label should name the weather clue that changes how the scene feels: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The weather clue has one swirl, dot, stripe, shimmer, or paper-tag shape: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The Teacup Town window area shows one sill card, cloud label, or tiny forecast strip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The watcher points, files, sorts, or compares the weather detail beside: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: The weather detail makes the moment feel cozy, crisp, curious, or bright because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: The scene feels different after the watcher notices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which weather-window detail best shows the feeling of this moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Strengthen the mood by adding one visible clue from the tab: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw one weather tab and write the feeling word under it: ____________________. Extra paper line: File another Teacup Town weather detail and match it to a feeling: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 6 | Ages 7-9 | revise with a sharper clue</div>
+      <h2>Pocket Park Folder Tab Notice Detail</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card near blank paper and choose one invented notice-board detail to file under a tab: ____________________.</p>
+      <p class="kid-direction">Writer: Pick one notice detail, file it under the tab, and revise the sentence so it is clearer: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The folder tab names the notice-board detail the reader should keep in mind: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The notice has one crooked corner, leaf stamp, dotted border, or tiny label strip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The pocket-park board includes one broad paper panel, tab row, or pretend display edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The notice keeper labels, files, points to, or compares the board detail with: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: The sharper detail makes the scene feel tidy, curious, gentle, or lively because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: The notice-board clue becomes clearer when the writer adds: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which notice detail should be revised before the scene continues: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Trade one plain notice word for a sharper folder-tab clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write one plain word on the tab, then revise it into a clearer detail: ____________________. Extra paper line: File another pretend notice detail and revise it once: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 7 | Ages 7-9 | notice container labels</div>
+      <h2>Spoon Ferry Lunchbox Harbor Tab Details</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this folder tab beside a pretend harbor sketch and choose one tab label to sort the scene: ____________________.</p>
+      <p class="kid-direction">Writer: add one clear detail that helps the spoon ferry, lid dock, or paper flag stand out: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: point the folder tab at the one harbor part readers should notice first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: give the spoon ferry, lid dock, or paper flag one size, color, shape, or surface clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: describe where the pretend harbor label sits inside the lunchbox container: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: show the ferry helper filing, pointing, or sorting one tiny harbor tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: show the scene feels calm, busy, curious, or careful by adding one visible clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: The folder tab points to the chosen harbor object because it has this detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: which label, mark, or shape should the reader picture first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: compare two invented harbor details and keep the clearer one: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw one tab label and one spoon ferry detail without adding extra scene parts: ____________________. Carry-out line: make another folder tab detail for a pretend container harbor: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 8 | Ages 7-9 | sort visible paper clues</div>
+      <h2>Acorn Avenue Paper Slip Detail Sort</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card with two pretend acorn slips and let the folder tab mark the one to describe: ____________________.</p>
+      <p class="kid-direction">Writer: choose one acorn slip, leaf stamp, or seed mark and add a detail a reader can picture: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: point the folder tab at the slip detail that matters most in this made-up office moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: describe the acorn slip with one color, shape, edge, fold, or tiny symbol: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: show where the sorted slip rests on the twig tray, seed counter, or paper shelf: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: show the leaf clerk labeling, filing, or comparing one invented slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: show the office feels orderly, puzzled, cheerful, or careful through one paper clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: The folder tab marks the slip with this detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: what tiny mark helps the reader tell this acorn slip from the others: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: replace a plain slip detail with one clearer invented mark: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw two slips, tab one, and write one detail about the tabbed slip: ____________________. Carry-out line: invent another acorn office detail using only paper slips and tab labels: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 9 | Ages 8-10 | anchor map-room detail</div>
+      <h2>Seed Library Map Room Detail Tab</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a pretend seed map and use the folder tab to mark one broad shelf clue: ____________________.</p>
+      <p class="kid-direction">Writer: add one exact-looking but invented detail to the map fold, seed card, or shelf label: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: point the folder tab at the map-room part that should pull the reader&#39;s eye first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: describe the seed card, map fold, or shelf label with one texture, color, shape, or border: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: show where the tabbed clue sits near a shelf corner, map table, or card pocket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: show the seed keeper comparing, filing, or sliding the tab beside one clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: show the map room feels quiet, bright, curious, or neatly arranged with one visible detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: Near the folder tab, the seed-library clue looks like this: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: which seed shape, border mark, or shelf label makes the clue easier to picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: trade a vague map-room detail for one clearer paper clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: sketch one map fold, add a folder tab, and name one detail on the tabbed clue: ____________________. Carry-out line: create another seed-library detail by tabbing a pretend map or shelf card: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 10 | Ages 8-10 | connect signal detail to setting</div>
+      <h2>Rain Gauge Railway Platform Detail Tab</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the folder tab beside a pretend gauge sketch and choose one platform detail to describe: ____________________.</p>
+      <p class="kid-direction">Writer: add one visible detail to the gauge mark, cloud card, flag label, or platform edge: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: point the folder tab at the rain railway clue that should guide the reader&#39;s attention: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: describe the gauge, flag label, or cloud card with one color, shine, size, or shape: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: show where the tabbed clue sits on the pretend platform, beside the gauge, or near a paper rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: show the conductor filing, pointing to, or comparing one signal card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: show the railway feels misty, patient, lively, or careful with one visible clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: The folder tab points to the railway detail that shows this: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: what gauge mark, flag shape, or platform clue makes the scene clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: add one stronger rain railway clue and remove one fuzzy detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw one gauge mark, tab it, and write a single platform detail: ____________________. Carry-out line: make another rain railway detail card with a tabbed signal or platform clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 11 | Ages 8-10 | clarify message detail</div>
+      <h2>Moss Message Observatory Detail File</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the folder tab beside a pretend moss note and choose one detail to file under sky clues: ____________________.</p>
+      <p class="kid-direction">Writer: add one visible detail to the moss mark, pebble lens, lantern card, or sky shelf: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: point the folder tab at the moss-message clue the reader should notice first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: describe the moss note, pebble lens, or lantern card with one shade, shape, size, or edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: show where the tabbed clue rests on the observatory step, shelf, or paper chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: show the sky watcher filing, comparing, or pointing to one tabbed clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: show the observatory feels hushed, bright, curious, or careful through one visible detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: The tabbed moss-message detail helps the reader see this: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: what moss shade, lantern edge, or pebble shape makes the note easier to imagine: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: compare two observatory details and keep the one that sharpens the moss note: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw one moss note, add a folder tab, and write one clear detail: ____________________. Carry-out line: invent another observatory detail by filing one moss-message clue under a tab: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 12 | Ages 8-10 | sequence detail</div>
+      <h2>Tidepool Timekeeper Shell Tab</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card beside a pretend folder tab label and invite one shell-clock detail, keeping the scene fictional and paper-only: ____________________.</p>
+      <p class="kid-direction">Write the tiny detail the folder tab should file before the next tidepool moment begins: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The tidepool timekeeper files the most helpful shell-clock clue under the tab labeled ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The shell-clock, bead dial, or paper tide strip looks different because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The pretend tidepool shelf, pool edge, or note tray shows the order by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The timekeeper points to the folder tab and chooses to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: Show the timekeeper&#39;s curious mood with one small tidepool clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: File the detail into this sentence: The shell-clock clue showed ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which small tidepool clue helps the reader picture the order? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Make the tidepool detail smaller by naming one shell, bead, mark, or note: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Sort two pretend tidepool details under one folder tab and write the clearer one: ____________________. Carry-on line: Invent one more paper folder tab label for a tidepool detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 13 | Ages 10-11 | revision target</div>
+      <h2>Revision River Ferry Compare Tab</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place two pretend ferry notes under a folder tab and ask which one needs a sharper story detail: ____________________.</p>
+      <p class="kid-direction">Choose the ferry detail that should change, then write the clearer detail on the tab line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The folder tab marks the ferry detail that needs the writer&#39;s attention: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The paper ferry token, rope tag, or ripple card becomes easier to picture when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The invented ferry dock, deck note, or river sign feels clearer after ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The ferry helper compares the two tabbed notes and decides to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: Show the helper&#39;s thoughtful mood with one gentle ferry clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: File the revised detail into this sentence: The ferry moment changed when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which exact ferry detail should become smaller, clearer, or more useful? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Replace one broad ferry word with a sharper paper detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle one fuzzy ferry detail and file one clearer word under the tab: ____________________. Carry-on line: Invent another ferry folder tab that compares an old detail with a clearer one: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 14 | Ages 10-11 | label clue detail</div>
+      <h2>Clue Label Tower Pointer Tab</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the card beside a made-up display label and keep every tower clue invented, broad, and paper-only: ____________________.</p>
+      <p class="kid-direction">Write the detail that makes the folder tab point from the label to the clue the reader should notice: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The tower keeper files the label clue under the tab named ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The label card, pointer strip, or display tag stands out because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The pretend tower shelf, label step, or clue rail gives the reader this hint: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The clue keeper points, sorts, or refiles the label so it can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: Show the keeper&#39;s alert mood with one small label clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: File the clue into this sentence: The label pointed toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which label detail helps the reader find the next invented clue? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Add one shape, color, texture, or surface detail to sharpen the label clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw one folder tab and write the clue word it should point toward: ____________________. Carry-on line: Invent one more tower label tab for a pretend clue display: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 15 | Ages 10-11 | choice obstacle</div>
+      <h2>Compass Craft Choice Sort Tab</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place two pretend craft options beside the folder tab and invite the writer to file one choice detail: ____________________.</p>
+      <p class="kid-direction">Write the detail that shows why the compass crafter chooses one paper option over another: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The folder tab holds the choice detail that matters most to the compass crafter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The paper needle, bead marker, or folded arrow looks useful because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The invented craft table, bead rail, or folded-arrow stand shows the choice by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The compass crafter sorts the options and chooses to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: Show the crafter&#39;s steady mood with one small craft clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: File the choice into this sentence: The crafter chose the option that ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which choice detail helps the reader understand the crafter&#39;s next move? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Name both pretend options, then make the chosen detail more exact: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Sort option A and option B under the tab, then write the chosen detail: ____________________. Carry-on line: Invent one more compass-craft folder tab that files a useful choice detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-detail-card-page">
+      <div class="page-kicker">Detail Card 16 | Ages 10-11 | promise detail</div>
+      <h2>Binding Day Boardwalk Promise Tab</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card near a pretend folded page and invite one small promise detail that stays fictional and kind: ____________________.</p>
+      <p class="kid-direction">Write the paper detail that shows how the page helper keeps the promise in the next story moment: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Focus detail</h3>
+      <p>Focus detail: The folder tab labels the promise detail the helper should remember: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trait</h3>
+      <p>Object trait: The folded page, clasp note, or booklet sign shows the promise because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place detail</h3>
+      <p>Place detail: The invented boardwalk page table, booklet booth, or paper rail feels clearer when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character action: The page helper files the promise note and chooses to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood signal</h3>
+      <p>Mood signal: Show the helper&#39;s careful mood with one small page clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence frame</h3>
+      <p>Sentence frame: File the promise detail into this sentence: The helper remembered to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail question</h3>
+      <p>Detail question: Which small detail makes the promise easy to picture and easy to keep? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise detail</h3>
+      <p>Revise detail: Make the promise detail smaller by naming one page, clasp, sign, or fold: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write the promise detail under one folder tab and add one careful action: ____________________. Carry-on line: Invent one more boardwalk folder tab for a gentle promise detail: ____________________.</p>
+    </section>
+  </body>
+</html>

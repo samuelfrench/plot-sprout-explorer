@@ -558,6 +558,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable binder clip story transition cards with adult guide tools, transition routines, and take-home transition slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'folder-tab-story-detail-card-pack',
+    title: 'Folder Tab Story Detail Card Pack',
+    pricePoint: '$61',
+    description:
+      'Sixteen printable folder tab story detail cards with adult guide tools, detail routines, and take-home detail slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]
