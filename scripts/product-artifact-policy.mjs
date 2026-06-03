@@ -54,6 +54,8 @@ export const linedPaperStoryParagraphRevisionCardPackProductSlug =
   'lined-paper-story-paragraph-revision-card-pack'
 export const compositionNotebookStoryDraftChecklistCardPackProductSlug =
   'composition-notebook-story-draft-checklist-card-pack'
+export const spiralNotebookStoryFinalCopyCardPackProductSlug =
+  'spiral-notebook-story-final-copy-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -487,6 +489,16 @@ const requiredCompositionNotebookStoryDraftChecklistCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/composition-notebook-story-draft-checklist-card-pack/source/composition-notebook-story-draft-checklist-card-pack.html',
   manifestPath: 'product-build/composition-notebook-story-draft-checklist-card-pack/manifest.json',
+}
+
+const requiredSpiralNotebookStoryFinalCopyCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/spiral-notebook-story-final-copy-card-pack/Spiral-Notebook-Story-Final-Copy-Card-Pack.pdf',
+  zipPath:
+    'product-build/spiral-notebook-story-final-copy-card-pack/spiral-notebook-story-final-copy-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/spiral-notebook-story-final-copy-card-pack/source/spiral-notebook-story-final-copy-card-pack.html',
+  manifestPath: 'product-build/spiral-notebook-story-final-copy-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -13592,6 +13604,409 @@ export function validateCompositionNotebookStoryDraftChecklistCardPackSourceFile
   return errors
 }
 
+const spiralNotebookFinalCopyCardKeys = [
+  'id',
+  'title',
+  'worldSlug',
+  'ageBand',
+  'finalCopySkill',
+  'useCase',
+  'adultSetup',
+  'kidDirection',
+  'openingCopyPrompt',
+  'neatCopyPrompt',
+  'detailTransferPrompt',
+  'sentenceBoundaryPrompt',
+  'dialogueCopyPrompt',
+  'finalCopyCheckPrompt',
+  'quietOptionLine',
+  'takeHomeLine',
+]
+
+const spiralNotebookFinalCopySourceFiles = [
+  'content/product-artifacts/lanes/batch52-spiral-notebook-final-copy-cards-a.json',
+  'content/product-artifacts/lanes/batch52-spiral-notebook-final-copy-cards-b.json',
+  'content/product-artifacts/lanes/batch52-spiral-notebook-final-copy-cards-c.json',
+  'content/product-artifacts/lanes/batch52-spiral-notebook-final-copy-tools.json',
+]
+
+const batch50SpiralNotebookFinalCopyOverlapWorldSet = new Set([
+  'penny-path-compass-shop',
+  'sticker-station-mail-cart',
+  'mitten-market-lost-ticket',
+  'paperclip-plaza-parcel-day',
+  'greenhouse-gear-garden',
+  'pantry-measurement-mystery',
+  'solar-oven-picnic-station',
+  'compost-clock-workshop',
+  'orchard-pulley-post',
+  'pond-bridge-blueprint-club',
+  'cloudberry-clocktower',
+  'tiny-lantern-reef',
+  'almost-invention-workshop',
+  'margin-note-market',
+  'index-card-theater-club',
+  'chapter-gate-greenhouse',
+])
+
+const batch51SpiralNotebookFinalCopyOverlapWorldSet = new Set([
+  'buttonwood-library-train',
+  'button-bakery-map-mixup',
+  'teacup-town-weather-window',
+  'spoon-ferry-lunchbox-harbor',
+  'pocket-park-notice-board',
+  'rain-gauge-railway',
+  'greenhouse-gear-garden',
+  'cloudberry-clocktower',
+  'moss-message-observatory',
+  'orchard-pulley-post',
+  'pond-bridge-blueprint-club',
+  'revision-river-ferry',
+  'chapter-gate-greenhouse',
+  'index-card-theater-club',
+  'binding-day-boardwalk',
+  'margin-note-market',
+])
+
+function validateNoUnsafeSpiralNotebookFinalCopyLanguage(value, label, errors) {
+  validateNoUnsafeClipboardParagraphFocusLanguage(value, label, errors)
+  const allowedText = normalizeClipboardParagraphFocusAllowedSafetyText(value)
+  pushIf(
+    errors,
+    /\bpublic\b|\baddress(es)?\b|\bfoods?\b/i.test(allowedText),
+    `${label} includes public, address, or food language.`,
+  )
+  pushIf(
+    errors,
+    /\bpublish(es|ed|ing)?\b|\bpublication(s)?\b|\bshowcase(s|d|ing)?\b|\bportfolio(s)?\b|\bdisplay(s|ed|ing)?\b|\bperfect\b|\brubric(s)?\b|\bassessment(s)?\b|\bspell(ing|s|ed)?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes publishing, showcase, portfolio, display, perfect, rubric, assessment, or spelling language.`,
+  )
+}
+
+function validateSpiralNotebookFinalCopyCard(
+  card,
+  index,
+  sourceWorldSlugs,
+  knownWorldSlugs,
+  knownWorldRecords,
+  cardIds,
+  errors,
+) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(card)) !== JSON.stringify(spiralNotebookFinalCopyCardKeys),
+    `${label} must use the exact spiral notebook final-copy card field order.`,
+  )
+
+  for (const key of spiralNotebookFinalCopyCardKeys) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(card.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(card.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(
+      errors,
+      !card.id.startsWith('spiral-notebook-final-copy-card-'),
+      `${label}.id must start with spiral-notebook-final-copy-card-.`,
+    )
+    pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+    cardIds.add(card.id)
+  }
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) && !/spiral notebook (story )?final-copy card/i.test(card.useCase),
+    `${label}.useCase must say spiral notebook final-copy card.`,
+  )
+  pushIf(errors, isNonEmptyString(card.adultSetup) && !card.adultSetup.startsWith('Adult:'), `${label}.adultSetup must start with Adult:.`)
+
+  for (const key of [
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'openingCopyPrompt',
+    'neatCopyPrompt',
+    'detailTransferPrompt',
+    'sentenceBoundaryPrompt',
+    'dialogueCopyPrompt',
+    'finalCopyCheckPrompt',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeSpiralNotebookFinalCopyLanguage(card, label, errors)
+}
+
+function validateSpiralNotebookFinalCopyRoutine(routine, index, names, errors) {
+  const label = `finalCopyRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.name)) {
+    pushIf(errors, names.has(routine.name), `${label}.name is duplicated.`)
+    names.add(routine.name)
+  }
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  if (Array.isArray(routine.steps)) {
+    routine.steps.forEach((step, stepIndex) => {
+      pushIf(errors, isNonEmptyString(step) && !hasWritableBlank(step), `${label}.steps[${stepIndex}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(step) && hasSnakeCasePlaceholder(step), `${label}.steps[${stepIndex}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+  validateNoUnsafeSpiralNotebookFinalCopyLanguage(routine, label, errors)
+}
+
+function validateSpiralNotebookTakeHomeFinalCopySlip(slip, index, titles, errors) {
+  const label = `takeHomeFinalCopySlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(slip[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(slip.title)) {
+    pushIf(errors, titles.has(slip.title), `${label}.title is duplicated.`)
+    titles.add(slip.title)
+  }
+  pushIf(
+    errors,
+    isNonEmptyString(slip.time) && /\b\d+\s*(minute|minutes|min|mins)\b|\b(five|six|seven|eight|nine|ten)\s+minute(s)?\b/i.test(slip.time),
+    `${label}.time must use a non-timed take-home slip label.`,
+  )
+  for (const key of ['direction', 'familyLine']) {
+    pushIf(errors, isNonEmptyString(slip[key]) && !hasWritableBlank(slip[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(slip[key]) && hasSnakeCasePlaceholder(slip[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeSpiralNotebookFinalCopyLanguage(slip, label, errors)
+}
+
+export function validateSpiralNotebookStoryFinalCopyCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Spiral Notebook Story Final Copy Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-03-batch52', 'batchId must be 2026-06-03-batch52.')
+  pushIf(errors, source.generatedAt !== '2026-06-03', 'generatedAt must be 2026-06-03.')
+  pushIf(
+    errors,
+    source.productSlug !== spiralNotebookStoryFinalCopyCardPackProductSlug,
+    `productSlug must be ${spiralNotebookStoryFinalCopyCardPackProductSlug}.`,
+  )
+  pushIf(
+    errors,
+    source.title !== 'Spiral Notebook Story Final Copy Card Pack',
+    'title must be Spiral Notebook Story Final Copy Card Pack.',
+  )
+  pushIf(errors, source.pricePoint !== '$77', 'pricePoint must be $77.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), `safetyNote must include ${requiredSafety}`)
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Spiral Notebook Story Final Copy Card Pack source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Spiral Notebook Story Final Copy Card Pack source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Spiral Notebook Story Final Copy Card Pack source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    const batch50Overlap = source.worldSlugs.filter((slug) => batch50SpiralNotebookFinalCopyOverlapWorldSet.has(slug))
+    pushIf(
+      errors,
+      batch50Overlap.length > 7,
+      `worldSlugs must reuse no more than 7 Batch 50 worlds; overlapping slugs: ${batch50Overlap.join(', ')}.`,
+    )
+    const batch51Overlap = source.worldSlugs.filter((slug) => batch51SpiralNotebookFinalCopyOverlapWorldSet.has(slug))
+    pushIf(
+      errors,
+      batch51Overlap.length > 7,
+      `worldSlugs must reuse no more than 7 Batch 51 worlds; overlapping slugs: ${batch51Overlap.join(', ')}.`,
+    )
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(
+    source,
+    requiredSpiralNotebookStoryFinalCopyCardPackArtifactPaths,
+    'Spiral Notebook Story Final Copy Card Pack',
+    errors,
+  )
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    validateExactStringArray(source.adultGuide.bullets, 6, 'adultGuide.bullets', errors)
+    validateNoUnsafeSpiralNotebookFinalCopyLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.finalCopyRoutines), 'finalCopyRoutines must be an array.')
+  if (Array.isArray(source.finalCopyRoutines)) {
+    pushIf(errors, source.finalCopyRoutines.length !== 6, 'finalCopyRoutines must have exactly 6 entries.')
+    const names = new Set()
+    source.finalCopyRoutines.forEach((routine, index) => validateSpiralNotebookFinalCopyRoutine(routine, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeFinalCopySlips), 'takeHomeFinalCopySlips must be an array.')
+  if (Array.isArray(source.takeHomeFinalCopySlips)) {
+    pushIf(errors, source.takeHomeFinalCopySlips.length !== 10, 'takeHomeFinalCopySlips must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeFinalCopySlips.forEach((slip, index) =>
+      validateSpiralNotebookTakeHomeFinalCopySlip(slip, index, titles, errors),
+    )
+  }
+
+  validateExactStringArray(source.optionalSharePrompts, 8, 'optionalSharePrompts', errors)
+  if (Array.isArray(source.optionalSharePrompts)) {
+    source.optionalSharePrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalSharePrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalSharePrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeSpiralNotebookFinalCopyLanguage(prompt, `optionalSharePrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateSpiralNotebookFinalCopyCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 16, 'cards must cover at least 16 unique worlds.')
+  }
+
+  validateNoUnsafeSpiralNotebookFinalCopyLanguage(source, 'Spiral Notebook Story Final Copy Card Pack source', errors)
+  validateNoRiskyLanguage(source, 'Spiral Notebook Story Final Copy Card Pack source', errors)
+  return errors
+}
+
+export function validateSpiralNotebookStoryFinalCopyCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three final-copy-card lanes and one tools lane.')
+
+  pushIf(
+    errors,
+    JSON.stringify([...source.sourceFiles].sort()) !== JSON.stringify([...spiralNotebookFinalCopySourceFiles].sort()),
+    'sourceFiles must list the exact Batch 52 final-copy-card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedLaneId = sourceFile.split('/').at(-1)?.replace('.json', '')
+      pushIf(errors, lane.laneId !== expectedLaneId, `${sourceFile}.laneId must be ${expectedLaneId}.`)
+      if (Array.isArray(lane.cards)) {
+        const expectedRange = sourceFile.includes('-cards-a')
+          ? { min: 1, max: 6, count: 6, label: '01-06' }
+          : sourceFile.includes('-cards-b')
+          ? { min: 7, max: 11, count: 5, label: '07-11' }
+          : sourceFile.includes('-cards-c')
+          ? { min: 12, max: 16, count: 5, label: '12-16' }
+          : null
+        if (expectedRange) {
+          pushIf(
+            errors,
+            lane.cards.length !== expectedRange.count,
+            `${sourceFile} must contain exactly ${expectedRange.count} cards.`,
+          )
+          const wrongLaneCard = lane.cards.some((card) => {
+            const match = String(card?.id ?? '').match(/-(\d{2})$/)
+            const cardNumber = match ? Number(match[1]) : NaN
+            return !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max
+          })
+          pushIf(errors, wrongLaneCard, `${sourceFile} must contain only cards ${expectedRange.label}.`)
+        }
+        cardLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 52 final-copy-card lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three final-copy-card lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane.cards)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles final-copy-card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'finalCopyRoutines', 'takeHomeFinalCopySlips']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+    pushIf(
+      errors,
+      JSON.stringify(toolsLane.optionalAdultPrompts) !== JSON.stringify(source.optionalSharePrompts),
+      'sourceFiles tools lane optionalAdultPrompts must reproduce optionalSharePrompts exactly.',
+    )
+  }
+
+  return errors
+}
+
 
 
 export function countPdfPages(buffer) {
@@ -13782,6 +14197,8 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
     artifact?.pdfPath === requiredDeskLampStoryProblemCardPackArtifactPaths.pdfPath
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
+      : artifact?.pdfPath === requiredSpiralNotebookStoryFinalCopyCardPackArtifactPaths.pdfPath
+      ? requiredSpiralNotebookStoryFinalCopyCardPackArtifactPaths
       : artifact?.pdfPath === requiredCompositionNotebookStoryDraftChecklistCardPackArtifactPaths.pdfPath
       ? requiredCompositionNotebookStoryDraftChecklistCardPackArtifactPaths
       : artifact?.pdfPath === requiredLinedPaperStoryParagraphRevisionCardPackArtifactPaths.pdfPath

@@ -1,0 +1,158 @@
+{
+  "laneId": "batch52-spiral-notebook-final-copy-tools",
+  "adultGuide": {
+    "title": "Spiral Notebook Story Final Copy Adult Guide",
+    "bullets": [
+      "Print the spiral notebook final copy cards, take-home slips, and adult guide pages before the adult-led paper session.",
+      "Start with one fictional revised draft, then guide the writer through title, first line, paragraph spacing, careful copying, gentle rereading, and final note work.",
+      "Keep every example invented, family-friendly, offline, paper-only, and guided by an adult.",
+      "Use the spiral notebook page as the clean copy space, with pencil marks kept light and easy to follow.",
+      "Keep all names, places, and objects inside the pretend story world so no private details are needed.",
+      "Finish by having the writer choose one proud sentence and one next-story note on paper."
+    ]
+  },
+  "finalCopyRoutines": [
+    {
+      "name": "Title Line Setup",
+      "bestFor": "Helping the final copy begin with a clear title line on the spiral notebook page.",
+      "steps": [
+        "The adult asks which pretend story title belongs at the top of the spiral notebook page: ____________________.",
+        "The writer points to the title on the revised draft before copying it: ____________________.",
+        "The adult asks where the title should sit so the story page feels easy to read: ____________________.",
+        "The writer copies the title neatly on the first clean line: ____________________."
+      ]
+    },
+    {
+      "name": "First Line Start",
+      "bestFor": "Starting the final copy with a first sentence that matches the revised draft.",
+      "steps": [
+        "The adult asks the writer to find the first sentence in the revised fictional draft: ____________________.",
+        "The writer places a finger under the first words that will be copied: ____________________.",
+        "The adult asks what the first sentence should help the reader know right away: ____________________.",
+        "The writer copies the first sentence on the clean spiral notebook page: ____________________."
+      ]
+    },
+    {
+      "name": "Paragraph Space Check",
+      "bestFor": "Leaving enough space between story parts so the final copy is easy to follow.",
+      "steps": [
+        "The adult marks where the first story part ends on the revised draft: ____________________.",
+        "The writer decides where a small space or new line should go on the notebook page: ____________________.",
+        "The adult asks which next story part should begin after the space: ____________________.",
+        "The writer copies the next part with clear spacing: ____________________."
+      ]
+    },
+    {
+      "name": "Copy One Chunk",
+      "bestFor": "Copying a short piece at a steady paper pace without rushing the page.",
+      "steps": [
+        "The adult chooses one short chunk from the revised draft for the writer to copy: ____________________.",
+        "The writer reads the chunk once with a finger under the words: ____________________.",
+        "The adult asks which words the writer will copy before looking back at the draft: ____________________.",
+        "The writer copies that chunk onto the spiral notebook page: ____________________."
+      ]
+    },
+    {
+      "name": "Gentle Reread Pass",
+      "bestFor": "Checking the copied page against the revised draft with calm adult support.",
+      "steps": [
+        "The adult reads one copied sentence while the writer follows the revised draft: ____________________.",
+        "The writer marks any missing or doubled word with a tiny pencil dot: ____________________.",
+        "The adult asks what the sentence should say after the small fix: ____________________.",
+        "The writer makes one quiet correction on the final copy page: ____________________."
+      ]
+    },
+    {
+      "name": "Proud Sentence Note",
+      "bestFor": "Ending the final copy pass with a positive paper note and one next-story idea.",
+      "steps": [
+        "The adult asks the writer to choose one copied sentence that feels clear and strong: ____________________.",
+        "The writer underlines that sentence lightly on the spiral notebook page: ____________________.",
+        "The adult asks what the writer wants to remember for the next fictional story: ____________________.",
+        "The writer adds one next-story note at the bottom of the page: ____________________."
+      ]
+    }
+  ],
+  "takeHomeFinalCopySlips": [
+    {
+      "title": "Title Copy Slip",
+      "time": "one quiet final-copy pass",
+      "skill": "title placement",
+      "direction": "Copy the pretend story title on the first clean line of the spiral notebook page: ____________________.",
+      "familyLine": "Ask where the title should sit so the page is easy to read: ____________________."
+    },
+    {
+      "title": "First Sentence Slip",
+      "time": "first-line copy pass",
+      "skill": "first sentence copy",
+      "direction": "Find the first sentence in the revised draft, then copy it onto the clean page: ____________________.",
+      "familyLine": "Ask what the first sentence helps the reader know: ____________________."
+    },
+    {
+      "title": "Chunk Copy Slip",
+      "time": "small-chunk copy pass",
+      "skill": "careful copying",
+      "direction": "Copy one short story chunk from the revised draft onto the spiral notebook page: ____________________.",
+      "familyLine": "Ask which words the writer will copy before looking back: ____________________."
+    },
+    {
+      "title": "Spacing Slip",
+      "time": "page-spacing pass",
+      "skill": "paragraph spacing",
+      "direction": "Leave a clear space or new line where the next story part begins: ____________________.",
+      "familyLine": "Ask which story part should begin after the space: ____________________."
+    },
+    {
+      "title": "Margin Dot Slip",
+      "time": "gentle reread pass",
+      "skill": "copy check",
+      "direction": "Put a tiny pencil dot beside one place to revisit on the copied page: ____________________.",
+      "familyLine": "Ask what that sentence should say after the small fix: ____________________."
+    },
+    {
+      "title": "Missing Word Slip",
+      "time": "quiet line check",
+      "skill": "word match",
+      "direction": "Compare one copied line with the revised draft and add any missing word: ____________________.",
+      "familyLine": "Ask which draft word belongs in the copied line: ____________________."
+    },
+    {
+      "title": "Doubled Word Slip",
+      "time": "one-line cleanup pass",
+      "skill": "word cleanup",
+      "direction": "Find one doubled word on the copied page and cross out only the extra word: ____________________.",
+      "familyLine": "Ask how the sentence reads after the extra word comes out: ____________________."
+    },
+    {
+      "title": "Clear Ending Slip",
+      "time": "ending copy pass",
+      "skill": "ending copy",
+      "direction": "Copy the final sentence from the revised draft onto the notebook page: ____________________.",
+      "familyLine": "Ask how the ending lets the reader know the story is finished: ____________________."
+    },
+    {
+      "title": "Proud Sentence Slip",
+      "time": "proud-sentence pass",
+      "skill": "sentence choice",
+      "direction": "Lightly underline one copied sentence that feels clear and strong: ____________________.",
+      "familyLine": "Ask why that sentence is a good one to keep: ____________________."
+    },
+    {
+      "title": "Next Story Note Slip",
+      "time": "paper note pass",
+      "skill": "next-story reflection",
+      "direction": "Write one note at the bottom of the page for the next fictional story: ____________________.",
+      "familyLine": "Ask what the writer wants to remember next time: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the title I will copy is ____________________.",
+    "Optional adult-led offline prompt: the first sentence starts with ____________________.",
+    "Optional adult-led offline prompt: the short chunk I will copy next is ____________________.",
+    "Optional adult-led offline prompt: the place where I need a new line or space is ____________________.",
+    "Optional adult-led offline prompt: one copied line I will reread is ____________________.",
+    "Optional adult-led offline prompt: one tiny pencil fix I can make is ____________________.",
+    "Optional adult-led offline prompt: the sentence I feel proud of is ____________________.",
+    "Optional adult-led offline prompt: my next-story paper note is ____________________."
+  ]
+}

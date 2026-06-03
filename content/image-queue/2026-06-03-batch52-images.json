@@ -1,0 +1,32 @@
+{
+  "batchId": "2026-06-03-batch52-images",
+  "generatedAt": "2026-06-03",
+  "purpose": "Add the Batch 52 blue pencil world image plus the checkout-pending spiral notebook final-copy product hero image.",
+  "images": [
+    {
+      "slug": "blue-pencil-observatory",
+      "title": "Blue Pencil Observatory",
+      "purpose": "Local world image for the Batch 52 spiral notebook final-copy card pack.",
+      "ageBand": "10-11",
+      "seoLane": "homeschool writing prompts",
+      "sourceWorldFile": "content/worlds/batch1-upper.json",
+      "prompt": "family-friendly blue pencil observatory scene, blank notebook pages, paper telescope, blue pencil railings, small lookout platform, gentle sky shapes, colored paper hills, cozy polished children's storybook illustration, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, phone, tablet, laptop, computer, screen, device, microphone, audio recorder, voice memo, camera, photo, recording, transcription, account login, portal, qr code, upload icon, public post, public review, rating, score, grade, timer, contest, prize, food, tasting, allergy, medical, scary, weapon, fight, bullying",
+      "seed": 260652021,
+      "outputJpeg": "public/images/plotsprout/batch52-worlds/blue-pencil-observatory.jpg",
+      "outputWebp": "public/images/plotsprout/batch52-worlds/blue-pencil-observatory.webp",
+      "sidecar": "content/image-runs/batch52-worlds/blue-pencil-observatory.json"
+    },
+    {
+      "slug": "spiral-notebook-story-final-copy-card-pack",
+      "title": "Spiral Notebook Story Final Copy Card Pack",
+      "purpose": "Static product hero image for the checkout-pending spiral notebook final-copy card pack page.",
+      "prompt": "family-friendly studio product mockup of spiral notebook story final copy card pack, orthographic top-down view, blank spiral notebook, blank final-copy cards, empty writing areas, unbranded pencils, small paper tabs, quiet printable writing kit, seamless plain white background, clean shadow, only paper and pencils, no decor, no text",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, phone, tablet, laptop, computer, screen, device, microphone, audio recorder, voice memo, camera, photo, recording, transcription, account login, portal, qr code, upload icon, public post, public review, rating, score, grade, timer, contest, prize, food, tasting, allergy, medical, scary, weapon, fight, bullying, plants, leaves, bowls, cups, plates, seeds, food props, desk decor, pots",
+      "seed": 260652078,
+      "outputJpeg": "public/images/plotsprout/batch52/spiral-notebook-story-final-copy-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch52/spiral-notebook-story-final-copy-card-pack.webp",
+      "sidecar": "content/image-runs/batch52/spiral-notebook-story-final-copy-card-pack.json"
+    }
+  ]
+}

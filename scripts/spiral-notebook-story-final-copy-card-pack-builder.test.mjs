@@ -307,6 +307,40 @@ describe('Spiral Notebook Story Final Copy Card Pack', () => {
     )
   })
 
+  it('rejects standalone unsafe terms in final-copy source text', () => {
+    const cases = [
+      {
+        term: 'food',
+        mutate(source) {
+          source.cards[0].detailTransferPrompt =
+            'Detail transfer: food note stays off the final-copy page: ____________________.'
+        },
+      },
+      {
+        term: 'address',
+        mutate(source) {
+          source.cards[1].finalCopyCheckPrompt =
+            'Final-copy check: address note stays out of the adult-led copy pass: ____________________.'
+        },
+      },
+      {
+        term: 'public',
+        mutate(source) {
+          source.optionalSharePrompts[0] =
+            'Adult optional prompt 1: public note stays off the final-copy page: ____________________.'
+        },
+      },
+    ]
+
+    for (const { term, mutate } of cases) {
+      const source = validSource()
+      mutate(source)
+      expect(validateSpiralNotebookStoryFinalCopyCardPackSource(source, product, knownWorldAges).join('\n')).toMatch(
+        new RegExp(term, 'i'),
+      )
+    }
+  })
+
   it('renders all final-copy fields into printable HTML', () => {
     const source = validSource()
     const { root, worlds } = tempWorldsAndImages(source)
@@ -346,19 +380,20 @@ describe('Spiral Notebook Story Final Copy Card Pack', () => {
     const source = validSource()
     const { root, worlds } = tempWorldsAndImages(source)
     const imageSources = new Map(source.worldSlugs.map((slug) => [slug, `${root}/${slug}.jpg`]))
+    const targetBuildDir = resolve(root, 'product-build', 'spiral-notebook-story-final-copy-card-pack')
     const result = await buildSpiralNotebookStoryFinalCopyCardPack({
       source,
       product,
       worlds,
       imageSources,
-      buildDir: resolve(root, 'build'),
+      buildDir: targetBuildDir,
       recordRoot: root,
       writePdf: ({ pdfPath }) => writeFileSync(pdfPath, fakePdf(21)),
     })
-    const htmlPath = join(root, 'build', 'source', 'spiral-notebook-story-final-copy-card-pack.html')
-    const pdfPath = join(root, 'build', 'Spiral-Notebook-Story-Final-Copy-Card-Pack.pdf')
-    const zipPath = join(root, 'build', 'spiral-notebook-story-final-copy-card-pack.zip')
-    const manifestPath = join(root, 'build', 'manifest.json')
+    const htmlPath = join(targetBuildDir, 'source', 'spiral-notebook-story-final-copy-card-pack.html')
+    const pdfPath = join(targetBuildDir, 'Spiral-Notebook-Story-Final-Copy-Card-Pack.pdf')
+    const zipPath = join(targetBuildDir, 'spiral-notebook-story-final-copy-card-pack.zip')
+    const manifestPath = join(targetBuildDir, 'manifest.json')
 
     expect(existsSync(htmlPath)).toBe(true)
     expect(existsSync(pdfPath)).toBe(true)
@@ -368,12 +403,12 @@ describe('Spiral Notebook Story Final Copy Card Pack', () => {
     expect(result.manifest.files.zip.sha256).toBe(sha256(zipPath))
     expect(result.manifest.files.assets).toHaveLength(16)
 
-    const artifactErrors = inspectArtifactFiles(source, {
+    const artifactStatus = inspectArtifactFiles(root, source.artifact, {
       expectedPdfPages: 21,
       expectedZipEntries: expectedZipEntries(source),
-      rootDir: root,
     })
-    expect(artifactErrors).toEqual([])
+    expect(artifactStatus.errors).toEqual([])
+    expect(artifactStatus.valid).toBe(true)
     rmSync(root, { recursive: true, force: true })
   })
 

@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiral Notebook Story Final Copy Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .final-copy-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .final-copy-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .final-copy-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable spiral notebook final-copy cards</p>
+        <h1>Spiral Notebook Story Final Copy Card Pack</h1>
+        <p>Sixteen spiral notebook cards help writers copy one fictional story page while carrying over the opening, useful details, sentence breaks, dialogue, and one final-copy pencil note.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable spiral notebook final-copy cards plus adult guide tools, final-copy routines, take-home final-copy slips, and optional prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$77</span>
+        <h2>Included</h2>
+        <ul><li>16 printable spiral notebook final-copy cards</li>
+<li>Adult setup guide</li>
+<li>Fictional final-copy safety notes</li>
+<li>Spiral notebook copying moves</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led final-copy routines</li>
+<li>Ten take-home final-copy slips</li>
+<li>Eight optional prompts</li>
+<li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story final-copy coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Spiral Notebook Story Final Copy Adult Guide</h3><ul><li>Print the spiral notebook final copy cards, take-home slips, and adult guide pages before the adult-led paper session.</li>
+<li>Start with one fictional revised draft, then guide the writer through title, first line, paragraph spacing, careful copying, gentle rereading, and final note work.</li>
+<li>Keep every example invented, family-friendly, offline, paper-only, and guided by an adult.</li>
+<li>Use the spiral notebook page as the clean copy space, with pencil marks kept light and easy to follow.</li>
+<li>Keep all names, places, and objects inside the pretend story world so no private details are needed.</li>
+<li>Finish by having the writer choose one proud sentence and one next-story note on paper.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one spiral notebook story final-copy card at a time. Keep every choice broad, invented, paper-only, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen final-copy-card worlds</h2>
+      <p>Pick a world image, then check one fictional story draft with a pretend spiral notebook final-copy card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tiny Lantern Reef</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Mitten Market Lost Ticket</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Paperclip Plaza Parcel Day</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Compost Clock Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Almost Invention Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Blue Pencil Observatory</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Story final-copy routines</p>
+      <h2>Choose the spiral notebook final-copy routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Title Line Setup</h3>
+      <p>Helping the final copy begin with a clear title line on the spiral notebook page.</p>
+      <ol><li>The adult asks which pretend story title belongs at the top of the spiral notebook page: ____________________.</li>
+<li>The writer points to the title on the revised draft before copying it: ____________________.</li>
+<li>The adult asks where the title should sit so the story page feels easy to read: ____________________.</li>
+<li>The writer copies the title neatly on the first clean line: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>First Line Start</h3>
+      <p>Starting the final copy with a first sentence that matches the revised draft.</p>
+      <ol><li>The adult asks the writer to find the first sentence in the revised fictional draft: ____________________.</li>
+<li>The writer places a finger under the first words that will be copied: ____________________.</li>
+<li>The adult asks what the first sentence should help the reader know right away: ____________________.</li>
+<li>The writer copies the first sentence on the clean spiral notebook page: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Paragraph Space Check</h3>
+      <p>Leaving enough space between story parts so the final copy is easy to follow.</p>
+      <ol><li>The adult marks where the first story part ends on the revised draft: ____________________.</li>
+<li>The writer decides where a small space or new line should go on the notebook page: ____________________.</li>
+<li>The adult asks which next story part should begin after the space: ____________________.</li>
+<li>The writer copies the next part with clear spacing: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Copy One Chunk</h3>
+      <p>Copying a short piece at a steady paper pace without rushing the page.</p>
+      <ol><li>The adult chooses one short chunk from the revised draft for the writer to copy: ____________________.</li>
+<li>The writer reads the chunk once with a finger under the words: ____________________.</li>
+<li>The adult asks which words the writer will copy before looking back at the draft: ____________________.</li>
+<li>The writer copies that chunk onto the spiral notebook page: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Gentle Reread Pass</h3>
+      <p>Checking the copied page against the revised draft with calm adult support.</p>
+      <ol><li>The adult reads one copied sentence while the writer follows the revised draft: ____________________.</li>
+<li>The writer marks any missing or doubled word with a tiny pencil dot: ____________________.</li>
+<li>The adult asks what the sentence should say after the small fix: ____________________.</li>
+<li>The writer makes one quiet correction on the final copy page: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Proud Sentence Note</h3>
+      <p>Ending the final copy pass with a positive paper note and one next-story idea.</p>
+      <ol><li>The adult asks the writer to choose one copied sentence that feels clear and strong: ____________________.</li>
+<li>The writer underlines that sentence lightly on the spiral notebook page: ____________________.</li>
+<li>The adult asks what the writer wants to remember for the next fictional story: ____________________.</li>
+<li>The writer adds one next-story note at the bottom of the page: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home final copy slips</p>
+      <h2>Try one final copy later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">one quiet final-copy pass | title placement</p>
+      <h3>Title Copy Slip</h3>
+      <p>Copy the pretend story title on the first clean line of the spiral notebook page: ____________________.</p>
+      <p>Ask where the title should sit so the page is easy to read: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">first-line copy pass | first sentence copy</p>
+      <h3>First Sentence Slip</h3>
+      <p>Find the first sentence in the revised draft, then copy it onto the clean page: ____________________.</p>
+      <p>Ask what the first sentence helps the reader know: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">small-chunk copy pass | careful copying</p>
+      <h3>Chunk Copy Slip</h3>
+      <p>Copy one short story chunk from the revised draft onto the spiral notebook page: ____________________.</p>
+      <p>Ask which words the writer will copy before looking back: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">page-spacing pass | paragraph spacing</p>
+      <h3>Spacing Slip</h3>
+      <p>Leave a clear space or new line where the next story part begins: ____________________.</p>
+      <p>Ask which story part should begin after the space: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">gentle reread pass | copy check</p>
+      <h3>Margin Dot Slip</h3>
+      <p>Put a tiny pencil dot beside one place to revisit on the copied page: ____________________.</p>
+      <p>Ask what that sentence should say after the small fix: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">quiet line check | word match</p>
+      <h3>Missing Word Slip</h3>
+      <p>Compare one copied line with the revised draft and add any missing word: ____________________.</p>
+      <p>Ask which draft word belongs in the copied line: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">one-line cleanup pass | word cleanup</p>
+      <h3>Doubled Word Slip</h3>
+      <p>Find one doubled word on the copied page and cross out only the extra word: ____________________.</p>
+      <p>Ask how the sentence reads after the extra word comes out: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">ending copy pass | ending copy</p>
+      <h3>Clear Ending Slip</h3>
+      <p>Copy the final sentence from the revised draft onto the notebook page: ____________________.</p>
+      <p>Ask how the ending lets the reader know the story is finished: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">proud-sentence pass | sentence choice</p>
+      <h3>Proud Sentence Slip</h3>
+      <p>Lightly underline one copied sentence that feels clear and strong: ____________________.</p>
+      <p>Ask why that sentence is a good one to keep: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">paper note pass | next-story reflection</p>
+      <h3>Next Story Note Slip</h3>
+      <p>Write one note at the bottom of the page for the next fictional story: ____________________.</p>
+      <p>Ask what the writer wants to remember next time: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the title I will copy is ____________________.</li>
+<li>Optional adult-led offline prompt: the first sentence starts with ____________________.</li>
+<li>Optional adult-led offline prompt: the short chunk I will copy next is ____________________.</li>
+<li>Optional adult-led offline prompt: the place where I need a new line or space is ____________________.</li>
+<li>Optional adult-led offline prompt: one copied line I will reread is ____________________.</li>
+<li>Optional adult-led offline prompt: one tiny pencil fix I can make is ____________________.</li>
+<li>Optional adult-led offline prompt: the sentence I feel proud of is ____________________.</li>
+<li>Optional adult-led offline prompt: my next-story paper note is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 1 | Ages 6-8 | copy one fictional moon-market story draft into a clean final notebook page with an opening, neat lines, kept details, sentence boundaries, dialogue marks, and a final paper check</div>
+      <h2>Moon Muffin Market Final Copy Card</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a draft page, a clean spiral notebook page, and this card on the table before the writer copies the moon-market story offline on paper: ____________________.</p>
+      <p class="kid-direction">Writer: copy the pretend moon-market story offline onto the clean paper-only notebook page, moving slowly enough to keep each sentence easy to read: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy the first sentence so the reader meets the market helper and the moonlit stall right away: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: leave a small space between words and keep each notebook line calm from left to right: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: bring over two helpful details from the draft, such as the silver awning, crumb map, or bell tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: check each sentence for a starting capital and an ending mark before copying the next one: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: if a made-up helper speaks, copy the talking words inside quotation marks and add who says them: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final copy check: reread the notebook page and mark one place where the final copy is clear enough to keep: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to one sentence, and the writer copies only that sentence onto the clean offline paper page: ____________________. Take-home line: copy another short pretend moon-market draft onto spiral notebook paper with one opening, two details, and clean sentence ends: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 2 | Ages 7-9 | copy one fictional library-train story draft into final notebook form with a strong opening, neat spacing, transferred setting details, sentence boundaries, dialogue marks, and a final paper check</div>
+      <h2>Buttonwood Library Train Final Copy Card</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the library-train draft beside a clean spiral notebook page and choose the pencil the writer will use offline: ____________________.</p>
+      <p class="kid-direction">Writer: copy the pretend library-train story offline on paper only so the helper, train place, and ending all stay in the same order: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy an opening sentence that names the train helper and hints at the shelf or ticket problem: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: keep the notebook lines steady and leave space after each ending mark before the next sentence begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: copy two useful train details from the draft, such as a button shelf, paper ticket, or question card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: touch each sentence end with the pencil, then copy the next sentence only after the mark is clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: copy any pretend train talk with quotation marks and a simple tag, such as said the helper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final copy check: reread the final page and underline one sentence that helps the library train story make sense: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult covers part of the draft, and the writer copies one short section onto offline notebook paper: ____________________. Take-home line: copy another pretend library-train draft with the opening, train details, sentence marks, and dialogue marks kept clear: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 3 | Ages 7-9 | copy one fictional button-map story draft into final notebook form with a clear opening, neat line work, useful map details, sentence boundaries, dialogue marks, and a final paper check</div>
+      <h2>Button Bakery Map Mixup Final Copy Card</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out the pretend map-mixup draft and one clean spiral notebook page for quiet offline paper-only copying: ____________________.</p>
+      <p class="kid-direction">Writer: copy the made-up map story offline on paper only so the first clue, next turn, and final fix stay easy to follow: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy the first sentence with the map helper, the button marker, and the mixed-up clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: copy each line with even word spaces and keep the margin clear for a small check mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: carry over two draft details, such as a ribbon path, paper button marker, or crumb-shaped dot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: make sure each copied sentence starts clearly and ends before the next map clue begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: if two made-up helpers talk, copy only the important words and show who says each line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final copy check: reread the clean page and mark one copied map detail that helps the mixup feel finished: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult chooses one map clue sentence, and the writer copies only that sentence on offline paper: ____________________. Take-home line: copy another pretend map-mixup draft with neat lines, kept clues, clear sentence ends, and careful dialogue marks: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 4 | Ages 7-8 | copy one fictional weather-window story draft into final notebook form with an opening, neat spacing, transferred weather details, sentence boundaries, dialogue marks, and a final paper check</div>
+      <h2>Teacup Town Weather Window Final Copy Card</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the pretend weather-window draft beside a clean notebook page and keep the work offline with pencil and paper: ____________________.</p>
+      <p class="kid-direction">Writer: copy the weather-window story offline on paper only so the watcher, window place, and gentle change stay clear on the final page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy the first sentence so it shows who is watching and what appears at the window: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: copy with careful spaces, and start a fresh line if the sentence needs more space: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: copy two pretend window details, such as a cloud tag, cup sill, tiny flag, or paper band: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: check that each sentence has one complete thought before the next weather-window moment begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: copy any pretend talking words with quotation marks and keep the speaker name close by: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final copy check: reread the clean page and put a small pencil mark beside one sentence that is easy to follow: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the opening, and the writer copies only the first sentence on offline paper: ____________________. Take-home line: copy another pretend weather-window draft with a clear opening, two kept details, and tidy sentence endings: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 5 | Ages 7-9 | copy one fictional lunchbox-harbor story draft into final notebook form with a clear opening, neat lines, transferred harbor details, sentence boundaries, dialogue marks, and a final paper check</div>
+      <h2>Spoon Ferry Lunchbox Harbor Final Copy Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a pretend harbor draft, a clean spiral notebook page, and a pencil where the writer can copy offline on paper: ____________________.</p>
+      <p class="kid-direction">Writer: copy the harbor story offline on paper only so the ferry helper, paper dock, and ending moment stay in order: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy an opening sentence that shows the ferry helper and the harbor task before the ferry moves: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: keep each copied word easy to read and leave a little space between story parts: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: copy two harbor details from the draft, such as a spoon ferry, folded flag, paper wave, or dock label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: check that every ferry action has a clear sentence end before the next action starts: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: copy any pretend dock talk with quotation marks and a short speaker tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final copy check: reread the final page and circle one copied detail that helps the harbor ending make sense: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult folds the draft to show one paragraph, and the writer copies only that part onto offline notebook paper: ____________________. Take-home line: copy another pretend harbor draft with a clear first sentence, kept details, sentence ends, and any dialogue copied carefully: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 6 | Ages 7-9 | copy one fictional notice-board story draft into final notebook form with a clear opening, neat spacing, transferred board details, sentence boundaries, dialogue marks, and a final paper check</div>
+      <h2>Pocket Park Notice Board Final Copy Card</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: put the pretend notice-board draft next to a clean spiral notebook page and choose one pencil for offline copying: ____________________.</p>
+      <p class="kid-direction">Writer: copy the notice-board story offline on paper only so the board keeper, notice change, and final choice are easy to follow: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy the first sentence with the board keeper and the notice that starts the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: keep the notebook line steady and leave clear spaces around each copied word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: copy two useful board details from the draft, such as a leaf notice, bench label, pin rail, or paper path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: check each sentence for a clear beginning and ending mark before copying the next notice moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: if a pretend park helper speaks, copy the talking words in quotation marks and name the speaker: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final copy check: reread the clean page and mark one place where the final copy keeps the notice-board story clear: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to one notice-board detail, and the writer copies the sentence that uses it on offline paper: ____________________. Take-home line: copy another pretend notice-board draft with neat lines, two kept details, sentence endings, and clear dialogue marks: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 7 | Ages 8-10 | copy a clear opening, selected details, sentence stops, and one short dialogue line into a neat final page</div>
+      <h2>Moss Message Observatory Final Copy Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out the draft, this card, and one blank spiral notebook page for a calm fictional observatory copy pass: ____________________.</p>
+      <p class="kid-direction">Writer: copy the pretend moss message story onto paper with a clear opening, useful details, full sentence stops, and one tidy dialogue line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy the first sentence so the reader knows who found the moss message and where the observatory waits: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: use steady pencil lines, leave small spaces between words, and restart only the sentence you are fixing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: carry over two helpful observatory details from the draft, such as a pebble lens, moss chart, or signal shelf: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: check each copied sentence for a capital start and a clear end mark before moving to the next line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: copy one short spoken line from the invented watcher with quote marks and a simple said tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final-copy check: mark one opening, two details, three sentence ends, and one dialogue line before calling the page finished: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to one draft sentence, and the writer copies only that sentence into the spiral notebook: ____________________. Take-home line: copy another pretend message story on paper, keeping the opening, details, sentence ends, and dialogue easy to follow: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 8 | Ages 10-11 | transfer a revised ferry scene into final copy while preserving paragraph order and exact dialogue punctuation</div>
+      <h2>Revision River Ferry Final Copy Card</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the revised draft beside a blank spiral notebook page and choose one invented ferry crossing scene to copy: ____________________.</p>
+      <p class="kid-direction">Writer: copy the ferry scene in order, keep the revised details, and make the final page read like one smooth paper version: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy the revised opening so the river, ferry helper, and crossing problem are clear in one sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: keep margins steady, copy one sentence at a time, and use a single neat pencil fix if a word is missed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: transfer three important draft details, such as the ferry bell, paper dock, current mark, or folded ticket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: pause at every end mark and check that long ferry sentences do not run together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: copy one ferry-helper dialogue line with quote marks, a comma before the said tag when needed, and clear spacing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final-copy check: confirm the opening, detail order, sentence endings, dialogue marks, and last line all match the revised plan: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult covers the later draft lines, and the writer copies only the first ferry paragraph on paper: ____________________. Take-home line: copy another pretend river scene into a spiral notebook after choosing the details and dialogue that should stay: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 9 | Ages 8-10 | make a final copy that keeps tiny scene details readable and separates each sentence cleanly</div>
+      <h2>Tiny Lantern Reef Final Copy Card</h2>
+      <figure>
+        <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+        <figcaption>Tiny Lantern Reef</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the draft and card beside a blank spiral notebook page, then choose one gentle reef-lantern moment for final copy: ____________________.</p>
+      <p class="kid-direction">Writer: copy the pretend reef story carefully so each lantern detail, sentence, and dialogue line is easy to read on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy the opening sentence so the reader can see the tiny lantern reef and the helper&#39;s first job: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: write slowly enough for round letters, clear word spaces, and a steady line across the spiral notebook page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: carry over two tiny reef details from the draft, such as shell steps, glow dots, coral cards, or a paper tide line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: after each sentence, touch the end mark with your pencil and check that the next sentence starts cleanly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: copy one short reef-helper line with quote marks and a new line if the speaker changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final-copy check: underline the opening, circle two copied details, tap each sentence end, and check the dialogue marks: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult chooses one lantern detail, and the writer copies only the sentence that carries that detail: ____________________. Take-home line: copy another pretend tiny-place story on paper with two kept details and sentence endings that are easy to find: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 10 | Ages 7-8 | copy a short final story page with clear word spaces, end marks, and one simple dialogue line</div>
+      <h2>Mitten Market Lost Ticket Final Copy Card</h2>
+      <figure>
+        <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+        <figcaption>Mitten Market Lost Ticket</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the short draft beside a blank spiral notebook page and choose one pretend mitten market ticket moment to copy: ____________________.</p>
+      <p class="kid-direction">Writer: copy the made-up market story with neat words, clear spaces, sentence ends, and one small dialogue line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy the first sentence so it tells who lost the pretend ticket and where the mitten market begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: keep one finger space between words and copy only one short sentence before checking it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: copy two helpful market details from the draft, such as a mitten stall, ticket basket, ribbon tag, or bell card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: put a clear end mark after each sentence before starting the next one: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: copy one tiny line a character says about the missing ticket, using quote marks if the adult models them: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final-copy check: point to the first sentence, two market details, each end mark, and the dialogue line on the finished page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads one short draft line, and the writer copies that line only: ____________________. Take-home line: copy another pretend lost-and-found story on paper with clear spaces and sentence ends: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 11 | Ages 7-9 | copy a final parcel story page with a clear beginning, useful details, and readable dialogue</div>
+      <h2>Paperclip Plaza Parcel Day Final Copy Card</h2>
+      <figure>
+        <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+        <figcaption>Paperclip Plaza Parcel Day</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out the draft, this card, and one blank spiral notebook page for a paper-only parcel story copy pass: ____________________.</p>
+      <p class="kid-direction">Writer: copy the pretend parcel story so the beginning, plaza details, sentence ends, and one dialogue line are clear: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Opening copy: copy the beginning sentence so it names the parcel helper and the plaza job for the day: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Neat copy: copy from left to right with steady spaces, then reread the sentence before copying the next one: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Detail transfer: keep two useful parcel details from the draft, such as a paperclip gate, label tray, parcel cart, or corner post: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Sentence boundary: check that each copied sentence starts with a capital and ends before the next idea begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Dialogue copy: copy one short line between two pretend plaza helpers with quote marks and the speaker&#39;s name nearby: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Final-copy check: check the beginning, two parcel details, sentence starts and ends, and the dialogue line before closing the notebook: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult marks one paragraph with a pencil dot, and the writer copies just that paragraph into the spiral notebook: ____________________. Take-home line: copy another pretend parcel note on paper with a clear beginning, two details, and one readable line of dialogue: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 12 | Ages 7-9 | copy a fictional compass-shop story from draft notes to a final spiral notebook page with a clear opening, useful details, sentence stops, and one quoted line</div>
+      <h2>Penny Path Compass Shop Final Copy Card</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work offline, place this card beside a spiral notebook, and choose one made-up compass-shop draft note: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, copy the compass-shop story onto one spiral notebook page so it is ready to reread on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Adult asks: Copy the title and opening sentence so the reader knows the penny path begins in a compass shop: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Adult asks: Copy slowly on the spiral notebook lines, leaving finger space between words and space for end marks: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Adult asks: Move two draft details into the final copy, such as a penny trail and a small compass shelf: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Adult asks: Touch each sentence stop, then add one end mark where a sentence finishes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Adult asks: Copy one made-up quoted line from the shop guide and add who says it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Adult asks: Reread the final copy on paper and mark one place where the opening, details, and quoted line all belong: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: copy only the opening sentence and one detail onto the spiral notebook page: ____________________. Notebook line: use the same final-copy steps with another made-up penny path story on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 13 | Ages 8-10 | copy a fictional pantry measurement mystery from planning notes to a final spiral notebook page with clear labels, exact details, sentence stops, and one quoted clue</div>
+      <h2>Pantry Measurement Mystery Final Copy Card</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work offline, set a spiral notebook beside this card, and choose one made-up measurement clue draft: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, copy the pantry mystery into a final spiral notebook version that keeps each clue easy to follow: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Adult asks: Copy an opening that names the pantry mystery and the first odd measurement clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Adult asks: Copy each line carefully, keeping numbers, labels, and clue words readable on the spiral notebook page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Adult asks: Transfer two draft details, such as a mismatched scoop mark and a blank shelf tag, into the final copy: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Adult asks: Draw a tiny dot under each end mark, then fix one sentence that runs into the next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Adult asks: Copy one quoted clue from the pretend pantry helper and add a tag that names the helper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Adult asks: Compare the draft note with the final copy and mark the two clue details that made it onto the page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: copy only the opening, one clue detail, and one end-marked sentence on paper: ____________________. Notebook line: try the same final-copy pass with another made-up measurement mystery: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 14 | Ages 8-10 | copy a fictional compost clock workshop story into a final spiral notebook page with clear order, workshop details, sentence stops, and one quoted instruction</div>
+      <h2>Compost Clock Workshop Final Copy Card</h2>
+      <figure>
+        <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+        <figcaption>Compost Clock Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work offline, place this card beside a spiral notebook, and choose one made-up workshop draft with a clock dial clue: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, copy the workshop story in order so the final spiral notebook page can be reread on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Adult asks: Copy an opening that places the character inside the compost clock workshop before the dial clue changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Adult asks: Copy the final version with steady line spacing and clear end marks on the spiral notebook page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Adult asks: Transfer two useful workshop details, such as a leaf gear and a turning paper dial, from draft to final copy: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Adult asks: Check where each workshop action ends, then add an end mark before the next action begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Adult asks: Copy one quoted instruction from the workshop helper and add who gives it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Adult asks: Reread the final copy and mark where the opening, two details, and quoted instruction are easy to find: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: copy only the opening and one workshop detail before stopping the paper pass: ____________________. Notebook line: repeat the final-copy steps with another made-up workshop clue story: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 15 | Ages 10-11 | copy a fictional almost-invention workshop story into a polished spiral notebook page with a purposeful opening, transferred evidence, sentence control, and precise dialogue</div>
+      <h2>Almost Invention Workshop Final Copy Card</h2>
+      <figure>
+        <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+        <figcaption>Almost Invention Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work offline, set the spiral notebook beside this card, and choose one made-up invention draft with rough test notes: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, copy the invention story into final form while preserving the best draft details on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Adult asks: Copy an opening that names the almost-invention and hints at what still needs fixing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Adult asks: Copy in a steady final-copy pass, keeping paragraph breaks, margins, and end marks clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Adult asks: Transfer three exact draft details, such as a cardboard gear, a bent lever, and a repair note, into the final copy: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Adult asks: Find one long sentence, divide it into two clear sentences, and copy both into the final version: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Adult asks: Copy one quoted workshop exchange and keep each speaker tag clear on the notebook page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Adult asks: Reread the final copy against the draft and mark one line where the invention problem reads clearly: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: copy one paragraph only, including one transferred detail and one clear end mark: ____________________. Notebook line: use the same final-copy pass with another made-up almost-invention draft: ____________________.</p>
+    </section>
+
+    <section class="pack-page final-copy-card-page">
+      <div class="page-kicker">Story Final Copy Card 16 | Ages 10-11 | copy a fictional blue pencil observatory story into a final spiral notebook page with precise opening copy, carried-over details, sentence control, and tidy dialogue</div>
+      <h2>Blue Pencil Observatory Final Copy Card</h2>
+      <figure>
+        <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+        <figcaption>Blue Pencil Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work offline, place this card beside a spiral notebook, and choose one made-up observatory draft with pencil-mark clues: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, copy the observatory story into a final paper version that keeps the clues in a clear order: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Opening copy</h3>
+      <p>Adult asks: Copy an opening that introduces the blue pencil observatory and the first sky-chart clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Neat copy</h3>
+      <p>Adult asks: Copy with even margins, clear paragraph breaks, and readable pencil marks on the spiral notebook page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail transfer</h3>
+      <p>Adult asks: Transfer three draft details, such as a dome window, a blue pencil mark, and a quiet chart table, into final copy: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence boundary</h3>
+      <p>Adult asks: Underline one place where a sentence should end, then copy the corrected sentence with an end mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue copy</h3>
+      <p>Adult asks: Copy one quoted line between two observatory helpers and keep each tag clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final-copy check</h3>
+      <p>Adult asks: Reread the final copy and mark where the opening, clue details, sentence stops, and quoted line are all present: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: copy only the opening and one clue sentence onto the spiral notebook page: ____________________. Notebook line: repeat the paper-only final-copy steps with another made-up observatory clue: ____________________.</p>
+    </section>
+  </body>
+</html>

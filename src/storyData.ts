@@ -622,6 +622,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable composition notebook story draft checklist cards with adult guide tools, draft checklist routines, and take-home draft checklist slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'spiral-notebook-story-final-copy-card-pack',
+    title: 'Spiral Notebook Story Final Copy Card Pack',
+    pricePoint: '$77',
+    description:
+      'Sixteen printable spiral notebook story final-copy cards with adult guide tools, final-copy routines, and take-home final-copy slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

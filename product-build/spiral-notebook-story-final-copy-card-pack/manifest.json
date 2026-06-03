@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-03-batch52",
+  "generatedAt": "2026-06-03",
+  "productSlug": "spiral-notebook-story-final-copy-card-pack",
+  "title": "Spiral Notebook Story Final Copy Card Pack",
+  "pricePoint": "$77",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/spiral-notebook-story-final-copy-card-pack/Spiral-Notebook-Story-Final-Copy-Card-Pack.pdf",
+      "sha256": "a80e48b9bd30043ccc602af352e4d9e9911643d02bde887e322ce0893a62569f",
+      "size": 4890145
+    },
+    "zip": {
+      "path": "product-build/spiral-notebook-story-final-copy-card-pack/spiral-notebook-story-final-copy-card-pack.zip",
+      "sha256": "4fe0db13fa27fbc652a38d82513ea8ef83535df168cd2478207a15649faec3cb",
+      "size": 9362940
+    },
+    "sourceHtml": {
+      "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/spiral-notebook-story-final-copy-card-pack.html",
+      "sha256": "407ad5e187bdf053b9e7fe7a247e404fc8976b82d98ed203bf83f1140b82213e",
+      "size": 61267
+    },
+    "readme": {
+      "path": "product-build/spiral-notebook-story-final-copy-card-pack/README.txt",
+      "sha256": "d0350f9929ee86eb9659738653698df89a05d93d598070e22b6a684f1745e71f",
+      "size": 587
+    },
+    "assets": [
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/blue-pencil-observatory.jpg",
+        "sha256": "63eb8f59349d2a8b64c553669fffd66268a0560919cef1d9bb41a57addc880ae",
+        "size": 286058
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/compost-clock-workshop.jpg",
+        "sha256": "9aed5290d2d2119410590b2a1b52a012529bfc2340dc4bb2310fa45328cb1216",
+        "size": 277439
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/mitten-market-lost-ticket.jpg",
+        "sha256": "ba9662cac7927c25beffc08c6f4e5b52cb422e727f87d10b1d582ae8a296902c",
+        "size": 194672
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/moon-muffin-market.jpg",
+        "sha256": "9fd7c9a4e3584529222c481ce419c67545a98a4ab788f08742ac19df11f0f962",
+        "size": 238603
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/pantry-measurement-mystery.jpg",
+        "sha256": "b85111fa750c89e60fc21133ea09e431a26a010d8ff24db7c4baa305c3ff3f73",
+        "size": 287571
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/paperclip-plaza-parcel-day.jpg",
+        "sha256": "c7287db2a3788e8e0a567ea114b5ec913e61c8e11de424d2a30a2fc81c90ed5b",
+        "size": 379900
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      },
+      {
+        "path": "product-build/spiral-notebook-story-final-copy-card-pack/source/assets/tiny-lantern-reef.jpg",
+        "sha256": "2fc79f2835c185ed4110b7edfab6921ab3a004b059837733502ddc7d407d370f",
+        "size": 326494
+      }
+    ]
+  }
+}

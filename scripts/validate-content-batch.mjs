@@ -53,6 +53,8 @@ import {
   validateLinedPaperStoryParagraphRevisionCardPackSourceFiles,
   validateCompositionNotebookStoryDraftChecklistCardPackSource,
   validateCompositionNotebookStoryDraftChecklistCardPackSourceFiles,
+  validateSpiralNotebookStoryFinalCopyCardPackSource,
+  validateSpiralNotebookStoryFinalCopyCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -135,6 +137,7 @@ const batch49ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch50WorldImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch50-world-images.json')
 const batch50ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch50-product-images.json')
 const batch51ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch51-product-images.json')
+const batch52ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch52-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -185,6 +188,12 @@ const compositionNotebookDraftChecklistSourceFile = resolve(
   'product-artifacts',
   'composition-notebook-story-draft-checklist-card-pack.json',
 )
+const spiralNotebookFinalCopySourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'spiral-notebook-story-final-copy-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -232,6 +241,7 @@ const batch49ProductImagesBatchId = '2026-06-03-batch49-product-images'
 const batch50WorldImagesBatchId = '2026-06-03-batch50-world-images'
 const batch50ProductImagesBatchId = '2026-06-03-batch50-product-images'
 const batch51ProductImagesBatchId = '2026-06-03-batch51-product-images'
+const batch52ImagesBatchId = '2026-06-03-batch52-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -277,6 +287,7 @@ const paperSleeveSentenceVarietyBatchId = '2026-06-03-batch48'
 const clipboardParagraphFocusBatchId = '2026-06-03-batch49'
 const linedPaperParagraphRevisionBatchId = '2026-06-03-batch50'
 const compositionNotebookDraftChecklistBatchId = '2026-06-03-batch51'
+const spiralNotebookFinalCopyBatchId = '2026-06-03-batch52'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -4201,6 +4212,139 @@ function validateBatch51ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch52Image(image, imageSlugs, worldSlugs, worldSources) {
+  const label = `2026-06-03-batch52-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(image.slug), `${label}.slug must be lowercase kebab-case.`)
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 52 images.`)
+  imageSlugs.add(image.slug)
+
+  if (image.slug === 'blue-pencil-observatory') {
+    for (const key of ['ageBand', 'seoLane', 'sourceWorldFile']) validateString(image[key], `${label}.${key}`)
+    expect(worldSlugs.has(image.slug), `${label}.slug does not reference a Batch 1 world.`)
+    expect(image.sourceWorldFile === worldSources.get(image.slug), `${label}.sourceWorldFile does not match source world file.`)
+    expect(image.outputJpeg === `public/images/plotsprout/batch52-worlds/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+    expect(image.outputWebp === `public/images/plotsprout/batch52-worlds/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+    expect(image.sidecar === `content/image-runs/batch52-worlds/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+    for (const phrase of [
+      'family-friendly',
+      'blue pencil observatory',
+      'blank notebook pages',
+      'no text',
+      'no letters',
+      'no logos',
+      'no watermark',
+      'no branded characters',
+      'no scary harm',
+      'no weapons',
+    ]) {
+      expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+    }
+  } else {
+    expect(
+      image.slug === 'spiral-notebook-story-final-copy-card-pack',
+      `${label}.slug must be blue-pencil-observatory or spiral-notebook-story-final-copy-card-pack.`,
+    )
+    expect(image.outputJpeg === `public/images/plotsprout/batch52/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+    expect(image.outputWebp === `public/images/plotsprout/batch52/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+    expect(image.sidecar === `content/image-runs/batch52/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+    for (const phrase of [
+      'family-friendly',
+      'orthographic top-down view',
+      'blank spiral notebook',
+      'blank final-copy cards',
+      'empty writing areas',
+      'unbranded pencils',
+      'plain white background',
+      'spiral notebook story final copy card pack',
+    ]) {
+      expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+    }
+  }
+
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'coordinates',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'microphone',
+    'audio recorder',
+    'voice memo',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'contest',
+    'prize',
+    'food',
+    'tasting',
+    'allergy',
+    'medical',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -4566,6 +4710,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'composition-notebook-story-draft-checklist-card-pack': {
       title: 'Composition Notebook Story Draft Checklist Card Pack',
       pricePoint: '$75',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'spiral-notebook-story-final-copy-card-pack': {
+      title: 'Spiral Notebook Story Final Copy Card Pack',
+      pricePoint: '$77',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -5877,12 +6029,27 @@ expect(Array.isArray(batch51ProductImages.images), 'batch51 product image manife
 expect(batch51ProductImages.images.length === 1, `Expected 1 Batch 51 product image, found ${batch51ProductImages.images.length}.`)
 validateBatch51ProductImage(batch51ProductImages.images[0])
 
+expect(existsSync(batch52ImagesFile), `Missing Batch 52 image manifest: ${batch52ImagesFile}`)
+const batch52Images = readJson(batch52ImagesFile)
+expect(
+  batch52Images.batchId === batch52ImagesBatchId,
+  `batch52 image manifest batchId must be ${batch52ImagesBatchId}.`,
+)
+expect(batch52Images.generatedAt === '2026-06-03', 'batch52 image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch52Images.images), 'batch52 image manifest images must be an array.')
+expect(batch52Images.images.length === 2, `Expected 2 Batch 52 images, found ${batch52Images.images.length}.`)
+const batch52ImageSlugs = new Set()
+batch52Images.images.forEach((image) => validateBatch52Image(image, batch52ImageSlugs, worldSlugs, worldSources))
+for (const expectedSlug of ['blue-pencil-observatory', 'spiral-notebook-story-final-copy-card-pack']) {
+  expect(batch52ImageSlugs.has(expectedSlug), `Batch 52 images missing ${expectedSlug}.`)
+}
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 44, `Expected 44 product records, found ${products.products.length}.`)
+expect(products.products.length === 45, `Expected 45 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -5930,6 +6097,7 @@ for (const requiredProductSlug of [
   'clipboard-story-paragraph-focus-card-pack',
   'lined-paper-story-paragraph-revision-card-pack',
   'composition-notebook-story-draft-checklist-card-pack',
+  'spiral-notebook-story-final-copy-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -9305,6 +9473,102 @@ for (const asset of compositionNotebookDraftChecklistArtifactManifest.files.asse
   )
 }
 
+expect(
+  existsSync(spiralNotebookFinalCopySourceFile),
+  `Missing Batch 52 Spiral Notebook Story Final Copy Card Pack source file: ${spiralNotebookFinalCopySourceFile}`,
+)
+const spiralNotebookFinalCopySource = readJson(spiralNotebookFinalCopySourceFile)
+expect(
+  spiralNotebookFinalCopySource.batchId === spiralNotebookFinalCopyBatchId,
+  `Spiral Notebook Story Final Copy Card Pack source batchId must be ${spiralNotebookFinalCopyBatchId}.`,
+)
+const spiralNotebookFinalCopyProduct = products.products.find(
+  (product) => product.slug === 'spiral-notebook-story-final-copy-card-pack',
+)
+expect(
+  spiralNotebookFinalCopyProduct,
+  'Missing Spiral Notebook Story Final Copy Card Pack product record for Batch 52 artifact validation.',
+)
+const spiralNotebookFinalCopySourceErrors = validateSpiralNotebookStoryFinalCopyCardPackSource(
+  spiralNotebookFinalCopySource,
+  spiralNotebookFinalCopyProduct,
+  worldAgeBands,
+)
+expect(
+  spiralNotebookFinalCopySourceErrors.length === 0,
+  `Spiral Notebook Story Final Copy Card Pack source failed validation:\n${spiralNotebookFinalCopySourceErrors.join('\n')}`,
+)
+const spiralNotebookFinalCopySourceFileErrors = validateSpiralNotebookStoryFinalCopyCardPackSourceFiles(
+  spiralNotebookFinalCopySource,
+  root,
+)
+expect(
+  spiralNotebookFinalCopySourceFileErrors.length === 0,
+  `Spiral Notebook Story Final Copy Card Pack sourceFiles failed validation:\n${spiralNotebookFinalCopySourceFileErrors.join('\n')}`,
+)
+const spiralNotebookFinalCopyExpectedPdfPages = spiralNotebookFinalCopySource.cards.length + 5
+const spiralNotebookFinalCopyArtifactStatus = inspectArtifactFiles(root, spiralNotebookFinalCopySource.artifact, {
+  expectedPdfPages: spiralNotebookFinalCopyExpectedPdfPages,
+  expectedZipEntries: [
+    'Spiral-Notebook-Story-Final-Copy-Card-Pack.pdf',
+    'README.txt',
+    'source/spiral-notebook-story-final-copy-card-pack.html',
+    ...spiralNotebookFinalCopySource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+  ],
+})
+expect(
+  spiralNotebookFinalCopyArtifactStatus.valid,
+  `Spiral Notebook Story Final Copy Card Pack artifacts failed validation:\n${spiralNotebookFinalCopyArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  spiralNotebookFinalCopyArtifactStatus.files.pdf.size > 100_000,
+  `Spiral Notebook Story Final Copy Card Pack PDF artifact is unexpectedly small: ${spiralNotebookFinalCopyArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  spiralNotebookFinalCopyArtifactStatus.files.pdf.pageCount === spiralNotebookFinalCopyExpectedPdfPages,
+  `Spiral Notebook Story Final Copy Card Pack PDF artifact must have ${spiralNotebookFinalCopyExpectedPdfPages} pages.`,
+)
+expect(
+  spiralNotebookFinalCopyArtifactStatus.files.zip.size > spiralNotebookFinalCopyArtifactStatus.files.pdf.size,
+  'Spiral Notebook Story Final Copy Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const spiralNotebookFinalCopyCheckoutErrors = validateCheckoutReadiness(
+  spiralNotebookFinalCopyProduct,
+  spiralNotebookFinalCopyArtifactStatus,
+)
+expect(
+  spiralNotebookFinalCopyCheckoutErrors.length === 0,
+  `Spiral Notebook Story Final Copy Card Pack checkout readiness failed validation:\n${spiralNotebookFinalCopyCheckoutErrors.join('\n')}`,
+)
+const spiralNotebookFinalCopyArtifactManifest = readJson(resolve(root, spiralNotebookFinalCopySource.artifact.manifestPath))
+expect(
+  spiralNotebookFinalCopyArtifactManifest.sourcePageCount === spiralNotebookFinalCopySource.cards.length,
+  'Spiral Notebook Story Final Copy Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(spiralNotebookFinalCopyArtifactManifest.files.assets),
+  'Spiral Notebook Story Final Copy Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  spiralNotebookFinalCopyArtifactManifest.files.assets.length === spiralNotebookFinalCopySource.worldSlugs.length,
+  'Spiral Notebook Story Final Copy Card Pack artifact manifest must include one copied local image per source world.',
+)
+const spiralNotebookFinalCopyManifestAssetErrors = validateManifestWorldAssets(
+  spiralNotebookFinalCopySource,
+  spiralNotebookFinalCopyArtifactManifest,
+)
+expect(
+  spiralNotebookFinalCopyManifestAssetErrors.length === 0,
+  `Spiral Notebook Story Final Copy Card Pack artifact manifest image coverage failed validation:\n${spiralNotebookFinalCopyManifestAssetErrors.join('\n')}`,
+)
+for (const asset of spiralNotebookFinalCopyArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Spiral Notebook Story Final Copy Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -9348,6 +9612,7 @@ const productImageManifests = [
   batch49ProductImages,
   batch50ProductImages,
   batch51ProductImages,
+  batch52Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

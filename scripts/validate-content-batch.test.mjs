@@ -18,8 +18,11 @@ function currentLocalImageCount() {
   const productImages = readdirSync(resolve(root, 'content', 'image-queue'))
     .filter((fileName) => fileName.endsWith('-product-images.json'))
     .reduce((count, fileName) => count + readJson(`content/image-queue/${fileName}`).images.length, 0)
+  const combinedImages = readdirSync(resolve(root, 'content', 'image-queue'))
+    .filter((fileName) => fileName.endsWith('-images.json') && !fileName.endsWith('-world-images.json') && !fileName.endsWith('-product-images.json'))
+    .reduce((count, fileName) => count + readJson(`content/image-queue/${fileName}`).images.length, 0)
 
-  return batch4Images + expansionWorldImages + productImages
+  return batch4Images + expansionWorldImages + productImages + combinedImages
 }
 
 function currentProductArtifactCount() {

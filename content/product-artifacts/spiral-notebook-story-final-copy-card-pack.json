@@ -1,0 +1,502 @@
+{
+  "batchId": "2026-06-03-batch52",
+  "generatedAt": "2026-06-03",
+  "productSlug": "spiral-notebook-story-final-copy-card-pack",
+  "title": "Spiral Notebook Story Final Copy Card Pack",
+  "pricePoint": "$77",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.",
+  "sessionLength": "16 printable spiral notebook final-copy cards plus adult guide tools, final-copy routines, take-home final-copy slips, and optional prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/spiral-notebook-story-final-copy-card-pack/Spiral-Notebook-Story-Final-Copy-Card-Pack.pdf",
+    "zipPath": "product-build/spiral-notebook-story-final-copy-card-pack/spiral-notebook-story-final-copy-card-pack.zip",
+    "sourceHtmlPath": "product-build/spiral-notebook-story-final-copy-card-pack/source/spiral-notebook-story-final-copy-card-pack.html",
+    "manifestPath": "product-build/spiral-notebook-story-final-copy-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch52-spiral-notebook-final-copy-cards-a.json",
+    "content/product-artifacts/lanes/batch52-spiral-notebook-final-copy-cards-b.json",
+    "content/product-artifacts/lanes/batch52-spiral-notebook-final-copy-cards-c.json",
+    "content/product-artifacts/lanes/batch52-spiral-notebook-final-copy-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "spoon-ferry-lunchbox-harbor",
+    "pocket-park-notice-board",
+    "moss-message-observatory",
+    "revision-river-ferry",
+    "tiny-lantern-reef",
+    "mitten-market-lost-ticket",
+    "paperclip-plaza-parcel-day",
+    "penny-path-compass-shop",
+    "pantry-measurement-mystery",
+    "compost-clock-workshop",
+    "almost-invention-workshop",
+    "blue-pencil-observatory"
+  ],
+  "cover": {
+    "kicker": "Printable spiral notebook final-copy cards",
+    "headline": "Spiral Notebook Story Final Copy Card Pack",
+    "subhead": "Sixteen spiral notebook cards help writers copy one fictional story page while carrying over the opening, useful details, sentence breaks, dialogue, and one final-copy pencil note.",
+    "included": [
+      "16 printable spiral notebook final-copy cards",
+      "Adult setup guide",
+      "Fictional final-copy safety notes",
+      "Spiral notebook copying moves",
+      "Family handoff notes",
+      "Pack reset notes",
+      "Six adult-led final-copy routines",
+      "Ten take-home final-copy slips",
+      "Eight optional prompts",
+      "Printable PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "title": "Spiral Notebook Story Final Copy Adult Guide",
+    "bullets": [
+      "Print the spiral notebook final copy cards, take-home slips, and adult guide pages before the adult-led paper session.",
+      "Start with one fictional revised draft, then guide the writer through title, first line, paragraph spacing, careful copying, gentle rereading, and final note work.",
+      "Keep every example invented, family-friendly, offline, paper-only, and guided by an adult.",
+      "Use the spiral notebook page as the clean copy space, with pencil marks kept light and easy to follow.",
+      "Keep all names, places, and objects inside the pretend story world so no private details are needed.",
+      "Finish by having the writer choose one proud sentence and one next-story note on paper."
+    ]
+  },
+  "finalCopyRoutines": [
+    {
+      "name": "Title Line Setup",
+      "bestFor": "Helping the final copy begin with a clear title line on the spiral notebook page.",
+      "steps": [
+        "The adult asks which pretend story title belongs at the top of the spiral notebook page: ____________________.",
+        "The writer points to the title on the revised draft before copying it: ____________________.",
+        "The adult asks where the title should sit so the story page feels easy to read: ____________________.",
+        "The writer copies the title neatly on the first clean line: ____________________."
+      ]
+    },
+    {
+      "name": "First Line Start",
+      "bestFor": "Starting the final copy with a first sentence that matches the revised draft.",
+      "steps": [
+        "The adult asks the writer to find the first sentence in the revised fictional draft: ____________________.",
+        "The writer places a finger under the first words that will be copied: ____________________.",
+        "The adult asks what the first sentence should help the reader know right away: ____________________.",
+        "The writer copies the first sentence on the clean spiral notebook page: ____________________."
+      ]
+    },
+    {
+      "name": "Paragraph Space Check",
+      "bestFor": "Leaving enough space between story parts so the final copy is easy to follow.",
+      "steps": [
+        "The adult marks where the first story part ends on the revised draft: ____________________.",
+        "The writer decides where a small space or new line should go on the notebook page: ____________________.",
+        "The adult asks which next story part should begin after the space: ____________________.",
+        "The writer copies the next part with clear spacing: ____________________."
+      ]
+    },
+    {
+      "name": "Copy One Chunk",
+      "bestFor": "Copying a short piece at a steady paper pace without rushing the page.",
+      "steps": [
+        "The adult chooses one short chunk from the revised draft for the writer to copy: ____________________.",
+        "The writer reads the chunk once with a finger under the words: ____________________.",
+        "The adult asks which words the writer will copy before looking back at the draft: ____________________.",
+        "The writer copies that chunk onto the spiral notebook page: ____________________."
+      ]
+    },
+    {
+      "name": "Gentle Reread Pass",
+      "bestFor": "Checking the copied page against the revised draft with calm adult support.",
+      "steps": [
+        "The adult reads one copied sentence while the writer follows the revised draft: ____________________.",
+        "The writer marks any missing or doubled word with a tiny pencil dot: ____________________.",
+        "The adult asks what the sentence should say after the small fix: ____________________.",
+        "The writer makes one quiet correction on the final copy page: ____________________."
+      ]
+    },
+    {
+      "name": "Proud Sentence Note",
+      "bestFor": "Ending the final copy pass with a positive paper note and one next-story idea.",
+      "steps": [
+        "The adult asks the writer to choose one copied sentence that feels clear and strong: ____________________.",
+        "The writer underlines that sentence lightly on the spiral notebook page: ____________________.",
+        "The adult asks what the writer wants to remember for the next fictional story: ____________________.",
+        "The writer adds one next-story note at the bottom of the page: ____________________."
+      ]
+    }
+  ],
+  "takeHomeFinalCopySlips": [
+    {
+      "title": "Title Copy Slip",
+      "time": "one quiet final-copy pass",
+      "skill": "title placement",
+      "direction": "Copy the pretend story title on the first clean line of the spiral notebook page: ____________________.",
+      "familyLine": "Ask where the title should sit so the page is easy to read: ____________________."
+    },
+    {
+      "title": "First Sentence Slip",
+      "time": "first-line copy pass",
+      "skill": "first sentence copy",
+      "direction": "Find the first sentence in the revised draft, then copy it onto the clean page: ____________________.",
+      "familyLine": "Ask what the first sentence helps the reader know: ____________________."
+    },
+    {
+      "title": "Chunk Copy Slip",
+      "time": "small-chunk copy pass",
+      "skill": "careful copying",
+      "direction": "Copy one short story chunk from the revised draft onto the spiral notebook page: ____________________.",
+      "familyLine": "Ask which words the writer will copy before looking back: ____________________."
+    },
+    {
+      "title": "Spacing Slip",
+      "time": "page-spacing pass",
+      "skill": "paragraph spacing",
+      "direction": "Leave a clear space or new line where the next story part begins: ____________________.",
+      "familyLine": "Ask which story part should begin after the space: ____________________."
+    },
+    {
+      "title": "Margin Dot Slip",
+      "time": "gentle reread pass",
+      "skill": "copy check",
+      "direction": "Put a tiny pencil dot beside one place to revisit on the copied page: ____________________.",
+      "familyLine": "Ask what that sentence should say after the small fix: ____________________."
+    },
+    {
+      "title": "Missing Word Slip",
+      "time": "quiet line check",
+      "skill": "word match",
+      "direction": "Compare one copied line with the revised draft and add any missing word: ____________________.",
+      "familyLine": "Ask which draft word belongs in the copied line: ____________________."
+    },
+    {
+      "title": "Doubled Word Slip",
+      "time": "one-line cleanup pass",
+      "skill": "word cleanup",
+      "direction": "Find one doubled word on the copied page and cross out only the extra word: ____________________.",
+      "familyLine": "Ask how the sentence reads after the extra word comes out: ____________________."
+    },
+    {
+      "title": "Clear Ending Slip",
+      "time": "ending copy pass",
+      "skill": "ending copy",
+      "direction": "Copy the final sentence from the revised draft onto the notebook page: ____________________.",
+      "familyLine": "Ask how the ending lets the reader know the story is finished: ____________________."
+    },
+    {
+      "title": "Proud Sentence Slip",
+      "time": "proud-sentence pass",
+      "skill": "sentence choice",
+      "direction": "Lightly underline one copied sentence that feels clear and strong: ____________________.",
+      "familyLine": "Ask why that sentence is a good one to keep: ____________________."
+    },
+    {
+      "title": "Next Story Note Slip",
+      "time": "paper note pass",
+      "skill": "next-story reflection",
+      "direction": "Write one note at the bottom of the page for the next fictional story: ____________________.",
+      "familyLine": "Ask what the writer wants to remember next time: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Optional adult-led offline prompt: the title I will copy is ____________________.",
+    "Optional adult-led offline prompt: the first sentence starts with ____________________.",
+    "Optional adult-led offline prompt: the short chunk I will copy next is ____________________.",
+    "Optional adult-led offline prompt: the place where I need a new line or space is ____________________.",
+    "Optional adult-led offline prompt: one copied line I will reread is ____________________.",
+    "Optional adult-led offline prompt: one tiny pencil fix I can make is ____________________.",
+    "Optional adult-led offline prompt: the sentence I feel proud of is ____________________.",
+    "Optional adult-led offline prompt: my next-story paper note is ____________________."
+  ],
+  "cards": [
+    {
+      "id": "spiral-notebook-final-copy-card-01",
+      "title": "Moon Muffin Market Final Copy Card",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "finalCopySkill": "copy one fictional moon-market story draft into a clean final notebook page with an opening, neat lines, kept details, sentence boundaries, dialogue marks, and a final paper check",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional Moon Muffin Market story draft onto a clean page: ____________________.",
+      "adultSetup": "Adult: set a draft page, a clean spiral notebook page, and this card on the table before the writer copies the moon-market story offline on paper: ____________________.",
+      "kidDirection": "Writer: copy the pretend moon-market story offline onto the clean paper-only notebook page, moving slowly enough to keep each sentence easy to read: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy the first sentence so the reader meets the market helper and the moonlit stall right away: ____________________.",
+      "neatCopyPrompt": "Neat copy: leave a small space between words and keep each notebook line calm from left to right: ____________________.",
+      "detailTransferPrompt": "Detail transfer: bring over two helpful details from the draft, such as the silver awning, crumb map, or bell tag: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: check each sentence for a starting capital and an ending mark before copying the next one: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: if a made-up helper speaks, copy the talking words inside quotation marks and add who says them: ____________________.",
+      "finalCopyCheckPrompt": "Final copy check: reread the notebook page and mark one place where the final copy is clear enough to keep: ____________________.",
+      "quietOptionLine": "Quiet option: adult points to one sentence, and the writer copies only that sentence onto the clean offline paper page: ____________________.",
+      "takeHomeLine": "Take-home line: copy another short pretend moon-market draft onto spiral notebook paper with one opening, two details, and clean sentence ends: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-02",
+      "title": "Buttonwood Library Train Final Copy Card",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "finalCopySkill": "copy one fictional library-train story draft into final notebook form with a strong opening, neat spacing, transferred setting details, sentence boundaries, dialogue marks, and a final paper check",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional Buttonwood Library Train story draft onto a clean page: ____________________.",
+      "adultSetup": "Adult: place the library-train draft beside a clean spiral notebook page and choose the pencil the writer will use offline: ____________________.",
+      "kidDirection": "Writer: copy the pretend library-train story offline on paper only so the helper, train place, and ending all stay in the same order: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy an opening sentence that names the train helper and hints at the shelf or ticket problem: ____________________.",
+      "neatCopyPrompt": "Neat copy: keep the notebook lines steady and leave space after each ending mark before the next sentence begins: ____________________.",
+      "detailTransferPrompt": "Detail transfer: copy two useful train details from the draft, such as a button shelf, paper ticket, or question card: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: touch each sentence end with the pencil, then copy the next sentence only after the mark is clear: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: copy any pretend train talk with quotation marks and a simple tag, such as said the helper: ____________________.",
+      "finalCopyCheckPrompt": "Final copy check: reread the final page and underline one sentence that helps the library train story make sense: ____________________.",
+      "quietOptionLine": "Quiet option: adult covers part of the draft, and the writer copies one short section onto offline notebook paper: ____________________.",
+      "takeHomeLine": "Take-home line: copy another pretend library-train draft with the opening, train details, sentence marks, and dialogue marks kept clear: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-03",
+      "title": "Button Bakery Map Mixup Final Copy Card",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "finalCopySkill": "copy one fictional button-map story draft into final notebook form with a clear opening, neat line work, useful map details, sentence boundaries, dialogue marks, and a final paper check",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional Button Bakery Map Mixup story draft onto a clean page: ____________________.",
+      "adultSetup": "Adult: set out the pretend map-mixup draft and one clean spiral notebook page for quiet offline paper-only copying: ____________________.",
+      "kidDirection": "Writer: copy the made-up map story offline on paper only so the first clue, next turn, and final fix stay easy to follow: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy the first sentence with the map helper, the button marker, and the mixed-up clue: ____________________.",
+      "neatCopyPrompt": "Neat copy: copy each line with even word spaces and keep the margin clear for a small check mark: ____________________.",
+      "detailTransferPrompt": "Detail transfer: carry over two draft details, such as a ribbon path, paper button marker, or crumb-shaped dot: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: make sure each copied sentence starts clearly and ends before the next map clue begins: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: if two made-up helpers talk, copy only the important words and show who says each line: ____________________.",
+      "finalCopyCheckPrompt": "Final copy check: reread the clean page and mark one copied map detail that helps the mixup feel finished: ____________________.",
+      "quietOptionLine": "Quiet option: adult chooses one map clue sentence, and the writer copies only that sentence on offline paper: ____________________.",
+      "takeHomeLine": "Take-home line: copy another pretend map-mixup draft with neat lines, kept clues, clear sentence ends, and careful dialogue marks: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-04",
+      "title": "Teacup Town Weather Window Final Copy Card",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "finalCopySkill": "copy one fictional weather-window story draft into final notebook form with an opening, neat spacing, transferred weather details, sentence boundaries, dialogue marks, and a final paper check",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional Teacup Town Weather Window story draft onto a clean page: ____________________.",
+      "adultSetup": "Adult: place the pretend weather-window draft beside a clean notebook page and keep the work offline with pencil and paper: ____________________.",
+      "kidDirection": "Writer: copy the weather-window story offline on paper only so the watcher, window place, and gentle change stay clear on the final page: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy the first sentence so it shows who is watching and what appears at the window: ____________________.",
+      "neatCopyPrompt": "Neat copy: copy with careful spaces, and start a fresh line if the sentence needs more space: ____________________.",
+      "detailTransferPrompt": "Detail transfer: copy two pretend window details, such as a cloud tag, cup sill, tiny flag, or paper band: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: check that each sentence has one complete thought before the next weather-window moment begins: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: copy any pretend talking words with quotation marks and keep the speaker name close by: ____________________.",
+      "finalCopyCheckPrompt": "Final copy check: reread the clean page and put a small pencil mark beside one sentence that is easy to follow: ____________________.",
+      "quietOptionLine": "Quiet option: adult points to the opening, and the writer copies only the first sentence on offline paper: ____________________.",
+      "takeHomeLine": "Take-home line: copy another pretend weather-window draft with a clear opening, two kept details, and tidy sentence endings: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-05",
+      "title": "Spoon Ferry Lunchbox Harbor Final Copy Card",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "finalCopySkill": "copy one fictional lunchbox-harbor story draft into final notebook form with a clear opening, neat lines, transferred harbor details, sentence boundaries, dialogue marks, and a final paper check",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional Spoon Ferry Lunchbox Harbor story draft onto a clean page: ____________________.",
+      "adultSetup": "Adult: set a pretend harbor draft, a clean spiral notebook page, and a pencil where the writer can copy offline on paper: ____________________.",
+      "kidDirection": "Writer: copy the harbor story offline on paper only so the ferry helper, paper dock, and ending moment stay in order: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy an opening sentence that shows the ferry helper and the harbor task before the ferry moves: ____________________.",
+      "neatCopyPrompt": "Neat copy: keep each copied word easy to read and leave a little space between story parts: ____________________.",
+      "detailTransferPrompt": "Detail transfer: copy two harbor details from the draft, such as a spoon ferry, folded flag, paper wave, or dock label: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: check that every ferry action has a clear sentence end before the next action starts: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: copy any pretend dock talk with quotation marks and a short speaker tag: ____________________.",
+      "finalCopyCheckPrompt": "Final copy check: reread the final page and circle one copied detail that helps the harbor ending make sense: ____________________.",
+      "quietOptionLine": "Quiet option: adult folds the draft to show one paragraph, and the writer copies only that part onto offline notebook paper: ____________________.",
+      "takeHomeLine": "Take-home line: copy another pretend harbor draft with a clear first sentence, kept details, sentence ends, and any dialogue copied carefully: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-06",
+      "title": "Pocket Park Notice Board Final Copy Card",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "finalCopySkill": "copy one fictional notice-board story draft into final notebook form with a clear opening, neat spacing, transferred board details, sentence boundaries, dialogue marks, and a final paper check",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional Pocket Park Notice Board story draft onto a clean page: ____________________.",
+      "adultSetup": "Adult: put the pretend notice-board draft next to a clean spiral notebook page and choose one pencil for offline copying: ____________________.",
+      "kidDirection": "Writer: copy the notice-board story offline on paper only so the board keeper, notice change, and final choice are easy to follow: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy the first sentence with the board keeper and the notice that starts the story: ____________________.",
+      "neatCopyPrompt": "Neat copy: keep the notebook line steady and leave clear spaces around each copied word: ____________________.",
+      "detailTransferPrompt": "Detail transfer: copy two useful board details from the draft, such as a leaf notice, bench label, pin rail, or paper path: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: check each sentence for a clear beginning and ending mark before copying the next notice moment: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: if a pretend park helper speaks, copy the talking words in quotation marks and name the speaker: ____________________.",
+      "finalCopyCheckPrompt": "Final copy check: reread the clean page and mark one place where the final copy keeps the notice-board story clear: ____________________.",
+      "quietOptionLine": "Quiet option: adult points to one notice-board detail, and the writer copies the sentence that uses it on offline paper: ____________________.",
+      "takeHomeLine": "Take-home line: copy another pretend notice-board draft with neat lines, two kept details, sentence endings, and clear dialogue marks: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-07",
+      "title": "Moss Message Observatory Final Copy Card",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "finalCopySkill": "copy a clear opening, selected details, sentence stops, and one short dialogue line into a neat final page",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional moss message observatory story page: ____________________.",
+      "adultSetup": "Adult: set out the draft, this card, and one blank spiral notebook page for a calm fictional observatory copy pass: ____________________.",
+      "kidDirection": "Writer: copy the pretend moss message story onto paper with a clear opening, useful details, full sentence stops, and one tidy dialogue line: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy the first sentence so the reader knows who found the moss message and where the observatory waits: ____________________.",
+      "neatCopyPrompt": "Neat copy: use steady pencil lines, leave small spaces between words, and restart only the sentence you are fixing: ____________________.",
+      "detailTransferPrompt": "Detail transfer: carry over two helpful observatory details from the draft, such as a pebble lens, moss chart, or signal shelf: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: check each copied sentence for a capital start and a clear end mark before moving to the next line: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: copy one short spoken line from the invented watcher with quote marks and a simple said tag: ____________________.",
+      "finalCopyCheckPrompt": "Final-copy check: mark one opening, two details, three sentence ends, and one dialogue line before calling the page finished: ____________________.",
+      "quietOptionLine": "Quiet option: adult points to one draft sentence, and the writer copies only that sentence into the spiral notebook: ____________________.",
+      "takeHomeLine": "Take-home line: copy another pretend message story on paper, keeping the opening, details, sentence ends, and dialogue easy to follow: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-08",
+      "title": "Revision River Ferry Final Copy Card",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "finalCopySkill": "transfer a revised ferry scene into final copy while preserving paragraph order and exact dialogue punctuation",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional revision river ferry scene after a paper draft pass: ____________________.",
+      "adultSetup": "Adult: place the revised draft beside a blank spiral notebook page and choose one invented ferry crossing scene to copy: ____________________.",
+      "kidDirection": "Writer: copy the ferry scene in order, keep the revised details, and make the final page read like one smooth paper version: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy the revised opening so the river, ferry helper, and crossing problem are clear in one sentence: ____________________.",
+      "neatCopyPrompt": "Neat copy: keep margins steady, copy one sentence at a time, and use a single neat pencil fix if a word is missed: ____________________.",
+      "detailTransferPrompt": "Detail transfer: transfer three important draft details, such as the ferry bell, paper dock, current mark, or folded ticket: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: pause at every end mark and check that long ferry sentences do not run together: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: copy one ferry-helper dialogue line with quote marks, a comma before the said tag when needed, and clear spacing: ____________________.",
+      "finalCopyCheckPrompt": "Final-copy check: confirm the opening, detail order, sentence endings, dialogue marks, and last line all match the revised plan: ____________________.",
+      "quietOptionLine": "Quiet option: adult covers the later draft lines, and the writer copies only the first ferry paragraph on paper: ____________________.",
+      "takeHomeLine": "Take-home line: copy another pretend river scene into a spiral notebook after choosing the details and dialogue that should stay: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-09",
+      "title": "Tiny Lantern Reef Final Copy Card",
+      "worldSlug": "tiny-lantern-reef",
+      "ageBand": "8-10",
+      "finalCopySkill": "make a final copy that keeps tiny scene details readable and separates each sentence cleanly",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional tiny lantern reef story page: ____________________.",
+      "adultSetup": "Adult: set the draft and card beside a blank spiral notebook page, then choose one gentle reef-lantern moment for final copy: ____________________.",
+      "kidDirection": "Writer: copy the pretend reef story carefully so each lantern detail, sentence, and dialogue line is easy to read on paper: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy the opening sentence so the reader can see the tiny lantern reef and the helper's first job: ____________________.",
+      "neatCopyPrompt": "Neat copy: write slowly enough for round letters, clear word spaces, and a steady line across the spiral notebook page: ____________________.",
+      "detailTransferPrompt": "Detail transfer: carry over two tiny reef details from the draft, such as shell steps, glow dots, coral cards, or a paper tide line: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: after each sentence, touch the end mark with your pencil and check that the next sentence starts cleanly: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: copy one short reef-helper line with quote marks and a new line if the speaker changes: ____________________.",
+      "finalCopyCheckPrompt": "Final-copy check: underline the opening, circle two copied details, tap each sentence end, and check the dialogue marks: ____________________.",
+      "quietOptionLine": "Quiet option: adult chooses one lantern detail, and the writer copies only the sentence that carries that detail: ____________________.",
+      "takeHomeLine": "Take-home line: copy another pretend tiny-place story on paper with two kept details and sentence endings that are easy to find: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-10",
+      "title": "Mitten Market Lost Ticket Final Copy Card",
+      "worldSlug": "mitten-market-lost-ticket",
+      "ageBand": "7-8",
+      "finalCopySkill": "copy a short final story page with clear word spaces, end marks, and one simple dialogue line",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional mitten market lost-ticket story page: ____________________.",
+      "adultSetup": "Adult: place the short draft beside a blank spiral notebook page and choose one pretend mitten market ticket moment to copy: ____________________.",
+      "kidDirection": "Writer: copy the made-up market story with neat words, clear spaces, sentence ends, and one small dialogue line: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy the first sentence so it tells who lost the pretend ticket and where the mitten market begins: ____________________.",
+      "neatCopyPrompt": "Neat copy: keep one finger space between words and copy only one short sentence before checking it: ____________________.",
+      "detailTransferPrompt": "Detail transfer: copy two helpful market details from the draft, such as a mitten stall, ticket basket, ribbon tag, or bell card: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: put a clear end mark after each sentence before starting the next one: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: copy one tiny line a character says about the missing ticket, using quote marks if the adult models them: ____________________.",
+      "finalCopyCheckPrompt": "Final-copy check: point to the first sentence, two market details, each end mark, and the dialogue line on the finished page: ____________________.",
+      "quietOptionLine": "Quiet option: adult reads one short draft line, and the writer copies that line only: ____________________.",
+      "takeHomeLine": "Take-home line: copy another pretend lost-and-found story on paper with clear spaces and sentence ends: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-11",
+      "title": "Paperclip Plaza Parcel Day Final Copy Card",
+      "worldSlug": "paperclip-plaza-parcel-day",
+      "ageBand": "7-9",
+      "finalCopySkill": "copy a final parcel story page with a clear beginning, useful details, and readable dialogue",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for copying one fictional paperclip plaza parcel day story page: ____________________.",
+      "adultSetup": "Adult: set out the draft, this card, and one blank spiral notebook page for a paper-only parcel story copy pass: ____________________.",
+      "kidDirection": "Writer: copy the pretend parcel story so the beginning, plaza details, sentence ends, and one dialogue line are clear: ____________________.",
+      "openingCopyPrompt": "Opening copy: copy the beginning sentence so it names the parcel helper and the plaza job for the day: ____________________.",
+      "neatCopyPrompt": "Neat copy: copy from left to right with steady spaces, then reread the sentence before copying the next one: ____________________.",
+      "detailTransferPrompt": "Detail transfer: keep two useful parcel details from the draft, such as a paperclip gate, label tray, parcel cart, or corner post: ____________________.",
+      "sentenceBoundaryPrompt": "Sentence boundary: check that each copied sentence starts with a capital and ends before the next idea begins: ____________________.",
+      "dialogueCopyPrompt": "Dialogue copy: copy one short line between two pretend plaza helpers with quote marks and the speaker's name nearby: ____________________.",
+      "finalCopyCheckPrompt": "Final-copy check: check the beginning, two parcel details, sentence starts and ends, and the dialogue line before closing the notebook: ____________________.",
+      "quietOptionLine": "Quiet option: adult marks one paragraph with a pencil dot, and the writer copies just that paragraph into the spiral notebook: ____________________.",
+      "takeHomeLine": "Take-home line: copy another pretend parcel note on paper with a clear beginning, two details, and one readable line of dialogue: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-12",
+      "title": "Penny Path Compass Shop Final Copy Card",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "finalCopySkill": "copy a fictional compass-shop story from draft notes to a final spiral notebook page with a clear opening, useful details, sentence stops, and one quoted line",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for finishing one fictional penny path compass shop story: ____________________.",
+      "adultSetup": "Adult: keep the work offline, place this card beside a spiral notebook, and choose one made-up compass-shop draft note: ____________________.",
+      "kidDirection": "Writer: with the adult, copy the compass-shop story onto one spiral notebook page so it is ready to reread on paper: ____________________.",
+      "openingCopyPrompt": "Adult asks: Copy the title and opening sentence so the reader knows the penny path begins in a compass shop: ____________________.",
+      "neatCopyPrompt": "Adult asks: Copy slowly on the spiral notebook lines, leaving finger space between words and space for end marks: ____________________.",
+      "detailTransferPrompt": "Adult asks: Move two draft details into the final copy, such as a penny trail and a small compass shelf: ____________________.",
+      "sentenceBoundaryPrompt": "Adult asks: Touch each sentence stop, then add one end mark where a sentence finishes: ____________________.",
+      "dialogueCopyPrompt": "Adult asks: Copy one made-up quoted line from the shop guide and add who says it: ____________________.",
+      "finalCopyCheckPrompt": "Adult asks: Reread the final copy on paper and mark one place where the opening, details, and quoted line all belong: ____________________.",
+      "quietOptionLine": "Quiet option: copy only the opening sentence and one detail onto the spiral notebook page: ____________________.",
+      "takeHomeLine": "Notebook line: use the same final-copy steps with another made-up penny path story on paper: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-13",
+      "title": "Pantry Measurement Mystery Final Copy Card",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "finalCopySkill": "copy a fictional pantry measurement mystery from planning notes to a final spiral notebook page with clear labels, exact details, sentence stops, and one quoted clue",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for finishing one fictional pantry measurement mystery story: ____________________.",
+      "adultSetup": "Adult: keep the work offline, set a spiral notebook beside this card, and choose one made-up measurement clue draft: ____________________.",
+      "kidDirection": "Writer: with the adult, copy the pantry mystery into a final spiral notebook version that keeps each clue easy to follow: ____________________.",
+      "openingCopyPrompt": "Adult asks: Copy an opening that names the pantry mystery and the first odd measurement clue: ____________________.",
+      "neatCopyPrompt": "Adult asks: Copy each line carefully, keeping numbers, labels, and clue words readable on the spiral notebook page: ____________________.",
+      "detailTransferPrompt": "Adult asks: Transfer two draft details, such as a mismatched scoop mark and a blank shelf tag, into the final copy: ____________________.",
+      "sentenceBoundaryPrompt": "Adult asks: Draw a tiny dot under each end mark, then fix one sentence that runs into the next: ____________________.",
+      "dialogueCopyPrompt": "Adult asks: Copy one quoted clue from the pretend pantry helper and add a tag that names the helper: ____________________.",
+      "finalCopyCheckPrompt": "Adult asks: Compare the draft note with the final copy and mark the two clue details that made it onto the page: ____________________.",
+      "quietOptionLine": "Quiet option: copy only the opening, one clue detail, and one end-marked sentence on paper: ____________________.",
+      "takeHomeLine": "Notebook line: try the same final-copy pass with another made-up measurement mystery: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-14",
+      "title": "Compost Clock Workshop Final Copy Card",
+      "worldSlug": "compost-clock-workshop",
+      "ageBand": "8-10",
+      "finalCopySkill": "copy a fictional compost clock workshop story into a final spiral notebook page with clear order, workshop details, sentence stops, and one quoted instruction",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for finishing one fictional compost clock workshop story: ____________________.",
+      "adultSetup": "Adult: keep the work offline, place this card beside a spiral notebook, and choose one made-up workshop draft with a clock dial clue: ____________________.",
+      "kidDirection": "Writer: with the adult, copy the workshop story in order so the final spiral notebook page can be reread on paper: ____________________.",
+      "openingCopyPrompt": "Adult asks: Copy an opening that places the character inside the compost clock workshop before the dial clue changes: ____________________.",
+      "neatCopyPrompt": "Adult asks: Copy the final version with steady line spacing and clear end marks on the spiral notebook page: ____________________.",
+      "detailTransferPrompt": "Adult asks: Transfer two useful workshop details, such as a leaf gear and a turning paper dial, from draft to final copy: ____________________.",
+      "sentenceBoundaryPrompt": "Adult asks: Check where each workshop action ends, then add an end mark before the next action begins: ____________________.",
+      "dialogueCopyPrompt": "Adult asks: Copy one quoted instruction from the workshop helper and add who gives it: ____________________.",
+      "finalCopyCheckPrompt": "Adult asks: Reread the final copy and mark where the opening, two details, and quoted instruction are easy to find: ____________________.",
+      "quietOptionLine": "Quiet option: copy only the opening and one workshop detail before stopping the paper pass: ____________________.",
+      "takeHomeLine": "Notebook line: repeat the final-copy steps with another made-up workshop clue story: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-15",
+      "title": "Almost Invention Workshop Final Copy Card",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "finalCopySkill": "copy a fictional almost-invention workshop story into a polished spiral notebook page with a purposeful opening, transferred evidence, sentence control, and precise dialogue",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for finishing one fictional almost-invention workshop story: ____________________.",
+      "adultSetup": "Adult: keep the work offline, set the spiral notebook beside this card, and choose one made-up invention draft with rough test notes: ____________________.",
+      "kidDirection": "Writer: with the adult, copy the invention story into final form while preserving the best draft details on paper: ____________________.",
+      "openingCopyPrompt": "Adult asks: Copy an opening that names the almost-invention and hints at what still needs fixing: ____________________.",
+      "neatCopyPrompt": "Adult asks: Copy in a steady final-copy pass, keeping paragraph breaks, margins, and end marks clear: ____________________.",
+      "detailTransferPrompt": "Adult asks: Transfer three exact draft details, such as a cardboard gear, a bent lever, and a repair note, into the final copy: ____________________.",
+      "sentenceBoundaryPrompt": "Adult asks: Find one long sentence, divide it into two clear sentences, and copy both into the final version: ____________________.",
+      "dialogueCopyPrompt": "Adult asks: Copy one quoted workshop exchange and keep each speaker tag clear on the notebook page: ____________________.",
+      "finalCopyCheckPrompt": "Adult asks: Reread the final copy against the draft and mark one line where the invention problem reads clearly: ____________________.",
+      "quietOptionLine": "Quiet option: copy one paragraph only, including one transferred detail and one clear end mark: ____________________.",
+      "takeHomeLine": "Notebook line: use the same final-copy pass with another made-up almost-invention draft: ____________________."
+    },
+    {
+      "id": "spiral-notebook-final-copy-card-16",
+      "title": "Blue Pencil Observatory Final Copy Card",
+      "worldSlug": "blue-pencil-observatory",
+      "ageBand": "10-11",
+      "finalCopySkill": "copy a fictional blue pencil observatory story into a final spiral notebook page with precise opening copy, carried-over details, sentence control, and tidy dialogue",
+      "useCase": "Adult-led offline paper-only spiral notebook final-copy card for finishing one fictional blue pencil observatory story: ____________________.",
+      "adultSetup": "Adult: keep the work offline, place this card beside a spiral notebook, and choose one made-up observatory draft with pencil-mark clues: ____________________.",
+      "kidDirection": "Writer: with the adult, copy the observatory story into a final paper version that keeps the clues in a clear order: ____________________.",
+      "openingCopyPrompt": "Adult asks: Copy an opening that introduces the blue pencil observatory and the first sky-chart clue: ____________________.",
+      "neatCopyPrompt": "Adult asks: Copy with even margins, clear paragraph breaks, and readable pencil marks on the spiral notebook page: ____________________.",
+      "detailTransferPrompt": "Adult asks: Transfer three draft details, such as a dome window, a blue pencil mark, and a quiet chart table, into final copy: ____________________.",
+      "sentenceBoundaryPrompt": "Adult asks: Underline one place where a sentence should end, then copy the corrected sentence with an end mark: ____________________.",
+      "dialogueCopyPrompt": "Adult asks: Copy one quoted line between two observatory helpers and keep each tag clear: ____________________.",
+      "finalCopyCheckPrompt": "Adult asks: Reread the final copy and mark where the opening, clue details, sentence stops, and quoted line are all present: ____________________.",
+      "quietOptionLine": "Quiet option: copy only the opening and one clue sentence onto the spiral notebook page: ____________________.",
+      "takeHomeLine": "Notebook line: repeat the paper-only final-copy steps with another made-up observatory clue: ____________________."
+    }
+  ]
+}
