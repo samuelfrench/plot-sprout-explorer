@@ -1,0 +1,159 @@
+{
+  "adultGuide": {
+    "title": "Expanding File Scene Chain Adult Guide",
+    "bullets": [
+      "Set out the expanding file, blank page stack, pencils, and one labeled paper pocket before the adult-led story start: ____________________.",
+      "Choose one made-up scene chain card, then ask the child to keep every detail pretend and broad: ____________________.",
+      "Use each paper pocket for one page move: start scene, next scene, bridge detail, change marker, return detail, and file note: ____________________.",
+      "Keep the session offline and paper-only, with the adult holding the expanding file and guiding each page choice: ____________________.",
+      "Ask for invented characters, places, objects, and small changes; do not ask for personal facts or real day details: ____________________.",
+      "Close by tucking the page into the matching paper pocket and writing one adult-led restart note: ____________________."
+    ]
+  },
+  "sceneChainRoutines": [
+    {
+      "title": "Start Scene Pocket",
+      "time": "short first-page setup",
+      "materials": "Expanding file, one blank page, pencil, and start-scene paper pocket.",
+      "steps": [
+        "The adult opens the expanding file to the first paper pocket: ____________________.",
+        "The child names one made-up place, object, or character for the start scene: ____________________.",
+        "The adult asks what the pretend page should show first: ____________________.",
+        "The child writes or dictates one start scene line on the page: ____________________."
+      ],
+      "adultWrapLine": "This scene chain begins with one pretend page detail: ____________________."
+    },
+    {
+      "title": "Next Scene Step",
+      "time": "one-page continuation",
+      "materials": "Expanding file, current page, next blank page, and next-scene paper pocket.",
+      "steps": [
+        "The adult points from the start scene pocket to the next scene pocket: ____________________.",
+        "The child chooses one small made-up action that follows the first page: ____________________.",
+        "The adult asks what should stay connected from the start scene: ____________________.",
+        "The child writes one next scene line that follows on paper: ____________________."
+      ],
+      "adultWrapLine": "The next scene follows because the pretend action is: ____________________."
+    },
+    {
+      "title": "Bridge Detail Fold",
+      "time": "connection pass",
+      "materials": "Folded paper strip, expanding file, two page notes, and bridge paper pocket.",
+      "steps": [
+        "The adult places a folded bridge strip between two scene chain pages: ____________________.",
+        "The child chooses one pretend detail that connects both pages: ____________________.",
+        "The adult asks where that detail appears on the first page and the next page: ____________________.",
+        "The child writes the bridge detail on the folded strip: ____________________."
+      ],
+      "adultWrapLine": "The bridge detail keeps the scene chain connected with: ____________________."
+    },
+    {
+      "title": "Change Marker Slip",
+      "time": "gentle change pass",
+      "materials": "Small paper slip, pencil, expanding file, and change-marker paper pocket.",
+      "steps": [
+        "The adult opens the change-marker paper pocket and rereads the current page note: ____________________.",
+        "The child invents one calm change in the pretend scene: ____________________.",
+        "The adult asks how the page looks slightly different after the change: ____________________.",
+        "The child writes the change marker on the slip and tucks it into the pocket: ____________________."
+      ],
+      "adultWrapLine": "The made-up change marker for this scene chain is: ____________________."
+    },
+    {
+      "title": "Return Detail Page",
+      "time": "continuity return",
+      "materials": "Earlier page, blank page, expanding file, and return-detail paper pocket.",
+      "steps": [
+        "The adult opens an earlier page and asks which pretend detail can come back: ____________________.",
+        "The child picks one object, place clue, or character action from the scene chain: ____________________.",
+        "The adult places a blank page near the return-detail paper pocket: ____________________.",
+        "The child writes one return detail line that belongs on the new page: ____________________."
+      ],
+      "adultWrapLine": "The return detail brings back this pretend piece: ____________________."
+    },
+    {
+      "title": "File Note Close",
+      "time": "paper wrap pass",
+      "materials": "Expanding file, page stack, file note slip, pencil, and final paper pocket.",
+      "steps": [
+        "The adult lays the scene chain pages in order beside the expanding file: ____________________.",
+        "The child taps the page that should guide the next adult-led writing pass: ____________________.",
+        "The adult writes a file note that names the next pretend scene move: ____________________.",
+        "The child tucks the file note into the final paper pocket: ____________________."
+      ],
+      "adultWrapLine": "The expanding file closes with this next page note: ____________________."
+    }
+  ],
+  "takeHomeSceneSlips": [
+    {
+      "title": "Start Scene Slip",
+      "adultLine": "Adult: open the first paper pocket and ask for one made-up scene starter: ____________________.",
+      "childLine": "Child: my pretend start scene begins with: ____________________.",
+      "nextPageLine": "Next page: add one detail that belongs after the start scene: ____________________."
+    },
+    {
+      "title": "Next Scene Slip",
+      "adultLine": "Adult: point from the first page to the next paper pocket: ____________________.",
+      "childLine": "Child: the next pretend thing that happens is: ____________________.",
+      "nextPageLine": "Next page: write the action that follows this scene: ____________________."
+    },
+    {
+      "title": "Bridge Detail Slip",
+      "adultLine": "Adult: place one folded bridge strip between two scene chain pages: ____________________.",
+      "childLine": "Child: the bridge detail connecting both pages is: ____________________.",
+      "nextPageLine": "Next page: use the bridge detail in one new line: ____________________."
+    },
+    {
+      "title": "Change Marker Slip",
+      "adultLine": "Adult: ask what small made-up change happens in this pretend scene: ____________________.",
+      "childLine": "Child: my change marker says: ____________________.",
+      "nextPageLine": "Next page: show what is different after the change: ____________________."
+    },
+    {
+      "title": "Return Detail Slip",
+      "adultLine": "Adult: reread one earlier page and ask what pretend detail can return: ____________________.",
+      "childLine": "Child: the returning detail is: ____________________.",
+      "nextPageLine": "Next page: bring that detail back in a calm story line: ____________________."
+    },
+    {
+      "title": "Paper Pocket Order Slip",
+      "adultLine": "Adult: lay the expanding file pockets in scene chain order: ____________________.",
+      "childLine": "Child: the paper pocket I need next is: ____________________.",
+      "nextPageLine": "Next page: tuck the finished page into that pocket: ____________________."
+    },
+    {
+      "title": "Object Carry Slip",
+      "adultLine": "Adult: ask which pretend object should move from one page to the next: ____________________.",
+      "childLine": "Child: the object I will carry forward is: ____________________.",
+      "nextPageLine": "Next page: let that object help connect the scene chain: ____________________."
+    },
+    {
+      "title": "Place Clue Slip",
+      "adultLine": "Adult: choose one made-up place clue that can stay steady across pages: ____________________.",
+      "childLine": "Child: my pretend place clue is: ____________________.",
+      "nextPageLine": "Next page: repeat the clue in a new paper-only scene: ____________________."
+    },
+    {
+      "title": "Character Action Slip",
+      "adultLine": "Adult: ask what the pretend character does next on the page: ____________________.",
+      "childLine": "Child: the character action is: ____________________.",
+      "nextPageLine": "Next page: connect the action to the next scene chain step: ____________________."
+    },
+    {
+      "title": "File Note Slip",
+      "adultLine": "Adult: write one restart note before closing the expanding file: ____________________.",
+      "childLine": "Child: the next made-up page should begin with: ____________________.",
+      "nextPageLine": "Next page: read the file note, then add one pretend scene line: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led paper prompt: the expanding file opens to a pretend start scene about ____________________.",
+    "Optional adult-led paper prompt: the scene chain moves to the next page when ____________________.",
+    "Optional adult-led paper prompt: the bridge detail between these pages is ____________________.",
+    "Optional adult-led paper prompt: the made-up change marker says ____________________.",
+    "Optional adult-led paper prompt: the return detail that comes back is ____________________.",
+    "Optional adult-led paper prompt: the paper pocket for this page should be labeled ____________________.",
+    "Optional adult-led paper prompt: the pretend object carried forward is ____________________.",
+    "Optional adult-led paper prompt: the file note for the next page begins with ____________________."
+  ]
+}
