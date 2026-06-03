@@ -3228,6 +3228,130 @@
           "summary": "A binding day world for keeping a pretend promise with one kind solution step."
         }
       ]
+    },
+    {
+      "slug": "binder-clip-story-transition-card-pack",
+      "title": "Binder Clip Story Transition Card Pack",
+      "pricePoint": "$59",
+      "status": "checkout_pending",
+      "headline": "A printable transition-card pack for paper-only fictional binder-clip story bridges.",
+      "summary": "Sixteen adult-led binder clip cards help kids connect fictional before and after moments with bridge words, character moves, and carried objects.",
+      "heroImage": "images/plotsprout/batch43/binder-clip-story-transition-card-pack.jpg",
+      "ctaLabel": "Request transition card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Binder%20Clip%20Story%20Transition%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static binder clip story transition card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable binder clip story transition cards",
+        "Adult setup guide",
+        "Fictional transition safety notes",
+        "Binder clip transition coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led transition routines",
+        "Ten take-home transition slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one small bridge between two story moments",
+        "A tutoring or co-op table where writers can fill one transition card at a time",
+        "A warm-up where a pretend binder clip prop reduces blank-page pressure",
+        "A reluctant-writer activity that separates story transitions from a full draft",
+        "A take-home transition slip set for building one invented story offline"
+      ],
+      "parentSteps": [
+        "Choose one transition routine before the activity starts.",
+        "Set the paper, pencils, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one pretend binder clip job into a fictional bridge detail rather than using narrow real-world facts.",
+        "Send one transition slip with a single blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for clipping one tiny before moment to the next pastry-counter beat."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for carrying one note clue into the next pretend message."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for moving from a shelf clue to a traveler action."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for turning a question into the next mapped scene."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for shifting from a weather clue to a character notice."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for making the next notice-board step easy to follow."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for carrying one harbor clue forward."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for moving from a mix-up to one clear next action."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for turning a map clue into a new story scene."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for linking one pretend signal to a story turn."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for bridging one soft message gap."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for sequencing shell-clock clues into a clear transition."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for turning one broad transition into a clearer target."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for using a tag to point the next story moment forward."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for bridging a choice obstacle with one useful paper-arrow move."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for turning a pretend promise into one gentle page action."
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,1225 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binder Clip Story Transition Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-transition-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-transition-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-transition-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable binder clip transition cards</p>
+        <h1>Binder Clip Story Transition Card Pack</h1>
+        <p>Sixteen paper cards help writers connect fictional before moments, after moments, bridge words, character moves, place shifts, and carried objects.</p>
+        <p><strong>Audience:</strong> Families, co-op groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable transition cards plus adult guide tools, transition routines, take-home transition slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$59</span>
+        <h2>Included</h2>
+        <ul><li>16 printable binder clip story transition cards</li>
+<li>Adult setup guide</li>
+<li>Fictional transition safety notes</li>
+<li>Binder clip transition coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led transition routines</li>
+<li>Ten take-home transition slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Transition coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Binder Clip Transition Card Adult Guide</h3><ul><li>Print the transition cards, blank slips, and guide before the adult-led paper session.</li>
+<li>Use binder clips only as paper props for holding, grouping, or pointing to invented story moments.</li>
+<li>Keep every story detail fictional, broad, offline, and guided by an adult.</li>
+<li>Choose one before moment, one after moment, and one binder-clip job so the transition has a clear bridge.</li>
+<li>Replace any personal place, schedule, group name, or child detail with a made-up story label.</li>
+<li>Send along only blank slips or invented examples with no identity details.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one binder clip transition card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen transition-card worlds</h2>
+      <p>Pick a world image, then start one fictional story with a pretend binder clip transition card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Transition routines</p>
+      <h2>Choose the binder clip transition rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Before-After Clip Bridge</h3>
+      <p>Writers who need a clear bridge between two invented story moments.</p>
+      <ol><li>The adult names the pretend before moment and after moment from one card.</li>
+<li>The writer chooses a binder-clip job: hold, join, point, or flip.</li>
+<li>The adult asks what changes between the two pretend moments.</li>
+<li>The writer writes one bridge sentence for the transition: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Meanwhile Clip Turn</h3>
+      <p>Moving between two made-up scenes without adding outside facts.</p>
+      <ol><li>The adult places two slips side by side and clips a blank slip between them.</li>
+<li>The writer chooses a broad transition word such as meanwhile, later, or nearby.</li>
+<li>The adult asks what the reader needs to know before the next scene starts.</li>
+<li>The writer writes one fictional meanwhile sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Later Clip Stack</h3>
+      <p>Showing a gentle passage from one story beat to the next.</p>
+      <ol><li>The adult stacks the before slip under the after slip with a binder clip.</li>
+<li>The writer names one made-up change that happened between the slips.</li>
+<li>The adult asks whether the change is small enough for one sentence.</li>
+<li>The writer writes one later sentence that explains the change: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Object Thread</h3>
+      <p>Using one invented object to connect two story moments.</p>
+      <ol><li>The adult points to the binder clip and asks what pretend object it can stand for.</li>
+<li>The writer chooses one broad object job such as marker, handle, tag, or hinge.</li>
+<li>The adult asks how the object appears in both story moments.</li>
+<li>The writer writes one transition using the object thread: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Scene Swap Clip</h3>
+      <p>Changing scenes while keeping places fictional and broad.</p>
+      <ol><li>The adult labels one slip old scene and one slip new scene.</li>
+<li>The writer chooses one invented place label with no narrow outside details.</li>
+<li>The adult asks what signal tells the reader the scene has changed.</li>
+<li>The writer writes one scene-swap transition sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Mood-to-Action Bridge</h3>
+      <p>Connecting how an invented character feels to the next gentle action.</p>
+      <ol><li>The adult asks which pretend feeling starts the transition.</li>
+<li>The writer chooses one calm action that follows from that feeling.</li>
+<li>The adult clips the feeling slip to the action slip as a paper bridge.</li>
+<li>The writer writes one feeling-to-action transition: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home transition slips</p>
+      <h2>Start one story transition later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">One paper pass | bridge sentence</p>
+      <h3>Clip the Gap</h3>
+      <p>Write one sentence that clips a pretend before moment to a pretend after moment: ____________________.</p>
+      <p>Ask which two made-up moments the sentence connects: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Brief adult-led pass | meanwhile transition</p>
+      <h3>Meanwhile Slip</h3>
+      <p>Invent a meanwhile sentence that moves to another fictional scene: ____________________.</p>
+      <p>Ask what the reader learns before the next scene begins: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single printable slip | passage of story time</p>
+      <h3>Later Stack</h3>
+      <p>Write a later sentence that explains one small made-up change: ____________________.</p>
+      <p>Ask what changed between the two pretend story beats: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One pencil pass | object connection</p>
+      <h3>Object Thread</h3>
+      <p>Use one invented object as a thread between two story moments: ____________________.</p>
+      <p>Ask how the object appears in both moments: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Short paper pass | scene transition</p>
+      <h3>Scene Swap</h3>
+      <p>Write a scene-swap line that moves to a broad invented place: ____________________.</p>
+      <p>Ask what word tells the reader the scene changed: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Calm story pass | cause transition</p>
+      <h3>Then Because</h3>
+      <p>Use then because to connect one fictional choice to the next moment: ____________________.</p>
+      <p>Ask which choice made the next moment happen: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Quiet paper pass | feeling-to-action transition</p>
+      <h3>Feeling Bridge</h3>
+      <p>Write how an invented character moves from a feeling to a gentle action: ____________________.</p>
+      <p>Ask which action matches the pretend feeling: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Fresh slip pass | turning point transition</p>
+      <h3>Flip the Slip</h3>
+      <p>Write a line that flips from one made-up idea to a new made-up idea: ____________________.</p>
+      <p>Ask what changed after the flip: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single card pass | within-scene transition</p>
+      <h3>Same Place, New Beat</h3>
+      <p>Keep the broad invented place the same and write the next story beat: ____________________.</p>
+      <p>Ask what stayed the same while the story moved ahead: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Second pencil pass | clearer transition revision</p>
+      <h3>Clip and Clarify</h3>
+      <p>Revise one transition word so the next moment is easier to follow: ____________________.</p>
+      <p>Ask which word made the story bridge clearer: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the transition word I chose is ____________________.</li>
+<li>Optional adult-led offline prompt: the binder clip connects these two pretend moments: ____________________.</li>
+<li>Optional adult-led offline prompt: the before moment changes when ____________________.</li>
+<li>Optional adult-led offline prompt: the after moment begins with ____________________.</li>
+<li>Optional adult-led offline prompt: my object thread is ____________________.</li>
+<li>Optional adult-led offline prompt: the broad invented place changes to ____________________.</li>
+<li>Optional adult-led offline prompt: the character&#39;s gentle next action is ____________________.</li>
+<li>Optional adult-led offline prompt: an adult can add one made-up bridge word here: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 1 | Ages 6-8 | clip a tiny before moment to a tiny next moment</div>
+      <h2>Moon Muffin Binder Clip Crumb Turn</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside blank paper and name one make-believe market moment that can change softly: ____________________.</p>
+      <p class="kid-direction">Writer: Show how the moon muffin helper moves from one small counter moment to the next: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: The moon muffin counter is busy with one tiny crumb detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The next story moment begins when the helper notices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Choose a word like then, soon, or meanwhile to clip the two moon moments together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The helper carries the story forward by sliding, pointing, sorting, or nodding toward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: Move the scene from the crumb tray to another pretend market spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: Let the binder clip hold one moon tag, crumb card, or muffin note that travels into the next moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: What small market clue makes the next moment feel connected: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Make the turn clearer by adding one moon-muffin detail that belongs on both sides: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the clipped moon tag first, then write one bridge word: ____________________. Take-home line: Try another pretend moon-market transition with one before clue and one after clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 2 | Ages 6-8 | carry a clue from note to next note</div>
+      <h2>Puddle Planet Binder Clip Ripple Next</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out the printable card and offer one invented puddle note that can lead to another note: ____________________.</p>
+      <p class="kid-direction">Writer: Move the puddle mail helper from the first note clue to the next note clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: The puddle mail helper finds a ripple mark on the edge of: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The next made-up mail clue appears beside: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Choose a soft connector that helps the note move from one puddle clue to another: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The helper gently taps, folds, or turns the pretend note toward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: Shift from the puddle-mail counter to a broad pretend sorting spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: The binder clip carries a stamp shape, shell mark, or ripple label into the next moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: Which puddle-mail clue should the reader notice next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Add one matching ripple detail so the before and after moments fit: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Sketch two clipped note corners and fill one connector word: ____________________. Take-home line: Make another pretend puddle-mail transition using one carried clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 3 | Ages 7-9 | move from shelf clue to traveler action</div>
+      <h2>Buttonwood Binder Clip Shelf Switch</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside blank paper and choose one pretend shelf clue for the train scene: ____________________.</p>
+      <p class="kid-direction">Writer: Use the shelf clue to guide the traveler&#39;s next gentle action: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: The Buttonwood Library Train pauses beside a shelf card that shows: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The traveler responds by moving toward a new pretend train detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Pick a connector that makes the shelf pause turn into the traveler&#39;s move: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The traveler clips the ticket, checks a bookmark, or follows a shelf tag toward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: Move from the shelf-stop bench to another broad library-train area: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: The binder clip holds a ticket stub, bookmark strip, or shelf tag that stays important: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: What shelf clue explains why the traveler moves next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Make the switch clearer by naming the clue and the matching traveler action: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw one clipped ticket and write the bridge word under it: ____________________. Take-home line: Build another library-train transition from one clue to one action: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 4 | Ages 7-9 | turn a question into the next scene</div>
+      <h2>Button Bakery Binder Clip Map Turn</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this card beside a folded pretend map and ask for one made-up bakery-map question: ____________________.</p>
+      <p class="kid-direction">Writer: Let the bakery-map question point the story toward the next clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: The map-mender studies a crumb-shaped mark near: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The next scene begins when the map-mender turns the paper toward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Choose a connector that turns the map question into the next clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The map-mender folds, clips, or lines up one map edge with: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: Move from the bakery-map table to another pretend bakery corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: The binder clip keeps one button mark, crumb trail, or folded tab visible: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: What question should pull the map-mender into the next scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Add one map detail that explains why the story turns here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Trace the clipped map edge, then add one next-scene word: ____________________. Take-home line: Try another pretend bakery-map transition from one question to one clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 5 | Ages 7-8 | shift from weather clue to character notice</div>
+      <h2>Teacup Weather Binder Clip Pane Shift</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print this card and choose one gentle pretend weather-pane clue for the writer to carry forward: ____________________.</p>
+      <p class="kid-direction">Writer: Let the weather watcher notice one clue, then move into the next soft moment: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: A tiny teacup weather mark appears on the pretend pane: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The watcher turns the story toward a new sky-card clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Choose a connector that makes the pane clue lead into the sky-card clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The watcher points, compares, or gently clips the clue beside: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: Shift from the weather pane to another broad Teacup Town spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: The binder clip carries a cloud tag, drizzle dot, or teacup label into the next moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: Which gentle weather clue should the reader follow next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Make the shift clearer by matching one pane detail with one sky-card detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw two weather symbols and clip the one that carries forward: ____________________. Take-home line: Invent another Teacup Town transition by carrying one weather clue forward: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 6 | Ages 7-9 | make the next step easy to follow</div>
+      <h2>Pocket Park Binder Clip Notice Step</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this card near a blank pretend notice and choose one invented board detail to continue: ____________________.</p>
+      <p class="kid-direction">Writer: Use the notice-board detail to show what the keeper does next: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: The notice keeper spots one crooked corner, leaf mark, or tiny label on: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The next step begins when the keeper gently changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Pick a connector that moves the notice detail into the keeper&#39;s next step: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The keeper straightens, labels, or clips one pretend notice toward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: Move from the notice board to another broad pocket-park spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: The binder clip holds a leaf note, notice tab, or tiny board label that still matters: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: What notice detail tells the reader why the keeper acts next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Make the step clearer by adding one notice-board clue before the action: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the clipped notice corner and fill one next-step word: ____________________. Take-home line: Make another pretend pocket-park transition with one notice clue and one next step: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 7 | Ages 7-9 | carry a setting clue forward</div>
+      <h2>Spoon Ferry Dock-to-Deck Binder Clip Bridge</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this paper card beside a pretend harbor sketch and invite one invented moment before the ferry moves on: ____________________.</p>
+      <p class="kid-direction">Write the clue that helps the spoon ferry glide from the dock moment to the next gentle harbor job: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: the spoon ferry pauses beside the cracker dock while the harbor helper notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: the next scene begins on the napkin-tide deck when the helper decides to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: choose one word that clips the dock moment to the deck moment, such as next, nearby, or meanwhile: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: the helper carries the story forward by folding, pointing, or sliding ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: show the pretend harbor changing from cracker dock to napkin-tide deck by adding ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: the binder clip keeps one tiny harbor tag, sail corner, or dock note visible as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: what does the ferry helper notice that makes the next harbor moment make sense? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: make the dock-to-deck bridge clearer by adding one cracker, napkin, or spoon detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw the dock on one side, the deck on the other, and write one bridge word: ____________________. Take-home line: invent another spoon ferry transition that carries one harbor object into a new moment: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 8 | Ages 7-9 | move from mix-up to next action</div>
+      <h2>Acorn Avenue Slip-to-Seed Transition Clip</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out the card with two invented acorn slips and ask which paper clue should lead the story onward: ____________________.</p>
+      <p class="kid-direction">Write how the leaf clerk moves from the mixed slips to one clear next action at the seed counter: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: two pretend acorn slips sit in the wrong twig tray because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: the leaf clerk begins the next scene by matching one slip with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: choose a connecting word that shows the task changing from mixed to sorted: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: the clerk moves the story forward by clipping, turning, or comparing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: move the scene from the twig tray to the seed counter by showing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: the binder clip carries one seed tag, leaf mark, or tiny stamp into the next moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: what clue tells the clerk where the next pretend slip should go? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: make the slip-to-seed shift clearer by changing one invented mark on the paper slip: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw two slips, clip one to a seed tag, and add one transition word: ____________________. Take-home line: create another acorn office transition with invented slips and no actual errands: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 9 | Ages 8-10 | turn a clue into a new scene</div>
+      <h2>Seed Library Folded-Map Shelf Turn</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside a pretend seed map and ask which broad shelf clue should open the next scene: ____________________.</p>
+      <p class="kid-direction">Write the transition that moves the seed keeper from the folded map to the shelf card without naming an actual place: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: the seed keeper unfolds a map corner and finds a tiny bean symbol beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: the next scene starts at the shelf card when the keeper realizes the symbol points to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: choose one connector that turns the map clue into the shelf-card moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: the keeper carries the story forward by lining up the symbol with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: show the scene moving from map table to seed shelf by adding ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: the binder clip keeps the map flap, seed packet, or catalog card connected to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: which shelf detail makes the folded map clue useful in the next moment? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: make the map-to-shelf turn clearer by adding one seed shape, drawer mark, or paper fold: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: sketch the map flap and shelf card, then write the connector between them: ____________________. Take-home line: invent another seed library transition where one paper clue opens a new scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 10 | Ages 8-10 | link a signal to a story turn</div>
+      <h2>Rain Gauge Railway Signal-to-Platform Link</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card beside a pretend rain-gauge sketch and keep every railway detail invented and calm: ____________________.</p>
+      <p class="kid-direction">Write how the rain-note conductor moves from one signal card to the next platform choice: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: the rain gauge shows silver drizzle while a tiny signal card says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: the next scene begins on the puddle platform as the conductor chooses to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: choose one word that clips the signal card to the platform moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: the conductor carries the story forward by checking, lifting, or turning ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: show the scene moving from the glass gauge stand to the puddle platform by adding ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: the binder clip holds one cloud note, flag card, or water-sample tag so it follows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: what signal clue helps the conductor choose the next pretend platform step? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: make the signal-to-platform link clearer with one drizzle, flag, or gauge detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw the signal card, draw the platform, and write one bridge word between them: ____________________. Take-home line: invent another rain railway transition using one calm signal and one platform clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 11 | Ages 8-10 | bridge a message gap</div>
+      <h2>Moss Observatory Missing-Word Bridge</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the card near a pretend moss note and ask for one invented missing word before the scene turns: ____________________.</p>
+      <p class="kid-direction">Write the transition that helps the sky watcher move from the moss gap to the next notebook clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: the moss note pauses in the middle because one soft word is missing after ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: the next observatory note begins when the sky watcher adds the word and notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: choose one connector that lets the missing word lead into the next note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: the sky watcher moves the story forward by comparing the moss mark with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: show the scene turning from moss step to observatory shelf by adding ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: the binder clip holds the moss note, pebble lens, or lantern card as the watcher carries ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: what missing word helps the watcher understand the next gentle clue? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: make the missing-word bridge clearer by adding one moss shade, pebble, or lantern detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: copy the moss note with one blank, then write the bridge word beside it: ____________________. Take-home line: invent another moss observatory transition where one missing word opens the next note: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 12 | Ages 8-10 | sequence transition</div>
+      <h2>Tidepool Clock Binder Bridge</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card beside a pretend binder clip and invite three invented shell-clock notes, keeping every detail fictional: ____________________.</p>
+      <p class="kid-direction">Write the tiny bridge that carries the tidepool timekeeper from one shell-clock note to the next: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: The tidepool timekeeper studies the first shell-clock note and notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The next story moment begins when the bead dial, tide strip, or jar mark shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Choose one word or phrase that clips the two tidepool moments together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The timekeeper carries the story forward by gently testing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: The tidepool lab changes from the shell shelf to the pool edge when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: The paper binder clip holds the shell-clock note that reminds the timekeeper to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: Which clue should the timekeeper follow from the first moment into the next? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Make the order bridge clearer by adding one shell, bead, or tide-mark detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Number two pretend tidepool moments and write the bridge word between them: ____________________. Carry-on line: Invent one more tidepool bridge that moves from a shell note to a new lab clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 13 | Ages 10-11 | revision target</div>
+      <h2>Revision River Ferry Hinge</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the paper card beside a pretend ferry note and ask which bridge sentence needs one clearer target: ____________________.</p>
+      <p class="kid-direction">Find the fuzzy ferry transition, then write the exact detail that should change before the story crosses over: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: The ferry helper looks at the draft page and realizes the old sentence says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The revised ferry moment becomes clearer when the helper adds ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Choose a crossing word that turns the old draft moment into the revised one: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The helper moves the story forward by underlining one target and choosing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: The invented ferry scene shifts from the dock card to the paper deck because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: The binder clip keeps the old note beside the revised note so the helper can compare ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: What exact ferry detail should change so the next sentence makes sense? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Replace one broad ferry word with a sharper draft, dock, oar, or ripple detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle one fuzzy ferry word and write the clearer bridge word beside it: ____________________. Carry-on line: Choose one pretend ferry sentence and revise the transition target on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 14 | Ages 10-11 | label clue transition</div>
+      <h2>Clue Label Tower Pointer Shift</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card near a made-up display label and keep the clue tower entirely invented and paper-only: ____________________.</p>
+      <p class="kid-direction">Write how the label points from the first display clue toward the next clue the reader should notice: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: The clue keeper reads the first tower label and sees ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The next display clue matters when the label begins pointing toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Choose a pointing word that helps the reader move from label to clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The clue keeper shifts the story by moving, folding, or rewriting ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: The tower museum scene shifts from the label shelf to the display step when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: The binder clip becomes a paper pointer that carries the label clue toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: Which label detail should point the reader into the next tower moment? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Add one shape, color, or display surface so the label bridge feels exact: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw two label boxes and clip them together with one bridge word: ____________________. Carry-on line: Invent another tower label that points from one pretend clue to the next: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 15 | Ages 10-11 | choice obstacle</div>
+      <h2>Compass Craft Two-Arrow Link</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out two invented compass options and let the binder clip mark whichever option the writer chooses: ____________________.</p>
+      <p class="kid-direction">Write the bridge between the compass crafter&#39;s choice and the next action that helps the story continue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: The compass crafter faces two paper arrows and hesitates because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The next story moment begins once the chosen arrow helps the crafter notice ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Choose a word or phrase that shows why the choice leads to the next action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The crafter moves forward by testing the paper needle, bead marker, or folded arrow to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: The craft academy scene shifts from the bead table to the compass rail when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: The binder clip holds the chosen option card so the crafter remembers ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: Which choice carries the crafter into a clearer next move, and why? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Make the choice bridge clearer by naming both options and one useful reason: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Mark option A or option B, then write the bridge to the next action: ____________________. Carry-on line: Sketch two pretend compass choices and clip the one that leads into a new scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-transition-card-page">
+      <div class="page-kicker">Transition Card 16 | Ages 10-11 | promise transition</div>
+      <h2>Binding Day Promise Turn</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside a folded pretend page and invite one small promise that stays kind and invented: ____________________.</p>
+      <p class="kid-direction">Write how the page helper moves from making the promise to taking the next careful paper step: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Before moment</h3>
+      <p>Before moment: The page helper makes a small promise beside the boardwalk booklet stand: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After moment</h3>
+      <p>After moment: The next story moment begins when the helper chooses a page, clasp, or folded sign to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge word</h3>
+      <p>Bridge word: Choose a promise word that links what was said to what the helper does next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character move</h3>
+      <p>Character move: The helper carries the promise forward by checking, folding, or marking ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place shift</h3>
+      <p>Place shift: The binding boardwalk scene moves from the promise booth to the page table when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object carry-over</h3>
+      <p>Object carry-over: The binder clip holds the promise note where the helper can use it to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition question</h3>
+      <p>Transition question: What kind next step keeps the promise small, clear, and useful to the story? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise transition</h3>
+      <p>Revise transition: Add one booklet, clasp, thread, or sign detail that makes the promise turn easier to follow: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write the promise on one line and the next careful action on the next line: ____________________. Carry-on line: Invent another boardwalk promise that turns into one gentle page action: ____________________.</p>
+    </section>
+  </body>
+</html>

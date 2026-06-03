@@ -35,6 +35,8 @@ import {
   validateDeskLampStoryProblemCardPackSourceFiles,
   validatePaperClipStorySolutionCardPackSource,
   validatePaperClipStorySolutionCardPackSourceFiles,
+  validateBinderClipStoryTransitionCardPackSource,
+  validateBinderClipStoryTransitionCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -107,6 +109,7 @@ const batch39ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch40ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch40-product-images.json')
 const batch41ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch41-product-images.json')
 const batch42ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch42-product-images.json')
+const batch43ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch43-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -143,6 +146,7 @@ const backpackEndingSourceFile = resolve(root, 'content', 'product-artifacts', '
 const pencilCupOpeningSourceFile = resolve(root, 'content', 'product-artifacts', 'pencil-cup-story-opening-card-pack.json')
 const deskLampProblemSourceFile = resolve(root, 'content', 'product-artifacts', 'desk-lamp-story-problem-card-pack.json')
 const paperClipSolutionSourceFile = resolve(root, 'content', 'product-artifacts', 'paper-clip-story-solution-card-pack.json')
+const binderClipTransitionSourceFile = resolve(root, 'content', 'product-artifacts', 'binder-clip-story-transition-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -180,6 +184,7 @@ const batch39ProductImagesBatchId = '2026-06-03-batch39-product-images'
 const batch40ProductImagesBatchId = '2026-06-03-batch40-product-images'
 const batch41ProductImagesBatchId = '2026-06-03-batch41-product-images'
 const batch42ProductImagesBatchId = '2026-06-03-batch42-product-images'
+const batch43ProductImagesBatchId = '2026-06-03-batch43-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -216,6 +221,7 @@ const backpackEndingBatchId = '2026-06-03-batch39'
 const pencilCupOpeningBatchId = '2026-06-03-batch40'
 const deskLampProblemBatchId = '2026-06-03-batch41'
 const paperClipSolutionBatchId = '2026-06-03-batch42'
+const binderClipTransitionBatchId = '2026-06-03-batch43'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -3122,6 +3128,114 @@ function validateBatch42ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch43ProductImage(image) {
+  const label = `2026-06-03-batch43-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'binder-clip-story-transition-card-pack',
+    `${label}.slug must be binder-clip-story-transition-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch43/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch43/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch43/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'six loose blank cream printable story transition cards',
+    'simple unbranded black binder clips',
+    'empty rectangular writing areas',
+    'plain white background',
+    'screen-free binder clip story transition card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'app interface',
+    'microphone',
+    'audio recorder',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'school login',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'review',
+    'score',
+    'grade',
+    'timer',
+    'clock',
+    'calendar',
+    'contest',
+    'prize',
+    'child face',
+    'child portrait',
+    'person',
+    'hands',
+    'body',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar.negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -3415,6 +3529,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'paper-clip-story-solution-card-pack': {
       title: 'Paper Clip Story Solution Card Pack',
       pricePoint: '$57',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'binder-clip-story-transition-card-pack': {
+      title: 'Binder Clip Story Transition Card Pack',
+      pricePoint: '$59',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -3986,6 +4108,49 @@ function validateProduct(product, productSlugs, worldSlugs) {
       `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, real-identity, real room/location/schedule details, address, route, GPS, exact-location, profile, real-book-title, author, publisher, franchise, food/allergy, unsafe professional, scary/harm/bullying/fighting, or weapon language.`,
     )
   }
+  if (product.slug === 'binder-clip-story-transition-card-pack') {
+    const binderClipSummaryErrors = validateProductWorldSummaries(product, 'Binder Clip Story Transition Card Pack')
+    expect(
+      binderClipSummaryErrors.length === 0,
+      `${label}.worldSummaries failed validation:\n${binderClipSummaryErrors.join('\n')}`,
+    )
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    const binderClipRenderedText = renderedHtml
+      .replaceAll(safety, '')
+      .replaceAll('take-home', '')
+      .replaceAll('Checkout is pending until the payment provider is selected', '')
+      .replaceAll('device-width', '')
+      .replaceAll('Binder Clip Story Transition Card Pack', '')
+      .replaceAll('Binder%20Clip%20Story%20Transition%20Card%20Pack', '')
+      .replaceAll('binder clip story transition card pack', '')
+      .replaceAll('binder%20clip%20story%20transition%20card%20pack', '')
+      .replaceAll('Binder Clip', '')
+      .replaceAll('Binder%20Clip', '')
+      .replaceAll('binder clip', '')
+      .replaceAll('binder%20clip', '')
+      .replaceAll('binder-clip', '')
+      .replaceAll('transition card', '')
+      .replaceAll('transition-card', '')
+      .replaceAll('transition slip', '')
+      .replaceAll('screen-free', '')
+      .replaceAll('narrow real-world facts', '')
+      .replaceAll('narrow real-world fact', '')
+      .replaceAll('narrow personal facts', '')
+      .replaceAll('blank-page pressure', '')
+      .replaceAll('Puddle Planet Post Office', '')
+      .replaceAll('puddle-planet-post-office', '')
+      .replaceAll('Acorn Avenue Errand Office', '')
+      .replaceAll('acorn-avenue-errand-office', '')
+      .replaceAll('Seed Library Map Room', '')
+      .replaceAll('seed-library-map-room', '')
+    expect(!/\bscoring\b/i.test(binderClipRenderedText), `${label} static output includes scoring language.`)
+    expect(
+      !/\baccounts?\b|\bschool accounts?\b|\blogins?\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideos?\b|\bphotos?\b|\bcameras?\b|\bphones?\b|\bdevices?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bgrading\b|\bscores?\b|\brubrics?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\breal names?\b|\bfull names?\b|\bidentity details?\b|\bclassrooms?\b|\bschools?\b|\bstudents?\b|\bteachers?\b|\bhomes?\b|\bhouses?\b|\bhome address\b|\boffices?\b|\bdesks?\b|\brooms?\b|\breal rooms?\b|\bprivate locations?\b|\bprivate place details?\b|\blocation details?\b|\bexact locations?\b|\bexact places?\b|\bschedules?\b|\bschool route(s)?\b|\breal route(s)?\b|\broutes?\b|\baddresses?\b|\bstreets?\b|\bgps\b|\bcoordinates?\b|\breal child\b|\breal child data\b|\bprivate child data\b|\bstudent records?\b|\bprofiles?\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bfood prep\b|\ballerg(y|ies|en|ens|ic)\b|\bmedical\b|\blegal\b|\btherapy\b|\bgrief\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b/i.test(binderClipRenderedText),
+      `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, real-identity, real room/location/schedule details, address, route, GPS, exact-location, profile, real-book-title, author, publisher, franchise, food/allergy, unsafe professional, scary/harm/bullying/fighting, or weapon language.`,
+    )
+  }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
   validateString(metaDescription, `${label} rendered meta description`)
   expect(
@@ -4473,12 +4638,23 @@ expect(Array.isArray(batch42ProductImages.images), 'batch42 product image manife
 expect(batch42ProductImages.images.length === 1, `Expected 1 Batch 42 product image, found ${batch42ProductImages.images.length}.`)
 validateBatch42ProductImage(batch42ProductImages.images[0])
 
+expect(existsSync(batch43ProductImagesFile), `Missing Batch 43 product image manifest: ${batch43ProductImagesFile}`)
+const batch43ProductImages = readJson(batch43ProductImagesFile)
+expect(
+  batch43ProductImages.batchId === batch43ProductImagesBatchId,
+  `batch43 product image manifest batchId must be ${batch43ProductImagesBatchId}.`,
+)
+expect(batch43ProductImages.generatedAt === '2026-06-03', 'batch43 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch43ProductImages.images), 'batch43 product image manifest images must be an array.')
+expect(batch43ProductImages.images.length === 1, `Expected 1 Batch 43 product image, found ${batch43ProductImages.images.length}.`)
+validateBatch43ProductImage(batch43ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 35, `Expected 35 product records, found ${products.products.length}.`)
+expect(products.products.length === 36, `Expected 36 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -4517,6 +4693,7 @@ for (const requiredProductSlug of [
   'pencil-cup-story-opening-card-pack',
   'desk-lamp-story-problem-card-pack',
   'paper-clip-story-solution-card-pack',
+  'binder-clip-story-transition-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -7086,6 +7263,93 @@ for (const asset of paperClipSolutionArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(binderClipTransitionSourceFile), `Missing Batch 43 Binder Clip Story Transition Card Pack source file: ${binderClipTransitionSourceFile}`)
+const binderClipTransitionSource = readJson(binderClipTransitionSourceFile)
+expect(
+  binderClipTransitionSource.batchId === binderClipTransitionBatchId,
+  `Binder Clip Story Transition Card Pack source batchId must be ${binderClipTransitionBatchId}.`,
+)
+const binderClipTransitionProduct = products.products.find(
+  (product) => product.slug === 'binder-clip-story-transition-card-pack',
+)
+expect(
+  binderClipTransitionProduct,
+  'Missing Binder Clip Story Transition Card Pack product record for Batch 43 artifact validation.',
+)
+const binderClipTransitionSourceErrors = validateBinderClipStoryTransitionCardPackSource(
+  binderClipTransitionSource,
+  binderClipTransitionProduct,
+  worldAgeBands,
+)
+expect(
+  binderClipTransitionSourceErrors.length === 0,
+  `Binder Clip Story Transition Card Pack source failed validation:\n${binderClipTransitionSourceErrors.join('\n')}`,
+)
+const binderClipTransitionSourceFileErrors = validateBinderClipStoryTransitionCardPackSourceFiles(
+  binderClipTransitionSource,
+  root,
+)
+expect(
+  binderClipTransitionSourceFileErrors.length === 0,
+  `Binder Clip Story Transition Card Pack sourceFiles failed validation:\n${binderClipTransitionSourceFileErrors.join('\n')}`,
+)
+const binderClipTransitionExpectedPdfPages = binderClipTransitionSource.cards.length + 5
+const binderClipTransitionArtifactStatus = inspectArtifactFiles(root, binderClipTransitionSource.artifact, {
+  expectedPdfPages: binderClipTransitionExpectedPdfPages,
+})
+expect(
+  binderClipTransitionArtifactStatus.valid,
+  `Binder Clip Story Transition Card Pack artifacts failed validation:\n${binderClipTransitionArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  binderClipTransitionArtifactStatus.files.pdf.size > 100_000,
+  `Binder Clip Story Transition Card Pack PDF artifact is unexpectedly small: ${binderClipTransitionArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  binderClipTransitionArtifactStatus.files.pdf.pageCount === binderClipTransitionExpectedPdfPages,
+  `Binder Clip Story Transition Card Pack PDF artifact must have ${binderClipTransitionExpectedPdfPages} pages.`,
+)
+expect(
+  binderClipTransitionArtifactStatus.files.zip.size > binderClipTransitionArtifactStatus.files.pdf.size,
+  'Binder Clip Story Transition Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const binderClipTransitionCheckoutErrors = validateCheckoutReadiness(
+  binderClipTransitionProduct,
+  binderClipTransitionArtifactStatus,
+)
+expect(
+  binderClipTransitionCheckoutErrors.length === 0,
+  `Binder Clip Story Transition Card Pack checkout readiness failed validation:\n${binderClipTransitionCheckoutErrors.join('\n')}`,
+)
+const binderClipTransitionArtifactManifest = readJson(resolve(root, binderClipTransitionSource.artifact.manifestPath))
+expect(
+  binderClipTransitionArtifactManifest.sourcePageCount === binderClipTransitionSource.cards.length,
+  'Binder Clip Story Transition Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(binderClipTransitionArtifactManifest.files.assets),
+  'Binder Clip Story Transition Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  binderClipTransitionArtifactManifest.files.assets.length === binderClipTransitionSource.worldSlugs.length,
+  'Binder Clip Story Transition Card Pack artifact manifest must include one copied local image per source world.',
+)
+const binderClipTransitionManifestAssetErrors = validateManifestWorldAssets(
+  binderClipTransitionSource,
+  binderClipTransitionArtifactManifest,
+)
+expect(
+  binderClipTransitionManifestAssetErrors.length === 0,
+  `Binder Clip Story Transition Card Pack artifact manifest image coverage failed validation:\n${binderClipTransitionManifestAssetErrors.join('\n')}`,
+)
+for (const asset of binderClipTransitionArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Binder Clip Story Transition Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -7120,6 +7384,7 @@ const productImageManifests = [
   batch40ProductImages,
   batch41ProductImages,
   batch42ProductImages,
+  batch43ProductImages,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

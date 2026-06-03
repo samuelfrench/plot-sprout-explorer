@@ -550,6 +550,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable paper clip story solution cards with adult guide tools, solution routines, and take-home solution slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'binder-clip-story-transition-card-pack',
+    title: 'Binder Clip Story Transition Card Pack',
+    pricePoint: '$59',
+    description:
+      'Sixteen printable binder clip story transition cards with adult guide tools, transition routines, and take-home transition slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]
