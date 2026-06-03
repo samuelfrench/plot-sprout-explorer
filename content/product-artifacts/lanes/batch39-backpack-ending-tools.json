@@ -1,0 +1,192 @@
+{
+  "laneId": "batch39-backpack-ending-tools",
+  "batchId": "2026-06-03-batch39",
+  "productSlug": "backpack-story-ending-card-pack",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the ending cards, backpack sleeve, blank slips, and adult guide before writers gather.",
+      "Use a pretend paper backpack only; no personal bags, labels, or private items are part of the activity.",
+      "Set out pencils and scrap paper for fictional closing choices, final feelings, object returns, echo lines, and final images.",
+      "Tell writers every ending belongs to an invented story world and can be changed gently.",
+      "Keep the session adult-led, offline, and paper-only from the first card to the last slip."
+    ],
+    "backpackEndingSetup": [
+      "Place three ending cards in the pretend paper backpack and keep the rest face down.",
+      "Put one blank slip beside each card for the writer's chosen closing detail.",
+      "Invite the writer to pick one ending job: return an object, echo an earlier line, choose a final feeling, or draw the last image.",
+      "Ask the adult helper to read choices aloud and let the writer select one paper path.",
+      "Keep every label invented, broad, and tied to the story page rather than personal life."
+    ],
+    "endingCoaching": [
+      "Ask what choice the character makes on the final page and write it in one short phrase.",
+      "Ask which pretend object comes back and what it means now.",
+      "Help the writer echo one earlier story word without copying a whole scene.",
+      "Name one final feeling that is calm, clear, or hopeful.",
+      "Use gentle revision by asking what can be clearer, softer, or more complete on the ending slip."
+    ],
+    "privacyAndSafetyNotes": [
+      "Do not ask for personal names, family routines, exact places, travel clues, devices, images, audio, accounts, or public posting.",
+      "If a writer mentions an actual place or person, replace it with an invented story label.",
+      "Keep completed slips with the adult helper or send one paper slip to a family reader.",
+      "Use only fictional characters, pretend objects, broad story places, and made-up closing lines.",
+      "Skip any prompt that feels like collecting private details instead of shaping a fictional ending."
+    ],
+    "familyHandoff": [
+      "Send one chosen ending slip with a note that the activity stays adult-led and offline.",
+      "Invite the family reader to ask about the character's final choice, not about private life.",
+      "Offer one fresh blank slip for a gentler alternate ending.",
+      "Tell families that invented labels and made-up places are the safest way to keep the story playful.",
+      "Let the writer decide whether to read a line aloud or simply point to the final image."
+    ],
+    "reset": [
+      "Collect the cards, blank slips, pencils, and paper backpack sleeve.",
+      "Remove any slip with personal details and rewrite it as an invented story detail if the adult keeps it.",
+      "Shuffle ending cards so the next group sees a fresh mix.",
+      "Store finished fictional slips separately from unused blanks."
+    ]
+  },
+  "endingRoutines": [
+    {
+      "name": "Object Comes Back",
+      "bestFor": "Writers who need a concrete way to close the story.",
+      "steps": [
+        "Adult chooses one ending card and asks which pretend object mattered earlier.",
+        "Writer writes how the object appears again near the end.",
+        "Adult asks what the object means after the character's final choice.",
+        "Writer writes one closing sentence that returns the object gently."
+      ]
+    },
+    {
+      "name": "Echo Line Close",
+      "bestFor": "Writers practicing a satisfying repeated phrase.",
+      "steps": [
+        "Adult helps the writer pick one harmless word or short phrase from earlier in the story.",
+        "Writer changes the phrase slightly so it feels new at the end.",
+        "Adult asks what feeling the echo should leave.",
+        "Writer writes the echo as the last spoken or narrated line."
+      ]
+    },
+    {
+      "name": "Final Feeling Fold",
+      "bestFor": "Ending a story with emotional clarity.",
+      "steps": [
+        "Adult places three feeling slips beside one ending card.",
+        "Writer picks one gentle final feeling for the character.",
+        "Adult asks what choice helped the character reach that feeling.",
+        "Writer writes one sentence that shows the feeling through action."
+      ]
+    },
+    {
+      "name": "Last Image Window",
+      "bestFor": "Writers who think in pictures before sentences.",
+      "steps": [
+        "Adult asks the writer to sketch or name the final image on a blank slip.",
+        "Writer adds one color, sound, or tiny motion to the image.",
+        "Adult asks why that image belongs at the end.",
+        "Writer turns the image into one closing sentence."
+      ]
+    },
+    {
+      "name": "Choice And Consequence",
+      "bestFor": "Showing that an ending follows from a character decision.",
+      "steps": [
+        "Adult asks what the character finally chooses to do.",
+        "Writer writes the choice in one short invented sentence.",
+        "Adult asks what small, gentle change happens because of the choice.",
+        "Writer writes the change as the next-to-last or last sentence."
+      ]
+    },
+    {
+      "name": "Gentle Ending Repair",
+      "bestFor": "Revising an ending that feels abrupt or unclear.",
+      "steps": [
+        "Adult reads the ending card and asks which part feels unfinished.",
+        "Writer marks one place to add a closing choice, object return, feeling, or image.",
+        "Adult offers two calm wording options and lets the writer choose.",
+        "Writer writes a cleaner final line on a fresh slip."
+      ]
+    }
+  ],
+  "takeHomeEndingSlips": [
+    {
+      "title": "Lantern Return Slip",
+      "time": "One paper pass",
+      "skill": "object return",
+      "direction": "Bring back a pretend lantern near the ending and write what it means now: ____________________.",
+      "familyLine": "A family reader can ask which earlier story moment the lantern echoes: ____________________."
+    },
+    {
+      "title": "Pocket Pebble Close",
+      "time": "Calm pencil pass",
+      "skill": "final image",
+      "direction": "Write the last image of a pocket pebble resting in a made-up place: ____________________.",
+      "familyLine": "A family reader can ask why that image feels like an ending: ____________________."
+    },
+    {
+      "title": "Ribbon Gate Choice",
+      "time": "Single slip",
+      "skill": "closing choice",
+      "direction": "Write the character's final choice at an invented ribbon gate: ____________________.",
+      "familyLine": "A family reader can ask what gentle change follows that choice: ____________________."
+    },
+    {
+      "title": "Cloud Bell Echo",
+      "time": "Folded slip",
+      "skill": "echo line",
+      "direction": "Repeat one earlier made-up phrase in a new ending line: ____________________.",
+      "familyLine": "A family reader can ask how the phrase feels different at the end: ____________________."
+    },
+    {
+      "title": "Blue Button Feeling",
+      "time": "Family table pass",
+      "skill": "final feeling",
+      "direction": "Choose one final feeling for a character holding a blue button: ____________________.",
+      "familyLine": "A family reader can ask what action shows that feeling: ____________________."
+    },
+    {
+      "title": "Tiny Bridge Ending",
+      "time": "Paper-only pass",
+      "skill": "consequence",
+      "direction": "Write what changes after a character crosses a tiny pretend bridge: ____________________.",
+      "familyLine": "A family reader can ask which choice made the change happen: ____________________."
+    },
+    {
+      "title": "Moon Thread Return",
+      "time": "Quiet story pass",
+      "skill": "object meaning",
+      "direction": "Bring back a moon thread and write why it matters at the end: ____________________.",
+      "familyLine": "A family reader can ask what the moon thread helped the character understand: ____________________."
+    },
+    {
+      "title": "Garden Door Last Look",
+      "time": "One-card pass",
+      "skill": "visual ending",
+      "direction": "Write the final look at an invented garden door: ____________________.",
+      "familyLine": "A family reader can ask what detail makes the door feel finished: ____________________."
+    },
+    {
+      "title": "Quiet Market Goodbye",
+      "time": "Shared aloud pass",
+      "skill": "gentle closure",
+      "direction": "Write a short goodbye line for a made-up market character: ____________________.",
+      "familyLine": "A family reader can ask what the goodbye leaves behind: ____________________."
+    },
+    {
+      "title": "Fresh Ending Slip",
+      "time": "Revision pass",
+      "skill": "gentle revision",
+      "direction": "Rewrite one ending line so it is clearer or softer: ____________________.",
+      "familyLine": "A family reader can ask which word made the ending stronger: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Optional, adult-led offline prompt: my fictional ending choice is ____________________.",
+    "Optional, adult-led offline prompt: the pretend object that came back was ____________________.",
+    "Optional, adult-led offline prompt: the final feeling on my paper slip is ____________________.",
+    "Optional, adult-led offline prompt: my ending echo line uses the word ____________________.",
+    "Optional, adult-led offline prompt: the last image in the made-up story is ____________________.",
+    "Optional, adult-led offline prompt: one gentle change at the end is ____________________.",
+    "Optional, adult-led offline prompt: I made the ending clearer by changing ____________________.",
+    "Optional, adult-led offline prompt: an adult can add one invented closing detail here: ____________________."
+  ]
+}
