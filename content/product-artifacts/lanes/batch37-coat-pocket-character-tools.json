@@ -1,0 +1,190 @@
+{
+  "laneId": "batch37-coat-pocket-character-tools",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the character cards, pocket label, and slips before the session; keep every piece paper-only and adult-led.",
+      "Use a folded envelope or printed pouch labeled Pretend Paper Coat Pocket; never use or inspect real clothing.",
+      "Set out pencils, blank cards, and scrap paper for invented roles, invented objects, and story lines only.",
+      "Remind writers that every character is made up, with no real names, real places, or private details.",
+      "Frame the goal as one playful paper character plus one story line, not a finished assignment."
+    ],
+    "paperCharacterSetup": [
+      "Place the blank character cards inside the pretend paper coat pocket and let the adult handle the pocket between turns.",
+      "On the first card, write an invented character role with no real person attached: ____________________.",
+      "On the second card, write one harmless pretend pocket object for that character: ____________________.",
+      "On the third card, write one tiny make-believe wish or question for the character: ____________________.",
+      "Clip the three cards together so the writer has a paper character bundle before drafting."
+    ],
+    "characterCoaching": [
+      "Ask what the invented character wants on the story page, then write the want in one short phrase: ____________________.",
+      "Ask what the paper pocket object helps the character try, then write the helpful detail: ____________________.",
+      "Coach one visible trait that appears through action, such as careful, bold, or curious: ____________________.",
+      "Guide the writer to add one line the character could say in a pretend scene: ____________________.",
+      "If the idea turns toward real people or real places, redirect to a fictional role and setting: ____________________."
+    ],
+    "privacyAndSafetyNotes": [
+      "Do not ask writers to describe actual pockets, clothing, rooms, routes, schools, homes, relatives, or private places.",
+      "Use fictional role labels such as cloud gardener, moon baker, paper inventor, or tiny museum guide.",
+      "If a real name appears, replace it with a made-up character name: ____________________.",
+      "If a private location appears, replace it with a pretend story place: ____________________.",
+      "Keep all sharing local to the paper session and limited to invented words, sketches, or story lines."
+    ],
+    "familyHandoff": [
+      "Send only the completed paper cards and slips, with no request for personal details or real-life descriptions.",
+      "Invite the adult reader to ask for one favorite invented word from the card: ____________________.",
+      "Suggest a short family read-through of one story line, with the writer choosing what to read: ____________________.",
+      "Keep the pretend paper coat pocket label with the cards so the theme stays fictional and paper-based.",
+      "Use the reset card if a writer wants a fresh fictional role instead of revising a real-life detail."
+    ],
+    "reset": [
+      "Collect loose cards, remove any real names or private-place details, and keep only fictional paper pieces.",
+      "Return unused blanks to the pretend paper coat pocket for the next adult-led round.",
+      "Invite one fresh invented role to restart the set: ____________________.",
+      "Store the pack flat with pencils and blank slips for the next paper session."
+    ]
+  },
+  "characterRoutines": [
+    {
+      "name": "Paper Pocket Role Pull",
+      "bestFor": "Starting a fictional character without using real identity details.",
+      "steps": [
+        "Adult places three blank cards inside the pretend paper coat pocket.",
+        "Writer pulls one paper card and writes a made-up role: ____________________.",
+        "Writer adds one harmless pretend pocket object for that role: ____________________.",
+        "Writer starts a story sentence using the role and object: ____________________."
+      ]
+    },
+    {
+      "name": "Button-Size Backstory",
+      "bestFor": "Building a tiny character history that stays fictional.",
+      "steps": [
+        "Adult chooses a blank card and labels it Backstory Button.",
+        "Writer writes one invented place from a fantasy setting, not a real place: ____________________.",
+        "Writer writes one tiny reason the character carries the paper pocket object: ____________________.",
+        "Writer turns the reason into one character line: ____________________."
+      ]
+    },
+    {
+      "name": "Pocket Object Motive Match",
+      "bestFor": "Connecting character wants to a safe story action.",
+      "steps": [
+        "Adult lays out two character cards and two object cards from the paper pocket.",
+        "Writer pairs one invented role with one pretend object: ____________________.",
+        "Writer writes what the character hopes the object will help with: ____________________.",
+        "Writer writes the first try the character makes on the page: ____________________."
+      ]
+    },
+    {
+      "name": "Two-Card Character Voice",
+      "bestFor": "Practicing dialogue without real conversations or recordings.",
+      "steps": [
+        "Adult picks one role card and one trait card from the pretend paper pocket.",
+        "Writer writes an invented character name: ____________________.",
+        "Writer writes one short line the character might say in a pretend scene: ____________________.",
+        "Adult helps the writer add one action after the line: ____________________."
+      ]
+    },
+    {
+      "name": "Trait Turnaround",
+      "bestFor": "Showing how a fictional character changes across a story.",
+      "steps": [
+        "Adult gives the writer a Start Trait card and an Ending Trait card.",
+        "Writer writes the character's starting trait: ____________________.",
+        "Writer writes one paper-pocket object that helps the character practice a new choice: ____________________.",
+        "Writer writes the ending trait in a final story line: ____________________."
+      ]
+    },
+    {
+      "name": "Character Card Chain",
+      "bestFor": "Group or family table play with each person adding only fictional details.",
+      "steps": [
+        "Adult starts the chain with one invented role card: ____________________.",
+        "Next writer adds one harmless pretend object card: ____________________.",
+        "Next writer adds one made-up wish, question, or problem: ____________________.",
+        "Final writer combines the cards into one story opening: ____________________."
+      ]
+    }
+  ],
+  "takeHomeCharacterSlips": [
+    {
+      "title": "Moon Button Keeper",
+      "time": "Single paper slip",
+      "skill": "character role",
+      "direction": "Write an invented character who keeps a moon button in the pretend paper pocket: ____________________.",
+      "familyLine": "Adult reader asks for one made-up word connected to the button: ____________________."
+    },
+    {
+      "title": "Cloud Bakery Helper",
+      "time": "One short card",
+      "skill": "character want",
+      "direction": "Write what a cloud bakery helper wants to fix, make, or find in a pretend scene: ____________________.",
+      "familyLine": "Family reader can ask for one gentle action the helper tries: ____________________."
+    },
+    {
+      "title": "Tiny Museum Guide",
+      "time": "Folded slip",
+      "skill": "character voice",
+      "direction": "Write one line a tiny museum guide says about an imaginary display: ____________________.",
+      "familyLine": "Adult reader can point to a sketch and ask for one invented label: ____________________."
+    },
+    {
+      "title": "Paper Lantern Maker",
+      "time": "Two-line card",
+      "skill": "trait through action",
+      "direction": "Write one careful action the paper lantern maker takes on the story page: ____________________.",
+      "familyLine": "Family reader asks which trait the action shows: ____________________."
+    },
+    {
+      "title": "Pebble Orchestra Leader",
+      "time": "Small card",
+      "skill": "character detail",
+      "direction": "Write one pretend sound the pebble orchestra leader loves: ____________________.",
+      "familyLine": "Adult reader asks for one invented instrument name: ____________________."
+    },
+    {
+      "title": "Pocket Signal Sorter",
+      "time": "One paper pocket card",
+      "skill": "motive",
+      "direction": "Write why the pocket signal sorter carries a pretend signal token: ____________________.",
+      "familyLine": "Family reader asks what the signal token helps with in the story: ____________________."
+    },
+    {
+      "title": "Ribbon Cloud Painter",
+      "time": "Sketch plus line",
+      "skill": "sensory detail",
+      "direction": "Sketch a pretend ribbon cloud and write one color or texture word: ____________________.",
+      "familyLine": "Adult reader asks for one story sentence about the sketch: ____________________."
+    },
+    {
+      "title": "Clockless Picnic Planner",
+      "time": "Single scene slip",
+      "skill": "scene action",
+      "direction": "Write one pretend picnic item the character packs in the paper pocket: ____________________.",
+      "familyLine": "Family reader asks what the item does in the story: ____________________."
+    },
+    {
+      "title": "Acorn Page Turner",
+      "time": "One character card",
+      "skill": "character change",
+      "direction": "Write how the acorn page turner feels at the start and end of the story: ____________________.",
+      "familyLine": "Adult reader asks what choice helped the change happen: ____________________."
+    },
+    {
+      "title": "Story Thread Finder",
+      "time": "One closing slip",
+      "skill": "story ending",
+      "direction": "Write one final line where the character uses the pretend pocket object kindly or cleverly: ____________________.",
+      "familyLine": "Family reader asks for one favorite invented phrase from the ending: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Optional: read one invented character name from a paper card: ____________________.",
+    "Optional: show one harmless sketch from a card and say one made-up word: ____________________.",
+    "Optional: share one pretend pocket object and its story job: ____________________.",
+    "Optional: read one character line from the paper slip: ____________________.",
+    "Optional: point to a trait card and name the invented action that shows it: ____________________.",
+    "Optional: share one fictional place name from the story page: ____________________.",
+    "Optional: read the first sentence of a pretend character scene: ____________________.",
+    "Optional: trade one blank card with an adult and add a new invented role: ____________________."
+  ]
+}

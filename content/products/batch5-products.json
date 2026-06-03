@@ -2484,6 +2484,130 @@
           "summary": "A binding day world for choosing the clearest closing viewpoint."
         }
       ]
+    },
+    {
+      "slug": "coat-pocket-story-character-card-pack",
+      "title": "Coat Pocket Story Character Card Pack",
+      "pricePoint": "$47",
+      "status": "checkout_pending",
+      "headline": "A printable character-card pack for screen-free paper-pocket story helpers.",
+      "summary": "Sixteen adult-led coat-pocket cards help kids invent fictional characters from made-up pocket items, wants, worries, actions, and voices.",
+      "heroImage": "images/plotsprout/batch37/coat-pocket-story-character-card-pack.jpg",
+      "ctaLabel": "Request character card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Coat%20Pocket%20Story%20Character%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static coat pocket story character card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable coat pocket story character cards",
+        "Adult setup guide",
+        "Fictional character safety notes",
+        "Pretend paper pocket coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led character routines",
+        "Ten take-home character slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one fictional character before a full story",
+        "A tutoring or co-op table where writers can fill one character card at a time",
+        "A family table warm-up where a pretend paper pocket item reduces blank-page pressure",
+        "A reluctant-writer activity that separates character building from a full draft",
+        "A take-home character slip set for finishing one invented helper offline"
+      ],
+      "parentSteps": [
+        "Choose one character routine before the activity starts.",
+        "Set the paper, pencil, pretend pocket labels, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one pretend paper-pocket item into a fictional character clue rather than using personal facts.",
+        "Send one character slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for naming a pocket-crumb keeper with a gentle want."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for turning a pretend stamp clue into a helper character."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for connecting a ticket clue to a character want and worry."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for giving a map mender one helpful choice."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for matching a character voice to a weather clue."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for building a notice-board helper from one paper clue."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for pairing a harbor helper with one pocket item and wish."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn office world for showing character through a job and a tiny mix-up."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for linking a folded clue to a character goal."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for revealing personality through an object and decision."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for pairing a strange job with a careful voice."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for building a helper from a tiny job and gentle worry."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for showing character change through a revised choice."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue tower world for creating a label-swap curator with one noticing strength."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for shaping an apprentice through a tool and decision."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for connecting a promise, pocket object, and ending choice."
+        }
+      ]
     }
   ]
 }

@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-03-batch37-product-images",
+  "generatedAt": "2026-06-03",
+  "images": [
+    {
+      "slug": "coat-pocket-story-character-card-pack",
+      "title": "Coat Pocket Story Character Card Pack",
+      "purpose": "Static product page hero and printable-pack shelf image",
+      "prompt": "family-friendly flat lay, blank cream coat pocket story character cards, character guide boxes, screen-free printable coat pocket story character card pack, plain white background, unbranded cozy writing table, only six blank cream writing cards with empty rectangular boxes and one plain wooden pencil, no drawings, no illustrations, no line art, no readable text, no letters, no people, no clothing, no coat, no plant, no cup, no container, no extra props",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, illustration, drawing, line art, character drawing, cartoon, person, people, child, child face, child portrait, hands, body, clothing, coat, jacket, real pocket, actual pocket, fabric, plant, leaves, foliage, flower, food, snack, cup, mug, bowl, container, tableware, plate, book, book cover, real book title, author name, publisher name, phone, tablet, laptop, computer, screen, device, app interface, microphone, audio recorder, camera, photo, recording, transcription, school login, account login, portal, qr code, upload icon, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, address, house, home, street, gps, window view, real window, windowsill, room, brand mark, franchise character, scary, weapon",
+      "seed": 26063749,
+      "outputJpeg": "public/images/plotsprout/batch37/coat-pocket-story-character-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch37/coat-pocket-story-character-card-pack.webp",
+      "sidecar": "content/image-runs/batch37/coat-pocket-story-character-card-pack.json"
+    }
+  ]
+}

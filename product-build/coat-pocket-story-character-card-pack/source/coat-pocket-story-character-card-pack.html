@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coat Pocket Story Character Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-character-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-character-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-character-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper character cards</p>
+        <h1>Coat Pocket Story Character Card Pack</h1>
+        <p>Sixteen paper cards help writers create fictional story characters from made-up paper pocket items, wants, worries, actions, and voices.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable character cards plus adult guide tools, character routines, take-home character slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$47</span>
+        <h2>Included</h2>
+        <ul><li>16 printable coat-pocket character cards</li>
+<li>Adult setup guide</li>
+<li>Fictional character safety notes</li>
+<li>Pretend paper pocket coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led character routines</li>
+<li>Ten take-home character slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Character coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the character cards, pocket label, and slips before the session; keep every piece paper-only and adult-led.</li>
+<li>Use a folded envelope or printed pouch labeled Pretend Paper Coat Pocket; never use or inspect real clothing.</li>
+<li>Set out pencils, blank cards, and scrap paper for invented roles, invented objects, and story lines only.</li>
+<li>Remind writers that every character is made up, with no real names, real places, or private details.</li>
+<li>Frame the goal as one playful paper character plus one story line, not a finished assignment.</li></ul></article>
+        <article class="guide-card"><h3>Paper character setup</h3><ul><li>Place the blank character cards inside the pretend paper coat pocket and let the adult handle the pocket between turns.</li>
+<li>On the first card, write an invented character role with no real person attached: ____________________.</li>
+<li>On the second card, write one harmless pretend pocket object for that character: ____________________.</li>
+<li>On the third card, write one tiny make-believe wish or question for the character: ____________________.</li>
+<li>Clip the three cards together so the writer has a paper character bundle before drafting.</li></ul></article>
+        <article class="guide-card"><h3>Story character coaching</h3><ul><li>Ask what the invented character wants on the story page, then write the want in one short phrase: ____________________.</li>
+<li>Ask what the paper pocket object helps the character try, then write the helpful detail: ____________________.</li>
+<li>Coach one visible trait that appears through action, such as careful, bold, or curious: ____________________.</li>
+<li>Guide the writer to add one line the character could say in a pretend scene: ____________________.</li>
+<li>If the idea turns toward real people or real places, redirect to a fictional role and setting: ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Do not ask writers to describe actual pockets, clothing, rooms, routes, schools, homes, relatives, or private places.</li>
+<li>Use fictional role labels such as cloud gardener, moon baker, paper inventor, or tiny museum guide.</li>
+<li>If a real name appears, replace it with a made-up character name: ____________________.</li>
+<li>If a private location appears, replace it with a pretend story place: ____________________.</li>
+<li>Keep all sharing local to the paper session and limited to invented words, sketches, or story lines.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send only the completed paper cards and slips, with no request for personal details or real-life descriptions.</li>
+<li>Invite the adult reader to ask for one favorite invented word from the card: ____________________.</li>
+<li>Suggest a short family read-through of one story line, with the writer choosing what to read: ____________________.</li>
+<li>Keep the pretend paper coat pocket label with the cards so the theme stays fictional and paper-based.</li>
+<li>Use the reset card if a writer wants a fresh fictional role instead of revising a real-life detail.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect loose cards, remove any real names or private-place details, and keep only fictional paper pieces.</li>
+<li>Return unused blanks to the pretend paper coat pocket for the next adult-led round.</li>
+<li>Invite one fresh invented role to restart the set: ____________________.</li>
+<li>Store the pack flat with pencils and blank slips for the next paper session.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper character card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen character-card worlds</h2>
+      <p>Pick a world image, then create one fictional character from a pretend paper pocket item.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">character routines</p>
+      <h2>Choose the paper character rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Paper Pocket Role Pull</h3>
+      <p>Starting a fictional character without using real identity details.</p>
+      <ol><li>Adult places three blank cards inside the pretend paper coat pocket.</li>
+<li>Writer pulls one paper card and writes a made-up role: ____________________.</li>
+<li>Writer adds one harmless pretend pocket object for that role: ____________________.</li>
+<li>Writer starts a story sentence using the role and object: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Button-Size Backstory</h3>
+      <p>Building a tiny character history that stays fictional.</p>
+      <ol><li>Adult chooses a blank card and labels it Backstory Button.</li>
+<li>Writer writes one invented place from a fantasy setting, not a real place: ____________________.</li>
+<li>Writer writes one tiny reason the character carries the paper pocket object: ____________________.</li>
+<li>Writer turns the reason into one character line: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Pocket Object Motive Match</h3>
+      <p>Connecting character wants to a safe story action.</p>
+      <ol><li>Adult lays out two character cards and two object cards from the paper pocket.</li>
+<li>Writer pairs one invented role with one pretend object: ____________________.</li>
+<li>Writer writes what the character hopes the object will help with: ____________________.</li>
+<li>Writer writes the first try the character makes on the page: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Two-Card Character Voice</h3>
+      <p>Practicing dialogue without real conversations or recordings.</p>
+      <ol><li>Adult picks one role card and one trait card from the pretend paper pocket.</li>
+<li>Writer writes an invented character name: ____________________.</li>
+<li>Writer writes one short line the character might say in a pretend scene: ____________________.</li>
+<li>Adult helps the writer add one action after the line: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Trait Turnaround</h3>
+      <p>Showing how a fictional character changes across a story.</p>
+      <ol><li>Adult gives the writer a Start Trait card and an Ending Trait card.</li>
+<li>Writer writes the character&#39;s starting trait: ____________________.</li>
+<li>Writer writes one paper-pocket object that helps the character practice a new choice: ____________________.</li>
+<li>Writer writes the ending trait in a final story line: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Character Card Chain</h3>
+      <p>Group or family table play with each person adding only fictional details.</p>
+      <ol><li>Adult starts the chain with one invented role card: ____________________.</li>
+<li>Next writer adds one harmless pretend object card: ____________________.</li>
+<li>Next writer adds one made-up wish, question, or problem: ____________________.</li>
+<li>Final writer combines the cards into one story opening: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home character slips</p>
+      <h2>Finish one story character later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Single paper slip | character role</p>
+      <h3>Moon Button Keeper</h3>
+      <p>Write an invented character who keeps a moon button in the pretend paper pocket: ____________________.</p>
+      <p>Adult reader asks for one made-up word connected to the button: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One short card | character want</p>
+      <h3>Cloud Bakery Helper</h3>
+      <p>Write what a cloud bakery helper wants to fix, make, or find in a pretend scene: ____________________.</p>
+      <p>Family reader can ask for one gentle action the helper tries: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Folded slip | character voice</p>
+      <h3>Tiny Museum Guide</h3>
+      <p>Write one line a tiny museum guide says about an imaginary display: ____________________.</p>
+      <p>Adult reader can point to a sketch and ask for one invented label: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Two-line card | trait through action</p>
+      <h3>Paper Lantern Maker</h3>
+      <p>Write one careful action the paper lantern maker takes on the story page: ____________________.</p>
+      <p>Family reader asks which trait the action shows: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Small card | character detail</p>
+      <h3>Pebble Orchestra Leader</h3>
+      <p>Write one pretend sound the pebble orchestra leader loves: ____________________.</p>
+      <p>Adult reader asks for one invented instrument name: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One paper pocket card | motive</p>
+      <h3>Pocket Signal Sorter</h3>
+      <p>Write why the pocket signal sorter carries a pretend signal token: ____________________.</p>
+      <p>Family reader asks what the signal token helps with in the story: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Sketch plus line | sensory detail</p>
+      <h3>Ribbon Cloud Painter</h3>
+      <p>Sketch a pretend ribbon cloud and write one color or texture word: ____________________.</p>
+      <p>Adult reader asks for one story sentence about the sketch: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single scene slip | scene action</p>
+      <h3>Clockless Picnic Planner</h3>
+      <p>Write one pretend picnic item the character packs in the paper pocket: ____________________.</p>
+      <p>Family reader asks what the item does in the story: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One character card | character change</p>
+      <h3>Acorn Page Turner</h3>
+      <p>Write how the acorn page turner feels at the start and end of the story: ____________________.</p>
+      <p>Adult reader asks what choice helped the change happen: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One closing slip | story ending</p>
+      <h3>Story Thread Finder</h3>
+      <p>Write one final line where the character uses the pretend pocket object kindly or cleverly: ____________________.</p>
+      <p>Family reader asks for one favorite invented phrase from the ending: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional: read one invented character name from a paper card: ____________________.</li>
+<li>Optional: show one harmless sketch from a card and say one made-up word: ____________________.</li>
+<li>Optional: share one pretend pocket object and its story job: ____________________.</li>
+<li>Optional: read one character line from the paper slip: ____________________.</li>
+<li>Optional: point to a trait card and name the invented action that shows it: ____________________.</li>
+<li>Optional: share one fictional place name from the story page: ____________________.</li>
+<li>Optional: read the first sentence of a pretend character scene: ____________________.</li>
+<li>Optional: trade one blank card with an adult and add a new invented role: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 1 | Ages 6-8 | role name</div>
+      <h2>Moon Muffin Pocket Crumb Keeper</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside a drawn paper coat pocket and choose one market role together, keeping every detail fictional: ____________________.</p>
+      <p class="kid-direction">With your adult, fill the blanks to make a market character who belongs on the paper card: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Name prompt: Give the character a made-up market name or role label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Paper pocket item: Choose one pretend paper-pocket item the character carries, like a moon crumb tag or tiny tray ticket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Want prompt: What gentle thing does the character want at the Moon Muffin Market? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Worry prompt: What small, story-sized worry makes the character pause? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Action prompt: Write one helpful action the character tries next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Voice prompt: Write one sentence that sounds like this character speaking on paper: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise character: Add one detail that makes the character less plain and more moon-market specific: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to the paper pocket item; writer copies one character word: ____________________. Take-home line: Make one new paper-pocket character from a pretend market clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 2 | Ages 6-8 | item clue</div>
+      <h2>Puddle Planet Pocket Stamp Sorter</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Draw one paper coat pocket on the card and offer two invented mail-room roles to choose from: ____________________.</p>
+      <p class="kid-direction">With your adult, build a puddle-post character using only made-up paper clues: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Name prompt: Give the character a splashy made-up name or helper title: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Paper pocket item: Pick one pretend item tucked in the drawn paper pocket, such as a ripple stamp or floaty label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Want prompt: What does the character want to sort, deliver, or fix in the pretend post office? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Worry prompt: What gentle mix-up makes the character think twice before acting? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Action prompt: Write one careful next step the character takes with the mail clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Voice prompt: Write one short line in the character&#39;s puddle-post voice: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise character: Add one stamp, splash, counter, or label detail that shows who this character is: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult names one paper item; writer adds one matching character word: ____________________. Take-home line: Create another pretend paper-pocket helper for a make-believe mail counter: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 3 | Ages 7-9 | want and worry</div>
+      <h2>Buttonwood Ticket Pocket Page Turner</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place a pretend paper coat pocket beside a ticket shape and keep the character role invented: ____________________.</p>
+      <p class="kid-direction">With your adult, give the library-train character a want, a worry, and one paper-pocket clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Name prompt: Name the character with a fictional rail-library role, such as shelf rider or ticket page helper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Paper pocket item: Choose one pretend paper-pocket item from the train library, like a lantern ticket or bookmark wheel: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Want prompt: What does the character want before the next shelf stop? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Worry prompt: What small question or mix-up keeps the character from feeling ready? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Action prompt: Write one action the character takes inside the pretend train car: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Voice prompt: Write one calm library-train sentence this character might say: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise character: Add one detail that connects the want to the paper-pocket item: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle want or worry first, then fill one short character blank: ____________________. Take-home line: Make one new library-train character with a ticket clue and a gentle want: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 4 | Ages 7-9 | choice under confusion</div>
+      <h2>Button Bakery Pocket Map Mender</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Put the card next to a drawn paper coat pocket and a pretend bakery map, then choose one made-up role: ____________________.</p>
+      <p class="kid-direction">With your adult, make a character who uses a paper-pocket clue to handle a map mix-up: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Name prompt: Give the character a bakery-map name or role label that is completely invented: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Paper pocket item: Choose one pretend item in the drawn paper pocket, such as a crumb compass or button-map tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Want prompt: What does the character want the map to help everyone find? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Worry prompt: What small confusion makes the map hard to understand at first? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Action prompt: Write the helpful choice the character makes with the pocket clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Voice prompt: Write one polite bakery-map line in this character&#39;s voice: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise character: Add one bakery, button, crumb, or folded-map detail to sharpen the character: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to the map clue; writer fills one choice word: ____________________. Take-home line: Invent another paper-pocket map mender with one clear helpful choice: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 5 | Ages 7-8 | voice clue</div>
+      <h2>Teacup Weather Pocket Ribbon Watcher</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Draw a tiny paper coat pocket on the card and pick one gentle weather-window symbol together: ____________________.</p>
+      <p class="kid-direction">With your adult, create a teacup-town character whose voice matches the paper weather clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Name prompt: Name the character with a made-up teacup role or weather-window title: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Paper pocket item: Choose one pretend pocket item, such as a cloud ribbon, saucer note, or spoon-sized forecast card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Want prompt: What does the character want to understand about the tiny weather window? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Worry prompt: What gentle weather surprise makes the character speak carefully? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Action prompt: Write one kind action the character takes near the teacup window: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Voice prompt: Write one line that sounds careful, bright, or curious in this character&#39;s voice: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise character: Replace one plain word with a teacup or weather-window detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult offers two voice words; writer chooses one and fills the blank: ____________________. Take-home line: Make another paper-pocket character who speaks like a tiny weather watcher: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 6 | Ages 7-9 | notice-board role</div>
+      <h2>Pocket Park Tack-Tab Keeper</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Keep the notice board fully make-believe, place a drawn paper coat pocket beside it, and choose one invented park role: ____________________.</p>
+      <p class="kid-direction">With your adult, build a pocket-park character from one paper notice clue and one pretend pocket item: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Name prompt: Give the character a made-up pocket-park name or notice-board helper role: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Paper pocket item: Choose one pretend item in the drawn paper pocket, such as a ribbon tack, leaf label, or tiny note card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Want prompt: What does the character want the pretend notice to help with in the paper park? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Worry prompt: What small, gentle concern makes the character check the notice again? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Action prompt: Write one action the character takes to make the paper notice clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Voice prompt: Write one friendly pocket-park sentence this character could say: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise character: Add one notice-board, leaf, ribbon, or bench detail that makes the character memorable: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult reads the pretend notice clue; writer adds one role word: ____________________. Take-home line: Create one more fictional notice-board helper from a paper-pocket clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 7 | Ages 7-9 | Build a character from a pretend pocket item, a small wish, and a gentle worry.</div>
+      <h2>Button Captain on Spoon-Ferry Pier</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Fold the card so the pretend coat-pocket flap covers the prompts, then reveal one line at a time: ____________________.</p>
+      <p class="kid-direction">Kid: Make up a character for the paper harbor world. Start with one safe pretend detail: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Give the spoon-ferry helper a made-up name: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Name or draw the tiny paper item tucked in the pretend coat pocket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Write what the character wants before the lunchbox tide turns: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Write the small worry that makes the choice tricky: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Write one gentle action the character tries on the ferry pier: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Write one sentence in the character&#39;s own voice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Change one detail so the character feels more surprising: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: choose the pocket item silently, then fill this line: ____________________. Take-home line: A character can start with one paper pocket item and one wish: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 8 | Ages 7-9 | Show character through a job, a pocket clue, and a helpful choice.</div>
+      <h2>The Acorn Stamp Clerk&#39;s Tiny Mix-Up</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place the card beside a pencil and call the coat pocket a pretend paper pocket, not real clothing: ____________________.</p>
+      <p class="kid-direction">Kid: Invent an office character who helps in a made-up acorn avenue. First idea: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Give the acorn stamp clerk a made-up name: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Write the pretend paper pocket item that causes a tiny mix-up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Write what the character wants to fix or finish today: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Write what the character worries might be misunderstood: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Write one careful action the character takes at the errand counter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Write one polite line the character says: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Add one unexpected habit, sound, or motion to the character: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: point to a prompt, then fill just this blank: ____________________. Take-home line: A tiny mix-up can reveal what a character cares about: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 9 | Ages 8-10 | Connect a fictional role, object, goal, and hesitation into a stronger character.</div>
+      <h2>Map-Room Seed Keeper with a Folded Clue</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Cut the card apart if desired and keep the pocket clue fictional, with no real addresses or private places: ____________________.</p>
+      <p class="kid-direction">Kid: Create a map-room character from invented details only. First clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Give the seed keeper a made-up name: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Write the folded paper clue found in the pretend coat pocket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Write what the character wants the map to help with: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Write the character&#39;s quiet worry about choosing the wrong seed shelf: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Write one thoughtful action the character takes in the map room: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Write one sentence that sounds like this character speaking: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise the character by changing the clue, the want, or the worry: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill one blank and let the adult read the card aloud: ____________________. Take-home line: A good fictional character has a clue, a want, and a worry: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 10 | Ages 8-10 | Use a character&#39;s object and decision to reveal personality.</div>
+      <h2>Rain-Gauge Conductor and the Puddle Ticket</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Present the coat pocket as a drawn paper pocket on the card and keep the railway path imaginary: ____________________.</p>
+      <p class="kid-direction">Kid: Make a conductor, passenger, or station helper for the pretend railway. Start here: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Give the railway character a made-up name: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Write the pretend paper pocket item, such as a puddle ticket or gauge note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Write what the character wants to understand about the rainy railway: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Write what makes the character pause before acting: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Write one kind or clever action the character takes near the rain gauge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Write one line the character would say on the platform: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Change one trait so the character reacts differently to the rain: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: choose a role and fill this one blank: ____________________. Take-home line: A pocket item can show how a character solves a problem: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 11 | Ages 8-10 | Create a character voice by pairing a strange job with a personal concern.</div>
+      <h2>Moss Message Signal-Sorter</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Read the prompts aloud and remind writers that all names, places, and pocket items are made up: ____________________.</p>
+      <p class="kid-direction">Kid: Invent a signal-sorter, moss reader, or signal helper. Begin with one imagined detail: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Give the observatory character a made-up name: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Write the pretend paper pocket item that helps read moss messages: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Write what the character hopes to discover from the soft observatory signals: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Write the gentle worry that keeps the character careful: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Write one patient action the character takes while sorting messages: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Write one sentence in a calm character voice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise by adding one new quirk, tool, or rule for the character: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw the pocket item first, then name it here: ____________________. Take-home line: A character gets stronger when a job, item, and worry fit together: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 12 | Ages 8-10 | Builds a character from a small job, a pretend object, and one gentle worry.</div>
+      <h2>The Barnacle Button Keeper</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this printable card beside the printed pretend coat pocket and remind the writer that every pocket item is made up on paper: ____________________.</p>
+      <p class="kid-direction">Write a short scene where your tidepool lab character notices a tiny change and decides what to do next: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Give the fictional tidepool helper a made-up name: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Choose one pretend paper-pocket item, like a shell button, kelp ribbon, or bubble note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Write what this character wants to fix, learn, or protect in the tidepool lab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Write one gentle worry that makes the job harder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Write one careful action the character takes with the pretend pocket item: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Write one line the character says in a curious, careful voice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise by adding one habit the character repeats when thinking: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write only the name, pocket item, and first action: ____________________. Take-home slip: Finish this sentence for another tidepool character: In my pretend paper pocket, I keep ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 13 | Ages 10-11 | Shows character change by giving the character a first idea, a revised idea, and a better choice.</div>
+      <h2>The Ferry Pilot With a Patchwork Oar Tag</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Slide the card under the printed pretend coat pocket flap and frame the pocket item as a paper story prop only: ____________________.</p>
+      <p class="kid-direction">Write a scene where the ferry character crosses Revision River and changes one idea before reaching the dock: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Name the fictional ferry character with a name that sounds ready for revision: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Write the pretend paper-pocket item that helps them rethink a plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Write the first thing the character wants before the ferry ride begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Write the worry that makes the character hold too tightly to the first plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Write the action that shows the character trying a revised choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Write one line in the character&#39;s voice before or after the revision: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise by changing the character&#39;s want so it becomes more specific: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write the first plan and the revised plan in two short phrases: ____________________. Take-home slip: Invent another Revision River passenger and the paper-pocket clue they carry: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 14 | Ages 10-11 | Creates a clue-friendly character with a role, a secret preference, and a non-scary mistake to solve.</div>
+      <h2>The Label-Swap Curator</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Hand over the card with the printed pretend coat pocket visible, and keep all clues imaginary museum labels on paper: ____________________.</p>
+      <p class="kid-direction">Write a museum scene where the character notices one label that does not match its exhibit: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Name the fictional clue-label tower character: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Write the pretend paper-pocket item, such as a blank tag, tiny stamp, or folded exhibit note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Write what the character wants the museum visitors in the story to understand: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Write the character&#39;s worry about the mixed-up clue label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Write one action the character takes to compare two imaginary labels: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Write one thoughtful line the character says while studying the clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise by adding one surprising thing the character is good at noticing: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write only the mixed-up label and the character&#39;s first guess: ____________________. Take-home slip: Make a new fictional museum role and one pretend paper-pocket label: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 15 | Ages 10-11 | Builds a character through tools, decision-making, and a specific strength under pressure-free conditions.</div>
+      <h2>The North-Needle Apprentice</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Put this card beside the printed pretend coat pocket and invite the writer to choose only imaginary craft materials: ____________________.</p>
+      <p class="kid-direction">Write a scene where the apprentice tests a compass craft and learns something about how they make choices: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Name the fictional compass-craft apprentice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Write the pretend paper-pocket item, like a paper needle, painted bead, or folded direction card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Write what the character wants their compass craft to point toward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Write one worry that could make the character rush, guess, or doubt themselves: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Write the careful action the character takes before deciding which way to turn: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Write one line that shows the character thinking through the choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise by adding one small flaw that makes the character more interesting but still kind: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write a three-part character note: tool, want, worry: ____________________. Take-home slip: Finish this new compass character idea: My pretend paper-pocket tool points toward ____________________.</p>
+    </section>
+
+    <section class="pack-page story-character-card-page">
+      <div class="page-kicker">Character Card 16 | Ages 10-11 | Connects a character&#39;s promise, pocket object, and ending choice so the character feels complete.</div>
+      <h2>The Button-Thread Boardwalk Binder</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set the card on the table with the printed pretend coat pocket showing; all boardwalk details should stay fictional and paper-based: ____________________.</p>
+      <p class="kid-direction">Write a scene where the boardwalk binder uses a pretend pocket item to help finish a loose story page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Character name</h3>
+      <p>Name the fictional binding-day boardwalk character: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket item</h3>
+      <p>Write the pretend paper-pocket item, such as a button card, thread tag, or folded page corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Want clue</h3>
+      <p>Write the promise the character wants to keep by the end of the scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Worry clue</h3>
+      <p>Write the worry that makes keeping the promise feel uncertain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Action clue</h3>
+      <p>Write the action that shows the character choosing how to bind the ending together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Voice choice</h3>
+      <p>Write one line the character says when they understand what the ending needs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise character</h3>
+      <p>Revise by adding one earlier clue that makes the ending choice feel earned: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write the promise and the final choice only: ____________________. Take-home slip: Create another fictional binder and the pretend paper-pocket item that completes their story: ____________________.</p>
+    </section>
+  </body>
+</html>

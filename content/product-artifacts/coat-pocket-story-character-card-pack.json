@@ -1,0 +1,550 @@
+{
+  "batchId": "2026-06-03-batch37",
+  "generatedAt": "2026-06-03",
+  "productSlug": "coat-pocket-story-character-card-pack",
+  "title": "Coat Pocket Story Character Card Pack",
+  "pricePoint": "$47",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable character cards plus adult guide tools, character routines, take-home character slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/coat-pocket-story-character-card-pack/Coat-Pocket-Story-Character-Card-Pack.pdf",
+    "zipPath": "product-build/coat-pocket-story-character-card-pack/coat-pocket-story-character-card-pack.zip",
+    "sourceHtmlPath": "product-build/coat-pocket-story-character-card-pack/source/coat-pocket-story-character-card-pack.html",
+    "manifestPath": "product-build/coat-pocket-story-character-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch37-coat-pocket-character-cards-a.json",
+    "content/product-artifacts/lanes/batch37-coat-pocket-character-cards-b.json",
+    "content/product-artifacts/lanes/batch37-coat-pocket-character-cards-c.json",
+    "content/product-artifacts/lanes/batch37-coat-pocket-character-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable paper character cards",
+    "headline": "Coat Pocket Story Character Card Pack",
+    "subhead": "Sixteen paper cards help writers create fictional story characters from made-up paper pocket items, wants, worries, actions, and voices.",
+    "included": [
+      "16 printable coat-pocket character cards",
+      "Adult setup guide",
+      "Fictional character safety notes",
+      "Pretend paper pocket coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led character routines",
+      "Ten take-home character slips",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Print the character cards, pocket label, and slips before the session; keep every piece paper-only and adult-led.",
+      "Use a folded envelope or printed pouch labeled Pretend Paper Coat Pocket; never use or inspect real clothing.",
+      "Set out pencils, blank cards, and scrap paper for invented roles, invented objects, and story lines only.",
+      "Remind writers that every character is made up, with no real names, real places, or private details.",
+      "Frame the goal as one playful paper character plus one story line, not a finished assignment."
+    ],
+    "paperCharacterSetup": [
+      "Place the blank character cards inside the pretend paper coat pocket and let the adult handle the pocket between turns.",
+      "On the first card, write an invented character role with no real person attached: ____________________.",
+      "On the second card, write one harmless pretend pocket object for that character: ____________________.",
+      "On the third card, write one tiny make-believe wish or question for the character: ____________________.",
+      "Clip the three cards together so the writer has a paper character bundle before drafting."
+    ],
+    "characterCoaching": [
+      "Ask what the invented character wants on the story page, then write the want in one short phrase: ____________________.",
+      "Ask what the paper pocket object helps the character try, then write the helpful detail: ____________________.",
+      "Coach one visible trait that appears through action, such as careful, bold, or curious: ____________________.",
+      "Guide the writer to add one line the character could say in a pretend scene: ____________________.",
+      "If the idea turns toward real people or real places, redirect to a fictional role and setting: ____________________."
+    ],
+    "privacyAndSafetyNotes": [
+      "Do not ask writers to describe actual pockets, clothing, rooms, routes, schools, homes, relatives, or private places.",
+      "Use fictional role labels such as cloud gardener, moon baker, paper inventor, or tiny museum guide.",
+      "If a real name appears, replace it with a made-up character name: ____________________.",
+      "If a private location appears, replace it with a pretend story place: ____________________.",
+      "Keep all sharing local to the paper session and limited to invented words, sketches, or story lines."
+    ],
+    "familyHandoff": [
+      "Send only the completed paper cards and slips, with no request for personal details or real-life descriptions.",
+      "Invite the adult reader to ask for one favorite invented word from the card: ____________________.",
+      "Suggest a short family read-through of one story line, with the writer choosing what to read: ____________________.",
+      "Keep the pretend paper coat pocket label with the cards so the theme stays fictional and paper-based.",
+      "Use the reset card if a writer wants a fresh fictional role instead of revising a real-life detail."
+    ],
+    "reset": [
+      "Collect loose cards, remove any real names or private-place details, and keep only fictional paper pieces.",
+      "Return unused blanks to the pretend paper coat pocket for the next adult-led round.",
+      "Invite one fresh invented role to restart the set: ____________________.",
+      "Store the pack flat with pencils and blank slips for the next paper session."
+    ]
+  },
+  "characterRoutines": [
+    {
+      "name": "Paper Pocket Role Pull",
+      "bestFor": "Starting a fictional character without using real identity details.",
+      "steps": [
+        "Adult places three blank cards inside the pretend paper coat pocket.",
+        "Writer pulls one paper card and writes a made-up role: ____________________.",
+        "Writer adds one harmless pretend pocket object for that role: ____________________.",
+        "Writer starts a story sentence using the role and object: ____________________."
+      ]
+    },
+    {
+      "name": "Button-Size Backstory",
+      "bestFor": "Building a tiny character history that stays fictional.",
+      "steps": [
+        "Adult chooses a blank card and labels it Backstory Button.",
+        "Writer writes one invented place from a fantasy setting, not a real place: ____________________.",
+        "Writer writes one tiny reason the character carries the paper pocket object: ____________________.",
+        "Writer turns the reason into one character line: ____________________."
+      ]
+    },
+    {
+      "name": "Pocket Object Motive Match",
+      "bestFor": "Connecting character wants to a safe story action.",
+      "steps": [
+        "Adult lays out two character cards and two object cards from the paper pocket.",
+        "Writer pairs one invented role with one pretend object: ____________________.",
+        "Writer writes what the character hopes the object will help with: ____________________.",
+        "Writer writes the first try the character makes on the page: ____________________."
+      ]
+    },
+    {
+      "name": "Two-Card Character Voice",
+      "bestFor": "Practicing dialogue without real conversations or recordings.",
+      "steps": [
+        "Adult picks one role card and one trait card from the pretend paper pocket.",
+        "Writer writes an invented character name: ____________________.",
+        "Writer writes one short line the character might say in a pretend scene: ____________________.",
+        "Adult helps the writer add one action after the line: ____________________."
+      ]
+    },
+    {
+      "name": "Trait Turnaround",
+      "bestFor": "Showing how a fictional character changes across a story.",
+      "steps": [
+        "Adult gives the writer a Start Trait card and an Ending Trait card.",
+        "Writer writes the character's starting trait: ____________________.",
+        "Writer writes one paper-pocket object that helps the character practice a new choice: ____________________.",
+        "Writer writes the ending trait in a final story line: ____________________."
+      ]
+    },
+    {
+      "name": "Character Card Chain",
+      "bestFor": "Group or family table play with each person adding only fictional details.",
+      "steps": [
+        "Adult starts the chain with one invented role card: ____________________.",
+        "Next writer adds one harmless pretend object card: ____________________.",
+        "Next writer adds one made-up wish, question, or problem: ____________________.",
+        "Final writer combines the cards into one story opening: ____________________."
+      ]
+    }
+  ],
+  "takeHomeCharacterSlips": [
+    {
+      "title": "Moon Button Keeper",
+      "time": "Single paper slip",
+      "skill": "character role",
+      "direction": "Write an invented character who keeps a moon button in the pretend paper pocket: ____________________.",
+      "familyLine": "Adult reader asks for one made-up word connected to the button: ____________________."
+    },
+    {
+      "title": "Cloud Bakery Helper",
+      "time": "One short card",
+      "skill": "character want",
+      "direction": "Write what a cloud bakery helper wants to fix, make, or find in a pretend scene: ____________________.",
+      "familyLine": "Family reader can ask for one gentle action the helper tries: ____________________."
+    },
+    {
+      "title": "Tiny Museum Guide",
+      "time": "Folded slip",
+      "skill": "character voice",
+      "direction": "Write one line a tiny museum guide says about an imaginary display: ____________________.",
+      "familyLine": "Adult reader can point to a sketch and ask for one invented label: ____________________."
+    },
+    {
+      "title": "Paper Lantern Maker",
+      "time": "Two-line card",
+      "skill": "trait through action",
+      "direction": "Write one careful action the paper lantern maker takes on the story page: ____________________.",
+      "familyLine": "Family reader asks which trait the action shows: ____________________."
+    },
+    {
+      "title": "Pebble Orchestra Leader",
+      "time": "Small card",
+      "skill": "character detail",
+      "direction": "Write one pretend sound the pebble orchestra leader loves: ____________________.",
+      "familyLine": "Adult reader asks for one invented instrument name: ____________________."
+    },
+    {
+      "title": "Pocket Signal Sorter",
+      "time": "One paper pocket card",
+      "skill": "motive",
+      "direction": "Write why the pocket signal sorter carries a pretend signal token: ____________________.",
+      "familyLine": "Family reader asks what the signal token helps with in the story: ____________________."
+    },
+    {
+      "title": "Ribbon Cloud Painter",
+      "time": "Sketch plus line",
+      "skill": "sensory detail",
+      "direction": "Sketch a pretend ribbon cloud and write one color or texture word: ____________________.",
+      "familyLine": "Adult reader asks for one story sentence about the sketch: ____________________."
+    },
+    {
+      "title": "Clockless Picnic Planner",
+      "time": "Single scene slip",
+      "skill": "scene action",
+      "direction": "Write one pretend picnic item the character packs in the paper pocket: ____________________.",
+      "familyLine": "Family reader asks what the item does in the story: ____________________."
+    },
+    {
+      "title": "Acorn Page Turner",
+      "time": "One character card",
+      "skill": "character change",
+      "direction": "Write how the acorn page turner feels at the start and end of the story: ____________________.",
+      "familyLine": "Adult reader asks what choice helped the change happen: ____________________."
+    },
+    {
+      "title": "Story Thread Finder",
+      "time": "One closing slip",
+      "skill": "story ending",
+      "direction": "Write one final line where the character uses the pretend pocket object kindly or cleverly: ____________________.",
+      "familyLine": "Family reader asks for one favorite invented phrase from the ending: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Optional: read one invented character name from a paper card: ____________________.",
+    "Optional: show one harmless sketch from a card and say one made-up word: ____________________.",
+    "Optional: share one pretend pocket object and its story job: ____________________.",
+    "Optional: read one character line from the paper slip: ____________________.",
+    "Optional: point to a trait card and name the invented action that shows it: ____________________.",
+    "Optional: share one fictional place name from the story page: ____________________.",
+    "Optional: read the first sentence of a pretend character scene: ____________________.",
+    "Optional: trade one blank card with an adult and add a new invented role: ____________________."
+  ],
+  "cards": [
+    {
+      "id": "coat-pocket-character-card-01",
+      "title": "Moon Muffin Pocket Crumb Keeper",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "characterSkill": "role name",
+      "useCase": "Adult-led printable paper card for building one invented Moon Muffin Market character from a pretend paper coat pocket clue: ____________________.",
+      "adultSetup": "Adult: Place this card beside a drawn paper coat pocket and choose one market role together, keeping every detail fictional: ____________________.",
+      "kidDirection": "With your adult, fill the blanks to make a market character who belongs on the paper card: ____________________.",
+      "characterNamePrompt": "Name prompt: Give the character a made-up market name or role label: ____________________.",
+      "pocketItemPrompt": "Paper pocket item: Choose one pretend paper-pocket item the character carries, like a moon crumb tag or tiny tray ticket: ____________________.",
+      "wantPrompt": "Want prompt: What gentle thing does the character want at the Moon Muffin Market? ____________________.",
+      "worryPrompt": "Worry prompt: What small, story-sized worry makes the character pause? ____________________.",
+      "actionPrompt": "Action prompt: Write one helpful action the character tries next: ____________________.",
+      "voicePrompt": "Voice prompt: Write one sentence that sounds like this character speaking on paper: \"____________________.\"",
+      "reviseCharacterPrompt": "Revise character: Add one detail that makes the character less plain and more moon-market specific: ____________________.",
+      "quietOptionLine": "Quiet option: Adult points to the paper pocket item; writer copies one character word: ____________________.",
+      "takeHomeLine": "Take-home line: Make one new paper-pocket character from a pretend market clue: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-02",
+      "title": "Puddle Planet Pocket Stamp Sorter",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "characterSkill": "item clue",
+      "useCase": "Adult-led printable paper card for making a fictional post-office character from a pretend paper coat pocket stamp clue: ____________________.",
+      "adultSetup": "Adult: Draw one paper coat pocket on the card and offer two invented mail-room roles to choose from: ____________________.",
+      "kidDirection": "With your adult, build a puddle-post character using only made-up paper clues: ____________________.",
+      "characterNamePrompt": "Name prompt: Give the character a splashy made-up name or helper title: ____________________.",
+      "pocketItemPrompt": "Paper pocket item: Pick one pretend item tucked in the drawn paper pocket, such as a ripple stamp or floaty label: ____________________.",
+      "wantPrompt": "Want prompt: What does the character want to sort, deliver, or fix in the pretend post office? ____________________.",
+      "worryPrompt": "Worry prompt: What gentle mix-up makes the character think twice before acting? ____________________.",
+      "actionPrompt": "Action prompt: Write one careful next step the character takes with the mail clue: ____________________.",
+      "voicePrompt": "Voice prompt: Write one short line in the character's puddle-post voice: \"____________________.\"",
+      "reviseCharacterPrompt": "Revise character: Add one stamp, splash, counter, or label detail that shows who this character is: ____________________.",
+      "quietOptionLine": "Quiet option: Adult names one paper item; writer adds one matching character word: ____________________.",
+      "takeHomeLine": "Take-home line: Create another pretend paper-pocket helper for a make-believe mail counter: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-03",
+      "title": "Buttonwood Ticket Pocket Page Turner",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "characterSkill": "want and worry",
+      "useCase": "Adult-led printable paper card for shaping a Buttonwood Library Train character with a clear want and a small worry: ____________________.",
+      "adultSetup": "Adult: Place a pretend paper coat pocket beside a ticket shape and keep the character role invented: ____________________.",
+      "kidDirection": "With your adult, give the library-train character a want, a worry, and one paper-pocket clue: ____________________.",
+      "characterNamePrompt": "Name prompt: Name the character with a fictional rail-library role, such as shelf rider or ticket page helper: ____________________.",
+      "pocketItemPrompt": "Paper pocket item: Choose one pretend paper-pocket item from the train library, like a lantern ticket or bookmark wheel: ____________________.",
+      "wantPrompt": "Want prompt: What does the character want before the next shelf stop? ____________________.",
+      "worryPrompt": "Worry prompt: What small question or mix-up keeps the character from feeling ready? ____________________.",
+      "actionPrompt": "Action prompt: Write one action the character takes inside the pretend train car: ____________________.",
+      "voicePrompt": "Voice prompt: Write one calm library-train sentence this character might say: \"____________________.\"",
+      "reviseCharacterPrompt": "Revise character: Add one detail that connects the want to the paper-pocket item: ____________________.",
+      "quietOptionLine": "Quiet option: Circle want or worry first, then fill one short character blank: ____________________.",
+      "takeHomeLine": "Take-home line: Make one new library-train character with a ticket clue and a gentle want: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-04",
+      "title": "Button Bakery Pocket Map Mender",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "characterSkill": "choice under confusion",
+      "useCase": "Adult-led printable paper card for creating a fictional bakery-map character who makes one helpful choice: ____________________.",
+      "adultSetup": "Adult: Put the card next to a drawn paper coat pocket and a pretend bakery map, then choose one made-up role: ____________________.",
+      "kidDirection": "With your adult, make a character who uses a paper-pocket clue to handle a map mix-up: ____________________.",
+      "characterNamePrompt": "Name prompt: Give the character a bakery-map name or role label that is completely invented: ____________________.",
+      "pocketItemPrompt": "Paper pocket item: Choose one pretend item in the drawn paper pocket, such as a crumb compass or button-map tab: ____________________.",
+      "wantPrompt": "Want prompt: What does the character want the map to help everyone find? ____________________.",
+      "worryPrompt": "Worry prompt: What small confusion makes the map hard to understand at first? ____________________.",
+      "actionPrompt": "Action prompt: Write the helpful choice the character makes with the pocket clue: ____________________.",
+      "voicePrompt": "Voice prompt: Write one polite bakery-map line in this character's voice: \"____________________.\"",
+      "reviseCharacterPrompt": "Revise character: Add one bakery, button, crumb, or folded-map detail to sharpen the character: ____________________.",
+      "quietOptionLine": "Quiet option: Adult points to the map clue; writer fills one choice word: ____________________.",
+      "takeHomeLine": "Take-home line: Invent another paper-pocket map mender with one clear helpful choice: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-05",
+      "title": "Teacup Weather Pocket Ribbon Watcher",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "characterSkill": "voice clue",
+      "useCase": "Adult-led printable paper card for giving a Teacup Town character a voice clue from a pretend paper coat pocket item: ____________________.",
+      "adultSetup": "Adult: Draw a tiny paper coat pocket on the card and pick one gentle weather-window symbol together: ____________________.",
+      "kidDirection": "With your adult, create a teacup-town character whose voice matches the paper weather clue: ____________________.",
+      "characterNamePrompt": "Name prompt: Name the character with a made-up teacup role or weather-window title: ____________________.",
+      "pocketItemPrompt": "Paper pocket item: Choose one pretend pocket item, such as a cloud ribbon, saucer note, or spoon-sized forecast card: ____________________.",
+      "wantPrompt": "Want prompt: What does the character want to understand about the tiny weather window? ____________________.",
+      "worryPrompt": "Worry prompt: What gentle weather surprise makes the character speak carefully? ____________________.",
+      "actionPrompt": "Action prompt: Write one kind action the character takes near the teacup window: ____________________.",
+      "voicePrompt": "Voice prompt: Write one line that sounds careful, bright, or curious in this character's voice: \"____________________.\"",
+      "reviseCharacterPrompt": "Revise character: Replace one plain word with a teacup or weather-window detail: ____________________.",
+      "quietOptionLine": "Quiet option: Adult offers two voice words; writer chooses one and fills the blank: ____________________.",
+      "takeHomeLine": "Take-home line: Make another paper-pocket character who speaks like a tiny weather watcher: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-06",
+      "title": "Pocket Park Tack-Tab Keeper",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "characterSkill": "notice-board role",
+      "useCase": "Adult-led printable paper card for turning a pretend notice-board clue into a fictional pocket-park character: ____________________.",
+      "adultSetup": "Adult: Keep the notice board fully make-believe, place a drawn paper coat pocket beside it, and choose one invented park role: ____________________.",
+      "kidDirection": "With your adult, build a pocket-park character from one paper notice clue and one pretend pocket item: ____________________.",
+      "characterNamePrompt": "Name prompt: Give the character a made-up pocket-park name or notice-board helper role: ____________________.",
+      "pocketItemPrompt": "Paper pocket item: Choose one pretend item in the drawn paper pocket, such as a ribbon tack, leaf label, or tiny note card: ____________________.",
+      "wantPrompt": "Want prompt: What does the character want the pretend notice to help with in the paper park? ____________________.",
+      "worryPrompt": "Worry prompt: What small, gentle concern makes the character check the notice again? ____________________.",
+      "actionPrompt": "Action prompt: Write one action the character takes to make the paper notice clearer: ____________________.",
+      "voicePrompt": "Voice prompt: Write one friendly pocket-park sentence this character could say: \"____________________.\"",
+      "reviseCharacterPrompt": "Revise character: Add one notice-board, leaf, ribbon, or bench detail that makes the character memorable: ____________________.",
+      "quietOptionLine": "Quiet option: Adult reads the pretend notice clue; writer adds one role word: ____________________.",
+      "takeHomeLine": "Take-home line: Create one more fictional notice-board helper from a paper-pocket clue: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-07",
+      "title": "Button Captain on Spoon-Ferry Pier",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "characterSkill": "Build a character from a pretend pocket item, a small wish, and a gentle worry.",
+      "useCase": "Use this adult-led paper card as a printable character starter for a short fictional harbor story: ____________________.",
+      "adultSetup": "Adult: Fold the card so the pretend coat-pocket flap covers the prompts, then reveal one line at a time: ____________________.",
+      "kidDirection": "Kid: Make up a character for the paper harbor world. Start with one safe pretend detail: ____________________.",
+      "characterNamePrompt": "Give the spoon-ferry helper a made-up name: ____________________.",
+      "pocketItemPrompt": "Name or draw the tiny paper item tucked in the pretend coat pocket: ____________________.",
+      "wantPrompt": "Write what the character wants before the lunchbox tide turns: ____________________.",
+      "worryPrompt": "Write the small worry that makes the choice tricky: ____________________.",
+      "actionPrompt": "Write one gentle action the character tries on the ferry pier: ____________________.",
+      "voicePrompt": "Write one sentence in the character's own voice: ____________________.",
+      "reviseCharacterPrompt": "Change one detail so the character feels more surprising: ____________________.",
+      "quietOptionLine": "Quiet option: choose the pocket item silently, then fill this line: ____________________.",
+      "takeHomeLine": "Take-home line: A character can start with one paper pocket item and one wish: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-08",
+      "title": "The Acorn Stamp Clerk's Tiny Mix-Up",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "characterSkill": "Show character through a job, a pocket clue, and a helpful choice.",
+      "useCase": "Use this adult-led paper card as a printable character card for a fictional errand-office scene: ____________________.",
+      "adultSetup": "Adult: Place the card beside a pencil and call the coat pocket a pretend paper pocket, not real clothing: ____________________.",
+      "kidDirection": "Kid: Invent an office character who helps in a made-up acorn avenue. First idea: ____________________.",
+      "characterNamePrompt": "Give the acorn stamp clerk a made-up name: ____________________.",
+      "pocketItemPrompt": "Write the pretend paper pocket item that causes a tiny mix-up: ____________________.",
+      "wantPrompt": "Write what the character wants to fix or finish today: ____________________.",
+      "worryPrompt": "Write what the character worries might be misunderstood: ____________________.",
+      "actionPrompt": "Write one careful action the character takes at the errand counter: ____________________.",
+      "voicePrompt": "Write one polite line the character says: ____________________.",
+      "reviseCharacterPrompt": "Add one unexpected habit, sound, or motion to the character: ____________________.",
+      "quietOptionLine": "Quiet option: point to a prompt, then fill just this blank: ____________________.",
+      "takeHomeLine": "Take-home line: A tiny mix-up can reveal what a character cares about: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-09",
+      "title": "Map-Room Seed Keeper with a Folded Clue",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "characterSkill": "Connect a fictional role, object, goal, and hesitation into a stronger character.",
+      "useCase": "Use this adult-led paper card as a printable character-building prompt for a make-believe seed-library map room: ____________________.",
+      "adultSetup": "Adult: Cut the card apart if desired and keep the pocket clue fictional, with no real addresses or private places: ____________________.",
+      "kidDirection": "Kid: Create a map-room character from invented details only. First clue: ____________________.",
+      "characterNamePrompt": "Give the seed keeper a made-up name: ____________________.",
+      "pocketItemPrompt": "Write the folded paper clue found in the pretend coat pocket: ____________________.",
+      "wantPrompt": "Write what the character wants the map to help with: ____________________.",
+      "worryPrompt": "Write the character's quiet worry about choosing the wrong seed shelf: ____________________.",
+      "actionPrompt": "Write one thoughtful action the character takes in the map room: ____________________.",
+      "voicePrompt": "Write one sentence that sounds like this character speaking: ____________________.",
+      "reviseCharacterPrompt": "Revise the character by changing the clue, the want, or the worry: ____________________.",
+      "quietOptionLine": "Quiet option: fill one blank and let the adult read the card aloud: ____________________.",
+      "takeHomeLine": "Take-home line: A good fictional character has a clue, a want, and a worry: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-10",
+      "title": "Rain-Gauge Conductor and the Puddle Ticket",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "characterSkill": "Use a character's object and decision to reveal personality.",
+      "useCase": "Use this adult-led paper card as a printable character prompt for a fictional rain-gauge railway story: ____________________.",
+      "adultSetup": "Adult: Present the coat pocket as a drawn paper pocket on the card and keep the railway path imaginary: ____________________.",
+      "kidDirection": "Kid: Make a conductor, passenger, or station helper for the pretend railway. Start here: ____________________.",
+      "characterNamePrompt": "Give the railway character a made-up name: ____________________.",
+      "pocketItemPrompt": "Write the pretend paper pocket item, such as a puddle ticket or gauge note: ____________________.",
+      "wantPrompt": "Write what the character wants to understand about the rainy railway: ____________________.",
+      "worryPrompt": "Write what makes the character pause before acting: ____________________.",
+      "actionPrompt": "Write one kind or clever action the character takes near the rain gauge: ____________________.",
+      "voicePrompt": "Write one line the character would say on the platform: ____________________.",
+      "reviseCharacterPrompt": "Change one trait so the character reacts differently to the rain: ____________________.",
+      "quietOptionLine": "Quiet option: choose a role and fill this one blank: ____________________.",
+      "takeHomeLine": "Take-home line: A pocket item can show how a character solves a problem: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-11",
+      "title": "Moss Message Signal-Sorter",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "characterSkill": "Create a character voice by pairing a strange job with a personal concern.",
+      "useCase": "Use this adult-led paper card as a printable character card for a fictional moss-message observatory scene: ____________________.",
+      "adultSetup": "Adult: Read the prompts aloud and remind writers that all names, places, and pocket items are made up: ____________________.",
+      "kidDirection": "Kid: Invent a signal-sorter, moss reader, or signal helper. Begin with one imagined detail: ____________________.",
+      "characterNamePrompt": "Give the observatory character a made-up name: ____________________.",
+      "pocketItemPrompt": "Write the pretend paper pocket item that helps read moss messages: ____________________.",
+      "wantPrompt": "Write what the character hopes to discover from the soft observatory signals: ____________________.",
+      "worryPrompt": "Write the gentle worry that keeps the character careful: ____________________.",
+      "actionPrompt": "Write one patient action the character takes while sorting messages: ____________________.",
+      "voicePrompt": "Write one sentence in a calm character voice: ____________________.",
+      "reviseCharacterPrompt": "Revise by adding one new quirk, tool, or rule for the character: ____________________.",
+      "quietOptionLine": "Quiet option: draw the pocket item first, then name it here: ____________________.",
+      "takeHomeLine": "Take-home line: A character gets stronger when a job, item, and worry fit together: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-12",
+      "title": "The Barnacle Button Keeper",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "characterSkill": "Builds a character from a small job, a pretend object, and one gentle worry.",
+      "useCase": "Use this adult-led paper card when a young writer needs a clear fictional character before starting a tidepool lab scene: ____________________.",
+      "adultSetup": "Adult: Place this printable card beside the printed pretend coat pocket and remind the writer that every pocket item is made up on paper: ____________________.",
+      "kidDirection": "Write a short scene where your tidepool lab character notices a tiny change and decides what to do next: ____________________.",
+      "characterNamePrompt": "Give the fictional tidepool helper a made-up name: ____________________.",
+      "pocketItemPrompt": "Choose one pretend paper-pocket item, like a shell button, kelp ribbon, or bubble note: ____________________.",
+      "wantPrompt": "Write what this character wants to fix, learn, or protect in the tidepool lab: ____________________.",
+      "worryPrompt": "Write one gentle worry that makes the job harder: ____________________.",
+      "actionPrompt": "Write one careful action the character takes with the pretend pocket item: ____________________.",
+      "voicePrompt": "Write one line the character says in a curious, careful voice: ____________________.",
+      "reviseCharacterPrompt": "Revise by adding one habit the character repeats when thinking: ____________________.",
+      "quietOptionLine": "Quiet option: Write only the name, pocket item, and first action: ____________________.",
+      "takeHomeLine": "Take-home slip: Finish this sentence for another tidepool character: In my pretend paper pocket, I keep ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-13",
+      "title": "The Ferry Pilot With a Patchwork Oar Tag",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "characterSkill": "Shows character change by giving the character a first idea, a revised idea, and a better choice.",
+      "useCase": "Use this adult-led paper card to help writers create a fictional ferry character who changes their plan during revision: ____________________.",
+      "adultSetup": "Adult: Slide the card under the printed pretend coat pocket flap and frame the pocket item as a paper story prop only: ____________________.",
+      "kidDirection": "Write a scene where the ferry character crosses Revision River and changes one idea before reaching the dock: ____________________.",
+      "characterNamePrompt": "Name the fictional ferry character with a name that sounds ready for revision: ____________________.",
+      "pocketItemPrompt": "Write the pretend paper-pocket item that helps them rethink a plan: ____________________.",
+      "wantPrompt": "Write the first thing the character wants before the ferry ride begins: ____________________.",
+      "worryPrompt": "Write the worry that makes the character hold too tightly to the first plan: ____________________.",
+      "actionPrompt": "Write the action that shows the character trying a revised choice: ____________________.",
+      "voicePrompt": "Write one line in the character's voice before or after the revision: ____________________.",
+      "reviseCharacterPrompt": "Revise by changing the character's want so it becomes more specific: ____________________.",
+      "quietOptionLine": "Quiet option: Write the first plan and the revised plan in two short phrases: ____________________.",
+      "takeHomeLine": "Take-home slip: Invent another Revision River passenger and the paper-pocket clue they carry: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-14",
+      "title": "The Label-Swap Curator",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "characterSkill": "Creates a clue-friendly character with a role, a secret preference, and a non-scary mistake to solve.",
+      "useCase": "Use this adult-led paper card when a writer needs a fictional museum character who can start a clue-label scene: ____________________.",
+      "adultSetup": "Adult: Hand over the card with the printed pretend coat pocket visible, and keep all clues imaginary museum labels on paper: ____________________.",
+      "kidDirection": "Write a museum scene where the character notices one label that does not match its exhibit: ____________________.",
+      "characterNamePrompt": "Name the fictional clue-label tower character: ____________________.",
+      "pocketItemPrompt": "Write the pretend paper-pocket item, such as a blank tag, tiny stamp, or folded exhibit note: ____________________.",
+      "wantPrompt": "Write what the character wants the museum visitors in the story to understand: ____________________.",
+      "worryPrompt": "Write the character's worry about the mixed-up clue label: ____________________.",
+      "actionPrompt": "Write one action the character takes to compare two imaginary labels: ____________________.",
+      "voicePrompt": "Write one thoughtful line the character says while studying the clue: ____________________.",
+      "reviseCharacterPrompt": "Revise by adding one surprising thing the character is good at noticing: ____________________.",
+      "quietOptionLine": "Quiet option: Write only the mixed-up label and the character's first guess: ____________________.",
+      "takeHomeLine": "Take-home slip: Make a new fictional museum role and one pretend paper-pocket label: ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-15",
+      "title": "The North-Needle Apprentice",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "characterSkill": "Builds a character through tools, decision-making, and a specific strength under pressure-free conditions.",
+      "useCase": "Use this adult-led paper card to support a fictional compass-craft character in a printable character-building activity: ____________________.",
+      "adultSetup": "Adult: Put this card beside the printed pretend coat pocket and invite the writer to choose only imaginary craft materials: ____________________.",
+      "kidDirection": "Write a scene where the apprentice tests a compass craft and learns something about how they make choices: ____________________.",
+      "characterNamePrompt": "Name the fictional compass-craft apprentice: ____________________.",
+      "pocketItemPrompt": "Write the pretend paper-pocket item, like a paper needle, painted bead, or folded direction card: ____________________.",
+      "wantPrompt": "Write what the character wants their compass craft to point toward: ____________________.",
+      "worryPrompt": "Write one worry that could make the character rush, guess, or doubt themselves: ____________________.",
+      "actionPrompt": "Write the careful action the character takes before deciding which way to turn: ____________________.",
+      "voicePrompt": "Write one line that shows the character thinking through the choice: ____________________.",
+      "reviseCharacterPrompt": "Revise by adding one small flaw that makes the character more interesting but still kind: ____________________.",
+      "quietOptionLine": "Quiet option: Write a three-part character note: tool, want, worry: ____________________.",
+      "takeHomeLine": "Take-home slip: Finish this new compass character idea: My pretend paper-pocket tool points toward ____________________."
+    },
+    {
+      "id": "coat-pocket-character-card-16",
+      "title": "The Button-Thread Boardwalk Binder",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "characterSkill": "Connects a character's promise, pocket object, and ending choice so the character feels complete.",
+      "useCase": "Use this adult-led paper card when a writer needs a fictional boardwalk character with a clear ending arc: ____________________.",
+      "adultSetup": "Adult: Set the card on the table with the printed pretend coat pocket showing; all boardwalk details should stay fictional and paper-based: ____________________.",
+      "kidDirection": "Write a scene where the boardwalk binder uses a pretend pocket item to help finish a loose story page: ____________________.",
+      "characterNamePrompt": "Name the fictional binding-day boardwalk character: ____________________.",
+      "pocketItemPrompt": "Write the pretend paper-pocket item, such as a button card, thread tag, or folded page corner: ____________________.",
+      "wantPrompt": "Write the promise the character wants to keep by the end of the scene: ____________________.",
+      "worryPrompt": "Write the worry that makes keeping the promise feel uncertain: ____________________.",
+      "actionPrompt": "Write the action that shows the character choosing how to bind the ending together: ____________________.",
+      "voicePrompt": "Write one line the character says when they understand what the ending needs: ____________________.",
+      "reviseCharacterPrompt": "Revise by adding one earlier clue that makes the ending choice feel earned: ____________________.",
+      "quietOptionLine": "Quiet option: Write the promise and the final choice only: ____________________.",
+      "takeHomeLine": "Take-home slip: Create another fictional binder and the pretend paper-pocket item that completes their story: ____________________."
+    }
+  ]
+}

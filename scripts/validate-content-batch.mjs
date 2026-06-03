@@ -23,6 +23,8 @@ import {
   validateBlanketFortStoryDialogueCardPackSourceFiles,
   validateKitchenWindowStoryPovCardPackSource,
   validateKitchenWindowStoryPovCardPackSourceFiles,
+  validateCoatPocketStoryCharacterCardPackSource,
+  validateCoatPocketStoryCharacterCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -89,6 +91,7 @@ const batch33ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch34ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch34-product-images.json')
 const batch35ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch35-product-images.json')
 const batch36ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch36-product-images.json')
+const batch37ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch37-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -119,6 +122,7 @@ const deskDrawerSequenceSourceFile = resolve(root, 'content', 'product-artifacts
 const readingNookCauseEffectSourceFile = resolve(root, 'content', 'product-artifacts', 'reading-nook-story-cause-effect-card-pack.json')
 const blanketFortDialogueSourceFile = resolve(root, 'content', 'product-artifacts', 'blanket-fort-story-dialogue-card-pack.json')
 const kitchenWindowPovSourceFile = resolve(root, 'content', 'product-artifacts', 'kitchen-window-story-pov-card-pack.json')
+const coatPocketCharacterSourceFile = resolve(root, 'content', 'product-artifacts', 'coat-pocket-story-character-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -150,6 +154,7 @@ const batch33ProductImagesBatchId = '2026-06-02-batch33-product-images'
 const batch34ProductImagesBatchId = '2026-06-03-batch34-product-images'
 const batch35ProductImagesBatchId = '2026-06-03-batch35-product-images'
 const batch36ProductImagesBatchId = '2026-06-03-batch36-product-images'
+const batch37ProductImagesBatchId = '2026-06-03-batch37-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -180,6 +185,7 @@ const deskDrawerSequenceBatchId = '2026-06-02-batch33'
 const readingNookCauseEffectBatchId = '2026-06-03-batch34'
 const blanketFortDialogueBatchId = '2026-06-03-batch35'
 const kitchenWindowPovBatchId = '2026-06-03-batch36'
+const coatPocketCharacterBatchId = '2026-06-03-batch37'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -2453,6 +2459,111 @@ function validateBatch36ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch37ProductImage(image) {
+  const label = `2026-06-03-batch37-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'coat-pocket-story-character-card-pack',
+    `${label}.slug must be coat-pocket-story-character-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch37/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch37/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch37/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank cream coat pocket story character cards',
+    'unbranded cozy writing table',
+    'character guide boxes',
+    'plain white background',
+    'screen-free printable coat pocket story character card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'book',
+    'book cover',
+    'real book title',
+    'author name',
+    'publisher name',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'app interface',
+    'microphone',
+    'audio recorder',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'school login',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'review',
+    'score',
+    'grade',
+    'timer',
+    'clock',
+    'calendar',
+    'contest',
+    'prize',
+    'address',
+    'house',
+    'home',
+    'street',
+    'gps',
+    'child face',
+    'child portrait',
+    'person',
+    'hands',
+    'body',
+    'clothing',
+    'coat',
+    'jacket',
+    'real pocket',
+    'actual pocket',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -2698,6 +2809,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'kitchen-window-story-pov-card-pack': {
       title: 'Kitchen Window Story Point-of-View Card Pack',
       pricePoint: '$45',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'coat-pocket-story-character-card-pack': {
+      title: 'Coat Pocket Story Character Card Pack',
+      pricePoint: '$47',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -3055,6 +3174,34 @@ function validateProduct(product, productSlugs, worldSlugs) {
     expect(
       !/\baccounts?\b|\bschool accounts?\b|\blogins?\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideos?\b|\bphotos?\b|\bcameras?\b|\bphones?\b|\bdevices?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bgrading\b|\bscores?\b|\brubrics?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\baddresses?\b|\breal homes?\b|\bhome address\b|\bhome window(s)?\b|\breal window(s)?\b|\breal view(s)?\b|\blook out\b|\bhouse(s)?\b|\bneighbors?\b|\bneighborhood(s)?\b|\bstreets?\b|\boutside\b|\boutdoors?\b|\bgps\b|\bcoordinates?\b|\breal route(s)?\b|\bexact location\b|\bexact places?\b|\breal child\b|\breal child data\b|\bprivate child data\b|\bstudent records?\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bfood prep\b|\ballerg(y|ies|en|ens|ic)\b|\bmedical\b|\blegal\b|\btherapy\b|\bgrief\b|\bwindow safety\b|\boutdoor safety\b|\bweather safety\b/i.test(kitchenWindowRenderedText),
       `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, contact, photo, camera, real-home/window, outdoor, real-route, exact-location, real-book-title, author, publisher, franchise, food/allergy, unsafe professional, or weather/window-safety language.`,
+    )
+  }
+  if (product.slug === 'coat-pocket-story-character-card-pack') {
+    const coatPocketSummaryErrors = validateProductWorldSummaries(product, 'Coat Pocket Story Character Card Pack')
+    expect(
+      coatPocketSummaryErrors.length === 0,
+      `${label}.worldSummaries failed validation:\n${coatPocketSummaryErrors.join('\n')}`,
+    )
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    const coatPocketRenderedText = renderedHtml
+      .replaceAll(safety, '')
+      .replaceAll('take-home', '')
+      .replaceAll('Checkout is pending until the payment provider is selected', '')
+      .replaceAll('device-width', '')
+      .replaceAll('Coat Pocket', '')
+      .replaceAll('coat pocket', '')
+      .replaceAll('coat-pocket', '')
+      .replaceAll('paper-pocket', '')
+      .replaceAll('paper pocket', '')
+      .replaceAll('pretend pocket', '')
+      .replaceAll('pretend paper pocket', '')
+      .replaceAll('Seed Library Map Room', '')
+      .replaceAll('seed-library-map-room', '')
+    expect(
+      !/\baccounts?\b|\bschool accounts?\b|\blogins?\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideos?\b|\bphotos?\b|\bcameras?\b|\bphones?\b|\bdevices?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bgrading\b|\bscores?\b|\brubrics?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\breal names?\b|\bfull names?\b|\bidentity details?\b|\bactual pockets?\b|\breal pockets?\b|\bactual clothing\b|\breal clothing\b|\bprivate locations?\b|\bschool route(s)?\b|\breal route(s)?\b|\baddresses?\b|\bhome address\b|\breal homes?\b|\bhouse(s)?\b|\brooms?\b|\bschools?\b|\brelatives?\b|\bgps\b|\bcoordinates?\b|\bexact location\b|\bexact places?\b|\breal child\b|\breal child data\b|\bprivate child data\b|\bstudent records?\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bfood prep\b|\ballerg(y|ies|en|ens|ic)\b|\bmedical\b|\blegal\b|\btherapy\b|\bgrief\b/i.test(coatPocketRenderedText),
+      `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, real-identity, real-pocket/clothing, private-location, contact, photo, camera, real-home, real-route, exact-location, real-book-title, author, publisher, franchise, food/allergy, or unsafe professional language.`,
     )
   }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
@@ -3478,12 +3625,23 @@ expect(Array.isArray(batch36ProductImages.images), 'batch36 product image manife
 expect(batch36ProductImages.images.length === 1, `Expected 1 Batch 36 product image, found ${batch36ProductImages.images.length}.`)
 validateBatch36ProductImage(batch36ProductImages.images[0])
 
+expect(existsSync(batch37ProductImagesFile), `Missing Batch 37 product image manifest: ${batch37ProductImagesFile}`)
+const batch37ProductImages = readJson(batch37ProductImagesFile)
+expect(
+  batch37ProductImages.batchId === batch37ProductImagesBatchId,
+  `batch37 product image manifest batchId must be ${batch37ProductImagesBatchId}.`,
+)
+expect(batch37ProductImages.generatedAt === '2026-06-03', 'batch37 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch37ProductImages.images), 'batch37 product image manifest images must be an array.')
+expect(batch37ProductImages.images.length === 1, `Expected 1 Batch 37 product image, found ${batch37ProductImages.images.length}.`)
+validateBatch37ProductImage(batch37ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 29, `Expected 29 product records, found ${products.products.length}.`)
+expect(products.products.length === 30, `Expected 30 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -3516,6 +3674,7 @@ for (const requiredProductSlug of [
   'reading-nook-story-cause-effect-card-pack',
   'blanket-fort-story-dialogue-card-pack',
   'kitchen-window-story-pov-card-pack',
+  'coat-pocket-story-character-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -5563,6 +5722,93 @@ for (const asset of kitchenWindowPovArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(coatPocketCharacterSourceFile), `Missing Batch 37 Coat Pocket Story Character Card Pack source file: ${coatPocketCharacterSourceFile}`)
+const coatPocketCharacterSource = readJson(coatPocketCharacterSourceFile)
+expect(
+  coatPocketCharacterSource.batchId === coatPocketCharacterBatchId,
+  `Coat Pocket Story Character Card Pack source batchId must be ${coatPocketCharacterBatchId}.`,
+)
+const coatPocketCharacterProduct = products.products.find(
+  (product) => product.slug === 'coat-pocket-story-character-card-pack',
+)
+expect(
+  coatPocketCharacterProduct,
+  'Missing Coat Pocket Story Character Card Pack product record for Batch 37 artifact validation.',
+)
+const coatPocketCharacterSourceErrors = validateCoatPocketStoryCharacterCardPackSource(
+  coatPocketCharacterSource,
+  coatPocketCharacterProduct,
+  worldAgeBands,
+)
+expect(
+  coatPocketCharacterSourceErrors.length === 0,
+  `Coat Pocket Story Character Card Pack source failed validation:\n${coatPocketCharacterSourceErrors.join('\n')}`,
+)
+const coatPocketCharacterSourceFileErrors = validateCoatPocketStoryCharacterCardPackSourceFiles(
+  coatPocketCharacterSource,
+  root,
+)
+expect(
+  coatPocketCharacterSourceFileErrors.length === 0,
+  `Coat Pocket Story Character Card Pack sourceFiles failed validation:\n${coatPocketCharacterSourceFileErrors.join('\n')}`,
+)
+const coatPocketCharacterExpectedPdfPages = coatPocketCharacterSource.cards.length + 5
+const coatPocketCharacterArtifactStatus = inspectArtifactFiles(root, coatPocketCharacterSource.artifact, {
+  expectedPdfPages: coatPocketCharacterExpectedPdfPages,
+})
+expect(
+  coatPocketCharacterArtifactStatus.valid,
+  `Coat Pocket Story Character Card Pack artifacts failed validation:\n${coatPocketCharacterArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  coatPocketCharacterArtifactStatus.files.pdf.size > 100_000,
+  `Coat Pocket Story Character Card Pack PDF artifact is unexpectedly small: ${coatPocketCharacterArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  coatPocketCharacterArtifactStatus.files.pdf.pageCount === coatPocketCharacterExpectedPdfPages,
+  `Coat Pocket Story Character Card Pack PDF artifact must have ${coatPocketCharacterExpectedPdfPages} pages.`,
+)
+expect(
+  coatPocketCharacterArtifactStatus.files.zip.size > coatPocketCharacterArtifactStatus.files.pdf.size,
+  'Coat Pocket Story Character Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const coatPocketCharacterCheckoutErrors = validateCheckoutReadiness(
+  coatPocketCharacterProduct,
+  coatPocketCharacterArtifactStatus,
+)
+expect(
+  coatPocketCharacterCheckoutErrors.length === 0,
+  `Coat Pocket Story Character Card Pack checkout readiness failed validation:\n${coatPocketCharacterCheckoutErrors.join('\n')}`,
+)
+const coatPocketCharacterArtifactManifest = readJson(resolve(root, coatPocketCharacterSource.artifact.manifestPath))
+expect(
+  coatPocketCharacterArtifactManifest.sourcePageCount === coatPocketCharacterSource.cards.length,
+  'Coat Pocket Story Character Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(coatPocketCharacterArtifactManifest.files.assets),
+  'Coat Pocket Story Character Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  coatPocketCharacterArtifactManifest.files.assets.length === coatPocketCharacterSource.worldSlugs.length,
+  'Coat Pocket Story Character Card Pack artifact manifest must include one copied local image per source world.',
+)
+const coatPocketCharacterManifestAssetErrors = validateManifestWorldAssets(
+  coatPocketCharacterSource,
+  coatPocketCharacterArtifactManifest,
+)
+expect(
+  coatPocketCharacterManifestAssetErrors.length === 0,
+  `Coat Pocket Story Character Card Pack artifact manifest image coverage failed validation:\n${coatPocketCharacterManifestAssetErrors.join('\n')}`,
+)
+for (const asset of coatPocketCharacterArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Coat Pocket Story Character Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 console.log(
-  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length + batch26ProductImages.images.length + batch27ProductImages.images.length + batch28ProductImages.images.length + batch29ProductImages.images.length + batch30ProductImages.images.length + batch31ProductImages.images.length + batch32ProductImages.images.length + batch33ProductImages.images.length + batch34ProductImages.images.length + batch35ProductImages.images.length + batch36ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 29 product artifacts.`,
+  `Content batch verified: ${worldCount} worlds, ${worldCount * 3} prompts, ${worldCount} image prompts, ${kitCount} kit outlines, ${collectionSlugs.size} SEO collections, ${miniUnitSlugs.size} mini-units, ${batch4ImageSlugs.size + batch7ProductImages.images.length + batch10ProductImages.images.length + batch11ProductImages.images.length + batch13ProductImages.images.length + batch14ProductImages.images.length + batch15ProductImages.images.length + batch16ProductImages.images.length + batch17ProductImages.images.length + batch18ProductImages.images.length + batch19ProductImages.images.length + batch20ProductImages.images.length + batch21ProductImages.images.length + batch22ProductImages.images.length + batch23ProductImages.images.length + batch24ProductImages.images.length + batch25ProductImages.images.length + batch26ProductImages.images.length + batch27ProductImages.images.length + batch28ProductImages.images.length + batch29ProductImages.images.length + batch30ProductImages.images.length + batch31ProductImages.images.length + batch32ProductImages.images.length + batch33ProductImages.images.length + batch34ProductImages.images.length + batch35ProductImages.images.length + batch36ProductImages.images.length + batch37ProductImages.images.length} local world/product images, ${productSlugs.size} static product pages, 30 product artifacts.`,
 )
