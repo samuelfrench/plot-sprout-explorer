@@ -1,0 +1,158 @@
+{
+  "laneId": "batch47-washi-tape-word-choice-tools",
+  "adultGuide": {
+    "title": "Washi Tape Story Word Choice Adult Guide",
+    "bullets": [
+      "Print the washi tape word choice cards, blank swap strips, and adult guide pages before the adult-led paper session.",
+      "Begin with one plain fictional line, then coach word choice through precise nouns, clear verbs, useful describing words, phrase swaps, sentence rhythm, and final revision.",
+      "Keep every example made-up, broad, offline, printable, and guided by an adult.",
+      "Use short tape strips to mark one word or phrase at a time so the writer can compare choices without crowding the page.",
+      "Replace narrow real details with pretend names, broad story places, and invented objects before writing begins.",
+      "End each activity by writing a final revised fictional line that sounds clearer, smoother, and more specific on paper."
+    ]
+  },
+  "wordChoiceRoutines": [
+    {
+      "name": "Plain Line Tape Mark",
+      "bestFor": "Finding the first word in a fictional sentence that needs a clearer choice.",
+      "steps": [
+        "The adult writes one plain fictional line across the top of the page: ____________________.",
+        "The writer places a tape mark under one word that feels too general: ____________________.",
+        "The adult asks what job that word should do in the sentence: ____________________.",
+        "The writer rewrites the line with the marked word ready for a stronger swap: ____________________."
+      ]
+    },
+    {
+      "name": "Precise Noun Strip",
+      "bestFor": "Replacing a vague thing word with a clearer pretend object or story place.",
+      "steps": [
+        "The adult circles one general noun in the plain line, such as thing, place, object, or piece: ____________________.",
+        "The writer lists two precise fictional noun choices that stay broad and made-up: ____________________.",
+        "The adult asks which noun gives the reader the clearest picture: ____________________.",
+        "The writer writes the sentence again with the chosen precise noun: ____________________."
+      ]
+    },
+    {
+      "name": "Clear Verb Swap",
+      "bestFor": "Trading a flat action word for a verb that shows the movement.",
+      "steps": [
+        "The adult tapes over one plain verb in the fictional line: ____________________.",
+        "The writer chooses two clear verbs, such as slide, tuck, tilt, drift, fold, or tap: ____________________.",
+        "The adult asks which verb matches the pretend moment without adding extra facts: ____________________.",
+        "The writer writes the revised line with the clearer verb in place: ____________________."
+      ]
+    },
+    {
+      "name": "Useful Describing Word Check",
+      "bestFor": "Keeping describing words that help and removing ones that only decorate.",
+      "steps": [
+        "The adult points to one describing word in the sentence or invites the writer to add one: ____________________.",
+        "The writer writes what the describing word tells the reader about size, color, shape, sound, or feel on paper: ____________________.",
+        "The adult asks whether the word helps the sentence or should be swapped for a better one: ____________________.",
+        "The writer writes the sentence with one useful describing word: ____________________."
+      ]
+    },
+    {
+      "name": "Phrase Swap Lineup",
+      "bestFor": "Comparing two short phrases before choosing the cleaner sentence.",
+      "steps": [
+        "The adult writes the original phrase on one tape strip: ____________________.",
+        "The writer writes two possible phrase swaps on two fresh strips: ____________________.",
+        "The adult reads each phrase aloud softly from the paper and asks which one says the idea most clearly: ____________________.",
+        "The writer copies the chosen phrase into the revised sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Rhythm and Final Line",
+      "bestFor": "Making the revised sentence sound smooth on paper before finishing.",
+      "steps": [
+        "The adult places the revised sentence under the plain line for side-by-side checking: ____________________.",
+        "The writer marks one spot where the sentence feels bumpy, crowded, or too plain: ____________________.",
+        "The adult asks which word can move, change, or come out to improve the rhythm: ____________________.",
+        "The writer writes the final revised fictional line with precise words and smooth rhythm: ____________________."
+      ]
+    }
+  ],
+  "takeHomeWordSlips": [
+    {
+      "title": "Plain Line Slip",
+      "time": "One paper pass",
+      "skill": "plain fictional line",
+      "direction": "Write one made-up plain line that can be improved with stronger word choices: ____________________.",
+      "familyLine": "Ask which word feels too general and should get a tape mark: ____________________."
+    },
+    {
+      "title": "Precise Noun Slip",
+      "time": "Brief adult-led pass",
+      "skill": "precise nouns",
+      "direction": "Swap one general noun for a precise pretend object, place cue, or story item: ____________________.",
+      "familyLine": "Ask which noun gives the clearest picture on paper: ____________________."
+    },
+    {
+      "title": "Clear Verb Slip",
+      "time": "Single printable slip",
+      "skill": "clear verbs",
+      "direction": "Replace one flat verb with a clear verb that shows the action: ____________________.",
+      "familyLine": "Ask what movement the new verb helps the reader picture: ____________________."
+    },
+    {
+      "title": "Helpful Descriptor Slip",
+      "time": "Quiet pencil pass",
+      "skill": "useful describing words",
+      "direction": "Add or swap one describing word that helps the reader see the pretend moment: ____________________.",
+      "familyLine": "Ask what the describing word adds that the sentence needs: ____________________."
+    },
+    {
+      "title": "Too-General Word Slip",
+      "time": "Fresh slip pass",
+      "skill": "specific word choice",
+      "direction": "Find one word that feels too general and write a stronger replacement beside it: ____________________.",
+      "familyLine": "Ask why the replacement word is clearer than the first word: ____________________."
+    },
+    {
+      "title": "Phrase Swap Slip",
+      "time": "Tape strip pass",
+      "skill": "phrase swaps",
+      "direction": "Write two short phrase swaps for the same fictional idea, then choose one: ____________________.",
+      "familyLine": "Ask which phrase says the idea with fewer extra words: ____________________."
+    },
+    {
+      "title": "Sentence Rhythm Slip",
+      "time": "Calm paper pass",
+      "skill": "sentence rhythm",
+      "direction": "Copy the revised sentence and mark one spot that could sound smoother on paper: ____________________.",
+      "familyLine": "Ask which word could move, change, or come out for better rhythm: ____________________."
+    },
+    {
+      "title": "Word Pair Slip",
+      "time": "Second pencil pass",
+      "skill": "noun and verb pairing",
+      "direction": "Pair one precise noun with one clear verb in a new fictional line: ____________________.",
+      "familyLine": "Ask how the noun and verb work together in the line: ____________________."
+    },
+    {
+      "title": "Cleaner Line Slip",
+      "time": "Short revision pass",
+      "skill": "clean revision",
+      "direction": "Remove one extra word from the revised line so the meaning stays clear: ____________________.",
+      "familyLine": "Ask what changed after the extra word came out: ____________________."
+    },
+    {
+      "title": "Final Word Choice Slip",
+      "time": "Final paper pass",
+      "skill": "final revised line",
+      "direction": "Write the final revised fictional line with one precise noun, one clear verb, and smooth rhythm: ____________________.",
+      "familyLine": "Ask what improved from the plain line to the final line: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the plain fictional line for word choice practice is ____________________.",
+    "Optional adult-led offline prompt: the general word I will mark with tape is ____________________.",
+    "Optional adult-led offline prompt: the precise noun I chose for the pretend moment is ____________________.",
+    "Optional adult-led offline prompt: the clear verb that shows the action is ____________________.",
+    "Optional adult-led offline prompt: the useful describing word that earns its place is ____________________.",
+    "Optional adult-led offline prompt: the phrase swap that says the idea clearly is ____________________.",
+    "Optional adult-led offline prompt: the word I changed for smoother sentence rhythm is ____________________.",
+    "Optional adult-led offline prompt: the final revised fictional line is ____________________."
+  ]
+}
