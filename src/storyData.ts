@@ -510,6 +510,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable coat-pocket story character cards with adult guide tools, character routines, and take-home character slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'paper-tray-story-setting-card-pack',
+    title: 'Paper Tray Story Setting Card Pack',
+    pricePoint: '$49',
+    description:
+      'Sixteen printable paper-tray story setting cards with adult guide tools, setting routines, and take-home setting slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

@@ -72,6 +72,7 @@ describe('storyData', () => {
       'blanket-fort-story-dialogue-card-pack',
       'kitchen-window-story-pov-card-pack',
       'coat-pocket-story-character-card-pack',
+      'paper-tray-story-setting-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -104,6 +105,7 @@ describe('storyData', () => {
       '$43',
       '$45',
       '$47',
+      '$49',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)

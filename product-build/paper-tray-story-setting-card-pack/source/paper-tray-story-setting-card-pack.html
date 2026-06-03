@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Tray Story Setting Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-setting-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-setting-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-setting-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper setting cards</p>
+        <h1>Paper Tray Story Setting Card Pack</h1>
+        <p>Sixteen paper cards help writers build fictional story places from tray labels, mood clues, sensory details, and map edges.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable setting cards plus adult guide tools, setting routines, take-home setting slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$49</span>
+        <h2>Included</h2>
+        <ul><li>16 printable paper tray setting cards</li>
+<li>Adult setup guide</li>
+<li>Fictional setting safety notes</li>
+<li>Paper tray coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led setting routines</li>
+<li>Ten take-home setting slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Setting coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Place one printed card stack, blank slips, and pencils in a shared paper tray before writers gather.</li>
+<li>Read the pack aloud as pretend work; every setting must stay invented and broad.</li>
+<li>Choose one adult caller to handle card turns, pencil supply, and calm table pacing.</li>
+<li>Keep extra cards face down so the active prompt feels simple and paper-only.</li>
+<li>Invite writers to mark slips with invented symbols only when a card needs a label.</li></ul></article>
+        <article class="guide-card"><h3>Paper setting setup</h3><ul><li>Set a tray label that says Pretend Setting Cards and leave space for finished slips.</li>
+<li>Sort cards by broad story-place type: sky, garden, tiny market, floating shelf, and invented festival.</li>
+<li>Pair each card with one blank slip so writers can name a fictional detail.</li>
+<li>Keep answer slips loose rather than bound, so the tray stays light and fictional.</li>
+<li>Use only paper pieces, pencils, and printed cards for this offline lane.</li></ul></article>
+        <article class="guide-card"><h3>Story setting coaching</h3><ul><li>Ask for sensory but invented clues: color, sound, texture, weather, and a small surprise.</li>
+<li>If a writer names something actual, guide them to rename it with a made-up title.</li>
+<li>Keep prompts broad: a moonlit pier works better than an overly narrow named spot.</li>
+<li>Model one sentence that links setting to mood while staying gentle and family-friendly.</li>
+<li>Praise clear paper choices instead of speed, ranking, or correctness.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Use invented labels and pretend symbols only.</li>
+<li>Skip any prompt that starts to collect family routines or traceable clues.</li>
+<li>Do not write actual names, map clues, travel paths, or narrow real-world facts.</li>
+<li>Keep finished slips in the tray or send them with families; sharing stays adult-led and offline.</li>
+<li>Adults should rewrite any actual-world clue into an invented broad story-place before discussion.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one selected slip with a short note inviting more pretend setting play at the family table.</li>
+<li>Tell adults that blanks are for made-up details, not narrow real-world facts.</li>
+<li>Suggest using a fresh paper tray at the next gathering to keep the activity offline and light.</li>
+<li>Offer the optional prompts as aloud choices, not required written reports.</li>
+<li>Invite families to keep or recycle slips after the story talk.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect unused cards, blank slips, and pencils into the paper tray.</li>
+<li>Remove any slip that accidentally names a narrow real-world fact.</li>
+<li>Shuffle fictional setting cards so the next group starts fresh.</li>
+<li>Leave the tray empty of completed slips unless an adult intentionally sends them with a family.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper setting card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen setting-card worlds</h2>
+      <p>Pick a world image, then create one fictional setting from a pretend paper tray label.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">setting routines</p>
+      <h2>Choose the paper setting rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Tray Flip Setting Start</h3>
+      <p>Writers who need a low-pressure opening.</p>
+      <ol><li>Adult places three setting cards face up in the paper tray.</li>
+<li>Each writer chooses one card and adds one invented detail on a blank slip.</li>
+<li>Adult reads the slips aloud and asks which detail changes the story mood.</li>
+<li>Group keeps one slip under the card as the next story seed.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>One Clue Many Worlds</h3>
+      <p>Groups practicing flexible imagination.</p>
+      <ol><li>Adult names one gentle clue such as blue mist or silver moss.</li>
+<li>Writers each place that clue into a different fictional setting card.</li>
+<li>Adult invites each writer to add one texture or sound on paper.</li>
+<li>Group compares how the same clue feels different in each made-up story-place.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Weather Mood Swap</h3>
+      <p>Linking setting to feeling without heavy themes.</p>
+      <ol><li>Adult selects one setting card and places two blank weather slips beside it.</li>
+<li>Writers invent two gentle weather choices for the same setting.</li>
+<li>Adult reads both choices and asks how each changes the opening line.</li>
+<li>Group circles one choice to use in a new paper story start.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Tiny Prop Big Setting</h3>
+      <p>Writers who like concrete details.</p>
+      <ol><li>Adult places one pretend object slip beside a setting card.</li>
+<li>Writers describe where the object rests using only fictional clues.</li>
+<li>Adult asks what the object reveals about the wider story-place.</li>
+<li>Group writes one shared sentence that names the setting and the object.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Paper Gallery Pass</h3>
+      <p>Quiet groups that benefit from turn-taking.</p>
+      <ol><li>Adult lays four fictional setting cards in a row on the table.</li>
+<li>Writers add one blank slip beside any card that gives them an idea.</li>
+<li>Adult reads the new slips in card order without naming writers.</li>
+<li>Group chooses one setting to carry into a short story start.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Setting Doorway Build</h3>
+      <p>Starting a story with a strong entrance.</p>
+      <ol><li>Adult chooses a card and says the setting has an imaginary doorway.</li>
+<li>Writers draw or write one invented clue found near the doorway.</li>
+<li>Adult asks what the clue suggests about the setting beyond the doorway.</li>
+<li>Group writes one opening sentence that steps into the fictional story-place.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home setting slips</p>
+      <h2>Finish one story setting later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">One paper pass | sensory detail</p>
+      <h3>Cloud Harbor Slip</h3>
+      <p>Add one invented sound for Cloud Harbor: ____________________.</p>
+      <p>A grown-up can ask what changed when the sound showed up: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Family table pass | mood setting</p>
+      <h3>Velvet Hill Slip</h3>
+      <p>Name one gentle color that covers Velvet Hill: ____________________.</p>
+      <p>A grown-up can ask what feeling that color gives the story: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Calm pencil pass | setting clue</p>
+      <h3>Silver Moss Pier Slip</h3>
+      <p>Write one made-up clue found on Silver Moss Pier: ____________________.</p>
+      <p>A grown-up can ask what the clue makes a character wonder: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Shared aloud pass | texture detail</p>
+      <h3>Glass Pebble Cove Slip</h3>
+      <p>Add one invented texture for Glass Pebble Cove: ____________________.</p>
+      <p>A grown-up can ask how the texture changes the next sentence: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Paper tray pass | movement in setting</p>
+      <h3>Kite Forest Clearing Slip</h3>
+      <p>Write what moves gently in Kite Forest Clearing: ____________________.</p>
+      <p>A grown-up can ask where the movement leads the story: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Any calm pause | world detail</p>
+      <h3>Paper Moon Market Slip</h3>
+      <p>Invent one quiet booth at Paper Moon Market: ____________________.</p>
+      <p>A grown-up can ask what the booth gives to the story: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One-card pass | setting contrast</p>
+      <h3>Button Bridge Isle Slip</h3>
+      <p>Add one soft surprise near Button Bridge Isle: ____________________.</p>
+      <p>A grown-up can ask why the surprise belongs there: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Pencil-and-paper pass | entry detail</p>
+      <h3>Ribbon Garden Gate Slip</h3>
+      <p>Write one pretend sign of welcome at Ribbon Garden Gate: ____________________.</p>
+      <p>A grown-up can ask who might step through next: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Quiet story pass | visual detail</p>
+      <h3>Glow Shelf Lagoon Slip</h3>
+      <p>Add one glowing object above Glow Shelf Lagoon: ____________________.</p>
+      <p>A grown-up can ask what the glow changes in the setting: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Family story pass | setting action</p>
+      <h3>Blue Lantern Orchard Slip</h3>
+      <p>Write one gentle action happening in Blue Lantern Orchard: ____________________.</p>
+      <p>A grown-up can ask how that action begins a story: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>The pretend setting I picked for my story is ____________________.</li>
+<li>One invented clue that made it feel alive was ____________________.</li>
+<li>The color I added to the setting was ____________________.</li>
+<li>The sound on my paper slip was ____________________.</li>
+<li>The setting changed the character by making them feel ____________________.</li>
+<li>A made-up object that belongs there is ____________________.</li>
+<li>The next paper card could move the story toward ____________________.</li>
+<li>A family member can add one pretend detail here: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 1 | Ages 6-8 | glow-stall mood and object anchor</div>
+      <h2>Moon Muffin Market Glow Stall</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this paper tray card beside blank paper and ask for made-up moon-market details only: ____________________.</p>
+      <p class="kid-direction">Turn the tray into a moon-muffin story place using one name, mood, edge, and object: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent a moon-market stall or aisle name that sounds made-up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the short label that belongs on the paper tray card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose how the stall feels when the moon lamps glow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one imagined color, sound, scent, or texture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: draw or write what sits at one pretend border of the stall: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: pick one item that proves the story is in this stall: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: replace one plain word with a moon-market detail that makes the setting clearer: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: point to the tray label, then copy one setting word: ____________________. Take-home line: make one new paper tray setting from a pretend moon-market clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 2 | Ages 6-8 | ripple counter label and map edge</div>
+      <h2>Puddle Planet Ripple Mail Tray</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: offer one paper tray card and two invented ripple-mail labels, then let the writer choose: ____________________.</p>
+      <p class="kid-direction">Make a puddle-planet mail setting from pretend stamps, ripples, and floating shelves: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent a name for the puddle mail counter or ripple-sorting spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the short tray label a helper would sort by: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose how the puddle mail spot feels: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one color, ripple sound, smooth texture, or pretend scent: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: show what borders the puddle mail spot, such as a pebble rail or leaf dock: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: pick one paper mail object, such as a ripple stamp or shell tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: replace a plain puddle detail with a stronger planet-mail detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: point to one pretend stamp, then write one setting word: ____________________. Take-home line: invent another ripple-mail setting on a blank paper tray: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 3 | Ages 7-9 | moving shelf-stop name and anchor object</div>
+      <h2>Buttonwood Library Train Shelf Stop</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the paper tray card beside a ticket outline and keep every shelf-stop detail pretend: ____________________.</p>
+      <p class="kid-direction">Choose where the train car pauses in the pretend buttonwood library: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent a shelf-stop name for the Buttonwood Library Train: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the label that would sit on this paper shelf-stop tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose how the shelf stop feels when brass bells chime: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one lamp color, wheel sound, wood texture, or page scent: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: write what marks one border of the shelf stop: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: pick one library-train object, such as a button ticket or lantern bookmark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: add one moving-train or buttonwood detail to make the shelf stop less plain: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: name one anchor object, then add one setting word: ____________________. Take-home line: build another paper shelf-stop setting with one pretend ticket clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 4 | Ages 7-9 | folded-map corner and mix-up clue</div>
+      <h2>Button Bakery Folded Map Corner</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: give the writer one paper tray card and say the bakery map is pretend, folded, and silly: ____________________.</p>
+      <p class="kid-direction">Design the spot where the button map gets mixed up and then becomes clearer: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent a bakery-map spot name that belongs in a button story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the tray label for the folded paper map corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose how the corner feels before the mix-up is solved: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one color, crinkle sound, warm scent, or button texture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: write what sits at one map edge, such as a ribbon turn or button arch: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: pick one object that fixes the setting in this paper corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: add one button, fold, crumb, or map mark that makes the setting easier to picture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: point to one folded-map clue, then fill one setting word: ____________________. Take-home line: make one new bakery-map setting from a pretend paper fold: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 5 | Ages 7-8 | weather mood and tiny view anchor</div>
+      <h2>Teacup Town Weather Pane Plaza</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the paper tray card beside a drawn teacup outline and choose one pretend weather symbol together: ____________________.</p>
+      <p class="kid-direction">Make the tiny weather-pane setting change mood without changing the whole story place: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent a name for the teacup view or weather pane: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the paper tray label for this weather pane setting: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose how the pane feels when the weather shifts: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one color, tiny sound, soft texture, or pretend breeze detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: write what borders the pane, such as a saucer rim or cloud ribbon: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: pick one object that belongs near the pane: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: change one plain weather word into a teacup-town detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: choose one mood word and fill the blank: ____________________. Take-home line: create one more paper weather-pane setting with a tiny object clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 6 | Ages 7-9 | notice-board label and edge clue</div>
+      <h2>Pocket Park Ribbon Notice Nook</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep every notice invented, set one paper tray card beside a blank board shape, and pick a gentle park clue: ____________________.</p>
+      <p class="kid-direction">Design the spot around the notice board using one label, one edge, and one object: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent a pocket-park notice-board name that sounds make-believe: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the short tray label for the notice-board setting: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose how the pocket park feels when a ribbon notice flutters: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one color, rustle sound, leaf texture, or paper mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: write what sits at one edge of the notice nook: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: pick one object that belongs by the notice board: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: add one detail that makes the notice-board setting more pocket-park specific: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: point to one pretend notice shape, then add one setting word: ____________________. Take-home line: invent another paper notice-board setting with one friendly clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 7 | Ages 7-9 | harbor entry points and ferry pauses</div>
+      <h2>Lunchbox Harbor Spoon Ferry Markers</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card in a paper tray and invite the writer to invent only pretend harbor details: ____________________.</p>
+      <p class="kid-direction">List three paper harbor spots where the spoon ferry can pause, turn, or wait: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent what the harbor is called: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write a short label that tells what kind of make-believe harbor this is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose the harbor feeling, such as busy, sleepy, sparkly, or fog-soft: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add two imagined details near the tray piers: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: mark one border of the paper map where the pretend water continues beyond the tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: pick one object such as a tiny spoon flag, button buoy, or folded paper crate: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: change one edge, pause spot, or object so the story has more setting detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: circle one detail and add only one new word beside it: ____________________. Take-home line: use the harbor again as the opening setting for a new pretend ferry tale: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 8 | Ages 7-9 | sorting zones and tiny arrival clues</div>
+      <h2>Acorn Avenue Errand Sorting Grove</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card in a paper tray and frame the errand hub as made-up from start to finish: ____________________.</p>
+      <p class="kid-direction">Decide which acorn helpers visit the hub and what each corner is used for in the story: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent what this acorn errand hub is called: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write a tray label that tells what gets sorted here using only story details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose the errand hub feeling, such as brisk, careful, cheerful, or quietly curious: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add two pretend senses from paper crates, leaf stamps, pebble bells, or twig signs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: mark one paper border where the next make-believe errand waits off the tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: choose one anchor object, such as a walnut tag, feather clip, or folded leaf slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: change one corner so the errand feels easier, stranger, or funnier: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: add one small symbol instead of a long sentence: ____________________. Take-home line: reuse the hub as a starting spot for a new errand tale: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 9 | Ages 8-10 | legend symbols and border mysteries</div>
+      <h2>Seed Library Map Archive Legend</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card in a paper tray and remind the writer that all seed labels, symbols, and map marks are invented: ____________________.</p>
+      <p class="kid-direction">Create a map legend with three seed symbols and decide what each symbol changes in the setting: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent what this seed archive is called: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write a tray label that explains the archive purpose: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose the archive feeling, such as hushed, curious, glowing, or puzzle-bright: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add two imagined sensations from dry paper husks, smooth seed beads, or whispery folders: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: mark what appears beyond one paper map edge using only invented landmarks: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: pick one object that proves this setting belongs to a story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: add one rule for how maps are shelved, folded, or traded: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw a single symbol for the setting mood: ____________________. Take-home line: use one seed symbol to open the next fictional setting: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 10 | Ages 8-10 | weather changes and station edges</div>
+      <h2>Rain Gauge Railway Weather Bend</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card in a paper tray and keep every rail, gauge, and sign fully invented on paper: ____________________.</p>
+      <p class="kid-direction">Choose where the railway pauses when the rain gauge fills, empties, or tilts: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent what this rainy railway is called: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write a tray label for the railway bend, platform, or crossing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose the weather mood, such as silver, jumpy, calm, or gentle thunder-rumbly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add two imagined sensations, such as rain taps, cool rail shine, or soft puddle hush: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: mark one paper edge where the railway disappears into mist, reeds, or clouds: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: choose one anchor object, such as a tilted gauge, brass bell, or blue ticket stub: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: change how the gauge affects the next scene: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw the gauge level and one nearby setting clue: ____________________. Take-home line: bring the gauge clue into another pretend railway tale: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 11 | Ages 8-10 | vantage points and sky-border clues</div>
+      <h2>Moss Message Observatory Signal Shelf</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card in a paper tray and state that every moss signal, sky mark, and lookout note is pretend: ____________________.</p>
+      <p class="kid-direction">Decide what the moss signals show about the observatory weather, sound, and borders: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: invent what this moss observatory is called: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write a tray label that explains the observatory signal job: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose the observatory feeling, such as patient, moonlit, breezy, or lantern-warm: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add two imagined sensations, such as springy moss, cool stone, or whispery wind: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: mark what sits beyond one paper border: cloud steps, fern towers, or glow fog: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: pick one object such as a moss dial, folded sky chart, or pebble lens: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: change what one moss signal means for the setting: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: add one moss mark and one sky mark only: ____________________. Take-home line: reuse the moss signal as the first clue in a new fictional setting: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 12 | Ages 8-10 | tide marks, changing light, and one anchor object</div>
+      <h2>Tidepool Clock-Shelf Lab Setting</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card in the paper tray and name the tidepool lab as a pretend story world: ____________________.</p>
+      <p class="kid-direction">Create a tidepool lab setting where a tiny change in the water marks tells the story what is happening next: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: name the invented tidepool lab area where the story begins: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the short label that would sit on this card in the paper tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose calm, busy, puzzled, or bright, then add one reason the tidepool lab feels that way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one color, texture, or soft sound from the tidepool setting: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: draw or name what appears at the far edge of the pretend tidepool map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: choose one invented paper object that proves the setting is a timekeepers lab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: replace one plain detail with a sharper tide, shell, clock, or chart detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: sketch one tide mark and write only its setting clue: ____________________. Take-home line: save this card and add one new tidepool lab detail on another paper slip: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 13 | Ages 10-11 | contrast from fuzzy to clear ferry details</div>
+      <h2>Revision River Ferry Clear-View Setting</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: put the card in the paper tray, then invite the writer to keep the ferry world invented: ____________________.</p>
+      <p class="kid-direction">Build the ferry setting so the crossing changes from unclear to vivid by the end of the paragraph: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: name the invented ferry deck, dock, river bend, or page pier: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the short ferry-setting label for this tray card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: show how the ferry feels before and after the setting becomes clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one ripple sound, mist color, rope texture, or paper creak: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: mark what waits at the far river edge of the pretend map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: choose one invented ferry object that helps the setting feel specific: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: change one vague ferry detail into a concrete dock, ripple, rope, or lantern detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the unclear detail and the clearer detail: ____________________. Take-home line: save this card and add a new ferry setting clue on a folded paper slip: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 14 | Ages 10-11 | labels, surfaces, and display clues</div>
+      <h2>Clue Label Tower Exhibit-Tier Setting</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: put this card in the paper tray and remind the writer that every exhibit clue is pretend: ____________________.</p>
+      <p class="kid-direction">Invent a tower museum setting where one label makes the reader notice the right clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: name the invented tower tier, exhibit nook, label arch, or clue balcony: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the short label that identifies this museum setting card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose curious, grand, quiet, or cluttered, then explain what creates that mood: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one color, shape, surface, or hush-sound from the tower museum: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: mark which label hangs at the edge of the pretend tower map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: choose one invented display tag, label stand, or paper magnifier for the setting: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: swap one plain label word for a specific shape, material, or motion clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: sketch one label box and write only its strongest setting clue: ____________________. Take-home line: save this card and add another invented exhibit label on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 15 | Ages 10-11 | direction words, craft materials, and choice points</div>
+      <h2>Compass Craft Choice-Point Setting</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: put this card in the paper tray and keep every craft detail pretend and drawn: ____________________.</p>
+      <p class="kid-direction">Design a compass craft setting where the materials and marks show which choice matters most: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: name the invented needle hall, bead arch, compass court, or craft rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the short paper tray label for this compass setting: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose steady, curious, tangled, or bright, then add the setting clue that proves it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one line color, bead texture, paper fold, or gentle tapping sound: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: mark what lies beyond the last compass point on the pretend map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: choose one invented paper needle, bead card, folded arrow, or craft tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: replace one broad direction word with a specific setting clue the reader can picture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: mark one compass point and write only its setting clue: ____________________. Take-home line: save this card and add one new compass craft material on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-setting-card-page">
+      <div class="page-kicker">Setting Card 16 | Ages 10-11 | page order, boardwalk signs, and a final object anchor</div>
+      <h2>Binding Day Boardwalk Final-Page Setting</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: put this card in the paper tray and frame the boardwalk as an invented paper story world: ____________________.</p>
+      <p class="kid-direction">Build a boardwalk setting where loose page pieces show what the ending needs: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Setting name</h3>
+      <p>Setting name: name the invented page booth, stitch gate, binding rail, or boardwalk bend: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Tray label</h3>
+      <p>Tray label: write the short label that fits this final-page setting card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mood clue</h3>
+      <p>Mood clue: choose settled, busy, hopeful, or tidy, then add one boardwalk clue that creates the feeling: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sensory clue</h3>
+      <p>Sensory clue: add one paper-flutter sound, wood-grain texture, thread color, or salt-air hint: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Map edge</h3>
+      <p>Map edge: mark what sits at the far edge of the boardwalk map after the final page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object anchor</h3>
+      <p>Object anchor: choose one invented button tag, thread loop, page clasp, or folded sign: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise setting</h3>
+      <p>Revise setting: move one setting detail earlier so the ending feels connected: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: number two setting details and write only the final one: ____________________. Take-home line: save this card and add one boardwalk detail that could close the story: ____________________.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,550 @@
+{
+  "batchId": "2026-06-03-batch38",
+  "generatedAt": "2026-06-03",
+  "productSlug": "paper-tray-story-setting-card-pack",
+  "title": "Paper Tray Story Setting Card Pack",
+  "pricePoint": "$49",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable setting cards plus adult guide tools, setting routines, take-home setting slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/paper-tray-story-setting-card-pack/Paper-Tray-Story-Setting-Card-Pack.pdf",
+    "zipPath": "product-build/paper-tray-story-setting-card-pack/paper-tray-story-setting-card-pack.zip",
+    "sourceHtmlPath": "product-build/paper-tray-story-setting-card-pack/source/paper-tray-story-setting-card-pack.html",
+    "manifestPath": "product-build/paper-tray-story-setting-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch38-paper-tray-setting-cards-a.json",
+    "content/product-artifacts/lanes/batch38-paper-tray-setting-cards-b.json",
+    "content/product-artifacts/lanes/batch38-paper-tray-setting-cards-c.json",
+    "content/product-artifacts/lanes/batch38-paper-tray-setting-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable paper setting cards",
+    "headline": "Paper Tray Story Setting Card Pack",
+    "subhead": "Sixteen paper cards help writers build fictional story places from tray labels, mood clues, sensory details, and map edges.",
+    "included": [
+      "16 printable paper tray setting cards",
+      "Adult setup guide",
+      "Fictional setting safety notes",
+      "Paper tray coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led setting routines",
+      "Ten take-home setting slips",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Place one printed card stack, blank slips, and pencils in a shared paper tray before writers gather.",
+      "Read the pack aloud as pretend work; every setting must stay invented and broad.",
+      "Choose one adult caller to handle card turns, pencil supply, and calm table pacing.",
+      "Keep extra cards face down so the active prompt feels simple and paper-only.",
+      "Invite writers to mark slips with invented symbols only when a card needs a label."
+    ],
+    "paperSettingSetup": [
+      "Set a tray label that says Pretend Setting Cards and leave space for finished slips.",
+      "Sort cards by broad story-place type: sky, garden, tiny market, floating shelf, and invented festival.",
+      "Pair each card with one blank slip so writers can name a fictional detail.",
+      "Keep answer slips loose rather than bound, so the tray stays light and fictional.",
+      "Use only paper pieces, pencils, and printed cards for this offline lane."
+    ],
+    "settingCoaching": [
+      "Ask for sensory but invented clues: color, sound, texture, weather, and a small surprise.",
+      "If a writer names something actual, guide them to rename it with a made-up title.",
+      "Keep prompts broad: a moonlit pier works better than an overly narrow named spot.",
+      "Model one sentence that links setting to mood while staying gentle and family-friendly.",
+      "Praise clear paper choices instead of speed, ranking, or correctness."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented labels and pretend symbols only.",
+      "Skip any prompt that starts to collect family routines or traceable clues.",
+      "Do not write actual names, map clues, travel paths, or narrow real-world facts.",
+      "Keep finished slips in the tray or send them with families; sharing stays adult-led and offline.",
+      "Adults should rewrite any actual-world clue into an invented broad story-place before discussion."
+    ],
+    "familyHandoff": [
+      "Send one selected slip with a short note inviting more pretend setting play at the family table.",
+      "Tell adults that blanks are for made-up details, not narrow real-world facts.",
+      "Suggest using a fresh paper tray at the next gathering to keep the activity offline and light.",
+      "Offer the optional prompts as aloud choices, not required written reports.",
+      "Invite families to keep or recycle slips after the story talk."
+    ],
+    "reset": [
+      "Collect unused cards, blank slips, and pencils into the paper tray.",
+      "Remove any slip that accidentally names a narrow real-world fact.",
+      "Shuffle fictional setting cards so the next group starts fresh.",
+      "Leave the tray empty of completed slips unless an adult intentionally sends them with a family."
+    ]
+  },
+  "settingRoutines": [
+    {
+      "name": "Tray Flip Setting Start",
+      "bestFor": "Writers who need a low-pressure opening.",
+      "steps": [
+        "Adult places three setting cards face up in the paper tray.",
+        "Each writer chooses one card and adds one invented detail on a blank slip.",
+        "Adult reads the slips aloud and asks which detail changes the story mood.",
+        "Group keeps one slip under the card as the next story seed."
+      ]
+    },
+    {
+      "name": "One Clue Many Worlds",
+      "bestFor": "Groups practicing flexible imagination.",
+      "steps": [
+        "Adult names one gentle clue such as blue mist or silver moss.",
+        "Writers each place that clue into a different fictional setting card.",
+        "Adult invites each writer to add one texture or sound on paper.",
+        "Group compares how the same clue feels different in each made-up story-place."
+      ]
+    },
+    {
+      "name": "Weather Mood Swap",
+      "bestFor": "Linking setting to feeling without heavy themes.",
+      "steps": [
+        "Adult selects one setting card and places two blank weather slips beside it.",
+        "Writers invent two gentle weather choices for the same setting.",
+        "Adult reads both choices and asks how each changes the opening line.",
+        "Group circles one choice to use in a new paper story start."
+      ]
+    },
+    {
+      "name": "Tiny Prop Big Setting",
+      "bestFor": "Writers who like concrete details.",
+      "steps": [
+        "Adult places one pretend object slip beside a setting card.",
+        "Writers describe where the object rests using only fictional clues.",
+        "Adult asks what the object reveals about the wider story-place.",
+        "Group writes one shared sentence that names the setting and the object."
+      ]
+    },
+    {
+      "name": "Paper Gallery Pass",
+      "bestFor": "Quiet groups that benefit from turn-taking.",
+      "steps": [
+        "Adult lays four fictional setting cards in a row on the table.",
+        "Writers add one blank slip beside any card that gives them an idea.",
+        "Adult reads the new slips in card order without naming writers.",
+        "Group chooses one setting to carry into a short story start."
+      ]
+    },
+    {
+      "name": "Setting Doorway Build",
+      "bestFor": "Starting a story with a strong entrance.",
+      "steps": [
+        "Adult chooses a card and says the setting has an imaginary doorway.",
+        "Writers draw or write one invented clue found near the doorway.",
+        "Adult asks what the clue suggests about the setting beyond the doorway.",
+        "Group writes one opening sentence that steps into the fictional story-place."
+      ]
+    }
+  ],
+  "takeHomeSettingSlips": [
+    {
+      "title": "Cloud Harbor Slip",
+      "time": "One paper pass",
+      "skill": "sensory detail",
+      "direction": "Add one invented sound for Cloud Harbor: ____________________.",
+      "familyLine": "A grown-up can ask what changed when the sound showed up: ____________________."
+    },
+    {
+      "title": "Velvet Hill Slip",
+      "time": "Family table pass",
+      "skill": "mood setting",
+      "direction": "Name one gentle color that covers Velvet Hill: ____________________.",
+      "familyLine": "A grown-up can ask what feeling that color gives the story: ____________________."
+    },
+    {
+      "title": "Silver Moss Pier Slip",
+      "time": "Calm pencil pass",
+      "skill": "setting clue",
+      "direction": "Write one made-up clue found on Silver Moss Pier: ____________________.",
+      "familyLine": "A grown-up can ask what the clue makes a character wonder: ____________________."
+    },
+    {
+      "title": "Glass Pebble Cove Slip",
+      "time": "Shared aloud pass",
+      "skill": "texture detail",
+      "direction": "Add one invented texture for Glass Pebble Cove: ____________________.",
+      "familyLine": "A grown-up can ask how the texture changes the next sentence: ____________________."
+    },
+    {
+      "title": "Kite Forest Clearing Slip",
+      "time": "Paper tray pass",
+      "skill": "movement in setting",
+      "direction": "Write what moves gently in Kite Forest Clearing: ____________________.",
+      "familyLine": "A grown-up can ask where the movement leads the story: ____________________."
+    },
+    {
+      "title": "Paper Moon Market Slip",
+      "time": "Any calm pause",
+      "skill": "world detail",
+      "direction": "Invent one quiet booth at Paper Moon Market: ____________________.",
+      "familyLine": "A grown-up can ask what the booth gives to the story: ____________________."
+    },
+    {
+      "title": "Button Bridge Isle Slip",
+      "time": "One-card pass",
+      "skill": "setting contrast",
+      "direction": "Add one soft surprise near Button Bridge Isle: ____________________.",
+      "familyLine": "A grown-up can ask why the surprise belongs there: ____________________."
+    },
+    {
+      "title": "Ribbon Garden Gate Slip",
+      "time": "Pencil-and-paper pass",
+      "skill": "entry detail",
+      "direction": "Write one pretend sign of welcome at Ribbon Garden Gate: ____________________.",
+      "familyLine": "A grown-up can ask who might step through next: ____________________."
+    },
+    {
+      "title": "Glow Shelf Lagoon Slip",
+      "time": "Quiet story pass",
+      "skill": "visual detail",
+      "direction": "Add one glowing object above Glow Shelf Lagoon: ____________________.",
+      "familyLine": "A grown-up can ask what the glow changes in the setting: ____________________."
+    },
+    {
+      "title": "Blue Lantern Orchard Slip",
+      "time": "Family story pass",
+      "skill": "setting action",
+      "direction": "Write one gentle action happening in Blue Lantern Orchard: ____________________.",
+      "familyLine": "A grown-up can ask how that action begins a story: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "The pretend setting I picked for my story is ____________________.",
+    "One invented clue that made it feel alive was ____________________.",
+    "The color I added to the setting was ____________________.",
+    "The sound on my paper slip was ____________________.",
+    "The setting changed the character by making them feel ____________________.",
+    "A made-up object that belongs there is ____________________.",
+    "The next paper card could move the story toward ____________________.",
+    "A family member can add one pretend detail here: ____________________."
+  ],
+  "cards": [
+    {
+      "id": "paper-tray-setting-card-01",
+      "title": "Moon Muffin Market Glow Stall",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "settingSkill": "glow-stall mood and object anchor",
+      "useCase": "Adult-led printable paper setting card for offline shaping of a fictional moon-market stall before a short story begins: ____________________.",
+      "adultSetup": "Adult: set this paper tray card beside blank paper and ask for made-up moon-market details only: ____________________.",
+      "kidDirection": "Turn the tray into a moon-muffin story place using one name, mood, edge, and object: ____________________.",
+      "settingNamePrompt": "Setting name: invent a moon-market stall or aisle name that sounds made-up: ____________________.",
+      "trayLabelPrompt": "Tray label: write the short label that belongs on the paper tray card: ____________________.",
+      "moodPrompt": "Mood clue: choose how the stall feels when the moon lamps glow: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one imagined color, sound, scent, or texture: ____________________.",
+      "mapEdgePrompt": "Map edge: draw or write what sits at one pretend border of the stall: ____________________.",
+      "objectAnchorPrompt": "Object anchor: pick one item that proves the story is in this stall: ____________________.",
+      "reviseSettingPrompt": "Revise setting: replace one plain word with a moon-market detail that makes the setting clearer: ____________________.",
+      "quietOptionLine": "Quiet option: point to the tray label, then copy one setting word: ____________________.",
+      "takeHomeLine": "Take-home line: make one new paper tray setting from a pretend moon-market clue: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-02",
+      "title": "Puddle Planet Ripple Mail Tray",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "settingSkill": "ripple counter label and map edge",
+      "useCase": "Adult-led printable paper setting card for offline shaping of a fictional puddle mail counter with invented ripple details: ____________________.",
+      "adultSetup": "Adult: offer one paper tray card and two invented ripple-mail labels, then let the writer choose: ____________________.",
+      "kidDirection": "Make a puddle-planet mail setting from pretend stamps, ripples, and floating shelves: ____________________.",
+      "settingNamePrompt": "Setting name: invent a name for the puddle mail counter or ripple-sorting spot: ____________________.",
+      "trayLabelPrompt": "Tray label: write the short tray label a helper would sort by: ____________________.",
+      "moodPrompt": "Mood clue: choose how the puddle mail spot feels: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one color, ripple sound, smooth texture, or pretend scent: ____________________.",
+      "mapEdgePrompt": "Map edge: show what borders the puddle mail spot, such as a pebble rail or leaf dock: ____________________.",
+      "objectAnchorPrompt": "Object anchor: pick one paper mail object, such as a ripple stamp or shell tag: ____________________.",
+      "reviseSettingPrompt": "Revise setting: replace a plain puddle detail with a stronger planet-mail detail: ____________________.",
+      "quietOptionLine": "Quiet option: point to one pretend stamp, then write one setting word: ____________________.",
+      "takeHomeLine": "Take-home line: invent another ripple-mail setting on a blank paper tray: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-03",
+      "title": "Buttonwood Library Train Shelf Stop",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "settingSkill": "moving shelf-stop name and anchor object",
+      "useCase": "Adult-led printable paper setting card for offline building of a fictional library-train shelf stop with invented bookish details: ____________________.",
+      "adultSetup": "Adult: set the paper tray card beside a ticket outline and keep every shelf-stop detail pretend: ____________________.",
+      "kidDirection": "Choose where the train car pauses in the pretend buttonwood library: ____________________.",
+      "settingNamePrompt": "Setting name: invent a shelf-stop name for the Buttonwood Library Train: ____________________.",
+      "trayLabelPrompt": "Tray label: write the label that would sit on this paper shelf-stop tray: ____________________.",
+      "moodPrompt": "Mood clue: choose how the shelf stop feels when brass bells chime: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one lamp color, wheel sound, wood texture, or page scent: ____________________.",
+      "mapEdgePrompt": "Map edge: write what marks one border of the shelf stop: ____________________.",
+      "objectAnchorPrompt": "Object anchor: pick one library-train object, such as a button ticket or lantern bookmark: ____________________.",
+      "reviseSettingPrompt": "Revise setting: add one moving-train or buttonwood detail to make the shelf stop less plain: ____________________.",
+      "quietOptionLine": "Quiet option: name one anchor object, then add one setting word: ____________________.",
+      "takeHomeLine": "Take-home line: build another paper shelf-stop setting with one pretend ticket clue: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-04",
+      "title": "Button Bakery Folded Map Corner",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "settingSkill": "folded-map corner and mix-up clue",
+      "useCase": "Adult-led printable paper setting card for offline shaping of a fictional bakery-map corner with only made-up paper turns: ____________________.",
+      "adultSetup": "Adult: give the writer one paper tray card and say the bakery map is pretend, folded, and silly: ____________________.",
+      "kidDirection": "Design the spot where the button map gets mixed up and then becomes clearer: ____________________.",
+      "settingNamePrompt": "Setting name: invent a bakery-map spot name that belongs in a button story: ____________________.",
+      "trayLabelPrompt": "Tray label: write the tray label for the folded paper map corner: ____________________.",
+      "moodPrompt": "Mood clue: choose how the corner feels before the mix-up is solved: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one color, crinkle sound, warm scent, or button texture: ____________________.",
+      "mapEdgePrompt": "Map edge: write what sits at one map edge, such as a ribbon turn or button arch: ____________________.",
+      "objectAnchorPrompt": "Object anchor: pick one object that fixes the setting in this paper corner: ____________________.",
+      "reviseSettingPrompt": "Revise setting: add one button, fold, crumb, or map mark that makes the setting easier to picture: ____________________.",
+      "quietOptionLine": "Quiet option: point to one folded-map clue, then fill one setting word: ____________________.",
+      "takeHomeLine": "Take-home line: make one new bakery-map setting from a pretend paper fold: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-05",
+      "title": "Teacup Town Weather Pane Plaza",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "settingSkill": "weather mood and tiny view anchor",
+      "useCase": "Adult-led printable paper setting card for offline shaping of a fictional teacup weather-pane view before drafting: ____________________.",
+      "adultSetup": "Adult: set the paper tray card beside a drawn teacup outline and choose one pretend weather symbol together: ____________________.",
+      "kidDirection": "Make the tiny weather-pane setting change mood without changing the whole story place: ____________________.",
+      "settingNamePrompt": "Setting name: invent a name for the teacup view or weather pane: ____________________.",
+      "trayLabelPrompt": "Tray label: write the paper tray label for this weather pane setting: ____________________.",
+      "moodPrompt": "Mood clue: choose how the pane feels when the weather shifts: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one color, tiny sound, soft texture, or pretend breeze detail: ____________________.",
+      "mapEdgePrompt": "Map edge: write what borders the pane, such as a saucer rim or cloud ribbon: ____________________.",
+      "objectAnchorPrompt": "Object anchor: pick one object that belongs near the pane: ____________________.",
+      "reviseSettingPrompt": "Revise setting: change one plain weather word into a teacup-town detail: ____________________.",
+      "quietOptionLine": "Quiet option: choose one mood word and fill the blank: ____________________.",
+      "takeHomeLine": "Take-home line: create one more paper weather-pane setting with a tiny object clue: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-06",
+      "title": "Pocket Park Ribbon Notice Nook",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "settingSkill": "notice-board label and edge clue",
+      "useCase": "Adult-led printable paper setting card for offline building of a fictional pocket-park notice-board scene from pretend paper clues: ____________________.",
+      "adultSetup": "Adult: keep every notice invented, set one paper tray card beside a blank board shape, and pick a gentle park clue: ____________________.",
+      "kidDirection": "Design the spot around the notice board using one label, one edge, and one object: ____________________.",
+      "settingNamePrompt": "Setting name: invent a pocket-park notice-board name that sounds make-believe: ____________________.",
+      "trayLabelPrompt": "Tray label: write the short tray label for the notice-board setting: ____________________.",
+      "moodPrompt": "Mood clue: choose how the pocket park feels when a ribbon notice flutters: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one color, rustle sound, leaf texture, or paper mark: ____________________.",
+      "mapEdgePrompt": "Map edge: write what sits at one edge of the notice nook: ____________________.",
+      "objectAnchorPrompt": "Object anchor: pick one object that belongs by the notice board: ____________________.",
+      "reviseSettingPrompt": "Revise setting: add one detail that makes the notice-board setting more pocket-park specific: ____________________.",
+      "quietOptionLine": "Quiet option: point to one pretend notice shape, then add one setting word: ____________________.",
+      "takeHomeLine": "Take-home line: invent another paper notice-board setting with one friendly clue: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-07",
+      "title": "Lunchbox Harbor Spoon Ferry Markers",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "settingSkill": "harbor entry points and ferry pauses",
+      "useCase": "Adult-led printable paper setting card for an offline fictional harbor where spoon ferries carry tiny make-believe parcels between tray piers: ____________________.",
+      "adultSetup": "Adult: set this card in a paper tray and invite the writer to invent only pretend harbor details: ____________________.",
+      "kidDirection": "List three paper harbor spots where the spoon ferry can pause, turn, or wait: ____________________.",
+      "settingNamePrompt": "Setting name: invent what the harbor is called: ____________________.",
+      "trayLabelPrompt": "Tray label: write a short label that tells what kind of make-believe harbor this is: ____________________.",
+      "moodPrompt": "Mood clue: choose the harbor feeling, such as busy, sleepy, sparkly, or fog-soft: ____________________.",
+      "sensoryPrompt": "Sensory clue: add two imagined details near the tray piers: ____________________.",
+      "mapEdgePrompt": "Map edge: mark one border of the paper map where the pretend water continues beyond the tray: ____________________.",
+      "objectAnchorPrompt": "Object anchor: pick one object such as a tiny spoon flag, button buoy, or folded paper crate: ____________________.",
+      "reviseSettingPrompt": "Revise setting: change one edge, pause spot, or object so the story has more setting detail: ____________________.",
+      "quietOptionLine": "Quiet option: circle one detail and add only one new word beside it: ____________________.",
+      "takeHomeLine": "Take-home line: use the harbor again as the opening setting for a new pretend ferry tale: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-08",
+      "title": "Acorn Avenue Errand Sorting Grove",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "settingSkill": "sorting zones and tiny arrival clues",
+      "useCase": "Adult-led printable paper setting card for an offline fictional acorn errand hub with tiny sorting corners and pretend task marks: ____________________.",
+      "adultSetup": "Adult: set this card in a paper tray and frame the errand hub as made-up from start to finish: ____________________.",
+      "kidDirection": "Decide which acorn helpers visit the hub and what each corner is used for in the story: ____________________.",
+      "settingNamePrompt": "Setting name: invent what this acorn errand hub is called: ____________________.",
+      "trayLabelPrompt": "Tray label: write a tray label that tells what gets sorted here using only story details: ____________________.",
+      "moodPrompt": "Mood clue: choose the errand hub feeling, such as brisk, careful, cheerful, or quietly curious: ____________________.",
+      "sensoryPrompt": "Sensory clue: add two pretend senses from paper crates, leaf stamps, pebble bells, or twig signs: ____________________.",
+      "mapEdgePrompt": "Map edge: mark one paper border where the next make-believe errand waits off the tray: ____________________.",
+      "objectAnchorPrompt": "Object anchor: choose one anchor object, such as a walnut tag, feather clip, or folded leaf slip: ____________________.",
+      "reviseSettingPrompt": "Revise setting: change one corner so the errand feels easier, stranger, or funnier: ____________________.",
+      "quietOptionLine": "Quiet option: add one small symbol instead of a long sentence: ____________________.",
+      "takeHomeLine": "Take-home line: reuse the hub as a starting spot for a new errand tale: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-09",
+      "title": "Seed Library Map Archive Legend",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "settingSkill": "legend symbols and border mysteries",
+      "useCase": "Adult-led printable paper setting card for an offline fictional seed map archive where every drawer label points to an invented growing tale: ____________________.",
+      "adultSetup": "Adult: set this card in a paper tray and remind the writer that all seed labels, symbols, and map marks are invented: ____________________.",
+      "kidDirection": "Create a map legend with three seed symbols and decide what each symbol changes in the setting: ____________________.",
+      "settingNamePrompt": "Setting name: invent what this seed archive is called: ____________________.",
+      "trayLabelPrompt": "Tray label: write a tray label that explains the archive purpose: ____________________.",
+      "moodPrompt": "Mood clue: choose the archive feeling, such as hushed, curious, glowing, or puzzle-bright: ____________________.",
+      "sensoryPrompt": "Sensory clue: add two imagined sensations from dry paper husks, smooth seed beads, or whispery folders: ____________________.",
+      "mapEdgePrompt": "Map edge: mark what appears beyond one paper map edge using only invented landmarks: ____________________.",
+      "objectAnchorPrompt": "Object anchor: pick one object that proves this setting belongs to a story: ____________________.",
+      "reviseSettingPrompt": "Revise setting: add one rule for how maps are shelved, folded, or traded: ____________________.",
+      "quietOptionLine": "Quiet option: draw a single symbol for the setting mood: ____________________.",
+      "takeHomeLine": "Take-home line: use one seed symbol to open the next fictional setting: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-10",
+      "title": "Rain Gauge Railway Weather Bend",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "settingSkill": "weather changes and station edges",
+      "useCase": "Adult-led printable paper setting card for an offline fictional railway where rain gauges change the story setting: ____________________.",
+      "adultSetup": "Adult: set this card in a paper tray and keep every rail, gauge, and sign fully invented on paper: ____________________.",
+      "kidDirection": "Choose where the railway pauses when the rain gauge fills, empties, or tilts: ____________________.",
+      "settingNamePrompt": "Setting name: invent what this rainy railway is called: ____________________.",
+      "trayLabelPrompt": "Tray label: write a tray label for the railway bend, platform, or crossing: ____________________.",
+      "moodPrompt": "Mood clue: choose the weather mood, such as silver, jumpy, calm, or gentle thunder-rumbly: ____________________.",
+      "sensoryPrompt": "Sensory clue: add two imagined sensations, such as rain taps, cool rail shine, or soft puddle hush: ____________________.",
+      "mapEdgePrompt": "Map edge: mark one paper edge where the railway disappears into mist, reeds, or clouds: ____________________.",
+      "objectAnchorPrompt": "Object anchor: choose one anchor object, such as a tilted gauge, brass bell, or blue ticket stub: ____________________.",
+      "reviseSettingPrompt": "Revise setting: change how the gauge affects the next scene: ____________________.",
+      "quietOptionLine": "Quiet option: draw the gauge level and one nearby setting clue: ____________________.",
+      "takeHomeLine": "Take-home line: bring the gauge clue into another pretend railway tale: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-11",
+      "title": "Moss Message Observatory Signal Shelf",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "settingSkill": "vantage points and sky-border clues",
+      "useCase": "Adult-led printable paper setting card for an offline fictional observatory where moss signs help shape a quiet sky setting: ____________________.",
+      "adultSetup": "Adult: set this card in a paper tray and state that every moss signal, sky mark, and lookout note is pretend: ____________________.",
+      "kidDirection": "Decide what the moss signals show about the observatory weather, sound, and borders: ____________________.",
+      "settingNamePrompt": "Setting name: invent what this moss observatory is called: ____________________.",
+      "trayLabelPrompt": "Tray label: write a tray label that explains the observatory signal job: ____________________.",
+      "moodPrompt": "Mood clue: choose the observatory feeling, such as patient, moonlit, breezy, or lantern-warm: ____________________.",
+      "sensoryPrompt": "Sensory clue: add two imagined sensations, such as springy moss, cool stone, or whispery wind: ____________________.",
+      "mapEdgePrompt": "Map edge: mark what sits beyond one paper border: cloud steps, fern towers, or glow fog: ____________________.",
+      "objectAnchorPrompt": "Object anchor: pick one object such as a moss dial, folded sky chart, or pebble lens: ____________________.",
+      "reviseSettingPrompt": "Revise setting: change what one moss signal means for the setting: ____________________.",
+      "quietOptionLine": "Quiet option: add one moss mark and one sky mark only: ____________________.",
+      "takeHomeLine": "Take-home line: reuse the moss signal as the first clue in a new fictional setting: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-12",
+      "title": "Tidepool Clock-Shelf Lab Setting",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "settingSkill": "tide marks, changing light, and one anchor object",
+      "useCase": "Adult-led printable paper setting card for an invented tidepool lab where setting clues show time, mood, and movement: ____________________.",
+      "adultSetup": "Adult: set this card in the paper tray and name the tidepool lab as a pretend story world: ____________________.",
+      "kidDirection": "Create a tidepool lab setting where a tiny change in the water marks tells the story what is happening next: ____________________.",
+      "settingNamePrompt": "Setting name: name the invented tidepool lab area where the story begins: ____________________.",
+      "trayLabelPrompt": "Tray label: write the short label that would sit on this card in the paper tray: ____________________.",
+      "moodPrompt": "Mood clue: choose calm, busy, puzzled, or bright, then add one reason the tidepool lab feels that way: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one color, texture, or soft sound from the tidepool setting: ____________________.",
+      "mapEdgePrompt": "Map edge: draw or name what appears at the far edge of the pretend tidepool map: ____________________.",
+      "objectAnchorPrompt": "Object anchor: choose one invented paper object that proves the setting is a timekeepers lab: ____________________.",
+      "reviseSettingPrompt": "Revise setting: replace one plain detail with a sharper tide, shell, clock, or chart detail: ____________________.",
+      "quietOptionLine": "Quiet option: sketch one tide mark and write only its setting clue: ____________________.",
+      "takeHomeLine": "Take-home line: save this card and add one new tidepool lab detail on another paper slip: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-13",
+      "title": "Revision River Ferry Clear-View Setting",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "settingSkill": "contrast from fuzzy to clear ferry details",
+      "useCase": "Adult-led printable paper setting card for a fictional ferry setting that changes from fuzzy to clear: ____________________.",
+      "adultSetup": "Adult: put the card in the paper tray, then invite the writer to keep the ferry world invented: ____________________.",
+      "kidDirection": "Build the ferry setting so the crossing changes from unclear to vivid by the end of the paragraph: ____________________.",
+      "settingNamePrompt": "Setting name: name the invented ferry deck, dock, river bend, or page pier: ____________________.",
+      "trayLabelPrompt": "Tray label: write the short ferry-setting label for this tray card: ____________________.",
+      "moodPrompt": "Mood clue: show how the ferry feels before and after the setting becomes clearer: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one ripple sound, mist color, rope texture, or paper creak: ____________________.",
+      "mapEdgePrompt": "Map edge: mark what waits at the far river edge of the pretend map: ____________________.",
+      "objectAnchorPrompt": "Object anchor: choose one invented ferry object that helps the setting feel specific: ____________________.",
+      "reviseSettingPrompt": "Revise setting: change one vague ferry detail into a concrete dock, ripple, rope, or lantern detail: ____________________.",
+      "quietOptionLine": "Quiet option: write only the unclear detail and the clearer detail: ____________________.",
+      "takeHomeLine": "Take-home line: save this card and add a new ferry setting clue on a folded paper slip: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-14",
+      "title": "Clue Label Tower Exhibit-Tier Setting",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "settingSkill": "labels, surfaces, and display clues",
+      "useCase": "Adult-led printable paper setting card for a fictional tower museum where labels reveal the setting: ____________________.",
+      "adultSetup": "Adult: put this card in the paper tray and remind the writer that every exhibit clue is pretend: ____________________.",
+      "kidDirection": "Invent a tower museum setting where one label makes the reader notice the right clue: ____________________.",
+      "settingNamePrompt": "Setting name: name the invented tower tier, exhibit nook, label arch, or clue balcony: ____________________.",
+      "trayLabelPrompt": "Tray label: write the short label that identifies this museum setting card: ____________________.",
+      "moodPrompt": "Mood clue: choose curious, grand, quiet, or cluttered, then explain what creates that mood: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one color, shape, surface, or hush-sound from the tower museum: ____________________.",
+      "mapEdgePrompt": "Map edge: mark which label hangs at the edge of the pretend tower map: ____________________.",
+      "objectAnchorPrompt": "Object anchor: choose one invented display tag, label stand, or paper magnifier for the setting: ____________________.",
+      "reviseSettingPrompt": "Revise setting: swap one plain label word for a specific shape, material, or motion clue: ____________________.",
+      "quietOptionLine": "Quiet option: sketch one label box and write only its strongest setting clue: ____________________.",
+      "takeHomeLine": "Take-home line: save this card and add another invented exhibit label on paper: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-15",
+      "title": "Compass Craft Choice-Point Setting",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "settingSkill": "direction words, craft materials, and choice points",
+      "useCase": "Adult-led printable paper setting card for a fictional compass craft setting with clear paper choices: ____________________.",
+      "adultSetup": "Adult: put this card in the paper tray and keep every craft detail pretend and drawn: ____________________.",
+      "kidDirection": "Design a compass craft setting where the materials and marks show which choice matters most: ____________________.",
+      "settingNamePrompt": "Setting name: name the invented needle hall, bead arch, compass court, or craft rail: ____________________.",
+      "trayLabelPrompt": "Tray label: write the short paper tray label for this compass setting: ____________________.",
+      "moodPrompt": "Mood clue: choose steady, curious, tangled, or bright, then add the setting clue that proves it: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one line color, bead texture, paper fold, or gentle tapping sound: ____________________.",
+      "mapEdgePrompt": "Map edge: mark what lies beyond the last compass point on the pretend map: ____________________.",
+      "objectAnchorPrompt": "Object anchor: choose one invented paper needle, bead card, folded arrow, or craft tag: ____________________.",
+      "reviseSettingPrompt": "Revise setting: replace one broad direction word with a specific setting clue the reader can picture: ____________________.",
+      "quietOptionLine": "Quiet option: mark one compass point and write only its setting clue: ____________________.",
+      "takeHomeLine": "Take-home line: save this card and add one new compass craft material on paper: ____________________."
+    },
+    {
+      "id": "paper-tray-setting-card-16",
+      "title": "Binding Day Boardwalk Final-Page Setting",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "settingSkill": "page order, boardwalk signs, and a final object anchor",
+      "useCase": "Adult-led printable paper setting card for a fictional boardwalk setting where the ending feels connected: ____________________.",
+      "adultSetup": "Adult: put this card in the paper tray and frame the boardwalk as an invented paper story world: ____________________.",
+      "kidDirection": "Build a boardwalk setting where loose page pieces show what the ending needs: ____________________.",
+      "settingNamePrompt": "Setting name: name the invented page booth, stitch gate, binding rail, or boardwalk bend: ____________________.",
+      "trayLabelPrompt": "Tray label: write the short label that fits this final-page setting card: ____________________.",
+      "moodPrompt": "Mood clue: choose settled, busy, hopeful, or tidy, then add one boardwalk clue that creates the feeling: ____________________.",
+      "sensoryPrompt": "Sensory clue: add one paper-flutter sound, wood-grain texture, thread color, or salt-air hint: ____________________.",
+      "mapEdgePrompt": "Map edge: mark what sits at the far edge of the boardwalk map after the final page: ____________________.",
+      "objectAnchorPrompt": "Object anchor: choose one invented button tag, thread loop, page clasp, or folded sign: ____________________.",
+      "reviseSettingPrompt": "Revise setting: move one setting detail earlier so the ending feels connected: ____________________.",
+      "quietOptionLine": "Quiet option: number two setting details and write only the final one: ____________________.",
+      "takeHomeLine": "Take-home line: save this card and add one boardwalk detail that could close the story: ____________________."
+    }
+  ]
+}

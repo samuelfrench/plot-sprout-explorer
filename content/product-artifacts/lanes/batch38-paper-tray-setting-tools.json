@@ -1,0 +1,190 @@
+{
+  "laneId": "batch38-paper-tray-setting-tools",
+  "adultGuide": {
+    "beforeSession": [
+      "Place one printed card stack, blank slips, and pencils in a shared paper tray before writers gather.",
+      "Read the pack aloud as pretend work; every setting must stay invented and broad.",
+      "Choose one adult caller to handle card turns, pencil supply, and calm table pacing.",
+      "Keep extra cards face down so the active prompt feels simple and paper-only.",
+      "Invite writers to mark slips with invented symbols only when a card needs a label."
+    ],
+    "paperSettingSetup": [
+      "Set a tray label that says Pretend Setting Cards and leave space for finished slips.",
+      "Sort cards by broad story-place type: sky, garden, tiny market, floating shelf, and invented festival.",
+      "Pair each card with one blank slip so writers can name a fictional detail.",
+      "Keep answer slips loose rather than bound, so the tray stays light and fictional.",
+      "Use only paper pieces, pencils, and printed cards for this offline lane."
+    ],
+    "settingCoaching": [
+      "Ask for sensory but invented clues: color, sound, texture, weather, and a small surprise.",
+      "If a writer names something actual, guide them to rename it with a made-up title.",
+      "Keep prompts broad: a moonlit pier works better than an overly narrow named spot.",
+      "Model one sentence that links setting to mood while staying gentle and family-friendly.",
+      "Praise clear paper choices instead of speed, ranking, or correctness."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented labels and pretend symbols only.",
+      "Skip any prompt that starts to collect family routines or traceable clues.",
+      "Do not write actual names, map clues, travel paths, or narrow real-world facts.",
+      "Keep finished slips in the tray or send them with families; sharing stays adult-led and offline.",
+      "Adults should rewrite any actual-world clue into an invented broad story-place before discussion."
+    ],
+    "familyHandoff": [
+      "Send one selected slip with a short note inviting more pretend setting play at the family table.",
+      "Tell adults that blanks are for made-up details, not narrow real-world facts.",
+      "Suggest using a fresh paper tray at the next gathering to keep the activity offline and light.",
+      "Offer the optional prompts as aloud choices, not required written reports.",
+      "Invite families to keep or recycle slips after the story talk."
+    ],
+    "reset": [
+      "Collect unused cards, blank slips, and pencils into the paper tray.",
+      "Remove any slip that accidentally names a narrow real-world fact.",
+      "Shuffle fictional setting cards so the next group starts fresh.",
+      "Leave the tray empty of completed slips unless an adult intentionally sends them with a family."
+    ]
+  },
+  "settingRoutines": [
+    {
+      "name": "Tray Flip Setting Start",
+      "bestFor": "Writers who need a low-pressure opening.",
+      "steps": [
+        "Adult places three setting cards face up in the paper tray.",
+        "Each writer chooses one card and adds one invented detail on a blank slip.",
+        "Adult reads the slips aloud and asks which detail changes the story mood.",
+        "Group keeps one slip under the card as the next story seed."
+      ]
+    },
+    {
+      "name": "One Clue Many Worlds",
+      "bestFor": "Groups practicing flexible imagination.",
+      "steps": [
+        "Adult names one gentle clue such as blue mist or silver moss.",
+        "Writers each place that clue into a different fictional setting card.",
+        "Adult invites each writer to add one texture or sound on paper.",
+        "Group compares how the same clue feels different in each made-up story-place."
+      ]
+    },
+    {
+      "name": "Weather Mood Swap",
+      "bestFor": "Linking setting to feeling without heavy themes.",
+      "steps": [
+        "Adult selects one setting card and places two blank weather slips beside it.",
+        "Writers invent two gentle weather choices for the same setting.",
+        "Adult reads both choices and asks how each changes the opening line.",
+        "Group circles one choice to use in a new paper story start."
+      ]
+    },
+    {
+      "name": "Tiny Prop Big Setting",
+      "bestFor": "Writers who like concrete details.",
+      "steps": [
+        "Adult places one pretend object slip beside a setting card.",
+        "Writers describe where the object rests using only fictional clues.",
+        "Adult asks what the object reveals about the wider story-place.",
+        "Group writes one shared sentence that names the setting and the object."
+      ]
+    },
+    {
+      "name": "Paper Gallery Pass",
+      "bestFor": "Quiet groups that benefit from turn-taking.",
+      "steps": [
+        "Adult lays four fictional setting cards in a row on the table.",
+        "Writers add one blank slip beside any card that gives them an idea.",
+        "Adult reads the new slips in card order without naming writers.",
+        "Group chooses one setting to carry into a short story start."
+      ]
+    },
+    {
+      "name": "Setting Doorway Build",
+      "bestFor": "Starting a story with a strong entrance.",
+      "steps": [
+        "Adult chooses a card and says the setting has an imaginary doorway.",
+        "Writers draw or write one invented clue found near the doorway.",
+        "Adult asks what the clue suggests about the setting beyond the doorway.",
+        "Group writes one opening sentence that steps into the fictional story-place."
+      ]
+    }
+  ],
+  "takeHomeSettingSlips": [
+    {
+      "title": "Cloud Harbor Slip",
+      "time": "One paper pass",
+      "skill": "sensory detail",
+      "direction": "Add one invented sound for Cloud Harbor: ____________________.",
+      "familyLine": "A grown-up can ask what changed when the sound showed up: ____________________."
+    },
+    {
+      "title": "Velvet Hill Slip",
+      "time": "Family table pass",
+      "skill": "mood setting",
+      "direction": "Name one gentle color that covers Velvet Hill: ____________________.",
+      "familyLine": "A grown-up can ask what feeling that color gives the story: ____________________."
+    },
+    {
+      "title": "Silver Moss Pier Slip",
+      "time": "Calm pencil pass",
+      "skill": "setting clue",
+      "direction": "Write one made-up clue found on Silver Moss Pier: ____________________.",
+      "familyLine": "A grown-up can ask what the clue makes a character wonder: ____________________."
+    },
+    {
+      "title": "Glass Pebble Cove Slip",
+      "time": "Shared aloud pass",
+      "skill": "texture detail",
+      "direction": "Add one invented texture for Glass Pebble Cove: ____________________.",
+      "familyLine": "A grown-up can ask how the texture changes the next sentence: ____________________."
+    },
+    {
+      "title": "Kite Forest Clearing Slip",
+      "time": "Paper tray pass",
+      "skill": "movement in setting",
+      "direction": "Write what moves gently in Kite Forest Clearing: ____________________.",
+      "familyLine": "A grown-up can ask where the movement leads the story: ____________________."
+    },
+    {
+      "title": "Paper Moon Market Slip",
+      "time": "Any calm pause",
+      "skill": "world detail",
+      "direction": "Invent one quiet booth at Paper Moon Market: ____________________.",
+      "familyLine": "A grown-up can ask what the booth gives to the story: ____________________."
+    },
+    {
+      "title": "Button Bridge Isle Slip",
+      "time": "One-card pass",
+      "skill": "setting contrast",
+      "direction": "Add one soft surprise near Button Bridge Isle: ____________________.",
+      "familyLine": "A grown-up can ask why the surprise belongs there: ____________________."
+    },
+    {
+      "title": "Ribbon Garden Gate Slip",
+      "time": "Pencil-and-paper pass",
+      "skill": "entry detail",
+      "direction": "Write one pretend sign of welcome at Ribbon Garden Gate: ____________________.",
+      "familyLine": "A grown-up can ask who might step through next: ____________________."
+    },
+    {
+      "title": "Glow Shelf Lagoon Slip",
+      "time": "Quiet story pass",
+      "skill": "visual detail",
+      "direction": "Add one glowing object above Glow Shelf Lagoon: ____________________.",
+      "familyLine": "A grown-up can ask what the glow changes in the setting: ____________________."
+    },
+    {
+      "title": "Blue Lantern Orchard Slip",
+      "time": "Family story pass",
+      "skill": "setting action",
+      "direction": "Write one gentle action happening in Blue Lantern Orchard: ____________________.",
+      "familyLine": "A grown-up can ask how that action begins a story: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "The pretend setting I picked for my story is ____________________.",
+    "One invented clue that made it feel alive was ____________________.",
+    "The color I added to the setting was ____________________.",
+    "The sound on my paper slip was ____________________.",
+    "The setting changed the character by making them feel ____________________.",
+    "A made-up object that belongs there is ____________________.",
+    "The next paper card could move the story toward ____________________.",
+    "A family member can add one pretend detail here: ____________________."
+  ]
+}

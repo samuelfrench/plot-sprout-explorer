@@ -2608,6 +2608,130 @@
           "summary": "A binding day world for connecting a promise, pocket object, and ending choice."
         }
       ]
+    },
+    {
+      "slug": "paper-tray-story-setting-card-pack",
+      "title": "Paper Tray Story Setting Card Pack",
+      "pricePoint": "$49",
+      "status": "checkout_pending",
+      "headline": "A printable setting-card pack for screen-free paper-tray story places.",
+      "summary": "Sixteen adult-led paper tray cards help kids invent fictional settings from tray labels, mood clues, sensory details, map edges, and object anchors.",
+      "heroImage": "images/plotsprout/batch38/paper-tray-story-setting-card-pack.jpg",
+      "ctaLabel": "Request setting card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Paper%20Tray%20Story%20Setting%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static paper tray story setting card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable paper tray story setting cards",
+        "Adult setup guide",
+        "Fictional setting safety notes",
+        "Paper tray coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led setting routines",
+        "Ten take-home setting slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one fictional setting before a full story",
+        "A tutoring or co-op table where writers can fill one setting card at a time",
+        "A family table warm-up where a paper tray label reduces blank-page pressure",
+        "A reluctant-writer activity that separates setting building from a full draft",
+        "A take-home setting slip set for finishing one invented story place offline"
+      ],
+      "parentSteps": [
+        "Choose one setting routine before the activity starts.",
+        "Set the paper, pencil, blank tray labels, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one paper tray label into a fictional setting clue rather than using narrow real-world facts.",
+        "Send one setting slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for naming a glow stall with a clear mood clue."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for turning ripple mail counters into broad story places."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for building one shelf stop with a ticket-like object anchor."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for clarifying a folded map corner before drafting."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for changing setting mood through pretend weather-pane clues."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for setting up a ribbon notice nook with one object clue."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for placing harbor pauses, edges, and parcel anchors."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for sorting corners and tiny arrival clues."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for using map symbols and archive borders as setting cues."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for letting gauge changes reshape a fictional bend."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for adding signal shelves and sky-border clues."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for tying marks, light, and timekeeper objects together."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision river world for moving a ferry setting from fuzzy to clear."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for turning exhibit tiers into inspectable setting details."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for using direction words and paper materials as setting clues."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for connecting boardwalk details to a final page setting."
+        }
+      ]
     }
   ]
 }
