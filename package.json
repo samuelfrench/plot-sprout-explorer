@@ -46,6 +46,7 @@
     "image:batch36": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch36-product-images.json",
     "image:batch37": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch37-product-images.json",
     "image:batch38": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch38-product-images.json",
+    "image:batch39": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch39-product-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -76,7 +77,8 @@
     "product:blanket-fort-dialogue-pack": "node scripts/blanket-fort-story-dialogue-card-pack-builder.mjs",
     "product:kitchen-window-pov-pack": "node scripts/kitchen-window-story-pov-card-pack-builder.mjs",
     "product:coat-pocket-character-pack": "node scripts/coat-pocket-story-character-card-pack-builder.mjs",
-    "product:paper-tray-setting-pack": "node scripts/paper-tray-story-setting-card-pack-builder.mjs"
+    "product:paper-tray-setting-pack": "node scripts/paper-tray-story-setting-card-pack-builder.mjs",
+    "product:backpack-ending-pack": "node scripts/backpack-story-ending-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

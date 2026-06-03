@@ -1,0 +1,1088 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Backpack Story Ending Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-ending-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-ending-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-ending-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable backpack ending cards</p>
+        <h1>Backpack Story Ending Card Pack</h1>
+        <p>Sixteen paper cards help writers close fictional stories with final choices, returning objects, echo lines, and closing images.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable ending cards plus adult guide tools, ending routines, take-home ending slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$51</span>
+        <h2>Included</h2>
+        <ul><li>16 printable backpack ending cards</li>
+<li>Adult setup guide</li>
+<li>Fictional ending safety notes</li>
+<li>Backpack ending coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led ending routines</li>
+<li>Ten take-home ending slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Ending coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the ending cards, backpack sleeve, blank slips, and adult guide before writers gather.</li>
+<li>Use a pretend paper backpack only; no real bags, labels, or private items are part of the activity.</li>
+<li>Set out pencils and scrap paper for fictional closing choices, final feelings, object returns, echo lines, and final images.</li>
+<li>Tell writers every ending belongs to an invented story world and can be changed gently.</li>
+<li>Keep the session adult-led, offline, and paper-only from the first card to the last slip.</li></ul></article>
+        <article class="guide-card"><h3>Backpack ending setup</h3><ul><li>Place three ending cards in the pretend paper backpack and keep the rest face down.</li>
+<li>Put one blank slip beside each card for the writer&#39;s chosen closing detail.</li>
+<li>Invite the writer to pick one ending job: return an object, echo an earlier line, choose a final feeling, or draw the last image.</li>
+<li>Ask the adult helper to read choices aloud and let the writer select one paper path.</li>
+<li>Keep every label invented, broad, and tied to the story page rather than personal life.</li></ul></article>
+        <article class="guide-card"><h3>Story ending coaching</h3><ul><li>Ask what choice the character makes on the final page and write it in one short phrase.</li>
+<li>Ask which pretend object comes back and what it means now.</li>
+<li>Help the writer echo one earlier story word without copying a whole scene.</li>
+<li>Name one final feeling that is calm, clear, or hopeful.</li>
+<li>Use gentle revision by asking what can be clearer, softer, or more complete on the ending slip.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Keep the activity on invented story words, broad pretend places, and paper-only choices.</li>
+<li>If a writer mentions a narrow real-world fact, replace it with an invented story label.</li>
+<li>Keep completed slips with the adult helper or send one paper slip to a family reader.</li>
+<li>Use only fictional characters, pretend objects, broad story places, and made-up closing lines.</li>
+<li>Skip any prompt that feels like collecting private details instead of shaping a fictional ending.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one chosen ending slip with a note that the activity stays adult-led and offline.</li>
+<li>Invite the family reader to ask about the character&#39;s final choice, not about private life.</li>
+<li>Offer one fresh blank slip for a gentler alternate ending.</li>
+<li>Tell families that invented labels and made-up places are the safest way to keep the story playful.</li>
+<li>Let the writer decide whether to read a line aloud or simply point to the final image.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect the cards, blank slips, pencils, and paper backpack sleeve.</li>
+<li>Remove any slip with narrow real-world facts and rewrite it as an invented story detail if the adult keeps it.</li>
+<li>Shuffle ending cards so the next group sees a fresh mix.</li>
+<li>Store finished fictional slips separately from unused blanks.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one backpack ending card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen ending-card worlds</h2>
+      <p>Pick a world image, then close one fictional story with a pretend backpack ending card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">ending routines</p>
+      <h2>Choose the backpack ending rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Object Comes Back</h3>
+      <p>Writers who need a concrete way to close the story.</p>
+      <ol><li>Adult chooses one ending card and asks which pretend object mattered earlier.</li>
+<li>Writer writes how the object appears again near the end.</li>
+<li>Adult asks what the object means after the character&#39;s final choice.</li>
+<li>Writer writes one closing sentence that returns the object gently.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Echo Line Close</h3>
+      <p>Writers practicing a satisfying repeated phrase.</p>
+      <ol><li>Adult helps the writer pick one harmless word or short phrase from earlier in the story.</li>
+<li>Writer changes the phrase slightly so it feels new at the end.</li>
+<li>Adult asks what feeling the echo should leave.</li>
+<li>Writer writes the echo as the last spoken or narrated line.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Final Feeling Fold</h3>
+      <p>Ending a story with emotional clarity.</p>
+      <ol><li>Adult places three feeling slips beside one ending card.</li>
+<li>Writer picks one gentle final feeling for the character.</li>
+<li>Adult asks what choice helped the character reach that feeling.</li>
+<li>Writer writes one sentence that shows the feeling through action.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Last Image Window</h3>
+      <p>Writers who think in pictures before sentences.</p>
+      <ol><li>Adult asks the writer to sketch or name the final image on a blank slip.</li>
+<li>Writer adds one color, sound, or tiny motion to the image.</li>
+<li>Adult asks why that image belongs at the end.</li>
+<li>Writer turns the image into one closing sentence.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Choice And Consequence</h3>
+      <p>Showing that an ending follows from a character decision.</p>
+      <ol><li>Adult asks what the character finally chooses to do.</li>
+<li>Writer writes the choice in one short invented sentence.</li>
+<li>Adult asks what small, gentle change happens because of the choice.</li>
+<li>Writer writes the change as the next-to-last or last sentence.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Gentle Ending Repair</h3>
+      <p>Revising an ending that feels abrupt or unclear.</p>
+      <ol><li>Adult reads the ending card and asks which part feels unfinished.</li>
+<li>Writer marks one place to add a closing choice, object return, feeling, or image.</li>
+<li>Adult offers two calm wording options and lets the writer choose.</li>
+<li>Writer writes a cleaner final line on a fresh slip.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home ending slips</p>
+      <h2>Finish one story ending later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">One paper pass | object return</p>
+      <h3>Lantern Return Slip</h3>
+      <p>Bring back a pretend lantern near the ending and write what it means now: ____________________.</p>
+      <p>A family reader can ask which earlier story moment the lantern echoes: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Calm pencil pass | final image</p>
+      <h3>Pocket Pebble Close</h3>
+      <p>Write the last image of a pocket pebble resting in a made-up place: ____________________.</p>
+      <p>A family reader can ask why that image feels like an ending: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single slip | closing choice</p>
+      <h3>Ribbon Gate Choice</h3>
+      <p>Write the character&#39;s final choice at an invented ribbon gate: ____________________.</p>
+      <p>A family reader can ask what gentle change follows that choice: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Folded slip | echo line</p>
+      <h3>Cloud Bell Echo</h3>
+      <p>Repeat one earlier made-up phrase in a new ending line: ____________________.</p>
+      <p>A family reader can ask how the phrase feels different at the end: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Family table pass | final feeling</p>
+      <h3>Blue Button Feeling</h3>
+      <p>Choose one final feeling for a character holding a blue button: ____________________.</p>
+      <p>A family reader can ask what action shows that feeling: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Paper-only pass | consequence</p>
+      <h3>Tiny Bridge Ending</h3>
+      <p>Write what changes after a character crosses a tiny pretend bridge: ____________________.</p>
+      <p>A family reader can ask which choice made the change happen: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Quiet story pass | object meaning</p>
+      <h3>Moon Thread Return</h3>
+      <p>Bring back a moon thread and write why it matters at the end: ____________________.</p>
+      <p>A family reader can ask what the moon thread helped the character understand: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One-card pass | visual ending</p>
+      <h3>Garden Door Last Look</h3>
+      <p>Write the final look at an invented garden door: ____________________.</p>
+      <p>A family reader can ask what detail makes the door feel finished: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Shared aloud pass | gentle closure</p>
+      <h3>Quiet Market Goodbye</h3>
+      <p>Write a short goodbye line for a made-up market character: ____________________.</p>
+      <p>A family reader can ask what the goodbye leaves behind: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Revision pass | gentle revision</p>
+      <h3>Fresh Ending Slip</h3>
+      <p>Rewrite one ending line so it is clearer or softer: ____________________.</p>
+      <p>A family reader can ask which word made the ending stronger: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional, adult-led offline prompt: my fictional ending choice is ____________________.</li>
+<li>Optional, adult-led offline prompt: the pretend object that came back was ____________________.</li>
+<li>Optional, adult-led offline prompt: the final feeling on my paper slip is ____________________.</li>
+<li>Optional, adult-led offline prompt: my ending echo line uses the word ____________________.</li>
+<li>Optional, adult-led offline prompt: the last image in the made-up story is ____________________.</li>
+<li>Optional, adult-led offline prompt: one gentle change at the end is ____________________.</li>
+<li>Optional, adult-led offline prompt: I made the ending clearer by changing ____________________.</li>
+<li>Optional, adult-led offline prompt: an adult can add one invented closing detail here: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 1 | Ages 6-8 | choice ending</div>
+      <h2>Moon Muffin Last Crumb Tuck</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place the card beside a blank backpack flap shape and offer two pretend moon-market ending choices: ____________________.</p>
+      <p class="kid-direction">Pick the ending that best fits the moon muffin mix-up and write the final choice on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: The moon muffin helper finally chooses to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling check: At the final crumb counter, the helper feels ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: Bring back one earlier market item before the ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo line: Repeat one tiny word or clue from the beginning in the ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Write the last market sentence with a soft landing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: Add one moon-market detail that makes the choice clearer: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle one ending choice and copy only three final words: ____________________. Take-home line: Use this card to finish another pretend market tale with one clear choice: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 2 | Ages 6-8 | feeling ending</div>
+      <h2>Puddle Planet Soft Stamp Close</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out the card and ask which pretend ripple-mail feeling should end the story: ____________________.</p>
+      <p class="kid-direction">Write the ending by showing how the puddle mail helper feels after the tiny mix-up settles: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: The ripple-mail helper can finish by sorting, waiting, or asking for help: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling ending: The helper feels ____________________ because the puddle mail is finally ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: Bring back one pretend stamp, tag, or shell slip near the last line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo line: Let the final ripple echo an earlier sound or word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: End with one calm puddle-planet sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: Replace one plain feeling word with a stronger puddle word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Choose one feeling word first, then fill the ending blank: ____________________. Take-home line: Finish another pretend mail tale by naming the final feeling: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 3 | Ages 7-9 | object return</div>
+      <h2>Buttonwood Ticket Comes Back</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place a small paper ticket shape beside this card and invite an invented object return: ____________________.</p>
+      <p class="kid-direction">Finish the library-train story by bringing back an object that mattered earlier: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: The traveler ends by keeping, returning, or trading the ticket clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling prompt: When the object returns, the traveler feels ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: The earlier object that comes back in the last scene is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo line: Repeat one shelf, bell, wheel, or bookmark clue in the ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Write the last library-train sentence after the object returns: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: Add one object detail so the ending feels connected to the beginning: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the returning object, then write one ending word: ____________________. Take-home line: Try an object-return ending in another invented train tale: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 4 | Ages 7-9 | question echo</div>
+      <h2>Button Bakery Map Question Loop</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Read one pretend map question aloud and ask the writer to echo it near the ending: ____________________.</p>
+      <p class="kid-direction">Use the last line to answer or repeat one bakery-map question in a new way: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: The map-mender ends by folding, turning, or labeling the pretend map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling prompt: After the question comes back, the map-mender feels ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: Bring back one button, crumb, ribbon, or folded corner in the ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Question echo: The question that comes back near the end is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Write a final sentence that answers the echoed question: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: Move one earlier question clue closer to the final line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Copy the question mark shape and fill one answer word: ____________________. Take-home line: End another pretend map tale by echoing one question: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 5 | Ages 7-8 | small surprise</div>
+      <h2>Teacup Weather Tiny Blue Surprise</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Choose one pretend weather symbol together and leave room for a tiny surprise at the end: ____________________.</p>
+      <p class="kid-direction">Finish the teacup weather story with a small surprise that stays gentle and make-believe: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: The weather watcher ends by opening, closing, or tapping the tiny pane: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling prompt: The small surprise makes the watcher feel ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: Bring back one saucer, ribbon, spoon, or cloud tag in the final moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo line: Let one earlier weather word return in the last sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Write the gentle surprise ending for Teacup Town: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: Make the surprise smaller, clearer, and more teacup-like: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the surprise symbol and write one final phrase: ____________________. Take-home line: Add one tiny surprise ending to another pretend weather tale: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 6 | Ages 7-9 | next-day hint</div>
+      <h2>Pocket Park Notice Tomorrow Hint</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside a blank pretend notice and ask for an invented next-day hint only: ____________________.</p>
+      <p class="kid-direction">End the pocket-park story by hinting at what the notice might invite next in the make-believe world: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: The notice helper ends by pinning, reading, or saving the pretend note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling prompt: The helper feels ____________________ when the notice finally makes sense.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: Bring back one ribbon tack, leaf slip, or bench tag near the ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo line: Repeat one notice word from the beginning in the final hint: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Write the next-day hint without naming any real place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: Add one pocket-park detail that makes the hint feel ready but not finished: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Choose one hint word and place it on the pretend notice: ____________________. Take-home line: Make another broad next-day hint for a fictional notice-board ending: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 7 | Ages 7-9 | choice ending</div>
+      <h2>Spoon Ferry Last Lunchbox Bell</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this ending card after the draft and invite one gentle pretend choice, not any narrow real-world fact: ____________________.</p>
+      <p class="kid-direction">Kid: choose what the spoon ferry helper does before the lunchbox harbor quiets: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: The helper can ring the tiny bell, return the crumb flag, or wave from the napkin pier; I choose ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling clue: after the choice, the harbor feels ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: bring back one pretend object from earlier, such as the spoon flag or button buoy: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo clue: repeat one harbor word from the beginning in a new way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: write the last sentence with the ferry, bell, or quiet water: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: change one plain action into a clearer ending choice: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: circle one object and fill only this ending blank: ____________________. Take-away line: a final choice can close a pretend ferry story: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 8 | Ages 7-9 | object return</div>
+      <h2>Acorn Errand Desk Return Slip</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card beside the last paragraph and ask which invented errand object should come back: ____________________.</p>
+      <p class="kid-direction">Kid: pick one acorn office object from the story and use it to close the ending: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: decide whether the helper files, folds, or carries the final errand slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling clue: show how the helper feels when the errand desk finally makes sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: bring back a walnut tag, leaf stamp, pebble bell, or invented desk slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo clue: reuse one word from the opening errand mix-up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: write a closing sentence that names the returned object: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: replace a vague finish with one object that proves the errand is done: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw the object first, then name it here: ____________________. Take-away line: an object from earlier can make a small ending feel complete: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 9 | Ages 8-10 | question echo</div>
+      <h2>Seed Map Last Drawer Question</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: invite the writer to find one pretend question from the draft and echo it with invented seed-library words: ____________________.</p>
+      <p class="kid-direction">Kid: write an ending that points back to one question from the map room: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: decide whether the seed keeper closes the drawer, opens a new map, or leaves a clue card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling clue: choose the ending feeling after the map question changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: bring back one seed bead, folded map, drawer label, or paper key: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo clue: repeat the map-room question with one changed word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: write the last sentence so the echoed question feels settled or curious: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: add one earlier map clue so the question echo connects: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: copy the question mark, then fill one answer word: ____________________. Take-away line: an ending can echo a question without explaining everything: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 10 | Ages 8-10 | next-day hint</div>
+      <h2>Rain Gauge Railway Tomorrow Ticket</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: ask for one paper ticket, gauge mark, or platform clue that hints at what could happen later: ____________________.</p>
+      <p class="kid-direction">Kid: end the railway story with one quiet clue that could lead to another pretend ride: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: decide whether the train pauses, turns back, or follows a new puddle signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling clue: show whether the platform feels calm, curious, bright, or rain-soft at the end: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: bring back a blue ticket, tilted gauge, brass bell, or bead of rain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo clue: reuse one railway sound from the beginning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: write the last sentence with tomorrow&#39;s pretend ticket clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: add one small future hint without adding a whole new scene: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: mark one gauge line and write only the hint word: ____________________. Take-away line: a next-day hint can leave the railway tale open but finished: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 11 | Ages 8-10 | closing image</div>
+      <h2>Moss Observatory Final Glow</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: invite one invented image from the moss signals, sky chart, or lookout shelf to close the story: ____________________.</p>
+      <p class="kid-direction">Kid: write the ending so the reader can picture the last quiet observatory moment: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: decide whether the observer leaves the moss dial glowing, folded, or turned toward the sky: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling clue: name the final feeling the closing image should carry: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: bring back a moss dial, pebble lens, folded sky chart, or lantern note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo clue: reuse one moss message word from earlier in the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: write a closing image with light, moss, stone, or sky: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: replace an explanation with one picture the reader can see: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: sketch the final image, then write two words for it: ____________________. Take-away line: one clear final picture can close a pretend observatory story: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 12 | Ages 8-10 | object return</div>
+      <h2>Tidepool Clock Shell Return</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card beside a blank backpack pocket shape and choose one invented tidepool object together: ____________________.</p>
+      <p class="kid-direction">End your tidepool lab tale by bringing one make-believe object back to where it belongs: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: decide whether the shell clock is returned quietly, proudly, or with a tiny new tick: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling prompt: show how the timekeeper feels after the tidepool object is safely back: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: name the shell, bead, bubble note, or kelp tag that comes back at the end: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo prompt: repeat one early tidepool detail in a fresh way near the final sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: write the last sentence that leaves the lab calm and clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: add one tide, clock, shell, or ripple detail so the ending feels earned: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw the returned object first, then write only its ending word: ____________________. Take-along line: fold this card into a pretend backpack pocket and add one more calm ending clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 13 | Ages 10-11 | revision ending</div>
+      <h2>Revision River Ferry Last Dock</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: offer one plain ferry sentence and one blank backpack pocket shape for a stronger ending: ____________________.</p>
+      <p class="kid-direction">Rewrite the ferry ending so the final dock shows what changed in the make-believe draft: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: choose the ferry landing, cargo swap, or dock bell that closes the tale best: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling prompt: show what the ferry helper understands after the revised crossing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: bring back one paper oar tag, lantern slip, or basket clue from earlier in the tale: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo prompt: echo one word from the first ferry sentence, but make it sharper now: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: write the closing ferry sentence with one concrete detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: replace one vague ending word with a clearer river, dock, basket, or bell word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write old ending arrow new ending before making the full change: ____________________. Take-along line: keep this card in the pretend backpack pocket and revise one more final sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 14 | Ages 10-11 | question echo</div>
+      <h2>Clue Label Tower Echo Tag</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out two pretend exhibit labels and invite the writer to keep every clue made up: ____________________.</p>
+      <p class="kid-direction">End the tower museum tale by letting the final label echo the question from earlier: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: decide whether the label gives an answer, a tiny hint, or a new gentle question: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling prompt: show how the clue finder feels when the final tag makes sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: bring back one exhibit tag, ribbon card, or folded label from the opening: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo prompt: repeat the tale&#39;s first question with one changed word at the end: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: write the museum ending sentence that lets the label feel complete: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: move one clue closer to the final label so the question echo is clear: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the echoed question and circle the changed word: ____________________. Take-along line: tuck this card into a pretend backpack pocket and invent one more final label: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 15 | Ages 10-11 | choice ending</div>
+      <h2>Compass Craft Final Turn</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a paper compass beside the card and name every direction as invented story play: ____________________.</p>
+      <p class="kid-direction">End the compass craft tale by choosing one final turn and showing why it fits: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: choose north-thread, east-bead, south-fold, or west-paper as the final turn: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling prompt: show what the crafter feels after choosing the final direction: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: bring back one paper needle, bead string, fold card, or compass tag at the end: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo prompt: echo one early direction word so the ending connects to the beginning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: write the last compass sentence with the choice and its clear reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: add one small clue that makes the final turn feel planned, not random: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: mark one compass point silently, then write its ending reason: ____________________. Take-along line: slide this card into a pretend backpack pocket and add a new choice ending: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-ending-card-page">
+      <div class="page-kicker">Ending Card 16 | Ages 10-11 | promise line</div>
+      <h2>Binding Day Boardwalk Promise Knot</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: fold a blank paper booklet and ask for only invented boardwalk, page, and button details: ____________________.</p>
+      <p class="kid-direction">End the binding day tale by writing the promise that ties the final page together: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Ending choice</h3>
+      <p>Ending choice: choose whether the promise is kept with a button, thread loop, page clasp, or folded sign: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final feeling</h3>
+      <p>Feeling prompt: show how the binder feels when the loose pages finally fit: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object return</h3>
+      <p>Object return: bring back one button tag, thread loop, page corner, or boardwalk token from earlier: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Echo line</h3>
+      <p>Echo prompt: echo the first page&#39;s worry with a calmer final version: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: write the promise line that closes the booklet and leaves one bright image: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise ending</h3>
+      <p>Revise ending: add one earlier object to the final promise so the ending feels connected: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the promise and the object that helps keep it: ____________________. Take-along line: keep this card with the pretend backpack pocket and write another promise ending: ____________________.</p>
+    </section>
+  </body>
+</html>

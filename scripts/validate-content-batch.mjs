@@ -27,6 +27,8 @@ import {
   validateCoatPocketStoryCharacterCardPackSourceFiles,
   validatePaperTrayStorySettingCardPackSource,
   validatePaperTrayStorySettingCardPackSourceFiles,
+  validateBackpackStoryEndingCardPackSource,
+  validateBackpackStoryEndingCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -95,6 +97,7 @@ const batch35ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch36ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch36-product-images.json')
 const batch37ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch37-product-images.json')
 const batch38ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch38-product-images.json')
+const batch39ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch39-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -127,6 +130,7 @@ const blanketFortDialogueSourceFile = resolve(root, 'content', 'product-artifact
 const kitchenWindowPovSourceFile = resolve(root, 'content', 'product-artifacts', 'kitchen-window-story-pov-card-pack.json')
 const coatPocketCharacterSourceFile = resolve(root, 'content', 'product-artifacts', 'coat-pocket-story-character-card-pack.json')
 const paperTraySettingSourceFile = resolve(root, 'content', 'product-artifacts', 'paper-tray-story-setting-card-pack.json')
+const backpackEndingSourceFile = resolve(root, 'content', 'product-artifacts', 'backpack-story-ending-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -160,6 +164,7 @@ const batch35ProductImagesBatchId = '2026-06-03-batch35-product-images'
 const batch36ProductImagesBatchId = '2026-06-03-batch36-product-images'
 const batch37ProductImagesBatchId = '2026-06-03-batch37-product-images'
 const batch38ProductImagesBatchId = '2026-06-03-batch38-product-images'
+const batch39ProductImagesBatchId = '2026-06-03-batch39-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -192,6 +197,7 @@ const blanketFortDialogueBatchId = '2026-06-03-batch35'
 const kitchenWindowPovBatchId = '2026-06-03-batch36'
 const coatPocketCharacterBatchId = '2026-06-03-batch37'
 const paperTraySettingBatchId = '2026-06-03-batch38'
+const backpackEndingBatchId = '2026-06-03-batch39'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -2675,6 +2681,111 @@ function validateBatch38ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch39ProductImage(image) {
+  const label = `2026-06-03-batch39-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'backpack-story-ending-card-pack',
+    `${label}.slug must be backpack-story-ending-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch39/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch39/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch39/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'six loose blank cream printable story ending cards',
+    'unbranded cozy writing table',
+    'empty rectangular writing areas',
+    'plain white background',
+    'screen-free backpack story ending card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'app interface',
+    'microphone',
+    'audio recorder',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'school login',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'review',
+    'score',
+    'grade',
+    'timer',
+    'clock',
+    'calendar',
+    'contest',
+    'prize',
+    'child face',
+    'child portrait',
+    'person',
+    'hands',
+    'body',
+    'backpack bag',
+    'real backpack',
+    'personal bag',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar.negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -2936,6 +3047,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'paper-tray-story-setting-card-pack': {
       title: 'Paper Tray Story Setting Card Pack',
       pricePoint: '$49',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'backpack-story-ending-card-pack': {
+      title: 'Backpack Story Ending Card Pack',
+      pricePoint: '$51',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -3351,6 +3470,42 @@ function validateProduct(product, productSlugs, worldSlugs) {
     expect(
       !/\baccounts?\b|\bschool accounts?\b|\blogins?\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideos?\b|\bphotos?\b|\bcameras?\b|\bphones?\b|\bdevices?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bgrading\b|\bscores?\b|\brubrics?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\breal names?\b|\bfull names?\b|\bidentity details?\b|\bclassrooms?\b|\bschools?\b|\bstudents?\b|\bteachers?\b|\bhomes?\b|\bhouses?\b|\bhome address\b|\boffices?\b|\bdesks?\b|\brooms?\b|\bprivate locations?\b|\bprivate place details?\b|\blocation details?\b|\bexact locations?\b|\bexact places?\b|\bschool route(s)?\b|\breal route(s)?\b|\broutes?\b|\baddresses?\b|\bstreets?\b|\bgps\b|\bcoordinates?\b|\breal child\b|\breal child data\b|\bprivate child data\b|\bstudent records?\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bfood prep\b|\ballerg(y|ies|en|ens|ic)\b|\bmedical\b|\blegal\b|\btherapy\b|\bgrief\b/i.test(paperTrayRenderedText),
       `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, real-identity, real classroom/home/office/room, school details, address, route, GPS, exact-location, real-book-title, author, publisher, franchise, food/allergy, or unsafe professional language.`,
+    )
+  }
+  if (product.slug === 'backpack-story-ending-card-pack') {
+    const backpackSummaryErrors = validateProductWorldSummaries(product, 'Backpack Story Ending Card Pack')
+    expect(
+      backpackSummaryErrors.length === 0,
+      `${label}.worldSummaries failed validation:\n${backpackSummaryErrors.join('\n')}`,
+    )
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    const backpackRenderedText = renderedHtml
+      .replaceAll(safety, '')
+      .replaceAll('take-home', '')
+      .replaceAll('Checkout is pending until the payment provider is selected', '')
+      .replaceAll('device-width', '')
+      .replaceAll('Backpack Story Ending Card Pack', '')
+      .replaceAll('backpack story ending card pack', '')
+      .replaceAll('Backpack', '')
+      .replaceAll('backpack', '')
+      .replaceAll('pretend-backpack', '')
+      .replaceAll('pretend backpack', '')
+      .replaceAll('paper backpack', '')
+      .replaceAll('ending card', '')
+      .replaceAll('ending-card', '')
+      .replaceAll('narrow real-world facts', '')
+      .replaceAll('narrow real-world fact', '')
+      .replaceAll('Puddle Planet Post Office', '')
+      .replaceAll('puddle-planet-post-office', '')
+      .replaceAll('Acorn Avenue Errand Office', '')
+      .replaceAll('acorn-avenue-errand-office', '')
+      .replaceAll('Seed Library Map Room', '')
+      .replaceAll('seed-library-map-room', '')
+    expect(
+      !/\baccounts?\b|\bschool accounts?\b|\blogins?\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideos?\b|\bphotos?\b|\bcameras?\b|\bphones?\b|\bdevices?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bgrading\b|\bscores?\b|\brubrics?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\breal names?\b|\bfull names?\b|\bidentity details?\b|\bclassrooms?\b|\bschools?\b|\bstudents?\b|\bteachers?\b|\bhomes?\b|\bhouses?\b|\bhome address\b|\bprivate locations?\b|\bprivate place details?\b|\blocation details?\b|\bexact locations?\b|\bexact places?\b|\bschool route(s)?\b|\breal route(s)?\b|\broutes?\b|\baddresses?\b|\bstreets?\b|\bgps\b|\bcoordinates?\b|\breal child\b|\breal child data\b|\bprivate child data\b|\bstudent records?\b|\bprofiles?\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bfood prep\b|\ballerg(y|ies|en|ens|ic)\b|\bmedical\b|\blegal\b|\btherapy\b|\bgrief\b/i.test(backpackRenderedText),
+      `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, real-identity, real school/home details, address, route, GPS, exact-location, profile, real-book-title, author, publisher, franchise, food/allergy, or unsafe professional language.`,
     )
   }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
@@ -3796,12 +3951,23 @@ expect(Array.isArray(batch38ProductImages.images), 'batch38 product image manife
 expect(batch38ProductImages.images.length === 1, `Expected 1 Batch 38 product image, found ${batch38ProductImages.images.length}.`)
 validateBatch38ProductImage(batch38ProductImages.images[0])
 
+expect(existsSync(batch39ProductImagesFile), `Missing Batch 39 product image manifest: ${batch39ProductImagesFile}`)
+const batch39ProductImages = readJson(batch39ProductImagesFile)
+expect(
+  batch39ProductImages.batchId === batch39ProductImagesBatchId,
+  `batch39 product image manifest batchId must be ${batch39ProductImagesBatchId}.`,
+)
+expect(batch39ProductImages.generatedAt === '2026-06-03', 'batch39 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch39ProductImages.images), 'batch39 product image manifest images must be an array.')
+expect(batch39ProductImages.images.length === 1, `Expected 1 Batch 39 product image, found ${batch39ProductImages.images.length}.`)
+validateBatch39ProductImage(batch39ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 31, `Expected 31 product records, found ${products.products.length}.`)
+expect(products.products.length === 32, `Expected 32 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -3836,6 +4002,7 @@ for (const requiredProductSlug of [
   'kitchen-window-story-pov-card-pack',
   'coat-pocket-story-character-card-pack',
   'paper-tray-story-setting-card-pack',
+  'backpack-story-ending-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -6057,6 +6224,93 @@ for (const asset of paperTraySettingArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(backpackEndingSourceFile), `Missing Batch 39 Backpack Story Ending Card Pack source file: ${backpackEndingSourceFile}`)
+const backpackEndingSource = readJson(backpackEndingSourceFile)
+expect(
+  backpackEndingSource.batchId === backpackEndingBatchId,
+  `Backpack Story Ending Card Pack source batchId must be ${backpackEndingBatchId}.`,
+)
+const backpackEndingProduct = products.products.find(
+  (product) => product.slug === 'backpack-story-ending-card-pack',
+)
+expect(
+  backpackEndingProduct,
+  'Missing Backpack Story Ending Card Pack product record for Batch 39 artifact validation.',
+)
+const backpackEndingSourceErrors = validateBackpackStoryEndingCardPackSource(
+  backpackEndingSource,
+  backpackEndingProduct,
+  worldAgeBands,
+)
+expect(
+  backpackEndingSourceErrors.length === 0,
+  `Backpack Story Ending Card Pack source failed validation:\n${backpackEndingSourceErrors.join('\n')}`,
+)
+const backpackEndingSourceFileErrors = validateBackpackStoryEndingCardPackSourceFiles(
+  backpackEndingSource,
+  root,
+)
+expect(
+  backpackEndingSourceFileErrors.length === 0,
+  `Backpack Story Ending Card Pack sourceFiles failed validation:\n${backpackEndingSourceFileErrors.join('\n')}`,
+)
+const backpackEndingExpectedPdfPages = backpackEndingSource.cards.length + 5
+const backpackEndingArtifactStatus = inspectArtifactFiles(root, backpackEndingSource.artifact, {
+  expectedPdfPages: backpackEndingExpectedPdfPages,
+})
+expect(
+  backpackEndingArtifactStatus.valid,
+  `Backpack Story Ending Card Pack artifacts failed validation:\n${backpackEndingArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  backpackEndingArtifactStatus.files.pdf.size > 100_000,
+  `Backpack Story Ending Card Pack PDF artifact is unexpectedly small: ${backpackEndingArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  backpackEndingArtifactStatus.files.pdf.pageCount === backpackEndingExpectedPdfPages,
+  `Backpack Story Ending Card Pack PDF artifact must have ${backpackEndingExpectedPdfPages} pages.`,
+)
+expect(
+  backpackEndingArtifactStatus.files.zip.size > backpackEndingArtifactStatus.files.pdf.size,
+  'Backpack Story Ending Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const backpackEndingCheckoutErrors = validateCheckoutReadiness(
+  backpackEndingProduct,
+  backpackEndingArtifactStatus,
+)
+expect(
+  backpackEndingCheckoutErrors.length === 0,
+  `Backpack Story Ending Card Pack checkout readiness failed validation:\n${backpackEndingCheckoutErrors.join('\n')}`,
+)
+const backpackEndingArtifactManifest = readJson(resolve(root, backpackEndingSource.artifact.manifestPath))
+expect(
+  backpackEndingArtifactManifest.sourcePageCount === backpackEndingSource.cards.length,
+  'Backpack Story Ending Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(backpackEndingArtifactManifest.files.assets),
+  'Backpack Story Ending Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  backpackEndingArtifactManifest.files.assets.length === backpackEndingSource.worldSlugs.length,
+  'Backpack Story Ending Card Pack artifact manifest must include one copied local image per source world.',
+)
+const backpackEndingManifestAssetErrors = validateManifestWorldAssets(
+  backpackEndingSource,
+  backpackEndingArtifactManifest,
+)
+expect(
+  backpackEndingManifestAssetErrors.length === 0,
+  `Backpack Story Ending Card Pack artifact manifest image coverage failed validation:\n${backpackEndingManifestAssetErrors.join('\n')}`,
+)
+for (const asset of backpackEndingArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Backpack Story Ending Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -6087,6 +6341,7 @@ const productImageManifests = [
   batch36ProductImages,
   batch37ProductImages,
   batch38ProductImages,
+  batch39ProductImages,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

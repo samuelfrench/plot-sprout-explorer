@@ -1,0 +1,534 @@
+{
+  "batchId": "2026-06-03-batch39",
+  "generatedAt": "2026-06-03",
+  "productSlug": "backpack-story-ending-card-pack",
+  "title": "Backpack Story Ending Card Pack",
+  "pricePoint": "$51",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable ending cards plus adult guide tools, ending routines, take-home ending slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/backpack-story-ending-card-pack/Backpack-Story-Ending-Card-Pack.pdf",
+    "zipPath": "product-build/backpack-story-ending-card-pack/backpack-story-ending-card-pack.zip",
+    "sourceHtmlPath": "product-build/backpack-story-ending-card-pack/source/backpack-story-ending-card-pack.html",
+    "manifestPath": "product-build/backpack-story-ending-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch39-backpack-ending-cards-a.json",
+    "content/product-artifacts/lanes/batch39-backpack-ending-cards-b.json",
+    "content/product-artifacts/lanes/batch39-backpack-ending-cards-c.json",
+    "content/product-artifacts/lanes/batch39-backpack-ending-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable backpack ending cards",
+    "headline": "Backpack Story Ending Card Pack",
+    "subhead": "Sixteen paper cards help writers close fictional stories with final choices, returning objects, echo lines, and closing images.",
+    "included": [
+      "16 printable backpack ending cards",
+      "Adult setup guide",
+      "Fictional ending safety notes",
+      "Backpack ending coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led ending routines",
+      "Ten take-home ending slips",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Print the ending cards, backpack sleeve, blank slips, and adult guide before writers gather.",
+      "Use a pretend paper backpack only; no real bags, labels, or private items are part of the activity.",
+      "Set out pencils and scrap paper for fictional closing choices, final feelings, object returns, echo lines, and final images.",
+      "Tell writers every ending belongs to an invented story world and can be changed gently.",
+      "Keep the session adult-led, offline, and paper-only from the first card to the last slip."
+    ],
+    "backpackEndingSetup": [
+      "Place three ending cards in the pretend paper backpack and keep the rest face down.",
+      "Put one blank slip beside each card for the writer's chosen closing detail.",
+      "Invite the writer to pick one ending job: return an object, echo an earlier line, choose a final feeling, or draw the last image.",
+      "Ask the adult helper to read choices aloud and let the writer select one paper path.",
+      "Keep every label invented, broad, and tied to the story page rather than personal life."
+    ],
+    "endingCoaching": [
+      "Ask what choice the character makes on the final page and write it in one short phrase.",
+      "Ask which pretend object comes back and what it means now.",
+      "Help the writer echo one earlier story word without copying a whole scene.",
+      "Name one final feeling that is calm, clear, or hopeful.",
+      "Use gentle revision by asking what can be clearer, softer, or more complete on the ending slip."
+    ],
+    "privacyAndSafetyNotes": [
+      "Keep the activity on invented story words, broad pretend places, and paper-only choices.",
+      "If a writer mentions a narrow real-world fact, replace it with an invented story label.",
+      "Keep completed slips with the adult helper or send one paper slip to a family reader.",
+      "Use only fictional characters, pretend objects, broad story places, and made-up closing lines.",
+      "Skip any prompt that feels like collecting private details instead of shaping a fictional ending."
+    ],
+    "familyHandoff": [
+      "Send one chosen ending slip with a note that the activity stays adult-led and offline.",
+      "Invite the family reader to ask about the character's final choice, not about private life.",
+      "Offer one fresh blank slip for a gentler alternate ending.",
+      "Tell families that invented labels and made-up places are the safest way to keep the story playful.",
+      "Let the writer decide whether to read a line aloud or simply point to the final image."
+    ],
+    "reset": [
+      "Collect the cards, blank slips, pencils, and paper backpack sleeve.",
+      "Remove any slip with narrow real-world facts and rewrite it as an invented story detail if the adult keeps it.",
+      "Shuffle ending cards so the next group sees a fresh mix.",
+      "Store finished fictional slips separately from unused blanks."
+    ]
+  },
+  "endingRoutines": [
+    {
+      "name": "Object Comes Back",
+      "bestFor": "Writers who need a concrete way to close the story.",
+      "steps": [
+        "Adult chooses one ending card and asks which pretend object mattered earlier.",
+        "Writer writes how the object appears again near the end.",
+        "Adult asks what the object means after the character's final choice.",
+        "Writer writes one closing sentence that returns the object gently."
+      ]
+    },
+    {
+      "name": "Echo Line Close",
+      "bestFor": "Writers practicing a satisfying repeated phrase.",
+      "steps": [
+        "Adult helps the writer pick one harmless word or short phrase from earlier in the story.",
+        "Writer changes the phrase slightly so it feels new at the end.",
+        "Adult asks what feeling the echo should leave.",
+        "Writer writes the echo as the last spoken or narrated line."
+      ]
+    },
+    {
+      "name": "Final Feeling Fold",
+      "bestFor": "Ending a story with emotional clarity.",
+      "steps": [
+        "Adult places three feeling slips beside one ending card.",
+        "Writer picks one gentle final feeling for the character.",
+        "Adult asks what choice helped the character reach that feeling.",
+        "Writer writes one sentence that shows the feeling through action."
+      ]
+    },
+    {
+      "name": "Last Image Window",
+      "bestFor": "Writers who think in pictures before sentences.",
+      "steps": [
+        "Adult asks the writer to sketch or name the final image on a blank slip.",
+        "Writer adds one color, sound, or tiny motion to the image.",
+        "Adult asks why that image belongs at the end.",
+        "Writer turns the image into one closing sentence."
+      ]
+    },
+    {
+      "name": "Choice And Consequence",
+      "bestFor": "Showing that an ending follows from a character decision.",
+      "steps": [
+        "Adult asks what the character finally chooses to do.",
+        "Writer writes the choice in one short invented sentence.",
+        "Adult asks what small, gentle change happens because of the choice.",
+        "Writer writes the change as the next-to-last or last sentence."
+      ]
+    },
+    {
+      "name": "Gentle Ending Repair",
+      "bestFor": "Revising an ending that feels abrupt or unclear.",
+      "steps": [
+        "Adult reads the ending card and asks which part feels unfinished.",
+        "Writer marks one place to add a closing choice, object return, feeling, or image.",
+        "Adult offers two calm wording options and lets the writer choose.",
+        "Writer writes a cleaner final line on a fresh slip."
+      ]
+    }
+  ],
+  "takeHomeEndingSlips": [
+    {
+      "title": "Lantern Return Slip",
+      "time": "One paper pass",
+      "skill": "object return",
+      "direction": "Bring back a pretend lantern near the ending and write what it means now: ____________________.",
+      "familyLine": "A family reader can ask which earlier story moment the lantern echoes: ____________________."
+    },
+    {
+      "title": "Pocket Pebble Close",
+      "time": "Calm pencil pass",
+      "skill": "final image",
+      "direction": "Write the last image of a pocket pebble resting in a made-up place: ____________________.",
+      "familyLine": "A family reader can ask why that image feels like an ending: ____________________."
+    },
+    {
+      "title": "Ribbon Gate Choice",
+      "time": "Single slip",
+      "skill": "closing choice",
+      "direction": "Write the character's final choice at an invented ribbon gate: ____________________.",
+      "familyLine": "A family reader can ask what gentle change follows that choice: ____________________."
+    },
+    {
+      "title": "Cloud Bell Echo",
+      "time": "Folded slip",
+      "skill": "echo line",
+      "direction": "Repeat one earlier made-up phrase in a new ending line: ____________________.",
+      "familyLine": "A family reader can ask how the phrase feels different at the end: ____________________."
+    },
+    {
+      "title": "Blue Button Feeling",
+      "time": "Family table pass",
+      "skill": "final feeling",
+      "direction": "Choose one final feeling for a character holding a blue button: ____________________.",
+      "familyLine": "A family reader can ask what action shows that feeling: ____________________."
+    },
+    {
+      "title": "Tiny Bridge Ending",
+      "time": "Paper-only pass",
+      "skill": "consequence",
+      "direction": "Write what changes after a character crosses a tiny pretend bridge: ____________________.",
+      "familyLine": "A family reader can ask which choice made the change happen: ____________________."
+    },
+    {
+      "title": "Moon Thread Return",
+      "time": "Quiet story pass",
+      "skill": "object meaning",
+      "direction": "Bring back a moon thread and write why it matters at the end: ____________________.",
+      "familyLine": "A family reader can ask what the moon thread helped the character understand: ____________________."
+    },
+    {
+      "title": "Garden Door Last Look",
+      "time": "One-card pass",
+      "skill": "visual ending",
+      "direction": "Write the final look at an invented garden door: ____________________.",
+      "familyLine": "A family reader can ask what detail makes the door feel finished: ____________________."
+    },
+    {
+      "title": "Quiet Market Goodbye",
+      "time": "Shared aloud pass",
+      "skill": "gentle closure",
+      "direction": "Write a short goodbye line for a made-up market character: ____________________.",
+      "familyLine": "A family reader can ask what the goodbye leaves behind: ____________________."
+    },
+    {
+      "title": "Fresh Ending Slip",
+      "time": "Revision pass",
+      "skill": "gentle revision",
+      "direction": "Rewrite one ending line so it is clearer or softer: ____________________.",
+      "familyLine": "A family reader can ask which word made the ending stronger: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Optional, adult-led offline prompt: my fictional ending choice is ____________________.",
+    "Optional, adult-led offline prompt: the pretend object that came back was ____________________.",
+    "Optional, adult-led offline prompt: the final feeling on my paper slip is ____________________.",
+    "Optional, adult-led offline prompt: my ending echo line uses the word ____________________.",
+    "Optional, adult-led offline prompt: the last image in the made-up story is ____________________.",
+    "Optional, adult-led offline prompt: one gentle change at the end is ____________________.",
+    "Optional, adult-led offline prompt: I made the ending clearer by changing ____________________.",
+    "Optional, adult-led offline prompt: an adult can add one invented closing detail here: ____________________."
+  ],
+  "cards": [
+    {
+      "id": "backpack-ending-card-01",
+      "title": "Moon Muffin Last Crumb Tuck",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "endingSkill": "choice ending",
+      "useCase": "Adult-led offline backpack ending card for choosing a gentle make-believe market ending before the page is finished: ____________________.",
+      "adultSetup": "Adult: Place the card beside a blank backpack flap shape and offer two pretend moon-market ending choices: ____________________.",
+      "kidDirection": "Pick the ending that best fits the moon muffin mix-up and write the final choice on paper: ____________________.",
+      "endingChoicePrompt": "Ending choice: The moon muffin helper finally chooses to ____________________.",
+      "feelingPrompt": "Feeling check: At the final crumb counter, the helper feels ____________________.",
+      "objectReturnPrompt": "Object return: Bring back one earlier market item before the ending: ____________________.",
+      "echoPrompt": "Echo line: Repeat one tiny word or clue from the beginning in the ending: ____________________.",
+      "finalLinePrompt": "Final line: Write the last market sentence with a soft landing: ____________________.",
+      "reviseEndingPrompt": "Revise ending: Add one moon-market detail that makes the choice clearer: ____________________.",
+      "quietOptionLine": "Quiet option: Circle one ending choice and copy only three final words: ____________________.",
+      "takeHomeLine": "Take-home line: Use this card to finish another pretend market tale with one clear choice: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-02",
+      "title": "Puddle Planet Soft Stamp Close",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "endingSkill": "feeling ending",
+      "useCase": "Adult-led paper-only backpack ending card for ending a fictional puddle mail tale by naming the final feeling: ____________________.",
+      "adultSetup": "Adult: Set out the card and ask which pretend ripple-mail feeling should end the story: ____________________.",
+      "kidDirection": "Write the ending by showing how the puddle mail helper feels after the tiny mix-up settles: ____________________.",
+      "endingChoicePrompt": "Ending choice: The ripple-mail helper can finish by sorting, waiting, or asking for help: ____________________.",
+      "feelingPrompt": "Feeling ending: The helper feels ____________________ because the puddle mail is finally ____________________.",
+      "objectReturnPrompt": "Object return: Bring back one pretend stamp, tag, or shell slip near the last line: ____________________.",
+      "echoPrompt": "Echo line: Let the final ripple echo an earlier sound or word: ____________________.",
+      "finalLinePrompt": "Final line: End with one calm puddle-planet sentence: ____________________.",
+      "reviseEndingPrompt": "Revise ending: Replace one plain feeling word with a stronger puddle word: ____________________.",
+      "quietOptionLine": "Quiet option: Choose one feeling word first, then fill the ending blank: ____________________.",
+      "takeHomeLine": "Take-home line: Finish another pretend mail tale by naming the final feeling: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-03",
+      "title": "Buttonwood Ticket Comes Back",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "endingSkill": "object return",
+      "useCase": "Adult-led printable backpack ending card for ending a fictional library-train tale by returning one important object: ____________________.",
+      "adultSetup": "Adult: Place a small paper ticket shape beside this card and invite an invented object return: ____________________.",
+      "kidDirection": "Finish the library-train story by bringing back an object that mattered earlier: ____________________.",
+      "endingChoicePrompt": "Ending choice: The traveler ends by keeping, returning, or trading the ticket clue: ____________________.",
+      "feelingPrompt": "Feeling prompt: When the object returns, the traveler feels ____________________.",
+      "objectReturnPrompt": "Object return: The earlier object that comes back in the last scene is ____________________.",
+      "echoPrompt": "Echo line: Repeat one shelf, bell, wheel, or bookmark clue in the ending: ____________________.",
+      "finalLinePrompt": "Final line: Write the last library-train sentence after the object returns: ____________________.",
+      "reviseEndingPrompt": "Revise ending: Add one object detail so the ending feels connected to the beginning: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the returning object, then write one ending word: ____________________.",
+      "takeHomeLine": "Take-home line: Try an object-return ending in another invented train tale: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-04",
+      "title": "Button Bakery Map Question Loop",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "endingSkill": "question echo",
+      "useCase": "Adult-led offline backpack ending card for ending a fictional bakery-map tale by echoing a question from earlier: ____________________.",
+      "adultSetup": "Adult: Read one pretend map question aloud and ask the writer to echo it near the ending: ____________________.",
+      "kidDirection": "Use the last line to answer or repeat one bakery-map question in a new way: ____________________.",
+      "endingChoicePrompt": "Ending choice: The map-mender ends by folding, turning, or labeling the pretend map: ____________________.",
+      "feelingPrompt": "Feeling prompt: After the question comes back, the map-mender feels ____________________.",
+      "objectReturnPrompt": "Object return: Bring back one button, crumb, ribbon, or folded corner in the ending: ____________________.",
+      "echoPrompt": "Question echo: The question that comes back near the end is ____________________.",
+      "finalLinePrompt": "Final line: Write a final sentence that answers the echoed question: ____________________.",
+      "reviseEndingPrompt": "Revise ending: Move one earlier question clue closer to the final line: ____________________.",
+      "quietOptionLine": "Quiet option: Copy the question mark shape and fill one answer word: ____________________.",
+      "takeHomeLine": "Take-home line: End another pretend map tale by echoing one question: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-05",
+      "title": "Teacup Weather Tiny Blue Surprise",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "endingSkill": "small surprise",
+      "useCase": "Adult-led printable backpack ending card for adding one gentle fictional surprise to a teacup weather ending: ____________________.",
+      "adultSetup": "Adult: Choose one pretend weather symbol together and leave room for a tiny surprise at the end: ____________________.",
+      "kidDirection": "Finish the teacup weather story with a small surprise that stays gentle and make-believe: ____________________.",
+      "endingChoicePrompt": "Ending choice: The weather watcher ends by opening, closing, or tapping the tiny pane: ____________________.",
+      "feelingPrompt": "Feeling prompt: The small surprise makes the watcher feel ____________________.",
+      "objectReturnPrompt": "Object return: Bring back one saucer, ribbon, spoon, or cloud tag in the final moment: ____________________.",
+      "echoPrompt": "Echo line: Let one earlier weather word return in the last sentence: ____________________.",
+      "finalLinePrompt": "Final line: Write the gentle surprise ending for Teacup Town: ____________________.",
+      "reviseEndingPrompt": "Revise ending: Make the surprise smaller, clearer, and more teacup-like: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the surprise symbol and write one final phrase: ____________________.",
+      "takeHomeLine": "Take-home line: Add one tiny surprise ending to another pretend weather tale: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-06",
+      "title": "Pocket Park Notice Tomorrow Hint",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "endingSkill": "next-day hint",
+      "useCase": "Adult-led paper-only backpack ending card for closing a fictional notice-board tale with a broad next-day hint: ____________________.",
+      "adultSetup": "Adult: Place this card beside a blank pretend notice and ask for an invented next-day hint only: ____________________.",
+      "kidDirection": "End the pocket-park story by hinting at what the notice might invite next in the make-believe world: ____________________.",
+      "endingChoicePrompt": "Ending choice: The notice helper ends by pinning, reading, or saving the pretend note: ____________________.",
+      "feelingPrompt": "Feeling prompt: The helper feels ____________________ when the notice finally makes sense.",
+      "objectReturnPrompt": "Object return: Bring back one ribbon tack, leaf slip, or bench tag near the ending: ____________________.",
+      "echoPrompt": "Echo line: Repeat one notice word from the beginning in the final hint: ____________________.",
+      "finalLinePrompt": "Final line: Write the next-day hint without naming any real place: ____________________.",
+      "reviseEndingPrompt": "Revise ending: Add one pocket-park detail that makes the hint feel ready but not finished: ____________________.",
+      "quietOptionLine": "Quiet option: Choose one hint word and place it on the pretend notice: ____________________.",
+      "takeHomeLine": "Take-home line: Make another broad next-day hint for a fictional notice-board ending: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-07",
+      "title": "Spoon Ferry Last Lunchbox Bell",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "endingSkill": "choice ending",
+      "useCase": "Adult-led offline backpack ending card for a fictional lunchbox harbor tale where the last choice closes the paper trip: ____________________.",
+      "adultSetup": "Adult: place this ending card after the draft and invite one gentle pretend choice, not any narrow real-world fact: ____________________.",
+      "kidDirection": "Kid: choose what the spoon ferry helper does before the lunchbox harbor quiets: ____________________.",
+      "endingChoicePrompt": "Ending choice: The helper can ring the tiny bell, return the crumb flag, or wave from the napkin pier; I choose ____________________.",
+      "feelingPrompt": "Feeling clue: after the choice, the harbor feels ____________________.",
+      "objectReturnPrompt": "Object return: bring back one pretend object from earlier, such as the spoon flag or button buoy: ____________________.",
+      "echoPrompt": "Echo clue: repeat one harbor word from the beginning in a new way: ____________________.",
+      "finalLinePrompt": "Final line: write the last sentence with the ferry, bell, or quiet water: ____________________.",
+      "reviseEndingPrompt": "Revise ending: change one plain action into a clearer ending choice: ____________________.",
+      "quietOptionLine": "Quiet option: circle one object and fill only this ending blank: ____________________.",
+      "takeHomeLine": "Take-away line: a final choice can close a pretend ferry story: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-08",
+      "title": "Acorn Errand Desk Return Slip",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "endingSkill": "object return",
+      "useCase": "Adult-led offline backpack ending card for a fictional acorn errand tale that finishes by bringing back one small paper clue: ____________________.",
+      "adultSetup": "Adult: set this card beside the last paragraph and ask which invented errand object should come back: ____________________.",
+      "kidDirection": "Kid: pick one acorn office object from the story and use it to close the ending: ____________________.",
+      "endingChoicePrompt": "Ending choice: decide whether the helper files, folds, or carries the final errand slip: ____________________.",
+      "feelingPrompt": "Feeling clue: show how the helper feels when the errand desk finally makes sense: ____________________.",
+      "objectReturnPrompt": "Object return: bring back a walnut tag, leaf stamp, pebble bell, or invented desk slip: ____________________.",
+      "echoPrompt": "Echo clue: reuse one word from the opening errand mix-up: ____________________.",
+      "finalLinePrompt": "Final line: write a closing sentence that names the returned object: ____________________.",
+      "reviseEndingPrompt": "Revise ending: replace a vague finish with one object that proves the errand is done: ____________________.",
+      "quietOptionLine": "Quiet option: draw the object first, then name it here: ____________________.",
+      "takeHomeLine": "Take-away line: an object from earlier can make a small ending feel complete: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-09",
+      "title": "Seed Map Last Drawer Question",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "endingSkill": "question echo",
+      "useCase": "Adult-led offline backpack ending card for a fictional seed map room tale that closes by answering or echoing one gentle question: ____________________.",
+      "adultSetup": "Adult: invite the writer to find one pretend question from the draft and echo it with invented seed-library words: ____________________.",
+      "kidDirection": "Kid: write an ending that points back to one question from the map room: ____________________.",
+      "endingChoicePrompt": "Ending choice: decide whether the seed keeper closes the drawer, opens a new map, or leaves a clue card: ____________________.",
+      "feelingPrompt": "Feeling clue: choose the ending feeling after the map question changes: ____________________.",
+      "objectReturnPrompt": "Object return: bring back one seed bead, folded map, drawer label, or paper key: ____________________.",
+      "echoPrompt": "Echo clue: repeat the map-room question with one changed word: ____________________.",
+      "finalLinePrompt": "Final line: write the last sentence so the echoed question feels settled or curious: ____________________.",
+      "reviseEndingPrompt": "Revise ending: add one earlier map clue so the question echo connects: ____________________.",
+      "quietOptionLine": "Quiet option: copy the question mark, then fill one answer word: ____________________.",
+      "takeHomeLine": "Take-away line: an ending can echo a question without explaining everything: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-10",
+      "title": "Rain Gauge Railway Tomorrow Ticket",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "endingSkill": "next-day hint",
+      "useCase": "Adult-led offline backpack ending card for a fictional rain railway tale that finishes with a small hint about the next made-up day: ____________________.",
+      "adultSetup": "Adult: ask for one paper ticket, gauge mark, or platform clue that hints at what could happen later: ____________________.",
+      "kidDirection": "Kid: end the railway story with one quiet clue that could lead to another pretend ride: ____________________.",
+      "endingChoicePrompt": "Ending choice: decide whether the train pauses, turns back, or follows a new puddle signal: ____________________.",
+      "feelingPrompt": "Feeling clue: show whether the platform feels calm, curious, bright, or rain-soft at the end: ____________________.",
+      "objectReturnPrompt": "Object return: bring back a blue ticket, tilted gauge, brass bell, or bead of rain: ____________________.",
+      "echoPrompt": "Echo clue: reuse one railway sound from the beginning: ____________________.",
+      "finalLinePrompt": "Final line: write the last sentence with tomorrow's pretend ticket clue: ____________________.",
+      "reviseEndingPrompt": "Revise ending: add one small future hint without adding a whole new scene: ____________________.",
+      "quietOptionLine": "Quiet option: mark one gauge line and write only the hint word: ____________________.",
+      "takeHomeLine": "Take-away line: a next-day hint can leave the railway tale open but finished: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-11",
+      "title": "Moss Observatory Final Glow",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "endingSkill": "closing image",
+      "useCase": "Adult-led offline backpack ending card for a fictional moss observatory tale that closes with one clear picture: ____________________.",
+      "adultSetup": "Adult: invite one invented image from the moss signals, sky chart, or lookout shelf to close the story: ____________________.",
+      "kidDirection": "Kid: write the ending so the reader can picture the last quiet observatory moment: ____________________.",
+      "endingChoicePrompt": "Ending choice: decide whether the observer leaves the moss dial glowing, folded, or turned toward the sky: ____________________.",
+      "feelingPrompt": "Feeling clue: name the final feeling the closing image should carry: ____________________.",
+      "objectReturnPrompt": "Object return: bring back a moss dial, pebble lens, folded sky chart, or lantern note: ____________________.",
+      "echoPrompt": "Echo clue: reuse one moss message word from earlier in the story: ____________________.",
+      "finalLinePrompt": "Final line: write a closing image with light, moss, stone, or sky: ____________________.",
+      "reviseEndingPrompt": "Revise ending: replace an explanation with one picture the reader can see: ____________________.",
+      "quietOptionLine": "Quiet option: sketch the final image, then write two words for it: ____________________.",
+      "takeHomeLine": "Take-away line: one clear final picture can close a pretend observatory story: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-12",
+      "title": "Tidepool Clock Shell Return",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "endingSkill": "object return",
+      "useCase": "Adult-led paper backpack ending card for closing a pretend tidepool lab tale when one small object comes back changed: ____________________.",
+      "adultSetup": "Adult: place the card beside a blank backpack pocket shape and choose one invented tidepool object together: ____________________.",
+      "kidDirection": "End your tidepool lab tale by bringing one make-believe object back to where it belongs: ____________________.",
+      "endingChoicePrompt": "Ending choice: decide whether the shell clock is returned quietly, proudly, or with a tiny new tick: ____________________.",
+      "feelingPrompt": "Feeling prompt: show how the timekeeper feels after the tidepool object is safely back: ____________________.",
+      "objectReturnPrompt": "Object return: name the shell, bead, bubble note, or kelp tag that comes back at the end: ____________________.",
+      "echoPrompt": "Echo prompt: repeat one early tidepool detail in a fresh way near the final sentence: ____________________.",
+      "finalLinePrompt": "Final line: write the last sentence that leaves the lab calm and clear: ____________________.",
+      "reviseEndingPrompt": "Revise ending: add one tide, clock, shell, or ripple detail so the ending feels earned: ____________________.",
+      "quietOptionLine": "Quiet option: draw the returned object first, then write only its ending word: ____________________.",
+      "takeHomeLine": "Take-along line: fold this card into a pretend backpack pocket and add one more calm ending clue: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-13",
+      "title": "Revision River Ferry Last Dock",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "endingSkill": "revision ending",
+      "useCase": "Adult-led paper backpack ending card for turning a fuzzy ferry draft into a clearer fictional final moment: ____________________.",
+      "adultSetup": "Adult: offer one plain ferry sentence and one blank backpack pocket shape for a stronger ending: ____________________.",
+      "kidDirection": "Rewrite the ferry ending so the final dock shows what changed in the make-believe draft: ____________________.",
+      "endingChoicePrompt": "Ending choice: choose the ferry landing, cargo swap, or dock bell that closes the tale best: ____________________.",
+      "feelingPrompt": "Feeling prompt: show what the ferry helper understands after the revised crossing: ____________________.",
+      "objectReturnPrompt": "Object return: bring back one paper oar tag, lantern slip, or basket clue from earlier in the tale: ____________________.",
+      "echoPrompt": "Echo prompt: echo one word from the first ferry sentence, but make it sharper now: ____________________.",
+      "finalLinePrompt": "Final line: write the closing ferry sentence with one concrete detail: ____________________.",
+      "reviseEndingPrompt": "Revise ending: replace one vague ending word with a clearer river, dock, basket, or bell word: ____________________.",
+      "quietOptionLine": "Quiet option: write old ending arrow new ending before making the full change: ____________________.",
+      "takeHomeLine": "Take-along line: keep this card in the pretend backpack pocket and revise one more final sentence: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-14",
+      "title": "Clue Label Tower Echo Tag",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "endingSkill": "question echo",
+      "useCase": "Adult-led paper backpack ending card for closing a fictional label mystery by answering or echoing one useful question: ____________________.",
+      "adultSetup": "Adult: set out two pretend exhibit labels and invite the writer to keep every clue made up: ____________________.",
+      "kidDirection": "End the tower museum tale by letting the final label echo the question from earlier: ____________________.",
+      "endingChoicePrompt": "Ending choice: decide whether the label gives an answer, a tiny hint, or a new gentle question: ____________________.",
+      "feelingPrompt": "Feeling prompt: show how the clue finder feels when the final tag makes sense: ____________________.",
+      "objectReturnPrompt": "Object return: bring back one exhibit tag, ribbon card, or folded label from the opening: ____________________.",
+      "echoPrompt": "Echo prompt: repeat the tale's first question with one changed word at the end: ____________________.",
+      "finalLinePrompt": "Final line: write the museum ending sentence that lets the label feel complete: ____________________.",
+      "reviseEndingPrompt": "Revise ending: move one clue closer to the final label so the question echo is clear: ____________________.",
+      "quietOptionLine": "Quiet option: write only the echoed question and circle the changed word: ____________________.",
+      "takeHomeLine": "Take-along line: tuck this card into a pretend backpack pocket and invent one more final label: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-15",
+      "title": "Compass Craft Final Turn",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "endingSkill": "choice ending",
+      "useCase": "Adult-led paper backpack ending card for closing a fictional compass craft tale with one thoughtful choice: ____________________.",
+      "adultSetup": "Adult: place a paper compass beside the card and name every direction as invented story play: ____________________.",
+      "kidDirection": "End the compass craft tale by choosing one final turn and showing why it fits: ____________________.",
+      "endingChoicePrompt": "Ending choice: choose north-thread, east-bead, south-fold, or west-paper as the final turn: ____________________.",
+      "feelingPrompt": "Feeling prompt: show what the crafter feels after choosing the final direction: ____________________.",
+      "objectReturnPrompt": "Object return: bring back one paper needle, bead string, fold card, or compass tag at the end: ____________________.",
+      "echoPrompt": "Echo prompt: echo one early direction word so the ending connects to the beginning: ____________________.",
+      "finalLinePrompt": "Final line: write the last compass sentence with the choice and its clear reason: ____________________.",
+      "reviseEndingPrompt": "Revise ending: add one small clue that makes the final turn feel planned, not random: ____________________.",
+      "quietOptionLine": "Quiet option: mark one compass point silently, then write its ending reason: ____________________.",
+      "takeHomeLine": "Take-along line: slide this card into a pretend backpack pocket and add a new choice ending: ____________________."
+    },
+    {
+      "id": "backpack-ending-card-16",
+      "title": "Binding Day Boardwalk Promise Knot",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "endingSkill": "promise line",
+      "useCase": "Adult-led paper backpack ending card for finishing a fictional boardwalk booklet with one clear promise line: ____________________.",
+      "adultSetup": "Adult: fold a blank paper booklet and ask for only invented boardwalk, page, and button details: ____________________.",
+      "kidDirection": "End the binding day tale by writing the promise that ties the final page together: ____________________.",
+      "endingChoicePrompt": "Ending choice: choose whether the promise is kept with a button, thread loop, page clasp, or folded sign: ____________________.",
+      "feelingPrompt": "Feeling prompt: show how the binder feels when the loose pages finally fit: ____________________.",
+      "objectReturnPrompt": "Object return: bring back one button tag, thread loop, page corner, or boardwalk token from earlier: ____________________.",
+      "echoPrompt": "Echo prompt: echo the first page's worry with a calmer final version: ____________________.",
+      "finalLinePrompt": "Final line: write the promise line that closes the booklet and leaves one bright image: ____________________.",
+      "reviseEndingPrompt": "Revise ending: add one earlier object to the final promise so the ending feels connected: ____________________.",
+      "quietOptionLine": "Quiet option: write only the promise and the object that helps keep it: ____________________.",
+      "takeHomeLine": "Take-along line: keep this card with the pretend backpack pocket and write another promise ending: ____________________."
+    }
+  ]
+}

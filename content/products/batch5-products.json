@@ -2732,6 +2732,130 @@
           "summary": "A binding day world for connecting boardwalk details to a final page setting."
         }
       ]
+    },
+    {
+      "slug": "backpack-story-ending-card-pack",
+      "title": "Backpack Story Ending Card Pack",
+      "pricePoint": "$51",
+      "status": "checkout_pending",
+      "headline": "A printable ending-card pack for screen-free pretend-backpack story closers.",
+      "summary": "Sixteen adult-led backpack cards help kids finish fictional stories with final choices, returning objects, echo lines, closing images, and gentle revisions.",
+      "heroImage": "images/plotsprout/batch39/backpack-story-ending-card-pack.jpg",
+      "ctaLabel": "Request ending card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Backpack%20Story%20Ending%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static backpack story ending card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable backpack story ending cards",
+        "Adult setup guide",
+        "Fictional ending safety notes",
+        "Backpack ending coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led ending routines",
+        "Ten take-home ending slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one fictional ending after a short draft",
+        "A tutoring or co-op table where writers can fill one ending card at a time",
+        "A family table warm-up where a pretend backpack pocket reduces final-line pressure",
+        "A reluctant-writer activity that separates ending choices from a full rewrite",
+        "A take-home ending slip set for finishing one invented story close offline"
+      ],
+      "parentSteps": [
+        "Choose one ending routine before the activity starts.",
+        "Set the paper, pencil, blank backpack slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full final sentence.",
+        "Turn one pretend backpack clue into a fictional ending detail rather than using narrow real-world facts.",
+        "Send one ending slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for choosing the last crumb decision that closes the helper tale."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for naming the final feeling after ripple mail settles."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for returning one ticket clue before the last line."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for echoing a map question in the ending."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for adding one tiny surprise to a gentle final scene."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for leaving a broad next-day hint on a pretend notice."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for choosing the last harbor action before the water quiets."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for bringing back a small slip that proves the close is complete."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for letting one map question return in a new ending line."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for closing with a future hint and one pretend ticket clue."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for replacing explanation with one clear final image."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for returning a shell-clock object with one calm change."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for sharpening a fuzzy ending into one concrete dock moment."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for answering or echoing one final tag question."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for choosing the final turn and its reason."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for writing one promise line that ties the page together."
+        }
+      ]
     }
   ]
 }

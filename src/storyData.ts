@@ -518,6 +518,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable paper-tray story setting cards with adult guide tools, setting routines, and take-home setting slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'backpack-story-ending-card-pack',
+    title: 'Backpack Story Ending Card Pack',
+    pricePoint: '$51',
+    description:
+      'Sixteen printable backpack story ending cards with adult guide tools, ending routines, and take-home ending slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]
