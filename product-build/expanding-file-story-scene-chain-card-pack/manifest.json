@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-03-batch55",
+  "generatedAt": "2026-06-03",
+  "productSlug": "expanding-file-story-scene-chain-card-pack",
+  "title": "Expanding File Story Scene Chain Card Pack",
+  "pricePoint": "$83",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/expanding-file-story-scene-chain-card-pack/Expanding-File-Story-Scene-Chain-Card-Pack.pdf",
+      "sha256": "6afe33600e443cb84c9740475a6e23ae3a47e6b150b301e87746478ea59a3f34",
+      "size": 4889756
+    },
+    "zip": {
+      "path": "product-build/expanding-file-story-scene-chain-card-pack/expanding-file-story-scene-chain-card-pack.zip",
+      "sha256": "844c624d38249fa5fe224e13b92b2a0af6a4825cfc0e3f1c6613e35402fcde78",
+      "size": 9368318
+    },
+    "sourceHtml": {
+      "path": "product-build/expanding-file-story-scene-chain-card-pack/source/expanding-file-story-scene-chain-card-pack.html",
+      "sha256": "01fecb465039000d20161ec9f9d4adf928805544079098832d5549a23e4ae701",
+      "size": 61340
+    },
+    "readme": {
+      "path": "product-build/expanding-file-story-scene-chain-card-pack/README.txt",
+      "sha256": "8cdb060ca0c3f59cb5341629096e79542035d75d83ad568edd1ba745269c0d46",
+      "size": 570
+    },
+    "assets": [
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/appendix-archive-lab.jpg",
+        "sha256": "b98def39163f848890045a4790bdae486d811fbdf1d967156eb0e7a5a0a74b4c",
+        "size": 291030
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/pantry-measurement-mystery.jpg",
+        "sha256": "b85111fa750c89e60fc21133ea09e431a26a010d8ff24db7c4baa305c3ff3f73",
+        "size": 287571
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/paperclip-plaza-parcel-day.jpg",
+        "sha256": "c7287db2a3788e8e0a567ea114b5ec913e61c8e11de424d2a30a2fc81c90ed5b",
+        "size": 379900
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/pond-bridge-blueprint-club.jpg",
+        "sha256": "0fe8f3c9f82671ca8e6daa82a2c54eeda4d2c86d0d1e65a86e366df3f5f0f707",
+        "size": 238332
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/solar-oven-picnic-station.jpg",
+        "sha256": "9742a1d469b45961d9634dc0fb6e722bf60c2f8beb872eb9790da8b21e9300be",
+        "size": 299058
+      },
+      {
+        "path": "product-build/expanding-file-story-scene-chain-card-pack/source/assets/sticker-station-mail-cart.jpg",
+        "sha256": "3ac216af41b988ed757c346983c7c30bd6e182daf96403981799ada1b40b6429",
+        "size": 177751
+      }
+    ]
+  }
+}

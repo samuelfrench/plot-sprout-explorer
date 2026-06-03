@@ -590,12 +590,14 @@ describe('Expanding File Story Scene Chain Card Pack policy', () => {
       sidecar: 'content/image-runs/batch55/expanding-file-story-scene-chain-card-pack.json',
     })
     expect(imageManifest.images[0].prompt).toBe(
-      'family-friendly studio product mockup of expanding file story scene chain card pack, orthographic top-down view, open blank expanding file with blank divider pockets, blank scene-chain cards tucked into pockets, empty writing areas, unbranded pencils, quiet printable writing kit, seamless plain white background, clean shadow, only paper folders cards and pencils, no text',
+      'family-friendly studio product mockup of an open expanding file folder story scene chain card pack, orthographic top-down catalog view, accordion-style paper folder with multiple blank divider pockets fanned open, loose blank scene-chain cards tucked into separate pockets, visible pocket depth, empty writing areas, two unbranded graphite pencils, quiet printable writing kit, seamless plain white background, clean shadow, only paper folder pockets loose cards and pencils, no text',
     )
     for (const phrase of [
       'text',
       'labels',
       'logo',
+      'spiral binding',
+      'notebook',
       'school',
       'home',
       'address',

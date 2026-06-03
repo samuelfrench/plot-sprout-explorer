@@ -1,0 +1,1087 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expanding File Story Scene Chain Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .scene-chain-card-page { font-size: 7.48px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .scene-chain-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .scene-chain-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable expanding file scene-chain cards</p>
+        <h1>Expanding File Story Scene Chain Card Pack</h1>
+        <p>Sixteen expanding file cards help writers connect a fictional start scene, next scene, bridge detail, change marker, return detail, and paper pocket note.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable expanding file story scene-chain cards plus adult guide tools, scene-chain routines, take-home scene slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline scene-chain practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$83</span>
+        <h2>Included</h2>
+        <ul><li>16 printable expanding file scene-chain cards</li>
+<li>Adult setup guide</li>
+<li>Fictional scene-chain safety notes</li>
+<li>Start scene prompts</li>
+<li>Next scene prompts</li>
+<li>Bridge detail prompts</li>
+<li>Change marker and return detail prompts</li>
+<li>Six adult-led scene-chain routines</li>
+<li>Ten take-home scene slips</li>
+<li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Scene-chain coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Expanding File Scene Chain Adult Guide</h3><ul><li>Set out the expanding file, blank page stack, pencils, and one labeled paper pocket before the adult-led story start: ____________________.</li>
+<li>Choose one made-up scene chain card, then ask the child to keep every detail pretend and broad: ____________________.</li>
+<li>Use each paper pocket for one page move: start scene, next scene, bridge detail, change marker, return detail, and file note: ____________________.</li>
+<li>Keep the session offline and paper-only, with the adult holding the expanding file and guiding each page choice: ____________________.</li>
+<li>Ask for invented characters, places, objects, and small changes; do not ask for personal facts or real day details: ____________________.</li>
+<li>Close by tucking the page into the matching paper pocket and writing one adult-led restart note: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one expanding file scene-chain card at a time. Keep every choice broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen scene-chain card worlds</h2>
+      <p>Pick a world image, then connect one fictional page move with a pretend expanding file scene-chain card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Sticker Station Mail Cart</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Rain Boot Route Rangers</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Paperclip Plaza Parcel Day</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Solar Oven Picnic Station</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pond Bridge Blueprint Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Almost Invention Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Appendix Archive Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Scene-chain routines</p>
+      <h2>Choose the expanding file routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">short first-page setup</p>
+      <h3>Start Scene Pocket</h3>
+      <p>Expanding file, one blank page, pencil, and start-scene paper pocket.</p>
+      <ol><li>The adult opens the expanding file to the first paper pocket: ____________________.</li>
+<li>The child names one made-up place, object, or character for the start scene: ____________________.</li>
+<li>The adult asks what the pretend page should show first: ____________________.</li>
+<li>The child writes or dictates one start scene line on the page: ____________________.</li></ol>
+      <p>This scene chain begins with one pretend page detail: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">one-page continuation</p>
+      <h3>Next Scene Step</h3>
+      <p>Expanding file, current page, next blank page, and next-scene paper pocket.</p>
+      <ol><li>The adult points from the start scene pocket to the next scene pocket: ____________________.</li>
+<li>The child chooses one small made-up action that follows the first page: ____________________.</li>
+<li>The adult asks what should stay connected from the start scene: ____________________.</li>
+<li>The child writes one next scene line that follows on paper: ____________________.</li></ol>
+      <p>The next scene follows because the pretend action is: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">connection pass</p>
+      <h3>Bridge Detail Fold</h3>
+      <p>Folded paper strip, expanding file, two page notes, and bridge paper pocket.</p>
+      <ol><li>The adult places a folded bridge strip between two scene chain pages: ____________________.</li>
+<li>The child chooses one pretend detail that connects both pages: ____________________.</li>
+<li>The adult asks where that detail appears on the first page and the next page: ____________________.</li>
+<li>The child writes the bridge detail on the folded strip: ____________________.</li></ol>
+      <p>The bridge detail keeps the scene chain connected with: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">gentle change pass</p>
+      <h3>Change Marker Slip</h3>
+      <p>Small paper slip, pencil, expanding file, and change-marker paper pocket.</p>
+      <ol><li>The adult opens the change-marker paper pocket and rereads the current page note: ____________________.</li>
+<li>The child invents one calm change in the pretend scene: ____________________.</li>
+<li>The adult asks how the page looks slightly different after the change: ____________________.</li>
+<li>The child writes the change marker on the slip and tucks it into the pocket: ____________________.</li></ol>
+      <p>The made-up change marker for this scene chain is: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">continuity return</p>
+      <h3>Return Detail Page</h3>
+      <p>Earlier page, blank page, expanding file, and return-detail paper pocket.</p>
+      <ol><li>The adult opens an earlier page and asks which pretend detail can come back: ____________________.</li>
+<li>The child picks one object, place clue, or character action from the scene chain: ____________________.</li>
+<li>The adult places a blank page near the return-detail paper pocket: ____________________.</li>
+<li>The child writes one return detail line that belongs on the new page: ____________________.</li></ol>
+      <p>The return detail brings back this pretend piece: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">paper wrap pass</p>
+      <h3>File Note Close</h3>
+      <p>Expanding file, page stack, file note slip, pencil, and final paper pocket.</p>
+      <ol><li>The adult lays the scene chain pages in order beside the expanding file: ____________________.</li>
+<li>The child taps the page that should guide the next adult-led writing pass: ____________________.</li>
+<li>The adult writes a file note that names the next pretend scene move: ____________________.</li>
+<li>The child tucks the file note into the final paper pocket: ____________________.</li></ol>
+      <p>The expanding file closes with this next page note: ____________________.</p>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home scene slips</p>
+      <h2>Try one scene chain later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home scene slip</p>
+      <h3>Start Scene Slip</h3>
+      <p>Adult: open the first paper pocket and ask for one made-up scene starter: ____________________.</p>
+      <p>Child: my pretend start scene begins with: ____________________.</p>
+      <p>Next page: add one detail that belongs after the start scene: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home scene slip</p>
+      <h3>Next Scene Slip</h3>
+      <p>Adult: point from the first page to the next paper pocket: ____________________.</p>
+      <p>Child: the next pretend thing that happens is: ____________________.</p>
+      <p>Next page: write the action that follows this scene: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home scene slip</p>
+      <h3>Bridge Detail Slip</h3>
+      <p>Adult: place one folded bridge strip between two scene chain pages: ____________________.</p>
+      <p>Child: the bridge detail connecting both pages is: ____________________.</p>
+      <p>Next page: use the bridge detail in one new line: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home scene slip</p>
+      <h3>Change Marker Slip</h3>
+      <p>Adult: ask what small made-up change happens in this pretend scene: ____________________.</p>
+      <p>Child: my change marker says: ____________________.</p>
+      <p>Next page: show what is different after the change: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home scene slip</p>
+      <h3>Return Detail Slip</h3>
+      <p>Adult: reread one earlier page and ask what pretend detail can return: ____________________.</p>
+      <p>Child: the returning detail is: ____________________.</p>
+      <p>Next page: bring that detail back in a calm story line: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home scene slip</p>
+      <h3>Paper Pocket Order Slip</h3>
+      <p>Adult: lay the expanding file pockets in scene chain order: ____________________.</p>
+      <p>Child: the paper pocket I need next is: ____________________.</p>
+      <p>Next page: tuck the finished page into that pocket: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home scene slip</p>
+      <h3>Object Carry Slip</h3>
+      <p>Adult: ask which pretend object should move from one page to the next: ____________________.</p>
+      <p>Child: the object I will carry forward is: ____________________.</p>
+      <p>Next page: let that object help connect the scene chain: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home scene slip</p>
+      <h3>Place Clue Slip</h3>
+      <p>Adult: choose one made-up place clue that can stay steady across pages: ____________________.</p>
+      <p>Child: my pretend place clue is: ____________________.</p>
+      <p>Next page: repeat the clue in a new paper-only scene: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home scene slip</p>
+      <h3>Character Action Slip</h3>
+      <p>Adult: ask what the pretend character does next on the page: ____________________.</p>
+      <p>Child: the character action is: ____________________.</p>
+      <p>Next page: connect the action to the next scene chain step: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home scene slip</p>
+      <h3>File Note Slip</h3>
+      <p>Adult: write one restart note before closing the expanding file: ____________________.</p>
+      <p>Child: the next made-up page should begin with: ____________________.</p>
+      <p>Next page: read the file note, then add one pretend scene line: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Optional adult-led paper prompt: the expanding file opens to a pretend start scene about ____________________.</li>
+<li>Optional adult-led paper prompt: the scene chain moves to the next page when ____________________.</li>
+<li>Optional adult-led paper prompt: the bridge detail between these pages is ____________________.</li>
+<li>Optional adult-led paper prompt: the made-up change marker says ____________________.</li>
+<li>Optional adult-led paper prompt: the return detail that comes back is ____________________.</li>
+<li>Optional adult-led paper prompt: the paper pocket for this page should be labeled ____________________.</li>
+<li>Optional adult-led paper prompt: the pretend object carried forward is ____________________.</li>
+<li>Optional adult-led paper prompt: the file note for the next page begins with ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 1 | Ages 7-9 | connect a button-map start scene to a next scene, bridge detail, change marker, return detail, and paper pocket note</div>
+      <h2>Button Bakery Map Mixup Story Scene Chain Card</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out an expanding file, one blank page, a pencil, and a pretend button map drawn only for this scene chain: ____________________.</p>
+      <p class="kid-direction">Writer: keep the Button Bakery story made-up by moving one map clue from the start scene to the next scene, then into a paper pocket: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write who finds the pretend button map and what one marker seems to point toward on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: write what the helper notices after turning the page, such as a shifted button, a new arrow, or a folded corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one small detail that connects the first map marker to the new page clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: mark the exact moment the scene chain changes with a new symbol, color word, or paper fold: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first button marker so the later scene connects to the beginning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: label one expanding file paper pocket with the button clue that should travel to the next page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the start scene and return detail blanks for the button-map mixup: ____________________. Later paper line: make another Button Bakery scene chain with one pretend map marker and one paper pocket note: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 2 | Ages 7-9 | carry a sticker-cart scene from first sort card to next page, bridge detail, change marker, return detail, and expanding file pocket</div>
+      <h2>Sticker Station Mail Cart Story Scene Chain Card</h2>
+      <figure>
+        <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+        <figcaption>Sticker Station Mail Cart</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the expanding file, blank page, pencil, and three pretend sticker sort slips beside the card: ____________________.</p>
+      <p class="kid-direction">Writer: make a scene chain where the mail cart starts with one sticker slip, changes on the next page, and files a note in a paper pocket: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write which cart helper finds the first sticker slip and what the helper thinks it means: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: write what changes when the cart reaches the next made-up station, such as a new sticker shape or turned slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one concrete detail that links the first sticker slip to the new station clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: write the word or symbol on the page that shows the scene chain has shifted: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first sticker slip with a clearer meaning in the later scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: choose the expanding file paper pocket that should hold the sticker clue for the next page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the sticker slip at the start and how it returns later: ____________________. Later paper line: start another Sticker Station scene chain with one pretend sort slip and one paper pocket label: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 3 | Ages 7-9 | link a notice-board start scene to a next page clue, bridge detail, change marker, return detail, and expanding file pocket note</div>
+      <h2>Pocket Park Notice Board Story Scene Chain Card</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set an expanding file, blank page, pencil, and one pretend notice-board slip on the table: ____________________.</p>
+      <p class="kid-direction">Writer: build a Pocket Park scene chain by moving one notice-board clue across two pages and into the right paper pocket: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write what pretend notice appears on the board and which helper reads it first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: write the next page moment when the notice changes, gets a new border, or points to a tiny bench tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one object, color, or mark that appears in both scenes so the chain feels connected: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: write the page signal that shows the board clue has changed, such as a flap, star mark, or crossed ribbon: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first notice-board detail in the later scene with a new use: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: label an expanding file paper pocket with the notice-board clue to save for the next page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the notice at the start and the returning notice detail: ____________________. Later paper line: make another Pocket Park scene chain with one made-up notice and one paper pocket clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 4 | Ages 7-9 | move a pretend rain-boot trail mark from start scene to next scene, bridge detail, change marker, return detail, and paper pocket note</div>
+      <h2>Rain Boot Route Rangers Story Scene Chain Card</h2>
+      <figure>
+        <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+        <figcaption>Rain Boot Route Rangers</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the expanding file, one blank page, pencil, and a pretend rain-boot mark slip beside the writer: ____________________.</p>
+      <p class="kid-direction">Writer: keep the ranger path fully made-up by writing a start scene, a next scene, and one paper pocket clue for the scene chain: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write which ranger finds the first pretend boot mark and what the mark suggests on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: write what the next page reveals, such as a second boot mark, a paper puddle tag, or a tucked ribbon: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one detail that links the first boot mark to the new page clue without naming any real place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: write the exact page sign that shows the scene chain changes direction: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first boot mark so the later scene echoes the start: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: choose an expanding file paper pocket for the pretend boot-mark clue and label it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the first boot mark and how it returns on the later page: ____________________. Later paper line: start another Rain Boot Rangers scene chain with one pretend trail mark and one paper pocket note: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 5 | Ages 7-9 | track a paperclip parcel from start scene to next scene, bridge detail, change marker, return detail, and expanding file pocket note</div>
+      <h2>Paperclip Plaza Parcel Day Story Scene Chain Card</h2>
+      <figure>
+        <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+        <figcaption>Paperclip Plaza Parcel Day</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out an expanding file, blank page, pencil, and one pretend parcel tag clipped to scrap paper: ____________________.</p>
+      <p class="kid-direction">Writer: write a scene chain where a paperclip parcel clue starts on one page, changes on the next, and lands in a paper pocket: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write who notices the clipped parcel tag and what tiny mark starts the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: write what happens on the next page when the tag tilts, the clip moves, or a new fold appears: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one matching detail that carries from the first parcel tag to the next scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: write the paper sign that marks the scene change, such as a bent clip, dotted line, or new tag corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first clipped tag detail when the parcel scene settles: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: label the expanding file paper pocket where the parcel clue belongs before the next page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the clipped parcel tag and the return detail blanks: ____________________. Later paper line: make another Paperclip Plaza scene chain with one pretend parcel tag and one paper pocket clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 6 | Ages 8-10 | connect a solar-station gauge scene to a next page change, bridge detail, change marker, return detail, and paper pocket note</div>
+      <h2>Solar Oven Picnic Station Story Scene Chain Card</h2>
+      <figure>
+        <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+        <figcaption>Solar Oven Picnic Station</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the expanding file, blank page, pencil, and one pretend solar gauge card on the table: ____________________.</p>
+      <p class="kid-direction">Writer: keep the solar station story on paper by chaining the first gauge scene to a next scene and filing one clue in a paper pocket: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write which station helper reads the first pretend solar gauge and what the gauge card shows: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: write what changes on the next page, such as a shifted shade mark, a tilted flap, or a new station tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one detail that appears on both the first gauge card and the next page clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: write the symbol, fold, or short note that shows the scene chain has changed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first gauge mark so the later scene connects to the start: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: label one expanding file paper pocket with the solar gauge clue to carry forward: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the first gauge card and the returning gauge detail: ____________________. Later paper line: start another Solar Oven Picnic Station scene chain with one pretend gauge and one paper pocket note: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 7 | Ages 8-10 | connect a first signal, changed clue, bridge detail, and return note across one scene chain</div>
+      <h2>Moss Message Observatory Scene Chain Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one blank page, this card, and three labeled paper pocket slips for start scene, next scene, and return detail: ____________________.</p>
+      <p class="kid-direction">Writer: make up an observatory helper, a moss signal, and a pretend page where the scene chain changes one clue at a time: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write the first observatory moment, including the helper, the moss signal color, and where the signal waits on the chart rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: move to the signal table and show what new moss mark appears beside the first chart note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one concrete bridge detail, such as a pebble lens, folded chart corner, or whisper-quiet signal flag, that links both scenes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: write the exact clue change, such as the moss mark turning from a dot to a tiny arrow on the pretend page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first moss signal and explain how the changed mark helps the helper read it more clearly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: place one sentence in the expanding file paper pocket that names the start scene clue and the return detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the moss signal, and the writer fills only the bridge detail and return detail blanks: ____________________. Take-home line: continue a paper-only observatory scene chain by saving one pretend signal note in a paper pocket: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 8 | Ages 8-10 | carry a measurement clue from one shelf scene to the next without breaking the pretend mystery</div>
+      <h2>Pantry Measurement Mystery Scene Chain Card</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page beside the expanding file and label one paper pocket for the first measure clue: ____________________.</p>
+      <p class="kid-direction">Writer: invent a pretend shelf keeper, a measuring ribbon, and a made-up mystery that stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write the first shelf moment where the helper finds a measuring ribbon with three odd tick marks: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: move the helper to the tally shelf and show which tick mark does not match the pretend jar label row: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one specific link between scenes, such as a bent ruler edge, chalk tally strip, or paper jar tag with a tiny square: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: write how the clue changes when the helper compares two pretend measurements on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first measuring ribbon and show how its odd tick mark finally points to the right paper tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: tuck a one-line measurement clue into the expanding file paper pocket for this scene chain: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult names the first tick mark, and the writer writes only the next scene and return detail: ____________________. Take-home line: make another paper-only measurement mystery by carrying one pretend ribbon clue from page to paper pocket: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 9 | Ages 8-10 | use a map-room clue to bridge two scenes and return to the first page detail</div>
+      <h2>Seed Library Map Room Scene Chain Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the expanding file open, add one blank page, and label a paper pocket for the map-room bridge detail: ____________________.</p>
+      <p class="kid-direction">Writer: create a pretend map guide, a drawer map, and a made-up scene chain that follows one folded path clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write how the map guide opens a drawer map and finds one folded path clue beside a seed label stamp: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: move to the long map table and show how the folded path points to a different drawer mark than expected: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one concrete object that links the scenes, such as a brass drawer pull, dotted path strip, or stamped corner square: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: write the moment the path clue changes direction on the pretend page after the guide flips one map flap: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first drawer map and show how the changed path clue makes its first mark useful: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: file one map-room bridge sentence in the expanding file paper pocket for later page planning: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult chooses the drawer map detail, and the writer fills only the change marker blank: ____________________. Take-home line: keep a paper-only map room scene chain by carrying one folded clue from start scene to return detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 10 | Ages 8-10 | show a blueprint idea changing between two scenes while one bridge detail returns</div>
+      <h2>Pond Bridge Blueprint Club Scene Chain Card</h2>
+      <figure>
+        <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+        <figcaption>Pond Bridge Blueprint Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank page, the expanding file, and a paper pocket labeled blueprint clue: ____________________.</p>
+      <p class="kid-direction">Writer: make up a bridge planner, a pretend pond blueprint, and a scene chain where one sketch detail changes: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write the first blueprint club moment where the planner draws a tiny bridge sketch beside a pebble marker: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: move to the paper model table and show what part of the bridge sketch needs a new line or label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one concrete bridge detail, such as a plank notch, lily-pad stamp, or folded blueprint flap, that connects the scenes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: write how the sketch changes from first idea to clearer paper plan while keeping the work calm and adult-led: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first pebble marker and show how the updated sketch now explains its place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: place one blueprint change sentence in the expanding file paper pocket for this pretend scene chain: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult circles one sketch detail, and the writer writes only the change marker and return detail: ____________________. Take-home line: build another paper-only blueprint scene chain by saving one sketch clue in a paper pocket: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 11 | Ages 10-11 | manage a longer ferry scene chain by tracking revision choices, bridge details, and a returning clue</div>
+      <h2>Revision River Ferry Scene Chain Card</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out two blank pages, the expanding file, and a paper pocket labeled ferry revision clue: ____________________.</p>
+      <p class="kid-direction">Writer: invent a pretend ferry helper, a folded ticket clue, and a scene chain that revises one river crossing idea on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write the first ferry moment where the helper finds a folded ticket with one unclear dock symbol: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: move to the ferry desk and show how the helper tries a clearer sentence for the dock symbol on the next page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: add one concrete bridge detail, such as a ticket crease, bell cord note, or folded ferry map edge, that ties the scenes together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: write the exact revision choice that changes the crossing idea, such as replacing a vague clue with a clearer paper symbol: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the folded ticket and show how the revised symbol now makes the ferry scene chain easier to follow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: file one ferry revision sentence in the expanding file paper pocket so the returning clue stays connected: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult marks the folded ticket clue, and the writer writes only the revised symbol sentence: ____________________. Take-home line: continue a paper-only ferry scene chain by saving one pretend revision clue in a paper pocket: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 12 | Ages 10-11 | link a made-up boardwalk binding scene to the next page with one returning detail</div>
+      <h2>Binding Day Boardwalk Scene Chain Card</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card, blank paper, a pencil, and one expanding file paper pocket on the table for a private made-up boardwalk chain: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, write one start scene, one next scene, and a bridge detail that keeps the pretend boardwalk chain connected: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write the binding cart, the loose page stack, and the boardwalk helper who notices one bright spine ribbon: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: move to the paper-stall counter where the helper finds a second loose page with a matching ribbon mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: carry the bright spine ribbon from the first page into the next scene so the reader can follow the scene chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: show one gentle change, such as the loose pages shifting into a new order beside the binding cart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first spine ribbon and explain how it helps the helper connect the two boardwalk pages: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: tuck the start scene, next scene, and ribbon bridge note into the expanding file paper pocket: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the spine ribbon, the next loose page, and one return detail for the scene chain: ____________________. Take-home line: keep the Binding Day Boardwalk page in the paper pocket and add one made-up connected scene later: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 13 | Ages 10-11 | move one margin note through a pretend market scene chain without losing the paper clue</div>
+      <h2>Margin Note Market Scene Chain Card</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out this card, blank paper, pencil, and an expanding file paper pocket labeled for pretend margin notes: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, start at one paper tag booth, move to the next page, and keep one margin note clue alive: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write the paper tag booth, the tiny margin note on a folded page, and the keeper who spots it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: shift to the ribbon ledger table where another character reads the margin note in a new way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: repeat the tiny margin note wording or shape so the second scene clearly belongs to the first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: add one paper-only change, such as the note moving from page edge to ledger corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring the original margin note back and write what the keeper understands after the ledger table scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: place the margin note clue and both scene pages in the expanding file paper pocket: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write the margin note, where it moves next, and what it means when it returns: ____________________. Take-home line: save the Margin Note Market scene chain on paper and add one pretend booth detail later: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 14 | Ages 10-11 | connect an almost-invention problem to a later paper repair scene</div>
+      <h2>Almost Invention Workshop Scene Chain Card</h2>
+      <figure>
+        <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+        <figcaption>Almost Invention Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the activity adult-led and paper-only, then set this card beside blank paper, pencil, and an expanding file paper pocket: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, make a pretend invention almost work, then write the next scene where one clue helps it improve: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write the cardboard gear, bent lever, and workshop helper who realizes the almost-invention needs one more paper clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: move to the sketch table where the helper studies the gear note and tries a calmer pretend repair idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: carry the bent lever note from the first scene to the sketch table so the scene chain stays clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: show one change, such as the gear sketch turning from a question mark into a labeled paper arrow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the bent lever and write how the sketch table clue changes what the helper does next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: file the start scene, sketch table scene, and lever bridge detail inside the expanding file paper pocket: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write the bent lever, the sketch table clue, and one return detail for the almost-invention: ____________________. Take-home line: keep the Almost Invention Workshop scene chain in the paper pocket and add another pretend repair note later: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 15 | Ages 10-11 | use an appendix slip to connect archive scenes across two paper pages</div>
+      <h2>Appendix Archive Lab Scene Chain Card</h2>
+      <figure>
+        <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+        <figcaption>Appendix Archive Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card, blank paper, pencil, and an expanding file paper pocket beside one made-up appendix slip: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, build a pretend archive scene chain where one appendix slip changes meaning on the next page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write the appendix drawer, the numbered paper slip, and the archive helper who finds a missing label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: move to the sorting desk where the numbered slip points to a different made-up page clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: repeat the numbered appendix slip in both scenes so the archive chain feels connected: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: show the slip changing from a loose clue into a sorted page marker with one added symbol: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the missing label and write how the sorted slip helps explain it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: slide the appendix slip, start scene, next scene, and return label note into the expanding file paper pocket: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write the numbered slip, the sorting desk clue, and the returned missing label: ____________________. Take-home line: keep the Appendix Archive Lab scene chain on paper and add one made-up appendix clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page scene-chain-card-page">
+      <div class="page-kicker">Scene Chain Card 16 | Ages 10-11 | carry one compass craft direction through a two-page pretend scene chain</div>
+      <h2>Compass Craft Academy Scene Chain Card</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out this card, blank paper, pencil, and an expanding file paper pocket for a made-up compass craft chain: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, start with one pretend compass direction, change it on the next page, and return to the first clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Start scene</h3>
+      <p>Start scene: write the compass craft table, the north-point paper arrow, and the maker who needs a clearer direction clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next scene</h3>
+      <p>Next scene: move to the folded-map bench where the maker compares the arrow with a second paper compass mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge detail</h3>
+      <p>Bridge detail: carry the north-point paper arrow into the folded-map bench scene so the scene chain has a clear link: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Change marker</h3>
+      <p>Change marker: show one change, such as the arrow pointing toward a new craft symbol instead of the first mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return detail</h3>
+      <p>Return detail: bring back the first north-point arrow and explain what it helps the maker understand now: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File pocket note</h3>
+      <p>File pocket note: put the compass arrow, folded-map clue, and return detail page into the expanding file paper pocket: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write the compass arrow, one changed mark, and one return sentence for the scene chain: ____________________. Take-home line: save the Compass Craft Academy page in the paper pocket and add one pretend direction clue later: ____________________.</p>
+    </section>
+  </body>
+</html>

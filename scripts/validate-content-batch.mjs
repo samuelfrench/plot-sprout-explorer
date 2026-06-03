@@ -4644,13 +4644,15 @@ function validateBatch55Image(image, imageSlugs) {
   expect(image.sidecar === `content/image-runs/batch55/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
   expect(
     image.prompt ===
-      'family-friendly studio product mockup of expanding file story scene chain card pack, orthographic top-down view, open blank expanding file with blank divider pockets, blank scene-chain cards tucked into pockets, empty writing areas, unbranded pencils, quiet printable writing kit, seamless plain white background, clean shadow, only paper folders cards and pencils, no text',
+      'family-friendly studio product mockup of an open expanding file folder story scene chain card pack, orthographic top-down catalog view, accordion-style paper folder with multiple blank divider pockets fanned open, loose blank scene-chain cards tucked into separate pockets, visible pocket depth, empty writing areas, two unbranded graphite pencils, quiet printable writing kit, seamless plain white background, clean shadow, only paper folder pockets loose cards and pencils, no text',
     `${label}.prompt must match the approved Batch55 hero prompt.`,
   )
   for (const phrase of [
     'text',
     'labels',
     'logo',
+    'spiral binding',
+    'notebook',
     'school',
     'home',
     'address',
