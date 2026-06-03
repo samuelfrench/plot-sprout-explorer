@@ -1,0 +1,190 @@
+{
+  "laneId": "batch35-blanket-fort-dialogue-tools",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the dialogue cards, blank line bubbles, turn arrows, tag strips, and take-home slips before writers arrive.",
+      "Explain that every blanket fort scene, character, place, and problem is invented for paper writing only.",
+      "Choose a small set of cozy prop cards, such as quilt flap, lantern note, pillow sign, and tunnel map.",
+      "Put pencils, erasers, and extra blank slips where the adult can hand them out without stopping the table.",
+      "Start with one adult example that shows two short lines, one tag, and one clear reply."
+    ],
+    "paperDialogueSetup": [
+      "Place two character tents on the table with a turn arrow between them.",
+      "Set one setting mat under the tents so every line belongs inside the pretend fort scene.",
+      "Keep question, reply, feeling, object, and closing slips in separate paper stacks.",
+      "Use blank name tabs with role labels such as Builder, Guard, Mapper, or Visitor.",
+      "Leave a small swap pile for lines that are funny but do not fit the current scene."
+    ],
+    "dialogueCoaching": [
+      "Ask what the pretend character wants before the writer fills the first line.",
+      "Point to the turn arrow and check that each new line answers or reacts to the line before it.",
+      "If two characters sound alike, invite one word change that shows a different voice.",
+      "Add simple tags only when the reader needs help knowing who speaks or how the line is said.",
+      "Read the exchange once and ask whether the fort problem moved forward."
+    ],
+    "privacyAndSafetyNotes": [
+      "Keep all work on paper with the adult leader or family folder.",
+      "Use invented names, pretend roles, and made-up blanket fort places.",
+      "Turn any personal detail into a silly prop, role, or setting clue before writing.",
+      "Let a writer point, choose, or write one invented word instead of reading aloud.",
+      "Skip any prompt that stops feeling fictional, gentle, paper-only, or adult-led."
+    ],
+    "familyHandoff": [
+      "Send one slip with one blank line, not a long worksheet.",
+      "Tell family adults the slip is for short invented dialogue practice at a table.",
+      "Invite one adult model line before the writer adds a reply.",
+      "Praise clear turns, voice clues, and problem-solving lines before spelling or neatness.",
+      "Return unused slips to the folder so the next adult-led session starts cleanly."
+    ],
+    "reset": [
+      "Sort line bubbles, turn arrows, tag strips, setting mats, and slips into separate stacks.",
+      "Recycle scrap warm-ups and keep clean blank slips for the next table.",
+      "Clear adult examples from the table so the next group begins with fresh invented choices.",
+      "Put the blanket fort prop cards, pencils, and guide sheet back in the envelope."
+    ]
+  },
+  "dialogueRoutines": [
+    {
+      "name": "Fort Flap Greeting",
+      "bestFor": "Starting a scene with one friendly opening line.",
+      "steps": [
+        "Adult places two pretend character tents beside the fort flap card.",
+        "Writer chooses which character speaks first.",
+        "Writer writes one greeting that fits the blanket fort setting.",
+        "Adult points to the turn arrow and asks who answers next."
+      ]
+    },
+    {
+      "name": "Question Reply Ladder",
+      "bestFor": "Writers who need help making one line connect to the next.",
+      "steps": [
+        "Place a question slip above a reply slip.",
+        "Writer fills the question with a pretend fort problem or wonder.",
+        "Writer fills the reply with an answer that uses one detail from the question.",
+        "Read both lines and underline the word that connects them."
+      ]
+    },
+    {
+      "name": "Tag Tuck-In",
+      "bestFor": "Adding who said the line without cluttering the page.",
+      "steps": [
+        "Writer chooses one finished line bubble.",
+        "Adult offers two short tags, such as said the Mapper or whispered the Builder.",
+        "Writer tucks the tag after the line or before the line.",
+        "Read the sentence and remove the tag if the speaker is already clear."
+      ]
+    },
+    {
+      "name": "Lantern Voice Swap",
+      "bestFor": "Revising two speakers so they sound different.",
+      "steps": [
+        "Place two line bubbles under the lantern card.",
+        "Writer chooses one voice clue for each speaker, such as careful, bouncy, puzzled, or proud.",
+        "Writer changes one word in each line to match the chosen voice clue.",
+        "Adult reads the lines and asks which speaker sounds more specific."
+      ]
+    },
+    {
+      "name": "Pillow Sign Object Turn",
+      "bestFor": "Using an object to make dialogue feel grounded in the scene.",
+      "steps": [
+        "Adult places one object card in the middle of the character tents.",
+        "Writer writes a line where one speaker notices or uses that object.",
+        "The next line must react to the object clue, not change the topic.",
+        "Writer circles the object word that helped the turn connect."
+      ]
+    },
+    {
+      "name": "Gentle Disagreement Fix",
+      "bestFor": "Practicing a mild difference of opinion in a fictional scene.",
+      "steps": [
+        "Adult gives two characters different ideas for solving the blanket fort problem.",
+        "Writer writes one polite disagreement line for the first speaker.",
+        "Writer adds a reply that offers a compromise or new plan.",
+        "Read the two lines and check that both characters stay kind."
+      ]
+    }
+  ],
+  "takeHomeDialogueSlips": [
+    {
+      "title": "Fort Flap Hello",
+      "time": "one-line slip",
+      "skill": "greeting line",
+      "direction": "Write one made-up greeting at the blanket fort flap: ____________________.",
+      "familyLine": "Adult asks who answers from inside the pretend fort: ____________________."
+    },
+    {
+      "title": "Tunnel Map Question",
+      "time": "question slip",
+      "skill": "question reply",
+      "direction": "Make one pretend character ask a question about the tunnel map: ____________________.",
+      "familyLine": "Adult helps add an answer that uses one word from the question: ____________________."
+    },
+    {
+      "title": "Lantern Listener Reply",
+      "time": "reply slip",
+      "skill": "listener reaction",
+      "direction": "Write a line that reacts to what another pretend character just said: ____________________.",
+      "familyLine": "Adult asks which word shows the listener was paying attention: ____________________."
+    },
+    {
+      "title": "Pillow Tag Tuck",
+      "time": "tag slip",
+      "skill": "dialogue tag",
+      "direction": "Add a simple tag to this made-up line: \"The secret flap is stuck.\" ____________________.",
+      "familyLine": "Adult checks whether the tag tells who speaks or how the line sounds: ____________________."
+    },
+    {
+      "title": "Quilt Voice Patch",
+      "time": "voice slip",
+      "skill": "revise for voice",
+      "direction": "Change one word so the line sounds proud, careful, excited, or unsure: ____________________.",
+      "familyLine": "Adult asks what word made the voice clearer: ____________________."
+    },
+    {
+      "title": "Arrow Turn Pair",
+      "time": "turn slip",
+      "skill": "turn-taking",
+      "direction": "Write two short lines where the second line answers the first: ____________________.",
+      "familyLine": "Adult points to the turn arrow and asks if the second line belongs: ____________________."
+    },
+    {
+      "title": "Lantern Feeling Clue",
+      "time": "feeling slip",
+      "skill": "feeling clue",
+      "direction": "Write a line that hints at a feeling without naming the feeling: ____________________.",
+      "familyLine": "Adult asks which clue shows how the pretend character feels: ____________________."
+    },
+    {
+      "title": "Object Line Bubble",
+      "time": "object slip",
+      "skill": "object clue line",
+      "direction": "Use blanket fold, paper lantern, cushion wall, or string sign in one line: ____________________.",
+      "familyLine": "Adult asks how the object helped the line fit the scene: ____________________."
+    },
+    {
+      "title": "Cushion Problem Reply",
+      "time": "problem-reply slip",
+      "skill": "problem-solving reply",
+      "direction": "Write a kind reply that helps solve a pretend fort problem: ____________________.",
+      "familyLine": "Adult asks what plan the reply suggested: ____________________."
+    },
+    {
+      "title": "Fort Flap Closing",
+      "time": "closing slip",
+      "skill": "closing line",
+      "direction": "Write one closing line that ends the invented scene gently: ____________________.",
+      "familyLine": "Adult asks what changed before the closing line: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "My made-up greeting line was ____________________.",
+    "The pretend question I liked best was ____________________.",
+    "The reply that connected clearly was ____________________.",
+    "One tag that helped the reader was ____________________.",
+    "My character voice clue was ____________________.",
+    "The blanket fort object that shaped a line was ____________________.",
+    "A gentle problem-solving reply was ____________________.",
+    "My fictional closing line was ____________________."
+  ]
+}

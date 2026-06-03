@@ -2236,6 +2236,130 @@
           "summary": "A binding day world for linking causes and effects into a final page result."
         }
       ]
+    },
+    {
+      "slug": "blanket-fort-story-dialogue-card-pack",
+      "title": "Blanket Fort Story Dialogue Card Pack",
+      "pricePoint": "$43",
+      "status": "checkout_pending",
+      "headline": "A printable dialogue-card pack for screen-free blanket-fort story exchanges.",
+      "summary": "Sixteen adult-led blanket fort cards help kids write fictional speaker lines and replies.",
+      "heroImage": "images/plotsprout/batch35/blanket-fort-story-dialogue-card-pack.jpg",
+      "ctaLabel": "Request dialogue card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Blanket%20Fort%20Story%20Dialogue%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static blanket fort story dialogue card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable blanket fort story dialogue cards",
+        "Adult setup guide",
+        "Fictional dialogue safety notes",
+        "Speaker line coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led dialogue routines",
+        "Ten take-home dialogue slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one paper line-and-reply pair before a full story",
+        "A tutoring or co-op blanket-fort table where writers can fill one dialogue card at a time",
+        "A family table warm-up where speaker labels reduce blank-page pressure",
+        "A reluctant-writer activity that separates story voice from a full draft",
+        "A take-home dialogue slip set for finishing one invented exchange offline"
+      ],
+      "parentSteps": [
+        "Choose one dialogue routine before the activity starts.",
+        "Set the paper, pencil, speaker labels, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one pretend blanket fort detail into a make-believe speaker line rather than using personal facts.",
+        "Send one dialogue slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for writing a friendly first speaker line."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for matching one clear question with one answer."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for adding a clear dialogue tag."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for solving one map problem through a reply."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for showing feeling through an action clue."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for writing one kind disagreement line."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for making a line fit the setting."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn office world for disagreeing politely about an errand mixup."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for linking a map question to a useful reply."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for pointing a spoken line toward an object clue."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for writing a listener reaction."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for starting with a friendly greeting line."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for answering a question about a draft line."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue tower world for turning a museum object into a spoken clue."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for making disagreement respectful and useful."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for closing an invented exchange."
+        }
+      ]
     }
   ]
 }

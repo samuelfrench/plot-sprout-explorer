@@ -486,6 +486,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable reading-nook story cause/effect cards with adult guide tools, cause/effect routines, and take-home cause/effect slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'blanket-fort-story-dialogue-card-pack',
+    title: 'Blanket Fort Story Dialogue Card Pack',
+    pricePoint: '$43',
+    description:
+      'Sixteen printable blanket-fort story dialogue cards with adult guide tools, dialogue routines, and take-home dialogue slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

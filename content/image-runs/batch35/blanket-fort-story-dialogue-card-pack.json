@@ -1,0 +1,18 @@
+{
+  "slug": "blanket-fort-story-dialogue-card-pack",
+  "prompt": "family-friendly flat lay, six plain unadorned blank cream blanket fort story dialogue cards, empty speaker line guide boxes, no writing, no text, no decoration, no plant, unbranded blanket fort corner, one plain wooden pencil, plain white background, screen-free printable blanket fort story dialogue card pack",
+  "negativePrompt": "text, readable writing, letters, labels, logo, watermark, book, book cover, real book title, author name, publisher name, phone, tablet, laptop, computer, screen, device, app interface, microphone, audio recorder, camera, photo, recording, transcription, school login, account login, portal, qr code, upload icon, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, child face, child portrait, plant, leaves, foliage, flower, food, snack, cup, plate, brand mark, franchise character, scary, weapon",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26063543,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch35/blanket-fort-story-dialogue-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch35/blanket-fort-story-dialogue-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-03-batch35-product-images.json",
+  "title": "Blanket Fort Story Dialogue Card Pack"
+}

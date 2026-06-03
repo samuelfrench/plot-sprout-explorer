@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blanket Fort Story Dialogue Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-dialogue-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-dialogue-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-dialogue-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper dialogue cards</p>
+        <h1>Blanket Fort Story Dialogue Card Pack</h1>
+        <p>Sixteen paper cards help writers draft two fictional speaker lines inside a pretend blanket-fort story scene.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable dialogue cards plus adult guide tools, dialogue routines, take-home dialogue slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$43</span>
+        <h2>Included</h2>
+        <ul><li>16 printable blanket-fort dialogue cards</li>
+<li>Adult setup guide</li>
+<li>Fictional dialogue safety notes</li>
+<li>Speaker line coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led dialogue routines</li>
+<li>Ten take-home dialogue slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Dialogue move coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the dialogue cards, blank line bubbles, turn arrows, tag strips, and take-home slips before writers arrive.</li>
+<li>Explain that every blanket fort scene, character, place, and problem is invented for paper writing only.</li>
+<li>Choose a small set of cozy prop cards, such as quilt flap, lantern note, pillow sign, and tunnel map.</li>
+<li>Put pencils, erasers, and extra blank slips where the adult can hand them out without stopping the table.</li>
+<li>Start with one adult example that shows two short lines, one tag, and one clear reply.</li></ul></article>
+        <article class="guide-card"><h3>Paper dialogue setup</h3><ul><li>Place two character tents on the table with a turn arrow between them.</li>
+<li>Set one setting mat under the tents so every line belongs inside the pretend fort scene.</li>
+<li>Keep question, reply, feeling, object, and closing slips in separate paper stacks.</li>
+<li>Use blank name tabs with role labels such as Builder, Guard, Mapper, or Visitor.</li>
+<li>Leave a small swap pile for lines that are funny but do not fit the current scene.</li></ul></article>
+        <article class="guide-card"><h3>Story dialogue coaching</h3><ul><li>Ask what the pretend character wants before the writer fills the first line.</li>
+<li>Point to the turn arrow and check that each new line answers or reacts to the line before it.</li>
+<li>If two characters sound alike, invite one word change that shows a different voice.</li>
+<li>Add simple tags only when the reader needs help knowing who speaks or how the line is said.</li>
+<li>Read the exchange once and ask whether the fort problem moved forward.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Keep all work on paper with the adult leader or family folder.</li>
+<li>Use invented names, pretend roles, and made-up blanket fort places.</li>
+<li>Turn any personal detail into a silly prop, role, or setting clue before writing.</li>
+<li>Let a writer point, choose, or write one invented word instead of reading aloud.</li>
+<li>Skip any prompt that stops feeling fictional, gentle, paper-only, or adult-led.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one slip with one blank line, not a long worksheet.</li>
+<li>Tell family adults the slip is for short invented dialogue practice at a table.</li>
+<li>Invite one adult model line before the writer adds a reply.</li>
+<li>Praise clear turns, voice clues, and problem-solving lines before spelling or neatness.</li>
+<li>Return unused slips to the folder so the next adult-led session starts cleanly.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Sort line bubbles, turn arrows, tag strips, setting mats, and slips into separate stacks.</li>
+<li>Recycle scrap warm-ups and keep clean blank slips for the next table.</li>
+<li>Clear adult examples from the table so the next group begins with fresh invented choices.</li>
+<li>Put the blanket fort prop cards, pencils, and guide sheet back in the envelope.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper dialogue card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen dialogue-card worlds</h2>
+      <p>Pick a world image, then write one fictional speaker line and one matching reply.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Dialogue routines</p>
+      <h2>Choose the paper dialogue rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Fort Flap Greeting</h3>
+      <p>Starting a scene with one friendly opening line.</p>
+      <ol><li>Adult places two pretend character tents beside the fort flap card.</li>
+<li>Writer chooses which character speaks first.</li>
+<li>Writer writes one greeting that fits the blanket fort setting.</li>
+<li>Adult points to the turn arrow and asks who answers next.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Question Reply Ladder</h3>
+      <p>Writers who need help making one line connect to the next.</p>
+      <ol><li>Place a question slip above a reply slip.</li>
+<li>Writer fills the question with a pretend fort problem or wonder.</li>
+<li>Writer fills the reply with an answer that uses one detail from the question.</li>
+<li>Read both lines and underline the word that connects them.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Tag Tuck-In</h3>
+      <p>Adding who said the line without cluttering the page.</p>
+      <ol><li>Writer chooses one finished line bubble.</li>
+<li>Adult offers two short tags, such as said the Mapper or whispered the Builder.</li>
+<li>Writer tucks the tag after the line or before the line.</li>
+<li>Read the sentence and remove the tag if the speaker is already clear.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Lantern Voice Swap</h3>
+      <p>Revising two speakers so they sound different.</p>
+      <ol><li>Place two line bubbles under the lantern card.</li>
+<li>Writer chooses one voice clue for each speaker, such as careful, bouncy, puzzled, or proud.</li>
+<li>Writer changes one word in each line to match the chosen voice clue.</li>
+<li>Adult reads the lines and asks which speaker sounds more specific.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Pillow Sign Object Turn</h3>
+      <p>Using an object to make dialogue feel grounded in the scene.</p>
+      <ol><li>Adult places one object card in the middle of the character tents.</li>
+<li>Writer writes a line where one speaker notices or uses that object.</li>
+<li>The next line must react to the object clue, not change the topic.</li>
+<li>Writer circles the object word that helped the turn connect.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Gentle Disagreement Fix</h3>
+      <p>Practicing a mild difference of opinion in a fictional scene.</p>
+      <ol><li>Adult gives two characters different ideas for solving the blanket fort problem.</li>
+<li>Writer writes one polite disagreement line for the first speaker.</li>
+<li>Writer adds a reply that offers a compromise or new plan.</li>
+<li>Read the two lines and check that both characters stay kind.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home dialogue slips</p>
+      <h2>Finish one story dialogue later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">one-line slip | greeting line</p>
+      <h3>Fort Flap Hello</h3>
+      <p>Write one made-up greeting at the blanket fort flap: ____________________.</p>
+      <p>Adult asks who answers from inside the pretend fort: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">question slip | question reply</p>
+      <h3>Tunnel Map Question</h3>
+      <p>Make one pretend character ask a question about the tunnel map: ____________________.</p>
+      <p>Adult helps add an answer that uses one word from the question: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">reply slip | listener reaction</p>
+      <h3>Lantern Listener Reply</h3>
+      <p>Write a line that reacts to what another pretend character just said: ____________________.</p>
+      <p>Adult asks which word shows the listener was paying attention: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">tag slip | dialogue tag</p>
+      <h3>Pillow Tag Tuck</h3>
+      <p>Add a simple tag to this made-up line: &quot;The secret flap is stuck.&quot; ____________________.</p>
+      <p>Adult checks whether the tag tells who speaks or how the line sounds: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">voice slip | revise for voice</p>
+      <h3>Quilt Voice Patch</h3>
+      <p>Change one word so the line sounds proud, careful, excited, or unsure: ____________________.</p>
+      <p>Adult asks what word made the voice clearer: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">turn slip | turn-taking</p>
+      <h3>Arrow Turn Pair</h3>
+      <p>Write two short lines where the second line answers the first: ____________________.</p>
+      <p>Adult points to the turn arrow and asks if the second line belongs: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">feeling slip | feeling clue</p>
+      <h3>Lantern Feeling Clue</h3>
+      <p>Write a line that hints at a feeling without naming the feeling: ____________________.</p>
+      <p>Adult asks which clue shows how the pretend character feels: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">object slip | object clue line</p>
+      <h3>Object Line Bubble</h3>
+      <p>Use blanket fold, paper lantern, cushion wall, or string sign in one line: ____________________.</p>
+      <p>Adult asks how the object helped the line fit the scene: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">problem-reply slip | problem-solving reply</p>
+      <h3>Cushion Problem Reply</h3>
+      <p>Write a kind reply that helps solve a pretend fort problem: ____________________.</p>
+      <p>Adult asks what plan the reply suggested: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">closing slip | closing line</p>
+      <h3>Fort Flap Closing</h3>
+      <p>Write one closing line that ends the invented scene gently: ____________________.</p>
+      <p>Adult asks what changed before the closing line: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>My made-up greeting line was ____________________.</li>
+<li>The pretend question I liked best was ____________________.</li>
+<li>The reply that connected clearly was ____________________.</li>
+<li>One tag that helped the reader was ____________________.</li>
+<li>My character voice clue was ____________________.</li>
+<li>The blanket fort object that shaped a line was ____________________.</li>
+<li>A gentle problem-solving reply was ____________________.</li>
+<li>My fictional closing line was ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 1 | Ages 6-8 | greeting line</div>
+      <h2>Moon Muffin Market Welcome</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place the paper card beside a pencil and two small speaker tabs, then point to the moon muffin tray clue: ____________________.</p>
+      <p class="kid-direction">Write two friendly lines that begin the made-up market scene inside the blanket fort: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the Moon Muffin stall keeper. Write a friendly first line about the glowing tray: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is the blanket-fort visitor. Write a kind answer that uses an invented nickname: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that tells who spoke, such as said the stall keeper, then finish it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show the speaker feels welcoming with one tiny action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write the next spoken line after the greeting: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Change one plain greeting into a Moon Muffin Market voice with a tray, lantern, or crumb clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: point to one paper muffin first, then write just the first greeting words: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: start a new market scene with one cozy hello: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 2 | Ages 6-8 | question reply</div>
+      <h2>Puddle Planet Post Office Question</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Set out a pretend envelope shape, a puddle stamp square, and the card, then choose one safe blanket-fort delivery clue: ____________________.</p>
+      <p class="kid-direction">Write the question first, then write an answer that matches the question exactly: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the puddle-post clerk. Ask where the blue envelope should float: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is the puddle traveler. Answer with a place, a reason, and a gentle voice: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag after the question that names the clerk: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show the traveler is careful by adding an action before or after the answer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write a reply that answers the exact question instead of changing the subject: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Make the reply sound more puddle-planet by adding a ripple, stamp, boot, or tiny orbit clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: adult leader reads the question once, and the writer fills only the answer words: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: make a new pretend post-office question and one clear answer: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 3 | Ages 7-9 | dialogue tag</div>
+      <h2>Buttonwood Library Train Tag</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place the card with two paper ticket strips and ask the writer to choose a conductor and shelf passenger: ____________________.</p>
+      <p class="kid-direction">Write two spoken lines, then add tags so a reader can tell who is speaking: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the ticket conductor. Give a quiet rail-car direction about the next shelf stop: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is a shelf passenger. Answer with a question about the buttonwood track: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that names the speaker and shows a calm library-train voice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Add a quiet feeling clue, like smoothing a ticket or tapping a bookmark rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write the passenger&#39;s reply so it connects to the conductor&#39;s line: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Revise one plain line so it sounds like it belongs on a buttonwood rail car: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: underline the speaker name first, then write the tag after the spoken words: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: add one new train-platform line with a clear tag: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 4 | Ages 7-9 | problem-solving reply</div>
+      <h2>Button Bakery Map Fix</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Lay the card beside a folded paper map and one drawn button counter, then mark the mixed-up path clue: ____________________.</p>
+      <p class="kid-direction">Write a confused line, then answer it with one helpful fix that fits the bakery map: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the button baker. Ask for help because the path map points toward the wrong counter: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is the map helper. Give one useful fix without taking over the whole story: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that shows which speaker offers the fix: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show the baker feels puzzled with one small action near the paper map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write a reply that offers one small fix the characters can try right away: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Revise the fix so it sounds polite and bakery-map specific: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: choose one of two adult-read fixes, then copy the better one into the blank: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: invent a new button-bakery mixup and one helpful reply: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 5 | Ages 7-8 | feeling clue</div>
+      <h2>Teacup Town Weather Window Hint</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Put the card beside a paper teacup cart and choose one made-up weather-window symbol together: ____________________.</p>
+      <p class="kid-direction">Write two lines of dialogue, then add an action clue that shows how one speaker feels: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the weather-window watcher. Say what appears in the teacup window: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is the teacup cart helper. Answer without naming the feeling first: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that names the watcher or helper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show the feeling with a hand, cup, curtain, or cart action instead of only naming it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write a reply that reacts to the weather clue and keeps the scene gentle: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Change &quot;I feel unsure&quot; into an action clue that fits Teacup Town: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: draw the weather symbol first, then write one short feeling clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: make a new weather-window line that shows a feeling through action: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 6 | Ages 7-9 | polite disagreement</div>
+      <h2>Pocket Park Notice Board Mixup</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place the card with two paper notice slips and one drawn park bench, then pick the mixed-up notice together: ____________________.</p>
+      <p class="kid-direction">Write one suggestion and one polite disagreement that gives a clear reason: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the notice board helper. Suggest moving the picnic sign to a new spot: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is the bench gardener. Disagree kindly and give one reason from the paper park: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that shows who disagreed in a friendly way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show both speakers stay friendly with one small park action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write the polite disagreement reply using kind words and one clear reason: &quot;____________________.&quot;</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Revise a blunt no into a kind paper-park answer with a reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: circle the kind words first, then write the disagreement line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: make a new notice-board suggestion and one kind disagreement: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 7 | Ages 7-9 | setting-aware line</div>
+      <h2>Lunchbox Harbor Spoon Ferry</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Read this tiny scene aloud: A spoon ferry bumps against a lunchbox dock while a sandwich sail flaps in the harbor breeze. Two helpers must trade one clear line each before the snack tide turns. Choose who speaks first: ____________________.</p>
+      <p class="kid-direction">Write two short lines. Each line should mention one harbor detail, such as the spoon ferry, lunchbox dock, sandwich sail, crumb waves, or napkin flag. Line 1: ____________________ Line 2: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker One is the Ferry Helper. Start with a line that welcomes the other helper aboard the spoon ferry. ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker Two is the Lunchbox Lookout. Answer with a line about what they see near the dock. ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag after one line. Use a simple tag such as said, called, whispered, or asked. Dialogue tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show one feeling with a tiny action instead of naming it. Example idea: tapping the napkin flag, gripping the ferry rail, or peeking over the lunchbox lid. Feeling clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Have Speaker One reply to the lookout&#39;s news with a helpful next step. Reply: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Change this plain line so it sounds like harbor talk: We should go now. New line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to one harbor item and write only one spoken line for it. ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: At home, add one more ferry line that includes a sound from the snack harbor. ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 8 | Ages 7-9 | polite disagreement</div>
+      <h2>Acorn Avenue Errand Desk</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Read this scene: In the Acorn Avenue Errand Office, a tiny cart of acorns has been sent to the button counter instead of the leaf stamp desk. Two office helpers must fix the mix-up without being rude. Helper roles: ____________________ and ____________________.</p>
+      <p class="kid-direction">Write a polite disagreement. One helper thinks the acorns belong at the button counter. The other thinks they belong at the leaf stamp desk. Line 1: ____________________ Line 2: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker One is the Button Counter Helper. Write a line that explains why the acorns might belong there. ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker Two is the Leaf Stamp Helper. Disagree politely and give a reason. Use words like I think, maybe, or could we. ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add one dialogue tag that shows the office voice is calm. Tag line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Add a feeling clue with an office object, such as straightening a paper stack, smoothing a leaf form, or nudging the acorn cart. Feeling clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write a reply where the first helper accepts a fair test or plan. Reply: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Change this bossy line into a polite office line: No, you are wrong. New line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Circle button counter or leaf stamp desk, then write one kind sentence for that helper. ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Add one more errand-office line where both helpers agree on the next stop. ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 9 | Ages 8-10 | question reply</div>
+      <h2>Seed Library Map Question</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Read this scene: In the seed library map room, drawers of seed packets line the wall, and a giant garden map has one missing path label. Two map helpers must ask and answer before choosing where to place the path card. Missing path name: ____________________.</p>
+      <p class="kid-direction">Write one question and one answer. The answer must give a useful detail from the map room. Question: ____________________ Answer: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker One is the Map Finder. Ask about the missing path, the seed drawer, or the garden symbol. ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker Two is the Seed Shelf Guide. Reply with one exact clue, such as a drawer color, packet symbol, or map corner. ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a dialogue tag that fits a quiet map room. Try murmured, asked, answered, or said. Tag line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show how the guide feels by using the map or seed packet. Feeling clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write a follow-up reply where Speaker One uses the clue to make a decision. Reply: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Change this vague answer into a useful one: It is over there. Better answer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Choose one map clue and write only the answer line. ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Add a new question about a different seed packet on the map. ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 10 | Ages 8-10 | object clue line</div>
+      <h2>Rain Gauge Railway Clue</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Read this scene: The rain-gauge railway train waits beside a clear measuring tube. The tracks are dry at one end and shiny at the other. Two rail workers must figure out why the train whistle sounds drippy. Object clue chosen by the group: ____________________.</p>
+      <p class="kid-direction">Write a dialogue line that points to an object clue. Do not solve the whole mystery in the first line. Clue line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker One is the Gauge Checker. Say something about the measuring tube, water mark, shiny track, or dripping whistle. ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker Two is the Rail Signal Helper. Reply with a careful guess based on that object. ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that shows how the line is spoken near the tracks, such as called, said, warned, or asked. Tag line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show a feeling through movement near the railway, such as stepping back from a puddle, holding up a lantern, or wiping a rail. Feeling clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write the next reply where the Gauge Checker suggests one safe, simple test for the clue. Reply: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Change this flat line into an object clue line: Something is wrong. New line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw or point to the object clue, then write one short spoken sentence about it. ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Add one more railway reply that uses a weather word. ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 11 | Ages 8-10 | listener reaction</div>
+      <h2>Moss Message Observatory</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Read this scene: At the moss message observatory, soft green tiles glow with tiny lantern-shaped signals. One observer reads a moss message from the night dome, and the other must react before they decide what it means. Moss signal shape: ____________________.</p>
+      <p class="kid-direction">Write a first line and a listener reaction. The reaction should prove Speaker Two heard the first line. First line: ____________________ Reaction: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker One is the Dome Observer. Say what the moss message seems to show. Include the signal shape or glow pattern. ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker Two is the Moss Note Keeper. React to the exact detail Speaker One mentioned before adding an idea. ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a dialogue tag that fits the observatory mood, such as whispered, answered, wondered, or said. Tag line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show the listener&#39;s feeling with a small action, such as leaning closer, touching the moss tile edge, or pausing beside the signal chart. Feeling clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write a reply where Speaker One responds to the listener&#39;s reaction and suggests what to check next. Reply: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Change this non-listening line into a true reaction: I have a different idea. Better reaction: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write only Speaker Two&#39;s reaction to this line: The moss light blinked twice. Reaction: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Add one more observatory line where a character reacts to a glow, blink, or hush. ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 12 | Ages 8-10 | greeting line</div>
+      <h2>Tidepool Lab Shell Greeting</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold two paper shell badges, and choose a pretend tidepool task for the speakers: ____________________.</p>
+      <p class="kid-direction">Write two short greeting lines that fit a quiet lab scene and help the story begin: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the shell sorter. The first greeting line is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is the tide clock keeper. The answer greeting is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that names who spoke, such as the shell sorter said: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show the speaker feels careful by adding one small action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write the next reply so the tidepool task can start: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Revise one greeting so it sounds more like a helpful lab worker: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to the shell badge first, then write only one greeting line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Use two paper shells to make a new greeting scene: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 13 | Ages 10-11 | question reply</div>
+      <h2>Revision River Ferry Reply</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw two ferry docks on scrap paper, and choose one foggy pretend sentence: ____________________.</p>
+      <p class="kid-direction">Write a question that asks what should change, then write a reply with a clear choice: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the dock guide. The question about the foggy sentence is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is the ferry captain. The clear reply is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that fits the river setting, such as the captain called from the rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show the dock guide feels unsure with one action or detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write a second reply that explains which word should be changed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Revise the ferry captain&#39;s reply so it sounds confident but polite: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write the question first, then underline the reply that solves it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Draw two docks and write one question-reply pair for a made-up sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 14 | Ages 10-11 | object clue line</div>
+      <h2>Clue Label Museum Object Line</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, stack three blank paper labels, and invent one museum object for the top label: ____________________.</p>
+      <p class="kid-direction">Write dialogue where one speaker notices the object and the other speaker responds with a clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the label keeper. The object-noticing line is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is the tower guide. The clue reply is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that shows the label keeper points to the paper label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show curiosity with a small movement, face clue, or pause: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write the next reply that connects the object to the next label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Revise one line so the clue feels sharper and less plain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw the object on a label, then write one clue line under it: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Make a paper museum label and give it one spoken clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 15 | Ages 10-11 | polite disagreement</div>
+      <h2>Compass Craft Polite Disagreement</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw a small compass dial, and choose two possible directions for the academy project: ____________________.</p>
+      <p class="kid-direction">Write two lines where the speakers disagree, but both stay respectful and focused on the craft problem: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the compass apprentice. The first opinion line is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is the pattern coach. The polite disagreement line is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that shows calm speech, such as the coach answered evenly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show the apprentice feels determined with one action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write a reply that offers a compromise for the compass design: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Revise the disagreement so it is clearer and kinder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write only the polite disagreement line beside the compass arrow: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Fold a paper compass and write one respectful disagreement about its direction: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-dialogue-card-page">
+      <div class="page-kicker">Dialogue Card 16 | Ages 10-11 | closing line</div>
+      <h2>Binding Day Boardwalk Closing Line</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold three scrap pages into a tiny booklet, and choose the final boardwalk problem: ____________________.</p>
+      <p class="kid-direction">Write two ending lines that show the booklet problem is settled and the scene can close: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Speaker one</h3>
+      <p>Speaker one is the page binder. The near-ending line is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Speaker two</h3>
+      <p>Speaker two is the ribbon keeper. The closing answer is: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Dialogue tag</h3>
+      <p>Add a tag that shows the speaker touches the finished booklet: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Feeling clue</h3>
+      <p>Show relief or pride with one quiet action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reply prompt</h3>
+      <p>Write one final reply that does not start a new problem: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise line</h3>
+      <p>Revise the closing line so it feels complete and specific: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Box the line that closes the scene, then copy it here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Make a tiny paper booklet and write one closing line for its last page: ____________________.</p>
+    </section>
+  </body>
+</html>

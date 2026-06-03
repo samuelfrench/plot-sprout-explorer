@@ -31,6 +31,7 @@ export const pencilCaseStorySwitchCardPackProductSlug = 'pencil-case-story-switc
 export const notebookMarginStoryRevisionCardPackProductSlug = 'notebook-margin-story-revision-card-pack'
 export const deskDrawerStorySequenceCardPackProductSlug = 'desk-drawer-story-sequence-card-pack'
 export const readingNookStoryCauseEffectCardPackProductSlug = 'reading-nook-story-cause-effect-card-pack'
+export const blanketFortStoryDialogueCardPackProductSlug = 'blanket-fort-story-dialogue-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -294,6 +295,16 @@ const requiredReadingNookStoryCauseEffectCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/reading-nook-story-cause-effect-card-pack/source/reading-nook-story-cause-effect-card-pack.html',
   manifestPath: 'product-build/reading-nook-story-cause-effect-card-pack/manifest.json',
+}
+
+const requiredBlanketFortStoryDialogueCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/blanket-fort-story-dialogue-card-pack/Blanket-Fort-Story-Dialogue-Card-Pack.pdf',
+  zipPath:
+    'product-build/blanket-fort-story-dialogue-card-pack/blanket-fort-story-dialogue-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/blanket-fort-story-dialogue-card-pack/source/blanket-fort-story-dialogue-card-pack.html',
+  manifestPath: 'product-build/blanket-fort-story-dialogue-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -7195,6 +7206,350 @@ export function validateReadingNookStoryCauseEffectCardPackSourceFiles(source, r
   return errors
 }
 
+const blanketFortDialogueSkills = new Set([
+  'greeting line',
+  'question reply',
+  'feeling clue',
+  'dialogue tag',
+  'turn-taking',
+  'revise for voice',
+  'setting-aware line',
+  'object clue line',
+  'problem-solving reply',
+  'listener reaction',
+  'polite disagreement',
+  'closing line',
+])
+
+const blanketFortDialogueSlipLabels = new Set([
+  'one-line slip',
+  'question slip',
+  'reply slip',
+  'tag slip',
+  'voice slip',
+  'turn slip',
+  'feeling slip',
+  'object slip',
+  'problem-reply slip',
+  'closing slip',
+])
+
+function validateNoUnsafeBlanketFortDialogueLanguage(value, label, errors) {
+  const rawText = JSON.stringify(value)
+  const accountText = rawText
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+    .replace(/\bfamily folder\b/gi, '')
+    .replace(/\bfamily adult\b/gi, '')
+  pushIf(
+    errors,
+    /\baccounts?\b|\bschool accounts?\b|\blogins?\b|\blog in\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic posting\b|\bpublic publishing\b|\bpublish online\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\bsocial\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphone(s)?\b|\btablet(s)?\b|\bdevice(s)?\b|\bphotos?\b|\bcameras?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\bgps\b|\bcoordinates?\b|\breal route(s)?\b|\bexact address\b|\baddresses?\b|\breal homes?\b|\bhome address\b|\bhouse(s)?\b|\bneighbors?\b|\bneighborhood(s)?\b|\bstreets?\b|\boutside\b|\boutdoors?\b|\bexact location\b|\bexact places?\b|\bemails?\b|\bchild names?\b|\bstudent names?\b|\bfull names?\b|\brosters?\b|\bstudent records?\b|\battendance\b|\bbehavior reports?\b|\bhouse numbers?\b|\blicense plates?\b|\bvehicle plates?\b|\bexact schedules?\b|\bschedules?\b|\btracker(s)?\b|\btracking\b|\bprivate child data\b|\breal child data\b|\bpersonal facts?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\btimer(s)?\b|\btimed\b|\bcontest(s)?\b|\bprizes?\b/i.test(
+      accountText,
+    ),
+    `${label} includes account, upload, public-posting, review/rating, recording, transcript, microphone, phone/device, photo/camera, private-conversation, exact-place, real-home, route, contact, child-profile, grade, score, tracker, schedule, or private-child-data language.`,
+  )
+
+  const safetyText = rawText
+    .replace(/\bNo scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles\./gi, '')
+    .replace(/\bfictional, gentle, paper-only, or adult-led\b/gi, '')
+    .replace(/\badult-led\b/gi, '')
+    .replace(/\bpaper writing only\b/gi, '')
+    .replace(/\bmade-up\b/gi, '')
+    .replace(/\bpretend\b/gi, '')
+    .replace(/\bblanket fort\b/gi, '')
+    .replace(/\bblanket-fort\b/gi, '')
+    .replace(/\bpaper card(s)?\b/gi, '')
+    .replace(/\bpaper slip(s)?\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+  pushIf(
+    errors,
+    /\bHarry Potter\b|\bJ\.?\s*K\.?\s*Rowling\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bbestseller(s)?\b|\bcopyright(ed)?\b|\bbrand(ed)? character(s)?\b|\blogos?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bmedical\b|\bdoctor(s)?\b|\bdentist(s)?\b|\bsymptom(s)?\b|\bmedicine(s)?\b|\bmedication(s)?\b|\bemergency\b|\btreatment(s)?\b|\blegal\b|\blawyer(s)?\b|\battorney(s)?\b|\btherapy\b|\btherapist(s)?\b|\bdiagnos(is|e|es|ed|ing|tic)\b|\bgrief\b|\bassessment(s)?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bguarantee(s|d)?\b|\bguaranteed\b|\bcontest(s)?\b|\bprizes?\b|\btimer(s)?\b|\btimed\b|\bgambling\b|\bbet(s|ting)?\b|\bcasino(s)?\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bchurch(es)?\b|\btemple(s)?\b|\bmosque(s)?\b|\bsynagogue(s)?\b|\bprayer(s)?\b|\bjesus\b|\bgod\b|\bromance\b|\bkiss(ing)?\b|\bdating\b|\bweapon(s)?\b|\bgun(s)?\b|\bsword(s)?\b|\bfight(ing)?\b|\bkill(s|ed|ing)?\b|\bblood\b|\bhorror\b|\bad(s)? targeted to children\b|\bclimb(s|ed|ing)?\b|\bjump(s|ed|ing)?\b|\brun(s|ning)?\b|\broughhouse\b|\bwrestl(e|ing)\b|\bblindfold(s|ed)?\b|\bstairs?\b|\bmatchstick(s)?\b|\blighter(s)?\b|\bfood prep\b|\bserve food\b|\breal recipe advice\b|\btast(e|es|ed|ing)?\b|\ballerg(y|ies|en|ens|ic)\b|\bwindow safety\b|\boutdoor safety\b|\bsafety instruction(s)?\b|\bweather safety\b/i.test(
+      safetyText,
+    ),
+    `${label} includes real book title, author, publisher, franchise, branded/copyrighted, review/rating, medical, legal, therapy, diagnosis, grief, assessment, grade, score, guaranteed-outcome, contest, prize, timer-pressure, gambling, politics, religion, romance, weapon, violence, ad-targeting, unsafe physical, window-safety, outdoor-safety, or weather-safety language.`,
+  )
+  pushIf(
+    errors,
+    /\b\d+\s*(minute|minutes|min|mins)\b|\b(five|six|seven|eight|nine|ten)\s+(to\s+(five|six|seven|eight|nine|ten)\s+)?minute(s)?\b/i.test(
+      safetyText,
+    ),
+    `${label} includes timed-duration or minute-pressure language.`,
+  )
+}
+
+function validateBlanketFortDialogueCard(card, index, sourceWorldSlugs, knownWorldSlugs, knownWorldRecords, cardIds, errors) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  for (const key of [
+    'id',
+    'title',
+    'worldSlug',
+    'ageBand',
+    'dialogueSkill',
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'speakerOnePrompt',
+    'speakerTwoPrompt',
+    'dialogueTagPrompt',
+    'feelingCluePrompt',
+    'replyPrompt',
+    'reviseLinePrompt',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(card.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(card.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(
+      errors,
+      !card.id.startsWith('blanket-fort-dialogue-card-'),
+      `${label}.id must start with blanket-fort-dialogue-card-.`,
+    )
+    pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+    cardIds.add(card.id)
+  }
+  pushIf(errors, !blanketFortDialogueSkills.has(card.dialogueSkill), `${label}.dialogueSkill is not allowed.`)
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  for (const key of [
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'speakerOnePrompt',
+    'speakerTwoPrompt',
+    'dialogueTagPrompt',
+    'feelingCluePrompt',
+    'replyPrompt',
+    'reviseLinePrompt',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeBlanketFortDialogueLanguage(card, label, errors)
+}
+
+function validateBlanketFortDialogueRoutine(routine, index, names, errors) {
+  const label = `dialogueRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.name)) {
+    pushIf(errors, names.has(routine.name), `${label}.name is duplicated.`)
+    names.add(routine.name)
+  }
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  validateNoUnsafeBlanketFortDialogueLanguage(routine, label, errors)
+}
+
+function validateTakeHomeDialogueSlip(slip, index, titles, errors) {
+  const label = `takeHomeDialogueSlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(slip[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(slip.title)) {
+    pushIf(errors, titles.has(slip.title), `${label}.title is duplicated.`)
+    titles.add(slip.title)
+  }
+  pushIf(errors, !blanketFortDialogueSlipLabels.has(slip.time), `${label}.time must use a non-timed take-home slip label.`)
+  pushIf(errors, !blanketFortDialogueSkills.has(slip.skill), `${label}.skill is not allowed.`)
+  for (const key of ['direction', 'familyLine']) {
+    pushIf(errors, isNonEmptyString(slip[key]) && !hasWritableBlank(slip[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(slip[key]) && hasSnakeCasePlaceholder(slip[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeBlanketFortDialogueLanguage(slip, label, errors)
+}
+
+export function validateBlanketFortStoryDialogueCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Blanket Fort Story Dialogue Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-03-batch35', 'batchId must be 2026-06-03-batch35.')
+  pushIf(errors, source.generatedAt !== '2026-06-03', 'generatedAt must be 2026-06-03.')
+  pushIf(
+    errors,
+    source.productSlug !== blanketFortStoryDialogueCardPackProductSlug,
+    `productSlug must be ${blanketFortStoryDialogueCardPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Blanket Fort Story Dialogue Card Pack', 'title must be Blanket Fort Story Dialogue Card Pack.')
+  pushIf(errors, source.pricePoint !== '$43', 'pricePoint must be $43.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), 'safetyNote must include the required safety sentence.')
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Blanket Fort Story Dialogue Card Pack source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Blanket Fort Story Dialogue Card Pack source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Blanket Fort Story Dialogue Card Pack source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(source, requiredBlanketFortStoryDialogueCardPackArtifactPaths, 'Blanket Fort Story Dialogue Card Pack', errors)
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateStringArray(source.adultGuide.beforeSession, 5, 'adultGuide.beforeSession', errors)
+    validateStringArray(source.adultGuide.paperDialogueSetup, 5, 'adultGuide.paperDialogueSetup', errors)
+    validateStringArray(source.adultGuide.dialogueCoaching, 5, 'adultGuide.dialogueCoaching', errors)
+    validateStringArray(source.adultGuide.privacyAndSafetyNotes, 5, 'adultGuide.privacyAndSafetyNotes', errors)
+    validateStringArray(source.adultGuide.familyHandoff, 5, 'adultGuide.familyHandoff', errors)
+    validateStringArray(source.adultGuide.reset, 4, 'adultGuide.reset', errors)
+    validateNoUnsafeBlanketFortDialogueLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.dialogueRoutines), 'dialogueRoutines must be an array.')
+  if (Array.isArray(source.dialogueRoutines)) {
+    pushIf(errors, source.dialogueRoutines.length !== 6, 'dialogueRoutines must have exactly 6 entries.')
+    const names = new Set()
+    source.dialogueRoutines.forEach((routine, index) => validateBlanketFortDialogueRoutine(routine, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeDialogueSlips), 'takeHomeDialogueSlips must be an array.')
+  if (Array.isArray(source.takeHomeDialogueSlips)) {
+    pushIf(errors, source.takeHomeDialogueSlips.length !== 10, 'takeHomeDialogueSlips must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeDialogueSlips.forEach((slip, index) => validateTakeHomeDialogueSlip(slip, index, titles, errors))
+  }
+
+  validateExactStringArray(source.optionalSharePrompts, 8, 'optionalSharePrompts', errors)
+  if (Array.isArray(source.optionalSharePrompts)) {
+    source.optionalSharePrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalSharePrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalSharePrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateBlanketFortDialogueCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 16, 'cards must cover at least 16 unique worlds.')
+  }
+
+  validateNoUnsafeBlanketFortDialogueLanguage(source, 'Blanket Fort Story Dialogue Card Pack source', errors)
+  validateNoRiskyLanguage(source, 'Blanket Fort Story Dialogue Card Pack source', errors)
+  return errors
+}
+
+export function validateBlanketFortStoryDialogueCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three dialogue-card lanes and one tools lane.')
+
+  const expectedSourceFiles = [
+    'content/product-artifacts/lanes/batch35-blanket-fort-dialogue-cards-a.json',
+    'content/product-artifacts/lanes/batch35-blanket-fort-dialogue-cards-b.json',
+    'content/product-artifacts/lanes/batch35-blanket-fort-dialogue-cards-c.json',
+    'content/product-artifacts/lanes/batch35-blanket-fort-dialogue-tools.json',
+  ]
+  pushIf(
+    errors,
+    JSON.stringify([...source.sourceFiles].sort()) !== JSON.stringify([...expectedSourceFiles].sort()),
+    'sourceFiles must list the exact Batch 35 dialogue-card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedLaneId = sourceFile.split('/').at(-1)?.replace('.json', '')
+      pushIf(errors, lane.laneId !== expectedLaneId, `${sourceFile}.laneId must be ${expectedLaneId}.`)
+      if (Array.isArray(lane.cards)) {
+        cardLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 35 dialogue-card lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three dialogue-card lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane.cards)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles dialogue-card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'dialogueRoutines', 'takeHomeDialogueSlips', 'optionalSharePrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
@@ -7324,7 +7679,9 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
-    artifact?.pdfPath === requiredReadingNookStoryCauseEffectCardPackArtifactPaths.pdfPath
+    artifact?.pdfPath === requiredBlanketFortStoryDialogueCardPackArtifactPaths.pdfPath
+      ? requiredBlanketFortStoryDialogueCardPackArtifactPaths
+      : artifact?.pdfPath === requiredReadingNookStoryCauseEffectCardPackArtifactPaths.pdfPath
       ? requiredReadingNookStoryCauseEffectCardPackArtifactPaths
       : artifact?.pdfPath === requiredDeskDrawerStorySequenceCardPackArtifactPaths.pdfPath
       ? requiredDeskDrawerStorySequenceCardPackArtifactPaths
