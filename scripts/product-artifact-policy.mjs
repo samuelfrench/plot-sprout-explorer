@@ -50,6 +50,8 @@ export const paperSleeveStorySentenceVarietyCardPackProductSlug =
   'paper-sleeve-story-sentence-variety-card-pack'
 export const clipboardStoryParagraphFocusCardPackProductSlug =
   'clipboard-story-paragraph-focus-card-pack'
+export const linedPaperStoryParagraphRevisionCardPackProductSlug =
+  'lined-paper-story-paragraph-revision-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -463,6 +465,16 @@ const requiredClipboardStoryParagraphFocusCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/clipboard-story-paragraph-focus-card-pack/source/clipboard-story-paragraph-focus-card-pack.html',
   manifestPath: 'product-build/clipboard-story-paragraph-focus-card-pack/manifest.json',
+}
+
+const requiredLinedPaperStoryParagraphRevisionCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/lined-paper-story-paragraph-revision-card-pack/Lined-Paper-Story-Paragraph-Revision-Card-Pack.pdf',
+  zipPath:
+    'product-build/lined-paper-story-paragraph-revision-card-pack/lined-paper-story-paragraph-revision-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/lined-paper-story-paragraph-revision-card-pack/source/lined-paper-story-paragraph-revision-card-pack.html',
+  manifestPath: 'product-build/lined-paper-story-paragraph-revision-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -12830,6 +12842,373 @@ export function validateClipboardStoryParagraphFocusCardPackSourceFiles(source, 
   return errors
 }
 
+const linedPaperParagraphRevisionCardKeys = [
+  'id',
+  'title',
+  'worldSlug',
+  'ageBand',
+  'paragraphRevisionSkill',
+  'useCase',
+  'adultSetup',
+  'kidDirection',
+  'topicSentencePrompt',
+  'detailOrderPrompt',
+  'transitionCheckPrompt',
+  'closingSentencePrompt',
+  'repeatedWordCutPrompt',
+  'finalRevisedParagraphPrompt',
+  'quietOptionLine',
+  'takeHomeLine',
+]
+
+const linedPaperParagraphRevisionSourceFiles = [
+  'content/product-artifacts/lanes/batch50-lined-paper-paragraph-revision-cards-a.json',
+  'content/product-artifacts/lanes/batch50-lined-paper-paragraph-revision-cards-b.json',
+  'content/product-artifacts/lanes/batch50-lined-paper-paragraph-revision-cards-c.json',
+  'content/product-artifacts/lanes/batch50-lined-paper-paragraph-revision-tools.json',
+]
+
+const linedPaperParagraphRevisionBlockedPriorWorldSlugs = new Set([
+  'moon-muffin-market',
+  'puddle-planet-post-office',
+  'buttonwood-library-train',
+  'button-bakery-map-mixup',
+  'teacup-town-weather-window',
+  'pocket-park-notice-board',
+  'spoon-ferry-lunchbox-harbor',
+  'acorn-avenue-errand-office',
+  'seed-library-map-room',
+  'rain-gauge-railway',
+  'moss-message-observatory',
+  'tidepool-timekeepers-lab',
+  'revision-river-ferry',
+  'clue-label-tower-museum',
+  'compass-craft-academy',
+  'binding-day-boardwalk',
+])
+
+function validateNoUnsafeLinedPaperParagraphRevisionLanguage(value, label, errors) {
+  validateNoUnsafeClipboardParagraphFocusLanguage(value, label, errors)
+}
+
+function validateLinedPaperParagraphRevisionCard(
+  card,
+  index,
+  sourceWorldSlugs,
+  knownWorldSlugs,
+  knownWorldRecords,
+  cardIds,
+  errors,
+) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(card)) !== JSON.stringify(linedPaperParagraphRevisionCardKeys),
+    `${label} must use the exact lined paper paragraph revision card field order.`,
+  )
+
+  for (const key of linedPaperParagraphRevisionCardKeys) {
+    validateString(card[key], `${label}.${key}`, errors)
+  }
+
+  if (isNonEmptyString(card.id)) {
+    pushIf(errors, !/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(card.id), `${label}.id must be lowercase kebab-case.`)
+    pushIf(
+      errors,
+      !card.id.startsWith('lined-paper-paragraph-revision-card-'),
+      `${label}.id must start with lined-paper-paragraph-revision-card-.`,
+    )
+    pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+    cardIds.add(card.id)
+  }
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) && !/lined[- ]paper (story[- ])?paragraph[- ]revision card/i.test(card.useCase),
+    `${label}.useCase must say lined paper paragraph revision card.`,
+  )
+  pushIf(errors, isNonEmptyString(card.adultSetup) && !card.adultSetup.startsWith('Adult:'), `${label}.adultSetup must start with Adult:.`)
+
+  for (const key of [
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'topicSentencePrompt',
+    'detailOrderPrompt',
+    'transitionCheckPrompt',
+    'closingSentencePrompt',
+    'repeatedWordCutPrompt',
+    'finalRevisedParagraphPrompt',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeLinedPaperParagraphRevisionLanguage(card, label, errors)
+}
+
+function validateLinedPaperParagraphRevisionRoutine(routine, index, names, errors) {
+  const label = `paragraphRevisionRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  for (const key of ['name', 'bestFor']) {
+    validateString(routine[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(routine.name)) {
+    pushIf(errors, names.has(routine.name), `${label}.name is duplicated.`)
+    names.add(routine.name)
+  }
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  if (Array.isArray(routine.steps)) {
+    routine.steps.forEach((step, stepIndex) => {
+      pushIf(errors, isNonEmptyString(step) && !hasWritableBlank(step), `${label}.steps[${stepIndex}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(step) && hasSnakeCasePlaceholder(step), `${label}.steps[${stepIndex}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+  validateNoUnsafeLinedPaperParagraphRevisionLanguage(routine, label, errors)
+}
+
+function validateLinedPaperTakeHomeParagraphRevisionSlip(slip, index, titles, errors) {
+  const label = `takeHomeParagraphRevisionSlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  for (const key of ['title', 'time', 'skill', 'direction', 'familyLine']) {
+    validateString(slip[key], `${label}.${key}`, errors)
+  }
+  if (isNonEmptyString(slip.title)) {
+    pushIf(errors, titles.has(slip.title), `${label}.title is duplicated.`)
+    titles.add(slip.title)
+  }
+  pushIf(
+    errors,
+    isNonEmptyString(slip.time) && /\b\d+\s*(minute|minutes|min|mins)\b|\b(five|six|seven|eight|nine|ten)\s+minute(s)?\b/i.test(slip.time),
+    `${label}.time must use a non-timed take-home slip label.`,
+  )
+  for (const key of ['direction', 'familyLine']) {
+    pushIf(errors, isNonEmptyString(slip[key]) && !hasWritableBlank(slip[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(slip[key]) && hasSnakeCasePlaceholder(slip[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeLinedPaperParagraphRevisionLanguage(slip, label, errors)
+}
+
+export function validateLinedPaperStoryParagraphRevisionCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Lined Paper Story Paragraph Revision Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs)
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-03-batch50', 'batchId must be 2026-06-03-batch50.')
+  pushIf(errors, source.generatedAt !== '2026-06-03', 'generatedAt must be 2026-06-03.')
+  pushIf(
+    errors,
+    source.productSlug !== linedPaperStoryParagraphRevisionCardPackProductSlug,
+    `productSlug must be ${linedPaperStoryParagraphRevisionCardPackProductSlug}.`,
+  )
+  pushIf(
+    errors,
+    source.title !== 'Lined Paper Story Paragraph Revision Card Pack',
+    'title must be Lined Paper Story Paragraph Revision Card Pack.',
+  )
+  pushIf(errors, source.pricePoint !== '$73', 'pricePoint must be $73.')
+  pushIf(errors, !source.safetyNote?.includes(requiredSafety), `safetyNote must include ${requiredSafety}`)
+
+  pushIf(errors, product?.slug !== source.productSlug, 'Lined Paper Story Paragraph Revision Card Pack source productSlug must match product.slug.')
+  pushIf(errors, product?.title !== source.title, 'Lined Paper Story Paragraph Revision Card Pack source title must match product.title.')
+  pushIf(errors, product?.pricePoint !== source.pricePoint, 'Lined Paper Story Paragraph Revision Card Pack source pricePoint must match product.pricePoint.')
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set(Array.isArray(source.worldSlugs) ? source.worldSlugs : [])
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    pushIf(errors, sourceWorldSlugs.size !== source.worldSlugs.length, 'worldSlugs must list unique worlds.')
+    pushIf(errors, Array.isArray(product?.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+    const blockedPriorWorldSlugs = [...sourceWorldSlugs].filter((slug) =>
+      linedPaperParagraphRevisionBlockedPriorWorldSlugs.has(slug),
+    )
+    pushIf(
+      errors,
+      blockedPriorWorldSlugs.length > 0,
+      `worldSlugs must be disjoint from Batch 44-49 world slugs; overlapping slugs: ${blockedPriorWorldSlugs.join(', ')}.`,
+    )
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+  }
+
+  validateArtifactPaths(
+    source,
+    requiredLinedPaperStoryParagraphRevisionCardPackArtifactPaths,
+    'Lined Paper Story Paragraph Revision Card Pack',
+    errors,
+  )
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) {
+      validateString(source.cover[key], `cover.${key}`, errors)
+    }
+    validateStringArray(source.cover.included, 10, 'cover.included', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    validateExactStringArray(source.adultGuide.bullets, 6, 'adultGuide.bullets', errors)
+    validateNoUnsafeLinedPaperParagraphRevisionLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.paragraphRevisionRoutines), 'paragraphRevisionRoutines must be an array.')
+  if (Array.isArray(source.paragraphRevisionRoutines)) {
+    pushIf(errors, source.paragraphRevisionRoutines.length !== 6, 'paragraphRevisionRoutines must have exactly 6 entries.')
+    const names = new Set()
+    source.paragraphRevisionRoutines.forEach((routine, index) => validateLinedPaperParagraphRevisionRoutine(routine, index, names, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeParagraphRevisionSlips), 'takeHomeParagraphRevisionSlips must be an array.')
+  if (Array.isArray(source.takeHomeParagraphRevisionSlips)) {
+    pushIf(errors, source.takeHomeParagraphRevisionSlips.length !== 10, 'takeHomeParagraphRevisionSlips must have exactly 10 entries.')
+    const titles = new Set()
+    source.takeHomeParagraphRevisionSlips.forEach((slip, index) =>
+      validateLinedPaperTakeHomeParagraphRevisionSlip(slip, index, titles, errors),
+    )
+  }
+
+  validateExactStringArray(source.optionalSharePrompts, 8, 'optionalSharePrompts', errors)
+  if (Array.isArray(source.optionalSharePrompts)) {
+    source.optionalSharePrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalSharePrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalSharePrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeLinedPaperParagraphRevisionLanguage(prompt, `optionalSharePrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateLinedPaperParagraphRevisionCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size < 16, 'cards must cover at least 16 unique worlds.')
+  }
+
+  validateNoUnsafeLinedPaperParagraphRevisionLanguage(source, 'Lined Paper Story Paragraph Revision Card Pack source', errors)
+  validateNoRiskyLanguage(source, 'Lined Paper Story Paragraph Revision Card Pack source', errors)
+  return errors
+}
+
+export function validateLinedPaperStoryParagraphRevisionCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three paragraph revision-card lanes and one tools lane.')
+
+  pushIf(
+    errors,
+    JSON.stringify([...source.sourceFiles].sort()) !== JSON.stringify([...linedPaperParagraphRevisionSourceFiles].sort()),
+    'sourceFiles must list the exact Batch 50 paragraph revision-card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedLaneId = sourceFile.split('/').at(-1)?.replace('.json', '')
+      pushIf(errors, lane.laneId !== expectedLaneId, `${sourceFile}.laneId must be ${expectedLaneId}.`)
+      if (Array.isArray(lane.cards)) {
+        const expectedRange = sourceFile.includes('-cards-a')
+          ? { min: 1, max: 6, count: 6, label: '01-06' }
+          : sourceFile.includes('-cards-b')
+          ? { min: 7, max: 11, count: 5, label: '07-11' }
+          : sourceFile.includes('-cards-c')
+          ? { min: 12, max: 16, count: 5, label: '12-16' }
+          : null
+        if (expectedRange) {
+          pushIf(
+            errors,
+            lane.cards.length !== expectedRange.count,
+            `${sourceFile} must contain exactly ${expectedRange.count} cards.`,
+          )
+          const wrongLaneCard = lane.cards.some((card) => {
+            const match = String(card?.id ?? '').match(/-(\d{2})$/)
+            const cardNumber = match ? Number(match[1]) : NaN
+            return !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max
+          })
+          pushIf(errors, wrongLaneCard, `${sourceFile} must contain only cards ${expectedRange.label}.`)
+        }
+        cardLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 50 paragraph revision-card lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three paragraph revision-card lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane.cards)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles paragraph revision-card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'paragraphRevisionRoutines', 'takeHomeParagraphRevisionSlips']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+    pushIf(
+      errors,
+      JSON.stringify(toolsLane.optionalAdultPrompts) !== JSON.stringify(source.optionalSharePrompts),
+      'sourceFiles tools lane optionalAdultPrompts must reproduce optionalSharePrompts exactly.',
+    )
+  }
+
+  return errors
+}
+
 
 
 export function countPdfPages(buffer) {
@@ -13020,6 +13399,8 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
   const expectedPaths =
     artifact?.pdfPath === requiredDeskLampStoryProblemCardPackArtifactPaths.pdfPath
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
+      : artifact?.pdfPath === requiredLinedPaperStoryParagraphRevisionCardPackArtifactPaths.pdfPath
+      ? requiredLinedPaperStoryParagraphRevisionCardPackArtifactPaths
       : artifact?.pdfPath === requiredClipboardStoryParagraphFocusCardPackArtifactPaths.pdfPath
       ? requiredClipboardStoryParagraphFocusCardPackArtifactPaths
       : artifact?.pdfPath === requiredPaperSleeveStorySentenceVarietyCardPackArtifactPaths.pdfPath

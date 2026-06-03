@@ -1,0 +1,91 @@
+{
+  "batchId": "2026-06-03-batch50-world-images",
+  "generatedAt": "2026-06-03",
+  "purpose": "Add local world art for Batch 50 paragraph revision cards whose disjoint Batch 1 worlds were not in the Batch 4 image run.",
+  "images": [
+    {
+      "slug": "sticker-station-mail-cart",
+      "title": "Sticker Station Mail Cart",
+      "ageBand": "7-9",
+      "seoLane": "story writing worksheets",
+      "sourceWorldFile": "content/worlds/batch1-lower.json",
+      "prompt": "family-friendly, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, polished children's storybook illustration of a plain tiny mail cart on a park path, blank note cards, colorful sticker shapes, pencil repair box, no signboards, blank panels",
+      "outputJpeg": "public/images/plotsprout/batch50-worlds/sticker-station-mail-cart.jpg",
+      "outputWebp": "public/images/plotsprout/batch50-worlds/sticker-station-mail-cart.webp",
+      "sidecar": "content/image-runs/batch50-worlds/sticker-station-mail-cart.json",
+      "seed": 260650511
+    },
+    {
+      "slug": "mitten-market-lost-ticket",
+      "title": "Mitten Market Lost Ticket",
+      "ageBand": "7-8",
+      "seoLane": "creative writing prompts for kids",
+      "sourceWorldFile": "content/worlds/batch1-lower.json",
+      "prompt": "family-friendly, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, polished children's storybook illustration of a cozy mitten-shaped fabric market stall, yarn paths, blank cloth flags, lost ticket counter, no signboards, blank panels",
+      "outputJpeg": "public/images/plotsprout/batch50-worlds/mitten-market-lost-ticket.jpg",
+      "outputWebp": "public/images/plotsprout/batch50-worlds/mitten-market-lost-ticket.webp",
+      "sidecar": "content/image-runs/batch50-worlds/mitten-market-lost-ticket.json",
+      "seed": 260650512
+    },
+    {
+      "slug": "paperclip-plaza-parcel-day",
+      "title": "Paperclip Plaza Parcel Day",
+      "ageBand": "7-9",
+      "seoLane": "story writing worksheets",
+      "sourceWorldFile": "content/worlds/batch1-lower.json",
+      "prompt": "family-friendly, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, polished children's storybook illustration of paperclip plaza, binder-clip awnings, blank sticky-note sidewalks, tiny parcels, cozy tabletop city, blank paper surfaces, icon-only marks",
+      "outputJpeg": "public/images/plotsprout/batch50-worlds/paperclip-plaza-parcel-day.jpg",
+      "outputWebp": "public/images/plotsprout/batch50-worlds/paperclip-plaza-parcel-day.webp",
+      "sidecar": "content/image-runs/batch50-worlds/paperclip-plaza-parcel-day.json",
+      "seed": 260650503
+    },
+    {
+      "slug": "compost-clock-workshop",
+      "title": "Compost Clock Workshop",
+      "ageBand": "8-10",
+      "seoLane": "homeschool writing prompts",
+      "sourceWorldFile": "content/worlds/batch1-middle.json",
+      "prompt": "family-friendly, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, polished children's storybook illustration of compost clock workshop, garden shed bench, hand-crank clock, leaf-layer cards, soil jars, field notebook, blank paper surfaces, icon-only marks",
+      "outputJpeg": "public/images/plotsprout/batch50-worlds/compost-clock-workshop.jpg",
+      "outputWebp": "public/images/plotsprout/batch50-worlds/compost-clock-workshop.webp",
+      "sidecar": "content/image-runs/batch50-worlds/compost-clock-workshop.json",
+      "seed": 260650504
+    },
+    {
+      "slug": "orchard-pulley-post",
+      "title": "Orchard Pulley Post",
+      "ageBand": "8-10",
+      "seoLane": "story writing worksheets",
+      "sourceWorldFile": "content/worlds/batch1-middle.json",
+      "prompt": "family-friendly, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, polished children's storybook illustration of orchard pulley post, apple baskets, rope scale, tree platform, blank tally boards, crisp autumn light, blank paper surfaces, icon-only marks",
+      "outputJpeg": "public/images/plotsprout/batch50-worlds/orchard-pulley-post.jpg",
+      "outputWebp": "public/images/plotsprout/batch50-worlds/orchard-pulley-post.webp",
+      "sidecar": "content/image-runs/batch50-worlds/orchard-pulley-post.json",
+      "seed": 260650505
+    },
+    {
+      "slug": "pond-bridge-blueprint-club",
+      "title": "Pond Bridge Blueprint Club",
+      "ageBand": "8-10",
+      "seoLane": "reluctant writer activities",
+      "sourceWorldFile": "content/worlds/batch1-middle.json",
+      "prompt": "family-friendly, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, polished children's storybook illustration of pond bridge blueprint club, blank graph paper board, tiny bridge models, leaf boats, pebble test weights, blank paper surfaces, icon-only marks",
+      "outputJpeg": "public/images/plotsprout/batch50-worlds/pond-bridge-blueprint-club.jpg",
+      "outputWebp": "public/images/plotsprout/batch50-worlds/pond-bridge-blueprint-club.webp",
+      "sidecar": "content/image-runs/batch50-worlds/pond-bridge-blueprint-club.json",
+      "seed": 260650506
+    },
+    {
+      "slug": "chapter-gate-greenhouse",
+      "title": "Chapter Gate Greenhouse",
+      "ageBand": "10-11",
+      "seoLane": "story writing worksheets",
+      "sourceWorldFile": "content/worlds/batch1-upper.json",
+      "prompt": "family-friendly, no text, no letters, no logos, no watermark, no branded characters, no scary harm, no weapons, polished children's storybook illustration of chapter gate greenhouse, paper plants, glass transition gates, colored garden beds, notebooks and pencils, blank paper surfaces, icon-only marks",
+      "outputJpeg": "public/images/plotsprout/batch50-worlds/chapter-gate-greenhouse.jpg",
+      "outputWebp": "public/images/plotsprout/batch50-worlds/chapter-gate-greenhouse.webp",
+      "sidecar": "content/image-runs/batch50-worlds/chapter-gate-greenhouse.json",
+      "seed": 260650507
+    }
+  ]
+}

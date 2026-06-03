@@ -19,22 +19,22 @@ const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
 
 const worldAges = {
-  'moon-muffin-market': '6-8',
-  'puddle-planet-post-office': '6-8',
-  'buttonwood-library-train': '7-9',
-  'button-bakery-map-mixup': '7-9',
-  'teacup-town-weather-window': '7-8',
-  'pocket-park-notice-board': '7-9',
-  'spoon-ferry-lunchbox-harbor': '7-9',
-  'acorn-avenue-errand-office': '7-9',
-  'seed-library-map-room': '8-10',
-  'rain-gauge-railway': '8-10',
-  'moss-message-observatory': '8-10',
-  'tidepool-timekeepers-lab': '8-10',
-  'revision-river-ferry': '10-11',
-  'clue-label-tower-museum': '10-11',
-  'compass-craft-academy': '10-11',
-  'binding-day-boardwalk': '10-11',
+  'penny-path-compass-shop': '7-9',
+  'sticker-station-mail-cart': '7-9',
+  'mitten-market-lost-ticket': '7-8',
+  'paperclip-plaza-parcel-day': '7-9',
+  'greenhouse-gear-garden': '8-10',
+  'pantry-measurement-mystery': '8-10',
+  'solar-oven-picnic-station': '8-10',
+  'compost-clock-workshop': '8-10',
+  'orchard-pulley-post': '8-10',
+  'pond-bridge-blueprint-club': '8-10',
+  'cloudberry-clocktower': '8-10',
+  'tiny-lantern-reef': '8-10',
+  'almost-invention-workshop': '10-11',
+  'margin-note-market': '10-11',
+  'index-card-theater-club': '10-11',
+  'chapter-gate-greenhouse': '10-11',
 }
 
 const worldSlugs = Object.keys(worldAges)
@@ -127,7 +127,7 @@ function validSource(overrides = {}) {
       'content/product-artifacts/lanes/batch50-lined-paper-paragraph-revision-cards-c.json',
       'content/product-artifacts/lanes/batch50-lined-paper-paragraph-revision-tools.json',
     ],
-    worldSlugs,
+    worldSlugs: [...worldSlugs],
     cover: {
       kicker: 'Printable lined paper paragraph revision cards',
       headline: 'Lined Paper Story Paragraph Revision Card Pack',
@@ -194,7 +194,7 @@ const product = {
   title: 'Lined Paper Story Paragraph Revision Card Pack',
   pricePoint: '$73',
   status: 'checkout_pending',
-  worldSlugs,
+  worldSlugs: [...worldSlugs],
   worldSummaries: worldSlugs.map((slug) => ({
     slug,
     summary: `A linked fictional world summary for ${slug}.`,
@@ -247,6 +247,37 @@ function writeLaneFiles(tempRoot, source, laneIdOverrides = {}) {
 describe('Lined Paper Story Paragraph Revision Card Pack policy', () => {
   it('accepts a valid source with sixteen printable paragraph revision cards', () => {
     expect(validateLinedPaperStoryParagraphRevisionCardPackSource(validSource(), product, knownWorldAges)).toEqual([])
+  })
+
+  it('rejects world slug reuse from Batch 44-49 paragraph skill packs', () => {
+    const source = validSource()
+    source.worldSlugs[0] = 'moon-muffin-market'
+    source.cards[0] = {
+      ...source.cards[0],
+      worldSlug: 'moon-muffin-market',
+      ageBand: '6-8',
+    }
+    const productWithOverlap = {
+      ...product,
+      worldSlugs: source.worldSlugs,
+      worldSummaries: source.worldSlugs.map((slug) => ({
+        slug,
+        summary: `A linked fictional world summary for ${slug}.`,
+      })),
+    }
+    const knownWorldAgesWithPriorBatch = new Map([
+      ...knownWorldAges,
+      ['moon-muffin-market', { ageBand: '6-8' }],
+    ])
+    expect(
+      validateLinedPaperStoryParagraphRevisionCardPackSource(
+        source,
+        productWithOverlap,
+        knownWorldAgesWithPriorBatch,
+      ),
+    ).toContain(
+      'worldSlugs must be disjoint from Batch 44-49 world slugs; overlapping slugs: moon-muffin-market.',
+    )
   })
 
   it('rejects a paragraph revision prompt field without a writable blank', () => {
@@ -380,7 +411,7 @@ describe('Lined Paper Story Paragraph Revision Card Pack policy', () => {
     expect(html).toContain('Detail order')
     expect(html).toContain('Repeated-word cut')
     expect(html).toContain('Final revised paragraph')
-    expect(html).toContain('assets/moon-muffin-market.jpg')
+    expect(html).toContain('assets/penny-path-compass-shop.jpg')
   })
 
   it('builds deterministic printable paragraph revision artifacts', async () => {

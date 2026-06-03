@@ -1,0 +1,1065 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lined Paper Story Paragraph Revision Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .paragraph-revision-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .paragraph-revision-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .paragraph-revision-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable lined paper paragraph revision cards</p>
+        <h1>Lined Paper Story Paragraph Revision Card Pack</h1>
+        <p>Sixteen lined-paper cards help writers revise one fictional paragraph with a topic sentence, ordered details, a transition check, a closing sentence, one repeated-word cut, and a final copied paragraph.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable paragraph revision cards plus adult guide tools, paragraph revision routines, take-home paragraph revision slips, and optional prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$73</span>
+        <h2>Included</h2>
+        <ul><li>16 printable lined paper paragraph revision cards</li>
+<li>Adult setup guide</li>
+<li>Fictional paragraph revision safety notes</li>
+<li>Lined-paper paragraph coaching moves</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led paragraph revision routines</li>
+<li>Ten take-home paragraph revision slips</li>
+<li>Eight optional prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story paragraph-revision coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Lined Paper Story Paragraph Revision Adult Guide</h3><ul><li>Print the lined-paper paragraph revision cards, blank lined sheets, and guide pages before the adult-led paper session.</li>
+<li>Begin with one fictional draft paragraph, then coach a topic sentence, useful detail order, transition check, closing sentence, repeated-word cut, and final revised paragraph.</li>
+<li>Keep every example made-up, broad, printable, offline, paper-only, and guided by an adult.</li>
+<li>Use one lined sheet for the draft and one fresh lined sheet for the revised copy so changes stay easy to see.</li>
+<li>Keep details inside the pretend story world; use invented names, simple objects, and broad settings instead of narrow facts.</li>
+<li>End each activity by copying one final revised fictional paragraph with a clear topic sentence, ordered details, helpful transitions, and a closing sentence.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one lined-paper story paragraph-revision card at a time. Keep every choice broad, invented, paper-only, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen paragraph-revision-card worlds</h2>
+      <p>Pick a world image, then revise one fictional paragraph with a pretend lined-paper story paragraph-revision card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Sticker Station Mail Cart</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Mitten Market Lost Ticket</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Paperclip Plaza Parcel Day</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Greenhouse Gear Garden</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Solar Oven Picnic Station</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Compost Clock Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Orchard Pulley Post</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pond Bridge Blueprint Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Cloudberry Clocktower</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tiny Lantern Reef</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Almost Invention Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Chapter Gate Greenhouse</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Story paragraph-revision routines</p>
+      <h2>Choose the lined-paper paragraph-revision routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Topic Sentence Anchor</h3>
+      <p>Making the first line tell what the fictional paragraph is mostly about.</p>
+      <ol><li>The adult points to the first line of the draft paragraph and asks for the main idea: ____________________.</li>
+<li>The writer underlines words that belong in the topic sentence: ____________________.</li>
+<li>The adult asks which opening line would guide every detail on the lined page: ____________________.</li>
+<li>The writer writes the revised topic sentence on the fresh lined sheet: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Detail Order Ladder</h3>
+      <p>Putting supporting details in an order that is easier to follow.</p>
+      <ol><li>The adult writes each fictional detail from the draft on a separate lined-paper strip: ____________________.</li>
+<li>The writer numbers the detail that should come first, second, and third: ____________________.</li>
+<li>The adult asks which detail feels out of order or should move lower on the page: ____________________.</li>
+<li>The writer copies the details in the new order under the topic sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Transition Check Track</h3>
+      <p>Adding small bridge words so the details connect on paper.</p>
+      <ol><li>The adult circles the spaces between detail sentences on the lined draft: ____________________.</li>
+<li>The writer chooses a transition word or phrase for the first bridge: ____________________.</li>
+<li>The adult asks whether the next bridge shows time, place in the paragraph, or another idea: ____________________.</li>
+<li>The writer adds the transition words to the revised detail lines: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Closing Sentence Wrap</h3>
+      <p>Finishing the paragraph with one sentence that points back to the main idea.</p>
+      <ol><li>The adult reads the topic sentence and the ordered details aloud from the lined page: ____________________.</li>
+<li>The writer says what the paragraph helped the reader understand about the pretend moment: ____________________.</li>
+<li>The adult asks which final sentence can wrap up the same main idea: ____________________.</li>
+<li>The writer writes the closing sentence as the last line of the revised paragraph: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Repeated Word Cut</h3>
+      <p>Finding one overused word and replacing or removing it for smoother reading.</p>
+      <ol><li>The adult asks the writer to circle one word that appears too many times in the draft: ____________________.</li>
+<li>The writer chooses one repeated word to keep because it is needed: ____________________.</li>
+<li>The adult asks which repeated word can change, move, or come out: ____________________.</li>
+<li>The writer marks the repeated-word cut on the lined draft before copying: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Final Revised Paragraph Copy</h3>
+      <p>Copying the clean paragraph after each revision move is finished.</p>
+      <ol><li>The adult checks the revision marks in order: topic sentence, details, transitions, closing sentence, word cut: ____________________.</li>
+<li>The writer points to the first sentence that will be copied on the fresh lined sheet: ____________________.</li>
+<li>The adult asks which sentence needs one last small pencil change before copying: ____________________.</li>
+<li>The writer copies the final revised fictional paragraph on fresh lined paper: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home paragraph revision slips</p>
+      <h2>Try one revised paragraph later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">one lined-paper pass | topic sentence</p>
+      <h3>Topic Sentence Slip</h3>
+      <p>Write a topic sentence that tells what this fictional paragraph is mostly about: ____________________.</p>
+      <p>Ask which words should guide every detail in the paragraph: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">three-line pass | detail order</p>
+      <h3>Detail Order Slip</h3>
+      <p>Number three fictional details in the clearest order for the paragraph: ____________________.</p>
+      <p>Ask why the first detail should come before the next one: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">bridge-word pass | transition check</p>
+      <h3>Transition Check Slip</h3>
+      <p>Add one transition word or phrase between two detail sentences: ____________________.</p>
+      <p>Ask how the transition helps the two sentences connect: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">final-line pass | closing sentence</p>
+      <h3>Closing Sentence Slip</h3>
+      <p>Write a closing sentence that points back to the topic sentence: ____________________.</p>
+      <p>Ask what the paragraph should leave the reader understanding: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">circle-and-change pass | repeated-word cut</p>
+      <h3>Repeated Word Slip</h3>
+      <p>Circle one repeated word, then change or remove one extra use of it: ____________________.</p>
+      <p>Ask which repeated word helped less after it showed up again: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">fresh-copy pass | final revised paragraph</p>
+      <h3>Final Revised Paragraph Slip</h3>
+      <p>Copy the final revised fictional paragraph on fresh lined paper: ____________________.</p>
+      <p>Ask which revision made the paragraph easiest to follow: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">two-detail pass | supporting details</p>
+      <h3>Support Detail Slip</h3>
+      <p>Write two fictional details that both support the same topic sentence: ____________________.</p>
+      <p>Ask whether both details belong under the same main idea: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">lineup pass | sentence move</p>
+      <h3>Move One Sentence Slip</h3>
+      <p>Choose one sentence that should move earlier or later in the paragraph: ____________________.</p>
+      <p>Ask where the sentence fits best on the lined page: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">quiet pencil pass | extra idea cut</p>
+      <h3>Cut One Extra Idea Slip</h3>
+      <p>Mark one interesting idea that does not fit this paragraph&#39;s topic: ____________________.</p>
+      <p>Ask which idea can wait for a different fictional paragraph: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">last pencil pass | smooth final copy</p>
+      <h3>Smooth Copy Slip</h3>
+      <p>Make one small pencil change before copying the final revised paragraph: ____________________.</p>
+      <p>Ask which small change made the paragraph read more smoothly: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the topic sentence for this fictional paragraph is ____________________.</li>
+<li>Optional adult-led offline prompt: the first useful detail should be ____________________.</li>
+<li>Optional adult-led offline prompt: the detail that should move earlier is ____________________.</li>
+<li>Optional adult-led offline prompt: the transition word or phrase I will add is ____________________.</li>
+<li>Optional adult-led offline prompt: the closing sentence should remind the reader that ____________________.</li>
+<li>Optional adult-led offline prompt: the repeated word I will cut or change is ____________________.</li>
+<li>Optional adult-led offline prompt: the sentence that needs one small change is ____________________.</li>
+<li>Optional adult-led offline prompt: the final revised fictional paragraph is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 1 | Ages 7-9 | revise one fictional compass-shop path paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Penny Path Compass Shop Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend compass-shop path moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one compass-shop path paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one compass-shop path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the penny path clue comes before the button compass choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the helper moves from path clue to compass choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to one clear path choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated path word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend receipt slip or compass card: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 2 | Ages 7-9 | revise one fictional mail-cart sticker stop paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Sticker Station Mail Cart Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+        <figcaption>Sticker Station Mail Cart</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend mail-cart sticker stop moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one mail-cart sticker stop paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one mail-cart sticker stop: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the blank note card comes before the sticker cart choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the helper moves from note card to cart choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the finished sticker stop: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated sticker word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend note card or cart label paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 3 | Ages 7-8 | revise one fictional lost-ticket market paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Mitten Market Lost Ticket Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+        <figcaption>Mitten Market Lost Ticket</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend lost-ticket market moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one lost-ticket market paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one lost-ticket market: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the yarn-path clue comes before the mitten stall choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the helper moves from yarn clue to stall choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the ticket search ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated ticket word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend clothespin flag or market ticket paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 4 | Ages 7-9 | revise one fictional parcel-plaza delivery paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Paperclip Plaza Parcel Day Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+        <figcaption>Paperclip Plaza Parcel Day</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend parcel-plaza delivery moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one parcel-plaza delivery paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one parcel-plaza delivery: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the paperclip plaza stop comes before the tiny parcel choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the helper moves from plaza stop to parcel choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the finished delivery: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated parcel word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend sticky-note sidewalk or plaza parcel paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 5 | Ages 8-10 | revise one fictional greenhouse gear plan paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Greenhouse Gear Garden Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+        <figcaption>Greenhouse Gear Garden</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend greenhouse gear plan moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one greenhouse gear plan paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one greenhouse gear plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the seed tray detail comes before the watering rail detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from seed tray to watering rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the greenhouse gear plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated gear word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend seed tray or vent chart paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 6 | Ages 8-10 | revise one fictional pantry measurement chart paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Pantry Measurement Mystery Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend pantry measurement chart moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one pantry measurement chart paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one pantry measurement chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the measuring spoon note comes before the height chart clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from spoon note to chart clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the measurement chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated chart word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend jar mark or measurement note paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 7 | Ages 8-10 | revise one fictional sun-shadow station chart paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Solar Oven Picnic Station Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+        <figcaption>Solar Oven Picnic Station</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend sun-shadow station chart moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one sun-shadow station chart paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one sun-shadow station chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the shadow arrow detail comes before the station notebook detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from shadow arrow to notebook detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the station chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated sun word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend shadow card or station chart paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 8 | Ages 8-10 | revise one fictional compost clockwork plan paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Compost Clock Workshop Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+        <figcaption>Compost Clock Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend compost clockwork plan moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one compost clockwork plan paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one compost clockwork plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the leaf-layer note comes before the hand-crank clock detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from leaf note to clock detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the compost clockwork plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated clock word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend leaf calendar or clockwork note paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 9 | Ages 8-10 | revise one fictional orchard pulley post paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Orchard Pulley Post Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+        <figcaption>Orchard Pulley Post</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend orchard pulley post moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one orchard pulley post paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one orchard pulley post: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the apple basket detail comes before the rope scale choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from basket detail to scale choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the pulley post plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated basket word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend pulley note or orchard tally paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 10 | Ages 8-10 | revise one fictional pond bridge blueprint paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Pond Bridge Blueprint Club Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+        <figcaption>Pond Bridge Blueprint Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend pond bridge blueprint moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one pond bridge blueprint paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one pond bridge blueprint: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the bridge model detail comes before the pebble test note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from bridge model to test note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the blueprint choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated bridge word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend waterproof board or leaf boat paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 11 | Ages 8-10 | revise one fictional clocktower berry clue paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Cloudberry Clocktower Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+        <figcaption>Cloudberry Clocktower</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend clocktower berry clue moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one clocktower berry clue paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one clocktower berry clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the clocktower clue comes before the breakfast-hour notice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from clocktower clue to notice detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the berry clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated clock word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend berry vine or missing-hour paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 12 | Ages 8-10 | revise one fictional lantern reef path paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Tiny Lantern Reef Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+        <figcaption>Tiny Lantern Reef</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend lantern reef path moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one lantern reef path paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one lantern reef path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the paper boat detail comes before the button-coral clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from paper boat to reef clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the lantern path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated lantern word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend sea-glass path or paper boat paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 13 | Ages 10-11 | revise one fictional paper prototype test paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Almost Invention Workshop Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+        <figcaption>Almost Invention Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend paper prototype test moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one paper prototype test paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one paper prototype test: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the cardboard gear detail comes before the testing chart detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from gear detail to chart detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the prototype test result: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated test word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend prototype note or blank chart paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 14 | Ages 10-11 | revise one fictional margin-note feedback trade paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Margin Note Market Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend margin-note feedback trade moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one margin-note feedback trade paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one margin-note feedback trade: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the feedback stall detail comes before the note-card trade: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from stall detail to trade detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the feedback choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated note word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend feedback slip or market stall paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 15 | Ages 10-11 | revise one fictional index-card scene plan paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Index Card Theater Club Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend index-card scene plan moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one index-card scene plan paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one index-card scene plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the scene card detail comes before the quiet prop-table choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from scene card to prop-table choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the theater scene plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated scene word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend blank cue card or prop-table paragraph: ____________________.</p>
+    </section>
+
+    <section class="pack-page paragraph-revision-card-page">
+      <div class="page-kicker">Story Paragraph Revision Card 16 | Ages 10-11 | revise one fictional chapter-gate greenhouse note paragraph by improving the topic sentence, detail order, transition, closing sentence, repeated words, and final copy</div>
+      <h2>Chapter Gate Greenhouse Paragraph Revision Card</h2>
+      <figure>
+        <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+        <figcaption>Chapter Gate Greenhouse</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set lined paper beside this card and choose one pretend chapter-gate greenhouse note moment before the writer starts: ____________________.</p>
+      <p class="kid-direction">Adult reads: Writer, make one chapter-gate greenhouse note paragraph clearer by changing one part at a time on lined paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Topic sentence</h3>
+      <p>Adult asks: Write a topic sentence that tells the reader the paragraph is about one chapter-gate greenhouse note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Detail order</h3>
+      <p>Adult asks: Number two details so the paper plant detail comes before the transition gate choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition check</h3>
+      <p>Adult asks: Add one small transition, such as first or next, so the writer moves from plant detail to gate choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Closing sentence</h3>
+      <p>Adult asks: Write a closing sentence that brings the paragraph back to the chapter-gate note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated-word cut</h3>
+      <p>Adult asks: Circle one repeated chapter word, then replace one copy with a fresh paper word: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final revised paragraph</h3>
+      <p>Adult asks: Copy the final revised paragraph neatly on lined paper with the new topic, details, transition, closing, and word change: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Adult points to one sentence, and the writer changes only that sentence first: ____________________. Later paper line: Try the same revision steps with a pretend paper plant or transition gate paragraph: ____________________.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,158 @@
+{
+  "laneId": "batch50-lined-paper-paragraph-revision-tools",
+  "adultGuide": {
+    "title": "Lined Paper Story Paragraph Revision Adult Guide",
+    "bullets": [
+      "Print the lined-paper paragraph revision cards, blank lined sheets, and guide pages before the adult-led paper session.",
+      "Begin with one fictional draft paragraph, then coach a topic sentence, useful detail order, transition check, closing sentence, repeated-word cut, and final revised paragraph.",
+      "Keep every example made-up, broad, printable, offline, paper-only, and guided by an adult.",
+      "Use one lined sheet for the draft and one fresh lined sheet for the revised copy so changes stay easy to see.",
+      "Keep details inside the pretend story world; use invented names, simple objects, and broad settings instead of narrow facts.",
+      "End each activity by copying one final revised fictional paragraph with a clear topic sentence, ordered details, helpful transitions, and a closing sentence."
+    ]
+  },
+  "paragraphRevisionRoutines": [
+    {
+      "name": "Topic Sentence Anchor",
+      "bestFor": "Making the first line tell what the fictional paragraph is mostly about.",
+      "steps": [
+        "The adult points to the first line of the draft paragraph and asks for the main idea: ____________________.",
+        "The writer underlines words that belong in the topic sentence: ____________________.",
+        "The adult asks which opening line would guide every detail on the lined page: ____________________.",
+        "The writer writes the revised topic sentence on the fresh lined sheet: ____________________."
+      ]
+    },
+    {
+      "name": "Detail Order Ladder",
+      "bestFor": "Putting supporting details in an order that is easier to follow.",
+      "steps": [
+        "The adult writes each fictional detail from the draft on a separate lined-paper strip: ____________________.",
+        "The writer numbers the detail that should come first, second, and third: ____________________.",
+        "The adult asks which detail feels out of order or should move lower on the page: ____________________.",
+        "The writer copies the details in the new order under the topic sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Transition Check Track",
+      "bestFor": "Adding small bridge words so the details connect on paper.",
+      "steps": [
+        "The adult circles the spaces between detail sentences on the lined draft: ____________________.",
+        "The writer chooses a transition word or phrase for the first bridge: ____________________.",
+        "The adult asks whether the next bridge shows time, place in the paragraph, or another idea: ____________________.",
+        "The writer adds the transition words to the revised detail lines: ____________________."
+      ]
+    },
+    {
+      "name": "Closing Sentence Wrap",
+      "bestFor": "Finishing the paragraph with one sentence that points back to the main idea.",
+      "steps": [
+        "The adult reads the topic sentence and the ordered details aloud from the lined page: ____________________.",
+        "The writer says what the paragraph helped the reader understand about the pretend moment: ____________________.",
+        "The adult asks which final sentence can wrap up the same main idea: ____________________.",
+        "The writer writes the closing sentence as the last line of the revised paragraph: ____________________."
+      ]
+    },
+    {
+      "name": "Repeated Word Cut",
+      "bestFor": "Finding one overused word and replacing or removing it for smoother reading.",
+      "steps": [
+        "The adult asks the writer to circle one word that appears too many times in the draft: ____________________.",
+        "The writer chooses one repeated word to keep because it is needed: ____________________.",
+        "The adult asks which repeated word can change, move, or come out: ____________________.",
+        "The writer marks the repeated-word cut on the lined draft before copying: ____________________."
+      ]
+    },
+    {
+      "name": "Final Revised Paragraph Copy",
+      "bestFor": "Copying the clean paragraph after each revision move is finished.",
+      "steps": [
+        "The adult checks the revision marks in order: topic sentence, details, transitions, closing sentence, word cut: ____________________.",
+        "The writer points to the first sentence that will be copied on the fresh lined sheet: ____________________.",
+        "The adult asks which sentence needs one last small pencil change before copying: ____________________.",
+        "The writer copies the final revised fictional paragraph on fresh lined paper: ____________________."
+      ]
+    }
+  ],
+  "takeHomeParagraphRevisionSlips": [
+    {
+      "title": "Topic Sentence Slip",
+      "time": "one lined-paper pass",
+      "skill": "topic sentence",
+      "direction": "Write a topic sentence that tells what this fictional paragraph is mostly about: ____________________.",
+      "familyLine": "Ask which words should guide every detail in the paragraph: ____________________."
+    },
+    {
+      "title": "Detail Order Slip",
+      "time": "three-line pass",
+      "skill": "detail order",
+      "direction": "Number three fictional details in the clearest order for the paragraph: ____________________.",
+      "familyLine": "Ask why the first detail should come before the next one: ____________________."
+    },
+    {
+      "title": "Transition Check Slip",
+      "time": "bridge-word pass",
+      "skill": "transition check",
+      "direction": "Add one transition word or phrase between two detail sentences: ____________________.",
+      "familyLine": "Ask how the transition helps the two sentences connect: ____________________."
+    },
+    {
+      "title": "Closing Sentence Slip",
+      "time": "final-line pass",
+      "skill": "closing sentence",
+      "direction": "Write a closing sentence that points back to the topic sentence: ____________________.",
+      "familyLine": "Ask what the paragraph should leave the reader understanding: ____________________."
+    },
+    {
+      "title": "Repeated Word Slip",
+      "time": "circle-and-change pass",
+      "skill": "repeated-word cut",
+      "direction": "Circle one repeated word, then change or remove one extra use of it: ____________________.",
+      "familyLine": "Ask which repeated word helped less after it showed up again: ____________________."
+    },
+    {
+      "title": "Final Revised Paragraph Slip",
+      "time": "fresh-copy pass",
+      "skill": "final revised paragraph",
+      "direction": "Copy the final revised fictional paragraph on fresh lined paper: ____________________.",
+      "familyLine": "Ask which revision made the paragraph easiest to follow: ____________________."
+    },
+    {
+      "title": "Support Detail Slip",
+      "time": "two-detail pass",
+      "skill": "supporting details",
+      "direction": "Write two fictional details that both support the same topic sentence: ____________________.",
+      "familyLine": "Ask whether both details belong under the same main idea: ____________________."
+    },
+    {
+      "title": "Move One Sentence Slip",
+      "time": "lineup pass",
+      "skill": "sentence move",
+      "direction": "Choose one sentence that should move earlier or later in the paragraph: ____________________.",
+      "familyLine": "Ask where the sentence fits best on the lined page: ____________________."
+    },
+    {
+      "title": "Cut One Extra Idea Slip",
+      "time": "quiet pencil pass",
+      "skill": "extra idea cut",
+      "direction": "Mark one interesting idea that does not fit this paragraph's topic: ____________________.",
+      "familyLine": "Ask which idea can wait for a different fictional paragraph: ____________________."
+    },
+    {
+      "title": "Smooth Copy Slip",
+      "time": "last pencil pass",
+      "skill": "smooth final copy",
+      "direction": "Make one small pencil change before copying the final revised paragraph: ____________________.",
+      "familyLine": "Ask which small change made the paragraph read more smoothly: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the topic sentence for this fictional paragraph is ____________________.",
+    "Optional adult-led offline prompt: the first useful detail should be ____________________.",
+    "Optional adult-led offline prompt: the detail that should move earlier is ____________________.",
+    "Optional adult-led offline prompt: the transition word or phrase I will add is ____________________.",
+    "Optional adult-led offline prompt: the closing sentence should remind the reader that ____________________.",
+    "Optional adult-led offline prompt: the repeated word I will cut or change is ____________________.",
+    "Optional adult-led offline prompt: the sentence that needs one small change is ____________________.",
+    "Optional adult-led offline prompt: the final revised fictional paragraph is ____________________."
+  ]
+}

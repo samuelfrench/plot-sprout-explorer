@@ -4096,6 +4096,130 @@
           "summary": "A binding day world for copying a final paragraph after one extra idea is cut."
         }
       ]
+    },
+    {
+      "slug": "lined-paper-story-paragraph-revision-card-pack",
+      "title": "Lined Paper Story Paragraph Revision Card Pack",
+      "pricePoint": "$73",
+      "status": "checkout_pending",
+      "headline": "A printable paragraph revision card pack for paper-only lined-paper paragraph polish.",
+      "summary": "Sixteen adult-led lined-paper cards help kids revise one fictional paragraph with a topic sentence, ordered details, transition, closing, and word cut.",
+      "heroImage": "images/plotsprout/batch50/lined-paper-story-paragraph-revision-card-pack.jpg",
+      "ctaLabel": "Request paragraph revision card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Lined%20Paper%20Story%20Paragraph%20Revision%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static lined paper story paragraph revision card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "penny-path-compass-shop",
+        "sticker-station-mail-cart",
+        "mitten-market-lost-ticket",
+        "paperclip-plaza-parcel-day",
+        "greenhouse-gear-garden",
+        "pantry-measurement-mystery",
+        "solar-oven-picnic-station",
+        "compost-clock-workshop",
+        "orchard-pulley-post",
+        "pond-bridge-blueprint-club",
+        "cloudberry-clocktower",
+        "tiny-lantern-reef",
+        "almost-invention-workshop",
+        "margin-note-market",
+        "index-card-theater-club",
+        "chapter-gate-greenhouse"
+      ],
+      "includedPages": [
+        "Sixteen printable lined paper paragraph revision cards",
+        "Adult setup guide",
+        "Fictional paragraph revision safety notes",
+        "Lined-paper paragraph coaching moves",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six adult-led paragraph revision routines",
+        "Ten take-home paragraph revision slips",
+        "Eight optional prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one clean paragraph after a rough draft",
+        "A tutoring or co-op table where writers can revise topic sentences before copying",
+        "A calm pencil activity for ordering details without asking for a full new story",
+        "A reluctant-writer activity that makes revision feel like six small paper checks",
+        "A take-home paragraph slip set for practicing final-copy habits offline"
+      ],
+      "parentSteps": [
+        "Choose one paragraph revision routine before the activity starts.",
+        "Set the draft page, fresh lined paper, pencils, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full revised paragraph.",
+        "Move from topic sentence to detail order, transition check, closing sentence, repeated-word cut, and final copy.",
+        "Send one paragraph revision slip with a single blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "penny-path-compass-shop",
+          "summary": "A compass-shop world for revising a path paragraph with one clear order of details."
+        },
+        {
+          "slug": "sticker-station-mail-cart",
+          "summary": "A sticker-station world for cleaning up a mail-cart paragraph before final copy."
+        },
+        {
+          "slug": "mitten-market-lost-ticket",
+          "summary": "A mitten-market world for revising a lost-ticket paragraph with a matching ending."
+        },
+        {
+          "slug": "paperclip-plaza-parcel-day",
+          "summary": "A paperclip-plaza world for revising a parcel paragraph with smoother detail order."
+        },
+        {
+          "slug": "greenhouse-gear-garden",
+          "summary": "A greenhouse-gear world for revising a plan paragraph with connected details."
+        },
+        {
+          "slug": "pantry-measurement-mystery",
+          "summary": "A pantry-measurement world for revising a chart paragraph without food prep advice."
+        },
+        {
+          "slug": "solar-oven-picnic-station",
+          "summary": "A solar-station world for revising a sun-shadow paragraph with safe paper-only details."
+        },
+        {
+          "slug": "compost-clock-workshop",
+          "summary": "A compost-clock world for revising an observation paragraph with measured detail order."
+        },
+        {
+          "slug": "orchard-pulley-post",
+          "summary": "An orchard-pulley world for revising a process paragraph with clear supporting details."
+        },
+        {
+          "slug": "pond-bridge-blueprint-club",
+          "summary": "A pond-bridge world for revising a blueprint paragraph with a single main idea."
+        },
+        {
+          "slug": "cloudberry-clocktower",
+          "summary": "A cloudberry-clocktower world for revising a clue paragraph with a clear return ending."
+        },
+        {
+          "slug": "tiny-lantern-reef",
+          "summary": "A lantern-reef world for revising a path paragraph with one clean final copy."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "summary": "An invention-workshop world for revising a prototype paragraph with precise order."
+        },
+        {
+          "slug": "margin-note-market",
+          "summary": "A margin-note world for revising a feedback paragraph without public posting."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "summary": "An index-card theater world for revising a scene-plan paragraph with one main idea."
+        },
+        {
+          "slug": "chapter-gate-greenhouse",
+          "summary": "A chapter-gate greenhouse world for revising a transition paragraph on paper."
+        }
+      ]
     }
   ]
 }

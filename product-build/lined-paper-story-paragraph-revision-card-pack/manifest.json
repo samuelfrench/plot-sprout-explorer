@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-03-batch50",
+  "generatedAt": "2026-06-03",
+  "productSlug": "lined-paper-story-paragraph-revision-card-pack",
+  "title": "Lined Paper Story Paragraph Revision Card Pack",
+  "pricePoint": "$73",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "provider-upload-ready artifact: PDF plus source HTML and local image assets; checkout still requires Sam provider choice.",
+  "files": {
+    "pdf": {
+      "path": "product-build/lined-paper-story-paragraph-revision-card-pack/Lined-Paper-Story-Paragraph-Revision-Card-Pack.pdf",
+      "sha256": "0145c65ef86f79648daf79c547c746db37fb57d9f5ef74f1b0ac6f5547f8893e",
+      "size": 5014266
+    },
+    "zip": {
+      "path": "product-build/lined-paper-story-paragraph-revision-card-pack/lined-paper-story-paragraph-revision-card-pack.zip",
+      "sha256": "306614fd17c1d7c43b20fd9e2d056ef445220f9c4a0a986ccc54589971df0977",
+      "size": 9612324
+    },
+    "sourceHtml": {
+      "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/lined-paper-story-paragraph-revision-card-pack.html",
+      "sha256": "6c35e5eccb4c3f09c3220772f3d2de2115254a6fea6ea7e90ed1cd6ac346420a",
+      "size": 61327
+    },
+    "readme": {
+      "path": "product-build/lined-paper-story-paragraph-revision-card-pack/README.txt",
+      "sha256": "4482b0ebad221b6894d0fe578eafa80483bb351e4b40323915fee68040d99537",
+      "size": 607
+    },
+    "assets": [
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/chapter-gate-greenhouse.jpg",
+        "sha256": "2a34e6f4bafcaaf422f06aa11146c3d4247b0b7cd76b3fd207dffcb11aa2b2d1",
+        "size": 289788
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/cloudberry-clocktower.jpg",
+        "sha256": "3204161ea211c5e28ca7cfeae6e7cfc97be61f53ca978a3606435351731ad6e3",
+        "size": 366382
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/compost-clock-workshop.jpg",
+        "sha256": "9aed5290d2d2119410590b2a1b52a012529bfc2340dc4bb2310fa45328cb1216",
+        "size": 277439
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/mitten-market-lost-ticket.jpg",
+        "sha256": "ba9662cac7927c25beffc08c6f4e5b52cb422e727f87d10b1d582ae8a296902c",
+        "size": 194672
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/orchard-pulley-post.jpg",
+        "sha256": "7a51a3f1f4413db9566324b67ca123c16f482d925b5246204786bcfedeb5e1da",
+        "size": 214727
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/pantry-measurement-mystery.jpg",
+        "sha256": "b85111fa750c89e60fc21133ea09e431a26a010d8ff24db7c4baa305c3ff3f73",
+        "size": 287571
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/paperclip-plaza-parcel-day.jpg",
+        "sha256": "c7287db2a3788e8e0a567ea114b5ec913e61c8e11de424d2a30a2fc81c90ed5b",
+        "size": 379900
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/pond-bridge-blueprint-club.jpg",
+        "sha256": "0fe8f3c9f82671ca8e6daa82a2c54eeda4d2c86d0d1e65a86e366df3f5f0f707",
+        "size": 238332
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/solar-oven-picnic-station.jpg",
+        "sha256": "9742a1d469b45961d9634dc0fb6e722bf60c2f8beb872eb9790da8b21e9300be",
+        "size": 299058
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/sticker-station-mail-cart.jpg",
+        "sha256": "3ac216af41b988ed757c346983c7c30bd6e182daf96403981799ada1b40b6429",
+        "size": 177751
+      },
+      {
+        "path": "product-build/lined-paper-story-paragraph-revision-card-pack/source/assets/tiny-lantern-reef.jpg",
+        "sha256": "2fc79f2835c185ed4110b7edfab6921ab3a004b059837733502ddc7d407d370f",
+        "size": 326494
+      }
+    ]
+  }
+}

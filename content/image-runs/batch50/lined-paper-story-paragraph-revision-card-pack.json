@@ -1,0 +1,18 @@
+{
+  "slug": "lined-paper-story-paragraph-revision-card-pack",
+  "prompt": "family-friendly flat lay of blank lined paper story paragraph revision card pack, blank lined paper, blank paragraph revision cards, empty writing areas, unbranded pencils, small paper tabs, quiet printable writing kit, plain white background, soft natural light, realistic product photography, no text",
+  "negativePrompt": "text, readable writing, letters, labels, logo, watermark, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, phone, tablet, laptop, computer, screen, device, microphone, audio recorder, voice memo, camera, photo, recording, transcription, account login, portal, qr code, upload icon, public post, public review, rating, score, grade, timer, contest, prize, food, tasting, allergy, medical, scary, weapon, fight, bullying",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26065073,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch50/lined-paper-story-paragraph-revision-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch50/lined-paper-story-paragraph-revision-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-03-batch50-product-images.json",
+  "title": "Lined Paper Story Paragraph Revision Card Pack"
+}

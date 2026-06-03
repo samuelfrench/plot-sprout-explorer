@@ -86,5 +86,9 @@ describe('App', () => {
       'href',
       expect.stringContaining('clipboard-story-paragraph-focus-card-pack'),
     )
+    expect(screen.getByRole('link', { name: /Preview Lined Paper Story Paragraph Revision Card Pack/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('lined-paper-story-paragraph-revision-card-pack'),
+    )
   })
 })

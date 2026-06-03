@@ -84,6 +84,7 @@ describe('storyData', () => {
       'washi-tape-story-word-choice-card-pack',
       'paper-sleeve-story-sentence-variety-card-pack',
       'clipboard-story-paragraph-focus-card-pack',
+      'lined-paper-story-paragraph-revision-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -128,6 +129,7 @@ describe('storyData', () => {
       '$67',
       '$69',
       '$71',
+      '$73',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)

@@ -606,6 +606,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable clipboard story paragraph focus cards with adult guide tools, paragraph focus routines, and take-home paragraph slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'lined-paper-story-paragraph-revision-card-pack',
+    title: 'Lined Paper Story Paragraph Revision Card Pack',
+    pricePoint: '$73',
+    description:
+      'Sixteen printable lined paper story paragraph revision cards with adult guide tools, paragraph revision routines, and take-home paragraph revision slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

@@ -18,20 +18,20 @@
 - Create: `content/product-artifacts/lanes/batch50-lined-paper-paragraph-revision-cards-c.json`
 - Create: `content/product-artifacts/lanes/batch50-lined-paper-paragraph-revision-tools.json`
 
-- [ ] Write cards 01-06, 07-11, and 12-16 with disjoint world slugs from the Batch44-49 set.
-- [ ] Use fields `id`, `title`, `worldSlug`, `ageBand`, `paragraphRevisionSkill`, `useCase`, `adultSetup`, `kidDirection`, `topicSentencePrompt`, `detailOrderPrompt`, `transitionCheckPrompt`, `closingSentencePrompt`, `repeatedWordCutPrompt`, `finalRevisedParagraphPrompt`, `quietOptionLine`, and `takeHomeLine`.
-- [ ] Write tools with `adultGuide`, `paragraphRevisionRoutines`, `takeHomeParagraphRevisionSlips`, and `optionalAdultPrompts`.
-- [ ] Keep all values ASCII, fictional, adult-led, offline, paper-only, and with writable blanks where applicable.
-- [ ] Avoid unsafe terms: no spelling grades, scores, timers, uploads, recording, camera/photo/audio/video/voice-memo flow, public posting, accounts, real school/home identity details, private child profiles, diary-style personal disclosures, food/allergy/medical advice, or real child data.
+- [x] Write cards 01-06, 07-11, and 12-16 with disjoint world slugs from the Batch44-49 set.
+- [x] Use fields `id`, `title`, `worldSlug`, `ageBand`, `paragraphRevisionSkill`, `useCase`, `adultSetup`, `kidDirection`, `topicSentencePrompt`, `detailOrderPrompt`, `transitionCheckPrompt`, `closingSentencePrompt`, `repeatedWordCutPrompt`, `finalRevisedParagraphPrompt`, `quietOptionLine`, and `takeHomeLine`.
+- [x] Write tools with `adultGuide`, `paragraphRevisionRoutines`, `takeHomeParagraphRevisionSlips`, and `optionalAdultPrompts`.
+- [x] Keep all values ASCII, fictional, adult-led, offline, paper-only, and with writable blanks where applicable.
+- [x] Avoid unsafe terms: no spelling grades, scores, timers, uploads, recording, camera/photo/audio/video/voice-memo flow, public posting, accounts, real school/home identity details, private child profiles, diary-style personal disclosures, food/allergy/medical advice, or real child data.
 
 ### Task 2: RED Tests
 
 **Files:**
 - Create: `scripts/lined-paper-story-paragraph-revision-card-pack-builder.test.mjs`
 
-- [ ] Add failing tests that import nonexistent Batch50 validator and builder exports.
-- [ ] Assert source schema, exact lane paths, lane range ownership, banned scoring/upload/recording/private-data terms, rendered paragraph-revision fields, artifact path inspection, deterministic builder output, and committed product checkout-pending state.
-- [ ] Run `npx vitest run scripts/lined-paper-story-paragraph-revision-card-pack-builder.test.mjs --testTimeout 15000` and confirm expected import/export failure before implementation.
+- [x] Add failing tests that import nonexistent Batch50 validator and builder exports.
+- [x] Assert source schema, exact lane paths, lane range ownership, banned scoring/upload/recording/private-data terms, rendered paragraph-revision fields, artifact path inspection, deterministic builder output, and committed product checkout-pending state.
+- [x] Run `npx vitest run scripts/lined-paper-story-paragraph-revision-card-pack-builder.test.mjs --testTimeout 15000` and confirm expected import/export failure before implementation.
 
 ### Task 3: Validator And Builder Integration
 
@@ -41,10 +41,10 @@
 - Create: `scripts/lined-paper-story-paragraph-revision-card-pack-builder.mjs`
 - Modify: `package.json`
 
-- [ ] Add Batch50 slug and required artifact paths.
-- [ ] Add source and lane validators for 16 cards, 6 routines, 10 take-home paragraph revision slips, 8 optional prompts, exact world/age mapping, exact lane range split, writable blanks, and safety constraints.
-- [ ] Add the builder script and package scripts `image:batch50` and `product:lined-paper-paragraph-revision-pack`.
-- [ ] Run the focused Batch50 Vitest file until it is green.
+- [x] Add Batch50 slug and required artifact paths.
+- [x] Add source and lane validators for 16 cards, 6 routines, 10 take-home paragraph revision slips, 8 optional prompts, exact world/age mapping, exact lane range split, writable blanks, and safety constraints.
+- [x] Add the builder script and package scripts `image:batch50` and `product:lined-paper-paragraph-revision-pack`.
+- [x] Run the focused Batch50 Vitest file until it is green.
 
 ### Task 4: Product Source And Static Catalog
 
@@ -56,10 +56,10 @@
 - Modify: `src/App.test.tsx`
 - Create: `content/image-queue/2026-06-03-batch50-product-images.json`
 
-- [ ] Assemble source JSON from the lane files.
-- [ ] Add the checkout-pending product page entry with `$73`, mailto-only CTA, local image path, world summaries, bullets, and safety notes.
-- [ ] Add the product to `staticProducts` and route/link tests.
-- [ ] Add the local-only image manifest for the product image.
+- [x] Assemble source JSON from the lane files.
+- [x] Add the checkout-pending product page entry with `$73`, mailto-only CTA, local image path, world summaries, bullets, and safety notes.
+- [x] Add the product to `staticProducts` and route/link tests.
+- [x] Add the local-only image manifest for the product image.
 
 ### Task 5: Assets, Artifacts, And Verification
 
@@ -67,11 +67,15 @@
 - Create: `public/images/plotsprout/batch50/lined-paper-story-paragraph-revision-card-pack.jpg`
 - Create: `public/images/plotsprout/batch50/lined-paper-story-paragraph-revision-card-pack.webp`
 - Create: `content/image-runs/batch50/lined-paper-story-paragraph-revision-card-pack.json`
+- Create: `content/image-queue/2026-06-03-batch50-world-images.json`
+- Create: `public/images/plotsprout/batch50-worlds/*`
+- Create: `content/image-runs/batch50-worlds/*`
 - Create: `product-build/lined-paper-story-paragraph-revision-card-pack/*`
 - Modify: generated static route `lined-paper-story-paragraph-revision-card-pack/index.html`
 
-- [ ] Generate the local SDXL image with `PLOTSPROUT_MODELS_ROOT=/home/sam/claude-workspace/ComfyUI/models npm run image:batch50`.
-- [ ] Build the PDF/source/ZIP artifacts with `npm run product:lined-paper-paragraph-revision-pack`.
-- [ ] Run `npm run verify`, local Playwright desktop/mobile product and homepage checks, and browser console checks.
-- [ ] Request content/artifact and UI/static reviews before merge.
+- [x] Generate the local SDXL image with `PLOTSPROUT_MODELS_ROOT=/home/sam/claude-workspace/ComfyUI/models npm run image:batch50`.
+- [x] Generate local SDXL world images for disjoint Batch50 worlds not covered by Batch 4.
+- [x] Build the PDF/source/ZIP artifacts with `npm run product:lined-paper-paragraph-revision-pack`.
+- [x] Run `npm run verify`, local Playwright desktop/mobile product and homepage checks, and browser console checks.
+- [x] Request content/artifact and UI/static reviews before merge.
 - [ ] Commit, push the branch, merge/fast-forward main, push main, watch GitHub Actions deploy, live smoke, close TODO with `[skip ci]`, update memory, and leave checkout pending.

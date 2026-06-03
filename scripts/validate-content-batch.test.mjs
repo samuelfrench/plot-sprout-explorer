@@ -12,11 +12,14 @@ function readJson(relativePath) {
 
 function currentLocalImageCount() {
   const batch4Images = readJson('content/image-queue/2026-06-02-batch4-world-images.json').images.length
+  const expansionWorldImages = readdirSync(resolve(root, 'content', 'image-queue'))
+    .filter((fileName) => fileName.endsWith('-world-images.json') && fileName !== '2026-06-02-batch4-world-images.json')
+    .reduce((count, fileName) => count + readJson(`content/image-queue/${fileName}`).images.length, 0)
   const productImages = readdirSync(resolve(root, 'content', 'image-queue'))
     .filter((fileName) => fileName.endsWith('-product-images.json'))
     .reduce((count, fileName) => count + readJson(`content/image-queue/${fileName}`).images.length, 0)
 
-  return batch4Images + productImages
+  return batch4Images + expansionWorldImages + productImages
 }
 
 function currentProductArtifactCount() {

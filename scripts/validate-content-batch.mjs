@@ -49,6 +49,8 @@ import {
   validatePaperSleeveStorySentenceVarietyCardPackSourceFiles,
   validateClipboardStoryParagraphFocusCardPackSource,
   validateClipboardStoryParagraphFocusCardPackSourceFiles,
+  validateLinedPaperStoryParagraphRevisionCardPackSource,
+  validateLinedPaperStoryParagraphRevisionCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -128,6 +130,8 @@ const batch46ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch47ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch47-product-images.json')
 const batch48ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch48-product-images.json')
 const batch49ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch49-product-images.json')
+const batch50WorldImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch50-world-images.json')
+const batch50ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch50-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -171,6 +175,7 @@ const stickyNoteToneSourceFile = resolve(root, 'content', 'product-artifacts', '
 const washiTapeWordChoiceSourceFile = resolve(root, 'content', 'product-artifacts', 'washi-tape-story-word-choice-card-pack.json')
 const paperSleeveSentenceVarietySourceFile = resolve(root, 'content', 'product-artifacts', 'paper-sleeve-story-sentence-variety-card-pack.json')
 const clipboardParagraphFocusSourceFile = resolve(root, 'content', 'product-artifacts', 'clipboard-story-paragraph-focus-card-pack.json')
+const linedPaperParagraphRevisionSourceFile = resolve(root, 'content', 'product-artifacts', 'lined-paper-story-paragraph-revision-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -215,6 +220,8 @@ const batch46ProductImagesBatchId = '2026-06-03-batch46-product-images'
 const batch47ProductImagesBatchId = '2026-06-03-batch47-product-images'
 const batch48ProductImagesBatchId = '2026-06-03-batch48-product-images'
 const batch49ProductImagesBatchId = '2026-06-03-batch49-product-images'
+const batch50WorldImagesBatchId = '2026-06-03-batch50-world-images'
+const batch50ProductImagesBatchId = '2026-06-03-batch50-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -258,6 +265,7 @@ const stickyNoteToneBatchId = '2026-06-03-batch46'
 const washiTapeWordChoiceBatchId = '2026-06-03-batch47'
 const paperSleeveSentenceVarietyBatchId = '2026-06-03-batch48'
 const clipboardParagraphFocusBatchId = '2026-06-03-batch49'
+const linedPaperParagraphRevisionBatchId = '2026-06-03-batch50'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -630,6 +638,64 @@ function validateBatch4Image(image, imageSlugs, worldSlugs, worldSources) {
   expect(image.outputJpeg === `public/images/plotsprout/batch4/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
   expect(image.outputWebp === `public/images/plotsprout/batch4/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
   expect(image.sidecar === `content/image-runs/batch4/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+
+  for (const phrase of [
+    'family-friendly',
+    'no text',
+    'no letters',
+    'no logos',
+    'no watermark',
+    'no branded characters',
+    'no scary harm',
+    'no weapons',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  validateNoBannedTerms(image, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  validateString(sidecar.model, `${label}.sidecar.model`)
+  expect(sidecar.width >= 1344, `${label}.sidecar.width is too small.`)
+  expect(sidecar.height >= 768, `${label}.sidecar.height is too small.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar.seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
+function validateBatch50WorldImage(image, imageSlugs, worldSlugs, worldSources) {
+  const label = `2026-06-03-batch50-world-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of [
+    'slug',
+    'title',
+    'ageBand',
+    'seoLane',
+    'sourceWorldFile',
+    'prompt',
+    'outputJpeg',
+    'outputWebp',
+    'sidecar',
+  ]) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(/^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(image.slug), `${label}.slug must be lowercase kebab-case.`)
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 50 world images.`)
+  imageSlugs.add(image.slug)
+  expect(worldSlugs.has(image.slug), `${label}.slug does not reference a Batch 1 world.`)
+  expect(image.sourceWorldFile === worldSources.get(image.slug), `${label}.sourceWorldFile does not match source world file.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch50-worlds/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch50-worlds/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch50-worlds/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
 
   for (const phrase of [
     'family-friendly',
@@ -3914,6 +3980,111 @@ function validateBatch49ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch50ProductImage(image) {
+  const label = `2026-06-03-batch50-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'lined-paper-story-paragraph-revision-card-pack',
+    `${label}.slug must be lined-paper-story-paragraph-revision-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch50/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch50/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch50/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank lined paper',
+    'blank paragraph revision cards',
+    'empty writing areas',
+    'unbranded pencils',
+    'plain white background',
+    'lined paper story paragraph revision card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'coordinates',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'microphone',
+    'audio recorder',
+    'voice memo',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'contest',
+    'prize',
+    'food',
+    'tasting',
+    'allergy',
+    'medical',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar.negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -4263,6 +4434,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'clipboard-story-paragraph-focus-card-pack': {
       title: 'Clipboard Story Paragraph Focus Card Pack',
       pricePoint: '$71',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'lined-paper-story-paragraph-revision-card-pack': {
+      title: 'Lined Paper Story Paragraph Revision Card Pack',
+      pricePoint: '$73',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -5527,12 +5706,48 @@ expect(Array.isArray(batch49ProductImages.images), 'batch49 product image manife
 expect(batch49ProductImages.images.length === 1, `Expected 1 Batch 49 product image, found ${batch49ProductImages.images.length}.`)
 validateBatch49ProductImage(batch49ProductImages.images[0])
 
+expect(existsSync(batch50WorldImagesFile), `Missing Batch 50 world image manifest: ${batch50WorldImagesFile}`)
+const batch50WorldImages = readJson(batch50WorldImagesFile)
+expect(
+  batch50WorldImages.batchId === batch50WorldImagesBatchId,
+  `batch50 world image manifest batchId must be ${batch50WorldImagesBatchId}.`,
+)
+expect(batch50WorldImages.generatedAt === '2026-06-03', 'batch50 world image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch50WorldImages.images), 'batch50 world image manifest images must be an array.')
+expect(batch50WorldImages.images.length === 7, `Expected 7 Batch 50 world images, found ${batch50WorldImages.images.length}.`)
+const batch50WorldImageSlugs = new Set()
+batch50WorldImages.images.forEach((image) =>
+  validateBatch50WorldImage(image, batch50WorldImageSlugs, worldSlugs, worldSources),
+)
+for (const expectedSlug of [
+  'sticker-station-mail-cart',
+  'mitten-market-lost-ticket',
+  'paperclip-plaza-parcel-day',
+  'compost-clock-workshop',
+  'orchard-pulley-post',
+  'pond-bridge-blueprint-club',
+  'chapter-gate-greenhouse',
+]) {
+  expect(batch50WorldImageSlugs.has(expectedSlug), `Batch 50 world images missing ${expectedSlug}.`)
+}
+
+expect(existsSync(batch50ProductImagesFile), `Missing Batch 50 product image manifest: ${batch50ProductImagesFile}`)
+const batch50ProductImages = readJson(batch50ProductImagesFile)
+expect(
+  batch50ProductImages.batchId === batch50ProductImagesBatchId,
+  `batch50 product image manifest batchId must be ${batch50ProductImagesBatchId}.`,
+)
+expect(batch50ProductImages.generatedAt === '2026-06-03', 'batch50 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch50ProductImages.images), 'batch50 product image manifest images must be an array.')
+expect(batch50ProductImages.images.length === 1, `Expected 1 Batch 50 product image, found ${batch50ProductImages.images.length}.`)
+validateBatch50ProductImage(batch50ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 42, `Expected 42 product records, found ${products.products.length}.`)
+expect(products.products.length === 43, `Expected 43 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -5578,6 +5793,7 @@ for (const requiredProductSlug of [
   'washi-tape-story-word-choice-card-pack',
   'paper-sleeve-story-sentence-variety-card-pack',
   'clipboard-story-paragraph-focus-card-pack',
+  'lined-paper-story-paragraph-revision-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -8762,6 +8978,99 @@ for (const asset of clipboardParagraphFocusArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(linedPaperParagraphRevisionSourceFile), `Missing Batch 50 Lined Paper Story Paragraph Revision Card Pack source file: ${linedPaperParagraphRevisionSourceFile}`)
+const linedPaperParagraphRevisionSource = readJson(linedPaperParagraphRevisionSourceFile)
+expect(
+  linedPaperParagraphRevisionSource.batchId === linedPaperParagraphRevisionBatchId,
+  `Lined Paper Story Paragraph Revision Card Pack source batchId must be ${linedPaperParagraphRevisionBatchId}.`,
+)
+const linedPaperParagraphRevisionProduct = products.products.find(
+  (product) => product.slug === 'lined-paper-story-paragraph-revision-card-pack',
+)
+expect(
+  linedPaperParagraphRevisionProduct,
+  'Missing Lined Paper Story Paragraph Revision Card Pack product record for Batch 50 artifact validation.',
+)
+const linedPaperParagraphRevisionSourceErrors = validateLinedPaperStoryParagraphRevisionCardPackSource(
+  linedPaperParagraphRevisionSource,
+  linedPaperParagraphRevisionProduct,
+  worldAgeBands,
+)
+expect(
+  linedPaperParagraphRevisionSourceErrors.length === 0,
+  `Lined Paper Story Paragraph Revision Card Pack source failed validation:\n${linedPaperParagraphRevisionSourceErrors.join('\n')}`,
+)
+const linedPaperParagraphRevisionSourceFileErrors = validateLinedPaperStoryParagraphRevisionCardPackSourceFiles(
+  linedPaperParagraphRevisionSource,
+  root,
+)
+expect(
+  linedPaperParagraphRevisionSourceFileErrors.length === 0,
+  `Lined Paper Story Paragraph Revision Card Pack sourceFiles failed validation:\n${linedPaperParagraphRevisionSourceFileErrors.join('\n')}`,
+)
+const linedPaperParagraphRevisionExpectedPdfPages = linedPaperParagraphRevisionSource.cards.length + 5
+const linedPaperParagraphRevisionArtifactStatus = inspectArtifactFiles(root, linedPaperParagraphRevisionSource.artifact, {
+  expectedPdfPages: linedPaperParagraphRevisionExpectedPdfPages,
+  expectedZipEntries: [
+    'Lined-Paper-Story-Paragraph-Revision-Card-Pack.pdf',
+    'README.txt',
+    'source/lined-paper-story-paragraph-revision-card-pack.html',
+    ...linedPaperParagraphRevisionSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+  ],
+})
+expect(
+  linedPaperParagraphRevisionArtifactStatus.valid,
+  `Lined Paper Story Paragraph Revision Card Pack artifacts failed validation:\n${linedPaperParagraphRevisionArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  linedPaperParagraphRevisionArtifactStatus.files.pdf.size > 100_000,
+  `Lined Paper Story Paragraph Revision Card Pack PDF artifact is unexpectedly small: ${linedPaperParagraphRevisionArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  linedPaperParagraphRevisionArtifactStatus.files.pdf.pageCount === linedPaperParagraphRevisionExpectedPdfPages,
+  `Lined Paper Story Paragraph Revision Card Pack PDF artifact must have ${linedPaperParagraphRevisionExpectedPdfPages} pages.`,
+)
+expect(
+  linedPaperParagraphRevisionArtifactStatus.files.zip.size > linedPaperParagraphRevisionArtifactStatus.files.pdf.size,
+  'Lined Paper Story Paragraph Revision Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const linedPaperParagraphRevisionCheckoutErrors = validateCheckoutReadiness(
+  linedPaperParagraphRevisionProduct,
+  linedPaperParagraphRevisionArtifactStatus,
+)
+expect(
+  linedPaperParagraphRevisionCheckoutErrors.length === 0,
+  `Lined Paper Story Paragraph Revision Card Pack checkout readiness failed validation:\n${linedPaperParagraphRevisionCheckoutErrors.join('\n')}`,
+)
+const linedPaperParagraphRevisionArtifactManifest = readJson(resolve(root, linedPaperParagraphRevisionSource.artifact.manifestPath))
+expect(
+  linedPaperParagraphRevisionArtifactManifest.sourcePageCount === linedPaperParagraphRevisionSource.cards.length,
+  'Lined Paper Story Paragraph Revision Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(linedPaperParagraphRevisionArtifactManifest.files.assets),
+  'Lined Paper Story Paragraph Revision Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  linedPaperParagraphRevisionArtifactManifest.files.assets.length === linedPaperParagraphRevisionSource.worldSlugs.length,
+  'Lined Paper Story Paragraph Revision Card Pack artifact manifest must include one copied local image per source world.',
+)
+const linedPaperParagraphRevisionManifestAssetErrors = validateManifestWorldAssets(
+  linedPaperParagraphRevisionSource,
+  linedPaperParagraphRevisionArtifactManifest,
+)
+expect(
+  linedPaperParagraphRevisionManifestAssetErrors.length === 0,
+  `Lined Paper Story Paragraph Revision Card Pack artifact manifest image coverage failed validation:\n${linedPaperParagraphRevisionManifestAssetErrors.join('\n')}`,
+)
+for (const asset of linedPaperParagraphRevisionArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Lined Paper Story Paragraph Revision Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -8803,9 +9112,11 @@ const productImageManifests = [
   batch47ProductImages,
   batch48ProductImages,
   batch49ProductImages,
+  batch50ProductImages,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +
+  batch50WorldImageSlugs.size +
   productImageManifests.reduce((count, imageManifest) => count + imageManifest.images.length, 0)
 const productArtifactCount = readdirSync(resolve(root, 'content', 'product-artifacts')).filter((entry) =>
   entry.endsWith('.json'),
