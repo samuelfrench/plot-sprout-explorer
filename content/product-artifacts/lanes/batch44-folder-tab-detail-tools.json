@@ -1,0 +1,158 @@
+{
+  "laneId": "batch44-folder-tab-detail-tools",
+  "adultGuide": {
+    "title": "Folder Tab Detail Card Adult Guide",
+    "bullets": [
+      "Print the detail cards, blank slips, and folder-tab labels before the adult-led paper session.",
+      "Use folder tabs as paper props for labeling, sorting, pointing, filing, comparing, and revising invented story details.",
+      "Keep every detail fictional, broad, offline, and guided by an adult.",
+      "Focus detail work on visual clues, story objects, gentle actions, and mood words.",
+      "Replace narrow outside facts with made-up tab labels before anyone writes.",
+      "Send along only blank slips or invented examples that use made-up people and broad pretend places."
+    ]
+  },
+  "detailRoutines": [
+    {
+      "name": "Label the Detail",
+      "bestFor": "Writers who need one clear story detail before drafting.",
+      "steps": [
+        "The adult places a blank folder tab beside one detail card.",
+        "The writer chooses a broad tab label such as color, object, action, or mood.",
+        "The adult asks which made-up detail belongs under that label.",
+        "The writer writes one matching fictional detail: ____________________."
+      ]
+    },
+    {
+      "name": "Sort Three Details",
+      "bestFor": "Choosing useful details without crowding a sentence.",
+      "steps": [
+        "The adult lays out three blank slips and names one invented scene.",
+        "The writer sorts slips into visual, object, and action tabs.",
+        "The adult asks which tab gives the reader the clearest clue.",
+        "The writer writes the chosen detail under the tab: ____________________."
+      ]
+    },
+    {
+      "name": "Point to the Clue",
+      "bestFor": "Adding a detail that helps the reader notice one story clue.",
+      "steps": [
+        "The adult uses a folder tab as a pointer beside a made-up story object.",
+        "The writer names what the pointer helps the reader notice.",
+        "The adult asks whether the clue is visual, action, object, or mood.",
+        "The writer writes one pointed clue sentence: ____________________."
+      ]
+    },
+    {
+      "name": "File by Mood",
+      "bestFor": "Connecting a gentle mood word to a visible story detail.",
+      "steps": [
+        "The adult labels two tabs calm and curious.",
+        "The writer chooses one invented object or action for each tab.",
+        "The adult asks which tab better fits the next story moment.",
+        "The writer files one mood detail into a sentence: ____________________."
+      ]
+    },
+    {
+      "name": "Compare and Choose",
+      "bestFor": "Replacing a vague detail with a clearer fictional one.",
+      "steps": [
+        "The adult places two invented detail slips under one folder tab.",
+        "The writer compares which slip is easier to picture.",
+        "The adult asks what makes the clearer detail useful.",
+        "The writer writes the clearer revised detail: ____________________."
+      ]
+    },
+    {
+      "name": "Revise the Tab",
+      "bestFor": "Changing a too-broad label into a stronger story-detail label.",
+      "steps": [
+        "The adult reads the current folder-tab label aloud.",
+        "The writer chooses a more specific invented label that stays broad and safe.",
+        "The adult asks which detail now belongs under the revised label.",
+        "The writer writes the revised tab detail: ____________________."
+      ]
+    }
+  ],
+  "takeHomeDetailSlips": [
+    {
+      "title": "Color Tab",
+      "time": "One paper pass",
+      "skill": "visual detail",
+      "direction": "Label a pretend color tab and write one fictional detail under it: ____________________.",
+      "familyLine": "Ask which color clue helps the story picture: ____________________."
+    },
+    {
+      "title": "Object Tab",
+      "time": "Brief adult-led pass",
+      "skill": "object detail",
+      "direction": "File one made-up object under a folder tab and add one story detail: ____________________.",
+      "familyLine": "Ask what the object helps the reader notice: ____________________."
+    },
+    {
+      "title": "Action Tab",
+      "time": "Single printable slip",
+      "skill": "action detail",
+      "direction": "Sort one gentle fictional action onto a tab and write it in a sentence: ____________________.",
+      "familyLine": "Ask which action makes the moment easier to picture: ____________________."
+    },
+    {
+      "title": "Mood Tab",
+      "time": "Quiet paper pass",
+      "skill": "mood detail",
+      "direction": "Choose a calm mood tab and add one visible made-up clue for it: ____________________.",
+      "familyLine": "Ask which clue shows the mood on the page: ____________________."
+    },
+    {
+      "title": "Tiny Clue Tab",
+      "time": "One pencil pass",
+      "skill": "clue detail",
+      "direction": "Point a folder tab at one tiny fictional clue and write the clue clearly: ____________________.",
+      "familyLine": "Ask what the pointer helps the reader see: ____________________."
+    },
+    {
+      "title": "Compare Tabs",
+      "time": "Short paper pass",
+      "skill": "detail choice",
+      "direction": "Compare two invented details and choose the one that is easier to picture: ____________________.",
+      "familyLine": "Ask why that detail belongs on the folder tab: ____________________."
+    },
+    {
+      "title": "Revise a Label",
+      "time": "Fresh slip pass",
+      "skill": "label revision",
+      "direction": "Revise a vague tab label into a clearer made-up story label: ____________________.",
+      "familyLine": "Ask which label made the detail clearer: ____________________."
+    },
+    {
+      "title": "File the Setting Hint",
+      "time": "Calm story pass",
+      "skill": "broad setting detail",
+      "direction": "File one broad invented setting hint under a folder tab: ____________________.",
+      "familyLine": "Ask what hint tells the reader where the pretend moment happens: ____________________."
+    },
+    {
+      "title": "Object Plus Action",
+      "time": "Single card pass",
+      "skill": "combined detail",
+      "direction": "Put one made-up object and one gentle action under the same tab: ____________________.",
+      "familyLine": "Ask how the object and action fit together: ____________________."
+    },
+    {
+      "title": "Detail Swap",
+      "time": "Second pencil pass",
+      "skill": "detail revision",
+      "direction": "Swap a plain invented detail for a clearer visual story detail: ____________________.",
+      "familyLine": "Ask which swapped detail gives the reader more to picture: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the folder-tab label I chose is ____________________.",
+    "Optional adult-led offline prompt: one visual story detail under this tab is ____________________.",
+    "Optional adult-led offline prompt: the invented object I filed is ____________________.",
+    "Optional adult-led offline prompt: the gentle action detail I sorted is ____________________.",
+    "Optional adult-led offline prompt: the mood clue I pointed to is ____________________.",
+    "Optional adult-led offline prompt: the clearer detail after comparing is ____________________.",
+    "Optional adult-led offline prompt: the revised tab label is ____________________.",
+    "Optional adult-led offline prompt: an adult can add one broad made-up detail here: ____________________."
+  ]
+}
