@@ -1,0 +1,170 @@
+{
+  "laneId": "batch53-tabbed-folder-story-series-tools",
+  "adultGuide": {
+    "title": "Tabbed Folder Story Series Adult Guide",
+    "bullets": [
+      "Setup: choose one story folder, add three to five paper tabs, and label each tab with a simple story series part: ____________________.",
+      "Materials: keep blank pages, pencils, tab cards, paper clips, and a folder note sheet nearby before the adult-led session begins: ____________________.",
+      "Steps: help the writer place the current page behind the right tab, reread the last page softly, then plan the next page on paper: ____________________.",
+      "Safety: keep every name, place, and problem inside a made-up story world, and do not place child work online or ask for private details: ____________________.",
+      "Continuity: use the tab cards to track who is in the story series, what changed, and what the next page should remember: ____________________.",
+      "Reset: when the session ends, tuck loose pages into the story folder, mark the next tab to use, and write one adult reminder for later: ____________________."
+    ]
+  },
+  "seriesRoutines": [
+    {
+      "id": "tab-check-in",
+      "title": "Tab Check-In",
+      "time": "short folder start",
+      "adultSteps": [
+        "The adult opens the story folder and asks which tab holds the current page: ____________________.",
+        "The child points to the tab and names the made-up story series part: ____________________.",
+        "The adult reads the last two paper notes under that tab: ____________________.",
+        "The child chooses one note that must stay true on the next page: ____________________."
+      ],
+      "familyLine": "Today this story folder tab needs to remember: ____________________."
+    },
+    {
+      "id": "last-page-echo",
+      "title": "Last Page Echo",
+      "time": "quiet reread pass",
+      "adultSteps": [
+        "The adult reads the last page from the story folder while the child follows with a finger: ____________________.",
+        "The child circles one pretend character, place, or object that should return: ____________________.",
+        "The adult asks what changed on that last page: ____________________.",
+        "The child starts the next page by echoing one small detail without copying the whole line: ____________________."
+      ],
+      "familyLine": "The next page will echo this detail from the last page: ____________________."
+    },
+    {
+      "id": "series-thread-card",
+      "title": "Series Thread Card",
+      "time": "paper continuity note",
+      "adultSteps": [
+        "The adult hands over one tab card for the story series thread: ____________________.",
+        "The child writes the thread in a short phrase, such as lost key, moon map, or tiny boat: ____________________.",
+        "The adult asks how that thread appears on the current page: ____________________.",
+        "The child writes one next page reminder on the same tab card: ____________________."
+      ],
+      "familyLine": "The story series thread we are carrying forward is: ____________________."
+    },
+    {
+      "id": "next-page-bridge",
+      "title": "Next Page Bridge",
+      "time": "page-to-page planning",
+      "adultSteps": [
+        "The adult asks what the current page leaves unfinished in the pretend story: ____________________.",
+        "The child says one gentle question the next page can answer: ____________________.",
+        "The adult writes the question on a tab card and places it before the blank page: ____________________.",
+        "The child begins the next page with one sentence that answers or follows the question: ____________________."
+      ],
+      "familyLine": "Our next page will answer or follow this question: ____________________."
+    },
+    {
+      "id": "folder-order-walk",
+      "title": "Folder Order Walk",
+      "time": "multi-page order check",
+      "adultSteps": [
+        "The adult spreads the story folder pages in order beside the tabs: ____________________.",
+        "The child taps each page and says what happened there in one short phrase: ____________________.",
+        "The adult asks which page the new page should follow: ____________________.",
+        "The child places the new page behind the right tab and writes the page label: ____________________."
+      ],
+      "familyLine": "This new page belongs after: ____________________."
+    },
+    {
+      "id": "gentle-series-reset",
+      "title": "Gentle Series Reset",
+      "time": "calm stopping point",
+      "adultSteps": [
+        "The adult asks which page is done enough for today and places it in the story folder: ____________________.",
+        "The child chooses one tab card that needs a reminder for the next session: ____________________.",
+        "The adult writes a simple restart line, such as begin with the map or ask about the lantern: ____________________.",
+        "The child closes the folder and names the next page idea in one paper note: ____________________."
+      ],
+      "familyLine": "Next time, this story series can restart with: ____________________."
+    }
+  ],
+  "takeHomeSeriesSlips": [
+    {
+      "id": "home-tab-label-slip",
+      "title": "Home Tab Label Slip",
+      "adultLine": "Adult: help choose a clear tab label for the current story folder section: ____________________.",
+      "childLine": "Child: my tab label says: ____________________.",
+      "nextStepLine": "Next page: put the new page behind this tab: ____________________."
+    },
+    {
+      "id": "returning-detail-slip",
+      "title": "Returning Detail Slip",
+      "adultLine": "Adult: ask which pretend detail should return from the last page: ____________________.",
+      "childLine": "Child: the detail I will bring back is: ____________________.",
+      "nextStepLine": "Next page: use that detail in one new sentence: ____________________."
+    },
+    {
+      "id": "character-thread-slip",
+      "title": "Character Thread Slip",
+      "adultLine": "Adult: point to the tab card that tracks one made-up character: ____________________.",
+      "childLine": "Child: this character still wants or needs: ____________________.",
+      "nextStepLine": "Next page: show one tiny action from that character: ____________________."
+    },
+    {
+      "id": "place-reminder-slip",
+      "title": "Place Reminder Slip",
+      "adultLine": "Adult: ask which pretend place should stay the same across pages: ____________________.",
+      "childLine": "Child: my story place reminder is: ____________________.",
+      "nextStepLine": "Next page: add one matching place detail: ____________________."
+    },
+    {
+      "id": "object-carryover-slip",
+      "title": "Object Carryover Slip",
+      "adultLine": "Adult: help find one made-up object that should carry into the next page: ____________________.",
+      "childLine": "Child: the object I am carrying forward is: ____________________.",
+      "nextStepLine": "Next page: let the object help or change something: ____________________."
+    },
+    {
+      "id": "question-bridge-slip",
+      "title": "Question Bridge Slip",
+      "adultLine": "Adult: write one gentle story question on a tab card: ____________________.",
+      "childLine": "Child: my next page question is: ____________________.",
+      "nextStepLine": "Next page: answer the question with one story action: ____________________."
+    },
+    {
+      "id": "page-order-slip",
+      "title": "Page Order Slip",
+      "adultLine": "Adult: lay out the story folder pages and ask where the new page belongs: ____________________.",
+      "childLine": "Child: this page comes after: ____________________.",
+      "nextStepLine": "Next page: write the page label before starting: ____________________."
+    },
+    {
+      "id": "same-world-slip",
+      "title": "Same World Slip",
+      "adultLine": "Adult: ask what rule or detail makes this story world feel connected: ____________________.",
+      "childLine": "Child: one thing that stays true in my story series is: ____________________.",
+      "nextStepLine": "Next page: keep that rule or detail in the new scene: ____________________."
+    },
+    {
+      "id": "small-change-slip",
+      "title": "Small Change Slip",
+      "adultLine": "Adult: ask what small change should happen next without losing the story thread: ____________________.",
+      "childLine": "Child: the small change I choose is: ____________________.",
+      "nextStepLine": "Next page: write the change after one familiar detail: ____________________."
+    },
+    {
+      "id": "restart-note-slip",
+      "title": "Restart Note Slip",
+      "adultLine": "Adult: write one restart note before closing the story folder: ____________________.",
+      "childLine": "Child: next time I want to begin with: ____________________.",
+      "nextStepLine": "Next page: read this note first, then write one new line: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the story folder tab we are using today is ____________________.",
+    "Optional adult-led offline prompt: the last page detail to remember is ____________________.",
+    "Optional adult-led offline prompt: the next page should begin after ____________________.",
+    "Optional adult-led offline prompt: the story series thread on this tab card is ____________________.",
+    "Optional adult-led offline prompt: one made-up character needs to remember ____________________.",
+    "Optional adult-led offline prompt: one pretend place detail that stays true is ____________________.",
+    "Optional adult-led offline prompt: the small change for the next page is ____________________.",
+    "Optional adult-led offline prompt: the restart note for this story folder is ____________________."
+  ]
+}
