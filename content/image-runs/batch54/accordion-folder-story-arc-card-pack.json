@@ -1,0 +1,18 @@
+{
+  "slug": "accordion-folder-story-arc-card-pack",
+  "prompt": "family-friendly studio product mockup of accordion folder story arc card pack, orthographic top-down view, open blank accordion folder with five visible paper pockets, blank story-arc cards tucked into pockets, empty writing areas, unbranded pencils, quiet printable writing kit, seamless plain white background, clean shadow, only paper and pencils, no text",
+  "negativePrompt": "text, readable writing, letters, labels, logo, watermark, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, phone, tablet, laptop, computer, screen, device, microphone, audio recorder, voice memo, camera, photo, recording, transcription, account login, portal, qr code, upload icon, public post, public review, rating, score, grade, timer, contest, prize, food, tasting, allergy, medical, scary, weapon, fight, bullying, plants, leaves, bowls, cups, plates, seeds, desk decor, pots",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "checkpoint",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 260654081,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch54/accordion-folder-story-arc-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch54/accordion-folder-story-arc-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-03-batch54-images.json",
+  "title": "Accordion Folder Story Arc Card Pack"
+}

@@ -61,6 +61,7 @@
     "image:batch51": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch51-product-images.json",
     "image:batch52": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch52-images.json",
     "image:batch53": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch53-images.json",
+    "image:batch54": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch54-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -106,7 +107,8 @@
     "product:lined-paper-paragraph-revision-pack": "node scripts/lined-paper-story-paragraph-revision-card-pack-builder.mjs",
     "product:composition-notebook-draft-checklist-pack": "node scripts/composition-notebook-story-draft-checklist-card-pack-builder.mjs",
     "product:spiral-notebook-final-copy-pack": "node scripts/spiral-notebook-story-final-copy-card-pack-builder.mjs",
-    "product:tabbed-folder-series-pack": "node scripts/tabbed-folder-story-series-card-pack-builder.mjs"
+    "product:tabbed-folder-series-pack": "node scripts/tabbed-folder-story-series-card-pack-builder.mjs",
+    "product:accordion-folder-arc-pack": "node scripts/accordion-folder-story-arc-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

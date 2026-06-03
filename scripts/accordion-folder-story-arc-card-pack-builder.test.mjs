@@ -543,6 +543,7 @@ describe('Accordion Folder Story Arc Card Pack policy', () => {
     expect(html).toContain('Ending return')
     expect(html).toContain('Arc folder note')
     expect(html).toContain('assets/solar-oven-picnic-station.jpg')
+    expect(html).not.toMatch(/tabbed folder/i)
   })
 
   it('requires a local card-world image before building artifacts', async () => {

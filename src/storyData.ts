@@ -638,6 +638,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable tabbed folder story-series cards with adult guide tools, series routines, and take-home series slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'accordion-folder-story-arc-card-pack',
+    title: 'Accordion Folder Story Arc Card Pack',
+    pricePoint: '$81',
+    description:
+      'Sixteen printable accordion folder story-arc cards with adult guide tools, arc routines, and take-home arc slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

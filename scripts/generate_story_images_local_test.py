@@ -10,11 +10,14 @@ import json
 import subprocess
 import sys
 import tempfile
+import types
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).resolve().parent))
 
+import generate_story_images_local as generator_module
 from generate_story_images_local import NEGATIVE_PROMPT, ROOT, generate_job, manifest_jobs
 
 
@@ -155,6 +158,66 @@ assert callable(manifest_jobs)
         self.assertEqual(written_sidecar["negativePrompt"], custom_negative_prompt)
         self.assertEqual(written_sidecar["manifest"], "content/image-queue/test-manifest.json")
         self.assertNotIn("elapsedSeconds", written_sidecar)
+
+    def test_load_pipeline_can_use_checkpoint_embedded_vae_without_external_repo(self) -> None:
+        calls = {"external_vae": 0, "pipeline_kwargs": {}}
+
+        class FakeTorch:
+            float16 = "float16"
+
+        class FakeAutoencoderKL:
+            @staticmethod
+            def from_pretrained(*_args, **_kwargs):
+                calls["external_vae"] += 1
+                return object()
+
+        class FakeScheduler:
+            config = {"fake": "config"}
+
+        class FakePipeline:
+            def __init__(self) -> None:
+                self.scheduler = FakeScheduler()
+
+            @classmethod
+            def from_single_file(cls, *_args, **kwargs):
+                calls["pipeline_kwargs"] = kwargs
+                return cls()
+
+            def enable_freeu(self, **_kwargs) -> None:
+                return None
+
+            def to(self, _device: str) -> None:
+                return None
+
+            def set_progress_bar_config(self, **_kwargs) -> None:
+                return None
+
+        class FakeDPMSolverMultistepScheduler:
+            @staticmethod
+            def from_config(_config, **_kwargs):
+                return FakeScheduler()
+
+        fake_diffusers = types.SimpleNamespace(
+            AutoencoderKL=FakeAutoencoderKL,
+            DPMSolverMultistepScheduler=FakeDPMSolverMultistepScheduler,
+            StableDiffusionXLPipeline=FakePipeline,
+        )
+
+        with tempfile.TemporaryDirectory(dir=ROOT) as temp_dir:
+            checkpoint_path = Path(temp_dir) / "sd_xl_base_1.0.safetensors"
+            checkpoint_path.write_bytes(b"fake checkpoint")
+            with patch.object(generator_module, "SDXL_BASE_CHECKPOINT", checkpoint_path), patch.object(
+                generator_module,
+                "SDXL_VAE_REPO",
+                "checkpoint",
+            ), patch.object(generator_module, "load_torch", return_value=FakeTorch()), patch.dict(
+                sys.modules,
+                {"diffusers": fake_diffusers},
+            ):
+                generator_module.load_pipeline()
+
+        self.assertEqual(calls["external_vae"], 0)
+        self.assertNotIn("vae", calls["pipeline_kwargs"])
 
 
 if __name__ == "__main__":

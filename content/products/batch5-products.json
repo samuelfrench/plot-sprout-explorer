@@ -4592,6 +4592,130 @@
           "summary": "A moon market world for ending with one quiet next-page idea."
         }
       ]
+    },
+    {
+      "slug": "accordion-folder-story-arc-card-pack",
+      "title": "Accordion Folder Story Arc Card Pack",
+      "pricePoint": "$81",
+      "status": "checkout_pending",
+      "headline": "A printable accordion folder card pack for private paper story arcs.",
+      "summary": "Sixteen adult-led accordion folder cards help kids shape one fictional arc from beginning through middle change, choice, consequence, and ending return.",
+      "heroImage": "images/plotsprout/batch54/accordion-folder-story-arc-card-pack.jpg",
+      "ctaLabel": "Request story arc card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Accordion%20Folder%20Story%20Arc%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static accordion folder story arc card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "acorn-avenue-errand-office",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "sticker-station-mail-cart",
+        "spoon-ferry-lunchbox-harbor",
+        "solar-oven-picnic-station",
+        "paperclip-plaza-parcel-day",
+        "penny-path-compass-shop",
+        "tidepool-timekeepers-lab",
+        "rain-gauge-railway",
+        "compost-clock-workshop",
+        "seed-library-map-room",
+        "moss-message-observatory",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "greenhouse-gear-garden"
+      ],
+      "includedPages": [
+        "Sixteen printable accordion folder story-arc cards",
+        "Adult setup guide",
+        "Fictional story-arc safety notes",
+        "Beginning pocket prompts",
+        "Middle change and choice bridge prompts",
+        "Consequence and ending return prompts",
+        "Arc folder note prompts",
+        "Six adult-led story-arc routines",
+        "Ten take-home story-arc slips",
+        "Local image-backed world menu",
+        "Printable PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one quiet folder path from beginning to ending",
+        "A tutoring or co-op table where writers sort arc pieces into visible pockets",
+        "A calm pencil activity for linking one character choice to one result",
+        "A reluctant-writer activity that turns story structure into six small paper routines",
+        "A take-home story-arc slip set for continuing one folder note offline"
+      ],
+      "parentSteps": [
+        "Choose one story-arc routine before the activity starts.",
+        "Set the accordion folder, cards, blank pages, pencils, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full page note.",
+        "Move from beginning to middle change, choice bridge, consequence, ending return, and arc folder note.",
+        "Send one story-arc slip with a single blank so family adults can continue the folder offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for returning to one folder clue at the end."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button map world for moving one mixed-up symbol through the arc."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup window world for changing one weather sign and bringing it back."
+        },
+        {
+          "slug": "sticker-station-mail-cart",
+          "summary": "A sticker station world for sorting a first card into a final meaning."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for carrying one dock note from start to finish."
+        },
+        {
+          "slug": "solar-oven-picnic-station",
+          "summary": "A solar station world for using one paper gauge note across the arc."
+        },
+        {
+          "slug": "paperclip-plaza-parcel-day",
+          "summary": "A paperclip plaza world for returning one parcel tag as the ending answer."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "summary": "A compass shop world for saving one folded slip and pointing it back at the ending."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool timekeeper world for carrying one question through the middle."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain gauge railway world for explaining what changed by the final note."
+        },
+        {
+          "slug": "compost-clock-workshop",
+          "summary": "A compost clock world for turning a first mix-up into a calm ending."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed map world for planting one beginning detail that returns later."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for keeping the middle change tied to the opening."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for bringing one choice back at the end."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for keeping one pretend goal pointed through the arc."
+        },
+        {
+          "slug": "greenhouse-gear-garden",
+          "summary": "A gear garden world for closing the folder with one reset note."
+        }
+      ]
     }
   ]
 }

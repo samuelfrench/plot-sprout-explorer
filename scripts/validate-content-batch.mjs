@@ -57,6 +57,8 @@ import {
   validateSpiralNotebookStoryFinalCopyCardPackSourceFiles,
   validateTabbedFolderStorySeriesCardPackSource,
   validateTabbedFolderStorySeriesCardPackSourceFiles,
+  validateAccordionFolderStoryArcCardPackSource,
+  validateAccordionFolderStoryArcCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -141,6 +143,7 @@ const batch50ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch51ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch51-product-images.json')
 const batch52ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch52-images.json')
 const batch53ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch53-images.json')
+const batch54ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch54-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -203,6 +206,12 @@ const tabbedFolderStorySeriesSourceFile = resolve(
   'product-artifacts',
   'tabbed-folder-story-series-card-pack.json',
 )
+const accordionFolderStoryArcSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'accordion-folder-story-arc-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -252,6 +261,7 @@ const batch50ProductImagesBatchId = '2026-06-03-batch50-product-images'
 const batch51ProductImagesBatchId = '2026-06-03-batch51-product-images'
 const batch52ImagesBatchId = '2026-06-03-batch52-images'
 const batch53ImagesBatchId = '2026-06-03-batch53-images'
+const batch54ImagesBatchId = '2026-06-03-batch54-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -299,6 +309,7 @@ const linedPaperParagraphRevisionBatchId = '2026-06-03-batch50'
 const compositionNotebookDraftChecklistBatchId = '2026-06-03-batch51'
 const spiralNotebookFinalCopyBatchId = '2026-06-03-batch52'
 const tabbedFolderStorySeriesBatchId = '2026-06-03-batch53'
+const accordionFolderStoryArcBatchId = '2026-06-03-batch54'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -4490,6 +4501,110 @@ function validateBatch53Image(image, imageSlugs, worldSlugs, worldSources) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch54Image(image, imageSlugs) {
+  const label = `2026-06-03-batch54-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.slug === 'accordion-folder-story-arc-card-pack', `${label}.slug must be accordion-folder-story-arc-card-pack.`)
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 54 images.`)
+  imageSlugs.add(image.slug)
+  expect(image.outputJpeg === `public/images/plotsprout/batch54/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch54/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch54/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'orthographic top-down view',
+    'blank accordion folder',
+    'blank story-arc cards',
+    'empty writing areas',
+    'unbranded pencils',
+    'plain white background',
+    'accordion folder story arc card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'coordinates',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'microphone',
+    'audio recorder',
+    'voice memo',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'contest',
+    'prize',
+    'food',
+    'tasting',
+    'allergy',
+    'medical',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -4871,6 +4986,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'tabbed-folder-story-series-card-pack': {
       title: 'Tabbed Folder Story Series Card Pack',
       pricePoint: '$79',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'accordion-folder-story-arc-card-pack': {
+      title: 'Accordion Folder Story Arc Card Pack',
+      pricePoint: '$81',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -6212,12 +6335,28 @@ for (const expectedSlug of ['appendix-archive-lab', 'tabbed-folder-story-series-
   expect(batch53ImageSlugs.has(expectedSlug), `Batch 53 images missing ${expectedSlug}.`)
 }
 
+expect(existsSync(batch54ImagesFile), `Missing Batch 54 image manifest: ${batch54ImagesFile}`)
+const batch54Images = readJson(batch54ImagesFile)
+expect(
+  batch54Images.batchId === batch54ImagesBatchId,
+  `batch54 image manifest batchId must be ${batch54ImagesBatchId}.`,
+)
+expect(batch54Images.generatedAt === '2026-06-03', 'batch54 image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch54Images.images), 'batch54 image manifest images must be an array.')
+expect(batch54Images.images.length === 1, `Expected 1 Batch 54 image, found ${batch54Images.images.length}.`)
+const batch54ImageSlugs = new Set()
+batch54Images.images.forEach((image) => validateBatch54Image(image, batch54ImageSlugs))
+expect(
+  batch54ImageSlugs.has('accordion-folder-story-arc-card-pack'),
+  'Batch 54 images missing accordion-folder-story-arc-card-pack.',
+)
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 46, `Expected 46 product records, found ${products.products.length}.`)
+expect(products.products.length === 47, `Expected 47 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -6267,6 +6406,7 @@ for (const requiredProductSlug of [
   'composition-notebook-story-draft-checklist-card-pack',
   'spiral-notebook-story-final-copy-card-pack',
   'tabbed-folder-story-series-card-pack',
+  'accordion-folder-story-arc-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -9834,6 +9974,102 @@ for (const asset of tabbedFolderStorySeriesArtifactManifest.files.assets) {
   )
 }
 
+expect(
+  existsSync(accordionFolderStoryArcSourceFile),
+  `Missing Batch 54 Accordion Folder Story Arc Card Pack source file: ${accordionFolderStoryArcSourceFile}`,
+)
+const accordionFolderStoryArcSource = readJson(accordionFolderStoryArcSourceFile)
+expect(
+  accordionFolderStoryArcSource.batchId === accordionFolderStoryArcBatchId,
+  `Accordion Folder Story Arc Card Pack source batchId must be ${accordionFolderStoryArcBatchId}.`,
+)
+const accordionFolderStoryArcProduct = products.products.find(
+  (product) => product.slug === 'accordion-folder-story-arc-card-pack',
+)
+expect(
+  accordionFolderStoryArcProduct,
+  'Missing Accordion Folder Story Arc Card Pack product record for Batch 54 artifact validation.',
+)
+const accordionFolderStoryArcSourceErrors = validateAccordionFolderStoryArcCardPackSource(
+  accordionFolderStoryArcSource,
+  accordionFolderStoryArcProduct,
+  worldAgeBands,
+)
+expect(
+  accordionFolderStoryArcSourceErrors.length === 0,
+  `Accordion Folder Story Arc Card Pack source failed validation:\n${accordionFolderStoryArcSourceErrors.join('\n')}`,
+)
+const accordionFolderStoryArcSourceFileErrors = validateAccordionFolderStoryArcCardPackSourceFiles(
+  accordionFolderStoryArcSource,
+  root,
+)
+expect(
+  accordionFolderStoryArcSourceFileErrors.length === 0,
+  `Accordion Folder Story Arc Card Pack sourceFiles failed validation:\n${accordionFolderStoryArcSourceFileErrors.join('\n')}`,
+)
+const accordionFolderStoryArcExpectedPdfPages = accordionFolderStoryArcSource.cards.length + 5
+const accordionFolderStoryArcArtifactStatus = inspectArtifactFiles(root, accordionFolderStoryArcSource.artifact, {
+  expectedPdfPages: accordionFolderStoryArcExpectedPdfPages,
+  expectedZipEntries: [
+    'Accordion-Folder-Story-Arc-Card-Pack.pdf',
+    'README.txt',
+    'source/accordion-folder-story-arc-card-pack.html',
+    ...accordionFolderStoryArcSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+  ],
+})
+expect(
+  accordionFolderStoryArcArtifactStatus.valid,
+  `Accordion Folder Story Arc Card Pack artifacts failed validation:\n${accordionFolderStoryArcArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  accordionFolderStoryArcArtifactStatus.files.pdf.size > 100_000,
+  `Accordion Folder Story Arc Card Pack PDF artifact is unexpectedly small: ${accordionFolderStoryArcArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  accordionFolderStoryArcArtifactStatus.files.pdf.pageCount === accordionFolderStoryArcExpectedPdfPages,
+  `Accordion Folder Story Arc Card Pack PDF artifact must have ${accordionFolderStoryArcExpectedPdfPages} pages.`,
+)
+expect(
+  accordionFolderStoryArcArtifactStatus.files.zip.size > accordionFolderStoryArcArtifactStatus.files.pdf.size,
+  'Accordion Folder Story Arc Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const accordionFolderStoryArcCheckoutErrors = validateCheckoutReadiness(
+  accordionFolderStoryArcProduct,
+  accordionFolderStoryArcArtifactStatus,
+)
+expect(
+  accordionFolderStoryArcCheckoutErrors.length === 0,
+  `Accordion Folder Story Arc Card Pack checkout readiness failed validation:\n${accordionFolderStoryArcCheckoutErrors.join('\n')}`,
+)
+const accordionFolderStoryArcArtifactManifest = readJson(resolve(root, accordionFolderStoryArcSource.artifact.manifestPath))
+expect(
+  accordionFolderStoryArcArtifactManifest.sourcePageCount === accordionFolderStoryArcSource.cards.length,
+  'Accordion Folder Story Arc Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(accordionFolderStoryArcArtifactManifest.files.assets),
+  'Accordion Folder Story Arc Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  accordionFolderStoryArcArtifactManifest.files.assets.length === accordionFolderStoryArcSource.worldSlugs.length,
+  'Accordion Folder Story Arc Card Pack artifact manifest must include one copied local image per source world.',
+)
+const accordionFolderStoryArcManifestAssetErrors = validateManifestWorldAssets(
+  accordionFolderStoryArcSource,
+  accordionFolderStoryArcArtifactManifest,
+)
+expect(
+  accordionFolderStoryArcManifestAssetErrors.length === 0,
+  `Accordion Folder Story Arc Card Pack artifact manifest image coverage failed validation:\n${accordionFolderStoryArcManifestAssetErrors.join('\n')}`,
+)
+for (const asset of accordionFolderStoryArcArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Accordion Folder Story Arc Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -9879,6 +10115,7 @@ const productImageManifests = [
   batch51ProductImages,
   batch52Images,
   batch53Images,
+  batch54Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

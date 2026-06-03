@@ -1,0 +1,1081 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accordion Folder Story Arc Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-arc-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-arc-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-arc-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable accordion folder story-arc cards</p>
+        <h1>Accordion Folder Story Arc Card Pack</h1>
+        <p>Sixteen accordion folder cards help writers sort a private fictional story arc into beginning, middle change, choice bridge, consequence, and ending return notes.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable accordion folder story-arc cards plus adult guide tools, arc routines, take-home arc slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$81</span>
+        <h2>Included</h2>
+        <ul><li>16 printable accordion folder story-arc cards</li>
+<li>Adult setup guide</li>
+<li>Fictional story-arc safety notes</li>
+<li>Accordion folder arc moves</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led story-arc routines</li>
+<li>Ten take-home story-arc slips</li>
+<li>Eight optional adult prompts</li>
+<li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story-arc coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Accordion Folder Story Arc Adult Guide</h3><ul><li>Setup: print the cards, blank slips, and one accordion folder sheet, then label the paper pockets before writing begins: ____________________.</li>
+<li>Beginning pocket: help the writer choose one pretend fact, object, place, or character note that starts the story arc: ____________________.</li>
+<li>Middle change pocket: move one paper note forward when something gentle shifts in the fictional story world: ____________________.</li>
+<li>Choice bridge: place a folded bridge slip between the middle change pocket and the consequence note so the arc movement stays visible: ____________________.</li>
+<li>Ending return: use the final pocket for one detail that comes back calmly near the finish, then add a reset note behind it: ____________________.</li>
+<li>Keep the whole activity adult-led, made-up, offline, paper-only, and broad enough for invented details only: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one accordion folder story-arc card at a time. Keep every choice broad, invented, paper-only, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen story-arc card worlds</h2>
+      <p>Pick a world image, then shape one fictional story draft with a pretend accordion folder story-arc card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Sticker Station Mail Cart</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Solar Oven Picnic Station</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Paperclip Plaza Parcel Day</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Compost Clock Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Greenhouse Gear Garden</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Story-arc routines</p>
+      <h2>Choose the accordion folder story arc routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">short folder start</p>
+      <h3>Beginning Pocket Sort</h3>
+      <ol><li>The adult opens the accordion folder to the beginning pocket and places one blank note inside: ____________________.</li>
+<li>The child chooses one invented starter detail for the first pocket: ____________________.</li>
+<li>The adult asks what the story reader should know first in this pretend world: ____________________.</li>
+<li>The child writes or dictates the beginning pocket note on paper: ____________________.</li></ol>
+      <p>The beginning pocket starts the story arc with: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">middle movement pass</p>
+      <h3>Middle Change Lift</h3>
+      <ol><li>The adult rereads the beginning pocket note and points to the middle change pocket: ____________________.</li>
+<li>The child chooses one small made-up change that can move the story arc forward: ____________________.</li>
+<li>The adult asks how that change makes the pretend character notice something new: ____________________.</li>
+<li>The child writes the middle change note and tucks it into the pocket: ____________________.</li></ol>
+      <p>The middle change pocket moves the story because: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">bridge planning pass</p>
+      <h3>Choice Bridge Fold</h3>
+      <ol><li>The adult places one folded choice bridge slip between the middle change pocket and the next paper note: ____________________.</li>
+<li>The child says one gentle choice the pretend character can make next: ____________________.</li>
+<li>The adult asks what the choice connects from the middle change to the consequence note: ____________________.</li>
+<li>The child writes the choice bridge line across the folded slip: ____________________.</li></ol>
+      <p>The choice bridge connects the change to this next move: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">cause-and-result pass</p>
+      <h3>Consequence Note Chain</h3>
+      <ol><li>The adult lays the consequence note after the choice bridge so the folder shows the next arc step: ____________________.</li>
+<li>The child explains what happens because of the pretend choice: ____________________.</li>
+<li>The adult keeps the consequence small, safe, and useful for the fictional arc: ____________________.</li>
+<li>The child writes one consequence note and places it after the bridge: ____________________.</li></ol>
+      <p>The consequence note follows the choice because: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">ending return pass</p>
+      <h3>Ending Return Pocket</h3>
+      <ol><li>The adult opens the ending return pocket and rereads one earlier folder note: ____________________.</li>
+<li>The child chooses one detail from the beginning or middle that can return near the finish: ____________________.</li>
+<li>The adult asks how the returning detail helps the story feel closed on paper: ____________________.</li>
+<li>The child writes the ending return note and tucks it into the final pocket: ____________________.</li></ol>
+      <p>The ending return pocket brings back this detail: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">folder reset pass</p>
+      <h3>Reset Note Close</h3>
+      <ol><li>The adult checks the folder order: beginning pocket, middle change pocket, choice bridge, consequence note, and ending return: ____________________.</li>
+<li>The child taps one pocket that should be remembered for the next paper pass: ____________________.</li>
+<li>The adult writes a reset note that names where to restart in the accordion folder: ____________________.</li>
+<li>The child closes the folder after adding one final pencil reminder: ____________________.</li></ol>
+      <p>The reset note says to restart with: ____________________.</p>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home story arc slips</p>
+      <h2>Try one story arc later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story arc slip</p>
+      <h3>Beginning Pocket Slip</h3>
+      <p>Adult: open the beginning pocket and ask for one invented starter detail: ____________________.</p>
+      <p>Child: my beginning pocket note says: ____________________.</p>
+      <p>Next paper step: place the note in the first accordion folder pocket: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story arc slip</p>
+      <h3>Middle Change Slip</h3>
+      <p>Adult: point from the beginning pocket to the middle change pocket: ____________________.</p>
+      <p>Child: the small pretend change is: ____________________.</p>
+      <p>Next paper step: move the arc forward with one new note: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story arc slip</p>
+      <h3>Choice Bridge Slip</h3>
+      <p>Adult: place a folded choice bridge between the middle change and the consequence note: ____________________.</p>
+      <p>Child: the pretend choice on my bridge is: ____________________.</p>
+      <p>Next paper step: connect the choice to what happens next: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story arc slip</p>
+      <h3>Consequence Note Slip</h3>
+      <p>Adult: ask what happens because of the made-up choice: ____________________.</p>
+      <p>Child: the consequence note says: ____________________.</p>
+      <p>Next paper step: place the consequence after the choice bridge: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story arc slip</p>
+      <h3>Ending Return Slip</h3>
+      <p>Adult: reread one earlier pocket note before opening the ending return pocket: ____________________.</p>
+      <p>Child: the detail that comes back is: ____________________.</p>
+      <p>Next paper step: write how the returning detail helps close the arc: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story arc slip</p>
+      <h3>Reset Note Slip</h3>
+      <p>Adult: choose one pocket that should guide the next paper session: ____________________.</p>
+      <p>Child: my reset note begins with: ____________________.</p>
+      <p>Next paper step: tuck the reset note behind the ending return pocket: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story arc slip</p>
+      <h3>Pocket Order Slip</h3>
+      <p>Adult: lay the folder notes in order from beginning pocket to ending return: ____________________.</p>
+      <p>Child: the pocket order I see is: ____________________.</p>
+      <p>Next paper step: put one note back in the pocket where it belongs: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story arc slip</p>
+      <h3>Object Return Slip</h3>
+      <p>Adult: ask which pretend object can travel through the story arc: ____________________.</p>
+      <p>Child: the object I will bring back is: ____________________.</p>
+      <p>Next paper step: place the object note in the ending return pocket: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story arc slip</p>
+      <h3>Gentle Fork Slip</h3>
+      <p>Adult: offer two calm pretend choices for the bridge slip: ____________________.</p>
+      <p>Child: the choice I pick is: ____________________.</p>
+      <p>Next paper step: write one consequence note after the choice: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home story arc slip</p>
+      <h3>Arc Close Slip</h3>
+      <p>Adult: point to the beginning pocket and ask what should feel settled by the end: ____________________.</p>
+      <p>Child: the story arc feels settled when: ____________________.</p>
+      <p>Next paper step: write the ending return note, then add a reset note: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the beginning pocket opens with ____________________.</li>
+<li>Optional adult-led offline prompt: the middle change pocket now says ____________________.</li>
+<li>Optional adult-led offline prompt: the choice bridge asks the character to choose ____________________.</li>
+<li>Optional adult-led offline prompt: the consequence note follows because ____________________.</li>
+<li>Optional adult-led offline prompt: the ending return brings back ____________________.</li>
+<li>Optional adult-led offline prompt: the reset note reminds us to restart with ____________________.</li>
+<li>Optional adult-led offline prompt: the accordion folder order today is ____________________.</li>
+<li>Optional adult-led offline prompt: one paper-only story arc move to keep is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 1 | Ages 7-9 | anchor an acorn errand beginning, carry one desk change, bridge a helper choice, show a small result, and return to the first folder clue</div>
+      <h2>Acorn Avenue Errand Desk Story Arc Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place an accordion folder, blank paper, pencil, and one pretend acorn errand slip near the writer before starting: ____________________.</p>
+      <p class="kid-direction">Writer: sort the acorn errand into a beginning pocket, middle change pocket, choice bridge pocket, result pocket, and ending return pocket: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write who finds the acorn errand slip and what first desk clue starts the arc: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: add one small change, such as a missing clip, new stamp mark, or shifted folder flap: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose how the helper handles the new folder clue with a paper-only action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write the gentle story result of that choice at the errand desk: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first acorn slip or folder flap so the arc feels connected: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: label one accordion folder pocket with the beginning clue, middle change, or ending return: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the beginning clue and ending return blanks for the acorn errand: ____________________. Later paper line: start another Acorn Avenue errand arc with one folder clue and one return note: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 2 | Ages 7-9 | move a button-map mixup from first clue to middle change, choice bridge, result, ending return, and folder note</div>
+      <h2>Button Bakery Map Mixup Story Arc Card</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out blank paper, a pencil, the accordion folder, and a pretend button map made only for this story: ____________________.</p>
+      <p class="kid-direction">Writer: make the map mixup begin with one button marker, change in the middle, and return to the first marker at the end: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write which helper finds the mixed-up button map and what marker starts the story arc: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: add one new paper symbol that makes the map point differently: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose whether the helper follows the old marker, the new symbol, or a folded map corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write the story result that happens because the helper chose one map clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first button marker in a calmer, clearer way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: tuck a map-mixup note into the pocket named beginning, middle, choice, result, or return: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw or write only the first button marker and the ending return marker: ____________________. Later paper line: make another button-map arc with one mixed-up symbol and one return marker: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 3 | Ages 7-8 | show a weather-window beginning, one middle sky change, a choice bridge, gentle result, ending return, and folder note</div>
+      <h2>Teacup Town Weather Window Story Arc Card</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card, blank paper, pencil, and accordion folder beside a pretend teacup-window sketch: ____________________.</p>
+      <p class="kid-direction">Writer: write the weather-window story as a beginning sign, middle change, choice bridge, result, and return: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write what the teacup watcher first sees at the window, such as a paper cloud tag or tiny flag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: let the window sign shift once, with a new color, tilt, or note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose how the watcher responds on paper to the changed window sign: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write the small story result that follows from the watcher&#39;s choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first cloud tag, cup sill, or flag so the ending echoes the start: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: place one weather-window note in the pocket for beginning, middle change, choice, result, or return: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the beginning sign and ending echo, then pause the folder work: ____________________. Later paper line: start another teacup-window arc with one paper weather sign that changes once: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 4 | Ages 7-9 | carry a sticker-cart beginning through one mail mix-up, bridge a choice, show a result, and return to the first sort card</div>
+      <h2>Sticker Station Mail Cart Story Arc Card</h2>
+      <figure>
+        <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+        <figcaption>Sticker Station Mail Cart</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set the accordion folder, blank paper, pencil, and pretend sticker sort cards on the table: ____________________.</p>
+      <p class="kid-direction">Writer: sort the mail-cart story into beginning, middle change, choice bridge, result, ending return, and folder note blanks: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write which cart helper finds the first sticker card and what it seems to mean: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: add one change, such as a swapped sticker color, bent card corner, or new cart bell note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose how the helper sorts the sticker card after the change: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write the story result that follows when the helper sorts the card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first sticker color or cart bell note with a new meaning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: file one sticker-station arc note under beginning, middle, choice, result, or return: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the first sticker card and what it means at the end: ____________________. Later paper line: make another sticker-cart arc with a beginning card, one change, and one return note: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 5 | Ages 7-9 | move a spoon-ferry harbor beginning into a lunchbox middle change, bridge a helper choice, show a result, and return to the first dock note</div>
+      <h2>Spoon Ferry Lunchbox Harbor Story Arc Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place blank paper, pencil, accordion folder, and a pretend spoon-ferry dock note beside the card: ____________________.</p>
+      <p class="kid-direction">Writer: guide the spoon ferry from the first dock note through one middle change, one choice, one result, and one ending return: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write who spots the spoon ferry and what first lunchbox-harbor signal starts the arc: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: add one gentle shift, such as a tilted dock tag, folded flag, or changed ferry token: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose what the ferry helper does with the changed token on the paper dock: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write the story result after the helper uses the changed token: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first dock note or folded flag in the final harbor moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: place the spoon-ferry beginning, middle change, choice, result, or return note in a folder pocket: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the dock beginning and ending return notes: ____________________. Later paper line: start another spoon-ferry harbor arc with one dock signal and one returning token: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 6 | Ages 8-10 | use a solar-oven station beginning, a middle gauge change, a choice bridge, a result, an ending return, and an accordion folder note</div>
+      <h2>Solar Oven Picnic Station Story Arc Card</h2>
+      <figure>
+        <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+        <figcaption>Solar Oven Picnic Station</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set blank paper, pencil, accordion folder, and a pretend solar-oven gauge card on the table: ____________________.</p>
+      <p class="kid-direction">Writer: keep the solar-oven station story on paper by moving from first gauge note to change, choice, result, and return: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write the first gauge note at the picnic station and name the helper who notices it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: add one paper change to the gauge, such as a new shade mark, flap angle, or station tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose how the helper adjusts the pretend paper plan after the gauge changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write the story result that follows from the helper&#39;s paper plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first gauge note so the station ending connects to the start: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: file the gauge beginning, middle change, choice, result, or return note in the accordion folder: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the first gauge note and the ending return note: ____________________. Later paper line: make another solar-oven station arc with one pretend gauge change and one return note: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 7 | Ages 7-9 | fold a beginning clue into the ending return</div>
+      <h2>Paperclip Plaza Parcel Day Story Arc Card</h2>
+      <figure>
+        <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+        <figcaption>Paperclip Plaza Parcel Day</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out the card, one blank page, and three folder pocket labels for beginning, middle change, and ending return: ____________________.</p>
+      <p class="kid-direction">Writer: make up a parcel helper, a plaza parcel, and a clue tag that can come back at the end: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write who finds the paperclip-handled parcel and what tiny symbol is on its tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: show how the same symbol appears on two plaza counters but means a different job at each one: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose whether the helper opens the parcel at the table or follows the best symbol match on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write what changes in the plaza because of that choice, such as a clearer key, calmer parcel cart, or sorted notes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first tag symbol and show how it finally points to the right parcel place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: tuck one parcel tag note into the accordion folder pocket that matches its story arc job: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult names the parcel tag, and the writer fills only the beginning and ending return blanks: ____________________. Take-home line: continue a paper-only plaza story by carrying one parcel clue from beginning to ending return: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 8 | Ages 7-9 | sort arc notes into beginning, middle, and ending pockets</div>
+      <h2>Penny Path Compass Shop Story Arc Card</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the accordion folder beside a blank compass note and point to the beginning, middle, and ending pockets: ____________________.</p>
+      <p class="kid-direction">Writer: invent a button compass, a folded errand slip, and one helper choice that changes the path of the story: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write how the helper borrows the button compass and what the folded slip asks them to find: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: make the compass needle point toward a kinder next step instead of the expected direction: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose whether the helper trusts the moving needle or writes a new paper map of each kind turn: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write what changes after the choice, such as a steadier compass note, a clearer path card, or a thankful mailbox row: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the folded slip and show how its first errand is answered in the final sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: sort one compass clue into the folder pocket where it belongs in the story arc: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the compass note, and the writer adds only one middle change sentence: ____________________. Take-home line: build another paper-only compass shop story by saving one beginning slip and one ending return note: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 9 | Ages 8-10 | carry one tidepool question through the middle</div>
+      <h2>Tidepool Timekeepers Lab Story Arc Card</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank tide note, the accordion folder, and one pencil mark for the beginning clue pocket: ____________________.</p>
+      <p class="kid-direction">Writer: create a tidepool helper, a lab work spot, and a tide question that changes but stays connected: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write the first tide question the helper notices beside the shell-shadow jars: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: show one tide mark, pebble note, or seaweed flag that does not match the helper&#39;s first guess: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose whether the helper checks the pebble notebook, compares two shell shadows, or moves one note to a new pocket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write how the helper&#39;s choice changes the lab plan without leaving the pretend tidepool work spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first tide question and answer it with one calm detail from the middle change: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: place one tidepool clue in the accordion folder pocket that shows where the story arc has moved: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads the tide question, and the writer writes only the ending return sentence: ____________________. Take-home line: keep a paper-only tidepool lab arc steady by carrying one question from beginning to ending: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 10 | Ages 8-10 | use a paper gauge note to show what changed</div>
+      <h2>Rain Gauge Railway Story Arc Card</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out the accordion folder, one blank gauge note, and a paper rail card for story-arc sorting: ____________________.</p>
+      <p class="kid-direction">Writer: invent a small railway helper, a rain gauge note, and one track change that moves the story forward: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write what the helper sees on the rain gauge ticket before the tiny railway starts its paper trip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: show how a track switch sends the sample car toward the wrong rail card or weather post: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose whether the helper checks the gauge again, redraws the track plan, or writes a careful rail note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write what changes because of the choice, such as a corrected sample car, calmer weather flags, or a clearer gauge mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first rain gauge ticket and show how the final rail note explains it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: tuck the gauge note into the folder pocket that names its beginning, middle, or ending job: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult circles the gauge ticket, and the writer fills only the choice bridge blank: ____________________. Take-home line: continue a paper-only railway arc by saving one gauge note and returning to it at the end: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 11 | Ages 8-10 | turn one compost-clock mix-up into a calm ending</div>
+      <h2>Compost Clock Workshop Story Arc Card</h2>
+      <figure>
+        <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+        <figcaption>Compost Clock Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the accordion folder beside a blank layer dial note and choose one beginning pocket for the workshop clue: ____________________.</p>
+      <p class="kid-direction">Writer: make up a workshop helper, a leaf-layer clock, and one slow change that can return at the ending: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write the first clock mix-up, such as a leaf layer appearing on the wrong dial mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: show how a worm tunnel map, soil jar, or layer flag reveals that the clock is reading the stack in a new order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: choose whether the helper rebuilds the layer dial, labels a new pocket, or asks the workshop map to explain the order: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write how the workshop changes after that choice, such as a steadier dial, clearer layer note, or calmer soil shelf: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first clock mix-up and show how it now makes sense in the final workshop note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: file one compost-clock clue in the accordion folder pocket that shows its place in the arc: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult names the layer dial, and the writer writes only one middle change detail: ____________________. Take-home line: keep a paper-only compost-clock arc by returning one beginning mix-up as the ending answer: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 12 | Ages 8-10 | plant one beginning detail that returns later</div>
+      <h2>Seed Library Map Room Story Arc Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work private and offline, place this card, blank paper, pencil, and an accordion folder on the table: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, sort the made-up seed map story into beginning, middle change, choice, result, and ending return: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write one seed packet mark, map-room shelf, or careful map clue that starts the story arc: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: show how the map room changes when one pretend seed marker slides to a new paper square: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: let the map keeper choose whether to follow the shelf clue or the seed packet clue next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write what the choice changes in the paper map room, such as a new shelf label or crossed path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the beginning seed packet mark and explain how it helps the final map note make sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: tuck one seed map beginning detail, middle change, and ending return reminder into separate accordion pockets: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the seed packet mark, one map-room change, and the ending return note: ____________________. Take-home line: keep the Seed Library Map Room arc in the paper folder and add one returning clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 13 | Ages 8-10 | keep the middle change connected to the opening</div>
+      <h2>Moss Message Observatory Story Arc Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work private and offline, set out this card with paper, pencil, and an accordion folder labeled for the observatory: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, begin with one moss message, change it in the middle, and return to it at the ending: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write the first moss message beside the observatory lens and name who notices it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: make the moss message shift shape, direction, or meaning while staying tied to the opening clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: let the observer choose one paper-only way to compare the first message with the changed one: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write what the observer understands after comparing the two moss marks in the observatory: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first moss message and show how the middle change made it clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: place the opening moss clue, the changed clue, and the ending return note in order inside the accordion folder: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write one opening moss clue and one middle change that still connects to it: ____________________. Take-home line: add one more Moss Message Observatory arc note that returns to the first clue on paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 14 | Ages 10-11 | bring a clue-label choice back at the end</div>
+      <h2>Clue Label Tower Museum Story Arc Card</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work private and offline, provide this card, blank paper, a pencil, and an accordion folder for arc notes: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, write how one museum label choice starts small, changes the middle, and returns at the end: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: introduce the tower museum case, the unclear clue label, and the character who must decide what it means: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: add one new exhibit detail that makes the clue label harder or more interesting to understand: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: let the character choose which clue label to trust and write why that choice moves the arc forward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write how the chosen label changes the next museum step, such as which case opens on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring the chosen clue label back and explain what it means after the character sees the final case: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: file the unclear label, the choice, and the returned label in accordion folder order: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the unclear label, the chosen label, and the ending meaning: ____________________. Take-home line: keep the Clue Label Tower Museum arc private in the paper folder and add one new label clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 15 | Ages 10-11 | use a compass note to keep the arc pointed at one pretend goal</div>
+      <h2>Compass Craft Academy Story Arc Card</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work private and offline, place this card beside paper, pencil, and an accordion folder for compass notes: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, choose one pretend compass goal and let each story-arc part point back to it: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write the compass craft goal, the first direction note, and the character who wants to solve it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: make one compass point change, wobble, or reveal a new craft mark that complicates the goal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: let the character choose between two compass notes and explain how the choice keeps the arc aimed at the goal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write what happens to the craft project because of the chosen compass note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first compass goal and show whether the final paper note points closer to it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: sort the compass goal, changed point, choice note, and ending return into the accordion folder: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write the compass goal, one changed point, and one ending return sentence: ____________________. Take-home line: save the Compass Craft Academy arc in the paper folder and add one new direction note later: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-arc-card-page">
+      <div class="page-kicker">Story Arc Card 16 | Ages 8-10 | reset the accordion folder with one ending return note</div>
+      <h2>Greenhouse Gear Garden Story Arc Card</h2>
+      <figure>
+        <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+        <figcaption>Greenhouse Gear Garden</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: keep the work private and offline, set out paper, pencil, this card, and an accordion folder for gear-garden arc pieces: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, move the gear garden story from first problem to changed middle, choice, result, and calm return: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning</h3>
+      <p>Beginning: write the first greenhouse gear detail, such as a turning wheel, label tag, or garden crank that starts the arc: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle change</h3>
+      <p>Middle change: show one gear-garden part changing position so the character has to rethink the next paper step: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Choice bridge</h3>
+      <p>Choice bridge: let the character choose one gentle repair, reset, or note-check that links the middle to the ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence</h3>
+      <p>Consequence: write what changes in the greenhouse gear garden after that choice, using only made-up story details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending return</h3>
+      <p>Ending return: bring back the first gear detail and write the reset note that closes the story arc: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Arc folder note</h3>
+      <p>Arc folder note: place the beginning gear detail, middle change, choice, result, and reset note into accordion order: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the first gear detail, the changed part, and the reset note: ____________________. Take-home line: keep the Greenhouse Gear Garden arc in the paper folder and add another ending return note later: ____________________.</p>
+    </section>
+  </body>
+</html>

@@ -8,7 +8,7 @@
       "Middle change pocket: move one paper note forward when something gentle shifts in the fictional story world: ____________________.",
       "Choice bridge: place a folded bridge slip between the middle change pocket and the consequence note so the arc movement stays visible: ____________________.",
       "Ending return: use the final pocket for one detail that comes back calmly near the finish, then add a reset note behind it: ____________________.",
-      "Keep the whole activity adult-led, made-up, offline, paper-only, and broad enough that no real identity details are needed: ____________________."
+      "Keep the whole activity adult-led, made-up, offline, paper-only, and broad enough for invented details only: ____________________."
     ]
   },
   "arcRoutines": [
@@ -30,7 +30,7 @@
       "time": "middle movement pass",
       "adultSteps": [
         "The adult rereads the beginning pocket note and points to the middle change pocket: ____________________.",
-        "The child names one small made-up change that can move the story arc forward: ____________________.",
+        "The child chooses one small made-up change that can move the story arc forward: ____________________.",
         "The adult asks how that change makes the pretend character notice something new: ____________________.",
         "The child writes the middle change note and tucks it into the pocket: ____________________."
       ],
@@ -77,7 +77,7 @@
       "title": "Reset Note Close",
       "time": "folder reset pass",
       "adultSteps": [
-        "The adult reviews the folder order: beginning pocket, middle change pocket, choice bridge, consequence note, and ending return: ____________________.",
+        "The adult checks the folder order: beginning pocket, middle change pocket, choice bridge, consequence note, and ending return: ____________________.",
         "The child taps one pocket that should be remembered for the next paper pass: ____________________.",
         "The adult writes a reset note that names where to restart in the accordion folder: ____________________.",
         "The child closes the folder after adding one final pencil reminder: ____________________."

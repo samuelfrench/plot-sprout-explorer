@@ -32,6 +32,7 @@ GUIDANCE = float(os.environ.get("PLOTSPROUT_IMAGE_GUIDANCE", "7.0"))
 JPEG_QUALITY = int(os.environ.get("PLOTSPROUT_IMAGE_JPEG_QUALITY", "92"))
 WEBP_QUALITY = int(os.environ.get("PLOTSPROUT_IMAGE_WEBP_QUALITY", "92"))
 FREEU_SDXL = dict(b1=1.3, b2=1.4, s1=0.9, s2=0.2)
+CHECKPOINT_VAE_MODES = {"checkpoint", "embedded", "none", "off"}
 NEGATIVE_PROMPT = (
     "text, readable writing, letters, logo, watermark, signature, scary, horror, weapon, violence, "
     "brand character, phone, smartphone, tablet, laptop, computer, screen, device, electronics, "
@@ -99,15 +100,18 @@ def load_pipeline() -> Any:
 
     dtype = torch.float16
     print(f"Loading SDXL base: {SDXL_BASE_CHECKPOINT}")
-    vae = AutoencoderKL.from_pretrained(SDXL_VAE_REPO, torch_dtype=dtype, local_files_only=True)
-    pipe = StableDiffusionXLPipeline.from_single_file(
-        str(SDXL_BASE_CHECKPOINT),
-        torch_dtype=dtype,
-        use_safetensors=True,
-        add_watermarker=False,
-        vae=vae,
-        local_files_only=True,
-    )
+    vae = None
+    if SDXL_VAE_REPO.strip().lower() not in CHECKPOINT_VAE_MODES:
+        vae = AutoencoderKL.from_pretrained(SDXL_VAE_REPO, torch_dtype=dtype, local_files_only=True)
+    pipeline_kwargs = {
+        "torch_dtype": dtype,
+        "use_safetensors": True,
+        "add_watermarker": False,
+        "local_files_only": True,
+    }
+    if vae is not None:
+        pipeline_kwargs["vae"] = vae
+    pipe = StableDiffusionXLPipeline.from_single_file(str(SDXL_BASE_CHECKPOINT), **pipeline_kwargs)
     pipe.scheduler = DPMSolverMultistepScheduler.from_config(
         pipe.scheduler.config,
         algorithm_type="dpmsolver++",
