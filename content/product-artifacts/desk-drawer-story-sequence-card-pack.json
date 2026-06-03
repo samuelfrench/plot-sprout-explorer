@@ -1,0 +1,534 @@
+{
+  "batchId": "2026-06-02-batch33",
+  "generatedAt": "2026-06-02",
+  "productSlug": "desk-drawer-story-sequence-card-pack",
+  "title": "Desk Drawer Story Sequence Card Pack",
+  "pricePoint": "$39",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable story sequence cards plus adult guide tools, sequence routines, take-home sequence slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/desk-drawer-story-sequence-card-pack/Desk-Drawer-Story-Sequence-Card-Pack.pdf",
+    "zipPath": "product-build/desk-drawer-story-sequence-card-pack/desk-drawer-story-sequence-card-pack.zip",
+    "sourceHtmlPath": "product-build/desk-drawer-story-sequence-card-pack/source/desk-drawer-story-sequence-card-pack.html",
+    "manifestPath": "product-build/desk-drawer-story-sequence-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch33-desk-drawer-sequence-cards-a.json",
+    "content/product-artifacts/lanes/batch33-desk-drawer-sequence-cards-b.json",
+    "content/product-artifacts/lanes/batch33-desk-drawer-sequence-cards-c.json",
+    "content/product-artifacts/lanes/batch33-desk-drawer-sequence-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable paper sequence cards",
+    "headline": "Desk Drawer Story Sequence Card Pack",
+    "subhead": "Sixteen paper sequence cards turn pretend drawer objects into clear beginning-middle-ending story order.",
+    "included": [
+      "16 printable desk-drawer sequence cards",
+      "Adult setup guide",
+      "Fictional sequence-card safety notes",
+      "Sequence coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led sequence routines",
+      "Ten take-home sequence slips",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Print and cut the desk drawer sequence cards before the writer arrives.",
+      "Choose six to ten cards for the group size and place the rest aside.",
+      "Set blank paper, pencils, blank slips, and a small envelope or box to stand in for the pretend drawer.",
+      "Explain that the drawer objects are fictional paper clues used to build a made-up story order.",
+      "Start with one adult example so writers see how beginning, middle, and ending cards line up."
+    ],
+    "paperSequenceSetup": [
+      "Place the selected cards face down in a small envelope, tray, or pretend desk drawer.",
+      "Pull single cards and set each into one of three zones: beginning, middle, or ending.",
+      "Let writers move cards before writing so the sequence can change without erasing.",
+      "Keep blank bridge slips nearby for one missing event between two cards.",
+      "Save skipped cards in a later pile so the session keeps moving."
+    ],
+    "sequenceCoaching": [
+      "Ask what has to happen before this card can make sense.",
+      "Use concrete transition words: first, next, then, after that, because, and finally.",
+      "When a writer stalls, offer two possible spots for the card and let the writer choose.",
+      "Point to the paper order before asking for another sentence.",
+      "Finish with one quick retell from left to right before the final writing round."
+    ],
+    "privacyAndSafetyNotes": [
+      "Keep all work on paper and offline with the adult leader or family folder.",
+      "Use invented names, pretend places, and made-up drawer objects.",
+      "Redirect any personal or narrow real-life detail into a broad invented detail before writing.",
+      "A writer may point to one card or share one invented word instead of reading aloud.",
+      "Skip any prompt that stops feeling gentle, invented, paper-only, or adult-led."
+    ],
+    "familyHandoff": [
+      "Send one ordered card row, one blank bridge slip, or one short fiction sentence.",
+      "Tell family adults the task is event order practice, not a mark of writing ability.",
+      "Invite one gentle paper retell using first, next, then, and finally.",
+      "Ask families to keep examples fictional and offline.",
+      "Return unfinished cards in a folder for the next adult-led session."
+    ],
+    "reset": [
+      "Collect selected cards, blank slips, and draft pages.",
+      "Return finished pages to the writer or adult folder and recycle only scrap warm-ups.",
+      "Sort cards by beginning, middle, ending, cause, and transition focus if useful.",
+      "Shuffle the drawer stack before the next session."
+    ]
+  },
+  "sequenceRoutines": [
+    {
+      "name": "Drawer Pull Warm-Up",
+      "bestFor": "A gentle opening round for one writer or a small table.",
+      "steps": [
+        "Pull three cards from the pretend drawer.",
+        "Read each card aloud and place them in any order.",
+        "Ask which card has to happen first.",
+        "Write one sentence for each card using first, next, and then."
+      ]
+    },
+    {
+      "name": "Beginning Middle Ending Sort",
+      "bestFor": "Writers who need a clear story structure before drafting.",
+      "steps": [
+        "Draw six cards and spread them across the table.",
+        "Choose two cards for the beginning zone.",
+        "Choose two cards for the middle zone.",
+        "Choose two cards for the ending zone and retell the row aloud."
+      ]
+    },
+    {
+      "name": "Cause Card Chain",
+      "bestFor": "Practicing why one event leads to another.",
+      "steps": [
+        "Pull four cards and choose one card to start the chain.",
+        "Place the next card only after saying what caused it.",
+        "Move any card that does not connect yet to a later spot.",
+        "Write the sequence as four short story beats."
+      ]
+    },
+    {
+      "name": "Missing Bridge Slip",
+      "bestFor": "Fixing a story that skips ahead too quickly.",
+      "steps": [
+        "Read the ordered cards from left to right.",
+        "Stop where the story feels like it skipped a step.",
+        "Have the adult write one fictional bridge event on a blank slip.",
+        "Place the bridge slip in the gap and retell the sequence once."
+      ]
+    },
+    {
+      "name": "Setting Path Row",
+      "bestFor": "Showing how a character moves through a pretend drawer world.",
+      "steps": [
+        "Pick three fictional drawer spots such as tab corner, paperclip hill, or stamp stack.",
+        "Place a card at each setting spot.",
+        "Decide which spot the character visits first, next, and last.",
+        "Write one sentence that shows the move between each spot."
+      ]
+    },
+    {
+      "name": "Ending Drawer Swap",
+      "bestFor": "Revising an ending without rewriting the full story.",
+      "steps": [
+        "Keep the beginning and middle cards in their current order.",
+        "Pull two new ending cards from the pretend drawer.",
+        "Compare which ending fits the character's earlier choice.",
+        "Write the final two sentences using the chosen ending card."
+      ]
+    }
+  ],
+  "takeHomeSequenceSlips": [
+    {
+      "title": "First Drawer Clue",
+      "time": "one-card slip",
+      "skill": "beginning sequence",
+      "direction": "Pull three pretend drawer cards. Put the card that starts the made-up scene first, then write what ____________________ notices.",
+      "familyLine": "Family adult spots the beginning when ____________________ gives the story a clear first move."
+    },
+    {
+      "title": "Middle Bridge Slip",
+      "time": "bridge slip",
+      "skill": "middle sequence",
+      "direction": "Choose one card for the start and one for the end. Write the middle event that belongs between them: ____________________.",
+      "familyLine": "The middle works because ____________________ connects the first event to the last event."
+    },
+    {
+      "title": "Last Card Close",
+      "time": "closing slip",
+      "skill": "ending sequence",
+      "direction": "Choose a final pretend drawer object and write how the small story closes after ____________________.",
+      "familyLine": "The ending has arrived when ____________________ shows what changed last."
+    },
+    {
+      "title": "First Next Finally Row",
+      "time": "first-next-finally row",
+      "skill": "first-next-finally",
+      "direction": "Use three paper cards and write one First, one Next, and one Finally sentence about ____________________.",
+      "familyLine": "The first-next-finally row makes sense because ____________________ stays in the right order."
+    },
+    {
+      "title": "Because Drawer Chain",
+      "time": "because chain",
+      "skill": "cause and effect",
+      "direction": "Pick one paper drawer card that causes a change. Write what happens because ____________________ appears.",
+      "familyLine": "Cause and effect show up when ____________________ makes the next event happen."
+    },
+    {
+      "title": "Tab Word Trail",
+      "time": "transition word slip",
+      "skill": "transition words",
+      "direction": "Write a three-sentence drawer story using after, then, and last. Put ____________________ in the sentence with your favorite transition word.",
+      "familyLine": "The transition word helps the listener understand where ____________________ belongs."
+    },
+    {
+      "title": "Numbered Label Strip",
+      "time": "event order slip",
+      "skill": "event order",
+      "direction": "Draw four paper label strips, number the events, and write which number belongs beside ____________________.",
+      "familyLine": "Check the event order by asking whether ____________________ happened before or after the other events."
+    },
+    {
+      "title": "Object Stack Sort",
+      "time": "object path slip",
+      "skill": "object sequence",
+      "direction": "Choose three fictional desk drawer objects. Arrange them by story job and explain why ____________________ goes in that spot.",
+      "familyLine": "The object sequence works because ____________________ has a clear place in the pretend drawer story."
+    },
+    {
+      "title": "Drawer Nook Path",
+      "time": "setting row slip",
+      "skill": "setting sequence",
+      "direction": "Draw three pretend spots inside a desk drawer scene. Show where ____________________ appears first, next, and last.",
+      "familyLine": "The setting sequence helps the listener follow how ____________________ moves through the pretend drawer world."
+    },
+    {
+      "title": "Folded Note Fix",
+      "time": "problem-solution slip",
+      "skill": "problem-solution sequence",
+      "direction": "Make a small pretend drawer problem, then add two steps that lead to a gentle solution. Write the solution step for ____________________.",
+      "familyLine": "The problem-solution sequence works because ____________________ comes after the problem and helps close the story."
+    }
+  ],
+  "optionalSharePrompts": [
+    "The card that belongs first is ____________________ because it gives the story a clear start.",
+    "The card I moved to the middle was ____________________.",
+    "The final card in my sequence is ____________________.",
+    "One transition word that helped my order was ____________________.",
+    "The drawer object that caused the next event was ____________________.",
+    "The spot where my story needed a bridge slip was ____________________.",
+    "My character chose ____________________ before the ending happened.",
+    "The sequence I would try again starts with ____________________."
+  ],
+  "cards": [
+    {
+      "id": "desk-drawer-sequence-card-01",
+      "title": "Moon Muffin Market Opening Order",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "sequenceSkill": "beginning sequence",
+      "useCase": "Adult-led printable sequence card for starting a tiny moon muffin market story with one clear opening event: ____________________.",
+      "adultSetup": "Print the card, pull out three blank desk-drawer slips, and name the first market sound together: ____________________.",
+      "kidDirection": "Fill the slips in order so the moon muffin stall opens before anything else happens: ____________________.",
+      "firstPrompt": "First, the moon muffin bell rings when ____________________.",
+      "nextPrompt": "Next, the silver tray rolls toward ____________________.",
+      "thenPrompt": "Then, the market helper notices ____________________.",
+      "finallyPrompt": "Finally, the first paper wrapper closes around ____________________.",
+      "transitionPrompt": "Transition prompt: Add one order word before the second event: ____________________.",
+      "checkBackPrompt": "Check back: Point to the event that must happen first and explain why: ____________________.",
+      "quietOptionLine": "Quiet option: Number the three slips silently before writing one market word: ____________________.",
+      "takeHomeLine": "Take-home line: Retell the market opening with three new pretend drawer slips: ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-02",
+      "title": "Puddle Planet Parcel Path",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "sequenceSkill": "first-next-finally",
+      "useCase": "Adult-led printable sequence card for moving one pretend puddle parcel through first, next, then, and finally: ____________________.",
+      "adultSetup": "Print the card, draw four small puddle boxes, and choose one made-up parcel job: ____________________.",
+      "kidDirection": "Write the parcel trip step by step so each puddle box has one event: ____________________.",
+      "firstPrompt": "First, the puddle parcel slides onto ____________________.",
+      "nextPrompt": "Next, the splash sorter sends it toward ____________________.",
+      "thenPrompt": "Then, the stamp puddle changes because ____________________.",
+      "finallyPrompt": "Finally, the parcel reaches the desk drawer marked ____________________.",
+      "transitionPrompt": "Transition prompt: Choose one time word that helps the parcel move: ____________________.",
+      "checkBackPrompt": "Check back: Make sure the final stop could not happen before ____________________.",
+      "quietOptionLine": "Quiet option: Tap the four puddle boxes in order before filling one blank: ____________________.",
+      "takeHomeLine": "Take-home line: Try the parcel path again with a different pretend stamp: ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-03",
+      "title": "Buttonwood Library Train Ticket Row",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "sequenceSkill": "event order",
+      "useCase": "Adult-led printable sequence card for placing library train events in an order a reader can follow: ____________________.",
+      "adultSetup": "Print the card, cut four paper ticket shapes, and choose the train's first shelf stop: ____________________.",
+      "kidDirection": "Line up the tickets from first stop to last stop before writing the train scene: ____________________.",
+      "firstPrompt": "First, the Buttonwood Library Train arrives beside ____________________.",
+      "nextPrompt": "Next, the ticket reader checks ____________________.",
+      "thenPrompt": "Then, the shelf car opens and reveals ____________________.",
+      "finallyPrompt": "Finally, the train rolls the book cart to ____________________.",
+      "transitionPrompt": "Transition prompt: Add a train-moving phrase between two tickets: ____________________.",
+      "checkBackPrompt": "Check back: Move any ticket that belongs earlier and name the clue: ____________________.",
+      "quietOptionLine": "Quiet option: Number the tickets with tiny dots before reading one sentence: ____________________.",
+      "takeHomeLine": "Take-home line: Rebuild the library train row with four new paper tickets: ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-04",
+      "title": "Button Bakery Map Fix",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "sequenceSkill": "problem-solution sequence",
+      "useCase": "Adult-led printable sequence card for turning a bakery map mix-up into problem, attempt, and fix: ____________________.",
+      "adultSetup": "Print the card, fold a scrap map into the desk drawer, and mark one wrong crumb path: ____________________.",
+      "kidDirection": "Show how the map mix-up starts, grows clearer, and gets fixed in order: ____________________.",
+      "firstPrompt": "First, the button bakery map points to ____________________.",
+      "nextPrompt": "Next, the tray carrier follows the crumbs and finds ____________________.",
+      "thenPrompt": "Then, the baker spots the wrong label because ____________________.",
+      "finallyPrompt": "Finally, the map is fixed when ____________________.",
+      "transitionPrompt": "Transition prompt: Add a bridge from problem to solution: ____________________.",
+      "checkBackPrompt": "Check back: Underline the step that actually solves the mix-up: ____________________.",
+      "quietOptionLine": "Quiet option: Trace the wrong crumb path with one finger before writing: ____________________.",
+      "takeHomeLine": "Take-home line: Make a new folded bakery map with one different fix: ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-05",
+      "title": "Teacup Town Weather Change",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "sequenceSkill": "setting sequence",
+      "useCase": "Adult-led printable sequence card for showing how a tiny teacup setting changes one weather step at a time: ____________________.",
+      "adultSetup": "Print the card, draw four little window panes, and choose the first pretend weather clue: ____________________.",
+      "kidDirection": "Move through the panes in order so Teacup Town changes gently from start to finish: ____________________.",
+      "firstPrompt": "First, the weather window shows ____________________.",
+      "nextPrompt": "Next, the cup-handle bridge begins to ____________________.",
+      "thenPrompt": "Then, the tiny town square changes when ____________________.",
+      "finallyPrompt": "Finally, the window settles on ____________________.",
+      "transitionPrompt": "Transition prompt: Add a phrase that shows the weather changed: ____________________.",
+      "checkBackPrompt": "Check back: Circle the setting detail that changes after the first pane: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch one weather mark in each pane before writing: ____________________.",
+      "takeHomeLine": "Take-home line: Retell the weather-window sequence with four new pane clues: ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-06",
+      "title": "Pocket Park Notice Chain",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "sequenceSkill": "cause and effect",
+      "useCase": "Adult-led printable sequence card for building a pocket park notice into a clear cause-and-effect chain: ____________________.",
+      "adultSetup": "Print the card, draw one small notice board, and invent a harmless paper notice together: ____________________.",
+      "kidDirection": "Write what the notice says, what it causes, and how the park changes afterward: ____________________.",
+      "firstPrompt": "First, the Pocket Park notice board announces ____________________.",
+      "nextPrompt": "Next, one bench-side helper reacts by ____________________.",
+      "thenPrompt": "Then, that choice causes ____________________.",
+      "finallyPrompt": "Finally, the pocket park feels different because ____________________.",
+      "transitionPrompt": "Transition prompt: Add one cause-and-effect phrase before the third step: ____________________.",
+      "checkBackPrompt": "Check back: Draw an arrow from the notice to the effect it caused: ____________________.",
+      "quietOptionLine": "Quiet option: Point to each arrow in order before filling one blank: ____________________.",
+      "takeHomeLine": "Take-home line: Make another pretend park notice and follow its effect chain: ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-07",
+      "title": "Spoon Ferry Lunchbox Harbor",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "sequenceSkill": "first-next-finally",
+      "useCase": "Adult-led printable sequence card for a tiny spoon ferry voyage with three clear lunchbox harbor stops: ____________________.",
+      "adultSetup": "Place the card beside a pencil and one folded paper dock, then name the pretend ferry cargo together: ____________________.",
+      "kidDirection": "Write what happens as the spoon ferry loads, crosses, pauses, and docks in order: ____________________.",
+      "firstPrompt": "First, the spoon ferry picks up ____________________ from the lunchbox dock.",
+      "nextPrompt": "Next, the harbor water makes the ferry ____________________.",
+      "thenPrompt": "Then, the crumb captain asks for ____________________ before docking.",
+      "finallyPrompt": "Finally, the ferry delivers ____________________ and the harbor settles.",
+      "transitionPrompt": "Add one crossing transition such as after that, soon, or at last before ____________________.",
+      "checkBackPrompt": "Check back and circle the event that could not happen before ____________________.",
+      "quietOptionLine": "Quiet option: Sketch three small harbor boxes and label the last one ____________________.",
+      "takeHomeLine": "Take-home line: Retell the spoon ferry trip in order, ending with ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-08",
+      "title": "Acorn Avenue Errand Office",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "sequenceSkill": "event order",
+      "useCase": "Adult-led printable card for sorting a busy pretend errand into a clean order: ____________________.",
+      "adultSetup": "Set out three scrap-paper errand tickets and tell the writer the Acorn Avenue office is invented: ____________________.",
+      "kidDirection": "Write the errand in the order the acorn office handles it from drawer to stamp: ____________________.",
+      "firstPrompt": "First, the acorn clerk opens the drawer and finds ____________________.",
+      "nextPrompt": "Next, the paperclip messenger carries ____________________ down Acorn Avenue.",
+      "thenPrompt": "Then, the leaf counter discovers ____________________ is in the wrong tray.",
+      "finallyPrompt": "Finally, the office stamps the errand with ____________________.",
+      "transitionPrompt": "Use an order word to show when ____________________ moves from one desk to the next.",
+      "checkBackPrompt": "Check back and fix one event if ____________________ happens too early.",
+      "quietOptionLine": "Quiet option: Number four acorn-office moments and mark ____________________.",
+      "takeHomeLine": "Take-home line: Retell the errand with first, next, then, and finally using ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-09",
+      "title": "Seed Library Map Room",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "sequenceSkill": "object sequence",
+      "useCase": "Adult-led printable card for following one pretend seed packet as it moves through a fictional map room: ____________________.",
+      "adultSetup": "Give the writer one index card as a pretend seed packet and one blank map square: ____________________.",
+      "kidDirection": "Write a sequence where the labeled seed packet moves through shelves, drawers, and map marks: ____________________.",
+      "firstPrompt": "First, the seed packet is placed on ____________________.",
+      "nextPrompt": "Next, the map room ladder, drawer, or stamp helps it move to ____________________.",
+      "thenPrompt": "Then, the packet is almost mixed up with ____________________.",
+      "finallyPrompt": "Finally, the packet reaches the right map shelf and ____________________.",
+      "transitionPrompt": "Use a movement transition such as across, into, under, or beside before ____________________.",
+      "checkBackPrompt": "Check that the seed packet appears in every event, then add the missing spot: ____________________.",
+      "quietOptionLine": "Quiet option: Draw four tiny boxes and place the packet in box ____________________.",
+      "takeHomeLine": "Take-home line: Save the finished card as a pretend library map label for ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-10",
+      "title": "Rain Gauge Railway",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "sequenceSkill": "cause and effect",
+      "useCase": "Adult-led printable card for linking each rain railway event to the reason it happens next: ____________________.",
+      "adultSetup": "Lay a paper strip as the railway line and explain that the rain gauge, train, and station are pretend: ____________________.",
+      "kidDirection": "Write a paper-only railway story where each event causes the next event in the chain: ____________________.",
+      "firstPrompt": "First, the rain gauge fills to the mark that says ____________________.",
+      "nextPrompt": "Next, because of that, the tiny railway conductor decides to ____________________.",
+      "thenPrompt": "Then, that choice causes the platform crew to ____________________.",
+      "finallyPrompt": "Finally, the rain train arrives with ____________________.",
+      "transitionPrompt": "Add one cause transition such as because, so, or therefore before ____________________.",
+      "checkBackPrompt": "Check back and underline the event that causes ____________________.",
+      "quietOptionLine": "Quiet option: Draw a cause-and-effect arrow from ____________________ to the last stop.",
+      "takeHomeLine": "Take-home line: Tell the railway chain using one because sentence about ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-11",
+      "title": "Moss Message Observatory",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "sequenceSkill": "detail sequence",
+      "useCase": "Adult-led printable card for revealing a quiet observatory message one detail at a time: ____________________.",
+      "adultSetup": "Fold a paper telescope strip and invite the writer to imagine a desk-drawer observatory with invented rooms: ____________________.",
+      "kidDirection": "Write the moss message sequence by adding one useful clue before the next clue appears: ____________________.",
+      "firstPrompt": "First, the observatory lens notices ____________________ glowing in the moss.",
+      "nextPrompt": "Next, the moss message adds a smaller clue about ____________________.",
+      "thenPrompt": "Then, the watcher compares both clues and realizes ____________________.",
+      "finallyPrompt": "Finally, the full moss message says ____________________.",
+      "transitionPrompt": "Add a clue-order transition such as next, later, or finally before ____________________.",
+      "checkBackPrompt": "Check back and remove any clue that explains ____________________ before the moss reveals it.",
+      "quietOptionLine": "Quiet option: List four moss clues and put a box around ____________________.",
+      "takeHomeLine": "Take-home line: Share the moss message in order, saving ____________________ for last."
+    },
+    {
+      "id": "desk-drawer-sequence-card-12",
+      "title": "Tidepool Shell Tray",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "sequenceSkill": "first-next-finally",
+      "useCase": "Adult-led printable sequence card for turning a fictional tidepool lab errand into first, next, then, and finally steps: ____________________.",
+      "adultSetup": "Print the card, set out three small paper shells, and invite the writer to place them in story order: ____________________.",
+      "kidDirection": "Use each blank to tell what the tidepool timekeepers do before the shell counter is reset: ____________________.",
+      "firstPrompt": "First, the tidepool timekeepers find a shell counter beside ____________________.",
+      "nextPrompt": "Next, the smallest timekeeper carries ____________________ to the sorting tray.",
+      "thenPrompt": "Then, the lab note changes because ____________________.",
+      "finallyPrompt": "Finally, the shell counter is ready when ____________________.",
+      "transitionPrompt": "Add one sequence word that helps the reader move from one shell step to ____________________.",
+      "checkBackPrompt": "Check back: Does the first step clearly happen before ____________________?",
+      "quietOptionLine": "Quiet option: Number the three shells silently and write only the middle step: ____________________.",
+      "takeHomeLine": "Take-home line: Retell the tiny lab sequence at home with three paper marks: ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-13",
+      "title": "Revision River Ferry Docks",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "sequenceSkill": "middle sequence",
+      "useCase": "Adult-led printable sequence card for strengthening the middle of a fictional ferry crossing on paper: ____________________.",
+      "adultSetup": "Print the card, draw four small ferry docks, and choose one plain draft sentence to send across: ____________________.",
+      "kidDirection": "Build the crossing so the middle events explain how the sentence changes before it lands: ____________________.",
+      "firstPrompt": "First, the Revision River ferry leaves the drawer dock carrying ____________________.",
+      "nextPrompt": "Next, the ferry pauses when the draft sentence notices ____________________.",
+      "thenPrompt": "Then, the middle dock changes the sentence by adding ____________________.",
+      "finallyPrompt": "Finally, the ferry reaches the far dock with ____________________.",
+      "transitionPrompt": "Add a transition phrase that shows the middle turn after ____________________.",
+      "checkBackPrompt": "Check back: Does the middle event make the final sentence easier to understand: ____________________?",
+      "quietOptionLine": "Quiet option: Write only the ferry pause and the changed detail: ____________________.",
+      "takeHomeLine": "Take-home line: Draw three ferry docks and label the strongest middle step: ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-14",
+      "title": "Clue Label Tower Trail",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "sequenceSkill": "detail sequence",
+      "useCase": "Adult-led printable sequence card for ordering invented museum clues from broad label to final detail: ____________________.",
+      "adultSetup": "Print the card, sketch a tower of four blank labels, and remind the writer that every exhibit is fictional: ____________________.",
+      "kidDirection": "Fill the labels so each clue gives the next clue room to make sense: ____________________.",
+      "firstPrompt": "First, the lowest tower label names an exhibit shaped like ____________________.",
+      "nextPrompt": "Next, the second label adds the detail ____________________.",
+      "thenPrompt": "Then, the third label changes the clue by showing ____________________.",
+      "finallyPrompt": "Finally, the top label reveals why ____________________.",
+      "transitionPrompt": "Add a transition phrase that connects the second clue to ____________________.",
+      "checkBackPrompt": "Check back: Does each clue appear before the clue that depends on ____________________?",
+      "quietOptionLine": "Quiet option: List the four label details before writing the full trail: ____________________.",
+      "takeHomeLine": "Take-home line: Turn four paper scraps into clue labels and order them around ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-15",
+      "title": "Compass Craft Choice Path",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "sequenceSkill": "cause and effect",
+      "useCase": "Adult-led printable sequence card for linking a fictional compass-making choice to its next results: ____________________.",
+      "adultSetup": "Print the card, draw a paper compass dial, and choose one academy craft choice to test: ____________________.",
+      "kidDirection": "Show how each choice causes the next academy step inside the pretend academy page: ____________________.",
+      "firstPrompt": "First, the apprentice chooses ____________________ for the compass center.",
+      "nextPrompt": "Next, that choice causes the compass mark to point toward ____________________.",
+      "thenPrompt": "Then, the apprentice adjusts ____________________ because the pointer changes.",
+      "finallyPrompt": "Finally, the finished compass helps the academy find ____________________.",
+      "transitionPrompt": "Add a cause-and-effect transition such as because, so, or after: ____________________.",
+      "checkBackPrompt": "Check back: Does each result grow from the choice before it: ____________________?",
+      "quietOptionLine": "Quiet option: Draw one tiny cause arrow from the first choice to ____________________.",
+      "takeHomeLine": "Take-home line: Name one cause and one result from your compass story: ____________________."
+    },
+    {
+      "id": "desk-drawer-sequence-card-16",
+      "title": "Binding Day Final Thread",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "sequenceSkill": "ending sequence",
+      "useCase": "Adult-led printable sequence card for making the last steps of a fictional booklet ending feel complete: ____________________.",
+      "adultSetup": "Print the card, fold one scrap page like a tiny booklet, and choose a final paper problem: ____________________.",
+      "kidDirection": "Write the ending steps so the boardwalk booklet closes the problem instead of starting a new one: ____________________.",
+      "firstPrompt": "First, near the ending, the page keeper gathers ____________________.",
+      "nextPrompt": "Next, the keeper checks ____________________ before the ribbon is tied.",
+      "thenPrompt": "Then, the final page shows ____________________ has changed.",
+      "finallyPrompt": "Finally, the booklet closes beside ____________________.",
+      "transitionPrompt": "Add an ending transition that shows the last step follows ____________________.",
+      "checkBackPrompt": "Check back: Does the final moment answer something from earlier: ____________________?",
+      "quietOptionLine": "Quiet option: Box the detail that feels like closure and write it here: ____________________.",
+      "takeHomeLine": "Take-home line: Stack four scrap pages and name the final sequence: ____________________."
+    }
+  ]
+}

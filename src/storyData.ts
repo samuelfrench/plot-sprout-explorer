@@ -470,6 +470,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable notebook-margin story revision cards with adult guide tools, revision routines, and take-home revision slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'desk-drawer-story-sequence-card-pack',
+    title: 'Desk Drawer Story Sequence Card Pack',
+    pricePoint: '$39',
+    description:
+      'Sixteen printable desk-drawer story sequence cards with adult guide tools, sequence routines, and take-home sequence slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

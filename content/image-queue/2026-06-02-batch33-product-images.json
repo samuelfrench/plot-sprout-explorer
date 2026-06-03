@@ -1,0 +1,17 @@
+{
+  "batchId": "2026-06-02-batch33-product-images",
+  "generatedAt": "2026-06-02",
+  "images": [
+    {
+      "slug": "desk-drawer-story-sequence-card-pack",
+      "title": "Desk Drawer Story Sequence Card Pack product image",
+      "purpose": "Static product hero for the checkout-pending desk drawer story sequence card pack page.",
+      "seed": 26063347,
+      "prompt": "family-friendly overhead flat lay catalog product image, only six rectangular blank cream desk drawer story sequence cards beside an open unbranded wooden desk drawer tray, blank paper slips and one plain wooden pencil, faint empty first-next-then-finally guide boxes with no writing, seamless plain white background, no extra props, no plants, no containers, screen-free printable desk drawer story sequence card pack",
+      "negativePrompt": "text, readable writing, letters, labels, logo, watermark, phone, tablet, laptop, computer, screen, device, app interface, school login, account login, portal, QR code, upload icon, camera, photo, GPS, navigation app, coordinates, address, house, home, street sign, real place, real-world map, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, branded character, franchise, copyright character, people, face, animal, plant, potted plant, greenery, flower, pot, vase, cup, decorative container, decorative props, round coaster, circular cards, food, snack, medicine, weapon, violence, scary scene, outdoor scene, window, doorway, building, safety sign",
+      "outputJpeg": "public/images/plotsprout/batch33/desk-drawer-story-sequence-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch33/desk-drawer-story-sequence-card-pack.webp",
+      "sidecar": "content/image-runs/batch33/desk-drawer-story-sequence-card-pack.json"
+    }
+  ]
+}

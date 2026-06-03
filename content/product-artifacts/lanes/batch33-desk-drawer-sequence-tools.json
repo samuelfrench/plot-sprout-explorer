@@ -1,0 +1,190 @@
+{
+  "laneId": "batch33-desk-drawer-sequence-tools",
+  "adultGuide": {
+    "beforeSession": [
+      "Print and cut the desk drawer sequence cards before the writer arrives.",
+      "Choose six to ten cards for the group size and place the rest aside.",
+      "Set blank paper, pencils, blank slips, and a small envelope or box to stand in for the pretend drawer.",
+      "Explain that the drawer objects are fictional paper clues used to build a made-up story order.",
+      "Start with one adult example so writers see how beginning, middle, and ending cards line up."
+    ],
+    "paperSequenceSetup": [
+      "Place the selected cards face down in a small envelope, tray, or pretend desk drawer.",
+      "Pull single cards and set each into one of three zones: beginning, middle, or ending.",
+      "Let writers move cards before writing so the sequence can change without erasing.",
+      "Keep blank bridge slips nearby for one missing event between two cards.",
+      "Save skipped cards in a later pile so the session keeps moving."
+    ],
+    "sequenceCoaching": [
+      "Ask what has to happen before this card can make sense.",
+      "Use concrete transition words: first, next, then, after that, because, and finally.",
+      "When a writer stalls, offer two possible spots for the card and let the writer choose.",
+      "Point to the paper order before asking for another sentence.",
+      "Finish with one quick retell from left to right before the final writing round."
+    ],
+    "privacyAndSafetyNotes": [
+      "Keep all work on paper and offline with the adult leader or family folder.",
+      "Use invented names, pretend places, and made-up drawer objects.",
+      "Redirect any personal or narrow real-life detail into a broad invented detail before writing.",
+      "A writer may point to one card or share one invented word instead of reading aloud.",
+      "Skip any prompt that stops feeling gentle, invented, paper-only, or adult-led."
+    ],
+    "familyHandoff": [
+      "Send one ordered card row, one blank bridge slip, or one short fiction sentence.",
+      "Tell family adults the task is event order practice, not a mark of writing ability.",
+      "Invite one gentle paper retell using first, next, then, and finally.",
+      "Ask families to keep examples fictional and offline.",
+      "Return unfinished cards in a folder for the next adult-led session."
+    ],
+    "reset": [
+      "Collect selected cards, blank slips, and draft pages.",
+      "Return finished pages to the writer or adult folder and recycle only scrap warm-ups.",
+      "Sort cards by beginning, middle, ending, cause, and transition focus if useful.",
+      "Shuffle the drawer stack before the next session."
+    ]
+  },
+  "sequenceRoutines": [
+    {
+      "name": "Drawer Pull Warm-Up",
+      "bestFor": "A gentle opening round for one writer or a small table.",
+      "steps": [
+        "Pull three cards from the pretend drawer.",
+        "Read each card aloud and place them in any order.",
+        "Ask which card has to happen first.",
+        "Write one sentence for each card using first, next, and then."
+      ]
+    },
+    {
+      "name": "Beginning Middle Ending Sort",
+      "bestFor": "Writers who need a clear story structure before drafting.",
+      "steps": [
+        "Draw six cards and spread them across the table.",
+        "Choose two cards for the beginning zone.",
+        "Choose two cards for the middle zone.",
+        "Choose two cards for the ending zone and retell the row aloud."
+      ]
+    },
+    {
+      "name": "Cause Card Chain",
+      "bestFor": "Practicing why one event leads to another.",
+      "steps": [
+        "Pull four cards and choose one card to start the chain.",
+        "Place the next card only after saying what caused it.",
+        "Move any card that does not connect yet to a later spot.",
+        "Write the sequence as four short story beats."
+      ]
+    },
+    {
+      "name": "Missing Bridge Slip",
+      "bestFor": "Fixing a story that skips ahead too quickly.",
+      "steps": [
+        "Read the ordered cards from left to right.",
+        "Stop where the story feels like it skipped a step.",
+        "Have the adult write one fictional bridge event on a blank slip.",
+        "Place the bridge slip in the gap and retell the sequence once."
+      ]
+    },
+    {
+      "name": "Setting Path Row",
+      "bestFor": "Showing how a character moves through a pretend drawer world.",
+      "steps": [
+        "Pick three fictional drawer spots such as tab corner, paperclip hill, or stamp stack.",
+        "Place a card at each setting spot.",
+        "Decide which spot the character visits first, next, and last.",
+        "Write one sentence that shows the move between each spot."
+      ]
+    },
+    {
+      "name": "Ending Drawer Swap",
+      "bestFor": "Revising an ending without rewriting the full story.",
+      "steps": [
+        "Keep the beginning and middle cards in their current order.",
+        "Pull two new ending cards from the pretend drawer.",
+        "Compare which ending fits the character's earlier choice.",
+        "Write the final two sentences using the chosen ending card."
+      ]
+    }
+  ],
+  "takeHomeSequenceSlips": [
+    {
+      "title": "First Drawer Clue",
+      "time": "one-card slip",
+      "skill": "beginning sequence",
+      "direction": "Pull three pretend drawer cards. Put the card that starts the made-up scene first, then write what ____________________ notices.",
+      "familyLine": "Family adult spots the beginning when ____________________ gives the story a clear first move."
+    },
+    {
+      "title": "Middle Bridge Slip",
+      "time": "bridge slip",
+      "skill": "middle sequence",
+      "direction": "Choose one card for the start and one for the end. Write the middle event that belongs between them: ____________________.",
+      "familyLine": "The middle works because ____________________ connects the first event to the last event."
+    },
+    {
+      "title": "Last Card Close",
+      "time": "closing slip",
+      "skill": "ending sequence",
+      "direction": "Choose a final pretend drawer object and write how the small story closes after ____________________.",
+      "familyLine": "The ending has arrived when ____________________ shows what changed last."
+    },
+    {
+      "title": "First Next Finally Row",
+      "time": "first-next-finally row",
+      "skill": "first-next-finally",
+      "direction": "Use three paper cards and write one First, one Next, and one Finally sentence about ____________________.",
+      "familyLine": "The first-next-finally row makes sense because ____________________ stays in the right order."
+    },
+    {
+      "title": "Because Drawer Chain",
+      "time": "because chain",
+      "skill": "cause and effect",
+      "direction": "Pick one paper drawer card that causes a change. Write what happens because ____________________ appears.",
+      "familyLine": "Cause and effect show up when ____________________ makes the next event happen."
+    },
+    {
+      "title": "Tab Word Trail",
+      "time": "transition word slip",
+      "skill": "transition words",
+      "direction": "Write a three-sentence drawer story using after, then, and last. Put ____________________ in the sentence with your favorite transition word.",
+      "familyLine": "The transition word helps the listener understand where ____________________ belongs."
+    },
+    {
+      "title": "Numbered Label Strip",
+      "time": "event order slip",
+      "skill": "event order",
+      "direction": "Draw four paper label strips, number the events, and write which number belongs beside ____________________.",
+      "familyLine": "Check the event order by asking whether ____________________ happened before or after the other events."
+    },
+    {
+      "title": "Object Stack Sort",
+      "time": "object path slip",
+      "skill": "object sequence",
+      "direction": "Choose three fictional desk drawer objects. Arrange them by story job and explain why ____________________ goes in that spot.",
+      "familyLine": "The object sequence works because ____________________ has a clear place in the pretend drawer story."
+    },
+    {
+      "title": "Drawer Nook Path",
+      "time": "setting row slip",
+      "skill": "setting sequence",
+      "direction": "Draw three pretend spots inside a desk drawer scene. Show where ____________________ appears first, next, and last.",
+      "familyLine": "The setting sequence helps the listener follow how ____________________ moves through the pretend drawer world."
+    },
+    {
+      "title": "Folded Note Fix",
+      "time": "problem-solution slip",
+      "skill": "problem-solution sequence",
+      "direction": "Make a small pretend drawer problem, then add two steps that lead to a gentle solution. Write the solution step for ____________________.",
+      "familyLine": "The problem-solution sequence works because ____________________ comes after the problem and helps close the story."
+    }
+  ],
+  "optionalSharePrompts": [
+    "The card that belongs first is ____________________ because it gives the story a clear start.",
+    "The card I moved to the middle was ____________________.",
+    "The final card in my sequence is ____________________.",
+    "One transition word that helped my order was ____________________.",
+    "The drawer object that caused the next event was ____________________.",
+    "The spot where my story needed a bridge slip was ____________________.",
+    "My character chose ____________________ before the ending happened.",
+    "The sequence I would try again starts with ____________________."
+  ]
+}

@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desk Drawer Story Sequence Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-sequence-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-sequence-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-sequence-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper sequence cards</p>
+        <h1>Desk Drawer Story Sequence Card Pack</h1>
+        <p>Sixteen paper sequence cards turn pretend drawer objects into clear beginning-middle-ending story order.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable story sequence cards plus adult guide tools, sequence routines, take-home sequence slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$39</span>
+        <h2>Included</h2>
+        <ul><li>16 printable desk-drawer sequence cards</li>
+<li>Adult setup guide</li>
+<li>Fictional sequence-card safety notes</li>
+<li>Sequence coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led sequence routines</li>
+<li>Ten take-home sequence slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Sequence move coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print and cut the desk drawer sequence cards before the writer arrives.</li>
+<li>Choose six to ten cards for the group size and place the rest aside.</li>
+<li>Set blank paper, pencils, blank slips, and a small envelope or box to stand in for the pretend drawer.</li>
+<li>Explain that the drawer objects are fictional paper clues used to build a made-up story order.</li>
+<li>Start with one adult example so writers see how beginning, middle, and ending cards line up.</li></ul></article>
+        <article class="guide-card"><h3>Paper sequence setup</h3><ul><li>Place the selected cards face down in a small envelope, tray, or pretend desk drawer.</li>
+<li>Pull single cards and set each into one of three zones: beginning, middle, or ending.</li>
+<li>Let writers move cards before writing so the sequence can change without erasing.</li>
+<li>Keep blank bridge slips nearby for one missing event between two cards.</li>
+<li>Save skipped cards in a later pile so the session keeps moving.</li></ul></article>
+        <article class="guide-card"><h3>Story sequence coaching</h3><ul><li>Ask what has to happen before this card can make sense.</li>
+<li>Use concrete transition words: first, next, then, after that, because, and finally.</li>
+<li>When a writer stalls, offer two possible spots for the card and let the writer choose.</li>
+<li>Point to the paper order before asking for another sentence.</li>
+<li>Finish with one quick retell from left to right before the final writing round.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Keep all work on paper and offline with the adult leader or family folder.</li>
+<li>Use invented names, pretend places, and made-up drawer objects.</li>
+<li>Redirect any personal or narrow real-life detail into a broad invented detail before writing.</li>
+<li>A writer may point to one card or share one invented word instead of reading aloud.</li>
+<li>Skip any prompt that stops feeling gentle, invented, paper-only, or adult-led.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Send one ordered card row, one blank bridge slip, or one short fiction sentence.</li>
+<li>Tell family adults the task is event order practice, not a mark of writing ability.</li>
+<li>Invite one gentle paper retell using first, next, then, and finally.</li>
+<li>Ask families to keep examples fictional and offline.</li>
+<li>Return unfinished cards in a folder for the next adult-led session.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect selected cards, blank slips, and draft pages.</li>
+<li>Return finished pages to the writer or adult folder and recycle only scrap warm-ups.</li>
+<li>Sort cards by beginning, middle, ending, cause, and transition focus if useful.</li>
+<li>Shuffle the drawer stack before the next session.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper sequence card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen story-sequence-card worlds</h2>
+      <p>Pick a world image, then order one invented desk-drawer object into a story start.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Sequence routines</p>
+      <h2>Choose the paper sequence rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Drawer Pull Warm-Up</h3>
+      <p>A gentle opening round for one writer or a small table.</p>
+      <ol><li>Pull three cards from the pretend drawer.</li>
+<li>Read each card aloud and place them in any order.</li>
+<li>Ask which card has to happen first.</li>
+<li>Write one sentence for each card using first, next, and then.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Beginning Middle Ending Sort</h3>
+      <p>Writers who need a clear story structure before drafting.</p>
+      <ol><li>Draw six cards and spread them across the table.</li>
+<li>Choose two cards for the beginning zone.</li>
+<li>Choose two cards for the middle zone.</li>
+<li>Choose two cards for the ending zone and retell the row aloud.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Cause Card Chain</h3>
+      <p>Practicing why one event leads to another.</p>
+      <ol><li>Pull four cards and choose one card to start the chain.</li>
+<li>Place the next card only after saying what caused it.</li>
+<li>Move any card that does not connect yet to a later spot.</li>
+<li>Write the sequence as four short story beats.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Missing Bridge Slip</h3>
+      <p>Fixing a story that skips ahead too quickly.</p>
+      <ol><li>Read the ordered cards from left to right.</li>
+<li>Stop where the story feels like it skipped a step.</li>
+<li>Have the adult write one fictional bridge event on a blank slip.</li>
+<li>Place the bridge slip in the gap and retell the sequence once.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Setting Path Row</h3>
+      <p>Showing how a character moves through a pretend drawer world.</p>
+      <ol><li>Pick three fictional drawer spots such as tab corner, paperclip hill, or stamp stack.</li>
+<li>Place a card at each setting spot.</li>
+<li>Decide which spot the character visits first, next, and last.</li>
+<li>Write one sentence that shows the move between each spot.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Ending Drawer Swap</h3>
+      <p>Revising an ending without rewriting the full story.</p>
+      <ol><li>Keep the beginning and middle cards in their current order.</li>
+<li>Pull two new ending cards from the pretend drawer.</li>
+<li>Compare which ending fits the character&#39;s earlier choice.</li>
+<li>Write the final two sentences using the chosen ending card.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home sequence slips</p>
+      <h2>Finish one story sequence later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">one-card slip | beginning sequence</p>
+      <h3>First Drawer Clue</h3>
+      <p>Pull three pretend drawer cards. Put the card that starts the made-up scene first, then write what ____________________ notices.</p>
+      <p>Family adult spots the beginning when ____________________ gives the story a clear first move.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">bridge slip | middle sequence</p>
+      <h3>Middle Bridge Slip</h3>
+      <p>Choose one card for the start and one for the end. Write the middle event that belongs between them: ____________________.</p>
+      <p>The middle works because ____________________ connects the first event to the last event.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">closing slip | ending sequence</p>
+      <h3>Last Card Close</h3>
+      <p>Choose a final pretend drawer object and write how the small story closes after ____________________.</p>
+      <p>The ending has arrived when ____________________ shows what changed last.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">first-next-finally row | first-next-finally</p>
+      <h3>First Next Finally Row</h3>
+      <p>Use three paper cards and write one First, one Next, and one Finally sentence about ____________________.</p>
+      <p>The first-next-finally row makes sense because ____________________ stays in the right order.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">because chain | cause and effect</p>
+      <h3>Because Drawer Chain</h3>
+      <p>Pick one paper drawer card that causes a change. Write what happens because ____________________ appears.</p>
+      <p>Cause and effect show up when ____________________ makes the next event happen.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">transition word slip | transition words</p>
+      <h3>Tab Word Trail</h3>
+      <p>Write a three-sentence drawer story using after, then, and last. Put ____________________ in the sentence with your favorite transition word.</p>
+      <p>The transition word helps the listener understand where ____________________ belongs.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">event order slip | event order</p>
+      <h3>Numbered Label Strip</h3>
+      <p>Draw four paper label strips, number the events, and write which number belongs beside ____________________.</p>
+      <p>Check the event order by asking whether ____________________ happened before or after the other events.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">object path slip | object sequence</p>
+      <h3>Object Stack Sort</h3>
+      <p>Choose three fictional desk drawer objects. Arrange them by story job and explain why ____________________ goes in that spot.</p>
+      <p>The object sequence works because ____________________ has a clear place in the pretend drawer story.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">setting row slip | setting sequence</p>
+      <h3>Drawer Nook Path</h3>
+      <p>Draw three pretend spots inside a desk drawer scene. Show where ____________________ appears first, next, and last.</p>
+      <p>The setting sequence helps the listener follow how ____________________ moves through the pretend drawer world.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">problem-solution slip | problem-solution sequence</p>
+      <h3>Folded Note Fix</h3>
+      <p>Make a small pretend drawer problem, then add two steps that lead to a gentle solution. Write the solution step for ____________________.</p>
+      <p>The problem-solution sequence works because ____________________ comes after the problem and helps close the story.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>The card that belongs first is ____________________ because it gives the story a clear start.</li>
+<li>The card I moved to the middle was ____________________.</li>
+<li>The final card in my sequence is ____________________.</li>
+<li>One transition word that helped my order was ____________________.</li>
+<li>The drawer object that caused the next event was ____________________.</li>
+<li>The spot where my story needed a bridge slip was ____________________.</li>
+<li>My character chose ____________________ before the ending happened.</li>
+<li>The sequence I would try again starts with ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 1 | Ages 6-8 | beginning sequence</div>
+      <h2>Moon Muffin Market Opening Order</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, pull out three blank desk-drawer slips, and name the first market sound together: ____________________.</p>
+      <p class="kid-direction">Fill the slips in order so the moon muffin stall opens before anything else happens: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the moon muffin bell rings when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the silver tray rolls toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the market helper notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the first paper wrapper closes around ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Transition prompt: Add one order word before the second event: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Point to the event that must happen first and explain why: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number the three slips silently before writing one market word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Retell the market opening with three new pretend drawer slips: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 2 | Ages 6-8 | first-next-finally</div>
+      <h2>Puddle Planet Parcel Path</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw four small puddle boxes, and choose one made-up parcel job: ____________________.</p>
+      <p class="kid-direction">Write the parcel trip step by step so each puddle box has one event: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the puddle parcel slides onto ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the splash sorter sends it toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the stamp puddle changes because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the parcel reaches the desk drawer marked ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Transition prompt: Choose one time word that helps the parcel move: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Make sure the final stop could not happen before ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Tap the four puddle boxes in order before filling one blank: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Try the parcel path again with a different pretend stamp: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 3 | Ages 7-9 | event order</div>
+      <h2>Buttonwood Library Train Ticket Row</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, cut four paper ticket shapes, and choose the train&#39;s first shelf stop: ____________________.</p>
+      <p class="kid-direction">Line up the tickets from first stop to last stop before writing the train scene: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the Buttonwood Library Train arrives beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the ticket reader checks ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the shelf car opens and reveals ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the train rolls the book cart to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Transition prompt: Add a train-moving phrase between two tickets: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Move any ticket that belongs earlier and name the clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number the tickets with tiny dots before reading one sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Rebuild the library train row with four new paper tickets: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 4 | Ages 7-9 | problem-solution sequence</div>
+      <h2>Button Bakery Map Fix</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold a scrap map into the desk drawer, and mark one wrong crumb path: ____________________.</p>
+      <p class="kid-direction">Show how the map mix-up starts, grows clearer, and gets fixed in order: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the button bakery map points to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the tray carrier follows the crumbs and finds ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the baker spots the wrong label because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the map is fixed when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Transition prompt: Add a bridge from problem to solution: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Underline the step that actually solves the mix-up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Trace the wrong crumb path with one finger before writing: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Make a new folded bakery map with one different fix: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 5 | Ages 7-8 | setting sequence</div>
+      <h2>Teacup Town Weather Change</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw four little window panes, and choose the first pretend weather clue: ____________________.</p>
+      <p class="kid-direction">Move through the panes in order so Teacup Town changes gently from start to finish: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the weather window shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the cup-handle bridge begins to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the tiny town square changes when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the window settles on ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Transition prompt: Add a phrase that shows the weather changed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Circle the setting detail that changes after the first pane: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch one weather mark in each pane before writing: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Retell the weather-window sequence with four new pane clues: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 6 | Ages 7-9 | cause and effect</div>
+      <h2>Pocket Park Notice Chain</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw one small notice board, and invent a harmless paper notice together: ____________________.</p>
+      <p class="kid-direction">Write what the notice says, what it causes, and how the park changes afterward: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the Pocket Park notice board announces ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, one bench-side helper reacts by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, that choice causes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the pocket park feels different because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Transition prompt: Add one cause-and-effect phrase before the third step: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Draw an arrow from the notice to the effect it caused: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Point to each arrow in order before filling one blank: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Make another pretend park notice and follow its effect chain: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 7 | Ages 7-9 | first-next-finally</div>
+      <h2>Spoon Ferry Lunchbox Harbor</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place the card beside a pencil and one folded paper dock, then name the pretend ferry cargo together: ____________________.</p>
+      <p class="kid-direction">Write what happens as the spoon ferry loads, crosses, pauses, and docks in order: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the spoon ferry picks up ____________________ from the lunchbox dock.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the harbor water makes the ferry ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the crumb captain asks for ____________________ before docking.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the ferry delivers ____________________ and the harbor settles.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Add one crossing transition such as after that, soon, or at last before ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back and circle the event that could not happen before ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Sketch three small harbor boxes and label the last one ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Retell the spoon ferry trip in order, ending with ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 8 | Ages 7-9 | event order</div>
+      <h2>Acorn Avenue Errand Office</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Set out three scrap-paper errand tickets and tell the writer the Acorn Avenue office is invented: ____________________.</p>
+      <p class="kid-direction">Write the errand in the order the acorn office handles it from drawer to stamp: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the acorn clerk opens the drawer and finds ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the paperclip messenger carries ____________________ down Acorn Avenue.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the leaf counter discovers ____________________ is in the wrong tray.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the office stamps the errand with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Use an order word to show when ____________________ moves from one desk to the next.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back and fix one event if ____________________ happens too early.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number four acorn-office moments and mark ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Retell the errand with first, next, then, and finally using ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 9 | Ages 8-10 | object sequence</div>
+      <h2>Seed Library Map Room</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Give the writer one index card as a pretend seed packet and one blank map square: ____________________.</p>
+      <p class="kid-direction">Write a sequence where the labeled seed packet moves through shelves, drawers, and map marks: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the seed packet is placed on ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the map room ladder, drawer, or stamp helps it move to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the packet is almost mixed up with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the packet reaches the right map shelf and ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Use a movement transition such as across, into, under, or beside before ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check that the seed packet appears in every event, then add the missing spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw four tiny boxes and place the packet in box ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Save the finished card as a pretend library map label for ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 10 | Ages 8-10 | cause and effect</div>
+      <h2>Rain Gauge Railway</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Lay a paper strip as the railway line and explain that the rain gauge, train, and station are pretend: ____________________.</p>
+      <p class="kid-direction">Write a paper-only railway story where each event causes the next event in the chain: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the rain gauge fills to the mark that says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, because of that, the tiny railway conductor decides to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, that choice causes the platform crew to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the rain train arrives with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Add one cause transition such as because, so, or therefore before ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back and underline the event that causes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw a cause-and-effect arrow from ____________________ to the last stop.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Tell the railway chain using one because sentence about ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 11 | Ages 8-10 | detail sequence</div>
+      <h2>Moss Message Observatory</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Fold a paper telescope strip and invite the writer to imagine a desk-drawer observatory with invented rooms: ____________________.</p>
+      <p class="kid-direction">Write the moss message sequence by adding one useful clue before the next clue appears: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the observatory lens notices ____________________ glowing in the moss.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the moss message adds a smaller clue about ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the watcher compares both clues and realizes ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the full moss message says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Add a clue-order transition such as next, later, or finally before ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back and remove any clue that explains ____________________ before the moss reveals it.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: List four moss clues and put a box around ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Share the moss message in order, saving ____________________ for last.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 12 | Ages 8-10 | first-next-finally</div>
+      <h2>Tidepool Shell Tray</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, set out three small paper shells, and invite the writer to place them in story order: ____________________.</p>
+      <p class="kid-direction">Use each blank to tell what the tidepool timekeepers do before the shell counter is reset: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the tidepool timekeepers find a shell counter beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the smallest timekeeper carries ____________________ to the sorting tray.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the lab note changes because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the shell counter is ready when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Add one sequence word that helps the reader move from one shell step to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does the first step clearly happen before ____________________?</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Number the three shells silently and write only the middle step: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Retell the tiny lab sequence at home with three paper marks: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 13 | Ages 10-11 | middle sequence</div>
+      <h2>Revision River Ferry Docks</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw four small ferry docks, and choose one plain draft sentence to send across: ____________________.</p>
+      <p class="kid-direction">Build the crossing so the middle events explain how the sentence changes before it lands: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the Revision River ferry leaves the drawer dock carrying ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the ferry pauses when the draft sentence notices ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the middle dock changes the sentence by adding ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the ferry reaches the far dock with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Add a transition phrase that shows the middle turn after ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does the middle event make the final sentence easier to understand: ____________________?</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Write only the ferry pause and the changed detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Draw three ferry docks and label the strongest middle step: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 14 | Ages 10-11 | detail sequence</div>
+      <h2>Clue Label Tower Trail</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, sketch a tower of four blank labels, and remind the writer that every exhibit is fictional: ____________________.</p>
+      <p class="kid-direction">Fill the labels so each clue gives the next clue room to make sense: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the lowest tower label names an exhibit shaped like ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the second label adds the detail ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the third label changes the clue by showing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the top label reveals why ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Add a transition phrase that connects the second clue to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does each clue appear before the clue that depends on ____________________?</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: List the four label details before writing the full trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Turn four paper scraps into clue labels and order them around ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 15 | Ages 10-11 | cause and effect</div>
+      <h2>Compass Craft Choice Path</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, draw a paper compass dial, and choose one academy craft choice to test: ____________________.</p>
+      <p class="kid-direction">Show how each choice causes the next academy step inside the pretend academy page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, the apprentice chooses ____________________ for the compass center.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, that choice causes the compass mark to point toward ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the apprentice adjusts ____________________ because the pointer changes.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the finished compass helps the academy find ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Add a cause-and-effect transition such as because, so, or after: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does each result grow from the choice before it: ____________________?</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Draw one tiny cause arrow from the first choice to ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Name one cause and one result from your compass story: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-sequence-card-page">
+      <div class="page-kicker">Story Sequence Card 16 | Ages 10-11 | ending sequence</div>
+      <h2>Binding Day Final Thread</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Print the card, fold one scrap page like a tiny booklet, and choose a final paper problem: ____________________.</p>
+      <p class="kid-direction">Write the ending steps so the boardwalk booklet closes the problem instead of starting a new one: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First prompt</h3>
+      <p>First, near the ending, the page keeper gathers ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next prompt</h3>
+      <p>Next, the keeper checks ____________________ before the ribbon is tied.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Then prompt</h3>
+      <p>Then, the final page shows ____________________ has changed.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finally prompt</h3>
+      <p>Finally, the booklet closes beside ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Transition prompt</h3>
+      <p>Add an ending transition that shows the last step follows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Check back</h3>
+      <p>Check back: Does the final moment answer something from earlier: ____________________?</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Quiet option</h3>
+      <p>Quiet option: Box the detail that feels like closure and write it here: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Take-home line: Stack four scrap pages and name the final sequence: ____________________.</p>
+    </section>
+  </body>
+</html>

@@ -1988,6 +1988,130 @@
           "summary": "A page-order boardwalk world for testing one stronger final line."
         }
       ]
+    },
+    {
+      "slug": "desk-drawer-story-sequence-card-pack",
+      "title": "Desk Drawer Story Sequence Card Pack",
+      "pricePoint": "$39",
+      "status": "checkout_pending",
+      "headline": "A printable sequence-card pack for screen-free desk-drawer story order.",
+      "summary": "Sixteen adult-led desk-drawer sequence cards help kids order beginning, middle, ending, cause, transition, setting, object, and final events.",
+      "heroImage": "images/plotsprout/batch33/desk-drawer-story-sequence-card-pack.jpg",
+      "ctaLabel": "Request sequence card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Desk%20Drawer%20Story%20Sequence%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static desk drawer story sequence card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable desk-drawer story sequence cards",
+        "Adult setup guide",
+        "Fictional sequence-card safety notes",
+        "Sequence coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led sequence routines",
+        "Ten take-home sequence slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A homeschool writing table that needs one paper order move before a full story",
+        "A tutoring or co-op desk where writers can place one sequence card at a time",
+        "A family table warm-up where first, next, then, and finally boxes reduce blank-page pressure",
+        "A reluctant-writer activity that separates event order from a full draft",
+        "A take-home sequence slip set for finishing one invented story order offline"
+      ],
+      "parentSteps": [
+        "Choose one sequence routine before the activity starts.",
+        "Set the paper, pencil, blank slips, pretend drawer, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one pretend drawer object into a make-believe story order rather than recording personal facts.",
+        "Send one sequence slip with a single finish blank so families can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for choosing the first sound before a tiny stall opens."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A tiny post-office world for placing a pretend parcel into first, next, then, and finally boxes."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A rolling library world for lining up four paper tickets into a clearer story row."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for moving from a mix-up to a fix in the right order."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup weather world for showing how a pretend setting changes one pane at a time."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A notice-board world for linking one paper announcement to the result it causes."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A lunchbox harbor world for ordering a small ferry trip from pickup to delivery."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An errand-office world for sorting one pretend desk task into clean event order."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed-library world for following one pretend packet through shelves, drawers, and marks."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A railway world for writing why one tiny rain event leads to the next."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A quiet observatory world for revealing one message clue after another."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for putting shell-counter steps into a short ordered scene."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for strengthening the middle event before the sentence lands."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A label tower world for stacking clue labels from broad idea to final detail."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A craft academy world for showing how one compass choice causes the next result."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A page-order boardwalk world for making the final steps of a pretend booklet feel complete."
+        }
+      ]
     }
   ]
 }
