@@ -68,7 +68,7 @@
       "adultSetup": "Adult: Set this card beside blank paper and keep every map mark invented while the writer tests word swaps: ____________________.",
       "kidDirection": "Writer: Make the map mix-up clearer by naming the right pretend object, action, and helpful detail: ____________________.",
       "plainWordPrompt": "Plain words: The helper fixed the thing on the map: ____________________.",
-      "preciseNounPrompt": "Precise noun: Replace thing and map with crumb map, button marker, tray compass, ribbon path, or paper route card: ____________________.",
+      "preciseNounPrompt": "Precise noun: Replace thing and map with crumb map, button marker, tray compass, ribbon path, or paper path card: ____________________.",
       "clearVerbPrompt": "Clear verb: Replace fixed with rotated, matched, unfolded, traced, aligned, or nudged: ____________________.",
       "describerPrompt": "Useful describer: Add one useful word such as crooked, speckled, folded, tidy, or tiny when it explains the mix-up: ____________________.",
       "sentenceSwapPrompt": "Phrase swap: Trade on the map for beside the button marker, across the ribbon path, or under the crumb-map corner: ____________________.",

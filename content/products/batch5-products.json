@@ -3724,6 +3724,130 @@
           "summary": "A binding day world for making a page promise feel warm, grand, or quiet."
         }
       ]
+    },
+    {
+      "slug": "washi-tape-story-word-choice-card-pack",
+      "title": "Washi Tape Story Word Choice Card Pack",
+      "pricePoint": "$67",
+      "status": "checkout_pending",
+      "headline": "A printable word choice card pack for paper-only washi tape sentence swaps.",
+      "summary": "Sixteen adult-led washi tape prompts help kids replace plain words with precise nouns, clear verbs, useful describers, phrase swaps, and final lines.",
+      "heroImage": "images/plotsprout/batch47/washi-tape-story-word-choice-card-pack.jpg",
+      "ctaLabel": "Request word choice card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Washi%20Tape%20Story%20Word%20Choice%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static washi tape story word choice card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable washi tape story word choice cards",
+        "Adult setup guide",
+        "Fictional word-choice safety notes",
+        "Washi tape word swap coaching moves",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six adult-led word choice routines",
+        "Ten take-home word slips",
+        "Eight optional prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one word swap before a story sentence",
+        "A tutoring or co-op table where writers can revise one card at a time",
+        "A warm-up where a small paper strip reduces blank-page pressure",
+        "A reluctant-writer activity that separates word choice from a full draft",
+        "A take-home word slip set for building one invented story offline"
+      ],
+      "parentSteps": [
+        "Choose one word choice routine before the activity starts.",
+        "Set the paper, pencils, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one plain line into a fictional sentence with sharper nouns and verbs.",
+        "Send one word slip with a single blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for swapping thing and put into tray, counter, and helper action words."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for changing plain mail words into shell-slot nouns and clear motions."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for sharpening ticket lines with exact props and clean verbs."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for turning vague map words into crumb-map and ribbon-path choices."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for choosing weather-window nouns and tidy action verbs."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for tightening notice-board words with useful describers."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for replacing plain ferry words with dock, pier, and glide choices."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for choosing office nouns and clear paper-errand verbs."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for shaping a map-table line with specific nouns and phrase swaps."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for making gauge, platform, and rail-label words more exact."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for pairing exact objects with balanced sentence rhythm."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for testing one surface word in a clearer shell-note sentence."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for trimming a wordy line into one cleaner ferry sentence."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for choosing the verb before adding display-tag describers."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for comparing two word choices before copying one final line."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for copying the clearest revised boardwalk sentence."
+        }
+      ]
     }
   ]
 }

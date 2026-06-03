@@ -582,6 +582,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable sticky note story tone cards with adult guide tools, tone routines, and take-home tone slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'washi-tape-story-word-choice-card-pack',
+    title: 'Washi Tape Story Word Choice Card Pack',
+    pricePoint: '$67',
+    description:
+      'Sixteen printable washi tape story word choice cards with adult guide tools, word choice routines, and take-home word slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

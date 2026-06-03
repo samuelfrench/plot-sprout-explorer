@@ -43,6 +43,8 @@ import {
   validateIndexCardStoryShowNotTellCardPackSourceFiles,
   validateStickyNoteStoryToneCardPackSource,
   validateStickyNoteStoryToneCardPackSourceFiles,
+  validateWashiTapeStoryWordChoiceCardPackSource,
+  validateWashiTapeStoryWordChoiceCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -119,6 +121,7 @@ const batch43ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch44ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch44-product-images.json')
 const batch45ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch45-product-images.json')
 const batch46ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch46-product-images.json')
+const batch47ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch47-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -159,6 +162,7 @@ const binderClipTransitionSourceFile = resolve(root, 'content', 'product-artifac
 const folderTabDetailSourceFile = resolve(root, 'content', 'product-artifacts', 'folder-tab-story-detail-card-pack.json')
 const indexCardShowNotTellSourceFile = resolve(root, 'content', 'product-artifacts', 'index-card-story-show-not-tell-card-pack.json')
 const stickyNoteToneSourceFile = resolve(root, 'content', 'product-artifacts', 'sticky-note-story-tone-card-pack.json')
+const washiTapeWordChoiceSourceFile = resolve(root, 'content', 'product-artifacts', 'washi-tape-story-word-choice-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -200,6 +204,7 @@ const batch43ProductImagesBatchId = '2026-06-03-batch43-product-images'
 const batch44ProductImagesBatchId = '2026-06-03-batch44-product-images'
 const batch45ProductImagesBatchId = '2026-06-03-batch45-product-images'
 const batch46ProductImagesBatchId = '2026-06-03-batch46-product-images'
+const batch47ProductImagesBatchId = '2026-06-03-batch47-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -240,6 +245,7 @@ const binderClipTransitionBatchId = '2026-06-03-batch43'
 const folderTabDetailBatchId = '2026-06-03-batch44'
 const indexCardShowNotTellBatchId = '2026-06-03-batch45'
 const stickyNoteToneBatchId = '2026-06-03-batch46'
+const washiTapeWordChoiceBatchId = '2026-06-03-batch47'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -3582,6 +3588,110 @@ function validateBatch46ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch47ProductImage(image) {
+  const label = `2026-06-03-batch47-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'washi-tape-story-word-choice-card-pack',
+    `${label}.slug must be washi-tape-story-word-choice-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch47/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch47/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch47/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank washi tape strips',
+    'empty writing areas',
+    'unbranded pencils',
+    'plain white background',
+    'screen-free washi tape story word choice card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'coordinates',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'microphone',
+    'audio recorder',
+    'voice memo',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'contest',
+    'prize',
+    'food',
+    'tasting',
+    'allergy',
+    'medical',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar.negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -3907,6 +4017,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'sticky-note-story-tone-card-pack': {
       title: 'Sticky Note Story Tone Card Pack',
       pricePoint: '$65',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'washi-tape-story-word-choice-card-pack': {
+      title: 'Washi Tape Story Word Choice Card Pack',
+      pricePoint: '$67',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -5138,12 +5256,23 @@ expect(Array.isArray(batch46ProductImages.images), 'batch46 product image manife
 expect(batch46ProductImages.images.length === 1, `Expected 1 Batch 46 product image, found ${batch46ProductImages.images.length}.`)
 validateBatch46ProductImage(batch46ProductImages.images[0])
 
+expect(existsSync(batch47ProductImagesFile), `Missing Batch 47 product image manifest: ${batch47ProductImagesFile}`)
+const batch47ProductImages = readJson(batch47ProductImagesFile)
+expect(
+  batch47ProductImages.batchId === batch47ProductImagesBatchId,
+  `batch47 product image manifest batchId must be ${batch47ProductImagesBatchId}.`,
+)
+expect(batch47ProductImages.generatedAt === '2026-06-03', 'batch47 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch47ProductImages.images), 'batch47 product image manifest images must be an array.')
+expect(batch47ProductImages.images.length === 1, `Expected 1 Batch 47 product image, found ${batch47ProductImages.images.length}.`)
+validateBatch47ProductImage(batch47ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-  expect(products.products.length === 39, `Expected 39 product records, found ${products.products.length}.`)
+  expect(products.products.length === 40, `Expected 40 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -5186,6 +5315,7 @@ for (const requiredProductSlug of [
   'folder-tab-story-detail-card-pack',
   'index-card-story-show-not-tell-card-pack',
   'sticky-note-story-tone-card-pack',
+  'washi-tape-story-word-choice-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -8103,6 +8233,93 @@ for (const asset of stickyNoteToneArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(washiTapeWordChoiceSourceFile), `Missing Batch 47 Washi Tape Story Word Choice Card Pack source file: ${washiTapeWordChoiceSourceFile}`)
+const washiTapeWordChoiceSource = readJson(washiTapeWordChoiceSourceFile)
+expect(
+  washiTapeWordChoiceSource.batchId === washiTapeWordChoiceBatchId,
+  `Washi Tape Story Word Choice Card Pack source batchId must be ${washiTapeWordChoiceBatchId}.`,
+)
+const washiTapeWordChoiceProduct = products.products.find(
+  (product) => product.slug === 'washi-tape-story-word-choice-card-pack',
+)
+expect(
+  washiTapeWordChoiceProduct,
+  'Missing Washi Tape Story Word Choice Card Pack product record for Batch 47 artifact validation.',
+)
+const washiTapeWordChoiceSourceErrors = validateWashiTapeStoryWordChoiceCardPackSource(
+  washiTapeWordChoiceSource,
+  washiTapeWordChoiceProduct,
+  worldAgeBands,
+)
+expect(
+  washiTapeWordChoiceSourceErrors.length === 0,
+  `Washi Tape Story Word Choice Card Pack source failed validation:\n${washiTapeWordChoiceSourceErrors.join('\n')}`,
+)
+const washiTapeWordChoiceSourceFileErrors = validateWashiTapeStoryWordChoiceCardPackSourceFiles(
+  washiTapeWordChoiceSource,
+  root,
+)
+expect(
+  washiTapeWordChoiceSourceFileErrors.length === 0,
+  `Washi Tape Story Word Choice Card Pack sourceFiles failed validation:\n${washiTapeWordChoiceSourceFileErrors.join('\n')}`,
+)
+const washiTapeWordChoiceExpectedPdfPages = washiTapeWordChoiceSource.cards.length + 5
+const washiTapeWordChoiceArtifactStatus = inspectArtifactFiles(root, washiTapeWordChoiceSource.artifact, {
+  expectedPdfPages: washiTapeWordChoiceExpectedPdfPages,
+})
+expect(
+  washiTapeWordChoiceArtifactStatus.valid,
+  `Washi Tape Story Word Choice Card Pack artifacts failed validation:\n${washiTapeWordChoiceArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  washiTapeWordChoiceArtifactStatus.files.pdf.size > 100_000,
+  `Washi Tape Story Word Choice Card Pack PDF artifact is unexpectedly small: ${washiTapeWordChoiceArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  washiTapeWordChoiceArtifactStatus.files.pdf.pageCount === washiTapeWordChoiceExpectedPdfPages,
+  `Washi Tape Story Word Choice Card Pack PDF artifact must have ${washiTapeWordChoiceExpectedPdfPages} pages.`,
+)
+expect(
+  washiTapeWordChoiceArtifactStatus.files.zip.size > washiTapeWordChoiceArtifactStatus.files.pdf.size,
+  'Washi Tape Story Word Choice Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const washiTapeWordChoiceCheckoutErrors = validateCheckoutReadiness(
+  washiTapeWordChoiceProduct,
+  washiTapeWordChoiceArtifactStatus,
+)
+expect(
+  washiTapeWordChoiceCheckoutErrors.length === 0,
+  `Washi Tape Story Word Choice Card Pack checkout readiness failed validation:\n${washiTapeWordChoiceCheckoutErrors.join('\n')}`,
+)
+const washiTapeWordChoiceArtifactManifest = readJson(resolve(root, washiTapeWordChoiceSource.artifact.manifestPath))
+expect(
+  washiTapeWordChoiceArtifactManifest.sourcePageCount === washiTapeWordChoiceSource.cards.length,
+  'Washi Tape Story Word Choice Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(washiTapeWordChoiceArtifactManifest.files.assets),
+  'Washi Tape Story Word Choice Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  washiTapeWordChoiceArtifactManifest.files.assets.length === washiTapeWordChoiceSource.worldSlugs.length,
+  'Washi Tape Story Word Choice Card Pack artifact manifest must include one copied local image per source world.',
+)
+const washiTapeWordChoiceManifestAssetErrors = validateManifestWorldAssets(
+  washiTapeWordChoiceSource,
+  washiTapeWordChoiceArtifactManifest,
+)
+expect(
+  washiTapeWordChoiceManifestAssetErrors.length === 0,
+  `Washi Tape Story Word Choice Card Pack artifact manifest image coverage failed validation:\n${washiTapeWordChoiceManifestAssetErrors.join('\n')}`,
+)
+for (const asset of washiTapeWordChoiceArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Washi Tape Story Word Choice Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -8141,6 +8358,7 @@ const productImageManifests = [
   batch44ProductImages,
   batch45ProductImages,
   batch46ProductImages,
+  batch47ProductImages,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

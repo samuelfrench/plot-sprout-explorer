@@ -51,7 +51,7 @@ const wordChoiceSkills = [
   'turn a general word into an invented label',
   'choose one word that changes the mood',
   'replace repeated words without a thesaurus',
-  'use one texture word without tasting',
+  'use one surface word on paper',
   'tighten a sentence with fewer words',
   'choose a verb before adding describing words',
   'compare two word choices on paper',
@@ -113,7 +113,7 @@ function validWashiTapeWordChoiceSource(overrides = {}) {
     title: 'Washi Tape Story Word Choice Card Pack',
     pricePoint: '$67',
     audience:
-      'Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.',
+      'Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.',
     sessionLength:
       '16 printable word-choice cards plus adult guide tools, word-choice routines, take-home word slips, and optional prompts',
     safetyNote: safety,

@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Washi Tape Story Word Choice Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .word-choice-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .word-choice-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .word-choice-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable washi tape word choice cards</p>
+        <h1>Washi Tape Story Word Choice Card Pack</h1>
+        <p>Sixteen paper cards help writers replace plain fictional words with precise nouns, clear verbs, useful describers, sentence swaps, rhythm checks, and final revised lines.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable word-choice cards plus adult guide tools, word-choice routines, take-home word slips, and optional prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$67</span>
+        <h2>Included</h2>
+        <ul><li>16 printable washi tape word choice cards</li>
+<li>Adult setup guide</li>
+<li>Fictional word-choice safety notes</li>
+<li>Washi tape coaching moves</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led word choice routines</li>
+<li>Ten take-home word slips</li>
+<li>Eight optional prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story word-choice coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Washi Tape Story Word Choice Adult Guide</h3><ul><li>Print the washi tape word choice cards, blank swap strips, and adult guide pages before the adult-led paper session.</li>
+<li>Begin with one plain fictional line, then coach word choice through precise nouns, clear verbs, useful describing words, phrase swaps, sentence rhythm, and final revision.</li>
+<li>Keep every example made-up, broad, offline, printable, and guided by an adult.</li>
+<li>Use short tape strips to mark one word or phrase at a time so the writer can compare choices without crowding the page.</li>
+<li>Replace narrow real details with pretend names, broad story places, and invented objects before writing begins.</li>
+<li>End each activity by writing a final revised fictional line that sounds clearer, smoother, and more specific on paper.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one washi tape story word-choice card at a time. Keep every choice broad, invented, paper-only, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen word-choice-card worlds</h2>
+      <p>Pick a world image, then revise one fictional sentence with a pretend washi tape story word-choice card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Story word-choice routines</p>
+      <h2>Choose the washi tape word-choice rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Plain Line Tape Mark</h3>
+      <p>Finding the first word in a fictional sentence that needs a clearer choice.</p>
+      <ol><li>The adult writes one plain fictional line across the top of the page: ____________________.</li>
+<li>The writer places a tape mark under one word that feels too general: ____________________.</li>
+<li>The adult asks what job that word should do in the sentence: ____________________.</li>
+<li>The writer rewrites the line with the marked word ready for a stronger swap: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Precise Noun Strip</h3>
+      <p>Replacing a vague thing word with a clearer pretend object or story place.</p>
+      <ol><li>The adult circles one general noun in the plain line, such as thing, place, object, or piece: ____________________.</li>
+<li>The writer lists two precise fictional noun choices that stay broad and made-up: ____________________.</li>
+<li>The adult asks which noun gives the reader the clearest picture: ____________________.</li>
+<li>The writer writes the sentence again with the chosen precise noun: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Clear Verb Swap</h3>
+      <p>Trading a flat action word for a verb that shows the movement.</p>
+      <ol><li>The adult tapes over one plain verb in the fictional line: ____________________.</li>
+<li>The writer chooses two clear verbs, such as slide, tuck, tilt, drift, fold, or tap: ____________________.</li>
+<li>The adult asks which verb matches the pretend moment without adding extra facts: ____________________.</li>
+<li>The writer writes the revised line with the clearer verb in place: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Useful Describing Word Check</h3>
+      <p>Keeping describing words that help and removing ones that only decorate.</p>
+      <ol><li>The adult points to one describing word in the sentence or invites the writer to add one: ____________________.</li>
+<li>The writer writes what the describing word tells the reader about size, color, shape, sound, or feel on paper: ____________________.</li>
+<li>The adult asks whether the word helps the sentence or should be swapped for a better one: ____________________.</li>
+<li>The writer writes the sentence with one useful describing word: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Phrase Swap Lineup</h3>
+      <p>Comparing two short phrases before choosing the cleaner sentence.</p>
+      <ol><li>The adult writes the original phrase on one tape strip: ____________________.</li>
+<li>The writer writes two possible phrase swaps on two fresh strips: ____________________.</li>
+<li>The adult reads each phrase aloud softly from the paper and asks which one says the idea most clearly: ____________________.</li>
+<li>The writer copies the chosen phrase into the revised sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Rhythm and Final Line</h3>
+      <p>Making the revised sentence sound smooth on paper before finishing.</p>
+      <ol><li>The adult places the revised sentence under the plain line for side-by-side checking: ____________________.</li>
+<li>The writer marks one spot where the sentence feels bumpy, crowded, or too plain: ____________________.</li>
+<li>The adult asks which word can move, change, or come out to improve the rhythm: ____________________.</li>
+<li>The writer writes the final revised fictional line with precise words and smooth rhythm: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home word slips</p>
+      <h2>Swap one word later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">One paper pass | plain fictional line</p>
+      <h3>Plain Line Slip</h3>
+      <p>Write one made-up plain line that can be improved with stronger word choices: ____________________.</p>
+      <p>Ask which word feels too general and should get a tape mark: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Brief adult-led pass | precise nouns</p>
+      <h3>Precise Noun Slip</h3>
+      <p>Swap one general noun for a precise pretend object, place cue, or story item: ____________________.</p>
+      <p>Ask which noun gives the clearest picture on paper: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single printable slip | clear verbs</p>
+      <h3>Clear Verb Slip</h3>
+      <p>Replace one flat verb with a clear verb that shows the action: ____________________.</p>
+      <p>Ask what movement the new verb helps the reader picture: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Quiet pencil pass | useful describing words</p>
+      <h3>Helpful Descriptor Slip</h3>
+      <p>Add or swap one describing word that helps the reader see the pretend moment: ____________________.</p>
+      <p>Ask what the describing word adds that the sentence needs: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Fresh slip pass | specific word choice</p>
+      <h3>Too-General Word Slip</h3>
+      <p>Find one word that feels too general and write a stronger replacement beside it: ____________________.</p>
+      <p>Ask why the replacement word is clearer than the first word: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Tape strip pass | phrase swaps</p>
+      <h3>Phrase Swap Slip</h3>
+      <p>Write two short phrase swaps for the same fictional idea, then choose one: ____________________.</p>
+      <p>Ask which phrase says the idea with fewer extra words: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Calm paper pass | sentence rhythm</p>
+      <h3>Sentence Rhythm Slip</h3>
+      <p>Copy the revised sentence and mark one spot that could sound smoother on paper: ____________________.</p>
+      <p>Ask which word could move, change, or come out for better rhythm: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Second pencil pass | noun and verb pairing</p>
+      <h3>Word Pair Slip</h3>
+      <p>Pair one precise noun with one clear verb in a new fictional line: ____________________.</p>
+      <p>Ask how the noun and verb work together in the line: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Short revision pass | clean revision</p>
+      <h3>Cleaner Line Slip</h3>
+      <p>Remove one extra word from the revised line so the meaning stays clear: ____________________.</p>
+      <p>Ask what changed after the extra word came out: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Final paper pass | final revised line</p>
+      <h3>Final Word Choice Slip</h3>
+      <p>Write the final revised fictional line with one precise noun, one clear verb, and smooth rhythm: ____________________.</p>
+      <p>Ask what improved from the plain line to the final line: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the plain fictional line for word choice practice is ____________________.</li>
+<li>Optional adult-led offline prompt: the general word I will mark with tape is ____________________.</li>
+<li>Optional adult-led offline prompt: the precise noun I chose for the pretend moment is ____________________.</li>
+<li>Optional adult-led offline prompt: the clear verb that shows the action is ____________________.</li>
+<li>Optional adult-led offline prompt: the useful describing word that earns its place is ____________________.</li>
+<li>Optional adult-led offline prompt: the phrase swap that says the idea clearly is ____________________.</li>
+<li>Optional adult-led offline prompt: the word I changed for smoother sentence rhythm is ____________________.</li>
+<li>Optional adult-led offline prompt: the final revised fictional line is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 1 | Ages 6-8 | choose precise market nouns, clear actions, and useful describers for one revised line</div>
+      <h2>Moon Muffin Washi Tape Counter Words</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this paper card beside blank paper and invite the writer to mark favorite word swaps with pretend tape strips: ____________________.</p>
+      <p class="kid-direction">Writer: Make the market sentence clearer by swapping plain words for exact pretend nouns, verbs, and describers: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The helper put the thing on the place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: Replace thing and place with moon muffin tray, crumb card, counter mat, or another pretend market noun: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: Replace put with set, tucked, slid, balanced, or another clear market action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: Add one helpful word such as silver, soft, warm, neat, or tiny only if it makes the picture clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: Trade on the place for beside the moon tag, across the counter mat, or under the paper awning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Page rhythm: Try a short-short-long word pattern on paper, then mark the line that looks smoothest to read: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: Combine one precise noun, one clear verb, and one useful describer into the best line: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle one noun and one verb first, then write just the final line: ____________________. Take-home line: Revise another pretend moon muffin sentence by replacing thing and put: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 2 | Ages 6-8 | replace plain mail words with exact puddle post office nouns and active verbs</div>
+      <h2>Puddle Planet Washi Tape Shell Slot</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out this card, blank paper, and pretend tape marks for sorting word choices before the final line: ____________________.</p>
+      <p class="kid-direction">Writer: Trade fuzzy mail words for exact objects, clear motions, and one useful describing word: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The worker moved the thing to the spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: Replace worker, thing, and spot with mail helper, puddle note, shell slot, ripple stamp, or sorting tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: Replace moved with floated, slid, sorted, tucked, or stamped so the action is easy to picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: Add one helpful word such as round, neat, blue, curled, or tiny when it sharpens the pretend mail clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: Replace to the spot with into the shell slot, across the ripple tray, or beside the stamp card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Page rhythm: Build a line with one short phrase and one longer phrase so the sentence rests neatly on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: Write the puddle post office line with exact nouns, one clear verb, and no extra clutter: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Underline the best noun swap first, then write one final sentence: ____________________. Take-home line: Try a second pretend puddle mail line by replacing worker and moved: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 3 | Ages 7-9 | revise a library train sentence with precise props, stronger verbs, and smoother rhythm</div>
+      <h2>Buttonwood Washi Tape Ticket Line</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place the card beside blank paper and ask the writer to test word swaps before choosing a final fictional line: ____________________.</p>
+      <p class="kid-direction">Writer: Make the library train moment more exact by choosing the best prop noun, action verb, and rhythm: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The traveler did something with the ticket near the place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: Replace place with rolling shelf, station bookmark, buttonwood bench, ticket rail, or another pretend train noun: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: Replace did something with stamped, tucked, nudged, clipped, turned, or traced: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: Add one needed word such as folded, brass-colored, narrow, tidy, or quiet to guide the reader&#39;s picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: Change near the place into beside the rolling shelf, under the station bookmark, or along the ticket rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Page rhythm: Compare a clipped sentence with a flowing sentence and choose the one that fits the train stop best: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: Write one polished library train sentence using the strongest noun, verb, and phrase swap: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Box the ticket noun and action verb before writing the final line: ____________________. Take-home line: Revise another pretend library train line by changing one vague noun and one weak verb: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 4 | Ages 7-9 | use exact map-table nouns, vivid verbs, and useful describers to clarify a mix-up</div>
+      <h2>Button Bakery Washi Tape Map Mixup</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this card beside blank paper and keep every map mark invented while the writer tests word swaps: ____________________.</p>
+      <p class="kid-direction">Writer: Make the map mix-up clearer by naming the right pretend object, action, and helpful detail: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The helper fixed the thing on the map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: Replace thing and map with crumb map, button marker, tray compass, ribbon path, or paper path card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: Replace fixed with rotated, matched, unfolded, traced, aligned, or nudged: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: Add one useful word such as crooked, speckled, folded, tidy, or tiny when it explains the mix-up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: Trade on the map for beside the button marker, across the ribbon path, or under the crumb-map corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Page rhythm: Arrange the sentence so the mix-up clue comes first or last, then pick the clearer paper version: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: Write the button bakery map line with one precise noun, one clear verb, and one useful describer: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw two pretend map marks, circle the better noun, and write the final line: ____________________. Take-home line: Make another pretend map sentence clearer by replacing thing, fixed, and on the map: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 5 | Ages 7-8 | choose exact weather-window nouns and clean verbs for a smooth revised sentence</div>
+      <h2>Teacup Town Washi Tape Weather Window</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside blank paper and invite the writer to mark the clearest weather-window word choices: ____________________.</p>
+      <p class="kid-direction">Writer: Improve the tiny weather sentence by choosing an exact object, a clean action, and one useful describer: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The watcher put the thing by the window: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: Replace thing and window with weather card, cup sill, cloud tag, pane strip, or forecast ribbon: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: Replace put with lifted, tucked, tilted, slid, rested, or pinned on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: Add one helpful word such as misty, pale, tiny, snug, or clear only where it helps the scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: Change by the window into against the cup sill, across the pane strip, or under the cloud tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Page rhythm: Try the describing word before the noun and after the verb, then choose the smoother written line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: Write one Teacup Town line with exact weather nouns and a clean action verb: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Choose one weather noun and one action verb, then write only the final line: ____________________. Take-home line: Revise another tiny weather-window sentence by replacing thing and put: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 6 | Ages 7-9 | tighten a notice-board sentence with precise nouns, active verbs, and balanced phrase swaps</div>
+      <h2>Pocket Park Washi Tape Notice Board</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this card beside blank paper and remind the writer to invent every notice, board, and park detail: ____________________.</p>
+      <p class="kid-direction">Writer: Make the notice-board sentence clearer by replacing dull words with exact paper-scene choices: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The keeper put the paper on the board: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: Replace paper and board with leaf notice, board corner, bench label, path arrow, or tiny notice rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: Replace put with aligned, smoothed, posted, tucked, clipped, or squared: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: Add one helpful word such as crisp, green, square, bright, or narrow when it makes the notice clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: Trade on the board for along the notice rail, beneath the bench label, or beside the path arrow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Page rhythm: Move the phrase swap to the beginning or end of the sentence and choose the version that reads cleanly on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: Write one pocket park notice sentence with the strongest noun, verb, describer, and phrase swap: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Mark the best phrase swap with a pretend tape strip, then write the final line: ____________________. Take-home line: Revise another pretend notice-board line by replacing paper, put, and on the board: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 7 | Ages 7-9 | replace plain ferry words with exact nouns and clear verbs</div>
+      <h2>Spoon Ferry Lunchbox Harbor Word Choice Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and set out pencil, paper, and a pretend paper tape strip for the lunchbox harbor line: ____________________.</p>
+      <p class="kid-direction">Writer: swap plain words for precise nouns, clear verbs, one useful describer, and a final fictional ferry line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The thing went to the place. Replace thing and place with exact ferry nouns: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: choose spoon ferry, lid dock, napkin pier, or cargo label for the main object: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: choose glided, docked, nudged, or tipped to show the ferry action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: add one word such as patterned, tiny, tidy, or silver only if it helps the reader picture the line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: replace went to with glided beside, docked at, or nudged past: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Paper rhythm: mark the phrase break that makes the ferry sentence smooth on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: write one lunchbox harbor sentence with a precise noun and clear verb: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: circle one noun and one verb, then write only the final ferry line: ____________________. Take-home line: invent another spoon ferry sentence and trade two plain words for exact ones: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 8 | Ages 7-9 | choose office nouns and verbs that make a paper errand clear</div>
+      <h2>Acorn Avenue Errand Office Word Choice Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose one pretend office object such as an acorn slip, twig tray, or seed stamp: ____________________.</p>
+      <p class="kid-direction">Writer: make the acorn errand line clearer by naming the object, choosing the action, and trimming vague words: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The worker did the job with the stuff. Replace worker, job, and stuff with exact office words: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: choose leaf clerk, acorn slip, twig tray, seed stamp, or label stack for the sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: choose filed, stacked, stamped, slid, or sorted to show the errand action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: add one word such as folded, neat, small, or numbered if it gives helpful detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: replace did the job with filed the slip, stamped the label, or stacked the tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Paper rhythm: try the shorter phrase and the longer phrase, then choose the one that reads cleanly on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: write one acorn office sentence with exact nouns and a clear action: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: underline the clearest verb and write the revised acorn office sentence: ____________________. Take-home line: make a new acorn errand line and swap one vague word for a precise noun: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 9 | Ages 8-10 | build a map-table line with specific nouns, verbs, and phrase swaps</div>
+      <h2>Seed Library Map Room Word Choice Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and pick one invented seed card, folded map, or shelf label for paper-only practice: ____________________.</p>
+      <p class="kid-direction">Writer: revise the map table line by replacing general words with exact objects, movement verbs, and a smoother phrase: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The person looked at the map thing. Replace person and map thing with exact seed-library nouns: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: choose seed keeper, map drawer, bean marker, card pocket, or shelf label for the line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: choose unfolded, traced, tucked, compared, or marked to show the map-table action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: add one focused word such as folded, creased, tiny, or labeled when it sharpens the picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: replace looked at with traced along, compared with, or unfolded beside: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Paper rhythm: move one phrase to the front or end and choose the version with the clearest sentence flow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: write one seed-library map table sentence with exact words and smooth rhythm: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: box the precise noun, circle the clear verb, and write the final map table line: ____________________. Take-home line: invent another seed-library line and replace two general words with exact choices: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 10 | Ages 8-10 | revise railway sentences with exact gauge nouns and active verbs</div>
+      <h2>Rain Gauge Railway Word Choice Card</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose a pretend gauge mark, platform flag, or rail label for the writer to name: ____________________.</p>
+      <p class="kid-direction">Writer: make the rain railway sentence clearer by choosing exact gauge nouns, active verbs, and one useful describing word: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The train person moved the rain thing. Replace train person and rain thing with precise railway nouns: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: choose rain conductor, gauge bead, platform flag, rail label, or puddle platform for the line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: choose measured, aligned, signaled, rolled, or checked to show the paper railway action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: add one word such as even, clear, blue, or narrow only if it helps the reader see the object: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: replace moved with aligned the flag, measured the mark, or rolled past the platform: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Paper rhythm: choose whether the gauge detail belongs before or after the action for the cleanest line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: write one rain gauge railway sentence with precise nouns and a clear verb: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: choose one gauge noun and one action verb, then write the final railway line: ____________________. Take-home line: create another rain railway line and replace moved with a clearer verb: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 11 | Ages 8-10 | shape an observatory line with precise nouns, clear verbs, and sentence rhythm</div>
+      <h2>Moss Message Observatory Word Choice Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and pick one pretend moss note, pebble lens, or sky chart for paper-only revision: ____________________.</p>
+      <p class="kid-direction">Writer: replace vague words in the observatory line with exact nouns, clear verbs, helpful describers, and a final polished sentence: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain words: The watcher found the thing on the shelf. Replace watcher, thing, and shelf with exact observatory words: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: choose sky watcher, moss note, pebble lens, sky chart, or message shelf for the line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: choose uncovered, tilted, traced, tucked, or studied to show the observatory action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: add one word such as soft, speckled, curved, or quiet when it adds a clear clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Phrase swap: replace found the thing with uncovered the moss note, tilted the pebble lens, or traced the sky chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Paper rhythm: test a short opening phrase and choose the version that gives the final line a smooth shape: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final revised fictional line: write one moss observatory sentence with exact words and balanced rhythm: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: mark one precise noun and one useful describer, then write the final observatory line: ____________________. Take-home line: invent another moss message line and trade one vague phrase for a precise one: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 12 | Ages 8-10 | use one surface word on paper</div>
+      <h2>Tidepool Timekeepers Lab Surface Strip</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside blank paper and one pretend washi strip, then keep every example broad and fictional: ____________________.</p>
+      <p class="kid-direction">Writer: choose one plain tidepool word, then replace it with a precise noun, clear verb, or useful describing word: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain word: write a bland word from the shell-note sentence, such as thing, moved, nice, or place: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: choose one invented tidepool object such as shell dial, bead tray, pool tag, or paper bell: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: replace moved with a verb the reader can picture, such as nudged, lined up, tilted, or slid: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: add one surface word, such as rippled, smooth, dotted, or folded, only if it sharpens the picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Sentence swap: rewrite The timekeeper moved the thing with sharper tidepool words: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Sound and shape check: read the revised line on paper and mark the word that makes the sentence rhythm clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the revised fictional tidepool sentence in its clearest form: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: circle one stronger tidepool word and write only the final line: ____________________. Carry-on line: make another tidepool lab sentence clearer by changing one plain word: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 13 | Ages 10-11 | tighten a sentence with fewer words</div>
+      <h2>Revision River Ferry Trimmed Wake</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out this card with blank paper and a pretend ferry draft strip, then invite one short fictional revision: ____________________.</p>
+      <p class="kid-direction">Writer: find a wordy ferry sentence, cross out extra words, and choose one exact noun or verb to carry more meaning: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain word: write the wordy phrase from the ferry line, such as the sign that was on the deck or did a change: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: choose one exact ferry noun such as draft sign, dock tag, margin rope, or folded oar marker: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: replace did a change with adjusted, trimmed, straightened, tucked, or another clear action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: add one describing word only if it earns its space, such as narrow, neat, tilted, or crisp: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Sentence swap: change The ferry helper did a change to the sign that was on the deck into a tighter sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Sound and shape check: read both versions on paper and mark the shorter line that still sounds complete: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the tightened fictional ferry sentence with no extra filler words: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw a small slash through one extra word, then copy the tightened line: ____________________. Carry-on line: tighten one new ferry sentence by trading a long phrase for one clear word: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 14 | Ages 10-11 | choose a verb before adding describing words</div>
+      <h2>Clue Label Tower Museum Verb Lift</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside blank paper and a pretend label strip, then ask for a fictional tower-museum action: ____________________.</p>
+      <p class="kid-direction">Writer: choose the action word before adding any describing words, so the clue-label sentence moves clearly: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain word: write a weak action from the label sentence, such as put, made, got, or went: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: choose one tower-museum noun such as label rail, clue drawer, pointer card, or display tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: replace the weak action with arranged, lifted, tucked, balanced, or another verb that shows the movement: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: after the verb works, add one describer such as narrow, gleaming, tiny, or tilted if it helps: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Sentence swap: rewrite The clue keeper put the label by the case with a verb that does more work: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Sound and shape check: tap the verb on paper and mark whether the sentence sounds cleaner before or after the describer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the revised fictional tower-museum sentence with the clear verb leading the action: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: underline the verb first, then write one revised label sentence: ____________________. Carry-on line: revise another clue-label sentence by choosing the verb before adding a describer: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 15 | Ages 10-11 | compare two word choices on paper</div>
+      <h2>Compass Craft Academy Choice Pair</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: give the writer blank paper with two pretend washi choice strips and keep the compass-craft scene invented: ____________________.</p>
+      <p class="kid-direction">Writer: write two possible words, compare what each one shows, then choose the word that fits the sentence job: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain word: write the vague compass-craft word you want to replace, such as tool, made, good, or part: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: choose two possible craft nouns, such as paper needle, bead marker, fold guide, or compass card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: compare two verbs, such as balanced and dropped or traced and marked, then choose the clearer action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: test one describer, such as steady, bent, bright, or careful, and keep it only if it changes the picture: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Sentence swap: rewrite The crafter made the tool twice, once with each word choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Sound and shape check: read both compass-craft versions on paper and mark the line that sounds smoother: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the revised fictional compass-craft sentence with the chosen word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: circle A or B on the two choice strips, then copy the chosen sentence: ____________________. Carry-on line: compare two words for one new compass-craft sentence before writing the final line: ____________________.</p>
+    </section>
+
+    <section class="pack-page word-choice-card-page">
+      <div class="page-kicker">Story Word Choice Card 16 | Ages 10-11 | copy the clearest revised line</div>
+      <h2>Binding Day Boardwalk Final Line</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the card beside blank paper and a pretend booklet strip, then frame the boardwalk moment as fully fictional: ____________________.</p>
+      <p class="kid-direction">Writer: revise one boardwalk sentence, choose the clearest version, and copy it carefully as the final line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Plain word</h3>
+      <p>Plain word: write the plain boardwalk word or phrase, such as closed it, nice booklet, went over, or small thing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Precise noun</h3>
+      <p>Precise noun: choose one exact boardwalk noun such as booklet clasp, thread loop, page rail, or promise slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Clear verb</h3>
+      <p>Clear verb: replace closed it or went over with clasped, folded, sealed, tucked, or another visible action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Useful describer</h3>
+      <p>Useful describer: add one useful word such as neat, warm, narrow, or bright only if it helps the reader picture the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence swap</h3>
+      <p>Sentence swap: rewrite The helper closed it at the boardwalk stand with sharper nouns and verbs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sound and shape check</h3>
+      <p>Sound and shape check: read the revised line on paper and mark the place where the sentence rhythm feels smoothest: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the clearest revised fictional boardwalk sentence as the line you would keep: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: copy only the final line and underline the word that improved it most: ____________________. Carry-on line: choose one plain boardwalk word, replace it, and copy the revised line on paper: ____________________.</p>
+    </section>
+  </body>
+</html>
