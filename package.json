@@ -49,6 +49,7 @@
     "image:batch39": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch39-product-images.json",
     "image:batch40": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch40-product-images.json",
     "image:batch41": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch41-product-images.json",
+    "image:batch42": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch42-product-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -82,7 +83,8 @@
     "product:paper-tray-setting-pack": "node scripts/paper-tray-story-setting-card-pack-builder.mjs",
     "product:backpack-ending-pack": "node scripts/backpack-story-ending-card-pack-builder.mjs",
     "product:pencil-cup-opening-pack": "node scripts/pencil-cup-story-opening-card-pack-builder.mjs",
-    "product:desk-lamp-problem-pack": "node scripts/desk-lamp-story-problem-card-pack-builder.mjs"
+    "product:desk-lamp-problem-pack": "node scripts/desk-lamp-story-problem-card-pack-builder.mjs",
+    "product:paper-clip-solution-pack": "node scripts/paper-clip-story-solution-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

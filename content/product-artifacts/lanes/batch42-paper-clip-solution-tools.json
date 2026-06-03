@@ -1,0 +1,192 @@
+{
+  "laneId": "batch42-paper-clip-solution-tools",
+  "batchId": "2026-06-03-batch42",
+  "productSlug": "paper-clip-story-solution-card-pack",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the solution cards, blank slips, and adult guide before the adult-led paper session.",
+      "Use drawn paper clips or loose paper-clip shapes as story props, keeping every detail made-up and broad.",
+      "Keep every solution fictional, broad, offline, printable, and guided by an adult.",
+      "Choose a small stack so each writer works with one pretend problem and one fitting solution.",
+      "Remind writers that a solution can be revised when the problem fit becomes clearer."
+    ],
+    "paperClipSolutionSetup": [
+      "Place a drawn paper clip at the center of the page with four labels: need, tool, step, result.",
+      "Let the adult read the card and point to the label that should start the solution.",
+      "Ask writers to invent one helper, one gentle problem clue, and one small solution step.",
+      "Use blank slips for alternate fixes so crossed-out ideas stay low-pressure.",
+      "Keep the paper clip broad: it can become a bridge, tag, pointer, clasp, handle, marker, or holder inside the story."
+    ],
+    "solutionCoaching": [
+      "Ask what the problem needs before asking what the helper should do.",
+      "Keep the solution small enough for one character action and one visible result.",
+      "If the solution gets too large, shrink it to one clue connected by the paper clip.",
+      "Ask what changes after the first solution try so the next sentence has a purpose.",
+      "Use gentle revision by swapping one vague fix for a clearer invented action."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented names, broad story labels, and pretend places only.",
+      "Keep the activity paper-only, offline, and adult-led.",
+      "Keep all details made-up and broad, using story labels instead of outside facts.",
+      "If a detail sounds personal, replace it with a made-up paper-clip label or story object.",
+      "Reading stays optional and limited to one fictional word, sketch, or line."
+    ],
+    "familyHandoff": [
+      "Pass along one chosen solution slip and one blank slip for another fictional fix.",
+      "Tell family adults to ask about the made-up problem and solution, not actual life details.",
+      "Invite praise for one helpful clue, one fitting action, or one revised solution word.",
+      "Keep the carry-along activity adult-led, offline, and paper-only.",
+      "Ask family adults to leave narrow personal facts off the paper and keep the story invented."
+    ],
+    "reset": [
+      "Collect unused cards, blank slips, and paper-clip props.",
+      "Recycle scratch paper that includes narrow real-world facts.",
+      "Save only fictional examples that can model gentle solutions later.",
+      "Restock the pack with fresh blank slips before the next paper session."
+    ]
+  },
+  "solutionRoutines": [
+    {
+      "name": "Clip Need Match",
+      "bestFor": "Writers who need to connect a problem need to one useful action.",
+      "steps": [
+        "The adult names the pretend problem need from the card.",
+        "The writer chooses one paper-clip job: hold, point, join, or mark.",
+        "The adult asks how that job helps the made-up character take one step.",
+        "The writer writes one solution sentence that matches the need."
+      ]
+    },
+    {
+      "name": "Tiny Fix Ladder",
+      "bestFor": "Keeping solutions small enough for one short story scene.",
+      "steps": [
+        "The adult draws three small rungs on a paper slip.",
+        "The writer names a first try, a better try, and a result.",
+        "The adult asks which rung is the smallest useful solution.",
+        "The writer chooses that rung and adds one fictional clue."
+      ]
+    },
+    {
+      "name": "Object Becomes Helper",
+      "bestFor": "Writers who like solving through an invented story object.",
+      "steps": [
+        "The adult points to the drawn paper clip and asks what it could become in the story.",
+        "The writer chooses one safe make-believe object job.",
+        "The adult asks what problem clue the object touches or holds.",
+        "The writer writes how the object helps without solving everything at once."
+      ]
+    },
+    {
+      "name": "Problem-Fit Check",
+      "bestFor": "Testing whether a solution actually answers the card's problem.",
+      "steps": [
+        "The adult rereads the problem clue from the card.",
+        "The writer says which part of the solution matches that clue.",
+        "The adult asks what would still be unclear after the first try.",
+        "The writer revises one word so the solution fits better."
+      ]
+    },
+    {
+      "name": "Kind Choice Swap",
+      "bestFor": "Keeping a fictional solution gentle and cooperative.",
+      "steps": [
+        "The adult asks whether the first solution sounds too big, too sudden, or too bossy.",
+        "The writer chooses one gentler action word.",
+        "The adult asks how the new action still helps the made-up problem.",
+        "The writer swaps the action word and keeps the rest of the solution."
+      ]
+    },
+    {
+      "name": "Result Then Revise",
+      "bestFor": "Showing how a first solution can reveal the next clearer fix.",
+      "steps": [
+        "The writer writes one result after the first solution try.",
+        "The adult asks what clue the result reveals.",
+        "The writer circles one word that can become clearer.",
+        "The writer revises the solution with the new clue."
+      ]
+    }
+  ],
+  "takeHomeSolutionSlips": [
+    {
+      "title": "Clip the Missing Clue",
+      "time": "One paper pass",
+      "skill": "missing clue solution",
+      "direction": "Invent a paper-clip solution that holds one missing clue in a made-up story: ____________________.",
+      "familyLine": "Ask which clue the character notices first: ____________________."
+    },
+    {
+      "title": "Tiny Bridge Fix",
+      "time": "Brief adult-led pass",
+      "skill": "small fix",
+      "direction": "Write a fictional solution where a paper clip becomes a tiny bridge between two story clues: ____________________.",
+      "familyLine": "Ask what the bridge helps connect: ____________________."
+    },
+    {
+      "title": "Helpful Label",
+      "time": "Single printable slip",
+      "skill": "label solution",
+      "direction": "Create a made-up label that helps a character solve one gentle mix-up: ____________________.",
+      "familyLine": "Ask which word on the label helps most: ____________________."
+    },
+    {
+      "title": "First Try Clip",
+      "time": "One pencil pass",
+      "skill": "first solution try",
+      "direction": "Write the first solution try a fictional helper makes with a pretend paper clip: ____________________.",
+      "familyLine": "Ask what the first try teaches the helper: ____________________."
+    },
+    {
+      "title": "Two-Clue Match",
+      "time": "Short paper pass",
+      "skill": "matching clues",
+      "direction": "Invent two story clues and use a paper clip to show how they match: ____________________.",
+      "familyLine": "Ask why those clues belong together: ____________________."
+    },
+    {
+      "title": "Small Result",
+      "time": "Single card pass",
+      "skill": "result after solution",
+      "direction": "Write what changes after a character tries one small solution: ____________________.",
+      "familyLine": "Ask what new clue appears after the change: ____________________."
+    },
+    {
+      "title": "Gentler Action",
+      "time": "Calm story pass",
+      "skill": "kind solution revision",
+      "direction": "Replace a too-big fictional fix with one gentler paper-clip action: ____________________.",
+      "familyLine": "Ask which action word feels clearer and kinder: ____________________."
+    },
+    {
+      "title": "Pointer to the Clue",
+      "time": "Quiet paper pass",
+      "skill": "clue pointer",
+      "direction": "Draw or name a paper clip pointer that shows where the solution clue belongs: ____________________.",
+      "familyLine": "Ask what the pointer helps the reader notice: ____________________."
+    },
+    {
+      "title": "Better Fit",
+      "time": "Fresh slip pass",
+      "skill": "problem fit",
+      "direction": "Check whether a pretend solution fits the problem, then change one word so it fits better: ____________________.",
+      "familyLine": "Ask which word made the solution match the problem: ____________________."
+    },
+    {
+      "title": "Second Solution Try",
+      "time": "Second pencil pass",
+      "skill": "revise the solution",
+      "direction": "Write a second solution try that is clearer than the first try: ____________________.",
+      "familyLine": "Ask what the character learned before trying again: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Optional adult-led offline prompt: my pretend solution is ____________________.",
+    "Optional adult-led offline prompt: the paper-clip object helps by ____________________.",
+    "Optional adult-led offline prompt: the problem clue I matched is ____________________.",
+    "Optional adult-led offline prompt: the helper's first solution try is ____________________.",
+    "Optional adult-led offline prompt: one gentle action word I used is ____________________.",
+    "Optional adult-led offline prompt: the result after the solution is ____________________.",
+    "Optional adult-led offline prompt: I made the solution clearer by changing ____________________.",
+    "Optional adult-led offline prompt: an adult can add one made-up clue here: ____________________."
+  ]
+}

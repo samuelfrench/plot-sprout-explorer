@@ -542,6 +542,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable desk lamp story problem cards with adult guide tools, problem routines, and take-home problem slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'paper-clip-story-solution-card-pack',
+    title: 'Paper Clip Story Solution Card Pack',
+    pricePoint: '$57',
+    description:
+      'Sixteen printable paper clip story solution cards with adult guide tools, solution routines, and take-home solution slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

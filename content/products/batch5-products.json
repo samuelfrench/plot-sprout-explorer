@@ -3104,6 +3104,130 @@
           "summary": "A binding day world for keeping a pretend promise with one kind first try."
         }
       ]
+    },
+    {
+      "slug": "paper-clip-story-solution-card-pack",
+      "title": "Paper Clip Story Solution Card Pack",
+      "pricePoint": "$57",
+      "status": "checkout_pending",
+      "headline": "A printable solution-card pack for paper-only fictional paper-clip story fixes.",
+      "summary": "Sixteen adult-led paper clip cards help kids shape fictional story solutions with helpful choices, first steps, results, and revision prompts.",
+      "heroImage": "images/plotsprout/batch42/paper-clip-story-solution-card-pack.jpg",
+      "ctaLabel": "Request solution card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Paper%20Clip%20Story%20Solution%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static paper clip story solution card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable paper clip story solution cards",
+        "Adult setup guide",
+        "Fictional solution safety notes",
+        "Paper clip solution coaching moves",
+        "Privacy and family handoff notes",
+        "Pack reset notes",
+        "Six adult-led solution routines",
+        "Ten take-home solution slips",
+        "Eight optional share prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one small fictional fix before a full story",
+        "A tutoring or co-op table where writers can fill one solution card at a time",
+        "A warm-up where a pretend paper clip clue reduces blank-page pressure",
+        "A reluctant-writer activity that separates story solutions from a full draft",
+        "A take-home solution slip set for building one invented story offline"
+      ],
+      "parentSteps": [
+        "Choose one solution routine before the activity starts.",
+        "Set the paper, pencils, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one pretend paper clip clue into a fictional solution detail rather than using narrow real-world facts.",
+        "Send one solution slip with a single blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for choosing one tiny paper-clip fix at the pastry counter."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for clipping one missing clue onto a pretend mail note."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for linking a traveler need to one useful action."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for answering a folded-map question with one small fix."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for matching two gentle weather clues on paper."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for choosing the first try that helps a pretend notice."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for steadying a harbor clue with one useful paper step."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for sorting two pretend task slips into a clear next move."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for matching a map symbol with a shelf clue."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for choosing which pretend signal should be tried first."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for patching one soft message gap with a clipped word."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for putting shell-clock clues into a clearer solution order."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for turning a broad fix into one clearer revision target."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for making one tag point to the right story clue."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for choosing between two useful paper-arrow options."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for keeping a pretend promise with one kind solution step."
+        }
+      ]
     }
   ]
 }

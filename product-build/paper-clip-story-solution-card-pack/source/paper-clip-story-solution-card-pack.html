@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Clip Story Solution Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-solution-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-solution-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-solution-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper clip solution cards</p>
+        <h1>Paper Clip Story Solution Card Pack</h1>
+        <p>Sixteen paper cards help writers shape fictional story solutions with clear needs, helpful choices, first steps, and revision prompts.</p>
+        <p><strong>Audience:</strong> Families, co-op groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable solution cards plus adult guide tools, solution routines, take-home solution slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$57</span>
+        <h2>Included</h2>
+        <ul><li>16 printable paper clip story solution cards</li>
+<li>Adult setup guide</li>
+<li>Fictional solution safety notes</li>
+<li>Paper clip solution coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led solution routines</li>
+<li>Ten take-home solution slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Solution coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the solution cards, blank slips, and adult guide before the adult-led paper session.</li>
+<li>Use drawn paper clips or loose paper-clip shapes as story props, keeping every detail made-up and broad.</li>
+<li>Keep every solution fictional, broad, offline, printable, and guided by an adult.</li>
+<li>Choose a small stack so each writer works with one pretend problem and one fitting solution.</li>
+<li>Remind writers that a solution can be revised when the problem fit becomes clearer.</li></ul></article>
+        <article class="guide-card"><h3>Paper clip solution setup</h3><ul><li>Place a drawn paper clip at the center of the page with four labels: need, tool, step, result.</li>
+<li>Let the adult read the card and point to the label that should start the solution.</li>
+<li>Ask writers to invent one helper, one gentle problem clue, and one small solution step.</li>
+<li>Use blank slips for alternate fixes so crossed-out ideas stay low-pressure.</li>
+<li>Keep the paper clip broad: it can become a bridge, tag, pointer, clasp, handle, marker, or holder inside the story.</li></ul></article>
+        <article class="guide-card"><h3>Story solution coaching</h3><ul><li>Ask what the problem needs before asking what the helper should do.</li>
+<li>Keep the solution small enough for one character action and one visible result.</li>
+<li>If the solution gets too large, shrink it to one clue connected by the paper clip.</li>
+<li>Ask what changes after the first solution try so the next sentence has a purpose.</li>
+<li>Use gentle revision by swapping one vague fix for a clearer invented action.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Use invented names, broad story labels, and pretend places only.</li>
+<li>Keep the activity paper-only, offline, and adult-led.</li>
+<li>Keep all details made-up and broad, using story labels instead of outside facts.</li>
+<li>If a detail sounds personal, replace it with a made-up paper-clip label or story object.</li>
+<li>Reading stays optional and limited to one fictional word, sketch, or line.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Pass along one chosen solution slip and one blank slip for another fictional fix.</li>
+<li>Tell family adults to ask about the made-up problem and solution, not actual life details.</li>
+<li>Invite praise for one helpful clue, one fitting action, or one revised solution word.</li>
+<li>Keep the carry-along activity adult-led, offline, and paper-only.</li>
+<li>Ask family adults to leave narrow personal facts off the paper and keep the story invented.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect unused cards, blank slips, and paper-clip props.</li>
+<li>Recycle scratch paper that includes narrow real-world facts.</li>
+<li>Save only fictional examples that can model gentle solutions later.</li>
+<li>Restock the pack with fresh blank slips before the next paper session.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper clip solution card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen solution-card worlds</h2>
+      <p>Pick a world image, then start one fictional story with a pretend paper clip solution card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Solution routines</p>
+      <h2>Choose the paper clip solution rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Clip Need Match</h3>
+      <p>Writers who need to connect a problem need to one useful action.</p>
+      <ol><li>The adult names the pretend problem need from the card.</li>
+<li>The writer chooses one paper-clip job: hold, point, join, or mark.</li>
+<li>The adult asks how that job helps the made-up character take one step.</li>
+<li>The writer writes one solution sentence that matches the need.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Tiny Fix Ladder</h3>
+      <p>Keeping solutions small enough for one short story scene.</p>
+      <ol><li>The adult draws three small rungs on a paper slip.</li>
+<li>The writer names a first try, a better try, and a result.</li>
+<li>The adult asks which rung is the smallest useful solution.</li>
+<li>The writer chooses that rung and adds one fictional clue.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Object Becomes Helper</h3>
+      <p>Writers who like solving through an invented story object.</p>
+      <ol><li>The adult points to the drawn paper clip and asks what it could become in the story.</li>
+<li>The writer chooses one safe make-believe object job.</li>
+<li>The adult asks what problem clue the object touches or holds.</li>
+<li>The writer writes how the object helps without solving everything at once.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Problem-Fit Check</h3>
+      <p>Testing whether a solution actually answers the card&#39;s problem.</p>
+      <ol><li>The adult rereads the problem clue from the card.</li>
+<li>The writer says which part of the solution matches that clue.</li>
+<li>The adult asks what would still be unclear after the first try.</li>
+<li>The writer revises one word so the solution fits better.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Kind Choice Swap</h3>
+      <p>Keeping a fictional solution gentle and cooperative.</p>
+      <ol><li>The adult asks whether the first solution sounds too big, too sudden, or too bossy.</li>
+<li>The writer chooses one gentler action word.</li>
+<li>The adult asks how the new action still helps the made-up problem.</li>
+<li>The writer swaps the action word and keeps the rest of the solution.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Result Then Revise</h3>
+      <p>Showing how a first solution can reveal the next clearer fix.</p>
+      <ol><li>The writer writes one result after the first solution try.</li>
+<li>The adult asks what clue the result reveals.</li>
+<li>The writer circles one word that can become clearer.</li>
+<li>The writer revises the solution with the new clue.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home solution slips</p>
+      <h2>Start one story solution later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">One paper pass | missing clue solution</p>
+      <h3>Clip the Missing Clue</h3>
+      <p>Invent a paper-clip solution that holds one missing clue in a made-up story: ____________________.</p>
+      <p>Ask which clue the character notices first: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Brief adult-led pass | small fix</p>
+      <h3>Tiny Bridge Fix</h3>
+      <p>Write a fictional solution where a paper clip becomes a tiny bridge between two story clues: ____________________.</p>
+      <p>Ask what the bridge helps connect: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single printable slip | label solution</p>
+      <h3>Helpful Label</h3>
+      <p>Create a made-up label that helps a character solve one gentle mix-up: ____________________.</p>
+      <p>Ask which word on the label helps most: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One pencil pass | first solution try</p>
+      <h3>First Try Clip</h3>
+      <p>Write the first solution try a fictional helper makes with a pretend paper clip: ____________________.</p>
+      <p>Ask what the first try teaches the helper: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Short paper pass | matching clues</p>
+      <h3>Two-Clue Match</h3>
+      <p>Invent two story clues and use a paper clip to show how they match: ____________________.</p>
+      <p>Ask why those clues belong together: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single card pass | result after solution</p>
+      <h3>Small Result</h3>
+      <p>Write what changes after a character tries one small solution: ____________________.</p>
+      <p>Ask what new clue appears after the change: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Calm story pass | kind solution revision</p>
+      <h3>Gentler Action</h3>
+      <p>Replace a too-big fictional fix with one gentler paper-clip action: ____________________.</p>
+      <p>Ask which action word feels clearer and kinder: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Quiet paper pass | clue pointer</p>
+      <h3>Pointer to the Clue</h3>
+      <p>Draw or name a paper clip pointer that shows where the solution clue belongs: ____________________.</p>
+      <p>Ask what the pointer helps the reader notice: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Fresh slip pass | problem fit</p>
+      <h3>Better Fit</h3>
+      <p>Check whether a pretend solution fits the problem, then change one word so it fits better: ____________________.</p>
+      <p>Ask which word made the solution match the problem: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Second pencil pass | revise the solution</p>
+      <h3>Second Solution Try</h3>
+      <p>Write a second solution try that is clearer than the first try: ____________________.</p>
+      <p>Ask what the character learned before trying again: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional adult-led offline prompt: my pretend solution is ____________________.</li>
+<li>Optional adult-led offline prompt: the paper-clip object helps by ____________________.</li>
+<li>Optional adult-led offline prompt: the problem clue I matched is ____________________.</li>
+<li>Optional adult-led offline prompt: the helper&#39;s first solution try is ____________________.</li>
+<li>Optional adult-led offline prompt: one gentle action word I used is ____________________.</li>
+<li>Optional adult-led offline prompt: the result after the solution is ____________________.</li>
+<li>Optional adult-led offline prompt: I made the solution clearer by changing ____________________.</li>
+<li>Optional adult-led offline prompt: an adult can add one made-up clue here: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 1 | Ages 6-8 | choose a tiny fix</div>
+      <h2>Moon Muffin Paper Clip Crumb Bridge</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside blank paper and a drawn paper clip, then name one gentle market problem to solve: ____________________.</p>
+      <p class="kid-direction">Write the tiny fix the moon muffin helper tries first: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The moon muffin helper can gently solve the crumb mix-up by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The helper chooses one small step, such as sorting, pointing, or asking, to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The moon-market counter shows this solution belongs here because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip becomes a crumb bridge, label holder, or moon tag that helps ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: What tiny fix keeps the moon muffin trade moving gently? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The helper tries the solution first by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the fix smaller and clearer by adding one moon-market clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the paper clip bridge first, then add one solution word: ____________________. Take-home line: Try another pretend market solution on blank paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 2 | Ages 6-8 | add the missing clue</div>
+      <h2>Puddle Planet Paper Clip Stamp Holder</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out the printable card and invite one made-up puddle note with a blank stamp space: ____________________.</p>
+      <p class="kid-direction">Choose the clue that helps the puddle mail helper sort the note gently: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The puddle mail helper solves the missing clue by adding ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The helper chooses to check the note edge, stamp shape, or ripple tag to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The puddle-mail counter shows this clue belongs here because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip holds the stamp clue in place so the helper can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which clue should be clipped onto the puddle note first? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The helper tests the solution first by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the clue more puddle-like by adding one ripple, shell, or stamp detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the stamp space first, then write the clue inside it: ____________________. Take-home line: Make another pretend mail note and clip on one missing clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 3 | Ages 7-9 | connect need to action</div>
+      <h2>Buttonwood Paper Clip Ticket Link</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Put the card beside blank paper and ask for one pretend ticket need on the Buttonwood Library Train: ____________________.</p>
+      <p class="kid-direction">Write the action that matches what the traveler needs next: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The traveler can solve the ticket mix-up by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The traveler chooses one action that matches the need, then ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The library-train shelf stop shows the action fits because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip links a ticket, bookmark, or shelf tag to help ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which action best matches the traveler&#39;s need? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The traveler tries the ticket-link solution by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the action fit better by naming one ticket clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw two clipped tickets and choose the one that helps: ____________________. Take-home line: Try another pretend library-train solution by matching need to action: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 4 | Ages 7-9 | answer the problem question</div>
+      <h2>Button Bakery Clip Map Repair</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside a folded pretend map and ask what question the map-mender should answer first: ____________________.</p>
+      <p class="kid-direction">Answer the bakery-map question with one paper-clip solution that fits the mix-up: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The map-mender answers the crumb-map question by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The map-mender folds, labels, or turns one map piece to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The bakery-map corner shows the fix belongs here because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip holds the map corner so the right clue can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: What small fix answers the bakery-map question? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The map-mender tests the clipped corner by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Add one button, crumb, or fold detail that makes the fix clearer: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Copy the map question first, then write one answer word: ____________________. Take-home line: Use another pretend map problem and answer it with one small paper fix: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 5 | Ages 7-8 | match two clues</div>
+      <h2>Teacup Weather Clip Signal</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out the card and choose two pretend weather clues that can be matched on paper: ____________________.</p>
+      <p class="kid-direction">Write the solution that helps the teacup weather watcher match the clues: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The weather watcher solves the mismatch by matching ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The watcher compares one pane clue with one cloud tag to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The teacup weather pane shows these clues belong together because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip joins the matching weather clues so the watcher can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which two weather clues should be clipped together? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The watcher tests the match by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the match clearer by changing one weather word: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw two weather symbols and clip the matching pair: ____________________. Take-home line: Try another pretend weather solution by matching two gentle clues: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 6 | Ages 7-9 | clear first try</div>
+      <h2>Pocket Park Clip Notice Fix</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set the card beside a blank pretend notice and ask for one small board problem to solve: ____________________.</p>
+      <p class="kid-direction">Name the first solution try that helps the notice keeper move the story forward: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The notice keeper solves the board mix-up first by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The notice keeper pins, straightens, or labels one pretend notice to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The pocket-park board shows this first try makes sense because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip holds one notice corner so the clue can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: What first try helps the notice keeper move forward? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The notice keeper tests the solution by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the first try clearer by adding one notice-board clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the notice corner and write one helpful verb: ____________________. Take-home line: Make another pretend notice-board solution with one clear first try: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 7 | Ages 7-9 | steady setting pressure</div>
+      <h2>Spoon Ferry Clip Dock Helper</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print this card and invite one invented harbor problem that can be solved with a small paper step: ____________________.</p>
+      <p class="kid-direction">Write how the spoon ferry helper makes the cracker dock easier to use: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The spoon ferry helper steadies the pretend dock by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The helper folds, slides, or labels one harbor detail to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The cracker dock shows this ferry fix belongs here because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip becomes a dock hook, flag holder, or tiny handle that helps ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: What small fix helps the ferry crossing continue gently? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The helper tests the dock solution by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the harbor fix clearer by adding one cracker, napkin, or lid clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the pretend dock and mark the helpful clip spot: ____________________. Take-home line: Invent another spoon ferry solution using one paper-clip clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 8 | Ages 7-9 | untangle a task mix-up</div>
+      <h2>Acorn Avenue Clip Sorter</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print this card and offer two pretend errand slips with invented labels, not real chores: ____________________.</p>
+      <p class="kid-direction">Write the solution that matches each acorn slip to the right made-up helper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The leaf clerk solves the slip mix-up by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The helper sorts one slip by shape, seed mark, or tiny color clue to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The acorn counter shows this sorting solution works because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip pairs each slip with its matching seed tag so the clerk can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which slip should be clipped to which seed tag? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The clerk tests the paired slips by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the task match clearer by changing one invented slip clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw two slips and clip the matching one to its tag: ____________________. Take-home line: Create another pretend acorn errand solution with no real chores: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 9 | Ages 8-10 | match map symbol</div>
+      <h2>Seed Library Clip Symbol Match</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this card beside a pretend seed map and choose one made-up shelf symbol to match: ____________________.</p>
+      <p class="kid-direction">Write the solution that tells the map keeper which symbol belongs with the shelf clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The map keeper solves the symbol mismatch by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The helper compares one seed pin, shelf card, or border mark to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The seed-library shelf shows the symbol belongs here because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip joins the matching symbol and shelf card so the keeper can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which map symbol should be clipped to the shelf clue? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The map keeper tests the match by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Replace a confusing symbol with one clearer fictional mark: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Sketch one seed symbol and write what it matches: ____________________. Take-home line: Invent another seed-library solution by matching one symbol to one clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 10 | Ages 8-10 | choose a signal</div>
+      <h2>Rain Gauge Railway Clip Signal Choice</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print this card and keep every signal invented, gentle, and paper-based: ____________________.</p>
+      <p class="kid-direction">Write which pretend signal the rain-note conductor should use first: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The conductor solves the mixed signal by choosing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The conductor compares a gauge mark, cloud note, or flag card to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The rain-gauge platform shows this signal helps because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip holds the chosen signal card where the conductor can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which invented signal should the conductor try first? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The conductor tests the chosen signal by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the signal choice clearer by adding one drizzle, glass, or flag detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw two signal cards and clip the one that fits: ____________________. Take-home line: Make another pretend railway solution with one helpful signal card: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 11 | Ages 8-10 | fill a message gap</div>
+      <h2>Moss Observatory Clip Word Patch</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print this card and ask for a pretend moss note with one missing story word: ____________________.</p>
+      <p class="kid-direction">Write the solution word that helps the sky watcher understand the moss message: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The sky watcher solves the message gap by adding ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The watcher checks one moss mark, pebble lens, or chart edge to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The observatory note shows the added word belongs because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip patches the missing word onto the moss note so the watcher can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which word should be clipped into the moss message? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The watcher tests the word patch by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the message word clearer by adding one moss, pebble, or lantern clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Copy the moss note and fill only the missing word: ____________________. Take-home line: Invent another moss-message solution by clipping on one helpful word: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 12 | Ages 8-10 | set solution order</div>
+      <h2>Tidepool Clock Clip Order</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this card beside blank paper and invite three invented shell-clock steps to arrange: ____________________.</p>
+      <p class="kid-direction">Write which tidepool solution step comes first, next, and last: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The tidepool timekeeper solves the order mix-up by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The timekeeper tests one shell note, bead dial, or tide strip to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The tidepool lab shows this order solves the problem because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip holds the first solution step so the timekeeper can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which solution step should come first, next, and last? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The timekeeper clips the first step in place by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the order easier to follow by changing one shell-clock clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Number three pretend clues and clip the first one: ____________________. Take-home line: Invent another tidepool solution with three clear paper steps: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 13 | Ages 10-11 | revise a solution target</div>
+      <h2>Revision River Clip Target</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this printable card near a drawn ferry note and ask which pretend solution detail needs clearer wording: ____________________.</p>
+      <p class="kid-direction">Choose the solution target that needs one clearer word, then revise it on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The ferry helper improves the solution by changing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The helper underlines one fuzzy solution word and replaces it with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The revision ferry shows this target fits the problem because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip marks the solution target so the helper can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which exact story part should the helper revise first? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The ferry helper tests the clearer target by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Turn the broad fix into one exact ferry action by adding ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle one fuzzy word and write its clearer replacement: ____________________. Take-home line: Choose one pretend ferry solution and revise one target word: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 14 | Ages 10-11 | point label to clue</div>
+      <h2>Clue Label Tower Clip Pointer</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out the paper card and invite one invented display label that needs a clearer pointer: ____________________.</p>
+      <p class="kid-direction">Write the solution that moves the label toward the clue it should show: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The clue keeper solves the label mix-up by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The clue keeper points, swaps, or rewrites one label to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The tower display shows this label solution works because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip becomes a pointer that connects the label to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which clue should the label point toward next? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The clue keeper tests the label pointer by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the pointer more specific by adding one shape, color, or display clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw one label box and clip it to the clue word: ____________________. Take-home line: Invent another tower label solution with one clear paper pointer: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 15 | Ages 10-11 | choose a helpful option</div>
+      <h2>Compass Craft Clip Choice</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this card beside two invented compass choices and keep both choices broad and make-believe: ____________________.</p>
+      <p class="kid-direction">Write which option helps the compass crafter move the story forward: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The compass crafter solves the choice obstacle by picking ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The crafter tests one arrow, bead, or paper needle to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The compass craft table shows this option helps because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip marks the chosen option so the crafter can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: Which option helps the character move the story forward? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The compass crafter tests the chosen option by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the choice clearer by naming the two options and one reason: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Mark option A or option B, then write one helpful reason: ____________________. Take-home line: Sketch two pretend compass choices and clip the one that helps: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-solution-card-page">
+      <div class="page-kicker">Solution Card 16 | Ages 10-11 | kind promise solution</div>
+      <h2>Binding Day Clip Promise Keeper</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this card beside a pretend page clasp and invite one made-up promise that can be kept kindly: ____________________.</p>
+      <p class="kid-direction">Write the small solution that helps the page helper keep the pretend promise: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Solution step</h3>
+      <p>Solution step: The page helper keeps the promise by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: The helper checks one sign, thread loop, or folded page to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place clue</h3>
+      <p>Place clue: The binding boardwalk shows this solution stays small because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object use</h3>
+      <p>Object use: The pretend paper clip holds the promise note where the helper can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Solution question</h3>
+      <p>Solution question: What kind step helps the helper keep the promise? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First step</h3>
+      <p>First step: The page helper tests the promise solution by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise solution</h3>
+      <p>Revise solution: Make the promise solution smaller and clearer by adding one page clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the promise note and write one helpful action: ____________________. Take-home line: Invent another small promise solution for a pretend boardwalk helper: ____________________.</p>
+    </section>
+  </body>
+</html>

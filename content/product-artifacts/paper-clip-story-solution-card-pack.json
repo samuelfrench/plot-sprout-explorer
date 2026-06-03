@@ -1,0 +1,550 @@
+{
+  "batchId": "2026-06-03-batch42",
+  "generatedAt": "2026-06-03",
+  "productSlug": "paper-clip-story-solution-card-pack",
+  "title": "Paper Clip Story Solution Card Pack",
+  "pricePoint": "$57",
+  "audience": "Families, co-op groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable solution cards plus adult guide tools, solution routines, take-home solution slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/paper-clip-story-solution-card-pack/Paper-Clip-Story-Solution-Card-Pack.pdf",
+    "zipPath": "product-build/paper-clip-story-solution-card-pack/paper-clip-story-solution-card-pack.zip",
+    "sourceHtmlPath": "product-build/paper-clip-story-solution-card-pack/source/paper-clip-story-solution-card-pack.html",
+    "manifestPath": "product-build/paper-clip-story-solution-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch42-paper-clip-solution-cards-a.json",
+    "content/product-artifacts/lanes/batch42-paper-clip-solution-cards-b.json",
+    "content/product-artifacts/lanes/batch42-paper-clip-solution-cards-c.json",
+    "content/product-artifacts/lanes/batch42-paper-clip-solution-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable paper clip solution cards",
+    "headline": "Paper Clip Story Solution Card Pack",
+    "subhead": "Sixteen paper cards help writers shape fictional story solutions with clear needs, helpful choices, first steps, and revision prompts.",
+    "included": [
+      "16 printable paper clip story solution cards",
+      "Adult setup guide",
+      "Fictional solution safety notes",
+      "Paper clip solution coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led solution routines",
+      "Ten take-home solution slips",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Print the solution cards, blank slips, and adult guide before the adult-led paper session.",
+      "Use drawn paper clips or loose paper-clip shapes as story props, keeping every detail made-up and broad.",
+      "Keep every solution fictional, broad, offline, printable, and guided by an adult.",
+      "Choose a small stack so each writer works with one pretend problem and one fitting solution.",
+      "Remind writers that a solution can be revised when the problem fit becomes clearer."
+    ],
+    "paperClipSolutionSetup": [
+      "Place a drawn paper clip at the center of the page with four labels: need, tool, step, result.",
+      "Let the adult read the card and point to the label that should start the solution.",
+      "Ask writers to invent one helper, one gentle problem clue, and one small solution step.",
+      "Use blank slips for alternate fixes so crossed-out ideas stay low-pressure.",
+      "Keep the paper clip broad: it can become a bridge, tag, pointer, clasp, handle, marker, or holder inside the story."
+    ],
+    "solutionCoaching": [
+      "Ask what the problem needs before asking what the helper should do.",
+      "Keep the solution small enough for one character action and one visible result.",
+      "If the solution gets too large, shrink it to one clue connected by the paper clip.",
+      "Ask what changes after the first solution try so the next sentence has a purpose.",
+      "Use gentle revision by swapping one vague fix for a clearer invented action."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented names, broad story labels, and pretend places only.",
+      "Keep the activity paper-only, offline, and adult-led.",
+      "Keep all details made-up and broad, using story labels instead of outside facts.",
+      "If a detail sounds personal, replace it with a made-up paper-clip label or story object.",
+      "Reading stays optional and limited to one fictional word, sketch, or line."
+    ],
+    "familyHandoff": [
+      "Pass along one chosen solution slip and one blank slip for another fictional fix.",
+      "Tell family adults to ask about the made-up problem and solution, not actual life details.",
+      "Invite praise for one helpful clue, one fitting action, or one revised solution word.",
+      "Keep the carry-along activity adult-led, offline, and paper-only.",
+      "Ask family adults to leave narrow personal facts off the paper and keep the story invented."
+    ],
+    "reset": [
+      "Collect unused cards, blank slips, and paper-clip props.",
+      "Recycle scratch paper that includes narrow real-world facts.",
+      "Save only fictional examples that can model gentle solutions later.",
+      "Restock the pack with fresh blank slips before the next paper session."
+    ]
+  },
+  "solutionRoutines": [
+    {
+      "name": "Clip Need Match",
+      "bestFor": "Writers who need to connect a problem need to one useful action.",
+      "steps": [
+        "The adult names the pretend problem need from the card.",
+        "The writer chooses one paper-clip job: hold, point, join, or mark.",
+        "The adult asks how that job helps the made-up character take one step.",
+        "The writer writes one solution sentence that matches the need."
+      ]
+    },
+    {
+      "name": "Tiny Fix Ladder",
+      "bestFor": "Keeping solutions small enough for one short story scene.",
+      "steps": [
+        "The adult draws three small rungs on a paper slip.",
+        "The writer names a first try, a better try, and a result.",
+        "The adult asks which rung is the smallest useful solution.",
+        "The writer chooses that rung and adds one fictional clue."
+      ]
+    },
+    {
+      "name": "Object Becomes Helper",
+      "bestFor": "Writers who like solving through an invented story object.",
+      "steps": [
+        "The adult points to the drawn paper clip and asks what it could become in the story.",
+        "The writer chooses one safe make-believe object job.",
+        "The adult asks what problem clue the object touches or holds.",
+        "The writer writes how the object helps without solving everything at once."
+      ]
+    },
+    {
+      "name": "Problem-Fit Check",
+      "bestFor": "Testing whether a solution actually answers the card's problem.",
+      "steps": [
+        "The adult rereads the problem clue from the card.",
+        "The writer says which part of the solution matches that clue.",
+        "The adult asks what would still be unclear after the first try.",
+        "The writer revises one word so the solution fits better."
+      ]
+    },
+    {
+      "name": "Kind Choice Swap",
+      "bestFor": "Keeping a fictional solution gentle and cooperative.",
+      "steps": [
+        "The adult asks whether the first solution sounds too big, too sudden, or too bossy.",
+        "The writer chooses one gentler action word.",
+        "The adult asks how the new action still helps the made-up problem.",
+        "The writer swaps the action word and keeps the rest of the solution."
+      ]
+    },
+    {
+      "name": "Result Then Revise",
+      "bestFor": "Showing how a first solution can reveal the next clearer fix.",
+      "steps": [
+        "The writer writes one result after the first solution try.",
+        "The adult asks what clue the result reveals.",
+        "The writer circles one word that can become clearer.",
+        "The writer revises the solution with the new clue."
+      ]
+    }
+  ],
+  "takeHomeSolutionSlips": [
+    {
+      "title": "Clip the Missing Clue",
+      "time": "One paper pass",
+      "skill": "missing clue solution",
+      "direction": "Invent a paper-clip solution that holds one missing clue in a made-up story: ____________________.",
+      "familyLine": "Ask which clue the character notices first: ____________________."
+    },
+    {
+      "title": "Tiny Bridge Fix",
+      "time": "Brief adult-led pass",
+      "skill": "small fix",
+      "direction": "Write a fictional solution where a paper clip becomes a tiny bridge between two story clues: ____________________.",
+      "familyLine": "Ask what the bridge helps connect: ____________________."
+    },
+    {
+      "title": "Helpful Label",
+      "time": "Single printable slip",
+      "skill": "label solution",
+      "direction": "Create a made-up label that helps a character solve one gentle mix-up: ____________________.",
+      "familyLine": "Ask which word on the label helps most: ____________________."
+    },
+    {
+      "title": "First Try Clip",
+      "time": "One pencil pass",
+      "skill": "first solution try",
+      "direction": "Write the first solution try a fictional helper makes with a pretend paper clip: ____________________.",
+      "familyLine": "Ask what the first try teaches the helper: ____________________."
+    },
+    {
+      "title": "Two-Clue Match",
+      "time": "Short paper pass",
+      "skill": "matching clues",
+      "direction": "Invent two story clues and use a paper clip to show how they match: ____________________.",
+      "familyLine": "Ask why those clues belong together: ____________________."
+    },
+    {
+      "title": "Small Result",
+      "time": "Single card pass",
+      "skill": "result after solution",
+      "direction": "Write what changes after a character tries one small solution: ____________________.",
+      "familyLine": "Ask what new clue appears after the change: ____________________."
+    },
+    {
+      "title": "Gentler Action",
+      "time": "Calm story pass",
+      "skill": "kind solution revision",
+      "direction": "Replace a too-big fictional fix with one gentler paper-clip action: ____________________.",
+      "familyLine": "Ask which action word feels clearer and kinder: ____________________."
+    },
+    {
+      "title": "Pointer to the Clue",
+      "time": "Quiet paper pass",
+      "skill": "clue pointer",
+      "direction": "Draw or name a paper clip pointer that shows where the solution clue belongs: ____________________.",
+      "familyLine": "Ask what the pointer helps the reader notice: ____________________."
+    },
+    {
+      "title": "Better Fit",
+      "time": "Fresh slip pass",
+      "skill": "problem fit",
+      "direction": "Check whether a pretend solution fits the problem, then change one word so it fits better: ____________________.",
+      "familyLine": "Ask which word made the solution match the problem: ____________________."
+    },
+    {
+      "title": "Second Solution Try",
+      "time": "Second pencil pass",
+      "skill": "revise the solution",
+      "direction": "Write a second solution try that is clearer than the first try: ____________________.",
+      "familyLine": "Ask what the character learned before trying again: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Optional adult-led offline prompt: my pretend solution is ____________________.",
+    "Optional adult-led offline prompt: the paper-clip object helps by ____________________.",
+    "Optional adult-led offline prompt: the problem clue I matched is ____________________.",
+    "Optional adult-led offline prompt: the helper's first solution try is ____________________.",
+    "Optional adult-led offline prompt: one gentle action word I used is ____________________.",
+    "Optional adult-led offline prompt: the result after the solution is ____________________.",
+    "Optional adult-led offline prompt: I made the solution clearer by changing ____________________.",
+    "Optional adult-led offline prompt: an adult can add one made-up clue here: ____________________."
+  ],
+  "cards": [
+    {
+      "id": "paper-clip-solution-card-01",
+      "title": "Moon Muffin Paper Clip Crumb Bridge",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "solutionSkill": "choose a tiny fix",
+      "useCase": "Adult-led printable paper clip solution card for choosing one tiny fictional fix in a pretend moon muffin market: ____________________.",
+      "adultSetup": "Adult: Place this card beside blank paper and a drawn paper clip, then name one gentle market problem to solve: ____________________.",
+      "kidDirection": "Write the tiny fix the moon muffin helper tries first: ____________________.",
+      "solutionStepPrompt": "Solution step: The moon muffin helper can gently solve the crumb mix-up by ____________________.",
+      "characterChoicePrompt": "Character choice: The helper chooses one small step, such as sorting, pointing, or asking, to ____________________.",
+      "placeCluePrompt": "Place clue: The moon-market counter shows this solution belongs here because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip becomes a crumb bridge, label holder, or moon tag that helps ____________________.",
+      "solutionQuestionPrompt": "Solution question: What tiny fix keeps the moon muffin trade moving gently? ____________________.",
+      "firstStepPrompt": "First step: The helper tries the solution first by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the fix smaller and clearer by adding one moon-market clue: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the paper clip bridge first, then add one solution word: ____________________.",
+      "takeHomeLine": "Take-home line: Try another pretend market solution on blank paper: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-02",
+      "title": "Puddle Planet Paper Clip Stamp Holder",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "solutionSkill": "add the missing clue",
+      "useCase": "Adult-led paper-only paper clip solution card for adding one missing clue to a pretend puddle-mail story: ____________________.",
+      "adultSetup": "Adult: Set out the printable card and invite one made-up puddle note with a blank stamp space: ____________________.",
+      "kidDirection": "Choose the clue that helps the puddle mail helper sort the note gently: ____________________.",
+      "solutionStepPrompt": "Solution step: The puddle mail helper solves the missing clue by adding ____________________.",
+      "characterChoicePrompt": "Character choice: The helper chooses to check the note edge, stamp shape, or ripple tag to ____________________.",
+      "placeCluePrompt": "Place clue: The puddle-mail counter shows this clue belongs here because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip holds the stamp clue in place so the helper can ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which clue should be clipped onto the puddle note first? ____________________.",
+      "firstStepPrompt": "First step: The helper tests the solution first by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the clue more puddle-like by adding one ripple, shell, or stamp detail: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the stamp space first, then write the clue inside it: ____________________.",
+      "takeHomeLine": "Take-home line: Make another pretend mail note and clip on one missing clue: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-03",
+      "title": "Buttonwood Paper Clip Ticket Link",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "solutionSkill": "connect need to action",
+      "useCase": "Adult-led printable paper clip solution card for connecting one fictional library-train need to one helpful action: ____________________.",
+      "adultSetup": "Adult: Put the card beside blank paper and ask for one pretend ticket need on the Buttonwood Library Train: ____________________.",
+      "kidDirection": "Write the action that matches what the traveler needs next: ____________________.",
+      "solutionStepPrompt": "Solution step: The traveler can solve the ticket mix-up by ____________________.",
+      "characterChoicePrompt": "Character choice: The traveler chooses one action that matches the need, then ____________________.",
+      "placeCluePrompt": "Place clue: The library-train shelf stop shows the action fits because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip links a ticket, bookmark, or shelf tag to help ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which action best matches the traveler's need? ____________________.",
+      "firstStepPrompt": "First step: The traveler tries the ticket-link solution by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the action fit better by naming one ticket clue: ____________________.",
+      "quietOptionLine": "Quiet option: Draw two clipped tickets and choose the one that helps: ____________________.",
+      "takeHomeLine": "Take-home line: Try another pretend library-train solution by matching need to action: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-04",
+      "title": "Button Bakery Clip Map Repair",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "solutionSkill": "answer the problem question",
+      "useCase": "Adult-led offline paper clip solution card for answering one fictional bakery-map problem question with a small fix: ____________________.",
+      "adultSetup": "Adult: Place this card beside a folded pretend map and ask what question the map-mender should answer first: ____________________.",
+      "kidDirection": "Answer the bakery-map question with one paper-clip solution that fits the mix-up: ____________________.",
+      "solutionStepPrompt": "Solution step: The map-mender answers the crumb-map question by ____________________.",
+      "characterChoicePrompt": "Character choice: The map-mender folds, labels, or turns one map piece to ____________________.",
+      "placeCluePrompt": "Place clue: The bakery-map corner shows the fix belongs here because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip holds the map corner so the right clue can ____________________.",
+      "solutionQuestionPrompt": "Solution question: What small fix answers the bakery-map question? ____________________.",
+      "firstStepPrompt": "First step: The map-mender tests the clipped corner by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Add one button, crumb, or fold detail that makes the fix clearer: ____________________.",
+      "quietOptionLine": "Quiet option: Copy the map question first, then write one answer word: ____________________.",
+      "takeHomeLine": "Take-home line: Use another pretend map problem and answer it with one small paper fix: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-05",
+      "title": "Teacup Weather Clip Signal",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "solutionSkill": "match two clues",
+      "useCase": "Adult-led printable paper clip solution card for matching two gentle fictional weather clues in Teacup Town: ____________________.",
+      "adultSetup": "Adult: Set out the card and choose two pretend weather clues that can be matched on paper: ____________________.",
+      "kidDirection": "Write the solution that helps the teacup weather watcher match the clues: ____________________.",
+      "solutionStepPrompt": "Solution step: The weather watcher solves the mismatch by matching ____________________.",
+      "characterChoicePrompt": "Character choice: The watcher compares one pane clue with one cloud tag to ____________________.",
+      "placeCluePrompt": "Place clue: The teacup weather pane shows these clues belong together because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip joins the matching weather clues so the watcher can ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which two weather clues should be clipped together? ____________________.",
+      "firstStepPrompt": "First step: The watcher tests the match by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the match clearer by changing one weather word: ____________________.",
+      "quietOptionLine": "Quiet option: Draw two weather symbols and clip the matching pair: ____________________.",
+      "takeHomeLine": "Take-home line: Try another pretend weather solution by matching two gentle clues: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-06",
+      "title": "Pocket Park Clip Notice Fix",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "solutionSkill": "clear first try",
+      "useCase": "Adult-led paper-only paper clip solution card for choosing a clear first try in a fictional notice-board story: ____________________.",
+      "adultSetup": "Adult: Set the card beside a blank pretend notice and ask for one small board problem to solve: ____________________.",
+      "kidDirection": "Name the first solution try that helps the notice keeper move the story forward: ____________________.",
+      "solutionStepPrompt": "Solution step: The notice keeper solves the board mix-up first by ____________________.",
+      "characterChoicePrompt": "Character choice: The notice keeper pins, straightens, or labels one pretend notice to ____________________.",
+      "placeCluePrompt": "Place clue: The pocket-park board shows this first try makes sense because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip holds one notice corner so the clue can ____________________.",
+      "solutionQuestionPrompt": "Solution question: What first try helps the notice keeper move forward? ____________________.",
+      "firstStepPrompt": "First step: The notice keeper tests the solution by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the first try clearer by adding one notice-board clue: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the notice corner and write one helpful verb: ____________________.",
+      "takeHomeLine": "Take-home line: Make another pretend notice-board solution with one clear first try: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-07",
+      "title": "Spoon Ferry Clip Dock Helper",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "solutionSkill": "steady setting pressure",
+      "useCase": "Adult-led printable paper clip solution card for finding one small fictional ferry fix at a pretend lunchbox harbor: ____________________.",
+      "adultSetup": "Adult: Print this card and invite one invented harbor problem that can be solved with a small paper step: ____________________.",
+      "kidDirection": "Write how the spoon ferry helper makes the cracker dock easier to use: ____________________.",
+      "solutionStepPrompt": "Solution step: The spoon ferry helper steadies the pretend dock by ____________________.",
+      "characterChoicePrompt": "Character choice: The helper folds, slides, or labels one harbor detail to ____________________.",
+      "placeCluePrompt": "Place clue: The cracker dock shows this ferry fix belongs here because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip becomes a dock hook, flag holder, or tiny handle that helps ____________________.",
+      "solutionQuestionPrompt": "Solution question: What small fix helps the ferry crossing continue gently? ____________________.",
+      "firstStepPrompt": "First step: The helper tests the dock solution by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the harbor fix clearer by adding one cracker, napkin, or lid clue: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the pretend dock and mark the helpful clip spot: ____________________.",
+      "takeHomeLine": "Take-home line: Invent another spoon ferry solution using one paper-clip clue: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-08",
+      "title": "Acorn Avenue Clip Sorter",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "solutionSkill": "untangle a task mix-up",
+      "useCase": "Adult-led printable paper clip solution card for untangling a fictional acorn errand mix-up with made-up tasks only: ____________________.",
+      "adultSetup": "Adult: Print this card and offer two pretend errand slips with invented labels, not real chores: ____________________.",
+      "kidDirection": "Write the solution that matches each acorn slip to the right made-up helper: ____________________.",
+      "solutionStepPrompt": "Solution step: The leaf clerk solves the slip mix-up by ____________________.",
+      "characterChoicePrompt": "Character choice: The helper sorts one slip by shape, seed mark, or tiny color clue to ____________________.",
+      "placeCluePrompt": "Place clue: The acorn counter shows this sorting solution works because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip pairs each slip with its matching seed tag so the clerk can ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which slip should be clipped to which seed tag? ____________________.",
+      "firstStepPrompt": "First step: The clerk tests the paired slips by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the task match clearer by changing one invented slip clue: ____________________.",
+      "quietOptionLine": "Quiet option: Draw two slips and clip the matching one to its tag: ____________________.",
+      "takeHomeLine": "Take-home line: Create another pretend acorn errand solution with no real chores: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-09",
+      "title": "Seed Library Clip Symbol Match",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "solutionSkill": "match map symbol",
+      "useCase": "Adult-led paper-only paper clip solution card for matching one fictional seed-library map symbol to one shelf clue: ____________________.",
+      "adultSetup": "Adult: Set this card beside a pretend seed map and choose one made-up shelf symbol to match: ____________________.",
+      "kidDirection": "Write the solution that tells the map keeper which symbol belongs with the shelf clue: ____________________.",
+      "solutionStepPrompt": "Solution step: The map keeper solves the symbol mismatch by ____________________.",
+      "characterChoicePrompt": "Character choice: The helper compares one seed pin, shelf card, or border mark to ____________________.",
+      "placeCluePrompt": "Place clue: The seed-library shelf shows the symbol belongs here because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip joins the matching symbol and shelf card so the keeper can ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which map symbol should be clipped to the shelf clue? ____________________.",
+      "firstStepPrompt": "First step: The map keeper tests the match by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Replace a confusing symbol with one clearer fictional mark: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch one seed symbol and write what it matches: ____________________.",
+      "takeHomeLine": "Take-home line: Invent another seed-library solution by matching one symbol to one clue: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-10",
+      "title": "Rain Gauge Railway Clip Signal Choice",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "solutionSkill": "choose a signal",
+      "useCase": "Adult-led printable paper clip solution card for choosing one fictional rain-gauge railway signal that helps the story continue: ____________________.",
+      "adultSetup": "Adult: Print this card and keep every signal invented, gentle, and paper-based: ____________________.",
+      "kidDirection": "Write which pretend signal the rain-note conductor should use first: ____________________.",
+      "solutionStepPrompt": "Solution step: The conductor solves the mixed signal by choosing ____________________.",
+      "characterChoicePrompt": "Character choice: The conductor compares a gauge mark, cloud note, or flag card to ____________________.",
+      "placeCluePrompt": "Place clue: The rain-gauge platform shows this signal helps because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip holds the chosen signal card where the conductor can ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which invented signal should the conductor try first? ____________________.",
+      "firstStepPrompt": "First step: The conductor tests the chosen signal by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the signal choice clearer by adding one drizzle, glass, or flag detail: ____________________.",
+      "quietOptionLine": "Quiet option: Draw two signal cards and clip the one that fits: ____________________.",
+      "takeHomeLine": "Take-home line: Make another pretend railway solution with one helpful signal card: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-11",
+      "title": "Moss Observatory Clip Word Patch",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "solutionSkill": "fill a message gap",
+      "useCase": "Adult-led offline paper clip solution card for filling one gentle fictional moss-message gap with a helpful word: ____________________.",
+      "adultSetup": "Adult: Print this card and ask for a pretend moss note with one missing story word: ____________________.",
+      "kidDirection": "Write the solution word that helps the sky watcher understand the moss message: ____________________.",
+      "solutionStepPrompt": "Solution step: The sky watcher solves the message gap by adding ____________________.",
+      "characterChoicePrompt": "Character choice: The watcher checks one moss mark, pebble lens, or chart edge to ____________________.",
+      "placeCluePrompt": "Place clue: The observatory note shows the added word belongs because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip patches the missing word onto the moss note so the watcher can ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which word should be clipped into the moss message? ____________________.",
+      "firstStepPrompt": "First step: The watcher tests the word patch by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the message word clearer by adding one moss, pebble, or lantern clue: ____________________.",
+      "quietOptionLine": "Quiet option: Copy the moss note and fill only the missing word: ____________________.",
+      "takeHomeLine": "Take-home line: Invent another moss-message solution by clipping on one helpful word: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-12",
+      "title": "Tidepool Clock Clip Order",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "solutionSkill": "set solution order",
+      "useCase": "Adult-led printable paper clip solution card for putting one fictional tidepool solution into a clear order: ____________________.",
+      "adultSetup": "Adult: Set this card beside blank paper and invite three invented shell-clock steps to arrange: ____________________.",
+      "kidDirection": "Write which tidepool solution step comes first, next, and last: ____________________.",
+      "solutionStepPrompt": "Solution step: The tidepool timekeeper solves the order mix-up by ____________________.",
+      "characterChoicePrompt": "Character choice: The timekeeper tests one shell note, bead dial, or tide strip to ____________________.",
+      "placeCluePrompt": "Place clue: The tidepool lab shows this order solves the problem because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip holds the first solution step so the timekeeper can ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which solution step should come first, next, and last? ____________________.",
+      "firstStepPrompt": "First step: The timekeeper clips the first step in place by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the order easier to follow by changing one shell-clock clue: ____________________.",
+      "quietOptionLine": "Quiet option: Number three pretend clues and clip the first one: ____________________.",
+      "takeHomeLine": "Take-home line: Invent another tidepool solution with three clear paper steps: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-13",
+      "title": "Revision River Clip Target",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "solutionSkill": "revise a solution target",
+      "useCase": "Adult-led offline paper clip solution card for choosing one fictional ferry solution detail to revise: ____________________.",
+      "adultSetup": "Adult: Place this printable card near a drawn ferry note and ask which pretend solution detail needs clearer wording: ____________________.",
+      "kidDirection": "Choose the solution target that needs one clearer word, then revise it on paper: ____________________.",
+      "solutionStepPrompt": "Solution step: The ferry helper improves the solution by changing ____________________.",
+      "characterChoicePrompt": "Character choice: The helper underlines one fuzzy solution word and replaces it with ____________________.",
+      "placeCluePrompt": "Place clue: The revision ferry shows this target fits the problem because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip marks the solution target so the helper can ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which exact story part should the helper revise first? ____________________.",
+      "firstStepPrompt": "First step: The ferry helper tests the clearer target by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Turn the broad fix into one exact ferry action by adding ____________________.",
+      "quietOptionLine": "Quiet option: Circle one fuzzy word and write its clearer replacement: ____________________.",
+      "takeHomeLine": "Take-home line: Choose one pretend ferry solution and revise one target word: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-14",
+      "title": "Clue Label Tower Clip Pointer",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "solutionSkill": "point label to clue",
+      "useCase": "Adult-led printable paper clip solution card for making one fictional tower label point to the right clue: ____________________.",
+      "adultSetup": "Adult: Set out the paper card and invite one invented display label that needs a clearer pointer: ____________________.",
+      "kidDirection": "Write the solution that moves the label toward the clue it should show: ____________________.",
+      "solutionStepPrompt": "Solution step: The clue keeper solves the label mix-up by ____________________.",
+      "characterChoicePrompt": "Character choice: The clue keeper points, swaps, or rewrites one label to ____________________.",
+      "placeCluePrompt": "Place clue: The tower display shows this label solution works because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip becomes a pointer that connects the label to ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which clue should the label point toward next? ____________________.",
+      "firstStepPrompt": "First step: The clue keeper tests the label pointer by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the pointer more specific by adding one shape, color, or display clue: ____________________.",
+      "quietOptionLine": "Quiet option: Draw one label box and clip it to the clue word: ____________________.",
+      "takeHomeLine": "Take-home line: Invent another tower label solution with one clear paper pointer: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-15",
+      "title": "Compass Craft Clip Choice",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "solutionSkill": "choose a helpful option",
+      "useCase": "Adult-led offline paper clip solution card for choosing between two fictional compass-craft options on paper: ____________________.",
+      "adultSetup": "Adult: Place this card beside two invented compass choices and keep both choices broad and make-believe: ____________________.",
+      "kidDirection": "Write which option helps the compass crafter move the story forward: ____________________.",
+      "solutionStepPrompt": "Solution step: The compass crafter solves the choice obstacle by picking ____________________.",
+      "characterChoicePrompt": "Character choice: The crafter tests one arrow, bead, or paper needle to ____________________.",
+      "placeCluePrompt": "Place clue: The compass craft table shows this option helps because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip marks the chosen option so the crafter can ____________________.",
+      "solutionQuestionPrompt": "Solution question: Which option helps the character move the story forward? ____________________.",
+      "firstStepPrompt": "First step: The compass crafter tests the chosen option by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the choice clearer by naming the two options and one reason: ____________________.",
+      "quietOptionLine": "Quiet option: Mark option A or option B, then write one helpful reason: ____________________.",
+      "takeHomeLine": "Take-home line: Sketch two pretend compass choices and clip the one that helps: ____________________."
+    },
+    {
+      "id": "paper-clip-solution-card-16",
+      "title": "Binding Day Clip Promise Keeper",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "solutionSkill": "kind promise solution",
+      "useCase": "Adult-led printable paper clip solution card for creating one gentle fictional promise solution on paper: ____________________.",
+      "adultSetup": "Adult: Set this card beside a pretend page clasp and invite one made-up promise that can be kept kindly: ____________________.",
+      "kidDirection": "Write the small solution that helps the page helper keep the pretend promise: ____________________.",
+      "solutionStepPrompt": "Solution step: The page helper keeps the promise by ____________________.",
+      "characterChoicePrompt": "Character choice: The helper checks one sign, thread loop, or folded page to ____________________.",
+      "placeCluePrompt": "Place clue: The binding boardwalk shows this solution stays small because ____________________.",
+      "objectUsePrompt": "Object use: The pretend paper clip holds the promise note where the helper can ____________________.",
+      "solutionQuestionPrompt": "Solution question: What kind step helps the helper keep the promise? ____________________.",
+      "firstStepPrompt": "First step: The page helper tests the promise solution by ____________________.",
+      "reviseSolutionPrompt": "Revise solution: Make the promise solution smaller and clearer by adding one page clue: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the promise note and write one helpful action: ____________________.",
+      "takeHomeLine": "Take-home line: Invent another small promise solution for a pretend boardwalk helper: ____________________."
+    }
+  ]
+}
