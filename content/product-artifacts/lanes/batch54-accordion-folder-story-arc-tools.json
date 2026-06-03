@@ -1,0 +1,170 @@
+{
+  "laneId": "batch54-accordion-folder-story-arc-tools",
+  "adultGuide": {
+    "title": "Accordion Folder Story Arc Adult Guide",
+    "bullets": [
+      "Setup: print the cards, blank slips, and one accordion folder sheet, then label the paper pockets before writing begins: ____________________.",
+      "Beginning pocket: help the writer choose one pretend fact, object, place, or character note that starts the story arc: ____________________.",
+      "Middle change pocket: move one paper note forward when something gentle shifts in the fictional story world: ____________________.",
+      "Choice bridge: place a folded bridge slip between the middle change pocket and the consequence note so the arc movement stays visible: ____________________.",
+      "Ending return: use the final pocket for one detail that comes back calmly near the finish, then add a reset note behind it: ____________________.",
+      "Keep the whole activity adult-led, made-up, offline, paper-only, and broad enough that no real identity details are needed: ____________________."
+    ]
+  },
+  "arcRoutines": [
+    {
+      "id": "beginning-pocket-sort",
+      "title": "Beginning Pocket Sort",
+      "time": "short folder start",
+      "adultSteps": [
+        "The adult opens the accordion folder to the beginning pocket and places one blank note inside: ____________________.",
+        "The child chooses one invented starter detail for the first pocket: ____________________.",
+        "The adult asks what the story reader should know first in this pretend world: ____________________.",
+        "The child writes or dictates the beginning pocket note on paper: ____________________."
+      ],
+      "familyLine": "The beginning pocket starts the story arc with: ____________________."
+    },
+    {
+      "id": "middle-change-lift",
+      "title": "Middle Change Lift",
+      "time": "middle movement pass",
+      "adultSteps": [
+        "The adult rereads the beginning pocket note and points to the middle change pocket: ____________________.",
+        "The child names one small made-up change that can move the story arc forward: ____________________.",
+        "The adult asks how that change makes the pretend character notice something new: ____________________.",
+        "The child writes the middle change note and tucks it into the pocket: ____________________."
+      ],
+      "familyLine": "The middle change pocket moves the story because: ____________________."
+    },
+    {
+      "id": "choice-bridge-fold",
+      "title": "Choice Bridge Fold",
+      "time": "bridge planning pass",
+      "adultSteps": [
+        "The adult places one folded choice bridge slip between the middle change pocket and the next paper note: ____________________.",
+        "The child says one gentle choice the pretend character can make next: ____________________.",
+        "The adult asks what the choice connects from the middle change to the consequence note: ____________________.",
+        "The child writes the choice bridge line across the folded slip: ____________________."
+      ],
+      "familyLine": "The choice bridge connects the change to this next move: ____________________."
+    },
+    {
+      "id": "consequence-note-chain",
+      "title": "Consequence Note Chain",
+      "time": "cause-and-result pass",
+      "adultSteps": [
+        "The adult lays the consequence note after the choice bridge so the folder shows the next arc step: ____________________.",
+        "The child explains what happens because of the pretend choice: ____________________.",
+        "The adult keeps the consequence small, safe, and useful for the fictional arc: ____________________.",
+        "The child writes one consequence note and places it after the bridge: ____________________."
+      ],
+      "familyLine": "The consequence note follows the choice because: ____________________."
+    },
+    {
+      "id": "ending-return-pocket",
+      "title": "Ending Return Pocket",
+      "time": "ending return pass",
+      "adultSteps": [
+        "The adult opens the ending return pocket and rereads one earlier folder note: ____________________.",
+        "The child chooses one detail from the beginning or middle that can return near the finish: ____________________.",
+        "The adult asks how the returning detail helps the story feel closed on paper: ____________________.",
+        "The child writes the ending return note and tucks it into the final pocket: ____________________."
+      ],
+      "familyLine": "The ending return pocket brings back this detail: ____________________."
+    },
+    {
+      "id": "reset-note-close",
+      "title": "Reset Note Close",
+      "time": "folder reset pass",
+      "adultSteps": [
+        "The adult reviews the folder order: beginning pocket, middle change pocket, choice bridge, consequence note, and ending return: ____________________.",
+        "The child taps one pocket that should be remembered for the next paper pass: ____________________.",
+        "The adult writes a reset note that names where to restart in the accordion folder: ____________________.",
+        "The child closes the folder after adding one final pencil reminder: ____________________."
+      ],
+      "familyLine": "The reset note says to restart with: ____________________."
+    }
+  ],
+  "takeHomeArcSlips": [
+    {
+      "id": "beginning-pocket-slip",
+      "title": "Beginning Pocket Slip",
+      "adultLine": "Adult: open the beginning pocket and ask for one invented starter detail: ____________________.",
+      "childLine": "Child: my beginning pocket note says: ____________________.",
+      "nextStepLine": "Next paper step: place the note in the first accordion folder pocket: ____________________."
+    },
+    {
+      "id": "middle-change-slip",
+      "title": "Middle Change Slip",
+      "adultLine": "Adult: point from the beginning pocket to the middle change pocket: ____________________.",
+      "childLine": "Child: the small pretend change is: ____________________.",
+      "nextStepLine": "Next paper step: move the arc forward with one new note: ____________________."
+    },
+    {
+      "id": "choice-bridge-slip",
+      "title": "Choice Bridge Slip",
+      "adultLine": "Adult: place a folded choice bridge between the middle change and the consequence note: ____________________.",
+      "childLine": "Child: the pretend choice on my bridge is: ____________________.",
+      "nextStepLine": "Next paper step: connect the choice to what happens next: ____________________."
+    },
+    {
+      "id": "consequence-note-slip",
+      "title": "Consequence Note Slip",
+      "adultLine": "Adult: ask what happens because of the made-up choice: ____________________.",
+      "childLine": "Child: the consequence note says: ____________________.",
+      "nextStepLine": "Next paper step: place the consequence after the choice bridge: ____________________."
+    },
+    {
+      "id": "ending-return-slip",
+      "title": "Ending Return Slip",
+      "adultLine": "Adult: reread one earlier pocket note before opening the ending return pocket: ____________________.",
+      "childLine": "Child: the detail that comes back is: ____________________.",
+      "nextStepLine": "Next paper step: write how the returning detail helps close the arc: ____________________."
+    },
+    {
+      "id": "reset-note-slip",
+      "title": "Reset Note Slip",
+      "adultLine": "Adult: choose one pocket that should guide the next paper session: ____________________.",
+      "childLine": "Child: my reset note begins with: ____________________.",
+      "nextStepLine": "Next paper step: tuck the reset note behind the ending return pocket: ____________________."
+    },
+    {
+      "id": "pocket-order-slip",
+      "title": "Pocket Order Slip",
+      "adultLine": "Adult: lay the folder notes in order from beginning pocket to ending return: ____________________.",
+      "childLine": "Child: the pocket order I see is: ____________________.",
+      "nextStepLine": "Next paper step: put one note back in the pocket where it belongs: ____________________."
+    },
+    {
+      "id": "object-return-slip",
+      "title": "Object Return Slip",
+      "adultLine": "Adult: ask which pretend object can travel through the story arc: ____________________.",
+      "childLine": "Child: the object I will bring back is: ____________________.",
+      "nextStepLine": "Next paper step: place the object note in the ending return pocket: ____________________."
+    },
+    {
+      "id": "gentle-fork-slip",
+      "title": "Gentle Fork Slip",
+      "adultLine": "Adult: offer two calm pretend choices for the bridge slip: ____________________.",
+      "childLine": "Child: the choice I pick is: ____________________.",
+      "nextStepLine": "Next paper step: write one consequence note after the choice: ____________________."
+    },
+    {
+      "id": "arc-close-slip",
+      "title": "Arc Close Slip",
+      "adultLine": "Adult: point to the beginning pocket and ask what should feel settled by the end: ____________________.",
+      "childLine": "Child: the story arc feels settled when: ____________________.",
+      "nextStepLine": "Next paper step: write the ending return note, then add a reset note: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led offline prompt: the beginning pocket opens with ____________________.",
+    "Optional adult-led offline prompt: the middle change pocket now says ____________________.",
+    "Optional adult-led offline prompt: the choice bridge asks the character to choose ____________________.",
+    "Optional adult-led offline prompt: the consequence note follows because ____________________.",
+    "Optional adult-led offline prompt: the ending return brings back ____________________.",
+    "Optional adult-led offline prompt: the reset note reminds us to restart with ____________________.",
+    "Optional adult-led offline prompt: the accordion folder order today is ____________________.",
+    "Optional adult-led offline prompt: one paper-only story arc move to keep is ____________________."
+  ]
+}
