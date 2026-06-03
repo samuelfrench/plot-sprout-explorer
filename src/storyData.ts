@@ -590,6 +590,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable washi tape story word choice cards with adult guide tools, word choice routines, and take-home word slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'paper-sleeve-story-sentence-variety-card-pack',
+    title: 'Paper Sleeve Story Sentence Variety Card Pack',
+    pricePoint: '$69',
+    description:
+      'Sixteen printable paper sleeve story sentence variety cards with adult guide tools, sentence variety routines, and take-home sentence slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

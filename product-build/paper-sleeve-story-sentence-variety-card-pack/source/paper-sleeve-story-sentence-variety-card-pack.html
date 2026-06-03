@@ -1,0 +1,1145 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Sleeve Story Sentence Variety Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .sentence-variety-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .sentence-variety-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .sentence-variety-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper sleeve sentence variety cards</p>
+        <h1>Paper Sleeve Story Sentence Variety Card Pack</h1>
+        <p>Sixteen paper sleeve cards help writers try short sentences, stretched sentences, question sentences, starter swaps, sentence combines, rhythm checks, and final varied lines.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 6-11.</p>
+        <p><strong>Format:</strong> 16 printable sentence-variety cards plus adult guide tools, sentence-variety routines, take-home sentence slips, and optional prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$69</span>
+        <h2>Included</h2>
+        <ul><li>16 printable paper sleeve sentence variety cards</li>
+<li>Adult setup guide</li>
+<li>Fictional sentence-variety safety notes</li>
+<li>Paper sleeve coaching moves</li>
+<li>Family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led sentence variety routines</li>
+<li>Ten take-home sentence slips</li>
+<li>Eight optional prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Story sentence-variety coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Paper Sleeve Story Sentence Variety Adult Guide</h3><ul><li>Print the paper sleeve sentence variety cards, blank strips, and guide pages before the adult-led paper session.</li>
+<li>Begin with one plain fictional sentence, then coach short sentences, stretched sentences, question sentences, starter swaps, sentence combines, rhythm checks, and final lines.</li>
+<li>Keep every example made-up, broad, printable, offline, paper-only, and guided by an adult.</li>
+<li>Use one sleeve strip for each sentence shape so the writer can compare rhythm without crowding the page.</li>
+<li>Change sentence shape without adding narrow outside facts; use invented objects, broad story places, and made-up character names.</li>
+<li>End each activity by copying one final varied fictional sentence that sounds clear, smooth, and intentional on paper.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one paper sleeve story sentence-variety card at a time. Keep every choice broad, invented, paper-only, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen sentence-variety-card worlds</h2>
+      <p>Pick a world image, then revise one fictional sentence with a pretend paper sleeve story sentence-variety card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Story sentence-variety routines</p>
+      <h2>Choose the paper sleeve sentence-variety rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Short Sentence Fold</h3>
+      <p>Turning a crowded fictional idea into one clear short sentence.</p>
+      <ol><li>The adult writes one plain fictional idea on the sleeve strip: ____________________.</li>
+<li>The writer underlines the one idea that matters most in the line: ____________________.</li>
+<li>The adult asks which extra words can come out while the meaning stays clear: ____________________.</li>
+<li>The writer writes the short sentence on a fresh strip: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Stretched Sentence Add-On</h3>
+      <p>Adding one useful detail to a short fictional sentence.</p>
+      <ol><li>The adult places the short sentence beside a blank stretch strip: ____________________.</li>
+<li>The writer chooses one useful detail about an invented object, action, or broad story place: ____________________.</li>
+<li>The adult asks where the detail fits without making the sentence crowded: ____________________.</li>
+<li>The writer writes the stretched sentence with one added detail: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Question Sentence Turn</h3>
+      <p>Trying a question sentence to create curiosity on paper.</p>
+      <ol><li>The adult writes a statement from the fictional card: ____________________.</li>
+<li>The writer chooses the wondering word that fits the sentence, such as what, why, how, or where: ____________________.</li>
+<li>The adult asks how the statement must change so it becomes a question: ____________________.</li>
+<li>The writer writes the question sentence with the same made-up idea: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Starter Swap Slide</h3>
+      <p>Moving the sentence starter so two lines do not begin the same way.</p>
+      <ol><li>The adult writes two fictional sentences that begin in a similar way: ____________________.</li>
+<li>The writer circles the starter that can move to a new position: ____________________.</li>
+<li>The adult asks whether an action, object, or broad story place should start the revised line: ____________________.</li>
+<li>The writer writes the starter-swap sentence on the sleeve strip: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Sentence Combine Fold</h3>
+      <p>Joining two tiny fictional sentences into one smoother sentence.</p>
+      <ol><li>The adult writes two short fictional sentences on separate strips: ____________________.</li>
+<li>The writer marks the shared idea that lets the two strips fold together: ____________________.</li>
+<li>The adult asks which joining word or comma spot makes the combined line smooth: ____________________.</li>
+<li>The writer writes the combined sentence as one clear line: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Rhythm Check Final Line</h3>
+      <p>Choosing the sentence shape that sounds best before finishing.</p>
+      <ol><li>The adult places the short, stretched, question, starter-swap, and combined options in a row: ____________________.</li>
+<li>The writer marks the sentence that has the best paper rhythm for the pretend moment: ____________________.</li>
+<li>The adult asks whether one word should move, change, or come out before copying the final line: ____________________.</li>
+<li>The writer writes the final varied fictional sentence: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home sentence slips</p>
+      <h2>Try one sentence shape later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">single sleeve pass | short sentence</p>
+      <h3>Short Sentence Slip</h3>
+      <p>Write one made-up idea as a clear short sentence: ____________________.</p>
+      <p>Ask which words can come out while the idea stays clear: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">quiet pencil pass | stretched sentence</p>
+      <h3>Stretched Sentence Slip</h3>
+      <p>Add one useful invented detail to stretch a short sentence: ____________________.</p>
+      <p>Ask which detail helps the reader picture the pretend moment: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">single paper pass | question sentence</p>
+      <h3>Question Sentence Slip</h3>
+      <p>Turn one fictional statement into a question sentence: ____________________.</p>
+      <p>Ask what the question makes the reader wonder: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">fresh strip pass | starter swap</p>
+      <h3>Starter Swap Slip</h3>
+      <p>Move the starter of one fictional sentence to create a new rhythm: ____________________.</p>
+      <p>Ask which starter sounds strongest on paper: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">folded strip pass | sentence combine</p>
+      <h3>Sentence Combine Slip</h3>
+      <p>Combine two tiny fictional sentences into one smooth line: ____________________.</p>
+      <p>Ask which shared idea helped the sentences fold together: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">calm revision pass | split crowded sentence</p>
+      <h3>Split Sentence Slip</h3>
+      <p>Split one crowded fictional sentence into two clear sentences: ____________________.</p>
+      <p>Ask where the sentence should break so each idea has space: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">new sleeve pass | action starter</p>
+      <h3>Action Starter Slip</h3>
+      <p>Start one fictional sentence with a clear action word: ____________________.</p>
+      <p>Ask how the action starter changes the rhythm of the line: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">paper strip pass | object starter</p>
+      <h3>Object Starter Slip</h3>
+      <p>Start one fictional sentence with an invented object: ____________________.</p>
+      <p>Ask whether the object starter makes the sentence more specific: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">two-strip pass | short and stretched pair</p>
+      <h3>Rhythm Pair Slip</h3>
+      <p>Write one short sentence and one stretched sentence for the same pretend idea: ____________________.</p>
+      <p>Ask which sentence should come first for smoother rhythm: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">final paper pass | final varied sentence</p>
+      <h3>Final Line Slip</h3>
+      <p>Copy the varied fictional sentence that sounds clearest on paper: ____________________.</p>
+      <p>Ask what changed from the plain sentence to the final line: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional adult-led offline prompt: the plain fictional sentence for this sleeve strip is ____________________.</li>
+<li>Optional adult-led offline prompt: the short sentence version is ____________________.</li>
+<li>Optional adult-led offline prompt: the stretched sentence with one useful detail is ____________________.</li>
+<li>Optional adult-led offline prompt: the question sentence I will try is ____________________.</li>
+<li>Optional adult-led offline prompt: the starter I moved to the front is ____________________.</li>
+<li>Optional adult-led offline prompt: the two tiny sentences I combined are ____________________.</li>
+<li>Optional adult-led offline prompt: the rhythm change that made the line smoother is ____________________.</li>
+<li>Optional adult-led offline prompt: the final varied fictional sentence is ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 1 | Ages 6-8 | turn one tiny market idea into short, stretched, question, and combined sentence choices</div>
+      <h2>Moon Muffin Paper Sleeve Counter Sentences</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this paper card beside blank paper and choose one invented moon muffin counter idea to reshape: ____________________.</p>
+      <p class="kid-direction">Writer: Try the same tiny market idea as a short line, a longer line, a question, and a final smooth line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: The tray glowed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: Add where, when, or how the moon muffin tray glowed at the counter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: Ask what the helper noticed about the glowing tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: Begin with At the counter, With one soft glow, or Under the paper awning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: Join The tray glowed and The helper smiled with and, so, or because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: Read the short line and the stretched line on paper, then mark the smoother one: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Choose the best moon muffin sentence shape and write it clearly: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Point to one favorite sentence shape, then write only the final line: ____________________. Later line: Try the same sentence shapes with a pretend crumb card or silver wrapper: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 2 | Ages 6-8 | practice short, stretched, question, and joined sentences for a pretend mail clue</div>
+      <h2>Puddle Planet Paper Sleeve Ripple Mail</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this paper card beside blank paper and offer one invented puddle note or shell slot idea: ____________________.</p>
+      <p class="kid-direction">Writer: Make the puddle mail idea sound different by changing sentence length, beginning, and question form: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: The note floated: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: Add where the note floated and what it brushed beside the shell slot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: Ask who should read the ripple note next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: Begin with Beside the shell slot, Across the ripple tray, or After one bob: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: Join The note floated and The stamp wobbled with and, while, or because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: Compare the short sentence with the combined sentence and choose the clearer paper line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Write the puddle mail sentence in the shape that fits best: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle short, stretched, question, or combined before writing the final line: ____________________. Later line: Try another pretend puddle mail sentence with a shell slot or ripple stamp: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 3 | Ages 7-9 | vary a library train line by changing length, opening phrase, question shape, and combined detail</div>
+      <h2>Buttonwood Paper Sleeve Ticket Turn</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this paper card beside blank paper and choose one invented ticket, shelf, or station-card moment: ____________________.</p>
+      <p class="kid-direction">Writer: Change the library train idea into a short line, a stretched line, a question, and a polished final line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: The ticket slipped: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: Add how the ticket slipped along the rolling shelf and where it stopped: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: Ask why the ticket slipped toward the shelf tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: Begin with Along the rolling shelf, Before the bell note, or With a soft slide: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: Join The ticket slipped and The traveler paused with so, while, or because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: Read the question and the combined sentence on paper, then pick the line with the cleanest flow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Write one library train sentence with the strongest shape and smoothest flow: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Underline one opening phrase first, then write the final line: ____________________. Later line: Try the same sentence shapes with a bookmark strip or station card: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 4 | Ages 7-9 | reshape a map-table mix-up line with short, stretched, question, opening, and combined versions</div>
+      <h2>Button Bakery Paper Sleeve Map Table</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this paper card beside blank paper and keep every map-table mark invented before the writer revises: ____________________.</p>
+      <p class="kid-direction">Writer: Try the bakery map-table idea in several sentence shapes, then choose the clearest final line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: The crumb map tilted: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: Add where the crumb map tilted and what button marker shifted beside it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: Ask which button marker made the crumb map tilt: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: Begin with On the map table, Beside the button marker, or After one tiny tilt: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: Join The crumb map tilted and The ribbon path curved with and, so, or while: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: Try the opening phrase first and last, then choose the version that reads more smoothly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Write one button bakery sentence with the best length, beginning, and rhythm: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Choose one beginning and one connector, then write the final line: ____________________. Later line: Make another pretend map-table sentence using a button marker or ribbon path: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 5 | Ages 7-8 | create sentence variety with a tiny weather-window clue and a smooth final line</div>
+      <h2>Teacup Town Paper Sleeve Weather Pane</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this paper card beside blank paper and name one invented weather card, cup sill, or cloud tag clue: ____________________.</p>
+      <p class="kid-direction">Writer: Make the weather-window clue work as a short sentence, a stretched sentence, a question, and a final line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: The cloud tag twirled: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: Add where the cloud tag twirled beside the cup sill and how it moved: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: Ask what the tiny watcher noticed about the cloud tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: Begin with Beside the cup sill, Under the pale pane, or With one quick twirl: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: Join The cloud tag twirled and The forecast strip lifted with as, and, or so: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: Read the stretched sentence and the question, then pick the one that sounds best on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Write one Teacup Town sentence with the clearest shape and softest flow: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Mark the sentence shape you like, then write only the final line: ____________________. Later line: Try the same shapes with a weather card or forecast strip: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 6 | Ages 7-9 | balance a notice-board line with short, stretched, question, swapped opening, and combined sentence forms</div>
+      <h2>Pocket Park Paper Sleeve Notice Board</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this paper card beside blank paper and choose one invented leaf notice or board edge idea: ____________________.</p>
+      <p class="kid-direction">Writer: Try the notice-board idea in four sentence shapes, then pick the line that reads best: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: The leaf notice fluttered: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: Add where the leaf notice fluttered and what the keeper adjusted beside it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: Ask why the leaf notice fluttered at the board edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: Begin with At the board edge, Beneath the bench label, or After one paper flutter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: Join The leaf notice fluttered and The keeper adjusted the corner with and, so, or while: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: Compare the short sentence with the combined sentence and choose the steadier paper line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: Write one pocket park notice sentence with the best sentence shape: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Box one connector word before writing the final line: ____________________. Later line: Try another pretend notice-board sentence with a leaf note or bench label: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 7 | Ages 7-9 | alternate short and long lines</div>
+      <h2>Spoon Ferry Lunchbox Harbor Sentence Variety Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and name a pretend spoon ferry, lid dock, or napkin pier before writing begins: ____________________.</p>
+      <p class="kid-direction">Writer: try one tiny ferry line, one stretched ferry line, and one question, then choose the smoothest final line: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: write a clear spoon ferry line with one action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: add one useful harbor detail to the ferry line without crowding it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: ask what the spoon ferry carries across the pretend harbor: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: begin with Across the lid dock, Near the napkin pier, or With a soft clink: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: join The ferry glides. The label waits. into one smooth fictional sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: mark short, stretched, or question as the line that reads best on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the ferry sentence with the clearest paper rhythm: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: circle one sentence shape and fill only the final ferry line: ____________________. Carry-away line: revise one pretend ferry sentence by changing its shape, not its meaning: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 8 | Ages 7-9 | add an invented where phrase</div>
+      <h2>Acorn Avenue Errand Office Sentence Variety Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose a pretend acorn slip, twig tray, or seed stamp as the sentence object: ____________________.</p>
+      <p class="kid-direction">Writer: move the where phrase, test a short line, and keep the errand sentence clear: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: name one acorn office action in five words or fewer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: add where the acorn slip waits, using only invented office details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: ask where the leaf clerk should set the acorn slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: begin with Beside the twig tray, Under the seed stamp, or At the paper counter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: join The clerk sorts slips. The tray fills up. into one clean fictional sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: choose whether the where phrase reads better at the front or end: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the acorn office sentence with the clearest where phrase: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: choose one where phrase and write only the final office line: ____________________. Carry-away line: reshape one pretend errand sentence with a new where phrase: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 9 | Ages 8-10 | add an invented when phrase</div>
+      <h2>Seed Library Map Table Sentence Variety Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose a pretend seed card, folded map, or shelf label for the map table: ____________________.</p>
+      <p class="kid-direction">Writer: try a short seed library line, stretch it with a when phrase, and keep every detail made up: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: write one clear map table action with a seed card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: add a when phrase such as After the bell note or Before the cart pause: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: ask when the seed keeper should tuck the card beside the map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: begin with Before the cart pause, After the label flip, or While the map lies flat: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: join The map lies flat. The seed card waits. into one smooth seed library sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: decide whether the when phrase makes the line clear or too crowded: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the seed library sentence with the best paper rhythm: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: pick one when phrase and write only the final map table line: ____________________. Carry-away line: revise one pretend seed library sentence by moving its when phrase: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 10 | Ages 8-10 | use an action opening</div>
+      <h2>Rain Gauge Railway Sentence Variety Card</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose a pretend gauge bead, rail label, or platform flag: ____________________.</p>
+      <p class="kid-direction">Writer: begin with an action, then test the same railway idea as a short line, stretched line, and question: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: write one clear rain gauge railway action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: add one useful rail or gauge detail to the action line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: ask what the rain conductor checks before the gauge bead rolls: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: begin with Measuring the gauge bead, Rolling past the platform, or Lifting the rail label: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: join The gauge bead rolls. The platform flag lifts. into one smooth railway sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: compare the action opening with the plain opening and choose the clearer line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the rain railway sentence with the clearest action opening: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: underline the action opening and write only the final railway line: ____________________. Carry-away line: reshape one pretend railway sentence by moving the action to the opening: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 11 | Ages 8-10 | use a quiet question before an answer</div>
+      <h2>Moss Message Observatory Sentence Variety Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: print this card and choose a pretend moss note, pebble lens, or sky chart for the paper prompt: ____________________.</p>
+      <p class="kid-direction">Writer: write a quiet question, answer it with a stretched line, then copy the final sentence pair: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: write one clear moss observatory answer in a short line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: add one useful detail about the moss note, pebble lens, or sky chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: ask a quiet question about what the moss note points toward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Opening swap: begin the answer with Beside the pebble lens, Under the sky chart, or With careful marks: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: join The moss note curls. The watcher reads it. into one smooth observatory sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: choose whether the question should stand alone or pair with the answer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the question and answer that read best together on paper: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the question first, then one answer line: ____________________. Carry-away line: revise one pretend observatory answer by placing a question before it: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 12 | Ages 8-10 | write a sentence pair with contrast</div>
+      <h2>Tidepool Timekeepers Lab Contrast Pair</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card beside blank paper and one pretend sleeve strip, then offer a broad tidepool lab idea: ____________________.</p>
+      <p class="kid-direction">Writer: write one short tidepool sentence, stretch the next line with a contrast, and keep both ideas invented: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: write one clear line about a shell dial, pool marker, or tide bead: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: add one useful contrast after but or while without crowding the line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: ask what changed between the first line and the second line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Starter swap: begin the contrast line with Instead, Meanwhile, or By the shell dial: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: join The pool was calm and The shell dial clicked into one contrast sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: mark whether the short line followed by the contrast line sounds clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the tidepool sentence pair that shows contrast without extra words: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the short line and one contrast word: ____________________. Carry-on line: make a new tidepool sentence pair where the second line changes the first idea: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 13 | Ages 10-11 | trim a sentence back to one idea</div>
+      <h2>Revision River Ferry One-Idea Trim</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside blank paper and one pretend sleeve strip, then offer a broad draft-ferry idea: ____________________.</p>
+      <p class="kid-direction">Writer: write a crowded ferry sentence, choose the one idea that matters most, and trim the rest: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: write the one idea the ferry sign needs to keep: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: write the crowded version with two invented details so you can trim it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: ask which detail is doing the clearest job: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Starter swap: begin with the ferry marker, the draft oar, or the folded sign: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: join two tiny ferry lines, then keep only the idea that carries the sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: read the long version and the trimmed version, then mark the cleaner rhythm: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the trimmed ferry sentence with one clear idea: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: cross out one extra detail and copy the sentence that remains: ____________________. Carry-on line: trim another ferry sentence so it keeps one idea: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 14 | Ages 10-11 | choose the best sentence order</div>
+      <h2>Clue Label Tower Museum Order Choice</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card beside blank paper and one pretend sleeve strip, then choose a broad museum clue: ____________________.</p>
+      <p class="kid-direction">Writer: try the same clue in two sentence orders, then choose the order that helps the line make sense: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: write one clear label clue about a display drawer or pointer card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: add one useful clue after the main action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: ask which clue the reader should notice first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Starter swap: begin with First, Beside the case, or Under the pointer card: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: join The label tipped and The clue drawer opened in the order that makes sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: compare the two sentence orders and mark the one that reads cleanly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the museum clue sentence in its best order: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write two starts, circle the clearer opening, and copy the line: ____________________. Carry-on line: reorder one museum sentence so the clue appears before the result: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 15 | Ages 10-11 | compare two sentence rhythms on paper</div>
+      <h2>Compass Craft Academy Rhythm Pair</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card beside blank paper and two pretend sleeve strips, then keep the craft scene invented: ____________________.</p>
+      <p class="kid-direction">Writer: write two versions of one compass-craft idea, one short and one stretched, then choose the smoother rhythm: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: write one crisp line about a paper needle or bead marker: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: add a useful craft detail after the action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: ask whether the short or stretched line fits the craft moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Starter swap: begin one version with Carefully, At the fold guide, or With the paper needle: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: join The compass card tilted and The bead marker slid into one smooth line: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: compare the two versions on paper and mark the sentence rhythm that feels steadier: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the compass-craft sentence with the rhythm you would keep: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: label one version short and one version stretched, then copy the smoother line: ____________________. Carry-on line: make two compass-craft versions and keep the one with stronger rhythm: ____________________.</p>
+    </section>
+
+    <section class="pack-page sentence-variety-card-page">
+      <div class="page-kicker">Story Sentence Variety Card 16 | Ages 10-11 | copy the strongest varied sentence</div>
+      <h2>Binding Day Boardwalk Strongest Line</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card beside blank paper and a pretend sleeve strip, then choose a broad booklet-closing idea: ____________________.</p>
+      <p class="kid-direction">Writer: try a short line, a stretched line, a question, and a starter swap before copying the strongest varied sentence: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Short sentence</h3>
+      <p>Short sentence: write one clear boardwalk line about a booklet clasp, page rail, or thread loop: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Stretched sentence</h3>
+      <p>Stretched sentence: add one useful boardwalk detail without adding a second idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Question sentence</h3>
+      <p>Question sentence: ask what the page helper should choose next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Starter swap</h3>
+      <p>Starter swap: begin with Beside the booklet stand, After the page fold, or With a thread loop: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Sentence combine</h3>
+      <p>Sentence combine: join The booklet opened and The clasp waited into one smooth sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rhythm check</h3>
+      <p>Rhythm check: compare all versions and mark the line that sounds strongest on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Final line</h3>
+      <p>Final line: copy the strongest varied fictional boardwalk sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: choose one shape and copy only the final boardwalk line: ____________________. Carry-on line: try one new sentence shape for a boardwalk idea and copy the strongest line: ____________________.</p>
+    </section>
+  </body>
+</html>

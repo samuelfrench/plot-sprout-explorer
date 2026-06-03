@@ -3848,6 +3848,130 @@
           "summary": "A binding day world for copying the clearest revised boardwalk sentence."
         }
       ]
+    },
+    {
+      "slug": "paper-sleeve-story-sentence-variety-card-pack",
+      "title": "Paper Sleeve Story Sentence Variety Card Pack",
+      "pricePoint": "$69",
+      "status": "checkout_pending",
+      "headline": "A printable sentence variety card pack for paper-only sleeve strip revisions.",
+      "summary": "Sixteen adult-led paper sleeve prompts help kids try short, stretched, question, starter-swap, combined, and final varied lines.",
+      "heroImage": "images/plotsprout/batch48/paper-sleeve-story-sentence-variety-card-pack.jpg",
+      "ctaLabel": "Request sentence variety card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Paper%20Sleeve%20Story%20Sentence%20Variety%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static paper sleeve story sentence variety card pack page is ready for provider wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "button-bakery-map-mixup",
+        "teacup-town-weather-window",
+        "pocket-park-notice-board",
+        "spoon-ferry-lunchbox-harbor",
+        "acorn-avenue-errand-office",
+        "seed-library-map-room",
+        "rain-gauge-railway",
+        "moss-message-observatory",
+        "tidepool-timekeepers-lab",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable paper sleeve sentence variety cards",
+        "Adult setup guide",
+        "Fictional sentence variety safety notes",
+        "Paper sleeve sentence-shape coaching moves",
+        "Family handoff notes",
+        "Pack reset notes",
+        "Six adult-led sentence variety routines",
+        "Ten take-home sentence slips",
+        "Eight optional prompts",
+        "Local image-backed world menu",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one sentence shape choice before a story line",
+        "A tutoring or co-op table where writers can revise one sleeve strip at a time",
+        "A warm-up where a small paper strip reduces blank-page pressure",
+        "A reluctant-writer activity that separates sentence shape from a full draft",
+        "A take-home sentence slip set for building one invented story offline"
+      ],
+      "parentSteps": [
+        "Choose one sentence variety routine before the activity starts.",
+        "Set the paper, pencils, blank slips, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full sentence.",
+        "Turn one plain line into a fictional sentence with a clearer length, opening, or connector.",
+        "Send one sentence slip with a single blank so family adults can continue the story offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "summary": "A moon market world for comparing short, stretched, question, and combined counter lines."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "summary": "A puddle post world for shaping ripple-note lines with different sentence forms."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "summary": "A library train world for testing ticket lines with opening swaps and question turns."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button bakery world for arranging map-table ideas into smoother sentence shapes."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup town world for changing a cloud-tag clue into varied paper lines."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A pocket park world for balancing notice-board ideas with short and combined sentences."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for alternating short ferry lines with stretched harbor details."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for moving an invented where phrase through one sentence."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "summary": "A seed library world for adding invented when phrases around a map-table clue."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "summary": "A rain railway world for starting a sentence with action before testing its rhythm."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "summary": "A moss observatory world for pairing a quiet question with one clear answer line."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for writing a short line followed by a useful contrast."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for trimming a crowded sentence back to one clear idea."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A clue label world for choosing the sentence order that reveals the clue cleanly."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "summary": "A compass craft world for comparing two paper sentence rhythms before copying one."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding day world for choosing the strongest varied boardwalk sentence."
+        }
+      ]
     }
   ]
 }

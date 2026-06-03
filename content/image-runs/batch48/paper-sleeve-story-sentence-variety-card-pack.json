@@ -1,0 +1,18 @@
+{
+  "slug": "paper-sleeve-story-sentence-variety-card-pack",
+  "prompt": "family-friendly flat lay of blank paper sleeves, blank sentence cards with empty writing areas, sleeve strips, unbranded pencils, and small blank paper guides on a seamless plain white background, no keyboard, no electronics, screen-free paper sleeve story sentence variety card pack product photo, no readable text, no people",
+  "negativePrompt": "text, readable writing, letters, labels, logo, watermark, illustration, drawing, line art, cartoon, person, people, child, child face, child portrait, hands, body, clothing, classroom, school, student, teacher, home, house, room, office, address, street, route, gps, coordinates, location, schedule, map, real map, phone, tablet, laptop, computer, keyboard, electronics, screen, device, app interface, microphone, audio recorder, voice memo, camera, photo, recording, transcription, school login, account login, portal, qr code, upload icon, public post, public review, rating, review, score, grade, timer, clock, calendar, contest, prize, food, tasting, allergy, medical, brand mark, franchise character, scary, weapon, fight, bullying",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "madebyollin/sdxl-vae-fp16-fix",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 26064869,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch48/paper-sleeve-story-sentence-variety-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch48/paper-sleeve-story-sentence-variety-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-03-batch48-product-images.json",
+  "title": "Paper Sleeve Story Sentence Variety Card Pack"
+}

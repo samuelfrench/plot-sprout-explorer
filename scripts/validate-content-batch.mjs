@@ -45,6 +45,8 @@ import {
   validateStickyNoteStoryToneCardPackSourceFiles,
   validateWashiTapeStoryWordChoiceCardPackSource,
   validateWashiTapeStoryWordChoiceCardPackSourceFiles,
+  validatePaperSleeveStorySentenceVarietyCardPackSource,
+  validatePaperSleeveStorySentenceVarietyCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -122,6 +124,7 @@ const batch44ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch45ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch45-product-images.json')
 const batch46ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch46-product-images.json')
 const batch47ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch47-product-images.json')
+const batch48ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch48-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -163,6 +166,7 @@ const folderTabDetailSourceFile = resolve(root, 'content', 'product-artifacts', 
 const indexCardShowNotTellSourceFile = resolve(root, 'content', 'product-artifacts', 'index-card-story-show-not-tell-card-pack.json')
 const stickyNoteToneSourceFile = resolve(root, 'content', 'product-artifacts', 'sticky-note-story-tone-card-pack.json')
 const washiTapeWordChoiceSourceFile = resolve(root, 'content', 'product-artifacts', 'washi-tape-story-word-choice-card-pack.json')
+const paperSleeveSentenceVarietySourceFile = resolve(root, 'content', 'product-artifacts', 'paper-sleeve-story-sentence-variety-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -205,6 +209,7 @@ const batch44ProductImagesBatchId = '2026-06-03-batch44-product-images'
 const batch45ProductImagesBatchId = '2026-06-03-batch45-product-images'
 const batch46ProductImagesBatchId = '2026-06-03-batch46-product-images'
 const batch47ProductImagesBatchId = '2026-06-03-batch47-product-images'
+const batch48ProductImagesBatchId = '2026-06-03-batch48-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -246,6 +251,7 @@ const folderTabDetailBatchId = '2026-06-03-batch44'
 const indexCardShowNotTellBatchId = '2026-06-03-batch45'
 const stickyNoteToneBatchId = '2026-06-03-batch46'
 const washiTapeWordChoiceBatchId = '2026-06-03-batch47'
+const paperSleeveSentenceVarietyBatchId = '2026-06-03-batch48'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -3692,6 +3698,111 @@ function validateBatch47ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch48ProductImage(image) {
+  const label = `2026-06-03-batch48-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'paper-sleeve-story-sentence-variety-card-pack',
+    `${label}.slug must be paper-sleeve-story-sentence-variety-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch48/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch48/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch48/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'blank paper sleeves',
+    'blank sentence cards',
+    'empty writing areas',
+    'unbranded pencils',
+    'plain white background',
+    'paper sleeve story sentence variety card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'coordinates',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'microphone',
+    'audio recorder',
+    'voice memo',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'contest',
+    'prize',
+    'food',
+    'tasting',
+    'allergy',
+    'medical',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar.negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -4025,6 +4136,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'washi-tape-story-word-choice-card-pack': {
       title: 'Washi Tape Story Word Choice Card Pack',
       pricePoint: '$67',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'paper-sleeve-story-sentence-variety-card-pack': {
+      title: 'Paper Sleeve Story Sentence Variety Card Pack',
+      pricePoint: '$69',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -5267,12 +5386,23 @@ expect(Array.isArray(batch47ProductImages.images), 'batch47 product image manife
 expect(batch47ProductImages.images.length === 1, `Expected 1 Batch 47 product image, found ${batch47ProductImages.images.length}.`)
 validateBatch47ProductImage(batch47ProductImages.images[0])
 
+expect(existsSync(batch48ProductImagesFile), `Missing Batch 48 product image manifest: ${batch48ProductImagesFile}`)
+const batch48ProductImages = readJson(batch48ProductImagesFile)
+expect(
+  batch48ProductImages.batchId === batch48ProductImagesBatchId,
+  `batch48 product image manifest batchId must be ${batch48ProductImagesBatchId}.`,
+)
+expect(batch48ProductImages.generatedAt === '2026-06-03', 'batch48 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch48ProductImages.images), 'batch48 product image manifest images must be an array.')
+expect(batch48ProductImages.images.length === 1, `Expected 1 Batch 48 product image, found ${batch48ProductImages.images.length}.`)
+validateBatch48ProductImage(batch48ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-  expect(products.products.length === 40, `Expected 40 product records, found ${products.products.length}.`)
+expect(products.products.length === 41, `Expected 41 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -5316,6 +5446,7 @@ for (const requiredProductSlug of [
   'index-card-story-show-not-tell-card-pack',
   'sticky-note-story-tone-card-pack',
   'washi-tape-story-word-choice-card-pack',
+  'paper-sleeve-story-sentence-variety-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -8320,6 +8451,93 @@ for (const asset of washiTapeWordChoiceArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(paperSleeveSentenceVarietySourceFile), `Missing Batch 48 Paper Sleeve Story Sentence Variety Card Pack source file: ${paperSleeveSentenceVarietySourceFile}`)
+const paperSleeveSentenceVarietySource = readJson(paperSleeveSentenceVarietySourceFile)
+expect(
+  paperSleeveSentenceVarietySource.batchId === paperSleeveSentenceVarietyBatchId,
+  `Paper Sleeve Story Sentence Variety Card Pack source batchId must be ${paperSleeveSentenceVarietyBatchId}.`,
+)
+const paperSleeveSentenceVarietyProduct = products.products.find(
+  (product) => product.slug === 'paper-sleeve-story-sentence-variety-card-pack',
+)
+expect(
+  paperSleeveSentenceVarietyProduct,
+  'Missing Paper Sleeve Story Sentence Variety Card Pack product record for Batch 48 artifact validation.',
+)
+const paperSleeveSentenceVarietySourceErrors = validatePaperSleeveStorySentenceVarietyCardPackSource(
+  paperSleeveSentenceVarietySource,
+  paperSleeveSentenceVarietyProduct,
+  worldAgeBands,
+)
+expect(
+  paperSleeveSentenceVarietySourceErrors.length === 0,
+  `Paper Sleeve Story Sentence Variety Card Pack source failed validation:\n${paperSleeveSentenceVarietySourceErrors.join('\n')}`,
+)
+const paperSleeveSentenceVarietySourceFileErrors = validatePaperSleeveStorySentenceVarietyCardPackSourceFiles(
+  paperSleeveSentenceVarietySource,
+  root,
+)
+expect(
+  paperSleeveSentenceVarietySourceFileErrors.length === 0,
+  `Paper Sleeve Story Sentence Variety Card Pack sourceFiles failed validation:\n${paperSleeveSentenceVarietySourceFileErrors.join('\n')}`,
+)
+const paperSleeveSentenceVarietyExpectedPdfPages = paperSleeveSentenceVarietySource.cards.length + 5
+const paperSleeveSentenceVarietyArtifactStatus = inspectArtifactFiles(root, paperSleeveSentenceVarietySource.artifact, {
+  expectedPdfPages: paperSleeveSentenceVarietyExpectedPdfPages,
+})
+expect(
+  paperSleeveSentenceVarietyArtifactStatus.valid,
+  `Paper Sleeve Story Sentence Variety Card Pack artifacts failed validation:\n${paperSleeveSentenceVarietyArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  paperSleeveSentenceVarietyArtifactStatus.files.pdf.size > 100_000,
+  `Paper Sleeve Story Sentence Variety Card Pack PDF artifact is unexpectedly small: ${paperSleeveSentenceVarietyArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  paperSleeveSentenceVarietyArtifactStatus.files.pdf.pageCount === paperSleeveSentenceVarietyExpectedPdfPages,
+  `Paper Sleeve Story Sentence Variety Card Pack PDF artifact must have ${paperSleeveSentenceVarietyExpectedPdfPages} pages.`,
+)
+expect(
+  paperSleeveSentenceVarietyArtifactStatus.files.zip.size > paperSleeveSentenceVarietyArtifactStatus.files.pdf.size,
+  'Paper Sleeve Story Sentence Variety Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const paperSleeveSentenceVarietyCheckoutErrors = validateCheckoutReadiness(
+  paperSleeveSentenceVarietyProduct,
+  paperSleeveSentenceVarietyArtifactStatus,
+)
+expect(
+  paperSleeveSentenceVarietyCheckoutErrors.length === 0,
+  `Paper Sleeve Story Sentence Variety Card Pack checkout readiness failed validation:\n${paperSleeveSentenceVarietyCheckoutErrors.join('\n')}`,
+)
+const paperSleeveSentenceVarietyArtifactManifest = readJson(resolve(root, paperSleeveSentenceVarietySource.artifact.manifestPath))
+expect(
+  paperSleeveSentenceVarietyArtifactManifest.sourcePageCount === paperSleeveSentenceVarietySource.cards.length,
+  'Paper Sleeve Story Sentence Variety Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(paperSleeveSentenceVarietyArtifactManifest.files.assets),
+  'Paper Sleeve Story Sentence Variety Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  paperSleeveSentenceVarietyArtifactManifest.files.assets.length === paperSleeveSentenceVarietySource.worldSlugs.length,
+  'Paper Sleeve Story Sentence Variety Card Pack artifact manifest must include one copied local image per source world.',
+)
+const paperSleeveSentenceVarietyManifestAssetErrors = validateManifestWorldAssets(
+  paperSleeveSentenceVarietySource,
+  paperSleeveSentenceVarietyArtifactManifest,
+)
+expect(
+  paperSleeveSentenceVarietyManifestAssetErrors.length === 0,
+  `Paper Sleeve Story Sentence Variety Card Pack artifact manifest image coverage failed validation:\n${paperSleeveSentenceVarietyManifestAssetErrors.join('\n')}`,
+)
+for (const asset of paperSleeveSentenceVarietyArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Paper Sleeve Story Sentence Variety Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -8359,6 +8577,7 @@ const productImageManifests = [
   batch45ProductImages,
   batch46ProductImages,
   batch47ProductImages,
+  batch48ProductImages,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

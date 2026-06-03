@@ -55,6 +55,7 @@
     "image:batch45": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch45-product-images.json",
     "image:batch46": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch46-product-images.json",
     "image:batch47": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch47-product-images.json",
+    "image:batch48": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch48-product-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -94,7 +95,8 @@
     "product:folder-tab-detail-pack": "node scripts/folder-tab-story-detail-card-pack-builder.mjs",
     "product:index-card-show-not-tell-pack": "node scripts/index-card-story-show-not-tell-card-pack-builder.mjs",
     "product:sticky-note-tone-pack": "node scripts/sticky-note-story-tone-card-pack-builder.mjs",
-    "product:washi-tape-word-choice-pack": "node scripts/washi-tape-story-word-choice-card-pack-builder.mjs"
+    "product:washi-tape-word-choice-pack": "node scripts/washi-tape-story-word-choice-card-pack-builder.mjs",
+    "product:paper-sleeve-sentence-variety-pack": "node scripts/paper-sleeve-story-sentence-variety-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",
