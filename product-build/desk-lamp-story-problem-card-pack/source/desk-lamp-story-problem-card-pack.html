@@ -1,0 +1,1168 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desk Lamp Story Problem Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8.03px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 31.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17.3px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.55px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.72px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 7.05px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.9px; }
+      .story-problem-card-page { font-size: 7.52px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.62px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.022in; }
+      .story-problem-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .story-problem-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable desk lamp problem cards</p>
+        <h1>Desk Lamp Story Problem Card Pack</h1>
+        <p>Sixteen paper cards help writers shape fictional story problems with problem spots, character needs, place pressure, object trouble, questions, first tries, and revision prompts.</p>
+        <p><strong>Audience:</strong> Families, co-op groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable problem cards plus adult guide tools, problem routines, take-home problem slips, and optional share prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline story practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$55</span>
+        <h2>Included</h2>
+        <ul><li>16 printable desk lamp problem cards</li>
+<li>Adult setup guide</li>
+<li>Fictional problem safety notes</li>
+<li>Desk lamp problem coaching moves</li>
+<li>Privacy and family handoff notes</li>
+<li>Pack reset notes</li>
+<li>Six adult-led problem routines</li>
+<li>Ten take-home problem slips</li>
+<li>Eight optional share prompts</li>
+<li>Provider-ready PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Problem coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Before the session</h3><ul><li>Print the problem cards, blank slips, and adult guide before the adult-led paper session.</li>
+<li>Use a drawn desk lamp or pretend paper lamp as the shared story prop.</li>
+<li>Keep every prompt fictional, broad, offline, and printable from start to finish.</li>
+<li>Choose a small stack so each writer works with one gentle obstacle at a time.</li>
+<li>Remind writers that a first try can be changed when the problem becomes clearer.</li></ul></article>
+        <article class="guide-card"><h3>Desk lamp problem setup</h3><ul><li>Place the drawn desk lamp at the center of the paper set with four beam labels: clue, want, mismatch, first try.</li>
+<li>Let the adult read the card and point to the beam label that starts the problem.</li>
+<li>Ask writers to invent one made-up character, one missing clue, and one small story problem.</li>
+<li>Use blank slips for extra tries so crossed-out ideas can stay low-pressure.</li>
+<li>Keep the lamp idea broad: a glow, shade, pull cord, switch, base, or label can all become paper clues.</li></ul></article>
+        <article class="guide-card"><h3>Story problem coaching</h3><ul><li>Ask what feels missing, mixed up, or not yet clear in the made-up story.</li>
+<li>Keep the obstacle small enough for one character choice and one first try.</li>
+<li>If the problem gets too large, shrink it to one clue under the lamp glow.</li>
+<li>Ask which detail changes after the first try so the next sentence has a purpose.</li>
+<li>Use gentle revision by swapping one vague word for a clearer invented clue.</li></ul></article>
+        <article class="guide-card"><h3>Privacy and safety notes</h3><ul><li>Use invented names, broad story labels, and pretend places only.</li>
+<li>Keep the activity paper-only, offline, and adult-led.</li>
+<li>Do not collect facts about actual writers, families, or daily life.</li>
+<li>If a detail sounds personal, replace it with a made-up lamp label or story object.</li>
+<li>Sharing stays optional and limited to one fictional word, sketch, or line.</li></ul></article>
+        <article class="guide-card"><h3>Family handoff</h3><ul><li>Pass along one chosen paper slip and one blank slip for another fictional problem.</li>
+<li>Tell family adults to ask about the made-up obstacle, not actual life details.</li>
+<li>Invite praise for one clear clue, one first try, or one revised problem word.</li>
+<li>Keep the carry-along activity adult-led, offline, and paper-only.</li>
+<li>Ask family adults to leave narrow personal facts off the paper and keep the story invented.</li></ul></article>
+        <article class="guide-card"><h3>Reset</h3><ul><li>Collect unused cards, blank slips, and the drawn desk lamp prop.</li>
+<li>Recycle scratch paper that includes narrow real-world facts.</li>
+<li>Save only fictional examples that can model gentle obstacles later.</li>
+<li>Restock the pack with fresh blank slips before the next paper session.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one desk lamp problem card at a time. Keep every choice broad, invented, and screen-free.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen problem-card worlds</h2>
+      <p>Pick a world image, then start one fictional story with a pretend desk lamp problem card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Problem routines</p>
+      <h2>Choose the desk lamp problem rhythm</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <h3>Beam Label Pick</h3>
+      <p>Writers who need a simple way to name the small story problem.</p>
+      <ol><li>The adult points to one lamp beam label: clue, want, mismatch, or first try.</li>
+<li>The writer chooses one invented object under that beam.</li>
+<li>The adult asks what small problem appears because the object is missing, mixed up, or unclear.</li>
+<li>The writer writes one sentence that names the gentle obstacle.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Missing Clue Glow</h3>
+      <p>Writers who can start once one clue is absent or hidden.</p>
+      <ol><li>The adult draws a glow circle on a blank slip.</li>
+<li>The writer names the invented clue that should be inside the glow.</li>
+<li>The adult asks why the character needs that clue before moving on.</li>
+<li>The writer adds one first try that brings the clue closer.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Switch Mismatch</h3>
+      <p>Turning a mismatch into a clear fictional problem.</p>
+      <ol><li>The adult sketches an on-off switch on paper.</li>
+<li>The writer invents what changes when the switch moves.</li>
+<li>The adult asks what no longer matches after the switch change.</li>
+<li>The writer writes the mismatch as a small story problem.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Shade the Too-Big Problem</h3>
+      <p>Shrinking a large idea into one writable obstacle.</p>
+      <ol><li>The adult draws a lamp shade over the largest part of the problem idea.</li>
+<li>The writer chooses only one visible clue to keep.</li>
+<li>The adult asks what the character can try first with that clue.</li>
+<li>The writer rewrites the problem as one clear sentence.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>Question Under the Lamp</h3>
+      <p>Writers who need the problem to become a question before drafting.</p>
+      <ol><li>The adult places a blank question slip under the drawn desk lamp.</li>
+<li>The writer names one character want and one missing clue.</li>
+<li>The adult helps turn those two pieces into a gentle question.</li>
+<li>The writer answers the question with a first try, not the final fix.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <h3>First Try, Better Try</h3>
+      <p>Showing that a problem can grow clearer after one attempt.</p>
+      <ol><li>The adult reads the problem card and asks for one first try.</li>
+<li>The writer writes the try even if it is not enough yet.</li>
+<li>The adult asks what clue the try reveals.</li>
+<li>The writer revises the problem using the new clue.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home problem slips</p>
+      <h2>Start one story problem later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">One paper pass | missing clue</p>
+      <h3>Glow Goes Missing</h3>
+      <p>Invent a desk lamp glow that points to one missing clue in a made-up story: ____________________.</p>
+      <p>Ask which clue the character notices first: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Brief adult-led pass | mismatch</p>
+      <h3>Crooked Shade Clue</h3>
+      <p>Write a fictional problem where the lamp shade points one way but the clue points another way: ____________________.</p>
+      <p>Ask what does not match yet: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single printable slip | first try</p>
+      <h3>Pull Cord First Try</h3>
+      <p>Create a made-up character who pulls a paper cord and makes one first try: ____________________.</p>
+      <p>Ask what the first try helps the character learn: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">One pencil pass | story question</p>
+      <h3>Glow Label Trouble</h3>
+      <p>Invent a label under the desk lamp that raises a gentle problem question: ____________________.</p>
+      <p>Ask which word on the label matters most: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Short paper pass | object need</p>
+      <h3>Button Beacon</h3>
+      <p>Write a small story problem where a button beacon needs one invented object: ____________________.</p>
+      <p>Ask what object would help without ending the story too fast: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Single card pass | clue order</p>
+      <h3>Paper Beam Puzzle</h3>
+      <p>Draw or name three paper beams and choose the one that hides the first clue: ____________________.</p>
+      <p>Ask why that beam comes first: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Calm story pass | cause and fix</p>
+      <h3>Tiny Switch Change</h3>
+      <p>Make the lamp switch change one pretend detail, then write the problem it causes: ____________________.</p>
+      <p>Ask what gentle fix the character could try: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Quiet paper pass | label mismatch</p>
+      <h3>Base Label Mismatch</h3>
+      <p>Invent a lamp base label that does not match the story object beside it: ____________________.</p>
+      <p>Ask what needs to be relabeled in the made-up story: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Fresh slip pass | problem revision</p>
+      <h3>Soft Problem Shrink</h3>
+      <p>Take a too-large fictional problem and shrink it to one missing clue: ____________________.</p>
+      <p>Ask which smaller version is easier to write next: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Second pencil pass | revise the problem</p>
+      <h3>Better Second Try</h3>
+      <p>Write a second try that makes the small story problem clearer than the first try: ____________________.</p>
+      <p>Ask which word changed the problem most: ____________________.</p>
+    </article></div>
+      <h3>Optional share prompts</h3>
+      <ul><li>Optional adult-led offline prompt: my small story problem is ____________________.</li>
+<li>Optional adult-led offline prompt: the missing clue under the lamp is ____________________.</li>
+<li>Optional adult-led offline prompt: the mismatch I invented is ____________________.</li>
+<li>Optional adult-led offline prompt: the character&#39;s first try is ____________________.</li>
+<li>Optional adult-led offline prompt: one lamp part that matters is ____________________.</li>
+<li>Optional adult-led offline prompt: the problem question I can read is ____________________.</li>
+<li>Optional adult-led offline prompt: I made the problem clearer by changing ____________________.</li>
+<li>Optional adult-led offline prompt: an adult can add one made-up clue here: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 1 | Ages 6-8 | spotting a small problem</div>
+      <h2>Moon Muffin Lamp Crumb Mixup</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this paper card beside a drawn desk lamp and invite one gentle moon-market obstacle: ____________________.</p>
+      <p class="kid-direction">Look at the drawn lamp, then write the small problem the market helper notices: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The tiny problem at the moon muffin stall is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The moon muffin helper needs ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend market counter feels extra busy because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp points to a crumb tag that ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: What needs to change so the muffin trade can keep going gently? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The helper first tries to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the problem smaller and clearer by adding one missing moon-market clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the crumb tag first, then add one problem word: ____________________. Take-home line: Try another tiny pretend market problem on blank paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 2 | Ages 6-8 | noticing a missing clue</div>
+      <h2>Puddle Planet Missing Stamp</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this printable card beside a drawn desk lamp and choose one puddle-mail clue to leave out: ____________________.</p>
+      <p class="kid-direction">Find the missing clue before the puddle mail helper makes a first try: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The small story problem appears when the puddle note has no ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The puddle mail helper needs a clue about ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend puddle counter cannot sort the note because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp shines on a blank stamp spot that needs ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: Which clue is missing from the puddle note? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The helper first checks the paper edge for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Add one clear missing clue so the problem is easier to notice: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle the blank stamp spot and write one clue word: ____________________. Take-home line: Make another pretend mail note with one missing clue to fill in: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 3 | Ages 7-9 | matching need to action</div>
+      <h2>Buttonwood Ticket Helper</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Put the card beside blank paper and a drawn desk lamp, then name one pretend library-train need: ____________________.</p>
+      <p class="kid-direction">Write what the traveler needs, then choose an action that actually helps: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The library-train problem begins when the ticket clue does not match ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The buttonwood traveler needs ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend shelf stop feels tangled because two book tickets point to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp shows a ticket corner with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: What action best matches the traveler&#39;s need? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The traveler first tries to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Change the need or action so they fit together more clearly: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the ticket, then write one need and one action: ____________________. Take-home line: Try another pretend library-train problem by matching a need to an action: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 4 | Ages 7-9 | asking the problem question</div>
+      <h2>Button Bakery Crumb-Map Question</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out the printable card, blank paper, and a drawn desk lamp beside a pretend crumb map: ____________________.</p>
+      <p class="kid-direction">Before fixing anything, write the question the map-mender should ask: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The button bakery map problem shows up when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The map-mender needs to understand ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend bakery counter feels mixed up because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp points at a folded map corner that ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: What question should the map-mender ask first? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The map-mender first writes the question ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the question more exact by naming one crumb-map clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Write only the question mark and one clue word first: ____________________. Take-home line: Use another pretend map problem and start with the clearest question: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 5 | Ages 7-8 | tiny weather mismatch</div>
+      <h2>Teacup Weather Lamp Glow Mixup</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this paper card beside a drawn desk lamp and choose two gentle weather clues that do not match: ____________________.</p>
+      <p class="kid-direction">Look for the tiny mismatch, then write what seems different in Teacup Town: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The tiny weather mismatch is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The teacup weather watcher needs to figure out ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend weather pane feels mixed up because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp label says drizzle while the teacup cloud shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: Which weather clue does not match the scene? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The watcher first compares ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Add one gentle weather detail that makes the mismatch easier to see: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw two weather symbols and mark the one that feels different: ____________________. Take-home line: Try another tiny pretend weather mismatch on blank paper: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 6 | Ages 7-9 | clear first try</div>
+      <h2>Pocket Park Notice First Try</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set the card beside blank paper and a drawn desk lamp, then offer one small pretend notice-board mixup: ____________________.</p>
+      <p class="kid-direction">Name the small problem, then write the first try that makes the most sense: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The pocket-park notice problem is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The notice keeper needs ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend pocket-park board feels paused because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp points to a notice tack that ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: What is the first clear thing the notice keeper should try? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The notice keeper first tries to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the first try clearer by adding one object clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the notice tack, then write one first-try verb: ____________________. Take-home line: Make another pretend notice-board problem and choose one clear first try: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 7 | Ages 7-9 | setting pressure</div>
+      <h2>Spoon Ferry Cracker Dock Problem</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print this card and set a drawn desk lamp idea beside it; invite one invented harbor detail only: ____________________.</p>
+      <p class="kid-direction">Write a gentle obstacle that starts when the spoon ferry reaches the harbor edge: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The first small story problem appears when the spoon ferry reaches ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The tiny ferryperson needs help carrying, finding, or choosing ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The cracker dock, napkin tide, or lunchbox lid makes the crossing harder because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp glow shows one story object out of place, such as ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: What gentle obstacle should the ferry solve before the story can continue? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The helper first tries to balance, fold, or nudge ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the setting pressure clearer by adding one sight, sound, or texture: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Point to the dock detail and write one small problem word: ____________________. Take-home line: On paper, invent one more spoon ferry problem using a drawn desk lamp clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 8 | Ages 7-9 | task mix-up</div>
+      <h2>Acorn Avenue Errand Slip Tangle</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print this card and ask for made-up errand slips, pretend stamps, and invented tasks only: ____________________.</p>
+      <p class="kid-direction">Write a small story problem where two pretend tasks get matched the wrong way: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: At Acorn Avenue, two pretend errand slips get mixed because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The leaf clerk needs the helper to match the right task to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The acorn counter is crowded with twig trays, making the mix-up harder because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp glow lands on the wrong stamp, label, or seed tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: Which task belongs to which character, and what clue proves it? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The helper sorts one slip by shape, color, or tiny symbol: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the task mix-up clearer by changing one clue on a slip: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw two errand slips and mark the one that seems mismatched: ____________________. Take-home line: Use paper to invent another acorn errand mix-up with no real chores: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 9 | Ages 8-10 | map mismatch</div>
+      <h2>Seed Library Map Shelf Mismatch</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print this card and invite a drawn desk lamp idea to shine on one invented map shelf clue: ____________________.</p>
+      <p class="kid-direction">Write a small story problem where a seed map mark does not match the shelf clue: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The seed map on the table shows one path beside the shelf, but the seed tag says ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The map keeper needs the writer to decide which symbol belongs with ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The map table is full of folded charts, so the mismatch matters because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp glow reveals a seed pin, paper compass, or shelf card that does not match ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: Which map clue should the character trust first, and why? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The helper compares one symbol, one border, and one seed tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Replace any confusing map clue with a clearer fictional symbol: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Sketch one map symbol and write what it is supposed to mean: ____________________. Take-home line: Invent another seed library map mismatch on paper using a desk lamp clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 10 | Ages 8-10 | signal mismatch</div>
+      <h2>Rain Gauge Railway Signal Tangle</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print this card and place a drawn desk lamp idea near the page; all railway signals stay fictional: ____________________.</p>
+      <p class="kid-direction">Write a small story problem where two railway signals do not agree: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The rain gauge points to silver drizzle while the signal flag shows ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The rain-note conductor needs help choosing what the mixed signals mean for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The puddle platform, gauge stand, or paper bridge makes the signal mismatch matter because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp glow reveals a wet ticket, glass tube, or cloud note with the wrong mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: Which signal should the character test first on the story page? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The helper compares the gauge mark with one flag, bell, or cloud note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the signal mismatch clearer by changing one pretend mark: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw two signals and circle the one that does not fit: ____________________. Take-home line: On paper, invent another rain gauge signal mismatch with a desk lamp clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 11 | Ages 8-10 | message gap</div>
+      <h2>Moss Observatory Missing Middle Note</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Print this card and ask for a pretend moss note with one gentle missing clue: ____________________.</p>
+      <p class="kid-direction">Write a small story problem where a moss message leaves out one important word: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The moss note has a gentle gap where the key word should be ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The sky watcher needs help filling one missing message clue for ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The lantern shelf, moss step, or pebble-lens table makes the gap important because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk lamp glow falls on a folded sky chart with one blank space: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: What does the message need to say so the character can make a first try? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The observer checks one moss mark, one pebble lens, and one chart edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the message gap clearer by adding one soft clue before the blank: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Copy the moss note and leave one gentle blank to fill: ____________________. Take-home line: Invent another moss message gap on paper using a desk lamp clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 12 | Ages 8-10 | sequence problem</div>
+      <h2>Tidepool Clock Pebble Order Mix</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this paper card beside a drawn desk-lamp idea and invite an invented tidepool order mismatch: ____________________.</p>
+      <p class="kid-direction">Spot which tidepool timekeeper clue comes before or after another clue, then write the small story problem: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: Three shell-clock notes are out of order, and the confusing clue is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The tidepool timekeeper needs the next correct note so they can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend tidepool lab has one changing mark that makes the order matter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk-lamp idea shines on a shell tag, bead dial, or paper tide strip that does not fit because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: Which clue should come first, next, and last in this make-believe lab? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The timekeeper gently tests the sequence by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the mixed-up order smaller, clearer, and easier to follow by ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Number three pretend clues on paper and fill one blank: ____________________. Carry-on line: On another paper slip, invent one new order mismatch for the tidepool lab: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 13 | Ages 10-11 | revision target</div>
+      <h2>Revision River Lantern Target</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place the printable card near a drawn desk-lamp idea and ask which ferry detail needs clearer wording: ____________________.</p>
+      <p class="kid-direction">Choose one fuzzy ferry problem, mark what needs to change, and write the revision target on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The ferry helper cannot tell which sentence, clue, or action needs clearer wording because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The revision river helper needs a clear target so the story can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend ferry crossing feels misty, crowded with clues, or unclear because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk-lamp idea points to a lantern tag, rope note, or ferry card that needs revision because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: What exact story part should be revised first? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The ferry helper gently underlines one target and tries to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Turn the broad ferry trouble into one clear revision target by ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle one fuzzy ferry word and write its clearer replacement: ____________________. Carry-on line: On a later paper slip, choose one pretend ferry detail to revise: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 14 | Ages 10-11 | label clue problem</div>
+      <h2>Clue Label Tower Tag Mix-Up</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set out the paper card and a drawn desk-lamp idea, then invite one invented exhibit label mismatch: ____________________.</p>
+      <p class="kid-direction">Find the label that points to the wrong clue, then write the small story problem it creates: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: One tower label names the wrong clue, and the mix-up begins when ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The clue keeper needs the label to help them notice ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend tower museum has many tags, shelves, or display cards, so the label must ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk-lamp idea shines on a label stand, paper magnifier, or display tag that causes trouble by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: Which label clue tells the reader where to look next? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The clue keeper gently swaps, points, or rewrites one label to ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the label clue more specific by adding one shape, color, or display detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw one label box and fill only the clue word: ____________________. Carry-on line: Invent one new paper label that points to a pretend tower clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 15 | Ages 10-11 | choice obstacle</div>
+      <h2>Compass Craft Forked Arrow Choice</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Place this printable card beside a drawn desk-lamp idea and offer two invented compass choices on paper: ____________________.</p>
+      <p class="kid-direction">Write the moment the compass crafter must choose between two paper arrows, beads, or marks: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: Two compass craft choices both seem useful, and the obstacle is ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The compass crafter needs to choose one option so they can ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend craft academy has a bead rail, needle hall, or folded arrow gate that makes the choice matter because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk-lamp idea reveals a paper needle, craft tag, or bead card that points two ways because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: Which choice helps the character move the story forward, and why? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The compass crafter gently tests one choice by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the choice obstacle clearer by naming the two options and one tradeoff: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Mark option A or option B, then write one reason: ____________________. Carry-on line: Sketch two pretend compass choices on paper and choose one: ____________________.</p>
+    </section>
+
+    <section class="pack-page story-problem-card-page">
+      <div class="page-kicker">Problem Card 16 | Ages 10-11 | promise problem</div>
+      <h2>Binding Day Promise Knot</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: Set this card beside a drawn desk-lamp idea and invite one invented promise that can be kept kindly: ____________________.</p>
+      <p class="kid-direction">Write the small problem that appears when a boardwalk page helper tries to keep a promise: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Problem spot</h3>
+      <p>Problem spot: The promise becomes tricky when a page, sign, or clasp is different from what the helper expected: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character need</h3>
+      <p>Character need: The page helper needs to keep the promise by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Place pressure</h3>
+      <p>Place pressure: The pretend binding boardwalk has page signs, thread loops, or booth notes that make the promise matter because ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Object trouble</h3>
+      <p>Object trouble: The drawn desk-lamp idea shines on a thread loop, page clasp, or folded sign that complicates the promise by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Problem question</h3>
+      <p>Problem question: What kind choice lets the helper keep the promise without making the story too big? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: The page helper gently tries to keep the promise by ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Revise problem</h3>
+      <p>Revise the problem: Make the promise problem smaller, kinder, and easier to solve by ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Draw the promised object and write one helpful action: ____________________. Carry-on line: On another paper slip, invent one small promise a boardwalk helper can keep: ____________________.</p>
+    </section>
+  </body>
+</html>

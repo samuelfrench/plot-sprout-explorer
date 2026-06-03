@@ -31,6 +31,8 @@ import {
   validateBackpackStoryEndingCardPackSourceFiles,
   validatePencilCupStoryOpeningCardPackSource,
   validatePencilCupStoryOpeningCardPackSourceFiles,
+  validateDeskLampStoryProblemCardPackSource,
+  validateDeskLampStoryProblemCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -101,6 +103,7 @@ const batch37ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-0
 const batch38ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch38-product-images.json')
 const batch39ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch39-product-images.json')
 const batch40ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch40-product-images.json')
+const batch41ProductImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch41-product-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -135,6 +138,7 @@ const coatPocketCharacterSourceFile = resolve(root, 'content', 'product-artifact
 const paperTraySettingSourceFile = resolve(root, 'content', 'product-artifacts', 'paper-tray-story-setting-card-pack.json')
 const backpackEndingSourceFile = resolve(root, 'content', 'product-artifacts', 'backpack-story-ending-card-pack.json')
 const pencilCupOpeningSourceFile = resolve(root, 'content', 'product-artifacts', 'pencil-cup-story-opening-card-pack.json')
+const deskLampProblemSourceFile = resolve(root, 'content', 'product-artifacts', 'desk-lamp-story-problem-card-pack.json')
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -170,6 +174,7 @@ const batch37ProductImagesBatchId = '2026-06-03-batch37-product-images'
 const batch38ProductImagesBatchId = '2026-06-03-batch38-product-images'
 const batch39ProductImagesBatchId = '2026-06-03-batch39-product-images'
 const batch40ProductImagesBatchId = '2026-06-03-batch40-product-images'
+const batch41ProductImagesBatchId = '2026-06-03-batch41-product-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -204,6 +209,7 @@ const coatPocketCharacterBatchId = '2026-06-03-batch37'
 const paperTraySettingBatchId = '2026-06-03-batch38'
 const backpackEndingBatchId = '2026-06-03-batch39'
 const pencilCupOpeningBatchId = '2026-06-03-batch40'
+const deskLampProblemBatchId = '2026-06-03-batch41'
 const allowedStarterAgeBands = new Set(['6-8', '7-9', '8-10', '10-11'])
 const safety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -2894,6 +2900,114 @@ function validateBatch40ProductImage(image) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch41ProductImage(image) {
+  const label = `2026-06-03-batch41-product-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(
+    image.slug === 'desk-lamp-story-problem-card-pack',
+    `${label}.slug must be desk-lamp-story-problem-card-pack.`,
+  )
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.outputJpeg === `public/images/plotsprout/batch41/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch41/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch41/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  for (const phrase of [
+    'family-friendly',
+    'flat lay',
+    'six loose blank cream printable story problem cards',
+    'simple unbranded desk lamp',
+    'empty rectangular writing areas',
+    'plain white background',
+    'screen-free desk lamp story problem card pack',
+  ]) {
+    expect(image.prompt.toLowerCase().includes(phrase), `${label}.prompt missing "${phrase}".`)
+  }
+  for (const phrase of [
+    'text',
+    'readable writing',
+    'letters',
+    'labels',
+    'logo',
+    'watermark',
+    'classroom',
+    'school',
+    'student',
+    'teacher',
+    'home',
+    'house',
+    'room',
+    'office',
+    'address',
+    'street',
+    'route',
+    'gps',
+    'location',
+    'schedule',
+    'phone',
+    'tablet',
+    'laptop',
+    'computer',
+    'screen',
+    'device',
+    'app interface',
+    'microphone',
+    'audio recorder',
+    'camera',
+    'photo',
+    'recording',
+    'transcription',
+    'school login',
+    'account login',
+    'portal',
+    'qr code',
+    'upload icon',
+    'public post',
+    'public review',
+    'rating',
+    'review',
+    'score',
+    'grade',
+    'timer',
+    'clock',
+    'calendar',
+    'contest',
+    'prize',
+    'child face',
+    'child portrait',
+    'person',
+    'hands',
+    'body',
+    'scary',
+    'weapon',
+    'fight',
+    'bullying',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar.negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar.steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar.outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar.outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -3171,6 +3285,14 @@ function validateProduct(product, productSlugs, worldSlugs) {
     'pencil-cup-story-opening-card-pack': {
       title: 'Pencil Cup Story Opening Card Pack',
       pricePoint: '$53',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
+    'desk-lamp-story-problem-card-pack': {
+      title: 'Desk Lamp Story Problem Card Pack',
+      pricePoint: '$55',
       minIncludedPages: 10,
       minUseCases: 5,
       minParentSteps: 5,
@@ -3659,6 +3781,48 @@ function validateProduct(product, productSlugs, worldSlugs) {
       `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, real-identity, real school/home details, address, route, GPS, exact-location, profile, real-book-title, author, publisher, franchise, food/allergy, or unsafe professional language.`,
     )
   }
+  if (product.slug === 'desk-lamp-story-problem-card-pack') {
+    const deskLampSummaryErrors = validateProductWorldSummaries(product, 'Desk Lamp Story Problem Card Pack')
+    expect(
+      deskLampSummaryErrors.length === 0,
+      `${label}.worldSummaries failed validation:\n${deskLampSummaryErrors.join('\n')}`,
+    )
+    for (const { summary } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+    }
+    const deskLampRenderedText = renderedHtml
+      .replaceAll(safety, '')
+      .replaceAll('take-home', '')
+      .replaceAll('Checkout is pending until the payment provider is selected', '')
+      .replaceAll('device-width', '')
+      .replaceAll('Desk Lamp Story Problem Card Pack', '')
+      .replaceAll('Desk%20Lamp%20Story%20Problem%20Card%20Pack', '')
+      .replaceAll('desk lamp story problem card pack', '')
+      .replaceAll('desk%20lamp%20story%20problem%20card%20pack', '')
+      .replaceAll('Desk Lamp', '')
+      .replaceAll('Desk%20Lamp', '')
+      .replaceAll('Desk lamp', '')
+      .replaceAll('desk lamp', '')
+      .replaceAll('desk%20lamp', '')
+      .replaceAll('desk-lamp', '')
+      .replaceAll('problem card', '')
+      .replaceAll('problem-card', '')
+      .replaceAll('screen-free', '')
+      .replaceAll('narrow real-world facts', '')
+      .replaceAll('narrow real-world fact', '')
+      .replaceAll('narrow personal facts', '')
+      .replaceAll('small story problem', '')
+      .replaceAll('Puddle Planet Post Office', '')
+      .replaceAll('puddle-planet-post-office', '')
+      .replaceAll('Acorn Avenue Errand Office', '')
+      .replaceAll('acorn-avenue-errand-office', '')
+      .replaceAll('Seed Library Map Room', '')
+      .replaceAll('seed-library-map-room', '')
+    expect(
+      !/\baccounts?\b|\bschool accounts?\b|\blogins?\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic post(s|ed|ing)?\b|\bpublic reviews?\b|\breviews?\b|\bratings?\b|\bstars?\b|\bcomments?\b|\bforums?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideos?\b|\bphotos?\b|\bcameras?\b|\bphones?\b|\bdevices?\b|\bprivate conversation(s)?\b|\breal conversation(s)?\b|\btracker(s)?\b|\btracking\b|\bbehavior reports?\b|\bgrades?\b|\bgrading\b|\bscores?\b|\brubrics?\b|\bcontest(s)?\b|\bprizes?\b|\btimers?\b|\breal names?\b|\bfull names?\b|\bidentity details?\b|\bclassrooms?\b|\bschools?\b|\bstudents?\b|\bteachers?\b|\bhomes?\b|\bhouses?\b|\bhome address\b|\boffices?\b|\bdesks?\b|\brooms?\b|\breal rooms?\b|\bprivate locations?\b|\bprivate place details?\b|\blocation details?\b|\bexact locations?\b|\bexact places?\b|\bschedules?\b|\bschool route(s)?\b|\breal route(s)?\b|\broutes?\b|\baddresses?\b|\bstreets?\b|\bgps\b|\bcoordinates?\b|\breal child\b|\breal child data\b|\bprivate child data\b|\bstudent records?\b|\bprofiles?\b|\bbook title(s)?\b|\breal title(s)?\b|\bauthor(s)?\b|\bpublisher(s)?\b|\bfranchise(s)?\b|\bcopyright(ed)?\b|\bHarry Potter\b|\bDisney\b|\bPokemon\b|\bPokémon\b|\bMarvel\b|\bStar Wars\b|\bMinecraft\b|\bfood prep\b|\ballerg(y|ies|en|ens|ic)\b|\bmedical\b|\blegal\b|\btherapy\b|\bgrief\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b/i.test(deskLampRenderedText),
+      `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, real-identity, real room/location/schedule details, address, route, GPS, exact-location, profile, real-book-title, author, publisher, franchise, food/allergy, unsafe professional, scary/harm/bullying/fighting, or weapon language.`,
+    )
+  }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
   validateString(metaDescription, `${label} rendered meta description`)
   expect(
@@ -4124,12 +4288,23 @@ expect(Array.isArray(batch40ProductImages.images), 'batch40 product image manife
 expect(batch40ProductImages.images.length === 1, `Expected 1 Batch 40 product image, found ${batch40ProductImages.images.length}.`)
 validateBatch40ProductImage(batch40ProductImages.images[0])
 
+expect(existsSync(batch41ProductImagesFile), `Missing Batch 41 product image manifest: ${batch41ProductImagesFile}`)
+const batch41ProductImages = readJson(batch41ProductImagesFile)
+expect(
+  batch41ProductImages.batchId === batch41ProductImagesBatchId,
+  `batch41 product image manifest batchId must be ${batch41ProductImagesBatchId}.`,
+)
+expect(batch41ProductImages.generatedAt === '2026-06-03', 'batch41 product image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch41ProductImages.images), 'batch41 product image manifest images must be an array.')
+expect(batch41ProductImages.images.length === 1, `Expected 1 Batch 41 product image, found ${batch41ProductImages.images.length}.`)
+validateBatch41ProductImage(batch41ProductImages.images[0])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 33, `Expected 33 product records, found ${products.products.length}.`)
+expect(products.products.length === 34, `Expected 34 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 products.products.forEach((product) => validateProduct(product, productSlugs, worldSlugs))
 for (const requiredProductSlug of [
@@ -4166,6 +4341,7 @@ for (const requiredProductSlug of [
   'paper-tray-story-setting-card-pack',
   'backpack-story-ending-card-pack',
   'pencil-cup-story-opening-card-pack',
+  'desk-lamp-story-problem-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -6561,6 +6737,93 @@ for (const asset of pencilCupOpeningArtifactManifest.files.assets) {
   )
 }
 
+expect(existsSync(deskLampProblemSourceFile), `Missing Batch 41 Desk Lamp Story Problem Card Pack source file: ${deskLampProblemSourceFile}`)
+const deskLampProblemSource = readJson(deskLampProblemSourceFile)
+expect(
+  deskLampProblemSource.batchId === deskLampProblemBatchId,
+  `Desk Lamp Story Problem Card Pack source batchId must be ${deskLampProblemBatchId}.`,
+)
+const deskLampProblemProduct = products.products.find(
+  (product) => product.slug === 'desk-lamp-story-problem-card-pack',
+)
+expect(
+  deskLampProblemProduct,
+  'Missing Desk Lamp Story Problem Card Pack product record for Batch 41 artifact validation.',
+)
+const deskLampProblemSourceErrors = validateDeskLampStoryProblemCardPackSource(
+  deskLampProblemSource,
+  deskLampProblemProduct,
+  worldAgeBands,
+)
+expect(
+  deskLampProblemSourceErrors.length === 0,
+  `Desk Lamp Story Problem Card Pack source failed validation:\n${deskLampProblemSourceErrors.join('\n')}`,
+)
+const deskLampProblemSourceFileErrors = validateDeskLampStoryProblemCardPackSourceFiles(
+  deskLampProblemSource,
+  root,
+)
+expect(
+  deskLampProblemSourceFileErrors.length === 0,
+  `Desk Lamp Story Problem Card Pack sourceFiles failed validation:\n${deskLampProblemSourceFileErrors.join('\n')}`,
+)
+const deskLampProblemExpectedPdfPages = deskLampProblemSource.cards.length + 5
+const deskLampProblemArtifactStatus = inspectArtifactFiles(root, deskLampProblemSource.artifact, {
+  expectedPdfPages: deskLampProblemExpectedPdfPages,
+})
+expect(
+  deskLampProblemArtifactStatus.valid,
+  `Desk Lamp Story Problem Card Pack artifacts failed validation:\n${deskLampProblemArtifactStatus.errors.join('\n')}`,
+)
+expect(
+  deskLampProblemArtifactStatus.files.pdf.size > 100_000,
+  `Desk Lamp Story Problem Card Pack PDF artifact is unexpectedly small: ${deskLampProblemArtifactStatus.files.pdf.size} bytes.`,
+)
+expect(
+  deskLampProblemArtifactStatus.files.pdf.pageCount === deskLampProblemExpectedPdfPages,
+  `Desk Lamp Story Problem Card Pack PDF artifact must have ${deskLampProblemExpectedPdfPages} pages.`,
+)
+expect(
+  deskLampProblemArtifactStatus.files.zip.size > deskLampProblemArtifactStatus.files.pdf.size,
+  'Desk Lamp Story Problem Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+)
+const deskLampProblemCheckoutErrors = validateCheckoutReadiness(
+  deskLampProblemProduct,
+  deskLampProblemArtifactStatus,
+)
+expect(
+  deskLampProblemCheckoutErrors.length === 0,
+  `Desk Lamp Story Problem Card Pack checkout readiness failed validation:\n${deskLampProblemCheckoutErrors.join('\n')}`,
+)
+const deskLampProblemArtifactManifest = readJson(resolve(root, deskLampProblemSource.artifact.manifestPath))
+expect(
+  deskLampProblemArtifactManifest.sourcePageCount === deskLampProblemSource.cards.length,
+  'Desk Lamp Story Problem Card Pack artifact manifest sourcePageCount must match source cards.',
+)
+expect(
+  Array.isArray(deskLampProblemArtifactManifest.files.assets),
+  'Desk Lamp Story Problem Card Pack artifact manifest files.assets must be an array.',
+)
+expect(
+  deskLampProblemArtifactManifest.files.assets.length === deskLampProblemSource.worldSlugs.length,
+  'Desk Lamp Story Problem Card Pack artifact manifest must include one copied local image per source world.',
+)
+const deskLampProblemManifestAssetErrors = validateManifestWorldAssets(
+  deskLampProblemSource,
+  deskLampProblemArtifactManifest,
+)
+expect(
+  deskLampProblemManifestAssetErrors.length === 0,
+  `Desk Lamp Story Problem Card Pack artifact manifest image coverage failed validation:\n${deskLampProblemManifestAssetErrors.join('\n')}`,
+)
+for (const asset of deskLampProblemArtifactManifest.files.assets) {
+  validateImageFile(
+    resolve(root, asset.path),
+    `Desk Lamp Story Problem Card Pack copied artifact image ${asset.path}`,
+    'jpeg',
+  )
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -6593,6 +6856,7 @@ const productImageManifests = [
   batch38ProductImages,
   batch39ProductImages,
   batch40ProductImages,
+  batch41ProductImages,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

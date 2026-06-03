@@ -1,0 +1,192 @@
+{
+  "laneId": "batch41-desk-lamp-problem-tools",
+  "batchId": "2026-06-03-batch41",
+  "productSlug": "desk-lamp-story-problem-card-pack",
+  "adultGuide": {
+    "beforeSession": [
+      "Print the problem cards, blank slips, and adult guide before the adult-led paper session.",
+      "Use a drawn desk lamp or pretend paper lamp as the shared story prop.",
+      "Keep every prompt fictional, broad, offline, and printable from start to finish.",
+      "Choose a small stack so each writer works with one gentle obstacle at a time.",
+      "Remind writers that a first try can be changed when the problem becomes clearer."
+    ],
+    "deskLampProblemSetup": [
+      "Place the drawn desk lamp at the center of the paper set with four beam labels: clue, want, mismatch, first try.",
+      "Let the adult read the card and point to the beam label that starts the problem.",
+      "Ask writers to invent one made-up character, one missing clue, and one small story problem.",
+      "Use blank slips for extra tries so crossed-out ideas can stay low-pressure.",
+      "Keep the lamp idea broad: a glow, shade, pull cord, switch, base, or label can all become paper clues."
+    ],
+    "problemCoaching": [
+      "Ask what feels missing, mixed up, or not yet clear in the made-up story.",
+      "Keep the obstacle small enough for one character choice and one first try.",
+      "If the problem gets too large, shrink it to one clue under the lamp glow.",
+      "Ask which detail changes after the first try so the next sentence has a purpose.",
+      "Use gentle revision by swapping one vague word for a clearer invented clue."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented names, broad story labels, and pretend places only.",
+      "Keep the activity paper-only, offline, and adult-led.",
+      "Do not collect facts about actual writers, families, or daily life.",
+      "If a detail sounds personal, replace it with a made-up lamp label or story object.",
+      "Sharing stays optional and limited to one fictional word, sketch, or line."
+    ],
+    "familyHandoff": [
+      "Pass along one chosen paper slip and one blank slip for another fictional problem.",
+      "Tell family adults to ask about the made-up obstacle, not actual life details.",
+      "Invite praise for one clear clue, one first try, or one revised problem word.",
+      "Keep the carry-along activity adult-led, offline, and paper-only.",
+      "Ask family adults to leave narrow personal facts off the paper and keep the story invented."
+    ],
+    "reset": [
+      "Collect unused cards, blank slips, and the drawn desk lamp prop.",
+      "Recycle scratch paper that includes narrow real-world facts.",
+      "Save only fictional examples that can model gentle obstacles later.",
+      "Restock the pack with fresh blank slips before the next paper session."
+    ]
+  },
+  "problemRoutines": [
+    {
+      "name": "Beam Label Pick",
+      "bestFor": "Writers who need a simple way to name the small story problem.",
+      "steps": [
+        "The adult points to one lamp beam label: clue, want, mismatch, or first try.",
+        "The writer chooses one invented object under that beam.",
+        "The adult asks what small problem appears because the object is missing, mixed up, or unclear.",
+        "The writer writes one sentence that names the gentle obstacle."
+      ]
+    },
+    {
+      "name": "Missing Clue Glow",
+      "bestFor": "Writers who can start once one clue is absent or hidden.",
+      "steps": [
+        "The adult draws a glow circle on a blank slip.",
+        "The writer names the invented clue that should be inside the glow.",
+        "The adult asks why the character needs that clue before moving on.",
+        "The writer adds one first try that brings the clue closer."
+      ]
+    },
+    {
+      "name": "Switch Mismatch",
+      "bestFor": "Turning a mismatch into a clear fictional problem.",
+      "steps": [
+        "The adult sketches an on-off switch on paper.",
+        "The writer invents what changes when the switch moves.",
+        "The adult asks what no longer matches after the switch change.",
+        "The writer writes the mismatch as a small story problem."
+      ]
+    },
+    {
+      "name": "Shade the Too-Big Problem",
+      "bestFor": "Shrinking a large idea into one writable obstacle.",
+      "steps": [
+        "The adult draws a lamp shade over the largest part of the problem idea.",
+        "The writer chooses only one visible clue to keep.",
+        "The adult asks what the character can try first with that clue.",
+        "The writer rewrites the problem as one clear sentence."
+      ]
+    },
+    {
+      "name": "Question Under the Lamp",
+      "bestFor": "Writers who need the problem to become a question before drafting.",
+      "steps": [
+        "The adult places a blank question slip under the drawn desk lamp.",
+        "The writer names one character want and one missing clue.",
+        "The adult helps turn those two pieces into a gentle question.",
+        "The writer answers the question with a first try, not the final fix."
+      ]
+    },
+    {
+      "name": "First Try, Better Try",
+      "bestFor": "Showing that a problem can grow clearer after one attempt.",
+      "steps": [
+        "The adult reads the problem card and asks for one first try.",
+        "The writer writes the try even if it is not enough yet.",
+        "The adult asks what clue the try reveals.",
+        "The writer revises the problem using the new clue."
+      ]
+    }
+  ],
+  "takeHomeProblemSlips": [
+    {
+      "title": "Glow Goes Missing",
+      "time": "One paper pass",
+      "skill": "missing clue",
+      "direction": "Invent a desk lamp glow that points to one missing clue in a made-up story: ____________________.",
+      "familyLine": "Ask which clue the character notices first: ____________________."
+    },
+    {
+      "title": "Crooked Shade Clue",
+      "time": "Brief adult-led pass",
+      "skill": "mismatch",
+      "direction": "Write a fictional problem where the lamp shade points one way but the clue points another way: ____________________.",
+      "familyLine": "Ask what does not match yet: ____________________."
+    },
+    {
+      "title": "Pull Cord First Try",
+      "time": "Single printable slip",
+      "skill": "first try",
+      "direction": "Create a made-up character who pulls a paper cord and makes one first try: ____________________.",
+      "familyLine": "Ask what the first try helps the character learn: ____________________."
+    },
+    {
+      "title": "Glow Label Trouble",
+      "time": "One pencil pass",
+      "skill": "story question",
+      "direction": "Invent a label under the desk lamp that raises a gentle problem question: ____________________.",
+      "familyLine": "Ask which word on the label matters most: ____________________."
+    },
+    {
+      "title": "Button Beacon",
+      "time": "Short paper pass",
+      "skill": "object need",
+      "direction": "Write a small story problem where a button beacon needs one invented object: ____________________.",
+      "familyLine": "Ask what object would help without ending the story too fast: ____________________."
+    },
+    {
+      "title": "Paper Beam Puzzle",
+      "time": "Single card pass",
+      "skill": "clue order",
+      "direction": "Draw or name three paper beams and choose the one that hides the first clue: ____________________.",
+      "familyLine": "Ask why that beam comes first: ____________________."
+    },
+    {
+      "title": "Tiny Switch Change",
+      "time": "Calm story pass",
+      "skill": "cause and fix",
+      "direction": "Make the lamp switch change one pretend detail, then write the problem it causes: ____________________.",
+      "familyLine": "Ask what gentle fix the character could try: ____________________."
+    },
+    {
+      "title": "Base Label Mismatch",
+      "time": "Quiet paper pass",
+      "skill": "label mismatch",
+      "direction": "Invent a lamp base label that does not match the story object beside it: ____________________.",
+      "familyLine": "Ask what needs to be relabeled in the made-up story: ____________________."
+    },
+    {
+      "title": "Soft Problem Shrink",
+      "time": "Fresh slip pass",
+      "skill": "problem revision",
+      "direction": "Take a too-large fictional problem and shrink it to one missing clue: ____________________.",
+      "familyLine": "Ask which smaller version is easier to write next: ____________________."
+    },
+    {
+      "title": "Better Second Try",
+      "time": "Second pencil pass",
+      "skill": "revise the problem",
+      "direction": "Write a second try that makes the small story problem clearer than the first try: ____________________.",
+      "familyLine": "Ask which word changed the problem most: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Optional adult-led offline prompt: my small story problem is ____________________.",
+    "Optional adult-led offline prompt: the missing clue under the lamp is ____________________.",
+    "Optional adult-led offline prompt: the mismatch I invented is ____________________.",
+    "Optional adult-led offline prompt: the character's first try is ____________________.",
+    "Optional adult-led offline prompt: one lamp part that matters is ____________________.",
+    "Optional adult-led offline prompt: the problem question I can read is ____________________.",
+    "Optional adult-led offline prompt: I made the problem clearer by changing ____________________.",
+    "Optional adult-led offline prompt: an adult can add one made-up clue here: ____________________."
+  ]
+}

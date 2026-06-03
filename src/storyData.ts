@@ -534,6 +534,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable pencil cup story opening cards with adult guide tools, opening routines, and take-home opening slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'desk-lamp-story-problem-card-pack',
+    title: 'Desk Lamp Story Problem Card Pack',
+    pricePoint: '$55',
+    description:
+      'Sixteen printable desk lamp story problem cards with adult guide tools, problem routines, and take-home problem slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

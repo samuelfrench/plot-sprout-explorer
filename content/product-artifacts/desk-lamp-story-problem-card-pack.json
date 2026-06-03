@@ -1,0 +1,550 @@
+{
+  "batchId": "2026-06-03-batch41",
+  "generatedAt": "2026-06-03",
+  "productSlug": "desk-lamp-story-problem-card-pack",
+  "title": "Desk Lamp Story Problem Card Pack",
+  "pricePoint": "$55",
+  "audience": "Families, co-op groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable problem cards plus adult guide tools, problem routines, take-home problem slips, and optional share prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.",
+  "artifact": {
+    "pdfPath": "product-build/desk-lamp-story-problem-card-pack/Desk-Lamp-Story-Problem-Card-Pack.pdf",
+    "zipPath": "product-build/desk-lamp-story-problem-card-pack/desk-lamp-story-problem-card-pack.zip",
+    "sourceHtmlPath": "product-build/desk-lamp-story-problem-card-pack/source/desk-lamp-story-problem-card-pack.html",
+    "manifestPath": "product-build/desk-lamp-story-problem-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch41-desk-lamp-problem-cards-a.json",
+    "content/product-artifacts/lanes/batch41-desk-lamp-problem-cards-b.json",
+    "content/product-artifacts/lanes/batch41-desk-lamp-problem-cards-c.json",
+    "content/product-artifacts/lanes/batch41-desk-lamp-problem-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "puddle-planet-post-office",
+    "buttonwood-library-train",
+    "button-bakery-map-mixup",
+    "teacup-town-weather-window",
+    "pocket-park-notice-board",
+    "spoon-ferry-lunchbox-harbor",
+    "acorn-avenue-errand-office",
+    "seed-library-map-room",
+    "rain-gauge-railway",
+    "moss-message-observatory",
+    "tidepool-timekeepers-lab",
+    "revision-river-ferry",
+    "clue-label-tower-museum",
+    "compass-craft-academy",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable desk lamp problem cards",
+    "headline": "Desk Lamp Story Problem Card Pack",
+    "subhead": "Sixteen paper cards help writers shape fictional story problems with problem spots, character needs, place pressure, object trouble, questions, first tries, and revision prompts.",
+    "included": [
+      "16 printable desk lamp problem cards",
+      "Adult setup guide",
+      "Fictional problem safety notes",
+      "Desk lamp problem coaching moves",
+      "Privacy and family handoff notes",
+      "Pack reset notes",
+      "Six adult-led problem routines",
+      "Ten take-home problem slips",
+      "Eight optional share prompts",
+      "Provider-ready PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "beforeSession": [
+      "Print the problem cards, blank slips, and adult guide before the adult-led paper session.",
+      "Use a drawn desk lamp or pretend paper lamp as the shared story prop.",
+      "Keep every prompt fictional, broad, offline, and printable from start to finish.",
+      "Choose a small stack so each writer works with one gentle obstacle at a time.",
+      "Remind writers that a first try can be changed when the problem becomes clearer."
+    ],
+    "deskLampProblemSetup": [
+      "Place the drawn desk lamp at the center of the paper set with four beam labels: clue, want, mismatch, first try.",
+      "Let the adult read the card and point to the beam label that starts the problem.",
+      "Ask writers to invent one made-up character, one missing clue, and one small story problem.",
+      "Use blank slips for extra tries so crossed-out ideas can stay low-pressure.",
+      "Keep the lamp idea broad: a glow, shade, pull cord, switch, base, or label can all become paper clues."
+    ],
+    "problemCoaching": [
+      "Ask what feels missing, mixed up, or not yet clear in the made-up story.",
+      "Keep the obstacle small enough for one character choice and one first try.",
+      "If the problem gets too large, shrink it to one clue under the lamp glow.",
+      "Ask which detail changes after the first try so the next sentence has a purpose.",
+      "Use gentle revision by swapping one vague word for a clearer invented clue."
+    ],
+    "privacyAndSafetyNotes": [
+      "Use invented names, broad story labels, and pretend places only.",
+      "Keep the activity paper-only, offline, and adult-led.",
+      "Do not collect facts about actual writers, families, or daily life.",
+      "If a detail sounds personal, replace it with a made-up lamp label or story object.",
+      "Sharing stays optional and limited to one fictional word, sketch, or line."
+    ],
+    "familyHandoff": [
+      "Pass along one chosen paper slip and one blank slip for another fictional problem.",
+      "Tell family adults to ask about the made-up obstacle, not actual life details.",
+      "Invite praise for one clear clue, one first try, or one revised problem word.",
+      "Keep the carry-along activity adult-led, offline, and paper-only.",
+      "Ask family adults to leave narrow personal facts off the paper and keep the story invented."
+    ],
+    "reset": [
+      "Collect unused cards, blank slips, and the drawn desk lamp prop.",
+      "Recycle scratch paper that includes narrow real-world facts.",
+      "Save only fictional examples that can model gentle obstacles later.",
+      "Restock the pack with fresh blank slips before the next paper session."
+    ]
+  },
+  "problemRoutines": [
+    {
+      "name": "Beam Label Pick",
+      "bestFor": "Writers who need a simple way to name the small story problem.",
+      "steps": [
+        "The adult points to one lamp beam label: clue, want, mismatch, or first try.",
+        "The writer chooses one invented object under that beam.",
+        "The adult asks what small problem appears because the object is missing, mixed up, or unclear.",
+        "The writer writes one sentence that names the gentle obstacle."
+      ]
+    },
+    {
+      "name": "Missing Clue Glow",
+      "bestFor": "Writers who can start once one clue is absent or hidden.",
+      "steps": [
+        "The adult draws a glow circle on a blank slip.",
+        "The writer names the invented clue that should be inside the glow.",
+        "The adult asks why the character needs that clue before moving on.",
+        "The writer adds one first try that brings the clue closer."
+      ]
+    },
+    {
+      "name": "Switch Mismatch",
+      "bestFor": "Turning a mismatch into a clear fictional problem.",
+      "steps": [
+        "The adult sketches an on-off switch on paper.",
+        "The writer invents what changes when the switch moves.",
+        "The adult asks what no longer matches after the switch change.",
+        "The writer writes the mismatch as a small story problem."
+      ]
+    },
+    {
+      "name": "Shade the Too-Big Problem",
+      "bestFor": "Shrinking a large idea into one writable obstacle.",
+      "steps": [
+        "The adult draws a lamp shade over the largest part of the problem idea.",
+        "The writer chooses only one visible clue to keep.",
+        "The adult asks what the character can try first with that clue.",
+        "The writer rewrites the problem as one clear sentence."
+      ]
+    },
+    {
+      "name": "Question Under the Lamp",
+      "bestFor": "Writers who need the problem to become a question before drafting.",
+      "steps": [
+        "The adult places a blank question slip under the drawn desk lamp.",
+        "The writer names one character want and one missing clue.",
+        "The adult helps turn those two pieces into a gentle question.",
+        "The writer answers the question with a first try, not the final fix."
+      ]
+    },
+    {
+      "name": "First Try, Better Try",
+      "bestFor": "Showing that a problem can grow clearer after one attempt.",
+      "steps": [
+        "The adult reads the problem card and asks for one first try.",
+        "The writer writes the try even if it is not enough yet.",
+        "The adult asks what clue the try reveals.",
+        "The writer revises the problem using the new clue."
+      ]
+    }
+  ],
+  "takeHomeProblemSlips": [
+    {
+      "title": "Glow Goes Missing",
+      "time": "One paper pass",
+      "skill": "missing clue",
+      "direction": "Invent a desk lamp glow that points to one missing clue in a made-up story: ____________________.",
+      "familyLine": "Ask which clue the character notices first: ____________________."
+    },
+    {
+      "title": "Crooked Shade Clue",
+      "time": "Brief adult-led pass",
+      "skill": "mismatch",
+      "direction": "Write a fictional problem where the lamp shade points one way but the clue points another way: ____________________.",
+      "familyLine": "Ask what does not match yet: ____________________."
+    },
+    {
+      "title": "Pull Cord First Try",
+      "time": "Single printable slip",
+      "skill": "first try",
+      "direction": "Create a made-up character who pulls a paper cord and makes one first try: ____________________.",
+      "familyLine": "Ask what the first try helps the character learn: ____________________."
+    },
+    {
+      "title": "Glow Label Trouble",
+      "time": "One pencil pass",
+      "skill": "story question",
+      "direction": "Invent a label under the desk lamp that raises a gentle problem question: ____________________.",
+      "familyLine": "Ask which word on the label matters most: ____________________."
+    },
+    {
+      "title": "Button Beacon",
+      "time": "Short paper pass",
+      "skill": "object need",
+      "direction": "Write a small story problem where a button beacon needs one invented object: ____________________.",
+      "familyLine": "Ask what object would help without ending the story too fast: ____________________."
+    },
+    {
+      "title": "Paper Beam Puzzle",
+      "time": "Single card pass",
+      "skill": "clue order",
+      "direction": "Draw or name three paper beams and choose the one that hides the first clue: ____________________.",
+      "familyLine": "Ask why that beam comes first: ____________________."
+    },
+    {
+      "title": "Tiny Switch Change",
+      "time": "Calm story pass",
+      "skill": "cause and fix",
+      "direction": "Make the lamp switch change one pretend detail, then write the problem it causes: ____________________.",
+      "familyLine": "Ask what gentle fix the character could try: ____________________."
+    },
+    {
+      "title": "Base Label Mismatch",
+      "time": "Quiet paper pass",
+      "skill": "label mismatch",
+      "direction": "Invent a lamp base label that does not match the story object beside it: ____________________.",
+      "familyLine": "Ask what needs to be relabeled in the made-up story: ____________________."
+    },
+    {
+      "title": "Soft Problem Shrink",
+      "time": "Fresh slip pass",
+      "skill": "problem revision",
+      "direction": "Take a too-large fictional problem and shrink it to one missing clue: ____________________.",
+      "familyLine": "Ask which smaller version is easier to write next: ____________________."
+    },
+    {
+      "title": "Better Second Try",
+      "time": "Second pencil pass",
+      "skill": "revise the problem",
+      "direction": "Write a second try that makes the small story problem clearer than the first try: ____________________.",
+      "familyLine": "Ask which word changed the problem most: ____________________."
+    }
+  ],
+  "optionalSharePrompts": [
+    "Optional adult-led offline prompt: my small story problem is ____________________.",
+    "Optional adult-led offline prompt: the missing clue under the lamp is ____________________.",
+    "Optional adult-led offline prompt: the mismatch I invented is ____________________.",
+    "Optional adult-led offline prompt: the character's first try is ____________________.",
+    "Optional adult-led offline prompt: one lamp part that matters is ____________________.",
+    "Optional adult-led offline prompt: the problem question I can read is ____________________.",
+    "Optional adult-led offline prompt: I made the problem clearer by changing ____________________.",
+    "Optional adult-led offline prompt: an adult can add one made-up clue here: ____________________."
+  ],
+  "cards": [
+    {
+      "id": "desk-lamp-problem-card-01",
+      "title": "Moon Muffin Lamp Crumb Mixup",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "problemSkill": "spotting a small problem",
+      "useCase": "Adult-led printable desk lamp problem card for spotting one small story problem in a pretend moon muffin market: ____________________.",
+      "adultSetup": "Adult: Set this paper card beside a drawn desk lamp and invite one gentle moon-market obstacle: ____________________.",
+      "kidDirection": "Look at the drawn lamp, then write the small problem the market helper notices: ____________________.",
+      "problemSpotPrompt": "Problem spot: The tiny problem at the moon muffin stall is ____________________.",
+      "characterNeedPrompt": "Character need: The moon muffin helper needs ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend market counter feels extra busy because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp points to a crumb tag that ____________________.",
+      "questionPrompt": "Problem question: What needs to change so the muffin trade can keep going gently? ____________________.",
+      "firstTryPrompt": "First try: The helper first tries to ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the problem smaller and clearer by adding one missing moon-market clue: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the crumb tag first, then add one problem word: ____________________.",
+      "takeHomeLine": "Take-home line: Try another tiny pretend market problem on blank paper: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-02",
+      "title": "Puddle Planet Missing Stamp",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "problemSkill": "noticing a missing clue",
+      "useCase": "Adult-led paper-only desk lamp problem card for noticing one missing clue in a pretend puddle-mail story: ____________________.",
+      "adultSetup": "Adult: Set this printable card beside a drawn desk lamp and choose one puddle-mail clue to leave out: ____________________.",
+      "kidDirection": "Find the missing clue before the puddle mail helper makes a first try: ____________________.",
+      "problemSpotPrompt": "Problem spot: The small story problem appears when the puddle note has no ____________________.",
+      "characterNeedPrompt": "Character need: The puddle mail helper needs a clue about ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend puddle counter cannot sort the note because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp shines on a blank stamp spot that needs ____________________.",
+      "questionPrompt": "Problem question: Which clue is missing from the puddle note? ____________________.",
+      "firstTryPrompt": "First try: The helper first checks the paper edge for ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Add one clear missing clue so the problem is easier to notice: ____________________.",
+      "quietOptionLine": "Quiet option: Circle the blank stamp spot and write one clue word: ____________________.",
+      "takeHomeLine": "Take-home line: Make another pretend mail note with one missing clue to fill in: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-03",
+      "title": "Buttonwood Ticket Helper",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "problemSkill": "matching need to action",
+      "useCase": "Adult-led printable desk lamp problem card for matching a character need to one clear story action: ____________________.",
+      "adultSetup": "Adult: Put the card beside blank paper and a drawn desk lamp, then name one pretend library-train need: ____________________.",
+      "kidDirection": "Write what the traveler needs, then choose an action that actually helps: ____________________.",
+      "problemSpotPrompt": "Problem spot: The library-train problem begins when the ticket clue does not match ____________________.",
+      "characterNeedPrompt": "Character need: The buttonwood traveler needs ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend shelf stop feels tangled because two book tickets point to ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp shows a ticket corner with ____________________.",
+      "questionPrompt": "Problem question: What action best matches the traveler's need? ____________________.",
+      "firstTryPrompt": "First try: The traveler first tries to ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Change the need or action so they fit together more clearly: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the ticket, then write one need and one action: ____________________.",
+      "takeHomeLine": "Take-home line: Try another pretend library-train problem by matching a need to an action: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-04",
+      "title": "Button Bakery Crumb-Map Question",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "problemSkill": "asking the problem question",
+      "useCase": "Adult-led offline desk lamp problem card for asking the problem question in a fictional bakery-map mixup: ____________________.",
+      "adultSetup": "Adult: Set out the printable card, blank paper, and a drawn desk lamp beside a pretend crumb map: ____________________.",
+      "kidDirection": "Before fixing anything, write the question the map-mender should ask: ____________________.",
+      "problemSpotPrompt": "Problem spot: The button bakery map problem shows up when ____________________.",
+      "characterNeedPrompt": "Character need: The map-mender needs to understand ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend bakery counter feels mixed up because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp points at a folded map corner that ____________________.",
+      "questionPrompt": "Problem question: What question should the map-mender ask first? ____________________.",
+      "firstTryPrompt": "First try: The map-mender first writes the question ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the question more exact by naming one crumb-map clue: ____________________.",
+      "quietOptionLine": "Quiet option: Write only the question mark and one clue word first: ____________________.",
+      "takeHomeLine": "Take-home line: Use another pretend map problem and start with the clearest question: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-05",
+      "title": "Teacup Weather Lamp Glow Mixup",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "problemSkill": "tiny weather mismatch",
+      "useCase": "Adult-led printable desk lamp problem card for finding a tiny weather mismatch in a pretend teacup tale: ____________________.",
+      "adultSetup": "Adult: Place this paper card beside a drawn desk lamp and choose two gentle weather clues that do not match: ____________________.",
+      "kidDirection": "Look for the tiny mismatch, then write what seems different in Teacup Town: ____________________.",
+      "problemSpotPrompt": "Problem spot: The tiny weather mismatch is ____________________.",
+      "characterNeedPrompt": "Character need: The teacup weather watcher needs to figure out ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend weather pane feels mixed up because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp label says drizzle while the teacup cloud shows ____________________.",
+      "questionPrompt": "Problem question: Which weather clue does not match the scene? ____________________.",
+      "firstTryPrompt": "First try: The watcher first compares ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Add one gentle weather detail that makes the mismatch easier to see: ____________________.",
+      "quietOptionLine": "Quiet option: Draw two weather symbols and mark the one that feels different: ____________________.",
+      "takeHomeLine": "Take-home line: Try another tiny pretend weather mismatch on blank paper: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-06",
+      "title": "Pocket Park Notice First Try",
+      "worldSlug": "pocket-park-notice-board",
+      "ageBand": "7-9",
+      "problemSkill": "clear first try",
+      "useCase": "Adult-led paper-only desk lamp problem card for choosing a clear first try in a fictional notice-board problem: ____________________.",
+      "adultSetup": "Adult: Set the card beside blank paper and a drawn desk lamp, then offer one small pretend notice-board mixup: ____________________.",
+      "kidDirection": "Name the small problem, then write the first try that makes the most sense: ____________________.",
+      "problemSpotPrompt": "Problem spot: The pocket-park notice problem is ____________________.",
+      "characterNeedPrompt": "Character need: The notice keeper needs ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend pocket-park board feels paused because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp points to a notice tack that ____________________.",
+      "questionPrompt": "Problem question: What is the first clear thing the notice keeper should try? ____________________.",
+      "firstTryPrompt": "First try: The notice keeper first tries to ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the first try clearer by adding one object clue: ____________________.",
+      "quietOptionLine": "Quiet option: Draw the notice tack, then write one first-try verb: ____________________.",
+      "takeHomeLine": "Take-home line: Make another pretend notice-board problem and choose one clear first try: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-07",
+      "title": "Spoon Ferry Cracker Dock Problem",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "problemSkill": "setting pressure",
+      "useCase": "Adult-led printable paper-only desk lamp problem card for a fictional spoon ferry small story problem: ____________________.",
+      "adultSetup": "Adult: Print this card and set a drawn desk lamp idea beside it; invite one invented harbor detail only: ____________________.",
+      "kidDirection": "Write a gentle obstacle that starts when the spoon ferry reaches the harbor edge: ____________________.",
+      "problemSpotPrompt": "Problem spot: The first small story problem appears when the spoon ferry reaches ____________________.",
+      "characterNeedPrompt": "Character need: The tiny ferryperson needs help carrying, finding, or choosing ____________________.",
+      "placePressurePrompt": "Place pressure: The cracker dock, napkin tide, or lunchbox lid makes the crossing harder because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp glow shows one story object out of place, such as ____________________.",
+      "questionPrompt": "Problem question: What gentle obstacle should the ferry solve before the story can continue? ____________________.",
+      "firstTryPrompt": "First try: The helper first tries to balance, fold, or nudge ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the setting pressure clearer by adding one sight, sound, or texture: ____________________.",
+      "quietOptionLine": "Quiet option: Point to the dock detail and write one small problem word: ____________________.",
+      "takeHomeLine": "Take-home line: On paper, invent one more spoon ferry problem using a drawn desk lamp clue: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-08",
+      "title": "Acorn Avenue Errand Slip Tangle",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "problemSkill": "task mix-up",
+      "useCase": "Adult-led printable paper-only desk lamp problem card for a fictional acorn errand task mix-up: ____________________.",
+      "adultSetup": "Adult: Print this card and ask for made-up errand slips, pretend stamps, and invented tasks only: ____________________.",
+      "kidDirection": "Write a small story problem where two pretend tasks get matched the wrong way: ____________________.",
+      "problemSpotPrompt": "Problem spot: At Acorn Avenue, two pretend errand slips get mixed because ____________________.",
+      "characterNeedPrompt": "Character need: The leaf clerk needs the helper to match the right task to ____________________.",
+      "placePressurePrompt": "Place pressure: The acorn counter is crowded with twig trays, making the mix-up harder because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp glow lands on the wrong stamp, label, or seed tag: ____________________.",
+      "questionPrompt": "Problem question: Which task belongs to which character, and what clue proves it? ____________________.",
+      "firstTryPrompt": "First try: The helper sorts one slip by shape, color, or tiny symbol: ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the task mix-up clearer by changing one clue on a slip: ____________________.",
+      "quietOptionLine": "Quiet option: Draw two errand slips and mark the one that seems mismatched: ____________________.",
+      "takeHomeLine": "Take-home line: Use paper to invent another acorn errand mix-up with no real chores: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-09",
+      "title": "Seed Library Map Shelf Mismatch",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "problemSkill": "map mismatch",
+      "useCase": "Adult-led printable paper-only desk lamp problem card for a fictional seed library map-table mismatch: ____________________.",
+      "adultSetup": "Adult: Print this card and invite a drawn desk lamp idea to shine on one invented map shelf clue: ____________________.",
+      "kidDirection": "Write a small story problem where a seed map mark does not match the shelf clue: ____________________.",
+      "problemSpotPrompt": "Problem spot: The seed map on the table shows one path beside the shelf, but the seed tag says ____________________.",
+      "characterNeedPrompt": "Character need: The map keeper needs the writer to decide which symbol belongs with ____________________.",
+      "placePressurePrompt": "Place pressure: The map table is full of folded charts, so the mismatch matters because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp glow reveals a seed pin, paper compass, or shelf card that does not match ____________________.",
+      "questionPrompt": "Problem question: Which map clue should the character trust first, and why? ____________________.",
+      "firstTryPrompt": "First try: The helper compares one symbol, one border, and one seed tag: ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Replace any confusing map clue with a clearer fictional symbol: ____________________.",
+      "quietOptionLine": "Quiet option: Sketch one map symbol and write what it is supposed to mean: ____________________.",
+      "takeHomeLine": "Take-home line: Invent another seed library map mismatch on paper using a desk lamp clue: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-10",
+      "title": "Rain Gauge Railway Signal Tangle",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "problemSkill": "signal mismatch",
+      "useCase": "Adult-led printable paper-only desk lamp problem card for a fictional rain gauge railway signal mismatch: ____________________.",
+      "adultSetup": "Adult: Print this card and place a drawn desk lamp idea near the page; all railway signals stay fictional: ____________________.",
+      "kidDirection": "Write a small story problem where two railway signals do not agree: ____________________.",
+      "problemSpotPrompt": "Problem spot: The rain gauge points to silver drizzle while the signal flag shows ____________________.",
+      "characterNeedPrompt": "Character need: The rain-note conductor needs help choosing what the mixed signals mean for ____________________.",
+      "placePressurePrompt": "Place pressure: The puddle platform, gauge stand, or paper bridge makes the signal mismatch matter because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp glow reveals a wet ticket, glass tube, or cloud note with the wrong mark: ____________________.",
+      "questionPrompt": "Problem question: Which signal should the character test first on the story page? ____________________.",
+      "firstTryPrompt": "First try: The helper compares the gauge mark with one flag, bell, or cloud note: ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the signal mismatch clearer by changing one pretend mark: ____________________.",
+      "quietOptionLine": "Quiet option: Draw two signals and circle the one that does not fit: ____________________.",
+      "takeHomeLine": "Take-home line: On paper, invent another rain gauge signal mismatch with a desk lamp clue: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-11",
+      "title": "Moss Observatory Missing Middle Note",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "problemSkill": "message gap",
+      "useCase": "Adult-led printable paper-only desk lamp problem card for a fictional moss observatory message gap: ____________________.",
+      "adultSetup": "Adult: Print this card and ask for a pretend moss note with one gentle missing clue: ____________________.",
+      "kidDirection": "Write a small story problem where a moss message leaves out one important word: ____________________.",
+      "problemSpotPrompt": "Problem spot: The moss note has a gentle gap where the key word should be ____________________.",
+      "characterNeedPrompt": "Character need: The sky watcher needs help filling one missing message clue for ____________________.",
+      "placePressurePrompt": "Place pressure: The lantern shelf, moss step, or pebble-lens table makes the gap important because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk lamp glow falls on a folded sky chart with one blank space: ____________________.",
+      "questionPrompt": "Problem question: What does the message need to say so the character can make a first try? ____________________.",
+      "firstTryPrompt": "First try: The observer checks one moss mark, one pebble lens, and one chart edge: ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the message gap clearer by adding one soft clue before the blank: ____________________.",
+      "quietOptionLine": "Quiet option: Copy the moss note and leave one gentle blank to fill: ____________________.",
+      "takeHomeLine": "Take-home line: Invent another moss message gap on paper using a desk lamp clue: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-12",
+      "title": "Tidepool Clock Pebble Order Mix",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "problemSkill": "sequence problem",
+      "useCase": "Adult-led printable desk-lamp problem card for shaping one fictional tidepool sequence problem with a drawn lamp glow and paper clues: ____________________.",
+      "adultSetup": "Adult: Set this paper card beside a drawn desk-lamp idea and invite an invented tidepool order mismatch: ____________________.",
+      "kidDirection": "Spot which tidepool timekeeper clue comes before or after another clue, then write the small story problem: ____________________.",
+      "problemSpotPrompt": "Problem spot: Three shell-clock notes are out of order, and the confusing clue is ____________________.",
+      "characterNeedPrompt": "Character need: The tidepool timekeeper needs the next correct note so they can ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend tidepool lab has one changing mark that makes the order matter: ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk-lamp idea shines on a shell tag, bead dial, or paper tide strip that does not fit because ____________________.",
+      "questionPrompt": "Problem question: Which clue should come first, next, and last in this make-believe lab? ____________________.",
+      "firstTryPrompt": "First try: The timekeeper gently tests the sequence by ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the mixed-up order smaller, clearer, and easier to follow by ____________________.",
+      "quietOptionLine": "Quiet option: Number three pretend clues on paper and fill one blank: ____________________.",
+      "takeHomeLine": "Carry-on line: On another paper slip, invent one new order mismatch for the tidepool lab: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-13",
+      "title": "Revision River Lantern Target",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "problemSkill": "revision target",
+      "useCase": "Adult-led offline desk-lamp problem card for choosing one fictional ferry problem that needs a clear revision target: ____________________.",
+      "adultSetup": "Adult: Place the printable card near a drawn desk-lamp idea and ask which ferry detail needs clearer wording: ____________________.",
+      "kidDirection": "Choose one fuzzy ferry problem, mark what needs to change, and write the revision target on paper: ____________________.",
+      "problemSpotPrompt": "Problem spot: The ferry helper cannot tell which sentence, clue, or action needs clearer wording because ____________________.",
+      "characterNeedPrompt": "Character need: The revision river helper needs a clear target so the story can ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend ferry crossing feels misty, crowded with clues, or unclear because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk-lamp idea points to a lantern tag, rope note, or ferry card that needs revision because ____________________.",
+      "questionPrompt": "Problem question: What exact story part should be revised first? ____________________.",
+      "firstTryPrompt": "First try: The ferry helper gently underlines one target and tries to ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Turn the broad ferry trouble into one clear revision target by ____________________.",
+      "quietOptionLine": "Quiet option: Circle one fuzzy ferry word and write its clearer replacement: ____________________.",
+      "takeHomeLine": "Carry-on line: On a later paper slip, choose one pretend ferry detail to revise: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-14",
+      "title": "Clue Label Tower Tag Mix-Up",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "problemSkill": "label clue problem",
+      "useCase": "Adult-led printable desk-lamp problem card for making one fictional tower label point to the right story clue: ____________________.",
+      "adultSetup": "Adult: Set out the paper card and a drawn desk-lamp idea, then invite one invented exhibit label mismatch: ____________________.",
+      "kidDirection": "Find the label that points to the wrong clue, then write the small story problem it creates: ____________________.",
+      "problemSpotPrompt": "Problem spot: One tower label names the wrong clue, and the mix-up begins when ____________________.",
+      "characterNeedPrompt": "Character need: The clue keeper needs the label to help them notice ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend tower museum has many tags, shelves, or display cards, so the label must ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk-lamp idea shines on a label stand, paper magnifier, or display tag that causes trouble by ____________________.",
+      "questionPrompt": "Problem question: Which label clue tells the reader where to look next? ____________________.",
+      "firstTryPrompt": "First try: The clue keeper gently swaps, points, or rewrites one label to ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the label clue more specific by adding one shape, color, or display detail: ____________________.",
+      "quietOptionLine": "Quiet option: Draw one label box and fill only the clue word: ____________________.",
+      "takeHomeLine": "Carry-on line: Invent one new paper label that points to a pretend tower clue: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-15",
+      "title": "Compass Craft Forked Arrow Choice",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "problemSkill": "choice obstacle",
+      "useCase": "Adult-led offline desk-lamp problem card for building one fictional craft choice that gently blocks the next story move: ____________________.",
+      "adultSetup": "Adult: Place this printable card beside a drawn desk-lamp idea and offer two invented compass choices on paper: ____________________.",
+      "kidDirection": "Write the moment the compass crafter must choose between two paper arrows, beads, or marks: ____________________.",
+      "problemSpotPrompt": "Problem spot: Two compass craft choices both seem useful, and the obstacle is ____________________.",
+      "characterNeedPrompt": "Character need: The compass crafter needs to choose one option so they can ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend craft academy has a bead rail, needle hall, or folded arrow gate that makes the choice matter because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk-lamp idea reveals a paper needle, craft tag, or bead card that points two ways because ____________________.",
+      "questionPrompt": "Problem question: Which choice helps the character move the story forward, and why? ____________________.",
+      "firstTryPrompt": "First try: The compass crafter gently tests one choice by ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the choice obstacle clearer by naming the two options and one tradeoff: ____________________.",
+      "quietOptionLine": "Quiet option: Mark option A or option B, then write one reason: ____________________.",
+      "takeHomeLine": "Carry-on line: Sketch two pretend compass choices on paper and choose one: ____________________."
+    },
+    {
+      "id": "desk-lamp-problem-card-16",
+      "title": "Binding Day Promise Knot",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "problemSkill": "promise problem",
+      "useCase": "Adult-led printable desk-lamp problem card for creating one gentle fictional promise problem on paper: ____________________.",
+      "adultSetup": "Adult: Set this card beside a drawn desk-lamp idea and invite one invented promise that can be kept kindly: ____________________.",
+      "kidDirection": "Write the small problem that appears when a boardwalk page helper tries to keep a promise: ____________________.",
+      "problemSpotPrompt": "Problem spot: The promise becomes tricky when a page, sign, or clasp is different from what the helper expected: ____________________.",
+      "characterNeedPrompt": "Character need: The page helper needs to keep the promise by ____________________.",
+      "placePressurePrompt": "Place pressure: The pretend binding boardwalk has page signs, thread loops, or booth notes that make the promise matter because ____________________.",
+      "objectTroublePrompt": "Object trouble: The drawn desk-lamp idea shines on a thread loop, page clasp, or folded sign that complicates the promise by ____________________.",
+      "questionPrompt": "Problem question: What kind choice lets the helper keep the promise without making the story too big? ____________________.",
+      "firstTryPrompt": "First try: The page helper gently tries to keep the promise by ____________________.",
+      "reviseProblemPrompt": "Revise the problem: Make the promise problem smaller, kinder, and easier to solve by ____________________.",
+      "quietOptionLine": "Quiet option: Draw the promised object and write one helpful action: ____________________.",
+      "takeHomeLine": "Carry-on line: On another paper slip, invent one small promise a boardwalk helper can keep: ____________________."
+    }
+  ]
+}
