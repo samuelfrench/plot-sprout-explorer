@@ -1,0 +1,19 @@
+{
+  "slug": "manila-folder-story-clue-trail-card-pack",
+  "prompt": "family-friendly top-down close-cropped catalog product photo on seamless white background, blank tan manila folder, blank off-white clue card stack, blank paper slip edges, quiet printable paper kit mockup, no writing",
+  "negativePrompt": "text, writing, letters, words, labels, titles, logo, watermark, forms, borders, lines, ruled paper, handwriting, printed marks, brand marks, brown table, colored pencils, clips, erasers, scissors, spiral binding, notebook, school, home, address, route, gps, schedule, screens, devices, public, upload, rating, score, grade, timer, food, allergy, medical, scary, weapons, bullying, plants, leaves, round objects, wood, stone, desk decor, tabletop props, cups, bowls, children, faces, hands, clutter, dark shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "checkpoint",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 260656087,
+  "jpegQuality": 90,
+  "webpQuality": 90,
+  "outputJpeg": "public/images/plotsprout/batch56/manila-folder-story-clue-trail-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch56/manila-folder-story-clue-trail-card-pack.webp",
+  "postProcessing": "ImageMagick crop 720x440+250+215, resize and extent to 1344x768, JPEG/WebP quality 90 to remove extra paper props and keep a blank close-cropped paper kit mockup.",
+  "manifest": "content/image-queue/2026-06-03-batch56-images.json",
+  "title": "Manila Folder Story Clue Trail Card Pack"
+}

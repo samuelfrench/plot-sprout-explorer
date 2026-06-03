@@ -4734,7 +4734,7 @@ function validateBatch56Image(image, imageSlugs) {
   expect(image.sidecar === `content/image-runs/batch56/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
   expect(
     image.prompt ===
-      'family-friendly studio product mockup of a manila folder story clue trail card pack, orthographic top-down catalog view, tan manila folder open with blank clue trail cards clipped in a neat stack, small blank folder label tab, paper clue slips, unbranded graphite pencils, quiet printable writing kit, seamless plain white background, clean shadow, only manila folder blank cards clue slips and pencils, no text',
+      'family-friendly top-down close-cropped catalog product photo on seamless white background, blank tan manila folder, blank off-white clue card stack, blank paper slip edges, quiet printable paper kit mockup, no writing',
     `${label}.prompt must match the approved Batch56 hero prompt.`,
   )
   for (const phrase of [

@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manila Folder Story Clue Trail Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30.5px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .clue-trail-card-page { font-size: 7.48px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .clue-trail-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .clue-trail-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable manila folder clue trail cards</p>
+        <h1>Manila Folder Story Clue Trail Card Pack</h1>
+        <p>Sixteen manila folder cards help writers connect a first clue, next clue, turning clue, mismatch, return clue, and broad folder label note.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable manila folder story clue-trail cards plus adult guide tools, clue-trail routines, take-home clue slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline clue trail practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$85</span>
+        <h2>Included</h2>
+        <ul><li>16 printable manila folder clue trail cards</li>
+<li>Adult setup guide</li>
+<li>Fictional clue-trail safety notes</li>
+<li>First clue prompts</li>
+<li>Next clue prompts</li>
+<li>Turning clue prompts</li>
+<li>Mismatch and return clue prompts</li>
+<li>Six adult-led clue-trail routines</li>
+<li>Ten take-home clue slips</li>
+<li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Clue trail coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Manila Folder Clue Trail Adult Guide</h3><ul><li>Set out one manila folder, blank pages, pencils, and a paper clue trail card before the adult-led start: ____________________.</li>
+<li>Choose one made-up world and remind the writer that every clue stays invented, broad, and paper-only: ____________________.</li>
+<li>Move through first clue, next clue, turning clue, mismatch clue, return clue, and folder label in order: ____________________.</li>
+<li>Keep the adult in charge of the folder while the child writes or dictates short page notes: ____________________.</li>
+<li>Use pretend objects, places, and actions only; do not ask for real schedules, rooms, names, or personal facts: ____________________.</li>
+<li>Close by reading the folder label and choosing one next-page clue for a later adult-led paper pass: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one manila folder clue trail card at a time. Keep every choice broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen clue trail card worlds</h2>
+      <p>Pick a world image, then connect one fictional page move with a pretend manila folder clue trail card.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Sticker Station Mail Cart</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Chapter Gate Greenhouse</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Paperclip Plaza Parcel Day</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Orchard Pulley Post</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Appendix Archive Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Blue Pencil Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Mitten Market Lost Ticket</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Cloudberry Clocktower</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Rain Boot Route Rangers</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Clue trail routines</p>
+      <h2>Choose the manila folder routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">short first-page setup</p>
+      <h3>First Clue Folder Start</h3>
+      <p>Manila folder, blank page, pencil, and first-clue card.</p>
+      <ol><li>The adult opens the manila folder and points to the first clue blank: ____________________.</li>
+<li>The child chooses one made-up object, place hint, or action: ____________________.</li>
+<li>The adult asks how that clue starts the pretend page: ____________________.</li>
+<li>The child writes or dictates one first clue line on paper: ____________________.</li></ol>
+      <p>The clue trail begins with this pretend first clue: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">one-page continuation</p>
+      <h3>Next Clue Step</h3>
+      <p>Manila folder, current page, next blank page, and pencil.</p>
+      <ol><li>The adult points from the first clue to the next clue blank: ____________________.</li>
+<li>The child chooses one clue that follows on paper: ____________________.</li>
+<li>The adult asks what should stay connected from the first clue: ____________________.</li>
+<li>The child writes one next clue line on the page: ____________________.</li></ol>
+      <p>The next clue follows because: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">gentle clue turn</p>
+      <h3>Turning Clue Pass</h3>
+      <p>Manila folder, clue card, pencil, and small paper strip.</p>
+      <ol><li>The adult rereads the first two paper clues: ____________________.</li>
+<li>The child invents one calm turn that changes the clue trail: ____________________.</li>
+<li>The adult asks what the page should notice after the turn: ____________________.</li>
+<li>The child writes the turning clue on a paper strip: ____________________.</li></ol>
+      <p>The turning clue changes the paper trail with: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">connection check</p>
+      <h3>Mismatch Check</h3>
+      <p>Manila folder, two clue notes, and mismatch blank.</p>
+      <ol><li>The adult points to one clue that almost fits the page: ____________________.</li>
+<li>The child names what feels mismatched in the pretend trail: ____________________.</li>
+<li>The adult asks how a new paper clue could fix the connection: ____________________.</li>
+<li>The child writes the mismatch clue and one repair idea: ____________________.</li></ol>
+      <p>The mismatch clue now needs this paper fix: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">continuity return</p>
+      <h3>Return Clue Loop</h3>
+      <p>Earlier page, blank page, pencil, and manila folder.</p>
+      <ol><li>The adult reopens one earlier clue from the folder: ____________________.</li>
+<li>The child chooses a pretend clue to bring back: ____________________.</li>
+<li>The adult asks where the returning clue belongs on the next page: ____________________.</li>
+<li>The child writes one return clue line that connects the trail: ____________________.</li></ol>
+      <p>The return clue brings back this pretend piece: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">paper wrap pass</p>
+      <h3>Folder Label Close</h3>
+      <p>Manila folder, folder label slip, page stack, and pencil.</p>
+      <ol><li>The adult lays the clue trail pages beside the manila folder: ____________________.</li>
+<li>The child chooses a broad pretend folder label for the trail: ____________________.</li>
+<li>The adult reads the label and asks what next-page clue it suggests: ____________________.</li>
+<li>The child tucks the folder label slip into the manila folder: ____________________.</li></ol>
+      <p>The folder label closes this clue trail with: ____________________.</p>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home clue slips</p>
+      <h2>Try one clue trail later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home clue slip</p>
+      <h3>Clue slip 1</h3>
+      <p>Adult: open the manila folder and ask for one pretend first clue: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home clue slip</p>
+      <h3>Clue slip 2</h3>
+      <p>Child: the first clue on my paper trail is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home clue slip</p>
+      <h3>Clue slip 3</h3>
+      <p>Adult: point from the first clue to the next clue blank: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home clue slip</p>
+      <h3>Clue slip 4</h3>
+      <p>Child: the next clue should show: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home clue slip</p>
+      <h3>Clue slip 5</h3>
+      <p>Adult: ask what calm turning clue changes the page: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home clue slip</p>
+      <h3>Clue slip 6</h3>
+      <p>Child: my turning clue says: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home clue slip</p>
+      <h3>Clue slip 7</h3>
+      <p>Adult: ask which clue almost fits but needs a repair note: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home clue slip</p>
+      <h3>Clue slip 8</h3>
+      <p>Child: the mismatch clue can be fixed by: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home clue slip</p>
+      <h3>Clue slip 9</h3>
+      <p>Adult: reread one earlier clue and ask what can return: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home clue slip</p>
+      <h3>Clue slip 10</h3>
+      <p>Child: the folder label for this pretend trail is: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Optional adult-led paper prompt: the first clue in the manila folder is ____________________.</li>
+<li>Optional adult-led paper prompt: the next clue follows because ____________________.</li>
+<li>Optional adult-led paper prompt: the turning clue changes the page when ____________________.</li>
+<li>Optional adult-led paper prompt: the mismatch clue needs this repair ____________________.</li>
+<li>Optional adult-led paper prompt: the return clue brings back ____________________.</li>
+<li>Optional adult-led paper prompt: the folder label should say ____________________.</li>
+<li>Optional adult-led paper prompt: the next page clue could be ____________________.</li>
+<li>Optional adult-led paper prompt: the clue trail closes with ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 1 | Ages 7-8 | connect a first window clue to a next clue, turning clue, mismatch clue, return clue, and folder label</div>
+      <h2>Teacup Town Weather Window Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one manila folder, blank page, pencil, and pretend weather-window clue trail card on the table: ____________________.</p>
+      <p class="kid-direction">Writer: follow the clue trail on paper by making each Teacup Town clue pretend and broad: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: write the tiny weather sign seen through the teacup window, such as a paper cloud tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the paper clue that follows the first window sign inside the manila folder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm page moment when the weather-window clue starts to mean something new: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: name one pretend sign that almost fits the clue trail but needs a clearer page note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first weather-window sign so the later page connects to the start: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this Teacup Town manila folder clue trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the first clue and folder label blanks before adding more clue trail notes: ____________________. Take-home line: restart this paper clue trail later with one pretend teacup-window folder label: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 2 | Ages 7-9 | move a spoon-ferry harbor clue from first clue to next clue, turn, mismatch, return, and folder label</div>
+      <h2>Spoon Ferry Lunchbox Harbor Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a manila folder, blank page, pencil, and pretend dock-token clue trail card where the writer can reach them: ____________________.</p>
+      <p class="kid-direction">Writer: keep the spoon ferry clue trail fully invented while each clue moves across the page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: write the pretend dock token, ferry mark, or folded harbor signal that starts the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the paper clue that appears after the spoon ferry reaches the next made-up harbor stop: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm moment when the dock token changes what the helper understands: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: name one pretend harbor clue that seems close but belongs on a different page note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first dock token or ferry mark with a clearer meaning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this manila folder clue trail at the harbor: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the first dock token and the return clue before the adult closes the folder: ____________________. Take-home line: continue this paper clue trail later with one spoon-ferry folder label: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 3 | Ages 7-9 | carry a mail-cart clue through first clue, next clue, turning clue, mismatch, return, and folder label</div>
+      <h2>Sticker Station Mail Cart Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+        <figcaption>Sticker Station Mail Cart</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one manila folder, blank page, pencil, and pretend sticker-sort clue trail card: ____________________.</p>
+      <p class="kid-direction">Writer: follow the mail cart clue trail with pretend sticker slips and paper-only page notes: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: choose the first pretend sticker slip on the cart and write what it seems to mean: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the paper clue that follows when the cart reaches the next made-up station: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm page turn when the sticker slip points to a new clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: name one pretend sticker mark that almost matches but needs a different clue trail note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first sticker slip so the later page connects to the first clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this Sticker Station manila folder clue trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: circle the first sticker clue and write only the folder label blank for now: ____________________. Take-home line: start another paper clue trail later with one pretend sticker-cart folder label: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 4 | Ages 10-11 | trace a greenhouse gate clue through layered clue trail moves and a broad folder label</div>
+      <h2>Chapter Gate Greenhouse Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+        <figcaption>Chapter Gate Greenhouse</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place the manila folder, blank page, pencil, and pretend greenhouse-gate clue trail card beside the writer: ____________________.</p>
+      <p class="kid-direction">Writer: build the clue trail with invented gate marks, plant tags, and page notes that stay paper-only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: write the first pretend gate mark, hinge note, or greenhouse tag that starts the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the paper clue that follows the gate mark deeper into the made-up greenhouse: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm moment when the gate clue changes direction or meaning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: name one pretend greenhouse tag that almost fits but needs a corrected page note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first gate mark so the clue trail links back to the beginning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this Chapter Gate manila folder clue trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: list only the first gate clue and the return clue inside the manila folder: ____________________. Take-home line: reopen this paper clue trail later with one pretend greenhouse folder label: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 5 | Ages 7-9 | track a clipped parcel clue from first clue to next clue, turning clue, mismatch, return, and folder label</div>
+      <h2>Paperclip Plaza Parcel Day Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+        <figcaption>Paperclip Plaza Parcel Day</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a manila folder, blank page, pencil, and pretend clipped-parcel clue trail card on the table: ____________________.</p>
+      <p class="kid-direction">Writer: keep every parcel clue pretend while the clue trail moves from one paper note to the next: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: write the pretend paperclip mark or parcel tag that starts the plaza clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the page clue that follows after the parcel tag shifts, folds, or points onward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm moment when the clipped parcel clue points somewhere unexpected on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: name one pretend parcel tag that nearly fits but belongs under a different clue trail note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first paperclip mark so the parcel page feels connected: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this Paperclip Plaza manila folder clue trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write the first parcel clue and return clue, then pause the manila folder work: ____________________. Take-home line: continue this paper clue trail later with one pretend parcel-day folder label: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 6 | Ages 8-10 | connect a pulley-post clue through clue trail turns, mismatch checking, return, and folder label</div>
+      <h2>Orchard Pulley Post Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+        <figcaption>Orchard Pulley Post</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a manila folder, blank page, pencil, and pretend pulley-post clue trail card beside the paper: ____________________.</p>
+      <p class="kid-direction">Writer: follow the orchard clue trail by inventing paper pulley marks, post notes, and a broad folder label: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: write the pretend pulley mark or post tag that starts the orchard page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the paper clue that follows when the pulley mark moves to the next made-up post: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm page moment when the pulley clue changes the path of the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: name one pretend post note that almost fits but needs a new paper clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first pulley mark so the later clue connects to the start: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this Orchard Pulley Post manila folder clue trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the first clue, return clue, and folder label blanks before adding more: ____________________. Take-home line: restart this paper clue trail later with one pretend orchard folder label: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 7 | Ages 10-11 | track an archive clue trail through first clue, next clue, turning clue, mismatch, return clue, and folder label</div>
+      <h2>Appendix Archive Lab Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+        <figcaption>Appendix Archive Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one manila folder, a blank page, a pencil, and a folder label slip before the clue trail begins: ____________________.</p>
+      <p class="kid-direction">Writer: invent an archive helper and follow the clue trail on paper without using real names, places, or facts: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: write the first pretend archive mark, such as a folded index tab, shelf dot, or margin arrow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the paper clue that follows from the first mark inside the made-up appendix archive lab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: show the calm moment when the archive helper learns the first clue points to a different paper drawer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: name one clue that almost fits the drawer but needs a new note in the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first archive mark and explain how it now helps the helper connect the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this manila folder clue trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the first archive mark, and the writer fills only the return clue blank: ____________________. Take-home line: keep the paper-only clue trail by saving one pretend archive clue under the folder label: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 8 | Ages 7-9 | connect a simple compass clue trail with a first clue, next clue, gentle turn, mismatch, return clue, and folder label</div>
+      <h2>Penny Path Compass Shop Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one manila folder beside a blank compass note, a pencil, and a folder label strip for the clue trail: ____________________.</p>
+      <p class="kid-direction">Writer: make up a shop helper, a button compass, and a clue trail that stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: write what the button compass points to first, such as a penny path mark or folded counter note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the next paper clue the helper notices near the compass shop counter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: write how the compass clue turns toward a kinder path or clearer paper mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: choose one pretend mark that seems close but does not match the compass clue yet: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first compass point and show how it helps the final page note make sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this manila folder clue trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult names the button compass, and the writer writes only the next clue line: ____________________. Take-home line: continue the paper-only clue trail later by keeping one compass clue in the manila folder: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 9 | Ages 8-10 | carry a measurement clue trail from first mark to folder label while checking a mismatch on paper</div>
+      <h2>Pantry Measurement Mystery Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one manila folder, a blank measurement page, a pencil, and a folder label slip for the clue trail: ____________________.</p>
+      <p class="kid-direction">Writer: invent a shelf helper, a measuring ribbon, and a made-up clue trail that stays broad and paper-only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: write the first pretend measuring mark, such as three tiny ticks on a ribbon strip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the next shelf note that follows from the measuring mark on the paper page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: show how the helper notices the measuring mark points to a different paper tag than expected: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: write one shelf tag that almost matches the ribbon clue but needs another clue trail note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first measuring mark and explain how it helps sort the pretend mystery: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this manila folder clue trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult circles the measuring mark, and the writer fills only the mismatch blank: ____________________. Take-home line: save one paper measuring clue in the manila folder and restart the clue trail later: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 10 | Ages 10-11 | manage a longer observatory clue trail by linking first clue, next clue, turning clue, mismatch, return clue, and folder label</div>
+      <h2>Blue Pencil Observatory Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+        <figcaption>Blue Pencil Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: open the manila folder, add a blank sky chart page, and place a folder label slip beside the clue trail card: ____________________.</p>
+      <p class="kid-direction">Writer: invent an observatory helper and use paper clues only as the blue pencil clue trail changes: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: write the first blue pencil mark on the pretend sky chart, such as a tiny arrow or ring: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the next paper chart clue that follows from the first blue pencil mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: write the moment the helper realizes the chart mark points to a new paper corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: name one sky chart mark that looks useful but does not fit the clue trail yet: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first blue pencil mark and show how the new clue explains it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this manila folder clue trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the sky chart mark, and the writer writes only the turning clue sentence: ____________________. Take-home line: tuck one paper chart clue into the manila folder under the folder label: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 11 | Ages 8-10 | build a railway clue trail by following a gauge note through mismatch and return clue before the folder label</div>
+      <h2>Rain Gauge Railway Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one manila folder beside a blank rail note, a pencil, and a folder label strip for the clue trail: ____________________.</p>
+      <p class="kid-direction">Writer: make up a railway helper, a rain gauge ticket, and a paper-only clue trail with no real trip details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: write the first pretend gauge mark the helper finds on a small rail ticket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the next paper rail clue that follows from the gauge mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: show how a track note changes what the gauge mark means in the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: write one rail card mark that almost fits but sends the helper back to check the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first gauge mark and show how the helper connects it to the final rail note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this manila folder clue trail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult names the gauge mark, and the writer fills only the return clue blank: ____________________. Take-home line: keep one pretend gauge clue in the manila folder so the paper clue trail can continue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 12 | Ages 10-11 | connect a binding clue, a shifted page clue, a turning clue, a mismatch clue, a return clue, and a folder label</div>
+      <h2>Binding Day Boardwalk Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one manila folder, blank page, pencil, and this clue trail card beside a pretend boardwalk page stack: ____________________.</p>
+      <p class="kid-direction">Writer: follow the clue trail on paper and keep every boardwalk detail invented, broad, and guided by the adult: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: choose the loose page, ribbon mark, or binding cart detail that starts the boardwalk clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the paper clue that follows beside the boardwalk binding table in the manila folder: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm moment when the page stack changes what the first clue seems to mean: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: name one pretend ribbon, page mark, or cart label that almost fits but needs a new paper note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first binding clue and show why it belongs in this clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for the Binding Day Boardwalk manila folder: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the binding clue, the return clue, and one folder label word for the clue trail: ____________________. Take-home line: save the paper in the manila folder and restart the clue trail later with one new boardwalk clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 13 | Ages 8-10 | carry a made-up map-room clue through a first clue, next clue, turning clue, mismatch clue, return clue, and folder label</div>
+      <h2>Seed Library Map Room Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card, a manila folder, blank paper, and pencil beside a pretend map-room shelf note: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, move through the clue trail one paper clue at a time and keep the map room invented: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: choose the seed drawer mark, map corner symbol, or shelf tag that begins the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the next paper clue that points from the first map-room mark to a different pretend shelf: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm page moment when the map-room clue points to a surprising paper corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: write one seed drawer mark or map symbol that almost matches but needs a clearer note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first map-room mark and explain how it connects the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for this Seed Library Map Room manila folder: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: copy one map-room mark, one next clue, and one folder label word before adding more: ____________________. Take-home line: tuck the page into the manila folder and add one invented map-room clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 14 | Ages 7-8 | link a simple lost-ticket clue to a next clue, turning clue, mismatch clue, return clue, and folder label</div>
+      <h2>Mitten Market Lost Ticket Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+        <figcaption>Mitten Market Lost Ticket</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: open the manila folder, set down a blank page and pencil, and point to the first clue trail blank: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, make up a gentle mitten-market clue trail on paper without using real details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: choose the mitten tag, folded ticket, or small booth mark that starts the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the next paper clue that follows the mitten tag to another pretend market spot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm moment when the folded ticket points to a different mitten clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: write one pretend tag or ticket clue that almost fits but needs help from another paper clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first mitten tag and show how it helps the clue trail make sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for the Mitten Market Lost Ticket manila folder: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw or write one mitten clue and one folder label word for the clue trail: ____________________. Take-home line: keep the page in the manila folder and add one pretend lost-ticket clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 15 | Ages 8-10 | connect a clocktower clue through a next clue, turning clue, mismatch clue, return clue, and folder label</div>
+      <h2>Cloudberry Clocktower Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+        <figcaption>Cloudberry Clocktower</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one manila folder, blank page, pencil, and this clue trail card beside a pretend clocktower note: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, build the clue trail on paper using only invented clocktower details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: choose the clock hand mark, bell-card symbol, or stair label that begins the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the next paper clue that follows from the clock hand mark to another pretend tower detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm moment when the tower clue changes direction on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: name one bell-card symbol or stair label that almost fits but needs a new paper note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first clocktower clue and explain why it belongs in the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for the Cloudberry Clocktower manila folder: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the clocktower mark, the return clue, and one folder label word: ____________________. Take-home line: put the page into the manila folder and continue the paper clue trail later: ____________________.</p>
+    </section>
+
+    <section class="pack-page clue-trail-card-page">
+      <div class="page-kicker">Clue Trail Card 16 | Ages 7-9 | connect a rain-boot trail mark to a next clue, turning clue, mismatch clue, return clue, and folder label</div>
+      <h2>Rain Boot Route Rangers Story Clue Trail Card</h2>
+      <figure>
+        <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+        <figcaption>Rain Boot Route Rangers</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out the manila folder, blank paper, pencil, and card before the invented rain-boot clue trail begins: ____________________.</p>
+      <p class="kid-direction">Writer: with the adult, keep the clue trail on paper and make every ranger mark pretend: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First clue</h3>
+      <p>First clue: choose the boot print, puddle mark, or paper sign that starts the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next clue</h3>
+      <p>Next clue: add the next paper clue that follows the boot print to another invented ranger mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning clue</h3>
+      <p>Turning clue: invent the calm moment when the boot print points to a different paper sign: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Mismatch clue</h3>
+      <p>Mismatch clue: write one puddle mark or paper sign that almost fits but needs a clearer clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Return clue</h3>
+      <p>Return clue: bring back the first boot print and show how it connects the clue trail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Folder label</h3>
+      <p>Folder label: write the broad pretend folder label for the Rain Boot Route Rangers manila folder: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write one boot print clue, one return clue, and one folder label word: ____________________. Take-home line: tuck the page into the manila folder and add one made-up rain-boot clue later: ____________________.</p>
+    </section>
+  </body>
+</html>

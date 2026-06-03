@@ -497,6 +497,8 @@ export async function buildManilaFolderStoryClueTrailCardPack(options = {}) {
     assets: readdirSync(paths.assetsDir)
       .sort()
       .map((file) => fileRecord(resolve(paths.assetsDir, file), recordRoot)),
+  }, {
+    fulfillmentNote: 'Static artifact bundle: PDF plus source HTML and local image assets; checkout stays pending on the public page.',
   })
   writeFileSync(paths.manifestPath, `${JSON.stringify(manifest, null, 2)}\n`)
 

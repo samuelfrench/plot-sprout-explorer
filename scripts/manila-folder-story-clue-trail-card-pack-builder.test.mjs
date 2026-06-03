@@ -599,6 +599,7 @@ describe('Manila Folder Story Clue Trail Card Pack policy', () => {
       expect(existsSync(zipPath)).toBe(true)
       expect(existsSync(manifestPath)).toBe(true)
       expect(readFileSync(readmePath, 'utf8')).not.toMatch(/\b(provider|public|real child)\b/i)
+      expect(readFileSync(manifestPath, 'utf8')).not.toMatch(/\b(provider|payment|real child)\b/i)
       expect(output.source.productSlug).toBe('manila-folder-story-clue-trail-card-pack')
       expect(output.manifest.productSlug).toBe('manila-folder-story-clue-trail-card-pack')
       expect(output.manifest.files.pdf.sha256).toBe(sha256(pdfPath))
@@ -713,7 +714,7 @@ describe('Manila Folder Story Clue Trail Card Pack policy', () => {
       sidecar: 'content/image-runs/batch56/manila-folder-story-clue-trail-card-pack.json',
     })
     expect(imageManifest.images[0].prompt).toBe(
-      'family-friendly studio product mockup of a manila folder story clue trail card pack, orthographic top-down catalog view, tan manila folder open with blank clue trail cards clipped in a neat stack, small blank folder label tab, paper clue slips, unbranded graphite pencils, quiet printable writing kit, seamless plain white background, clean shadow, only manila folder blank cards clue slips and pencils, no text',
+      'family-friendly top-down close-cropped catalog product photo on seamless white background, blank tan manila folder, blank off-white clue card stack, blank paper slip edges, quiet printable paper kit mockup, no writing',
     )
     for (const phrase of [
       'text',
