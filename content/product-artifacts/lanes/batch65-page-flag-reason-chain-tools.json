@@ -1,0 +1,150 @@
+{
+  "adultGuide": {
+    "title": "Page Flag Story Reason Chain Adult Guide: ____________________.",
+    "setupSteps": [
+      "Set out one reason-chain card, a blank page, pencil, and paper page flags before the adult-led session begins: ____________________.",
+      "Label seven paper lines story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.",
+      "Choose one pretend world and keep every character, place, object, detail, and reason invented: ____________________.",
+      "Tell the writer that dictated words, adult-scribed words, or independent writing all fit the offline paper-only activity: ____________________.",
+      "Place the page flag beside the reason-chain sentence so the writer can check one clear fictional connection: ____________________."
+    ],
+    "facilitationNotes": [
+      "Start with a small story idea that can fit on one paper line: ____________________.",
+      "Ask for the first detail as one invented thing the writer can name or point to on the card: ____________________.",
+      "Ask for the first reason before adding the second detail so the chain has a clear middle: ____________________.",
+      "Use the because bridge to connect both details without adding real names or facts: ____________________.",
+      "Close with the page flag check so the writer marks a private paper sentence, not an outside task: ____________________."
+    ],
+    "safetyNotes": [
+      "Use invented characters, broad pretend places, and made-up details only: ____________________.",
+      "Keep the activity offline, paper-only, adult-led, and away from outside audiences: ____________________.",
+      "Skip any prompt that starts to ask for real names, real place details, or personal facts: ____________________.",
+      "Keep the reason-chain sentence about the pretend story, not about a real person or real event: ____________________.",
+      "Treat the page flag check as a quiet paper marker for this session: ____________________."
+    ]
+  },
+  "reasonChainRoutines": [
+    {
+      "title": "Story Idea Start: ____________________.",
+      "useWhen": "Use when the writer needs one small fictional idea before choosing details: ____________________.",
+      "steps": [
+        "The adult places the story idea line at the top of the blank page: ____________________.",
+        "The writer names one made-up choice, question, or change inside the pretend world: ____________________.",
+        "The writer completes this line: My story idea is ____________________.",
+        "The adult rereads the story idea and keeps it ready for the first detail: ____________________."
+      ]
+    },
+    {
+      "title": "First Detail Anchor: ____________________.",
+      "useWhen": "Use when the story idea needs one invented detail to begin the reason chain: ____________________.",
+      "steps": [
+        "The adult points to the first detail line and asks what pretend detail helps the idea: ____________________.",
+        "The writer chooses one object, mark, sound, color, signal, or tiny change from the fictional world: ____________________.",
+        "The writer completes this line: My first detail is ____________________.",
+        "The adult places the first detail under the story idea without adding real facts: ____________________."
+      ]
+    },
+    {
+      "title": "First Reason Link: ____________________.",
+      "useWhen": "Use when the first detail is ready but its meaning is still missing: ____________________.",
+      "steps": [
+        "The adult rereads the story idea and first detail in order: ____________________.",
+        "The writer tells why the first detail helps the story idea make sense: ____________________.",
+        "The writer completes this line: My first reason is ____________________.",
+        "The adult keeps the first reason short and inside the pretend story: ____________________."
+      ]
+    },
+    {
+      "title": "Second Detail Support: ____________________.",
+      "useWhen": "Use when the reason chain needs one more invented detail that supports the same idea: ____________________.",
+      "steps": [
+        "The adult points to the second detail line and rereads the story idea: ____________________.",
+        "The writer names a different pretend detail that supports the same reason chain: ____________________.",
+        "The writer completes this line: My second detail is ____________________.",
+        "The adult checks that the second detail helps the same idea instead of starting a new one: ____________________."
+      ]
+    },
+    {
+      "title": "Because Bridge Builder: ____________________.",
+      "useWhen": "Use when the story idea, first detail, first reason, and second detail are ready to connect: ____________________.",
+      "steps": [
+        "The adult lays the first detail and second detail lines beside the because bridge line: ____________________.",
+        "The adult asks how both details help the same pretend reason: ____________________.",
+        "The writer completes this line: My because bridge is ____________________.",
+        "The adult trims the bridge to one clear phrase before the reason-chain sentence: ____________________."
+      ]
+    },
+    {
+      "title": "Reason-Chain Sentence Check: ____________________.",
+      "useWhen": "Use at the end of a paper session to combine the parts and mark the page flag check: ____________________.",
+      "steps": [
+        "The adult reads the story idea, first detail, first reason, second detail, and because bridge in order: ____________________.",
+        "The writer completes this line: My reason-chain sentence is ____________________.",
+        "The adult asks whether the sentence uses only invented story details: ____________________.",
+        "The writer completes this line: My page flag check says ____________________."
+      ]
+    }
+  ],
+  "takeHomeReasonSlips": [
+    {
+      "title": "Story Idea Slip: ____________________.",
+      "prompt": "My story idea is ____________________.",
+      "adultNote": "Ask for one small made-up idea that belongs inside the pretend world: ____________________."
+    },
+    {
+      "title": "First Detail Slip: ____________________.",
+      "prompt": "My first detail is ____________________.",
+      "adultNote": "Choose one invented object, mark, signal, or tiny change that helps the story idea: ____________________."
+    },
+    {
+      "title": "First Reason Slip: ____________________.",
+      "prompt": "My first reason is ____________________.",
+      "adultNote": "Ask why the first detail helps the pretend story idea make sense: ____________________."
+    },
+    {
+      "title": "Second Detail Slip: ____________________.",
+      "prompt": "My second detail is ____________________.",
+      "adultNote": "Choose a different invented detail that supports the same reason chain: ____________________."
+    },
+    {
+      "title": "Because Bridge Slip: ____________________.",
+      "prompt": "My because bridge is ____________________.",
+      "adultNote": "Use a short phrase that connects both details to the reason: ____________________."
+    },
+    {
+      "title": "Reason-Chain Sentence Slip: ____________________.",
+      "prompt": "My reason-chain sentence is ____________________.",
+      "adultNote": "Combine the story idea, first detail, first reason, second detail, and because bridge in one sentence: ____________________."
+    },
+    {
+      "title": "Page Flag Check Slip: ____________________.",
+      "prompt": "My page flag check says this sentence stays invented because ____________________.",
+      "adultNote": "Use this as a quiet paper check, not a correction mark: ____________________."
+    },
+    {
+      "title": "Detail Pair Slip: ____________________.",
+      "prompt": "My first detail and second detail fit together because ____________________.",
+      "adultNote": "Reread both detail lines before filling the blank: ____________________."
+    },
+    {
+      "title": "Short Chain Slip: ____________________.",
+      "prompt": "The shortest reason chain I can write is ____________________.",
+      "adultNote": "Frame this as paper sorting so the sentence stays clear: ____________________."
+    },
+    {
+      "title": "Next Paper Flag Slip: ____________________.",
+      "prompt": "The next paper flag could mark this invented reason: ____________________.",
+      "adultNote": "Save the slip for another adult-led offline writing session: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Which story idea feels small enough for one paper line: ____________________.",
+    "What first detail can the writer invent without using real people or real places: ____________________.",
+    "What first reason explains why that detail matters inside the pretend story: ____________________.",
+    "What second detail helps the same story idea in a different way: ____________________.",
+    "Which words can become the because bridge without adding real facts: ____________________.",
+    "What reason-chain sentence uses the story idea, first detail, first reason, second detail, and because bridge: ____________________.",
+    "What page flag check shows the sentence stayed invented and paper-only: ____________________.",
+    "Which line can stay blank until the writer is ready to dictate or write it: ____________________."
+  ]
+}
