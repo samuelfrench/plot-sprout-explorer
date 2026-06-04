@@ -78,6 +78,8 @@ export const libraryPocketStorySummaryCardPackProductSlug =
   'library-pocket-story-summary-card-pack'
 export const shelfMarkerStoryThemeCardPackProductSlug =
   'shelf-marker-story-theme-card-pack'
+export const bookendStoryEvidenceCardPackProductSlug =
+  'bookend-story-evidence-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -92,6 +94,7 @@ const archiveDrawerStoryResolutionRequiredSafety = manilaFolderStoryClueTrailReq
 const cardCatalogStoryRetellRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 const libraryPocketStorySummaryRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 const shelfMarkerStoryThemeRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
+const bookendStoryEvidenceRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 
 const familySafetyBlockedTerms = [
   /\bweapon(s)?\b/i,
@@ -642,6 +645,16 @@ const requiredShelfMarkerStoryThemeCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/shelf-marker-story-theme-card-pack/source/shelf-marker-story-theme-card-pack.html',
   manifestPath: 'product-build/shelf-marker-story-theme-card-pack/manifest.json',
+}
+
+const requiredBookendStoryEvidenceCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/bookend-story-evidence-card-pack/Bookend-Story-Evidence-Card-Pack.pdf',
+  zipPath:
+    'product-build/bookend-story-evidence-card-pack/bookend-story-evidence-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/bookend-story-evidence-card-pack/source/bookend-story-evidence-card-pack.html',
+  manifestPath: 'product-build/bookend-story-evidence-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -20022,6 +20035,670 @@ export function validateShelfMarkerStoryThemeCardPackSourceFiles(source, rootDir
   return errors
 }
 
+const bookendStoryEvidenceSourceKeys = [
+  'batchId',
+  'generatedAt',
+  'productSlug',
+  'title',
+  'pricePoint',
+  'audience',
+  'sessionLength',
+  'safetyNote',
+  'artifact',
+  'sourceFiles',
+  'worldSlugs',
+  'cover',
+  'adultGuide',
+  'evidenceRoutines',
+  'takeHomeEvidenceSlips',
+  'optionalAdultPrompts',
+  'cards',
+]
+
+const bookendStoryEvidenceCardKeys = [
+  'id',
+  'title',
+  'worldSlug',
+  'ageBand',
+  'evidenceSkill',
+  'useCase',
+  'adultSetup',
+  'kidDirection',
+  'storyClaimPrompt',
+  'firstCluePrompt',
+  'secondCluePrompt',
+  'becauseLinePrompt',
+  'evidenceSentencePrompt',
+  'bookendNotePrompt',
+  'quietOptionLine',
+  'takeHomeLine',
+]
+
+const bookendStoryEvidenceSourceFiles = [
+  'content/product-artifacts/lanes/batch64-bookend-evidence-cards-a.json',
+  'content/product-artifacts/lanes/batch64-bookend-evidence-cards-b.json',
+  'content/product-artifacts/lanes/batch64-bookend-evidence-cards-c.json',
+  'content/product-artifacts/lanes/batch64-bookend-evidence-tools.json',
+]
+
+const bookendStoryEvidenceExpectedWorldSlugs = [
+  'moon-muffin-market',
+  'puddle-planet-post-office',
+  'teacup-town-weather-window',
+  'button-bakery-map-mixup',
+  'penny-path-compass-shop',
+  'pocket-park-notice-board',
+  'greenhouse-gear-garden',
+  'orchard-pulley-post',
+  'rain-gauge-railway',
+  'cloudberry-clocktower',
+  'tiny-lantern-reef',
+  'almost-invention-workshop',
+  'clue-label-tower-museum',
+  'compass-craft-academy',
+  'margin-note-market',
+  'pencil-dragon-academy',
+]
+
+const bookendStoryEvidenceExpectedWorldAges = new Map([
+  ['moon-muffin-market', '6-8'],
+  ['puddle-planet-post-office', '6-8'],
+  ['teacup-town-weather-window', '7-8'],
+  ['button-bakery-map-mixup', '7-9'],
+  ['penny-path-compass-shop', '7-9'],
+  ['pocket-park-notice-board', '7-9'],
+  ['greenhouse-gear-garden', '8-10'],
+  ['orchard-pulley-post', '8-10'],
+  ['rain-gauge-railway', '8-10'],
+  ['cloudberry-clocktower', '8-10'],
+  ['tiny-lantern-reef', '8-10'],
+  ['almost-invention-workshop', '10-11'],
+  ['clue-label-tower-museum', '10-11'],
+  ['compass-craft-academy', '10-11'],
+  ['margin-note-market', '10-11'],
+  ['pencil-dragon-academy', '10-11'],
+])
+
+const bookendStoryEvidencePriorSourceFiles = new Map([
+  [56, 'content/product-artifacts/manila-folder-story-clue-trail-card-pack.json'],
+  [57, 'content/product-artifacts/pocket-folder-story-goal-path-card-pack.json'],
+  [58, 'content/product-artifacts/hanging-file-story-decision-point-card-pack.json'],
+  [59, 'content/product-artifacts/file-box-story-turning-point-card-pack.json'],
+  [60, 'content/product-artifacts/archive-drawer-story-resolution-card-pack.json'],
+  [61, 'content/product-artifacts/card-catalog-story-retell-card-pack.json'],
+  [62, 'content/product-artifacts/library-pocket-story-summary-card-pack.json'],
+  [63, 'content/product-artifacts/shelf-marker-story-theme-card-pack.json'],
+])
+
+const bookendStoryEvidenceExpectedOverlaps = new Map([
+  [56, 5],
+  [57, 6],
+  [58, 6],
+  [59, 6],
+  [60, 6],
+  [61, 7],
+  [62, 7],
+  [63, 6],
+])
+
+const bookendStoryEvidenceHeroImage =
+  'images/plotsprout/batch64/bookend-story-evidence-card-pack.jpg'
+
+function readBookendStoryEvidencePriorWorldSet(batchNumber) {
+  const sourceFile = bookendStoryEvidencePriorSourceFiles.get(batchNumber)
+  const source = JSON.parse(readFileSync(resolve(import.meta.dirname, '..', sourceFile), 'utf8'))
+  return new Set(source.worldSlugs)
+}
+
+function bookendStoryEvidenceTitleFromWorldSlug(slug) {
+  return slug
+    .split('-')
+    .map((part) => part[0].toUpperCase() + part.slice(1))
+    .join(' ')
+    .replace('Map Mixup', 'Map Mix-Up')
+}
+
+function normalizeBookendStoryEvidenceAllowedText(value) {
+  let text = JSON.stringify(value)
+    .replace(
+      /\bNo scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts\./gi,
+      '',
+    )
+    .replace(/\bkeep the bookend note fictional and separate from real book or library systems\b\.?/gi, '')
+    .replace(/\bdo not collect child writing, photos, audio, video, or personal profiles\b\.?/gi, '')
+    .replace(/\bdo not ask for real school, home, schedule, or identity details\b\.?/gi, '')
+    .replace(/\buse pretend names, broad made-up places, and invented actions\b\.?/gi, '')
+    .replace(/\buse invented characters, broad pretend places, and made-up clue details only\b\.?/gi, '')
+    .replace(/\bskip any prompt that starts to ask for real names, real place details, or personal facts\b\.?/gi, '')
+    .replace(/\bkeep the evidence sentence about the pretend story, not about a real person or real event\b\.?/gi, '')
+    .replace(/\bwithout using real-life facts\b/gi, '')
+    .replace(/\bwithout using real people or real places\b/gi, '')
+    .replace(/\bnot about a real person or real event\b/gi, '')
+    .replace(/\bnot as a real service step\b/gi, '')
+    .replace(/\bnot a correction mark\b/gi, '')
+    .replace(/\badult-led\b/gi, '')
+    .replace(/\badult\b/gi, '')
+    .replace(/\boffline\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+    .replace(/\bfamilies\b/gi, '')
+    .replace(/\bfamily\b/gi, '')
+    .replace(/\bhomeschool\b/gi, '')
+    .replace(/\btutors?\b/gi, '')
+    .replace(/\bfictional\b/gi, '')
+    .replace(/\bpretend\b/gi, '')
+    .replace(/\binvented\b/gi, '')
+    .replace(/\bmade-up\b/gi, '')
+    .replace(/\bmade up\b/gi, '')
+    .replace(/\bbookend-story-evidence-card-pack\b/gi, '')
+    .replace(/\bbookend story evidence card pack\b/gi, '')
+    .replace(/\bbookend story evidence card(s)?\b/gi, '')
+    .replace(/\bbookend evidence card(s)?\b/gi, '')
+    .replace(/\bstory evidence card(s)?\b/gi, '')
+    .replace(/\bevidence routine(s)?\b/gi, '')
+    .replace(/\bevidence slip(s)?\b/gi, '')
+    .replace(/\bevidence sentence(s)?\b/gi, '')
+    .replace(/\bevidence path(s)?\b/gi, '')
+    .replace(/\bevidence\b/gi, '')
+    .replace(/\bstory claim(s)?\b/gi, '')
+    .replace(/\bfirst clue(s)?\b/gi, '')
+    .replace(/\bsecond clue(s)?\b/gi, '')
+    .replace(/\bbecause line(s)?\b/gi, '')
+    .replace(/\bbookend note(s)?\b/gi, '')
+    .replace(/\bbookend(s)?\b/gi, '')
+    .replace(/\bclue(s)?\b/gi, '')
+    .replace(/\bclaim(s)?\b/gi, '')
+    .replace(/\bpage(s)?\b/gi, '')
+    .replace(/\bpaper\b/gi, '')
+    .replace(/\bblank(s)?\b/gi, '')
+    .replace(/\bnote(s)?\b/gi, '')
+    .replace(/\bslip(s)?\b/gi, '')
+    .replace(/\bcard(s)?\b/gi, '')
+    .replace(/\bwriter(s)?\b/gi, '')
+    .replace(/\bwriting\b/gi, '')
+    .replace(/\bchild\b/gi, '')
+    .replace(/\bkid(s)?\b/gi, '')
+    .replace(/\bcharacter(s)?\b/gi, '')
+
+  for (const slug of bookendStoryEvidenceExpectedWorldSlugs) {
+    text = removeLiteralTerm(text, slug)
+    text = removeLiteralTerm(text, bookendStoryEvidenceTitleFromWorldSlug(slug))
+  }
+  return text
+}
+
+function validateNoUnsafeBookendStoryEvidenceLanguage(value, label, errors) {
+  const allowedText = normalizeBookendStoryEvidenceAllowedText(value)
+  pushIf(
+    errors,
+    /\bquote(s|d|r|rs|ing)?\b|\breviews?\b|\bcite(s|d|r|rs|ing)?\b|\bcitation(s)?\b|\bsources?\b|\breal book titles?\b|\breal author names?\b|\breal library systems?\b|\blibrary systems?\b|\blibrary cards?\b|\bcheckout(s|ed|ing)?\b|\bcheckout desks?\b|\bdue[- ]dates?\b|\bfines?\b|\bpublic\b|\bpublic posts?\b|\bpublic posting\b|\bpost online\b|\bposting online\b|\bpublish(es|ed|ing|able)?\b|\bpublication(s)?\b|\bupload(s|ed|ing)?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphotos?\b|\bcameras?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bassessment(s)?\b|\btimer(s)?\b|\btimed\b|\bfood(s)?\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b|\bprofessional advice\b|\bprivate child data\b|\breal child data\b|\bpersonal details?\b|\bpersonal disclosure(s)?\b|\bprivate child profile(s)?\b|\bchild profiles?\b|\bprofiles?\b|\baddresses?\b|\bstreets?\b|\bexact locations?\b|\blocation details?\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b|\bbranded character(s)?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes quote, review, cite, source, citation, real book title, real author, library system, checkout, due date, fine, public posting, upload, recording, camera, photo, video, audio, voice memo, grading, score, timer, food, allergy advice, scary harm, bullying, or real child data language.`,
+  )
+}
+
+function validateBookendStoryEvidenceCard(
+  card,
+  index,
+  sourceWorldSlugs,
+  knownWorldSlugs,
+  knownWorldRecords,
+  cardIds,
+  errors,
+) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(card)) !== JSON.stringify(bookendStoryEvidenceCardKeys),
+    `${label} keys must match the exact bookend evidence card field order.`,
+  )
+
+  for (const key of bookendStoryEvidenceCardKeys) validateString(card[key], `${label}.${key}`, errors)
+
+  const expectedWorldSlug = bookendStoryEvidenceExpectedWorldSlugs[index]
+  const expectedId = `bookend-evidence-card-${String(index + 1).padStart(2, '0')}`
+  const expectedAgeBand = bookendStoryEvidenceExpectedWorldAges.get(expectedWorldSlug)
+  const expectedTitle = bookendStoryEvidenceTitleFromWorldSlug(expectedWorldSlug)
+  pushIf(errors, card.id !== expectedId, `${label}.id must be ${expectedId}.`)
+  pushIf(errors, card.worldSlug !== expectedWorldSlug, `${label}.worldSlug must be ${expectedWorldSlug}.`)
+  pushIf(errors, card.ageBand !== expectedAgeBand, `${label}.ageBand must be ${expectedAgeBand}.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.title) && !card.title.includes(expectedTitle),
+    `${label}.title must include ${expectedTitle}.`,
+  )
+  pushIf(
+    errors,
+    isNonEmptyString(card.title) && !/story evidence card/i.test(card.title),
+    `${label}.title must say Story Evidence Card.`,
+  )
+  pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+  cardIds.add(card.id)
+
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(errors, isNonEmptyString(card.useCase) && !/\boffline\b/i.test(card.useCase), `${label}.useCase must say offline.`)
+  pushIf(errors, isNonEmptyString(card.useCase) && !/\bpaper-only\b/i.test(card.useCase), `${label}.useCase must say paper-only.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) && !/\bfictional\b|\bpretend\b|\binvented\b|\bmade-up\b|\bmade up\b/i.test(card.useCase),
+    `${label}.useCase must say fictional, pretend, invented, or made-up.`,
+  )
+  pushIf(errors, isNonEmptyString(card.evidenceSkill) && !/story claim/i.test(card.evidenceSkill), `${label}.evidenceSkill must include story claim.`)
+  pushIf(errors, isNonEmptyString(card.evidenceSkill) && !/clue/i.test(card.evidenceSkill), `${label}.evidenceSkill must include clue language.`)
+  pushIf(errors, isNonEmptyString(card.evidenceSkill) && !/because line/i.test(card.evidenceSkill), `${label}.evidenceSkill must include because line.`)
+  pushIf(errors, isNonEmptyString(card.evidenceSkill) && !/bookend note/i.test(card.evidenceSkill), `${label}.evidenceSkill must include bookend note.`)
+
+  for (const key of bookendStoryEvidenceCardKeys.filter(
+    (field) => !['id', 'title', 'worldSlug', 'ageBand', 'evidenceSkill'].includes(field),
+  )) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+
+  for (const [key, pattern] of [
+    ['storyClaimPrompt', /story claim/i],
+    ['firstCluePrompt', /first clue/i],
+    ['secondCluePrompt', /second clue/i],
+    ['becauseLinePrompt', /because line/i],
+    ['evidenceSentencePrompt', /evidence sentence/i],
+    ['bookendNotePrompt', /bookend note/i],
+  ]) {
+    pushIf(errors, isNonEmptyString(card[key]) && !pattern.test(card[key]), `${label}.${key} must include ${key.replace(/Prompt$/, '')} language.`)
+  }
+
+  validateNoUnsafeBookendStoryEvidenceLanguage(card, label, errors)
+}
+
+function validateBookendStoryEvidenceRoutine(routine, index, errors) {
+  const label = `evidenceRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(routine)) !== JSON.stringify(['title', 'useWhen', 'steps']),
+    `${label} must use the exact evidence routine field order.`,
+  )
+  for (const key of ['title', 'useWhen']) validateString(routine[key], `${label}.${key}`, errors)
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  for (const [path, value] of Object.entries(flattenStrings(routine))) {
+    pushIf(errors, isNonEmptyString(value) && !hasWritableBlank(value), `${label}.${path} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(value) && hasSnakeCasePlaceholder(value), `${label}.${path} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeBookendStoryEvidenceLanguage(routine, label, errors)
+}
+
+function validateBookendStoryEvidenceSlip(slip, index, errors) {
+  const label = `takeHomeEvidenceSlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(slip)) !== JSON.stringify(['title', 'prompt', 'adultNote']),
+    `${label} must use the exact take-home evidence slip field order.`,
+  )
+  for (const key of ['title', 'prompt', 'adultNote']) validateString(slip[key], `${label}.${key}`, errors)
+  pushIf(errors, isNonEmptyString(slip.prompt) && !hasWritableBlank(slip.prompt), `${label}.prompt must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(slip.prompt) && hasSnakeCasePlaceholder(slip.prompt), `${label}.prompt must use human-readable text, not snake_case placeholders.`)
+  validateNoUnsafeBookendStoryEvidenceLanguage(slip, label, errors)
+}
+
+export function validateBookendStoryEvidenceCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Bookend Story Evidence Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs ?? [])
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(source)) !== JSON.stringify(bookendStoryEvidenceSourceKeys),
+    'source must use the exact Batch 64 bookend evidence source field order.',
+  )
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-04-batch64', 'batchId must be 2026-06-04-batch64.')
+  pushIf(errors, source.generatedAt !== '2026-06-04', 'generatedAt must be 2026-06-04.')
+  pushIf(
+    errors,
+    source.productSlug !== bookendStoryEvidenceCardPackProductSlug,
+    `productSlug must be ${bookendStoryEvidenceCardPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Bookend Story Evidence Card Pack', 'title must be Bookend Story Evidence Card Pack.')
+  pushIf(errors, source.pricePoint !== '$101', 'pricePoint must be $101.')
+  pushIf(
+    errors,
+    !source.safetyNote?.includes(bookendStoryEvidenceRequiredSafety),
+    'safetyNote must include required Batch 64 safety sentence.',
+  )
+
+  if (product) {
+    pushIf(errors, product.slug !== source.productSlug, 'product.slug must match productSlug.')
+    pushIf(errors, product.title !== source.title, 'product.title must match title.')
+    pushIf(errors, product.pricePoint !== source.pricePoint, 'product.pricePoint must match pricePoint.')
+    pushIf(errors, product.status !== 'checkout_pending', 'product.status must remain checkout_pending.')
+    pushIf(errors, product.heroImage !== bookendStoryEvidenceHeroImage, `product.heroImage must be ${bookendStoryEvidenceHeroImage}.`)
+    pushIf(
+      errors,
+      Array.isArray(product.worldSlugs) && JSON.stringify(product.worldSlugs) !== JSON.stringify(source.worldSlugs),
+      'product.worldSlugs must match source.worldSlugs in exact order.',
+    )
+  }
+
+  pushIf(errors, !Array.isArray(source.sourceFiles), 'sourceFiles must be an array.')
+  if (Array.isArray(source.sourceFiles)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.sourceFiles) !== JSON.stringify(bookendStoryEvidenceSourceFiles),
+      'sourceFiles must list the exact Batch 64 bookend evidence card lane and tools files.',
+    )
+  }
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set()
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.worldSlugs) !== JSON.stringify(bookendStoryEvidenceExpectedWorldSlugs),
+      'worldSlugs must match the exact Batch 64 bookend evidence world order.',
+    )
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, sourceWorldSlugs.has(slug), `worldSlugs includes duplicate slug ${slug}.`)
+      sourceWorldSlugs.add(slug)
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+    for (const [batchNumber, expectedOverlap] of bookendStoryEvidenceExpectedOverlaps) {
+      const overlapSet = readBookendStoryEvidencePriorWorldSet(batchNumber)
+      const overlap = source.worldSlugs.filter((slug) => overlapSet.has(slug))
+      pushIf(
+        errors,
+        overlap.length !== expectedOverlap,
+        `Batch64 must overlap Batch${batchNumber} in exactly ${expectedOverlap} worlds; overlapping slugs: ${overlap.join(', ')}.`,
+      )
+    }
+  }
+
+  validateArtifactPaths(
+    source,
+    requiredBookendStoryEvidenceCardPackArtifactPaths,
+    'Bookend Story Evidence Card Pack',
+    errors,
+  )
+
+  const framingText = JSON.stringify({
+    audience: source.audience,
+    sessionLength: source.sessionLength,
+    cover: source.cover,
+    adultGuide: source.adultGuide,
+    cards: source.cards,
+  })
+  pushIf(errors, !/adult-led/i.test(framingText), 'Bookend Story Evidence Card Pack source must use adult-led framing.')
+  pushIf(errors, !/\boffline\b/i.test(framingText), 'Bookend Story Evidence Card Pack source must use offline framing.')
+  pushIf(errors, !/\bpaper-only\b/i.test(framingText), 'Bookend Story Evidence Card Pack source must use paper-only framing.')
+  pushIf(
+    errors,
+    !/\bfictional\b|\bpretend\b|\binvented\b|\bmade-up\b|\bmade up\b/i.test(framingText),
+    'Bookend Story Evidence Card Pack source must use fictional, pretend, invented, or made-up framing.',
+  )
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) validateString(source.cover[key], `cover.${key}`, errors)
+    validateExactStringArray(source.cover.included, 11, 'cover.included', errors)
+    validateNoUnsafeBookendStoryEvidenceLanguage(source.cover, 'cover', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    pushIf(
+      errors,
+      JSON.stringify(Object.keys(source.adultGuide)) !== JSON.stringify(['title', 'setupSteps', 'facilitationNotes', 'safetyNotes']),
+      'adultGuide must use the exact field order.',
+    )
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    pushIf(errors, isNonEmptyString(source.adultGuide.title) && !hasWritableBlank(source.adultGuide.title), 'adultGuide.title must include a writable blank.')
+    for (const key of ['setupSteps', 'facilitationNotes', 'safetyNotes']) {
+      validateExactStringArray(source.adultGuide[key], 5, `adultGuide.${key}`, errors)
+      if (Array.isArray(source.adultGuide[key])) {
+        source.adultGuide[key].forEach((line, index) => {
+          pushIf(errors, isNonEmptyString(line) && !hasWritableBlank(line), `adultGuide.${key}[${index}] must include a writable blank.`)
+          pushIf(errors, isNonEmptyString(line) && hasSnakeCasePlaceholder(line), `adultGuide.${key}[${index}] must use human-readable text, not snake_case placeholders.`)
+        })
+      }
+    }
+    validateNoUnsafeBookendStoryEvidenceLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.evidenceRoutines), 'evidenceRoutines must be an array.')
+  if (Array.isArray(source.evidenceRoutines)) {
+    pushIf(errors, source.evidenceRoutines.length !== 6, 'evidenceRoutines must have exactly 6 entries.')
+    source.evidenceRoutines.forEach((routine, index) => validateBookendStoryEvidenceRoutine(routine, index, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeEvidenceSlips), 'takeHomeEvidenceSlips must be an array.')
+  if (Array.isArray(source.takeHomeEvidenceSlips)) {
+    pushIf(errors, source.takeHomeEvidenceSlips.length !== 10, 'takeHomeEvidenceSlips must have exactly 10 entries.')
+    source.takeHomeEvidenceSlips.forEach((slip, index) => validateBookendStoryEvidenceSlip(slip, index, errors))
+  }
+
+  validateExactStringArray(source.optionalAdultPrompts, 8, 'optionalAdultPrompts', errors)
+  if (Array.isArray(source.optionalAdultPrompts)) {
+    source.optionalAdultPrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalAdultPrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalAdultPrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeBookendStoryEvidenceLanguage(prompt, `optionalAdultPrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateBookendStoryEvidenceCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size !== 16, 'cards must cover exactly 16 unique worlds.')
+  }
+
+  validateNoUnsafeBookendStoryEvidenceLanguage(
+    {
+      batchId: source.batchId,
+      generatedAt: source.generatedAt,
+      productSlug: source.productSlug,
+      title: source.title,
+      pricePoint: source.pricePoint,
+      audience: source.audience,
+      sessionLength: source.sessionLength,
+      safetyNote: source.safetyNote,
+      worldSlugs: source.worldSlugs,
+      cover: source.cover,
+      adultGuide: source.adultGuide,
+      evidenceRoutines: source.evidenceRoutines,
+      takeHomeEvidenceSlips: source.takeHomeEvidenceSlips,
+      optionalAdultPrompts: source.optionalAdultPrompts,
+      cards: source.cards,
+    },
+    'Bookend Story Evidence Card Pack source',
+    errors,
+  )
+  validateNoRiskyLanguage(source, 'Bookend Story Evidence Card Pack source', errors)
+  return errors
+}
+
+function validateBookendStoryEvidenceToolLane(lane, sourceFile, errors) {
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(lane)) !==
+      JSON.stringify(['adultGuide', 'evidenceRoutines', 'takeHomeEvidenceSlips', 'optionalAdultPrompts']),
+    `${sourceFile} must use the exact Batch 64 tools field order.`,
+  )
+  const sourceLike = {
+    adultGuide: lane.adultGuide,
+    evidenceRoutines: lane.evidenceRoutines,
+    takeHomeEvidenceSlips: lane.takeHomeEvidenceSlips,
+    optionalAdultPrompts: lane.optionalAdultPrompts,
+  }
+  if (isObject(lane.adultGuide)) {
+    pushIf(
+      errors,
+      JSON.stringify(Object.keys(lane.adultGuide)) !== JSON.stringify(['title', 'setupSteps', 'facilitationNotes', 'safetyNotes']),
+      `${sourceFile}.adultGuide must use the exact field order.`,
+    )
+    for (const key of ['setupSteps', 'facilitationNotes', 'safetyNotes']) {
+      validateExactStringArray(lane.adultGuide[key], 5, `${sourceFile}.adultGuide.${key}`, errors)
+    }
+  }
+  pushIf(errors, !Array.isArray(lane.evidenceRoutines), `${sourceFile}.evidenceRoutines must be an array.`)
+  if (Array.isArray(lane.evidenceRoutines)) {
+    pushIf(errors, lane.evidenceRoutines.length !== 6, `${sourceFile}.evidenceRoutines must have exactly 6 entries.`)
+    lane.evidenceRoutines.forEach((routine, index) => validateBookendStoryEvidenceRoutine(routine, index, errors))
+  }
+  pushIf(errors, !Array.isArray(lane.takeHomeEvidenceSlips), `${sourceFile}.takeHomeEvidenceSlips must be an array.`)
+  if (Array.isArray(lane.takeHomeEvidenceSlips)) {
+    pushIf(errors, lane.takeHomeEvidenceSlips.length !== 10, `${sourceFile}.takeHomeEvidenceSlips must have exactly 10 entries.`)
+    lane.takeHomeEvidenceSlips.forEach((slip, index) => validateBookendStoryEvidenceSlip(slip, index, errors))
+  }
+  validateExactStringArray(lane.optionalAdultPrompts, 8, `${sourceFile}.optionalAdultPrompts`, errors)
+
+  const requiresWritableBlank = (path) =>
+    path === 'adultGuide.title' ||
+    /^adultGuide\.(setupSteps|facilitationNotes|safetyNotes)\[\d+\]$/.test(path) ||
+    /^evidenceRoutines\[\d+\]\.(title|useWhen)$/.test(path) ||
+    /^evidenceRoutines\[\d+\]\.steps\[\d+\]$/.test(path) ||
+    /^takeHomeEvidenceSlips\[\d+\]\.prompt$/.test(path) ||
+    /^optionalAdultPrompts\[\d+\]$/.test(path)
+
+  for (const [path, value] of Object.entries(flattenStrings(sourceLike))) {
+    pushIf(
+      errors,
+      requiresWritableBlank(path) && isNonEmptyString(value) && !hasWritableBlank(value),
+      `${sourceFile}.${path} must include a writable blank.`,
+    )
+    pushIf(
+      errors,
+      isNonEmptyString(value) && hasSnakeCasePlaceholder(value),
+      `${sourceFile}.${path} must use human-readable text, not snake_case placeholders.`,
+    )
+  }
+  validateNoUnsafeBookendStoryEvidenceLanguage(lane, sourceFile, errors)
+}
+
+export function validateBookendStoryEvidenceCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three bookend evidence card lanes and one tools lane.')
+  pushIf(
+    errors,
+    JSON.stringify(source.sourceFiles) !== JSON.stringify(bookendStoryEvidenceSourceFiles),
+    'sourceFiles must list the exact Batch 64 bookend evidence card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedRange = sourceFile.includes('-cards-a')
+        ? { min: 1, max: 6, count: 6, label: '01-06' }
+        : sourceFile.includes('-cards-b')
+        ? { min: 7, max: 11, count: 5, label: '07-11' }
+        : sourceFile.includes('-cards-c')
+        ? { min: 12, max: 16, count: 5, label: '12-16' }
+        : null
+
+      if (Array.isArray(lane) && expectedRange) {
+        cardLaneFiles.push({ sourceFile, lane })
+        pushIf(errors, lane.length !== expectedRange.count, `${sourceFile} must contain exactly ${expectedRange.count} cards.`)
+        const cardIds = new Set()
+        const sourceWorldSlugs = new Set(bookendStoryEvidenceExpectedWorldSlugs)
+        const knownWorldRecords = bookendStoryEvidenceExpectedWorldAges
+        lane.forEach((card) => {
+          const match = String(card?.id ?? '').match(/-(\d{2})$/)
+          const cardNumber = match ? Number(match[1]) : NaN
+          pushIf(
+            errors,
+            !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max,
+            `${sourceFile} must include card numbers ${expectedRange.label}.`,
+          )
+          if (Number.isInteger(cardNumber)) {
+            validateBookendStoryEvidenceCard(
+              card,
+              cardNumber - 1,
+              sourceWorldSlugs,
+              sourceWorldSlugs,
+              knownWorldRecords,
+              cardIds,
+              errors,
+            )
+          }
+        })
+      } else if (isObject(lane) && isObject(lane.adultGuide)) {
+        toolLaneFiles.push({ sourceFile, lane })
+        validateBookendStoryEvidenceToolLane(lane, sourceFile, errors)
+      } else {
+        errors.push(`${sourceFile} must be a Batch 64 bookend evidence card array lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three bookend evidence card lane files.')
+  pushIf(errors, toolLaneFiles.length !== 1, 'sourceFiles must include exactly one bookend evidence tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles evidence card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'evidenceRoutines', 'takeHomeEvidenceSlips', 'optionalAdultPrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
@@ -20282,6 +20959,8 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
       ? artifact
       : artifact?.pdfPath === requiredDeskLampStoryProblemCardPackArtifactPaths.pdfPath
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
+      : artifact?.pdfPath === requiredBookendStoryEvidenceCardPackArtifactPaths.pdfPath
+      ? requiredBookendStoryEvidenceCardPackArtifactPaths
       : artifact?.pdfPath === requiredShelfMarkerStoryThemeCardPackArtifactPaths.pdfPath
       ? requiredShelfMarkerStoryThemeCardPackArtifactPaths
       : artifact?.pdfPath === requiredLibraryPocketStorySummaryCardPackArtifactPaths.pdfPath

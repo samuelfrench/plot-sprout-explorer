@@ -88,6 +88,25 @@ const shelfMarkerWorldSlugs = [
   'spoon-ferry-lunchbox-harbor',
 ]
 
+const bookendEvidenceWorldSlugs = [
+  'moon-muffin-market',
+  'puddle-planet-post-office',
+  'teacup-town-weather-window',
+  'button-bakery-map-mixup',
+  'penny-path-compass-shop',
+  'pocket-park-notice-board',
+  'greenhouse-gear-garden',
+  'orchard-pulley-post',
+  'rain-gauge-railway',
+  'cloudberry-clocktower',
+  'tiny-lantern-reef',
+  'almost-invention-workshop',
+  'clue-label-tower-museum',
+  'compass-craft-academy',
+  'margin-note-market',
+  'pencil-dragon-academy',
+]
+
 function readJson(relativePath: string): unknown {
   return JSON.parse(readFileSync(resolve(process.cwd(), relativePath), 'utf8'))
 }
@@ -182,6 +201,7 @@ describe('storyData', () => {
       'card-catalog-story-retell-card-pack',
       'library-pocket-story-summary-card-pack',
       'shelf-marker-story-theme-card-pack',
+      'bookend-story-evidence-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -240,6 +260,7 @@ describe('storyData', () => {
       '$95',
       '$97',
       '$99',
+      '$101',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
@@ -534,6 +555,84 @@ describe('storyData', () => {
         'mailto:samfrench@gmail.com?subject=Shelf%20Marker%20Story%20Theme%20Card%20Pack',
     })
     expect(product?.worldSlugs).toEqual(shelfMarkerWorldSlugs)
+    expect(String(product?.ctaHref)).toMatch(/^mailto:/)
+    expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
+  })
+
+  it('keeps the Batch64 bookend evidence source artifact aligned with the lane files', () => {
+    const source = readJson('content/product-artifacts/bookend-story-evidence-card-pack.json') as Record<
+      string,
+      unknown
+    >
+    const laneA = readJson(
+      'content/product-artifacts/lanes/batch64-bookend-evidence-cards-a.json',
+    ) as unknown[]
+    const laneB = readJson(
+      'content/product-artifacts/lanes/batch64-bookend-evidence-cards-b.json',
+    ) as unknown[]
+    const laneC = readJson(
+      'content/product-artifacts/lanes/batch64-bookend-evidence-cards-c.json',
+    ) as unknown[]
+    const tools = readJson('content/product-artifacts/lanes/batch64-bookend-evidence-tools.json') as Record<
+      string,
+      unknown
+    >
+    const cover = source.cover as { included?: string[] }
+
+    expect(Object.keys(source)).toEqual([
+      'batchId',
+      'generatedAt',
+      'productSlug',
+      'title',
+      'pricePoint',
+      'audience',
+      'sessionLength',
+      'safetyNote',
+      'artifact',
+      'sourceFiles',
+      'worldSlugs',
+      'cover',
+      'adultGuide',
+      'evidenceRoutines',
+      'takeHomeEvidenceSlips',
+      'optionalAdultPrompts',
+      'cards',
+    ])
+    expect(source.sourceFiles).toEqual([
+      'content/product-artifacts/lanes/batch64-bookend-evidence-cards-a.json',
+      'content/product-artifacts/lanes/batch64-bookend-evidence-cards-b.json',
+      'content/product-artifacts/lanes/batch64-bookend-evidence-cards-c.json',
+      'content/product-artifacts/lanes/batch64-bookend-evidence-tools.json',
+    ])
+    expect(source.worldSlugs).toEqual(bookendEvidenceWorldSlugs)
+    expect(cover.included).toHaveLength(11)
+    expect(cover.included?.join(' ')).toMatch(/evidence/i)
+    expect(cover.included?.join(' ')).not.toMatch(/theme|summary|library pocket/i)
+    expect(source.cards).toEqual([...laneA, ...laneB, ...laneC])
+    expect(source.adultGuide).toEqual(tools.adultGuide)
+    expect(source.evidenceRoutines).toEqual(tools.evidenceRoutines)
+    expect(source.takeHomeEvidenceSlips).toEqual(tools.takeHomeEvidenceSlips)
+    expect(source.optionalAdultPrompts).toEqual(tools.optionalAdultPrompts)
+  })
+
+  it('keeps the Batch64 bookend evidence product checkout-pending and mailto-only', () => {
+    const products = readJson('content/products/batch5-products.json') as {
+      products: Array<Record<string, unknown>>
+    }
+    const product = products.products.find(
+      (candidate) => candidate.slug === 'bookend-story-evidence-card-pack',
+    )
+
+    expect(product).toMatchObject({
+      slug: 'bookend-story-evidence-card-pack',
+      title: 'Bookend Story Evidence Card Pack',
+      pricePoint: '$101',
+      status: 'checkout_pending',
+      heroImage: 'images/plotsprout/batch64/bookend-story-evidence-card-pack.jpg',
+      ctaHref:
+        'mailto:samfrench@gmail.com?subject=Bookend%20Story%20Evidence%20Card%20Pack',
+    })
+    expect(product?.worldSlugs).toEqual(bookendEvidenceWorldSlugs)
     expect(String(product?.ctaHref)).toMatch(/^mailto:/)
     expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
   })

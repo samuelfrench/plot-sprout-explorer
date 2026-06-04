@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest'
 import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
-import { resolve } from 'node:path'
+import { dirname, resolve } from 'node:path'
 
 import {
   inspectArtifactFiles,
@@ -265,25 +265,63 @@ function makeSource() {
   }
 }
 
+function makeProduct(source = makeSource()) {
+  return {
+    slug: source.productSlug,
+    title: source.title,
+    pricePoint: source.pricePoint,
+    status: 'checkout_pending',
+    headline: 'Printable bookend evidence cards for private fictional story claims.',
+    summary:
+      'Sixteen bookend evidence cards help kids support fictional story claims with clue details, because lines, and short evidence sentences.',
+    heroImage: 'images/plotsprout/batch64/bookend-story-evidence-card-pack.jpg',
+    ctaLabel: 'Request bookend evidence pack launch notice',
+    ctaHref: 'mailto:samfrench@gmail.com?subject=Bookend%20Story%20Evidence%20Card%20Pack',
+    checkoutNote:
+      'Checkout is pending until the payment provider is selected; this static bookend evidence pack page is ready for hosted checkout wiring but does not accept payment yet.',
+    safetyNote: source.safetyNote,
+    worldSlugs: [...source.worldSlugs],
+    worldSummaries: source.worldSlugs.map((slug) => ({
+      slug,
+      title: titleForSlug(slug),
+      summary: `A pretend ${titleForSlug(slug)} world for supporting one fictional story claim on paper.`,
+    })),
+  }
+}
+
+function writeTempLaneFiles(source, tempRoot) {
+  const fileContents = {
+    [sourceFiles[0]]: source.cards.slice(0, 6),
+    [sourceFiles[1]]: source.cards.slice(6, 11),
+    [sourceFiles[2]]: source.cards.slice(11, 16),
+    [sourceFiles[3]]: {
+      adultGuide: source.adultGuide,
+      evidenceRoutines: source.evidenceRoutines,
+      takeHomeEvidenceSlips: source.takeHomeEvidenceSlips,
+      optionalAdultPrompts: source.optionalAdultPrompts,
+    },
+  }
+  for (const [relativePath, data] of Object.entries(fileContents)) {
+    const targetPath = resolve(tempRoot, relativePath)
+    mkdirSync(dirname(targetPath), { recursive: true })
+    writeFileSync(targetPath, `${JSON.stringify(data, null, 2)}\n`)
+  }
+}
+
+function makeImageRoot(source) {
+  const imageRoot = mkdtempSync(resolve(tmpdir(), 'plotsprout-batch64-images-'))
+  for (const slug of source.worldSlugs) {
+    writeFileSync(resolve(imageRoot, `${slug}.jpg`), `fake jpeg bytes for ${slug}`)
+  }
+  return imageRoot
+}
+
 describe('Bookend Story Evidence Card Pack', () => {
   it('validates the canonical source shape, safety, lanes, worlds, and artifact paths', () => {
     const source = makeSource()
+    const product = makeProduct(source)
 
-    expect(() =>
-      validateBookendStoryEvidenceCardPackSource(source, {
-        knownWorldAges,
-        requireImageFiles: false,
-        requireProductImageManifest: false,
-        requireArtifactFiles: false,
-        product: {
-          slug: source.productSlug,
-          title: source.title,
-          pricePoint: source.pricePoint,
-          status: 'checkout_pending',
-          worldSlugs,
-        },
-      }),
-    ).not.toThrow()
+    expect(validateBookendStoryEvidenceCardPackSource(source, product, knownWorldAges)).toEqual([])
 
     expect(source.cards).toHaveLength(16)
     expect(source.evidenceRoutines).toHaveLength(6)
@@ -319,21 +357,8 @@ describe('Bookend Story Evidence Card Pack', () => {
     source.cards[0].evidenceSentencePrompt =
       'Copy a quote from a real book review and cite the source: ____________________.'
 
-    expect(() =>
-      validateBookendStoryEvidenceCardPackSource(source, {
-        knownWorldAges,
-        requireImageFiles: false,
-        requireProductImageManifest: false,
-        requireArtifactFiles: false,
-        product: {
-          slug: source.productSlug,
-          title: source.title,
-          pricePoint: source.pricePoint,
-          status: 'checkout_pending',
-          worldSlugs,
-        },
-      }),
-    ).toThrow(/quote|review|cite|source|citation/i)
+    const errors = validateBookendStoryEvidenceCardPackSource(source, makeProduct(source), knownWorldAges)
+    expect(errors.join('\n')).toMatch(/quote|review|cite|source|citation/i)
   })
 
   it('validates committed source files and product metadata when present', () => {
@@ -341,39 +366,22 @@ describe('Bookend Story Evidence Card Pack', () => {
     const products = readJson('content/products/batch5-products.json').products
     const product = products.find((candidate) => candidate.slug === source.productSlug)
 
-    validateBookendStoryEvidenceCardPackSourceFiles({
-      root,
-      source,
-      product,
-      requireImageFiles: false,
-      requireProductImageManifest: true,
-      requireArtifactFiles: false,
-    })
+    expect(validateBookendStoryEvidenceCardPackSource(source, product, knownWorldAges)).toEqual([])
+    expect(validateBookendStoryEvidenceCardPackSourceFiles(source, root)).toEqual([])
 
     expect(product.status).toBe('checkout_pending')
     expect(product.pricePoint).toBe('$101')
     expect(product.ctaHref).toContain('mailto:')
     expect(product.ctaHref).toContain('Bookend%20Story%20Evidence%20Card%20Pack')
     expect(product.heroImage).toBe('images/plotsprout/batch64/bookend-story-evidence-card-pack.jpg')
-    expect(validateProductWorldSummaries(product, source.worldSlugs)).toEqual([])
+    expect(validateProductWorldSummaries(product, 'Batch64 product')).toEqual([])
   })
 
   it('renders the printable evidence fields into deterministic HTML', () => {
     const source = makeSource()
-    const product = {
-      slug: source.productSlug,
-      title: source.title,
-      pricePoint: source.pricePoint,
-      status: 'checkout_pending',
-      worldSlugs,
-    }
+    const imageMap = new Map(worldSlugs.map((slug) => [slug, `assets/${slug}.jpg`]))
 
-    const html = renderBookendStoryEvidenceCardPackHtml({
-      source,
-      product,
-      worlds,
-      imagePathForWorld: (slug) => `assets/${slug}.jpg`,
-    })
+    const html = renderBookendStoryEvidenceCardPackHtml(source, worlds, imageMap)
 
     expect(html).toContain('Bookend Story Evidence Card Pack')
     expect(html).toContain('Story claim:')
@@ -386,55 +394,61 @@ describe('Bookend Story Evidence Card Pack', () => {
     expect(html).not.toMatch(/\b(public|address|rating|review|quote|citation)\b/i)
   })
 
-  it('builds deterministic PDF, source, README, manifest, and ZIP files', () => {
+  it('builds deterministic PDF, source, README, manifest, and ZIP files', async () => {
     const tmpRoot = mkdtempSync(resolve(tmpdir(), 'bookend-evidence-pack-'))
+    const tempLanes = mkdtempSync(resolve(tmpdir(), 'bookend-evidence-lanes-'))
+    let imageRoot
 
     try {
       const source = makeSource()
-      const product = {
-        slug: source.productSlug,
-        title: source.title,
-        pricePoint: source.pricePoint,
-        status: 'checkout_pending',
-        worldSlugs,
-      }
-      const imageRoot = resolve(tmpRoot, 'images')
-      mkdirSync(imageRoot, { recursive: true })
-      for (const slug of worldSlugs) {
-        writeFileSync(resolve(imageRoot, `${slug}.jpg`), `fake image ${slug}`)
-      }
+      imageRoot = makeImageRoot(source)
+      writeTempLaneFiles(source, tempLanes)
 
-      const first = buildBookendStoryEvidenceCardPack({
-        targetBuildDir: resolve(tmpRoot, 'first'),
+      const first = await buildBookendStoryEvidenceCardPack({
+        outputDir: resolve(tmpRoot, 'first'),
         source,
-        product,
+        product: makeProduct(source),
         worlds,
-        productImagePath: resolve(imageRoot, 'hero.jpg'),
-        worldImagePathForSlug: (slug) => resolve(imageRoot, `${slug}.jpg`),
+        imageRoot,
+        sourceFilesRoot: tempLanes,
+        pdfRenderer: () => Buffer.from('%PDF-1.7\n1 0 obj\n<<>>\nendobj\n%%EOF\n'),
       })
-      const second = buildBookendStoryEvidenceCardPack({
-        targetBuildDir: resolve(tmpRoot, 'second'),
+      const second = await buildBookendStoryEvidenceCardPack({
+        outputDir: resolve(tmpRoot, 'second'),
         source,
-        product,
+        product: makeProduct(source),
         worlds,
-        productImagePath: resolve(imageRoot, 'hero.jpg'),
-        worldImagePathForSlug: (slug) => resolve(imageRoot, `${slug}.jpg`),
+        imageRoot,
+        sourceFilesRoot: tempLanes,
+        pdfRenderer: () => Buffer.from('%PDF-1.7\n1 0 obj\n<<>>\nendobj\n%%EOF\n'),
       })
 
       for (const output of [first, second]) {
         expect(existsSync(output.pdfPath)).toBe(true)
         expect(existsSync(output.zipPath)).toBe(true)
-        expect(existsSync(output.sourceHtmlPath)).toBe(true)
+        expect(existsSync(output.htmlPath)).toBe(true)
         expect(existsSync(output.manifestPath)).toBe(true)
         expect(existsSync(output.readmePath)).toBe(true)
-        expect(inspectArtifactFiles(output.manifestPath)).toEqual([])
-        expect(readFileSync(output.sourceHtmlPath, 'utf8')).toContain('Bookend Story Evidence Card Pack')
+        expect(
+          inspectArtifactFiles(
+            {
+              pdfPath: output.pdfPath,
+              zipPath: output.zipPath,
+              sourceHtmlPath: output.htmlPath,
+              manifestPath: output.manifestPath,
+            },
+            'Batch64 temp artifact',
+          ),
+        ).toEqual([])
+        expect(readFileSync(output.htmlPath, 'utf8')).toContain('Bookend Story Evidence Card Pack')
       }
 
       expect(readFileSync(first.pdfPath)).toEqual(readFileSync(second.pdfPath))
       expect(readFileSync(first.zipPath)).toEqual(readFileSync(second.zipPath))
     } finally {
       rmSync(tmpRoot, { recursive: true, force: true })
+      rmSync(tempLanes, { recursive: true, force: true })
+      if (imageRoot) rmSync(imageRoot, { recursive: true, force: true })
     }
   })
 })

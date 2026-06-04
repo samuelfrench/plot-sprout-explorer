@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-04-batch64",
+  "generatedAt": "2026-06-04",
+  "productSlug": "bookend-story-evidence-card-pack",
+  "title": "Bookend Story Evidence Card Pack",
+  "pricePoint": "$101",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.",
+  "files": {
+    "pdf": {
+      "path": "product-build/bookend-story-evidence-card-pack/Bookend-Story-Evidence-Card-Pack.pdf",
+      "sha256": "4af9cb6c2cac3c5da697001a1b5b0e73b35604a93eadfb2d109713da2e2c4d32",
+      "size": 5071865
+    },
+    "zip": {
+      "path": "product-build/bookend-story-evidence-card-pack/bookend-story-evidence-card-pack.zip",
+      "sha256": "141db72d5cd174c2704b14a15a49e08a38e5294c4c928d1d4ccfd49c5e3c4db2",
+      "size": 9731269
+    },
+    "sourceHtml": {
+      "path": "product-build/bookend-story-evidence-card-pack/source/bookend-story-evidence-card-pack.html",
+      "sha256": "d0d87f534a8c470c7bdc1d4ce17bc8f6a67dbd55d3fbe8942b56056a0b156158",
+      "size": 58973
+    },
+    "readme": {
+      "path": "product-build/bookend-story-evidence-card-pack/README.txt",
+      "sha256": "456620486208386282366e418ecd0054e1d07f6088fe8b66001554f4f1c2abb9",
+      "size": 540
+    },
+    "assets": [
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/moon-muffin-market.jpg",
+        "sha256": "9fd7c9a4e3584529222c481ce419c67545a98a4ab788f08742ac19df11f0f962",
+        "size": 238603
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/puddle-planet-post-office.jpg",
+        "sha256": "abf1065c54d207cce767bd8a5081e2483bfa37fc4a7d9a476bd65f4e5c914e44",
+        "size": 304692
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/orchard-pulley-post.jpg",
+        "sha256": "7a51a3f1f4413db9566324b67ca123c16f482d925b5246204786bcfedeb5e1da",
+        "size": 214727
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/cloudberry-clocktower.jpg",
+        "sha256": "3204161ea211c5e28ca7cfeae6e7cfc97be61f53ca978a3606435351731ad6e3",
+        "size": 366382
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/tiny-lantern-reef.jpg",
+        "sha256": "2fc79f2835c185ed4110b7edfab6921ab3a004b059837733502ddc7d407d370f",
+        "size": 326494
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/bookend-story-evidence-card-pack/source/assets/pencil-dragon-academy.jpg",
+        "sha256": "a6cbedee60bf72546acee4677a2b5f6a4214f1ee1feaafde681e739bf71da612",
+        "size": 404513
+      }
+    ]
+  }
+}

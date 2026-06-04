@@ -77,6 +77,8 @@ import {
   validateLibraryPocketStorySummaryCardPackSourceFiles,
   validateShelfMarkerStoryThemeCardPackSource,
   validateShelfMarkerStoryThemeCardPackSourceFiles,
+  validateBookendStoryEvidenceCardPackSource,
+  validateBookendStoryEvidenceCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -171,6 +173,7 @@ const batch60ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-ba
 const batch61ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch61-images.json')
 const batch62ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch62-images.json')
 const batch63ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch63-images.json')
+const batch64ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch64-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -293,6 +296,12 @@ const shelfMarkerStoryThemeSourceFile = resolve(
   'product-artifacts',
   'shelf-marker-story-theme-card-pack.json',
 )
+const bookendStoryEvidenceSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'bookend-story-evidence-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -352,6 +361,7 @@ const batch60ImagesBatchId = '2026-06-04-batch60-images'
 const batch61ImagesBatchId = '2026-06-04-batch61-images'
 const batch62ImagesBatchId = '2026-06-04-batch62-images'
 const batch63ImagesBatchId = '2026-06-04-batch63-images'
+const batch64ImagesBatchId = '2026-06-04-batch64-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -5299,6 +5309,51 @@ function validateBatch63Image(image, imageSlugs) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch64Image(image, imageSlugs) {
+  const label = `2026-06-04-batch64-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.width === 1344, `${label}.width must be 1344.`)
+  expect(image.height === 768, `${label}.height must be 768.`)
+  expect(
+    image.slug === 'bookend-story-evidence-card-pack',
+    `${label}.slug must be bookend-story-evidence-card-pack.`,
+  )
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 64 images.`)
+  imageSlugs.add(image.slug)
+  expect(image.outputJpeg === `public/images/plotsprout/batch64/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch64/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch64/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  expect(/bookend/i.test(image.prompt), `${label}.prompt must describe the bookend evidence product hero.`)
+  expect(/evidence/i.test(image.prompt), `${label}.prompt must describe evidence cards.`)
+  expect(/text/i.test(image.negativePrompt), `${label}.negativePrompt must block text-like artifacts.`)
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  const generatedFileExists = [jpegPath, webpPath, sidecarPath].some((filePath) => existsSync(filePath))
+  if (!generatedFileExists) return
+
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -5765,6 +5820,14 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       minParentSteps: 4,
       maxWorldSlugs: 16,
     },
+    'bookend-story-evidence-card-pack': {
+      title: 'Bookend Story Evidence Card Pack',
+      pricePoint: '$101',
+      minIncludedPages: 10,
+      minUseCases: 4,
+      minParentSteps: 4,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -5785,7 +5848,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
     product.slug === 'archive-drawer-story-resolution-card-pack' ||
     product.slug === 'card-catalog-story-retell-card-pack' ||
     product.slug === 'library-pocket-story-summary-card-pack' ||
-    product.slug === 'shelf-marker-story-theme-card-pack'
+    product.slug === 'shelf-marker-story-theme-card-pack' ||
+    product.slug === 'bookend-story-evidence-card-pack'
       ? expandingFileStorySceneChainSafety
       : safety
   expect(product.safetyNote.includes(requiredProductSafety), `${label}.safetyNote missing required safety sentence.`)
@@ -5949,6 +6013,9 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
 
   const renderedPath = resolve(root, 'public', product.slug, 'index.html')
   if (!existsSync(renderedPath)) {
+    if (product.slug === 'bookend-story-evidence-card-pack' && options.batch64GenerationStarted) {
+      fail(`${label} static output is missing after Batch 64 generated outputs started: ${renderedPath}`)
+    }
     if (product.slug === 'shelf-marker-story-theme-card-pack' && options.batch63GenerationStarted) {
       fail(`${label} static output is missing after Batch 63 generated outputs started: ${renderedPath}`)
     }
@@ -5985,7 +6052,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
         product.slug === 'archive-drawer-story-resolution-card-pack' ||
         product.slug === 'card-catalog-story-retell-card-pack' ||
         product.slug === 'library-pocket-story-summary-card-pack' ||
-        product.slug === 'shelf-marker-story-theme-card-pack',
+        product.slug === 'shelf-marker-story-theme-card-pack' ||
+        product.slug === 'bookend-story-evidence-card-pack',
       `${label} static output is missing: ${renderedPath}`,
     )
     return
@@ -7371,12 +7439,33 @@ const batch63ImagePaths = batch63Images.images.flatMap((image) => [
   resolve(root, image.sidecar),
 ])
 
+expect(existsSync(batch64ImagesFile), `Missing Batch 64 image manifest: ${batch64ImagesFile}`)
+const batch64Images = readJson(batch64ImagesFile)
+expect(
+  batch64Images.batchId === batch64ImagesBatchId,
+  `batch64 image manifest batchId must be ${batch64ImagesBatchId}.`,
+)
+expect(batch64Images.generatedAt === '2026-06-04', 'batch64 image manifest generatedAt must be 2026-06-04.')
+expect(Array.isArray(batch64Images.images), 'batch64 image manifest images must be an array.')
+expect(batch64Images.images.length === 1, `Expected 1 Batch 64 image, found ${batch64Images.images.length}.`)
+const batch64ImageSlugs = new Set()
+batch64Images.images.forEach((image) => validateBatch64Image(image, batch64ImageSlugs))
+expect(
+  batch64ImageSlugs.has('bookend-story-evidence-card-pack'),
+  'Batch 64 images missing bookend-story-evidence-card-pack.',
+)
+const batch64ImagePaths = batch64Images.images.flatMap((image) => [
+  resolve(root, image.outputJpeg),
+  resolve(root, image.outputWebp),
+  resolve(root, image.sidecar),
+])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 56, `Expected 56 product records, found ${products.products.length}.`)
+expect(products.products.length === 57, `Expected 57 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 let batch55GeneratedOutputPaths = [...batch55ImagePaths]
 const batch55ProductRecord = products.products.find(
@@ -7575,8 +7664,37 @@ if (batch63GenerationStarted) {
     )
   }
 }
+let batch64GeneratedOutputPaths = [...batch64ImagePaths]
+const batch64ProductRecord = products.products.find(
+  (product) => product.slug === 'bookend-story-evidence-card-pack',
+)
+if (batch64ProductRecord) {
+  batch64GeneratedOutputPaths.push(resolve(root, 'public', batch64ProductRecord.slug, 'index.html'))
+}
+const batch64ProductArtifactPathForGeneration = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'bookend-story-evidence-card-pack.json',
+)
+if (existsSync(batch64ProductArtifactPathForGeneration)) {
+  const artifactSourceForGeneration = readJson(batch64ProductArtifactPathForGeneration)
+  batch64GeneratedOutputPaths.push(
+    ...Object.values(artifactSourceForGeneration.artifact ?? {}).map((relativePath) => resolve(root, relativePath)),
+  )
+}
+const batch64GenerationStarted = anyPathExists(batch64GeneratedOutputPaths)
+if (batch64GenerationStarted) {
+  for (const imagePath of batch64ImagePaths) {
+    expect(
+      existsSync(imagePath),
+      `Batch 64 generated image output is missing after Batch 64 generated outputs started: ${imagePath}`,
+    )
+  }
+}
 products.products.forEach((product) =>
   validateProduct(product, productSlugs, worldSlugs, {
+    batch64GenerationStarted,
     batch55GenerationStarted,
     batch56GenerationStarted,
     batch57GenerationStarted,
@@ -7645,6 +7763,7 @@ for (const requiredProductSlug of [
   'card-catalog-story-retell-card-pack',
   'library-pocket-story-summary-card-pack',
   'shelf-marker-story-theme-card-pack',
+  'bookend-story-evidence-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -12356,6 +12475,126 @@ if (shelfMarkerStoryThemeRequiresArtifacts) {
   }
 }
 
+expect(
+  existsSync(bookendStoryEvidenceSourceFile),
+  `Missing Batch 64 Bookend Story Evidence Card Pack source file: ${bookendStoryEvidenceSourceFile}`,
+)
+const bookendStoryEvidenceSource = readJson(bookendStoryEvidenceSourceFile)
+expect(
+  bookendStoryEvidenceSource.batchId === '2026-06-04-batch64',
+  'Bookend Story Evidence Card Pack source batchId must be 2026-06-04-batch64.',
+)
+const bookendStoryEvidenceProduct = products.products.find(
+  (product) => product.slug === 'bookend-story-evidence-card-pack',
+)
+expect(
+  bookendStoryEvidenceProduct,
+  'Missing Bookend Story Evidence Card Pack product record for Batch 64 artifact validation.',
+)
+const bookendStoryEvidenceSourceErrors = validateBookendStoryEvidenceCardPackSource(
+  bookendStoryEvidenceSource,
+  bookendStoryEvidenceProduct,
+  worldAgeBands,
+)
+expect(
+  bookendStoryEvidenceSourceErrors.length === 0,
+  `Bookend Story Evidence Card Pack source failed validation:\n${bookendStoryEvidenceSourceErrors.join('\n')}`,
+)
+const bookendStoryEvidenceSourceFileErrors = validateBookendStoryEvidenceCardPackSourceFiles(
+  bookendStoryEvidenceSource,
+  root,
+)
+expect(
+  bookendStoryEvidenceSourceFileErrors.length === 0,
+  `Bookend Story Evidence Card Pack sourceFiles failed validation:\n${bookendStoryEvidenceSourceFileErrors.join('\n')}`,
+)
+const bookendStoryEvidenceSummaryErrors = validateProductWorldSummaries(
+  bookendStoryEvidenceProduct,
+  'Bookend Story Evidence Card Pack',
+)
+expect(
+  bookendStoryEvidenceSummaryErrors.length === 0,
+  `Bookend Story Evidence Card Pack world summaries failed validation:\n${bookendStoryEvidenceSummaryErrors.join('\n')}`,
+)
+const bookendStoryEvidenceArtifactPaths = Object.values(bookendStoryEvidenceSource.artifact).map((relativePath) =>
+  resolve(root, relativePath),
+)
+const bookendStoryEvidenceAnyArtifactFilesExist = anyPathExists(bookendStoryEvidenceArtifactPaths)
+const bookendStoryEvidenceRequiresArtifacts =
+  batch64GenerationStarted || bookendStoryEvidenceAnyArtifactFilesExist
+if (bookendStoryEvidenceRequiresArtifacts) {
+  for (const artifactPath of bookendStoryEvidenceArtifactPaths) {
+    expect(
+      existsSync(artifactPath),
+      `Bookend Story Evidence Card Pack artifact set is incomplete after artifact generation started: ${artifactPath}`,
+    )
+  }
+  const bookendStoryEvidenceExpectedPdfPages = bookendStoryEvidenceSource.cards.length + 5
+  const bookendStoryEvidenceArtifactStatus = inspectArtifactFiles(root, bookendStoryEvidenceSource.artifact, {
+    expectedPdfPages: bookendStoryEvidenceExpectedPdfPages,
+    expectedZipEntries: [
+      'Bookend-Story-Evidence-Card-Pack.pdf',
+      'README.txt',
+      'source/bookend-story-evidence-card-pack.html',
+      ...bookendStoryEvidenceSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+    ],
+  })
+  expect(
+    bookendStoryEvidenceArtifactStatus.valid,
+    `Bookend Story Evidence Card Pack artifacts failed validation:\n${bookendStoryEvidenceArtifactStatus.errors.join('\n')}`,
+  )
+  expect(
+    bookendStoryEvidenceArtifactStatus.files.pdf.size > 100_000,
+    `Bookend Story Evidence Card Pack PDF artifact is unexpectedly small: ${bookendStoryEvidenceArtifactStatus.files.pdf.size} bytes.`,
+  )
+  expect(
+    bookendStoryEvidenceArtifactStatus.files.pdf.pageCount === bookendStoryEvidenceExpectedPdfPages,
+    `Bookend Story Evidence Card Pack PDF artifact must have ${bookendStoryEvidenceExpectedPdfPages} pages.`,
+  )
+  expect(
+    bookendStoryEvidenceArtifactStatus.files.zip.size > bookendStoryEvidenceArtifactStatus.files.pdf.size,
+    'Bookend Story Evidence Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+  )
+  const bookendStoryEvidenceCheckoutErrors = validateCheckoutReadiness(
+    bookendStoryEvidenceProduct,
+    bookendStoryEvidenceArtifactStatus,
+  )
+  expect(
+    bookendStoryEvidenceCheckoutErrors.length === 0,
+    `Bookend Story Evidence Card Pack checkout readiness failed validation:\n${bookendStoryEvidenceCheckoutErrors.join('\n')}`,
+  )
+  const bookendStoryEvidenceArtifactManifest = readJson(
+    resolve(root, bookendStoryEvidenceSource.artifact.manifestPath),
+  )
+  expect(
+    bookendStoryEvidenceArtifactManifest.sourcePageCount === bookendStoryEvidenceSource.cards.length,
+    'Bookend Story Evidence Card Pack artifact manifest sourcePageCount must match source cards.',
+  )
+  expect(
+    Array.isArray(bookendStoryEvidenceArtifactManifest.files?.assets),
+    'Bookend Story Evidence Card Pack artifact manifest files.assets must be an array.',
+  )
+  expect(
+    bookendStoryEvidenceArtifactManifest.files.assets.length === bookendStoryEvidenceSource.worldSlugs.length,
+    'Bookend Story Evidence Card Pack artifact manifest must include one copied local image per source world.',
+  )
+  const bookendStoryEvidenceManifestAssetErrors = validateManifestWorldAssets(
+    bookendStoryEvidenceSource,
+    bookendStoryEvidenceArtifactManifest,
+  )
+  expect(
+    bookendStoryEvidenceManifestAssetErrors.length === 0,
+    `Bookend Story Evidence Card Pack artifact manifest image coverage failed validation:\n${bookendStoryEvidenceManifestAssetErrors.join('\n')}`,
+  )
+  for (const asset of bookendStoryEvidenceArtifactManifest.files.assets) {
+    validateImageFile(
+      resolve(root, asset.path),
+      `Bookend Story Evidence Card Pack copied artifact image ${asset.path}`,
+      'jpeg',
+    )
+  }
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -12411,6 +12650,7 @@ const productImageManifests = [
   batch61Images,
   batch62Images,
   batch63Images,
+  batch64Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

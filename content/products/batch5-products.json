@@ -5894,6 +5894,143 @@
           "summary": "A pretend Spoon Ferry Lunchbox Harbor world for noticing one fictional story theme on paper."
         }
       ]
+    },
+    {
+      "slug": "bookend-story-evidence-card-pack",
+      "title": "Bookend Story Evidence Card Pack",
+      "pricePoint": "$101",
+      "status": "checkout_pending",
+      "headline": "Printable bookend evidence cards for private fictional story claims.",
+      "summary": "Sixteen bookend evidence cards help kids support fictional story claims with clue details, because lines, and short evidence sentences.",
+      "heroImage": "images/plotsprout/batch64/bookend-story-evidence-card-pack.jpg",
+      "ctaLabel": "Request bookend evidence pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Bookend%20Story%20Evidence%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static bookend evidence pack page is ready for hosted checkout wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "puddle-planet-post-office",
+        "teacup-town-weather-window",
+        "button-bakery-map-mixup",
+        "penny-path-compass-shop",
+        "pocket-park-notice-board",
+        "greenhouse-gear-garden",
+        "orchard-pulley-post",
+        "rain-gauge-railway",
+        "cloudberry-clocktower",
+        "tiny-lantern-reef",
+        "almost-invention-workshop",
+        "clue-label-tower-museum",
+        "compass-craft-academy",
+        "margin-note-market",
+        "pencil-dragon-academy"
+      ],
+      "includedPages": [
+        "Sixteen printable bookend evidence cards",
+        "Adult setup guide",
+        "Story claim prompts",
+        "First clue prompts",
+        "Second clue prompts",
+        "Because line prompts",
+        "Evidence sentence prompts",
+        "Six adult-led evidence routines",
+        "Ten take-home evidence slips",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family paper table for supporting one claim in a pretend story",
+        "A homeschool writing station for first clue, second clue, and because line practice",
+        "A tutoring pack for writers who need concrete evidence sentence support",
+        "An adult-led small group activity for private paper-only evidence practice"
+      ],
+      "parentSteps": [
+        "Print one evidence card and set it beside a blank page.",
+        "Ask for the story claim before asking for the first clue.",
+        "Let the child point, dictate, sketch, or write one short line per blank.",
+        "Close with a bookend note and keep every clue fictional."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "title": "Moon Muffin Market",
+          "summary": "A pretend Moon Muffin Market world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "title": "Puddle Planet Post Office",
+          "summary": "A pretend Puddle Planet Post Office world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "title": "Teacup Town Weather Window",
+          "summary": "A pretend Teacup Town Weather Window world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "title": "Button Bakery Map Mix-Up",
+          "summary": "A pretend Button Bakery Map Mix-Up world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "title": "Penny Path Compass Shop",
+          "summary": "A pretend Penny Path Compass Shop world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "title": "Pocket Park Notice Board",
+          "summary": "A pretend Pocket Park Notice Board world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "greenhouse-gear-garden",
+          "title": "Greenhouse Gear Garden",
+          "summary": "A pretend Greenhouse Gear Garden world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "orchard-pulley-post",
+          "title": "Orchard Pulley Post",
+          "summary": "A pretend Orchard Pulley Post world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "title": "Rain Gauge Railway",
+          "summary": "A pretend Rain Gauge Railway world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "cloudberry-clocktower",
+          "title": "Cloudberry Clocktower",
+          "summary": "A pretend Cloudberry Clocktower world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "tiny-lantern-reef",
+          "title": "Tiny Lantern Reef",
+          "summary": "A pretend Tiny Lantern Reef world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "title": "Almost Invention Workshop",
+          "summary": "A pretend Almost Invention Workshop world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "title": "Clue Label Tower Museum",
+          "summary": "A pretend Clue Label Tower Museum world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "title": "Compass Craft Academy",
+          "summary": "A pretend Compass Craft Academy world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "margin-note-market",
+          "title": "Margin Note Market",
+          "summary": "A pretend Margin Note Market world for supporting one fictional story claim on paper."
+        },
+        {
+          "slug": "pencil-dragon-academy",
+          "title": "Pencil Dragon Academy",
+          "summary": "A pretend Pencil Dragon Academy world for supporting one fictional story claim on paper."
+        }
+      ]
     }
   ]
 }

@@ -718,6 +718,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable shelf marker story theme cards with adult guide tools, theme routines, and take-home theme slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'bookend-story-evidence-card-pack',
+    title: 'Bookend Story Evidence Card Pack',
+    pricePoint: '$101',
+    description:
+      'Sixteen printable bookend story evidence cards with adult guide tools, evidence routines, and take-home evidence slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]
