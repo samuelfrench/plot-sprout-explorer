@@ -678,6 +678,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable hanging file story decision-point cards with adult guide tools, decision-point routines, and take-home decision slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'file-box-story-turning-point-card-pack',
+    title: 'File Box Story Turning Point Card Pack',
+    pricePoint: '$91',
+    description:
+      'Sixteen printable file box story turning-point cards with adult guide tools, turning-point routines, and take-home turning slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

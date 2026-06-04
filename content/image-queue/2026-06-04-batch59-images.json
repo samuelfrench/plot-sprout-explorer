@@ -1,0 +1,20 @@
+{
+  "batchId": "2026-06-04-batch59-images",
+  "generatedAt": "2026-06-04",
+  "purpose": "Add the checkout-pending file box story turning point card pack product hero image.",
+  "images": [
+    {
+      "slug": "file-box-story-turning-point-card-pack",
+      "title": "File Box Story Turning Point Card Pack",
+      "purpose": "Static product hero image for the checkout-pending file box story turning point card pack page.",
+      "prompt": "family-friendly top-down close-cropped catalog product photo on seamless pale neutral background, blank file box tray, blank off-white turning point card stack, blank beige file tab slips, clean printable paper kit, isolated paper stationery arrangement, unmarked paper, no writing, no symbols",
+      "negativePrompt": "text, writing, letters, words, labels, titles, logo, watermark, symbols, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, spiral binding, notebook, school, home, address, route, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, rating, score, grade, timer, food, allergy, medical, scary, weapons, bullying, plants, leaves, greenery, succulent, plant pot, wood, stone, desk decor, tabletop props, cups, bowls, children, faces, hands, clutter, colored background, pink background, dark shadows",
+      "seed": 260659291,
+      "width": 1344,
+      "height": 768,
+      "outputJpeg": "public/images/plotsprout/batch59/file-box-story-turning-point-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch59/file-box-story-turning-point-card-pack.webp",
+      "sidecar": "content/image-runs/batch59/file-box-story-turning-point-card-pack.json"
+    }
+  ]
+}

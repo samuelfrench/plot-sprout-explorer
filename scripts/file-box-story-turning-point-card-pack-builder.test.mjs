@@ -467,6 +467,43 @@ describe('File Box Story Turning Point Card Pack policy', () => {
     )
   })
 
+  it('inspects generated artifacts through the configured Batch59 relative artifact paths', async () => {
+    const source = validSource()
+    const { root: imageRoot, worlds: tempWorlds } = tempWorldsAndImages(source)
+    const tempRoot = mkdtempSync(join(tmpdir(), 'file-box-turning-configured-artifacts-'))
+
+    try {
+      await buildFileBoxStoryTurningPointCardPack({
+        source,
+        worlds: tempWorlds,
+        outputDir: resolve(tempRoot, 'product-build/file-box-story-turning-point-card-pack'),
+        recordRoot: tempRoot,
+        imageRoot,
+        pdfRenderer: async () => fakePdf(source.cards.length + 5),
+      })
+
+      const artifactStatus = inspectArtifactFiles(tempRoot, source.artifact, {
+        expectedPdfPages: source.cards.length + 5,
+        expectedZipEntries: [
+          'File-Box-Story-Turning-Point-Card-Pack.pdf',
+          'README.txt',
+          'source/file-box-story-turning-point-card-pack.html',
+          ...source.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+        ],
+      })
+
+      expect(artifactStatus.valid).toBe(true)
+      expect(artifactStatus.errors).toEqual([])
+      expect(artifactStatus.files.pdf.path).toBe(source.artifact.pdfPath)
+      expect(artifactStatus.files.zip.path).toBe(source.artifact.zipPath)
+      expect(artifactStatus.files.sourceHtml.path).toBe(source.artifact.sourceHtmlPath)
+      expect(artifactStatus.files.manifest.path).toBe(source.artifact.manifestPath)
+    } finally {
+      rmSync(imageRoot, { recursive: true, force: true })
+      rmSync(tempRoot, { recursive: true, force: true })
+    }
+  })
+
   it('rejects a turning-point prompt field without a writable blank', () => {
     const source = validSource()
     source.cards[0].characterReactionPrompt = 'Character reaction: write one pretend reaction to the turning point.'

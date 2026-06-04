@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-04-batch59",
+  "generatedAt": "2026-06-04",
+  "productSlug": "file-box-story-turning-point-card-pack",
+  "title": "File Box Story Turning Point Card Pack",
+  "pricePoint": "$91",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.",
+  "files": {
+    "pdf": {
+      "path": "product-build/file-box-story-turning-point-card-pack/File-Box-Story-Turning-Point-Card-Pack.pdf",
+      "sha256": "d134bdf95e5d7099263903c45ca2018ce21f8d4bbf583a564c8edc1962b0c1eb",
+      "size": 4738674
+    },
+    "zip": {
+      "path": "product-build/file-box-story-turning-point-card-pack/file-box-story-turning-point-card-pack.zip",
+      "sha256": "da162e1b47a39211b0b09439e50dfc289d2e082d11fbbdc49105bfffe9208259",
+      "size": 9066304
+    },
+    "sourceHtml": {
+      "path": "product-build/file-box-story-turning-point-card-pack/source/file-box-story-turning-point-card-pack.html",
+      "sha256": "c4bb538b2197d349343564999579d55197fa8b944ef4b711f2a2eed95ec9ee4e",
+      "size": 60782
+    },
+    "readme": {
+      "path": "product-build/file-box-story-turning-point-card-pack/README.txt",
+      "sha256": "e8147f2c0ea8f4e634800be4157633339257c98fc0fef23fe89b74c244990ecc",
+      "size": 551
+    },
+    "assets": [
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/sticker-station-mail-cart.jpg",
+        "sha256": "3ac216af41b988ed757c346983c7c30bd6e182daf96403981799ada1b40b6429",
+        "size": 177751
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/solar-oven-picnic-station.jpg",
+        "sha256": "9742a1d469b45961d9634dc0fb6e722bf60c2f8beb872eb9790da8b21e9300be",
+        "size": 299058
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/orchard-pulley-post.jpg",
+        "sha256": "7a51a3f1f4413db9566324b67ca123c16f482d925b5246204786bcfedeb5e1da",
+        "size": 214727
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/chapter-gate-greenhouse.jpg",
+        "sha256": "2a34e6f4bafcaaf422f06aa11146c3d4247b0b7cd76b3fd207dffcb11aa2b2d1",
+        "size": 289788
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/file-box-story-turning-point-card-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      }
+    ]
+  }
+}

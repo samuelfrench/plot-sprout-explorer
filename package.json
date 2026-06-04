@@ -66,6 +66,7 @@
     "image:batch56": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch56-images.json",
     "image:batch57": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch57-images.json",
     "image:batch58": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-03-batch58-images.json",
+    "image:batch59": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-04-batch59-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -116,7 +117,8 @@
     "product:expanding-file-scene-chain-pack": "node scripts/expanding-file-story-scene-chain-card-pack-builder.mjs",
     "product:manila-folder-clue-trail-pack": "node scripts/manila-folder-story-clue-trail-card-pack-builder.mjs",
     "product:pocket-folder-goal-path-pack": "node scripts/pocket-folder-story-goal-path-card-pack-builder.mjs",
-    "product:hanging-file-decision-point-pack": "node scripts/hanging-file-story-decision-point-card-pack-builder.mjs"
+    "product:hanging-file-decision-point-pack": "node scripts/hanging-file-story-decision-point-card-pack-builder.mjs",
+    "product:file-box-turning-point-pack": "node scripts/file-box-story-turning-point-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

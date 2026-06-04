@@ -1,0 +1,1148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Box Story Turning Point Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .turning-card-page { font-size: 7.3px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .turning-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .turning-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.245in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable file box turning point cards</p>
+        <h1>File Box Story Turning Point Card Pack</h1>
+        <p>Sixteen file-box cards help writers connect a starting scene, a turn signal, a before path, an after path, a character reaction, and a next step.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable file box story turning-point cards plus adult guide tools, turning-point routines, take-home turning slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline turning point practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$91</span>
+        <h2>Included</h2>
+        <ul><li>16 printable file box turning point cards</li>
+<li>Adult setup guide</li>
+<li>Fictional turning-point safety notes</li>
+<li>Starting scene prompts</li>
+<li>Turn signal prompts</li>
+<li>Before and after path prompts</li>
+<li>Character reaction prompts</li>
+<li>Next step prompts</li>
+<li>Six adult-led turning-point routines</li>
+<li>Ten take-home turning slips</li>
+<li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Turning point coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>File Box Turning Point Adult Guide</h3><ul><li>Adult-led setup: place the file box, blank pages, pencils, and one turning point card on the table before the writer begins: ____________________.</li>
+<li>Adult-led framing: choose one fictional starting scene and keep every page paper-only, offline, and invented: ____________________.</li>
+<li>Adult-led order: move from starting scene to turn signal, before path, after path, reaction, next step, and file-box label: ____________________.</li>
+<li>Adult-led support: let the writer write or dictate short fictional lines while the adult keeps the file box sorted: ____________________.</li>
+<li>Adult-led safety: use pretend characters, broad places, and invented actions instead of real names, exact places, or personal facts: ____________________.</li>
+<li>Adult-led close: reread the turning point, add the next-step note, and write one file-box label for the paper stack: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one file box card at a time. Keep every change broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen turning card worlds</h2>
+      <p>Pick a world image, then connect what came before, what changed, and what follows next.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Sticker Station Mail Cart</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Rain Boot Route Rangers</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Greenhouse Gear Garden</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Solar Oven Picnic Station</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Orchard Pulley Post</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Chapter Gate Greenhouse</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Turning routines</p>
+      <h2>Choose the file box routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">short first-page setup</p>
+      <h3>Starting Scene File Card</h3>
+      <p>File box, blank page, pencil, and starting scene card.</p>
+      <ol><li>The adult opens the file box and points to the starting scene blank: ____________________.</li>
+<li>The writer names one fictional place where the page begins: ____________________.</li>
+<li>The adult asks what the character is doing before anything changes: ____________________.</li>
+<li>The writer writes or dictates one starting scene line on paper: ____________________.</li></ol>
+      <p>This paper turning point starts in this fictional scene: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">paper change cue</p>
+      <h3>Turn Signal Slip</h3>
+      <p>File box, starting scene page, turn signal slip, and pencil.</p>
+      <ol><li>The adult rereads the starting scene line from the paper page: ____________________.</li>
+<li>The writer invents one turn signal that shows the story is about to change: ____________________.</li>
+<li>The adult asks what the character notices when the turn signal appears: ____________________.</li>
+<li>The writer writes the turn signal on the slip and places it beside the page: ____________________.</li></ol>
+      <p>The turn signal changes the paper plan with: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">before-the-turn pass</p>
+      <h3>Before Path Sort</h3>
+      <p>File box, starting scene page, before path note, and pencil.</p>
+      <ol><li>The adult points to what the character expected before the turn signal: ____________________.</li>
+<li>The writer names the before path the character thought would happen: ____________________.</li>
+<li>The adult asks which paper line belongs before the turning point: ____________________.</li>
+<li>The writer writes the before path note and files it behind the starting scene: ____________________.</li></ol>
+      <p>The before path on this paper plan is: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">after-the-turn pass</p>
+      <h3>After Path Sort</h3>
+      <p>File box, turn signal slip, after path note, and pencil.</p>
+      <ol><li>The adult slides the turn signal slip between the before path and the blank after path: ____________________.</li>
+<li>The writer invents what changes after the turn signal: ____________________.</li>
+<li>The adult asks how the after path is different from the before path: ____________________.</li>
+<li>The writer writes the after path note and places it after the turn signal: ____________________.</li></ol>
+      <p>The after path changes the fictional page by: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">reaction line pass</p>
+      <h3>Character Reaction Note</h3>
+      <p>File box, before path note, after path note, reaction note, and pencil.</p>
+      <ol><li>The adult lays the before path and after path notes side by side: ____________________.</li>
+<li>The writer names how the fictional character reacts to the change: ____________________.</li>
+<li>The adult asks what the reaction shows in one paper line: ____________________.</li>
+<li>The writer writes the character reaction note and tucks it after the after path: ____________________.</li></ol>
+      <p>The character reaction after the turning point is: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">file-box wrap</p>
+      <h3>Next-Step File-Box Close</h3>
+      <p>File box, page stack, next-step slip, file-box label strip, and pencil.</p>
+      <ol><li>The adult rereads the starting scene, turn signal, before path, after path, and reaction: ____________________.</li>
+<li>The writer chooses one fictional next step that follows the turning point: ____________________.</li>
+<li>The adult asks what file-box label will help find this paper turning point later: ____________________.</li>
+<li>The writer writes the next-step slip and file-box label, then the adult files the stack: ____________________.</li></ol>
+      <p>The file-box label closes this turning point as: ____________________.</p>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home turning slips</p>
+      <h2>Try one turn later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home turning slip</p>
+      <h3>Turning slip 1</h3>
+      <p>Adult: set out one paper page and ask for a paper-only fictional starting scene: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home turning slip</p>
+      <h3>Turning slip 2</h3>
+      <p>Writer: the paper-only fictional starting scene in my file box is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home turning slip</p>
+      <h3>Turning slip 3</h3>
+      <p>Adult: ask what paper-only fictional turn signal changes the plan: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home turning slip</p>
+      <h3>Turning slip 4</h3>
+      <p>Writer: the paper-only fictional turn signal is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home turning slip</p>
+      <h3>Turning slip 5</h3>
+      <p>Adult: ask what paper-only fictional path the character expected before the turn signal: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home turning slip</p>
+      <h3>Turning slip 6</h3>
+      <p>Writer: the paper-only fictional before path is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home turning slip</p>
+      <h3>Turning slip 7</h3>
+      <p>Adult: ask what paper-only fictional path changes after the turn signal: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home turning slip</p>
+      <h3>Turning slip 8</h3>
+      <p>Writer: the paper-only fictional after path is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home turning slip</p>
+      <h3>Turning slip 9</h3>
+      <p>Adult: ask how the paper-only fictional character reacts and what next step follows: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home turning slip</p>
+      <h3>Turning slip 10</h3>
+      <p>Writer: the paper-only fictional next-step note and file-box label are: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Optional adult-led paper prompt: the fictional starting scene is ____________________.</li>
+<li>Optional adult-led paper prompt: the turn signal appears when ____________________.</li>
+<li>Optional adult-led paper prompt: the before path was supposed to ____________________.</li>
+<li>Optional adult-led paper prompt: the after path changes into ____________________.</li>
+<li>Optional adult-led paper prompt: the fictional character reacts by ____________________.</li>
+<li>Optional adult-led paper prompt: the next step on paper is ____________________.</li>
+<li>Optional adult-led paper prompt: the file-box label should say ____________________.</li>
+<li>Optional adult-led paper prompt: the next file-box card could begin with ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 1 | Ages 7-9 | name a fictional errand-office start scene, turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Acorn Avenue Errand Office Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one file box, blank page, pencil, and pretend errand-office turning point card beside the writer: ____________________.</p>
+      <p class="kid-direction">Writer: keep the Acorn Avenue helper, errand slips, and office counter invented while the page turns on paper only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write who is at the pretend errand office and what small paper slip starts the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: write the label, stamp mark, or folded slip that tells the helper the errand page is changing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write what the helper thought would happen before the turn signal appeared: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the calmer new paper path the helper can follow after noticing the turn signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write how the helper responds to the change with one invented action or thought: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write the next paper-only move the helper makes at the errand office: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write a broad file-box label for this Acorn Avenue turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the start scene, turn signal, and file-box label blanks before adding the paths later: ____________________. Take-home line: reopen this paper turning point later with one pretend Acorn Avenue errand slip: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 2 | Ages 7-8 | plan a fictional weather-window turning point with a start scene, turn signal, before path, after path, reaction, next step, and file-box label</div>
+      <h2>Teacup Town Weather Window Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one file box, blank page, pencil, and pretend weather-window turning point card on the table: ____________________.</p>
+      <p class="kid-direction">Writer: invent the teacup window, tiny weather sign, and helper so every detail stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write who watches the pretend window and what weather sign is first on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: write the small window clue that changes what the helper thinks the sign means: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write the simple plan the helper had before the window clue changed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the helper follows after the weather-window signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write one gentle response the helper has when the window sign changes meaning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write what the helper writes, folds, or checks next on the pretend page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write a broad file-box label for this Teacup Town turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw a tiny window mark, then fill the turn signal and file-box label blanks: ____________________. Take-home line: continue this paper turning point later with one pretend teacup-window sign: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 3 | Ages 7-9 | connect a fictional mail-cart start scene to a turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Sticker Station Mail Cart Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+        <figcaption>Sticker Station Mail Cart</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one file box, blank page, pencil, and pretend sticker-cart turning point card where the writer can reach them: ____________________.</p>
+      <p class="kid-direction">Writer: keep the mail cart, sticker slips, and station helper completely invented while the turn stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write which helper rolls the pretend cart in and which sticker slip starts the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: write the sticker shape, color word, or cart tag that changes the helper&#39;s paper plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write where the helper thought the sticker slip belonged before the turn signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the helper follows after reading the cart tag again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write how the helper reacts when the sticker clue points to a new idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write the next sticker slip, cart mark, or note the helper adds to the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write a broad file-box label for this Sticker Station turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the start scene, before path, and file-box label blanks before the after path: ____________________. Take-home line: start another paper turning point later with one pretend sticker-cart signal: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 4 | Ages 7-9 | shape a fictional spoon-ferry harbor start scene, turn signal, before path, after path, reaction, next step, and file-box label</div>
+      <h2>Spoon Ferry Lunchbox Harbor Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one file box, blank page, pencil, and pretend spoon-ferry turning point card beside the paper: ____________________.</p>
+      <p class="kid-direction">Writer: invent the harbor, spoon ferry, lunchbox tag, and helper while every move stays paper-only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write who waits near the pretend spoon ferry and what lunchbox tag starts the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: write the dock mark, ferry bell word, or tag flip that changes the harbor plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write the harbor path the helper expected before the tag flipped or the dock mark changed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the helper follows after the spoon-ferry signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write one calm response the helper has when the harbor plan changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write the next dock note, ferry mark, or file box slip the helper adds: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write a broad file-box label for this Spoon Ferry turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the turn signal and after path blanks, then choose a file-box label later: ____________________. Take-home line: reopen this paper turning point later with one pretend spoon-ferry harbor signal: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 5 | Ages 7-9 | build a fictional notice-board turning point from start scene to turn signal, before path, after path, reaction, next step, and file-box label</div>
+      <h2>Pocket Park Notice Board Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one file box, blank page, pencil, and pretend notice-board turning point card: ____________________.</p>
+      <p class="kid-direction">Writer: keep the pocket park, board notes, pins, and helper invented while the turning point stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write who reads the pretend board note and what park detail is first on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: write the pin color, paper corner, or board note that changes what the helper understands: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write the first idea the helper had before the board note changed the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the helper can follow after checking the notice board again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write one invented response the helper has when the board note changes the plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write the next note, pin mark, or folded slip the helper adds to the pretend page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write a broad file-box label for this Pocket Park turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the start scene, character reaction, and file-box label blanks for now: ____________________. Take-home line: continue this paper turning point later with one pretend pocket-park board note: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 6 | Ages 7-9 | plan a fictional ranger turning point with a start scene, turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Rain Boot Route Rangers Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+        <figcaption>Rain Boot Route Rangers</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one file box, blank page, pencil, and pretend rain-boot ranger turning point card beside the writer: ____________________.</p>
+      <p class="kid-direction">Writer: invent the ranger, boot marks, and paper trail so the whole turning point stays pretend: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write which ranger finds the first pretend boot mark and what it seems to mean: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: write the rain-boot mark, folded trail slip, or sign word that changes the paper path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write the route idea the ranger had before the turn signal appeared: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the ranger follows after reading the boot mark again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write how the ranger responds when the pretend route changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write the next boot mark, trail note, or file box slip the ranger adds: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write a broad file-box label for this Rain Boot Route Rangers turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the before path and after path blanks, then let the adult hold the file box for later: ____________________. Take-home line: restart this paper turning point later with one pretend rain-boot route signal: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 7 | Ages 8-10 | connect a fictional lab start scene, turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Tidepool Timekeepers Lab Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a file box, blank page, pencil, and label strip before the paper turning point begins: ____________________.</p>
+      <p class="kid-direction">Writer: invent a tidepool timekeeper, a pretend chart, and a made-up turn that stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write what the timekeeper is checking on the pretend tidepool chart before anything changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: name the paper clue that tells the timekeeper the plan needs a turn, such as a shell mark or clock dot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write what the timekeeper was going to do before noticing the turn signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the timekeeper follows after the signal changes the plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write how the timekeeper reacts when the after path makes more sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: add one calm next step the timekeeper can try on the same pretend lab page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write the short pretend label for this tidepool turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads the start scene and turn signal, and the writer fills only the after path blank: ____________________. Take-home line: place the lab page in the file box with the file-box label ready for later: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 8 | Ages 8-10 | shape a fictional garden helper turning point with a start scene, turn signal, before path, after path, reaction, next step, and file-box label</div>
+      <h2>Greenhouse Gear Garden Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+        <figcaption>Greenhouse Gear Garden</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: open the file box, add a blank garden page, and set a pencil beside a file-box label slip: ____________________.</p>
+      <p class="kid-direction">Writer: make up a greenhouse gear helper and keep every gear, gate, and garden note pretend on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write what the greenhouse helper is trying to sort with the pretend gear cards: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: name the small paper sign that changes the helper&#39;s plan, such as a gear notch, gate tag, or vine mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write the helper&#39;s first plan before the turn signal appears on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new plan the helper chooses after reading the turn signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write one line about how the helper reacts to the changed plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: add one paper next step that keeps the greenhouse story moving gently: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write the short pretend label for this greenhouse gear turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the turn signal line, and the writer fills only the character reaction blank: ____________________. Take-home line: tuck the greenhouse page into the file box with the before path and after path marked for later: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 9 | Ages 8-10 | plan a fictional picnic-station turning point by naming a start scene, turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Solar Oven Picnic Station Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+        <figcaption>Solar Oven Picnic Station</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a file box, blank station page, pencil, and file-box label slip where the writer can reach them: ____________________.</p>
+      <p class="kid-direction">Writer: invent a picnic station helper and use only pretend paper panels, notes, and station signs: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write what the station helper is arranging on the pretend paper panel before the plan turns: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: name the paper sign that tells the helper to change the plan, such as a sun card, shade mark, or folded tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write what the helper planned to do before the turn signal changed the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the helper follows after noticing the signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write how the helper responds when the new path fits the station better: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: add one gentle next step that belongs in the pretend picnic station story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write the short pretend label for this station turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads the before path and after path, and the writer fills only the file-box label blank: ____________________. Take-home line: save the station page in the file box with one turn signal note clipped to the page: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 10 | Ages 8-10 | draft a fictional orchard-post turning point with a start scene, turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Orchard Pulley Post Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+        <figcaption>Orchard Pulley Post</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one file box beside a blank orchard post page, pencil, and label strip before writing starts: ____________________.</p>
+      <p class="kid-direction">Writer: invent an orchard post helper and keep the pulley, message cards, and turning point completely pretend: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write what the orchard helper is carrying, sorting, or reading at the pulley post first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: name the paper clue that changes the helper&#39;s plan, such as a ribbon mark, branch tag, or pulley arrow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write the helper&#39;s first paper path before the pulley clue changes the plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the helper follows after the turn signal appears: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write how the helper reacts to the new pulley-post path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: add one next action the helper can write on the pretend orchard post page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write the short pretend label for this orchard turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult circles the turn signal phrase, and the writer fills only the after path line: ____________________. Take-home line: file the orchard post page with the turning point label facing up for later: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 11 | Ages 10-11 | plan a longer fictional revision-ferry turning point by linking start scene, turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Revision River Ferry Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out the file box, a blank river ferry page, pencil, and file-box label slip for the paper turning point: ____________________.</p>
+      <p class="kid-direction">Writer: invent a ferry guide, revision notes, and a made-up river crossing that exists only on the page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write what the ferry guide is revising, sorting, or carrying before the turning point arrives: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: name the revision clue that changes the ferry guide&#39;s plan, such as a margin arrow, ferry tag, or crossed note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write the guide&#39;s original paper path before the revision clue changes the plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new path the guide follows after the turn signal points to a better revision choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: write how the ferry guide reacts when the revised path fits the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: add one thoughtful next step the guide can write after the turning point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write the short pretend label for this revision river turning point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult rereads the turn signal, and the writer fills only the before path and after path blanks: ____________________. Take-home line: keep the ferry page in the file box with the file-box label and next step ready for later: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 12 | Ages 10-11 | connect a fictional tower-museum starting scene to a turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Clue Label Tower Museum Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one file box, blank page, pencil, and this card beside a pretend tower-museum label stack: ____________________.</p>
+      <p class="kid-direction">Writer: plan one invented tower-museum turning point on paper and keep every clue label made up with adult guidance: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write where the fictional label keeper begins in the tower museum: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: name the small paper clue that tells the scene is about to change: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write what the label keeper planned to do before the turn signal appeared: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the label keeper follows after noticing the signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: show how the label keeper reacts with one calm thought, question, or action: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write the next page action that moves the tower-museum story forward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write the broad pretend label for this turning point card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the start scene, turn signal, and file-box label first: ____________________. Take-home line: keep the page in the file box and add one new after-path note later: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 13 | Ages 10-11 | connect a fictional greenhouse starting scene to a turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Chapter Gate Greenhouse Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+        <figcaption>Chapter Gate Greenhouse</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one file box, blank page, pencil, and this card beside a pretend greenhouse gate stack: ____________________.</p>
+      <p class="kid-direction">Writer: draft one invented greenhouse turning point on paper and keep every gate detail pretend: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write where the fictional gate sorter begins beside the greenhouse papers: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: name the gate note, vine tag, or page corner that signals a change: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write what the gate sorter planned before the turn signal appeared: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the gate sorter follows once the signal is noticed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: show the gate sorter&#39;s calm thought, question, or action after the change: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write the next page action that carries the greenhouse story forward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write the broad pretend label for this greenhouse turning point card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: complete only the start scene, turn signal, and file-box label first: ____________________. Take-home line: tuck the page in the file box and add one new next-step note later: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 14 | Ages 10-11 | connect a fictional margin-note starting scene to a turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Margin Note Market Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one file box, blank page, pencil, and this card beside a pretend margin-note stall map: ____________________.</p>
+      <p class="kid-direction">Writer: plan one invented market turning point on paper using only pretend notes, tags, and paths: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write where the fictional note keeper begins in the margin-note market: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: name the margin note, paper tag, or path mark that signals a change: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write what the note keeper expected to do before the signal appeared: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the note keeper follows after reading the signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: show the note keeper&#39;s calm thought, question, or action at the turning point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write the next page action that moves the margin-note story forward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write the broad pretend label for this market turning point card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the start scene, turn signal, and file-box label before adding paths: ____________________. Take-home line: keep the page in the file box and add one new before-path or after-path note later: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 15 | Ages 10-11 | connect a fictional boardwalk starting scene to a turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Binding Day Boardwalk Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one file box, blank page, pencil, and this card beside a pretend boardwalk page stack: ____________________.</p>
+      <p class="kid-direction">Writer: draft one invented boardwalk turning point on paper and keep every binding-day detail made up: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write where the fictional binding helper begins along the boardwalk papers: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: name the ribbon tag, page marker, or boardwalk note that signals a change: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write what the binding helper planned before the signal changed the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the binding helper follows after seeing the signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: show the binding helper&#39;s calm thought, question, or action when the path changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write the next page action that carries the boardwalk story forward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write the broad pretend label for this boardwalk turning point card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the start scene, turn signal, and file-box label for now: ____________________. Take-home line: place the page in the file box and add one new character-reaction line later: ____________________.</p>
+    </section>
+
+    <section class="pack-page turning-card-page">
+      <div class="page-kicker">Turning Card 16 | Ages 10-11 | connect a fictional theater-club starting scene to a turn signal, before path, after path, character reaction, next step, and file-box label</div>
+      <h2>Index Card Theater Club Story Turning Point Card</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one file box, blank page, pencil, and this card beside a pretend theater-club index card stack: ____________________.</p>
+      <p class="kid-direction">Writer: plan one invented theater-club turning point on paper and keep every card detail pretend: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Starting scene</h3>
+      <p>Start scene: write where the fictional card keeper begins in the theater club: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turn signal</h3>
+      <p>Turn signal: name the index card, curtain tab, or note mark that signals a change: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Before path</h3>
+      <p>Before path: write what the card keeper planned before the turn signal appeared: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>After path</h3>
+      <p>After path: write the new paper path the card keeper follows after noticing the signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character reaction</h3>
+      <p>Character reaction: show the card keeper&#39;s calm thought, question, or action when the plan changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next step</h3>
+      <p>Next step: write the next page action that moves the theater-club story forward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File-box label</h3>
+      <p>File-box label: write the broad pretend label for this theater-club turning point card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the start scene, turn signal, and file-box label before adding more: ____________________. Take-home line: keep the page in the file box and add one new next-step note later: ____________________.</p>
+    </section>
+  </body>
+</html>

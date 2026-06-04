@@ -93,6 +93,7 @@ describe('storyData', () => {
       'manila-folder-story-clue-trail-card-pack',
       'pocket-folder-story-goal-path-card-pack',
       'hanging-file-story-decision-point-card-pack',
+      'file-box-story-turning-point-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -146,6 +147,7 @@ describe('storyData', () => {
       '$85',
       '$87',
       '$89',
+      '$91',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)

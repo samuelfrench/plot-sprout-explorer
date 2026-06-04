@@ -5220,6 +5220,132 @@
           "summary": "A revision ferry world for choosing one river note path and adding the next consequence."
         }
       ]
+    },
+    {
+      "slug": "file-box-story-turning-point-card-pack",
+      "title": "File Box Story Turning Point Card Pack",
+      "pricePoint": "$91",
+      "status": "checkout_pending",
+      "headline": "A printable file box card pack for paper story turning points.",
+      "summary": "Sixteen adult-led file box cards help kids connect a starting scene, a turn signal, a before path, an after path, a character reaction, a next step, and a file-box label.",
+      "heroImage": "images/plotsprout/batch59/file-box-story-turning-point-card-pack.jpg",
+      "ctaLabel": "Request turning point card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=File%20Box%20Story%20Turning%20Point%20Card%20Pack",
+      "checkoutNote": "Checkout is pending; this static file box story turning point card pack page is prepared for launch notice requests but does not accept orders yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "acorn-avenue-errand-office",
+        "teacup-town-weather-window",
+        "sticker-station-mail-cart",
+        "spoon-ferry-lunchbox-harbor",
+        "pocket-park-notice-board",
+        "rain-boot-route-rangers",
+        "tidepool-timekeepers-lab",
+        "greenhouse-gear-garden",
+        "solar-oven-picnic-station",
+        "orchard-pulley-post",
+        "revision-river-ferry",
+        "clue-label-tower-museum",
+        "chapter-gate-greenhouse",
+        "margin-note-market",
+        "binding-day-boardwalk",
+        "index-card-theater-club"
+      ],
+      "includedPages": [
+        "Sixteen printable file box turning point cards",
+        "Adult setup guide",
+        "Fictional turning-point safety notes",
+        "Starting scene prompts",
+        "Turn signal prompts",
+        "Before and after path prompts",
+        "Character reaction prompts",
+        "Next step prompts",
+        "File-box label prompts",
+        "Six adult-led turning-point routines",
+        "Ten take-home turning slips",
+        "Local image-backed world menu",
+        "Printable PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one visible turn from starting scene to next step",
+        "A tutoring or co-op table where writers connect one paper change without a screen",
+        "A calm pencil activity for linking one signal, two paths, and one reaction",
+        "A reluctant-writer activity that turns story movement into small paper blanks",
+        "A take-home turning slip set for reopening one file-box label offline"
+      ],
+      "parentSteps": [
+        "Choose one turning-point routine before the activity starts.",
+        "Set out the file box, cards, blank pages, pencils, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full page note.",
+        "Move from starting scene to turn signal, before path, after path, character reaction, next step, and file-box label.",
+        "Send one turning slip with a single blank so family adults can continue the paper turn offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for turning one office slip into a new helper path."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "summary": "A teacup weather world for spotting one window signal before the path changes."
+        },
+        {
+          "slug": "sticker-station-mail-cart",
+          "summary": "A mail cart world for filing one sticker signal and choosing the next paper move."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for shifting one harbor route after a pretend tag changes."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "summary": "A notice-board world for noticing one posted turn and writing a calmer next step."
+        },
+        {
+          "slug": "rain-boot-route-rangers",
+          "summary": "A rain boot ranger world for changing a route after one pretend signal appears."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A tidepool lab world for comparing before and after paths around one chart turn."
+        },
+        {
+          "slug": "greenhouse-gear-garden",
+          "summary": "A greenhouse gear world for reacting to one garden signal and filing the label."
+        },
+        {
+          "slug": "solar-oven-picnic-station",
+          "summary": "A solar station world for shifting a helper plan after one paper signal changes."
+        },
+        {
+          "slug": "orchard-pulley-post",
+          "summary": "An orchard post world for sending one pulley note through a new paper path."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for connecting one longer turn to a thoughtful next step."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A tower label world for naming one turn signal and sorting the file-box label."
+        },
+        {
+          "slug": "chapter-gate-greenhouse",
+          "summary": "A greenhouse gate world for shaping one careful turn without making a long book."
+        },
+        {
+          "slug": "margin-note-market",
+          "summary": "A margin note market world for moving from one before path to one after path."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "summary": "A binding boardwalk world for reacting to one page-stack turn and closing the label."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "summary": "An index card theater world for choosing one next step after a stage-card signal."
+        }
+      ]
     }
   ]
 }

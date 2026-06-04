@@ -64,7 +64,10 @@ function metaDescription(value, maxLength = 158) {
   const clipped = text.slice(0, maxLength + 1)
   const boundary = clipped.lastIndexOf(' ')
   const candidate = boundary > 80 ? clipped.slice(0, boundary) : text.slice(0, maxLength)
-  const cleaned = candidate.replace(/\s+(and|or|with|for|to)$/i, '').replace(/[ ,;:-]+$/g, '')
+  let cleaned = candidate.replace(/[ ,;:-]+$/g, '')
+  while (/\s+(and|or|with|for|to|a|an|the)$/i.test(cleaned)) {
+    cleaned = cleaned.replace(/\s+(and|or|with|for|to|a|an|the)$/i, '').replace(/[ ,;:-]+$/g, '')
+  }
   return /[.!?]$/.test(cleaned) ? cleaned : `${cleaned}.`
 }
 
