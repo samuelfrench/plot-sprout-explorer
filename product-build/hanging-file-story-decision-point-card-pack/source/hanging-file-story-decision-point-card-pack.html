@@ -1,0 +1,1148 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hanging File Story Decision Point Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .decision-card-page { font-size: 7.3px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .decision-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .decision-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.245in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable hanging file decision point cards</p>
+        <h1>Hanging File Story Decision Point Card Pack</h1>
+        <p>Sixteen hanging-file cards help writers compare two pretend paths, choose one path, write a consequence note, and add a broad file label.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable hanging file story decision-point cards plus adult guide tools, decision-point routines, take-home decision slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline decision practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$89</span>
+        <h2>Included</h2>
+        <ul><li>16 printable hanging file decision point cards</li>
+<li>Adult setup guide</li>
+<li>Fictional decision-point safety notes</li>
+<li>Character choice prompts</li>
+<li>Two-path comparison prompts</li>
+<li>Compare clue prompts</li>
+<li>Chosen path prompts</li>
+<li>Consequence note prompts</li>
+<li>File label prompts</li>
+<li>Six adult-led decision-point routines</li>
+<li>Ten take-home decision slips</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Decision point coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Hanging File Decision Point Adult Guide</h3><ul><li>Set out one hanging file, blank pages, pencils, and a decision-point card before the adult-led paper start: ____________________.</li>
+<li>Choose one fictional character choice and keep every path, clue, and consequence note invented: ____________________.</li>
+<li>Move through character choice, path one, path two, clue to compare, chosen path, consequence note, and hanging-file label in order: ____________________.</li>
+<li>Keep the adult in charge of the hanging file while the writer writes or dictates short paper lines: ____________________.</li>
+<li>Use pretend characters, broad places, and invented actions only; skip real names, real places, and personal facts: ____________________.</li>
+<li>Close by reading the chosen path, adding one consequence note, and writing the hanging-file label for later adult-led paper planning: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one hanging file card at a time. Keep every choice broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen decision card worlds</h2>
+      <p>Pick a world image, then compare two fictional paths and choose one consequence note.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Mitten Market Lost Ticket</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Compost Clock Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Orchard Pulley Post</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pond Bridge Blueprint Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Almost Invention Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Appendix Archive Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Blue Pencil Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Decision point routines</p>
+      <h2>Choose the hanging file routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">short first-page setup</p>
+      <h3>Character Choice Start</h3>
+      <p>Hanging file, blank page, pencil, and character choice slip.</p>
+      <ol><li>The adult opens the hanging file and points to the character choice blank: ____________________.</li>
+<li>The writer names one fictional character for the paper plan: ____________________.</li>
+<li>The adult asks what choice is standing in front of that character: ____________________.</li>
+<li>The writer writes or dictates one character choice line on paper: ____________________.</li></ol>
+      <p>The decision point starts with this fictional character choice: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">first option pass</p>
+      <h3>Path One Fold</h3>
+      <p>Hanging file, current page, pencil, and path one slip.</p>
+      <ol><li>The adult rereads the character choice line from the page: ____________________.</li>
+<li>The writer invents one path the fictional character could take: ____________________.</li>
+<li>The adult asks what makes path one clear on paper: ____________________.</li>
+<li>The writer writes path one on the slip and places it in the hanging file: ____________________.</li></ol>
+      <p>Path one gives the character this possible choice: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">second option pass</p>
+      <h3>Path Two Fold</h3>
+      <p>Hanging file, path one slip, blank path two slip, and pencil.</p>
+      <ol><li>The adult points from path one to the path two blank: ____________________.</li>
+<li>The writer invents a different path the fictional character could take: ____________________.</li>
+<li>The adult asks how path two is different from path one: ____________________.</li>
+<li>The writer writes path two and tucks it beside path one: ____________________.</li></ol>
+      <p>Path two gives the character this other possible choice: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">paper comparison pass</p>
+      <h3>Compare Clue Sort</h3>
+      <p>Hanging file, path one slip, path two slip, clue-to-compare note, and pencil.</p>
+      <ol><li>The adult lays path one and path two side by side on the table: ____________________.</li>
+<li>The writer chooses one clue to compare before a path is picked: ____________________.</li>
+<li>The adult asks what the clue shows about each path: ____________________.</li>
+<li>The writer writes the clue to compare on the note: ____________________.</li></ol>
+      <p>The clue to compare says this about the two paths: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">choice close pass</p>
+      <h3>Chosen Path Slip</h3>
+      <p>Hanging file, two path slips, clue note, chosen path slip, and pencil.</p>
+      <ol><li>The adult rereads path one, path two, and the clue to compare: ____________________.</li>
+<li>The writer picks one chosen path for the fictional character: ____________________.</li>
+<li>The adult asks why that path fits the character choice: ____________________.</li>
+<li>The writer writes the chosen path on the slip: ____________________.</li></ol>
+      <p>The chosen path for this decision point is: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">hanging-file wrap</p>
+      <h3>Consequence Label Close</h3>
+      <p>Hanging file, chosen path slip, consequence note, label strip, and pencil.</p>
+      <ol><li>The adult places the chosen path slip at the front of the hanging file: ____________________.</li>
+<li>The writer names one fictional consequence note for that chosen path: ____________________.</li>
+<li>The adult asks what hanging-file label will help find this decision point later: ____________________.</li>
+<li>The writer writes the consequence note and hanging-file label: ____________________.</li></ol>
+      <p>The hanging-file label closes this decision point as: ____________________.</p>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home decision slips</p>
+      <h2>Try one decision later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home decision slip</p>
+      <h3>Decision slip 1</h3>
+      <p>Adult: open the hanging file and ask for one fictional character choice: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home decision slip</p>
+      <h3>Decision slip 2</h3>
+      <p>Writer: the fictional character choice is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home decision slip</p>
+      <h3>Decision slip 3</h3>
+      <p>Adult: ask what path one could be on the paper plan: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home decision slip</p>
+      <h3>Decision slip 4</h3>
+      <p>Writer: path one is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home decision slip</p>
+      <h3>Decision slip 5</h3>
+      <p>Adult: ask what different path two could be: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home decision slip</p>
+      <h3>Decision slip 6</h3>
+      <p>Writer: path two is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home decision slip</p>
+      <h3>Decision slip 7</h3>
+      <p>Adult: ask for one clue to compare before choosing: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home decision slip</p>
+      <h3>Decision slip 8</h3>
+      <p>Writer: the clue to compare is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home decision slip</p>
+      <h3>Decision slip 9</h3>
+      <p>Adult: reread both paths and ask which chosen path fits the character choice: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home decision slip</p>
+      <h3>Decision slip 10</h3>
+      <p>Writer: the consequence note and hanging-file label are: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Optional adult-led paper prompt: the fictional character choice is ____________________.</li>
+<li>Optional adult-led paper prompt: path one could lead to ____________________.</li>
+<li>Optional adult-led paper prompt: path two could lead to ____________________.</li>
+<li>Optional adult-led paper prompt: the clue to compare is ____________________.</li>
+<li>Optional adult-led paper prompt: the chosen path should be ____________________.</li>
+<li>Optional adult-led paper prompt: the consequence note says ____________________.</li>
+<li>Optional adult-led paper prompt: the hanging-file label can name ____________________.</li>
+<li>Optional adult-led paper prompt: the next decision point can start with ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 1 | Ages 7-9 | name one fictional character choice, two possible paths, one clue to compare, one chosen path, one consequence note, and one hanging-file label for a pretend errand-office scene</div>
+      <h2>Acorn Avenue Errand Office Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one hanging file, blank page, pencil, and pretend errand-office decision point card beside the writer: ____________________.</p>
+      <p class="kid-direction">Writer: keep the Acorn Avenue helper and every errand office detail invented while you decide between two paper paths: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Choice: name the fictional helper&#39;s errand-office choice at the decision point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path the helper could try with the errand note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a different possible paper path the helper could try with the same errand note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: write one pretend clue that helps compare the two errand-office paths: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose one path for the helper and write why it fits this made-up errand scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write one small result note from the chosen errand-office path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>File label: write a broad hanging-file label for this Acorn Avenue decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the choice, compare clue, and file label blanks before choosing a path later: ____________________. Take-home line: restart this paper decision point later with one pretend Acorn Avenue errand choice: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 2 | Ages 7-9 | name one fictional character choice, two possible paths, one clue to compare, one chosen path, one consequence note, and one hanging-file label for a pretend button-bakery map mixup</div>
+      <h2>Button Bakery Map Mixup Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one hanging file, blank page, pencil, and pretend button-map decision point card where the writer can reach them: ____________________.</p>
+      <p class="kid-direction">Writer: invent the button bakery, map marks, and helper choice on paper without using real place details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Choice: name the fictional helper&#39;s choice when two button-map marks point to different ideas: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path the helper could follow from the button mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a second possible paper path that uses a different button-map clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: write one pretend map clue, button color, or label that helps compare the paths: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose one path for the helper and write the reason it fits the map mixup: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write one small result note from the chosen button-map path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>File label: write a broad hanging-file label for this Button Bakery decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw a tiny button mark, then fill the choice and file label blanks: ____________________. Take-home line: continue this paper decision point later with one pretend button-map choice: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 3 | Ages 7-8 | name one fictional character choice, two possible paths, one clue to compare, one chosen path, one consequence note, and one hanging-file label for a pretend mitten-ticket scene</div>
+      <h2>Mitten Market Lost Ticket Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+        <figcaption>Mitten Market Lost Ticket</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one hanging file, blank page, pencil, and pretend mitten-ticket decision point card on the table: ____________________.</p>
+      <p class="kid-direction">Writer: keep the ticket, mitten stalls, and helper made-up while the decision stays paper-only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Choice: name the fictional helper&#39;s choice when the pretend ticket could belong in two places: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path for checking the mitten ticket: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a second possible paper path for sorting the ticket mixup: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: write one pretend clue that helps compare the two ticket paths: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose one path for the helper and write why it fits the mitten market scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write one small result note from the chosen ticket path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>File label: write a broad hanging-file label for this Mitten Market decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the choice, path one, and file label blanks before adding more: ____________________. Take-home line: start another paper decision point later with one pretend mitten-ticket choice: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 4 | Ages 7-9 | name one fictional character choice, two possible paths, one clue to compare, one chosen path, one consequence note, and one hanging-file label for a pretend compass-shop decision</div>
+      <h2>Penny Path Compass Shop Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one hanging file, blank page, pencil, and pretend compass-shop decision point card beside the writer: ____________________.</p>
+      <p class="kid-direction">Writer: invent the compass shop, penny marks, and helper choice while every path stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Choice: name the fictional helper&#39;s choice when the pretend compass points toward two ideas: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path the helper could try with the compass clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a different possible paper path the helper could try with the penny mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: write one pretend clue that helps compare the compass path and penny-mark path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose one path for the helper and write why it fits the compass shop scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write one small result note from the chosen compass-shop path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>File label: write a broad hanging-file label for this Penny Path decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the choice and compare clue blanks, then let the chosen path wait: ____________________. Take-home line: continue this paper decision point later with one pretend compass-shop choice: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 5 | Ages 7-9 | name one fictional character choice, two possible paths, one clue to compare, one chosen path, one consequence note, and one hanging-file label for a pretend spoon-ferry harbor scene</div>
+      <h2>Spoon Ferry Lunchbox Harbor Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one hanging file, blank page, pencil, and pretend spoon-ferry decision point card: ____________________.</p>
+      <p class="kid-direction">Writer: keep the harbor, spoon ferry, lunchbox tag, and helper choice invented on the page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Choice: name the fictional helper&#39;s choice when the spoon ferry can carry one paper tag first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path the helper could send across the harbor: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a second possible paper path the helper could send from another dock mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: write one pretend harbor clue that helps compare the two spoon-ferry paths: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose one path for the helper and write why it fits the harbor scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write one small result note from the chosen spoon-ferry path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>File label: write a broad hanging-file label for this Spoon Ferry decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the choice, path two, and file label blanks before finishing the rest: ____________________. Take-home line: reopen this paper decision point later with one pretend spoon-ferry choice: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 6 | Ages 8-10 | name one fictional character choice, two possible paths, one clue to compare, one chosen path, one consequence note, and one hanging-file label for a pretend compost-clock workshop scene</div>
+      <h2>Compost Clock Workshop Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+        <figcaption>Compost Clock Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one hanging file, blank page, pencil, and pretend compost-clock decision point card beside the paper: ____________________.</p>
+      <p class="kid-direction">Writer: invent the clock workshop, compost dial, and helper choice while the whole decision stays paper-only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Choice: name the fictional helper&#39;s choice when the compost clock offers two timing ideas: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path the helper could try with the clock dial clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a second possible paper path the helper could try with the compost tag clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: write one pretend workshop clue that helps compare the two clock paths: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose one path for the helper and write why it fits the compost-clock scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write one small result note from the chosen workshop path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>File label: write a broad hanging-file label for this Compost Clock decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the compare clue and chosen path blanks first, then add the result note later: ____________________. Take-home line: continue this paper decision point later with one pretend compost-clock choice: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 7 | Ages 8-10 | name one fictional orchard-post character choice, two possible paper paths, one clue to compare, one chosen path, one consequence note, and one hanging-file label</div>
+      <h2>Orchard Pulley Post Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+        <figcaption>Orchard Pulley Post</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one hanging file, a blank orchard post page, a pencil, and a file label slip before the decision point starts: ____________________.</p>
+      <p class="kid-direction">Writer: invent an orchard post helper and keep the pulley, message cards, and decision point completely pretend on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Character choice: write the one choice the orchard post helper must make about a pretend pulley note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path the helper could try after reading the pulley note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write the second possible paper path the helper could try instead: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: name one clue the helper can compare before choosing, such as a ribbon mark, branch tag, or pulley arrow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose which paper path the helper follows and write why it fits the compare clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write the calm result of that choice on the pretend orchard post page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>Hanging-file label: write the short pretend label for this orchard decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads the two path lines, and the writer fills only the chosen path blank: ____________________. Take-home line: place the orchard post page in the hanging file with one consequence note ready for later: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 8 | Ages 8-10 | build a fictional pantry-measurement character choice with two possible paper paths, one compare clue, one chosen path, one consequence note, and one hanging-file label</div>
+      <h2>Pantry Measurement Mystery Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one hanging file beside a blank measurement page, a pencil, and a file label strip for the decision point: ____________________.</p>
+      <p class="kid-direction">Writer: make up a shelf helper, a measuring ribbon, and a mystery choice that stays broad, fictional, and paper-only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Character choice: write the choice the shelf helper faces when two pretend measurement marks seem useful: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path, such as checking the tall mark before the short mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write the second possible paper path, such as checking the corner note before the ribbon strip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: name the one measurement clue the helper compares before choosing a path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose one path and explain how the compare clue points that way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write what changes on the pretend measurement page because of the helper&#39;s choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>Hanging-file label: write the short pretend label for this measurement mystery decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the compare clue line, and the writer fills only the consequence note blank: ____________________. Take-home line: save the measurement page in the hanging file with the chosen path circled for later: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 9 | Ages 8-10 | draft a fictional blueprint-club character choice with two possible paths, one clue to compare, one chosen path, one consequence note, and one hanging-file label</div>
+      <h2>Pond Bridge Blueprint Club Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+        <figcaption>Pond Bridge Blueprint Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one hanging file, a blank blueprint page, a pencil, and a file label slip for the decision point: ____________________.</p>
+      <p class="kid-direction">Writer: invent a blueprint club helper and keep the pretend bridge choice on paper with adult guidance: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Character choice: write the decision the blueprint helper must make about a pretend bridge sketch: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path for revising the bridge sketch: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write the second possible paper path for revising the bridge sketch a different way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: name one blueprint clue the helper compares, such as a plank line, dotted mark, or folded corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose the paper path that best matches the compare clue and write the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write the gentle result that follows from the blueprint helper&#39;s chosen path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>Hanging-file label: write the short pretend label for this blueprint club decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult circles one blueprint clue, and the writer fills only the chosen path line: ____________________. Take-home line: file the blueprint page with one decision note and one label slip for later paper planning: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 10 | Ages 8-10 | shape a fictional lab-helper choice by naming two possible paper paths, one clue to compare, one chosen path, one consequence note, and one hanging-file label</div>
+      <h2>Tidepool Timekeepers Lab Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: open the hanging file, add a blank lab page, and place a file label strip beside the decision point card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a timekeeper helper, a pretend tidepool chart, and a paper-only decision with no real place details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Character choice: write the choice the timekeeper helper must make when two pretend chart marks point different ways: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path the helper could follow on the tidepool chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write the second possible paper path the helper could follow instead: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: name one chart clue the helper compares before choosing, such as a shell mark, wave line, or clock dot: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose the chart path that fits the compare clue and write the helper&#39;s reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write the calm result that appears on the pretend lab page after the choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>Hanging-file label: write the short pretend label for this timekeepers lab decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads the chart clue, and the writer fills only the path one and path two blanks: ____________________. Take-home line: keep the lab page in the hanging file with the chosen chart path ready to continue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 11 | Ages 10-11 | plan a longer fictional workshop character choice with two possible paths, one clue to compare, one chosen path, one consequence note, and one hanging-file label</div>
+      <h2>Almost Invention Workshop Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+        <figcaption>Almost Invention Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one hanging file, a blank workshop page, a pencil, and a file label slip beside the decision point prompt: ____________________.</p>
+      <p class="kid-direction">Writer: invent a workshop helper with a gentle almost-invention and keep the decision point made up on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Character choice: write the decision the workshop helper faces when an almost-invention can be changed two ways: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path for adjusting the almost-invention idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write the second possible paper path for adjusting the almost-invention idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: name one workshop clue the helper compares, such as a sketch arrow, gear note, or folded plan tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose the path the helper follows and explain how the compare clue supports it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write the result of the chosen path and what the helper understands next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>Hanging-file label: write the short pretend label for this workshop decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the two path lines, and the writer fills only the compare clue blank: ____________________. Take-home line: tuck the workshop page into the hanging file with the consequence note facing up for later: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 12 | Ages 10-11 | name one fictional archive character choice, two possible paper paths, one comparison clue, one chosen path, one consequence note, and one hanging-file label</div>
+      <h2>Appendix Archive Lab Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+        <figcaption>Appendix Archive Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one hanging file, blank page, pencil, and this card beside a pretend appendix archive tray: ____________________.</p>
+      <p class="kid-direction">Writer: plan one invented lab character choice on paper and keep every archive detail made up with adult guidance: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Character choice: name the fictional archive helper&#39;s choice at the decision point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible paper path through a note stack, appendix tab, or file marker: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a different possible path using another tab, margin clue, or archive note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: name one small clue that helps compare the two paths without blame or danger: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose the path the helper takes and explain the quiet reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write what changes in the pretend archive after that chosen path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>Hanging-file label: write the broad pretend label for this archive decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the character choice, two path names, and file label first: ____________________. Take-home line: keep the page with the hanging file and add one new compare clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 13 | Ages 10-11 | name one fictional observatory character choice, two possible chart paths, one comparison clue, one chosen path, one consequence note, and one hanging-file label</div>
+      <h2>Blue Pencil Observatory Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+        <figcaption>Blue Pencil Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card, a hanging file, blank paper, and pencil beside a pretend blue-pencil chart: ____________________.</p>
+      <p class="kid-direction">Writer: draft one invented observatory character choice on paper using only made-up chart details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Character choice: name the fictional chart keeper&#39;s choice at the observatory decision point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible path with a blue pencil mark, chart corner, or file tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a second possible path with a different chart mark or note strip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: name one chart clue that helps the keeper compare which path fits better: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose the path the keeper follows and give one calm reason from the clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write what the chosen path changes on the pretend chart page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>Hanging-file label: write the broad pretend label for this observatory decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the choice, the two path titles, and the file label before adding more: ____________________. Take-home line: tuck the page in the hanging file and add one new chart clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 14 | Ages 10-11 | name one fictional museum character choice, two possible label paths, one comparison clue, one chosen path, one consequence note, and one hanging-file label</div>
+      <h2>Clue Label Tower Museum Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a hanging file, blank page, pencil, and this card beside a pretend tower-museum label stack: ____________________.</p>
+      <p class="kid-direction">Writer: plan one invented museum character choice on paper and keep the tower labels fictional: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Character choice: name the fictional label keeper&#39;s choice at the tower museum decision point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible path using a clue label, shelf card, or file tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a second possible path using a different label order or tower note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: name one clue label that helps compare the two possible paths: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose the path the label keeper uses and explain why that clue helped: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write what changes in the pretend museum tower after the chosen path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>Hanging-file label: write the broad pretend label for this tower museum decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the choice blank, both path blanks, and one file label before adding the note: ____________________. Take-home line: save the page in the hanging file and add one more clue label later: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 15 | Ages 10-11 | name one fictional margin-note character choice, two possible note paths, one comparison clue, one chosen path, one consequence note, and one hanging-file label</div>
+      <h2>Margin Note Market Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one hanging file, blank page, pencil, and this card beside a pretend margin-note stall map: ____________________.</p>
+      <p class="kid-direction">Writer: draft one invented note keeper choice on paper with only pretend market and margin details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Character choice: name the fictional note keeper&#39;s choice at the margin-note decision point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible path using a margin note, stall tag, or file divider: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a second possible path using a different margin note or paper signal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: name one small note clue that helps compare which path matches the story page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose the note keeper&#39;s path and explain the paper clue that made it fit: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write what changes at the pretend margin-note market after the chosen path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>Hanging-file label: write the broad pretend label for this margin-note decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write just the choice, path one, path two, and file label for now: ____________________. Take-home line: place the page in the hanging file and add one extra margin note later: ____________________.</p>
+    </section>
+
+    <section class="pack-page decision-card-page">
+      <div class="page-kicker">Decision Card 16 | Ages 10-11 | name one fictional ferry character choice, two possible revision paths, one comparison clue, one chosen path, one consequence note, and one hanging-file label</div>
+      <h2>Revision River Ferry Story Decision Point Card</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out this card, one hanging file, blank page, and pencil beside a pretend revision river ferry chart: ____________________.</p>
+      <p class="kid-direction">Writer: plan one invented ferry character choice on paper and keep every river detail pretend and gentle: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Choice</h3>
+      <p>Character choice: name the fictional ferry guide&#39;s choice at the revision river decision point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path one</h3>
+      <p>Path one: write the first possible path using a revision note, ferry tag, or file marker: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Path two</h3>
+      <p>Path two: write a different possible path using another paper crossing note or tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Compare clue</h3>
+      <p>Compare clue: name one revision clue that helps compare the two paths before choosing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Chosen path</h3>
+      <p>Chosen path: choose the path the ferry guide follows and name the clue that tipped the choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Consequence note</h3>
+      <p>Consequence note: write what changes on the pretend river page after the chosen path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>File label</h3>
+      <p>Hanging-file label: write the broad pretend label for this revision river decision point: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the choice, two path names, and hanging-file label first: ____________________. Take-home line: keep the page in the hanging file and add one new consequence note later: ____________________.</p>
+    </section>
+  </body>
+</html>

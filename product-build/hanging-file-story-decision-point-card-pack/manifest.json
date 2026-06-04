@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-03-batch58",
+  "generatedAt": "2026-06-03",
+  "productSlug": "hanging-file-story-decision-point-card-pack",
+  "title": "Hanging File Story Decision Point Card Pack",
+  "pricePoint": "$89",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.",
+  "files": {
+    "pdf": {
+      "path": "product-build/hanging-file-story-decision-point-card-pack/Hanging-File-Story-Decision-Point-Card-Pack.pdf",
+      "sha256": "06cff61943230bdd4a040576c4b7f4ccab174f3c321b2d9288f14d881207f6de",
+      "size": 4888705
+    },
+    "zip": {
+      "path": "product-build/hanging-file-story-decision-point-card-pack/hanging-file-story-decision-point-card-pack.zip",
+      "sha256": "fbe85cae4b33fde9af4acb495a763c6c39291041d02130e19645f03a56df493b",
+      "size": 9367000
+    },
+    "sourceHtml": {
+      "path": "product-build/hanging-file-story-decision-point-card-pack/source/hanging-file-story-decision-point-card-pack.html",
+      "sha256": "e23bc6ed283397821fca0e4a81356c7ca594b45fdfeb0ee217dbe2a8b970533c",
+      "size": 60653
+    },
+    "readme": {
+      "path": "product-build/hanging-file-story-decision-point-card-pack/README.txt",
+      "sha256": "a0e25302a0a21e914313f05850c8c694d4e7ee2e7ca4dfede902853584c8c060",
+      "size": 573
+    },
+    "assets": [
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/mitten-market-lost-ticket.jpg",
+        "sha256": "ba9662cac7927c25beffc08c6f4e5b52cb422e727f87d10b1d582ae8a296902c",
+        "size": 194672
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/compost-clock-workshop.jpg",
+        "sha256": "9aed5290d2d2119410590b2a1b52a012529bfc2340dc4bb2310fa45328cb1216",
+        "size": 277439
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/orchard-pulley-post.jpg",
+        "sha256": "7a51a3f1f4413db9566324b67ca123c16f482d925b5246204786bcfedeb5e1da",
+        "size": 214727
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/pantry-measurement-mystery.jpg",
+        "sha256": "b85111fa750c89e60fc21133ea09e431a26a010d8ff24db7c4baa305c3ff3f73",
+        "size": 287571
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/pond-bridge-blueprint-club.jpg",
+        "sha256": "0fe8f3c9f82671ca8e6daa82a2c54eeda4d2c86d0d1e65a86e366df3f5f0f707",
+        "size": 238332
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/appendix-archive-lab.jpg",
+        "sha256": "b98def39163f848890045a4790bdae486d811fbdf1d967156eb0e7a5a0a74b4c",
+        "size": 291030
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/blue-pencil-observatory.jpg",
+        "sha256": "63eb8f59349d2a8b64c553669fffd66268a0560919cef1d9bb41a57addc880ae",
+        "size": 286058
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/hanging-file-story-decision-point-card-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      }
+    ]
+  }
+}

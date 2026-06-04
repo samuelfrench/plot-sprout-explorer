@@ -4920,11 +4920,14 @@ function validateBatch58Image(image, imageSlugs) {
   expect(image.sidecar === `content/image-runs/batch58/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
   expect(
     image.prompt ===
-      'family-friendly top-down close-cropped catalog product photo on seamless white background, blank hanging file folder, blank off-white decision card stack, blank file label slips, quiet printable paper kit mockup, no writing',
+      'family-friendly top-down close-cropped catalog product photo on seamless pale neutral background, blank tan hanging file folder, blank off-white decision card stack, blank beige file label slips, clean printable paper kit, isolated paper stationery arrangement, unmarked paper, no writing, no symbols',
     `${label}.prompt must match the approved Batch58 hero prompt.`,
   )
   for (const phrase of [
     'text',
+    'symbols',
+    'fake letters',
+    'stray marks',
     'labels',
     'logo',
     'spiral binding',
@@ -4937,6 +4940,11 @@ function validateBatch58Image(image, imageSlugs) {
     'schedule',
     'screens',
     'devices',
+    'keyboard',
+    'laptop',
+    'trackpad',
+    'computer',
+    'phone',
     'public',
     'upload',
     'recording',
@@ -4956,9 +4964,14 @@ function validateBatch58Image(image, imageSlugs) {
     'weapons',
     'bullying',
     'plants',
+    'greenery',
+    'succulent',
+    'plant pot',
     'cups',
     'bowls',
     'desk decor',
+    'colored background',
+    'pink background',
   ]) {
     expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
   }
