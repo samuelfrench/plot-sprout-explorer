@@ -185,7 +185,7 @@ function makeTools() {
       'Ask which clue appears more than once on the paper page: ____________________.',
       'Ask what the character chooses without using real-life facts: ____________________.',
       'Ask how the ending answers the first story question: ____________________.',
-      'Ask for one short theme line, not a grade or score: ____________________.',
+      'Ask for one short theme line, not a correction mark: ____________________.',
       'Ask where the shelf marker note belongs on the paper card: ____________________.',
       'Invite a dictated answer before asking for handwriting: ____________________.',
       'Stop after one filled blank if the writer is done: ____________________.',
@@ -374,15 +374,18 @@ describe('Shelf Marker Story Theme Card Pack contract', () => {
   it('builds deterministic PDF, ZIP, source HTML, and manifest artifacts in a temporary output directory', async () => {
     const source = makeSource()
     const tempBuild = mkdtempSync(resolve(tmpdir(), 'plotsprout-batch63-build-'))
+    const tempLanes = mkdtempSync(resolve(tmpdir(), 'plotsprout-batch63-build-lanes-'))
     const imageRoot = makeImageRoot(source)
 
     try {
+      writeTempLaneFiles(source, tempLanes)
       const first = await buildShelfMarkerStoryThemeCardPack({
         source,
         product: makeProduct(source),
         worlds,
         outputDir: tempBuild,
         imageRoot,
+        sourceFilesRoot: tempLanes,
         pdfRenderer: () => Buffer.from('%PDF-1.7\n1 0 obj\n<<>>\nendobj\n%%EOF\n'),
       })
       const firstManifest = readFileSync(first.manifestPath, 'utf8')
@@ -394,6 +397,7 @@ describe('Shelf Marker Story Theme Card Pack contract', () => {
         worlds,
         outputDir: tempBuild,
         imageRoot,
+        sourceFilesRoot: tempLanes,
         pdfRenderer: () => Buffer.from('%PDF-1.7\n1 0 obj\n<<>>\nendobj\n%%EOF\n'),
       })
 
@@ -415,6 +419,7 @@ describe('Shelf Marker Story Theme Card Pack contract', () => {
       ).toEqual([])
     } finally {
       rmSync(tempBuild, { recursive: true, force: true })
+      rmSync(tempLanes, { recursive: true, force: true })
       rmSync(imageRoot, { recursive: true, force: true })
     }
   })

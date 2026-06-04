@@ -76,6 +76,8 @@ export const cardCatalogStoryRetellCardPackProductSlug =
   'card-catalog-story-retell-card-pack'
 export const libraryPocketStorySummaryCardPackProductSlug =
   'library-pocket-story-summary-card-pack'
+export const shelfMarkerStoryThemeCardPackProductSlug =
+  'shelf-marker-story-theme-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -89,6 +91,7 @@ const fileBoxStoryTurningPointRequiredSafety = manilaFolderStoryClueTrailRequire
 const archiveDrawerStoryResolutionRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 const cardCatalogStoryRetellRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 const libraryPocketStorySummaryRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
+const shelfMarkerStoryThemeRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 
 const familySafetyBlockedTerms = [
   /\bweapon(s)?\b/i,
@@ -629,6 +632,16 @@ const requiredLibraryPocketStorySummaryCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/library-pocket-story-summary-card-pack/source/library-pocket-story-summary-card-pack.html',
   manifestPath: 'product-build/library-pocket-story-summary-card-pack/manifest.json',
+}
+
+const requiredShelfMarkerStoryThemeCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/shelf-marker-story-theme-card-pack/Shelf-Marker-Story-Theme-Card-Pack.pdf',
+  zipPath:
+    'product-build/shelf-marker-story-theme-card-pack/shelf-marker-story-theme-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/shelf-marker-story-theme-card-pack/source/shelf-marker-story-theme-card-pack.html',
+  manifestPath: 'product-build/shelf-marker-story-theme-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -19047,10 +19060,10 @@ function validateNoUnsafeLibraryPocketStorySummaryLanguage(value, label, errors)
   const allowedText = normalizeLibraryPocketStorySummaryAllowedText(value)
   pushIf(
     errors,
-    /\baccounts?\b|\blogins?\b|\blog in\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic\b|\bpublish(es|ed|ing|able)?\b|\bpublication(s)?\b|\bpublic reviews?\b|\badd a review\b|\breviews?\s+and\s+ratings?\b|\bratings?\b|\bcomments?\b|\blikes?\b|\bfollowers?\b|\bsocial\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphone(s)?\b|\btablet(s)?\b|\blaptop(s)?\b|\bcomputer(s)?\b|\bscreen(s)?\b|\bdevice(s)?\b|\bphotos?\b|\bcameras?\b|\bwrite (the )?real name(s)?\b|\breal identity\b|\bidentity details?\b|\baddresses?\b|\bstreets?\b|\bprivate locations?\b|\bexact locations?\b|\blocation details?\b|\breal route(s)?\b|\broute details?\b|\bgps\b|\bcoordinates?\b|\bexact schedules?\b|\bschedules?\b|\bprivate child data\b|\breal child data\b|\bpersonal facts?\b|\bpersonal details?\b|\bpersonal disclosure(s)?\b|\bprivate child profile(s)?\b|\bprivate profiles?\b|\bchild profiles?\b|\bprofiles?\b|\bdiar(y|ies)\b|\bjournal(s)?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bassessment(s)?\b|\bperfect\b|\bshowcase(s|d|ing)?\b|\bportfolio(s)?\b|\bdisplay(s|ed|ing)?\b|\bspell(ing)? pressure\b|\btimer(s)?\b|\btimed\b|\bcontest(s)?\b|\bprizes?\b|\bwinners?\b|\bpayments?\b|\bcheckout(s)?\b|\bprovider(s)?\b|\bstripe\b|\blibrary cards?\b|\bcheckout desks?\b|\bdue dates?\b|\bfines?\b|\breal book titles?\b|\breal author names?\b|\breal library names?\b|\bchapter book(s)?\b|\bepisode(s)?\b|\bscreenplay(s)?\b|\bcliffhanger(s)?\b|\bplot twist(es)?\b|\bchoose your own adventure\b|\bfood(s)?\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b|\bprofessional advice\b|\bhorror\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bprayer(s)?\b|\bbet(s|ting)?\b|\bgambling\b|\bcasino(s)?\b|\bdisney\b|\bpokemon\b|\bpokémon\b|\bminecraft\b|\bmarvel\b|\bstar wars\b|\bharry potter\b|\bbranded character(s)?\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b/i.test(
+    /\baccounts?\b|\blogins?\b|\blog in\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic\b|\bpublish(es|ed|ing|able)?\b|\bpublication(s)?\b|\bpublic reviews?\b|\badd a review\b|\breviews?\s+and\s+ratings?\b|\bratings?\b|\bcomments?\b|\blikes?\b|\bfollowers?\b|\bsocial\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphone(s)?\b|\btablet(s)?\b|\blaptop(s)?\b|\bcomputer(s)?\b|\bscreen(s)?\b|\bdevice(s)?\b|\bphotos?\b|\bcameras?\b|\bwrite (the )?real name(s)?\b|\breal identity\b|\bidentity details?\b|\baddresses?\b|\bstreets?\b|\bprivate locations?\b|\bexact locations?\b|\blocation details?\b|\breal route(s)?\b|\broute details?\b|\bgps\b|\bcoordinates?\b|\bexact schedules?\b|\bschedules?\b|\bprivate child data\b|\breal child data\b|\bpersonal facts?\b|\bpersonal details?\b|\bpersonal disclosure(s)?\b|\bprivate child profile(s)?\b|\bprivate profiles?\b|\bchild profiles?\b|\bprofiles?\b|\bdiar(y|ies)\b|\bjournal(s)?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bassessment(s)?\b|\bperfect\b|\bshowcase(s|d|ing)?\b|\bportfolio(s)?\b|\bdisplay(s|ed|ing)?\b|\bspell(ing)? pressure\b|\btimer(s)?\b|\btimed\b|\bcontest(s)?\b|\bprizes?\b|\bwinners?\b|\bpayments?\b|\bcheckout(s)?\b|\bprovider(s)?\b|\bstripe\b|\blibrary cards?\b|\bcheckout desks?\b|\bdue dates?\b|\bfines?\b|\bcall numbers?\b|\bbarcodes?\b|\breal book titles?\b|\breal author names?\b|\breal library names?\b|\bchapter book(s)?\b|\bepisode(s)?\b|\bscreenplay(s)?\b|\bcliffhanger(s)?\b|\bplot twist(es)?\b|\bchoose your own adventure\b|\bfood(s)?\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b|\bprofessional advice\b|\bhorror\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bprayer(s)?\b|\bbet(s|ting)?\b|\bgambling\b|\bcasino(s)?\b|\bdisney\b|\bpokemon\b|\bpokémon\b|\bminecraft\b|\bmarvel\b|\bstar wars\b|\bharry potter\b|\bbranded character(s)?\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b/i.test(
       allowedText,
     ),
-    `${label} includes account, upload, public, address, publish, portfolio, review, rating, library card, due date, real book title, real author name, real library name, episode, chapter book, screenplay, cliffhanger, plot twist, choose your own adventure, recording, photo, audio, video, timer, score, grading, rubric, assessment, spelling pressure, private child profile, election, prayer, bet, payment, checkout, Stripe, provider, food, allergy, medical, horror, politics, religion, gambling, branded character, scary, harm, bullying, fighting, or weapon language.`,
+    `${label} includes account, upload, public, address, publish, portfolio, review, rating, library card, checkout desk, due date, fine, call number, barcode, real book title, real author name, real library name, episode, chapter book, screenplay, cliffhanger, plot twist, choose your own adventure, recording, photo, audio, video, timer, score, grading, rubric, assessment, spelling pressure, private child profile, election, prayer, bet, payment, checkout, Stripe, provider, food, allergy, medical, horror, politics, religion, gambling, branded character, scary, harm, bullying, fighting, or weapon language.`,
   )
 }
 
@@ -19433,6 +19446,582 @@ export function validateLibraryPocketStorySummaryCardPackSourceFiles(source, roo
   return errors
 }
 
+const shelfMarkerStoryThemeSourceKeys = [
+  'batchId',
+  'generatedAt',
+  'productSlug',
+  'title',
+  'pricePoint',
+  'audience',
+  'sessionLength',
+  'safetyNote',
+  'artifact',
+  'sourceFiles',
+  'worldSlugs',
+  'cover',
+  'adultGuide',
+  'themeRoutines',
+  'takeHomeThemeSlips',
+  'optionalAdultPrompts',
+  'cards',
+]
+
+const shelfMarkerStoryThemeCardKeys = [
+  'id',
+  'title',
+  'worldSlug',
+  'ageBand',
+  'themeSkill',
+  'useCase',
+  'adultSetup',
+  'kidDirection',
+  'storyQuestionPrompt',
+  'repeatedCluePrompt',
+  'characterChoicePrompt',
+  'endingEchoPrompt',
+  'themeLinePrompt',
+  'shelfMarkerNotePrompt',
+  'quietOptionLine',
+  'takeHomeLine',
+]
+
+const shelfMarkerStoryThemeSourceFiles = [
+  'content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-a.json',
+  'content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-b.json',
+  'content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-c.json',
+  'content/product-artifacts/lanes/batch63-shelf-marker-theme-tools.json',
+]
+
+const shelfMarkerStoryThemeExpectedWorldSlugs = [
+  'compass-craft-academy',
+  'tiny-lantern-reef',
+  'acorn-avenue-errand-office',
+  'compost-clock-workshop',
+  'pantry-measurement-mystery',
+  'button-bakery-map-mixup',
+  'revision-river-ferry',
+  'sticker-station-mail-cart',
+  'moon-muffin-market',
+  'index-card-theater-club',
+  'puddle-planet-post-office',
+  'binding-day-boardwalk',
+  'seed-library-map-room',
+  'moss-message-observatory',
+  'cloudberry-clocktower',
+  'spoon-ferry-lunchbox-harbor',
+]
+
+const shelfMarkerStoryThemeExpectedWorldAges = new Map([
+  ['compass-craft-academy', '10-11'],
+  ['tiny-lantern-reef', '8-10'],
+  ['acorn-avenue-errand-office', '7-9'],
+  ['compost-clock-workshop', '8-10'],
+  ['pantry-measurement-mystery', '8-10'],
+  ['button-bakery-map-mixup', '7-9'],
+  ['revision-river-ferry', '10-11'],
+  ['sticker-station-mail-cart', '7-9'],
+  ['moon-muffin-market', '6-8'],
+  ['index-card-theater-club', '10-11'],
+  ['puddle-planet-post-office', '6-8'],
+  ['binding-day-boardwalk', '10-11'],
+  ['seed-library-map-room', '8-10'],
+  ['moss-message-observatory', '8-10'],
+  ['cloudberry-clocktower', '8-10'],
+  ['spoon-ferry-lunchbox-harbor', '7-9'],
+])
+
+const shelfMarkerStoryThemePriorSourceFiles = new Map([
+  [56, 'content/product-artifacts/manila-folder-story-clue-trail-card-pack.json'],
+  [57, 'content/product-artifacts/pocket-folder-story-goal-path-card-pack.json'],
+  [58, 'content/product-artifacts/hanging-file-story-decision-point-card-pack.json'],
+  [59, 'content/product-artifacts/file-box-story-turning-point-card-pack.json'],
+  [60, 'content/product-artifacts/archive-drawer-story-resolution-card-pack.json'],
+  [61, 'content/product-artifacts/card-catalog-story-retell-card-pack.json'],
+  [62, 'content/product-artifacts/library-pocket-story-summary-card-pack.json'],
+])
+
+const shelfMarkerStoryThemeExpectedOverlaps = new Map([
+  [56, 6],
+  [57, 6],
+  [58, 6],
+  [59, 6],
+  [60, 6],
+  [61, 7],
+  [62, 5],
+])
+
+function readShelfMarkerStoryThemePriorWorldSet(batchNumber) {
+  const sourceFile = shelfMarkerStoryThemePriorSourceFiles.get(batchNumber)
+  const source = JSON.parse(readFileSync(resolve(import.meta.dirname, '..', sourceFile), 'utf8'))
+  return new Set(source.worldSlugs)
+}
+
+function shelfMarkerStoryThemeTitleFromWorldSlug(slug) {
+  return slug
+    .split('-')
+    .map((part) => part[0].toUpperCase() + part.slice(1))
+    .join(' ')
+    .replace('Map Mixup', 'Map Mix-Up')
+}
+
+function normalizeShelfMarkerStoryThemeAllowedText(value) {
+  let text = JSON.stringify(value)
+    .replace(
+      /\bNo scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts\./gi,
+      '',
+    )
+    .replace(/\buse pretend names, broad made-up places, and invented actions instead of identifying facts\b/gi, '')
+    .replace(/\buse pretend names, broad made-up places, and invented actions\b/gi, '')
+    .replace(/\bdo not ask for real school, home, schedule, or identity details\b/gi, '')
+    .replace(/\bdo not collect child writing, photos, audio, video, or personal profiles\b/gi, '')
+    .replace(/\bkeep every prompt offline, paper-only, and adult-led\b/gi, '')
+    .replace(/\bkeep the shelf marker note fictional and separate from real book or library systems\b/gi, '')
+    .replace(/\bnot as a real service step\b/gi, '')
+    .replace(/\bwithout adding personal facts\b/gi, '')
+    .replace(/\bnot a personal fact\b/gi, '')
+    .replace(/\bfeels? like\b/gi, '')
+    .replace(/\bidentifying-fact collection\b/gi, '')
+    .replace(/\bidentifying facts\b/gi, '')
+    .replace(/\bpersonal facts?\b/gi, '')
+    .replace(/\badult-led\b/gi, '')
+    .replace(/\badult\b/gi, '')
+    .replace(/\boffline\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+    .replace(/\bfamilies\b/gi, '')
+    .replace(/\bfamily\b/gi, '')
+    .replace(/\bhomeschool\b/gi, '')
+    .replace(/\btutors?\b/gi, '')
+    .replace(/\bfictional\b/gi, '')
+    .replace(/\bpretend\b/gi, '')
+    .replace(/\binvented\b/gi, '')
+    .replace(/\bmade-up\b/gi, '')
+    .replace(/\bmade up\b/gi, '')
+    .replace(/\bshelf-marker-story-theme-card-pack\b/gi, '')
+    .replace(/\bshelf marker story theme card pack\b/gi, '')
+    .replace(/\bshelf marker story theme card(s)?\b/gi, '')
+    .replace(/\bshelf marker theme card(s)?\b/gi, '')
+    .replace(/\bshelf marker note(s)?\b/gi, '')
+    .replace(/\bshelf marker\b/gi, '')
+    .replace(/\bstory question(s)?\b/gi, '')
+    .replace(/\brepeated clue(s)?\b/gi, '')
+    .replace(/\bcharacter choice(s)?\b/gi, '')
+    .replace(/\bending echo(es)?\b/gi, '')
+    .replace(/\btheme line(s)?\b/gi, '')
+    .replace(/\btheme routine(s)?\b/gi, '')
+    .replace(/\btheme card(s)?\b/gi, '')
+    .replace(/\btheme slip(s)?\b/gi, '')
+    .replace(/\btheme\b/gi, '')
+    .replace(/\blabel(s)?\b/gi, '')
+    .replace(/\bpage(s)?\b/gi, '')
+    .replace(/\bpaper\b/gi, '')
+    .replace(/\bblank(s)?\b/gi, '')
+    .replace(/\bnote(s)?\b/gi, '')
+    .replace(/\bslip(s)?\b/gi, '')
+    .replace(/\bcard(s)?\b/gi, '')
+    .replace(/\bwriter(s)?\b/gi, '')
+    .replace(/\bwriting\b/gi, '')
+    .replace(/\bchild\b/gi, '')
+    .replace(/\bkid\b/gi, '')
+    .replace(/\bcharacter(s)?\b/gi, '')
+
+  for (const slug of shelfMarkerStoryThemeExpectedWorldSlugs) {
+    text = removeLiteralTerm(text, slug)
+    text = removeLiteralTerm(text, shelfMarkerStoryThemeTitleFromWorldSlug(slug))
+  }
+  return text
+}
+
+function validateNoUnsafeShelfMarkerStoryThemeLanguage(value, label, errors) {
+  const allowedText = normalizeShelfMarkerStoryThemeAllowedText(value)
+  pushIf(
+    errors,
+    /\baccounts?\b|\blogins?\b|\blog in\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic\b|\bpublish(es|ed|ing|able)?\b|\bpublication(s)?\b|\bpublic reviews?\b|\badd a review\b|\breviews?\s+and\s+ratings?\b|\bratings?\b|\bcomments?\b|\blikes?\b|\bfollowers?\b|\bsocial\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphone(s)?\b|\btablet(s)?\b|\blaptop(s)?\b|\bcomputer(s)?\b|\bscreen(s)?\b|\bdevice(s)?\b|\bphotos?\b|\bcameras?\b|\bwrite (the )?real name(s)?\b|\breal identity\b|\bidentity details?\b|\baddresses?\b|\bstreets?\b|\bprivate locations?\b|\bexact locations?\b|\blocation details?\b|\breal route(s)?\b|\broute details?\b|\bgps\b|\bcoordinates?\b|\bexact schedules?\b|\bschedules?\b|\bprivate child data\b|\breal child data\b|\bpersonal facts?\b|\bpersonal details?\b|\bpersonal disclosure(s)?\b|\bprivate child profile(s)?\b|\bprivate profiles?\b|\bchild profiles?\b|\bprofiles?\b|\bdiar(y|ies)\b|\bjournal(s)?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bassessment(s)?\b|\bperfect\b|\bshowcase(s|d|ing)?\b|\bportfolio(s)?\b|\bdisplay(s|ed|ing)?\b|\bspell(ing)? pressure\b|\btimer(s)?\b|\btimed\b|\bcontest(s)?\b|\bprizes?\b|\bwinners?\b|\bpayments?\b|\bcheckout(s)?\b|\bprovider(s)?\b|\bstripe\b|\blibrary cards?\b|\bcheckout desks?\b|\bdue dates?\b|\bfines?\b|\bcall numbers?\b|\bbarcodes?\b|\breal book titles?\b|\breal author names?\b|\breal library names?\b|\bchapter book(s)?\b|\bepisode(s)?\b|\bscreenplay(s)?\b|\bcliffhanger(s)?\b|\bplot twist(es)?\b|\bchoose your own adventure\b|\bfood(s)?\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b|\bprofessional advice\b|\bhorror\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bprayer(s)?\b|\bbet(s|ting)?\b|\bgambling\b|\bcasino(s)?\b|\bdisney\b|\bpokemon\b|\bpokémon\b|\bminecraft\b|\bmarvel\b|\bstar wars\b|\bharry potter\b|\bbranded character(s)?\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes account, upload, public, address, publish, portfolio, review, rating, library card, checkout desk, due date, fine, call number, barcode, real book title, real author name, real library name, episode, chapter book, screenplay, cliffhanger, plot twist, choose your own adventure, recording, photo, audio, video, timer, score, grading, rubric, assessment, spelling pressure, private child profile, election, prayer, bet, payment, checkout, Stripe, provider, food, allergy, medical, horror, politics, religion, gambling, branded character, scary, harm, bullying, fighting, or weapon language.`,
+  )
+}
+
+function validateShelfMarkerStoryThemeCard(
+  card,
+  index,
+  sourceWorldSlugs,
+  knownWorldSlugs,
+  knownWorldRecords,
+  cardIds,
+  errors,
+) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(card)) !== JSON.stringify(shelfMarkerStoryThemeCardKeys),
+    `${label} keys must match the exact shelf marker theme card field order.`,
+  )
+
+  for (const key of shelfMarkerStoryThemeCardKeys) validateString(card[key], `${label}.${key}`, errors)
+
+  const expectedWorldSlug = shelfMarkerStoryThemeExpectedWorldSlugs[index]
+  const expectedId = `shelf-marker-theme-card-${String(index + 1).padStart(2, '0')}`
+  const expectedAgeBand = shelfMarkerStoryThemeExpectedWorldAges.get(expectedWorldSlug)
+  const expectedTitle = shelfMarkerStoryThemeTitleFromWorldSlug(expectedWorldSlug)
+  pushIf(errors, card.id !== expectedId, `${label}.id must be ${expectedId}.`)
+  pushIf(errors, card.worldSlug !== expectedWorldSlug, `${label}.worldSlug must be ${expectedWorldSlug}.`)
+  pushIf(errors, card.ageBand !== expectedAgeBand, `${label}.ageBand must be ${expectedAgeBand}.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.title) && !card.title.includes(expectedTitle),
+    `${label}.title must include ${expectedTitle}.`,
+  )
+  pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+  cardIds.add(card.id)
+
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) && !(/theme/i.test(card.useCase) && /\bcard\b/i.test(card.useCase)),
+    `${label}.useCase must say shelf marker theme card.`,
+  )
+
+  for (const key of shelfMarkerStoryThemeCardKeys.filter(
+    (field) => !['id', 'title', 'worldSlug', 'ageBand', 'themeSkill'].includes(field),
+  )) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeShelfMarkerStoryThemeLanguage(card, label, errors)
+}
+
+function validateShelfMarkerStoryThemeRoutine(routine, index, errors) {
+  const label = `themeRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(routine)) !== JSON.stringify(['title', 'useWhen', 'steps']),
+    `${label} must use the exact theme routine field order.`,
+  )
+  for (const key of ['title', 'useWhen']) validateString(routine[key], `${label}.${key}`, errors)
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  if (Array.isArray(routine.steps)) {
+    routine.steps.forEach((step, stepIndex) => {
+      pushIf(errors, isNonEmptyString(step) && !hasWritableBlank(step), `${label}.steps[${stepIndex}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(step) && hasSnakeCasePlaceholder(step), `${label}.steps[${stepIndex}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+  validateNoUnsafeShelfMarkerStoryThemeLanguage(routine, label, errors)
+}
+
+function validateShelfMarkerStoryThemeSlip(slip, index, errors) {
+  const label = `takeHomeThemeSlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(slip)) !== JSON.stringify(['title', 'prompt', 'adultNote']),
+    `${label} must use the exact take-home theme slip field order.`,
+  )
+  for (const key of ['title', 'prompt', 'adultNote']) validateString(slip[key], `${label}.${key}`, errors)
+  pushIf(errors, isNonEmptyString(slip.prompt) && !hasWritableBlank(slip.prompt), `${label}.prompt must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(slip.prompt) && hasSnakeCasePlaceholder(slip.prompt), `${label}.prompt must use human-readable text, not snake_case placeholders.`)
+  validateNoUnsafeShelfMarkerStoryThemeLanguage(slip, label, errors)
+}
+
+export function validateShelfMarkerStoryThemeCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Shelf Marker Story Theme Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs ?? [])
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(source)) !== JSON.stringify(shelfMarkerStoryThemeSourceKeys),
+    'source must use the exact Batch 63 shelf marker theme source field order.',
+  )
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-04-batch63', 'batchId must be 2026-06-04-batch63.')
+  pushIf(errors, source.generatedAt !== '2026-06-04', 'generatedAt must be 2026-06-04.')
+  pushIf(
+    errors,
+    source.productSlug !== shelfMarkerStoryThemeCardPackProductSlug,
+    `productSlug must be ${shelfMarkerStoryThemeCardPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Shelf Marker Story Theme Card Pack', 'title must be Shelf Marker Story Theme Card Pack.')
+  pushIf(errors, source.pricePoint !== '$99', 'pricePoint must be $99.')
+  pushIf(
+    errors,
+    !source.safetyNote?.includes(shelfMarkerStoryThemeRequiredSafety),
+    'safetyNote must include required Batch 63 safety sentence.',
+  )
+
+  if (product) {
+    pushIf(errors, product.slug !== source.productSlug, 'product.slug must match productSlug.')
+    pushIf(errors, product.title !== source.title, 'product.title must match title.')
+    pushIf(errors, product.pricePoint !== source.pricePoint, 'product.pricePoint must match pricePoint.')
+    pushIf(errors, product.status !== 'checkout_pending', 'product.status must remain checkout_pending.')
+    pushIf(errors, Array.isArray(product.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+  }
+
+  pushIf(errors, !Array.isArray(source.sourceFiles), 'sourceFiles must be an array.')
+  if (Array.isArray(source.sourceFiles)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.sourceFiles) !== JSON.stringify(shelfMarkerStoryThemeSourceFiles),
+      'sourceFiles must list the exact Batch 63 shelf marker theme card lane and tools files.',
+    )
+  }
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set()
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.worldSlugs) !== JSON.stringify(shelfMarkerStoryThemeExpectedWorldSlugs),
+      'worldSlugs must match the exact Batch 63 shelf marker theme world set.',
+    )
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, sourceWorldSlugs.has(slug), `worldSlugs includes duplicate slug ${slug}.`)
+      sourceWorldSlugs.add(slug)
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+    for (const [batchNumber, expectedOverlap] of shelfMarkerStoryThemeExpectedOverlaps) {
+      const overlapSet = readShelfMarkerStoryThemePriorWorldSet(batchNumber)
+      const overlap = source.worldSlugs.filter((slug) => overlapSet.has(slug))
+      pushIf(
+        errors,
+        overlap.length !== expectedOverlap,
+        `Batch63 must overlap Batch${batchNumber} in exactly ${expectedOverlap} worlds; overlapping slugs: ${overlap.join(', ')}.`,
+      )
+    }
+  }
+
+  validateArtifactPaths(
+    source,
+    requiredShelfMarkerStoryThemeCardPackArtifactPaths,
+    'Shelf Marker Story Theme Card Pack',
+    errors,
+  )
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) validateString(source.cover[key], `cover.${key}`, errors)
+    validateExactStringArray(source.cover.included, 11, 'cover.included', errors)
+    validateNoUnsafeShelfMarkerStoryThemeLanguage(source.cover, 'cover', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    pushIf(
+      errors,
+      JSON.stringify(Object.keys(source.adultGuide)) !== JSON.stringify(['title', 'setupSteps', 'facilitationNotes', 'safetyNotes']),
+      'adultGuide must use the exact field order.',
+    )
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    for (const key of ['setupSteps', 'facilitationNotes', 'safetyNotes']) {
+      validateExactStringArray(source.adultGuide[key], 5, `adultGuide.${key}`, errors)
+      if (Array.isArray(source.adultGuide[key])) {
+        source.adultGuide[key].forEach((line, index) => {
+          pushIf(errors, isNonEmptyString(line) && !hasWritableBlank(line), `adultGuide.${key}[${index}] must include a writable blank.`)
+          pushIf(errors, isNonEmptyString(line) && hasSnakeCasePlaceholder(line), `adultGuide.${key}[${index}] must use human-readable text, not snake_case placeholders.`)
+        })
+      }
+    }
+    validateNoUnsafeShelfMarkerStoryThemeLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.themeRoutines), 'themeRoutines must be an array.')
+  if (Array.isArray(source.themeRoutines)) {
+    pushIf(errors, source.themeRoutines.length !== 6, 'themeRoutines must have exactly 6 entries.')
+    source.themeRoutines.forEach((routine, index) => validateShelfMarkerStoryThemeRoutine(routine, index, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeThemeSlips), 'takeHomeThemeSlips must be an array.')
+  if (Array.isArray(source.takeHomeThemeSlips)) {
+    pushIf(errors, source.takeHomeThemeSlips.length !== 10, 'takeHomeThemeSlips must have exactly 10 entries.')
+    source.takeHomeThemeSlips.forEach((slip, index) => validateShelfMarkerStoryThemeSlip(slip, index, errors))
+  }
+
+  validateExactStringArray(source.optionalAdultPrompts, 8, 'optionalAdultPrompts', errors)
+  if (Array.isArray(source.optionalAdultPrompts)) {
+    source.optionalAdultPrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalAdultPrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalAdultPrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeShelfMarkerStoryThemeLanguage(prompt, `optionalAdultPrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateShelfMarkerStoryThemeCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size !== 16, 'cards must cover exactly 16 unique worlds.')
+  }
+
+  validateNoUnsafeShelfMarkerStoryThemeLanguage(
+    source,
+    'Shelf Marker Story Theme Card Pack source',
+    errors,
+  )
+  validateNoRiskyLanguage(source, 'Shelf Marker Story Theme Card Pack source', errors)
+  return errors
+}
+
+function validateShelfMarkerStoryThemeToolLane(lane, sourceFile, errors) {
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(lane)) !==
+      JSON.stringify(['adultGuide', 'themeRoutines', 'takeHomeThemeSlips', 'optionalAdultPrompts']),
+    `${sourceFile} must use the exact Batch 63 tools field order.`,
+  )
+  const sourceLike = {
+    adultGuide: lane.adultGuide,
+    themeRoutines: lane.themeRoutines,
+    takeHomeThemeSlips: lane.takeHomeThemeSlips,
+    optionalAdultPrompts: lane.optionalAdultPrompts,
+  }
+  const requiresWritableBlank = (path) =>
+    path === 'adultGuide.title' ||
+    /^adultGuide\.(setupSteps|facilitationNotes|safetyNotes)\[\d+\]$/.test(path) ||
+    /^themeRoutines\[\d+\]\.(title|useWhen)$/.test(path) ||
+    /^themeRoutines\[\d+\]\.steps\[\d+\]$/.test(path) ||
+    /^takeHomeThemeSlips\[\d+\]\.prompt$/.test(path) ||
+    /^optionalAdultPrompts\[\d+\]$/.test(path)
+
+  for (const [path, value] of Object.entries(flattenStrings(sourceLike))) {
+    pushIf(
+      errors,
+      requiresWritableBlank(path) && isNonEmptyString(value) && !hasWritableBlank(value),
+      `${sourceFile}.${path} must include a writable blank.`,
+    )
+    pushIf(
+      errors,
+      isNonEmptyString(value) && hasSnakeCasePlaceholder(value),
+      `${sourceFile}.${path} must use human-readable text, not snake_case placeholders.`,
+    )
+  }
+  validateNoUnsafeShelfMarkerStoryThemeLanguage(lane, sourceFile, errors)
+}
+
+export function validateShelfMarkerStoryThemeCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three shelf marker theme card lanes and one tools lane.')
+  pushIf(
+    errors,
+    JSON.stringify(source.sourceFiles) !== JSON.stringify(shelfMarkerStoryThemeSourceFiles),
+    'sourceFiles must list the exact Batch 63 shelf marker theme card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedRange = sourceFile.includes('-cards-a')
+        ? { min: 1, max: 6, count: 6, label: '01-06' }
+        : sourceFile.includes('-cards-b')
+        ? { min: 7, max: 11, count: 5, label: '07-11' }
+        : sourceFile.includes('-cards-c')
+        ? { min: 12, max: 16, count: 5, label: '12-16' }
+        : null
+
+      if (Array.isArray(lane) && expectedRange) {
+        cardLaneFiles.push({ sourceFile, lane })
+        pushIf(errors, lane.length !== expectedRange.count, `${sourceFile} must contain exactly ${expectedRange.count} cards.`)
+        const cardIds = new Set()
+        const sourceWorldSlugs = new Set(shelfMarkerStoryThemeExpectedWorldSlugs)
+        const knownWorldRecords = shelfMarkerStoryThemeExpectedWorldAges
+        lane.forEach((card) => {
+          const match = String(card?.id ?? '').match(/-(\d{2})$/)
+          const cardNumber = match ? Number(match[1]) : NaN
+          pushIf(
+            errors,
+            !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max,
+            `${sourceFile} must include card numbers ${expectedRange.label}.`,
+          )
+          if (Number.isInteger(cardNumber)) {
+            validateShelfMarkerStoryThemeCard(
+              card,
+              cardNumber - 1,
+              sourceWorldSlugs,
+              sourceWorldSlugs,
+              knownWorldRecords,
+              cardIds,
+              errors,
+            )
+          }
+        })
+      } else if (isObject(lane) && isObject(lane.adultGuide)) {
+        toolLaneFiles.push({ sourceFile, lane })
+        validateShelfMarkerStoryThemeToolLane(lane, sourceFile, errors)
+      } else {
+        errors.push(`${sourceFile} must be a Batch 63 shelf marker theme card array lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three shelf marker theme card lane files.')
+  pushIf(errors, toolLaneFiles.length !== 1, 'sourceFiles must include exactly one shelf marker theme tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles theme card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'themeRoutines', 'takeHomeThemeSlips', 'optionalAdultPrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
@@ -19693,6 +20282,8 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
       ? artifact
       : artifact?.pdfPath === requiredDeskLampStoryProblemCardPackArtifactPaths.pdfPath
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
+      : artifact?.pdfPath === requiredShelfMarkerStoryThemeCardPackArtifactPaths.pdfPath
+      ? requiredShelfMarkerStoryThemeCardPackArtifactPaths
       : artifact?.pdfPath === requiredLibraryPocketStorySummaryCardPackArtifactPaths.pdfPath
       ? requiredLibraryPocketStorySummaryCardPackArtifactPaths
       : artifact?.pdfPath === requiredCardCatalogStoryRetellCardPackArtifactPaths.pdfPath
