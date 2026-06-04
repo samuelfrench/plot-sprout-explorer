@@ -12281,7 +12281,9 @@ const shelfMarkerStoryThemeArtifactPaths = Object.values(shelfMarkerStoryThemeSo
   resolve(root, relativePath),
 )
 const shelfMarkerStoryThemeAnyArtifactFilesExist = anyPathExists(shelfMarkerStoryThemeArtifactPaths)
-if (shelfMarkerStoryThemeAnyArtifactFilesExist) {
+const shelfMarkerStoryThemeRequiresArtifacts =
+  batch63GenerationStarted || shelfMarkerStoryThemeAnyArtifactFilesExist
+if (shelfMarkerStoryThemeRequiresArtifacts) {
   for (const artifactPath of shelfMarkerStoryThemeArtifactPaths) {
     expect(
       existsSync(artifactPath),

@@ -254,6 +254,18 @@ describe('content batch verifier summary', () => {
     })
   })
 
+  it('fails closed if Batch63 generated outputs exist before artifact files exist', () => {
+    const artifactDir = resolve(root, 'product-build/shelf-marker-story-theme-card-pack')
+
+    withRestoredPaths([artifactDir], () => {
+      rmSync(artifactDir, { recursive: true, force: true })
+
+      const output = runVerifierExpectingFailure()
+      expect(output).toContain('Shelf Marker Story Theme Card Pack artifact set is incomplete after artifact generation started')
+      expect(output).toContain('Shelf-Marker-Story-Theme-Card-Pack.pdf')
+    })
+  })
+
   it('fails closed if Batch55 artifact generation leaves a partial artifact set', () => {
     const artifactDir = resolve(root, 'product-build/expanding-file-story-scene-chain-card-pack')
     const pdfPath = resolve(artifactDir, 'Expanding-File-Story-Scene-Chain-Card-Pack.pdf')
