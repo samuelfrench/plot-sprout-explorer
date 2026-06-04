@@ -1,0 +1,109 @@
+{
+  "adultGuide": {
+    "title": "Card Catalog Story Retell Adult Guide: ____________________.",
+    "bullets": [
+      "Adult-led setup: place the card catalog label strip, blank retell slips, pencils, and one paper card on the table before the offline retell begins: ____________________.",
+      "Adult-led framing: keep every beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label fictional: ____________________.",
+      "Adult-led order: move from beginning snapshot to middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.",
+      "Adult-led support: let the writer write or dictate short paper-only retell lines while the adult keeps the card catalog stack sorted: ____________________.",
+      "Adult-led safety: use pretend names, broad made-up places, and invented actions instead of exact identifiers or personal facts: ____________________.",
+      "Adult-led close: reread the paper-only retell stack, choose the next retell prompt, and write the card catalog label: ____________________."
+    ]
+  },
+  "retellRoutines": [
+    {
+      "title": "Beginning Snapshot Sort: ____________________.",
+      "time": "short paper retell setup: ____________________.",
+      "materials": "Card catalog label strip, blank beginning snapshot slip, paper card, and pencil: ____________________.",
+      "steps": [
+        "The adult points to the beginning snapshot blank and names the retell task: ____________________.",
+        "The writer invents where the fictional story starts and who is there: ____________________.",
+        "The adult asks what one paper detail helps everyone remember the beginning snapshot: ____________________.",
+        "The writer writes the beginning snapshot on the slip and places it first: ____________________."
+      ],
+      "adultWrapLine": "This retell begins with this beginning snapshot: ____________________."
+    },
+    {
+      "title": "Middle Clue Match: ____________________.",
+      "time": "middle retell pass: ____________________.",
+      "materials": "Beginning snapshot slip, middle clue slip, paper card, and pencil: ____________________.",
+      "steps": [
+        "The adult rereads the beginning snapshot and points to the middle clue blank: ____________________.",
+        "The writer chooses one fictional middle clue that helps the retell move forward: ____________________.",
+        "The adult asks how the middle clue connects to the beginning snapshot: ____________________.",
+        "The writer writes the middle clue and places it after the beginning snapshot: ____________________."
+      ],
+      "adultWrapLine": "The middle clue in this retell is: ____________________."
+    },
+    {
+      "title": "Turning Choice Card: ____________________.",
+      "time": "choice retell pass: ____________________.",
+      "materials": "Middle clue slip, turning choice slip, paper card, and pencil: ____________________.",
+      "steps": [
+        "The adult lays the middle clue beside the turning choice blank: ____________________.",
+        "The writer invents one fictional turning choice the character makes after the middle clue: ____________________.",
+        "The adult asks what changes because of the turning choice: ____________________.",
+        "The writer writes the turning choice and tucks it behind the middle clue: ____________________."
+      ],
+      "adultWrapLine": "The turning choice for this paper-only retell is: ____________________."
+    },
+    {
+      "title": "Ending Answer Check: ____________________.",
+      "time": "ending retell pass: ____________________.",
+      "materials": "Turning choice slip, ending answer slip, paper card, and pencil: ____________________.",
+      "steps": [
+        "The adult rereads the turning choice and points to the ending answer blank: ____________________.",
+        "The writer names the fictional ending answer that finishes the retell path: ____________________.",
+        "The adult asks which earlier slip the ending answer connects back to: ____________________.",
+        "The writer writes the ending answer and places it after the turning choice: ____________________."
+      ],
+      "adultWrapLine": "The ending answer closes this retell with: ____________________."
+    },
+    {
+      "title": "Favorite Detail Finder: ____________________.",
+      "time": "detail retell pass: ____________________.",
+      "materials": "Retell slips, favorite detail slip, paper card, and pencil: ____________________.",
+      "steps": [
+        "The adult spreads the beginning snapshot, middle clue, turning choice, and ending answer slips in order: ____________________.",
+        "The writer chooses one favorite detail from the fictional retell stack: ____________________.",
+        "The adult asks why that favorite detail helps the retell stay clear on paper: ____________________.",
+        "The writer writes the favorite detail and adds it beside the ending answer: ____________________."
+      ],
+      "adultWrapLine": "The favorite detail to remember is: ____________________."
+    },
+    {
+      "title": "Card Catalog Label Close: ____________________.",
+      "time": "retell wrap pass: ____________________.",
+      "materials": "Finished retell slips, next retell prompt slip, card catalog label strip, and pencil: ____________________.",
+      "steps": [
+        "The adult rereads the beginning snapshot, middle clue, turning choice, ending answer, and favorite detail: ____________________.",
+        "The writer chooses one next retell prompt for another paper-only pass: ____________________.",
+        "The adult asks what card catalog label will help sort the fictional retell stack: ____________________.",
+        "The writer writes the next retell prompt and card catalog label, then the adult files the slips: ____________________."
+      ],
+      "adultWrapLine": "The card catalog label for this retell is: ____________________."
+    }
+  ],
+  "takeHomeRetellSlips": [
+    "Adult: set out one paper slip and ask for a fictional beginning snapshot: ____________________.",
+    "Writer: the beginning snapshot for my paper-only retell is: ____________________.",
+    "Adult: ask which fictional middle clue belongs after the beginning snapshot: ____________________.",
+    "Writer: the middle clue in this retell is: ____________________.",
+    "Adult: ask what fictional turning choice follows the middle clue: ____________________.",
+    "Writer: the turning choice is: ____________________.",
+    "Adult: ask what fictional ending answer connects back to the retell path: ____________________.",
+    "Writer: the ending answer is: ____________________.",
+    "Adult: ask for one favorite detail and one next retell prompt: ____________________.",
+    "Writer: the favorite detail, next retell prompt, and card catalog label are: ____________________."
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led paper prompt: the beginning snapshot starts with ____________________.",
+    "Optional adult-led paper prompt: the middle clue helps because ____________________.",
+    "Optional adult-led paper prompt: the turning choice changes the retell by ____________________.",
+    "Optional adult-led paper prompt: the ending answer connects back to ____________________.",
+    "Optional adult-led paper prompt: the favorite detail to keep is ____________________.",
+    "Optional adult-led paper prompt: the next retell prompt could ask ____________________.",
+    "Optional adult-led paper prompt: the card catalog label should say ____________________.",
+    "Optional adult-led paper prompt: the paper-only retell stack is filed under ____________________."
+  ]
+}
