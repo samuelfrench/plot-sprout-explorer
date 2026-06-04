@@ -1,8 +1,5 @@
 {
-  "batchId": "2026-06-04-batch59",
-  "productSlug": "file-box-story-turning-point-card-pack",
-  "lane": "cards-a",
-  "cardRange": "01-06",
+  "laneId": "batch59-file-box-turning-point-cards-a",
   "cards": [
     {
       "id": "file-box-turning-point-card-01",
