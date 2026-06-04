@@ -1,0 +1,150 @@
+{
+  "adultGuide": {
+    "title": "Library Pocket Story Summary Adult Guide: ____.",
+    "setupSteps": [
+      "Set out one story summary card, seven blank slips, a pencil, and a paper pocket before the session begins: ____.",
+      "Name the paper-only path: story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label: ____.",
+      "Choose one fictional story world from the pack and keep all names, places, and actions invented: ____.",
+      "Place one blank slip under each summary heading so the writer can see the full order before writing: ____.",
+      "Keep the finished slips tucked in the paper pocket for adult-led reuse: ____."
+    ],
+    "facilitationNotes": [
+      "Use short spoken choices when a writer gets stuck: start place, action, change, result, detail, sentence, label: ____.",
+      "Accept dictated words, copied adult wording, or independent writing as long as the summary stays fictional: ____.",
+      "Keep the summary sentence to one clear line that names the story start, main action, important change, and ending result: ____.",
+      "Use the keeper detail only if it helps the summary stay specific without adding identifying facts: ____.",
+      "Close by rereading the slips in order and checking that the library pocket label matches the summary sentence: ____."
+    ],
+    "safetyNotes": [
+      "Use pretend names, broad made-up places, and invented actions instead of identifying facts: ____.",
+      "Keep the activity away from outside audiences, correction marks, or comparison between writers: ____.",
+      "Keep the pocket metaphor separate from outside title pages, creator names, or service forms: ____.",
+      "Keep every prompt about a pretend story with invented details only: ____.",
+      "Skip any prompt that starts to feel like identifying-fact collection and return to invented story facts: ____."
+    ]
+  },
+  "summaryRoutines": [
+    {
+      "title": "Pocket Order Setup: ____.",
+      "useWhen": "Use before a first summary card so the adult and writer can see the seven paper parts: ____.",
+      "steps": [
+        "The adult lays out blank slips labeled story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label: ____.",
+        "The writer points to the story start slip and says where the fictional story begins: ____.",
+        "The adult points across the row and names each next part in order: ____.",
+        "The writer tucks the empty slips halfway into the paper pocket until each one is ready: ____."
+      ]
+    },
+    {
+      "title": "Story Start To Main Action: ____.",
+      "useWhen": "Use when the summary needs a clear opening and one action that moves the story: ____.",
+      "steps": [
+        "The adult asks for one invented story start with a broad pretend place and a made-up character role: ____.",
+        "The writer writes the story start on the first slip: ____.",
+        "The adult asks what the character does next that matters most: ____.",
+        "The writer writes the main action on the second slip and places it after the story start: ____."
+      ]
+    },
+    {
+      "title": "Important Change Check: ____.",
+      "useWhen": "Use when the middle of the summary feels like a list instead of a change: ____.",
+      "steps": [
+        "The adult rereads the story start and main action in a calm voice: ____.",
+        "The writer names what becomes different because of the main action: ____.",
+        "The adult helps trim the answer to one important change: ____.",
+        "The writer writes the important change and slides it behind the main action slip: ____."
+      ]
+    },
+    {
+      "title": "Ending Result Match: ____.",
+      "useWhen": "Use when the summary needs a result that connects back to the earlier slips: ____.",
+      "steps": [
+        "The adult asks what happens after the important change in the fictional story: ____.",
+        "The writer chooses one ending result that answers the main action: ____.",
+        "The adult checks that the ending result does not add a new unrelated problem: ____.",
+        "The writer writes the ending result and places it after the important change: ____."
+      ]
+    },
+    {
+      "title": "Keeper Detail Sort: ____.",
+      "useWhen": "Use when the summary sentence needs one vivid but small detail: ____.",
+      "steps": [
+        "The adult spreads the story start, main action, important change, and ending result slips: ____.",
+        "The writer chooses one keeper detail that helps the summary stay clear: ____.",
+        "The adult asks whether the keeper detail supports the summary sentence: ____.",
+        "The writer writes the keeper detail on its slip and keeps it beside the sentence blank: ____."
+      ]
+    },
+    {
+      "title": "Summary Sentence And Pocket Label: ____.",
+      "useWhen": "Use at the end of a paper session to close the summary neatly: ____.",
+      "steps": [
+        "The adult reads the four main slips in order without adding extra facts: ____.",
+        "The writer writes one summary sentence using the story start, main action, important change, and ending result: ____.",
+        "The adult asks for a short library pocket label that names the summary focus: ____.",
+        "The writer writes the library pocket label and tucks all slips into the paper pocket: ____."
+      ]
+    }
+  ],
+  "takeHomeSummarySlips": [
+    {
+      "title": "Story Start Slip",
+      "prompt": "The fictional story start is ____________________.",
+      "adultNote": "Ask for one invented starting place or situation, then stop."
+    },
+    {
+      "title": "Main Action Slip",
+      "prompt": "The main action that moves the story is ____________________.",
+      "adultNote": "Help choose one action, not every event."
+    },
+    {
+      "title": "Important Change Slip",
+      "prompt": "The important change after the main action is ____________________.",
+      "adultNote": "Look for what becomes different in the fictional story."
+    },
+    {
+      "title": "Ending Result Slip",
+      "prompt": "The ending result is ____________________.",
+      "adultNote": "Keep the result connected to the earlier action."
+    },
+    {
+      "title": "Keeper Detail Slip",
+      "prompt": "The keeper detail that helps the summary is ____________________.",
+      "adultNote": "Choose one useful detail and leave the rest out."
+    },
+    {
+      "title": "Summary Sentence Slip",
+      "prompt": "My summary sentence is: ____________________.",
+      "adultNote": "Use one clear sentence from the finished slips."
+    },
+    {
+      "title": "Library Pocket Label Slip",
+      "prompt": "The library pocket label for this summary is ____________________.",
+      "adultNote": "Make the label short and fictional."
+    },
+    {
+      "title": "Order Check Slip",
+      "prompt": "My slips are in this order: story start, main action, important change, ending result, keeper detail, summary sentence, library pocket label: ____________________.",
+      "adultNote": "Use this as a quiet reread pass."
+    },
+    {
+      "title": "Shorten The Summary Slip",
+      "prompt": "One extra detail I can leave out is ____________________.",
+      "adultNote": "Frame this as paper sorting, not judging."
+    },
+    {
+      "title": "Pocket Close Slip",
+      "prompt": "The finished paper pocket holds a summary about ____________________.",
+      "adultNote": "Close the session by filing the slips without sharing or comparing."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Ask which slip should be easiest to fill first, then start there: ____.",
+    "Offer two adult-made fictional examples if the writer needs a model: ____.",
+    "Reread the slips in order before asking for the summary sentence: ____.",
+    "Point to the important change slip when the summary gets too long: ____.",
+    "Use the keeper detail slip only after the ending result is clear: ____.",
+    "Help shorten the library pocket label to a few plain words: ____.",
+    "Keep unused slips blank and return them to the pack for another paper session: ____.",
+    "End the session when the summary sentence and library pocket label both match the same fictional story: ____."
+  ]
+}
