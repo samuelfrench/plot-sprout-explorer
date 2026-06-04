@@ -26,8 +26,8 @@ const sourceFiles = [
 ]
 
 const worldAges = {
-  'moon-muffin-market': '6-8',
-  'puddle-planet-post-office': '6-8',
+  'moon-muffin-market': '7-8',
+  'puddle-planet-post-office': '7-8',
   'teacup-town-weather-window': '7-8',
   'button-bakery-map-mixup': '7-9',
   'penny-path-compass-shop': '7-9',
@@ -46,7 +46,15 @@ const worldAges = {
 
 const worldSlugs = Object.keys(worldAges)
 const knownWorldAges = new Map(
-  Object.entries(worldAges).map(([slug, ageBand]) => [slug, { ageBand }]),
+  Object.entries(worldAges).map(([slug, ageBand]) => [
+    slug,
+    {
+      ageBand:
+        slug === 'moon-muffin-market' || slug === 'puddle-planet-post-office'
+          ? '6-8'
+          : ageBand,
+    },
+  ]),
 )
 const worlds = new Map(
   Object.entries(worldAges).map(([worldSlug, ageBand]) => [
@@ -54,7 +62,7 @@ const worlds = new Map(
     {
       slug: worldSlug,
       title: titleForSlug(worldSlug),
-      ageBand,
+      ageBand: knownWorldAges.get(worldSlug).ageBand,
       premise: 'A friendly invented world for an adult-led paper story evidence card.',
     },
   ]),
@@ -284,6 +292,7 @@ function makeProduct(source = makeSource()) {
     worldSummaries: source.worldSlugs.map((slug) => ({
       slug,
       title: titleForSlug(slug),
+      ageBand: source.cards.find((card) => card.worldSlug === slug)?.ageBand,
       summary: `A pretend ${titleForSlug(slug)} world for supporting one fictional story claim on paper.`,
     })),
   }
@@ -384,6 +393,8 @@ describe('Bookend Story Evidence Card Pack', () => {
     const html = renderBookendStoryEvidenceCardPackHtml(source, worlds, imageMap)
 
     expect(html).toContain('Bookend Story Evidence Card Pack')
+    expect(html).toContain('Ages 7-8')
+    expect(html).not.toContain('Ages 6-8')
     expect(html).toContain('Story claim:')
     expect(html).toContain('First clue:')
     expect(html).toContain('Second clue:')

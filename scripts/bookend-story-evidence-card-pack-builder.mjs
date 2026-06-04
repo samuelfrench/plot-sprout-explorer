@@ -230,18 +230,22 @@ function renderList(items) {
   return items.map((item) => `<li>${escapeHtml(item)}</li>`).join('')
 }
 
+function cardAgeBandForWorld(source, slug) {
+  return source.cards.find((card) => card.worldSlug === slug)?.ageBand
+}
+
 function renderGuideCard(title, items) {
   return `<article class="guide-card"><h3>${escapeHtml(title)}</h3><ul>${renderList(items)}</ul></article>`
 }
 
-function renderWorldCard(world, imagePath) {
+function renderWorldCard(world, imagePath, displayAgeBand = world.ageBand) {
   const image = imagePath
     ? `<img src="${escapeHtml(imagePath)}" alt="${escapeHtml(world.title)} illustration">`
     : '<div class="image-placeholder" aria-hidden="true"></div>'
   return `
     <article class="world-card">
       ${image}
-      <p class="card-kicker">Ages ${escapeHtml(world.ageBand)}</p>
+      <p class="card-kicker">Ages ${escapeHtml(displayAgeBand)}</p>
       <h3>${escapeHtml(world.title)}</h3>
     </article>`
 }
@@ -309,7 +313,7 @@ export function renderBookendStoryEvidenceCardPackHtml(source, worlds, imageMap 
     .map((slug) => {
       const world = worlds.get(slug)
       if (!world) throw new Error(`Unknown Bookend Story Evidence Card source world slug: ${slug}`)
-      return renderWorldCard(world, imageMap.get(slug))
+      return renderWorldCard(world, imageMap.get(slug), cardAgeBandForWorld(source, slug) ?? world.ageBand)
     })
     .join('\n')
   const cards = source.cards

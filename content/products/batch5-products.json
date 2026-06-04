@@ -5953,81 +5953,97 @@
         {
           "slug": "moon-muffin-market",
           "title": "Moon Muffin Market",
+          "ageBand": "7-8",
           "summary": "A pretend Moon Muffin Market world for supporting one fictional story claim on paper."
         },
         {
           "slug": "puddle-planet-post-office",
           "title": "Puddle Planet Post Office",
+          "ageBand": "7-8",
           "summary": "A pretend Puddle Planet Post Office world for supporting one fictional story claim on paper."
         },
         {
           "slug": "teacup-town-weather-window",
           "title": "Teacup Town Weather Window",
+          "ageBand": "7-8",
           "summary": "A pretend Teacup Town Weather Window world for supporting one fictional story claim on paper."
         },
         {
           "slug": "button-bakery-map-mixup",
           "title": "Button Bakery Map Mix-Up",
+          "ageBand": "7-9",
           "summary": "A pretend Button Bakery Map Mix-Up world for supporting one fictional story claim on paper."
         },
         {
           "slug": "penny-path-compass-shop",
           "title": "Penny Path Compass Shop",
+          "ageBand": "7-9",
           "summary": "A pretend Penny Path Compass Shop world for supporting one fictional story claim on paper."
         },
         {
           "slug": "pocket-park-notice-board",
           "title": "Pocket Park Notice Board",
+          "ageBand": "7-9",
           "summary": "A pretend Pocket Park Notice Board world for supporting one fictional story claim on paper."
         },
         {
           "slug": "greenhouse-gear-garden",
           "title": "Greenhouse Gear Garden",
+          "ageBand": "8-10",
           "summary": "A pretend Greenhouse Gear Garden world for supporting one fictional story claim on paper."
         },
         {
           "slug": "orchard-pulley-post",
           "title": "Orchard Pulley Post",
+          "ageBand": "8-10",
           "summary": "A pretend Orchard Pulley Post world for supporting one fictional story claim on paper."
         },
         {
           "slug": "rain-gauge-railway",
           "title": "Rain Gauge Railway",
+          "ageBand": "8-10",
           "summary": "A pretend Rain Gauge Railway world for supporting one fictional story claim on paper."
         },
         {
           "slug": "cloudberry-clocktower",
           "title": "Cloudberry Clocktower",
+          "ageBand": "8-10",
           "summary": "A pretend Cloudberry Clocktower world for supporting one fictional story claim on paper."
         },
         {
           "slug": "tiny-lantern-reef",
           "title": "Tiny Lantern Reef",
+          "ageBand": "8-10",
           "summary": "A pretend Tiny Lantern Reef world for supporting one fictional story claim on paper."
         },
         {
           "slug": "almost-invention-workshop",
           "title": "Almost Invention Workshop",
+          "ageBand": "10-11",
           "summary": "A pretend Almost Invention Workshop world for supporting one fictional story claim on paper."
         },
         {
           "slug": "clue-label-tower-museum",
           "title": "Clue Label Tower Museum",
+          "ageBand": "10-11",
           "summary": "A pretend Clue Label Tower Museum world for supporting one fictional story claim on paper."
         },
         {
           "slug": "compass-craft-academy",
           "title": "Compass Craft Academy",
+          "ageBand": "10-11",
           "summary": "A pretend Compass Craft Academy world for supporting one fictional story claim on paper."
         },
         {
           "slug": "margin-note-market",
           "title": "Margin Note Market",
+          "ageBand": "10-11",
           "summary": "A pretend Margin Note Market world for supporting one fictional story claim on paper."
         },
         {
           "slug": "pencil-dragon-academy",
           "title": "Pencil Dragon Academy",
+          "ageBand": "10-11",
           "summary": "A pretend Pencil Dragon Academy world for supporting one fictional story claim on paper."
         }
       ]

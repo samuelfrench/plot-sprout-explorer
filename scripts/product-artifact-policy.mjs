@@ -20101,8 +20101,8 @@ const bookendStoryEvidenceExpectedWorldSlugs = [
 ]
 
 const bookendStoryEvidenceExpectedWorldAges = new Map([
-  ['moon-muffin-market', '6-8'],
-  ['puddle-planet-post-office', '6-8'],
+  ['moon-muffin-market', '7-8'],
+  ['puddle-planet-post-office', '7-8'],
   ['teacup-town-weather-window', '7-8'],
   ['button-bakery-map-mixup', '7-9'],
   ['penny-path-compass-shop', '7-9'],
@@ -20118,6 +20118,8 @@ const bookendStoryEvidenceExpectedWorldAges = new Map([
   ['margin-note-market', '10-11'],
   ['pencil-dragon-academy', '10-11'],
 ])
+
+const bookendStoryEvidenceAllowedAgeBands = ['7-8', '7-9', '8-10', '10-11']
 
 const bookendStoryEvidencePriorSourceFiles = new Map([
   [56, 'content/product-artifacts/manila-folder-story-clue-trail-card-pack.json'],
@@ -20279,15 +20281,18 @@ function validateBookendStoryEvidenceCard(
   pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
   cardIds.add(card.id)
 
-  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, !bookendStoryEvidenceAllowedAgeBands.includes(card.ageBand), `${label}.ageBand must stay within ages 7-11.`)
   pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
   pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
   const worldRecord = knownWorldRecords?.get(card.worldSlug)
   const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
   pushIf(
     errors,
-    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
-    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+    isNonEmptyString(card.ageBand) &&
+      isNonEmptyString(worldAgeBand) &&
+      card.ageBand !== worldAgeBand &&
+      !(worldAgeBand === '6-8' && card.ageBand === '7-8'),
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand} or narrow a 6-8 starter world to 7-8.`,
   )
 
   pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)

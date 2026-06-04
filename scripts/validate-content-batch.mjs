@@ -6581,6 +6581,13 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       `${label} static output includes account, school-login, portal/app/QR, public-posting, review/rating, recording/audio/transcript, microphone, phone/device, private-conversation, tracker, private-child-data, grading/rubric, score, timer, real-identity, real room/location/schedule details, address, route, GPS, exact-location, profile, real-book-title, author, publisher, franchise, food/tasting/allergy, unsafe professional, scary/harm/bullying/fighting, or weapon language.`,
     )
   }
+  if (product.slug === 'bookend-story-evidence-card-pack') {
+    for (const { summary, ageBand } of product.worldSummaries) {
+      expect(renderedHtml.includes(summary), `${label} static output missing product-specific world summary.`)
+      expect(renderedHtml.includes(`Ages ${ageBand}`), `${label} static output missing product-specific age band ${ageBand}.`)
+    }
+    expect(!renderedHtml.includes('Ages 6-8'), `${label} static output must not publish an Ages 6-8 label.`)
+  }
   const metaDescription = renderedHtml.match(/<meta name="description" content="([^"]+)">/)?.[1]
   validateString(metaDescription, `${label} rendered meta description`)
   expect(
@@ -12516,6 +12523,20 @@ expect(
   bookendStoryEvidenceSummaryErrors.length === 0,
   `Bookend Story Evidence Card Pack world summaries failed validation:\n${bookendStoryEvidenceSummaryErrors.join('\n')}`,
 )
+const bookendStoryEvidenceCardAgeBands = new Map(
+  bookendStoryEvidenceSource.cards.map((card) => [card.worldSlug, card.ageBand]),
+)
+for (const [index, summary] of bookendStoryEvidenceProduct.worldSummaries.entries()) {
+  validateString(summary.ageBand, `Bookend Story Evidence Card Pack product.worldSummaries[${index}].ageBand`)
+  expect(
+    summary.ageBand === bookendStoryEvidenceCardAgeBands.get(summary.slug),
+    `Bookend Story Evidence Card Pack product.worldSummaries[${index}].ageBand must match source card ageBand.`,
+  )
+  expect(
+    !/^6-/.test(summary.ageBand),
+    `Bookend Story Evidence Card Pack product.worldSummaries[${index}].ageBand must stay within ages 7-11.`,
+  )
+}
 const bookendStoryEvidenceArtifactPaths = Object.values(bookendStoryEvidenceSource.artifact).map((relativePath) =>
   resolve(root, relativePath),
 )

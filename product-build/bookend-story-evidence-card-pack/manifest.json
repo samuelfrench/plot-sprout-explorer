@@ -9,17 +9,17 @@
   "files": {
     "pdf": {
       "path": "product-build/bookend-story-evidence-card-pack/Bookend-Story-Evidence-Card-Pack.pdf",
-      "sha256": "4af9cb6c2cac3c5da697001a1b5b0e73b35604a93eadfb2d109713da2e2c4d32",
-      "size": 5071865
+      "sha256": "dd5f2991c0152f7d308f280ffcd718fa97c62d4bef099b4dfc7ea47b423bb3af",
+      "size": 5071860
     },
     "zip": {
       "path": "product-build/bookend-story-evidence-card-pack/bookend-story-evidence-card-pack.zip",
-      "sha256": "141db72d5cd174c2704b14a15a49e08a38e5294c4c928d1d4ccfd49c5e3c4db2",
-      "size": 9731269
+      "sha256": "de6f0a29014c73651d77b9f5fb5b744c9dcd83f7f1cbcd6754c78af65d87bc50",
+      "size": 9731264
     },
     "sourceHtml": {
       "path": "product-build/bookend-story-evidence-card-pack/source/bookend-story-evidence-card-pack.html",
-      "sha256": "d0d87f534a8c470c7bdc1d4ce17bc8f6a67dbd55d3fbe8942b56056a0b156158",
+      "sha256": "b64abb54177e0754d33d00bea07e94c3df49e8459377aae790f4a1412207066a",
       "size": 58973
     },
     "readme": {
