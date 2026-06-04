@@ -1,0 +1,1067 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocket Folder Story Goal Path Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .goal-path-card-page { font-size: 7.48px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .goal-path-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .goal-path-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.285in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable pocket folder goal path cards</p>
+        <h1>Pocket Folder Story Goal Path Card Pack</h1>
+        <p>Sixteen pocket folder cards help writers connect a want, small snag, first try, rethink, finish note, and broad pocket label.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable pocket folder story goal-path cards plus adult guide tools, goal-path routines, take-home goal slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline goal path practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$87</span>
+        <h2>Included</h2>
+        <ul><li>16 printable pocket folder goal path cards</li>
+<li>Adult setup guide</li>
+<li>Fictional goal-path safety notes</li>
+<li>Character want prompts</li>
+<li>Small snag prompts</li>
+<li>First try prompts</li>
+<li>Rethink prompts</li>
+<li>Six adult-led goal-path routines</li>
+<li>Ten take-home goal slips</li>
+<li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Goal path coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Pocket Folder Goal Path Adult Guide</h3><ul><li>Set out one pocket folder, blank pages, pencils, and a goal path card before the adult-led start: ____________________.</li>
+<li>Choose one made-up world and remind the writer that the want, snag, first try, rethink, finish note, and pocket label all stay invented: ____________________.</li>
+<li>Move through the goal path in order so the paper page has one clear want before any snag appears: ____________________.</li>
+<li>Keep the adult in charge of the folder while the writer writes or dictates short paper lines: ____________________.</li>
+<li>Use pretend characters, broad places, and invented actions only; skip real names, real places, and personal facts: ____________________.</li>
+<li>Close by reading the finish note and adding a pocket label for a later adult-led paper pass: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one pocket folder goal path card at a time. Keep every choice broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen goal path card worlds</h2>
+      <p>Pick a world image, then connect one fictional want, snag, first try, rethink, finish note, and pocket label.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Mitten Market Lost Ticket</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Rain Boot Route Rangers</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Greenhouse Gear Garden</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pond Bridge Blueprint Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Compost Clock Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Chapter Gate Greenhouse</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Blue Pencil Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Almost Invention Workshop</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Goal path routines</p>
+      <h2>Choose the pocket folder routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">short first-page setup</p>
+      <h3>Want Pocket Start</h3>
+      <p>Pocket folder, blank page, pencil, and want card.</p>
+      <ol><li>The adult opens the pocket folder and points to the want blank: ____________________.</li>
+<li>The writer names one pretend character want for the page: ____________________.</li>
+<li>The adult asks what makes that want clear on paper: ____________________.</li>
+<li>The writer writes or dictates one want line on the blank page: ____________________.</li></ol>
+      <p>The goal path starts with this pretend want: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">one-page snag setup</p>
+      <h3>Snag Slip Add-On</h3>
+      <p>Pocket folder, current page, pencil, and snag slip.</p>
+      <ol><li>The adult rereads the want line from the paper page: ____________________.</li>
+<li>The writer invents one small snag that gets in the character&#39;s way: ____________________.</li>
+<li>The adult asks how the snag changes the next sentence: ____________________.</li>
+<li>The writer writes one snag line under the want: ____________________.</li></ol>
+      <p>The snag gives the want this paper problem: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">first action pass</p>
+      <h3>First Try Page</h3>
+      <p>Pocket folder, goal path card, blank page, and pencil.</p>
+      <ol><li>The adult points from the snag to the first try blank: ____________________.</li>
+<li>The writer chooses one first try the character can make: ____________________.</li>
+<li>The adult asks what the first try looks like in one paper line: ____________________.</li>
+<li>The writer writes the first try and tucks the page beside the snag slip: ____________________.</li></ol>
+      <p>The first try moves the goal path with: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">gentle change pass</p>
+      <h3>Rethink Fold-Back</h3>
+      <p>Pocket folder, first try page, rethink strip, and pencil.</p>
+      <ol><li>The adult folds back the first try page and asks what did not quite work: ____________________.</li>
+<li>The writer names one calm rethink for the pretend character: ____________________.</li>
+<li>The adult asks what the character will try in a new way: ____________________.</li>
+<li>The writer writes one rethink line on the strip: ____________________.</li></ol>
+      <p>The rethink changes the goal path by: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">paper close pass</p>
+      <h3>Finish Note Tuck-In</h3>
+      <p>Pocket folder, finish note slip, page stack, and pencil.</p>
+      <ol><li>The adult lays the want, snag, first try, and rethink pages in order: ____________________.</li>
+<li>The writer chooses what the pretend character understands by the end: ____________________.</li>
+<li>The adult asks for one finish note that stays about the made-up goal path: ____________________.</li>
+<li>The writer writes the finish note and tucks it into the pocket folder: ____________________.</li></ol>
+      <p>The finish note closes the goal path with: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">folder label wrap</p>
+      <h3>Pocket Label Sort</h3>
+      <p>Pocket folder, label slip, pencil, and finished paper stack.</p>
+      <ol><li>The adult points to the folded goal path pages in the pocket folder: ____________________.</li>
+<li>The writer chooses a broad pocket label for the made-up goal path: ____________________.</li>
+<li>The adult asks which part the label should help find later: ____________________.</li>
+<li>The writer writes the pocket label and places it on the folder: ____________________.</li></ol>
+      <p>The pocket label names this goal path as: ____________________.</p>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home goal slips</p>
+      <h2>Try one goal path later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home goal slip</p>
+      <h3>Goal slip 1</h3>
+      <p>Adult: open the pocket folder and ask for one pretend character want: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home goal slip</p>
+      <h3>Goal slip 2</h3>
+      <p>Writer: the want on my goal path is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home goal slip</p>
+      <h3>Goal slip 3</h3>
+      <p>Adult: ask what small snag gets in the way of that want: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home goal slip</p>
+      <h3>Goal slip 4</h3>
+      <p>Writer: the snag on the paper page is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home goal slip</p>
+      <h3>Goal slip 5</h3>
+      <p>Adult: point to the first try blank and ask what the character does next: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home goal slip</p>
+      <h3>Goal slip 6</h3>
+      <p>Writer: the first try should be: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home goal slip</p>
+      <h3>Goal slip 7</h3>
+      <p>Adult: ask what the character can rethink after the first try: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home goal slip</p>
+      <h3>Goal slip 8</h3>
+      <p>Writer: the rethink line is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home goal slip</p>
+      <h3>Goal slip 9</h3>
+      <p>Adult: ask for a finish note that closes the pretend goal path: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home goal slip</p>
+      <h3>Goal slip 10</h3>
+      <p>Writer: the pocket label for this paper stack is: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Optional adult-led paper prompt: the pretend character wants ____________________.</li>
+<li>Optional adult-led paper prompt: the small snag is ____________________.</li>
+<li>Optional adult-led paper prompt: the first try looks like ____________________.</li>
+<li>Optional adult-led paper prompt: the rethink changes the plan by ____________________.</li>
+<li>Optional adult-led paper prompt: the finish note should say ____________________.</li>
+<li>Optional adult-led paper prompt: the pocket label can name ____________________.</li>
+<li>Optional adult-led paper prompt: the next paper pass could start with ____________________.</li>
+<li>Optional adult-led paper prompt: the goal path closes when ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 1 | Ages 7-9 | build a pretend errand-office goal path from want to snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Acorn Avenue Errand Office Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one pocket folder, blank page, pencil, and pretend acorn-errand goal path card beside the writer: ____________________.</p>
+      <p class="kid-direction">Writer: keep the Acorn Avenue errand fully made-up while each paper note moves the helper closer to the goal: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the tiny errand helper wants to finish before the folder pocket closes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: add one small paper mix-up, missing note, or turned sign that slows the errand goal path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the first calm idea the helper tries at the errand office: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: change one part of the plan after the snag points to a better paper clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the short note that shows how the helper reaches the made-up errand goal: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write a broad folder label for this Acorn Avenue want and goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the want, snag, and pocket label blanks before adding the first try later: ____________________. Take-home line: restart this paper goal path later with one pretend acorn errand want: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 2 | Ages 7-9 | plan a pretend notice-board goal path with a clear want, snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Pocket Park Notice Board Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a pocket folder, blank page, pencil, and pretend notice-board goal path card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a park helper, a paper notice, and a goal path that stays on the page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the park helper wants the notice board to help solve in the made-up scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: add one small snag, such as a folded corner, swapped pin, or confusing paper mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the helper&#39;s first try for making the notice board goal clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: write how the helper changes the paper plan after reading the snag again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the calm line that shows the notice-board goal path has reached a useful ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write a broad folder label for this Pocket Park want and goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the want and finish note, then let the adult hold the folder for later: ____________________. Take-home line: continue this paper goal path later with one pretend park notice want: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 3 | Ages 7-8 | move a pretend lost-ticket want through a small snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Mitten Market Lost Ticket Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+        <figcaption>Mitten Market Lost Ticket</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a pocket folder, blank page, pencil, and pretend mitten-ticket goal path card on the table: ____________________.</p>
+      <p class="kid-direction">Writer: make the ticket, mitten stalls, and helper completely pretend while the goal path stays paper-only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the mitten helper wants to find, fix, or return in the lost-ticket scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: add one small snag, like two similar ticket shapes or a tucked-away paper slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the first try the helper makes to sort out the ticket mix-up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: write what the helper notices next and how the plan changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the short made-up note that shows the ticket goal is settled: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write a broad folder label for this Mitten Market want and goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw a tiny paper ticket mark, then fill the want and pocket label blanks: ____________________. Take-home line: start another paper goal path later with one pretend mitten-ticket want: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 4 | Ages 7-9 | turn a pretend compass-shop want into a step-by-step goal path with snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Penny Path Compass Shop Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a pocket folder, blank page, pencil, and pretend compass-shop goal path card where the writer can reach them: ____________________.</p>
+      <p class="kid-direction">Writer: keep the compass, path marks, and shop helper invented while the goal path grows on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the shop helper wants the pretend compass to help choose or fix: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: add one small snag, such as a compass arrow that points to two paper marks: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the helper&#39;s first try for following the compass clue on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: write how the helper changes the plan after the compass mark makes a new idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the calm line that shows the compass-shop goal path is complete: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write a broad folder label for this Penny Path want and goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the want, first try, and pocket label blanks, then pause the rest: ____________________. Take-home line: continue this paper goal path later with one pretend compass-shop want: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 5 | Ages 7-9 | shape a pretend ranger want into a paper goal path with snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Rain Boot Route Rangers Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+        <figcaption>Rain Boot Route Rangers</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a pocket folder, blank page, pencil, and pretend rain-boot ranger goal path card beside the paper: ____________________.</p>
+      <p class="kid-direction">Writer: invent paper boot marks and ranger notes while keeping the whole goal path pretend: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the rain-boot ranger wants to arrange, check, or guide in the made-up scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: add one small snag, like a smudged boot mark, a folded map scrap, or a sign that needs clearer wording: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the ranger&#39;s first try for moving the goal path forward on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: write how the ranger changes the paper plan after the snag becomes clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the short note that shows the ranger&#39;s goal path reaches a calm finish: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write a broad folder label for this Rain Boot Route Rangers want and goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the want, snag, and finish note before adding the rethink later: ____________________. Take-home line: restart this paper goal path later with one pretend rain-boot ranger want: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 6 | Ages 8-10 | connect a pretend greenhouse-gear want to a snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Greenhouse Gear Garden Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+        <figcaption>Greenhouse Gear Garden</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a pocket folder, blank page, pencil, and pretend greenhouse-gear goal path card: ____________________.</p>
+      <p class="kid-direction">Writer: keep the gear, garden tags, and helper made-up while each paper note moves toward the goal: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the greenhouse helper wants the pretend gear to do for the garden plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: add one small snag, such as a gear tag that turns the wrong way or a label that needs a clearer note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the helper&#39;s first try for using the gear to move the goal path ahead: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: write how the helper changes the plan after checking the gear tag again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the short note that shows the greenhouse-gear goal path has a calm finish: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write a broad folder label for this Greenhouse Gear Garden want and goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the want and rethink blanks first, then choose a pocket label: ____________________. Take-home line: continue this paper goal path later with one pretend greenhouse-gear want: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 7 | Ages 8-10 | connect a fictional want, snag, first try, rethink, finish note, and pocket label for one moss message observatory page</div>
+      <h2>Moss Message Observatory Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one pocket folder, a blank page, a pencil, and a pocket label slip before the goal path begins: ____________________.</p>
+      <p class="kid-direction">Writer: invent an observatory helper who reads pretend moss messages and keeps every goal path note on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the observatory helper wants to learn from the pretend moss message today: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: name one small paper snag that makes the moss message hard to understand at first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the first calm paper plan the helper tries to follow the moss message: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: choose what the helper notices after the snag and how the paper plan changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the final note that shows what the helper understands now: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write the short pretend label for this moss message goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the want blank, and the writer fills only the finish note line: ____________________. Take-home line: tuck the moss message page into the pocket folder with one goal path note to continue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 8 | Ages 8-10 | build a fictional railway goal path with a want, snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Rain Gauge Railway Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one pocket folder beside a blank rail note, a pencil, and a pocket label strip for the goal path: ____________________.</p>
+      <p class="kid-direction">Writer: make up a railway helper, a pretend gauge mark, and a paper-only goal path with no real trip details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the railway helper wants the pretend gauge mark to help with: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: name the small paper snag that makes the gauge mark point to the wrong rail note at first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the first paper step the helper tries to sort the gauge mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: choose the new rail note the helper checks after the first try does not work: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write how the helper connects the gauge mark to a clearer paper ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write the short pretend label for this railway goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult names the gauge mark, and the writer fills only the rethink blank: ____________________. Take-home line: keep the rail note in the pocket folder with one want, snag, or first try line to finish later: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 9 | Ages 8-10 | draft a fictional blueprint-club goal path using want, snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Pond Bridge Blueprint Club Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+        <figcaption>Pond Bridge Blueprint Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one pocket folder, a blank blueprint page, a pencil, and a pocket label slip for the goal path: ____________________.</p>
+      <p class="kid-direction">Writer: invent a blueprint club helper and plan a pretend pond bridge idea only on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the blueprint helper wants the pretend pond bridge to help connect: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: name one small blueprint snag, such as a line that points to the wrong page corner: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the first paper plan the helper sketches to fix the bridge idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: choose what the helper notices on the blueprint and how the plan changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the final paper note that explains the new bridge idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write the short pretend label for this blueprint club goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult circles the snag blank, and the writer fills only one first try phrase: ____________________. Take-home line: slide the blueprint page into the pocket folder with the pocket label ready for another paper plan: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 10 | Ages 8-10 | shape a fictional workshop goal path through want, snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Compost Clock Workshop Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+        <figcaption>Compost Clock Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: open the pocket folder, add a blank workshop page, and place a pocket label strip beside the goal path card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a workshop helper with a pretend compost clock and keep the whole goal path on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the workshop helper wants the pretend compost clock to organize on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: name one small paper snag that makes the compost clock marks confusing at first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the first paper fix the helper tries for the clock marks: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: choose what the helper changes after checking the snag again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the final note that shows how the helper understands the clock marks now: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write the short pretend label for this workshop goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads the want line, and the writer fills only the pocket label blank: ____________________. Take-home line: place the compost clock page in the pocket folder and add one rethink note later: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 11 | Ages 10-11 | plan a longer fictional greenhouse goal path with want, snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Chapter Gate Greenhouse Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+        <figcaption>Chapter Gate Greenhouse</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one pocket folder, a blank greenhouse page, a pencil, and a pocket label slip beside the goal path prompt: ____________________.</p>
+      <p class="kid-direction">Writer: invent a greenhouse gate helper and write a paper-only goal path with made-up details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: write what the greenhouse gate helper wants to open, sort, or understand on the pretend page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: name one small gate snag that keeps the helper from moving the goal path forward at first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the first thoughtful paper plan the helper tries at the chapter gate greenhouse: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: choose what the helper learns from the snag and what changes in the next paper plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the final note that shows how the helper reached a calm stopping point: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write the short pretend label for this greenhouse goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the first try blank, and the writer fills only the rethink line: ____________________. Take-home line: tuck the greenhouse page into the pocket folder with the finish note facing up for later use: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 12 | Ages 10-11 | connect a fictional boardwalk character want to one snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Binding Day Boardwalk Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one pocket folder, blank page, pencil, and this card beside a pretend boardwalk page stack: ____________________.</p>
+      <p class="kid-direction">Writer: build a goal path on paper for an invented boardwalk helper and keep every detail made up with adult guidance: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: choose what the invented boardwalk helper wants to fix, find, or arrange by the last page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: name the small boardwalk paper problem that slows the want without danger or blame: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the first calm action the helper tries with a page stack, ribbon cart, or folder note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: show what the helper notices after the first try and what changes on the goal path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the ending note that shows how the want changed or was handled: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write the broad pretend pocket label for this boardwalk goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the want, snag, and pocket label before adding more: ____________________. Take-home line: tuck the page in the pocket folder and add one new rethink later: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 13 | Ages 10-11 | trace a fictional observatory character want through a snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Blue Pencil Observatory Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+        <figcaption>Blue Pencil Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card, a pocket folder, blank paper, and pencil beside a pretend blue-pencil sky chart: ____________________.</p>
+      <p class="kid-direction">Writer: plan the goal path on paper for an invented observatory helper and keep the sky-chart details pretend: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: choose what the invented observatory helper wants to mark, rename, or sort on the blue-pencil chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: write the small pencil-line problem that blocks the want for one calm story beat: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: describe the first paper action the helper tries with a pencil mark, chart corner, or folder tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: show the new clue the helper notices after the first try changes the goal path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write how the helper leaves the chart clearer at the end of the goal path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write the broad pretend pocket label for this observatory goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write one want sentence, one snag phrase, and one pocket label word first: ____________________. Take-home line: fold the page into the pocket folder and add one invented chart rethink later: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 14 | Ages 10-11 | shape a fictional theater-club want into a snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Index Card Theater Club Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a pocket folder, blank page, pencil, and this card beside a pretend stack of theater-club index cards: ____________________.</p>
+      <p class="kid-direction">Writer: use paper only to plan a goal path for an invented card keeper inside the pretend theater club: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: choose what the invented card keeper wants the theater club to remember on its index cards: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: name the small mix-up that makes two pretend index cards point in different directions: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the first careful card-sorting action the keeper tries to help the want: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: show what the keeper notices when the first try changes which card matters most: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the final paper note that shows the card keeper found a workable ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write the broad pretend pocket label for this theater-club goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the want blank, the snag blank, and one pocket label word before adding the first try: ____________________. Take-home line: slide the page into the pocket folder and add one new card rethink later: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 15 | Ages 10-11 | carry a fictional compass-craft want through a snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Compass Craft Academy Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one pocket folder, blank page, pencil, and this card beside a pretend compass craft table: ____________________.</p>
+      <p class="kid-direction">Writer: draft a paper goal path for an invented compass maker using only made-up craft-table details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: choose what the invented compass maker wants to guide through a pretend paper maze: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: write the small compass-mark problem that makes the goal path bend in an unexpected way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: describe the first paper action the compass maker tries with an arrow, tab, or folded map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: show what the compass maker changes after seeing why the first try was not enough: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write the ending note that explains where the goal path finally points: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write the broad pretend pocket label for this compass-craft goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the want, one snag phrase, and one compass pocket label for now: ____________________. Take-home line: keep the page in the pocket folder and add one new arrow rethink later: ____________________.</p>
+    </section>
+
+    <section class="pack-page goal-path-card-page">
+      <div class="page-kicker">Goal Path Card 16 | Ages 10-11 | turn a fictional almost-invention want into a snag, first try, rethink, finish note, and pocket label</div>
+      <h2>Almost Invention Workshop Story Goal Path Card</h2>
+      <figure>
+        <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+        <figcaption>Almost Invention Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a pocket folder, blank paper, pencil, and this card beside a pretend almost-invention sketch: ____________________.</p>
+      <p class="kid-direction">Writer: plan the paper goal path for an invented workshop helper and keep every invention detail gentle and pretend: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Want</h3>
+      <p>Want: choose what the invented workshop helper wants the almost-invention to do by the ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Snag</h3>
+      <p>Snag: name the small paper-tab or gear-label problem that keeps the want from working at first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First try</h3>
+      <p>First try: write the first careful action the helper tries with a tab, label, sketch, or folded note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Rethink</h3>
+      <p>Rethink: show what the helper notices after the first try and what new paper choice follows: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Finish note</h3>
+      <p>Finish note: write how the almost-invention ends up useful in a surprising pretend way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Pocket label</h3>
+      <p>Pocket label: write the broad pretend pocket label for this workshop goal path: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the want line, snag line, and pocket label line before adding more: ____________________. Take-home line: tuck the page into the pocket folder and add one new workshop rethink later: ____________________.</p>
+    </section>
+  </body>
+</html>

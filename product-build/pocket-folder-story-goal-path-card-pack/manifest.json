@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-03-batch57",
+  "generatedAt": "2026-06-03",
+  "productSlug": "pocket-folder-story-goal-path-card-pack",
+  "title": "Pocket Folder Story Goal Path Card Pack",
+  "pricePoint": "$87",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.",
+  "files": {
+    "pdf": {
+      "path": "product-build/pocket-folder-story-goal-path-card-pack/Pocket-Folder-Story-Goal-Path-Card-Pack.pdf",
+      "sha256": "814016ba932f3277c85b331b6bcb3ae2215de470030a46b5ae8cc3b969532452",
+      "size": 4565809
+    },
+    "zip": {
+      "path": "product-build/pocket-folder-story-goal-path-card-pack/pocket-folder-story-goal-path-card-pack.zip",
+      "sha256": "7ed3f48f436403f79b5a2b7b2f4f6a1439ca5d9952b1a59839a61b07d9ef54e0",
+      "size": 8720491
+    },
+    "sourceHtml": {
+      "path": "product-build/pocket-folder-story-goal-path-card-pack/source/pocket-folder-story-goal-path-card-pack.html",
+      "sha256": "ebd4f3fd4b71ac01b211ea31e69b406f6c79b357aef3517b9fa3743ab9a8ac5b",
+      "size": 55510
+    },
+    "readme": {
+      "path": "product-build/pocket-folder-story-goal-path-card-pack/README.txt",
+      "sha256": "a363916e6fd7e86fb7d863044b9f4939a0bce3218a5162e78cedd9e8ee84e84b",
+      "size": 548
+    },
+    "assets": [
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/blue-pencil-observatory.jpg",
+        "sha256": "63eb8f59349d2a8b64c553669fffd66268a0560919cef1d9bb41a57addc880ae",
+        "size": 286058
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/chapter-gate-greenhouse.jpg",
+        "sha256": "2a34e6f4bafcaaf422f06aa11146c3d4247b0b7cd76b3fd207dffcb11aa2b2d1",
+        "size": 289788
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/compost-clock-workshop.jpg",
+        "sha256": "9aed5290d2d2119410590b2a1b52a012529bfc2340dc4bb2310fa45328cb1216",
+        "size": 277439
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/mitten-market-lost-ticket.jpg",
+        "sha256": "ba9662cac7927c25beffc08c6f4e5b52cb422e727f87d10b1d582ae8a296902c",
+        "size": 194672
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/pond-bridge-blueprint-club.jpg",
+        "sha256": "0fe8f3c9f82671ca8e6daa82a2c54eeda4d2c86d0d1e65a86e366df3f5f0f707",
+        "size": 238332
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/pocket-folder-story-goal-path-card-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      }
+    ]
+  }
+}

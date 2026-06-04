@@ -1,0 +1,18 @@
+{
+  "slug": "pocket-folder-story-goal-path-card-pack",
+  "prompt": "family-friendly top-down close-cropped catalog product photo on seamless white background, blank two-pocket paper folder, blank off-white goal path card stack, blank pocket label slips, quiet printable paper kit mockup, no writing",
+  "negativePrompt": "text, writing, letters, words, labels, titles, logo, watermark, forms, borders, ruled paper, handwriting, printed marks, brand marks, spiral binding, notebook, school, home, address, route, gps, schedule, screens, devices, public, upload, recording, camera, photo, audio, video, voice memo, rating, score, grade, timer, food, allergy, medical, scary, weapons, bullying, plants, leaves, wood, stone, desk decor, tabletop props, cups, bowls, children, faces, hands, clutter, dark shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "checkpoint",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 260657087,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch57/pocket-folder-story-goal-path-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch57/pocket-folder-story-goal-path-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-03-batch57-images.json",
+  "title": "Pocket Folder Story Goal Path Card Pack"
+}
