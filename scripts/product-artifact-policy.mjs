@@ -66,6 +66,8 @@ export const manilaFolderStoryClueTrailCardPackProductSlug =
   'manila-folder-story-clue-trail-card-pack'
 export const pocketFolderStoryGoalPathCardPackProductSlug =
   'pocket-folder-story-goal-path-card-pack'
+export const hangingFileStoryDecisionPointCardPackProductSlug =
+  'hanging-file-story-decision-point-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -74,6 +76,7 @@ const expandingFileStorySceneChainRequiredSafety =
 const manilaFolderStoryClueTrailRequiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.'
 const pocketFolderStoryGoalPathRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
+const hangingFileStoryDecisionPointRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 
 const familySafetyBlockedTerms = [
   /\bweapon(s)?\b/i,
@@ -564,6 +567,16 @@ const requiredPocketFolderStoryGoalPathCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/pocket-folder-story-goal-path-card-pack/source/pocket-folder-story-goal-path-card-pack.html',
   manifestPath: 'product-build/pocket-folder-story-goal-path-card-pack/manifest.json',
+}
+
+const requiredHangingFileStoryDecisionPointCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/hanging-file-story-decision-point-card-pack/Hanging-File-Story-Decision-Point-Card-Pack.pdf',
+  zipPath:
+    'product-build/hanging-file-story-decision-point-card-pack/hanging-file-story-decision-point-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/hanging-file-story-decision-point-card-pack/source/hanging-file-story-decision-point-card-pack.html',
+  manifestPath: 'product-build/hanging-file-story-decision-point-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -16642,6 +16655,539 @@ export function validatePocketFolderStoryGoalPathCardPackSourceFiles(source, roo
   return errors
 }
 
+const hangingFileStoryDecisionPointSourceKeys = [
+  'batchId',
+  'generatedAt',
+  'productSlug',
+  'title',
+  'pricePoint',
+  'audience',
+  'sessionLength',
+  'safetyNote',
+  'artifact',
+  'sourceFiles',
+  'worldSlugs',
+  'cover',
+  'adultGuide',
+  'decisionPointRoutines',
+  'takeHomeDecisionSlips',
+  'optionalAdultPrompts',
+  'cards',
+]
+
+const hangingFileStoryDecisionPointCardKeys = [
+  'id',
+  'title',
+  'worldSlug',
+  'ageBand',
+  'decisionSkill',
+  'useCase',
+  'adultSetup',
+  'kidDirection',
+  'choicePrompt',
+  'pathOnePrompt',
+  'pathTwoPrompt',
+  'compareCluePrompt',
+  'chosenPathPrompt',
+  'consequenceNotePrompt',
+  'fileLabelPrompt',
+  'quietOptionLine',
+  'takeHomeLine',
+]
+
+const hangingFileStoryDecisionPointSourceFiles = [
+  'content/product-artifacts/lanes/batch58-hanging-file-decision-point-cards-a.json',
+  'content/product-artifacts/lanes/batch58-hanging-file-decision-point-cards-b.json',
+  'content/product-artifacts/lanes/batch58-hanging-file-decision-point-cards-c.json',
+  'content/product-artifacts/lanes/batch58-hanging-file-decision-point-tools.json',
+]
+
+const hangingFileStoryDecisionPointExpectedWorldSlugs = [
+  'acorn-avenue-errand-office',
+  'button-bakery-map-mixup',
+  'mitten-market-lost-ticket',
+  'penny-path-compass-shop',
+  'spoon-ferry-lunchbox-harbor',
+  'compost-clock-workshop',
+  'orchard-pulley-post',
+  'pantry-measurement-mystery',
+  'pond-bridge-blueprint-club',
+  'tidepool-timekeepers-lab',
+  'almost-invention-workshop',
+  'appendix-archive-lab',
+  'blue-pencil-observatory',
+  'clue-label-tower-museum',
+  'margin-note-market',
+  'revision-river-ferry',
+]
+
+const hangingFileStoryDecisionPointExpectedWorldAges = new Map([
+  ['acorn-avenue-errand-office', '7-9'],
+  ['button-bakery-map-mixup', '7-9'],
+  ['mitten-market-lost-ticket', '7-8'],
+  ['penny-path-compass-shop', '7-9'],
+  ['spoon-ferry-lunchbox-harbor', '7-9'],
+  ['compost-clock-workshop', '8-10'],
+  ['orchard-pulley-post', '8-10'],
+  ['pantry-measurement-mystery', '8-10'],
+  ['pond-bridge-blueprint-club', '8-10'],
+  ['tidepool-timekeepers-lab', '8-10'],
+  ['almost-invention-workshop', '10-11'],
+  ['appendix-archive-lab', '10-11'],
+  ['blue-pencil-observatory', '10-11'],
+  ['clue-label-tower-museum', '10-11'],
+  ['margin-note-market', '10-11'],
+  ['revision-river-ferry', '10-11'],
+])
+
+const hangingFileStoryDecisionPointPriorSourceFiles = new Map([
+  [53, 'content/product-artifacts/tabbed-folder-story-series-card-pack.json'],
+  [54, 'content/product-artifacts/accordion-folder-story-arc-card-pack.json'],
+  [55, 'content/product-artifacts/expanding-file-story-scene-chain-card-pack.json'],
+  [56, 'content/product-artifacts/manila-folder-story-clue-trail-card-pack.json'],
+  [57, 'content/product-artifacts/pocket-folder-story-goal-path-card-pack.json'],
+])
+
+function readHangingFileStoryDecisionPointPriorWorldSet(batchNumber) {
+  const sourceFile = hangingFileStoryDecisionPointPriorSourceFiles.get(batchNumber)
+  const source = JSON.parse(readFileSync(resolve(import.meta.dirname, '..', sourceFile), 'utf8'))
+  return new Set(source.worldSlugs)
+}
+
+function normalizeHangingFileStoryDecisionPointAllowedText(value) {
+  return JSON.stringify(value)
+    .replace(
+      /\bNo scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts\./gi,
+      '',
+    )
+    .replace(/\bdo not ask for real schedules, rooms, names, or personal facts\b/gi, '')
+    .replace(/\bskip real names, real places, and personal facts\b/gi, '')
+    .replace(/\bno real school\/home identity details\b/gi, '')
+    .replace(/\badult-led\b/gi, '')
+    .replace(/\badult\b/gi, '')
+    .replace(/\boffline\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+    .replace(/\bfamily-friendly\b/gi, '')
+    .replace(/\bfamilies\b/gi, '')
+    .replace(/\bfamily\b/gi, '')
+    .replace(/\bfictional\b/gi, '')
+    .replace(/\bpretend\b/gi, '')
+    .replace(/\binvented\b/gi, '')
+    .replace(/\bmade-up\b/gi, '')
+    .replace(/\bmade up\b/gi, '')
+    .replace(/\bhanging[- ]file story decision[- ]point card pack\b/gi, '')
+    .replace(/\bhanging[- ]file story decision[- ]point card(s)?\b/gi, '')
+    .replace(/\bhanging[- ]file decision[- ]point card(s)?\b/gi, '')
+    .replace(/\bdecision[- ]point card(s)?\b/gi, '')
+    .replace(/\bdecision[- ]point(s)?\b/gi, '')
+    .replace(/\bdecision point(s)?\b/gi, '')
+    .replace(/\bhanging[- ]file(s)?\b/gi, '')
+    .replace(/\bcharacter choice(s)?\b/gi, '')
+    .replace(/\bchoice prompt(s)?\b/gi, '')
+    .replace(/\bpath one\b/gi, '')
+    .replace(/\bpath two\b/gi, '')
+    .replace(/\btwo paths\b/gi, '')
+    .replace(/\bcompare clue(s)?\b/gi, '')
+    .replace(/\bchosen path(s)?\b/gi, '')
+    .replace(/\bconsequence note(s)?\b/gi, '')
+    .replace(/\bfile label(s)?\b/gi, '')
+    .replace(/\bpath(s)?\b/gi, '')
+    .replace(/\bchoice(s)?\b/gi, '')
+    .replace(/\bclue(s)?\b/gi, '')
+    .replace(/\bpage(s)?\b/gi, '')
+    .replace(/\bpaper\b/gi, '')
+    .replace(/\bblank(s)?\b/gi, '')
+    .replace(/\bnote(s)?\b/gi, '')
+    .replace(/\bacorn-avenue-errand-office\b/gi, '')
+    .replace(/\bbutton-bakery-map-mixup\b/gi, '')
+    .replace(/\bmitten-market-lost-ticket\b/gi, '')
+    .replace(/\bpenny-path-compass-shop\b/gi, '')
+    .replace(/\bspoon-ferry-lunchbox-harbor\b/gi, '')
+    .replace(/\bcompost-clock-workshop\b/gi, '')
+    .replace(/\borchard-pulley-post\b/gi, '')
+    .replace(/\bpantry-measurement-mystery\b/gi, '')
+    .replace(/\bpond-bridge-blueprint-club\b/gi, '')
+    .replace(/\btidepool-timekeepers-lab\b/gi, '')
+    .replace(/\balmost-invention-workshop\b/gi, '')
+    .replace(/\bappendix-archive-lab\b/gi, '')
+    .replace(/\bblue-pencil-observatory\b/gi, '')
+    .replace(/\bclue-label-tower-museum\b/gi, '')
+    .replace(/\bmargin-note-market\b/gi, '')
+    .replace(/\brevision-river-ferry\b/gi, '')
+    .replace(/\bAcorn Avenue Errand Office\b/g, '')
+    .replace(/\bButton Bakery Map Mixup\b/g, '')
+    .replace(/\bMitten Market Lost Ticket\b/g, '')
+    .replace(/\bPenny Path Compass Shop\b/g, '')
+    .replace(/\bSpoon Ferry Lunchbox Harbor\b/g, '')
+    .replace(/\bCompost Clock Workshop\b/g, '')
+    .replace(/\bOrchard Pulley Post\b/g, '')
+    .replace(/\bPantry Measurement Mystery\b/g, '')
+    .replace(/\bPond Bridge Blueprint Club\b/g, '')
+    .replace(/\bTidepool Timekeepers Lab\b/g, '')
+    .replace(/\bAlmost Invention Workshop\b/g, '')
+    .replace(/\bAppendix Archive Lab\b/g, '')
+    .replace(/\bBlue Pencil Observatory\b/g, '')
+    .replace(/\bClue Label Tower Museum\b/g, '')
+    .replace(/\bMargin Note Market\b/g, '')
+    .replace(/\bRevision River Ferry\b/g, '')
+}
+
+function validateNoUnsafeHangingFileStoryDecisionPointLanguage(value, label, errors) {
+  const allowedText = normalizeHangingFileStoryDecisionPointAllowedText(value)
+  pushIf(
+    errors,
+    /\baccounts?\b|\bschool accounts?\b|\blogins?\b|\blog in\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic\b|\bpublish(es|ed|ing|able)?\b|\bpublication(s)?\b|\breviews?\b|\bratings?\b|\bcomments?\b|\bforums?\b|\bsocial\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\brecording(s)?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphone(s)?\b|\btablet(s)?\b|\blaptop(s)?\b|\bcomputer(s)?\b|\bscreen(s)?\b|\bdevice(s)?\b|\bphotos?\b|\bcameras?\b|\bstudent names?\b|\bteacher names?\b|\breal teacher\b|\bwrite (the )?real name(s)?\b|\breal identity\b|\bidentity details?\b|\bschool names?\b|\bclassroom(s)?\b|\baddress(es)?\b|\bstreets?\b|\bprivate locations?\b|\bexact locations?\b|\blocation details?\b|\bschool route(s)?\b|\breal route(s)?\b|\broute details?\b|\bgps\b|\bcoordinates?\b|\bexact schedules?\b|\bschedules?\b|\bprivate child data\b|\breal child data\b|\bpersonal facts?\b|\bpersonal details?\b|\bpersonal disclosure(s)?\b|\bprivate child profile(s)?\b|\bprivate profiles?\b|\bchild profiles?\b|\bstudent profiles?\b|\bprofiles?\b|\bdiar(y|ies)\b|\bjournal(s)?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bassessment(s)?\b|\bperfect\b|\bshowcase(s|d|ing)?\b|\bportfolio(s)?\b|\bdisplay(s|ed|ing)?\b|\bspell(ing|s|ed)?\b|\btimer(s)?\b|\btimed\b|\bcontest(s)?\b|\bprizes?\b|\bpayments?\b|\bcheckout(s)?\b|\bprovider(s)?\b|\bstripe\b|\bchapter book(s)?\b|\bepisode(s)?\b|\bscreenplay(s)?\b|\bchoose your own adventure\b|\bfood(s)?\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b|\bprofessional advice\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bprayer(s)?\b|\bbet(s|ting)?\b|\bgambling\b|\bcasino(s)?\b|\bpokemon\b|\bpokémon\b|\bbranded character(s)?\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes account, upload, public, address, addresses, food, foods, publishing, publishable, showcase, portfolio, display, perfect, rubric, assessment, spelling, episode, chapter book, screenplay, choose your own adventure, recording, voice memo, timer, score, private child profile, election, prayer, bet, Pokemon, school name, home address, teacher name, camera, photo, audio, video, allergy, medical, diary, student profile, personal disclosure, provider, payment, checkout, Stripe, real-identity, route, GPS, schedule, location, profile, politics, religion, gambling, branded character, scary, harm, bullying, fighting, or weapon language.`,
+  )
+}
+
+function validateHangingFileStoryDecisionPointCard(
+  card,
+  index,
+  sourceWorldSlugs,
+  knownWorldSlugs,
+  knownWorldRecords,
+  cardIds,
+  errors,
+) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(card)) !== JSON.stringify(hangingFileStoryDecisionPointCardKeys),
+    `${label} must use the exact hanging file decision-point card field order.`,
+  )
+
+  for (const key of hangingFileStoryDecisionPointCardKeys) validateString(card[key], `${label}.${key}`, errors)
+
+  const expectedWorldSlug = hangingFileStoryDecisionPointExpectedWorldSlugs[index]
+  const expectedId = `hanging-file-decision-point-card-${String(index + 1).padStart(2, '0')}`
+  const expectedAgeBand = hangingFileStoryDecisionPointExpectedWorldAges.get(expectedWorldSlug)
+  pushIf(errors, card.id !== expectedId, `${label}.id must be ${expectedId}.`)
+  pushIf(errors, card.worldSlug !== expectedWorldSlug, `${label}.worldSlug must be ${expectedWorldSlug}.`)
+  pushIf(errors, card.ageBand !== expectedAgeBand, `${label}.ageBand must be ${expectedAgeBand}.`)
+  pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+  cardIds.add(card.id)
+
+  pushIf(errors, !['7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) &&
+      !(/hanging[- ]file/i.test(card.useCase) && /decision[- ]point/i.test(card.useCase) && /\bcard\b/i.test(card.useCase)),
+    `${label}.useCase must say hanging file decision-point card.`,
+  )
+
+  for (const key of [
+    'useCase',
+    'adultSetup',
+    'kidDirection',
+    'choicePrompt',
+    'pathOnePrompt',
+    'pathTwoPrompt',
+    'compareCluePrompt',
+    'chosenPathPrompt',
+    'consequenceNotePrompt',
+    'fileLabelPrompt',
+    'quietOptionLine',
+    'takeHomeLine',
+  ]) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeHangingFileStoryDecisionPointLanguage(card, label, errors)
+}
+
+function validateHangingFileStoryDecisionPointRoutine(routine, index, errors) {
+  const label = `decisionPointRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(routine)) !== JSON.stringify(['title', 'time', 'materials', 'steps', 'adultWrapLine']),
+    `${label} must use the exact decision-point routine field order.`,
+  )
+  for (const key of ['title', 'time', 'materials', 'adultWrapLine']) validateString(routine[key], `${label}.${key}`, errors)
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  if (Array.isArray(routine.steps)) {
+    routine.steps.forEach((step, stepIndex) => {
+      pushIf(errors, isNonEmptyString(step) && !hasWritableBlank(step), `${label}.steps[${stepIndex}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(step) && hasSnakeCasePlaceholder(step), `${label}.steps[${stepIndex}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+  pushIf(errors, isNonEmptyString(routine.adultWrapLine) && !hasWritableBlank(routine.adultWrapLine), `${label}.adultWrapLine must include a writable blank.`)
+  validateNoUnsafeHangingFileStoryDecisionPointLanguage(routine, label, errors)
+}
+
+export function validateHangingFileStoryDecisionPointCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Hanging File Story Decision Point Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs ?? [])
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(source)) !== JSON.stringify(hangingFileStoryDecisionPointSourceKeys),
+    'source must use the exact Batch 58 hanging file decision-point source field order.',
+  )
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-03-batch58', 'batchId must be 2026-06-03-batch58.')
+  pushIf(errors, source.generatedAt !== '2026-06-03', 'generatedAt must be 2026-06-03.')
+  pushIf(
+    errors,
+    source.productSlug !== hangingFileStoryDecisionPointCardPackProductSlug,
+    `productSlug must be ${hangingFileStoryDecisionPointCardPackProductSlug}.`,
+  )
+  pushIf(
+    errors,
+    source.title !== 'Hanging File Story Decision Point Card Pack',
+    'title must be Hanging File Story Decision Point Card Pack.',
+  )
+  pushIf(errors, source.pricePoint !== '$89', 'pricePoint must be $89.')
+  pushIf(
+    errors,
+    !source.safetyNote?.includes(hangingFileStoryDecisionPointRequiredSafety),
+    'safetyNote must include required Batch 58 safety sentence.',
+  )
+
+  if (product) {
+    pushIf(errors, product.slug !== source.productSlug, 'product.slug must match productSlug.')
+    pushIf(errors, product.title !== source.title, 'product.title must match title.')
+    pushIf(errors, product.pricePoint !== source.pricePoint, 'product.pricePoint must match pricePoint.')
+    pushIf(errors, product.status !== 'checkout_pending', 'product.status must remain checkout_pending.')
+    pushIf(errors, Array.isArray(product.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+  }
+
+  pushIf(errors, !Array.isArray(source.sourceFiles), 'sourceFiles must be an array.')
+  if (Array.isArray(source.sourceFiles)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.sourceFiles) !== JSON.stringify(hangingFileStoryDecisionPointSourceFiles),
+      'sourceFiles must list the exact Batch 58 decision-point-card lane and tools files.',
+    )
+  }
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set()
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.worldSlugs) !== JSON.stringify(hangingFileStoryDecisionPointExpectedWorldSlugs),
+      'worldSlugs must use the exact Batch 58 hanging file decision-point world order.',
+    )
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, sourceWorldSlugs.has(slug), `worldSlugs includes duplicate slug ${slug}.`)
+      sourceWorldSlugs.add(slug)
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+    for (const batchNumber of [53, 54, 55, 56, 57]) {
+      const overlapSet = readHangingFileStoryDecisionPointPriorWorldSet(batchNumber)
+      const overlap = source.worldSlugs.filter((slug) => overlapSet.has(slug))
+      pushIf(
+        errors,
+        overlap.length !== 7,
+        `worldSlugs must overlap exactly 7 Batch ${batchNumber} worlds; overlapping slugs: ${overlap.join(', ')}.`,
+      )
+    }
+  }
+
+  validateArtifactPaths(
+    source,
+    requiredHangingFileStoryDecisionPointCardPackArtifactPaths,
+    'Hanging File Story Decision Point Card Pack',
+    errors,
+  )
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) validateString(source.cover[key], `cover.${key}`, errors)
+    validateExactStringArray(source.cover.included, 11, 'cover.included', errors)
+    validateNoUnsafeHangingFileStoryDecisionPointLanguage(source.cover, 'cover', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    pushIf(
+      errors,
+      JSON.stringify(Object.keys(source.adultGuide)) !== JSON.stringify(['title', 'bullets']),
+      'adultGuide must use the exact field order.',
+    )
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    validateExactStringArray(source.adultGuide.bullets, 6, 'adultGuide.bullets', errors)
+    if (Array.isArray(source.adultGuide.bullets)) {
+      source.adultGuide.bullets.forEach((bullet, index) => {
+        pushIf(errors, isNonEmptyString(bullet) && !hasWritableBlank(bullet), `adultGuide.bullets[${index}] must include a writable blank.`)
+        pushIf(errors, isNonEmptyString(bullet) && hasSnakeCasePlaceholder(bullet), `adultGuide.bullets[${index}] must use human-readable text, not snake_case placeholders.`)
+      })
+    }
+    validateNoUnsafeHangingFileStoryDecisionPointLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.decisionPointRoutines), 'decisionPointRoutines must be an array.')
+  if (Array.isArray(source.decisionPointRoutines)) {
+    pushIf(errors, source.decisionPointRoutines.length !== 6, 'decisionPointRoutines must have exactly 6 entries.')
+    source.decisionPointRoutines.forEach((routine, index) =>
+      validateHangingFileStoryDecisionPointRoutine(routine, index, errors),
+    )
+  }
+
+  validateExactStringArray(source.takeHomeDecisionSlips, 10, 'takeHomeDecisionSlips', errors)
+  if (Array.isArray(source.takeHomeDecisionSlips)) {
+    source.takeHomeDecisionSlips.forEach((slip, index) => {
+      pushIf(errors, isNonEmptyString(slip) && !hasWritableBlank(slip), `takeHomeDecisionSlips[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(slip) && hasSnakeCasePlaceholder(slip), `takeHomeDecisionSlips[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeHangingFileStoryDecisionPointLanguage(slip, `takeHomeDecisionSlips[${index}]`, errors)
+    })
+  }
+
+  validateExactStringArray(source.optionalAdultPrompts, 8, 'optionalAdultPrompts', errors)
+  if (Array.isArray(source.optionalAdultPrompts)) {
+    source.optionalAdultPrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalAdultPrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalAdultPrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeHangingFileStoryDecisionPointLanguage(prompt, `optionalAdultPrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateHangingFileStoryDecisionPointCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size !== 16, 'cards must cover exactly 16 unique worlds.')
+  }
+
+  validateNoUnsafeHangingFileStoryDecisionPointLanguage(
+    source,
+    'Hanging File Story Decision Point Card Pack source',
+    errors,
+  )
+  validateNoRiskyLanguage(source, 'Hanging File Story Decision Point Card Pack source', errors)
+  return errors
+}
+
+export function validateHangingFileStoryDecisionPointCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three decision-point-card lanes and one tools lane.')
+
+  pushIf(
+    errors,
+    JSON.stringify(source.sourceFiles) !== JSON.stringify(hangingFileStoryDecisionPointSourceFiles),
+    'sourceFiles must list the exact Batch 58 decision-point-card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolsLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedLaneId = sourceFile.split('/').at(-1)?.replace('.json', '')
+      if (Array.isArray(lane.cards)) {
+        pushIf(
+          errors,
+          JSON.stringify(Object.keys(lane)) !== JSON.stringify(['laneId', 'cards']),
+          `${sourceFile} must use the exact Batch 58 card lane field order.`,
+        )
+        pushIf(errors, lane.laneId !== expectedLaneId, `${sourceFile}.laneId must be ${expectedLaneId}.`)
+        const expectedRange = sourceFile.includes('-cards-a')
+          ? { min: 1, max: 6, count: 6, label: '01-06' }
+          : sourceFile.includes('-cards-b')
+          ? { min: 7, max: 11, count: 5, label: '07-11' }
+          : sourceFile.includes('-cards-c')
+          ? { min: 12, max: 16, count: 5, label: '12-16' }
+          : null
+        if (expectedRange) {
+          pushIf(errors, lane.cards.length !== expectedRange.count, `${sourceFile} must contain exactly ${expectedRange.count} cards.`)
+          const wrongLaneCard = lane.cards.some((card) => {
+            const match = String(card?.id ?? '').match(/-(\d{2})$/)
+            const cardNumber = match ? Number(match[1]) : NaN
+            return !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max
+          })
+          pushIf(
+            errors,
+            lane.cards.length !== expectedRange.count || wrongLaneCard,
+            `${sourceFile} ${sourceFile.match(/cards-[abc]/)?.[0] ?? 'card lane'} must include card numbers ${expectedRange.label}.`,
+          )
+          pushIf(errors, wrongLaneCard, `${sourceFile} must include card numbers ${expectedRange.label}.`)
+        }
+        cardLaneFiles.push({ sourceFile, lane })
+      } else if (isObject(lane.adultGuide)) {
+        pushIf(
+          errors,
+          JSON.stringify(Object.keys(lane)) !==
+            JSON.stringify(['adultGuide', 'decisionPointRoutines', 'takeHomeDecisionSlips', 'optionalAdultPrompts']),
+          `${sourceFile} must use the exact Batch 58 tools field order.`,
+        )
+        toolsLaneFiles.push({ sourceFile, lane })
+      } else {
+        errors.push(`${sourceFile} must be a Batch 58 decision-point-card lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three decision-point-card lane files.')
+  pushIf(errors, toolsLaneFiles.length !== 1, 'sourceFiles must include exactly one tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane.cards)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles decision-point-card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolsLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'decisionPointRoutines', 'takeHomeDecisionSlips', 'optionalAdultPrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -16768,6 +17314,69 @@ export function validateManifestWorldAssets(source, manifest) {
   return errors
 }
 
+function inspectAbsoluteArtifactFiles(artifact, label = 'Product artifact') {
+  const errors = []
+  const records = {}
+  for (const [key, description] of [
+    ['pdfPath', 'PDF'],
+    ['zipPath', 'ZIP'],
+    ['sourceHtmlPath', 'source HTML'],
+    ['manifestPath', 'manifest'],
+  ]) {
+    const filePath = artifact?.[key]
+    if (!isNonEmptyString(filePath)) {
+      errors.push(`${label} missing ${key}.`)
+      continue
+    }
+    if (!existsSync(filePath)) {
+      errors.push(`${label} missing ${description} artifact: ${filePath}`)
+      continue
+    }
+    const buffer = readFileSync(filePath)
+    records[key] = { filePath, buffer }
+    if (key === 'pdfPath' && buffer.subarray(0, 5).toString('ascii') !== '%PDF-') {
+      errors.push(`${filePath} is not a PDF artifact.`)
+    }
+    if (key === 'zipPath' && buffer.subarray(0, 2).toString('ascii') !== 'PK') {
+      errors.push(`${filePath} is not a ZIP artifact.`)
+    }
+    if (key === 'sourceHtmlPath' && !buffer.toString('utf8', 0, Math.min(buffer.length, 120)).toLowerCase().includes('<!doctype html')) {
+      errors.push(`${filePath} is not a source HTML artifact.`)
+    }
+  }
+
+  const manifestBuffer = records.manifestPath?.buffer
+  if (!manifestBuffer) return errors
+  let manifest
+  try {
+    manifest = JSON.parse(manifestBuffer.toString('utf8'))
+  } catch {
+    errors.push(`${artifact.manifestPath} is not valid JSON.`)
+    return errors
+  }
+  const manifestRoot = dirname(artifact.manifestPath)
+  const fileRecords = manifestFileRecords(manifest.files)
+  for (const { label: recordLabel, record } of fileRecords) {
+    const filePath = resolve(manifestRoot, record.path)
+    if (!existsSync(filePath)) {
+      errors.push(`manifest ${recordLabel} path does not exist: ${record.path}.`)
+      continue
+    }
+    const buffer = readFileSync(filePath)
+    if (!Number.isInteger(record.size)) {
+      errors.push(`manifest ${recordLabel} size must be an integer.`)
+    } else if (record.size !== buffer.length) {
+      errors.push(`manifest ${recordLabel} size does not match ${record.path}.`)
+    }
+    if (!/^[a-f0-9]{64}$/.test(record.sha256 ?? '')) {
+      errors.push(`manifest ${recordLabel} sha256 must be a 64-character lowercase hex digest.`)
+    } else if (record.sha256 !== sha256(buffer)) {
+      errors.push(`manifest ${recordLabel} sha256 does not match ${record.path}.`)
+    }
+  }
+  return errors
+}
+
 export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, options = {}) {
   const files = {}
   const errors = []
@@ -16827,9 +17436,14 @@ export function inspectConfiguredArtifactFiles(root, artifact, expectedPaths, op
 }
 
 export function inspectArtifactFiles(root, artifact, options = {}) {
+  if (isObject(root) && typeof artifact === 'string') {
+    return inspectAbsoluteArtifactFiles(root, artifact)
+  }
   const expectedPaths =
     artifact?.pdfPath === requiredDeskLampStoryProblemCardPackArtifactPaths.pdfPath
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
+      : artifact?.pdfPath === requiredHangingFileStoryDecisionPointCardPackArtifactPaths.pdfPath
+      ? requiredHangingFileStoryDecisionPointCardPackArtifactPaths
       : artifact?.pdfPath === requiredPocketFolderStoryGoalPathCardPackArtifactPaths.pdfPath
       ? requiredPocketFolderStoryGoalPathCardPackArtifactPaths
       : artifact?.pdfPath === requiredManilaFolderStoryClueTrailCardPackArtifactPaths.pdfPath
