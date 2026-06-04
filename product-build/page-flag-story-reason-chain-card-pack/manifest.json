@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-04-batch65",
+  "generatedAt": "2026-06-04",
+  "productSlug": "page-flag-story-reason-chain-card-pack",
+  "title": "Page Flag Story Reason Chain Card Pack",
+  "pricePoint": "$103",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.",
+  "files": {
+    "pdf": {
+      "path": "product-build/page-flag-story-reason-chain-card-pack/Page-Flag-Story-Reason-Chain-Card-Pack.pdf",
+      "sha256": "64308b5fb995a358cdc5e8bd87a0743f7e3bc7f2ba45e8f372ca1f0f13823a6c",
+      "size": 5022611
+    },
+    "zip": {
+      "path": "product-build/page-flag-story-reason-chain-card-pack/page-flag-story-reason-chain-card-pack.zip",
+      "sha256": "1c9533cf14f47d7f9b4902e826063596570315860df4def948592df95a4305e3",
+      "size": 9634411
+    },
+    "sourceHtml": {
+      "path": "product-build/page-flag-story-reason-chain-card-pack/source/page-flag-story-reason-chain-card-pack.html",
+      "sha256": "724199d25fcb16a71b887346279342036719068e666fa3b9269365c24ad0cc76",
+      "size": 63346
+    },
+    "readme": {
+      "path": "product-build/page-flag-story-reason-chain-card-pack/README.txt",
+      "sha256": "7b8e54bc6d124653f5278f17994515b4813e3ded7b6785e2e2b235458b72d175",
+      "size": 566
+    },
+    "assets": [
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/pencil-dragon-academy.jpg",
+        "sha256": "a6cbedee60bf72546acee4677a2b5f6a4214f1ee1feaafde681e739bf71da612",
+        "size": 404513
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/pantry-measurement-mystery.jpg",
+        "sha256": "b85111fa750c89e60fc21133ea09e431a26a010d8ff24db7c4baa305c3ff3f73",
+        "size": 287571
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/paperclip-plaza-parcel-day.jpg",
+        "sha256": "c7287db2a3788e8e0a567ea114b5ec913e61c8e11de424d2a30a2fc81c90ed5b",
+        "size": 379900
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/pond-bridge-blueprint-club.jpg",
+        "sha256": "0fe8f3c9f82671ca8e6daa82a2c54eeda4d2c86d0d1e65a86e366df3f5f0f707",
+        "size": 238332
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/tiny-lantern-reef.jpg",
+        "sha256": "2fc79f2835c185ed4110b7edfab6921ab3a004b059837733502ddc7d407d370f",
+        "size": 326494
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/appendix-archive-lab.jpg",
+        "sha256": "b98def39163f848890045a4790bdae486d811fbdf1d967156eb0e7a5a0a74b4c",
+        "size": 291030
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/blue-pencil-observatory.jpg",
+        "sha256": "63eb8f59349d2a8b64c553669fffd66268a0560919cef1d9bb41a57addc880ae",
+        "size": 286058
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/chapter-gate-greenhouse.jpg",
+        "sha256": "2a34e6f4bafcaaf422f06aa11146c3d4247b0b7cd76b3fd207dffcb11aa2b2d1",
+        "size": 289788
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/page-flag-story-reason-chain-card-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      }
+    ]
+  }
+}

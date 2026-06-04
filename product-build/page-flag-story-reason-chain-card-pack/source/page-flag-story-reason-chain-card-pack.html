@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page Flag Story Reason Chain Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .image-placeholder { width: 100%; aspect-ratio: 1.28 / 1; border: 1px solid var(--line); background: repeating-linear-gradient(135deg, #fff, #fff 8px, #f3eee4 8px, #f3eee4 16px); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .reason-chain-card-page { font-size: 7.3px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img, .world-card .image-placeholder { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .reason-chain-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .reason-chain-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.245in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable page flag reason-chain cards</p>
+        <h1>Page Flag Story Reason Chain Card Pack</h1>
+        <p>Sixteen paper page flag cards help writers support fictional story ideas with details, reasons, because bridges, reason-chain sentences, and page flag checks.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable page flag story reason-chain cards plus adult guide tools, reason-chain routines, take-home reason slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline reason-chain practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$103</span>
+        <h2>Included</h2>
+        <ul><li>16 printable page flag reason-chain cards</li><li>Adult setup guide</li><li>Fictional reason chain safety notes</li><li>Story idea prompts</li><li>First detail prompts</li><li>First reason prompts</li><li>Second detail prompts</li><li>Because bridge prompts</li><li>Reason-chain sentence prompts</li><li>Six adult-led reason-chain routines</li><li>Ten take-home reason slips</li><li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Reason-chain coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Page Flag Story Reason Chain Adult Guide: ____________________.</h3><ul><li>Set out one reason-chain card, a blank page, pencil, and paper page flags before the adult-led session begins: ____________________.</li><li>Label seven paper lines story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</li><li>Choose one pretend world and keep every character, place, object, detail, and reason invented: ____________________.</li><li>Tell the writer that dictated words, adult-scribed words, or independent writing all fit the offline paper-only activity: ____________________.</li><li>Place the page flag beside the reason-chain sentence so the writer can check one clear fictional connection: ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Facilitation notes</h3><ul><li>Start with a small story idea that can fit on one paper line: ____________________.</li><li>Ask for the first detail as one invented thing the writer can name or point to on the card: ____________________.</li><li>Ask for the first reason before adding the second detail so the chain has a clear middle: ____________________.</li><li>Use the because bridge to connect both details without adding real names or facts: ____________________.</li><li>Close with the page flag check so the writer marks a private paper sentence, not an outside task: ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Safety notes</h3><ul><li>Use invented characters, broad pretend places, and made-up details only: ____________________.</li><li>Keep the activity offline, paper-only, adult-led, and away from outside audiences: ____________________.</li><li>Skip any prompt that starts to ask for real names, real place details, or personal facts: ____________________.</li><li>Keep the reason-chain sentence about the pretend story, not about a real person or real event: ____________________.</li><li>Treat the page flag check as a quiet paper marker for this session: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one story reason-chain card at a time. Keep every reason-chain sentence broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen reason chain card worlds</h2>
+      <p>Pick a world image, then name the story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pencil-dragon-academy.jpg" alt="Pencil Dragon Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Pencil Dragon Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Paperclip Plaza Parcel Day</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pond Bridge Blueprint Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tiny Lantern Reef</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Appendix Archive Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Blue Pencil Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Chapter Gate Greenhouse</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Rain Boot Route Rangers</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Reason-chain routines</p>
+      <h2>Choose the story reason-chain routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">Use when the writer needs one small fictional idea before choosing details: ____________________.</p>
+      <h3>Story Idea Start: ____________________.</h3>
+      <ol><li>The adult places the story idea line at the top of the blank page: ____________________.</li><li>The writer names one made-up choice, question, or change inside the pretend world: ____________________.</li><li>The writer completes this line: My story idea is ____________________.</li><li>The adult rereads the story idea and keeps it ready for the first detail: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the story idea needs one invented detail to begin the reason chain: ____________________.</p>
+      <h3>First Detail Anchor: ____________________.</h3>
+      <ol><li>The adult points to the first detail line and asks what pretend detail helps the idea: ____________________.</li><li>The writer chooses one object, mark, sound, color, signal, or tiny change from the fictional world: ____________________.</li><li>The writer completes this line: My first detail is ____________________.</li><li>The adult places the first detail under the story idea without adding real facts: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the first detail is ready but its meaning is still missing: ____________________.</p>
+      <h3>First Reason Link: ____________________.</h3>
+      <ol><li>The adult rereads the story idea and first detail in order: ____________________.</li><li>The writer tells why the first detail helps the story idea make sense: ____________________.</li><li>The writer completes this line: My first reason is ____________________.</li><li>The adult keeps the first reason short and inside the pretend story: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the reason chain needs one more invented detail that supports the same idea: ____________________.</p>
+      <h3>Second Detail Support: ____________________.</h3>
+      <ol><li>The adult points to the second detail line and rereads the story idea: ____________________.</li><li>The writer names a different pretend detail that supports the same reason chain: ____________________.</li><li>The writer completes this line: My second detail is ____________________.</li><li>The adult checks that the second detail helps the same idea instead of starting a new one: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the story idea, first detail, first reason, and second detail are ready to connect: ____________________.</p>
+      <h3>Because Bridge Builder: ____________________.</h3>
+      <ol><li>The adult lays the first detail and second detail lines beside the because bridge line: ____________________.</li><li>The adult asks how both details help the same pretend reason: ____________________.</li><li>The writer completes this line: My because bridge is ____________________.</li><li>The adult trims the bridge to one clear phrase before the reason-chain sentence: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use at the end of a paper session to combine the parts and mark the page flag check: ____________________.</p>
+      <h3>Reason-Chain Sentence Check: ____________________.</h3>
+      <ol><li>The adult reads the story idea, first detail, first reason, second detail, and because bridge in order: ____________________.</li><li>The writer completes this line: My reason-chain sentence is ____________________.</li><li>The adult asks whether the sentence uses only invented story details: ____________________.</li><li>The writer completes this line: My page flag check says ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home reason slips</p>
+      <h2>Try one reason chain later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home reason slip</p>
+      <h3>Story Idea Slip: ____________________.</h3>
+      <p>My story idea is ____________________.</p>
+      <p>Ask for one small made-up idea that belongs inside the pretend world: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home reason slip</p>
+      <h3>First Detail Slip: ____________________.</h3>
+      <p>My first detail is ____________________.</p>
+      <p>Choose one invented object, mark, signal, or tiny change that helps the story idea: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home reason slip</p>
+      <h3>First Reason Slip: ____________________.</h3>
+      <p>My first reason is ____________________.</p>
+      <p>Ask why the first detail helps the pretend story idea make sense: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home reason slip</p>
+      <h3>Second Detail Slip: ____________________.</h3>
+      <p>My second detail is ____________________.</p>
+      <p>Choose a different invented detail that supports the same reason chain: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home reason slip</p>
+      <h3>Because Bridge Slip: ____________________.</h3>
+      <p>My because bridge is ____________________.</p>
+      <p>Use a short phrase that connects both details to the reason: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home reason slip</p>
+      <h3>Reason-Chain Sentence Slip: ____________________.</h3>
+      <p>My reason-chain sentence is ____________________.</p>
+      <p>Combine the story idea, first detail, first reason, second detail, and because bridge in one sentence: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home reason slip</p>
+      <h3>Page Flag Check Slip: ____________________.</h3>
+      <p>My page flag check says this sentence stays invented because ____________________.</p>
+      <p>Use this as a quiet paper check, not a correction mark: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home reason slip</p>
+      <h3>Detail Pair Slip: ____________________.</h3>
+      <p>My first detail and second detail fit together because ____________________.</p>
+      <p>Reread both detail lines before filling the blank: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home reason slip</p>
+      <h3>Short Chain Slip: ____________________.</h3>
+      <p>The shortest reason chain I can write is ____________________.</p>
+      <p>Frame this as paper sorting so the sentence stays clear: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home reason slip</p>
+      <h3>Next Paper Flag Slip: ____________________.</h3>
+      <p>The next paper flag could mark this invented reason: ____________________.</p>
+      <p>Save the slip for another adult-led offline writing session: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Which story idea feels small enough for one paper line: ____________________.</li><li>What first detail can the writer invent without using real people or real places: ____________________.</li><li>What first reason explains why that detail matters inside the pretend story: ____________________.</li><li>What second detail helps the same story idea in a different way: ____________________.</li><li>Which words can become the because bridge without adding real facts: ____________________.</li><li>What reason-chain sentence uses the story idea, first detail, first reason, second detail, and because bridge: ____________________.</li><li>What page flag check shows the sentence stayed invented and paper-only: ____________________.</li><li>Which line can stay blank until the writer is ready to dictate or write it: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 1 | Ages 7-9 | Connect a fictional story idea to a first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check on paper: ____________________.</div>
+      <h2>Buttonwood Library Train Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one blank page, pencil, and two paper page flags before the invented train-library scene begins: ____________________.</p>
+      <p class="kid-direction">Writer: invent a buttonwood train car, a quiet shelf bell, and a helper who notices why one tiny change matters: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one made-up idea about what the Buttonwood train helper wants to understand: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented train-car detail that starts the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why that first detail matters inside the pretend story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different buttonwood detail that supports the same story idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write the words that connect both details to the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: combine the story idea, first detail, first reason, second detail, and because bridge in one sentence: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the reason-chain sentence stays invented and clear: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the story idea, first detail, and page flag check blanks first: ____________________. Take-home line: keep this paper card and add one new Buttonwood train detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 2 | Ages 10-11 | Build a fictional reason chain by linking a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Pencil Dragon Academy Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/pencil-dragon-academy.jpg" alt="Pencil Dragon Academy illustration">
+        <figcaption>Pencil Dragon Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and paper page flags beside the invented academy card: ____________________.</p>
+      <p class="kid-direction">Writer: make up a pencil dragon, a practice slate, and a classroom signal while every answer stays fictional: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one made-up idea about what the pencil dragon is trying to figure out: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented mark, tool, or academy object that points toward the idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why that first detail helps explain the pencil dragon&#39;s choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different academy detail that supports the same reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write a short bridge that connects the two details without adding real facts: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that shows the story idea and both details working together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the reason-chain sentence uses only invented academy details: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the two detail blanks before writing the reason-chain sentence: ____________________. Take-home line: keep this paper card and invent one more pencil dragon reason later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 3 | Ages 10-11 | Practice fictional reason-chain writing with a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Compass Craft Academy Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one blank page, pencil, and paper page flags near the compass craft prompt: ____________________.</p>
+      <p class="kid-direction">Writer: invent a compass maker, a craft table, and a pointer problem while all places and people stay made up: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one invented idea about what the compass maker needs to decide: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend pointer, tool, or table detail that begins the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why the first detail helps the compass maker think clearly: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different craft detail that supports the same story idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write a bridge phrase that explains how the details connect: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that links the story idea to both details and the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the sentence explains why the pretend choice makes sense: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: dictate the first reason to the adult, then copy one short phrase: ____________________. Take-home line: keep this paper card and add one new compass craft detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 4 | Ages 8-10 | Use fictional measurement details to form a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Pantry Measurement Mystery Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank page, pencil, and paper page flags for an invented measuring-shelf mystery with no tasting or advice: ____________________.</p>
+      <p class="kid-direction">Writer: invent a measuring shelf, a cup mark, and a helper who compares pretend clues on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one made-up idea about what the helper thinks the measurement mystery means: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented cup mark, shelf tag, or measuring line that begins the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why that first detail matters to the pretend mystery: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different measuring-shelf detail that supports the same idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write how the two details work together in the pretend story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that connects the story idea to the details and reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the reason chain stays fictional and paper-only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the story idea and first detail blanks, then pause: ____________________. Take-home line: keep this paper card and add one new pretend measuring detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 5 | Ages 7-9 | Shape a fictional reason chain from a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Paperclip Plaza Parcel Day Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+        <figcaption>Paperclip Plaza Parcel Day</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and paper page flags beside the invented plaza parcel card: ____________________.</p>
+      <p class="kid-direction">Writer: make up a paperclip plaza, a folded parcel, and a helper who notices two invented details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one made-up idea about what the parcel helper wants to solve: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend paperclip, fold, or plaza mark that starts the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why the first detail helps the helper understand the parcel: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different parcel-day detail that gives more support: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write a short bridge that tells why the details fit together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that includes the story idea, both details, and the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when every detail is invented and private to the paper: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw a tiny paperclip mark first, then fill one blank with words: ____________________. Take-home line: keep this paper card and add one new parcel-day reason later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 6 | Ages 8-10 | Plan a fictional reason chain using a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Pond Bridge Blueprint Club Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+        <figcaption>Pond Bridge Blueprint Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one blank page, pencil, and paper page flags near the invented pond bridge blueprint card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a tiny pond bridge, a folded blueprint, and a club helper who explains one choice: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one made-up idea about what the bridge helper decides to try: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented plank mark, pond ripple, or blueprint note that begins the chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why the first detail supports the helper&#39;s bridge idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different pond bridge detail that supports the same story idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write the bridge words that connect both details to the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that explains the bridge helper&#39;s idea with both details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the sentence gives a clear pretend reason: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the because bridge as a sentence starter before adding the final sentence: ____________________. Take-home line: keep this paper card and add one new blueprint detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 7 | Ages 8-10 | Connect reef details in a fictional story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Tiny Lantern Reef Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+        <figcaption>Tiny Lantern Reef</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and paper page flags beside the invented reef lantern card: ____________________.</p>
+      <p class="kid-direction">Writer: make up a tiny reef lantern, a glow pattern, and a helper who uses two details to explain a choice: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one invented idea about what the reef helper needs to understand: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend glow, shell shape, or waterline mark that begins the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why that first detail helps the helper&#39;s story idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different lantern reef detail that supports the same idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write how the two reef details connect to the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that links the story idea, details, and reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the sentence stays calm, fictional, and clear: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the first detail and second detail blanks before adding the reason: ____________________. Take-home line: keep this paper card and add one new lantern reef reason later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 8 | Ages 10-11 | Develop a fictional reason chain with a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Appendix Archive Lab Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+        <figcaption>Appendix Archive Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one blank page, pencil, and paper page flags for the invented archive lab card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a lab drawer, a labeled tray, and an archive helper while every reason stays made up: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one made-up idea about what the archive helper is trying to explain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented tray mark, folder shape, or lab object that starts the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why that first detail matters to the helper&#39;s explanation: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different archive lab detail that supports the same explanation: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write a bridge that connects both invented details to one reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that explains the story idea with both details and the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the reason-chain sentence has no real names or facts: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult-scribe the reason-chain sentence after the writer points to both details: ____________________. Take-home line: keep this paper card and add one new archive lab detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 9 | Ages 10-11 | Use observation in a fictional reason chain with a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Blue Pencil Observatory Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+        <figcaption>Blue Pencil Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and paper page flags near the invented observatory prompt: ____________________.</p>
+      <p class="kid-direction">Writer: make up a blue pencil telescope, a sky chart, and a helper who explains what two details suggest: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one invented idea about what the observatory helper notices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend pencil mark, lens shape, or sky chart detail that begins the chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why the first detail helps explain the helper&#39;s idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different observatory detail that gives more support: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write how the two details point toward the same reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that connects the story idea to the two details and reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the sentence uses invented observatory details only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the because bridge first with a short phrase, then add details: ____________________. Take-home line: keep this paper card and add one new blue pencil detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 10 | Ages 10-11 | Explain a fictional greenhouse choice through a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Chapter Gate Greenhouse Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+        <figcaption>Chapter Gate Greenhouse</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a blank page, pencil, and paper page flags beside the invented gate greenhouse card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a greenhouse gate, a plant marker, and a keeper who reasons through two pretend details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one made-up idea about what the greenhouse keeper decides: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented gate hinge, leaf mark, or greenhouse object that starts the chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why the first detail supports the keeper&#39;s story idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different greenhouse detail that supports the same idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write bridge words that show how both details lead to the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that joins the story idea, both details, and the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the reason chain stays pretend and paper-only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the story idea, first reason, and page flag check blanks first: ____________________. Take-home line: keep this paper card and invent one more greenhouse reason later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 11 | Ages 8-10 | Write a fictional reason chain from a moss message story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Moss Message Observatory Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one blank page, pencil, and paper page flags near the invented moss observatory card: ____________________.</p>
+      <p class="kid-direction">Writer: make up a moss message wall, a lookout window, and a helper who explains why two details belong together: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one invented idea about what the moss message might mean: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend moss shape, window mark, or lookout detail that begins the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why that first detail helps explain the moss message: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different observatory detail that supports the same story idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write how the two details connect to the same reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that uses the story idea, both details, and the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the sentence is clear and fully invented: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: whisper the first reason to the adult, then write one key word: ____________________. Take-home line: keep this paper card and add one new moss message detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 12 | Ages 7-9 | Link a fictional park-board story idea to a first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Pocket Park Notice Board Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one blank page, pencil, and paper page flags beside the invented pocket park card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a tiny notice board, a folded sign, and a helper who notices why two details fit: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one made-up idea about what the park helper wants to understand: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend sign fold, board pin, or path mark that begins the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why the first detail helps explain the story idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different pocket park detail that supports the same idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write the connecting words that show why both details matter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that connects the story idea to the two details and reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the reason-chain sentence stays invented and private to the paper: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the two detail blanks and save the sentence for later: ____________________. Take-home line: keep this paper card and add one new pocket park reason later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 13 | Ages 7-9 | Create a fictional reason chain with a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Rain Boot Route Rangers Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+        <figcaption>Rain Boot Route Rangers</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and paper page flags near the invented rain boot route ranger card: ____________________.</p>
+      <p class="kid-direction">Writer: make up rain boots, puddle marks, and a route ranger helper who explains a pretend trail choice: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one invented idea about what the rain boot route helper decides: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend boot print, puddle shape, or trail marker that starts the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why the first detail helps the helper make the pretend choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different rain boot route detail that supports the same story idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write a bridge phrase that connects both details to the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that explains the helper&#39;s story idea with both details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the sentence uses made-up trail details only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the first detail and first reason blanks before adding the second detail: ____________________. Take-home line: keep this paper card and invent one more rain boot route reason later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 14 | Ages 8-10 | Organize a fictional tidepool reason chain with a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Tidepool Timekeepers Lab Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a blank page, pencil, and paper page flags near the invented tidepool lab card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a tidepool clock, a lab tray, and a timekeeper who explains why two details matter: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one made-up idea about what the timekeeper is trying to explain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend shell clock, tray mark, or waterline detail that begins the chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why the first detail helps explain the timekeeper&#39;s idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different tidepool lab detail that supports the same idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write how both details point to the same reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that links the story idea, both details, and the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the reason-chain sentence stays inside the pretend lab: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: use adult-scribed words for the because bridge, then write one detail yourself: ____________________. Take-home line: keep this paper card and add one new tidepool timekeeper detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 15 | Ages 10-11 | Build a fictional clue-label reason chain from a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Clue Label Tower Museum Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one blank page, pencil, and paper page flags beside the invented tower museum card: ____________________.</p>
+      <p class="kid-direction">Writer: make up a clue label tower, a quiet exhibit alcove, and a helper who reasons from two invented details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one invented idea about what the tower helper thinks the clue label means: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend label mark, tower step, or alcove object that begins the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why the first detail supports the helper&#39;s story idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different tower museum detail that supports the same idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write a short bridge that connects both details to the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that explains the story idea with both details and the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the reason-chain sentence uses no real exhibit names or facts: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the story idea and because bridge first, then add the details: ____________________. Take-home line: keep this paper card and add one new clue label detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page reason-chain-card-page">
+      <div class="page-kicker">Reason Chain Card 16 | Ages 7-8 | Write a gentle fictional reason chain with a story idea, first detail, first reason, second detail, because bridge, reason-chain sentence, and page flag check: ____________________.</div>
+      <h2>Teacup Town Weather Window Page Flag Reason Chain Card</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set one blank page, pencil, and paper page flags near the invented weather window card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a teacup window, a tiny weather signal, and a helper who explains one small change: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story idea</h3>
+      <p>story idea: write one made-up idea about what the weather-window helper notices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend cloud mark, window shape, or teacup signal that begins the reason chain: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>First reason</h3>
+      <p>first reason: write why the first detail helps explain the story idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different weather-window detail that supports the same idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because bridge</h3>
+      <p>because bridge: write the words that connect both details to the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Reason-chain sentence</h3>
+      <p>reason-chain sentence: write one sentence that uses the story idea, both details, and the reason: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Page flag check</h3>
+      <p>page flag check: mark the paper flag when the sentence stays pretend, short, and clear: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the story idea and page flag check blanks first: ____________________. Take-home line: keep this paper card and add one new weather-window detail later with an adult: ____________________.</p>
+    </section>
+  </body>
+</html>
