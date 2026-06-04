@@ -11101,31 +11101,26 @@ if (hangingFileStoryDecisionPointAnyArtifactFilesExist) {
     'Hanging File Story Decision Point Card Pack artifact manifest sourcePageCount must match source cards.',
   )
   expect(
-    Array.isArray(hangingFileStoryDecisionPointArtifactManifest.files),
-    'Hanging File Story Decision Point Card Pack artifact manifest files must be a flat array.',
+    Array.isArray(hangingFileStoryDecisionPointArtifactManifest.files?.assets),
+    'Hanging File Story Decision Point Card Pack artifact manifest files.assets must be an array.',
   )
-  const hangingFileStoryDecisionPointManifestAssetPaths = hangingFileStoryDecisionPointArtifactManifest.files
-    .map((file) => file?.path)
-    .filter((path) => typeof path === 'string' && path.startsWith('source/assets/'))
   expect(
-    hangingFileStoryDecisionPointManifestAssetPaths.length === hangingFileStoryDecisionPointSource.worldSlugs.length,
+    hangingFileStoryDecisionPointArtifactManifest.files.assets.length ===
+      hangingFileStoryDecisionPointSource.worldSlugs.length,
     'Hanging File Story Decision Point Card Pack artifact manifest must include one copied local image per source world.',
   )
-  for (const slug of hangingFileStoryDecisionPointSource.worldSlugs) {
-    expect(
-      hangingFileStoryDecisionPointManifestAssetPaths.includes(`source/assets/${slug}.jpg`),
-      `Hanging File Story Decision Point Card Pack artifact manifest missing copied image for ${slug}.`,
-    )
-  }
-  const hangingFileStoryDecisionPointArtifactRoot = resolve(
-    root,
-    'product-build',
-    'hanging-file-story-decision-point-card-pack',
+  const hangingFileStoryDecisionPointManifestAssetErrors = validateManifestWorldAssets(
+    hangingFileStoryDecisionPointSource,
+    hangingFileStoryDecisionPointArtifactManifest,
   )
-  for (const assetPath of hangingFileStoryDecisionPointManifestAssetPaths) {
+  expect(
+    hangingFileStoryDecisionPointManifestAssetErrors.length === 0,
+    `Hanging File Story Decision Point Card Pack artifact manifest image coverage failed validation:\n${hangingFileStoryDecisionPointManifestAssetErrors.join('\n')}`,
+  )
+  for (const asset of hangingFileStoryDecisionPointArtifactManifest.files.assets) {
     validateImageFile(
-      resolve(hangingFileStoryDecisionPointArtifactRoot, assetPath),
-      `Hanging File Story Decision Point Card Pack copied artifact image ${assetPath}`,
+      resolve(root, asset.path),
+      `Hanging File Story Decision Point Card Pack copied artifact image ${asset.path}`,
       'jpeg',
     )
   }

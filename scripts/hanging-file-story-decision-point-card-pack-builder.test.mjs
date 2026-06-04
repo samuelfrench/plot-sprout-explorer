@@ -600,6 +600,7 @@ describe('Hanging File Story Decision Point Card Pack policy', () => {
         source,
         worlds: tempWorlds,
         outputDir: buildDir,
+        recordRoot: buildDir,
         imageRoot,
         pdfRenderer: async () => fakePdf(21),
       })
@@ -621,12 +622,15 @@ describe('Hanging File Story Decision Point Card Pack policy', () => {
       )
       expect(inspection).toEqual([])
       const manifest = JSON.parse(readFileSync(result.manifestPath, 'utf8'))
-      expect(manifest.files.map((file) => file.path)).toEqual([
-        'Hanging-File-Story-Decision-Point-Card-Pack.pdf',
-        'README.txt',
-        'source/hanging-file-story-decision-point-card-pack.html',
-        ...source.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
-      ])
+      expect(Array.isArray(manifest.files)).toBe(false)
+      expect(Object.keys(manifest.files)).toEqual(['pdf', 'zip', 'sourceHtml', 'readme', 'assets'])
+      expect(manifest.files.pdf.path).toBe('Hanging-File-Story-Decision-Point-Card-Pack.pdf')
+      expect(manifest.files.zip.path).toBe('hanging-file-story-decision-point-card-pack.zip')
+      expect(manifest.files.sourceHtml.path).toBe('source/hanging-file-story-decision-point-card-pack.html')
+      expect(manifest.files.readme.path).toBe('README.txt')
+      expect(manifest.files.assets.map((asset) => asset.path)).toEqual(
+        source.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+      )
     } finally {
       rmSync(imageRoot, { recursive: true, force: true })
       rmSync(buildDir, { recursive: true, force: true })

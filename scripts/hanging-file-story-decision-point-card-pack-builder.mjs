@@ -12,6 +12,7 @@ import { dirname, relative, resolve } from 'node:path'
 import { pathToFileURL } from 'node:url'
 
 import { writeStoredZip } from './product-artifact-policy.mjs'
+import { buildProductArtifactManifest } from './rainy-day-pack-builder.mjs'
 import { starterWorlds } from './starter-worlds.mjs'
 
 const root = resolve(import.meta.dirname, '..')
@@ -484,31 +485,12 @@ async function writePdf({ htmlPath, pdfPath, pdfRenderer }) {
   }
 }
 
-function buildFlatManifest(source, paths) {
-  const files = [
-    fileRecord(paths.pdfPath, paths.buildDir),
-    fileRecord(paths.readmePath, paths.buildDir),
-    fileRecord(paths.htmlPath, paths.buildDir),
-    ...source.worldSlugs.map((slug) => fileRecord(resolve(paths.assetsDir, `${slug}.jpg`), paths.buildDir)),
-  ]
-  return {
-    batchId: source.batchId,
-    generatedAt: source.generatedAt,
-    productSlug: source.productSlug,
-    title: source.title,
-    pricePoint: source.pricePoint,
-    sourcePageCount: source.cards.length,
-    fulfillmentNote:
-      'Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.',
-    files,
-  }
-}
-
 export async function buildHangingFileStoryDecisionPointCardPack(options = {}) {
   const { source, product, worlds } = options.source
     ? options
     : loadHangingFileStoryDecisionPointCardPackBuildInputs()
   const paths = hangingFileStoryDecisionPointBuildPaths(options.outputDir ?? options.buildDir ?? buildDir)
+  const recordRoot = options.recordRoot ?? root
 
   prepareBuildDirectory(paths)
   const imageMap = copyPackAssets(source, paths, {
@@ -527,7 +509,20 @@ export async function buildHangingFileStoryDecisionPointCardPack(options = {}) {
   })
 
   writeStoredZip(paths.zipPath, zipEntries(paths))
-  const manifest = buildFlatManifest(source, paths)
+  const manifest = buildProductArtifactManifest(
+    source,
+    {
+      pdf: fileRecord(paths.pdfPath, recordRoot),
+      zip: fileRecord(paths.zipPath, recordRoot),
+      sourceHtml: fileRecord(paths.htmlPath, recordRoot),
+      readme: fileRecord(paths.readmePath, recordRoot),
+      assets: source.worldSlugs.map((slug) => fileRecord(resolve(paths.assetsDir, `${slug}.jpg`), recordRoot)),
+    },
+    {
+      fulfillmentNote:
+        'Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.',
+    },
+  )
   writeFileSync(paths.manifestPath, `${JSON.stringify(manifest, null, 2)}\n`)
 
   return {
