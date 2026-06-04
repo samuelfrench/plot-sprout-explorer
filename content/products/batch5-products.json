@@ -5094,6 +5094,132 @@
           "summary": "An almost-invention world for making one workshop want useful by the end."
         }
       ]
+    },
+    {
+      "slug": "hanging-file-story-decision-point-card-pack",
+      "title": "Hanging File Story Decision Point Card Pack",
+      "pricePoint": "$89",
+      "status": "checkout_pending",
+      "headline": "A printable hanging file card pack for private paper story choices.",
+      "summary": "Sixteen adult-led hanging file cards help kids compare two fictional paths, choose one path, write a consequence note, and add a broad file label.",
+      "heroImage": "images/plotsprout/batch58/hanging-file-story-decision-point-card-pack.jpg",
+      "ctaLabel": "Request decision point card launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Hanging%20File%20Story%20Decision%20Point%20Card%20Pack",
+      "checkoutNote": "Checkout is pending; this static hanging file story decision point card pack page is prepared for launch notice requests but does not accept orders yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "acorn-avenue-errand-office",
+        "button-bakery-map-mixup",
+        "mitten-market-lost-ticket",
+        "penny-path-compass-shop",
+        "spoon-ferry-lunchbox-harbor",
+        "compost-clock-workshop",
+        "orchard-pulley-post",
+        "pantry-measurement-mystery",
+        "pond-bridge-blueprint-club",
+        "tidepool-timekeepers-lab",
+        "almost-invention-workshop",
+        "appendix-archive-lab",
+        "blue-pencil-observatory",
+        "clue-label-tower-museum",
+        "margin-note-market",
+        "revision-river-ferry"
+      ],
+      "includedPages": [
+        "Sixteen printable hanging file decision point cards",
+        "Adult setup guide",
+        "Fictional decision-point safety notes",
+        "Character choice prompts",
+        "Two-path comparison prompts",
+        "Compare clue prompts",
+        "Chosen path prompts",
+        "Consequence note prompts",
+        "File label prompts",
+        "Six adult-led decision-point routines",
+        "Ten take-home decision slips",
+        "Local image-backed world menu",
+        "Printable PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family writing table that needs one clear character choice with two pretend paper paths",
+        "A tutoring or co-op table where writers compare options without a screen",
+        "A calm pencil activity for connecting one choice, one clue, and one consequence note",
+        "A reluctant-writer activity that turns story movement into small paper decisions",
+        "A take-home decision slip set for restarting one hanging file note offline"
+      ],
+      "parentSteps": [
+        "Choose one decision-point routine before the activity starts.",
+        "Set out the hanging file, cards, blank pages, pencils, and imagination rule before writing begins.",
+        "Let the writer point, sketch, dictate, write one word, or fill one blank before asking for a full page note.",
+        "Move from character choice to path one, path two, compare clue, chosen path, consequence note, and file label.",
+        "Send one decision slip with a single blank so family adults can continue the paper choice offline."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "acorn-avenue-errand-office",
+          "summary": "An acorn errand world for comparing two helper paths before one file label closes the page."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "summary": "A button map world for sorting two pretend map paths with one clear compare clue."
+        },
+        {
+          "slug": "mitten-market-lost-ticket",
+          "summary": "A mitten ticket world for choosing one gentle ticket path and adding a result note."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "summary": "A compass shop world for weighing two paper directions before one chosen path."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "summary": "A spoon ferry world for comparing two harbor tag paths and filing the choice."
+        },
+        {
+          "slug": "compost-clock-workshop",
+          "summary": "A clock workshop world for using one dial clue to choose between two timing paths."
+        },
+        {
+          "slug": "orchard-pulley-post",
+          "summary": "An orchard post world for comparing two pulley-note paths before the helper chooses."
+        },
+        {
+          "slug": "pantry-measurement-mystery",
+          "summary": "A measurement mystery world for checking two paper marks and writing one consequence note."
+        },
+        {
+          "slug": "pond-bridge-blueprint-club",
+          "summary": "A blueprint club world for choosing one bridge sketch path from two pretend options."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "summary": "A timekeepers lab world for comparing two chart paths with one calm clue."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "summary": "An almost-invention world for choosing one workshop adjustment path and noting the result."
+        },
+        {
+          "slug": "appendix-archive-lab",
+          "summary": "An archive lab world for comparing two tab paths before filing the chosen direction."
+        },
+        {
+          "slug": "blue-pencil-observatory",
+          "summary": "A blue pencil world for using one chart clue to choose a path."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "summary": "A tower museum world for sorting two label paths and closing with one file label."
+        },
+        {
+          "slug": "margin-note-market",
+          "summary": "A margin note world for comparing two note paths before choosing the calmer fit."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "summary": "A revision ferry world for choosing one river note path and adding the next consequence."
+        }
+      ]
     }
   ]
 }

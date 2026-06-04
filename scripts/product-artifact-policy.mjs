@@ -16763,6 +16763,7 @@ function normalizeHangingFileStoryDecisionPointAllowedText(value) {
     .replace(/\bdo not ask for real schedules, rooms, names, or personal facts\b/gi, '')
     .replace(/\bskip real names, real places, and personal facts\b/gi, '')
     .replace(/\bno real school\/home identity details\b/gi, '')
+    .replace(/\bwithout blame or danger\b/gi, '')
     .replace(/\badult-led\b/gi, '')
     .replace(/\badult\b/gi, '')
     .replace(/\boffline\b/gi, '')
@@ -17265,6 +17266,7 @@ function manifestFileRecords(value, label = 'files') {
 
 function validateManifestFileRecords(root, manifest, expectedPaths, errors) {
   if (!isObject(manifest?.files)) return
+  const manifestRecordRoot = resolve(root, dirname(expectedPaths.manifestPath))
 
   for (const [manifestKey, pathKey] of [
     ['pdf', 'pdfPath'],
@@ -17279,7 +17281,8 @@ function validateManifestFileRecords(root, manifest, expectedPaths, errors) {
 
   for (const { label, record } of manifestFileRecords(manifest.files)) {
     const relativePath = record.path
-    const absolutePath = resolve(root, relativePath)
+    const repoRelativePath = resolve(root, relativePath)
+    const absolutePath = existsSync(repoRelativePath) ? repoRelativePath : resolve(manifestRecordRoot, relativePath)
     if (!existsSync(absolutePath)) {
       errors.push(`manifest ${label} path does not exist: ${relativePath}.`)
       continue

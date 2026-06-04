@@ -1,0 +1,20 @@
+{
+  "batchId": "2026-06-03-batch58-images",
+  "generatedAt": "2026-06-03",
+  "purpose": "Add the checkout-pending hanging file story decision point card pack product hero image.",
+  "images": [
+    {
+      "slug": "hanging-file-story-decision-point-card-pack",
+      "title": "Hanging File Story Decision Point Card Pack",
+      "purpose": "Static product hero image for the checkout-pending hanging file story decision point card pack page.",
+      "prompt": "family-friendly top-down close-cropped catalog product photo on seamless white background, blank hanging file folder, blank off-white decision card stack, blank file label slips, quiet printable paper kit mockup, no writing",
+      "negativePrompt": "text, writing, letters, words, labels, titles, logo, watermark, forms, borders, ruled paper, handwriting, printed marks, brand marks, spiral binding, notebook, school, home, address, route, gps, schedule, screens, devices, public, upload, recording, camera, photo, audio, video, voice memo, rating, score, grade, timer, food, allergy, medical, scary, weapons, bullying, plants, leaves, wood, stone, desk decor, tabletop props, cups, bowls, children, faces, hands, clutter, dark shadows",
+      "seed": 260658089,
+      "width": 1344,
+      "height": 768,
+      "outputJpeg": "public/images/plotsprout/batch58/hanging-file-story-decision-point-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch58/hanging-file-story-decision-point-card-pack.webp",
+      "sidecar": "content/image-runs/batch58/hanging-file-story-decision-point-card-pack.json"
+    }
+  ]
+}

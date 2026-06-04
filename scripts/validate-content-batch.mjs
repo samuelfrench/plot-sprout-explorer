@@ -65,6 +65,8 @@ import {
   validateManilaFolderStoryClueTrailCardPackSourceFiles,
   validatePocketFolderStoryGoalPathCardPackSource,
   validatePocketFolderStoryGoalPathCardPackSourceFiles,
+  validateHangingFileStoryDecisionPointCardPackSource,
+  validateHangingFileStoryDecisionPointCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -153,6 +155,7 @@ const batch54ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-ba
 const batch55ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch55-images.json')
 const batch56ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch56-images.json')
 const batch57ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch57-images.json')
+const batch58ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch58-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -239,6 +242,12 @@ const pocketFolderStoryGoalPathSourceFile = resolve(
   'product-artifacts',
   'pocket-folder-story-goal-path-card-pack.json',
 )
+const hangingFileStoryDecisionPointSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'hanging-file-story-decision-point-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -292,6 +301,7 @@ const batch54ImagesBatchId = '2026-06-03-batch54-images'
 const batch55ImagesBatchId = '2026-06-03-batch55-images'
 const batch56ImagesBatchId = '2026-06-03-batch56-images'
 const batch57ImagesBatchId = '2026-06-03-batch57-images'
+const batch58ImagesBatchId = '2026-06-03-batch58-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -347,6 +357,7 @@ const expandingFileStorySceneChainSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.'
 const manilaFolderStoryClueTrailSafety = expandingFileStorySceneChainSafety
 const pocketFolderStoryGoalPathSafety = expandingFileStorySceneChainSafety
+const hangingFileStoryDecisionPointSafety = expandingFileStorySceneChainSafety
 const seoLanes = new Set([
   'creative writing prompts for kids',
   'story writing worksheets',
@@ -442,6 +453,7 @@ function validateNoBannedTerms(record, label) {
     .replaceAll(expandingFileStorySceneChainSafety, '')
     .replaceAll(manilaFolderStoryClueTrailSafety, '')
     .replaceAll(pocketFolderStoryGoalPathSafety, '')
+    .replaceAll(hangingFileStoryDecisionPointSafety, '')
     .replace(/\bno\s+weapon(s)?\b/gi, '')
     .replace(/\bno\s+branded characters\b/gi, '')
     .replace(/\bno\s+scary harm\b/gi, '')
@@ -4890,6 +4902,90 @@ function validateBatch57Image(image, imageSlugs) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch58Image(image, imageSlugs) {
+  const label = `2026-06-03-batch58-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(
+    image.slug === 'hanging-file-story-decision-point-card-pack',
+    `${label}.slug must be hanging-file-story-decision-point-card-pack.`,
+  )
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 58 images.`)
+  imageSlugs.add(image.slug)
+  expect(image.outputJpeg === `public/images/plotsprout/batch58/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch58/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch58/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  expect(
+    image.prompt ===
+      'family-friendly top-down close-cropped catalog product photo on seamless white background, blank hanging file folder, blank off-white decision card stack, blank file label slips, quiet printable paper kit mockup, no writing',
+    `${label}.prompt must match the approved Batch58 hero prompt.`,
+  )
+  for (const phrase of [
+    'text',
+    'labels',
+    'logo',
+    'spiral binding',
+    'notebook',
+    'school',
+    'home',
+    'address',
+    'route',
+    'gps',
+    'schedule',
+    'screens',
+    'devices',
+    'public',
+    'upload',
+    'recording',
+    'camera',
+    'photo',
+    'audio',
+    'video',
+    'voice memo',
+    'rating',
+    'score',
+    'grade',
+    'timer',
+    'food',
+    'allergy',
+    'medical',
+    'scary',
+    'weapons',
+    'bullying',
+    'plants',
+    'cups',
+    'bowls',
+    'desk decor',
+  ]) {
+    expect(image.negativePrompt.toLowerCase().includes(phrase), `${label}.negativePrompt missing "${phrase}".`)
+  }
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  const generatedFileExists = [jpegPath, webpPath, sidecarPath].some((filePath) => existsSync(filePath))
+  if (!generatedFileExists) return
+
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -5308,6 +5404,14 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       minParentSteps: 5,
       maxWorldSlugs: 16,
     },
+    'hanging-file-story-decision-point-card-pack': {
+      title: 'Hanging File Story Decision Point Card Pack',
+      pricePoint: '$89',
+      minIncludedPages: 10,
+      minUseCases: 5,
+      minParentSteps: 5,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -5322,7 +5426,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const requiredProductSafety =
     product.slug === 'expanding-file-story-scene-chain-card-pack' ||
     product.slug === 'manila-folder-story-clue-trail-card-pack' ||
-    product.slug === 'pocket-folder-story-goal-path-card-pack'
+    product.slug === 'pocket-folder-story-goal-path-card-pack' ||
+    product.slug === 'hanging-file-story-decision-point-card-pack'
       ? expandingFileStorySceneChainSafety
       : safety
   expect(product.safetyNote.includes(requiredProductSafety), `${label}.safetyNote missing required safety sentence.`)
@@ -5486,6 +5591,9 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
 
   const renderedPath = resolve(root, 'public', product.slug, 'index.html')
   if (!existsSync(renderedPath)) {
+    if (product.slug === 'hanging-file-story-decision-point-card-pack' && options.batch58GenerationStarted) {
+      fail(`${label} static output is missing after Batch 58 generated outputs started: ${renderedPath}`)
+    }
     if (product.slug === 'pocket-folder-story-goal-path-card-pack' && options.batch57GenerationStarted) {
       fail(`${label} static output is missing after Batch 57 generated outputs started: ${renderedPath}`)
     }
@@ -5496,9 +5604,10 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       fail(`${label} static output is missing after Batch 55 generated outputs started: ${renderedPath}`)
     }
     expect(
-      product.slug === 'expanding-file-story-scene-chain-card-pack' ||
+        product.slug === 'expanding-file-story-scene-chain-card-pack' ||
         product.slug === 'manila-folder-story-clue-trail-card-pack' ||
-        product.slug === 'pocket-folder-story-goal-path-card-pack',
+        product.slug === 'pocket-folder-story-goal-path-card-pack' ||
+        product.slug === 'hanging-file-story-decision-point-card-pack',
       `${label} static output is missing: ${renderedPath}`,
     )
     return
@@ -6746,12 +6855,33 @@ const batch57ImagePaths = batch57Images.images.flatMap((image) => [
   resolve(root, image.sidecar),
 ])
 
+expect(existsSync(batch58ImagesFile), `Missing Batch 58 image manifest: ${batch58ImagesFile}`)
+const batch58Images = readJson(batch58ImagesFile)
+expect(
+  batch58Images.batchId === batch58ImagesBatchId,
+  `batch58 image manifest batchId must be ${batch58ImagesBatchId}.`,
+)
+expect(batch58Images.generatedAt === '2026-06-03', 'batch58 image manifest generatedAt must be 2026-06-03.')
+expect(Array.isArray(batch58Images.images), 'batch58 image manifest images must be an array.')
+expect(batch58Images.images.length === 1, `Expected 1 Batch 58 image, found ${batch58Images.images.length}.`)
+const batch58ImageSlugs = new Set()
+batch58Images.images.forEach((image) => validateBatch58Image(image, batch58ImageSlugs))
+expect(
+  batch58ImageSlugs.has('hanging-file-story-decision-point-card-pack'),
+  'Batch 58 images missing hanging-file-story-decision-point-card-pack.',
+)
+const batch58ImagePaths = batch58Images.images.flatMap((image) => [
+  resolve(root, image.outputJpeg),
+  resolve(root, image.outputWebp),
+  resolve(root, image.sidecar),
+])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 50, `Expected 50 product records, found ${products.products.length}.`)
+expect(products.products.length === 51, `Expected 51 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 let batch55GeneratedOutputPaths = [...batch55ImagePaths]
 const batch55ProductRecord = products.products.find(
@@ -6798,11 +6928,32 @@ if (existsSync(batch57ProductArtifactPathForGeneration)) {
   )
 }
 const batch57GenerationStarted = anyPathExists(batch57GeneratedOutputPaths)
+let batch58GeneratedOutputPaths = [...batch58ImagePaths]
+const batch58ProductRecord = products.products.find(
+  (product) => product.slug === 'hanging-file-story-decision-point-card-pack',
+)
+if (batch58ProductRecord) {
+  batch58GeneratedOutputPaths.push(resolve(root, 'public', batch58ProductRecord.slug, 'index.html'))
+}
+const batch58ProductArtifactPathForGeneration = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'hanging-file-story-decision-point-card-pack.json',
+)
+if (existsSync(batch58ProductArtifactPathForGeneration)) {
+  const artifactSourceForGeneration = readJson(batch58ProductArtifactPathForGeneration)
+  batch58GeneratedOutputPaths.push(
+    ...Object.values(artifactSourceForGeneration.artifact ?? {}).map((relativePath) => resolve(root, relativePath)),
+  )
+}
+const batch58GenerationStarted = anyPathExists(batch58GeneratedOutputPaths)
 products.products.forEach((product) =>
   validateProduct(product, productSlugs, worldSlugs, {
     batch55GenerationStarted,
     batch56GenerationStarted,
     batch57GenerationStarted,
+    batch58GenerationStarted,
   }),
 )
 for (const requiredProductSlug of [
@@ -6856,6 +7007,7 @@ for (const requiredProductSlug of [
   'expanding-file-story-scene-chain-card-pack',
   'manila-folder-story-clue-trail-card-pack',
   'pocket-folder-story-goal-path-card-pack',
+  'hanging-file-story-decision-point-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -10851,6 +11003,134 @@ if (pocketFolderStoryGoalPathAnyArtifactFilesExist) {
   }
 }
 
+expect(
+  existsSync(hangingFileStoryDecisionPointSourceFile),
+  `Missing Batch 58 Hanging File Story Decision Point Card Pack source file: ${hangingFileStoryDecisionPointSourceFile}`,
+)
+const hangingFileStoryDecisionPointSource = readJson(hangingFileStoryDecisionPointSourceFile)
+expect(
+  hangingFileStoryDecisionPointSource.batchId === '2026-06-03-batch58',
+  'Hanging File Story Decision Point Card Pack source batchId must be 2026-06-03-batch58.',
+)
+const hangingFileStoryDecisionPointProduct = products.products.find(
+  (product) => product.slug === 'hanging-file-story-decision-point-card-pack',
+)
+expect(
+  hangingFileStoryDecisionPointProduct,
+  'Missing Hanging File Story Decision Point Card Pack product record for Batch 58 artifact validation.',
+)
+const hangingFileStoryDecisionPointSourceErrors = validateHangingFileStoryDecisionPointCardPackSource(
+  hangingFileStoryDecisionPointSource,
+  hangingFileStoryDecisionPointProduct,
+  worldAgeBands,
+)
+expect(
+  hangingFileStoryDecisionPointSourceErrors.length === 0,
+  `Hanging File Story Decision Point Card Pack source failed validation:\n${hangingFileStoryDecisionPointSourceErrors.join('\n')}`,
+)
+const hangingFileStoryDecisionPointSourceFileErrors = validateHangingFileStoryDecisionPointCardPackSourceFiles(
+  hangingFileStoryDecisionPointSource,
+  root,
+)
+expect(
+  hangingFileStoryDecisionPointSourceFileErrors.length === 0,
+  `Hanging File Story Decision Point Card Pack sourceFiles failed validation:\n${hangingFileStoryDecisionPointSourceFileErrors.join('\n')}`,
+)
+const hangingFileStoryDecisionPointSummaryErrors = validateProductWorldSummaries(
+  hangingFileStoryDecisionPointProduct,
+  'Hanging File Story Decision Point Card Pack',
+)
+expect(
+  hangingFileStoryDecisionPointSummaryErrors.length === 0,
+  `Hanging File Story Decision Point Card Pack world summaries failed validation:\n${hangingFileStoryDecisionPointSummaryErrors.join('\n')}`,
+)
+const hangingFileStoryDecisionPointArtifactPaths = Object.values(hangingFileStoryDecisionPointSource.artifact).map(
+  (relativePath) => resolve(root, relativePath),
+)
+const hangingFileStoryDecisionPointAnyArtifactFilesExist = anyPathExists(hangingFileStoryDecisionPointArtifactPaths)
+if (hangingFileStoryDecisionPointAnyArtifactFilesExist) {
+  for (const artifactPath of hangingFileStoryDecisionPointArtifactPaths) {
+    expect(
+      existsSync(artifactPath),
+      `Hanging File Story Decision Point Card Pack artifact set is incomplete after artifact generation started: ${artifactPath}`,
+    )
+  }
+  const hangingFileStoryDecisionPointExpectedPdfPages = hangingFileStoryDecisionPointSource.cards.length + 5
+  const hangingFileStoryDecisionPointArtifactStatus = inspectArtifactFiles(
+    root,
+    hangingFileStoryDecisionPointSource.artifact,
+    {
+      expectedPdfPages: hangingFileStoryDecisionPointExpectedPdfPages,
+      expectedZipEntries: [
+        'Hanging-File-Story-Decision-Point-Card-Pack.pdf',
+        'README.txt',
+        'source/hanging-file-story-decision-point-card-pack.html',
+        ...hangingFileStoryDecisionPointSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+      ],
+    },
+  )
+  expect(
+    hangingFileStoryDecisionPointArtifactStatus.valid,
+    `Hanging File Story Decision Point Card Pack artifacts failed validation:\n${hangingFileStoryDecisionPointArtifactStatus.errors.join('\n')}`,
+  )
+  expect(
+    hangingFileStoryDecisionPointArtifactStatus.files.pdf.size > 100_000,
+    `Hanging File Story Decision Point Card Pack PDF artifact is unexpectedly small: ${hangingFileStoryDecisionPointArtifactStatus.files.pdf.size} bytes.`,
+  )
+  expect(
+    hangingFileStoryDecisionPointArtifactStatus.files.pdf.pageCount === hangingFileStoryDecisionPointExpectedPdfPages,
+    `Hanging File Story Decision Point Card Pack PDF artifact must have ${hangingFileStoryDecisionPointExpectedPdfPages} pages.`,
+  )
+  expect(
+    hangingFileStoryDecisionPointArtifactStatus.files.zip.size > hangingFileStoryDecisionPointArtifactStatus.files.pdf.size,
+    'Hanging File Story Decision Point Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+  )
+  const hangingFileStoryDecisionPointCheckoutErrors = validateCheckoutReadiness(
+    hangingFileStoryDecisionPointProduct,
+    hangingFileStoryDecisionPointArtifactStatus,
+  )
+  expect(
+    hangingFileStoryDecisionPointCheckoutErrors.length === 0,
+    `Hanging File Story Decision Point Card Pack checkout readiness failed validation:\n${hangingFileStoryDecisionPointCheckoutErrors.join('\n')}`,
+  )
+  const hangingFileStoryDecisionPointArtifactManifest = readJson(
+    resolve(root, hangingFileStoryDecisionPointSource.artifact.manifestPath),
+  )
+  expect(
+    hangingFileStoryDecisionPointArtifactManifest.sourcePageCount === hangingFileStoryDecisionPointSource.cards.length,
+    'Hanging File Story Decision Point Card Pack artifact manifest sourcePageCount must match source cards.',
+  )
+  expect(
+    Array.isArray(hangingFileStoryDecisionPointArtifactManifest.files),
+    'Hanging File Story Decision Point Card Pack artifact manifest files must be a flat array.',
+  )
+  const hangingFileStoryDecisionPointManifestAssetPaths = hangingFileStoryDecisionPointArtifactManifest.files
+    .map((file) => file?.path)
+    .filter((path) => typeof path === 'string' && path.startsWith('source/assets/'))
+  expect(
+    hangingFileStoryDecisionPointManifestAssetPaths.length === hangingFileStoryDecisionPointSource.worldSlugs.length,
+    'Hanging File Story Decision Point Card Pack artifact manifest must include one copied local image per source world.',
+  )
+  for (const slug of hangingFileStoryDecisionPointSource.worldSlugs) {
+    expect(
+      hangingFileStoryDecisionPointManifestAssetPaths.includes(`source/assets/${slug}.jpg`),
+      `Hanging File Story Decision Point Card Pack artifact manifest missing copied image for ${slug}.`,
+    )
+  }
+  const hangingFileStoryDecisionPointArtifactRoot = resolve(
+    root,
+    'product-build',
+    'hanging-file-story-decision-point-card-pack',
+  )
+  for (const assetPath of hangingFileStoryDecisionPointManifestAssetPaths) {
+    validateImageFile(
+      resolve(hangingFileStoryDecisionPointArtifactRoot, assetPath),
+      `Hanging File Story Decision Point Card Pack copied artifact image ${assetPath}`,
+      'jpeg',
+    )
+  }
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -10900,6 +11180,7 @@ const productImageManifests = [
   batch55Images,
   batch56Images,
   batch57Images,
+  batch58Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

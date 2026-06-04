@@ -670,6 +670,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable pocket folder story goal-path cards with adult guide tools, goal-path routines, and take-home goal slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'hanging-file-story-decision-point-card-pack',
+    title: 'Hanging File Story Decision Point Card Pack',
+    pricePoint: '$89',
+    description:
+      'Sixteen printable hanging file story decision-point cards with adult guide tools, decision-point routines, and take-home decision slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]
