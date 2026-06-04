@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-04-batch63",
+  "generatedAt": "2026-06-04",
+  "productSlug": "shelf-marker-story-theme-card-pack",
+  "title": "Shelf Marker Story Theme Card Pack",
+  "pricePoint": "$99",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.",
+  "files": {
+    "pdf": {
+      "path": "product-build/shelf-marker-story-theme-card-pack/Shelf-Marker-Story-Theme-Card-Pack.pdf",
+      "sha256": "f83f7d0f4158fcf249789466af499eef2e4db3b0ff3655557462b4f4055a794d",
+      "size": 5131298
+    },
+    "zip": {
+      "path": "product-build/shelf-marker-story-theme-card-pack/shelf-marker-story-theme-card-pack.zip",
+      "sha256": "d89c49e86853b535073d22fdd884f91d0726af507d4f1c7c570b9c5f20b0267d",
+      "size": 9847564
+    },
+    "sourceHtml": {
+      "path": "product-build/shelf-marker-story-theme-card-pack/source/shelf-marker-story-theme-card-pack.html",
+      "sha256": "540e4ec81667abcf259905b035178b517a0779bc827148c2e2856c26d5cef853",
+      "size": 59519
+    },
+    "readme": {
+      "path": "product-build/shelf-marker-story-theme-card-pack/README.txt",
+      "sha256": "5a8bed0b5e6586d236dbcdf36b5cb412ac4c052a3db14f299590ffcb62cb85f1",
+      "size": 541
+    },
+    "assets": [
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/tiny-lantern-reef.jpg",
+        "sha256": "2fc79f2835c185ed4110b7edfab6921ab3a004b059837733502ddc7d407d370f",
+        "size": 326494
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/compost-clock-workshop.jpg",
+        "sha256": "9aed5290d2d2119410590b2a1b52a012529bfc2340dc4bb2310fa45328cb1216",
+        "size": 277439
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/pantry-measurement-mystery.jpg",
+        "sha256": "b85111fa750c89e60fc21133ea09e431a26a010d8ff24db7c4baa305c3ff3f73",
+        "size": 287571
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/sticker-station-mail-cart.jpg",
+        "sha256": "3ac216af41b988ed757c346983c7c30bd6e182daf96403981799ada1b40b6429",
+        "size": 177751
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/moon-muffin-market.jpg",
+        "sha256": "9fd7c9a4e3584529222c481ce419c67545a98a4ab788f08742ac19df11f0f962",
+        "size": 238603
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/puddle-planet-post-office.jpg",
+        "sha256": "abf1065c54d207cce767bd8a5081e2483bfa37fc4a7d9a476bd65f4e5c914e44",
+        "size": 304692
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/cloudberry-clocktower.jpg",
+        "sha256": "3204161ea211c5e28ca7cfeae6e7cfc97be61f53ca978a3606435351731ad6e3",
+        "size": 366382
+      },
+      {
+        "path": "product-build/shelf-marker-story-theme-card-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      }
+    ]
+  }
+}

@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shelf Marker Story Theme Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .image-placeholder { width: 100%; aspect-ratio: 1.28 / 1; border: 1px solid var(--line); background: repeating-linear-gradient(135deg, #fff, #fff 8px, #f3eee4 8px, #f3eee4 16px); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .theme-card-page { font-size: 7.3px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img, .world-card .image-placeholder { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .theme-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .theme-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.245in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable shelf marker theme cards</p>
+        <h1>Shelf Marker Story Theme Card Pack</h1>
+        <p>Sixteen paper shelf marker cards help writers notice story questions, repeated clues, character choices, ending echoes, theme lines, and shelf marker notes.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable shelf marker story theme cards plus adult guide tools, theme routines, take-home theme slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline theme practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$99</span>
+        <h2>Included</h2>
+        <ul><li>16 printable shelf marker theme cards</li><li>Adult setup guide</li><li>Fictional theme safety notes</li><li>Story question prompts</li><li>Repeated clue prompts</li><li>Character choice prompts</li><li>Ending echo prompts</li><li>Theme line prompts</li><li>Six adult-led theme routines</li><li>Ten take-home theme slips</li><li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Theme coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Shelf Marker Story Theme Adult Guide: ____________________.</h3><ul><li>Set out one theme card, six blank paper strips, and a pencil before the adult-led session begins: ____________________.</li><li>Label the strips story question, repeated clue, character choice, ending echo, theme line, and shelf marker note: ____________________.</li><li>Choose one pretend story world and keep every name, setting, clue, and choice invented: ____________________.</li><li>Tell the writer that dictated words, copied adult wording, or independent writing all fit the paper-only activity: ____________________.</li><li>Place the finished strips under the shelf marker note so the theme can be reread without sharing it outside the session: ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Facilitation notes</h3><ul><li>Start with the story question when the writer needs a clear theme path: ____________________.</li><li>Use the repeated clue to point back to the same idea without asking for a polished sentence: ____________________.</li><li>Ask for one character choice that shows what matters in the fictional story: ____________________.</li><li>Save the ending echo until the writer can connect the ending to the first story question: ____________________.</li><li>Let the theme line stay simple, plain, and adult-supported: ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Safety notes</h3><ul><li>Use invented characters, broad pretend settings, and made-up clues only: ____________________.</li><li>Keep the activity offline, paper-only, adult-led, and free from outside audiences: ____________________.</li><li>Skip any prompt that starts to ask for writer facts, group labels, or outside-session details: ____________________.</li><li>Avoid outside titles, creator names, service forms, labels from real shelves, or correction marks: ____________________.</li><li>Treat the theme line as a fictional story idea, not a claim about a real person: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one story theme card at a time. Keep every theme line broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen theme card worlds</h2>
+      <p>Pick a world image, then name the story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tiny Lantern Reef</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Compost Clock Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Sticker Station Mail Cart</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Cloudberry Clocktower</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Theme routines</p>
+      <h2>Choose the story theme routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">Use when a writer needs one clear question to guide the theme: ____________________.</p>
+      <h3>Story Question Marker: ____________________.</h3>
+      <ol><li>The adult places a blank strip under the story question label: ____________________.</li><li>The adult asks what the invented story keeps wondering about: ____________________.</li><li>The writer completes this line: The story question is ____________________.</li><li>The adult rereads the question and saves it for the later theme line: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the theme needs a small clue that can appear more than once: ____________________.</p>
+      <h3>Repeated Clue Trail: ____________________.</h3>
+      <ol><li>The adult points to the story question strip and asks what small pretend clue could remind everyone of it: ____________________.</li><li>The writer names one repeated clue, such as a color, object, sound word, or tiny action from the fictional world: ____________________.</li><li>The writer completes this line: The repeated clue is ____________________.</li><li>The adult helps place the repeated clue beside the story question without adding real details: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the writer needs the theme to show through action: ____________________.</p>
+      <h3>Character Choice Sort: ____________________.</h3>
+      <ol><li>The adult asks which invented character makes a choice that matters: ____________________.</li><li>The writer chooses one simple action the character can take on paper: ____________________.</li><li>The writer completes this line: The character choice is ____________________.</li><li>The adult asks how that choice answers or changes the story question: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the ending needs to connect back to the first theme idea: ____________________.</p>
+      <h3>Ending Echo Match: ____________________.</h3>
+      <ol><li>The adult rereads the story question and repeated clue in order: ____________________.</li><li>The writer names a calm ending moment that echoes the same idea: ____________________.</li><li>The writer completes this line: The ending echo is ____________________.</li><li>The adult checks that the ending echo matches the character choice instead of starting a new story: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the strips are ready to become one plain theme line: ____________________.</p>
+      <h3>Theme Line Builder: ____________________.</h3>
+      <ol><li>The adult lays out the story question, repeated clue, character choice, and ending echo strips: ____________________.</li><li>The writer points to the strip that best shows the theme: ____________________.</li><li>The writer completes this line: The theme line is ____________________.</li><li>The adult helps trim the theme line to one simple fictional story idea: ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use at the end of a paper session to file the theme neatly: ____________________.</p>
+      <h3>Shelf Marker Close: ____________________.</h3>
+      <ol><li>The adult reads all five theme strips in order without adding new facts: ____________________.</li><li>The writer chooses a short shelf marker note that names the theme focus: ____________________.</li><li>The writer completes this line: The shelf marker note is ____________________.</li><li>The adult stacks the strips together for private paper reuse in a later session: ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home theme slips</p>
+      <h2>Try one theme later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home theme slip</p>
+      <h3>Story Question Slip</h3>
+      <p>The story question is ____________________.</p>
+      <p>Ask for one invented question the fictional story keeps returning to.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home theme slip</p>
+      <h3>Repeated Clue Slip</h3>
+      <p>The repeated clue is ____________________.</p>
+      <p>Choose a pretend clue that can appear more than once on paper.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home theme slip</p>
+      <h3>Character Choice Slip</h3>
+      <p>The character choice is ____________________.</p>
+      <p>Keep the choice simple and fictional.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home theme slip</p>
+      <h3>Ending Echo Slip</h3>
+      <p>The ending echo is ____________________.</p>
+      <p>Connect the ending back to the story question.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home theme slip</p>
+      <h3>Theme Line Slip</h3>
+      <p>The theme line is ____________________.</p>
+      <p>Use plain words and one fictional idea.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home theme slip</p>
+      <h3>Shelf Marker Note Slip</h3>
+      <p>The shelf marker note is ____________________.</p>
+      <p>Make the note short enough to fit on a paper marker.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home theme slip</p>
+      <h3>Clue Return Slip</h3>
+      <p>The repeated clue returns when ____________________.</p>
+      <p>Use this only to strengthen the theme, not to add more plot.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home theme slip</p>
+      <h3>Choice Reason Slip</h3>
+      <p>The character choice matters because ____________________.</p>
+      <p>Accept dictated wording if the writer knows the idea but not the sentence.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home theme slip</p>
+      <h3>Theme Check Slip</h3>
+      <p>The story question and ending echo match because ____________________.</p>
+      <p>Reread both strips before filling the blank.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home theme slip</p>
+      <h3>Paper Close Slip</h3>
+      <p>This paper theme set belongs with the shelf marker note ____________________.</p>
+      <p>Close by stacking the slips for private adult-led reuse.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Which story question feels easiest to answer with a fictional character choice: ____________________.</li><li>What repeated clue could appear at the beginning and near the ending echo: ____________________.</li><li>Which character choice shows the theme without explaining it too much: ____________________.</li><li>What ending echo would remind us of the same story question: ____________________.</li><li>How can the theme line use plain words instead of a long explanation: ____________________.</li><li>What shelf marker note would help an adult find this theme again on paper: ____________________.</li><li>Which strip should the writer dictate while the adult writes: ____________________.</li><li>Which blank strip can stay empty until the story question is clearer: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 1 | Ages 10-11 | notice a fictional theme by connecting the story question, repeated clue, character choice, ending echo, theme line, and shelf marker note on paper: ____________________.</div>
+      <h2>Compass Craft Academy Story Theme Card</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one blank page, pencil, and pretend shelf marker strip for the compass craft theme work: ____________________.</p>
+      <p class="kid-direction">Writer: invent a compass crafter, a paper direction problem, and a helpful worktable choice while every answer stays made up: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: write the question the compass crafter must answer about which paper direction can guide the worktable plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: write one compass mark, fold, or small arrow that appears more than once and points toward the theme: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: write the moment the crafter chooses careful checking instead of rushing the pretend plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: write how the ending repeats the compass clue in a calmer or clearer way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: write one sentence about what the story shows when a helper listens to small directions before acting: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: write a short pretend shelf marker note that names this theme for later paper sorting: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the story question, character choice, and theme line blanks first: ____________________. Take-home line: save this paper theme card and add one new compass clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 2 | Ages 8-10 | notice a fictional reef theme by linking a story question, repeated clue, character choice, ending echo, theme line, and shelf marker note on paper: ____________________.</div>
+      <h2>Tiny Lantern Reef Story Theme Card</h2>
+      <figure>
+        <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+        <figcaption>Tiny Lantern Reef</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and pretend shelf marker strip beside the tiny lantern reef card: ____________________.</p>
+      <p class="kid-direction">Writer: invent reef lanterns, shell marks, and a gentle helper while every theme answer stays fictional and paper-only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: write the question the reef helper must answer when the smallest lantern keeps glowing near the same shell mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: write the tiny light, shell mark, or reef note that returns in the beginning, middle, and ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: write how the helper chooses to follow the small lantern clue instead of ignoring it: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: write how the final lantern glow echoes the first clue in a brighter paper scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: write one sentence about what the story shows when a small clue helps a helper notice what matters: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: write a short pretend shelf marker note for this tiny-lantern theme: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the repeated clue and ending echo first, then add the theme line: ____________________. Take-home line: keep this paper theme card and add one new lantern clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 3 | Ages 7-9 | notice a fictional errand-office theme by naming the story question, repeated clue, character choice, ending echo, theme line, and shelf marker note: ____________________.</div>
+      <h2>Acorn Avenue Errand Office Story Theme Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a blank page, pencil, and pretend shelf marker strip near the Acorn Avenue card: ____________________.</p>
+      <p class="kid-direction">Writer: make up the errand slips, acorn stamps, desk trays, and helper while all details stay invented: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: write the question the office helper must answer when an acorn-stamped slip lands in the wrong tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: write the acorn stamp, folded corner, or desk-tray mark that keeps returning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: write how the helper chooses patience and clear sorting with the pretend slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: write how the ending brings back the acorn stamp to show the errand is understood: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: write one sentence about what the story shows when careful sorting helps a small task make sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: write a short pretend shelf marker note for this errand-office theme: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the story question, repeated clue, and shelf marker note first: ____________________. Take-home line: save this paper theme card and add one new acorn-stamp clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 4 | Ages 8-10 | notice a fictional workshop theme by connecting a story question, repeated clue, character choice, ending echo, theme line, and shelf marker note: ____________________.</div>
+      <h2>Compost Clock Workshop Story Theme Card</h2>
+      <figure>
+        <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+        <figcaption>Compost Clock Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and pretend shelf marker strip beside the workshop theme card: ____________________.</p>
+      <p class="kid-direction">Writer: invent clock gears, leaf scraps, turning bins, and a workshop helper while the story stays fully made up: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: write the question the helper must answer when the compost clock ticks in an uneven pattern: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: write the gear click, leaf mark, or turning-bin symbol that appears again and again: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: write how the helper chooses steady patience before changing the pretend clock: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: write how the final clock tick echoes the first uneven clue in a calmer way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: write one sentence about what the story shows when slow changes are watched with care: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: write a short pretend shelf marker note for this compost-clock theme: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the character choice and theme line first, then return to the clue blanks: ____________________. Take-home line: keep this paper theme card and add one new workshop echo later: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 5 | Ages 8-10 | notice a fictional measurement theme by sorting the story question, repeated clue, character choice, ending echo, theme line, and shelf marker note: ____________________.</div>
+      <h2>Pantry Measurement Mystery Story Theme Card</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one blank page, pencil, and pretend shelf marker strip for the measurement mystery: ____________________.</p>
+      <p class="kid-direction">Writer: invent labeled jars, measuring scoops, quiet counters, and a mystery helper while every detail stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: write the question the helper must answer when two pretend measuring scoops give different clues: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: write the jar line, scoop notch, or counter mark that keeps showing up: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: write how the helper chooses to compare the marks before naming the mystery answer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: write how the ending returns to the first scoop clue with a clearer meaning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: write one sentence about what the story shows when careful measuring helps a helper be fair: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: write a short pretend shelf marker note for this measurement theme: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the repeated clue, character choice, and ending echo blanks first: ____________________. Take-home line: save this paper theme card and add one new measuring mark later: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 6 | Ages 7-9 | notice a fictional map-mixup theme by naming the story question, repeated clue, character choice, ending echo, theme line, and shelf marker note: ____________________.</div>
+      <h2>Button Bakery Map Mix-Up Story Theme Card</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and pretend shelf marker strip next to the button-map card: ____________________.</p>
+      <p class="kid-direction">Writer: invent button trays, a pretend bakery map, and a helper who sorts the mixup on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: write the question the helper must answer when the button map points to two pretend places at once: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: write the button shape, dotted path, or tray mark that keeps returning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: write how the helper chooses the clearest paper path after comparing the button clues: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: write how the final map path echoes the first button clue in a simple way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: write one sentence about what the story shows when a helper compares clues before choosing a path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: write a short pretend shelf marker note for this button-map theme: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the story question and shelf marker note first, then add the repeated clue: ____________________. Take-home line: keep this paper theme card and add one new button-map clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 7 | Ages 10-11 | Build a fictional story theme by connecting one story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.</div>
+      <h2>Revision River Ferry Story Theme Card</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank story page, pencil, and pretend shelf marker strip; keep the ferry, river, and notes fully fictional: ____________________.</p>
+      <p class="kid-direction">Writer: invent a ferry guide who carries pretend revision notes across a made-up paper river, then fill each theme blank: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>Story question: what does the ferry guide need to understand before the page can cross the revision river? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>Repeated clue: choose one margin ripple, folded note, or ferry bell that appears more than once to point toward the theme: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: write the choice the ferry guide makes when two pretend revision paths both seem possible: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>Ending echo: show how the ending quietly echoes the first river question without adding a new problem: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>Theme line: write one simple sentence about what the ferry story suggests about careful changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>Shelf marker note: give this ferry theme a short pretend paper marker note: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the repeated clue, and the writer fills only the theme line blank: ____________________. Take-home line: save the ferry theme card for one later adult-led offline paper pass: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 8 | Ages 7-9 | Find a fictional story theme by naming one story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.</div>
+      <h2>Sticker Station Mail Cart Story Theme Card</h2>
+      <figure>
+        <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+        <figcaption>Sticker Station Mail Cart</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank story card, pencil, and pretend shelf marker slip beside the paper mail cart map: ____________________.</p>
+      <p class="kid-direction">Writer: invent a station helper, sticker signs, and a tiny mail cart that moves only inside the fictional paper story: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>Story question: what is the station helper trying to sort before the mail cart can make its pretend paper trip? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>Repeated clue: choose one sticker shape, wheel squeak, or cart flag that keeps showing what matters in the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: write the choice the helper makes when the sticker signs do not match at first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>Ending echo: write how the final mail cart stop reminds the reader of the first story question: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>Theme line: write one clear sentence about what the story suggests about noticing small clues: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>Shelf marker note: write the short pretend shelf marker note for this sticker station theme: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads the story question, and the writer fills only the repeated clue blank: ____________________. Take-home line: keep the sticker station theme card with the pretend shelf marker note for later paper writing: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 9 | Ages 6-8 | Notice a fictional story theme by filling one story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.</div>
+      <h2>Moon Muffin Market Story Theme Card</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank theme card, pencil, and pretend shelf marker slip; keep every market detail imagined on paper: ____________________.</p>
+      <p class="kid-direction">Writer: invent a moon market helper, silver tray marks, and a gentle paper-only problem to solve: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>Story question: what does the moon market helper wonder when the silver tray marks point in different directions? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>Repeated clue: choose one moon crumb shape, tray star, or stall bell that appears again and again as a clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: write the helper&#39;s choice when the moon tray can be sorted two pretend ways: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>Ending echo: show how the ending repeats the first moon market feeling in a calmer way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>Theme line: write one simple sentence about what the story suggests about sharing attention with small clues: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>Shelf marker note: write the short pretend shelf marker note for this moon market theme: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult circles the character choice line, and the writer fills only the ending echo blank: ____________________. Take-home line: save the moon market theme card for another adult-led offline paper story day: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 10 | Ages 10-11 | Shape a fictional story theme by linking one story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.</div>
+      <h2>Index Card Theater Club Story Theme Card</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: provide blank index cards, a pencil, and a pretend shelf marker strip; keep the club and theater details fictional: ____________________.</p>
+      <p class="kid-direction">Writer: invent a card-stage helper who arranges pretend scene cards on paper without performing for anyone: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>Story question: what does the card-stage helper need to decide before the pretend scene cards fit together? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>Repeated clue: choose one curtain fold, index tab, or stage mark that returns to guide the theme: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: write the helper&#39;s choice when two scene cards could lead the story in different directions: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>Ending echo: write how the final scene card echoes the first question in a quieter way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>Theme line: write one sentence about what the story suggests about arranging ideas with care: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>Shelf marker note: give this theater club theme a short pretend shelf marker note: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the ending echo, and the writer fills only the shelf marker note blank: ____________________. Take-home line: keep the index card theater theme card for one later adult-led paper revision pass: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 11 | Ages 6-8 | Start a fictional story theme by completing one story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.</div>
+      <h2>Puddle Planet Post Office Story Theme Card</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank card, pencil, and pretend shelf marker note strip; keep the post office playful and imaginary: ____________________.</p>
+      <p class="kid-direction">Writer: invent a puddle planet helper, paper stamps, and a make-believe mail bag that stays inside the story: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>Story question: what does the puddle planet helper wonder when the paper stamps splash into a new order? ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>Repeated clue: choose one puddle ring, stamp moon, or mail bag patch that returns as a clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>Character choice: write the helper&#39;s choice when the pretend mail bag could go to two paper counters: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>Ending echo: show how the ending repeats the first puddle question with a small answer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>Theme line: write one simple sentence about what the story suggests about patience with mixed-up clues: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>Shelf marker note: write the short pretend shelf marker note for this puddle planet theme: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads the repeated clue, and the writer fills only the character choice blank: ____________________. Take-home line: save the puddle planet theme card for later adult-led offline paper writing: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 12 | Ages 10-11 | Use story question, repeated clue, character choice, ending echo, theme line, and shelf marker note language to find the theme of a fictional Binding Day Boardwalk story.</div>
+      <h2>Binding Day Boardwalk Story Theme Card</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place this card, a pencil, and three blank slips beside a pretend boardwalk row sketch: ____________________.</p>
+      <p class="kid-direction">Fill the blanks for a made-up Binding Day Boardwalk story; keep the theme broad, gentle, and invented: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: What does the binding helper need to learn about keeping scattered pieces together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: What small boardwalk clue keeps appearing, such as a ribbon knot, paper rail, or loose cover edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: What calm choice does the helper make when two paper paths could both work: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: At the end, what earlier clue comes back with a clearer meaning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: This story may be about how ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: File this fictional theme near the shelf marker note called ____________________.</p>
+    </section></div>
+      <p class="take-home-line">quiet option: Fill only the repeated clue and theme line first, then add the story question later: ____________________. take-home line: Save the paper card and add one new ending echo on a blank slip later: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 13 | Ages 8-10 | Use story question, repeated clue, character choice, ending echo, theme line, and shelf marker note language to find the theme of a fictional Seed Library Map Room story.</div>
+      <h2>Seed Library Map Room Story Theme Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place this card, a pencil, and two blank map slips beside a pretend seed-room drawing: ____________________.</p>
+      <p class="kid-direction">Fill the blanks for a made-up Seed Library Map Room story with invented places, paper tags, and a gentle theme: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: What does the map keeper need to understand before the seed paths make sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: What small clue repeats on the paper map, such as a dot, leaf mark, folded tab, or tiny arrow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: What choice does the map keeper make when the easy route and the helpful route are different: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: At the end, how does the first seed mark echo the story question: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: This story may be about how ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: File this fictional theme near the shelf marker note called ____________________.</p>
+    </section></div>
+      <p class="take-home-line">quiet option: Fill the story question, repeated clue, and shelf marker note before adding the theme line: ____________________. take-home line: Save the paper card and add one new map-room clue on a fresh slip later: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 14 | Ages 8-10 | Use story question, repeated clue, character choice, ending echo, theme line, and shelf marker note language to find the theme of a fictional Moss Message Observatory story.</div>
+      <h2>Moss Message Observatory Story Theme Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place this card, a pencil, and a blank star chart beside a pretend moss-message note: ____________________.</p>
+      <p class="kid-direction">Fill the blanks for a made-up observatory story where a quiet clue helps the theme become clearer: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: What does the observer need to notice before the moss message can guide the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: What tiny clue appears more than once, such as a green dot, soft arrow, chart crease, or window mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: What choice does the observer make when listening carefully matters more than rushing: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: At the end, what early moss-message detail returns with a warmer meaning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: This story may be about how ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: File this fictional theme near the shelf marker note called ____________________.</p>
+    </section></div>
+      <p class="take-home-line">quiet option: Fill the repeated clue and ending echo first, then write the character choice: ____________________. take-home line: Save the paper card and add one calmer theme line on another slip later: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 15 | Ages 8-10 | Use story question, repeated clue, character choice, ending echo, theme line, and shelf marker note language to find the theme of a fictional Cloudberry Clocktower story.</div>
+      <h2>Cloudberry Clocktower Story Theme Card</h2>
+      <figure>
+        <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+        <figcaption>Cloudberry Clocktower</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place this card, a pencil, and three blank clock-face slips beside a pretend tower sketch: ____________________.</p>
+      <p class="kid-direction">Fill the blanks for a made-up Cloudberry Clocktower story; use paper clues to name a gentle theme: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: What does the tower helper need to learn when the clocktower marks do not line up yet: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: What clue repeats, such as a cloudberry stamp, soft tick mark, curved arrow, or bell-shaped shadow: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: What choice does the helper make when patience could help more than a quick fix: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: At the end, how does the first clocktower clue return in a clearer way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: This story may be about how ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: File this fictional theme near the shelf marker note called ____________________.</p>
+    </section></div>
+      <p class="take-home-line">quiet option: Fill the character choice and ending echo first, then add the shelf marker note: ____________________. take-home line: Save the paper card and add one new clocktower repeated clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page theme-card-page">
+      <div class="page-kicker">Theme Card 16 | Ages 7-9 | Use story question, repeated clue, character choice, ending echo, theme line, and shelf marker note language to find the theme of a fictional Spoon Ferry Lunchbox Harbor story.</div>
+      <h2>Spoon Ferry Lunchbox Harbor Story Theme Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place this card, a pencil, and two blank harbor slips beside a pretend paper ferry route: ____________________.</p>
+      <p class="kid-direction">Fill the blanks for a made-up Spoon Ferry Lunchbox Harbor story with pretend boats, gentle choices, and paper-only notes: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story question</h3>
+      <p>story question: What does the ferry helper need to understand before the tiny harbor feels sorted: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Repeated clue</h3>
+      <p>repeated clue: What clue repeats, such as a spoon-shaped sail, lunchbox dock mark, paper ripple, or folded flag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Character choice</h3>
+      <p>character choice: What choice does the helper make when another pretend boat needs space on the paper route: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending echo</h3>
+      <p>ending echo: At the end, how does the first harbor clue come back with a kinder meaning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Theme line</h3>
+      <p>theme line: This story may be about how ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Shelf marker note</h3>
+      <p>shelf marker note: File this fictional theme near the shelf marker note called ____________________.</p>
+    </section></div>
+      <p class="take-home-line">quiet option: Fill only the story question and repeated clue first, then add the theme line later: ____________________. take-home line: Save the paper card and add one new friendly ending echo on a fresh slip later: ____________________.</p>
+    </section>
+  </body>
+</html>
