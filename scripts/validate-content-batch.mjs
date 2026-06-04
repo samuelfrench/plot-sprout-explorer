@@ -79,6 +79,8 @@ import {
   validateShelfMarkerStoryThemeCardPackSourceFiles,
   validateBookendStoryEvidenceCardPackSource,
   validateBookendStoryEvidenceCardPackSourceFiles,
+  validatePageFlagStoryReasonChainCardPackSource,
+  validatePageFlagStoryReasonChainCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -174,6 +176,7 @@ const batch61ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-ba
 const batch62ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch62-images.json')
 const batch63ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch63-images.json')
 const batch64ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch64-images.json')
+const batch65ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch65-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -302,6 +305,12 @@ const bookendStoryEvidenceSourceFile = resolve(
   'product-artifacts',
   'bookend-story-evidence-card-pack.json',
 )
+const pageFlagStoryReasonChainSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'page-flag-story-reason-chain-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -362,6 +371,7 @@ const batch61ImagesBatchId = '2026-06-04-batch61-images'
 const batch62ImagesBatchId = '2026-06-04-batch62-images'
 const batch63ImagesBatchId = '2026-06-04-batch63-images'
 const batch64ImagesBatchId = '2026-06-04-batch64-images'
+const batch65ImagesBatchId = '2026-06-04-batch65-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -5354,6 +5364,51 @@ function validateBatch64Image(image, imageSlugs) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch65Image(image, imageSlugs) {
+  const label = `2026-06-04-batch65-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.width === 1344, `${label}.width must be 1344.`)
+  expect(image.height === 768, `${label}.height must be 768.`)
+  expect(
+    image.slug === 'page-flag-story-reason-chain-card-pack',
+    `${label}.slug must be page-flag-story-reason-chain-card-pack.`,
+  )
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 65 images.`)
+  imageSlugs.add(image.slug)
+  expect(image.outputJpeg === `public/images/plotsprout/batch65/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch65/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch65/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  expect(/page flag/i.test(image.prompt), `${label}.prompt must describe the page flag product hero.`)
+  expect(/reason[- ]chain/i.test(image.prompt), `${label}.prompt must describe reason-chain cards.`)
+  expect(/text/i.test(image.negativePrompt), `${label}.negativePrompt must block text-like artifacts.`)
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  const generatedFileExists = [jpegPath, webpPath, sidecarPath].some((filePath) => existsSync(filePath))
+  if (!generatedFileExists) return
+
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -5828,6 +5883,14 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       minParentSteps: 4,
       maxWorldSlugs: 16,
     },
+    'page-flag-story-reason-chain-card-pack': {
+      title: 'Page Flag Story Reason Chain Card Pack',
+      pricePoint: '$103',
+      minIncludedPages: 12,
+      minUseCases: 4,
+      minParentSteps: 4,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -5849,7 +5912,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
     product.slug === 'card-catalog-story-retell-card-pack' ||
     product.slug === 'library-pocket-story-summary-card-pack' ||
     product.slug === 'shelf-marker-story-theme-card-pack' ||
-    product.slug === 'bookend-story-evidence-card-pack'
+    product.slug === 'bookend-story-evidence-card-pack' ||
+    product.slug === 'page-flag-story-reason-chain-card-pack'
       ? expandingFileStorySceneChainSafety
       : safety
   expect(product.safetyNote.includes(requiredProductSafety), `${label}.safetyNote missing required safety sentence.`)
@@ -6013,6 +6077,9 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
 
   const renderedPath = resolve(root, 'public', product.slug, 'index.html')
   if (!existsSync(renderedPath)) {
+    if (product.slug === 'page-flag-story-reason-chain-card-pack' && options.batch65GenerationStarted) {
+      fail(`${label} static output is missing after Batch 65 generated outputs started: ${renderedPath}`)
+    }
     if (product.slug === 'bookend-story-evidence-card-pack' && options.batch64GenerationStarted) {
       fail(`${label} static output is missing after Batch 64 generated outputs started: ${renderedPath}`)
     }
@@ -6053,7 +6120,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
         product.slug === 'card-catalog-story-retell-card-pack' ||
         product.slug === 'library-pocket-story-summary-card-pack' ||
         product.slug === 'shelf-marker-story-theme-card-pack' ||
-        product.slug === 'bookend-story-evidence-card-pack',
+        product.slug === 'bookend-story-evidence-card-pack' ||
+        product.slug === 'page-flag-story-reason-chain-card-pack',
       `${label} static output is missing: ${renderedPath}`,
     )
     return
@@ -7467,12 +7535,33 @@ const batch64ImagePaths = batch64Images.images.flatMap((image) => [
   resolve(root, image.sidecar),
 ])
 
+expect(existsSync(batch65ImagesFile), `Missing Batch 65 image manifest: ${batch65ImagesFile}`)
+const batch65Images = readJson(batch65ImagesFile)
+expect(
+  batch65Images.batchId === batch65ImagesBatchId,
+  `batch65 image manifest batchId must be ${batch65ImagesBatchId}.`,
+)
+expect(batch65Images.generatedAt === '2026-06-04', 'batch65 image manifest generatedAt must be 2026-06-04.')
+expect(Array.isArray(batch65Images.images), 'batch65 image manifest images must be an array.')
+expect(batch65Images.images.length === 1, `Expected 1 Batch 65 image, found ${batch65Images.images.length}.`)
+const batch65ImageSlugs = new Set()
+batch65Images.images.forEach((image) => validateBatch65Image(image, batch65ImageSlugs))
+expect(
+  batch65ImageSlugs.has('page-flag-story-reason-chain-card-pack'),
+  'Batch 65 images missing page-flag-story-reason-chain-card-pack.',
+)
+const batch65ImagePaths = batch65Images.images.flatMap((image) => [
+  resolve(root, image.outputJpeg),
+  resolve(root, image.outputWebp),
+  resolve(root, image.sidecar),
+])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 57, `Expected 57 product records, found ${products.products.length}.`)
+expect(products.products.length === 58, `Expected 58 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 let batch55GeneratedOutputPaths = [...batch55ImagePaths]
 const batch55ProductRecord = products.products.find(
@@ -7699,8 +7788,37 @@ if (batch64GenerationStarted) {
     )
   }
 }
+let batch65GeneratedOutputPaths = [...batch65ImagePaths]
+const batch65ProductRecord = products.products.find(
+  (product) => product.slug === 'page-flag-story-reason-chain-card-pack',
+)
+if (batch65ProductRecord) {
+  batch65GeneratedOutputPaths.push(resolve(root, 'public', batch65ProductRecord.slug, 'index.html'))
+}
+const batch65ProductArtifactPathForGeneration = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'page-flag-story-reason-chain-card-pack.json',
+)
+if (existsSync(batch65ProductArtifactPathForGeneration)) {
+  const artifactSourceForGeneration = readJson(batch65ProductArtifactPathForGeneration)
+  batch65GeneratedOutputPaths.push(
+    ...Object.values(artifactSourceForGeneration.artifact ?? {}).map((relativePath) => resolve(root, relativePath)),
+  )
+}
+const batch65GenerationStarted = anyPathExists(batch65GeneratedOutputPaths)
+if (batch65GenerationStarted) {
+  for (const imagePath of batch65ImagePaths) {
+    expect(
+      existsSync(imagePath),
+      `Batch 65 generated image output is missing after Batch 65 generated outputs started: ${imagePath}`,
+    )
+  }
+}
 products.products.forEach((product) =>
   validateProduct(product, productSlugs, worldSlugs, {
+    batch65GenerationStarted,
     batch64GenerationStarted,
     batch55GenerationStarted,
     batch56GenerationStarted,
@@ -7771,6 +7889,7 @@ for (const requiredProductSlug of [
   'library-pocket-story-summary-card-pack',
   'shelf-marker-story-theme-card-pack',
   'bookend-story-evidence-card-pack',
+  'page-flag-story-reason-chain-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -12616,6 +12735,140 @@ if (bookendStoryEvidenceRequiresArtifacts) {
   }
 }
 
+expect(
+  existsSync(pageFlagStoryReasonChainSourceFile),
+  `Missing Batch 65 Page Flag Story Reason Chain Card Pack source file: ${pageFlagStoryReasonChainSourceFile}`,
+)
+const pageFlagStoryReasonChainSource = readJson(pageFlagStoryReasonChainSourceFile)
+expect(
+  pageFlagStoryReasonChainSource.batchId === '2026-06-04-batch65',
+  'Page Flag Story Reason Chain Card Pack source batchId must be 2026-06-04-batch65.',
+)
+const pageFlagStoryReasonChainProduct = products.products.find(
+  (product) => product.slug === 'page-flag-story-reason-chain-card-pack',
+)
+expect(
+  pageFlagStoryReasonChainProduct,
+  'Missing Page Flag Story Reason Chain Card Pack product record for Batch 65 artifact validation.',
+)
+const pageFlagStoryReasonChainSourceErrors = validatePageFlagStoryReasonChainCardPackSource(
+  pageFlagStoryReasonChainSource,
+  pageFlagStoryReasonChainProduct,
+  worldAgeBands,
+)
+expect(
+  pageFlagStoryReasonChainSourceErrors.length === 0,
+  `Page Flag Story Reason Chain Card Pack source failed validation:\n${pageFlagStoryReasonChainSourceErrors.join('\n')}`,
+)
+const pageFlagStoryReasonChainSourceFileErrors = validatePageFlagStoryReasonChainCardPackSourceFiles(
+  pageFlagStoryReasonChainSource,
+  root,
+)
+expect(
+  pageFlagStoryReasonChainSourceFileErrors.length === 0,
+  `Page Flag Story Reason Chain Card Pack sourceFiles failed validation:\n${pageFlagStoryReasonChainSourceFileErrors.join('\n')}`,
+)
+const pageFlagStoryReasonChainSummaryErrors = validateProductWorldSummaries(
+  pageFlagStoryReasonChainProduct,
+  'Page Flag Story Reason Chain Card Pack',
+)
+expect(
+  pageFlagStoryReasonChainSummaryErrors.length === 0,
+  `Page Flag Story Reason Chain Card Pack world summaries failed validation:\n${pageFlagStoryReasonChainSummaryErrors.join('\n')}`,
+)
+const pageFlagStoryReasonChainCardAgeBands = new Map(
+  pageFlagStoryReasonChainSource.cards.map((card) => [card.worldSlug, card.ageBand]),
+)
+for (const [index, summary] of pageFlagStoryReasonChainProduct.worldSummaries.entries()) {
+  validateString(summary.ageBand, `Page Flag Story Reason Chain Card Pack product.worldSummaries[${index}].ageBand`)
+  expect(
+    summary.ageBand === pageFlagStoryReasonChainCardAgeBands.get(summary.slug),
+    `Page Flag Story Reason Chain Card Pack product.worldSummaries[${index}].ageBand must match source card ageBand.`,
+  )
+  expect(
+    !/^6-/.test(summary.ageBand),
+    `Page Flag Story Reason Chain Card Pack product.worldSummaries[${index}].ageBand must stay within ages 7-11.`,
+  )
+}
+const pageFlagStoryReasonChainArtifactPaths = Object.values(pageFlagStoryReasonChainSource.artifact).map(
+  (relativePath) => resolve(root, relativePath),
+)
+const pageFlagStoryReasonChainAnyArtifactFilesExist = anyPathExists(pageFlagStoryReasonChainArtifactPaths)
+const pageFlagStoryReasonChainRequiresArtifacts =
+  batch65GenerationStarted || pageFlagStoryReasonChainAnyArtifactFilesExist
+if (pageFlagStoryReasonChainRequiresArtifacts) {
+  for (const artifactPath of pageFlagStoryReasonChainArtifactPaths) {
+    expect(
+      existsSync(artifactPath),
+      `Page Flag Story Reason Chain Card Pack artifact set is incomplete after artifact generation started: ${artifactPath}`,
+    )
+  }
+  const pageFlagStoryReasonChainExpectedPdfPages = pageFlagStoryReasonChainSource.cards.length + 5
+  const pageFlagStoryReasonChainArtifactStatus = inspectArtifactFiles(root, pageFlagStoryReasonChainSource.artifact, {
+    expectedPdfPages: pageFlagStoryReasonChainExpectedPdfPages,
+    expectedZipEntries: [
+      'Page-Flag-Story-Reason-Chain-Card-Pack.pdf',
+      'README.txt',
+      'source/page-flag-story-reason-chain-card-pack.html',
+      ...pageFlagStoryReasonChainSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+    ],
+  })
+  expect(
+    pageFlagStoryReasonChainArtifactStatus.valid,
+    `Page Flag Story Reason Chain Card Pack artifacts failed validation:\n${pageFlagStoryReasonChainArtifactStatus.errors.join('\n')}`,
+  )
+  expect(
+    pageFlagStoryReasonChainArtifactStatus.files.pdf.size > 100_000,
+    `Page Flag Story Reason Chain Card Pack PDF artifact is unexpectedly small: ${pageFlagStoryReasonChainArtifactStatus.files.pdf.size} bytes.`,
+  )
+  expect(
+    pageFlagStoryReasonChainArtifactStatus.files.pdf.pageCount === pageFlagStoryReasonChainExpectedPdfPages,
+    `Page Flag Story Reason Chain Card Pack PDF artifact must have ${pageFlagStoryReasonChainExpectedPdfPages} pages.`,
+  )
+  expect(
+    pageFlagStoryReasonChainArtifactStatus.files.zip.size > pageFlagStoryReasonChainArtifactStatus.files.pdf.size,
+    'Page Flag Story Reason Chain Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+  )
+  const pageFlagStoryReasonChainCheckoutErrors = validateCheckoutReadiness(
+    pageFlagStoryReasonChainProduct,
+    pageFlagStoryReasonChainArtifactStatus,
+  )
+  expect(
+    pageFlagStoryReasonChainCheckoutErrors.length === 0,
+    `Page Flag Story Reason Chain Card Pack checkout readiness failed validation:\n${pageFlagStoryReasonChainCheckoutErrors.join('\n')}`,
+  )
+  const pageFlagStoryReasonChainArtifactManifest = readJson(
+    resolve(root, pageFlagStoryReasonChainSource.artifact.manifestPath),
+  )
+  expect(
+    pageFlagStoryReasonChainArtifactManifest.sourcePageCount === pageFlagStoryReasonChainSource.cards.length,
+    'Page Flag Story Reason Chain Card Pack artifact manifest sourcePageCount must match source cards.',
+  )
+  expect(
+    Array.isArray(pageFlagStoryReasonChainArtifactManifest.files?.assets),
+    'Page Flag Story Reason Chain Card Pack artifact manifest files.assets must be an array.',
+  )
+  expect(
+    pageFlagStoryReasonChainArtifactManifest.files.assets.length === pageFlagStoryReasonChainSource.worldSlugs.length,
+    'Page Flag Story Reason Chain Card Pack artifact manifest must include one copied local image per source world.',
+  )
+  const pageFlagStoryReasonChainManifestAssetErrors = validateManifestWorldAssets(
+    pageFlagStoryReasonChainSource,
+    pageFlagStoryReasonChainArtifactManifest,
+  )
+  expect(
+    pageFlagStoryReasonChainManifestAssetErrors.length === 0,
+    `Page Flag Story Reason Chain Card Pack artifact manifest image coverage failed validation:\n${pageFlagStoryReasonChainManifestAssetErrors.join('\n')}`,
+  )
+  for (const asset of pageFlagStoryReasonChainArtifactManifest.files.assets) {
+    validateImageFile(
+      resolve(root, asset.path),
+      `Page Flag Story Reason Chain Card Pack copied artifact image ${asset.path}`,
+      'jpeg',
+    )
+  }
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -12672,6 +12925,7 @@ const productImageManifests = [
   batch62Images,
   batch63Images,
   batch64Images,
+  batch65Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

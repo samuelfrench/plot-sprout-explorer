@@ -154,14 +154,14 @@ function makeTools() {
         'Accept short invented phrases before asking for a full reason-chain sentence: ____________________.',
         'Use the because bridge to connect details without asking for personal facts: ____________________.',
         'If the writer stalls, fill only the story idea and first detail first: ____________________.',
-        'Use the page flag check as a paper mark, not as a grade or public display: ____________________.',
+        'Use the page flag check as a quiet paper mark, not as a correction mark: ____________________.',
       ],
       safetyNotes: [
         'Use pretend names, broad made-up places, and invented actions: ____________________.',
         'Do not ask for real school, home, schedule, or identity details: ____________________.',
-        'Do not collect child writing, photos, audio, video, or personal profiles: ____________________.',
+        'Do not collect child writing or identifying facts: ____________________.',
         'Keep every prompt offline, paper-only, and adult-led: ____________________.',
-        'Keep page flags fictional and separate from real book, library, or online systems: ____________________.',
+        'Keep page flags fictional and separate from real shelf or online systems: ____________________.',
       ],
     },
     reasonChainRoutines: [

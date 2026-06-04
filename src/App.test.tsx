@@ -146,5 +146,9 @@ describe('App', () => {
       'href',
       expect.stringContaining('bookend-story-evidence-card-pack'),
     )
+    expect(screen.getByRole('link', { name: /Preview Page Flag Story Reason Chain Card Pack/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('page-flag-story-reason-chain-card-pack'),
+    )
   })
 })

@@ -1,0 +1,21 @@
+{
+  "batchId": "2026-06-04-batch65-images",
+  "generatedAt": "2026-06-04",
+  "generation": "local",
+  "purpose": "Add the checkout-pending page flag story reason chain card pack product hero image.",
+  "images": [
+    {
+      "slug": "page-flag-story-reason-chain-card-pack",
+      "title": "Page Flag Story Reason Chain Card Pack",
+      "purpose": "Static product hero image for the checkout-pending page flag story reason chain card pack page.",
+      "prompt": "family-friendly top-down close-cropped product photo on seamless pale neutral background, blank paper page flag story reason chain card pack, neat stack of blank off-white reason-chain cards with small plain paper page flags, clean printable paper kit, paper-only stationery arrangement, unmarked paper, no readable text, no symbols, no decorative props",
+      "negativePrompt": "text, writing, letters, words, readable text, labels, titles, logo, watermark, symbols, icons, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, school, classroom, real library checkout desk, checkout desk, library cards, due dates, fines, call numbers, barcodes, real due date slips, books with titles, book titles, author names, real library names, sources, citations, quotes, reviews, ratings, addresses, routes, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, score, grade, timer, portfolio, showcase, food, snacks, cups, bowls, allergy, medical, scary, violence, weapons, bullying, romance, politics, religion, gambling, ads, branded characters, children, faces, hands, clutter, colored background, dark shadows",
+      "seed": 260665103,
+      "width": 1344,
+      "height": 768,
+      "outputJpeg": "public/images/plotsprout/batch65/page-flag-story-reason-chain-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch65/page-flag-story-reason-chain-card-pack.webp",
+      "sidecar": "content/image-runs/batch65/page-flag-story-reason-chain-card-pack.json"
+    }
+  ]
+}

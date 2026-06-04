@@ -107,6 +107,25 @@ const bookendEvidenceWorldSlugs = [
   'pencil-dragon-academy',
 ]
 
+const pageFlagReasonChainWorldSlugs = [
+  'buttonwood-library-train',
+  'pencil-dragon-academy',
+  'compass-craft-academy',
+  'pantry-measurement-mystery',
+  'paperclip-plaza-parcel-day',
+  'pond-bridge-blueprint-club',
+  'tiny-lantern-reef',
+  'appendix-archive-lab',
+  'blue-pencil-observatory',
+  'chapter-gate-greenhouse',
+  'moss-message-observatory',
+  'pocket-park-notice-board',
+  'rain-boot-route-rangers',
+  'tidepool-timekeepers-lab',
+  'clue-label-tower-museum',
+  'teacup-town-weather-window',
+]
+
 function readJson(relativePath: string): unknown {
   return JSON.parse(readFileSync(resolve(process.cwd(), relativePath), 'utf8'))
 }
@@ -202,6 +221,7 @@ describe('storyData', () => {
       'library-pocket-story-summary-card-pack',
       'shelf-marker-story-theme-card-pack',
       'bookend-story-evidence-card-pack',
+      'page-flag-story-reason-chain-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -261,6 +281,7 @@ describe('storyData', () => {
       '$97',
       '$99',
       '$101',
+      '$103',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
@@ -633,6 +654,84 @@ describe('storyData', () => {
         'mailto:samfrench@gmail.com?subject=Bookend%20Story%20Evidence%20Card%20Pack',
     })
     expect(product?.worldSlugs).toEqual(bookendEvidenceWorldSlugs)
+    expect(String(product?.ctaHref)).toMatch(/^mailto:/)
+    expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
+  })
+
+  it('keeps the Batch65 page flag reason chain source artifact aligned with the lane files', () => {
+    const source = readJson('content/product-artifacts/page-flag-story-reason-chain-card-pack.json') as Record<
+      string,
+      unknown
+    >
+    const laneA = readJson(
+      'content/product-artifacts/lanes/batch65-page-flag-reason-chain-cards-a.json',
+    ) as unknown[]
+    const laneB = readJson(
+      'content/product-artifacts/lanes/batch65-page-flag-reason-chain-cards-b.json',
+    ) as unknown[]
+    const laneC = readJson(
+      'content/product-artifacts/lanes/batch65-page-flag-reason-chain-cards-c.json',
+    ) as unknown[]
+    const tools = readJson('content/product-artifacts/lanes/batch65-page-flag-reason-chain-tools.json') as Record<
+      string,
+      unknown
+    >
+    const cover = source.cover as { included?: string[] }
+
+    expect(Object.keys(source)).toEqual([
+      'batchId',
+      'generatedAt',
+      'productSlug',
+      'title',
+      'pricePoint',
+      'audience',
+      'sessionLength',
+      'safetyNote',
+      'artifact',
+      'sourceFiles',
+      'worldSlugs',
+      'cover',
+      'adultGuide',
+      'reasonChainRoutines',
+      'takeHomeReasonSlips',
+      'optionalAdultPrompts',
+      'cards',
+    ])
+    expect(source.sourceFiles).toEqual([
+      'content/product-artifacts/lanes/batch65-page-flag-reason-chain-cards-a.json',
+      'content/product-artifacts/lanes/batch65-page-flag-reason-chain-cards-b.json',
+      'content/product-artifacts/lanes/batch65-page-flag-reason-chain-cards-c.json',
+      'content/product-artifacts/lanes/batch65-page-flag-reason-chain-tools.json',
+    ])
+    expect(source.worldSlugs).toEqual(pageFlagReasonChainWorldSlugs)
+    expect(cover.included).toHaveLength(12)
+    expect(cover.included?.join(' ')).toMatch(/reason-chain/i)
+    expect(cover.included?.join(' ')).not.toMatch(/evidence|theme|summary|library pocket/i)
+    expect(source.cards).toEqual([...laneA, ...laneB, ...laneC])
+    expect(source.adultGuide).toEqual(tools.adultGuide)
+    expect(source.reasonChainRoutines).toEqual(tools.reasonChainRoutines)
+    expect(source.takeHomeReasonSlips).toEqual(tools.takeHomeReasonSlips)
+    expect(source.optionalAdultPrompts).toEqual(tools.optionalAdultPrompts)
+  })
+
+  it('keeps the Batch65 page flag reason chain product checkout-pending and mailto-only', () => {
+    const products = readJson('content/products/batch5-products.json') as {
+      products: Array<Record<string, unknown>>
+    }
+    const product = products.products.find(
+      (candidate) => candidate.slug === 'page-flag-story-reason-chain-card-pack',
+    )
+
+    expect(product).toMatchObject({
+      slug: 'page-flag-story-reason-chain-card-pack',
+      title: 'Page Flag Story Reason Chain Card Pack',
+      pricePoint: '$103',
+      status: 'checkout_pending',
+      heroImage: 'images/plotsprout/batch65/page-flag-story-reason-chain-card-pack.jpg',
+      ctaHref:
+        'mailto:samfrench@gmail.com?subject=Page%20Flag%20Story%20Reason%20Chain%20Card%20Pack',
+    })
+    expect(product?.worldSlugs).toEqual(pageFlagReasonChainWorldSlugs)
     expect(String(product?.ctaHref)).toMatch(/^mailto:/)
     expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
   })

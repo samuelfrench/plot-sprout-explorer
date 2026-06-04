@@ -6047,6 +6047,161 @@
           "summary": "A pretend Pencil Dragon Academy world for supporting one fictional story claim on paper."
         }
       ]
+    },
+    {
+      "slug": "page-flag-story-reason-chain-card-pack",
+      "title": "Page Flag Story Reason Chain Card Pack",
+      "pricePoint": "$103",
+      "status": "checkout_pending",
+      "headline": "Printable page flag reason-chain cards for private fictional story thinking.",
+      "summary": "Sixteen page flag reason-chain cards help kids connect fictional story ideas with details, because bridges, and short reason-chain sentences.",
+      "heroImage": "images/plotsprout/batch65/page-flag-story-reason-chain-card-pack.jpg",
+      "ctaLabel": "Request page flag reason chain pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Page%20Flag%20Story%20Reason%20Chain%20Card%20Pack",
+      "checkoutNote": "Checkout stays pending until Sam chooses a hosted sales path; this static page is ready for later hosted wiring but does not sell yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "buttonwood-library-train",
+        "pencil-dragon-academy",
+        "compass-craft-academy",
+        "pantry-measurement-mystery",
+        "paperclip-plaza-parcel-day",
+        "pond-bridge-blueprint-club",
+        "tiny-lantern-reef",
+        "appendix-archive-lab",
+        "blue-pencil-observatory",
+        "chapter-gate-greenhouse",
+        "moss-message-observatory",
+        "pocket-park-notice-board",
+        "rain-boot-route-rangers",
+        "tidepool-timekeepers-lab",
+        "clue-label-tower-museum",
+        "teacup-town-weather-window"
+      ],
+      "includedPages": [
+        "Sixteen printable page flag reason-chain cards",
+        "Adult setup guide",
+        "Story idea prompts",
+        "First detail prompts",
+        "First reason prompts",
+        "Second detail prompts",
+        "Because bridge prompts",
+        "Reason-chain sentence prompts",
+        "Page flag check prompts",
+        "Six adult-led reason-chain routines",
+        "Ten take-home reason slips",
+        "PDF, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family paper table for connecting one idea to a pretend detail",
+        "A homeschool writing station for first reason and because bridge practice",
+        "A tutoring pack for writers who need concrete reason-chain support",
+        "An adult-led small group activity for private paper-only sentence practice"
+      ],
+      "parentSteps": [
+        "Print one reason-chain card and set it beside a blank page.",
+        "Ask for the story idea before asking for the first detail.",
+        "Let the child point, dictate, sketch, or write one short line per blank.",
+        "Close with a page flag check and keep every reason fictional."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "buttonwood-library-train",
+          "title": "Buttonwood Library Train",
+          "ageBand": "7-9",
+          "summary": "A pretend Buttonwood Library Train world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "pencil-dragon-academy",
+          "title": "Pencil Dragon Academy",
+          "ageBand": "10-11",
+          "summary": "A pretend Pencil Dragon Academy world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "title": "Compass Craft Academy",
+          "ageBand": "10-11",
+          "summary": "A pretend Compass Craft Academy world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "pantry-measurement-mystery",
+          "title": "Pantry Measurement Mystery",
+          "ageBand": "8-10",
+          "summary": "A pretend Pantry Measurement Mystery world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "paperclip-plaza-parcel-day",
+          "title": "Paperclip Plaza Parcel Day",
+          "ageBand": "7-9",
+          "summary": "A pretend Paperclip Plaza Parcel Day world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "pond-bridge-blueprint-club",
+          "title": "Pond Bridge Blueprint Club",
+          "ageBand": "8-10",
+          "summary": "A pretend Pond Bridge Blueprint Club world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "tiny-lantern-reef",
+          "title": "Tiny Lantern Reef",
+          "ageBand": "8-10",
+          "summary": "A pretend Tiny Lantern Reef world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "appendix-archive-lab",
+          "title": "Appendix Archive Lab",
+          "ageBand": "10-11",
+          "summary": "A pretend Appendix Archive Lab world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "blue-pencil-observatory",
+          "title": "Blue Pencil Observatory",
+          "ageBand": "10-11",
+          "summary": "A pretend Blue Pencil Observatory world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "chapter-gate-greenhouse",
+          "title": "Chapter Gate Greenhouse",
+          "ageBand": "10-11",
+          "summary": "A pretend Chapter Gate Greenhouse world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "title": "Moss Message Observatory",
+          "ageBand": "8-10",
+          "summary": "A pretend Moss Message Observatory world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "title": "Pocket Park Notice Board",
+          "ageBand": "7-9",
+          "summary": "A pretend Pocket Park Notice Board world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "rain-boot-route-rangers",
+          "title": "Rain Boot Route Rangers",
+          "ageBand": "7-9",
+          "summary": "A pretend Rain Boot Route Rangers world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "title": "Tidepool Timekeepers Lab",
+          "ageBand": "8-10",
+          "summary": "A pretend Tidepool Timekeepers Lab world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "title": "Clue Label Tower Museum",
+          "ageBand": "10-11",
+          "summary": "A pretend Clue Label Tower Museum world for connecting one fictional story idea to reasons on paper."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "title": "Teacup Town Weather Window",
+          "ageBand": "7-8",
+          "summary": "A pretend Teacup Town Weather Window world for connecting one fictional story idea to reasons on paper."
+        }
+      ]
     }
   ]
 }

@@ -726,6 +726,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable bookend story evidence cards with adult guide tools, evidence routines, and take-home evidence slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'page-flag-story-reason-chain-card-pack',
+    title: 'Page Flag Story Reason Chain Card Pack',
+    pricePoint: '$103',
+    description:
+      'Sixteen printable page flag story reason-chain cards with adult guide tools, reason-chain routines, and take-home reason slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]
