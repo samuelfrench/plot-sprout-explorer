@@ -69,6 +69,25 @@ const libraryPocketWorldSlugs = [
   'index-card-theater-club',
 ]
 
+const shelfMarkerWorldSlugs = [
+  'compass-craft-academy',
+  'tiny-lantern-reef',
+  'acorn-avenue-errand-office',
+  'compost-clock-workshop',
+  'pantry-measurement-mystery',
+  'button-bakery-map-mixup',
+  'revision-river-ferry',
+  'sticker-station-mail-cart',
+  'moon-muffin-market',
+  'index-card-theater-club',
+  'puddle-planet-post-office',
+  'binding-day-boardwalk',
+  'seed-library-map-room',
+  'moss-message-observatory',
+  'cloudberry-clocktower',
+  'spoon-ferry-lunchbox-harbor',
+]
+
 function readJson(relativePath: string): unknown {
   return JSON.parse(readFileSync(resolve(process.cwd(), relativePath), 'utf8'))
 }
@@ -162,6 +181,7 @@ describe('storyData', () => {
       'archive-drawer-story-resolution-card-pack',
       'card-catalog-story-retell-card-pack',
       'library-pocket-story-summary-card-pack',
+      'shelf-marker-story-theme-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -219,6 +239,7 @@ describe('storyData', () => {
       '$93',
       '$95',
       '$97',
+      '$99',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
@@ -435,6 +456,84 @@ describe('storyData', () => {
         'mailto:samfrench@gmail.com?subject=Library%20Pocket%20Story%20Summary%20Card%20Pack',
     })
     expect(product?.worldSlugs).toEqual(libraryPocketWorldSlugs)
+    expect(String(product?.ctaHref)).toMatch(/^mailto:/)
+    expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
+  })
+
+  it('keeps the Batch63 shelf marker theme source artifact aligned with the lane files', () => {
+    const source = readJson('content/product-artifacts/shelf-marker-story-theme-card-pack.json') as Record<
+      string,
+      unknown
+    >
+    const laneA = readJson(
+      'content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-a.json',
+    ) as unknown[]
+    const laneB = readJson(
+      'content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-b.json',
+    ) as unknown[]
+    const laneC = readJson(
+      'content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-c.json',
+    ) as unknown[]
+    const tools = readJson('content/product-artifacts/lanes/batch63-shelf-marker-theme-tools.json') as Record<
+      string,
+      unknown
+    >
+    const cover = source.cover as { included?: string[] }
+
+    expect(Object.keys(source)).toEqual([
+      'batchId',
+      'generatedAt',
+      'productSlug',
+      'title',
+      'pricePoint',
+      'audience',
+      'sessionLength',
+      'safetyNote',
+      'artifact',
+      'sourceFiles',
+      'worldSlugs',
+      'cover',
+      'adultGuide',
+      'themeRoutines',
+      'takeHomeThemeSlips',
+      'optionalAdultPrompts',
+      'cards',
+    ])
+    expect(source.sourceFiles).toEqual([
+      'content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-a.json',
+      'content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-b.json',
+      'content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-c.json',
+      'content/product-artifacts/lanes/batch63-shelf-marker-theme-tools.json',
+    ])
+    expect(source.worldSlugs).toEqual(shelfMarkerWorldSlugs)
+    expect(cover.included).toHaveLength(11)
+    expect(cover.included?.join(' ')).toMatch(/theme/i)
+    expect(cover.included?.join(' ')).not.toMatch(/summary|library pocket/i)
+    expect(source.cards).toEqual([...laneA, ...laneB, ...laneC])
+    expect(source.adultGuide).toEqual(tools.adultGuide)
+    expect(source.themeRoutines).toEqual(tools.themeRoutines)
+    expect(source.takeHomeThemeSlips).toEqual(tools.takeHomeThemeSlips)
+    expect(source.optionalAdultPrompts).toEqual(tools.optionalAdultPrompts)
+  })
+
+  it('keeps the Batch63 shelf marker product checkout-pending and mailto-only', () => {
+    const products = readJson('content/products/batch5-products.json') as {
+      products: Array<Record<string, unknown>>
+    }
+    const product = products.products.find(
+      (candidate) => candidate.slug === 'shelf-marker-story-theme-card-pack',
+    )
+
+    expect(product).toMatchObject({
+      slug: 'shelf-marker-story-theme-card-pack',
+      title: 'Shelf Marker Story Theme Card Pack',
+      pricePoint: '$99',
+      status: 'checkout_pending',
+      heroImage: 'images/plotsprout/batch63/shelf-marker-story-theme-card-pack.jpg',
+      ctaHref:
+        'mailto:samfrench@gmail.com?subject=Shelf%20Marker%20Story%20Theme%20Card%20Pack',
+    })
+    expect(product?.worldSlugs).toEqual(shelfMarkerWorldSlugs)
     expect(String(product?.ctaHref)).toMatch(/^mailto:/)
     expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
   })

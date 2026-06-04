@@ -1,0 +1,21 @@
+{
+  "batchId": "2026-06-04-batch63-images",
+  "generatedAt": "2026-06-04",
+  "generation": "local",
+  "purpose": "Add the checkout-pending shelf marker story theme card pack product hero image.",
+  "images": [
+    {
+      "slug": "shelf-marker-story-theme-card-pack",
+      "title": "Shelf Marker Story Theme Card Pack",
+      "purpose": "Static product hero image for the checkout-pending shelf marker story theme card pack page.",
+      "prompt": "family-friendly top-down close-cropped product photo on seamless pale neutral background, blank paper shelf marker story theme card pack, neat stack of blank off-white shelf marker cards with small paper tabs, clean printable paper kit, paper-only stationery arrangement, unmarked paper, no readable text, no symbols, no decorative props",
+      "negativePrompt": "text, writing, letters, words, readable text, labels, titles, logo, watermark, symbols, icons, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, school, classroom, real library checkout desk, checkout desk, library cards, due dates, fines, call numbers, barcodes, real due date slips, books with titles, book titles, author names, real library names, addresses, routes, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, review, rating, score, grade, timer, portfolio, showcase, food, snacks, cups, bowls, allergy, medical, scary, violence, weapons, bullying, romance, politics, religion, gambling, ads, branded characters, children, faces, hands, clutter, colored background, dark shadows",
+      "seed": 260663199,
+      "width": 1344,
+      "height": 768,
+      "outputJpeg": "public/images/plotsprout/batch63/shelf-marker-story-theme-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch63/shelf-marker-story-theme-card-pack.webp",
+      "sidecar": "content/image-runs/batch63/shelf-marker-story-theme-card-pack.json"
+    }
+  ]
+}

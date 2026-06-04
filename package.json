@@ -70,6 +70,7 @@
     "image:batch60": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-04-batch60-images.json",
     "image:batch61": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-04-batch61-images.json",
     "image:batch62": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-04-batch62-images.json",
+    "image:batch63": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-04-batch63-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -124,7 +125,8 @@
     "product:file-box-turning-point-pack": "node scripts/file-box-story-turning-point-card-pack-builder.mjs",
     "product:archive-drawer-resolution-pack": "node scripts/archive-drawer-story-resolution-card-pack-builder.mjs",
     "product:card-catalog-retell-pack": "node scripts/card-catalog-story-retell-card-pack-builder.mjs",
-    "product:library-pocket-summary-pack": "node scripts/library-pocket-story-summary-card-pack-builder.mjs"
+    "product:library-pocket-summary-pack": "node scripts/library-pocket-story-summary-card-pack-builder.mjs",
+    "product:shelf-marker-theme-pack": "node scripts/shelf-marker-story-theme-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

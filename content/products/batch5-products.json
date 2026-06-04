@@ -5757,6 +5757,143 @@
           "summary": "A pretend Index Card Theater Club world for summarizing one fictional story in library pocket order."
         }
       ]
+    },
+    {
+      "slug": "shelf-marker-story-theme-card-pack",
+      "title": "Shelf Marker Story Theme Card Pack",
+      "pricePoint": "$99",
+      "status": "checkout_pending",
+      "headline": "Printable shelf marker cards for private fictional story themes.",
+      "summary": "Sixteen shelf marker cards help kids notice fictional story questions, repeated clues, character choices, ending echoes, and theme lines.",
+      "heroImage": "images/plotsprout/batch63/shelf-marker-story-theme-card-pack.jpg",
+      "ctaLabel": "Request shelf marker pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Shelf%20Marker%20Story%20Theme%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static shelf marker pack page is ready for hosted checkout wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "compass-craft-academy",
+        "tiny-lantern-reef",
+        "acorn-avenue-errand-office",
+        "compost-clock-workshop",
+        "pantry-measurement-mystery",
+        "button-bakery-map-mixup",
+        "revision-river-ferry",
+        "sticker-station-mail-cart",
+        "moon-muffin-market",
+        "index-card-theater-club",
+        "puddle-planet-post-office",
+        "binding-day-boardwalk",
+        "seed-library-map-room",
+        "moss-message-observatory",
+        "cloudberry-clocktower",
+        "spoon-ferry-lunchbox-harbor"
+      ],
+      "includedPages": [
+        "Sixteen printable shelf marker theme cards",
+        "Adult setup guide",
+        "Story question prompts",
+        "Repeated clue prompts",
+        "Character choice prompts",
+        "Ending echo prompts",
+        "Theme line prompts",
+        "Six adult-led theme routines",
+        "Ten take-home theme slips",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family paper table for finding one theme in a pretend story",
+        "A homeschool writing station for story question and ending echo practice",
+        "A tutoring pack for writers who need concrete theme clues",
+        "An adult-led small group activity for private paper-only theme practice"
+      ],
+      "parentSteps": [
+        "Print one theme card and set it beside a blank page.",
+        "Ask for the story question before asking for the repeated clue.",
+        "Let the child point, dictate, sketch, or write one short line per blank.",
+        "Close with a theme line and keep the shelf marker note fictional."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "compass-craft-academy",
+          "title": "Compass Craft Academy",
+          "summary": "A pretend Compass Craft Academy world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "tiny-lantern-reef",
+          "title": "Tiny Lantern Reef",
+          "summary": "A pretend Tiny Lantern Reef world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "title": "Acorn Avenue Errand Office",
+          "summary": "A pretend Acorn Avenue Errand Office world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "compost-clock-workshop",
+          "title": "Compost Clock Workshop",
+          "summary": "A pretend Compost Clock Workshop world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "pantry-measurement-mystery",
+          "title": "Pantry Measurement Mystery",
+          "summary": "A pretend Pantry Measurement Mystery world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "title": "Button Bakery Map Mix-Up",
+          "summary": "A pretend Button Bakery Map Mix-Up world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "title": "Revision River Ferry",
+          "summary": "A pretend Revision River Ferry world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "sticker-station-mail-cart",
+          "title": "Sticker Station Mail Cart",
+          "summary": "A pretend Sticker Station Mail Cart world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "moon-muffin-market",
+          "title": "Moon Muffin Market",
+          "summary": "A pretend Moon Muffin Market world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "title": "Index Card Theater Club",
+          "summary": "A pretend Index Card Theater Club world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "puddle-planet-post-office",
+          "title": "Puddle Planet Post Office",
+          "summary": "A pretend Puddle Planet Post Office world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "title": "Binding Day Boardwalk",
+          "summary": "A pretend Binding Day Boardwalk world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "title": "Seed Library Map Room",
+          "summary": "A pretend Seed Library Map Room world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "title": "Moss Message Observatory",
+          "summary": "A pretend Moss Message Observatory world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "cloudberry-clocktower",
+          "title": "Cloudberry Clocktower",
+          "summary": "A pretend Cloudberry Clocktower world for noticing one fictional story theme on paper."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "title": "Spoon Ferry Lunchbox Harbor",
+          "summary": "A pretend Spoon Ferry Lunchbox Harbor world for noticing one fictional story theme on paper."
+        }
+      ]
     }
   ]
 }

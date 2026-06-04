@@ -1,0 +1,496 @@
+{
+  "batchId": "2026-06-04-batch63",
+  "generatedAt": "2026-06-04",
+  "productSlug": "shelf-marker-story-theme-card-pack",
+  "title": "Shelf Marker Story Theme Card Pack",
+  "pricePoint": "$99",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable shelf marker story theme cards plus adult guide tools, theme routines, take-home theme slips, and optional adult prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+  "artifact": {
+    "pdfPath": "product-build/shelf-marker-story-theme-card-pack/Shelf-Marker-Story-Theme-Card-Pack.pdf",
+    "zipPath": "product-build/shelf-marker-story-theme-card-pack/shelf-marker-story-theme-card-pack.zip",
+    "sourceHtmlPath": "product-build/shelf-marker-story-theme-card-pack/source/shelf-marker-story-theme-card-pack.html",
+    "manifestPath": "product-build/shelf-marker-story-theme-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-a.json",
+    "content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-b.json",
+    "content/product-artifacts/lanes/batch63-shelf-marker-theme-cards-c.json",
+    "content/product-artifacts/lanes/batch63-shelf-marker-theme-tools.json"
+  ],
+  "worldSlugs": [
+    "compass-craft-academy",
+    "tiny-lantern-reef",
+    "acorn-avenue-errand-office",
+    "compost-clock-workshop",
+    "pantry-measurement-mystery",
+    "button-bakery-map-mixup",
+    "revision-river-ferry",
+    "sticker-station-mail-cart",
+    "moon-muffin-market",
+    "index-card-theater-club",
+    "puddle-planet-post-office",
+    "binding-day-boardwalk",
+    "seed-library-map-room",
+    "moss-message-observatory",
+    "cloudberry-clocktower",
+    "spoon-ferry-lunchbox-harbor"
+  ],
+  "cover": {
+    "kicker": "Printable shelf marker theme cards",
+    "headline": "Shelf Marker Story Theme Card Pack",
+    "subhead": "Sixteen paper shelf marker cards help writers notice story questions, repeated clues, character choices, ending echoes, theme lines, and shelf marker notes.",
+    "included": [
+      "16 printable shelf marker theme cards",
+      "Adult setup guide",
+      "Fictional theme safety notes",
+      "Story question prompts",
+      "Repeated clue prompts",
+      "Character choice prompts",
+      "Ending echo prompts",
+      "Theme line prompts",
+      "Six adult-led theme routines",
+      "Ten take-home theme slips",
+      "Printable PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "title": "Shelf Marker Story Theme Adult Guide: ____________________.",
+    "setupSteps": [
+      "Set out one theme card, six blank paper strips, and a pencil before the adult-led session begins: ____________________.",
+      "Label the strips story question, repeated clue, character choice, ending echo, theme line, and shelf marker note: ____________________.",
+      "Choose one pretend story world and keep every name, setting, clue, and choice invented: ____________________.",
+      "Tell the writer that dictated words, copied adult wording, or independent writing all fit the paper-only activity: ____________________.",
+      "Place the finished strips under the shelf marker note so the theme can be reread without sharing it outside the session: ____________________."
+    ],
+    "facilitationNotes": [
+      "Start with the story question when the writer needs a clear theme path: ____________________.",
+      "Use the repeated clue to point back to the same idea without asking for a polished sentence: ____________________.",
+      "Ask for one character choice that shows what matters in the fictional story: ____________________.",
+      "Save the ending echo until the writer can connect the ending to the first story question: ____________________.",
+      "Let the theme line stay simple, plain, and adult-supported: ____________________."
+    ],
+    "safetyNotes": [
+      "Use invented characters, broad pretend settings, and made-up clues only: ____________________.",
+      "Keep the activity offline, paper-only, adult-led, and free from outside audiences: ____________________.",
+      "Skip any prompt that starts to ask for writer facts, group labels, or outside-session details: ____________________.",
+      "Avoid outside titles, creator names, service forms, labels from real shelves, or correction marks: ____________________.",
+      "Treat the theme line as a fictional story idea, not a claim about a real person: ____________________."
+    ]
+  },
+  "themeRoutines": [
+    {
+      "title": "Story Question Marker: ____________________.",
+      "useWhen": "Use when a writer needs one clear question to guide the theme: ____________________.",
+      "steps": [
+        "The adult places a blank strip under the story question label: ____________________.",
+        "The adult asks what the invented story keeps wondering about: ____________________.",
+        "The writer completes this line: The story question is ____________________.",
+        "The adult rereads the question and saves it for the later theme line: ____________________."
+      ]
+    },
+    {
+      "title": "Repeated Clue Trail: ____________________.",
+      "useWhen": "Use when the theme needs a small clue that can appear more than once: ____________________.",
+      "steps": [
+        "The adult points to the story question strip and asks what small pretend clue could remind everyone of it: ____________________.",
+        "The writer names one repeated clue, such as a color, object, sound word, or tiny action from the fictional world: ____________________.",
+        "The writer completes this line: The repeated clue is ____________________.",
+        "The adult helps place the repeated clue beside the story question without adding real details: ____________________."
+      ]
+    },
+    {
+      "title": "Character Choice Sort: ____________________.",
+      "useWhen": "Use when the writer needs the theme to show through action: ____________________.",
+      "steps": [
+        "The adult asks which invented character makes a choice that matters: ____________________.",
+        "The writer chooses one simple action the character can take on paper: ____________________.",
+        "The writer completes this line: The character choice is ____________________.",
+        "The adult asks how that choice answers or changes the story question: ____________________."
+      ]
+    },
+    {
+      "title": "Ending Echo Match: ____________________.",
+      "useWhen": "Use when the ending needs to connect back to the first theme idea: ____________________.",
+      "steps": [
+        "The adult rereads the story question and repeated clue in order: ____________________.",
+        "The writer names a calm ending moment that echoes the same idea: ____________________.",
+        "The writer completes this line: The ending echo is ____________________.",
+        "The adult checks that the ending echo matches the character choice instead of starting a new story: ____________________."
+      ]
+    },
+    {
+      "title": "Theme Line Builder: ____________________.",
+      "useWhen": "Use when the strips are ready to become one plain theme line: ____________________.",
+      "steps": [
+        "The adult lays out the story question, repeated clue, character choice, and ending echo strips: ____________________.",
+        "The writer points to the strip that best shows the theme: ____________________.",
+        "The writer completes this line: The theme line is ____________________.",
+        "The adult helps trim the theme line to one simple fictional story idea: ____________________."
+      ]
+    },
+    {
+      "title": "Shelf Marker Close: ____________________.",
+      "useWhen": "Use at the end of a paper session to file the theme neatly: ____________________.",
+      "steps": [
+        "The adult reads all five theme strips in order without adding new facts: ____________________.",
+        "The writer chooses a short shelf marker note that names the theme focus: ____________________.",
+        "The writer completes this line: The shelf marker note is ____________________.",
+        "The adult stacks the strips together for private paper reuse in a later session: ____________________."
+      ]
+    }
+  ],
+  "takeHomeThemeSlips": [
+    {
+      "title": "Story Question Slip",
+      "prompt": "The story question is ____________________.",
+      "adultNote": "Ask for one invented question the fictional story keeps returning to."
+    },
+    {
+      "title": "Repeated Clue Slip",
+      "prompt": "The repeated clue is ____________________.",
+      "adultNote": "Choose a pretend clue that can appear more than once on paper."
+    },
+    {
+      "title": "Character Choice Slip",
+      "prompt": "The character choice is ____________________.",
+      "adultNote": "Keep the choice simple and fictional."
+    },
+    {
+      "title": "Ending Echo Slip",
+      "prompt": "The ending echo is ____________________.",
+      "adultNote": "Connect the ending back to the story question."
+    },
+    {
+      "title": "Theme Line Slip",
+      "prompt": "The theme line is ____________________.",
+      "adultNote": "Use plain words and one fictional idea."
+    },
+    {
+      "title": "Shelf Marker Note Slip",
+      "prompt": "The shelf marker note is ____________________.",
+      "adultNote": "Make the note short enough to fit on a paper marker."
+    },
+    {
+      "title": "Clue Return Slip",
+      "prompt": "The repeated clue returns when ____________________.",
+      "adultNote": "Use this only to strengthen the theme, not to add more plot."
+    },
+    {
+      "title": "Choice Reason Slip",
+      "prompt": "The character choice matters because ____________________.",
+      "adultNote": "Accept dictated wording if the writer knows the idea but not the sentence."
+    },
+    {
+      "title": "Theme Check Slip",
+      "prompt": "The story question and ending echo match because ____________________.",
+      "adultNote": "Reread both strips before filling the blank."
+    },
+    {
+      "title": "Paper Close Slip",
+      "prompt": "This paper theme set belongs with the shelf marker note ____________________.",
+      "adultNote": "Close by stacking the slips for private adult-led reuse."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Which story question feels easiest to answer with a fictional character choice: ____________________.",
+    "What repeated clue could appear at the beginning and near the ending echo: ____________________.",
+    "Which character choice shows the theme without explaining it too much: ____________________.",
+    "What ending echo would remind us of the same story question: ____________________.",
+    "How can the theme line use plain words instead of a long explanation: ____________________.",
+    "What shelf marker note would help an adult find this theme again on paper: ____________________.",
+    "Which strip should the writer dictate while the adult writes: ____________________.",
+    "Which blank strip can stay empty until the story question is clearer: ____________________."
+  ],
+  "cards": [
+    {
+      "id": "shelf-marker-theme-card-01",
+      "title": "Compass Craft Academy Story Theme Card",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "themeSkill": "notice a fictional theme by connecting the story question, repeated clue, character choice, ending echo, theme line, and shelf marker note on paper: ____________________.",
+      "useCase": "Adult-led offline paper-only theme card for a pretend Compass Craft Academy story shelf marker: ____________________.",
+      "adultSetup": "Adult: set out one blank page, pencil, and pretend shelf marker strip for the compass craft theme work: ____________________.",
+      "kidDirection": "Writer: invent a compass crafter, a paper direction problem, and a helpful worktable choice while every answer stays made up: ____________________.",
+      "storyQuestionPrompt": "story question: write the question the compass crafter must answer about which paper direction can guide the worktable plan: ____________________.",
+      "repeatedCluePrompt": "repeated clue: write one compass mark, fold, or small arrow that appears more than once and points toward the theme: ____________________.",
+      "characterChoicePrompt": "character choice: write the moment the crafter chooses careful checking instead of rushing the pretend plan: ____________________.",
+      "endingEchoPrompt": "ending echo: write how the ending repeats the compass clue in a calmer or clearer way: ____________________.",
+      "themeLinePrompt": "theme line: write one sentence about what the story shows when a helper listens to small directions before acting: ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: write a short pretend shelf marker note that names this theme for later paper sorting: ____________________.",
+      "quietOptionLine": "Quiet option: fill only the story question, character choice, and theme line blanks first: ____________________.",
+      "takeHomeLine": "Take-home line: save this paper theme card and add one new compass clue later: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-02",
+      "title": "Tiny Lantern Reef Story Theme Card",
+      "worldSlug": "tiny-lantern-reef",
+      "ageBand": "8-10",
+      "themeSkill": "notice a fictional reef theme by linking a story question, repeated clue, character choice, ending echo, theme line, and shelf marker note on paper: ____________________.",
+      "useCase": "Adult-led offline paper-only theme card for a pretend Tiny Lantern Reef story shelf marker: ____________________.",
+      "adultSetup": "Adult: place a blank page, pencil, and pretend shelf marker strip beside the tiny lantern reef card: ____________________.",
+      "kidDirection": "Writer: invent reef lanterns, shell marks, and a gentle helper while every theme answer stays fictional and paper-only: ____________________.",
+      "storyQuestionPrompt": "story question: write the question the reef helper must answer when the smallest lantern keeps glowing near the same shell mark: ____________________.",
+      "repeatedCluePrompt": "repeated clue: write the tiny light, shell mark, or reef note that returns in the beginning, middle, and ending: ____________________.",
+      "characterChoicePrompt": "character choice: write how the helper chooses to follow the small lantern clue instead of ignoring it: ____________________.",
+      "endingEchoPrompt": "ending echo: write how the final lantern glow echoes the first clue in a brighter paper scene: ____________________.",
+      "themeLinePrompt": "theme line: write one sentence about what the story shows when a small clue helps a helper notice what matters: ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: write a short pretend shelf marker note for this tiny-lantern theme: ____________________.",
+      "quietOptionLine": "Quiet option: fill the repeated clue and ending echo first, then add the theme line: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper theme card and add one new lantern clue later: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-03",
+      "title": "Acorn Avenue Errand Office Story Theme Card",
+      "worldSlug": "acorn-avenue-errand-office",
+      "ageBand": "7-9",
+      "themeSkill": "notice a fictional errand-office theme by naming the story question, repeated clue, character choice, ending echo, theme line, and shelf marker note: ____________________.",
+      "useCase": "Adult-led offline paper-only theme card for a pretend Acorn Avenue Errand Office story shelf marker: ____________________.",
+      "adultSetup": "Adult: set a blank page, pencil, and pretend shelf marker strip near the Acorn Avenue card: ____________________.",
+      "kidDirection": "Writer: make up the errand slips, acorn stamps, desk trays, and helper while all details stay invented: ____________________.",
+      "storyQuestionPrompt": "story question: write the question the office helper must answer when an acorn-stamped slip lands in the wrong tray: ____________________.",
+      "repeatedCluePrompt": "repeated clue: write the acorn stamp, folded corner, or desk-tray mark that keeps returning: ____________________.",
+      "characterChoicePrompt": "character choice: write how the helper chooses patience and clear sorting with the pretend slip: ____________________.",
+      "endingEchoPrompt": "ending echo: write how the ending brings back the acorn stamp to show the errand is understood: ____________________.",
+      "themeLinePrompt": "theme line: write one sentence about what the story shows when careful sorting helps a small task make sense: ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: write a short pretend shelf marker note for this errand-office theme: ____________________.",
+      "quietOptionLine": "Quiet option: fill only the story question, repeated clue, and shelf marker note first: ____________________.",
+      "takeHomeLine": "Take-home line: save this paper theme card and add one new acorn-stamp clue later: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-04",
+      "title": "Compost Clock Workshop Story Theme Card",
+      "worldSlug": "compost-clock-workshop",
+      "ageBand": "8-10",
+      "themeSkill": "notice a fictional workshop theme by connecting a story question, repeated clue, character choice, ending echo, theme line, and shelf marker note: ____________________.",
+      "useCase": "Adult-led offline paper-only theme card for a pretend Compost Clock Workshop story shelf marker: ____________________.",
+      "adultSetup": "Adult: place a blank page, pencil, and pretend shelf marker strip beside the workshop theme card: ____________________.",
+      "kidDirection": "Writer: invent clock gears, leaf scraps, turning bins, and a workshop helper while the story stays fully made up: ____________________.",
+      "storyQuestionPrompt": "story question: write the question the helper must answer when the compost clock ticks in an uneven pattern: ____________________.",
+      "repeatedCluePrompt": "repeated clue: write the gear click, leaf mark, or turning-bin symbol that appears again and again: ____________________.",
+      "characterChoicePrompt": "character choice: write how the helper chooses steady patience before changing the pretend clock: ____________________.",
+      "endingEchoPrompt": "ending echo: write how the final clock tick echoes the first uneven clue in a calmer way: ____________________.",
+      "themeLinePrompt": "theme line: write one sentence about what the story shows when slow changes are watched with care: ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: write a short pretend shelf marker note for this compost-clock theme: ____________________.",
+      "quietOptionLine": "Quiet option: fill the character choice and theme line first, then return to the clue blanks: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper theme card and add one new workshop echo later: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-05",
+      "title": "Pantry Measurement Mystery Story Theme Card",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "themeSkill": "notice a fictional measurement theme by sorting the story question, repeated clue, character choice, ending echo, theme line, and shelf marker note: ____________________.",
+      "useCase": "Adult-led offline paper-only theme card for a pretend Pantry Measurement Mystery story shelf marker: ____________________.",
+      "adultSetup": "Adult: set out one blank page, pencil, and pretend shelf marker strip for the measurement mystery: ____________________.",
+      "kidDirection": "Writer: invent labeled jars, measuring scoops, quiet counters, and a mystery helper while every detail stays on paper: ____________________.",
+      "storyQuestionPrompt": "story question: write the question the helper must answer when two pretend measuring scoops give different clues: ____________________.",
+      "repeatedCluePrompt": "repeated clue: write the jar line, scoop notch, or counter mark that keeps showing up: ____________________.",
+      "characterChoicePrompt": "character choice: write how the helper chooses to compare the marks before naming the mystery answer: ____________________.",
+      "endingEchoPrompt": "ending echo: write how the ending returns to the first scoop clue with a clearer meaning: ____________________.",
+      "themeLinePrompt": "theme line: write one sentence about what the story shows when careful measuring helps a helper be fair: ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: write a short pretend shelf marker note for this measurement theme: ____________________.",
+      "quietOptionLine": "Quiet option: fill only the repeated clue, character choice, and ending echo blanks first: ____________________.",
+      "takeHomeLine": "Take-home line: save this paper theme card and add one new measuring mark later: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-06",
+      "title": "Button Bakery Map Mix-Up Story Theme Card",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "themeSkill": "notice a fictional map-mixup theme by naming the story question, repeated clue, character choice, ending echo, theme line, and shelf marker note: ____________________.",
+      "useCase": "Adult-led offline paper-only theme card for a pretend Button Bakery Map Mix-Up story shelf marker: ____________________.",
+      "adultSetup": "Adult: place a blank page, pencil, and pretend shelf marker strip next to the button-map card: ____________________.",
+      "kidDirection": "Writer: invent button trays, a pretend bakery map, and a helper who sorts the mixup on paper: ____________________.",
+      "storyQuestionPrompt": "story question: write the question the helper must answer when the button map points to two pretend places at once: ____________________.",
+      "repeatedCluePrompt": "repeated clue: write the button shape, dotted path, or tray mark that keeps returning: ____________________.",
+      "characterChoicePrompt": "character choice: write how the helper chooses the clearest paper path after comparing the button clues: ____________________.",
+      "endingEchoPrompt": "ending echo: write how the final map path echoes the first button clue in a simple way: ____________________.",
+      "themeLinePrompt": "theme line: write one sentence about what the story shows when a helper compares clues before choosing a path: ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: write a short pretend shelf marker note for this button-map theme: ____________________.",
+      "quietOptionLine": "Quiet option: fill the story question and shelf marker note first, then add the repeated clue: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper theme card and add one new button-map clue later: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-07",
+      "title": "Revision River Ferry Story Theme Card",
+      "worldSlug": "revision-river-ferry",
+      "ageBand": "10-11",
+      "themeSkill": "Build a fictional story theme by connecting one story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.",
+      "useCase": "Adult-led offline paper-only theme card for one invented revision river ferry story: ____________________.",
+      "adultSetup": "Adult: set out a blank story page, pencil, and pretend shelf marker strip; keep the ferry, river, and notes fully fictional: ____________________.",
+      "kidDirection": "Writer: invent a ferry guide who carries pretend revision notes across a made-up paper river, then fill each theme blank: ____________________.",
+      "storyQuestionPrompt": "Story question: what does the ferry guide need to understand before the page can cross the revision river? ____________________.",
+      "repeatedCluePrompt": "Repeated clue: choose one margin ripple, folded note, or ferry bell that appears more than once to point toward the theme: ____________________.",
+      "characterChoicePrompt": "Character choice: write the choice the ferry guide makes when two pretend revision paths both seem possible: ____________________.",
+      "endingEchoPrompt": "Ending echo: show how the ending quietly echoes the first river question without adding a new problem: ____________________.",
+      "themeLinePrompt": "Theme line: write one simple sentence about what the ferry story suggests about careful changes: ____________________.",
+      "shelfMarkerNotePrompt": "Shelf marker note: give this ferry theme a short pretend paper marker note: ____________________.",
+      "quietOptionLine": "Quiet option: adult points to the repeated clue, and the writer fills only the theme line blank: ____________________.",
+      "takeHomeLine": "Take-home line: save the ferry theme card for one later adult-led offline paper pass: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-08",
+      "title": "Sticker Station Mail Cart Story Theme Card",
+      "worldSlug": "sticker-station-mail-cart",
+      "ageBand": "7-9",
+      "themeSkill": "Find a fictional story theme by naming one story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.",
+      "useCase": "Adult-led offline paper-only theme card for one invented sticker station mail cart story: ____________________.",
+      "adultSetup": "Adult: place a blank story card, pencil, and pretend shelf marker slip beside the paper mail cart map: ____________________.",
+      "kidDirection": "Writer: invent a station helper, sticker signs, and a tiny mail cart that moves only inside the fictional paper story: ____________________.",
+      "storyQuestionPrompt": "Story question: what is the station helper trying to sort before the mail cart can make its pretend paper trip? ____________________.",
+      "repeatedCluePrompt": "Repeated clue: choose one sticker shape, wheel squeak, or cart flag that keeps showing what matters in the story: ____________________.",
+      "characterChoicePrompt": "Character choice: write the choice the helper makes when the sticker signs do not match at first: ____________________.",
+      "endingEchoPrompt": "Ending echo: write how the final mail cart stop reminds the reader of the first story question: ____________________.",
+      "themeLinePrompt": "Theme line: write one clear sentence about what the story suggests about noticing small clues: ____________________.",
+      "shelfMarkerNotePrompt": "Shelf marker note: write the short pretend shelf marker note for this sticker station theme: ____________________.",
+      "quietOptionLine": "Quiet option: adult reads the story question, and the writer fills only the repeated clue blank: ____________________.",
+      "takeHomeLine": "Take-home line: keep the sticker station theme card with the pretend shelf marker note for later paper writing: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-09",
+      "title": "Moon Muffin Market Story Theme Card",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "themeSkill": "Notice a fictional story theme by filling one story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.",
+      "useCase": "Adult-led offline paper-only theme card for one invented moon muffin market story with no tasting or recipe steps: ____________________.",
+      "adultSetup": "Adult: set out a blank theme card, pencil, and pretend shelf marker slip; keep every market detail imagined on paper: ____________________.",
+      "kidDirection": "Writer: invent a moon market helper, silver tray marks, and a gentle paper-only problem to solve: ____________________.",
+      "storyQuestionPrompt": "Story question: what does the moon market helper wonder when the silver tray marks point in different directions? ____________________.",
+      "repeatedCluePrompt": "Repeated clue: choose one moon crumb shape, tray star, or stall bell that appears again and again as a clue: ____________________.",
+      "characterChoicePrompt": "Character choice: write the helper's choice when the moon tray can be sorted two pretend ways: ____________________.",
+      "endingEchoPrompt": "Ending echo: show how the ending repeats the first moon market feeling in a calmer way: ____________________.",
+      "themeLinePrompt": "Theme line: write one simple sentence about what the story suggests about sharing attention with small clues: ____________________.",
+      "shelfMarkerNotePrompt": "Shelf marker note: write the short pretend shelf marker note for this moon market theme: ____________________.",
+      "quietOptionLine": "Quiet option: adult circles the character choice line, and the writer fills only the ending echo blank: ____________________.",
+      "takeHomeLine": "Take-home line: save the moon market theme card for another adult-led offline paper story day: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-10",
+      "title": "Index Card Theater Club Story Theme Card",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "themeSkill": "Shape a fictional story theme by linking one story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.",
+      "useCase": "Adult-led offline paper-only theme card for one invented index card theater club story: ____________________.",
+      "adultSetup": "Adult: provide blank index cards, a pencil, and a pretend shelf marker strip; keep the club and theater details fictional: ____________________.",
+      "kidDirection": "Writer: invent a card-stage helper who arranges pretend scene cards on paper without performing for anyone: ____________________.",
+      "storyQuestionPrompt": "Story question: what does the card-stage helper need to decide before the pretend scene cards fit together? ____________________.",
+      "repeatedCluePrompt": "Repeated clue: choose one curtain fold, index tab, or stage mark that returns to guide the theme: ____________________.",
+      "characterChoicePrompt": "Character choice: write the helper's choice when two scene cards could lead the story in different directions: ____________________.",
+      "endingEchoPrompt": "Ending echo: write how the final scene card echoes the first question in a quieter way: ____________________.",
+      "themeLinePrompt": "Theme line: write one sentence about what the story suggests about arranging ideas with care: ____________________.",
+      "shelfMarkerNotePrompt": "Shelf marker note: give this theater club theme a short pretend shelf marker note: ____________________.",
+      "quietOptionLine": "Quiet option: adult points to the ending echo, and the writer fills only the shelf marker note blank: ____________________.",
+      "takeHomeLine": "Take-home line: keep the index card theater theme card for one later adult-led paper revision pass: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-11",
+      "title": "Puddle Planet Post Office Story Theme Card",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "6-8",
+      "themeSkill": "Start a fictional story theme by completing one story question, repeated clue, character choice, ending echo, theme line, and shelf marker note.",
+      "useCase": "Adult-led offline paper-only theme card for one invented puddle planet post office story with pretend paper mail only: ____________________.",
+      "adultSetup": "Adult: set out a blank card, pencil, and pretend shelf marker note strip; keep the post office playful and imaginary: ____________________.",
+      "kidDirection": "Writer: invent a puddle planet helper, paper stamps, and a make-believe mail bag that stays inside the story: ____________________.",
+      "storyQuestionPrompt": "Story question: what does the puddle planet helper wonder when the paper stamps splash into a new order? ____________________.",
+      "repeatedCluePrompt": "Repeated clue: choose one puddle ring, stamp moon, or mail bag patch that returns as a clue: ____________________.",
+      "characterChoicePrompt": "Character choice: write the helper's choice when the pretend mail bag could go to two paper counters: ____________________.",
+      "endingEchoPrompt": "Ending echo: show how the ending repeats the first puddle question with a small answer: ____________________.",
+      "themeLinePrompt": "Theme line: write one simple sentence about what the story suggests about patience with mixed-up clues: ____________________.",
+      "shelfMarkerNotePrompt": "Shelf marker note: write the short pretend shelf marker note for this puddle planet theme: ____________________.",
+      "quietOptionLine": "Quiet option: adult reads the repeated clue, and the writer fills only the character choice blank: ____________________.",
+      "takeHomeLine": "Take-home line: save the puddle planet theme card for later adult-led offline paper writing: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-12",
+      "title": "Binding Day Boardwalk Story Theme Card",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "themeSkill": "Use story question, repeated clue, character choice, ending echo, theme line, and shelf marker note language to find the theme of a fictional Binding Day Boardwalk story.",
+      "useCase": "Adult-led fictional offline paper-only theme card for an invented boardwalk story about paper covers, ribbon paths, and one careful choice: ____________________.",
+      "adultSetup": "Adult-led fictional offline paper-only setup: place this card, a pencil, and three blank slips beside a pretend boardwalk row sketch: ____________________.",
+      "kidDirection": "Fill the blanks for a made-up Binding Day Boardwalk story; keep the theme broad, gentle, and invented: ____________________.",
+      "storyQuestionPrompt": "story question: What does the binding helper need to learn about keeping scattered pieces together: ____________________.",
+      "repeatedCluePrompt": "repeated clue: What small boardwalk clue keeps appearing, such as a ribbon knot, paper rail, or loose cover edge: ____________________.",
+      "characterChoicePrompt": "character choice: What calm choice does the helper make when two paper paths could both work: ____________________.",
+      "endingEchoPrompt": "ending echo: At the end, what earlier clue comes back with a clearer meaning: ____________________.",
+      "themeLinePrompt": "theme line: This story may be about how ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: File this fictional theme near the shelf marker note called ____________________.",
+      "quietOptionLine": "quiet option: Fill only the repeated clue and theme line first, then add the story question later: ____________________.",
+      "takeHomeLine": "take-home line: Save the paper card and add one new ending echo on a blank slip later: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-13",
+      "title": "Seed Library Map Room Story Theme Card",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "themeSkill": "Use story question, repeated clue, character choice, ending echo, theme line, and shelf marker note language to find the theme of a fictional Seed Library Map Room story.",
+      "useCase": "Adult-led fictional offline paper-only theme card for an invented map-room story about seed tags, paper paths, and one helpful sorting choice: ____________________.",
+      "adultSetup": "Adult-led fictional offline paper-only setup: place this card, a pencil, and two blank map slips beside a pretend seed-room drawing: ____________________.",
+      "kidDirection": "Fill the blanks for a made-up Seed Library Map Room story with invented places, paper tags, and a gentle theme: ____________________.",
+      "storyQuestionPrompt": "story question: What does the map keeper need to understand before the seed paths make sense: ____________________.",
+      "repeatedCluePrompt": "repeated clue: What small clue repeats on the paper map, such as a dot, leaf mark, folded tab, or tiny arrow: ____________________.",
+      "characterChoicePrompt": "character choice: What choice does the map keeper make when the easy route and the helpful route are different: ____________________.",
+      "endingEchoPrompt": "ending echo: At the end, how does the first seed mark echo the story question: ____________________.",
+      "themeLinePrompt": "theme line: This story may be about how ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: File this fictional theme near the shelf marker note called ____________________.",
+      "quietOptionLine": "quiet option: Fill the story question, repeated clue, and shelf marker note before adding the theme line: ____________________.",
+      "takeHomeLine": "take-home line: Save the paper card and add one new map-room clue on a fresh slip later: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-14",
+      "title": "Moss Message Observatory Story Theme Card",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "themeSkill": "Use story question, repeated clue, character choice, ending echo, theme line, and shelf marker note language to find the theme of a fictional Moss Message Observatory story.",
+      "useCase": "Adult-led fictional offline paper-only theme card for an invented observatory story about moss notes, paper charts, and careful noticing: ____________________.",
+      "adultSetup": "Adult-led fictional offline paper-only setup: place this card, a pencil, and a blank star chart beside a pretend moss-message note: ____________________.",
+      "kidDirection": "Fill the blanks for a made-up observatory story where a quiet clue helps the theme become clearer: ____________________.",
+      "storyQuestionPrompt": "story question: What does the observer need to notice before the moss message can guide the story: ____________________.",
+      "repeatedCluePrompt": "repeated clue: What tiny clue appears more than once, such as a green dot, soft arrow, chart crease, or window mark: ____________________.",
+      "characterChoicePrompt": "character choice: What choice does the observer make when listening carefully matters more than rushing: ____________________.",
+      "endingEchoPrompt": "ending echo: At the end, what early moss-message detail returns with a warmer meaning: ____________________.",
+      "themeLinePrompt": "theme line: This story may be about how ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: File this fictional theme near the shelf marker note called ____________________.",
+      "quietOptionLine": "quiet option: Fill the repeated clue and ending echo first, then write the character choice: ____________________.",
+      "takeHomeLine": "take-home line: Save the paper card and add one calmer theme line on another slip later: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-15",
+      "title": "Cloudberry Clocktower Story Theme Card",
+      "worldSlug": "cloudberry-clocktower",
+      "ageBand": "8-10",
+      "themeSkill": "Use story question, repeated clue, character choice, ending echo, theme line, and shelf marker note language to find the theme of a fictional Cloudberry Clocktower story.",
+      "useCase": "Adult-led fictional offline paper-only theme card for an invented clocktower story about soft gears, cloudberry marks, and a patient choice: ____________________.",
+      "adultSetup": "Adult-led fictional offline paper-only setup: place this card, a pencil, and three blank clock-face slips beside a pretend tower sketch: ____________________.",
+      "kidDirection": "Fill the blanks for a made-up Cloudberry Clocktower story; use paper clues to name a gentle theme: ____________________.",
+      "storyQuestionPrompt": "story question: What does the tower helper need to learn when the clocktower marks do not line up yet: ____________________.",
+      "repeatedCluePrompt": "repeated clue: What clue repeats, such as a cloudberry stamp, soft tick mark, curved arrow, or bell-shaped shadow: ____________________.",
+      "characterChoicePrompt": "character choice: What choice does the helper make when patience could help more than a quick fix: ____________________.",
+      "endingEchoPrompt": "ending echo: At the end, how does the first clocktower clue return in a clearer way: ____________________.",
+      "themeLinePrompt": "theme line: This story may be about how ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: File this fictional theme near the shelf marker note called ____________________.",
+      "quietOptionLine": "quiet option: Fill the character choice and ending echo first, then add the shelf marker note: ____________________.",
+      "takeHomeLine": "take-home line: Save the paper card and add one new clocktower repeated clue later: ____________________."
+    },
+    {
+      "id": "shelf-marker-theme-card-16",
+      "title": "Spoon Ferry Lunchbox Harbor Story Theme Card",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "themeSkill": "Use story question, repeated clue, character choice, ending echo, theme line, and shelf marker note language to find the theme of a fictional Spoon Ferry Lunchbox Harbor story.",
+      "useCase": "Adult-led fictional offline paper-only theme card for an invented harbor story about spoon boats, lunchbox docks, and one friendly choice: ____________________.",
+      "adultSetup": "Adult-led fictional offline paper-only setup: place this card, a pencil, and two blank harbor slips beside a pretend paper ferry route: ____________________.",
+      "kidDirection": "Fill the blanks for a made-up Spoon Ferry Lunchbox Harbor story with pretend boats, gentle choices, and paper-only notes: ____________________.",
+      "storyQuestionPrompt": "story question: What does the ferry helper need to understand before the tiny harbor feels sorted: ____________________.",
+      "repeatedCluePrompt": "repeated clue: What clue repeats, such as a spoon-shaped sail, lunchbox dock mark, paper ripple, or folded flag: ____________________.",
+      "characterChoicePrompt": "character choice: What choice does the helper make when another pretend boat needs space on the paper route: ____________________.",
+      "endingEchoPrompt": "ending echo: At the end, how does the first harbor clue come back with a kinder meaning: ____________________.",
+      "themeLinePrompt": "theme line: This story may be about how ____________________.",
+      "shelfMarkerNotePrompt": "shelf marker note: File this fictional theme near the shelf marker note called ____________________.",
+      "quietOptionLine": "quiet option: Fill only the story question and repeated clue first, then add the theme line later: ____________________.",
+      "takeHomeLine": "take-home line: Save the paper card and add one new friendly ending echo on a fresh slip later: ____________________."
+    }
+  ]
+}

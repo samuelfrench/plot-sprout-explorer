@@ -75,6 +75,8 @@ import {
   validateCardCatalogStoryRetellCardPackSourceFiles,
   validateLibraryPocketStorySummaryCardPackSource,
   validateLibraryPocketStorySummaryCardPackSourceFiles,
+  validateShelfMarkerStoryThemeCardPackSource,
+  validateShelfMarkerStoryThemeCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -168,6 +170,7 @@ const batch59ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-ba
 const batch60ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch60-images.json')
 const batch61ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch61-images.json')
 const batch62ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch62-images.json')
+const batch63ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch63-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -284,6 +287,12 @@ const libraryPocketStorySummarySourceFile = resolve(
   'product-artifacts',
   'library-pocket-story-summary-card-pack.json',
 )
+const shelfMarkerStoryThemeSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'shelf-marker-story-theme-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -342,6 +351,7 @@ const batch59ImagesBatchId = '2026-06-04-batch59-images'
 const batch60ImagesBatchId = '2026-06-04-batch60-images'
 const batch61ImagesBatchId = '2026-06-04-batch61-images'
 const batch62ImagesBatchId = '2026-06-04-batch62-images'
+const batch63ImagesBatchId = '2026-06-04-batch63-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -5245,6 +5255,50 @@ function validateBatch62Image(image, imageSlugs) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch63Image(image, imageSlugs) {
+  const label = `2026-06-04-batch63-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.width === 1344, `${label}.width must be 1344.`)
+  expect(image.height === 768, `${label}.height must be 768.`)
+  expect(
+    image.slug === 'shelf-marker-story-theme-card-pack',
+    `${label}.slug must be shelf-marker-story-theme-card-pack.`,
+  )
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 63 images.`)
+  imageSlugs.add(image.slug)
+  expect(image.outputJpeg === `public/images/plotsprout/batch63/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch63/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch63/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  expect(/shelf marker/i.test(image.prompt), `${label}.prompt must describe the shelf marker product hero.`)
+  expect(/text/i.test(image.negativePrompt), `${label}.negativePrompt must block text-like artifacts.`)
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  const generatedFileExists = [jpegPath, webpPath, sidecarPath].some((filePath) => existsSync(filePath))
+  if (!generatedFileExists) return
+
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -5703,6 +5757,14 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       minParentSteps: 4,
       maxWorldSlugs: 16,
     },
+    'shelf-marker-story-theme-card-pack': {
+      title: 'Shelf Marker Story Theme Card Pack',
+      pricePoint: '$99',
+      minIncludedPages: 10,
+      minUseCases: 4,
+      minParentSteps: 4,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -5722,7 +5784,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
     product.slug === 'file-box-story-turning-point-card-pack' ||
     product.slug === 'archive-drawer-story-resolution-card-pack' ||
     product.slug === 'card-catalog-story-retell-card-pack' ||
-    product.slug === 'library-pocket-story-summary-card-pack'
+    product.slug === 'library-pocket-story-summary-card-pack' ||
+    product.slug === 'shelf-marker-story-theme-card-pack'
       ? expandingFileStorySceneChainSafety
       : safety
   expect(product.safetyNote.includes(requiredProductSafety), `${label}.safetyNote missing required safety sentence.`)
@@ -5886,6 +5949,9 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
 
   const renderedPath = resolve(root, 'public', product.slug, 'index.html')
   if (!existsSync(renderedPath)) {
+    if (product.slug === 'shelf-marker-story-theme-card-pack' && options.batch63GenerationStarted) {
+      fail(`${label} static output is missing after Batch 63 generated outputs started: ${renderedPath}`)
+    }
     if (product.slug === 'library-pocket-story-summary-card-pack' && options.batch62GenerationStarted) {
       fail(`${label} static output is missing after Batch 62 generated outputs started: ${renderedPath}`)
     }
@@ -5918,7 +5984,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
         product.slug === 'file-box-story-turning-point-card-pack' ||
         product.slug === 'archive-drawer-story-resolution-card-pack' ||
         product.slug === 'card-catalog-story-retell-card-pack' ||
-        product.slug === 'library-pocket-story-summary-card-pack',
+        product.slug === 'library-pocket-story-summary-card-pack' ||
+        product.slug === 'shelf-marker-story-theme-card-pack',
       `${label} static output is missing: ${renderedPath}`,
     )
     return
@@ -7283,12 +7350,33 @@ const batch62ImagePaths = batch62Images.images.flatMap((image) => [
   resolve(root, image.sidecar),
 ])
 
+expect(existsSync(batch63ImagesFile), `Missing Batch 63 image manifest: ${batch63ImagesFile}`)
+const batch63Images = readJson(batch63ImagesFile)
+expect(
+  batch63Images.batchId === batch63ImagesBatchId,
+  `batch63 image manifest batchId must be ${batch63ImagesBatchId}.`,
+)
+expect(batch63Images.generatedAt === '2026-06-04', 'batch63 image manifest generatedAt must be 2026-06-04.')
+expect(Array.isArray(batch63Images.images), 'batch63 image manifest images must be an array.')
+expect(batch63Images.images.length === 1, `Expected 1 Batch 63 image, found ${batch63Images.images.length}.`)
+const batch63ImageSlugs = new Set()
+batch63Images.images.forEach((image) => validateBatch63Image(image, batch63ImageSlugs))
+expect(
+  batch63ImageSlugs.has('shelf-marker-story-theme-card-pack'),
+  'Batch 63 images missing shelf-marker-story-theme-card-pack.',
+)
+const batch63ImagePaths = batch63Images.images.flatMap((image) => [
+  resolve(root, image.outputJpeg),
+  resolve(root, image.outputWebp),
+  resolve(root, image.sidecar),
+])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 55, `Expected 55 product records, found ${products.products.length}.`)
+expect(products.products.length === 56, `Expected 56 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 let batch55GeneratedOutputPaths = [...batch55ImagePaths]
 const batch55ProductRecord = products.products.find(
@@ -7459,6 +7547,34 @@ if (batch62GenerationStarted) {
     )
   }
 }
+let batch63GeneratedOutputPaths = [...batch63ImagePaths]
+const batch63ProductRecord = products.products.find(
+  (product) => product.slug === 'shelf-marker-story-theme-card-pack',
+)
+if (batch63ProductRecord) {
+  batch63GeneratedOutputPaths.push(resolve(root, 'public', batch63ProductRecord.slug, 'index.html'))
+}
+const batch63ProductArtifactPathForGeneration = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'shelf-marker-story-theme-card-pack.json',
+)
+if (existsSync(batch63ProductArtifactPathForGeneration)) {
+  const artifactSourceForGeneration = readJson(batch63ProductArtifactPathForGeneration)
+  batch63GeneratedOutputPaths.push(
+    ...Object.values(artifactSourceForGeneration.artifact ?? {}).map((relativePath) => resolve(root, relativePath)),
+  )
+}
+const batch63GenerationStarted = anyPathExists(batch63GeneratedOutputPaths)
+if (batch63GenerationStarted) {
+  for (const imagePath of batch63ImagePaths) {
+    expect(
+      existsSync(imagePath),
+      `Batch 63 generated image output is missing after Batch 63 generated outputs started: ${imagePath}`,
+    )
+  }
+}
 products.products.forEach((product) =>
   validateProduct(product, productSlugs, worldSlugs, {
     batch55GenerationStarted,
@@ -7469,6 +7585,7 @@ products.products.forEach((product) =>
     batch60GenerationStarted,
     batch61GenerationStarted,
     batch62GenerationStarted,
+    batch63GenerationStarted,
   }),
 )
 for (const requiredProductSlug of [
@@ -7527,6 +7644,7 @@ for (const requiredProductSlug of [
   'archive-drawer-story-resolution-card-pack',
   'card-catalog-story-retell-card-pack',
   'library-pocket-story-summary-card-pack',
+  'shelf-marker-story-theme-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -12118,6 +12236,124 @@ if (libraryPocketStorySummaryAnyArtifactFilesExist) {
   }
 }
 
+expect(
+  existsSync(shelfMarkerStoryThemeSourceFile),
+  `Missing Batch 63 Shelf Marker Story Theme Card Pack source file: ${shelfMarkerStoryThemeSourceFile}`,
+)
+const shelfMarkerStoryThemeSource = readJson(shelfMarkerStoryThemeSourceFile)
+expect(
+  shelfMarkerStoryThemeSource.batchId === '2026-06-04-batch63',
+  'Shelf Marker Story Theme Card Pack source batchId must be 2026-06-04-batch63.',
+)
+const shelfMarkerStoryThemeProduct = products.products.find(
+  (product) => product.slug === 'shelf-marker-story-theme-card-pack',
+)
+expect(
+  shelfMarkerStoryThemeProduct,
+  'Missing Shelf Marker Story Theme Card Pack product record for Batch 63 artifact validation.',
+)
+const shelfMarkerStoryThemeSourceErrors = validateShelfMarkerStoryThemeCardPackSource(
+  shelfMarkerStoryThemeSource,
+  shelfMarkerStoryThemeProduct,
+  worldAgeBands,
+)
+expect(
+  shelfMarkerStoryThemeSourceErrors.length === 0,
+  `Shelf Marker Story Theme Card Pack source failed validation:\n${shelfMarkerStoryThemeSourceErrors.join('\n')}`,
+)
+const shelfMarkerStoryThemeSourceFileErrors = validateShelfMarkerStoryThemeCardPackSourceFiles(
+  shelfMarkerStoryThemeSource,
+  root,
+)
+expect(
+  shelfMarkerStoryThemeSourceFileErrors.length === 0,
+  `Shelf Marker Story Theme Card Pack sourceFiles failed validation:\n${shelfMarkerStoryThemeSourceFileErrors.join('\n')}`,
+)
+const shelfMarkerStoryThemeSummaryErrors = validateProductWorldSummaries(
+  shelfMarkerStoryThemeProduct,
+  'Shelf Marker Story Theme Card Pack',
+)
+expect(
+  shelfMarkerStoryThemeSummaryErrors.length === 0,
+  `Shelf Marker Story Theme Card Pack world summaries failed validation:\n${shelfMarkerStoryThemeSummaryErrors.join('\n')}`,
+)
+const shelfMarkerStoryThemeArtifactPaths = Object.values(shelfMarkerStoryThemeSource.artifact).map((relativePath) =>
+  resolve(root, relativePath),
+)
+const shelfMarkerStoryThemeAnyArtifactFilesExist = anyPathExists(shelfMarkerStoryThemeArtifactPaths)
+if (shelfMarkerStoryThemeAnyArtifactFilesExist) {
+  for (const artifactPath of shelfMarkerStoryThemeArtifactPaths) {
+    expect(
+      existsSync(artifactPath),
+      `Shelf Marker Story Theme Card Pack artifact set is incomplete after artifact generation started: ${artifactPath}`,
+    )
+  }
+  const shelfMarkerStoryThemeExpectedPdfPages = shelfMarkerStoryThemeSource.cards.length + 5
+  const shelfMarkerStoryThemeArtifactStatus = inspectArtifactFiles(root, shelfMarkerStoryThemeSource.artifact, {
+    expectedPdfPages: shelfMarkerStoryThemeExpectedPdfPages,
+    expectedZipEntries: [
+      'Shelf-Marker-Story-Theme-Card-Pack.pdf',
+      'README.txt',
+      'source/shelf-marker-story-theme-card-pack.html',
+      ...shelfMarkerStoryThemeSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+    ],
+  })
+  expect(
+    shelfMarkerStoryThemeArtifactStatus.valid,
+    `Shelf Marker Story Theme Card Pack artifacts failed validation:\n${shelfMarkerStoryThemeArtifactStatus.errors.join('\n')}`,
+  )
+  expect(
+    shelfMarkerStoryThemeArtifactStatus.files.pdf.size > 100_000,
+    `Shelf Marker Story Theme Card Pack PDF artifact is unexpectedly small: ${shelfMarkerStoryThemeArtifactStatus.files.pdf.size} bytes.`,
+  )
+  expect(
+    shelfMarkerStoryThemeArtifactStatus.files.pdf.pageCount === shelfMarkerStoryThemeExpectedPdfPages,
+    `Shelf Marker Story Theme Card Pack PDF artifact must have ${shelfMarkerStoryThemeExpectedPdfPages} pages.`,
+  )
+  expect(
+    shelfMarkerStoryThemeArtifactStatus.files.zip.size > shelfMarkerStoryThemeArtifactStatus.files.pdf.size,
+    'Shelf Marker Story Theme Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+  )
+  const shelfMarkerStoryThemeCheckoutErrors = validateCheckoutReadiness(
+    shelfMarkerStoryThemeProduct,
+    shelfMarkerStoryThemeArtifactStatus,
+  )
+  expect(
+    shelfMarkerStoryThemeCheckoutErrors.length === 0,
+    `Shelf Marker Story Theme Card Pack checkout readiness failed validation:\n${shelfMarkerStoryThemeCheckoutErrors.join('\n')}`,
+  )
+  const shelfMarkerStoryThemeArtifactManifest = readJson(
+    resolve(root, shelfMarkerStoryThemeSource.artifact.manifestPath),
+  )
+  expect(
+    shelfMarkerStoryThemeArtifactManifest.sourcePageCount === shelfMarkerStoryThemeSource.cards.length,
+    'Shelf Marker Story Theme Card Pack artifact manifest sourcePageCount must match source cards.',
+  )
+  expect(
+    Array.isArray(shelfMarkerStoryThemeArtifactManifest.files?.assets),
+    'Shelf Marker Story Theme Card Pack artifact manifest files.assets must be an array.',
+  )
+  expect(
+    shelfMarkerStoryThemeArtifactManifest.files.assets.length === shelfMarkerStoryThemeSource.worldSlugs.length,
+    'Shelf Marker Story Theme Card Pack artifact manifest must include one copied local image per source world.',
+  )
+  const shelfMarkerStoryThemeManifestAssetErrors = validateManifestWorldAssets(
+    shelfMarkerStoryThemeSource,
+    shelfMarkerStoryThemeArtifactManifest,
+  )
+  expect(
+    shelfMarkerStoryThemeManifestAssetErrors.length === 0,
+    `Shelf Marker Story Theme Card Pack artifact manifest image coverage failed validation:\n${shelfMarkerStoryThemeManifestAssetErrors.join('\n')}`,
+  )
+  for (const asset of shelfMarkerStoryThemeArtifactManifest.files.assets) {
+    validateImageFile(
+      resolve(root, asset.path),
+      `Shelf Marker Story Theme Card Pack copied artifact image ${asset.path}`,
+      'jpeg',
+    )
+  }
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -12172,6 +12408,7 @@ const productImageManifests = [
   batch60Images,
   batch61Images,
   batch62Images,
+  batch63Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

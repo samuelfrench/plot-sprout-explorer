@@ -710,6 +710,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable library pocket story summary cards with adult guide tools, summary routines, and take-home summary slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'shelf-marker-story-theme-card-pack',
+    title: 'Shelf Marker Story Theme Card Pack',
+    pricePoint: '$99',
+    description:
+      'Sixteen printable shelf marker story theme cards with adult guide tools, theme routines, and take-home theme slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

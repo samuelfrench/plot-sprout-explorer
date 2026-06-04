@@ -138,5 +138,9 @@ describe('App', () => {
       'href',
       expect.stringContaining('library-pocket-story-summary-card-pack'),
     )
+    expect(screen.getByRole('link', { name: /Preview Shelf Marker Story Theme Card Pack/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('shelf-marker-story-theme-card-pack'),
+    )
   })
 })

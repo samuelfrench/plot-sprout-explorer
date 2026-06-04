@@ -72,9 +72,9 @@ describe('content batch verifier summary', () => {
 
     expect(output).toContain(`${currentLocalImageCount()} local world/product images`)
     expect(output).toContain(`${currentProductArtifactCount()} product artifacts`)
-    expect(output).toContain('82 local world/product images')
-    expect(output).toContain('55 static product pages')
-    expect(output).toContain('55 product artifacts')
+    expect(output).toContain('83 local world/product images')
+    expect(output).toContain('56 static product pages')
+    expect(output).toContain('56 product artifacts')
   })
 
   it('rejects product meta descriptions clipped to a trailing adjective fragment', () => {
@@ -222,6 +222,35 @@ describe('content batch verifier summary', () => {
 
       const output = runVerifierExpectingFailure()
       expect(output).toContain('Batch 62 generated image output is missing after Batch 62 generated outputs started')
+    })
+  })
+
+  it('fails closed if Batch63 artifacts exist before hero image files exist', () => {
+    const imagePath = resolve(
+      root,
+      'public/images/plotsprout/batch63/shelf-marker-story-theme-card-pack.jpg',
+    )
+    const webpPath = resolve(
+      root,
+      'public/images/plotsprout/batch63/shelf-marker-story-theme-card-pack.webp',
+    )
+    const sidecarPath = resolve(
+      root,
+      'content/image-runs/batch63/shelf-marker-story-theme-card-pack.json',
+    )
+    const artifactDir = resolve(root, 'product-build/shelf-marker-story-theme-card-pack')
+    const pdfPath = resolve(artifactDir, 'Shelf-Marker-Story-Theme-Card-Pack.pdf')
+
+    withRestoredPaths([imagePath, webpPath, sidecarPath, artifactDir], () => {
+      rmSync(imagePath, { force: true })
+      rmSync(webpPath, { force: true })
+      rmSync(sidecarPath, { force: true })
+      rmSync(artifactDir, { recursive: true, force: true })
+      mkdirSync(artifactDir, { recursive: true })
+      writeFileSync(pdfPath, '%PDF-1.7\n%%EOF\n')
+
+      const output = runVerifierExpectingFailure()
+      expect(output).toContain('Batch 63 generated image output is missing after Batch 63 generated outputs started')
     })
   })
 
