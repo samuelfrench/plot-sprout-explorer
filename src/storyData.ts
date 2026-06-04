@@ -702,6 +702,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable card catalog story retell cards with adult guide tools, retell routines, and take-home retell slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'library-pocket-story-summary-card-pack',
+    title: 'Library Pocket Story Summary Card Pack',
+    pricePoint: '$97',
+    description:
+      'Sixteen printable library pocket story summary cards with adult guide tools, summary routines, and take-home summary slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

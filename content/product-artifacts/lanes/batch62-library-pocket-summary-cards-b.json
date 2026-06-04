@@ -16,7 +16,7 @@
     "summarySentencePrompt": "summary sentence: ____ tells the whole observatory story in one sentence.",
     "libraryPocketLabelPrompt": "library pocket label: ____ gives this moss-message summary a short pretend label.",
     "quietOptionLine": "Quiet option: fill only story start, ending result, and library pocket label: ____.",
-    "takeHomeLine": "Take-home line: save the paper summary with one keeper detail for a later adult-led retell: ____."
+    "takeHomeLine": "Take-home line: save the paper summary with one keeper detail for a later adult-led summary pass: ____."
   },
   {
     "id": "library-pocket-summary-card-08",
@@ -54,7 +54,7 @@
     "summarySentencePrompt": "summary sentence: ____ tells the compost-clock workshop story in one sentence.",
     "libraryPocketLabelPrompt": "library pocket label: ____ gives this workshop summary a short pretend label.",
     "quietOptionLine": "Quiet option: fill only story start, important change, and keeper detail: ____.",
-    "takeHomeLine": "Take-home line: save the workshop summary with its pocket label for one later adult-led retell: ____."
+    "takeHomeLine": "Take-home line: save the workshop summary with its pocket label for one later adult-led summary pass: ____."
   },
   {
     "id": "library-pocket-summary-card-10",
@@ -73,7 +73,7 @@
     "summarySentencePrompt": "summary sentence: ____ tells the seed-library map room story in one sentence.",
     "libraryPocketLabelPrompt": "library pocket label: ____ writes the short pretend label for this map room summary.",
     "quietOptionLine": "Quiet option: fill only main action, ending result, and library pocket label: ____.",
-    "takeHomeLine": "Take-home line: keep the map room summary card ready for a later paper retell: ____."
+    "takeHomeLine": "Take-home line: keep the map room summary card ready for a later paper summary pass: ____."
   },
   {
     "id": "library-pocket-summary-card-11",

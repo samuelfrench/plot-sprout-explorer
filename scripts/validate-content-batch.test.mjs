@@ -72,9 +72,9 @@ describe('content batch verifier summary', () => {
 
     expect(output).toContain(`${currentLocalImageCount()} local world/product images`)
     expect(output).toContain(`${currentProductArtifactCount()} product artifacts`)
-    expect(output).toContain('81 local world/product images')
-    expect(output).toContain('54 static product pages')
-    expect(output).toContain('54 product artifacts')
+    expect(output).toContain('82 local world/product images')
+    expect(output).toContain('55 static product pages')
+    expect(output).toContain('55 product artifacts')
   })
 
   it('fails closed if a Batch55 generated image exists before the static page is rendered', () => {
@@ -174,6 +174,35 @@ describe('content batch verifier summary', () => {
 
       const output = runVerifierExpectingFailure()
       expect(output).toContain('Batch 61 generated image output is missing after Batch 61 generated outputs started')
+    })
+  })
+
+  it('fails closed if Batch62 artifacts exist before hero image files exist', () => {
+    const imagePath = resolve(
+      root,
+      'public/images/plotsprout/batch62/library-pocket-story-summary-card-pack.jpg',
+    )
+    const webpPath = resolve(
+      root,
+      'public/images/plotsprout/batch62/library-pocket-story-summary-card-pack.webp',
+    )
+    const sidecarPath = resolve(
+      root,
+      'content/image-runs/batch62/library-pocket-story-summary-card-pack.json',
+    )
+    const artifactDir = resolve(root, 'product-build/library-pocket-story-summary-card-pack')
+    const pdfPath = resolve(artifactDir, 'Library-Pocket-Story-Summary-Card-Pack.pdf')
+
+    withRestoredPaths([imagePath, webpPath, sidecarPath, artifactDir], () => {
+      rmSync(imagePath, { force: true })
+      rmSync(webpPath, { force: true })
+      rmSync(sidecarPath, { force: true })
+      rmSync(artifactDir, { recursive: true, force: true })
+      mkdirSync(artifactDir, { recursive: true })
+      writeFileSync(pdfPath, '%PDF-1.7\n%%EOF\n')
+
+      const output = runVerifierExpectingFailure()
+      expect(output).toContain('Batch 62 generated image output is missing after Batch 62 generated outputs started')
     })
   })
 

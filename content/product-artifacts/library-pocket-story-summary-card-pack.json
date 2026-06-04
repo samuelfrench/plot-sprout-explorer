@@ -1,0 +1,512 @@
+{
+  "batchId": "2026-06-04-batch62",
+  "generatedAt": "2026-06-04",
+  "productSlug": "library-pocket-story-summary-card-pack",
+  "title": "Library Pocket Story Summary Card Pack",
+  "pricePoint": "$97",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable library pocket story summary cards plus adult guide tools, summary routines, take-home summary slips, and optional adult prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+  "artifact": {
+    "pdfPath": "product-build/library-pocket-story-summary-card-pack/Library-Pocket-Story-Summary-Card-Pack.pdf",
+    "zipPath": "product-build/library-pocket-story-summary-card-pack/library-pocket-story-summary-card-pack.zip",
+    "sourceHtmlPath": "product-build/library-pocket-story-summary-card-pack/source/library-pocket-story-summary-card-pack.html",
+    "manifestPath": "product-build/library-pocket-story-summary-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch62-library-pocket-summary-cards-a.json",
+    "content/product-artifacts/lanes/batch62-library-pocket-summary-cards-b.json",
+    "content/product-artifacts/lanes/batch62-library-pocket-summary-cards-c.json",
+    "content/product-artifacts/lanes/batch62-library-pocket-summary-tools.json"
+  ],
+  "worldSlugs": [
+    "moon-muffin-market",
+    "pencil-dragon-academy",
+    "teacup-town-weather-window",
+    "mitten-market-lost-ticket",
+    "rain-boot-route-rangers",
+    "greenhouse-gear-garden",
+    "moss-message-observatory",
+    "rain-gauge-railway",
+    "compost-clock-workshop",
+    "seed-library-map-room",
+    "solar-oven-picnic-station",
+    "tidepool-timekeepers-lab",
+    "almost-invention-workshop",
+    "appendix-archive-lab",
+    "clue-label-tower-museum",
+    "index-card-theater-club"
+  ],
+  "cover": {
+    "kicker": "Printable library pocket summary cards",
+    "headline": "Library Pocket Story Summary Card Pack",
+    "subhead": "Sixteen paper pocket cards help writers summarize a story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+    "included": [
+      "16 printable library pocket summary cards",
+      "Adult setup guide",
+      "Fictional summary safety notes",
+      "Story start prompts",
+      "Main action prompts",
+      "Important change prompts",
+      "Ending result prompts",
+      "Keeper detail prompts",
+      "Six adult-led summary routines",
+      "Ten take-home summary slips",
+      "Printable PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "title": "Library Pocket Story Summary Adult Guide: ____.",
+    "setupSteps": [
+      "Set out one story summary card, seven blank slips, a pencil, and a paper pocket before the session begins: ____.",
+      "Name the paper-only path: story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label: ____.",
+      "Choose one fictional story world from the pack and keep all names, places, and actions invented: ____.",
+      "Place one blank slip under each summary heading so the writer can see the full order before writing: ____.",
+      "Keep the finished slips tucked in the paper pocket for adult-led reuse: ____."
+    ],
+    "facilitationNotes": [
+      "Use short spoken choices when a writer gets stuck: start place, action, change, result, detail, sentence, label: ____.",
+      "Accept dictated words, copied adult wording, or independent writing as long as the summary stays fictional: ____.",
+      "Keep the summary sentence to one clear line that names the story start, main action, important change, and ending result: ____.",
+      "Use the keeper detail only if it helps the summary stay specific without adding identifying facts: ____.",
+      "Close by rereading the slips in order and checking that the library pocket label matches the summary sentence: ____."
+    ],
+    "safetyNotes": [
+      "Use pretend names, broad made-up places, and invented actions instead of identifying facts: ____.",
+      "Keep the activity away from outside audiences, correction marks, or comparison between writers: ____.",
+      "Keep the pocket metaphor separate from outside title pages, creator names, or service forms: ____.",
+      "Keep every prompt about a pretend story with invented details only: ____.",
+      "Skip any prompt that starts to feel like identifying-fact collection and return to invented story facts: ____."
+    ]
+  },
+  "summaryRoutines": [
+    {
+      "title": "Pocket Order Setup: ____.",
+      "useWhen": "Use before a first summary card so the adult and writer can see the seven paper parts: ____.",
+      "steps": [
+        "The adult lays out blank slips labeled story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label: ____.",
+        "The writer points to the story start slip and says where the fictional story begins: ____.",
+        "The adult points across the row and names each next part in order: ____.",
+        "The writer tucks the empty slips halfway into the paper pocket until each one is ready: ____."
+      ]
+    },
+    {
+      "title": "Story Start To Main Action: ____.",
+      "useWhen": "Use when the summary needs a clear opening and one action that moves the story: ____.",
+      "steps": [
+        "The adult asks for one invented story start with a broad pretend place and a made-up character role: ____.",
+        "The writer writes the story start on the first slip: ____.",
+        "The adult asks what the character does next that matters most: ____.",
+        "The writer writes the main action on the second slip and places it after the story start: ____."
+      ]
+    },
+    {
+      "title": "Important Change Check: ____.",
+      "useWhen": "Use when the middle of the summary feels like a list instead of a change: ____.",
+      "steps": [
+        "The adult rereads the story start and main action in a calm voice: ____.",
+        "The writer names what becomes different because of the main action: ____.",
+        "The adult helps trim the answer to one important change: ____.",
+        "The writer writes the important change and slides it behind the main action slip: ____."
+      ]
+    },
+    {
+      "title": "Ending Result Match: ____.",
+      "useWhen": "Use when the summary needs a result that connects back to the earlier slips: ____.",
+      "steps": [
+        "The adult asks what happens after the important change in the fictional story: ____.",
+        "The writer chooses one ending result that answers the main action: ____.",
+        "The adult checks that the ending result does not add a new unrelated problem: ____.",
+        "The writer writes the ending result and places it after the important change: ____."
+      ]
+    },
+    {
+      "title": "Keeper Detail Sort: ____.",
+      "useWhen": "Use when the summary sentence needs one vivid but small detail: ____.",
+      "steps": [
+        "The adult spreads the story start, main action, important change, and ending result slips: ____.",
+        "The writer chooses one keeper detail that helps the summary stay clear: ____.",
+        "The adult asks whether the keeper detail supports the summary sentence: ____.",
+        "The writer writes the keeper detail on its slip and keeps it beside the sentence blank: ____."
+      ]
+    },
+    {
+      "title": "Summary Sentence And Pocket Label: ____.",
+      "useWhen": "Use at the end of a paper session to close the summary neatly: ____.",
+      "steps": [
+        "The adult reads the four main slips in order without adding extra facts: ____.",
+        "The writer writes one summary sentence using the story start, main action, important change, and ending result: ____.",
+        "The adult asks for a short library pocket label that names the summary focus: ____.",
+        "The writer writes the library pocket label and tucks all slips into the paper pocket: ____."
+      ]
+    }
+  ],
+  "takeHomeSummarySlips": [
+    {
+      "title": "Story Start Slip",
+      "prompt": "The fictional story start is ____________________.",
+      "adultNote": "Ask for one invented starting place or situation, then stop."
+    },
+    {
+      "title": "Main Action Slip",
+      "prompt": "The main action that moves the story is ____________________.",
+      "adultNote": "Help choose one action, not every event."
+    },
+    {
+      "title": "Important Change Slip",
+      "prompt": "The important change after the main action is ____________________.",
+      "adultNote": "Look for what becomes different in the fictional story."
+    },
+    {
+      "title": "Ending Result Slip",
+      "prompt": "The ending result is ____________________.",
+      "adultNote": "Keep the result connected to the earlier action."
+    },
+    {
+      "title": "Keeper Detail Slip",
+      "prompt": "The keeper detail that helps the summary is ____________________.",
+      "adultNote": "Choose one useful detail and leave the rest out."
+    },
+    {
+      "title": "Summary Sentence Slip",
+      "prompt": "My summary sentence is: ____________________.",
+      "adultNote": "Use one clear sentence from the finished slips."
+    },
+    {
+      "title": "Library Pocket Label Slip",
+      "prompt": "The library pocket label for this summary is ____________________.",
+      "adultNote": "Make the label short and fictional."
+    },
+    {
+      "title": "Order Check Slip",
+      "prompt": "My slips are in this order: story start, main action, important change, ending result, keeper detail, summary sentence, library pocket label: ____________________.",
+      "adultNote": "Use this as a quiet reread pass."
+    },
+    {
+      "title": "Shorten The Summary Slip",
+      "prompt": "One extra detail I can leave out is ____________________.",
+      "adultNote": "Frame this as paper sorting, not judging."
+    },
+    {
+      "title": "Pocket Close Slip",
+      "prompt": "The finished paper pocket holds a summary about ____________________.",
+      "adultNote": "Close the session by filing the slips without sharing or comparing."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Ask which slip should be easiest to fill first, then start there: ____.",
+    "Offer two adult-made fictional examples if the writer needs a model: ____.",
+    "Reread the slips in order before asking for the summary sentence: ____.",
+    "Point to the important change slip when the summary gets too long: ____.",
+    "Use the keeper detail slip only after the ending result is clear: ____.",
+    "Help shorten the library pocket label to a few plain words: ____.",
+    "Keep unused slips blank and return them to the pack for another paper session: ____.",
+    "End the session when the summary sentence and library pocket label both match the same fictional story: ____."
+  ],
+  "cards": [
+    {
+      "id": "library-pocket-summary-card-01",
+      "title": "Moon Muffin Market Story Summary Card",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "6-8",
+      "summarySkill": "summarize a fictional paper-only story by naming the story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable summary card for a pretend Moon Muffin Market story kept offline on paper: ____.",
+      "adultSetup": "Adult: set out a pencil, blank page, and pretend library pocket slip before the summary talk: ____.",
+      "kidDirection": "Writer: invent a moon market helper and keep every answer made up and paper-only: ____.",
+      "storyStartPrompt": "story start: write who opens the moon market stall and what sign begins the story: ____.",
+      "mainActionPrompt": "main action: write what the helper sorts, carries, or fixes at the pretend market: ____.",
+      "importantChangePrompt": "important change: write what becomes different after the helper looks closely: ____.",
+      "endingResultPrompt": "ending result: write how the market feels or works at the end: ____.",
+      "keeperDetailPrompt": "keeper detail: write one moon market detail the summary should keep: ____.",
+      "summarySentencePrompt": "summary sentence: write one sentence that tells the start, action, change, and end: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: write a short pretend label for this Moon Muffin Market summary: ____.",
+      "quietOptionLine": "Quiet option: fill only the story start, ending result, and library pocket label first: ____.",
+      "takeHomeLine": "Take-home line: save this paper summary and add one new moon market keeper detail later: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-02",
+      "title": "Pencil Dragon Academy Story Summary Card",
+      "worldSlug": "pencil-dragon-academy",
+      "ageBand": "10-11",
+      "summarySkill": "build a concise fictional paper-only summary by connecting story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable summary card for a pretend Pencil Dragon Academy story kept offline on paper: ____.",
+      "adultSetup": "Adult: place a blank page, pencil, and pretend library pocket slip beside the practice-hall summary card: ____.",
+      "kidDirection": "Writer: invent the pencil dragons, practice hall, and helper while every answer stays fictional and paper-only: ____.",
+      "storyStartPrompt": "story start: write who enters the pencil-dragon practice hall and what paper signal starts the story: ____.",
+      "mainActionPrompt": "main action: write the biggest thing the helper does to guide the pencil dragons: ____.",
+      "importantChangePrompt": "important change: write what changes in the hall after the helper notices a clue: ____.",
+      "endingResultPrompt": "ending result: write the final calm result for the helper and pencil dragons: ____.",
+      "keeperDetailPrompt": "keeper detail: write one sharp, clear practice-hall detail the summary should keep: ____.",
+      "summarySentencePrompt": "summary sentence: write one sentence that explains the whole invented story clearly: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: write a short pretend label for this Pencil Dragon Academy summary: ____.",
+      "quietOptionLine": "Quiet option: fill the main action and important change first, then add the summary sentence: ____.",
+      "takeHomeLine": "Take-home line: keep this paper summary slip and revise one keeper detail later: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-03",
+      "title": "Teacup Town Weather Window Story Summary Card",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "summarySkill": "summarize a fictional paper-only weather-window story with a story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable summary card for a pretend Teacup Town Weather Window story kept offline on paper: ____.",
+      "adultSetup": "Adult: set a pencil, blank page, and pretend library pocket slip near the weather-window card: ____.",
+      "kidDirection": "Writer: make up the teacup window, tiny weather sign, and helper while answers stay on paper: ____.",
+      "storyStartPrompt": "story start: write who notices the teacup window and what weather sign begins the story: ____.",
+      "mainActionPrompt": "main action: write what the helper checks, turns, or sorts at the window: ____.",
+      "importantChangePrompt": "important change: write what changes when the weather sign finally makes sense: ____.",
+      "endingResultPrompt": "ending result: write what the helper sees through the window at the end: ____.",
+      "keeperDetailPrompt": "keeper detail: write one tiny Teacup Town detail that belongs in the summary: ____.",
+      "summarySentencePrompt": "summary sentence: write one sentence that tells the story in order: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: write a short pretend label for this weather-window summary: ____.",
+      "quietOptionLine": "Quiet option: fill only the story start, important change, and summary sentence: ____.",
+      "takeHomeLine": "Take-home line: save this paper summary and add one new weather-window detail later: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-04",
+      "title": "Mitten Market Lost Ticket Story Summary Card",
+      "worldSlug": "mitten-market-lost-ticket",
+      "ageBand": "7-8",
+      "summarySkill": "summarize a fictional paper-only lost-ticket story by naming the story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable summary card for a pretend Mitten Market lost ticket story kept offline on paper: ____.",
+      "adultSetup": "Adult: place a pencil, blank page, and pretend library pocket slip beside the mitten-ticket card: ____.",
+      "kidDirection": "Writer: invent the market stalls, mitten tags, ticket helper, and paper clues: ____.",
+      "storyStartPrompt": "story start: write who finds the pretend lost ticket and where the market story begins: ____.",
+      "mainActionPrompt": "main action: write what the helper does with the ticket, tag, or stall clue: ____.",
+      "importantChangePrompt": "important change: write what becomes clear after the ticket clue is compared: ____.",
+      "endingResultPrompt": "ending result: write how the ticket question ends in the pretend market: ____.",
+      "keeperDetailPrompt": "keeper detail: write one mitten or market detail the summary should keep: ____.",
+      "summarySentencePrompt": "summary sentence: write one sentence that tells the ticket story from start to end: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: write a short pretend label for this Mitten Market summary: ____.",
+      "quietOptionLine": "Quiet option: fill the story start and ending result before the other blanks: ____.",
+      "takeHomeLine": "Take-home line: tuck this paper summary away and add one new ticket detail later: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-05",
+      "title": "Rain Boot Route Rangers Story Summary Card",
+      "worldSlug": "rain-boot-route-rangers",
+      "ageBand": "7-9",
+      "summarySkill": "write a fictional paper-only summary by linking story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable summary card for a pretend Rain Boot Route Rangers story kept offline on paper: ____.",
+      "adultSetup": "Adult: set out a blank page, pencil, and pretend library pocket slip before the route summary: ____.",
+      "kidDirection": "Writer: invent rain boots, route marks, and helpful rangers while the route stays fully made up: ____.",
+      "storyStartPrompt": "story start: write who spots the first rain-boot route mark and what begins the story: ____.",
+      "mainActionPrompt": "main action: write what the rangers trace, sort, or repair on the pretend route: ____.",
+      "importantChangePrompt": "important change: write what changes after the route marks are put in order: ____.",
+      "endingResultPrompt": "ending result: write how the pretend route ends for the rangers: ____.",
+      "keeperDetailPrompt": "keeper detail: write one rain-boot or route-mark detail the summary should keep: ____.",
+      "summarySentencePrompt": "summary sentence: write one clear sentence that summarizes the whole route story: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: write a short pretend label for this Rain Boot Route Rangers summary: ____.",
+      "quietOptionLine": "Quiet option: fill the main action, important change, and label before the full sentence: ____.",
+      "takeHomeLine": "Take-home line: keep this paper summary and add one new route-mark detail later: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-06",
+      "title": "Greenhouse Gear Garden Story Summary Card",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "summarySkill": "summarize a fictional paper-only gear-garden story with a story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable summary card for a pretend Greenhouse Gear Garden story kept offline on paper: ____.",
+      "adultSetup": "Adult: place a pencil, blank page, and pretend library pocket slip beside the gear-garden card: ____.",
+      "kidDirection": "Writer: invent the greenhouse gears, garden dials, and helper while every answer stays paper-only: ____.",
+      "storyStartPrompt": "story start: write who hears the first garden gear click and what begins the story: ____.",
+      "mainActionPrompt": "main action: write what the helper adjusts, matches, or labels in the greenhouse: ____.",
+      "importantChangePrompt": "important change: write what changes after the gears and dials line up: ____.",
+      "endingResultPrompt": "ending result: write how the greenhouse works or feels at the end: ____.",
+      "keeperDetailPrompt": "keeper detail: write one gear, dial, or greenhouse detail the summary should keep: ____.",
+      "summarySentencePrompt": "summary sentence: write one sentence that tells the gear-garden story clearly: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: write a short pretend label for this Greenhouse Gear Garden summary: ____.",
+      "quietOptionLine": "Quiet option: fill only the important change, ending result, and keeper detail first: ____.",
+      "takeHomeLine": "Take-home line: save this paper summary and add one new gear-garden detail later: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-07",
+      "title": "Moss Message Observatory Story Summary Card",
+      "worldSlug": "moss-message-observatory",
+      "ageBand": "8-10",
+      "summarySkill": "Summarize a fictional moss-message observatory story by sorting story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable offline paper-only summary card for one invented observatory story about moss signals and a sky notebook: ____.",
+      "adultSetup": "Adult: set out one blank summary card, pencil, and small pocket label strip; keep all observatory details invented: ____.",
+      "kidDirection": "Writer: make the moss signal, telescope rail, and observatory helper fictional, then fill each summary blank: ____.",
+      "storyStartPrompt": "story start: ____ sees a moss message on the observatory ledge.",
+      "mainActionPrompt": "main action: ____ follows the moss marks from the telescope rail to the sky chart table.",
+      "importantChangePrompt": "important change: ____ changes when the moss marks rearrange into one clear paper path.",
+      "endingResultPrompt": "ending result: ____ shows how the helper places the solved moss message in the library pocket.",
+      "keeperDetailPrompt": "keeper detail: ____ names one moss color, lens mark, or ledge shape that makes the summary clear.",
+      "summarySentencePrompt": "summary sentence: ____ tells the whole observatory story in one sentence.",
+      "libraryPocketLabelPrompt": "library pocket label: ____ gives this moss-message summary a short pretend label.",
+      "quietOptionLine": "Quiet option: fill only story start, ending result, and library pocket label: ____.",
+      "takeHomeLine": "Take-home line: save the paper summary with one keeper detail for a later adult-led summary pass: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-08",
+      "title": "Rain Gauge Railway Story Summary Card",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "summarySkill": "Summarize a fictional rain-gauge railway story by connecting story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable offline paper-only summary card for one invented railway story with gauge posts and a paper rail cart: ____.",
+      "adultSetup": "Adult: place a blank summary card, pencil, pretend gauge strip, and pocket label slip beside the card: ____.",
+      "kidDirection": "Writer: keep the rain gauge posts, rail cart, and helper invented while you complete the paper summary: ____.",
+      "storyStartPrompt": "story start: ____ notices the rain gauge needle pointing at a tiny rail cart.",
+      "mainActionPrompt": "main action: ____ moves the cart between three pretend gauge posts to compare clues.",
+      "importantChangePrompt": "important change: ____ changes when the middle gauge shows a new mark.",
+      "endingResultPrompt": "ending result: ____ explains which rail post holds the answer.",
+      "keeperDetailPrompt": "keeper detail: ____ names the gauge color, rail token, or cart bell to keep.",
+      "summarySentencePrompt": "summary sentence: ____ sums up the rain-gauge railway story in one clear line.",
+      "libraryPocketLabelPrompt": "library pocket label: ____ writes the short label for this railway summary.",
+      "quietOptionLine": "Quiet option: fill only main action, keeper detail, and summary sentence: ____.",
+      "takeHomeLine": "Take-home line: keep the railway summary card with its library pocket label for another paper pass: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-09",
+      "title": "Compost Clock Workshop Story Summary Card",
+      "worldSlug": "compost-clock-workshop",
+      "ageBand": "8-10",
+      "summarySkill": "Summarize a fictional compost-clock workshop story by naming story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable offline paper-only summary card for one invented workshop story with leaf gears and clock marks: ____.",
+      "adultSetup": "Adult: set out a blank summary card, pencil, pretend clock strip, and pocket label slip before writing: ____.",
+      "kidDirection": "Writer: invent the compost clock, leaf gears, and workshop helper, then keep every answer on paper: ____.",
+      "storyStartPrompt": "story start: ____ enters a workshop where a compost clock ticks beside a leaf bin.",
+      "mainActionPrompt": "main action: ____ turns paper gears to match leaf layers with clock marks.",
+      "importantChangePrompt": "important change: ____ changes when the clock hand moves after a new leaf layer settles.",
+      "endingResultPrompt": "ending result: ____ explains which gear tells the workshop order.",
+      "keeperDetailPrompt": "keeper detail: ____ names one gear tooth, leaf tag, or soft tick that belongs in the summary.",
+      "summarySentencePrompt": "summary sentence: ____ tells the compost-clock workshop story in one sentence.",
+      "libraryPocketLabelPrompt": "library pocket label: ____ gives this workshop summary a short pretend label.",
+      "quietOptionLine": "Quiet option: fill only story start, important change, and keeper detail: ____.",
+      "takeHomeLine": "Take-home line: save the workshop summary with its pocket label for one later adult-led summary pass: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-10",
+      "title": "Seed Library Map Room Story Summary Card",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "summarySkill": "Summarize a fictional seed-library map room story by linking story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable offline paper-only summary card for one invented map room story with seed tags and folded paper maps: ____.",
+      "adultSetup": "Adult: provide a blank summary card, pencil, pretend seed tag, and library pocket label strip: ____.",
+      "kidDirection": "Writer: keep the seed library, map drawers, and room helper invented while the summary stays on paper: ____.",
+      "storyStartPrompt": "story start: ____ opens a pretend map drawer in the seed-library map room.",
+      "mainActionPrompt": "main action: ____ matches seed tags to three paper map shapes.",
+      "importantChangePrompt": "important change: ____ changes when one paper map turns and a seed tag no longer fits.",
+      "endingResultPrompt": "ending result: ____ explains where the seed tag belongs in the invented room.",
+      "keeperDetailPrompt": "keeper detail: ____ names one seed stamp, map corner, or drawer color that helps the summary.",
+      "summarySentencePrompt": "summary sentence: ____ tells the seed-library map room story in one sentence.",
+      "libraryPocketLabelPrompt": "library pocket label: ____ writes the short pretend label for this map room summary.",
+      "quietOptionLine": "Quiet option: fill only main action, ending result, and library pocket label: ____.",
+      "takeHomeLine": "Take-home line: keep the map room summary card ready for a later paper summary pass: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-11",
+      "title": "Solar Oven Picnic Station Story Summary Card",
+      "worldSlug": "solar-oven-picnic-station",
+      "ageBand": "8-10",
+      "summarySkill": "Summarize a fictional solar-oven picnic station story by ordering story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.",
+      "useCase": "Adult-led printable offline paper-only summary card for one invented picnic station story with sun tiles and a paper oven dial: ____.",
+      "adultSetup": "Adult: set out a blank summary card, pencil, pretend sun tile, and pocket label strip; keep the station fictional: ____.",
+      "kidDirection": "Writer: invent the solar oven panel, picnic station helper, and sun-tile problem without leaving the paper page: ____.",
+      "storyStartPrompt": "story start: ____ arrives at a pretend picnic station with a solar oven panel and folded sun tiles.",
+      "mainActionPrompt": "main action: ____ arranges sun tiles so the paper oven dial points to the right basket marker.",
+      "importantChangePrompt": "important change: ____ changes when a cloud card slides over one sun tile.",
+      "endingResultPrompt": "ending result: ____ explains how the station helper keeps the picnic plan working on paper.",
+      "keeperDetailPrompt": "keeper detail: ____ names one sun tile, dial mark, or blanket pattern that belongs in the summary.",
+      "summarySentencePrompt": "summary sentence: ____ tells the solar-oven picnic station story in one sentence.",
+      "libraryPocketLabelPrompt": "library pocket label: ____ gives this picnic station summary a short pretend label.",
+      "quietOptionLine": "Quiet option: fill only story start, important change, and summary sentence: ____.",
+      "takeHomeLine": "Take-home line: save the picnic station summary with one keeper detail for later adult-led paper use: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-12",
+      "title": "Tidepool Timekeepers Lab Story Summary Card",
+      "worldSlug": "tidepool-timekeepers-lab",
+      "ageBand": "8-10",
+      "summarySkill": "Use story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label language to summarize a fictional Tidepool Timekeepers Lab story.",
+      "useCase": "Adult-led printable fictional paper-only summary card for an invented tidepool lab story: ____.",
+      "adultSetup": "Place this card, a pencil, and three blank paper slips beside a pretend tidepool clock sketch: ____.",
+      "kidDirection": "Fill the blanks for a made-up tidepool lab story; keep every detail fictional and paper-only: ____.",
+      "storyStartPrompt": "story start: In the tidepool timekeepers lab, the first helper notices ____.",
+      "mainActionPrompt": "main action: The helper tests ____ to keep the tiny tide clocks in order.",
+      "importantChangePrompt": "important change: The lab changes when ____ shifts from confusing to useful.",
+      "endingResultPrompt": "ending result: By the end, the timekeepers know ____.",
+      "keeperDetailPrompt": "keeper detail: Keep this small lab detail in the summary: ____.",
+      "summarySentencePrompt": "summary sentence: Write one sentence with the start, action, change, and result: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: File this fictional summary under ____.",
+      "quietOptionLine": "quiet option: Fill only story start, keeper detail, and library pocket label first: ____.",
+      "takeHomeLine": "take-home line: Save the paper card and add a clearer summary sentence later: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-13",
+      "title": "Almost Invention Workshop Story Summary Card",
+      "worldSlug": "almost-invention-workshop",
+      "ageBand": "10-11",
+      "summarySkill": "Use story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label language to summarize a fictional Almost Invention Workshop story.",
+      "useCase": "Adult-led printable fictional paper-only summary card for an invented workshop story: ____.",
+      "adultSetup": "Place this card, a pencil, and a pretend invention sketch with one circled part: ____.",
+      "kidDirection": "Fill the blanks for a made-up workshop story about one almost-working idea: ____.",
+      "storyStartPrompt": "story start: At the almost-invention workshop, the maker begins with ____.",
+      "mainActionPrompt": "main action: The maker tries ____ with a harmless gear, flap, or lever.",
+      "importantChangePrompt": "important change: The invention changes when ____.",
+      "endingResultPrompt": "ending result: By the end, the maker can use ____.",
+      "keeperDetailPrompt": "keeper detail: Keep one workshop detail, such as a bent tag or brass knob: ____.",
+      "summarySentencePrompt": "summary sentence: Summarize the workshop story in one sentence: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: File this fictional summary under ____.",
+      "quietOptionLine": "quiet option: Fill story start and ending result before the full summary sentence: ____.",
+      "takeHomeLine": "take-home line: Save the paper card and add one stronger keeper detail later: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-14",
+      "title": "Appendix Archive Lab Story Summary Card",
+      "worldSlug": "appendix-archive-lab",
+      "ageBand": "10-11",
+      "summarySkill": "Use story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label language to summarize a fictional Appendix Archive Lab story.",
+      "useCase": "Adult-led printable fictional paper-only summary card for an invented archive lab story: ____.",
+      "adultSetup": "Place this card, a pencil, and three pretend appendix slips with one sideways slip: ____.",
+      "kidDirection": "Fill the blanks for a made-up archive lab story where one extra note becomes useful: ____.",
+      "storyStartPrompt": "story start: In the appendix archive lab, the sorter opens ____.",
+      "mainActionPrompt": "main action: The sorter compares ____ with a tucked extra note.",
+      "importantChangePrompt": "important change: The archive changes when ____ moves to the right pocket.",
+      "endingResultPrompt": "ending result: By the end, the extra note helps explain ____.",
+      "keeperDetailPrompt": "keeper detail: Keep one archive detail, such as a green tab or quiet tray: ____.",
+      "summarySentencePrompt": "summary sentence: Write one sentence that tells the archive summary clearly: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: File this fictional summary under ____.",
+      "quietOptionLine": "quiet option: Fill main action, important change, and library pocket label first: ____.",
+      "takeHomeLine": "take-home line: Save the paper card and add one cleaner ending result later: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-15",
+      "title": "Clue Label Tower Museum Story Summary Card",
+      "worldSlug": "clue-label-tower-museum",
+      "ageBand": "10-11",
+      "summarySkill": "Use story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label language to summarize a fictional Clue Label Tower Museum story.",
+      "useCase": "Adult-led printable fictional paper-only summary card for an invented tower museum story: ____.",
+      "adultSetup": "Place this card, a pencil, and a pretend tower label stack with one blank tag: ____.",
+      "kidDirection": "Fill the blanks for a made-up tower museum story about one clue getting a clear label: ____.",
+      "storyStartPrompt": "story start: At the clue label tower museum, the label keeper finds ____.",
+      "mainActionPrompt": "main action: The keeper matches ____ to a broad clue label.",
+      "importantChangePrompt": "important change: The tower changes when ____ becomes clear.",
+      "endingResultPrompt": "ending result: By the end, the clue label shows ____.",
+      "keeperDetailPrompt": "keeper detail: Keep one tower museum detail, such as a narrow shelf or silver tag: ____.",
+      "summarySentencePrompt": "summary sentence: Write one sentence that summarizes the clue label story: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: File this fictional summary under ____.",
+      "quietOptionLine": "quiet option: Fill story start, important change, and keeper detail first: ____.",
+      "takeHomeLine": "take-home line: Save the paper card and add one sharper library pocket label later: ____."
+    },
+    {
+      "id": "library-pocket-summary-card-16",
+      "title": "Index Card Theater Club Story Summary Card",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "summarySkill": "Use story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label language to summarize a fictional Index Card Theater Club story.",
+      "useCase": "Adult-led printable fictional paper-only summary card for an invented theater club story: ____.",
+      "adultSetup": "Place this card, a pencil, and three pretend index-card scene cues beside a paper stage sketch: ____.",
+      "kidDirection": "Fill the blanks for a made-up theater club story with invented names and broad made-up places: ____.",
+      "storyStartPrompt": "story start: At the index-card theater club, the cue keeper begins with ____.",
+      "mainActionPrompt": "main action: The cue keeper arranges ____ on the paper stage.",
+      "importantChangePrompt": "important change: The club changes when ____ moves to the top of the stack.",
+      "endingResultPrompt": "ending result: By the end, the scene can begin because ____.",
+      "keeperDetailPrompt": "keeper detail: Keep one theater detail, such as a folded prop tag or blue curtain mark: ____.",
+      "summarySentencePrompt": "summary sentence: Write one sentence that summarizes the theater card story: ____.",
+      "libraryPocketLabelPrompt": "library pocket label: File this fictional summary under ____.",
+      "quietOptionLine": "quiet option: Fill main action and ending result before the full summary sentence: ____.",
+      "takeHomeLine": "take-home line: Save the paper card and add one better keeper detail later: ____."
+    }
+  ]
+}

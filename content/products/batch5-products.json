@@ -5620,6 +5620,143 @@
           "summary": "A pretend Paperclip Plaza Parcel Day world for restating one story in card catalog order."
         }
       ]
+    },
+    {
+      "slug": "library-pocket-story-summary-card-pack",
+      "title": "Library Pocket Story Summary Card Pack",
+      "pricePoint": "$97",
+      "status": "checkout_pending",
+      "headline": "Printable library pocket cards for private fictional story summaries.",
+      "summary": "Sixteen library pocket cards help kids summarize fictional stories with story starts, main actions, important changes, ending results, keeper details, short summary sentences, and labels.",
+      "heroImage": "images/plotsprout/batch62/library-pocket-story-summary-card-pack.jpg",
+      "ctaLabel": "Request library pocket pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Library%20Pocket%20Story%20Summary%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static library pocket pack page is ready for hosted checkout wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "moon-muffin-market",
+        "pencil-dragon-academy",
+        "teacup-town-weather-window",
+        "mitten-market-lost-ticket",
+        "rain-boot-route-rangers",
+        "greenhouse-gear-garden",
+        "moss-message-observatory",
+        "rain-gauge-railway",
+        "compost-clock-workshop",
+        "seed-library-map-room",
+        "solar-oven-picnic-station",
+        "tidepool-timekeepers-lab",
+        "almost-invention-workshop",
+        "appendix-archive-lab",
+        "clue-label-tower-museum",
+        "index-card-theater-club"
+      ],
+      "includedPages": [
+        "Sixteen printable library pocket summary cards",
+        "Adult setup guide",
+        "Story start prompts",
+        "Main action prompts",
+        "Important change prompts",
+        "Ending result prompts",
+        "Keeper detail prompts",
+        "Six adult-led summary routines",
+        "Ten take-home summary slips",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family paper table for summarizing short fictional drafts",
+        "A homeschool writing station for story-start-to-ending summary practice",
+        "A tutoring pack for writers who need concrete summary order",
+        "An adult-led small group activity for private paper-only summary practice"
+      ],
+      "parentSteps": [
+        "Print one summary card and set it beside a blank page.",
+        "Ask for the story start before asking for the main action.",
+        "Let the child point, dictate, sketch, or write one short line per blank.",
+        "Close with a library pocket label and save the summary sentence for later."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "moon-muffin-market",
+          "title": "Moon Muffin Market",
+          "summary": "A pretend Moon Muffin Market world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "pencil-dragon-academy",
+          "title": "Pencil Dragon Academy",
+          "summary": "A pretend Pencil Dragon Academy world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "title": "Teacup Town Weather Window",
+          "summary": "A pretend Teacup Town Weather Window world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "mitten-market-lost-ticket",
+          "title": "Mitten Market Lost Ticket",
+          "summary": "A pretend Mitten Market Lost Ticket world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "rain-boot-route-rangers",
+          "title": "Rain Boot Route Rangers",
+          "summary": "A pretend Rain Boot Route Rangers world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "greenhouse-gear-garden",
+          "title": "Greenhouse Gear Garden",
+          "summary": "A pretend Greenhouse Gear Garden world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "title": "Moss Message Observatory",
+          "summary": "A pretend Moss Message Observatory world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "title": "Rain Gauge Railway",
+          "summary": "A pretend Rain Gauge Railway world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "compost-clock-workshop",
+          "title": "Compost Clock Workshop",
+          "summary": "A pretend Compost Clock Workshop world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "title": "Seed Library Map Room",
+          "summary": "A pretend Seed Library Map Room world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "solar-oven-picnic-station",
+          "title": "Solar Oven Picnic Station",
+          "summary": "A pretend Solar Oven Picnic Station world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "title": "Tidepool Timekeepers Lab",
+          "summary": "A pretend Tidepool Timekeepers Lab world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "title": "Almost Invention Workshop",
+          "summary": "A pretend Almost Invention Workshop world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "appendix-archive-lab",
+          "title": "Appendix Archive Lab",
+          "summary": "A pretend Appendix Archive Lab world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "title": "Clue Label Tower Museum",
+          "summary": "A pretend Clue Label Tower Museum world for summarizing one fictional story in library pocket order."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "title": "Index Card Theater Club",
+          "summary": "A pretend Index Card Theater Club world for summarizing one fictional story in library pocket order."
+        }
+      ]
     }
   ]
 }

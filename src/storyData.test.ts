@@ -50,6 +50,25 @@ const cardCatalogWorldSlugs = [
   'paperclip-plaza-parcel-day',
 ]
 
+const libraryPocketWorldSlugs = [
+  'moon-muffin-market',
+  'pencil-dragon-academy',
+  'teacup-town-weather-window',
+  'mitten-market-lost-ticket',
+  'rain-boot-route-rangers',
+  'greenhouse-gear-garden',
+  'moss-message-observatory',
+  'rain-gauge-railway',
+  'compost-clock-workshop',
+  'seed-library-map-room',
+  'solar-oven-picnic-station',
+  'tidepool-timekeepers-lab',
+  'almost-invention-workshop',
+  'appendix-archive-lab',
+  'clue-label-tower-museum',
+  'index-card-theater-club',
+]
+
 function readJson(relativePath: string): unknown {
   return JSON.parse(readFileSync(resolve(process.cwd(), relativePath), 'utf8'))
 }
@@ -142,6 +161,7 @@ describe('storyData', () => {
       'file-box-story-turning-point-card-pack',
       'archive-drawer-story-resolution-card-pack',
       'card-catalog-story-retell-card-pack',
+      'library-pocket-story-summary-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -198,6 +218,7 @@ describe('storyData', () => {
       '$91',
       '$93',
       '$95',
+      '$97',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
@@ -336,6 +357,84 @@ describe('storyData', () => {
         'mailto:samfrench@gmail.com?subject=Card%20Catalog%20Story%20Retell%20Card%20Pack',
     })
     expect(product?.worldSlugs).toEqual(cardCatalogWorldSlugs)
+    expect(String(product?.ctaHref)).toMatch(/^mailto:/)
+    expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
+  })
+
+  it('keeps the Batch62 library pocket source artifact aligned with the lane files', () => {
+    const source = readJson('content/product-artifacts/library-pocket-story-summary-card-pack.json') as Record<
+      string,
+      unknown
+    >
+    const laneA = readJson(
+      'content/product-artifacts/lanes/batch62-library-pocket-summary-cards-a.json',
+    ) as unknown[]
+    const laneB = readJson(
+      'content/product-artifacts/lanes/batch62-library-pocket-summary-cards-b.json',
+    ) as unknown[]
+    const laneC = readJson(
+      'content/product-artifacts/lanes/batch62-library-pocket-summary-cards-c.json',
+    ) as unknown[]
+    const tools = readJson('content/product-artifacts/lanes/batch62-library-pocket-summary-tools.json') as Record<
+      string,
+      unknown
+    >
+    const cover = source.cover as { included?: string[] }
+
+    expect(Object.keys(source)).toEqual([
+      'batchId',
+      'generatedAt',
+      'productSlug',
+      'title',
+      'pricePoint',
+      'audience',
+      'sessionLength',
+      'safetyNote',
+      'artifact',
+      'sourceFiles',
+      'worldSlugs',
+      'cover',
+      'adultGuide',
+      'summaryRoutines',
+      'takeHomeSummarySlips',
+      'optionalAdultPrompts',
+      'cards',
+    ])
+    expect(source.sourceFiles).toEqual([
+      'content/product-artifacts/lanes/batch62-library-pocket-summary-cards-a.json',
+      'content/product-artifacts/lanes/batch62-library-pocket-summary-cards-b.json',
+      'content/product-artifacts/lanes/batch62-library-pocket-summary-cards-c.json',
+      'content/product-artifacts/lanes/batch62-library-pocket-summary-tools.json',
+    ])
+    expect(source.worldSlugs).toEqual(libraryPocketWorldSlugs)
+    expect(cover.included).toHaveLength(11)
+    expect(cover.included?.join(' ')).toMatch(/summary/i)
+    expect(cover.included?.join(' ')).not.toMatch(/retell|card catalog/i)
+    expect(source.cards).toEqual([...laneA, ...laneB, ...laneC])
+    expect(source.adultGuide).toEqual(tools.adultGuide)
+    expect(source.summaryRoutines).toEqual(tools.summaryRoutines)
+    expect(source.takeHomeSummarySlips).toEqual(tools.takeHomeSummarySlips)
+    expect(source.optionalAdultPrompts).toEqual(tools.optionalAdultPrompts)
+  })
+
+  it('keeps the Batch62 library pocket product checkout-pending and mailto-only', () => {
+    const products = readJson('content/products/batch5-products.json') as {
+      products: Array<Record<string, unknown>>
+    }
+    const product = products.products.find(
+      (candidate) => candidate.slug === 'library-pocket-story-summary-card-pack',
+    )
+
+    expect(product).toMatchObject({
+      slug: 'library-pocket-story-summary-card-pack',
+      title: 'Library Pocket Story Summary Card Pack',
+      pricePoint: '$97',
+      status: 'checkout_pending',
+      heroImage: 'images/plotsprout/batch62/library-pocket-story-summary-card-pack.jpg',
+      ctaHref:
+        'mailto:samfrench@gmail.com?subject=Library%20Pocket%20Story%20Summary%20Card%20Pack',
+    })
+    expect(product?.worldSlugs).toEqual(libraryPocketWorldSlugs)
     expect(String(product?.ctaHref)).toMatch(/^mailto:/)
     expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
   })

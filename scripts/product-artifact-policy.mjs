@@ -74,6 +74,8 @@ export const archiveDrawerStoryResolutionCardPackProductSlug =
   'archive-drawer-story-resolution-card-pack'
 export const cardCatalogStoryRetellCardPackProductSlug =
   'card-catalog-story-retell-card-pack'
+export const libraryPocketStorySummaryCardPackProductSlug =
+  'library-pocket-story-summary-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -86,6 +88,7 @@ const hangingFileStoryDecisionPointRequiredSafety = manilaFolderStoryClueTrailRe
 const fileBoxStoryTurningPointRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 const archiveDrawerStoryResolutionRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 const cardCatalogStoryRetellRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
+const libraryPocketStorySummaryRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 
 const familySafetyBlockedTerms = [
   /\bweapon(s)?\b/i,
@@ -616,6 +619,16 @@ const requiredCardCatalogStoryRetellCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/card-catalog-story-retell-card-pack/source/card-catalog-story-retell-card-pack.html',
   manifestPath: 'product-build/card-catalog-story-retell-card-pack/manifest.json',
+}
+
+const requiredLibraryPocketStorySummaryCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/library-pocket-story-summary-card-pack/Library-Pocket-Story-Summary-Card-Pack.pdf',
+  zipPath:
+    'product-build/library-pocket-story-summary-card-pack/library-pocket-story-summary-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/library-pocket-story-summary-card-pack/source/library-pocket-story-summary-card-pack.html',
+  manifestPath: 'product-build/library-pocket-story-summary-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -18846,6 +18859,580 @@ export function validateCardCatalogStoryRetellCardPackSourceFiles(source, rootDi
   return errors
 }
 
+const libraryPocketStorySummarySourceKeys = [
+  'batchId',
+  'generatedAt',
+  'productSlug',
+  'title',
+  'pricePoint',
+  'audience',
+  'sessionLength',
+  'safetyNote',
+  'artifact',
+  'sourceFiles',
+  'worldSlugs',
+  'cover',
+  'adultGuide',
+  'summaryRoutines',
+  'takeHomeSummarySlips',
+  'optionalAdultPrompts',
+  'cards',
+]
+
+const libraryPocketStorySummaryCardKeys = [
+  'id',
+  'title',
+  'worldSlug',
+  'ageBand',
+  'summarySkill',
+  'useCase',
+  'adultSetup',
+  'kidDirection',
+  'storyStartPrompt',
+  'mainActionPrompt',
+  'importantChangePrompt',
+  'endingResultPrompt',
+  'keeperDetailPrompt',
+  'summarySentencePrompt',
+  'libraryPocketLabelPrompt',
+  'quietOptionLine',
+  'takeHomeLine',
+]
+
+const libraryPocketStorySummarySourceFiles = [
+  'content/product-artifacts/lanes/batch62-library-pocket-summary-cards-a.json',
+  'content/product-artifacts/lanes/batch62-library-pocket-summary-cards-b.json',
+  'content/product-artifacts/lanes/batch62-library-pocket-summary-cards-c.json',
+  'content/product-artifacts/lanes/batch62-library-pocket-summary-tools.json',
+]
+
+const libraryPocketStorySummaryExpectedWorldSlugs = [
+  'moon-muffin-market',
+  'pencil-dragon-academy',
+  'teacup-town-weather-window',
+  'mitten-market-lost-ticket',
+  'rain-boot-route-rangers',
+  'greenhouse-gear-garden',
+  'moss-message-observatory',
+  'rain-gauge-railway',
+  'compost-clock-workshop',
+  'seed-library-map-room',
+  'solar-oven-picnic-station',
+  'tidepool-timekeepers-lab',
+  'almost-invention-workshop',
+  'appendix-archive-lab',
+  'clue-label-tower-museum',
+  'index-card-theater-club',
+]
+
+const libraryPocketStorySummaryExpectedWorldAges = new Map([
+  ['moon-muffin-market', '6-8'],
+  ['pencil-dragon-academy', '10-11'],
+  ['teacup-town-weather-window', '7-8'],
+  ['mitten-market-lost-ticket', '7-8'],
+  ['rain-boot-route-rangers', '7-9'],
+  ['greenhouse-gear-garden', '8-10'],
+  ['moss-message-observatory', '8-10'],
+  ['rain-gauge-railway', '8-10'],
+  ['compost-clock-workshop', '8-10'],
+  ['seed-library-map-room', '8-10'],
+  ['solar-oven-picnic-station', '8-10'],
+  ['tidepool-timekeepers-lab', '8-10'],
+  ['almost-invention-workshop', '10-11'],
+  ['appendix-archive-lab', '10-11'],
+  ['clue-label-tower-museum', '10-11'],
+  ['index-card-theater-club', '10-11'],
+])
+
+const libraryPocketStorySummaryPriorSourceFiles = new Map([
+  [56, 'content/product-artifacts/manila-folder-story-clue-trail-card-pack.json'],
+  [57, 'content/product-artifacts/pocket-folder-story-goal-path-card-pack.json'],
+  [58, 'content/product-artifacts/hanging-file-story-decision-point-card-pack.json'],
+  [59, 'content/product-artifacts/file-box-story-turning-point-card-pack.json'],
+  [60, 'content/product-artifacts/archive-drawer-story-resolution-card-pack.json'],
+  [61, 'content/product-artifacts/card-catalog-story-retell-card-pack.json'],
+])
+
+const libraryPocketStorySummaryExpectedOverlaps = new Map([
+  [56, 6],
+  [57, 8],
+  [58, 6],
+  [59, 7],
+  [60, 13],
+  [61, 0],
+])
+
+function readLibraryPocketStorySummaryPriorWorldSet(batchNumber) {
+  const sourceFile = libraryPocketStorySummaryPriorSourceFiles.get(batchNumber)
+  const source = JSON.parse(readFileSync(resolve(import.meta.dirname, '..', sourceFile), 'utf8'))
+  return new Set(source.worldSlugs)
+}
+
+function libraryPocketStorySummaryTitleFromWorldSlug(slug) {
+  return slug
+    .split('-')
+    .map((part) => part[0].toUpperCase() + part.slice(1))
+    .join(' ')
+}
+
+function normalizeLibraryPocketStorySummaryAllowedText(value) {
+  let text = JSON.stringify(value)
+    .replace(
+      /\bNo scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts\./gi,
+      '',
+    )
+    .replace(/\buse pretend names, broad made-up places, and invented actions instead of identifying facts\b/gi, '')
+    .replace(/\buse pretend names, broad made-up places, and invented actions\b/gi, '')
+    .replace(/\bdo not ask for real school, home, schedule, or identity details\b/gi, '')
+    .replace(/\bdo not collect child writing, photos, audio, video, or personal profiles\b/gi, '')
+    .replace(/\bkeep every prompt offline, paper-only, and adult-led\b/gi, '')
+    .replace(/\bkeep the pocket label fictional and separate from real book or library systems\b/gi, '')
+    .replace(/\bwithout adding personal facts\b/gi, '')
+    .replace(/\bnot a personal fact\b/gi, '')
+    .replace(/\bfeels? like\b/gi, '')
+    .replace(/\bidentifying-fact collection\b/gi, '')
+    .replace(/\bidentifying facts\b/gi, '')
+    .replace(/\bpersonal facts?\b/gi, '')
+    .replace(/\badult-led\b/gi, '')
+    .replace(/\badult\b/gi, '')
+    .replace(/\boffline\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+    .replace(/\bfamilies\b/gi, '')
+    .replace(/\bfamily\b/gi, '')
+    .replace(/\bhomeschool\b/gi, '')
+    .replace(/\btutors?\b/gi, '')
+    .replace(/\bfictional\b/gi, '')
+    .replace(/\bpretend\b/gi, '')
+    .replace(/\binvented\b/gi, '')
+    .replace(/\bmade-up\b/gi, '')
+    .replace(/\bmade up\b/gi, '')
+    .replace(/\blibrary-pocket-story-summary-card-pack\b/gi, '')
+    .replace(/\blibrary pocket story summary card pack\b/gi, '')
+    .replace(/\blibrary pocket story summary card(s)?\b/gi, '')
+    .replace(/\blibrary pocket summary card(s)?\b/gi, '')
+    .replace(/\blibrary pocket label(s)?\b/gi, '')
+    .replace(/\blibrary pocket\b/gi, '')
+    .replace(/\bsummary sentence(s)?\b/gi, '')
+    .replace(/\bstory start(s)?\b/gi, '')
+    .replace(/\bmain action(s)?\b/gi, '')
+    .replace(/\bimportant change(s)?\b/gi, '')
+    .replace(/\bending result(s)?\b/gi, '')
+    .replace(/\bkeeper detail(s)?\b/gi, '')
+    .replace(/\bsummary routine(s)?\b/gi, '')
+    .replace(/\bsummary card(s)?\b/gi, '')
+    .replace(/\bsummary slip(s)?\b/gi, '')
+    .replace(/\bsummary\b/gi, '')
+    .replace(/\blabel(s)?\b/gi, '')
+    .replace(/\bpage(s)?\b/gi, '')
+    .replace(/\bpaper\b/gi, '')
+    .replace(/\bblank(s)?\b/gi, '')
+    .replace(/\bnote(s)?\b/gi, '')
+    .replace(/\bslip(s)?\b/gi, '')
+    .replace(/\bcard(s)?\b/gi, '')
+    .replace(/\bwriter(s)?\b/gi, '')
+    .replace(/\bwriting\b/gi, '')
+    .replace(/\bchild\b/gi, '')
+    .replace(/\bkid\b/gi, '')
+    .replace(/\bcharacter(s)?\b/gi, '')
+
+  for (const slug of libraryPocketStorySummaryExpectedWorldSlugs) {
+    text = removeLiteralTerm(text, slug)
+    text = removeLiteralTerm(text, libraryPocketStorySummaryTitleFromWorldSlug(slug))
+  }
+  return text
+}
+
+function validateNoUnsafeLibraryPocketStorySummaryLanguage(value, label, errors) {
+  const allowedText = normalizeLibraryPocketStorySummaryAllowedText(value)
+  pushIf(
+    errors,
+    /\baccounts?\b|\blogins?\b|\blog in\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic\b|\bpublish(es|ed|ing|able)?\b|\bpublication(s)?\b|\bpublic reviews?\b|\badd a review\b|\breviews?\s+and\s+ratings?\b|\bratings?\b|\bcomments?\b|\blikes?\b|\bfollowers?\b|\bsocial\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphone(s)?\b|\btablet(s)?\b|\blaptop(s)?\b|\bcomputer(s)?\b|\bscreen(s)?\b|\bdevice(s)?\b|\bphotos?\b|\bcameras?\b|\bwrite (the )?real name(s)?\b|\breal identity\b|\bidentity details?\b|\baddresses?\b|\bstreets?\b|\bprivate locations?\b|\bexact locations?\b|\blocation details?\b|\breal route(s)?\b|\broute details?\b|\bgps\b|\bcoordinates?\b|\bexact schedules?\b|\bschedules?\b|\bprivate child data\b|\breal child data\b|\bpersonal facts?\b|\bpersonal details?\b|\bpersonal disclosure(s)?\b|\bprivate child profile(s)?\b|\bprivate profiles?\b|\bchild profiles?\b|\bprofiles?\b|\bdiar(y|ies)\b|\bjournal(s)?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bassessment(s)?\b|\bperfect\b|\bshowcase(s|d|ing)?\b|\bportfolio(s)?\b|\bdisplay(s|ed|ing)?\b|\bspell(ing)? pressure\b|\btimer(s)?\b|\btimed\b|\bcontest(s)?\b|\bprizes?\b|\bwinners?\b|\bpayments?\b|\bcheckout(s)?\b|\bprovider(s)?\b|\bstripe\b|\blibrary cards?\b|\bcheckout desks?\b|\bdue dates?\b|\bfines?\b|\breal book titles?\b|\breal author names?\b|\breal library names?\b|\bchapter book(s)?\b|\bepisode(s)?\b|\bscreenplay(s)?\b|\bcliffhanger(s)?\b|\bplot twist(es)?\b|\bchoose your own adventure\b|\bfood(s)?\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b|\bprofessional advice\b|\bhorror\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bprayer(s)?\b|\bbet(s|ting)?\b|\bgambling\b|\bcasino(s)?\b|\bdisney\b|\bpokemon\b|\bpokémon\b|\bminecraft\b|\bmarvel\b|\bstar wars\b|\bharry potter\b|\bbranded character(s)?\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes account, upload, public, address, publish, portfolio, review, rating, library card, due date, real book title, real author name, real library name, episode, chapter book, screenplay, cliffhanger, plot twist, choose your own adventure, recording, photo, audio, video, timer, score, grading, rubric, assessment, spelling pressure, private child profile, election, prayer, bet, payment, checkout, Stripe, provider, food, allergy, medical, horror, politics, religion, gambling, branded character, scary, harm, bullying, fighting, or weapon language.`,
+  )
+}
+
+function validateLibraryPocketStorySummaryCard(
+  card,
+  index,
+  sourceWorldSlugs,
+  knownWorldSlugs,
+  knownWorldRecords,
+  cardIds,
+  errors,
+) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(card)) !== JSON.stringify(libraryPocketStorySummaryCardKeys),
+    `${label} keys must match the exact library pocket summary card field order.`,
+  )
+
+  for (const key of libraryPocketStorySummaryCardKeys) validateString(card[key], `${label}.${key}`, errors)
+
+  const expectedWorldSlug = libraryPocketStorySummaryExpectedWorldSlugs[index]
+  const expectedId = `library-pocket-summary-card-${String(index + 1).padStart(2, '0')}`
+  const expectedAgeBand = libraryPocketStorySummaryExpectedWorldAges.get(expectedWorldSlug)
+  const expectedTitle = libraryPocketStorySummaryTitleFromWorldSlug(expectedWorldSlug)
+  pushIf(errors, card.id !== expectedId, `${label}.id must be ${expectedId}.`)
+  pushIf(errors, card.worldSlug !== expectedWorldSlug, `${label}.worldSlug must be ${expectedWorldSlug}.`)
+  pushIf(errors, card.ageBand !== expectedAgeBand, `${label}.ageBand must be ${expectedAgeBand}.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.title) && !card.title.includes(expectedTitle),
+    `${label}.title must include ${expectedTitle}.`,
+  )
+  pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+  cardIds.add(card.id)
+
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) && !(/summary/i.test(card.useCase) && /\bcard\b/i.test(card.useCase)),
+    `${label}.useCase must say library pocket summary card.`,
+  )
+
+  for (const key of libraryPocketStorySummaryCardKeys.filter(
+    (field) => !['id', 'title', 'worldSlug', 'ageBand', 'summarySkill'].includes(field),
+  )) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeLibraryPocketStorySummaryLanguage(card, label, errors)
+}
+
+function validateLibraryPocketStorySummaryRoutine(routine, index, errors) {
+  const label = `summaryRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(routine)) !== JSON.stringify(['title', 'useWhen', 'steps']),
+    `${label} must use the exact summary routine field order.`,
+  )
+  for (const key of ['title', 'useWhen']) validateString(routine[key], `${label}.${key}`, errors)
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  if (Array.isArray(routine.steps)) {
+    routine.steps.forEach((step, stepIndex) => {
+      pushIf(errors, isNonEmptyString(step) && !hasWritableBlank(step), `${label}.steps[${stepIndex}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(step) && hasSnakeCasePlaceholder(step), `${label}.steps[${stepIndex}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+  validateNoUnsafeLibraryPocketStorySummaryLanguage(routine, label, errors)
+}
+
+function validateLibraryPocketStorySummarySlip(slip, index, errors) {
+  const label = `takeHomeSummarySlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(slip)) !== JSON.stringify(['title', 'prompt', 'adultNote']),
+    `${label} must use the exact take-home summary slip field order.`,
+  )
+  for (const key of ['title', 'prompt', 'adultNote']) validateString(slip[key], `${label}.${key}`, errors)
+  pushIf(errors, isNonEmptyString(slip.prompt) && !hasWritableBlank(slip.prompt), `${label}.prompt must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(slip.prompt) && hasSnakeCasePlaceholder(slip.prompt), `${label}.prompt must use human-readable text, not snake_case placeholders.`)
+  validateNoUnsafeLibraryPocketStorySummaryLanguage(slip, label, errors)
+}
+
+export function validateLibraryPocketStorySummaryCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Library Pocket Story Summary Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs ?? [])
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(source)) !== JSON.stringify(libraryPocketStorySummarySourceKeys),
+    'source must use the exact Batch 62 library pocket summary source field order.',
+  )
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-04-batch62', 'batchId must be 2026-06-04-batch62.')
+  pushIf(errors, source.generatedAt !== '2026-06-04', 'generatedAt must be 2026-06-04.')
+  pushIf(
+    errors,
+    source.productSlug !== libraryPocketStorySummaryCardPackProductSlug,
+    `productSlug must be ${libraryPocketStorySummaryCardPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Library Pocket Story Summary Card Pack', 'title must be Library Pocket Story Summary Card Pack.')
+  pushIf(errors, source.pricePoint !== '$97', 'pricePoint must be $97.')
+  pushIf(
+    errors,
+    !source.safetyNote?.includes(libraryPocketStorySummaryRequiredSafety),
+    'safetyNote must include required Batch 62 safety sentence.',
+  )
+
+  if (product) {
+    pushIf(errors, product.slug !== source.productSlug, 'product.slug must match productSlug.')
+    pushIf(errors, product.title !== source.title, 'product.title must match title.')
+    pushIf(errors, product.pricePoint !== source.pricePoint, 'product.pricePoint must match pricePoint.')
+    pushIf(errors, product.status !== 'checkout_pending', 'product.status must remain checkout_pending.')
+    pushIf(errors, Array.isArray(product.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+  }
+
+  pushIf(errors, !Array.isArray(source.sourceFiles), 'sourceFiles must be an array.')
+  if (Array.isArray(source.sourceFiles)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.sourceFiles) !== JSON.stringify(libraryPocketStorySummarySourceFiles),
+      'sourceFiles must list the exact Batch 62 library pocket summary card lane and tools files.',
+    )
+  }
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set()
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.worldSlugs) !== JSON.stringify(libraryPocketStorySummaryExpectedWorldSlugs),
+      'worldSlugs must match the exact Batch 62 library pocket summary world set.',
+    )
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, sourceWorldSlugs.has(slug), `worldSlugs includes duplicate slug ${slug}.`)
+      sourceWorldSlugs.add(slug)
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+    for (const [batchNumber, expectedOverlap] of libraryPocketStorySummaryExpectedOverlaps) {
+      const overlapSet = readLibraryPocketStorySummaryPriorWorldSet(batchNumber)
+      const overlap = source.worldSlugs.filter((slug) => overlapSet.has(slug))
+      pushIf(
+        errors,
+        overlap.length !== expectedOverlap,
+        `Batch62 must overlap Batch${batchNumber} in exactly ${expectedOverlap} worlds; overlapping slugs: ${overlap.join(', ')}.`,
+      )
+    }
+  }
+
+  validateArtifactPaths(
+    source,
+    requiredLibraryPocketStorySummaryCardPackArtifactPaths,
+    'Library Pocket Story Summary Card Pack',
+    errors,
+  )
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) validateString(source.cover[key], `cover.${key}`, errors)
+    validateExactStringArray(source.cover.included, 11, 'cover.included', errors)
+    validateNoUnsafeLibraryPocketStorySummaryLanguage(source.cover, 'cover', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    pushIf(
+      errors,
+      JSON.stringify(Object.keys(source.adultGuide)) !== JSON.stringify(['title', 'setupSteps', 'facilitationNotes', 'safetyNotes']),
+      'adultGuide must use the exact field order.',
+    )
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    for (const key of ['setupSteps', 'facilitationNotes', 'safetyNotes']) {
+      validateExactStringArray(source.adultGuide[key], 5, `adultGuide.${key}`, errors)
+      if (Array.isArray(source.adultGuide[key])) {
+        source.adultGuide[key].forEach((line, index) => {
+          pushIf(errors, isNonEmptyString(line) && !hasWritableBlank(line), `adultGuide.${key}[${index}] must include a writable blank.`)
+          pushIf(errors, isNonEmptyString(line) && hasSnakeCasePlaceholder(line), `adultGuide.${key}[${index}] must use human-readable text, not snake_case placeholders.`)
+        })
+      }
+    }
+    validateNoUnsafeLibraryPocketStorySummaryLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.summaryRoutines), 'summaryRoutines must be an array.')
+  if (Array.isArray(source.summaryRoutines)) {
+    pushIf(errors, source.summaryRoutines.length !== 6, 'summaryRoutines must have exactly 6 entries.')
+    source.summaryRoutines.forEach((routine, index) => validateLibraryPocketStorySummaryRoutine(routine, index, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeSummarySlips), 'takeHomeSummarySlips must be an array.')
+  if (Array.isArray(source.takeHomeSummarySlips)) {
+    pushIf(errors, source.takeHomeSummarySlips.length !== 10, 'takeHomeSummarySlips must have exactly 10 entries.')
+    source.takeHomeSummarySlips.forEach((slip, index) => validateLibraryPocketStorySummarySlip(slip, index, errors))
+  }
+
+  validateExactStringArray(source.optionalAdultPrompts, 8, 'optionalAdultPrompts', errors)
+  if (Array.isArray(source.optionalAdultPrompts)) {
+    source.optionalAdultPrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalAdultPrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalAdultPrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeLibraryPocketStorySummaryLanguage(prompt, `optionalAdultPrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateLibraryPocketStorySummaryCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size !== 16, 'cards must cover exactly 16 unique worlds.')
+  }
+
+  validateNoUnsafeLibraryPocketStorySummaryLanguage(
+    source,
+    'Library Pocket Story Summary Card Pack source',
+    errors,
+  )
+  validateNoRiskyLanguage(source, 'Library Pocket Story Summary Card Pack source', errors)
+  return errors
+}
+
+function validateLibraryPocketStorySummaryToolLane(lane, sourceFile, errors) {
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(lane)) !==
+      JSON.stringify(['adultGuide', 'summaryRoutines', 'takeHomeSummarySlips', 'optionalAdultPrompts']),
+    `${sourceFile} must use the exact Batch 62 tools field order.`,
+  )
+  const sourceLike = {
+    adultGuide: lane.adultGuide,
+    summaryRoutines: lane.summaryRoutines,
+    takeHomeSummarySlips: lane.takeHomeSummarySlips,
+    optionalAdultPrompts: lane.optionalAdultPrompts,
+  }
+  const requiresWritableBlank = (path) =>
+    path === 'adultGuide.title' ||
+    /^adultGuide\.(setupSteps|facilitationNotes|safetyNotes)\[\d+\]$/.test(path) ||
+    /^summaryRoutines\[\d+\]\.(title|useWhen)$/.test(path) ||
+    /^summaryRoutines\[\d+\]\.steps\[\d+\]$/.test(path) ||
+    /^takeHomeSummarySlips\[\d+\]\.prompt$/.test(path) ||
+    /^optionalAdultPrompts\[\d+\]$/.test(path)
+
+  for (const [path, value] of Object.entries(flattenStrings(sourceLike))) {
+    pushIf(
+      errors,
+      requiresWritableBlank(path) && isNonEmptyString(value) && !hasWritableBlank(value),
+      `${sourceFile}.${path} must include a writable blank.`,
+    )
+    pushIf(
+      errors,
+      isNonEmptyString(value) && hasSnakeCasePlaceholder(value),
+      `${sourceFile}.${path} must use human-readable text, not snake_case placeholders.`,
+    )
+  }
+  validateNoUnsafeLibraryPocketStorySummaryLanguage(lane, sourceFile, errors)
+}
+
+export function validateLibraryPocketStorySummaryCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three library pocket summary card lanes and one tools lane.')
+  pushIf(
+    errors,
+    JSON.stringify(source.sourceFiles) !== JSON.stringify(libraryPocketStorySummarySourceFiles),
+    'sourceFiles must list the exact Batch 62 library pocket summary card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedRange = sourceFile.includes('-cards-a')
+        ? { min: 1, max: 6, count: 6, label: '01-06' }
+        : sourceFile.includes('-cards-b')
+        ? { min: 7, max: 11, count: 5, label: '07-11' }
+        : sourceFile.includes('-cards-c')
+        ? { min: 12, max: 16, count: 5, label: '12-16' }
+        : null
+
+      if (Array.isArray(lane) && expectedRange) {
+        cardLaneFiles.push({ sourceFile, lane })
+        pushIf(errors, lane.length !== expectedRange.count, `${sourceFile} must contain exactly ${expectedRange.count} cards.`)
+        const cardIds = new Set()
+        const sourceWorldSlugs = new Set(libraryPocketStorySummaryExpectedWorldSlugs)
+        const knownWorldRecords = libraryPocketStorySummaryExpectedWorldAges
+        lane.forEach((card) => {
+          const match = String(card?.id ?? '').match(/-(\d{2})$/)
+          const cardNumber = match ? Number(match[1]) : NaN
+          pushIf(
+            errors,
+            !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max,
+            `${sourceFile} must include card numbers ${expectedRange.label}.`,
+          )
+          if (Number.isInteger(cardNumber)) {
+            validateLibraryPocketStorySummaryCard(
+              card,
+              cardNumber - 1,
+              sourceWorldSlugs,
+              sourceWorldSlugs,
+              knownWorldRecords,
+              cardIds,
+              errors,
+            )
+          }
+        })
+      } else if (isObject(lane) && isObject(lane.adultGuide)) {
+        toolLaneFiles.push({ sourceFile, lane })
+        validateLibraryPocketStorySummaryToolLane(lane, sourceFile, errors)
+      } else {
+        errors.push(`${sourceFile} must be a Batch 62 library pocket summary card array lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three library pocket summary card lane files.')
+  pushIf(errors, toolLaneFiles.length !== 1, 'sourceFiles must include exactly one library pocket summary tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles summary card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'summaryRoutines', 'takeHomeSummarySlips', 'optionalAdultPrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
 
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
@@ -19106,6 +19693,8 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
       ? artifact
       : artifact?.pdfPath === requiredDeskLampStoryProblemCardPackArtifactPaths.pdfPath
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
+      : artifact?.pdfPath === requiredLibraryPocketStorySummaryCardPackArtifactPaths.pdfPath
+      ? requiredLibraryPocketStorySummaryCardPackArtifactPaths
       : artifact?.pdfPath === requiredCardCatalogStoryRetellCardPackArtifactPaths.pdfPath
       ? requiredCardCatalogStoryRetellCardPackArtifactPaths
       : artifact?.pdfPath === requiredArchiveDrawerStoryResolutionCardPackArtifactPaths.pdfPath
