@@ -1,0 +1,150 @@
+{
+  "adultGuide": {
+    "title": "Paper Tab Story Inference Adult Guide, adult-led fictional offline paper-only family-friendly: ____________________.",
+    "setupSteps": [
+      "Place one paper tab card, blank paper, pencil, and scrap tab at the adult-led fictional offline paper-only table: ____________________.",
+      "Name the clue, what it might suggest, why, second clue, inference sentence, and paper tab check blanks before writing: ____________________.",
+      "Choose one made-up story moment and keep each clue adult-led, fictional, offline, paper-only, and family-friendly: ____________________.",
+      "Let the writer point, dictate, or write short paper phrases while the adult keeps the inference calm: ____________________.",
+      "Close by reading the inference sentence and paper tab check from the paper card only: ____________________."
+    ],
+    "facilitationNotes": [
+      "Ask for one tiny clue first so the adult-led fictional offline paper-only inference has a clear start: ____________________.",
+      "Use might suggest language before asking for why, so the writer can try an idea without pressure: ____________________.",
+      "Ask why the clue might suggest the idea, and accept a short family-friendly fictional phrase: ____________________.",
+      "Add a second clue only after the first clue and why line feel clear on paper: ____________________.",
+      "Finish with the paper tab check as a quiet adult-led paper-only mark for the inference sentence: ____________________."
+    ],
+    "safetyNotes": [
+      "Keep all names, places, events, clues, and paper tabs made-up for this adult-led fictional offline paper-only activity: ____________________.",
+      "Skip any line that asks for personal facts, exact places, outside facts, or child details: ____________________.",
+      "Use the tabs only as pretend paper markers for this family-friendly inference card: ____________________.",
+      "Keep the inference sentence about the invented story, not about a person outside the card: ____________________.",
+      "Treat the paper tab check as a calm ending to one adult-led fictional offline paper-only session: ____________________."
+    ]
+  },
+  "inferenceRoutines": [
+    {
+      "title": "Clue Spot Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when the writer needs one invented clue before deciding what it might suggest: ____________________.",
+      "steps": [
+        "The adult places the blank clue line beside the paper tab card: ____________________.",
+        "The writer names one fictional clue from the made-up story moment: ____________________.",
+        "The adult asks what the clue might suggest inside the pretend story: ____________________.",
+        "The writer fills this paper-only line: This clue might suggest ____________________."
+      ]
+    },
+    {
+      "title": "Might Suggest Bridge Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when the clue is chosen but the idea it might suggest is still loose: ____________________.",
+      "steps": [
+        "The adult reads the clue slowly from the paper card: ____________________.",
+        "The writer says one idea the clue might suggest in the fictional story: ____________________.",
+        "The adult repeats the idea with gentle why language: ____________________.",
+        "The writer completes this adult-led line: The clue might suggest ____________________ because ____________________."
+      ]
+    },
+    {
+      "title": "Why Line Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when the writer has a clue and a might suggest idea but needs a why line: ____________________.",
+      "steps": [
+        "The adult points to the why blank and keeps the card offline and paper-only: ____________________.",
+        "The writer explains why the clue might suggest the story idea: ____________________.",
+        "The adult helps trim the why line to one fictional phrase: ____________________.",
+        "The writer writes this line: My why is ____________________."
+      ]
+    },
+    {
+      "title": "Second Clue Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when one clue and why line are ready and the inference needs a second clue: ____________________.",
+      "steps": [
+        "The adult rereads the first clue and why line from the paper: ____________________.",
+        "The writer chooses a second clue that fits the same made-up idea: ____________________.",
+        "The adult asks how the second clue might suggest the same inference: ____________________.",
+        "The writer fills this line: My second clue is ____________________."
+      ]
+    },
+    {
+      "title": "Inference Sentence Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when the clue, might suggest idea, why, and second clue are ready to combine: ____________________.",
+      "steps": [
+        "The adult reads the clue, might suggest idea, why, and second clue in order: ____________________.",
+        "The writer chooses the words that belong in one inference sentence: ____________________.",
+        "The adult keeps the sentence fictional, offline, paper-only, and family-friendly: ____________________.",
+        "The writer completes this line: My inference sentence is ____________________."
+      ]
+    },
+    {
+      "title": "Paper Tab Check Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when the inference sentence is written and needs a final paper tab check: ____________________.",
+      "steps": [
+        "The adult places the paper tab beside the inference sentence: ____________________.",
+        "The writer points to the clue and second clue that support the sentence: ____________________.",
+        "The adult asks why the paper tab check shows a clear fictional inference: ____________________.",
+        "The writer completes this line: My paper tab check says ____________________."
+      ]
+    }
+  ],
+  "takeHomeInferenceSlips": [
+    {
+      "title": "Tiny Clue Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "Fictional clue: ____________________; it might suggest ____________________; why: ____________________.",
+      "adultNote": "Use this slip as an adult-led paper-only way to start one made-up inference: ____________________."
+    },
+    {
+      "title": "Might Suggest Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "This clue might suggest ____________________ because ____________________.",
+      "adultNote": "Ask for a pretend idea first, then ask why the clue might suggest it: ____________________."
+    },
+    {
+      "title": "Why Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "My why line is ____________________.",
+      "adultNote": "Keep the why line short, fictional, offline, paper-only, and family-friendly: ____________________."
+    },
+    {
+      "title": "Second Clue Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "My second clue is ____________________, and it might suggest ____________________.",
+      "adultNote": "Choose a second clue that supports the same invented inference sentence: ____________________."
+    },
+    {
+      "title": "Inference Sentence Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "My inference sentence is ____________________.",
+      "adultNote": "Combine the clue, what it might suggest, why, and second clue in one paper sentence: ____________________."
+    },
+    {
+      "title": "Paper Tab Check Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "My paper tab check says the clue and second clue fit because ____________________.",
+      "adultNote": "Use the paper tab check as a calm ending mark, not a pressure mark: ____________________."
+    },
+    {
+      "title": "Two Clue Pair Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "The first clue is ____________________; the second clue is ____________________; together they might suggest ____________________.",
+      "adultNote": "Read both fictional clues before asking why they fit together: ____________________."
+    },
+    {
+      "title": "Character Guess Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "A made-up character might be thinking ____________________ because the clue is ____________________.",
+      "adultNote": "Keep the guess inside the invented story and on paper only: ____________________."
+    },
+    {
+      "title": "Place Guess Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "The made-up place might feel ____________________ because the clue is ____________________.",
+      "adultNote": "Keep place details broad, invented, offline, paper-only, and family-friendly: ____________________."
+    },
+    {
+      "title": "Later Paper Tab Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "Next adult-led paper tab check, I can add a new clue: ____________________.",
+      "adultNote": "Save the slip for another fictional offline paper-only inference moment: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Which clue can start this adult-led fictional offline paper-only inference: ____________________.",
+    "What might suggest idea fits the clue without using outside facts: ____________________.",
+    "Why might the clue suggest that family-friendly story idea: ____________________.",
+    "What second clue supports the same inference sentence: ____________________.",
+    "Which words make the inference sentence clear and still fictional: ____________________.",
+    "Where should the paper tab check sit beside the sentence: ____________________.",
+    "Which blank can stay empty until the writer is ready to dictate or write: ____________________.",
+    "What adult-led fictional offline paper-only clue can be saved for later: ____________________."
+  ]
+}

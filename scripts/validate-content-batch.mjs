@@ -81,6 +81,8 @@ import {
   validateBookendStoryEvidenceCardPackSourceFiles,
   validatePageFlagStoryReasonChainCardPackSource,
   validatePageFlagStoryReasonChainCardPackSourceFiles,
+  validatePaperTabStoryInferenceCardPackSource,
+  validatePaperTabStoryInferenceCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -177,6 +179,7 @@ const batch62ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-ba
 const batch63ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch63-images.json')
 const batch64ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch64-images.json')
 const batch65ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch65-images.json')
+const batch66ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch66-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -311,6 +314,12 @@ const pageFlagStoryReasonChainSourceFile = resolve(
   'product-artifacts',
   'page-flag-story-reason-chain-card-pack.json',
 )
+const paperTabStoryInferenceSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'paper-tab-story-inference-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -372,6 +381,7 @@ const batch62ImagesBatchId = '2026-06-04-batch62-images'
 const batch63ImagesBatchId = '2026-06-04-batch63-images'
 const batch64ImagesBatchId = '2026-06-04-batch64-images'
 const batch65ImagesBatchId = '2026-06-04-batch65-images'
+const batch66ImagesBatchId = '2026-06-04-batch66-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -5409,6 +5419,51 @@ function validateBatch65Image(image, imageSlugs) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch66Image(image, imageSlugs) {
+  const label = `2026-06-04-batch66-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.width === 1344, `${label}.width must be 1344.`)
+  expect(image.height === 768, `${label}.height must be 768.`)
+  expect(
+    image.slug === 'paper-tab-story-inference-card-pack',
+    `${label}.slug must be paper-tab-story-inference-card-pack.`,
+  )
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 66 images.`)
+  imageSlugs.add(image.slug)
+  expect(image.outputJpeg === `public/images/plotsprout/batch66/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch66/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch66/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  expect(/paper tab/i.test(image.prompt), `${label}.prompt must describe the paper tab product hero.`)
+  expect(/inference/i.test(image.prompt), `${label}.prompt must describe inference cards.`)
+  expect(/text/i.test(image.negativePrompt), `${label}.negativePrompt must block text-like artifacts.`)
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  const generatedFileExists = [jpegPath, webpPath, sidecarPath].some((filePath) => existsSync(filePath))
+  if (!generatedFileExists) return
+
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -5891,6 +5946,14 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       minParentSteps: 4,
       maxWorldSlugs: 16,
     },
+    'paper-tab-story-inference-card-pack': {
+      title: 'Paper Tab Story Inference Card Pack',
+      pricePoint: '$105',
+      minIncludedPages: 12,
+      minUseCases: 4,
+      minParentSteps: 4,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -5913,7 +5976,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
     product.slug === 'library-pocket-story-summary-card-pack' ||
     product.slug === 'shelf-marker-story-theme-card-pack' ||
     product.slug === 'bookend-story-evidence-card-pack' ||
-    product.slug === 'page-flag-story-reason-chain-card-pack'
+    product.slug === 'page-flag-story-reason-chain-card-pack' ||
+    product.slug === 'paper-tab-story-inference-card-pack'
       ? expandingFileStorySceneChainSafety
       : safety
   expect(product.safetyNote.includes(requiredProductSafety), `${label}.safetyNote missing required safety sentence.`)
@@ -6077,6 +6141,9 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
 
   const renderedPath = resolve(root, 'public', product.slug, 'index.html')
   if (!existsSync(renderedPath)) {
+    if (product.slug === 'paper-tab-story-inference-card-pack' && options.batch66GenerationStarted) {
+      fail(`${label} static output is missing after Batch 66 generated outputs started: ${renderedPath}`)
+    }
     if (product.slug === 'page-flag-story-reason-chain-card-pack' && options.batch65GenerationStarted) {
       fail(`${label} static output is missing after Batch 65 generated outputs started: ${renderedPath}`)
     }
@@ -6121,7 +6188,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
         product.slug === 'library-pocket-story-summary-card-pack' ||
         product.slug === 'shelf-marker-story-theme-card-pack' ||
         product.slug === 'bookend-story-evidence-card-pack' ||
-        product.slug === 'page-flag-story-reason-chain-card-pack',
+        product.slug === 'page-flag-story-reason-chain-card-pack' ||
+        product.slug === 'paper-tab-story-inference-card-pack',
       `${label} static output is missing: ${renderedPath}`,
     )
     return
@@ -7556,12 +7624,33 @@ const batch65ImagePaths = batch65Images.images.flatMap((image) => [
   resolve(root, image.sidecar),
 ])
 
+expect(existsSync(batch66ImagesFile), `Missing Batch 66 image manifest: ${batch66ImagesFile}`)
+const batch66Images = readJson(batch66ImagesFile)
+expect(
+  batch66Images.batchId === batch66ImagesBatchId,
+  `batch66 image manifest batchId must be ${batch66ImagesBatchId}.`,
+)
+expect(batch66Images.generatedAt === '2026-06-04', 'batch66 image manifest generatedAt must be 2026-06-04.')
+expect(Array.isArray(batch66Images.images), 'batch66 image manifest images must be an array.')
+expect(batch66Images.images.length === 1, `Expected 1 Batch 66 image, found ${batch66Images.images.length}.`)
+const batch66ImageSlugs = new Set()
+batch66Images.images.forEach((image) => validateBatch66Image(image, batch66ImageSlugs))
+expect(
+  batch66ImageSlugs.has('paper-tab-story-inference-card-pack'),
+  'Batch 66 images missing paper-tab-story-inference-card-pack.',
+)
+const batch66ImagePaths = batch66Images.images.flatMap((image) => [
+  resolve(root, image.outputJpeg),
+  resolve(root, image.outputWebp),
+  resolve(root, image.sidecar),
+])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 58, `Expected 58 product records, found ${products.products.length}.`)
+expect(products.products.length === 59, `Expected 59 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 let batch55GeneratedOutputPaths = [...batch55ImagePaths]
 const batch55ProductRecord = products.products.find(
@@ -7816,8 +7905,37 @@ if (batch65GenerationStarted) {
     )
   }
 }
+let batch66GeneratedOutputPaths = [...batch66ImagePaths]
+const batch66ProductRecord = products.products.find(
+  (product) => product.slug === 'paper-tab-story-inference-card-pack',
+)
+if (batch66ProductRecord) {
+  batch66GeneratedOutputPaths.push(resolve(root, 'public', batch66ProductRecord.slug, 'index.html'))
+}
+const batch66ProductArtifactPathForGeneration = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'paper-tab-story-inference-card-pack.json',
+)
+if (existsSync(batch66ProductArtifactPathForGeneration)) {
+  const artifactSourceForGeneration = readJson(batch66ProductArtifactPathForGeneration)
+  batch66GeneratedOutputPaths.push(
+    ...Object.values(artifactSourceForGeneration.artifact ?? {}).map((relativePath) => resolve(root, relativePath)),
+  )
+}
+const batch66GenerationStarted = anyPathExists(batch66GeneratedOutputPaths)
+if (batch66GenerationStarted) {
+  for (const imagePath of batch66ImagePaths) {
+    expect(
+      existsSync(imagePath),
+      `Batch 66 generated image output is missing after Batch 66 generated outputs started: ${imagePath}`,
+    )
+  }
+}
 products.products.forEach((product) =>
   validateProduct(product, productSlugs, worldSlugs, {
+    batch66GenerationStarted,
     batch65GenerationStarted,
     batch64GenerationStarted,
     batch55GenerationStarted,
@@ -12868,6 +12986,139 @@ if (pageFlagStoryReasonChainRequiresArtifacts) {
     )
   }
 }
+expect(
+  existsSync(paperTabStoryInferenceSourceFile),
+  `Missing Batch 66 Paper Tab Story Inference Card Pack source file: ${paperTabStoryInferenceSourceFile}`,
+)
+const paperTabStoryInferenceSource = readJson(paperTabStoryInferenceSourceFile)
+expect(
+  paperTabStoryInferenceSource.batchId === '2026-06-04-batch66',
+  'Paper Tab Story Inference Card Pack source batchId must be 2026-06-04-batch66.',
+)
+const paperTabStoryInferenceProduct = products.products.find(
+  (product) => product.slug === 'paper-tab-story-inference-card-pack',
+)
+expect(
+  paperTabStoryInferenceProduct,
+  'Missing Paper Tab Story Inference Card Pack product record for Batch 66 artifact validation.',
+)
+const paperTabStoryInferenceSourceErrors = validatePaperTabStoryInferenceCardPackSource(
+  paperTabStoryInferenceSource,
+  paperTabStoryInferenceProduct,
+  worldAgeBands,
+)
+expect(
+  paperTabStoryInferenceSourceErrors.length === 0,
+  `Paper Tab Story Inference Card Pack source failed validation:\n${paperTabStoryInferenceSourceErrors.join('\n')}`,
+)
+const paperTabStoryInferenceSourceFileErrors = validatePaperTabStoryInferenceCardPackSourceFiles(
+  paperTabStoryInferenceSource,
+  root,
+)
+expect(
+  paperTabStoryInferenceSourceFileErrors.length === 0,
+  `Paper Tab Story Inference Card Pack sourceFiles failed validation:\n${paperTabStoryInferenceSourceFileErrors.join('\n')}`,
+)
+const paperTabStoryInferenceSummaryErrors = validateProductWorldSummaries(
+  paperTabStoryInferenceProduct,
+  'Paper Tab Story Inference Card Pack',
+)
+expect(
+  paperTabStoryInferenceSummaryErrors.length === 0,
+  `Paper Tab Story Inference Card Pack world summaries failed validation:\n${paperTabStoryInferenceSummaryErrors.join('\n')}`,
+)
+const paperTabStoryInferenceCardAgeBands = new Map(
+  paperTabStoryInferenceSource.cards.map((card) => [card.worldSlug, card.ageBand]),
+)
+for (const [index, summary] of paperTabStoryInferenceProduct.worldSummaries.entries()) {
+  validateString(summary.ageBand, `Paper Tab Story Inference Card Pack product.worldSummaries[${index}].ageBand`)
+  expect(
+    summary.ageBand === paperTabStoryInferenceCardAgeBands.get(summary.slug),
+    `Paper Tab Story Inference Card Pack product.worldSummaries[${index}].ageBand must match source card ageBand.`,
+  )
+  expect(
+    !/^6-/.test(summary.ageBand),
+    `Paper Tab Story Inference Card Pack product.worldSummaries[${index}].ageBand must stay within ages 7-11.`,
+  )
+}
+const paperTabStoryInferenceArtifactPaths = Object.values(paperTabStoryInferenceSource.artifact).map(
+  (relativePath) => resolve(root, relativePath),
+)
+const paperTabStoryInferenceAnyArtifactFilesExist = anyPathExists(paperTabStoryInferenceArtifactPaths)
+const paperTabStoryInferenceRequiresArtifacts =
+  batch66GenerationStarted || paperTabStoryInferenceAnyArtifactFilesExist
+if (paperTabStoryInferenceRequiresArtifacts) {
+  for (const artifactPath of paperTabStoryInferenceArtifactPaths) {
+    expect(
+      existsSync(artifactPath),
+      `Paper Tab Story Inference Card Pack artifact set is incomplete after artifact generation started: ${artifactPath}`,
+    )
+  }
+  const paperTabStoryInferenceExpectedPdfPages = paperTabStoryInferenceSource.cards.length + 5
+  const paperTabStoryInferenceArtifactStatus = inspectArtifactFiles(root, paperTabStoryInferenceSource.artifact, {
+    expectedPdfPages: paperTabStoryInferenceExpectedPdfPages,
+    expectedZipEntries: [
+      'Paper-Tab-Story-Inference-Card-Pack.pdf',
+      'README.txt',
+      'source/paper-tab-story-inference-card-pack.html',
+      ...paperTabStoryInferenceSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+    ],
+  })
+  expect(
+    paperTabStoryInferenceArtifactStatus.valid,
+    `Paper Tab Story Inference Card Pack artifacts failed validation:\n${paperTabStoryInferenceArtifactStatus.errors.join('\n')}`,
+  )
+  expect(
+    paperTabStoryInferenceArtifactStatus.files.pdf.size > 100_000,
+    `Paper Tab Story Inference Card Pack PDF artifact is unexpectedly small: ${paperTabStoryInferenceArtifactStatus.files.pdf.size} bytes.`,
+  )
+  expect(
+    paperTabStoryInferenceArtifactStatus.files.pdf.pageCount === paperTabStoryInferenceExpectedPdfPages,
+    `Paper Tab Story Inference Card Pack PDF artifact must have ${paperTabStoryInferenceExpectedPdfPages} pages.`,
+  )
+  expect(
+    paperTabStoryInferenceArtifactStatus.files.zip.size > paperTabStoryInferenceArtifactStatus.files.pdf.size,
+    'Paper Tab Story Inference Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+  )
+  const paperTabStoryInferenceCheckoutErrors = validateCheckoutReadiness(
+    paperTabStoryInferenceProduct,
+    paperTabStoryInferenceArtifactStatus,
+  )
+  expect(
+    paperTabStoryInferenceCheckoutErrors.length === 0,
+    `Paper Tab Story Inference Card Pack checkout readiness failed validation:\n${paperTabStoryInferenceCheckoutErrors.join('\n')}`,
+  )
+  const paperTabStoryInferenceArtifactManifest = readJson(
+    resolve(root, paperTabStoryInferenceSource.artifact.manifestPath),
+  )
+  expect(
+    paperTabStoryInferenceArtifactManifest.sourcePageCount === paperTabStoryInferenceSource.cards.length,
+    'Paper Tab Story Inference Card Pack artifact manifest sourcePageCount must match source cards.',
+  )
+  expect(
+    Array.isArray(paperTabStoryInferenceArtifactManifest.files?.assets),
+    'Paper Tab Story Inference Card Pack artifact manifest files.assets must be an array.',
+  )
+  expect(
+    paperTabStoryInferenceArtifactManifest.files.assets.length === paperTabStoryInferenceSource.worldSlugs.length,
+    'Paper Tab Story Inference Card Pack artifact manifest must include one copied local image per source world.',
+  )
+  const paperTabStoryInferenceManifestAssetErrors = validateManifestWorldAssets(
+    paperTabStoryInferenceSource,
+    paperTabStoryInferenceArtifactManifest,
+  )
+  expect(
+    paperTabStoryInferenceManifestAssetErrors.length === 0,
+    `Paper Tab Story Inference Card Pack artifact manifest image coverage failed validation:\n${paperTabStoryInferenceManifestAssetErrors.join('\n')}`,
+  )
+  for (const asset of paperTabStoryInferenceArtifactManifest.files.assets) {
+    validateImageFile(
+      resolve(root, asset.path),
+      `Paper Tab Story Inference Card Pack copied artifact image ${asset.path}`,
+      'jpeg',
+    )
+  }
+}
 
 const productImageManifests = [
   batch7ProductImages,
@@ -12926,6 +13177,7 @@ const productImageManifests = [
   batch63Images,
   batch64Images,
   batch65Images,
+  batch66Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

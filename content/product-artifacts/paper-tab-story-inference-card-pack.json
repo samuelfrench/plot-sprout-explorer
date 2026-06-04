@@ -1,0 +1,497 @@
+{
+  "batchId": "2026-06-04-batch66",
+  "generatedAt": "2026-06-04",
+  "productSlug": "paper-tab-story-inference-card-pack",
+  "title": "Paper Tab Story Inference Card Pack",
+  "pricePoint": "$105",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable paper tab story inference cards plus adult guide tools, inference routines, take-home inference slips, and optional adult prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+  "artifact": {
+    "pdfPath": "product-build/paper-tab-story-inference-card-pack/Paper-Tab-Story-Inference-Card-Pack.pdf",
+    "zipPath": "product-build/paper-tab-story-inference-card-pack/paper-tab-story-inference-card-pack.zip",
+    "sourceHtmlPath": "product-build/paper-tab-story-inference-card-pack/source/paper-tab-story-inference-card-pack.html",
+    "manifestPath": "product-build/paper-tab-story-inference-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch66-paper-tab-story-inference-cards-a.json",
+    "content/product-artifacts/lanes/batch66-paper-tab-story-inference-cards-b.json",
+    "content/product-artifacts/lanes/batch66-paper-tab-story-inference-cards-c.json",
+    "content/product-artifacts/lanes/batch66-paper-tab-story-inference-tools.json"
+  ],
+  "worldSlugs": [
+    "puddle-planet-post-office",
+    "moon-muffin-market",
+    "teacup-town-weather-window",
+    "mitten-market-lost-ticket",
+    "button-bakery-map-mixup",
+    "penny-path-compass-shop",
+    "spoon-ferry-lunchbox-harbor",
+    "buttonwood-library-train",
+    "rain-boot-route-rangers",
+    "cloudberry-clocktower",
+    "rain-gauge-railway",
+    "pantry-measurement-mystery",
+    "solar-oven-picnic-station",
+    "appendix-archive-lab",
+    "chapter-gate-greenhouse",
+    "binding-day-boardwalk"
+  ],
+  "cover": {
+    "kicker": "Printable paper tab inference cards",
+    "headline": "Paper Tab Story Inference Card Pack",
+    "subhead": "Sixteen paper tab cards help writers connect invented story clues to what they might suggest, why they fit, and one short inference sentence.",
+    "included": [
+      "16 printable paper tab inference cards",
+      "Adult setup guide",
+      "Fictional inference safety notes",
+      "Clue prompts",
+      "Might suggest prompts",
+      "Why prompts",
+      "Second clue prompts",
+      "Inference sentence prompts",
+      "Paper tab check prompts",
+      "Six adult-led inference routines",
+      "Ten take-home inference slips",
+      "Printable PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "title": "Paper Tab Story Inference Adult Guide, adult-led fictional offline paper-only family-friendly: ____________________.",
+    "setupSteps": [
+      "Place one paper tab card, blank paper, pencil, and scrap tab at the adult-led fictional offline paper-only table: ____________________.",
+      "Name the clue, what it might suggest, why, second clue, inference sentence, and paper tab check blanks before writing: ____________________.",
+      "Choose one made-up story moment and keep each clue adult-led, fictional, offline, paper-only, and family-friendly: ____________________.",
+      "Let the writer point, dictate, or write short paper phrases while the adult keeps the inference calm: ____________________.",
+      "Close by reading the inference sentence and paper tab check from the paper card only: ____________________."
+    ],
+    "facilitationNotes": [
+      "Ask for one tiny clue first so the adult-led fictional offline paper-only inference has a clear start: ____________________.",
+      "Use might suggest language before asking for why, so the writer can try an idea without pressure: ____________________.",
+      "Ask why the clue might suggest the idea, and accept a short family-friendly fictional phrase: ____________________.",
+      "Add a second clue only after the first clue and why line feel clear on paper: ____________________.",
+      "Finish with the paper tab check as a quiet adult-led paper-only mark for the inference sentence: ____________________."
+    ],
+    "safetyNotes": [
+      "Keep all names, places, events, clues, and paper tabs made-up for this adult-led fictional offline paper-only activity: ____________________.",
+      "Skip any line that asks for personal facts, exact places, outside facts, or child details: ____________________.",
+      "Use the tabs only as pretend paper markers for this family-friendly inference card: ____________________.",
+      "Keep the inference sentence about the invented story, not about a person outside the card: ____________________.",
+      "Treat the paper tab check as a calm ending to one adult-led fictional offline paper-only session: ____________________."
+    ]
+  },
+  "inferenceRoutines": [
+    {
+      "title": "Clue Spot Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when the writer needs one invented clue before deciding what it might suggest: ____________________.",
+      "steps": [
+        "The adult places the blank clue line beside the paper tab card: ____________________.",
+        "The writer names one fictional clue from the made-up story moment: ____________________.",
+        "The adult asks what the clue might suggest inside the pretend story: ____________________.",
+        "The writer fills this paper-only line: This clue might suggest ____________________."
+      ]
+    },
+    {
+      "title": "Might Suggest Bridge Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when the clue is chosen but the idea it might suggest is still loose: ____________________.",
+      "steps": [
+        "The adult reads the clue slowly from the paper card: ____________________.",
+        "The writer says one idea the clue might suggest in the fictional story: ____________________.",
+        "The adult repeats the idea with gentle why language: ____________________.",
+        "The writer completes this adult-led line: The clue might suggest ____________________ because ____________________."
+      ]
+    },
+    {
+      "title": "Why Line Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when the writer has a clue and a might suggest idea but needs a why line: ____________________.",
+      "steps": [
+        "The adult points to the why blank and keeps the card offline and paper-only: ____________________.",
+        "The writer explains why the clue might suggest the story idea: ____________________.",
+        "The adult helps trim the why line to one fictional phrase: ____________________.",
+        "The writer writes this line: My why is ____________________."
+      ]
+    },
+    {
+      "title": "Second Clue Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when one clue and why line are ready and the inference needs a second clue: ____________________.",
+      "steps": [
+        "The adult rereads the first clue and why line from the paper: ____________________.",
+        "The writer chooses a second clue that fits the same made-up idea: ____________________.",
+        "The adult asks how the second clue might suggest the same inference: ____________________.",
+        "The writer fills this line: My second clue is ____________________."
+      ]
+    },
+    {
+      "title": "Inference Sentence Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when the clue, might suggest idea, why, and second clue are ready to combine: ____________________.",
+      "steps": [
+        "The adult reads the clue, might suggest idea, why, and second clue in order: ____________________.",
+        "The writer chooses the words that belong in one inference sentence: ____________________.",
+        "The adult keeps the sentence fictional, offline, paper-only, and family-friendly: ____________________.",
+        "The writer completes this line: My inference sentence is ____________________."
+      ]
+    },
+    {
+      "title": "Paper Tab Check Routine, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "useWhen": "Use when the inference sentence is written and needs a final paper tab check: ____________________.",
+      "steps": [
+        "The adult places the paper tab beside the inference sentence: ____________________.",
+        "The writer points to the clue and second clue that support the sentence: ____________________.",
+        "The adult asks why the paper tab check shows a clear fictional inference: ____________________.",
+        "The writer completes this line: My paper tab check says ____________________."
+      ]
+    }
+  ],
+  "takeHomeInferenceSlips": [
+    {
+      "title": "Tiny Clue Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "Fictional clue: ____________________; it might suggest ____________________; why: ____________________.",
+      "adultNote": "Use this slip as an adult-led paper-only way to start one made-up inference: ____________________."
+    },
+    {
+      "title": "Might Suggest Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "This clue might suggest ____________________ because ____________________.",
+      "adultNote": "Ask for a pretend idea first, then ask why the clue might suggest it: ____________________."
+    },
+    {
+      "title": "Why Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "My why line is ____________________.",
+      "adultNote": "Keep the why line short, fictional, offline, paper-only, and family-friendly: ____________________."
+    },
+    {
+      "title": "Second Clue Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "My second clue is ____________________, and it might suggest ____________________.",
+      "adultNote": "Choose a second clue that supports the same invented inference sentence: ____________________."
+    },
+    {
+      "title": "Inference Sentence Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "My inference sentence is ____________________.",
+      "adultNote": "Combine the clue, what it might suggest, why, and second clue in one paper sentence: ____________________."
+    },
+    {
+      "title": "Paper Tab Check Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "My paper tab check says the clue and second clue fit because ____________________.",
+      "adultNote": "Use the paper tab check as a calm ending mark, not a pressure mark: ____________________."
+    },
+    {
+      "title": "Two Clue Pair Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "The first clue is ____________________; the second clue is ____________________; together they might suggest ____________________.",
+      "adultNote": "Read both fictional clues before asking why they fit together: ____________________."
+    },
+    {
+      "title": "Character Guess Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "A made-up character might be thinking ____________________ because the clue is ____________________.",
+      "adultNote": "Keep the guess inside the invented story and on paper only: ____________________."
+    },
+    {
+      "title": "Place Guess Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "The made-up place might feel ____________________ because the clue is ____________________.",
+      "adultNote": "Keep place details broad, invented, offline, paper-only, and family-friendly: ____________________."
+    },
+    {
+      "title": "Later Paper Tab Slip, adult-led fictional offline paper-only family-friendly: ____________________.",
+      "prompt": "Next adult-led paper tab check, I can add a new clue: ____________________.",
+      "adultNote": "Save the slip for another fictional offline paper-only inference moment: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Which clue can start this adult-led fictional offline paper-only inference: ____________________.",
+    "What might suggest idea fits the clue without using outside facts: ____________________.",
+    "Why might the clue suggest that family-friendly story idea: ____________________.",
+    "What second clue supports the same inference sentence: ____________________.",
+    "Which words make the inference sentence clear and still fictional: ____________________.",
+    "Where should the paper tab check sit beside the sentence: ____________________.",
+    "Which blank can stay empty until the writer is ready to dictate or write: ____________________.",
+    "What adult-led fictional offline paper-only clue can be saved for later: ____________________."
+  ],
+  "cards": [
+    {
+      "id": "paper-tab-inference-card-01",
+      "title": "Puddle Planet Post Office Paper Tab Story Inference Card",
+      "worldSlug": "puddle-planet-post-office",
+      "ageBand": "7-8",
+      "inferenceSkill": "Practice fictional inference by naming a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Puddle Planet Post Office story: ____________________.",
+      "adultSetup": "Adult: set out one blank page, pencil, and two small paper tabs beside the puddle planet card: ____________________.",
+      "kidDirection": "Writer: invent a puddle stamp desk, a planet pouch, and a helper who figures out what a small clue might suggest: ____________________.",
+      "cluePrompt": "clue: write one made-up puddle stamp, desk mark, or pouch detail that the helper notices first: ____________________.",
+      "suggestsPrompt": "might suggest: write what that first clue might suggest inside the pretend post office story: ____________________.",
+      "whyPrompt": "why: write why the clue might suggest that idea instead of a different made-up idea: ____________________.",
+      "secondCluePrompt": "second clue: write one different puddle planet detail that points toward the same inference: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that uses the clue, what it might suggest, why, and the second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when the inference sentence stays invented, calm, and clear: ____________________.",
+      "quietOptionLine": "Quiet option: fill only the clue and might suggest blanks first, then pause: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper card and add one new puddle planet clue later with an adult: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-02",
+      "title": "Moon Muffin Market Paper Tab Story Inference Card",
+      "worldSlug": "moon-muffin-market",
+      "ageBand": "7-8",
+      "inferenceSkill": "Use fictional inference to connect a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Moon Muffin Market story: ____________________.",
+      "adultSetup": "Adult: place one blank page, pencil, and paper tabs near the invented moon market prompt: ____________________.",
+      "kidDirection": "Writer: make up a moon market stall, a silver basket, and a helper who studies two pretend clues on paper: ____________________.",
+      "cluePrompt": "clue: write one moon stall mark, basket shape, or glowing counter detail the helper notices: ____________________.",
+      "suggestsPrompt": "might suggest: write what the clue might suggest about the helper's next pretend choice: ____________________.",
+      "whyPrompt": "why: write why that clue could point to the helper's idea in the made-up story: ____________________.",
+      "secondCluePrompt": "second clue: write one different moon market clue that supports the same inference: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that explains the inference with the clue and second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when the inference sentence uses only invented market details: ____________________.",
+      "quietOptionLine": "Quiet option: draw a tiny moon tab first, then fill one clue blank with words: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper card and invent one more moon market clue later with an adult: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-03",
+      "title": "Teacup Town Weather Window Paper Tab Story Inference Card",
+      "worldSlug": "teacup-town-weather-window",
+      "ageBand": "7-8",
+      "inferenceSkill": "Build a fictional inference from a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Teacup Town Weather Window story: ____________________.",
+      "adultSetup": "Adult: set a blank page, pencil, and paper tabs beside the weather-window story card: ____________________.",
+      "kidDirection": "Writer: invent a tiny teacup window, a sky signal, and a helper who thinks about what a clue might suggest: ____________________.",
+      "cluePrompt": "clue: write one window mark, cloud shape, or teacup signal the helper notices first: ____________________.",
+      "suggestsPrompt": "might suggest: write what that clue might suggest about the pretend weather-window problem: ____________________.",
+      "whyPrompt": "why: write why the clue could help the helper make that inference: ____________________.",
+      "secondCluePrompt": "second clue: write one different weather-window detail that supports the same inference: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that links the clue, might suggest idea, why, and second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when the inference sentence is fictional and easy to follow: ____________________.",
+      "quietOptionLine": "Quiet option: fill the clue and second clue blanks before writing the full sentence: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper card and add one new weather-window clue later with an adult: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-04",
+      "title": "Mitten Market Lost Ticket Paper Tab Story Inference Card",
+      "worldSlug": "mitten-market-lost-ticket",
+      "ageBand": "7-8",
+      "inferenceSkill": "Practice a fictional inference by writing a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Mitten Market Lost Ticket story: ____________________.",
+      "adultSetup": "Adult: place a blank page, pencil, and paper tabs near the mitten market card before writing begins: ____________________.",
+      "kidDirection": "Writer: make up a soft mitten booth, a folded ticket, and a helper who notices what two clues might suggest: ____________________.",
+      "cluePrompt": "clue: write one mitten stitch, booth mark, or folded ticket detail the helper spots: ____________________.",
+      "suggestsPrompt": "might suggest: write what the clue might suggest about where the pretend ticket belongs: ____________________.",
+      "whyPrompt": "why: write why that clue points toward the helper's made-up inference: ____________________.",
+      "secondCluePrompt": "second clue: write one different mitten market clue that supports the same idea: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that uses the clue, might suggest idea, why, and second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when the inference stays on the invented story page: ____________________.",
+      "quietOptionLine": "Quiet option: ask the adult to read the prompts while you fill one short blank: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper card and invent one more mitten market clue later with an adult: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-05",
+      "title": "Button Bakery Map Mix-Up Paper Tab Story Inference Card",
+      "worldSlug": "button-bakery-map-mixup",
+      "ageBand": "7-9",
+      "inferenceSkill": "Organize fictional inference with a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Button Bakery Map Mix-Up story: ____________________.",
+      "adultSetup": "Adult: set out one blank page, pencil, and paper tabs beside the button map prompt: ____________________.",
+      "kidDirection": "Writer: invent button trays, a pretend map, and a helper who uses clues to understand a mix-up: ____________________.",
+      "cluePrompt": "clue: write one button shape, tray mark, or map line the helper notices first: ____________________.",
+      "suggestsPrompt": "might suggest: write what that clue might suggest about the mixed-up pretend map: ____________________.",
+      "whyPrompt": "why: write why the clue could lead the helper toward that inference: ____________________.",
+      "secondCluePrompt": "second clue: write one different button map detail that supports the same inference: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that explains the inference with both clues and why: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when the sentence connects the clues without using real place details: ____________________.",
+      "quietOptionLine": "Quiet option: fill only the clue, second clue, and paper tab check blanks first: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper card and add one new button map clue later with an adult: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-06",
+      "title": "Penny Path Compass Shop Paper Tab Story Inference Card",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "inferenceSkill": "Shape a fictional inference from a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Penny Path Compass Shop story: ____________________.",
+      "adultSetup": "Adult: place a blank page, pencil, and paper tabs beside the compass shop card: ____________________.",
+      "kidDirection": "Writer: make up a penny path counter, a tiny compass, and a helper who thinks about what clues might suggest: ____________________.",
+      "cluePrompt": "clue: write one penny mark, pointer turn, or counter sign the helper notices first: ____________________.",
+      "suggestsPrompt": "might suggest: write what the clue might suggest about the helper's pretend compass choice: ____________________.",
+      "whyPrompt": "why: write why that clue helps the helper make the inference: ____________________.",
+      "secondCluePrompt": "second clue: write one different compass shop clue that supports the same idea: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that combines the clue, might suggest idea, why, and second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when the inference sentence stays fictional and paper-only: ____________________.",
+      "quietOptionLine": "Quiet option: fill the might suggest blank as a sentence starter, then add one clue: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper card and add one new compass shop clue later with an adult: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-07",
+      "title": "Spoon Ferry Lunchbox Harbor Paper Tab Story Inference Card",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "inferenceSkill": "Use a fictional clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Spoon Ferry Lunchbox Harbor story: ____________________.",
+      "adultSetup": "Adult: place a blank page, pencil, and small paper tabs beside the invented spoon ferry harbor card: ____________________.",
+      "kidDirection": "Writer: invent a lunchbox harbor, a spoon ferry, and a careful dock helper who notices calm paper clues: ____________________.",
+      "cluePrompt": "clue: write one pretend spoon ferry detail, lid mark, or dock signal the helper notices first: ____________________.",
+      "suggestsPrompt": "might suggest: write what the first clue might suggest about what the dock helper should do next: ____________________.",
+      "whyPrompt": "why: explain why that clue points to your idea inside the invented harbor story: ____________________.",
+      "secondCluePrompt": "second clue: add one different harbor detail that supports the same inference: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that uses the clue, what it might suggest, why, and the second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when the inference sentence stays pretend, calm, and paper-only: ____________________.",
+      "quietOptionLine": "Quiet option: fill the clue and second clue blanks first, then adult-scribe the inference sentence: ____________________.",
+      "takeHomeLine": "Take-home line: keep this spoon ferry card for one later adult-led paper tab check: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-08",
+      "title": "Buttonwood Library Train Paper Tab Story Inference Card",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "inferenceSkill": "Practice a fictional clue, might suggest statement, why line, second clue, inference sentence, and paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Buttonwood Library Train story: ____________________.",
+      "adultSetup": "Adult: set out a blank card page, pencil, and paper tabs near the invented buttonwood train prompt: ____________________.",
+      "kidDirection": "Writer: make up a buttonwood train, a rolling shelf cart, and a conductor who reads only invented paper clues: ____________________.",
+      "cluePrompt": "clue: write one pretend wheel squeak, shelf ribbon, or window leaf mark the conductor notices: ____________________.",
+      "suggestsPrompt": "might suggest: write what the clue might suggest about where the conductor should pause in the story: ____________________.",
+      "whyPrompt": "why: explain why that clue helps the conductor make a careful story inference: ____________________.",
+      "secondCluePrompt": "second clue: add one different train or buttonwood detail that points to the same inference: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that connects the clue, might suggest idea, why line, and second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when the inference uses invented details only: ____________________.",
+      "quietOptionLine": "Quiet option: adult reads the prompts, and the writer fills only clue, might suggest, and second clue blanks: ____________________.",
+      "takeHomeLine": "Take-home line: save this buttonwood train card for another paper-only inference pass with an adult: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-09",
+      "title": "Rain Boot Route Rangers Paper Tab Story Inference Card",
+      "worldSlug": "rain-boot-route-rangers",
+      "ageBand": "7-9",
+      "inferenceSkill": "Build a fictional inference from a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Rain Boot Route Rangers story: ____________________.",
+      "adultSetup": "Adult: provide a blank page, pencil, and paper tabs beside the invented rain boot rangers card: ____________________.",
+      "kidDirection": "Writer: invent two rain boot rangers, a puddle map on paper, and a gentle choice based on story clues: ____________________.",
+      "cluePrompt": "clue: write one pretend boot print, puddle shape, or paper map mark the rangers notice first: ____________________.",
+      "suggestsPrompt": "might suggest: write what the clue might suggest about which made-up path the rangers choose: ____________________.",
+      "whyPrompt": "why: explain why that clue supports the rangers' paper-only inference: ____________________.",
+      "secondCluePrompt": "second clue: add one different rain boot or puddle-map detail that supports the same inference: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that uses the clue, might suggest idea, why, and second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when the sentence avoids real places and stays fictional: ____________________.",
+      "quietOptionLine": "Quiet option: point to two invented map marks, then write only the might suggest line: ____________________.",
+      "takeHomeLine": "Take-home line: keep this rain boot rangers card for one later paper tab check with an adult: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-10",
+      "title": "Cloudberry Clocktower Paper Tab Story Inference Card",
+      "worldSlug": "cloudberry-clocktower",
+      "ageBand": "8-10",
+      "inferenceSkill": "Explain a fictional clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Cloudberry Clocktower story: ____________________.",
+      "adultSetup": "Adult: place a blank card page, pencil, and paper tabs beside the invented clocktower sketch: ____________________.",
+      "kidDirection": "Writer: invent a clocktower keeper, cloudberry-colored bells, and a small story choice built from clues: ____________________.",
+      "cluePrompt": "clue: write one pretend bell pause, stair scuff, or clock hand detail the keeper notices first: ____________________.",
+      "suggestsPrompt": "might suggest: write what the clue might suggest about the clocktower keeper's next careful step: ____________________.",
+      "whyPrompt": "why: explain why that clocktower clue supports the inference inside the made-up story: ____________________.",
+      "secondCluePrompt": "second clue: add one different cloudberry clocktower detail that supports the same inference: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that joins the clue, might suggest idea, why, and second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when every detail is invented and the inference is clear: ____________________.",
+      "quietOptionLine": "Quiet option: fill the clue blank with one phrase, then adult-scribe the why line: ____________________.",
+      "takeHomeLine": "Take-home line: save this clocktower card for one calm adult-led paper inference revisit: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-11",
+      "title": "Rain Gauge Railway Paper Tab Story Inference Card",
+      "worldSlug": "rain-gauge-railway",
+      "ageBand": "8-10",
+      "inferenceSkill": "Turn fictional railway details into a clue, might suggest idea, why line, second clue, inference sentence, and paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for a pretend Rain Gauge Railway story: ____________________.",
+      "adultSetup": "Adult: set a blank page, pencil, and paper tabs beside the invented rain gauge railway card: ____________________.",
+      "kidDirection": "Writer: invent a railway helper, a rain gauge beside the tracks, and paper clues that point to one idea: ____________________.",
+      "cluePrompt": "clue: write one pretend rain line, gauge tick, or track-side flag the railway helper notices first: ____________________.",
+      "suggestsPrompt": "might suggest: write what the clue might suggest about the helper's next story choice: ____________________.",
+      "whyPrompt": "why: explain why that clue helps the helper make a fair fictional inference: ____________________.",
+      "secondCluePrompt": "second clue: add one different railway or rain gauge detail that supports the same inference: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: write one sentence that includes the clue, might suggest idea, why, and second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: mark the paper tab when the inference sentence stays made-up, kind, and paper-only: ____________________.",
+      "quietOptionLine": "Quiet option: adult points to the clue and second clue blanks, and the writer fills one word in each: ____________________.",
+      "takeHomeLine": "Take-home line: keep this rain gauge railway card for one later offline paper inference pass with an adult: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-12",
+      "title": "Pantry Measurement Mystery Paper Tab Inference Card",
+      "worldSlug": "pantry-measurement-mystery",
+      "ageBand": "8-10",
+      "inferenceSkill": "Use one clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check for a fictional pantry measurement mystery: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for an invented pantry measurement story with pretend scoops, marks, and labels: ____________________.",
+      "adultSetup": "Adult: place this card, a pencil, and two blank paper tabs beside a pretend pantry counter sketch: ____________________.",
+      "kidDirection": "Writer: invent a careful pantry helper who notices measurement clues and writes only made-up story details: ____________________.",
+      "cluePrompt": "clue: Write one pretend measurement clue, such as a shifted scoop, uneven cup mark, or folded label edge: ____________________.",
+      "suggestsPrompt": "might suggest: What might this clue suggest about the helper's next story move: ____________________.",
+      "whyPrompt": "why: Explain why the clue might suggest that idea inside the pretend pantry mystery: ____________________.",
+      "secondCluePrompt": "second clue: Add a different pantry clue that points toward the same inference without repeating the first clue: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: Write one sentence that uses both clues to tell what the helper can infer: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: Mark the paper tab when the inference sentence uses clue, might suggest, why, and second clue language: ____________________.",
+      "quietOptionLine": "Quiet option: Fill only the clue and might suggest blanks first, then add why later: ____________________.",
+      "takeHomeLine": "Take-home line: Save this paper card and add one new pretend pantry clue with an adult later: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-13",
+      "title": "Solar Oven Picnic Station Paper Tab Inference Card",
+      "worldSlug": "solar-oven-picnic-station",
+      "ageBand": "8-10",
+      "inferenceSkill": "Connect a fictional solar station clue to what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for an invented solar oven picnic station story with paper dials and shade marks: ____________________.",
+      "adultSetup": "Adult: set this card, a pencil, and two blank paper tabs beside a pretend station map: ____________________.",
+      "kidDirection": "Writer: make up a sunny station helper, a paper dial, and clues that stay inside the fictional story: ____________________.",
+      "cluePrompt": "clue: Write one pretend station clue, such as a tilted paper dial, warm-color mark, or moved shade strip: ____________________.",
+      "suggestsPrompt": "might suggest: What might this clue suggest about what the station helper should notice next: ____________________.",
+      "whyPrompt": "why: Explain why the clue might suggest that idea in the invented solar station scene: ____________________.",
+      "secondCluePrompt": "second clue: Add another station clue that supports the same inference from a different spot on the paper map: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: Write one sentence that connects the clue, second clue, and what they might suggest: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: Mark the paper tab when the sentence stays calm, fictional, and paper-only: ____________________.",
+      "quietOptionLine": "Quiet option: Choose the clue and second clue first, then ask an adult to scribe the why line: ____________________.",
+      "takeHomeLine": "Take-home line: Save this card and invent one more solar station clue with an adult later: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-14",
+      "title": "Appendix Archive Lab Paper Tab Inference Card",
+      "worldSlug": "appendix-archive-lab",
+      "ageBand": "10-11",
+      "inferenceSkill": "Build a fictional archive-lab inference from a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for an invented appendix archive lab story with make-believe folders and specimen slips: ____________________.",
+      "adultSetup": "Adult: place this card, a pencil, and three blank paper tabs beside a pretend archive lab diagram: ____________________.",
+      "kidDirection": "Writer: invent an archive lab helper who studies two paper clues and infers a story idea without naming actual items: ____________________.",
+      "cluePrompt": "clue: Write one pretend archive lab clue, such as a misfiled slip, ink dot, or folded specimen tag: ____________________.",
+      "suggestsPrompt": "might suggest: What might this clue suggest about the hidden order in the invented archive lab: ____________________.",
+      "whyPrompt": "why: Explain why the clue might suggest that order using only made-up lab details: ____________________.",
+      "secondCluePrompt": "second clue: Add one different archive lab clue that strengthens or changes the inference: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: Write one sentence that names the inference and links it to the clue and second clue: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: Mark the paper tab when the inference sentence is based on two invented clues, not outside facts: ____________________.",
+      "quietOptionLine": "Quiet option: Fill the clue, second clue, and might suggest blanks before writing the full sentence: ____________________.",
+      "takeHomeLine": "Take-home line: Keep this paper card and add one new appendix archive lab clue with an adult later: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-15",
+      "title": "Chapter Gate Greenhouse Paper Tab Inference Card",
+      "worldSlug": "chapter-gate-greenhouse",
+      "ageBand": "10-11",
+      "inferenceSkill": "Use greenhouse clue reading to state what a clue might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for an invented chapter gate greenhouse story with paper gates and plant tags: ____________________.",
+      "adultSetup": "Adult: set this card, a pencil, and blank paper tabs beside a pretend greenhouse gate sketch: ____________________.",
+      "kidDirection": "Writer: make up a greenhouse gate helper who notices two calm clues and writes a story inference on paper: ____________________.",
+      "cluePrompt": "clue: Write one pretend greenhouse clue, such as a turned paper gate, leaning tag, or changed watering mark: ____________________.",
+      "suggestsPrompt": "might suggest: What might this clue suggest about which greenhouse path the helper should choose: ____________________.",
+      "whyPrompt": "why: Explain why the clue might suggest that path inside the invented story: ____________________.",
+      "secondCluePrompt": "second clue: Add another greenhouse clue that points toward the same inference or makes it more exact: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: Write one sentence that connects both greenhouse clues to what the helper infers: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: Mark the paper tab when the inference sentence includes a clue, might suggest, why, and second clue: ____________________.",
+      "quietOptionLine": "Quiet option: Circle the clue blanks and write only short phrases today: ____________________.",
+      "takeHomeLine": "Take-home line: Save this paper card and add one new chapter gate greenhouse clue with an adult later: ____________________."
+    },
+    {
+      "id": "paper-tab-inference-card-16",
+      "title": "Binding Day Boardwalk Paper Tab Inference Card",
+      "worldSlug": "binding-day-boardwalk",
+      "ageBand": "10-11",
+      "inferenceSkill": "Make a fictional boardwalk inference with a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.",
+      "useCase": "Adult-led offline paper-only inference card for an invented binding day boardwalk story with paper ribbons, carts, and rail marks: ____________________.",
+      "adultSetup": "Adult: place this card, a pencil, and two blank paper tabs beside a pretend boardwalk strip: ____________________.",
+      "kidDirection": "Writer: invent a boardwalk helper who reads two gentle clues and writes one clear inference sentence: ____________________.",
+      "cluePrompt": "clue: Write one pretend boardwalk clue, such as a loose ribbon, shifted cart card, or marked rail plank: ____________________.",
+      "suggestsPrompt": "might suggest: What might this clue suggest about what changed before the helper arrived: ____________________.",
+      "whyPrompt": "why: Explain why the clue might suggest that change in the invented binding day boardwalk story: ____________________.",
+      "secondCluePrompt": "second clue: Add a different boardwalk clue that supports the inference without copying the first clue: ____________________.",
+      "inferenceSentencePrompt": "inference sentence: Write one sentence that states what the helper infers from both clues: ____________________.",
+      "paperTabCheckPrompt": "paper tab check: Mark the paper tab when the sentence is fictional, paper-only, and supported by a second clue: ____________________.",
+      "quietOptionLine": "Quiet option: Fill the clue and second clue blanks, then stop before the full sentence if needed: ____________________.",
+      "takeHomeLine": "Take-home line: Keep this paper card and add one new boardwalk clue with an adult later: ____________________."
+    }
+  ]
+}

@@ -6202,6 +6202,161 @@
           "summary": "A pretend Teacup Town Weather Window world for connecting one fictional story idea to reasons on paper."
         }
       ]
+    },
+    {
+      "slug": "paper-tab-story-inference-card-pack",
+      "title": "Paper Tab Story Inference Card Pack",
+      "pricePoint": "$105",
+      "status": "checkout_pending",
+      "headline": "Printable paper tab inference cards for private fictional story thinking.",
+      "summary": "Sixteen paper tab inference cards help kids connect invented story clues with what they might suggest, why they fit, and one short inference sentence.",
+      "heroImage": "images/plotsprout/batch66/paper-tab-story-inference-card-pack.jpg",
+      "ctaLabel": "Request paper tab inference pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Paper%20Tab%20Story%20Inference%20Card%20Pack",
+      "checkoutNote": "Checkout stays pending until Sam chooses a hosted sales path; this static page is ready for later hosted wiring but does not sell yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "puddle-planet-post-office",
+        "moon-muffin-market",
+        "teacup-town-weather-window",
+        "mitten-market-lost-ticket",
+        "button-bakery-map-mixup",
+        "penny-path-compass-shop",
+        "spoon-ferry-lunchbox-harbor",
+        "buttonwood-library-train",
+        "rain-boot-route-rangers",
+        "cloudberry-clocktower",
+        "rain-gauge-railway",
+        "pantry-measurement-mystery",
+        "solar-oven-picnic-station",
+        "appendix-archive-lab",
+        "chapter-gate-greenhouse",
+        "binding-day-boardwalk"
+      ],
+      "includedPages": [
+        "Sixteen printable paper tab inference cards",
+        "Adult setup guide",
+        "Clue prompts",
+        "Might suggest prompts",
+        "Why prompts",
+        "Second clue prompts",
+        "Inference sentence prompts",
+        "Paper tab check prompts",
+        "Six adult-led inference routines",
+        "Ten take-home inference slips",
+        "Optional adult prompts",
+        "PDF, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family paper table for connecting one invented clue to an inference sentence",
+        "A homeschool writing station for clue, might suggest, and why practice",
+        "A tutoring pack for writers who need concrete inference support",
+        "An adult-led small group activity for private paper-only story thinking"
+      ],
+      "parentSteps": [
+        "Print one inference card and set it beside a blank page.",
+        "Ask for one clue before asking what it might suggest.",
+        "Let the child point, dictate, sketch, or write one short line per blank.",
+        "Close with a paper tab check and keep every inference fictional."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "puddle-planet-post-office",
+          "title": "Puddle Planet Post Office",
+          "ageBand": "7-8",
+          "summary": "A pretend Puddle Planet Post Office world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "moon-muffin-market",
+          "title": "Moon Muffin Market",
+          "ageBand": "7-8",
+          "summary": "A pretend Moon Muffin Market world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "teacup-town-weather-window",
+          "title": "Teacup Town Weather Window",
+          "ageBand": "7-8",
+          "summary": "A pretend Teacup Town Weather Window world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "mitten-market-lost-ticket",
+          "title": "Mitten Market Lost Ticket",
+          "ageBand": "7-8",
+          "summary": "A pretend Mitten Market Lost Ticket world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "title": "Button Bakery Map Mix-Up",
+          "ageBand": "7-9",
+          "summary": "A pretend Button Bakery Map Mix-Up world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "title": "Penny Path Compass Shop",
+          "ageBand": "7-9",
+          "summary": "A pretend Penny Path Compass Shop world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "title": "Spoon Ferry Lunchbox Harbor",
+          "ageBand": "7-9",
+          "summary": "A pretend Spoon Ferry Lunchbox Harbor world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "title": "Buttonwood Library Train",
+          "ageBand": "7-9",
+          "summary": "A pretend Buttonwood Library Train world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "rain-boot-route-rangers",
+          "title": "Rain Boot Route Rangers",
+          "ageBand": "7-9",
+          "summary": "A pretend Rain Boot Route Rangers world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "cloudberry-clocktower",
+          "title": "Cloudberry Clocktower",
+          "ageBand": "8-10",
+          "summary": "A pretend Cloudberry Clocktower world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "title": "Rain Gauge Railway",
+          "ageBand": "8-10",
+          "summary": "A pretend Rain Gauge Railway world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "pantry-measurement-mystery",
+          "title": "Pantry Measurement Mystery",
+          "ageBand": "8-10",
+          "summary": "A pretend Pantry Measurement Mystery world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "solar-oven-picnic-station",
+          "title": "Solar Oven Picnic Station",
+          "ageBand": "8-10",
+          "summary": "A pretend Solar Oven Picnic Station world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "appendix-archive-lab",
+          "title": "Appendix Archive Lab",
+          "ageBand": "10-11",
+          "summary": "A pretend Appendix Archive Lab world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "chapter-gate-greenhouse",
+          "title": "Chapter Gate Greenhouse",
+          "ageBand": "10-11",
+          "summary": "A pretend Chapter Gate Greenhouse world for connecting invented story clues to inference sentences on paper."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "title": "Binding Day Boardwalk",
+          "ageBand": "10-11",
+          "summary": "A pretend Binding Day Boardwalk world for connecting invented story clues to inference sentences on paper."
+        }
+      ]
     }
   ]
 }

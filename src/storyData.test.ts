@@ -126,6 +126,25 @@ const pageFlagReasonChainWorldSlugs = [
   'teacup-town-weather-window',
 ]
 
+const paperTabInferenceWorldSlugs = [
+  'puddle-planet-post-office',
+  'moon-muffin-market',
+  'teacup-town-weather-window',
+  'mitten-market-lost-ticket',
+  'button-bakery-map-mixup',
+  'penny-path-compass-shop',
+  'spoon-ferry-lunchbox-harbor',
+  'buttonwood-library-train',
+  'rain-boot-route-rangers',
+  'cloudberry-clocktower',
+  'rain-gauge-railway',
+  'pantry-measurement-mystery',
+  'solar-oven-picnic-station',
+  'appendix-archive-lab',
+  'chapter-gate-greenhouse',
+  'binding-day-boardwalk',
+]
+
 function readJson(relativePath: string): unknown {
   return JSON.parse(readFileSync(resolve(process.cwd(), relativePath), 'utf8'))
 }
@@ -222,6 +241,7 @@ describe('storyData', () => {
       'shelf-marker-story-theme-card-pack',
       'bookend-story-evidence-card-pack',
       'page-flag-story-reason-chain-card-pack',
+      'paper-tab-story-inference-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -282,6 +302,7 @@ describe('storyData', () => {
       '$99',
       '$101',
       '$103',
+      '$105',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
@@ -732,6 +753,84 @@ describe('storyData', () => {
         'mailto:samfrench@gmail.com?subject=Page%20Flag%20Story%20Reason%20Chain%20Card%20Pack',
     })
     expect(product?.worldSlugs).toEqual(pageFlagReasonChainWorldSlugs)
+    expect(String(product?.ctaHref)).toMatch(/^mailto:/)
+    expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
+  })
+
+  it('keeps the Batch66 paper tab inference source artifact aligned with the lane files', () => {
+    const source = readJson('content/product-artifacts/paper-tab-story-inference-card-pack.json') as Record<
+      string,
+      unknown
+    >
+    const laneA = readJson(
+      'content/product-artifacts/lanes/batch66-paper-tab-story-inference-cards-a.json',
+    ) as unknown[]
+    const laneB = readJson(
+      'content/product-artifacts/lanes/batch66-paper-tab-story-inference-cards-b.json',
+    ) as unknown[]
+    const laneC = readJson(
+      'content/product-artifacts/lanes/batch66-paper-tab-story-inference-cards-c.json',
+    ) as unknown[]
+    const tools = readJson('content/product-artifacts/lanes/batch66-paper-tab-story-inference-tools.json') as Record<
+      string,
+      unknown
+    >
+    const cover = source.cover as { included?: string[] }
+
+    expect(Object.keys(source)).toEqual([
+      'batchId',
+      'generatedAt',
+      'productSlug',
+      'title',
+      'pricePoint',
+      'audience',
+      'sessionLength',
+      'safetyNote',
+      'artifact',
+      'sourceFiles',
+      'worldSlugs',
+      'cover',
+      'adultGuide',
+      'inferenceRoutines',
+      'takeHomeInferenceSlips',
+      'optionalAdultPrompts',
+      'cards',
+    ])
+    expect(source.sourceFiles).toEqual([
+      'content/product-artifacts/lanes/batch66-paper-tab-story-inference-cards-a.json',
+      'content/product-artifacts/lanes/batch66-paper-tab-story-inference-cards-b.json',
+      'content/product-artifacts/lanes/batch66-paper-tab-story-inference-cards-c.json',
+      'content/product-artifacts/lanes/batch66-paper-tab-story-inference-tools.json',
+    ])
+    expect(source.worldSlugs).toEqual(paperTabInferenceWorldSlugs)
+    expect(cover.included).toHaveLength(12)
+    expect(cover.included?.join(' ')).toMatch(/inference/i)
+    expect(cover.included?.join(' ')).not.toMatch(/reason-chain|evidence|theme|summary/i)
+    expect(source.cards).toEqual([...laneA, ...laneB, ...laneC])
+    expect(source.adultGuide).toEqual(tools.adultGuide)
+    expect(source.inferenceRoutines).toEqual(tools.inferenceRoutines)
+    expect(source.takeHomeInferenceSlips).toEqual(tools.takeHomeInferenceSlips)
+    expect(source.optionalAdultPrompts).toEqual(tools.optionalAdultPrompts)
+  })
+
+  it('keeps the Batch66 paper tab inference product checkout-pending and mailto-only', () => {
+    const products = readJson('content/products/batch5-products.json') as {
+      products: Array<Record<string, unknown>>
+    }
+    const product = products.products.find(
+      (candidate) => candidate.slug === 'paper-tab-story-inference-card-pack',
+    )
+
+    expect(product).toMatchObject({
+      slug: 'paper-tab-story-inference-card-pack',
+      title: 'Paper Tab Story Inference Card Pack',
+      pricePoint: '$105',
+      status: 'checkout_pending',
+      heroImage: 'images/plotsprout/batch66/paper-tab-story-inference-card-pack.jpg',
+      ctaHref:
+        'mailto:samfrench@gmail.com?subject=Paper%20Tab%20Story%20Inference%20Card%20Pack',
+    })
+    expect(product?.worldSlugs).toEqual(paperTabInferenceWorldSlugs)
     expect(String(product?.ctaHref)).toMatch(/^mailto:/)
     expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
   })

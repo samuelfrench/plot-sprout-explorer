@@ -73,6 +73,7 @@
     "image:batch63": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-04-batch63-images.json",
     "image:batch64": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-04-batch64-images.json",
     "image:batch65": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-04-batch65-images.json",
+    "image:batch66": "python3 scripts/generate_story_images_local.py --manifest content/image-queue/2026-06-04-batch66-images.json",
     "product:rainy-day-pack": "node scripts/rainy-day-pack-builder.mjs",
     "product:homeschool-season-bundle": "node scripts/homeschool-season-bundle-builder.mjs",
     "product:classroom-license-pack": "node scripts/classroom-license-pack-builder.mjs",
@@ -130,7 +131,8 @@
     "product:library-pocket-summary-pack": "node scripts/library-pocket-story-summary-card-pack-builder.mjs",
     "product:shelf-marker-theme-pack": "node scripts/shelf-marker-story-theme-card-pack-builder.mjs",
     "product:bookend-evidence-pack": "node scripts/bookend-story-evidence-card-pack-builder.mjs",
-    "product:page-flag-reason-chain-pack": "node scripts/page-flag-story-reason-chain-card-pack-builder.mjs"
+    "product:page-flag-reason-chain-pack": "node scripts/page-flag-story-reason-chain-card-pack-builder.mjs",
+    "product:paper-tab-inference-pack": "node scripts/paper-tab-story-inference-card-pack-builder.mjs"
   },
   "dependencies": {
     "lucide-react": "^1.17.0",

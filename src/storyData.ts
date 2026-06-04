@@ -734,6 +734,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable page flag story reason-chain cards with adult guide tools, reason-chain routines, and take-home reason slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'paper-tab-story-inference-card-pack',
+    title: 'Paper Tab Story Inference Card Pack',
+    pricePoint: '$105',
+    description:
+      'Sixteen printable paper tab story inference cards with adult guide tools, inference routines, and take-home inference slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]
