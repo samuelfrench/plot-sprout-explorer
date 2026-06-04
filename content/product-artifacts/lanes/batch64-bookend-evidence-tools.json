@@ -1,0 +1,150 @@
+{
+  "adultGuide": {
+    "title": "Bookend Story Evidence Adult Guide: ____________________.",
+    "setupSteps": [
+      "Set out one evidence card, six blank paper strips, and a pencil before the adult-led session begins: ____________________.",
+      "Label the strips story claim, first clue, second clue, because line, evidence sentence, and bookend note: ____________________.",
+      "Choose one pretend story world and keep every character, place, object, clue, and reason invented: ____________________.",
+      "Tell the writer that dictated words, adult-scribed words, or independent writing all fit the offline paper-only activity: ____________________.",
+      "Place the story claim strip at the left edge and the bookend note at the right edge so the invented evidence has a calm start and close: ____________________."
+    ],
+    "facilitationNotes": [
+      "Start with a small story claim, not a big explanation: ____________________.",
+      "Ask for the first clue as one pretend detail the writer can point to on paper: ____________________.",
+      "Ask for the second clue as another invented detail that helps the same story claim: ____________________.",
+      "Use the because line to connect the two clues before asking for the evidence sentence: ____________________.",
+      "Close with the bookend note so the writer can name what the evidence helped show in the fictional story: ____________________."
+    ],
+    "safetyNotes": [
+      "Use invented characters, broad pretend places, and made-up clue details only: ____________________.",
+      "Keep the activity offline, paper-only, adult-led, and away from outside audiences: ____________________.",
+      "Skip any prompt that starts to ask for real names, real place details, or personal facts: ____________________.",
+      "Keep the evidence sentence about the pretend story, not about a real person or real event: ____________________.",
+      "Treat the bookend note as a private paper close for this session: ____________________."
+    ]
+  },
+  "evidenceRoutines": [
+    {
+      "title": "Story Claim Bookend: ____________________.",
+      "useWhen": "Use when the writer needs one simple idea to hold the evidence path: ____________________.",
+      "steps": [
+        "The adult places the story claim strip at the left edge of the workspace: ____________________.",
+        "The adult asks what small idea could be true inside the pretend story: ____________________.",
+        "The writer completes this line: My story claim is ____________________.",
+        "The adult rereads the story claim and saves it for the evidence sentence: ____________________."
+      ]
+    },
+    {
+      "title": "First Clue Finder: ____________________.",
+      "useWhen": "Use when the story claim needs one invented detail to begin the evidence path: ____________________.",
+      "steps": [
+        "The adult points to the first clue strip and asks what pretend detail helps the story claim: ____________________.",
+        "The writer chooses one object, action, sound, color, sign, or tiny change from the fictional world: ____________________.",
+        "The writer completes this line: My first clue is ____________________.",
+        "The adult places the first clue beside the story claim without adding real details: ____________________."
+      ]
+    },
+    {
+      "title": "Second Clue Pair: ____________________.",
+      "useWhen": "Use when the writer has one clue and needs another clue that supports the same story claim: ____________________.",
+      "steps": [
+        "The adult rereads the story claim and first clue in order: ____________________.",
+        "The writer names a different invented detail that points toward the same idea: ____________________.",
+        "The writer completes this line: My second clue is ____________________.",
+        "The adult checks that the second clue helps the same story claim instead of starting a new idea: ____________________."
+      ]
+    },
+    {
+      "title": "Because Line Link: ____________________.",
+      "useWhen": "Use when the clues are ready but the connection is still missing: ____________________.",
+      "steps": [
+        "The adult lays the first clue and second clue strips between the story claim and the blank because line: ____________________.",
+        "The adult asks why both clues help the story claim in the pretend story: ____________________.",
+        "The writer completes this line: These clues help because ____________________.",
+        "The adult trims the because line to one clear reason and keeps it fictional: ____________________."
+      ]
+    },
+    {
+      "title": "Evidence Sentence Builder: ____________________.",
+      "useWhen": "Use when the writer is ready to combine the story claim, two clues, and because line: ____________________.",
+      "steps": [
+        "The adult reads the story claim, first clue, second clue, and because line in order: ____________________.",
+        "The writer points to the strip that should start the evidence sentence: ____________________.",
+        "The writer completes this line: My evidence sentence is ____________________.",
+        "The adult helps keep the evidence sentence to one clear fictional story sentence: ____________________."
+      ]
+    },
+    {
+      "title": "Bookend Note Close: ____________________.",
+      "useWhen": "Use at the end of a paper session to close the evidence path neatly: ____________________.",
+      "steps": [
+        "The adult places the bookend note strip at the right edge of the workspace: ____________________.",
+        "The adult rereads the evidence sentence without adding new facts: ____________________.",
+        "The writer completes this line: My bookend note says ____________________.",
+        "The adult stacks the strips in order for a private paper folder: ____________________."
+      ]
+    }
+  ],
+  "takeHomeEvidenceSlips": [
+    {
+      "title": "Story Claim Slip",
+      "prompt": "My story claim is ____________________.",
+      "adultNote": "Ask for one small idea that could be true inside the pretend story."
+    },
+    {
+      "title": "First Clue Slip",
+      "prompt": "My first clue is ____________________.",
+      "adultNote": "Choose one invented detail that helps the story claim."
+    },
+    {
+      "title": "Second Clue Slip",
+      "prompt": "My second clue is ____________________.",
+      "adultNote": "Choose a different pretend detail that helps the same story claim."
+    },
+    {
+      "title": "Because Line Slip",
+      "prompt": "These clues help because ____________________.",
+      "adultNote": "Use one plain reason that stays inside the fictional story."
+    },
+    {
+      "title": "Evidence Sentence Slip",
+      "prompt": "My evidence sentence is ____________________.",
+      "adultNote": "Combine the story claim, first clue, second clue, and because line in one sentence."
+    },
+    {
+      "title": "Bookend Note Slip",
+      "prompt": "My bookend note says ____________________.",
+      "adultNote": "Close with one short note about what the evidence helped show."
+    },
+    {
+      "title": "Clue Match Slip",
+      "prompt": "The first clue and second clue both help the story claim because ____________________.",
+      "adultNote": "Reread both clue strips before filling the blank."
+    },
+    {
+      "title": "Claim Check Slip",
+      "prompt": "The story claim still fits after I read the clues: ____________________.",
+      "adultNote": "Use this as a quiet paper check, not a correction mark."
+    },
+    {
+      "title": "Sentence Shorten Slip",
+      "prompt": "One extra detail I can leave off the evidence sentence is ____________________.",
+      "adultNote": "Frame this as paper sorting so the sentence stays clear."
+    },
+    {
+      "title": "Bookend Path Slip",
+      "prompt": "My paper path goes story claim, first clue, second clue, because line, evidence sentence, bookend note: ____________________.",
+      "adultNote": "Close by stacking the strips in order for another adult-led session."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Which story claim feels small enough for one paper strip: ____________________.",
+    "What first clue can the writer invent without using real people or real places: ____________________.",
+    "What second clue helps the same story claim in a different way: ____________________.",
+    "Which clue should the adult reread before the because line: ____________________.",
+    "How can the because line use plain words and stay inside the pretend story: ____________________.",
+    "What evidence sentence uses the story claim, first clue, second clue, and because line: ____________________.",
+    "What bookend note gives the evidence path a calm paper close: ____________________.",
+    "Which strip can stay blank until the writer is ready to dictate or write it: ____________________."
+  ]
+}
