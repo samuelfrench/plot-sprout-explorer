@@ -5346,6 +5346,143 @@
           "summary": "An index card theater world for choosing one next step after a stage-card signal."
         }
       ]
+    },
+    {
+      "slug": "archive-drawer-story-resolution-card-pack",
+      "title": "Archive Drawer Story Resolution Card Pack",
+      "pricePoint": "$93",
+      "status": "checkout_pending",
+      "headline": "A printable resolution card pack for closing paper stories without pressure.",
+      "summary": "Sixteen archive drawer cards help kids close loose threads with last choices, changed feelings, closing images, leftover questions, and next-story seeds.",
+      "heroImage": "images/plotsprout/batch60/archive-drawer-story-resolution-card-pack.jpg",
+      "ctaLabel": "Request archive drawer pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Archive%20Drawer%20Story%20Resolution%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static archive drawer pack page is ready for hosted checkout wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "teacup-town-weather-window",
+        "mitten-market-lost-ticket",
+        "button-bakery-map-mixup",
+        "paperclip-plaza-parcel-day",
+        "sticker-station-mail-cart",
+        "greenhouse-gear-garden",
+        "moss-message-observatory",
+        "rain-gauge-railway",
+        "seed-library-map-room",
+        "solar-oven-picnic-station",
+        "tidepool-timekeepers-lab",
+        "almost-invention-workshop",
+        "appendix-archive-lab",
+        "clue-label-tower-museum",
+        "compost-clock-workshop",
+        "index-card-theater-club"
+      ],
+      "includedPages": [
+        "Sixteen printable archive drawer resolution cards",
+        "Adult setup guide",
+        "Loose thread prompts",
+        "Last choice prompts",
+        "Changed feeling prompts",
+        "Closing image prompts",
+        "Leftover question prompts",
+        "Next-story seed prompts",
+        "Ten take-home resolution slips",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family paper table for ending short fictional drafts",
+        "A homeschool writing station for resolution planning",
+        "A tutoring pack for writers who need concrete ending choices",
+        "An adult-led small group activity with no accounts or online posting"
+      ],
+      "parentSteps": [
+        "Print one resolution card and set it beside a blank page.",
+        "Ask for a loose thread before asking for the last choice.",
+        "Let the child point, dictate, sketch, or write one short line per blank.",
+        "Close with an archive drawer label and save the next-story seed for later."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "teacup-town-weather-window",
+          "title": "Teacup Town Weather Window",
+          "summary": "A pretend Teacup Town Weather Window world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "mitten-market-lost-ticket",
+          "title": "Mitten Market Lost Ticket",
+          "summary": "A pretend Mitten Market Lost Ticket world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "button-bakery-map-mixup",
+          "title": "Button Bakery Map Mix-Up",
+          "summary": "A pretend Button Bakery Map Mix-Up world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "paperclip-plaza-parcel-day",
+          "title": "Paperclip Plaza Parcel Day",
+          "summary": "A pretend Paperclip Plaza Parcel Day world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "sticker-station-mail-cart",
+          "title": "Sticker Station Mail Cart",
+          "summary": "A pretend Sticker Station Mail Cart world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "greenhouse-gear-garden",
+          "title": "Greenhouse Gear Garden",
+          "summary": "A pretend Greenhouse Gear Garden world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "moss-message-observatory",
+          "title": "Moss Message Observatory",
+          "summary": "A pretend Moss Message Observatory world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "rain-gauge-railway",
+          "title": "Rain Gauge Railway",
+          "summary": "A pretend Rain Gauge Railway world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "title": "Seed Library Map Room",
+          "summary": "A pretend Seed Library Map Room world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "solar-oven-picnic-station",
+          "title": "Solar Oven Picnic Station",
+          "summary": "A pretend Solar Oven Picnic Station world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "tidepool-timekeepers-lab",
+          "title": "Tidepool Timekeepers Lab",
+          "summary": "A pretend Tidepool Timekeepers Lab world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "almost-invention-workshop",
+          "title": "Almost Invention Workshop",
+          "summary": "A pretend Almost Invention Workshop world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "appendix-archive-lab",
+          "title": "Appendix Archive Lab",
+          "summary": "A pretend Appendix Archive Lab world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "clue-label-tower-museum",
+          "title": "Clue Label Tower Museum",
+          "summary": "A pretend Clue Label Tower Museum world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "compost-clock-workshop",
+          "title": "Compost Clock Workshop",
+          "summary": "A pretend Compost Clock Workshop world for closing one loose thread and saving one next-story seed."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "title": "Index Card Theater Club",
+          "summary": "A pretend Index Card Theater Club world for closing one loose thread and saving one next-story seed."
+        }
+      ]
     }
   ]
 }

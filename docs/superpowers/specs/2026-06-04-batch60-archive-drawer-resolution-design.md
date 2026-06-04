@@ -54,7 +54,7 @@ Use these 16 worlds in this order:
 2. `mitten-market-lost-ticket`
 3. `button-bakery-map-mixup`
 4. `paperclip-plaza-parcel-day`
-5. `spoon-ferry-lunchbox-harbor`
+5. `sticker-station-mail-cart`
 6. `greenhouse-gear-garden`
 7. `moss-message-observatory`
 8. `rain-gauge-railway`
@@ -64,7 +64,7 @@ Use these 16 worlds in this order:
 12. `almost-invention-workshop`
 13. `appendix-archive-lab`
 14. `clue-label-tower-museum`
-15. `compass-craft-academy`
+15. `compost-clock-workshop`
 16. `index-card-theater-club`
 
 The finite world pool makes a perfectly fresh 16-world product impossible. Batch60 therefore uses the nearest strict rule: overlap Batch56, Batch57, Batch58, and Batch59 in exactly 7 worlds each, overlap Batch55 in 8 worlds, and never exceed 8 worlds of overlap with any Batch55-Batch59 pack.

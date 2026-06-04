@@ -1,0 +1,18 @@
+{
+  "slug": "archive-drawer-story-resolution-card-pack",
+  "prompt": "family-friendly top-down close-cropped catalog product photo on seamless pale neutral background, blank archive drawer tray, blank off-white resolution card stack, blank beige drawer label slips, clean printable paper kit, isolated paper stationery arrangement, unmarked paper, no writing, no symbols",
+  "negativePrompt": "text, writing, letters, words, labels, titles, logo, watermark, symbols, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, spiral binding, notebook, school, home, address, route, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, rating, score, grade, timer, food, allergy, medical, scary, weapons, bullying, plants, leaves, greenery, succulent, plant pot, wood, stone, desk decor, tabletop props, cups, bowls, children, faces, hands, clutter, colored background, pink background, dark shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "checkpoint",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 260660093,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch60/archive-drawer-story-resolution-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch60/archive-drawer-story-resolution-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-04-batch60-images.json",
+  "title": "Archive Drawer Story Resolution Card Pack"
+}

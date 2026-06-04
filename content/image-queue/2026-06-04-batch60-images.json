@@ -1,0 +1,21 @@
+{
+  "batchId": "2026-06-04-batch60-images",
+  "generatedAt": "2026-06-04",
+  "generation": "local",
+  "purpose": "Add the checkout-pending archive drawer story resolution card pack product hero image.",
+  "images": [
+    {
+      "slug": "archive-drawer-story-resolution-card-pack",
+      "title": "Archive Drawer Story Resolution Card Pack",
+      "purpose": "Static product hero image for the checkout-pending archive drawer story resolution card pack page.",
+      "prompt": "family-friendly top-down close-cropped catalog product photo on seamless pale neutral background, blank archive drawer tray, blank off-white resolution card stack, blank beige drawer label slips, clean printable paper kit, isolated paper stationery arrangement, unmarked paper, no writing, no symbols",
+      "negativePrompt": "text, writing, letters, words, labels, titles, logo, watermark, symbols, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, spiral binding, notebook, school, home, address, route, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, rating, score, grade, timer, food, allergy, medical, scary, weapons, bullying, plants, leaves, greenery, succulent, plant pot, wood, stone, desk decor, tabletop props, cups, bowls, children, faces, hands, clutter, colored background, pink background, dark shadows",
+      "seed": 260660093,
+      "width": 1344,
+      "height": 768,
+      "outputJpeg": "public/images/plotsprout/batch60/archive-drawer-story-resolution-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch60/archive-drawer-story-resolution-card-pack.webp",
+      "sidecar": "content/image-runs/batch60/archive-drawer-story-resolution-card-pack.json"
+    }
+  ]
+}

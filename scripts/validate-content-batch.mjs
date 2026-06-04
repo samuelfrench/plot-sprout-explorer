@@ -69,6 +69,8 @@ import {
   validateHangingFileStoryDecisionPointCardPackSourceFiles,
   validateFileBoxStoryTurningPointCardPackSource,
   validateFileBoxStoryTurningPointCardPackSourceFiles,
+  validateArchiveDrawerStoryResolutionCardPackSource,
+  validateArchiveDrawerStoryResolutionCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -159,6 +161,7 @@ const batch56ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-ba
 const batch57ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch57-images.json')
 const batch58ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch58-images.json')
 const batch59ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch59-images.json')
+const batch60ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch60-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -257,6 +260,12 @@ const fileBoxStoryTurningPointSourceFile = resolve(
   'product-artifacts',
   'file-box-story-turning-point-card-pack.json',
 )
+const archiveDrawerStoryResolutionSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'archive-drawer-story-resolution-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -312,6 +321,7 @@ const batch56ImagesBatchId = '2026-06-03-batch56-images'
 const batch57ImagesBatchId = '2026-06-03-batch57-images'
 const batch58ImagesBatchId = '2026-06-03-batch58-images'
 const batch59ImagesBatchId = '2026-06-04-batch59-images'
+const batch60ImagesBatchId = '2026-06-04-batch60-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -369,6 +379,7 @@ const manilaFolderStoryClueTrailSafety = expandingFileStorySceneChainSafety
 const pocketFolderStoryGoalPathSafety = expandingFileStorySceneChainSafety
 const hangingFileStoryDecisionPointSafety = expandingFileStorySceneChainSafety
 const fileBoxStoryTurningPointSafety = expandingFileStorySceneChainSafety
+const archiveDrawerStoryResolutionSafety = expandingFileStorySceneChainSafety
 const seoLanes = new Set([
   'creative writing prompts for kids',
   'story writing worksheets',
@@ -466,6 +477,7 @@ function validateNoBannedTerms(record, label) {
     .replaceAll(pocketFolderStoryGoalPathSafety, '')
     .replaceAll(hangingFileStoryDecisionPointSafety, '')
     .replaceAll(fileBoxStoryTurningPointSafety, '')
+    .replaceAll(archiveDrawerStoryResolutionSafety, '')
     .replace(/\bno\s+weapon(s)?\b/gi, '')
     .replace(/\bno\s+branded characters\b/gi, '')
     .replace(/\bno\s+scary harm\b/gi, '')
@@ -5063,6 +5075,59 @@ function validateBatch59Image(image, imageSlugs) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch60Image(image, imageSlugs) {
+  const label = `2026-06-04-batch60-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.seed === 260660093, `${label}.seed must be 260660093.`)
+  expect(image.width === 1344, `${label}.width must be 1344.`)
+  expect(image.height === 768, `${label}.height must be 768.`)
+  expect(
+    image.slug === 'archive-drawer-story-resolution-card-pack',
+    `${label}.slug must be archive-drawer-story-resolution-card-pack.`,
+  )
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 60 images.`)
+  imageSlugs.add(image.slug)
+  expect(image.outputJpeg === `public/images/plotsprout/batch60/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch60/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch60/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  expect(
+    image.prompt ===
+      'family-friendly top-down close-cropped catalog product photo on seamless pale neutral background, blank archive drawer tray, blank off-white resolution card stack, blank beige drawer label slips, clean printable paper kit, isolated paper stationery arrangement, unmarked paper, no writing, no symbols',
+    `${label}.prompt must match the approved Batch60 hero prompt.`,
+  )
+  expect(
+    image.negativePrompt ===
+      'text, writing, letters, words, labels, titles, logo, watermark, symbols, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, spiral binding, notebook, school, home, address, route, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, rating, score, grade, timer, food, allergy, medical, scary, weapons, bullying, plants, leaves, greenery, succulent, plant pot, wood, stone, desk decor, tabletop props, cups, bowls, children, faces, hands, clutter, colored background, pink background, dark shadows',
+    `${label}.negativePrompt must match the approved Batch60 negative prompt.`,
+  )
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  const generatedFileExists = [jpegPath, webpPath, sidecarPath].some((filePath) => existsSync(filePath))
+  if (!generatedFileExists) return
+
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -5497,6 +5562,14 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       minParentSteps: 5,
       maxWorldSlugs: 16,
     },
+    'archive-drawer-story-resolution-card-pack': {
+      title: 'Archive Drawer Story Resolution Card Pack',
+      pricePoint: '$93',
+      minIncludedPages: 10,
+      minUseCases: 4,
+      minParentSteps: 4,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -5513,7 +5586,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
     product.slug === 'manila-folder-story-clue-trail-card-pack' ||
     product.slug === 'pocket-folder-story-goal-path-card-pack' ||
     product.slug === 'hanging-file-story-decision-point-card-pack' ||
-    product.slug === 'file-box-story-turning-point-card-pack'
+    product.slug === 'file-box-story-turning-point-card-pack' ||
+    product.slug === 'archive-drawer-story-resolution-card-pack'
       ? expandingFileStorySceneChainSafety
       : safety
   expect(product.safetyNote.includes(requiredProductSafety), `${label}.safetyNote missing required safety sentence.`)
@@ -5677,6 +5751,9 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
 
   const renderedPath = resolve(root, 'public', product.slug, 'index.html')
   if (!existsSync(renderedPath)) {
+    if (product.slug === 'archive-drawer-story-resolution-card-pack' && options.batch60GenerationStarted) {
+      fail(`${label} static output is missing after Batch 60 generated outputs started: ${renderedPath}`)
+    }
     if (product.slug === 'file-box-story-turning-point-card-pack' && options.batch59GenerationStarted) {
       fail(`${label} static output is missing after Batch 59 generated outputs started: ${renderedPath}`)
     }
@@ -5697,7 +5774,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
         product.slug === 'manila-folder-story-clue-trail-card-pack' ||
         product.slug === 'pocket-folder-story-goal-path-card-pack' ||
         product.slug === 'hanging-file-story-decision-point-card-pack' ||
-        product.slug === 'file-box-story-turning-point-card-pack',
+        product.slug === 'file-box-story-turning-point-card-pack' ||
+        product.slug === 'archive-drawer-story-resolution-card-pack',
       `${label} static output is missing: ${renderedPath}`,
     )
     return
@@ -6234,6 +6312,10 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   expect(
     !/\b(a|an|the)[.!?]?$/i.test(metaDescription),
     `${label} rendered meta description must not end on a dangling article.`,
+  )
+  expect(
+    !/\b[\w]+-[\w]+[.!?]?$/i.test(metaDescription),
+    `${label} rendered meta description must not end on a dangling hyphenated phrase.`,
   )
   expect(
     !/[,:;-]$/.test(metaDescription),
@@ -6991,12 +7073,33 @@ const batch59ImagePaths = batch59Images.images.flatMap((image) => [
   resolve(root, image.sidecar),
 ])
 
+expect(existsSync(batch60ImagesFile), `Missing Batch 60 image manifest: ${batch60ImagesFile}`)
+const batch60Images = readJson(batch60ImagesFile)
+expect(
+  batch60Images.batchId === batch60ImagesBatchId,
+  `batch60 image manifest batchId must be ${batch60ImagesBatchId}.`,
+)
+expect(batch60Images.generatedAt === '2026-06-04', 'batch60 image manifest generatedAt must be 2026-06-04.')
+expect(Array.isArray(batch60Images.images), 'batch60 image manifest images must be an array.')
+expect(batch60Images.images.length === 1, `Expected 1 Batch 60 image, found ${batch60Images.images.length}.`)
+const batch60ImageSlugs = new Set()
+batch60Images.images.forEach((image) => validateBatch60Image(image, batch60ImageSlugs))
+expect(
+  batch60ImageSlugs.has('archive-drawer-story-resolution-card-pack'),
+  'Batch 60 images missing archive-drawer-story-resolution-card-pack.',
+)
+const batch60ImagePaths = batch60Images.images.flatMap((image) => [
+  resolve(root, image.outputJpeg),
+  resolve(root, image.outputWebp),
+  resolve(root, image.sidecar),
+])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 52, `Expected 52 product records, found ${products.products.length}.`)
+expect(products.products.length === 53, `Expected 53 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 let batch55GeneratedOutputPaths = [...batch55ImagePaths]
 const batch55ProductRecord = products.products.find(
@@ -7083,6 +7186,34 @@ if (existsSync(batch59ProductArtifactPathForGeneration)) {
   )
 }
 const batch59GenerationStarted = anyPathExists(batch59GeneratedOutputPaths)
+let batch60GeneratedOutputPaths = [...batch60ImagePaths]
+const batch60ProductRecord = products.products.find(
+  (product) => product.slug === 'archive-drawer-story-resolution-card-pack',
+)
+if (batch60ProductRecord) {
+  batch60GeneratedOutputPaths.push(resolve(root, 'public', batch60ProductRecord.slug, 'index.html'))
+}
+const batch60ProductArtifactPathForGeneration = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'archive-drawer-story-resolution-card-pack.json',
+)
+if (existsSync(batch60ProductArtifactPathForGeneration)) {
+  const artifactSourceForGeneration = readJson(batch60ProductArtifactPathForGeneration)
+  batch60GeneratedOutputPaths.push(
+    ...Object.values(artifactSourceForGeneration.artifact ?? {}).map((relativePath) => resolve(root, relativePath)),
+  )
+}
+const batch60GenerationStarted = anyPathExists(batch60GeneratedOutputPaths)
+if (batch60GenerationStarted) {
+  for (const imagePath of batch60ImagePaths) {
+    expect(
+      existsSync(imagePath),
+      `Batch 60 generated image output is missing after Batch 60 generated outputs started: ${imagePath}`,
+    )
+  }
+}
 products.products.forEach((product) =>
   validateProduct(product, productSlugs, worldSlugs, {
     batch55GenerationStarted,
@@ -7090,6 +7221,7 @@ products.products.forEach((product) =>
     batch57GenerationStarted,
     batch58GenerationStarted,
     batch59GenerationStarted,
+    batch60GenerationStarted,
   }),
 )
 for (const requiredProductSlug of [
@@ -7145,6 +7277,7 @@ for (const requiredProductSlug of [
   'pocket-folder-story-goal-path-card-pack',
   'hanging-file-story-decision-point-card-pack',
   'file-box-story-turning-point-card-pack',
+  'archive-drawer-story-resolution-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -11381,6 +11514,125 @@ if (fileBoxStoryTurningPointAnyArtifactFilesExist) {
   }
 }
 
+expect(
+  existsSync(archiveDrawerStoryResolutionSourceFile),
+  `Missing Batch 60 Archive Drawer Story Resolution Card Pack source file: ${archiveDrawerStoryResolutionSourceFile}`,
+)
+const archiveDrawerStoryResolutionSource = readJson(archiveDrawerStoryResolutionSourceFile)
+expect(
+  archiveDrawerStoryResolutionSource.batchId === '2026-06-04-batch60',
+  'Archive Drawer Story Resolution Card Pack source batchId must be 2026-06-04-batch60.',
+)
+const archiveDrawerStoryResolutionProduct = products.products.find(
+  (product) => product.slug === 'archive-drawer-story-resolution-card-pack',
+)
+expect(
+  archiveDrawerStoryResolutionProduct,
+  'Missing Archive Drawer Story Resolution Card Pack product record for Batch 60 artifact validation.',
+)
+const archiveDrawerStoryResolutionSourceErrors = validateArchiveDrawerStoryResolutionCardPackSource(
+  archiveDrawerStoryResolutionSource,
+  archiveDrawerStoryResolutionProduct,
+  worldAgeBands,
+)
+expect(
+  archiveDrawerStoryResolutionSourceErrors.length === 0,
+  `Archive Drawer Story Resolution Card Pack source failed validation:\n${archiveDrawerStoryResolutionSourceErrors.join('\n')}`,
+)
+const archiveDrawerStoryResolutionSourceFileErrors = validateArchiveDrawerStoryResolutionCardPackSourceFiles(
+  archiveDrawerStoryResolutionSource,
+  root,
+)
+expect(
+  archiveDrawerStoryResolutionSourceFileErrors.length === 0,
+  `Archive Drawer Story Resolution Card Pack sourceFiles failed validation:\n${archiveDrawerStoryResolutionSourceFileErrors.join('\n')}`,
+)
+const archiveDrawerStoryResolutionSummaryErrors = validateProductWorldSummaries(
+  archiveDrawerStoryResolutionProduct,
+  'Archive Drawer Story Resolution Card Pack',
+)
+expect(
+  archiveDrawerStoryResolutionSummaryErrors.length === 0,
+  `Archive Drawer Story Resolution Card Pack world summaries failed validation:\n${archiveDrawerStoryResolutionSummaryErrors.join('\n')}`,
+)
+const archiveDrawerStoryResolutionArtifactPaths = Object.values(archiveDrawerStoryResolutionSource.artifact).map(
+  (relativePath) => resolve(root, relativePath),
+)
+const archiveDrawerStoryResolutionAnyArtifactFilesExist = anyPathExists(archiveDrawerStoryResolutionArtifactPaths)
+if (archiveDrawerStoryResolutionAnyArtifactFilesExist) {
+  for (const artifactPath of archiveDrawerStoryResolutionArtifactPaths) {
+    expect(
+      existsSync(artifactPath),
+      `Archive Drawer Story Resolution Card Pack artifact set is incomplete after artifact generation started: ${artifactPath}`,
+    )
+  }
+  const archiveDrawerStoryResolutionExpectedPdfPages = archiveDrawerStoryResolutionSource.cards.length + 5
+  const archiveDrawerStoryResolutionArtifactStatus = inspectArtifactFiles(root, archiveDrawerStoryResolutionSource.artifact, {
+    expectedPdfPages: archiveDrawerStoryResolutionExpectedPdfPages,
+    expectedZipEntries: [
+      'Archive-Drawer-Story-Resolution-Card-Pack.pdf',
+      'README.txt',
+      'source/archive-drawer-story-resolution-card-pack.html',
+      ...archiveDrawerStoryResolutionSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+    ],
+  })
+  expect(
+    archiveDrawerStoryResolutionArtifactStatus.valid,
+    `Archive Drawer Story Resolution Card Pack artifacts failed validation:\n${archiveDrawerStoryResolutionArtifactStatus.errors.join('\n')}`,
+  )
+  expect(
+    archiveDrawerStoryResolutionArtifactStatus.files.pdf.size > 100_000,
+    `Archive Drawer Story Resolution Card Pack PDF artifact is unexpectedly small: ${archiveDrawerStoryResolutionArtifactStatus.files.pdf.size} bytes.`,
+  )
+  expect(
+    archiveDrawerStoryResolutionArtifactStatus.files.pdf.pageCount === archiveDrawerStoryResolutionExpectedPdfPages,
+    `Archive Drawer Story Resolution Card Pack PDF artifact must have ${archiveDrawerStoryResolutionExpectedPdfPages} pages.`,
+  )
+  expect(
+    archiveDrawerStoryResolutionArtifactStatus.files.zip.size > archiveDrawerStoryResolutionArtifactStatus.files.pdf.size,
+    'Archive Drawer Story Resolution Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+  )
+  const archiveDrawerStoryResolutionCheckoutErrors = validateCheckoutReadiness(
+    archiveDrawerStoryResolutionProduct,
+    archiveDrawerStoryResolutionArtifactStatus,
+  )
+  expect(
+    archiveDrawerStoryResolutionCheckoutErrors.length === 0,
+    `Archive Drawer Story Resolution Card Pack checkout readiness failed validation:\n${archiveDrawerStoryResolutionCheckoutErrors.join('\n')}`,
+  )
+  const archiveDrawerStoryResolutionArtifactManifest = readJson(
+    resolve(root, archiveDrawerStoryResolutionSource.artifact.manifestPath),
+  )
+  expect(
+    archiveDrawerStoryResolutionArtifactManifest.sourcePageCount === archiveDrawerStoryResolutionSource.cards.length,
+    'Archive Drawer Story Resolution Card Pack artifact manifest sourcePageCount must match source cards.',
+  )
+  expect(
+    Array.isArray(archiveDrawerStoryResolutionArtifactManifest.files?.assets),
+    'Archive Drawer Story Resolution Card Pack artifact manifest files.assets must be an array.',
+  )
+  expect(
+    archiveDrawerStoryResolutionArtifactManifest.files.assets.length ===
+      archiveDrawerStoryResolutionSource.worldSlugs.length,
+    'Archive Drawer Story Resolution Card Pack artifact manifest must include one copied local image per source world.',
+  )
+  const archiveDrawerStoryResolutionManifestAssetErrors = validateManifestWorldAssets(
+    archiveDrawerStoryResolutionSource,
+    archiveDrawerStoryResolutionArtifactManifest,
+  )
+  expect(
+    archiveDrawerStoryResolutionManifestAssetErrors.length === 0,
+    `Archive Drawer Story Resolution Card Pack artifact manifest image coverage failed validation:\n${archiveDrawerStoryResolutionManifestAssetErrors.join('\n')}`,
+  )
+  for (const asset of archiveDrawerStoryResolutionArtifactManifest.files.assets) {
+    validateImageFile(
+      resolve(root, asset.path),
+      `Archive Drawer Story Resolution Card Pack copied artifact image ${asset.path}`,
+      'jpeg',
+    )
+  }
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -11432,6 +11684,7 @@ const productImageManifests = [
   batch57Images,
   batch58Images,
   batch59Images,
+  batch60Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

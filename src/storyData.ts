@@ -686,6 +686,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable file box story turning-point cards with adult guide tools, turning-point routines, and take-home turning slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'archive-drawer-story-resolution-card-pack',
+    title: 'Archive Drawer Story Resolution Card Pack',
+    pricePoint: '$93',
+    description:
+      'Sixteen printable archive drawer story resolution cards with adult guide tools, resolution routines, and take-home resolution slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

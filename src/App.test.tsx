@@ -126,5 +126,9 @@ describe('App', () => {
       'href',
       expect.stringContaining('file-box-story-turning-point-card-pack'),
     )
+    expect(screen.getByRole('link', { name: /Preview Archive Drawer Story Resolution Card Pack/i })).toHaveAttribute(
+      'href',
+      expect.stringContaining('archive-drawer-story-resolution-card-pack'),
+    )
   })
 })

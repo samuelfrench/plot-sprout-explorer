@@ -72,9 +72,9 @@ describe('content batch verifier summary', () => {
 
     expect(output).toContain(`${currentLocalImageCount()} local world/product images`)
     expect(output).toContain(`${currentProductArtifactCount()} product artifacts`)
-    expect(output).toContain('79 local world/product images')
-    expect(output).toContain('52 static product pages')
-    expect(output).toContain('52 product artifacts')
+    expect(output).toContain('80 local world/product images')
+    expect(output).toContain('53 static product pages')
+    expect(output).toContain('53 product artifacts')
   })
 
   it('fails closed if a Batch55 generated image exists before the static page is rendered', () => {
@@ -121,6 +121,30 @@ describe('content batch verifier summary', () => {
 
       const output = runVerifierExpectingFailure()
       expect(output).toContain('static output is missing after Batch 55 generated outputs started')
+    })
+  })
+
+  it('fails closed if Batch60 artifacts exist before hero image files exist', () => {
+    const imagePath = resolve(
+      root,
+      'public/images/plotsprout/batch60/archive-drawer-story-resolution-card-pack.jpg',
+    )
+    const webpPath = resolve(
+      root,
+      'public/images/plotsprout/batch60/archive-drawer-story-resolution-card-pack.webp',
+    )
+    const sidecarPath = resolve(
+      root,
+      'content/image-runs/batch60/archive-drawer-story-resolution-card-pack.json',
+    )
+
+    withRestoredPaths([imagePath, webpPath, sidecarPath], () => {
+      rmSync(imagePath, { force: true })
+      rmSync(webpPath, { force: true })
+      rmSync(sidecarPath, { force: true })
+
+      const output = runVerifierExpectingFailure()
+      expect(output).toContain('Batch 60 generated image output is missing after Batch 60 generated outputs started')
     })
   })
 

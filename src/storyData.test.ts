@@ -1,4 +1,8 @@
+/// <reference types="node" />
+
 import { describe, expect, it } from 'vitest'
+import { readFileSync } from 'node:fs'
+import { resolve } from 'node:path'
 
 import {
   buildImagePrompt,
@@ -7,6 +11,29 @@ import {
   productLinks,
   questWorlds,
 } from './storyData'
+
+const archiveDrawerWorldSlugs = [
+  'teacup-town-weather-window',
+  'mitten-market-lost-ticket',
+  'button-bakery-map-mixup',
+  'paperclip-plaza-parcel-day',
+  'sticker-station-mail-cart',
+  'greenhouse-gear-garden',
+  'moss-message-observatory',
+  'rain-gauge-railway',
+  'seed-library-map-room',
+  'solar-oven-picnic-station',
+  'tidepool-timekeepers-lab',
+  'almost-invention-workshop',
+  'appendix-archive-lab',
+  'clue-label-tower-museum',
+  'compost-clock-workshop',
+  'index-card-theater-club',
+]
+
+function readJson(relativePath: string): unknown {
+  return JSON.parse(readFileSync(resolve(process.cwd(), relativePath), 'utf8'))
+}
 
 describe('storyData', () => {
   it('keeps every starter world family-friendly and monetizable', () => {
@@ -94,6 +121,7 @@ describe('storyData', () => {
       'pocket-folder-story-goal-path-card-pack',
       'hanging-file-story-decision-point-card-pack',
       'file-box-story-turning-point-card-pack',
+      'archive-drawer-story-resolution-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -148,9 +176,78 @@ describe('storyData', () => {
       '$87',
       '$89',
       '$91',
+      '$93',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
     }
+  })
+
+  it('keeps the Batch60 archive drawer source artifact aligned with the lane files', () => {
+    const source = readJson('content/product-artifacts/archive-drawer-story-resolution-card-pack.json') as Record<
+      string,
+      unknown
+    >
+    const laneA = readJson('content/product-artifacts/lanes/batch60-archive-drawer-resolution-cards-a.json') as unknown[]
+    const laneB = readJson('content/product-artifacts/lanes/batch60-archive-drawer-resolution-cards-b.json') as unknown[]
+    const laneC = readJson('content/product-artifacts/lanes/batch60-archive-drawer-resolution-cards-c.json') as unknown[]
+    const tools = readJson('content/product-artifacts/lanes/batch60-archive-drawer-resolution-tools.json') as Record<
+      string,
+      unknown
+    >
+
+    expect(Object.keys(source)).toEqual([
+      'batchId',
+      'generatedAt',
+      'productSlug',
+      'title',
+      'pricePoint',
+      'audience',
+      'sessionLength',
+      'safetyNote',
+      'artifact',
+      'sourceFiles',
+      'worldSlugs',
+      'cover',
+      'adultGuide',
+      'resolutionRoutines',
+      'takeHomeResolutionSlips',
+      'optionalAdultPrompts',
+      'cards',
+    ])
+    expect(source.sourceFiles).toEqual([
+      'content/product-artifacts/lanes/batch60-archive-drawer-resolution-cards-a.json',
+      'content/product-artifacts/lanes/batch60-archive-drawer-resolution-cards-b.json',
+      'content/product-artifacts/lanes/batch60-archive-drawer-resolution-cards-c.json',
+      'content/product-artifacts/lanes/batch60-archive-drawer-resolution-tools.json',
+    ])
+    expect(source.worldSlugs).toEqual(archiveDrawerWorldSlugs)
+    expect(source.cards).toEqual([...laneA, ...laneB, ...laneC])
+    expect(source.adultGuide).toEqual(tools.adultGuide)
+    expect(source.resolutionRoutines).toEqual(tools.resolutionRoutines)
+    expect(source.takeHomeResolutionSlips).toEqual(tools.takeHomeResolutionSlips)
+    expect(source.optionalAdultPrompts).toEqual(tools.optionalAdultPrompts)
+  })
+
+  it('keeps the Batch60 archive drawer product checkout-pending and mailto-only', () => {
+    const products = readJson('content/products/batch5-products.json') as {
+      products: Array<Record<string, unknown>>
+    }
+    const product = products.products.find(
+      (candidate) => candidate.slug === 'archive-drawer-story-resolution-card-pack',
+    )
+
+    expect(product).toMatchObject({
+      slug: 'archive-drawer-story-resolution-card-pack',
+      title: 'Archive Drawer Story Resolution Card Pack',
+      pricePoint: '$93',
+      status: 'checkout_pending',
+      heroImage: 'images/plotsprout/batch60/archive-drawer-story-resolution-card-pack.jpg',
+      ctaHref:
+        'mailto:samfrench@gmail.com?subject=Archive%20Drawer%20Story%20Resolution%20Card%20Pack',
+    })
+    expect(product?.worldSlugs).toEqual(archiveDrawerWorldSlugs)
+    expect(String(product?.ctaHref)).toMatch(/^mailto:/)
+    expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
   })
 })

@@ -30,7 +30,7 @@ const worldAges = {
   'mitten-market-lost-ticket': '7-8',
   'button-bakery-map-mixup': '7-9',
   'paperclip-plaza-parcel-day': '7-9',
-  'spoon-ferry-lunchbox-harbor': '7-9',
+  'sticker-station-mail-cart': '7-9',
   'greenhouse-gear-garden': '8-10',
   'moss-message-observatory': '8-10',
   'rain-gauge-railway': '8-10',
@@ -40,7 +40,7 @@ const worldAges = {
   'almost-invention-workshop': '10-11',
   'appendix-archive-lab': '10-11',
   'clue-label-tower-museum': '10-11',
-  'compass-craft-academy': '10-11',
+  'compost-clock-workshop': '8-10',
   'index-card-theater-club': '10-11',
 }
 
@@ -302,7 +302,7 @@ function validProduct(overrides = {}) {
     status: 'checkout_pending',
     headline: 'A printable resolution card pack for closing paper stories without pressure.',
     summary:
-      'Sixteen adult-led archive drawer cards help kids connect a loose thread, a last choice, a changed feeling, a closing image, a leftover question, a next-story seed, and an archive drawer label.',
+      'Sixteen archive drawer cards help kids close loose threads with last choices, changed feelings, closing images, leftover questions, and next-story seeds.',
     heroImage: 'images/plotsprout/batch60/archive-drawer-story-resolution-card-pack.jpg',
     ctaLabel: 'Request archive drawer pack launch notice',
     ctaHref: 'mailto:samfrench@gmail.com?subject=Archive%20Drawer%20Story%20Resolution%20Card%20Pack',
@@ -343,6 +343,14 @@ function validProduct(overrides = {}) {
   }
 }
 
+function fakePdf(pageCount) {
+  const pages = Array.from(
+    { length: pageCount },
+    (_unused, index) => `${index + 1} 0 obj << /Type /Page >> endobj`,
+  )
+  return Buffer.from(`%PDF-1.7\n${pages.join('\n')}\n%%EOF\n`)
+}
+
 describe('Archive Drawer Story Resolution Card Pack policy', () => {
   it('accepts the canonical source contract and product alignment', () => {
     const errors = validateArchiveDrawerStoryResolutionCardPackSource(
@@ -378,8 +386,8 @@ describe('Archive Drawer Story Resolution Card Pack policy', () => {
     expect(errors).toMatch(/sourceFiles must list the exact Batch 60 archive drawer resolution card lane/)
     expect(errors).toMatch(/artifact.pdfPath must be/)
     expect(errors).toMatch(/worldSlugs must match the exact Batch 60 archive drawer resolution world set/)
-    expect(errors).toMatch(/cards\\[0\\] keys must match/)
-    expect(errors).toMatch(/cards\\[0\\].title must include/)
+    expect(errors).toMatch(/cards\[0\] keys must match/)
+    expect(errors).toMatch(/cards\[0\].title must include/)
   })
 
   it('enforces recent batch overlap counts', () => {
@@ -391,7 +399,7 @@ describe('Archive Drawer Story Resolution Card Pack policy', () => {
     }
 
     const badWorlds = [...worldSlugs]
-    badWorlds[0] = 'penny-path-compass-shop'
+    badWorlds[0] = 'pocket-park-notice-board'
     const errors = validateArchiveDrawerStoryResolutionCardPackSource(
       validSource({ worldSlugs: badWorlds }),
       validProduct({ worldSlugs: badWorlds }),
@@ -431,7 +439,7 @@ describe('Archive Drawer Story Resolution Card Pack policy', () => {
   })
 
   it('validates committed lane files when source files exist', () => {
-    const source = validSource()
+    const source = readJson('content/product-artifacts/archive-drawer-story-resolution-card-pack.json')
     const errors = validateArchiveDrawerStoryResolutionCardPackSourceFiles(source, root)
 
     if (existsSync(resolve(root, sourceFiles[0]))) {
@@ -439,6 +447,19 @@ describe('Archive Drawer Story Resolution Card Pack policy', () => {
     } else {
       expect(errors.join('\n')).toMatch(/Missing lane file/)
     }
+  })
+
+  it('flags stale canonical source drift from card lanes and tools lane', () => {
+    const source = readJson('content/product-artifacts/archive-drawer-story-resolution-card-pack.json')
+    source.cards[0].kidDirection =
+      'Writer keeps every detail pretend while closing a different loose thread: ____________________.'
+    source.adultGuide.bullets[0] =
+      'Set out a changed archive drawer setup before the adult-led start: ____________________.'
+
+    const errors = validateArchiveDrawerStoryResolutionCardPackSourceFiles(source, root).join('\n')
+
+    expect(errors).toMatch(/resolution card lanes must reproduce cards exactly/)
+    expect(errors).toMatch(/tools lane must reproduce adultGuide exactly/)
   })
 
   it('renders archive drawer resolution fields into source HTML', () => {
@@ -460,11 +481,17 @@ describe('Archive Drawer Story Resolution Card Pack policy', () => {
 
     try {
       const result = await buildArchiveDrawerStoryResolutionCardPack({
-        source: validSource(),
+        source: readJson('content/product-artifacts/archive-drawer-story-resolution-card-pack.json'),
         worlds,
         buildDir,
-        pdfRenderer: async () => Buffer.from('%PDF-1.7\n1 0 obj << /Type /Page >> endobj\n%%EOF\n'),
+        pdfRenderer: async () => fakePdf(21),
       })
+      const expectedZipEntries = [
+        'Archive-Drawer-Story-Resolution-Card-Pack.pdf',
+        'README.txt',
+        'source/archive-drawer-story-resolution-card-pack.html',
+        ...result.manifest.files.assets.map((asset) => asset.path),
+      ]
 
       const status = inspectArtifactFiles(
         buildDir,
@@ -477,12 +504,7 @@ describe('Archive Drawer Story Resolution Card Pack policy', () => {
         {
           expectedPdfPages: 21,
           pdfRoot: buildDir,
-          requiredZipEntries: [
-            'Archive-Drawer-Story-Resolution-Card-Pack.pdf',
-            'README.txt',
-            'manifest.json',
-            'source/archive-drawer-story-resolution-card-pack.html',
-          ],
+          expectedZipEntries,
         },
       )
 
