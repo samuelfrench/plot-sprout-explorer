@@ -31,6 +31,25 @@ const archiveDrawerWorldSlugs = [
   'index-card-theater-club',
 ]
 
+const cardCatalogWorldSlugs = [
+  'puddle-planet-post-office',
+  'buttonwood-library-train',
+  'cloudberry-clocktower',
+  'tiny-lantern-reef',
+  'acorn-avenue-errand-office',
+  'pocket-park-notice-board',
+  'penny-path-compass-shop',
+  'orchard-pulley-post',
+  'pond-bridge-blueprint-club',
+  'revision-river-ferry',
+  'chapter-gate-greenhouse',
+  'margin-note-market',
+  'blue-pencil-observatory',
+  'binding-day-boardwalk',
+  'sticker-station-mail-cart',
+  'paperclip-plaza-parcel-day',
+]
+
 function readJson(relativePath: string): unknown {
   return JSON.parse(readFileSync(resolve(process.cwd(), relativePath), 'utf8'))
 }
@@ -122,6 +141,7 @@ describe('storyData', () => {
       'hanging-file-story-decision-point-card-pack',
       'file-box-story-turning-point-card-pack',
       'archive-drawer-story-resolution-card-pack',
+      'card-catalog-story-retell-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -177,6 +197,7 @@ describe('storyData', () => {
       '$89',
       '$91',
       '$93',
+      '$95',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
@@ -247,6 +268,74 @@ describe('storyData', () => {
         'mailto:samfrench@gmail.com?subject=Archive%20Drawer%20Story%20Resolution%20Card%20Pack',
     })
     expect(product?.worldSlugs).toEqual(archiveDrawerWorldSlugs)
+    expect(String(product?.ctaHref)).toMatch(/^mailto:/)
+    expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
+  })
+
+  it('keeps the Batch61 card catalog source artifact aligned with the lane files', () => {
+    const source = readJson('content/product-artifacts/card-catalog-story-retell-card-pack.json') as Record<
+      string,
+      unknown
+    >
+    const laneA = readJson('content/product-artifacts/lanes/batch61-card-catalog-retell-cards-a.json') as unknown[]
+    const laneB = readJson('content/product-artifacts/lanes/batch61-card-catalog-retell-cards-b.json') as unknown[]
+    const laneC = readJson('content/product-artifacts/lanes/batch61-card-catalog-retell-cards-c.json') as unknown[]
+    const tools = readJson('content/product-artifacts/lanes/batch61-card-catalog-retell-tools.json') as Record<
+      string,
+      unknown
+    >
+
+    expect(Object.keys(source)).toEqual([
+      'batchId',
+      'generatedAt',
+      'productSlug',
+      'title',
+      'pricePoint',
+      'audience',
+      'sessionLength',
+      'safetyNote',
+      'artifact',
+      'sourceFiles',
+      'worldSlugs',
+      'cover',
+      'adultGuide',
+      'retellRoutines',
+      'takeHomeRetellSlips',
+      'optionalAdultPrompts',
+      'cards',
+    ])
+    expect(source.sourceFiles).toEqual([
+      'content/product-artifacts/lanes/batch61-card-catalog-retell-cards-a.json',
+      'content/product-artifacts/lanes/batch61-card-catalog-retell-cards-b.json',
+      'content/product-artifacts/lanes/batch61-card-catalog-retell-cards-c.json',
+      'content/product-artifacts/lanes/batch61-card-catalog-retell-tools.json',
+    ])
+    expect(source.worldSlugs).toEqual(cardCatalogWorldSlugs)
+    expect(source.cards).toEqual([...laneA, ...laneB, ...laneC])
+    expect(source.adultGuide).toEqual(tools.adultGuide)
+    expect(source.retellRoutines).toEqual(tools.retellRoutines)
+    expect(source.takeHomeRetellSlips).toEqual(tools.takeHomeRetellSlips)
+    expect(source.optionalAdultPrompts).toEqual(tools.optionalAdultPrompts)
+  })
+
+  it('keeps the Batch61 card catalog product checkout-pending and mailto-only', () => {
+    const products = readJson('content/products/batch5-products.json') as {
+      products: Array<Record<string, unknown>>
+    }
+    const product = products.products.find(
+      (candidate) => candidate.slug === 'card-catalog-story-retell-card-pack',
+    )
+
+    expect(product).toMatchObject({
+      slug: 'card-catalog-story-retell-card-pack',
+      title: 'Card Catalog Story Retell Card Pack',
+      pricePoint: '$95',
+      status: 'checkout_pending',
+      heroImage: 'images/plotsprout/batch61/card-catalog-story-retell-card-pack.jpg',
+      ctaHref:
+        'mailto:samfrench@gmail.com?subject=Card%20Catalog%20Story%20Retell%20Card%20Pack',
+    })
+    expect(product?.worldSlugs).toEqual(cardCatalogWorldSlugs)
     expect(String(product?.ctaHref)).toMatch(/^mailto:/)
     expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
   })

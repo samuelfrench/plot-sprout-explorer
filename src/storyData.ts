@@ -694,6 +694,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable archive drawer story resolution cards with adult guide tools, resolution routines, and take-home resolution slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'card-catalog-story-retell-card-pack',
+    title: 'Card Catalog Story Retell Card Pack',
+    pricePoint: '$95',
+    description:
+      'Sixteen printable card catalog story retell cards with adult guide tools, retell routines, and take-home retell slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

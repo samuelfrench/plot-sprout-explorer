@@ -71,6 +71,8 @@ import {
   validateFileBoxStoryTurningPointCardPackSourceFiles,
   validateArchiveDrawerStoryResolutionCardPackSource,
   validateArchiveDrawerStoryResolutionCardPackSourceFiles,
+  validateCardCatalogStoryRetellCardPackSource,
+  validateCardCatalogStoryRetellCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -162,6 +164,7 @@ const batch57ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-ba
 const batch58ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-03-batch58-images.json')
 const batch59ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch59-images.json')
 const batch60ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch60-images.json')
+const batch61ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch61-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -266,6 +269,12 @@ const archiveDrawerStoryResolutionSourceFile = resolve(
   'product-artifacts',
   'archive-drawer-story-resolution-card-pack.json',
 )
+const cardCatalogStoryRetellSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'card-catalog-story-retell-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -322,6 +331,7 @@ const batch57ImagesBatchId = '2026-06-03-batch57-images'
 const batch58ImagesBatchId = '2026-06-03-batch58-images'
 const batch59ImagesBatchId = '2026-06-04-batch59-images'
 const batch60ImagesBatchId = '2026-06-04-batch60-images'
+const batch61ImagesBatchId = '2026-06-04-batch61-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -5128,6 +5138,59 @@ function validateBatch60Image(image, imageSlugs) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch61Image(image, imageSlugs) {
+  const label = `2026-06-04-batch61-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.seed === 260661196, `${label}.seed must be 260661196.`)
+  expect(image.width === 1344, `${label}.width must be 1344.`)
+  expect(image.height === 768, `${label}.height must be 768.`)
+  expect(
+    image.slug === 'card-catalog-story-retell-card-pack',
+    `${label}.slug must be card-catalog-story-retell-card-pack.`,
+  )
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 61 images.`)
+  imageSlugs.add(image.slug)
+  expect(image.outputJpeg === `public/images/plotsprout/batch61/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch61/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch61/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  expect(
+    image.prompt ===
+      'family-friendly top-down close-cropped product photo on seamless pale neutral background, one blank beige card catalog tray, neat stack of blank off-white retell cards, three blank beige catalog label slips, clean printable paper kit, paper-only stationery arrangement, unmarked paper, no writing, no symbols, no decorative props',
+    `${label}.prompt must match the approved Batch61 hero prompt.`,
+  )
+  expect(
+    image.negativePrompt ===
+      'text, writing, letters, words, labels, titles, logo, watermark, symbols, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, spiral binding, notebook, school, home, address, route, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, review, rating, score, grade, timer, food, allergy, medical, scary, weapons, bullying, plants, leaves, leaf, greenery, succulent, plant pot, flowers, wood, stone, desk decor, tabletop props, cups, bowls, thread, yarn, string, twine, roll, fabric, cloth, ribbon, children, faces, hands, clutter, colored background, pink background, dark shadows',
+    `${label}.negativePrompt must match the approved Batch61 negative prompt.`,
+  )
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  const generatedFileExists = [jpegPath, webpPath, sidecarPath].some((filePath) => existsSync(filePath))
+  if (!generatedFileExists) return
+
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -5570,6 +5633,14 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       minParentSteps: 4,
       maxWorldSlugs: 16,
     },
+    'card-catalog-story-retell-card-pack': {
+      title: 'Card Catalog Story Retell Card Pack',
+      pricePoint: '$95',
+      minIncludedPages: 10,
+      minUseCases: 4,
+      minParentSteps: 4,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -5587,7 +5658,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
     product.slug === 'pocket-folder-story-goal-path-card-pack' ||
     product.slug === 'hanging-file-story-decision-point-card-pack' ||
     product.slug === 'file-box-story-turning-point-card-pack' ||
-    product.slug === 'archive-drawer-story-resolution-card-pack'
+    product.slug === 'archive-drawer-story-resolution-card-pack' ||
+    product.slug === 'card-catalog-story-retell-card-pack'
       ? expandingFileStorySceneChainSafety
       : safety
   expect(product.safetyNote.includes(requiredProductSafety), `${label}.safetyNote missing required safety sentence.`)
@@ -5751,6 +5823,9 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
 
   const renderedPath = resolve(root, 'public', product.slug, 'index.html')
   if (!existsSync(renderedPath)) {
+    if (product.slug === 'card-catalog-story-retell-card-pack' && options.batch61GenerationStarted) {
+      fail(`${label} static output is missing after Batch 61 generated outputs started: ${renderedPath}`)
+    }
     if (product.slug === 'archive-drawer-story-resolution-card-pack' && options.batch60GenerationStarted) {
       fail(`${label} static output is missing after Batch 60 generated outputs started: ${renderedPath}`)
     }
@@ -5775,7 +5850,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
         product.slug === 'pocket-folder-story-goal-path-card-pack' ||
         product.slug === 'hanging-file-story-decision-point-card-pack' ||
         product.slug === 'file-box-story-turning-point-card-pack' ||
-        product.slug === 'archive-drawer-story-resolution-card-pack',
+        product.slug === 'archive-drawer-story-resolution-card-pack' ||
+        product.slug === 'card-catalog-story-retell-card-pack',
       `${label} static output is missing: ${renderedPath}`,
     )
     return
@@ -7094,12 +7170,33 @@ const batch60ImagePaths = batch60Images.images.flatMap((image) => [
   resolve(root, image.sidecar),
 ])
 
+expect(existsSync(batch61ImagesFile), `Missing Batch 61 image manifest: ${batch61ImagesFile}`)
+const batch61Images = readJson(batch61ImagesFile)
+expect(
+  batch61Images.batchId === batch61ImagesBatchId,
+  `batch61 image manifest batchId must be ${batch61ImagesBatchId}.`,
+)
+expect(batch61Images.generatedAt === '2026-06-04', 'batch61 image manifest generatedAt must be 2026-06-04.')
+expect(Array.isArray(batch61Images.images), 'batch61 image manifest images must be an array.')
+expect(batch61Images.images.length === 1, `Expected 1 Batch 61 image, found ${batch61Images.images.length}.`)
+const batch61ImageSlugs = new Set()
+batch61Images.images.forEach((image) => validateBatch61Image(image, batch61ImageSlugs))
+expect(
+  batch61ImageSlugs.has('card-catalog-story-retell-card-pack'),
+  'Batch 61 images missing card-catalog-story-retell-card-pack.',
+)
+const batch61ImagePaths = batch61Images.images.flatMap((image) => [
+  resolve(root, image.outputJpeg),
+  resolve(root, image.outputWebp),
+  resolve(root, image.sidecar),
+])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 53, `Expected 53 product records, found ${products.products.length}.`)
+expect(products.products.length === 54, `Expected 54 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 let batch55GeneratedOutputPaths = [...batch55ImagePaths]
 const batch55ProductRecord = products.products.find(
@@ -7214,6 +7311,34 @@ if (batch60GenerationStarted) {
     )
   }
 }
+let batch61GeneratedOutputPaths = [...batch61ImagePaths]
+const batch61ProductRecord = products.products.find(
+  (product) => product.slug === 'card-catalog-story-retell-card-pack',
+)
+if (batch61ProductRecord) {
+  batch61GeneratedOutputPaths.push(resolve(root, 'public', batch61ProductRecord.slug, 'index.html'))
+}
+const batch61ProductArtifactPathForGeneration = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'card-catalog-story-retell-card-pack.json',
+)
+if (existsSync(batch61ProductArtifactPathForGeneration)) {
+  const artifactSourceForGeneration = readJson(batch61ProductArtifactPathForGeneration)
+  batch61GeneratedOutputPaths.push(
+    ...Object.values(artifactSourceForGeneration.artifact ?? {}).map((relativePath) => resolve(root, relativePath)),
+  )
+}
+const batch61GenerationStarted = anyPathExists(batch61GeneratedOutputPaths)
+if (batch61GenerationStarted) {
+  for (const imagePath of batch61ImagePaths) {
+    expect(
+      existsSync(imagePath),
+      `Batch 61 generated image output is missing after Batch 61 generated outputs started: ${imagePath}`,
+    )
+  }
+}
 products.products.forEach((product) =>
   validateProduct(product, productSlugs, worldSlugs, {
     batch55GenerationStarted,
@@ -7222,6 +7347,7 @@ products.products.forEach((product) =>
     batch58GenerationStarted,
     batch59GenerationStarted,
     batch60GenerationStarted,
+    batch61GenerationStarted,
   }),
 )
 for (const requiredProductSlug of [
@@ -7278,6 +7404,7 @@ for (const requiredProductSlug of [
   'hanging-file-story-decision-point-card-pack',
   'file-box-story-turning-point-card-pack',
   'archive-drawer-story-resolution-card-pack',
+  'card-catalog-story-retell-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -11633,6 +11760,124 @@ if (archiveDrawerStoryResolutionAnyArtifactFilesExist) {
   }
 }
 
+expect(
+  existsSync(cardCatalogStoryRetellSourceFile),
+  `Missing Batch 61 Card Catalog Story Retell Card Pack source file: ${cardCatalogStoryRetellSourceFile}`,
+)
+const cardCatalogStoryRetellSource = readJson(cardCatalogStoryRetellSourceFile)
+expect(
+  cardCatalogStoryRetellSource.batchId === '2026-06-04-batch61',
+  'Card Catalog Story Retell Card Pack source batchId must be 2026-06-04-batch61.',
+)
+const cardCatalogStoryRetellProduct = products.products.find(
+  (product) => product.slug === 'card-catalog-story-retell-card-pack',
+)
+expect(
+  cardCatalogStoryRetellProduct,
+  'Missing Card Catalog Story Retell Card Pack product record for Batch 61 artifact validation.',
+)
+const cardCatalogStoryRetellSourceErrors = validateCardCatalogStoryRetellCardPackSource(
+  cardCatalogStoryRetellSource,
+  cardCatalogStoryRetellProduct,
+  worldAgeBands,
+)
+expect(
+  cardCatalogStoryRetellSourceErrors.length === 0,
+  `Card Catalog Story Retell Card Pack source failed validation:\n${cardCatalogStoryRetellSourceErrors.join('\n')}`,
+)
+const cardCatalogStoryRetellSourceFileErrors = validateCardCatalogStoryRetellCardPackSourceFiles(
+  cardCatalogStoryRetellSource,
+  root,
+)
+expect(
+  cardCatalogStoryRetellSourceFileErrors.length === 0,
+  `Card Catalog Story Retell Card Pack sourceFiles failed validation:\n${cardCatalogStoryRetellSourceFileErrors.join('\n')}`,
+)
+const cardCatalogStoryRetellSummaryErrors = validateProductWorldSummaries(
+  cardCatalogStoryRetellProduct,
+  'Card Catalog Story Retell Card Pack',
+)
+expect(
+  cardCatalogStoryRetellSummaryErrors.length === 0,
+  `Card Catalog Story Retell Card Pack world summaries failed validation:\n${cardCatalogStoryRetellSummaryErrors.join('\n')}`,
+)
+const cardCatalogStoryRetellArtifactPaths = Object.values(cardCatalogStoryRetellSource.artifact).map((relativePath) =>
+  resolve(root, relativePath),
+)
+const cardCatalogStoryRetellAnyArtifactFilesExist = anyPathExists(cardCatalogStoryRetellArtifactPaths)
+if (cardCatalogStoryRetellAnyArtifactFilesExist) {
+  for (const artifactPath of cardCatalogStoryRetellArtifactPaths) {
+    expect(
+      existsSync(artifactPath),
+      `Card Catalog Story Retell Card Pack artifact set is incomplete after artifact generation started: ${artifactPath}`,
+    )
+  }
+  const cardCatalogStoryRetellExpectedPdfPages = cardCatalogStoryRetellSource.cards.length + 5
+  const cardCatalogStoryRetellArtifactStatus = inspectArtifactFiles(root, cardCatalogStoryRetellSource.artifact, {
+    expectedPdfPages: cardCatalogStoryRetellExpectedPdfPages,
+    expectedZipEntries: [
+      'Card-Catalog-Story-Retell-Card-Pack.pdf',
+      'README.txt',
+      'source/card-catalog-story-retell-card-pack.html',
+      ...cardCatalogStoryRetellSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+    ],
+  })
+  expect(
+    cardCatalogStoryRetellArtifactStatus.valid,
+    `Card Catalog Story Retell Card Pack artifacts failed validation:\n${cardCatalogStoryRetellArtifactStatus.errors.join('\n')}`,
+  )
+  expect(
+    cardCatalogStoryRetellArtifactStatus.files.pdf.size > 100_000,
+    `Card Catalog Story Retell Card Pack PDF artifact is unexpectedly small: ${cardCatalogStoryRetellArtifactStatus.files.pdf.size} bytes.`,
+  )
+  expect(
+    cardCatalogStoryRetellArtifactStatus.files.pdf.pageCount === cardCatalogStoryRetellExpectedPdfPages,
+    `Card Catalog Story Retell Card Pack PDF artifact must have ${cardCatalogStoryRetellExpectedPdfPages} pages.`,
+  )
+  expect(
+    cardCatalogStoryRetellArtifactStatus.files.zip.size > cardCatalogStoryRetellArtifactStatus.files.pdf.size,
+    'Card Catalog Story Retell Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+  )
+  const cardCatalogStoryRetellCheckoutErrors = validateCheckoutReadiness(
+    cardCatalogStoryRetellProduct,
+    cardCatalogStoryRetellArtifactStatus,
+  )
+  expect(
+    cardCatalogStoryRetellCheckoutErrors.length === 0,
+    `Card Catalog Story Retell Card Pack checkout readiness failed validation:\n${cardCatalogStoryRetellCheckoutErrors.join('\n')}`,
+  )
+  const cardCatalogStoryRetellArtifactManifest = readJson(
+    resolve(root, cardCatalogStoryRetellSource.artifact.manifestPath),
+  )
+  expect(
+    cardCatalogStoryRetellArtifactManifest.sourcePageCount === cardCatalogStoryRetellSource.cards.length,
+    'Card Catalog Story Retell Card Pack artifact manifest sourcePageCount must match source cards.',
+  )
+  expect(
+    Array.isArray(cardCatalogStoryRetellArtifactManifest.files?.assets),
+    'Card Catalog Story Retell Card Pack artifact manifest files.assets must be an array.',
+  )
+  expect(
+    cardCatalogStoryRetellArtifactManifest.files.assets.length === cardCatalogStoryRetellSource.worldSlugs.length,
+    'Card Catalog Story Retell Card Pack artifact manifest must include one copied local image per source world.',
+  )
+  const cardCatalogStoryRetellManifestAssetErrors = validateManifestWorldAssets(
+    cardCatalogStoryRetellSource,
+    cardCatalogStoryRetellArtifactManifest,
+  )
+  expect(
+    cardCatalogStoryRetellManifestAssetErrors.length === 0,
+    `Card Catalog Story Retell Card Pack artifact manifest image coverage failed validation:\n${cardCatalogStoryRetellManifestAssetErrors.join('\n')}`,
+  )
+  for (const asset of cardCatalogStoryRetellArtifactManifest.files.assets) {
+    validateImageFile(
+      resolve(root, asset.path),
+      `Card Catalog Story Retell Card Pack copied artifact image ${asset.path}`,
+      'jpeg',
+    )
+  }
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -11685,6 +11930,7 @@ const productImageManifests = [
   batch58Images,
   batch59Images,
   batch60Images,
+  batch61Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

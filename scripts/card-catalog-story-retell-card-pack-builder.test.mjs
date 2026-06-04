@@ -513,7 +513,7 @@ describe('Card Catalog Story Retell Card Pack policy', () => {
 
   it('keeps the committed product checkout-pending and world summaries aligned', () => {
     const products = readJson('content/products/batch5-products.json')
-    const product = products.find((candidate) => candidate.slug === 'card-catalog-story-retell-card-pack')
+    const product = products.products.find((candidate) => candidate.slug === 'card-catalog-story-retell-card-pack')
 
     expect(product).toMatchObject({
       slug: 'card-catalog-story-retell-card-pack',
@@ -522,7 +522,7 @@ describe('Card Catalog Story Retell Card Pack policy', () => {
       status: 'checkout_pending',
       heroImage: 'images/plotsprout/batch61/card-catalog-story-retell-card-pack.jpg',
     })
-    expect(validateProductWorldSummaries(product, new Set(worldSlugs))).toEqual([])
+    expect(validateProductWorldSummaries(product, 'Card Catalog Story Retell Card Pack')).toEqual([])
   })
 
   it('requires the local product image manifest and generated image sidecar', () => {

@@ -22,8 +22,19 @@ describe('content policy checkout guards', () => {
   })
 
   it('blocks active payment-provider and purchase language even when launch is pending', () => {
+    expect(
+      containsActiveCheckoutLanguage({
+        checkoutNote: 'Checkout is pending until the payment provider is selected. Buy now.',
+      }),
+    ).toBe(true)
     expect(containsActiveCheckoutLanguage({ checkoutNote: 'Payment link will be added later.' })).toBe(true)
     expect(containsActiveCheckoutLanguage({ checkoutNote: 'Stripe checkout is disabled for now.' })).toBe(true)
+    expect(containsActiveCheckoutLanguage({ checkoutNote: 'StripeCheckout stays disabled for now.' })).toBe(true)
+    expect(containsActiveCheckoutLanguage({ checkoutNote: 'StripePaymentLink stays disabled for now.' })).toBe(true)
     expect(containsActiveCheckoutLanguage({ ctaLabel: 'Buy now after provider approval.' })).toBe(true)
+  })
+
+  it('does not treat ordinary words containing stripe as payment-provider copy', () => {
+    expect(containsActiveCheckoutLanguage({ prompt: 'Use a striped cart wheel as a pretend detail.' })).toBe(false)
   })
 })

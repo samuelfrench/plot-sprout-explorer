@@ -1,18 +1,9 @@
-const allowedCheckoutPendingPhrases = [
-  /checkout is pending/i,
-  /checkout remains pending/i,
-  /checkout.*pending until the payment provider is selected/i,
-  /checkout.*pending until a payment provider is selected/i,
-  /checkout.*provider is selected/i,
-  /does not accept payment yet/i,
-]
-
 const activeCheckoutPatterns = [
   /buy now/i,
   /purchase now/i,
   /add to cart/i,
   /checkout url/i,
-  /stripe/i,
+  /\bstripe(?:\s*checkout|\s*payment\s*links?|checkout|paymentlink)?\b/i,
   /lemon squeeze/i,
   /gumroad/i,
   /payment link/i,
@@ -27,8 +18,5 @@ function checkoutStrings(value) {
 }
 
 export function containsActiveCheckoutLanguage(value) {
-  return checkoutStrings(value).some((text) => {
-    const allowedPendingOnly = allowedCheckoutPendingPhrases.some((pattern) => pattern.test(text))
-    return activeCheckoutPatterns.some((pattern) => pattern.test(text)) && !allowedPendingOnly
-  })
+  return checkoutStrings(value).some((text) => activeCheckoutPatterns.some((pattern) => pattern.test(text)))
 }

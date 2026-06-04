@@ -69,7 +69,7 @@
     "middleCluePrompt": "Adult-led fictional offline paper-only middle clue: write the sticker shape, cart pocket, or paper note that helps the helper understand the retell: ____________________.",
     "turningChoicePrompt": "Adult-led fictional offline paper-only turning choice: choose which sticker slip the helper places in the cart pocket first: ____________________.",
     "endingAnswerPrompt": "Adult-led fictional offline paper-only ending answer: write how the helper knows the sticker slips are sorted for this story: ____________________.",
-    "favoriteDetailPrompt": "Adult-led fictional offline paper-only favorite detail: save one tiny sticker-station detail for the retell, like a star tab or striped cart wheel: ____________________.",
+    "favoriteDetailPrompt": "Adult-led fictional offline paper-only favorite detail: save one tiny sticker-station detail for the retell, such as a star tab or striped cart wheel: ____________________.",
     "nextRetellPrompt": "Adult-led fictional offline paper-only next retell prompt: write one way to retell the cart moment with a different sticker slip: ____________________.",
     "cardCatalogLabelPrompt": "Adult-led fictional offline paper-only card catalog label: write the broad label for this Sticker Station Mail Cart retell card: ____________________.",
     "quietOptionLine": "Adult-led fictional offline paper-only quiet option: point to the cart pocket and fill only the middle clue first: ____________________.",

@@ -1,0 +1,21 @@
+{
+  "batchId": "2026-06-04-batch61-images",
+  "generatedAt": "2026-06-04",
+  "generation": "local",
+  "purpose": "Add the checkout-pending card catalog story retell card pack product hero image.",
+  "images": [
+    {
+      "slug": "card-catalog-story-retell-card-pack",
+      "title": "Card Catalog Story Retell Card Pack",
+      "purpose": "Static product hero image for the checkout-pending card catalog story retell card pack page.",
+      "prompt": "family-friendly top-down close-cropped product photo on seamless pale neutral background, one blank beige card catalog tray, neat stack of blank off-white retell cards, three blank beige catalog label slips, clean printable paper kit, paper-only stationery arrangement, unmarked paper, no writing, no symbols, no decorative props",
+      "negativePrompt": "text, writing, letters, words, labels, titles, logo, watermark, symbols, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, spiral binding, notebook, school, home, address, route, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, review, rating, score, grade, timer, food, allergy, medical, scary, weapons, bullying, plants, leaves, leaf, greenery, succulent, plant pot, flowers, wood, stone, desk decor, tabletop props, cups, bowls, thread, yarn, string, twine, roll, fabric, cloth, ribbon, children, faces, hands, clutter, colored background, pink background, dark shadows",
+      "seed": 260661196,
+      "width": 1344,
+      "height": 768,
+      "outputJpeg": "public/images/plotsprout/batch61/card-catalog-story-retell-card-pack.jpg",
+      "outputWebp": "public/images/plotsprout/batch61/card-catalog-story-retell-card-pack.webp",
+      "sidecar": "content/image-runs/batch61/card-catalog-story-retell-card-pack.json"
+    }
+  ]
+}

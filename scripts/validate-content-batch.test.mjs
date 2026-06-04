@@ -72,9 +72,9 @@ describe('content batch verifier summary', () => {
 
     expect(output).toContain(`${currentLocalImageCount()} local world/product images`)
     expect(output).toContain(`${currentProductArtifactCount()} product artifacts`)
-    expect(output).toContain('80 local world/product images')
-    expect(output).toContain('53 static product pages')
-    expect(output).toContain('53 product artifacts')
+    expect(output).toContain('81 local world/product images')
+    expect(output).toContain('54 static product pages')
+    expect(output).toContain('54 product artifacts')
   })
 
   it('fails closed if a Batch55 generated image exists before the static page is rendered', () => {
@@ -145,6 +145,35 @@ describe('content batch verifier summary', () => {
 
       const output = runVerifierExpectingFailure()
       expect(output).toContain('Batch 60 generated image output is missing after Batch 60 generated outputs started')
+    })
+  })
+
+  it('fails closed if Batch61 artifacts exist before hero image files exist', () => {
+    const imagePath = resolve(
+      root,
+      'public/images/plotsprout/batch61/card-catalog-story-retell-card-pack.jpg',
+    )
+    const webpPath = resolve(
+      root,
+      'public/images/plotsprout/batch61/card-catalog-story-retell-card-pack.webp',
+    )
+    const sidecarPath = resolve(
+      root,
+      'content/image-runs/batch61/card-catalog-story-retell-card-pack.json',
+    )
+    const artifactDir = resolve(root, 'product-build/card-catalog-story-retell-card-pack')
+    const pdfPath = resolve(artifactDir, 'Card-Catalog-Story-Retell-Card-Pack.pdf')
+
+    withRestoredPaths([imagePath, webpPath, sidecarPath, artifactDir], () => {
+      rmSync(imagePath, { force: true })
+      rmSync(webpPath, { force: true })
+      rmSync(sidecarPath, { force: true })
+      rmSync(artifactDir, { recursive: true, force: true })
+      mkdirSync(artifactDir, { recursive: true })
+      writeFileSync(pdfPath, '%PDF-1.7\n%%EOF\n')
+
+      const output = runVerifierExpectingFailure()
+      expect(output).toContain('Batch 61 generated image output is missing after Batch 61 generated outputs started')
     })
   })
 

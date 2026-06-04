@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Catalog Story Retell Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .image-placeholder { width: 100%; aspect-ratio: 1.28 / 1; border: 1px solid var(--line); background: repeating-linear-gradient(135deg, #fff, #fff 8px, #f3eee4 8px, #f3eee4 16px); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .retell-card-page { font-size: 7.3px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img, .world-card .image-placeholder { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .retell-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .retell-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.245in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable card catalog retell cards</p>
+        <h1>Card Catalog Story Retell Card Pack</h1>
+        <p>Sixteen card-catalog cards help writers retell a beginning snapshot, a middle clue, a turning choice, an ending answer, a favorite detail, and a next retell prompt.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable card catalog story retell cards plus adult guide tools, retell routines, take-home retell slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline retell practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$95</span>
+        <h2>Included</h2>
+        <ul><li>16 printable card catalog retell cards</li><li>Adult setup guide</li><li>Fictional retell safety notes</li><li>Beginning snapshot prompts</li><li>Middle clue prompts</li><li>Turning choice prompts</li><li>Ending answer prompts</li><li>Favorite detail prompts</li><li>Six adult-led retell routines</li><li>Ten take-home retell slips</li><li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Retell coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Card Catalog Story Retell Adult Guide: ____________________.</h3><ul><li>Adult-led setup: place the card catalog label strip, blank retell slips, pencils, and one paper card on the table before the offline retell begins: ____________________.</li><li>Adult-led framing: keep every beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label fictional: ____________________.</li><li>Adult-led order: move from beginning snapshot to middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</li><li>Adult-led support: let the writer write or dictate short paper-only retell lines while the adult keeps the card catalog stack sorted: ____________________.</li><li>Adult-led safety: use pretend names, broad made-up places, and invented actions instead of exact identifiers or personal facts: ____________________.</li><li>Adult-led close: reread the paper-only retell stack, choose the next retell prompt, and write the card catalog label: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one story retell card at a time. Keep every retell line broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen retell card worlds</h2>
+      <p>Pick a world image, then name the beginning, middle, turning choice, and ending in order.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Cloudberry Clocktower</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tiny Lantern Reef</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Acorn Avenue Errand Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Pocket Park Notice Board</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Orchard Pulley Post</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pond Bridge Blueprint Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Revision River Ferry</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Chapter Gate Greenhouse</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Blue Pencil Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Sticker Station Mail Cart</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Paperclip Plaza Parcel Day</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Retell routines</p>
+      <h2>Choose the story retell routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">short paper retell setup: ____________________.</p>
+      <h3>Beginning Snapshot Sort: ____________________.</h3>
+      <p>Card catalog label strip, blank beginning snapshot slip, paper card, and pencil: ____________________.</p>
+      <ol><li>The adult points to the beginning snapshot blank and names the retell task: ____________________.</li><li>The writer invents where the fictional story starts and who is there: ____________________.</li><li>The adult asks what one paper detail helps everyone remember the beginning snapshot: ____________________.</li><li>The writer writes the beginning snapshot on the slip and places it first: ____________________.</li></ol>
+      <p>This retell begins with this beginning snapshot: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">middle retell pass: ____________________.</p>
+      <h3>Middle Clue Match: ____________________.</h3>
+      <p>Beginning snapshot slip, middle clue slip, paper card, and pencil: ____________________.</p>
+      <ol><li>The adult rereads the beginning snapshot and points to the middle clue blank: ____________________.</li><li>The writer chooses one fictional middle clue that helps the retell move forward: ____________________.</li><li>The adult asks how the middle clue connects to the beginning snapshot: ____________________.</li><li>The writer writes the middle clue and places it after the beginning snapshot: ____________________.</li></ol>
+      <p>The middle clue in this retell is: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">choice retell pass: ____________________.</p>
+      <h3>Turning Choice Card: ____________________.</h3>
+      <p>Middle clue slip, turning choice slip, paper card, and pencil: ____________________.</p>
+      <ol><li>The adult lays the middle clue beside the turning choice blank: ____________________.</li><li>The writer invents one fictional turning choice the character makes after the middle clue: ____________________.</li><li>The adult asks what changes because of the turning choice: ____________________.</li><li>The writer writes the turning choice and tucks it behind the middle clue: ____________________.</li></ol>
+      <p>The turning choice for this paper-only retell is: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">ending retell pass: ____________________.</p>
+      <h3>Ending Answer Check: ____________________.</h3>
+      <p>Turning choice slip, ending answer slip, paper card, and pencil: ____________________.</p>
+      <ol><li>The adult rereads the turning choice and points to the ending answer blank: ____________________.</li><li>The writer names the fictional ending answer that finishes the retell path: ____________________.</li><li>The adult asks which earlier slip the ending answer connects back to: ____________________.</li><li>The writer writes the ending answer and places it after the turning choice: ____________________.</li></ol>
+      <p>The ending answer closes this retell with: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">detail retell pass: ____________________.</p>
+      <h3>Favorite Detail Finder: ____________________.</h3>
+      <p>Retell slips, favorite detail slip, paper card, and pencil: ____________________.</p>
+      <ol><li>The adult spreads the beginning snapshot, middle clue, turning choice, and ending answer slips in order: ____________________.</li><li>The writer chooses one favorite detail from the fictional retell stack: ____________________.</li><li>The adult asks why that favorite detail helps the retell stay clear on paper: ____________________.</li><li>The writer writes the favorite detail and adds it beside the ending answer: ____________________.</li></ol>
+      <p>The favorite detail to remember is: ____________________.</p>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">retell wrap pass: ____________________.</p>
+      <h3>Card Catalog Label Close: ____________________.</h3>
+      <p>Finished retell slips, next retell prompt slip, card catalog label strip, and pencil: ____________________.</p>
+      <ol><li>The adult rereads the beginning snapshot, middle clue, turning choice, ending answer, and favorite detail: ____________________.</li><li>The writer chooses one next retell prompt for another paper-only pass: ____________________.</li><li>The adult asks what card catalog label will help sort the fictional retell stack: ____________________.</li><li>The writer writes the next retell prompt and card catalog label, then the adult files the slips: ____________________.</li></ol>
+      <p>The card catalog label for this retell is: ____________________.</p>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home retell slips</p>
+      <h2>Try one retell later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home retell slip</p>
+      <h3>Retell slip 1</h3>
+      <p>Adult: set out one paper slip and ask for a fictional beginning snapshot: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home retell slip</p>
+      <h3>Retell slip 2</h3>
+      <p>Writer: the beginning snapshot for my paper-only retell is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home retell slip</p>
+      <h3>Retell slip 3</h3>
+      <p>Adult: ask which fictional middle clue belongs after the beginning snapshot: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home retell slip</p>
+      <h3>Retell slip 4</h3>
+      <p>Writer: the middle clue in this retell is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home retell slip</p>
+      <h3>Retell slip 5</h3>
+      <p>Adult: ask what fictional turning choice follows the middle clue: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home retell slip</p>
+      <h3>Retell slip 6</h3>
+      <p>Writer: the turning choice is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home retell slip</p>
+      <h3>Retell slip 7</h3>
+      <p>Adult: ask what fictional ending answer connects back to the retell path: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home retell slip</p>
+      <h3>Retell slip 8</h3>
+      <p>Writer: the ending answer is: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home retell slip</p>
+      <h3>Retell slip 9</h3>
+      <p>Adult: ask for one favorite detail and one next retell prompt: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home retell slip</p>
+      <h3>Retell slip 10</h3>
+      <p>Writer: the favorite detail, next retell prompt, and card catalog label are: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Optional adult-led paper prompt: the beginning snapshot starts with ____________________.</li><li>Optional adult-led paper prompt: the middle clue helps because ____________________.</li><li>Optional adult-led paper prompt: the turning choice changes the retell by ____________________.</li><li>Optional adult-led paper prompt: the ending answer connects back to ____________________.</li><li>Optional adult-led paper prompt: the favorite detail to keep is ____________________.</li><li>Optional adult-led paper prompt: the next retell prompt could ask ____________________.</li><li>Optional adult-led paper prompt: the card catalog label should say ____________________.</li><li>Optional adult-led paper prompt: the paper-only retell stack is filed under ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 1 | Ages 6-8 | retell a fictional paper-only story by naming one beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Puddle Planet Post Office Story Retell Card</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank page, pencil, and pretend card catalog slip before the Puddle Planet retell begins: ____________________.</p>
+      <p class="kid-direction">Writer: keep the puddle planet, tiny envelopes, and post office helper invented while every retell part stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write who stands at the pretend post office counter and what puddle envelope starts the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the small envelope mark, stamp shape, or puddle reflection that helps the helper remember the middle: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write the helper&#39;s paper choice when two pretend envelope bins seem possible: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write how the helper answers the puddle-envelope question in a calm invented way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: write one tiny Puddle Planet detail worth keeping in the retell: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: write one new paper question an adult can ask when this story is retold later: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the broad pretend label that files this Puddle Planet retell card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the beginning snapshot, ending answer, and card catalog label blanks first: ____________________. Take-home line: retell this pretend Puddle Planet page later with one new envelope detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 2 | Ages 7-9 | retell a fictional paper-only train story by linking a beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Buttonwood Library Train Story Retell Card</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and pretend catalog slip beside the Buttonwood train retell card: ____________________.</p>
+      <p class="kid-direction">Writer: invent the library train, shelf car, ticket tag, and helper while the retell stays private on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write who boards the pretend shelf car and what catalog ticket starts the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the shelf mark, ticket notch, or rolling card that helps the middle make sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write which track label or shelf car the helper chooses when the train pauses: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write how the helper explains where the pretend catalog ticket belongs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: write one Buttonwood train detail the retell should not forget: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: write one adult-led paper prompt for retelling the train story another way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the broad pretend label for this Buttonwood library train retell: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the middle clue and card catalog label, then pause the rest for later: ____________________. Take-home line: retell this pretend train page later with one new shelf-car clue: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 3 | Ages 8-10 | retell a fictional paper-only clocktower story through a beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Cloudberry Clocktower Story Retell Card</h2>
+      <figure>
+        <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+        <figcaption>Cloudberry Clocktower</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a blank page, pencil, and pretend catalog card beside the clocktower retell page: ____________________.</p>
+      <p class="kid-direction">Writer: keep the cloudberry tower, bell cards, floating notes, and helper invented while every retell line stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write who looks up at the pretend clocktower and what cloudberry signal begins the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the bell card, cloud mark, or tower note that explains the middle of the retell: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write the helper&#39;s choice when two pretend tower signals point to different ideas: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write the calm answer the helper gives after sorting the tower signal on paper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: write one cloudberry or clocktower detail that makes the retell clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: write one new paper retell prompt for the clocktower helper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the broad pretend label that files this Cloudberry Clocktower retell: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the beginning snapshot, middle clue, and favorite detail before choosing the ending answer: ____________________. Take-home line: retell this pretend clocktower page later with one new cloud signal: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 4 | Ages 8-10 | retell a fictional paper-only reef story by sorting a beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Tiny Lantern Reef Story Retell Card</h2>
+      <figure>
+        <img src="assets/tiny-lantern-reef.jpg" alt="Tiny Lantern Reef illustration">
+        <figcaption>Tiny Lantern Reef</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and pretend card catalog slip beside the reef retell card: ____________________.</p>
+      <p class="kid-direction">Writer: invent the tiny lanterns, reef paths, shell marks, and helper while the retell stays paper-only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write who notices the first pretend reef lantern and what gentle glow starts the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the shell mark, lantern color word, or reef note that helps the middle connect: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write which harmless lantern path the helper chooses when the reef notes differ: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write how the helper explains the final lantern path on the paper page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: write one tiny reef detail that belongs in every retell: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: write one adult-led question for retelling the reef story with a new detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the broad pretend label for this Tiny Lantern Reef retell: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the lantern beginning, the ending answer, and the card catalog label: ____________________. Take-home line: retell this pretend reef page later with one new lantern path note: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 5 | Ages 7-9 | retell a fictional paper-only errand office story with a beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Acorn Avenue Errand Office Story Retell Card</h2>
+      <figure>
+        <img src="assets/acorn-avenue-errand-office.jpg" alt="Acorn Avenue Errand Office illustration">
+        <figcaption>Acorn Avenue Errand Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one blank page, pencil, and pretend catalog label slip before the errand-office retell: ____________________.</p>
+      <p class="kid-direction">Writer: keep the Acorn Avenue helper, errand slips, desk tray, and paper counter invented: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write who arrives at the pretend errand office and what folded slip starts the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the acorn stamp, tray mark, or desk note that helps the middle of the retell: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write which paper counter or tray the helper chooses when the errand slip changes meaning: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write the clear invented answer the helper gives about the errand slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: write one Acorn Avenue detail that makes the retell easier to remember: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: write one new adult-led paper prompt for retelling the errand office story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the broad pretend label for this Acorn Avenue retell card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the beginning snapshot and middle clue now, then let the adult hold the ending blank for later: ____________________. Take-home line: retell this pretend errand-office page later with one new folded slip: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 6 | Ages 7-9 | retell a fictional paper-only notice board story by naming a beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Pocket Park Notice Board Story Retell Card</h2>
+      <figure>
+        <img src="assets/pocket-park-notice-board.jpg" alt="Pocket Park Notice Board illustration">
+        <figcaption>Pocket Park Notice Board</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and pretend card catalog label beside the Pocket Park retell card: ____________________.</p>
+      <p class="kid-direction">Writer: invent the pocket park, board notes, paper pins, and helper while every retell answer stays offline and on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write who reads the first pretend board note and what park detail starts the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the paper pin, folded corner, or board note that helps the middle become clear: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write which notice the helper chooses when two pretend notes could guide the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write how the helper explains the notice board question in the ending: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: write one pocket-park detail that should stay in the retell: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: write one adult-led paper prompt that starts a later retell of this park page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the broad pretend label that files this Pocket Park retell: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the beginning snapshot, turning choice, and card catalog label: ____________________. Take-home line: retell this pretend notice board page later with one new paper pin detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 7 | Ages 7-9 | retell a fictional compass shop page by naming one beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Penny Path Compass Shop Story Retell Card</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: set out a blank compass shop page, pencil, and card catalog label slip before the retell begins: ____________________.</p>
+      <p class="kid-direction">Adult-led fictional offline paper-only direction: invent a compass shop helper, a penny path mark, and a calm retell that stays on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write what the compass shop helper sees first near the penny path counter: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the paper clue that helps the helper understand the compass mark better: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write the choice the helper makes when the penny path points two pretend ways: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write the answer the helper can give after following the chosen paper path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: choose one tiny compass shop detail from the retell and write why it belongs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: change one small paper clue and retell the same compass shop story another way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the short pretend label for this penny path compass shop retell: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the middle clue line, and the writer fills only the ending answer blank: ____________________. Take-home line: keep the compass shop page with its card catalog label for one later paper retell: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 8 | Ages 8-10 | retell a fictional orchard post page by connecting one beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Orchard Pulley Post Story Retell Card</h2>
+      <figure>
+        <img src="assets/orchard-pulley-post.jpg" alt="Orchard Pulley Post illustration">
+        <figcaption>Orchard Pulley Post</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place a blank orchard post page, pencil, and card catalog label slip beside the retell card: ____________________.</p>
+      <p class="kid-direction">Adult-led fictional offline paper-only direction: invent an orchard post helper and keep the pulley, ribbon marks, and message cards pretend: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write what the orchard helper is carrying, sorting, or checking at the pulley post first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the orchard clue that helps the helper understand the pulley message: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write the paper choice the helper makes when the pulley message could move two ways: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write the calm answer the helper reaches after the turning choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: choose one ribbon mark, branch tag, or pulley arrow from the retell and write why it matters: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: move one orchard clue to a new spot and retell the page with a new path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the short pretend label for this orchard pulley post retell: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult circles the favorite detail line, and the writer fills only the card catalog label blank: ____________________. Take-home line: save the orchard post page with one next retell prompt ready for later paper use: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 9 | Ages 8-10 | retell a fictional blueprint club page with one beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Pond Bridge Blueprint Club Story Retell Card</h2>
+      <figure>
+        <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+        <figcaption>Pond Bridge Blueprint Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: set out a blank blueprint club page, pencil, and card catalog label slip before the paper retell starts: ____________________.</p>
+      <p class="kid-direction">Adult-led fictional offline paper-only direction: invent a blueprint club helper, a pretend pond bridge sketch, and a retell that stays on the page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write what the blueprint helper notices first on the pretend pond bridge sketch: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the blueprint clue that helps the helper understand what needs to change: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write the choice the helper makes when two bridge sketch paths seem possible: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write the answer the helper gives after choosing the bridge sketch path: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: choose one plank line, dotted mark, or folded corner from the retell and write why it helps: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: change one blueprint clue and retell the bridge page with a new ending answer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the short pretend label for this pond bridge blueprint club retell: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the beginning snapshot, and the writer fills only the middle clue blank: ____________________. Take-home line: place the blueprint club page with its card catalog label for one later paper retell: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 10 | Ages 10-11 | retell a fictional revision ferry page by linking one beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Revision River Ferry Story Retell Card</h2>
+      <figure>
+        <img src="assets/revision-river-ferry.jpg" alt="Revision River Ferry illustration">
+        <figcaption>Revision River Ferry</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: set out a blank ferry page, pencil, margin-note slip, and card catalog label before the retell work begins: ____________________.</p>
+      <p class="kid-direction">Adult-led fictional offline paper-only direction: invent a ferry guide who carries pretend revision notes across a made-up river on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write what the ferry guide is revising, sorting, or carrying at the river edge first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the margin clue that helps the ferry guide understand the page in a new way: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write the revision choice the guide makes when two ferry paths could fit the clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write the answer the ferry guide reaches after the chosen revision path crosses the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: choose one margin arrow, ferry tag, or crossed note from the retell and explain why it belongs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: change the ferry guide&#39;s middle clue and retell the same page with a different ending answer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the short pretend label for this revision river ferry retell: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult marks the turning choice line, and the writer fills only the favorite detail blank: ____________________. Take-home line: keep the ferry page with the next retell prompt ready for another offline paper pass: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 11 | Ages 10-11 | retell a fictional greenhouse gate page through one beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Chapter Gate Greenhouse Story Retell Card</h2>
+      <figure>
+        <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+        <figcaption>Chapter Gate Greenhouse</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place a blank greenhouse gate page, pencil, and card catalog label slip where the writer can reach them: ____________________.</p>
+      <p class="kid-direction">Adult-led fictional offline paper-only direction: invent a greenhouse gate keeper, a pretend latch note, and a retell that stays fictional on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Beginning snapshot: write what the greenhouse gate keeper notices first beside the pretend latch note: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Middle clue: write the gate clue that helps the keeper understand what the latch note means: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Turning choice: write the choice the keeper makes when the greenhouse gate note could be retold two ways: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Ending answer: write the answer the keeper reaches after choosing the retell path that fits the clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Favorite detail: choose one latch mark, seed tag, or glasshouse line from the retell and write why it helps: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Next retell prompt: swap one greenhouse gate clue and retell the same page with a new favorite detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Card catalog label: write the short pretend label for this greenhouse gate retell: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the ending answer line, and the writer fills only the next retell prompt blank: ____________________. Take-home line: save the greenhouse gate page with its card catalog label for one later offline paper retell: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 12 | Ages 10-11 | retell a fictional Margin Note Market story by sorting the beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label on paper: ____________________.</div>
+      <h2>Margin Note Market Story Retell Card</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place blank paper, pencil, and this card beside three pretend margin-note slips from one invented market stall: ____________________.</p>
+      <p class="kid-direction">Adult-led fictional offline paper-only direction: retell the made-up market story from the first note to the final label without using real names or real places: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Adult-led fictional offline paper-only beginning snapshot: write what the note keeper first sees at the margin-note stall: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Adult-led fictional offline paper-only middle clue: write the small margin mark, folded corner, or paper tag that helps the retell make sense: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Adult-led fictional offline paper-only turning choice: choose which pretend note the keeper follows when the market path changes: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Adult-led fictional offline paper-only ending answer: write how the note keeper explains what the margin note was trying to show: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Adult-led fictional offline paper-only favorite detail: copy one tiny stall detail that should stay in the retell: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Adult-led fictional offline paper-only next retell prompt: write one new way to retell the same market moment from another pretend slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Adult-led fictional offline paper-only card catalog label: write the broad label for filing this Margin Note Market retell card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Adult-led fictional offline paper-only quiet option: fill only the beginning snapshot, middle clue, and card catalog label first: ____________________. Adult-led fictional offline paper-only take-home line: save the market card and add one next retell prompt on a fresh slip later: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 13 | Ages 10-11 | retell a fictional Blue Pencil Observatory story by naming the beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Blue Pencil Observatory Story Retell Card</h2>
+      <figure>
+        <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+        <figcaption>Blue Pencil Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place blank paper, pencil, and this card beside a pretend observatory note with one blue pencil circle: ____________________.</p>
+      <p class="kid-direction">Adult-led fictional offline paper-only direction: retell the invented observatory moment by following the blue pencil marks across the paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Adult-led fictional offline paper-only beginning snapshot: write where the observatory helper starts beside the blue pencil chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Adult-led fictional offline paper-only middle clue: write the circled mark, tiny arrow, or chart speck that changes what the helper notices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Adult-led fictional offline paper-only turning choice: choose whether the helper checks the chart edge, the pencil tray, or the quiet note first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Adult-led fictional offline paper-only ending answer: write what the helper understands after matching the blue mark to the chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Adult-led fictional offline paper-only favorite detail: save one invented observatory detail, such as a pencil shaving moon or a folded chart tab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Adult-led fictional offline paper-only next retell prompt: write how the same observatory moment could be retold from the chart&#39;s point of view: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Adult-led fictional offline paper-only card catalog label: write the broad label for this Blue Pencil Observatory retell card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Adult-led fictional offline paper-only quiet option: circle the middle clue on scrap paper before filling the ending answer: ____________________. Adult-led fictional offline paper-only take-home line: keep the observatory card and add one new blue pencil clue later: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 14 | Ages 10-11 | retell a fictional Binding Day Boardwalk story by ordering the beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Binding Day Boardwalk Story Retell Card</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place blank paper, pencil, and this card beside pretend boardwalk slips, ribbon marks, and one loose paper cover: ____________________.</p>
+      <p class="kid-direction">Adult-led fictional offline paper-only direction: retell the invented boardwalk story by showing how the paper pieces become easier to follow: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Adult-led fictional offline paper-only beginning snapshot: write what the binding helper sees at the start of the boardwalk row: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Adult-led fictional offline paper-only middle clue: write the ribbon tag, cover mark, or page corner that hints where the retell should go next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Adult-led fictional offline paper-only turning choice: choose which paper piece the helper moves when the boardwalk order feels mixed: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Adult-led fictional offline paper-only ending answer: write how the helper explains the final boardwalk order on the page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Adult-led fictional offline paper-only favorite detail: keep one small boardwalk detail, such as a ribbon knot, cover stamp, or page rail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Adult-led fictional offline paper-only next retell prompt: write one fresh retell path that starts from a different pretend boardwalk slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Adult-led fictional offline paper-only card catalog label: write the broad label for filing this Binding Day Boardwalk retell card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Adult-led fictional offline paper-only quiet option: arrange three paper slips first, then write only the ending answer and label: ____________________. Adult-led fictional offline paper-only take-home line: save the boardwalk card and add one favorite detail on a small paper strip later: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 15 | Ages 7-9 | retell a fictional Sticker Station Mail Cart story by filling a beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Sticker Station Mail Cart Story Retell Card</h2>
+      <figure>
+        <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+        <figcaption>Sticker Station Mail Cart</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place blank paper, pencil, and this card beside pretend sticker slips and a drawn mail-cart pocket: ____________________.</p>
+      <p class="kid-direction">Adult-led fictional offline paper-only direction: retell the made-up cart story with pretend stickers, paper pockets, and gentle choices only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Adult-led fictional offline paper-only beginning snapshot: write where the sticker helper first parks the pretend mail cart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Adult-led fictional offline paper-only middle clue: write the sticker shape, cart pocket, or paper note that helps the helper understand the retell: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Adult-led fictional offline paper-only turning choice: choose which sticker slip the helper places in the cart pocket first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Adult-led fictional offline paper-only ending answer: write how the helper knows the sticker slips are sorted for this story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Adult-led fictional offline paper-only favorite detail: save one tiny sticker-station detail for the retell, such as a star tab or striped cart wheel: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Adult-led fictional offline paper-only next retell prompt: write one way to retell the cart moment with a different sticker slip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Adult-led fictional offline paper-only card catalog label: write the broad label for this Sticker Station Mail Cart retell card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Adult-led fictional offline paper-only quiet option: point to the cart pocket and fill only the middle clue first: ____________________. Adult-led fictional offline paper-only take-home line: keep the sticker card and draw one new pretend slip for another retell later: ____________________.</p>
+    </section>
+
+    <section class="pack-page retell-card-page">
+      <div class="page-kicker">Retell Card 16 | Ages 7-9 | retell a fictional Paperclip Plaza Parcel Day story by naming the beginning snapshot, middle clue, turning choice, ending answer, favorite detail, next retell prompt, and card catalog label: ____________________.</div>
+      <h2>Paperclip Plaza Parcel Day Story Retell Card</h2>
+      <figure>
+        <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+        <figcaption>Paperclip Plaza Parcel Day</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult-led fictional offline paper-only setup: place blank paper, pencil, and this card beside pretend parcel tags and a drawn paperclip plaza tray: ____________________.</p>
+      <p class="kid-direction">Adult-led fictional offline paper-only direction: retell the invented parcel-day story with paperclip marks, pretend tags, and no real details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Beginning snapshot</h3>
+      <p>Adult-led fictional offline paper-only beginning snapshot: write what the plaza helper first sees in the parcel tray: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Middle clue</h3>
+      <p>Adult-led fictional offline paper-only middle clue: write the paperclip mark, tag color, or folded corner that helps the retell move forward: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Turning choice</h3>
+      <p>Adult-led fictional offline paper-only turning choice: choose which pretend parcel tag the helper checks before the tray can settle: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending answer</h3>
+      <p>Adult-led fictional offline paper-only ending answer: write how the helper explains where the pretend parcel belongs in the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Favorite detail</h3>
+      <p>Adult-led fictional offline paper-only favorite detail: keep one small plaza detail, such as a shiny clip shape or a tidy tag stack: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Next retell prompt</h3>
+      <p>Adult-led fictional offline paper-only next retell prompt: write one new retell prompt that starts with a different paperclip mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Card catalog label</h3>
+      <p>Adult-led fictional offline paper-only card catalog label: write the broad label for this Paperclip Plaza Parcel Day retell card: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Adult-led fictional offline paper-only quiet option: fill the beginning snapshot and favorite detail before adding the ending answer: ____________________. Adult-led fictional offline paper-only take-home line: save the parcel card and add one new pretend tag for another paper retell later: ____________________.</p>
+    </section>
+  </body>
+</html>

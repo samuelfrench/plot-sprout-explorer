@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-04-batch61",
+  "generatedAt": "2026-06-04",
+  "productSlug": "card-catalog-story-retell-card-pack",
+  "title": "Card Catalog Story Retell Card Pack",
+  "pricePoint": "$95",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.",
+  "files": {
+    "pdf": {
+      "path": "product-build/card-catalog-story-retell-card-pack/Card-Catalog-Story-Retell-Card-Pack.pdf",
+      "sha256": "e6502089265c9837ebc7dd665daec19bec32620119f9a6c56de7d1da55b757e6",
+      "size": 4811380
+    },
+    "zip": {
+      "path": "product-build/card-catalog-story-retell-card-pack/card-catalog-story-retell-card-pack.zip",
+      "sha256": "3e557d7e2dc054d40433e7ae8f054f0768f7b7b2ddb36032b1e51bff3f9f46ab",
+      "size": 9208713
+    },
+    "sourceHtml": {
+      "path": "product-build/card-catalog-story-retell-card-pack/source/card-catalog-story-retell-card-pack.html",
+      "sha256": "f0d1cd3f2dd9fe801f08ffb088cf1747ebd08fab269f8d05553853feab54518e",
+      "size": 65847
+    },
+    "readme": {
+      "path": "product-build/card-catalog-story-retell-card-pack/README.txt",
+      "sha256": "18944eee0c3da0e58a1883d84e0d1bf4aa9a4f934fdc8ab00b27e996b345e22e",
+      "size": 547
+    },
+    "assets": [
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/puddle-planet-post-office.jpg",
+        "sha256": "abf1065c54d207cce767bd8a5081e2483bfa37fc4a7d9a476bd65f4e5c914e44",
+        "size": 304692
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/cloudberry-clocktower.jpg",
+        "sha256": "3204161ea211c5e28ca7cfeae6e7cfc97be61f53ca978a3606435351731ad6e3",
+        "size": 366382
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/tiny-lantern-reef.jpg",
+        "sha256": "2fc79f2835c185ed4110b7edfab6921ab3a004b059837733502ddc7d407d370f",
+        "size": 326494
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/acorn-avenue-errand-office.jpg",
+        "sha256": "6a03793185df55cec19476f00b934d579411bb6b5604bf775f08adb362748734",
+        "size": 223995
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/pocket-park-notice-board.jpg",
+        "sha256": "c6b875ed84237505da7fa786dddd988cc9a3eb6573e34a1dc3f02f980bd3470f",
+        "size": 171837
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/orchard-pulley-post.jpg",
+        "sha256": "7a51a3f1f4413db9566324b67ca123c16f482d925b5246204786bcfedeb5e1da",
+        "size": 214727
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/pond-bridge-blueprint-club.jpg",
+        "sha256": "0fe8f3c9f82671ca8e6daa82a2c54eeda4d2c86d0d1e65a86e366df3f5f0f707",
+        "size": 238332
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/revision-river-ferry.jpg",
+        "sha256": "2dba89df674e1933a7ab40b03102a0e134e8ad3b40dfc70095a166ba7e409e3c",
+        "size": 264350
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/chapter-gate-greenhouse.jpg",
+        "sha256": "2a34e6f4bafcaaf422f06aa11146c3d4247b0b7cd76b3fd207dffcb11aa2b2d1",
+        "size": 289788
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/blue-pencil-observatory.jpg",
+        "sha256": "63eb8f59349d2a8b64c553669fffd66268a0560919cef1d9bb41a57addc880ae",
+        "size": 286058
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/sticker-station-mail-cart.jpg",
+        "sha256": "3ac216af41b988ed757c346983c7c30bd6e182daf96403981799ada1b40b6429",
+        "size": 177751
+      },
+      {
+        "path": "product-build/card-catalog-story-retell-card-pack/source/assets/paperclip-plaza-parcel-day.jpg",
+        "sha256": "c7287db2a3788e8e0a567ea114b5ec913e61c8e11de424d2a30a2fc81c90ed5b",
+        "size": 379900
+      }
+    ]
+  }
+}

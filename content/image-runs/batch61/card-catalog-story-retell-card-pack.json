@@ -1,0 +1,23 @@
+{
+  "slug": "card-catalog-story-retell-card-pack",
+  "prompt": "family-friendly top-down close-cropped product photo on seamless pale neutral background, one blank beige card catalog tray, neat stack of blank off-white retell cards, three blank beige catalog label slips, clean printable paper kit, paper-only stationery arrangement, unmarked paper, no writing, no symbols, no decorative props",
+  "negativePrompt": "text, writing, letters, words, labels, titles, logo, watermark, symbols, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, spiral binding, notebook, school, home, address, route, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, review, rating, score, grade, timer, food, allergy, medical, scary, weapons, bullying, plants, leaves, leaf, greenery, succulent, plant pot, flowers, wood, stone, desk decor, tabletop props, cups, bowls, thread, yarn, string, twine, roll, fabric, cloth, ribbon, children, faces, hands, clutter, colored background, pink background, dark shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "checkpoint",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7,
+  "seed": 260661196,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch61/card-catalog-story-retell-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch61/card-catalog-story-retell-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-04-batch61-images.json",
+  "title": "Card Catalog Story Retell Card Pack",
+  "postProcess": {
+    "tool": "ImageMagick",
+    "operation": "crop 944x768+400+0, resize 1344x768",
+    "reason": "Removed out-of-scope twine prop from the SDXL product hero while preserving the blank card catalog tray and paper cards."
+  }
+}

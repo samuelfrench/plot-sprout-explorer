@@ -72,6 +72,8 @@ export const fileBoxStoryTurningPointCardPackProductSlug =
   'file-box-story-turning-point-card-pack'
 export const archiveDrawerStoryResolutionCardPackProductSlug =
   'archive-drawer-story-resolution-card-pack'
+export const cardCatalogStoryRetellCardPackProductSlug =
+  'card-catalog-story-retell-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -83,6 +85,7 @@ const pocketFolderStoryGoalPathRequiredSafety = manilaFolderStoryClueTrailRequir
 const hangingFileStoryDecisionPointRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 const fileBoxStoryTurningPointRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 const archiveDrawerStoryResolutionRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
+const cardCatalogStoryRetellRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 
 const familySafetyBlockedTerms = [
   /\bweapon(s)?\b/i,
@@ -603,6 +606,16 @@ const requiredArchiveDrawerStoryResolutionCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/archive-drawer-story-resolution-card-pack/source/archive-drawer-story-resolution-card-pack.html',
   manifestPath: 'product-build/archive-drawer-story-resolution-card-pack/manifest.json',
+}
+
+const requiredCardCatalogStoryRetellCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/card-catalog-story-retell-card-pack/Card-Catalog-Story-Retell-Card-Pack.pdf',
+  zipPath:
+    'product-build/card-catalog-story-retell-card-pack/card-catalog-story-retell-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/card-catalog-story-retell-card-pack/source/card-catalog-story-retell-card-pack.html',
+  manifestPath: 'product-build/card-catalog-story-retell-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -18293,6 +18306,547 @@ export function validateArchiveDrawerStoryResolutionCardPackSourceFiles(source, 
   return errors
 }
 
+
+const cardCatalogStoryRetellSourceKeys = [
+  'batchId',
+  'generatedAt',
+  'productSlug',
+  'title',
+  'pricePoint',
+  'audience',
+  'sessionLength',
+  'safetyNote',
+  'artifact',
+  'sourceFiles',
+  'worldSlugs',
+  'cover',
+  'adultGuide',
+  'retellRoutines',
+  'takeHomeRetellSlips',
+  'optionalAdultPrompts',
+  'cards',
+]
+
+const cardCatalogStoryRetellCardKeys = [
+  'id',
+  'title',
+  'worldSlug',
+  'ageBand',
+  'retellSkill',
+  'useCase',
+  'adultSetup',
+  'kidDirection',
+  'beginningSnapshotPrompt',
+  'middleCluePrompt',
+  'turningChoicePrompt',
+  'endingAnswerPrompt',
+  'favoriteDetailPrompt',
+  'nextRetellPrompt',
+  'cardCatalogLabelPrompt',
+  'quietOptionLine',
+  'takeHomeLine',
+]
+
+const cardCatalogStoryRetellSourceFiles = [
+  'content/product-artifacts/lanes/batch61-card-catalog-retell-cards-a.json',
+  'content/product-artifacts/lanes/batch61-card-catalog-retell-cards-b.json',
+  'content/product-artifacts/lanes/batch61-card-catalog-retell-cards-c.json',
+  'content/product-artifacts/lanes/batch61-card-catalog-retell-tools.json',
+]
+
+const cardCatalogStoryRetellExpectedWorldSlugs = [
+  'puddle-planet-post-office',
+  'buttonwood-library-train',
+  'cloudberry-clocktower',
+  'tiny-lantern-reef',
+  'acorn-avenue-errand-office',
+  'pocket-park-notice-board',
+  'penny-path-compass-shop',
+  'orchard-pulley-post',
+  'pond-bridge-blueprint-club',
+  'revision-river-ferry',
+  'chapter-gate-greenhouse',
+  'margin-note-market',
+  'blue-pencil-observatory',
+  'binding-day-boardwalk',
+  'sticker-station-mail-cart',
+  'paperclip-plaza-parcel-day',
+]
+
+const cardCatalogStoryRetellExpectedWorldAges = new Map([
+  ['puddle-planet-post-office', '6-8'],
+  ['buttonwood-library-train', '7-9'],
+  ['cloudberry-clocktower', '8-10'],
+  ['tiny-lantern-reef', '8-10'],
+  ['acorn-avenue-errand-office', '7-9'],
+  ['pocket-park-notice-board', '7-9'],
+  ['penny-path-compass-shop', '7-9'],
+  ['orchard-pulley-post', '8-10'],
+  ['pond-bridge-blueprint-club', '8-10'],
+  ['revision-river-ferry', '10-11'],
+  ['chapter-gate-greenhouse', '10-11'],
+  ['margin-note-market', '10-11'],
+  ['blue-pencil-observatory', '10-11'],
+  ['binding-day-boardwalk', '10-11'],
+  ['sticker-station-mail-cart', '7-9'],
+  ['paperclip-plaza-parcel-day', '7-9'],
+])
+
+const cardCatalogStoryRetellPriorSourceFiles = new Map([
+  [56, 'content/product-artifacts/manila-folder-story-clue-trail-card-pack.json'],
+  [57, 'content/product-artifacts/pocket-folder-story-goal-path-card-pack.json'],
+  [58, 'content/product-artifacts/hanging-file-story-decision-point-card-pack.json'],
+  [59, 'content/product-artifacts/file-box-story-turning-point-card-pack.json'],
+  [60, 'content/product-artifacts/archive-drawer-story-resolution-card-pack.json'],
+])
+
+const cardCatalogStoryRetellExpectedOverlaps = new Map([
+  [56, 8],
+  [57, 7],
+  [58, 7],
+  [59, 8],
+  [60, 2],
+])
+
+function readCardCatalogStoryRetellPriorWorldSet(batchNumber) {
+  const sourceFile = cardCatalogStoryRetellPriorSourceFiles.get(batchNumber)
+  const source = JSON.parse(readFileSync(resolve(import.meta.dirname, '..', sourceFile), 'utf8'))
+  return new Set(source.worldSlugs)
+}
+
+function cardCatalogStoryRetellTitleFromWorldSlug(slug) {
+  return slug
+    .split('-')
+    .map((part) => part[0].toUpperCase() + part.slice(1))
+    .join(' ')
+    .replace('Map Mixup', 'Map Mix-Up')
+}
+
+function cardCatalogStoryRetellTitleAliases(slug) {
+  return [cardCatalogStoryRetellTitleFromWorldSlug(slug)]
+}
+
+function normalizeCardCatalogStoryRetellAllowedText(value) {
+  let text = JSON.stringify(value)
+    .replace(
+      /\bNo scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts\./gi,
+      '',
+    )
+    .replace(/\buse pretend characters, places, and actions only; do not ask for real names or personal facts\b/gi, '')
+    .replace(/\bdo not ask for real names or personal facts\b/gi, '')
+    .replace(/\buse pretend names, broad made-up places, and invented actions instead of personal facts or exact identifiers\b/gi, '')
+    .replace(/\buse pretend names, broad made-up places, and invented actions instead of exact identifiers or personal facts\b/gi, '')
+    .replace(/\buse pretend names, broad made-up places, and invented actions instead of personal facts\b/gi, '')
+    .replace(/\bwithout using real names or real-life details\b/gi, '')
+    .replace(/\binstead of crowding this ending\b/gi, '')
+    .replace(/\badult-led\b/gi, '')
+    .replace(/\badult\b/gi, '')
+    .replace(/\boffline\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+    .replace(/\bfamilies\b/gi, '')
+    .replace(/\bfamily\b/gi, '')
+    .replace(/\bhomeschool\b/gi, '')
+    .replace(/\btutors?\b/gi, '')
+    .replace(/\bfictional\b/gi, '')
+    .replace(/\bpretend\b/gi, '')
+    .replace(/\binvented\b/gi, '')
+    .replace(/\bmade-up\b/gi, '')
+    .replace(/\bmade up\b/gi, '')
+    .replace(/\bcard[- ]catalog story retell card pack\b/gi, '')
+    .replace(/\bcard[- ]catalog story retell card(s)?\b/gi, '')
+    .replace(/\bcard[- ]catalog retell card(s)?\b/gi, '')
+    .replace(/\bcard[- ]catalog(s)?\b/gi, '')
+    .replace(/\bretell card(s)?\b/gi, '')
+    .replace(/\bretell(s)?\b/gi, '')
+    .replace(/\bbeginning snapshot(s)?\b/gi, '')
+    .replace(/\bmiddle clue(s)?\b/gi, '')
+    .replace(/\bturning choice(s)?\b/gi, '')
+    .replace(/\bending answer(s)?\b/gi, '')
+    .replace(/\bfavorite detail(s)?\b/gi, '')
+    .replace(/\bnext[- ]retell prompt(s)?\b/gi, '')
+    .replace(/\bcard catalog label(s)?\b/gi, '')
+    .replace(/\blabel(s)?\b/gi, '')
+    .replace(/\bpage(s)?\b/gi, '')
+    .replace(/\bpaper\b/gi, '')
+    .replace(/\bblank(s)?\b/gi, '')
+    .replace(/\bnote(s)?\b/gi, '')
+    .replace(/\bcard(s)?\b/gi, '')
+    .replace(/\bwriter(s)?\b/gi, '')
+    .replace(/\bwriting\b/gi, '')
+    .replace(/\bchild\b/gi, '')
+    .replace(/\bkid\b/gi, '')
+    .replace(/\bcharacter(s)?\b/gi, '')
+
+  for (const slug of cardCatalogStoryRetellExpectedWorldSlugs) {
+    text = removeLiteralTerm(text, slug)
+    text = removeLiteralTerm(text, cardCatalogStoryRetellTitleFromWorldSlug(slug))
+  }
+  return text
+}
+
+function validateNoUnsafeCardCatalogStoryRetellLanguage(value, label, errors) {
+  const allowedText = normalizeCardCatalogStoryRetellAllowedText(value)
+  pushIf(
+    errors,
+    /\baccounts?\b|\bschool accounts?\b|\blogins?\b|\blog in\b|\bsign-?in\b|\bportal(s)?\b|\bapps?\b|\bqr\b|\bqr codes?\b|\bupload(s|ed|ing)?\b|\bpublic\b|\bpublish(es|ed|ing|able)?\b|\bpublication(s)?\b|\breviews?\b|\bratings?\b|\bcomments?\b|\blikes?\b|\bfollowers?\b|\bsubscribers?\b|\bforums?\b|\bsocial\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\brecording(s)?\b|\btranscri(be|bes|bed|bing|pt|pts|ption|ptions)\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphone(s)?\b|\btablet(s)?\b|\blaptop(s)?\b|\bcomputer(s)?\b|\bscreen(s)?\b|\bdevice(s)?\b|\bphotos?\b|\bcameras?\b|\bstudent(s)?\b|\bteacher(s)?\b|\bacadem(y|ies)\b|\bschool(s)?\b|\bwrite (the )?real name(s)?\b|\breal identity\b|\bidentity details?\b|\baddress(es)?\b|\bstreets?\b|\bprivate locations?\b|\bexact locations?\b|\blocation details?\b|\breal route(s)?\b|\broute details?\b|\bgps\b|\bcoordinates?\b|\bexact schedules?\b|\bschedules?\b|\bprivate child data\b|\breal child data\b|\bpersonal facts?\b|\bpersonal details?\b|\bpersonal disclosure(s)?\b|\bprivate child profile(s)?\b|\bprivate profiles?\b|\bchild profiles?\b|\bstudent profiles?\b|\bprofiles?\b|\bdiar(y|ies)\b|\bjournal(s)?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bassessment(s)?\b|\bperfect\b|\bshowcase(s|d|ing)?\b|\bportfolio(s)?\b|\bdisplay(s|ed|ing)?\b|\bspell(ing|s|ed)?\b|\btimer(s)?\b|\btimed\b|\bcontest(s)?\b|\bprizes?\b|\bwinners?\b|\bleaderboard(s)?\b|\bviral\b|\bpayments?\b|\bcheckout(s)?\b|\bprovider(s)?\b|\bstripe\b|\bchapter book(s)?\b|\bepisode(s)?\b|\bscreenplay(s)?\b|\bcliffhanger(s)?\b|\bplot twist(es)?\b|\bchoose your own adventure\b|\bfood(s)?\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b|\bprofessional advice\b|\bpolitic(s|al)?\b|\belection(s)?\b|\bvote(s|d|r|rs|ing)?\b|\bcampaign(s|ing)?\b|\breligion\b|\breligious\b|\bprayer(s)?\b|\bbet(s|ting)?\b|\bgambling\b|\bcasino(s)?\b|\bpokemon\b|\bpokémon\b|\bbranded character(s)?\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes account, upload, public, address, addresses, food, foods, publishing, publishable, review, rating, showcase, portfolio, display, perfect, rubric, assessment, spelling, episode, chapter book, screenplay, cliffhanger, plot twist, choose your own adventure, recording, voice memo, timer, score, private child profile, election, prayer, bet, Pokemon, school, academy, student, teacher, real name, home address, camera, photo, audio, video, allergy, medical, diary, student profile, personal disclosure, provider, payment, checkout, Stripe, real-identity, route, GPS, schedule, location, profile, politics, religion, gambling, branded character, scary, harm, bullying, fighting, or weapon language.`,
+  )
+}
+
+function validateCardCatalogStoryRetellCard(
+  card,
+  index,
+  sourceWorldSlugs,
+  knownWorldSlugs,
+  knownWorldRecords,
+  cardIds,
+  errors,
+) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(card)) !== JSON.stringify(cardCatalogStoryRetellCardKeys),
+    `${label} keys must match the exact card catalog retell card field order.`,
+  )
+
+  for (const key of cardCatalogStoryRetellCardKeys) validateString(card[key], `${label}.${key}`, errors)
+
+  const expectedWorldSlug = cardCatalogStoryRetellExpectedWorldSlugs[index]
+  const expectedId = `card-catalog-retell-card-${String(index + 1).padStart(2, '0')}`
+  const expectedAgeBand = cardCatalogStoryRetellExpectedWorldAges.get(expectedWorldSlug)
+  const expectedTitles = cardCatalogStoryRetellTitleAliases(expectedWorldSlug)
+  pushIf(errors, card.id !== expectedId, `${label}.id must be ${expectedId}.`)
+  pushIf(errors, card.worldSlug !== expectedWorldSlug, `${label}.worldSlug must be ${expectedWorldSlug}.`)
+  pushIf(errors, card.ageBand !== expectedAgeBand, `${label}.ageBand must be ${expectedAgeBand}.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.title) && !expectedTitles.some((expectedTitle) => card.title.includes(expectedTitle)),
+    `${label}.title must include ${expectedTitles[0]}.`,
+  )
+  pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+  cardIds.add(card.id)
+
+  pushIf(errors, !['6-8', '7-8', '7-9', '8-10', '10-11'].includes(card.ageBand), `${label}.ageBand is not allowed.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) && isNonEmptyString(worldAgeBand) && card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) && !(/retell/i.test(card.useCase) && /\bcard\b/i.test(card.useCase)),
+    `${label}.useCase must say card catalog retell card.`,
+  )
+
+  for (const key of cardCatalogStoryRetellCardKeys.filter(
+    (field) => !['id', 'title', 'worldSlug', 'ageBand', 'retellSkill'].includes(field),
+  )) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeCardCatalogStoryRetellLanguage(card, label, errors)
+}
+
+function validateCardCatalogStoryRetellRoutine(routine, index, errors) {
+  const label = `retellRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(routine)) !== JSON.stringify(['title', 'time', 'materials', 'steps', 'adultWrapLine']),
+    `${label} must use the exact retell routine field order.`,
+  )
+  for (const key of ['title', 'time', 'materials', 'adultWrapLine']) validateString(routine[key], `${label}.${key}`, errors)
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  if (Array.isArray(routine.steps)) {
+    routine.steps.forEach((step, stepIndex) => {
+      pushIf(errors, isNonEmptyString(step) && !hasWritableBlank(step), `${label}.steps[${stepIndex}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(step) && hasSnakeCasePlaceholder(step), `${label}.steps[${stepIndex}] must use human-readable text, not snake_case placeholders.`)
+    })
+  }
+  pushIf(errors, isNonEmptyString(routine.adultWrapLine) && !hasWritableBlank(routine.adultWrapLine), `${label}.adultWrapLine must include a writable blank.`)
+  validateNoUnsafeCardCatalogStoryRetellLanguage(routine, label, errors)
+}
+
+export function validateCardCatalogStoryRetellCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Card Catalog Story Retell Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs ?? [])
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(source)) !== JSON.stringify(cardCatalogStoryRetellSourceKeys),
+    'source must use the exact Batch 61 card catalog retell source field order.',
+  )
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-04-batch61', 'batchId must be 2026-06-04-batch61.')
+  pushIf(errors, source.generatedAt !== '2026-06-04', 'generatedAt must be 2026-06-04.')
+  pushIf(
+    errors,
+    source.productSlug !== cardCatalogStoryRetellCardPackProductSlug,
+    `productSlug must be ${cardCatalogStoryRetellCardPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Card Catalog Story Retell Card Pack', 'title must be Card Catalog Story Retell Card Pack.')
+  pushIf(errors, source.pricePoint !== '$95', 'pricePoint must be $95.')
+  pushIf(
+    errors,
+    !source.safetyNote?.includes(cardCatalogStoryRetellRequiredSafety),
+    'safetyNote must include required Batch 61 safety sentence.',
+  )
+
+  if (product) {
+    pushIf(errors, product.slug !== source.productSlug, 'product.slug must match productSlug.')
+    pushIf(errors, product.title !== source.title, 'product.title must match title.')
+    pushIf(errors, product.pricePoint !== source.pricePoint, 'product.pricePoint must match pricePoint.')
+    pushIf(errors, product.status !== 'checkout_pending', 'product.status must remain checkout_pending.')
+    pushIf(errors, Array.isArray(product.worldSlugs) && !sameStringSet(source.worldSlugs, product.worldSlugs), 'worldSlugs must match product.worldSlugs.')
+  }
+
+  pushIf(errors, !Array.isArray(source.sourceFiles), 'sourceFiles must be an array.')
+  if (Array.isArray(source.sourceFiles)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.sourceFiles) !== JSON.stringify(cardCatalogStoryRetellSourceFiles),
+      'sourceFiles must list the exact Batch 61 card catalog retell card lane and tools files.',
+    )
+  }
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set()
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.worldSlugs) !== JSON.stringify(cardCatalogStoryRetellExpectedWorldSlugs),
+      'worldSlugs must match the exact Batch 61 card catalog retell world set.',
+    )
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, sourceWorldSlugs.has(slug), `worldSlugs includes duplicate slug ${slug}.`)
+      sourceWorldSlugs.add(slug)
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+    for (const [batchNumber, expectedOverlap] of cardCatalogStoryRetellExpectedOverlaps) {
+      const overlapSet = readCardCatalogStoryRetellPriorWorldSet(batchNumber)
+      const overlap = source.worldSlugs.filter((slug) => overlapSet.has(slug))
+      pushIf(
+        errors,
+        overlap.length !== expectedOverlap,
+        `Batch61 must overlap Batch${batchNumber} in exactly ${expectedOverlap} worlds; overlapping slugs: ${overlap.join(', ')}.`,
+      )
+    }
+  }
+
+  validateArtifactPaths(
+    source,
+    requiredCardCatalogStoryRetellCardPackArtifactPaths,
+    'Card Catalog Story Retell Card Pack',
+    errors,
+  )
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) validateString(source.cover[key], `cover.${key}`, errors)
+    validateExactStringArray(source.cover.included, 11, 'cover.included', errors)
+    validateNoUnsafeCardCatalogStoryRetellLanguage(source.cover, 'cover', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    pushIf(
+      errors,
+      JSON.stringify(Object.keys(source.adultGuide)) !== JSON.stringify(['title', 'bullets']),
+      'adultGuide must use the exact field order.',
+    )
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    validateExactStringArray(source.adultGuide.bullets, 6, 'adultGuide.bullets', errors)
+    if (Array.isArray(source.adultGuide.bullets)) {
+      source.adultGuide.bullets.forEach((bullet, index) => {
+        pushIf(errors, isNonEmptyString(bullet) && !hasWritableBlank(bullet), `adultGuide.bullets[${index}] must include a writable blank.`)
+        pushIf(errors, isNonEmptyString(bullet) && hasSnakeCasePlaceholder(bullet), `adultGuide.bullets[${index}] must use human-readable text, not snake_case placeholders.`)
+      })
+    }
+    validateNoUnsafeCardCatalogStoryRetellLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.retellRoutines), 'retellRoutines must be an array.')
+  if (Array.isArray(source.retellRoutines)) {
+    pushIf(errors, source.retellRoutines.length !== 6, 'retellRoutines must have exactly 6 entries.')
+    source.retellRoutines.forEach((routine, index) => validateCardCatalogStoryRetellRoutine(routine, index, errors))
+  }
+
+  validateExactStringArray(source.takeHomeRetellSlips, 10, 'takeHomeRetellSlips', errors)
+  if (Array.isArray(source.takeHomeRetellSlips)) {
+    source.takeHomeRetellSlips.forEach((slip, index) => {
+      pushIf(errors, isNonEmptyString(slip) && !hasWritableBlank(slip), `takeHomeRetellSlips[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(slip) && hasSnakeCasePlaceholder(slip), `takeHomeRetellSlips[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeCardCatalogStoryRetellLanguage(slip, `takeHomeRetellSlips[${index}]`, errors)
+    })
+  }
+
+  validateExactStringArray(source.optionalAdultPrompts, 8, 'optionalAdultPrompts', errors)
+  if (Array.isArray(source.optionalAdultPrompts)) {
+    source.optionalAdultPrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalAdultPrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalAdultPrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeCardCatalogStoryRetellLanguage(prompt, `optionalAdultPrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateCardCatalogStoryRetellCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size !== 16, 'cards must cover exactly 16 unique worlds.')
+  }
+
+  validateNoUnsafeCardCatalogStoryRetellLanguage(
+    source,
+    'Card Catalog Story Retell Card Pack source',
+    errors,
+  )
+  validateNoRiskyLanguage(source, 'Card Catalog Story Retell Card Pack source', errors)
+  return errors
+}
+
+function validateCardCatalogStoryRetellToolLane(lane, sourceFile, errors) {
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(lane)) !==
+      JSON.stringify(['adultGuide', 'retellRoutines', 'takeHomeRetellSlips', 'optionalAdultPrompts']),
+    `${sourceFile} must use the exact Batch 61 tools field order.`,
+  )
+  const sourceLike = {
+    adultGuide: lane.adultGuide,
+    retellRoutines: lane.retellRoutines,
+    takeHomeRetellSlips: lane.takeHomeRetellSlips,
+    optionalAdultPrompts: lane.optionalAdultPrompts,
+  }
+  for (const [path, value] of Object.entries(flattenStrings(sourceLike))) {
+    pushIf(errors, isNonEmptyString(value) && !hasWritableBlank(value), `${sourceFile}.${path} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(value) && hasSnakeCasePlaceholder(value), `${sourceFile}.${path} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeCardCatalogStoryRetellLanguage(lane, sourceFile, errors)
+}
+
+export function validateCardCatalogStoryRetellCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three card catalog retell card lanes and one tools lane.')
+  pushIf(
+    errors,
+    JSON.stringify(source.sourceFiles) !== JSON.stringify(cardCatalogStoryRetellSourceFiles),
+    'sourceFiles must list the exact Batch 61 card catalog retell card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedRange = sourceFile.includes('-cards-a')
+        ? { min: 1, max: 6, count: 6, label: '01-06' }
+        : sourceFile.includes('-cards-b')
+        ? { min: 7, max: 11, count: 5, label: '07-11' }
+        : sourceFile.includes('-cards-c')
+        ? { min: 12, max: 16, count: 5, label: '12-16' }
+        : null
+
+      if (Array.isArray(lane) && expectedRange) {
+        cardLaneFiles.push({ sourceFile, lane })
+        pushIf(errors, lane.length !== expectedRange.count, `${sourceFile} must contain exactly ${expectedRange.count} cards.`)
+        const cardIds = new Set()
+        const sourceWorldSlugs = new Set(cardCatalogStoryRetellExpectedWorldSlugs)
+        const knownWorldRecords = cardCatalogStoryRetellExpectedWorldAges
+        lane.forEach((card) => {
+          const match = String(card?.id ?? '').match(/-(\d{2})$/)
+          const cardNumber = match ? Number(match[1]) : NaN
+          pushIf(
+            errors,
+            !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max,
+            `${sourceFile} must include card numbers ${expectedRange.label}.`,
+          )
+          if (Number.isInteger(cardNumber)) {
+            validateCardCatalogStoryRetellCard(
+              card,
+              cardNumber - 1,
+              sourceWorldSlugs,
+              sourceWorldSlugs,
+              knownWorldRecords,
+              cardIds,
+              errors,
+            )
+          }
+        })
+      } else if (isObject(lane) && isObject(lane.adultGuide)) {
+        toolLaneFiles.push({ sourceFile, lane })
+        validateCardCatalogStoryRetellToolLane(lane, sourceFile, errors)
+      } else {
+        errors.push(`${sourceFile} must be a Batch 61 card catalog retell card array lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three card catalog retell card lane files.')
+  pushIf(errors, toolLaneFiles.length !== 1, 'sourceFiles must include exactly one card catalog retell tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles retell card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'retellRoutines', 'takeHomeRetellSlips', 'optionalAdultPrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -18552,6 +19106,8 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
       ? artifact
       : artifact?.pdfPath === requiredDeskLampStoryProblemCardPackArtifactPaths.pdfPath
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
+      : artifact?.pdfPath === requiredCardCatalogStoryRetellCardPackArtifactPaths.pdfPath
+      ? requiredCardCatalogStoryRetellCardPackArtifactPaths
       : artifact?.pdfPath === requiredArchiveDrawerStoryResolutionCardPackArtifactPaths.pdfPath
       ? requiredArchiveDrawerStoryResolutionCardPackArtifactPaths
       : artifact?.pdfPath === requiredFileBoxStoryTurningPointCardPackArtifactPaths.pdfPath

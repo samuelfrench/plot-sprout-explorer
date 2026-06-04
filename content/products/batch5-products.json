@@ -5483,6 +5483,143 @@
           "summary": "A pretend Index Card Theater Club world for closing one loose thread and saving one next-story seed."
         }
       ]
+    },
+    {
+      "slug": "card-catalog-story-retell-card-pack",
+      "title": "Card Catalog Story Retell Card Pack",
+      "pricePoint": "$95",
+      "status": "checkout_pending",
+      "headline": "A printable retell card pack for restating paper stories without pressure.",
+      "summary": "Sixteen card catalog cards help kids retell fictional stories with beginning snapshots, middle clues, turning choices, ending answers, favorite details, and labels.",
+      "heroImage": "images/plotsprout/batch61/card-catalog-story-retell-card-pack.jpg",
+      "ctaLabel": "Request card catalog pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Card%20Catalog%20Story%20Retell%20Card%20Pack",
+      "checkoutNote": "Checkout is pending until the payment provider is selected; this static card catalog pack page is ready for hosted checkout wiring but does not accept payment yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "puddle-planet-post-office",
+        "buttonwood-library-train",
+        "cloudberry-clocktower",
+        "tiny-lantern-reef",
+        "acorn-avenue-errand-office",
+        "pocket-park-notice-board",
+        "penny-path-compass-shop",
+        "orchard-pulley-post",
+        "pond-bridge-blueprint-club",
+        "revision-river-ferry",
+        "chapter-gate-greenhouse",
+        "margin-note-market",
+        "blue-pencil-observatory",
+        "binding-day-boardwalk",
+        "sticker-station-mail-cart",
+        "paperclip-plaza-parcel-day"
+      ],
+      "includedPages": [
+        "Sixteen printable card catalog retell cards",
+        "Adult setup guide",
+        "Beginning snapshot prompts",
+        "Middle clue prompts",
+        "Turning choice prompts",
+        "Ending answer prompts",
+        "Favorite detail prompts",
+        "Next retell prompts",
+        "Ten take-home retell slips",
+        "Provider-ready PDF, source HTML, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family paper table for retelling short fictional drafts",
+        "A homeschool writing station for beginning-middle-ending retell practice",
+        "A tutoring pack for writers who need concrete retell order",
+        "An adult-led small group activity with no accounts or online posting"
+      ],
+      "parentSteps": [
+        "Print one retell card and set it beside a blank page.",
+        "Ask for the beginning snapshot before asking for the middle clue.",
+        "Let the child point, dictate, sketch, or write one short line per blank.",
+        "Close with a card catalog label and save the next retell prompt for later."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "puddle-planet-post-office",
+          "title": "Puddle Planet Post Office",
+          "summary": "A pretend Puddle Planet Post Office world for restating one story in card catalog order."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "title": "Buttonwood Library Train",
+          "summary": "A pretend Buttonwood Library Train world for restating one story in card catalog order."
+        },
+        {
+          "slug": "cloudberry-clocktower",
+          "title": "Cloudberry Clocktower",
+          "summary": "A pretend Cloudberry Clocktower world for restating one story in card catalog order."
+        },
+        {
+          "slug": "tiny-lantern-reef",
+          "title": "Tiny Lantern Reef",
+          "summary": "A pretend Tiny Lantern Reef world for restating one story in card catalog order."
+        },
+        {
+          "slug": "acorn-avenue-errand-office",
+          "title": "Acorn Avenue Errand Office",
+          "summary": "A pretend Acorn Avenue Errand Office world for restating one story in card catalog order."
+        },
+        {
+          "slug": "pocket-park-notice-board",
+          "title": "Pocket Park Notice Board",
+          "summary": "A pretend Pocket Park Notice Board world for restating one story in card catalog order."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "title": "Penny Path Compass Shop",
+          "summary": "A pretend Penny Path Compass Shop world for restating one story in card catalog order."
+        },
+        {
+          "slug": "orchard-pulley-post",
+          "title": "Orchard Pulley Post",
+          "summary": "A pretend Orchard Pulley Post world for restating one story in card catalog order."
+        },
+        {
+          "slug": "pond-bridge-blueprint-club",
+          "title": "Pond Bridge Blueprint Club",
+          "summary": "A pretend Pond Bridge Blueprint Club world for restating one story in card catalog order."
+        },
+        {
+          "slug": "revision-river-ferry",
+          "title": "Revision River Ferry",
+          "summary": "A pretend Revision River Ferry world for restating one story in card catalog order."
+        },
+        {
+          "slug": "chapter-gate-greenhouse",
+          "title": "Chapter Gate Greenhouse",
+          "summary": "A pretend Chapter Gate Greenhouse world for restating one story in card catalog order."
+        },
+        {
+          "slug": "margin-note-market",
+          "title": "Margin Note Market",
+          "summary": "A pretend Margin Note Market world for restating one story in card catalog order."
+        },
+        {
+          "slug": "blue-pencil-observatory",
+          "title": "Blue Pencil Observatory",
+          "summary": "A pretend Blue Pencil Observatory world for restating one story in card catalog order."
+        },
+        {
+          "slug": "binding-day-boardwalk",
+          "title": "Binding Day Boardwalk",
+          "summary": "A pretend Binding Day Boardwalk world for restating one story in card catalog order."
+        },
+        {
+          "slug": "sticker-station-mail-cart",
+          "title": "Sticker Station Mail Cart",
+          "summary": "A pretend Sticker Station Mail Cart world for restating one story in card catalog order."
+        },
+        {
+          "slug": "paperclip-plaza-parcel-day",
+          "title": "Paperclip Plaza Parcel Day",
+          "summary": "A pretend Paperclip Plaza Parcel Day world for restating one story in card catalog order."
+        }
+      ]
     }
   ]
 }
