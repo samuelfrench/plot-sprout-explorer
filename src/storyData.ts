@@ -742,6 +742,14 @@ export const productLinks: FeaturedProductLink[] = [
       'Sixteen printable paper tab story inference cards with adult guide tools, inference routines, and take-home inference slips.',
     note: 'No checkout is enabled; request the launch notice by email.',
   },
+  {
+    slug: 'binder-ring-story-connection-card-pack',
+    title: 'Binder Ring Story Connection Card Pack',
+    pricePoint: '$107',
+    description:
+      'Sixteen printable binder ring story connection cards with adult guide tools, connection routines, and take-home connection slips.',
+    note: 'No checkout is enabled; request the launch notice by email.',
+  },
 ]
 
 export const featuredProductLink: FeaturedProductLink = productLinks[0]

@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Binder Ring Story Connection Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .image-placeholder { width: 100%; aspect-ratio: 1.28 / 1; border: 1px solid var(--line); background: repeating-linear-gradient(135deg, #fff, #fff 8px, #f3eee4 8px, #f3eee4 16px); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .connection-card-page { font-size: 7.3px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img, .world-card .image-placeholder { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .connection-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .connection-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.245in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable binder ring connection cards</p>
+        <h1>Binder Ring Story Connection Card Pack</h1>
+        <p>Sixteen binder ring cards help writers connect invented story details with because lines, second details, and one short bridge sentence.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable binder ring story connection cards plus adult guide tools, connection routines, take-home connection slips, and optional adult prompts</p>
+      <p>Family-safe printable writing pages for adult-led, offline connection practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$107</span>
+        <h2>Included</h2>
+        <ul><li>16 printable binder ring connection cards</li><li>Adult setup guide</li><li>Fictional connection safety notes</li><li>First detail prompts</li><li>Connection prompts</li><li>Because prompts</li><li>Second detail prompts</li><li>Bridge sentence prompts</li><li>Binder ring check prompts</li><li>Six adult-led connection routines</li><li>Ten take-home connection slips</li><li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Connection coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Binder Ring Story Connection Adult Guide: ____________________.</h3><ul><li>Set out one binder ring connection card, blank paper, pencil, and a small paper ring mark for the adult-led fictional offline paper-only session: ____________________.</li><li>Label six paper lines detail, connects to, because, second detail, bridge sentence, and binder ring check before the writer begins: ____________________.</li><li>Choose one made-up story moment from a place like Nettlewick Hall or Mallowgate Yard and keep every detail invented: ____________________.</li><li>Tell the writer that pointing, dictating, adult-scribed phrases, or short independent writing all fit this family-friendly paper activity: ____________________.</li><li>Close by rereading the bridge sentence and binder ring check from the paper card only: ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Facilitation notes</h3><ul><li>Start with one small detail so the writer has a clear paper anchor: ____________________.</li><li>Ask what the detail connects to before asking because, so the story link forms in a calm order: ____________________.</li><li>Use the because line to explain the connection with one invented reason: ____________________.</li><li>Add the second detail only after the first detail and connects to line feel clear on paper: ____________________.</li><li>Treat the binder ring check as a quiet close to the bridge sentence, not a correction mark: ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Safety notes</h3><ul><li>Use only invented names, made-up places, pretend objects, and fictional story details: ____________________.</li><li>Skip any prompt that asks for personal facts, exact place facts, outside facts, or child identity clues: ____________________.</li><li>Keep the activity adult-led, offline, paper-only, and away from audience pressure: ____________________.</li><li>Keep every bridge sentence about the pretend story, not about a person outside the card: ____________________.</li><li>Use the binder ring check as a paper sorting mark for one fictional connection: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one story connection card at a time. Keep every connection sentence broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen connection card worlds</h2>
+      <p>Pick a world image, then name the first detail, connection, because line, second detail, bridge sentence, and binder ring check.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Mitten Market Lost Ticket</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Sticker Station Mail Cart</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Paperclip Plaza Parcel Day</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pond Bridge Blueprint Club</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Cloudberry Clocktower</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Solar Oven Picnic Station</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Greenhouse Gear Garden</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Compass Craft Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pencil-dragon-academy.jpg" alt="Pencil Dragon Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Pencil Dragon Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Blue Pencil Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Margin Note Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Connection routines</p>
+      <h2>Choose the story connection routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">Use when the writer needs one invented detail before making a connection: ____________________.</p>
+      <h3>First Detail Finder: ____________________.</h3>
+      <ol><li>The adult points to the first detail blank on the paper card: ____________________.</li><li>The writer names one pretend object, color, sound, sign, or tiny change from the made-up story: ____________________.</li><li>The adult repeats the detail in plain words and keeps it fictional: ____________________.</li><li>The writer fills this line: My detail is ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the first detail is chosen and needs a story idea to connect to: ____________________.</p>
+      <h3>Connects To Pair: ____________________.</h3>
+      <ol><li>The adult reads the first detail from the paper card: ____________________.</li><li>The writer says what the detail connects to inside the pretend story: ____________________.</li><li>The adult asks whether the connection stays inside the made-up moment: ____________________.</li><li>The writer fills this line: My detail connects to ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the detail connects to an idea but the reason is still missing: ____________________.</p>
+      <h3>Because Link: ____________________.</h3>
+      <ol><li>The adult places the detail line beside the connects to line: ____________________.</li><li>The writer tells why the detail connects to that pretend story idea: ____________________.</li><li>The adult helps trim the because line to one clear invented phrase: ____________________.</li><li>The writer fills this line: It connects because ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when one detail and because line are ready and the connection needs a second detail: ____________________.</p>
+      <h3>Second Detail Support: ____________________.</h3>
+      <ol><li>The adult rereads the detail, connects to, and because lines in order: ____________________.</li><li>The writer chooses a second detail that supports the same fictional connection: ____________________.</li><li>The adult asks how the second detail helps the same bridge sentence: ____________________.</li><li>The writer fills this line: My second detail is ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the detail, connects to line, because line, and second detail are ready to combine: ____________________.</p>
+      <h3>Bridge Sentence Build: ____________________.</h3>
+      <ol><li>The adult reads all four paper lines in order without adding outside facts: ____________________.</li><li>The writer chooses which words belong in one bridge sentence: ____________________.</li><li>The adult keeps the bridge sentence short, fictional, offline, and paper-only: ____________________.</li><li>The writer fills this line: My bridge sentence is ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the bridge sentence is written and needs a final paper check: ____________________.</p>
+      <h3>Binder Ring Check Close: ____________________.</h3>
+      <ol><li>The adult places the paper ring mark beside the bridge sentence: ____________________.</li><li>The writer points to the detail and second detail that support the sentence: ____________________.</li><li>The adult asks why the binder ring check shows a clear fictional connection: ____________________.</li><li>The writer fills this line: My binder ring check says ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home connection slips</p>
+      <h2>Try one connection later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home connection slip</p>
+      <h3>Detail Connects Slip: ____________________.</h3>
+      <p>My detail is ____________________; it connects to ____________________ because ____________________.</p>
+      <p>Use this slip for one adult-led fictional paper connection, with no outside facts: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home connection slip</p>
+      <h3>Second Detail Slip: ____________________.</h3>
+      <p>My second detail is ____________________, and it supports the same connection because ____________________.</p>
+      <p>Ask for one more invented detail that belongs with the first detail: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home connection slip</p>
+      <h3>Bridge Sentence Slip: ____________________.</h3>
+      <p>My bridge sentence is ____________________.</p>
+      <p>Combine the detail, connects to line, because line, and second detail in one paper sentence: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home connection slip</p>
+      <h3>Binder Ring Check Slip: ____________________.</h3>
+      <p>My binder ring check says the two details fit because ____________________.</p>
+      <p>Use the check as a quiet ending mark for the made-up story connection: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home connection slip</p>
+      <h3>Tiny Connection Slip: ____________________.</h3>
+      <p>The tiniest connection I can write is ____________________ because ____________________.</p>
+      <p>Keep the line short so the writer can finish one adult-led paper link: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home connection slip</p>
+      <h3>Made-Up Place Slip: ____________________.</h3>
+      <p>In ____________________, one detail connects to another detail because ____________________.</p>
+      <p>Use a pretend place name like Nettlewick Hall, Mallowgate Yard, or Pebblepin Pier: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home connection slip</p>
+      <h3>Object Detail Slip: ____________________.</h3>
+      <p>The object detail ____________________ connects to the story idea ____________________ because ____________________.</p>
+      <p>Choose a pretend object and keep the connection inside the fictional moment: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home connection slip</p>
+      <h3>Character Thought Slip: ____________________.</h3>
+      <p>A made-up character might think ____________________ because the detail ____________________ connects to ____________________.</p>
+      <p>Keep the thought invented and tied to the paper detail: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home connection slip</p>
+      <h3>Two Detail Pair Slip: ____________________.</h3>
+      <p>First detail: ____________________; second detail: ____________________; bridge sentence: ____________________.</p>
+      <p>Read both details before asking for the bridge sentence: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home connection slip</p>
+      <h3>Later Ring Slip: ____________________.</h3>
+      <p>Next paper session, I can add one new detail that connects to ____________________.</p>
+      <p>Save this as a family-friendly offline paper-only starter for another adult-led connection: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Which small detail can start this adult-led fictional paper connection: ____________________.</li><li>What does the detail connects to inside the made-up story moment: ____________________.</li><li>Why does the detail connect because of something already on the card: ____________________.</li><li>What second detail supports the same story connection: ____________________.</li><li>Which words make a clear bridge sentence from the two details: ____________________.</li><li>Where should the binder ring check sit beside the bridge sentence: ____________________.</li><li>Which blank can stay empty until the writer is ready to dictate or write: ____________________.</li><li>What invented detail can be saved for the next offline paper-only connection: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 1 | Ages 7-8 | Practice story connection by naming one invented detail, telling what it connects to, writing because, adding a second detail, making one bridge sentence, and finishing the binder ring check: ____________________.</div>
+      <h2>Mitten Market Lost Ticket Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+        <figcaption>Mitten Market Lost Ticket</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one blank page, pencil, and two pretend binder ring marks beside the Mitten Market Lost Ticket card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a mitten stall, a folded ticket, and a helper who connects one small detail to another made-up detail: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend mitten stitch, ticket fold, or stall mark the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write what the first detail connects to inside the invented mitten market story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: write because why those two details fit together in the pretend story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different mitten market detail that strengthens the same connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that connects the first detail, because line, and second detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the pretend ring when the bridge sentence uses only invented details: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the first detail and connects to blanks, then pause with the adult: ____________________. Take-home line: keep this paper connection card and add one new mitten market detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 2 | Ages 7-9 | Build a story connection by choosing a detail, naming what it connects to, explaining because, adding a second detail, writing a bridge sentence, and doing a binder ring check: ____________________.</div>
+      <h2>Sticker Station Mail Cart Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/sticker-station-mail-cart.jpg" alt="Sticker Station Mail Cart illustration">
+        <figcaption>Sticker Station Mail Cart</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one blank page, pencil, and two pretend binder ring marks near the Sticker Station Mail Cart prompt: ____________________.</p>
+      <p class="kid-direction">Writer: make up a sticker counter, a rolling mail cart, and a helper who links two paper-only story details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend sticker shape, cart wheel mark, or station signal the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write which second made-up detail the first detail connects to in the sticker station story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: write because why the two sticker station details belong together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different mail cart or sticker station detail that supports the connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that shows how the first detail connects to the second detail because it fits: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the pretend binder ring when the connection stays calm, invented, and clear: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: point to one pretend sticker mark first, then write only the second detail blank: ____________________. Take-home line: save this paper connection card for one later adult-led sticker station detail: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 3 | Ages 7-9 | Use story connection practice to name one detail, tell what it connects to, explain because, add a second detail, write a bridge sentence, and finish with a binder ring check: ____________________.</div>
+      <h2>Spoon Ferry Lunchbox Harbor Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a blank page, pencil, and two pretend binder ring marks beside the Spoon Ferry Lunchbox Harbor card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a spoon ferry, a lunchbox harbor dock, and a helper who connects two gentle story details on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend spoon ferry rail, lunchbox lid mark, or harbor flag the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write what the first detail connects to somewhere else in the invented harbor story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: write because why the two harbor details fit together for the helper: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different spoon ferry or harbor detail that belongs with the first detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that connects both details and uses because language: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the pretend ring when the bridge sentence stays fictional and paper-only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the first detail and second detail blanks before trying the bridge sentence: ____________________. Take-home line: keep this paper connection card and add one new spoon ferry detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 4 | Ages 7-9 | Shape a fictional connection by writing a detail, what it connects to, a because line, a second detail, a bridge sentence, and a binder ring check: ____________________.</div>
+      <h2>Penny Path Compass Shop Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one blank page, pencil, and two pretend binder ring marks beside the compass shop card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a penny path counter, a tiny compass, and a helper who connects two pretend shop details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented penny mark, compass pointer turn, or counter tag the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write which second compass shop detail the first detail connects to: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: write because why the penny path detail and compass detail fit in the same story moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different compass shop detail that supports the connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that connects the first detail and second detail with a clear because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the pretend binder ring when both details are invented and connected: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: write only the connects to phrase first, then let the adult read it back: ____________________. Take-home line: save this paper connection card and add one new compass shop detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 5 | Ages 7-9 | Practice connecting fictional story details by naming a detail, saying what it connects to, explaining because, adding a second detail, writing a bridge sentence, and finishing the binder ring check: ____________________.</div>
+      <h2>Buttonwood Library Train Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank page, pencil, and two pretend binder ring marks near the Buttonwood Library Train card: ____________________.</p>
+      <p class="kid-direction">Writer: make up a buttonwood train car, a shelf bell, and a helper who connects two invented paper details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend buttonwood leaf mark, train wheel sound, or shelf bell detail the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write which second detail the first detail connects to inside the invented train story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: write because why those two buttonwood train details fit together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different train car or shelf bell detail that supports the connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that links the first detail, second detail, and because idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the pretend ring when the bridge sentence stays invented and private to the paper: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the first detail and because blanks while the adult reads the prompts: ____________________. Take-home line: keep this paper connection card and add one new buttonwood train detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 6 | Ages 7-9 | Make a story connection by writing a first detail, what it connects to, a because line, a second detail, one bridge sentence, and a binder ring check: ____________________.</div>
+      <h2>Paperclip Plaza Parcel Day Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/paperclip-plaza-parcel-day.jpg" alt="Paperclip Plaza Parcel Day illustration">
+        <figcaption>Paperclip Plaza Parcel Day</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and two pretend binder ring marks beside the Paperclip Plaza Parcel Day prompt: ____________________.</p>
+      <p class="kid-direction">Writer: invent a paperclip plaza, a folded parcel, and a helper who connects two calm story details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one pretend paperclip bend, parcel fold, or plaza tile mark the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write what the first detail connects to in another part of the invented parcel day story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: write because why the paperclip detail and parcel detail fit together: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: write one different plaza or parcel detail that supports the same connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that connects the first detail to the second detail because they fit: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the pretend ring when the connection is clear, invented, and paper-only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the second detail blank first, then choose the bridge sentence with the adult: ____________________. Take-home line: save this paper connection card and add one new parcel day detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 7 | Ages 8-10 | Practice one invented detail, what it connects to, because, a second detail, one bridge sentence, and a binder ring check: ____________________.</div>
+      <h2>Pond Bridge Blueprint Club Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/pond-bridge-blueprint-club.jpg" alt="Pond Bridge Blueprint Club illustration">
+        <figcaption>Pond Bridge Blueprint Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank page, pencil, and two pretend binder rings beside the pond bridge blueprint card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a pond bridge club, a folded blueprint, and a calm helper who connects two paper details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented plank mark, ripple sketch, or blueprint corner detail from the pond bridge club: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write what the first detail connects to in the made-up bridge plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: explain because the first detail fits the bridge plan or the helper&#39;s next paper choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: add one different pond bridge detail that belongs with the same connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that connects the first detail, because idea, and second detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the binder ring when both details connect inside the invented story: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the first detail and second detail blanks before the bridge sentence: ____________________. Take-home line: save this pond bridge connection card for one later adult-led paper pass: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 8 | Ages 8-10 | Connect one invented clocktower detail to a second detail, explain because, write a bridge sentence, and finish with a binder ring check: ____________________.</div>
+      <h2>Cloudberry Clocktower Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+        <figcaption>Cloudberry Clocktower</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank card page, pencil, and pretend binder rings beside the cloudberry clocktower prompt: ____________________.</p>
+      <p class="kid-direction">Writer: make up a clocktower keeper, cloudberry-colored bells, and two details that belong together: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented bell pause, stair scuff, or clock hand detail the keeper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write what the first detail connects to inside the clocktower story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: explain because that connection helps the keeper understand the made-up tower moment: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: add one different cloudberry clocktower detail that supports the connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that links the two details with because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the binder ring when the bridge sentence stays invented and clear: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult-scribe the because line while the writer chooses both details: ____________________. Take-home line: keep this clocktower connection card for a later calm paper revisit: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 9 | Ages 8-10 | Use one invented station detail, what it connects to, because, a second detail, a bridge sentence, and a binder ring check: ____________________.</div>
+      <h2>Solar Oven Picnic Station Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+        <figcaption>Solar Oven Picnic Station</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank page, pencil, and pretend binder rings beside the solar oven picnic station card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a shiny paper oven model, a picnic station chart, and two harmless story details that connect: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented mirror flap, sunbeam mark, or folded station chart detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write what the first detail connects to in the made-up station plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: explain because the station detail fits the helper&#39;s paper-only plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: add one different solar oven picnic station detail that belongs with the same idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that connects the first detail and second detail because they fit: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the binder ring when the connection uses invented object details only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: circle two paper object details, then write only the connects to line: ____________________. Take-home line: save this station connection card for one later adult-led paper bridge sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 10 | Ages 8-10 | Build a fictional connection from a first detail, connects to line, because, second detail, bridge sentence, and binder ring check: ____________________.</div>
+      <h2>Greenhouse Gear Garden Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+        <figcaption>Greenhouse Gear Garden</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: provide a blank card page, pencil, and pretend binder rings beside the greenhouse gear garden prompt: ____________________.</p>
+      <p class="kid-direction">Writer: invent a gear garden keeper, paper cogs, glass-pane shapes, and two story details that fit together: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented cog click, pane shadow, or garden sketch detail the keeper notices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write what the first detail connects to in the gear garden story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: explain because the two details help the keeper make one gentle paper choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: add one different greenhouse gear detail that supports the same connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that joins the detail, because line, and second detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the binder ring when the bridge sentence connects two made-up details: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: point to the cog and pane blanks first, then adult-scribe the bridge sentence: ____________________. Take-home line: keep this gear garden connection card for another offline paper pass with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 11 | Ages 8-10 | Name one invented map-room detail, say what it connects to, explain because, add a second detail, write a bridge sentence, and complete a binder ring check: ____________________.</div>
+      <h2>Seed Library Map Room Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and pretend binder rings beside the seed library map room card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a seed map room, paper drawers, and two pretend map details that connect inside the story: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>first detail: write one invented seed tag, drawer notch, or map-room corner detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write what the first detail connects to on the made-up map room page: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>because: explain because the detail fits the map room helper&#39;s paper plan: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>second detail: add one different seed library map room detail that belongs with the same connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>bridge sentence: write one sentence that connects the first detail, second detail, and because idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>binder ring check: mark the binder ring when both details stay made-up and paper-only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the two detail blanks first, then choose one connects to phrase: ____________________. Take-home line: save this map room connection card for one later adult-led bridge sentence: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 12 | Ages 10-11 | Connect one invented compass craft detail to a second detail, explain because it fits, write one bridge sentence, and finish with a binder ring check: ____________________.</div>
+      <h2>Compass Craft Academy Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/compass-craft-academy.jpg" alt="Compass Craft Academy illustration">
+        <figcaption>Compass Craft Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out this card, a pencil, blank paper, and two pretend binder rings for the compass craft connection: ____________________.</p>
+      <p class="kid-direction">Writer: invent a paper compass maker, a folded map corner, and calm details that stay inside the made-up academy world: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>First detail: write one pretend compass craft detail, such as a blue needle mark, folded map tab, or tiny gear stamp: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write how that detail connects to another invented compass craft detail in the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>Because: explain because why the two details fit together in this pretend compass craft scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>Second detail: write a different invented academy detail that supports the same connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>Bridge sentence: write one sentence that links the first detail and second detail with because language: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>Binder ring check: mark the paper ring when the bridge sentence uses detail, connects to, because, and second detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the first detail and connection blanks, then pause the paper card: ____________________. Take-home line: save this compass craft card and add one more invented detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 13 | Ages 10-11 | Use a fictional pencil dragon detail that connects to a second detail, add a because reason, draft one bridge sentence, and complete a binder ring check: ____________________.</div>
+      <h2>Pencil Dragon Academy Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/pencil-dragon-academy.jpg" alt="Pencil Dragon Academy illustration">
+        <figcaption>Pencil Dragon Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card, blank paper, a pencil, and two pretend binder rings beside the pencil dragon story sketch: ____________________.</p>
+      <p class="kid-direction">Writer: make up a pencil dragon helper and keep every academy detail invented, calm, and paper-only: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>First detail: write one pretend pencil dragon detail, such as a curled graphite scale, soft eraser cloud, or silver paper claw mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write how the first detail connects to a second detail from the same pretend pencil dragon world: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>Because: explain because why those two details belong together in the invented story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>Second detail: write another made-up academy detail that makes the connection clearer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>Bridge sentence: write one clear sentence that connects the two invented details with because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>Binder ring check: mark the paper ring when the bridge sentence names both details and the because fit: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: let an adult scribe the because line while you choose the second detail: ____________________. Take-home line: keep this pencil dragon card and add one new detail connection later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 14 | Ages 10-11 | Connect a fictional observatory detail to a second detail, explain because, write one bridge sentence, and finish the binder ring check: ____________________.</div>
+      <h2>Blue Pencil Observatory Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/blue-pencil-observatory.jpg" alt="Blue Pencil Observatory illustration">
+        <figcaption>Blue Pencil Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card, a pencil, blank paper, and two pretend binder rings beside a paper sky chart: ____________________.</p>
+      <p class="kid-direction">Writer: invent a blue-pencil sky watcher, a paper telescope, and details that stay inside the pretend observatory: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>First detail: write one invented observatory detail, such as a blue star dot, tilted paper lens, or moon-shaped margin mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write how that detail connects to a second detail in the pretend sky chart: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>Because: explain because why the first detail and second detail fit the same observatory idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>Second detail: write another invented blue-pencil observatory detail that supports the connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>Bridge sentence: write one sentence that connects both details and tells because they fit: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>Binder ring check: mark the paper ring when the bridge sentence stays fictional and includes a second detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the two detail blanks first and save the bridge sentence for later: ____________________. Take-home line: save this observatory card and add one more paper sky detail later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 15 | Ages 10-11 | Name one invented margin note detail, show how it connects to a second detail, explain because, write a bridge sentence, and complete a binder ring check: ____________________.</div>
+      <h2>Margin Note Market Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/margin-note-market.jpg" alt="Margin Note Market illustration">
+        <figcaption>Margin Note Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card, blank paper, a pencil, and two pretend binder rings beside a paper stall map: ____________________.</p>
+      <p class="kid-direction">Writer: invent a margin note helper, a folded stall sign, and story details with no real place facts: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>First detail: write one pretend market detail, such as a curled note corner, dotted stall path, or blue ribbon mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write how the first detail connects to another invented margin note market detail: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>Because: explain because why the two details fit together in the made-up market scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>Second detail: write a different invented market detail that supports the same connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>Bridge sentence: write one sentence that links the first detail and second detail with because: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>Binder ring check: mark the paper ring when the card has a detail, connects to line, because line, second detail, and bridge sentence: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: choose the first detail and second detail as short phrases before writing the sentence: ____________________. Take-home line: keep this margin note card and add one new invented connection later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page connection-card-page">
+      <div class="page-kicker">Connection Card 16 | Ages 10-11 | Connect one invented theater club detail to a second detail, explain because it fits, write one bridge sentence, and finish with a binder ring check: ____________________.</div>
+      <h2>Index Card Theater Club Binder Ring Story Connection Card</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out this card, blank paper, a pencil, and two pretend binder rings beside an index card scene map: ____________________.</p>
+      <p class="kid-direction">Writer: invent a paper theater club helper, quiet card props, and details that stay on the page: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>First detail</h3>
+      <p>First detail: write one pretend theater club detail, such as a folded curtain card, prop label shape, or pencil spotlight circle: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Connects to</h3>
+      <p>connects to: write how that detail connects to another invented index card detail in the same story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Because</h3>
+      <p>Because: explain because why the two invented details fit together on the paper scene map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second detail</h3>
+      <p>Second detail: write a different theater club detail that supports the same connection: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Bridge sentence</h3>
+      <p>Bridge sentence: write one sentence that connects the first detail and second detail with because language: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Binder ring check</h3>
+      <p>Binder ring check: mark the paper ring when the bridge sentence includes detail, connects to, because, and second detail: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the connection blank with a short phrase and leave the bridge sentence for later: ____________________. Take-home line: save this index card theater club card and add one new paper-only detail later with an adult: ____________________.</p>
+    </section>
+  </body>
+</html>

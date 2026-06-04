@@ -1,0 +1,18 @@
+{
+  "slug": "binder-ring-story-connection-card-pack",
+  "prompt": "family-friendly minimal top-down product mockup on seamless pale neutral background, exactly one neat stack of blank off-white story connection cards, two plain silver binder rings threaded through punched holes in the cards, clean printable paper kit, paper-only stationery arrangement, unmarked blank cards, no readable text, no symbols, no decorative props, no cup, no plant, no pouch, no book",
+  "negativePrompt": "text, writing, letters, words, readable text, labels, titles, logo, watermark, symbols, icons, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, cup, mug, coffee, tea, saucer, drink, bowl, plate, food, snacks, plant, flower, leaves, vase, pouch, purse, wallet, leather, book, notebook, journal, school, classroom, real library checkout desk, checkout desk, library cards, due dates, fines, call numbers, barcodes, real due date slips, books with titles, book titles, author names, real library names, sources, citations, quotes, reviews, ratings, addresses, routes, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, score, grade, timer, portfolio, showcase, allergy, medical, scary, violence, weapons, bullying, romance, politics, religion, gambling, ads, branded characters, children, faces, hands, clutter, colored background, dark shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "checkpoint",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 260667207,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch67/binder-ring-story-connection-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch67/binder-ring-story-connection-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-04-batch67-images.json",
+  "title": "Binder Ring Story Connection Card Pack"
+}

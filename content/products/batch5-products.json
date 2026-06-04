@@ -6357,6 +6357,161 @@
           "summary": "A pretend Binding Day Boardwalk world for connecting invented story clues to inference sentences on paper."
         }
       ]
+    },
+    {
+      "slug": "binder-ring-story-connection-card-pack",
+      "title": "Binder Ring Story Connection Card Pack",
+      "pricePoint": "$107",
+      "status": "checkout_pending",
+      "headline": "Printable binder ring connection cards for private fictional story thinking.",
+      "summary": "Sixteen binder ring connection cards help kids connect invented story details with because lines and short bridge sentences.",
+      "heroImage": "images/plotsprout/batch67/binder-ring-story-connection-card-pack.jpg",
+      "ctaLabel": "Request binder ring connection pack launch notice",
+      "ctaHref": "mailto:samfrench@gmail.com?subject=Binder%20Ring%20Story%20Connection%20Card%20Pack",
+      "checkoutNote": "Checkout stays pending until Sam chooses a hosted sales path; this static page is ready for later hosted wiring but does not sell yet.",
+      "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+      "worldSlugs": [
+        "mitten-market-lost-ticket",
+        "sticker-station-mail-cart",
+        "spoon-ferry-lunchbox-harbor",
+        "penny-path-compass-shop",
+        "buttonwood-library-train",
+        "paperclip-plaza-parcel-day",
+        "pond-bridge-blueprint-club",
+        "cloudberry-clocktower",
+        "solar-oven-picnic-station",
+        "greenhouse-gear-garden",
+        "seed-library-map-room",
+        "compass-craft-academy",
+        "pencil-dragon-academy",
+        "blue-pencil-observatory",
+        "margin-note-market",
+        "index-card-theater-club"
+      ],
+      "includedPages": [
+        "Sixteen printable binder ring connection cards",
+        "Adult setup guide",
+        "First detail prompts",
+        "Connects to prompts",
+        "Because prompts",
+        "Second detail prompts",
+        "Bridge sentence prompts",
+        "Binder ring check prompts",
+        "Six adult-led connection routines",
+        "Ten take-home connection slips",
+        "Optional adult prompts",
+        "PDF, README, manifest, and ZIP artifact"
+      ],
+      "useCases": [
+        "A family paper table for connecting two invented story details",
+        "A homeschool writing station for detail, because, and bridge sentence practice",
+        "A tutoring pack for writers who need concrete connection support",
+        "An adult-led small group activity for private paper-only story thinking"
+      ],
+      "parentSteps": [
+        "Print one connection card and set it beside a blank page.",
+        "Ask for one first detail before asking what it connects to.",
+        "Let the child point, dictate, sketch, or write one short line per blank.",
+        "Close with a binder ring check and keep every connection fictional."
+      ],
+      "worldSummaries": [
+        {
+          "slug": "mitten-market-lost-ticket",
+          "title": "Mitten Market Lost Ticket",
+          "ageBand": "7-8",
+          "summary": "A pretend Mitten Market Lost Ticket world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "sticker-station-mail-cart",
+          "title": "Sticker Station Mail Cart",
+          "ageBand": "7-9",
+          "summary": "A pretend Sticker Station Mail Cart world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "spoon-ferry-lunchbox-harbor",
+          "title": "Spoon Ferry Lunchbox Harbor",
+          "ageBand": "7-9",
+          "summary": "A pretend Spoon Ferry Lunchbox Harbor world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "penny-path-compass-shop",
+          "title": "Penny Path Compass Shop",
+          "ageBand": "7-9",
+          "summary": "A pretend Penny Path Compass Shop world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "buttonwood-library-train",
+          "title": "Buttonwood Library Train",
+          "ageBand": "7-9",
+          "summary": "A pretend Buttonwood Library Train world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "paperclip-plaza-parcel-day",
+          "title": "Paperclip Plaza Parcel Day",
+          "ageBand": "7-9",
+          "summary": "A pretend Paperclip Plaza Parcel Day world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "pond-bridge-blueprint-club",
+          "title": "Pond Bridge Blueprint Club",
+          "ageBand": "8-10",
+          "summary": "A pretend Pond Bridge Blueprint Club world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "cloudberry-clocktower",
+          "title": "Cloudberry Clocktower",
+          "ageBand": "8-10",
+          "summary": "A pretend Cloudberry Clocktower world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "solar-oven-picnic-station",
+          "title": "Solar Oven Picnic Station",
+          "ageBand": "8-10",
+          "summary": "A pretend Solar Oven Picnic Station world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "greenhouse-gear-garden",
+          "title": "Greenhouse Gear Garden",
+          "ageBand": "8-10",
+          "summary": "A pretend Greenhouse Gear Garden world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "seed-library-map-room",
+          "title": "Seed Library Map Room",
+          "ageBand": "8-10",
+          "summary": "A pretend Seed Library Map Room world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "compass-craft-academy",
+          "title": "Compass Craft Academy",
+          "ageBand": "10-11",
+          "summary": "A pretend Compass Craft Academy world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "pencil-dragon-academy",
+          "title": "Pencil Dragon Academy",
+          "ageBand": "10-11",
+          "summary": "A pretend Pencil Dragon Academy world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "blue-pencil-observatory",
+          "title": "Blue Pencil Observatory",
+          "ageBand": "10-11",
+          "summary": "A pretend Blue Pencil Observatory world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "margin-note-market",
+          "title": "Margin Note Market",
+          "ageBand": "10-11",
+          "summary": "A pretend Margin Note Market world for connecting invented story details to bridge sentences on paper."
+        },
+        {
+          "slug": "index-card-theater-club",
+          "title": "Index Card Theater Club",
+          "ageBand": "10-11",
+          "summary": "A pretend Index Card Theater Club world for connecting invented story details to bridge sentences on paper."
+        }
+      ]
     }
   ]
 }

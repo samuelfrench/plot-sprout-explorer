@@ -84,6 +84,8 @@ export const pageFlagStoryReasonChainCardPackProductSlug =
   'page-flag-story-reason-chain-card-pack'
 export const paperTabStoryInferenceCardPackProductSlug =
   'paper-tab-story-inference-card-pack'
+export const binderRingStoryConnectionCardPackProductSlug =
+  'binder-ring-story-connection-card-pack'
 
 const requiredSafety =
   'No scary harm, no bullying, no romance, no weapons, no branded characters, no real child profiles.'
@@ -101,6 +103,7 @@ const shelfMarkerStoryThemeRequiredSafety = manilaFolderStoryClueTrailRequiredSa
 const bookendStoryEvidenceRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 const pageFlagStoryReasonChainRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 const paperTabStoryInferenceRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
+const binderRingStoryConnectionRequiredSafety = manilaFolderStoryClueTrailRequiredSafety
 
 const familySafetyBlockedTerms = [
   /\bweapon(s)?\b/i,
@@ -681,6 +684,16 @@ const requiredPaperTabStoryInferenceCardPackArtifactPaths = {
   sourceHtmlPath:
     'product-build/paper-tab-story-inference-card-pack/source/paper-tab-story-inference-card-pack.html',
   manifestPath: 'product-build/paper-tab-story-inference-card-pack/manifest.json',
+}
+
+const requiredBinderRingStoryConnectionCardPackArtifactPaths = {
+  pdfPath:
+    'product-build/binder-ring-story-connection-card-pack/Binder-Ring-Story-Connection-Card-Pack.pdf',
+  zipPath:
+    'product-build/binder-ring-story-connection-card-pack/binder-ring-story-connection-card-pack.zip',
+  sourceHtmlPath:
+    'product-build/binder-ring-story-connection-card-pack/source/binder-ring-story-connection-card-pack.html',
+  manifestPath: 'product-build/binder-ring-story-connection-card-pack/manifest.json',
 }
 
 const allowedPageTypes = new Set(['map', 'prompt', 'worksheet', 'cards', 'reflection', 'adult-guide'])
@@ -22083,6 +22096,690 @@ export function validatePaperTabStoryInferenceCardPackSourceFiles(source, rootDi
 
 
 
+const binderRingStoryConnectionSourceKeys = [
+  'batchId',
+  'generatedAt',
+  'productSlug',
+  'title',
+  'pricePoint',
+  'audience',
+  'sessionLength',
+  'safetyNote',
+  'artifact',
+  'sourceFiles',
+  'worldSlugs',
+  'cover',
+  'adultGuide',
+  'connectionRoutines',
+  'takeHomeConnectionSlips',
+  'optionalAdultPrompts',
+  'cards',
+]
+
+const binderRingStoryConnectionCardKeys = [
+  'id',
+  'title',
+  'worldSlug',
+  'ageBand',
+  'connectionSkill',
+  'useCase',
+  'adultSetup',
+  'kidDirection',
+  'firstDetailPrompt',
+  'connectionPrompt',
+  'becausePrompt',
+  'secondDetailPrompt',
+  'bridgeSentencePrompt',
+  'binderRingCheckPrompt',
+  'quietOptionLine',
+  'takeHomeLine',
+]
+
+const binderRingStoryConnectionSourceFiles = [
+  'content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-a.json',
+  'content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-b.json',
+  'content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-c.json',
+  'content/product-artifacts/lanes/batch67-binder-ring-story-connection-tools.json',
+]
+
+const binderRingStoryConnectionExpectedWorldSlugs = [
+  'mitten-market-lost-ticket',
+  'sticker-station-mail-cart',
+  'spoon-ferry-lunchbox-harbor',
+  'penny-path-compass-shop',
+  'buttonwood-library-train',
+  'paperclip-plaza-parcel-day',
+  'pond-bridge-blueprint-club',
+  'cloudberry-clocktower',
+  'solar-oven-picnic-station',
+  'greenhouse-gear-garden',
+  'seed-library-map-room',
+  'compass-craft-academy',
+  'pencil-dragon-academy',
+  'blue-pencil-observatory',
+  'margin-note-market',
+  'index-card-theater-club',
+]
+
+const binderRingStoryConnectionExpectedWorldAges = new Map([
+  ['mitten-market-lost-ticket', '7-8'],
+  ['sticker-station-mail-cart', '7-9'],
+  ['spoon-ferry-lunchbox-harbor', '7-9'],
+  ['penny-path-compass-shop', '7-9'],
+  ['buttonwood-library-train', '7-9'],
+  ['paperclip-plaza-parcel-day', '7-9'],
+  ['pond-bridge-blueprint-club', '8-10'],
+  ['cloudberry-clocktower', '8-10'],
+  ['solar-oven-picnic-station', '8-10'],
+  ['greenhouse-gear-garden', '8-10'],
+  ['seed-library-map-room', '8-10'],
+  ['compass-craft-academy', '10-11'],
+  ['pencil-dragon-academy', '10-11'],
+  ['blue-pencil-observatory', '10-11'],
+  ['margin-note-market', '10-11'],
+  ['index-card-theater-club', '10-11'],
+])
+
+const binderRingStoryConnectionAllowedAgeBands = ['7-8', '7-9', '8-10', '10-11']
+
+const binderRingStoryConnectionPriorSourceFiles = new Map([
+  [58, 'content/product-artifacts/hanging-file-story-decision-point-card-pack.json'],
+  [59, 'content/product-artifacts/file-box-story-turning-point-card-pack.json'],
+  [60, 'content/product-artifacts/archive-drawer-story-resolution-card-pack.json'],
+  [61, 'content/product-artifacts/card-catalog-story-retell-card-pack.json'],
+  [62, 'content/product-artifacts/library-pocket-story-summary-card-pack.json'],
+  [63, 'content/product-artifacts/shelf-marker-story-theme-card-pack.json'],
+  [64, 'content/product-artifacts/bookend-story-evidence-card-pack.json'],
+  [65, 'content/product-artifacts/page-flag-story-reason-chain-card-pack.json'],
+  [66, 'content/product-artifacts/paper-tab-story-inference-card-pack.json'],
+])
+
+const binderRingStoryConnectionExpectedOverlaps = new Map([
+  [58, 6],
+  [59, 6],
+  [60, 7],
+  [61, 8],
+  [62, 6],
+  [63, 6],
+  [64, 6],
+  [65, 6],
+  [66, 6],
+])
+
+const binderRingStoryConnectionHeroImage =
+  'images/plotsprout/batch67/binder-ring-story-connection-card-pack.jpg'
+
+function readBinderRingStoryConnectionPriorWorldSet(batchNumber) {
+  const sourceFile = binderRingStoryConnectionPriorSourceFiles.get(batchNumber)
+  const source = JSON.parse(readFileSync(resolve(import.meta.dirname, '..', sourceFile), 'utf8'))
+  return new Set(source.worldSlugs)
+}
+
+function binderRingStoryConnectionTitleFromWorldSlug(slug) {
+  return slug
+    .split('-')
+    .map((part) => part[0].toUpperCase() + part.slice(1))
+    .join(' ')
+    .replace('Map Mixup', 'Map Mix-Up')
+}
+
+function normalizeBinderRingStoryConnectionAllowedText(value) {
+  let text = JSON.stringify(value)
+    .replace(
+      /\bNo scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts\./gi,
+      '',
+    )
+    .replace(/\bkeep binder rings fictional and separate from real book, library, or online systems\b\.?/gi, '')
+    .replace(/\bdo not collect child writing, photos, audio, video, or personal profiles\b\.?/gi, '')
+    .replace(/\bdo not ask for real school, home, schedule, or identity details\b\.?/gi, '')
+    .replace(/\buse pretend names, broad made-up places, and invented actions\b\.?/gi, '')
+    .replace(/\bwithout using real-life facts\b/gi, '')
+    .replace(/\bwithout using outside facts\b/gi, '')
+    .replace(/\bwithout asking for personal facts\b/gi, '')
+    .replace(/\bnot as a grade or public display\b/gi, '')
+    .replace(/\bnot a correction mark\b/gi, '')
+    .replace(/\badult-led\b/gi, '')
+    .replace(/\badult\b/gi, '')
+    .replace(/\boffline\b/gi, '')
+    .replace(/\bpaper-only\b/gi, '')
+    .replace(/\btake-home\b/gi, '')
+    .replace(/\bfamilies\b/gi, '')
+    .replace(/\bfamily\b/gi, '')
+    .replace(/\bhomeschool\b/gi, '')
+    .replace(/\btutors?\b/gi, '')
+    .replace(/\bfictional\b/gi, '')
+    .replace(/\bpretend\b/gi, '')
+    .replace(/\binvented\b/gi, '')
+    .replace(/\bmade-up\b/gi, '')
+    .replace(/\bmade up\b/gi, '')
+    .replace(/\bbinder-ring-story-connection-card-pack\b/gi, '')
+    .replace(/\bbinder ring story connection card pack\b/gi, '')
+    .replace(/\bbinder ring story connection card pack\b/gi, '')
+    .replace(/\bstory connection card(s)?\b/gi, '')
+    .replace(/\bbinder ring connection card(s)?\b/gi, '')
+    .replace(/\bconnection card(s)?\b/gi, '')
+    .replace(/\bconnection card(s)?\b/gi, '')
+    .replace(/\bconnection routine(s)?\b/gi, '')
+    .replace(/\bconnection routine(s)?\b/gi, '')
+    .replace(/\breason routine(s)?\b/gi, '')
+    .replace(/\bconnection slip(s)?\b/gi, '')
+    .replace(/\bbridge sentence(s)?\b/gi, '')
+    .replace(/\bbridge sentence(s)?\b/gi, '')
+    .replace(/\bconnection(s)?\b/gi, '')
+    .replace(/\bconnection(s)?\b/gi, '')
+    .replace(/\bdetail(s)?\b/gi, '')
+    .replace(/\bconnects to\b/gi, '')
+    .replace(/\bbecause\b/gi, '')
+    .replace(/\bsecond detail(s)?\b/gi, '')
+    .replace(/\bbinder ring check(s)?\b/gi, '')
+    .replace(/\bbinder ring(s)?\b/gi, '')
+    .replace(/\bdetail(s)?\b/gi, '')
+    .replace(/\breason(s)?\b/gi, '')
+    .replace(/\bpage(s)?\b/gi, '')
+    .replace(/\bpaper\b/gi, '')
+    .replace(/\bblank(s)?\b/gi, '')
+    .replace(/\bslip(s)?\b/gi, '')
+    .replace(/\bcard(s)?\b/gi, '')
+    .replace(/\bwriter(s)?\b/gi, '')
+    .replace(/\bwriting\b/gi, '')
+    .replace(/\bchild\b/gi, '')
+    .replace(/\bkid(s)?\b/gi, '')
+    .replace(/\bcharacter(s)?\b/gi, '')
+
+  for (const slug of binderRingStoryConnectionExpectedWorldSlugs) {
+    text = removeLiteralTerm(text, slug)
+    const title = binderRingStoryConnectionTitleFromWorldSlug(slug)
+    text = removeLiteralTerm(text, title)
+    text = removeLiteralTerm(text, title.replace('Map Mix-Up', 'Map Mixup'))
+  }
+  return text
+}
+
+function validateNoUnsafeBinderRingStoryConnectionLanguage(value, label, errors) {
+  const allowedText = normalizeBinderRingStoryConnectionAllowedText(value)
+  pushIf(
+    errors,
+    /\bquote(s|d|r|rs|ing)?\b|\breviews?\b|\bcite(s|d|r|rs|ing)?\b|\bcitation(s)?\b|\bsources?\b|\breal book titles?\b|\breal author names?\b|\breal library systems?\b|\blibrary systems?\b|\blibrary cards?\b|\bcheckout(s|ed|ing)?\b|\bcheckout desks?\b|\bdue[- ]dates?\b|\bfines?\b|\bshowcase(s|d|ing)?\b|\bportfolio(s)?\b|\bdisplay(s|ed|ing)?\b|\bperfect(s|ed|ing|ion)?\b|\bepisode(s)?\b|\bchapter[- ]?books?\b|\bscreenplay(s)?\b|\bcliff[- ]?hanger(s)?\b|\bplot[- ]?twist(s)?\b|\bchoose[- ]your[- ]own[- ]adventure(s)?\b|\bpublic\b|\bpublic posts?\b|\bpublic posting\b|\bpost online\b|\bposting online\b|\bpublish(es|ed|ing|able)?\b|\bpublication(s)?\b|\bupload(s|ed|ing)?\b|\brecord(s|ed|ing)?\b|\brecorders?\b|\baudio\b|\bvoice memo(s)?\b|\bmicrophone(s)?\b|\bvideo(s)?\b|\bphotos?\b|\bcameras?\b|\bgrade(s|d|book|s)?\b|\bgrading\b|\brubric(s)?\b|\bscore(s|d|book|s)?\b|\bscoring\b|\bassessment(s)?\b|\btimer(s)?\b|\btimed\b|\bfood(s)?\b|\btaste(s|d|ing)?\b|\ballerg(y|ies|ic|ens?)\b|\bmedical\b|\bprofessional advice\b|\bprivate child data\b|\breal child data\b|\bpersonal details?\b|\bpersonal disclosure(s)?\b|\bprivate child profile(s)?\b|\bchild profiles?\b|\bprofiles?\b|\baddresses?\b|\bstreets?\b|\bexact locations?\b|\blocation details?\b|\bscary\b|\bharm(s|ed|ing)?\b|\bbull(y|ies|ied|ying)\b|\bbullying\b|\bfight(s|ing)?\b|\bdanger(s|ous)?\b|\bweapon(s)?\b|\bbranded character(s)?\b/i.test(
+      allowedText,
+    ),
+    `${label} includes quote, review, cite, source, citation, real book title, real author, library system, checkout, due date, fine, showcase, portfolio, display, perfection, episode, chapter book, screenplay, cliffhanger, plot twist, choose-your-own-adventure, public posting, upload, recording, camera, photo, video, audio, voice memo, grading, score, timer, food, allergy advice, scary harm, bullying, or real child data language.`,
+  )
+}
+
+function validateBinderRingStoryConnectionCard(
+  card,
+  index,
+  sourceWorldSlugs,
+  knownWorldSlugs,
+  knownWorldRecords,
+  cardIds,
+  errors,
+) {
+  const label = `cards[${index}]`
+  pushIf(errors, !isObject(card), `${label} must be an object.`)
+  if (!isObject(card)) return
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(card)) !== JSON.stringify(binderRingStoryConnectionCardKeys),
+    `${label} keys must match the exact binder ring connection card field order.`,
+  )
+
+  for (const key of binderRingStoryConnectionCardKeys) validateString(card[key], `${label}.${key}`, errors)
+
+  const expectedWorldSlug = binderRingStoryConnectionExpectedWorldSlugs[index]
+  const expectedId = `binder-ring-connection-card-${String(index + 1).padStart(2, '0')}`
+  const expectedAgeBand = binderRingStoryConnectionExpectedWorldAges.get(expectedWorldSlug)
+  const expectedTitle = binderRingStoryConnectionTitleFromWorldSlug(expectedWorldSlug)
+  const expectedTitleVariants = [expectedTitle, expectedTitle.replace('Map Mix-Up', 'Map Mixup')]
+  pushIf(errors, card.id !== expectedId, `${label}.id must be ${expectedId}.`)
+  pushIf(errors, card.worldSlug !== expectedWorldSlug, `${label}.worldSlug must be ${expectedWorldSlug}.`)
+  pushIf(errors, card.ageBand !== expectedAgeBand, `${label}.ageBand must be ${expectedAgeBand}.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.title) && !expectedTitleVariants.some((title) => card.title.includes(title)),
+    `${label}.title must include ${expectedTitle}.`,
+  )
+  pushIf(
+    errors,
+    isNonEmptyString(card.title) && !/binder ring story connection card/i.test(card.title),
+    `${label}.title must say Binder Ring Story Connection Card.`,
+  )
+  pushIf(errors, cardIds.has(card.id), `${label}.id is duplicated.`)
+  cardIds.add(card.id)
+
+  pushIf(errors, !binderRingStoryConnectionAllowedAgeBands.includes(card.ageBand), `${label}.ageBand must stay within ages 7-11.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !knownWorldSlugs.has(card.worldSlug), `${label}.worldSlug references an unknown world.`)
+  pushIf(errors, isNonEmptyString(card.worldSlug) && !sourceWorldSlugs.has(card.worldSlug), `${label}.worldSlug must be listed in worldSlugs.`)
+  const worldRecord = knownWorldRecords?.get(card.worldSlug)
+  const worldAgeBand = typeof worldRecord === 'string' ? worldRecord : worldRecord?.ageBand
+  pushIf(
+    errors,
+    isNonEmptyString(card.ageBand) &&
+      isNonEmptyString(worldAgeBand) &&
+      card.ageBand !== worldAgeBand,
+    `${label}.ageBand must match ${card.worldSlug} ageBand ${worldAgeBand}.`,
+  )
+
+  pushIf(errors, isNonEmptyString(card.useCase) && !/adult-led/i.test(card.useCase), `${label}.useCase must say adult-led.`)
+  pushIf(errors, isNonEmptyString(card.useCase) && !/\boffline\b/i.test(card.useCase), `${label}.useCase must say offline.`)
+  pushIf(errors, isNonEmptyString(card.useCase) && !/\bpaper-only\b/i.test(card.useCase), `${label}.useCase must say paper-only.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.useCase) && !/\bfictional\b|\bpretend\b|\binvented\b|\bmade-up\b|\bmade up\b/i.test(card.useCase),
+    `${label}.useCase must say fictional, pretend, invented, or made-up.`,
+  )
+  pushIf(errors, isNonEmptyString(card.connectionSkill) && !/detail/i.test(card.connectionSkill), `${label}.connectionSkill must include detail.`)
+  pushIf(
+    errors,
+    isNonEmptyString(card.connectionSkill) && !/\bconnects?\b[\s\S]*\bto\b/i.test(card.connectionSkill),
+    `${label}.connectionSkill must include connect-to language.`,
+  )
+  pushIf(errors, isNonEmptyString(card.connectionSkill) && !/because/i.test(card.connectionSkill), `${label}.connectionSkill must include because.`)
+  pushIf(errors, isNonEmptyString(card.connectionSkill) && !/second detail/i.test(card.connectionSkill), `${label}.connectionSkill must include second detail.`)
+  pushIf(errors, isNonEmptyString(card.connectionSkill) && !/bridge sentence/i.test(card.connectionSkill), `${label}.connectionSkill must include bridge sentence.`)
+  pushIf(errors, isNonEmptyString(card.connectionSkill) && !/binder ring check/i.test(card.connectionSkill), `${label}.connectionSkill must include binder ring check.`)
+
+  for (const key of binderRingStoryConnectionCardKeys.filter(
+    (field) => !['id', 'title', 'worldSlug', 'ageBand', 'connectionSkill'].includes(field),
+  )) {
+    pushIf(errors, isNonEmptyString(card[key]) && !hasWritableBlank(card[key]), `${label}.${key} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(card[key]) && hasSnakeCasePlaceholder(card[key]), `${label}.${key} must use human-readable text, not snake_case placeholders.`)
+  }
+
+  for (const [key, pattern] of [
+    ['firstDetailPrompt', /detail/i],
+    ['connectionPrompt', /^connects to:/i],
+    ['becausePrompt', /because/i],
+    ['secondDetailPrompt', /second detail/i],
+    ['bridgeSentencePrompt', /bridge sentence/i],
+    ['binderRingCheckPrompt', /binder ring check/i],
+  ]) {
+    pushIf(errors, isNonEmptyString(card[key]) && !pattern.test(card[key]), `${label}.${key} must include ${key.replace(/Prompt$/, '')} language.`)
+  }
+
+  validateNoUnsafeBinderRingStoryConnectionLanguage(card, label, errors)
+}
+
+function validateBinderRingStoryConnectionRoutine(routine, index, errors) {
+  const label = `connectionRoutines[${index}]`
+  pushIf(errors, !isObject(routine), `${label} must be an object.`)
+  if (!isObject(routine)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(routine)) !== JSON.stringify(['title', 'useWhen', 'steps']),
+    `${label} must use the exact connection routine field order.`,
+  )
+  for (const key of ['title', 'useWhen']) validateString(routine[key], `${label}.${key}`, errors)
+  validateExactStringArray(routine.steps, 4, `${label}.steps`, errors)
+  for (const [path, value] of Object.entries(flattenStrings(routine))) {
+    pushIf(errors, isNonEmptyString(value) && !hasWritableBlank(value), `${label}.${path} must include a writable blank.`)
+    pushIf(errors, isNonEmptyString(value) && hasSnakeCasePlaceholder(value), `${label}.${path} must use human-readable text, not snake_case placeholders.`)
+  }
+  validateNoUnsafeBinderRingStoryConnectionLanguage(routine, label, errors)
+}
+
+function validateBinderRingStoryConnectionSlip(slip, index, errors) {
+  const label = `takeHomeConnectionSlips[${index}]`
+  pushIf(errors, !isObject(slip), `${label} must be an object.`)
+  if (!isObject(slip)) return
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(slip)) !== JSON.stringify(['title', 'prompt', 'adultNote']),
+    `${label} must use the exact take-home connection slip field order.`,
+  )
+  for (const key of ['title', 'prompt', 'adultNote']) validateString(slip[key], `${label}.${key}`, errors)
+  pushIf(errors, isNonEmptyString(slip.prompt) && !hasWritableBlank(slip.prompt), `${label}.prompt must include a writable blank.`)
+  pushIf(errors, isNonEmptyString(slip.prompt) && hasSnakeCasePlaceholder(slip.prompt), `${label}.prompt must use human-readable text, not snake_case placeholders.`)
+  validateNoUnsafeBinderRingStoryConnectionLanguage(slip, label, errors)
+}
+
+export function validateBinderRingStoryConnectionCardPackSource(source, product, knownWorldSlugs) {
+  const errors = []
+  pushIf(errors, !isObject(source), 'Binder Ring Story Connection Card Pack source must be an object.')
+  if (!isObject(source)) return errors
+
+  const knownWorldRecords = knownWorldSlugs instanceof Map ? knownWorldSlugs : null
+  const worldSlugs =
+    knownWorldSlugs instanceof Map
+      ? new Set(knownWorldSlugs.keys())
+      : knownWorldSlugs instanceof Set
+      ? knownWorldSlugs
+      : new Set(knownWorldSlugs ?? [])
+
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(source)) !== JSON.stringify(binderRingStoryConnectionSourceKeys),
+    'source must use the exact Batch 67 binder ring connection source field order.',
+  )
+
+  for (const key of ['batchId', 'generatedAt', 'productSlug', 'title', 'pricePoint', 'audience', 'sessionLength', 'safetyNote']) {
+    validateString(source[key], key, errors)
+  }
+  pushIf(errors, source.batchId !== '2026-06-04-batch67', 'batchId must be 2026-06-04-batch67.')
+  pushIf(errors, source.generatedAt !== '2026-06-04', 'generatedAt must be 2026-06-04.')
+  pushIf(
+    errors,
+    source.productSlug !== binderRingStoryConnectionCardPackProductSlug,
+    `productSlug must be ${binderRingStoryConnectionCardPackProductSlug}.`,
+  )
+  pushIf(errors, source.title !== 'Binder Ring Story Connection Card Pack', 'title must be Binder Ring Story Connection Card Pack.')
+  pushIf(errors, source.pricePoint !== '$107', 'pricePoint must be $107.')
+  pushIf(
+    errors,
+    !source.safetyNote?.includes(binderRingStoryConnectionRequiredSafety),
+    'safetyNote must include required Batch 67 safety sentence.',
+  )
+
+  if (product) {
+    pushIf(errors, product.slug !== source.productSlug, 'product.slug must match productSlug.')
+    pushIf(errors, product.title !== source.title, 'product.title must match title.')
+    pushIf(errors, product.pricePoint !== source.pricePoint, 'product.pricePoint must match pricePoint.')
+    pushIf(errors, product.status !== 'checkout_pending', 'product.status must remain checkout_pending.')
+    pushIf(errors, product.heroImage !== binderRingStoryConnectionHeroImage, `product.heroImage must be ${binderRingStoryConnectionHeroImage}.`)
+    pushIf(
+      errors,
+      Array.isArray(product.worldSlugs) && JSON.stringify(product.worldSlugs) !== JSON.stringify(source.worldSlugs),
+      'product.worldSlugs must match source.worldSlugs in exact order.',
+    )
+  }
+
+  pushIf(errors, !Array.isArray(source.sourceFiles), 'sourceFiles must be an array.')
+  if (Array.isArray(source.sourceFiles)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.sourceFiles) !== JSON.stringify(binderRingStoryConnectionSourceFiles),
+      'sourceFiles must list the exact Batch 67 binder ring connection card lane and tools files.',
+    )
+  }
+
+  pushIf(errors, !Array.isArray(source.worldSlugs), 'worldSlugs must be an array.')
+  const sourceWorldSlugs = new Set()
+  if (Array.isArray(source.worldSlugs)) {
+    pushIf(
+      errors,
+      JSON.stringify(source.worldSlugs) !== JSON.stringify(binderRingStoryConnectionExpectedWorldSlugs),
+      'worldSlugs must match the exact Batch 67 binder ring connection world order.',
+    )
+    pushIf(errors, source.worldSlugs.length !== 16, 'worldSlugs must have exactly 16 entries.')
+    for (const slug of source.worldSlugs) {
+      pushIf(errors, sourceWorldSlugs.has(slug), `worldSlugs includes duplicate slug ${slug}.`)
+      sourceWorldSlugs.add(slug)
+      pushIf(errors, !worldSlugs.has(slug), `worldSlugs references unknown world slug ${slug}.`)
+    }
+    for (const [batchNumber, expectedOverlap] of binderRingStoryConnectionExpectedOverlaps) {
+      const overlapSet = readBinderRingStoryConnectionPriorWorldSet(batchNumber)
+      const overlap = source.worldSlugs.filter((slug) => overlapSet.has(slug))
+      pushIf(
+        errors,
+        overlap.length !== expectedOverlap,
+        `Batch67 must overlap Batch${batchNumber} in exactly ${expectedOverlap} worlds; overlapping slugs: ${overlap.join(', ')}.`,
+      )
+    }
+  }
+
+  validateArtifactPaths(
+    source,
+    requiredBinderRingStoryConnectionCardPackArtifactPaths,
+    'Binder Ring Story Connection Card Pack',
+    errors,
+  )
+
+  const framingText = JSON.stringify({
+    audience: source.audience,
+    sessionLength: source.sessionLength,
+    cover: source.cover,
+    adultGuide: source.adultGuide,
+    cards: source.cards,
+  })
+  pushIf(errors, !/adult-led/i.test(framingText), 'Binder Ring Story Connection Card Pack source must use adult-led framing.')
+  pushIf(errors, !/\boffline\b/i.test(framingText), 'Binder Ring Story Connection Card Pack source must use offline framing.')
+  pushIf(errors, !/\bpaper-only\b/i.test(framingText), 'Binder Ring Story Connection Card Pack source must use paper-only framing.')
+  pushIf(
+    errors,
+    !/\bfictional\b|\bpretend\b|\binvented\b|\bmade-up\b|\bmade up\b/i.test(framingText),
+    'Binder Ring Story Connection Card Pack source must use fictional, pretend, invented, or made-up framing.',
+  )
+
+  pushIf(errors, !isObject(source.cover), 'cover must be an object.')
+  if (isObject(source.cover)) {
+    for (const key of ['kicker', 'headline', 'subhead']) validateString(source.cover[key], `cover.${key}`, errors)
+    validateExactStringArray(source.cover.included, 12, 'cover.included', errors)
+    validateNoUnsafeBinderRingStoryConnectionLanguage(source.cover, 'cover', errors)
+  }
+
+  pushIf(errors, !isObject(source.adultGuide), 'adultGuide must be an object.')
+  if (isObject(source.adultGuide)) {
+    pushIf(
+      errors,
+      JSON.stringify(Object.keys(source.adultGuide)) !== JSON.stringify(['title', 'setupSteps', 'facilitationNotes', 'safetyNotes']),
+      'adultGuide must use the exact field order.',
+    )
+    validateString(source.adultGuide.title, 'adultGuide.title', errors)
+    pushIf(errors, isNonEmptyString(source.adultGuide.title) && !hasWritableBlank(source.adultGuide.title), 'adultGuide.title must include a writable blank.')
+    for (const key of ['setupSteps', 'facilitationNotes', 'safetyNotes']) {
+      validateExactStringArray(source.adultGuide[key], 5, `adultGuide.${key}`, errors)
+      if (Array.isArray(source.adultGuide[key])) {
+        source.adultGuide[key].forEach((line, index) => {
+          pushIf(errors, isNonEmptyString(line) && !hasWritableBlank(line), `adultGuide.${key}[${index}] must include a writable blank.`)
+          pushIf(errors, isNonEmptyString(line) && hasSnakeCasePlaceholder(line), `adultGuide.${key}[${index}] must use human-readable text, not snake_case placeholders.`)
+        })
+      }
+    }
+    validateNoUnsafeBinderRingStoryConnectionLanguage(source.adultGuide, 'adultGuide', errors)
+  }
+
+  pushIf(errors, !Array.isArray(source.connectionRoutines), 'connectionRoutines must be an array.')
+  if (Array.isArray(source.connectionRoutines)) {
+    pushIf(errors, source.connectionRoutines.length !== 6, 'connectionRoutines must have exactly 6 entries.')
+    source.connectionRoutines.forEach((routine, index) => validateBinderRingStoryConnectionRoutine(routine, index, errors))
+  }
+
+  pushIf(errors, !Array.isArray(source.takeHomeConnectionSlips), 'takeHomeConnectionSlips must be an array.')
+  if (Array.isArray(source.takeHomeConnectionSlips)) {
+    pushIf(errors, source.takeHomeConnectionSlips.length !== 10, 'takeHomeConnectionSlips must have exactly 10 entries.')
+    source.takeHomeConnectionSlips.forEach((slip, index) => validateBinderRingStoryConnectionSlip(slip, index, errors))
+  }
+
+  validateExactStringArray(source.optionalAdultPrompts, 8, 'optionalAdultPrompts', errors)
+  if (Array.isArray(source.optionalAdultPrompts)) {
+    source.optionalAdultPrompts.forEach((prompt, index) => {
+      pushIf(errors, isNonEmptyString(prompt) && !hasWritableBlank(prompt), `optionalAdultPrompts[${index}] must include a writable blank.`)
+      pushIf(errors, isNonEmptyString(prompt) && hasSnakeCasePlaceholder(prompt), `optionalAdultPrompts[${index}] must use human-readable text, not snake_case placeholders.`)
+      validateNoUnsafeBinderRingStoryConnectionLanguage(prompt, `optionalAdultPrompts[${index}]`, errors)
+    })
+  }
+
+  pushIf(errors, !Array.isArray(source.cards), 'cards must be an array.')
+  if (Array.isArray(source.cards)) {
+    pushIf(errors, source.cards.length !== 16, 'cards must have exactly 16 entries.')
+    const cardIds = new Set()
+    const coveredWorlds = new Set()
+    source.cards.forEach((card, index) => {
+      validateBinderRingStoryConnectionCard(card, index, sourceWorldSlugs, worldSlugs, knownWorldRecords, cardIds, errors)
+      if (isNonEmptyString(card?.worldSlug)) coveredWorlds.add(card.worldSlug)
+    })
+    pushIf(errors, coveredWorlds.size !== 16, 'cards must cover exactly 16 unique worlds.')
+  }
+
+  validateNoUnsafeBinderRingStoryConnectionLanguage(
+    {
+      batchId: source.batchId,
+      generatedAt: source.generatedAt,
+      productSlug: source.productSlug,
+      title: source.title,
+      pricePoint: source.pricePoint,
+      audience: source.audience,
+      sessionLength: source.sessionLength,
+      safetyNote: source.safetyNote,
+      worldSlugs: source.worldSlugs,
+      cover: source.cover,
+      adultGuide: source.adultGuide,
+      connectionRoutines: source.connectionRoutines,
+      takeHomeConnectionSlips: source.takeHomeConnectionSlips,
+      optionalAdultPrompts: source.optionalAdultPrompts,
+      cards: source.cards,
+    },
+    'Binder Ring Story Connection Card Pack source',
+    errors,
+  )
+  validateNoRiskyLanguage(source, 'Binder Ring Story Connection Card Pack source', errors)
+  return errors
+}
+
+function validateBinderRingStoryConnectionToolLane(lane, sourceFile, errors) {
+  pushIf(
+    errors,
+    JSON.stringify(Object.keys(lane)) !==
+      JSON.stringify(['adultGuide', 'connectionRoutines', 'takeHomeConnectionSlips', 'optionalAdultPrompts']),
+    `${sourceFile} must use the exact Batch 67 tools field order.`,
+  )
+  const sourceLike = {
+    adultGuide: lane.adultGuide,
+    connectionRoutines: lane.connectionRoutines,
+    takeHomeConnectionSlips: lane.takeHomeConnectionSlips,
+    optionalAdultPrompts: lane.optionalAdultPrompts,
+  }
+  if (isObject(lane.adultGuide)) {
+    pushIf(
+      errors,
+      JSON.stringify(Object.keys(lane.adultGuide)) !== JSON.stringify(['title', 'setupSteps', 'facilitationNotes', 'safetyNotes']),
+      `${sourceFile}.adultGuide must use the exact field order.`,
+    )
+    for (const key of ['setupSteps', 'facilitationNotes', 'safetyNotes']) {
+      validateExactStringArray(lane.adultGuide[key], 5, `${sourceFile}.adultGuide.${key}`, errors)
+    }
+  }
+  pushIf(errors, !Array.isArray(lane.connectionRoutines), `${sourceFile}.connectionRoutines must be an array.`)
+  if (Array.isArray(lane.connectionRoutines)) {
+    pushIf(errors, lane.connectionRoutines.length !== 6, `${sourceFile}.connectionRoutines must have exactly 6 entries.`)
+    lane.connectionRoutines.forEach((routine, index) => validateBinderRingStoryConnectionRoutine(routine, index, errors))
+  }
+  pushIf(errors, !Array.isArray(lane.takeHomeConnectionSlips), `${sourceFile}.takeHomeConnectionSlips must be an array.`)
+  if (Array.isArray(lane.takeHomeConnectionSlips)) {
+    pushIf(errors, lane.takeHomeConnectionSlips.length !== 10, `${sourceFile}.takeHomeConnectionSlips must have exactly 10 entries.`)
+    lane.takeHomeConnectionSlips.forEach((slip, index) => validateBinderRingStoryConnectionSlip(slip, index, errors))
+  }
+  validateExactStringArray(lane.optionalAdultPrompts, 8, `${sourceFile}.optionalAdultPrompts`, errors)
+
+  const requiresWritableBlank = (path) =>
+    path === 'adultGuide.title' ||
+    /^adultGuide\.(setupSteps|facilitationNotes|safetyNotes)\[\d+\]$/.test(path) ||
+    /^connectionRoutines\[\d+\]\.(title|useWhen)$/.test(path) ||
+    /^connectionRoutines\[\d+\]\.steps\[\d+\]$/.test(path) ||
+    /^takeHomeConnectionSlips\[\d+\]\.prompt$/.test(path) ||
+    /^optionalAdultPrompts\[\d+\]$/.test(path)
+
+  for (const [path, value] of Object.entries(flattenStrings(sourceLike))) {
+    pushIf(
+      errors,
+      requiresWritableBlank(path) && isNonEmptyString(value) && !hasWritableBlank(value),
+      `${sourceFile}.${path} must include a writable blank.`,
+    )
+    pushIf(
+      errors,
+      isNonEmptyString(value) && hasSnakeCasePlaceholder(value),
+      `${sourceFile}.${path} must use human-readable text, not snake_case placeholders.`,
+    )
+  }
+  validateNoUnsafeBinderRingStoryConnectionLanguage(lane, sourceFile, errors)
+}
+
+export function validateBinderRingStoryConnectionCardPackSourceFiles(source, rootDir = resolve(import.meta.dirname, '..')) {
+  const errors = []
+  pushIf(errors, !Array.isArray(source?.sourceFiles), 'sourceFiles must be an array.')
+  if (!Array.isArray(source?.sourceFiles)) return errors
+  pushIf(errors, source.sourceFiles.length !== 4, 'sourceFiles must list the three binder ring connection card lanes and one tools lane.')
+  pushIf(
+    errors,
+    JSON.stringify(source.sourceFiles) !== JSON.stringify(binderRingStoryConnectionSourceFiles),
+    'sourceFiles must list the exact Batch 67 binder ring connection card lane and tools files.',
+  )
+
+  const cardLaneFiles = []
+  const toolLaneFiles = []
+  for (const sourceFile of source.sourceFiles) {
+    validateString(sourceFile, 'sourceFiles[]', errors)
+    if (!isNonEmptyString(sourceFile)) continue
+    try {
+      const lane = JSON.parse(readFileSync(resolve(rootDir, sourceFile), 'utf8'))
+      const expectedRange = sourceFile.includes('-cards-a')
+        ? { min: 1, max: 6, count: 6, label: '01-06' }
+        : sourceFile.includes('-cards-b')
+        ? { min: 7, max: 11, count: 5, label: '07-11' }
+        : sourceFile.includes('-cards-c')
+        ? { min: 12, max: 16, count: 5, label: '12-16' }
+        : null
+
+      if (Array.isArray(lane) && expectedRange) {
+        cardLaneFiles.push({ sourceFile, lane })
+        pushIf(errors, lane.length !== expectedRange.count, `${sourceFile} must contain exactly ${expectedRange.count} cards.`)
+        const cardIds = new Set()
+        const sourceWorldSlugs = new Set(binderRingStoryConnectionExpectedWorldSlugs)
+        const knownWorldRecords = binderRingStoryConnectionExpectedWorldAges
+        lane.forEach((card) => {
+          const match = String(card?.id ?? '').match(/-(\d{2})$/)
+          const cardNumber = match ? Number(match[1]) : NaN
+          pushIf(
+            errors,
+            !Number.isInteger(cardNumber) || cardNumber < expectedRange.min || cardNumber > expectedRange.max,
+            `${sourceFile} must include card numbers ${expectedRange.label}.`,
+          )
+          if (Number.isInteger(cardNumber)) {
+            validateBinderRingStoryConnectionCard(
+              card,
+              cardNumber - 1,
+              sourceWorldSlugs,
+              sourceWorldSlugs,
+              knownWorldRecords,
+              cardIds,
+              errors,
+            )
+          }
+        })
+      } else if (isObject(lane) && isObject(lane.adultGuide)) {
+        toolLaneFiles.push({ sourceFile, lane })
+        validateBinderRingStoryConnectionToolLane(lane, sourceFile, errors)
+      } else {
+        errors.push(`${sourceFile} must be a Batch 67 binder ring connection card array lane or tools lane.`)
+      }
+    } catch (error) {
+      errors.push(`${sourceFile} could not be read as JSON: ${error.message}`)
+    }
+  }
+
+  pushIf(errors, cardLaneFiles.length !== 3, 'sourceFiles must include exactly three binder ring connection card lane files.')
+  pushIf(errors, toolLaneFiles.length !== 1, 'sourceFiles must include exactly one binder ring connection tools lane file.')
+
+  const laneCards = cardLaneFiles
+    .flatMap(({ lane }) => lane)
+    .sort((left, right) => String(left?.id).localeCompare(String(right?.id)))
+  if (Array.isArray(source.cards)) {
+    pushIf(
+      errors,
+      JSON.stringify(laneCards) !== JSON.stringify(source.cards),
+      'sourceFiles connection card lanes must reproduce cards exactly.',
+    )
+  }
+
+  const toolsLane = toolLaneFiles[0]?.lane
+  if (toolsLane) {
+    for (const key of ['adultGuide', 'connectionRoutines', 'takeHomeConnectionSlips', 'optionalAdultPrompts']) {
+      pushIf(
+        errors,
+        JSON.stringify(toolsLane[key]) !== JSON.stringify(source[key]),
+        `sourceFiles tools lane must reproduce ${key} exactly.`,
+      )
+    }
+  }
+
+  return errors
+}
+
+
+
+
+
 export function countPdfPages(buffer) {
   const text = buffer.toString('latin1')
   return (text.match(/\/Type\s*\/Page\b/g) ?? []).length
@@ -22344,6 +23041,8 @@ export function inspectArtifactFiles(root, artifact, options = {}) {
       ? requiredDeskLampStoryProblemCardPackArtifactPaths
       : artifact?.pdfPath === requiredPaperTabStoryInferenceCardPackArtifactPaths.pdfPath
       ? requiredPaperTabStoryInferenceCardPackArtifactPaths
+      : artifact?.pdfPath === requiredBinderRingStoryConnectionCardPackArtifactPaths.pdfPath
+      ? requiredBinderRingStoryConnectionCardPackArtifactPaths
       : artifact?.pdfPath === requiredPageFlagStoryReasonChainCardPackArtifactPaths.pdfPath
       ? requiredPageFlagStoryReasonChainCardPackArtifactPaths
       : artifact?.pdfPath === requiredBookendStoryEvidenceCardPackArtifactPaths.pdfPath

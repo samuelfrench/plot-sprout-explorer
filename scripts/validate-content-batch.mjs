@@ -83,6 +83,8 @@ import {
   validatePageFlagStoryReasonChainCardPackSourceFiles,
   validatePaperTabStoryInferenceCardPackSource,
   validatePaperTabStoryInferenceCardPackSourceFiles,
+  validateBinderRingStoryConnectionCardPackSource,
+  validateBinderRingStoryConnectionCardPackSourceFiles,
   validateReadingNookStoryCauseEffectCardPackSource,
   validateReadingNookStoryCauseEffectCardPackSourceFiles,
   validateWindowSeatStorySceneCardPackSource,
@@ -180,6 +182,7 @@ const batch63ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-ba
 const batch64ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch64-images.json')
 const batch65ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch65-images.json')
 const batch66ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch66-images.json')
+const batch67ImagesFile = resolve(root, 'content', 'image-queue', '2026-06-04-batch67-images.json')
 const productsFile = resolve(root, 'content', 'products', 'batch5-products.json')
 const rainyDayPackSourceFile = resolve(root, 'content', 'product-artifacts', 'rainy-day-story-quest-pack.json')
 const seasonBundleSourceFile = resolve(root, 'content', 'product-artifacts', 'homeschool-season-story-bundle.json')
@@ -320,6 +323,12 @@ const paperTabStoryInferenceSourceFile = resolve(
   'product-artifacts',
   'paper-tab-story-inference-card-pack.json',
 )
+const binderRingStoryConnectionSourceFile = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'binder-ring-story-connection-card-pack.json',
+)
 const batchId = '2026-06-02-batch1'
 const seoBatchId = '2026-06-02-batch2'
 const miniUnitsBatchId = '2026-06-02-batch3'
@@ -382,6 +391,7 @@ const batch63ImagesBatchId = '2026-06-04-batch63-images'
 const batch64ImagesBatchId = '2026-06-04-batch64-images'
 const batch65ImagesBatchId = '2026-06-04-batch65-images'
 const batch66ImagesBatchId = '2026-06-04-batch66-images'
+const batch67ImagesBatchId = '2026-06-04-batch67-images'
 const productsBatchId = '2026-06-02-batch5'
 const rainyDayPackBatchId = '2026-06-02-batch7'
 const seasonBundleBatchId = '2026-06-02-batch8'
@@ -5464,6 +5474,51 @@ function validateBatch66Image(image, imageSlugs) {
   expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
 }
 
+function validateBatch67Image(image, imageSlugs) {
+  const label = `2026-06-04-batch67-images.json:${image.slug ?? 'missing-slug'}`
+  for (const key of ['slug', 'title', 'purpose', 'prompt', 'outputJpeg', 'outputWebp', 'sidecar']) {
+    validateString(image[key], `${label}.${key}`)
+  }
+  validateString(image.negativePrompt, `${label}.negativePrompt`)
+  expect(Number.isInteger(image.seed), `${label}.seed must be an integer.`)
+  expect(image.width === 1344, `${label}.width must be 1344.`)
+  expect(image.height === 768, `${label}.height must be 768.`)
+  expect(
+    image.slug === 'binder-ring-story-connection-card-pack',
+    `${label}.slug must be binder-ring-story-connection-card-pack.`,
+  )
+  expect(!imageSlugs.has(image.slug), `${label}.slug is duplicated across Batch 67 images.`)
+  imageSlugs.add(image.slug)
+  expect(image.outputJpeg === `public/images/plotsprout/batch67/${image.slug}.jpg`, `${label}.outputJpeg has an unexpected path.`)
+  expect(image.outputWebp === `public/images/plotsprout/batch67/${image.slug}.webp`, `${label}.outputWebp has an unexpected path.`)
+  expect(image.sidecar === `content/image-runs/batch67/${image.slug}.json`, `${label}.sidecar has an unexpected path.`)
+  expect(/binder ring/i.test(image.prompt), `${label}.prompt must describe the binder ring product hero.`)
+  expect(/connection/i.test(image.prompt), `${label}.prompt must describe connection cards.`)
+  expect(/text/i.test(image.negativePrompt), `${label}.negativePrompt must block text-like artifacts.`)
+  const imageCopy = { ...image }
+  delete imageCopy.negativePrompt
+  validateNoBannedTerms(imageCopy, label)
+
+  const jpegPath = resolve(root, image.outputJpeg)
+  const webpPath = resolve(root, image.outputWebp)
+  const sidecarPath = resolve(root, image.sidecar)
+  const generatedFileExists = [jpegPath, webpPath, sidecarPath].some((filePath) => existsSync(filePath))
+  if (!generatedFileExists) return
+
+  validateImageFile(jpegPath, `${label}.outputJpeg`, 'jpeg')
+  validateImageFile(webpPath, `${label}.outputWebp`, 'webp')
+  expect(existsSync(sidecarPath), `${label} missing sidecar file: ${sidecarPath}`)
+  const sidecar = readJson(sidecarPath)
+  expect(sidecar.slug === image.slug, `${label}.sidecar slug mismatch.`)
+  expect(sidecar.prompt === image.prompt, `${label}.sidecar prompt mismatch.`)
+  expect(sidecar.negativePrompt === image.negativePrompt, `${label}.sidecar negativePrompt mismatch.`)
+  expect(sidecar.steps >= 30, `${label}.sidecar steps must be at least 30.`)
+  expect(sidecar.seed === image.seed, `${label}.sidecar seed must match manifest seed.`)
+  expect(sidecar.outputJpeg === image.outputJpeg, `${label}.sidecar outputJpeg mismatch.`)
+  expect(sidecar.outputWebp === image.outputWebp, `${label}.sidecar outputWebp mismatch.`)
+  expect(!Object.hasOwn(sidecar, 'elapsedSeconds'), `${label}.sidecar must not include wall-clock elapsedSeconds.`)
+}
+
 function validateProduct(product, productSlugs, worldSlugs, options = {}) {
   const label = `batch5-products.json:${product.slug ?? 'missing-slug'}`
   for (const key of [
@@ -5954,6 +6009,14 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
       minParentSteps: 4,
       maxWorldSlugs: 16,
     },
+    'binder-ring-story-connection-card-pack': {
+      title: 'Binder Ring Story Connection Card Pack',
+      pricePoint: '$107',
+      minIncludedPages: 12,
+      minUseCases: 4,
+      minParentSteps: 4,
+      maxWorldSlugs: 16,
+    },
   }
   const expectedProduct = expectedProducts[product.slug]
   expect(Boolean(expectedProduct), `${label}.slug is not an expected product slug.`)
@@ -5977,7 +6040,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
     product.slug === 'shelf-marker-story-theme-card-pack' ||
     product.slug === 'bookend-story-evidence-card-pack' ||
     product.slug === 'page-flag-story-reason-chain-card-pack' ||
-    product.slug === 'paper-tab-story-inference-card-pack'
+    product.slug === 'paper-tab-story-inference-card-pack' ||
+    product.slug === 'binder-ring-story-connection-card-pack'
       ? expandingFileStorySceneChainSafety
       : safety
   expect(product.safetyNote.includes(requiredProductSafety), `${label}.safetyNote missing required safety sentence.`)
@@ -6141,6 +6205,9 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
 
   const renderedPath = resolve(root, 'public', product.slug, 'index.html')
   if (!existsSync(renderedPath)) {
+    if (product.slug === 'binder-ring-story-connection-card-pack' && options.batch67GenerationStarted) {
+      fail(`${label} static output is missing after Batch 67 generated outputs started: ${renderedPath}`)
+    }
     if (product.slug === 'paper-tab-story-inference-card-pack' && options.batch66GenerationStarted) {
       fail(`${label} static output is missing after Batch 66 generated outputs started: ${renderedPath}`)
     }
@@ -6189,7 +6256,8 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
         product.slug === 'shelf-marker-story-theme-card-pack' ||
         product.slug === 'bookend-story-evidence-card-pack' ||
         product.slug === 'page-flag-story-reason-chain-card-pack' ||
-        product.slug === 'paper-tab-story-inference-card-pack',
+        product.slug === 'paper-tab-story-inference-card-pack' ||
+        product.slug === 'binder-ring-story-connection-card-pack',
       `${label} static output is missing: ${renderedPath}`,
     )
     return
@@ -7645,12 +7713,33 @@ const batch66ImagePaths = batch66Images.images.flatMap((image) => [
   resolve(root, image.sidecar),
 ])
 
+expect(existsSync(batch67ImagesFile), `Missing Batch 67 image manifest: ${batch67ImagesFile}`)
+const batch67Images = readJson(batch67ImagesFile)
+expect(
+  batch67Images.batchId === batch67ImagesBatchId,
+  `batch67 image manifest batchId must be ${batch67ImagesBatchId}.`,
+)
+expect(batch67Images.generatedAt === '2026-06-04', 'batch67 image manifest generatedAt must be 2026-06-04.')
+expect(Array.isArray(batch67Images.images), 'batch67 image manifest images must be an array.')
+expect(batch67Images.images.length === 1, `Expected 1 Batch 67 image, found ${batch67Images.images.length}.`)
+const batch67ImageSlugs = new Set()
+batch67Images.images.forEach((image) => validateBatch67Image(image, batch67ImageSlugs))
+expect(
+  batch67ImageSlugs.has('binder-ring-story-connection-card-pack'),
+  'Batch 67 images missing binder-ring-story-connection-card-pack.',
+)
+const batch67ImagePaths = batch67Images.images.flatMap((image) => [
+  resolve(root, image.outputJpeg),
+  resolve(root, image.outputWebp),
+  resolve(root, image.sidecar),
+])
+
 expect(existsSync(productsFile), `Missing Batch 5 products file: ${productsFile}`)
 const products = readJson(productsFile)
 expect(products.batchId === productsBatchId, `batch5-products.json.batchId must be ${productsBatchId}.`)
 expect(products.generatedAt === '2026-06-02', 'batch5-products.json.generatedAt must be 2026-06-02.')
 expect(Array.isArray(products.products), 'batch5-products.json.products must be an array.')
-expect(products.products.length === 59, `Expected 59 product records, found ${products.products.length}.`)
+expect(products.products.length === 60, `Expected 60 product records, found ${products.products.length}.`)
 const productSlugs = new Set()
 let batch55GeneratedOutputPaths = [...batch55ImagePaths]
 const batch55ProductRecord = products.products.find(
@@ -7933,8 +8022,37 @@ if (batch66GenerationStarted) {
     )
   }
 }
+let batch67GeneratedOutputPaths = [...batch67ImagePaths]
+const batch67ProductRecord = products.products.find(
+  (product) => product.slug === 'binder-ring-story-connection-card-pack',
+)
+if (batch67ProductRecord) {
+  batch67GeneratedOutputPaths.push(resolve(root, 'public', batch67ProductRecord.slug, 'index.html'))
+}
+const batch67ProductArtifactPathForGeneration = resolve(
+  root,
+  'content',
+  'product-artifacts',
+  'binder-ring-story-connection-card-pack.json',
+)
+if (existsSync(batch67ProductArtifactPathForGeneration)) {
+  const artifactSourceForGeneration = readJson(batch67ProductArtifactPathForGeneration)
+  batch67GeneratedOutputPaths.push(
+    ...Object.values(artifactSourceForGeneration.artifact ?? {}).map((relativePath) => resolve(root, relativePath)),
+  )
+}
+const batch67GenerationStarted = anyPathExists(batch67GeneratedOutputPaths)
+if (batch67GenerationStarted) {
+  for (const imagePath of batch67ImagePaths) {
+    expect(
+      existsSync(imagePath),
+      `Batch 67 generated image output is missing after Batch 67 generated outputs started: ${imagePath}`,
+    )
+  }
+}
 products.products.forEach((product) =>
   validateProduct(product, productSlugs, worldSlugs, {
+    batch67GenerationStarted,
     batch66GenerationStarted,
     batch65GenerationStarted,
     batch64GenerationStarted,
@@ -8008,6 +8126,8 @@ for (const requiredProductSlug of [
   'shelf-marker-story-theme-card-pack',
   'bookend-story-evidence-card-pack',
   'page-flag-story-reason-chain-card-pack',
+  'paper-tab-story-inference-card-pack',
+  'binder-ring-story-connection-card-pack',
 ]) {
   expect(productSlugs.has(requiredProductSlug), `Missing product record: ${requiredProductSlug}`)
 }
@@ -13120,6 +13240,140 @@ if (paperTabStoryInferenceRequiresArtifacts) {
   }
 }
 
+expect(
+  existsSync(binderRingStoryConnectionSourceFile),
+  `Missing Batch 67 Binder Ring Story Connection Card Pack source file: ${binderRingStoryConnectionSourceFile}`,
+)
+const binderRingStoryConnectionSource = readJson(binderRingStoryConnectionSourceFile)
+expect(
+  binderRingStoryConnectionSource.batchId === '2026-06-04-batch67',
+  'Binder Ring Story Connection Card Pack source batchId must be 2026-06-04-batch67.',
+)
+const binderRingStoryConnectionProduct = products.products.find(
+  (product) => product.slug === 'binder-ring-story-connection-card-pack',
+)
+expect(
+  binderRingStoryConnectionProduct,
+  'Missing Binder Ring Story Connection Card Pack product record for Batch 67 artifact validation.',
+)
+const binderRingStoryConnectionSourceErrors = validateBinderRingStoryConnectionCardPackSource(
+  binderRingStoryConnectionSource,
+  binderRingStoryConnectionProduct,
+  worldAgeBands,
+)
+expect(
+  binderRingStoryConnectionSourceErrors.length === 0,
+  `Binder Ring Story Connection Card Pack source failed validation:\n${binderRingStoryConnectionSourceErrors.join('\n')}`,
+)
+const binderRingStoryConnectionSourceFileErrors = validateBinderRingStoryConnectionCardPackSourceFiles(
+  binderRingStoryConnectionSource,
+  root,
+)
+expect(
+  binderRingStoryConnectionSourceFileErrors.length === 0,
+  `Binder Ring Story Connection Card Pack sourceFiles failed validation:\n${binderRingStoryConnectionSourceFileErrors.join('\n')}`,
+)
+const binderRingStoryConnectionSummaryErrors = validateProductWorldSummaries(
+  binderRingStoryConnectionProduct,
+  'Binder Ring Story Connection Card Pack',
+)
+expect(
+  binderRingStoryConnectionSummaryErrors.length === 0,
+  `Binder Ring Story Connection Card Pack world summaries failed validation:\n${binderRingStoryConnectionSummaryErrors.join('\n')}`,
+)
+const binderRingStoryConnectionCardAgeBands = new Map(
+  binderRingStoryConnectionSource.cards.map((card) => [card.worldSlug, card.ageBand]),
+)
+for (const [index, summary] of binderRingStoryConnectionProduct.worldSummaries.entries()) {
+  validateString(summary.ageBand, `Binder Ring Story Connection Card Pack product.worldSummaries[${index}].ageBand`)
+  expect(
+    summary.ageBand === binderRingStoryConnectionCardAgeBands.get(summary.slug),
+    `Binder Ring Story Connection Card Pack product.worldSummaries[${index}].ageBand must match source card ageBand.`,
+  )
+  expect(
+    !/^6-/.test(summary.ageBand),
+    `Binder Ring Story Connection Card Pack product.worldSummaries[${index}].ageBand must stay within ages 7-11.`,
+  )
+}
+const binderRingStoryConnectionArtifactPaths = Object.values(binderRingStoryConnectionSource.artifact).map(
+  (relativePath) => resolve(root, relativePath),
+)
+const binderRingStoryConnectionAnyArtifactFilesExist = anyPathExists(binderRingStoryConnectionArtifactPaths)
+const binderRingStoryConnectionRequiresArtifacts =
+  batch67GenerationStarted || binderRingStoryConnectionAnyArtifactFilesExist
+if (binderRingStoryConnectionRequiresArtifacts) {
+  for (const artifactPath of binderRingStoryConnectionArtifactPaths) {
+    expect(
+      existsSync(artifactPath),
+      `Binder Ring Story Connection Card Pack artifact set is incomplete after artifact generation started: ${artifactPath}`,
+    )
+  }
+  const binderRingStoryConnectionExpectedPdfPages = binderRingStoryConnectionSource.cards.length + 5
+  const binderRingStoryConnectionArtifactStatus = inspectArtifactFiles(root, binderRingStoryConnectionSource.artifact, {
+    expectedPdfPages: binderRingStoryConnectionExpectedPdfPages,
+    expectedZipEntries: [
+      'Binder-Ring-Story-Connection-Card-Pack.pdf',
+      'README.txt',
+      'source/binder-ring-story-connection-card-pack.html',
+      ...binderRingStoryConnectionSource.worldSlugs.map((slug) => `source/assets/${slug}.jpg`),
+    ],
+  })
+  expect(
+    binderRingStoryConnectionArtifactStatus.valid,
+    `Binder Ring Story Connection Card Pack artifacts failed validation:\n${binderRingStoryConnectionArtifactStatus.errors.join('\n')}`,
+  )
+  expect(
+    binderRingStoryConnectionArtifactStatus.files.pdf.size > 100_000,
+    `Binder Ring Story Connection Card Pack PDF artifact is unexpectedly small: ${binderRingStoryConnectionArtifactStatus.files.pdf.size} bytes.`,
+  )
+  expect(
+    binderRingStoryConnectionArtifactStatus.files.pdf.pageCount === binderRingStoryConnectionExpectedPdfPages,
+    `Binder Ring Story Connection Card Pack PDF artifact must have ${binderRingStoryConnectionExpectedPdfPages} pages.`,
+  )
+  expect(
+    binderRingStoryConnectionArtifactStatus.files.zip.size > binderRingStoryConnectionArtifactStatus.files.pdf.size,
+    'Binder Ring Story Connection Card Pack ZIP artifact should include the PDF plus source HTML and image assets.',
+  )
+  const binderRingStoryConnectionCheckoutErrors = validateCheckoutReadiness(
+    binderRingStoryConnectionProduct,
+    binderRingStoryConnectionArtifactStatus,
+  )
+  expect(
+    binderRingStoryConnectionCheckoutErrors.length === 0,
+    `Binder Ring Story Connection Card Pack checkout readiness failed validation:\n${binderRingStoryConnectionCheckoutErrors.join('\n')}`,
+  )
+  const binderRingStoryConnectionArtifactManifest = readJson(
+    resolve(root, binderRingStoryConnectionSource.artifact.manifestPath),
+  )
+  expect(
+    binderRingStoryConnectionArtifactManifest.sourcePageCount === binderRingStoryConnectionSource.cards.length,
+    'Binder Ring Story Connection Card Pack artifact manifest sourcePageCount must match source cards.',
+  )
+  expect(
+    Array.isArray(binderRingStoryConnectionArtifactManifest.files?.assets),
+    'Binder Ring Story Connection Card Pack artifact manifest files.assets must be an array.',
+  )
+  expect(
+    binderRingStoryConnectionArtifactManifest.files.assets.length === binderRingStoryConnectionSource.worldSlugs.length,
+    'Binder Ring Story Connection Card Pack artifact manifest must include one copied local image per source world.',
+  )
+  const binderRingStoryConnectionManifestAssetErrors = validateManifestWorldAssets(
+    binderRingStoryConnectionSource,
+    binderRingStoryConnectionArtifactManifest,
+  )
+  expect(
+    binderRingStoryConnectionManifestAssetErrors.length === 0,
+    `Binder Ring Story Connection Card Pack artifact manifest image coverage failed validation:\n${binderRingStoryConnectionManifestAssetErrors.join('\n')}`,
+  )
+  for (const asset of binderRingStoryConnectionArtifactManifest.files.assets) {
+    validateImageFile(
+      resolve(root, asset.path),
+      `Binder Ring Story Connection Card Pack copied artifact image ${asset.path}`,
+      'jpeg',
+    )
+  }
+}
+
 const productImageManifests = [
   batch7ProductImages,
   batch10ProductImages,
@@ -13178,6 +13432,7 @@ const productImageManifests = [
   batch64Images,
   batch65Images,
   batch66Images,
+  batch67Images,
 ]
 const localWorldProductImageCount =
   batch4ImageSlugs.size +

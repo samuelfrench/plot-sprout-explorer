@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-04-batch67",
+  "generatedAt": "2026-06-04",
+  "productSlug": "binder-ring-story-connection-card-pack",
+  "title": "Binder Ring Story Connection Card Pack",
+  "pricePoint": "$107",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.",
+  "files": {
+    "pdf": {
+      "path": "product-build/binder-ring-story-connection-card-pack/Binder-Ring-Story-Connection-Card-Pack.pdf",
+      "sha256": "96925ad4c8961d122a8c296ad8636d0cfe002e0a4ae6b78b5a987f55a095c17e",
+      "size": 5371537
+    },
+    "zip": {
+      "path": "product-build/binder-ring-story-connection-card-pack/binder-ring-story-connection-card-pack.zip",
+      "sha256": "bd8715d6f34d6ff1acf1b84db73ea7134443787f907e6f97c3c9a4f9971b89f1",
+      "size": 10330890
+    },
+    "sourceHtml": {
+      "path": "product-build/binder-ring-story-connection-card-pack/source/binder-ring-story-connection-card-pack.html",
+      "sha256": "29e4c80f66701326d17ddfbcaa3aef31851688d8c0257b8923189fbd468f47bc",
+      "size": 61512
+    },
+    "readme": {
+      "path": "product-build/binder-ring-story-connection-card-pack/README.txt",
+      "sha256": "dac6e994b335df81786b9eaa6b2d9bbc6b2b70e1b7293aed8bbda059e5106a8c",
+      "size": 568
+    },
+    "assets": [
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/mitten-market-lost-ticket.jpg",
+        "sha256": "ba9662cac7927c25beffc08c6f4e5b52cb422e727f87d10b1d582ae8a296902c",
+        "size": 194672
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/sticker-station-mail-cart.jpg",
+        "sha256": "3ac216af41b988ed757c346983c7c30bd6e182daf96403981799ada1b40b6429",
+        "size": 177751
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/paperclip-plaza-parcel-day.jpg",
+        "sha256": "c7287db2a3788e8e0a567ea114b5ec913e61c8e11de424d2a30a2fc81c90ed5b",
+        "size": 379900
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/pond-bridge-blueprint-club.jpg",
+        "sha256": "0fe8f3c9f82671ca8e6daa82a2c54eeda4d2c86d0d1e65a86e366df3f5f0f707",
+        "size": 238332
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/cloudberry-clocktower.jpg",
+        "sha256": "3204161ea211c5e28ca7cfeae6e7cfc97be61f53ca978a3606435351731ad6e3",
+        "size": 366382
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/solar-oven-picnic-station.jpg",
+        "sha256": "9742a1d469b45961d9634dc0fb6e722bf60c2f8beb872eb9790da8b21e9300be",
+        "size": 299058
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/compass-craft-academy.jpg",
+        "sha256": "4511442c549002d63e5c1c065f0660ab9c12577c38d3be9d74bea2b3b7adcb60",
+        "size": 316282
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/pencil-dragon-academy.jpg",
+        "sha256": "a6cbedee60bf72546acee4677a2b5f6a4214f1ee1feaafde681e739bf71da612",
+        "size": 404513
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/blue-pencil-observatory.jpg",
+        "sha256": "63eb8f59349d2a8b64c553669fffd66268a0560919cef1d9bb41a57addc880ae",
+        "size": 286058
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/margin-note-market.jpg",
+        "sha256": "b45d340e115ed43d1417f53d147375760db5bc62c0f630460e5cb44ff233df8b",
+        "size": 330241
+      },
+      {
+        "path": "product-build/binder-ring-story-connection-card-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      }
+    ]
+  }
+}

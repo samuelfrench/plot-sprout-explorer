@@ -202,7 +202,7 @@ function makeCards() {
     const title = titleForSlug(worldSlug)
     return {
       id: `binder-ring-connection-card-${number}`,
-      title: `${title} Connection Card`,
+      title: `${title} Binder Ring Story Connection Card`,
       worldSlug,
       ageBand: worldAges[worldSlug],
       connectionSkill: `connect one fictional ${title} detail to a second detail with a because line, one bridge sentence, and a binder ring check: ____________________.`,
@@ -210,7 +210,7 @@ function makeCards() {
       adultSetup: `Adult: set out a blank page, pencil, and two binder rings before the ${title} connection begins: ____________________.`,
       kidDirection: `Writer: keep every ${title} idea invented while the connection stays on paper: ____________________.`,
       firstDetailPrompt: `First detail: write one pretend detail from the ${title} story: ____________________.`,
-      connectionPrompt: `Connection: write how that detail connects to another made-up detail in the story: ____________________.`,
+      connectionPrompt: `connects to: write how that detail connects to another made-up detail in the story: ____________________.`,
       becausePrompt: `Because: write because why the two details fit together in the pretend story: ____________________.`,
       secondDetailPrompt: `Second detail: write another invented detail that fits the same connection: ____________________.`,
       bridgeSentencePrompt: `Bridge sentence: write one sentence connecting the two details with because language: ____________________.`,
@@ -422,7 +422,8 @@ describe('Binder Ring Story Connection Card Pack', () => {
     expect(html).toContain('Ages 7-8')
     expect(html).not.toContain('Ages 6-8')
     expect(html).toContain('First detail:')
-    expect(html).toContain('Connection:')
+    expect(html).toContain('Connects to')
+    expect(html).toContain('connects to:')
     expect(html).toContain('Because:')
     expect(html).toContain('Second detail:')
     expect(html).toContain('Bridge sentence:')

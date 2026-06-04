@@ -1,0 +1,497 @@
+{
+  "batchId": "2026-06-04-batch67",
+  "generatedAt": "2026-06-04",
+  "productSlug": "binder-ring-story-connection-card-pack",
+  "title": "Binder Ring Story Connection Card Pack",
+  "pricePoint": "$107",
+  "audience": "Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.",
+  "sessionLength": "16 printable binder ring story connection cards plus adult guide tools, connection routines, take-home connection slips, and optional adult prompts",
+  "safetyNote": "No scary harm, no bullying, no romance, no weapons, no branded characters, and no identifying facts.",
+  "artifact": {
+    "pdfPath": "product-build/binder-ring-story-connection-card-pack/Binder-Ring-Story-Connection-Card-Pack.pdf",
+    "zipPath": "product-build/binder-ring-story-connection-card-pack/binder-ring-story-connection-card-pack.zip",
+    "sourceHtmlPath": "product-build/binder-ring-story-connection-card-pack/source/binder-ring-story-connection-card-pack.html",
+    "manifestPath": "product-build/binder-ring-story-connection-card-pack/manifest.json"
+  },
+  "sourceFiles": [
+    "content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-a.json",
+    "content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-b.json",
+    "content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-c.json",
+    "content/product-artifacts/lanes/batch67-binder-ring-story-connection-tools.json"
+  ],
+  "worldSlugs": [
+    "mitten-market-lost-ticket",
+    "sticker-station-mail-cart",
+    "spoon-ferry-lunchbox-harbor",
+    "penny-path-compass-shop",
+    "buttonwood-library-train",
+    "paperclip-plaza-parcel-day",
+    "pond-bridge-blueprint-club",
+    "cloudberry-clocktower",
+    "solar-oven-picnic-station",
+    "greenhouse-gear-garden",
+    "seed-library-map-room",
+    "compass-craft-academy",
+    "pencil-dragon-academy",
+    "blue-pencil-observatory",
+    "margin-note-market",
+    "index-card-theater-club"
+  ],
+  "cover": {
+    "kicker": "Printable binder ring connection cards",
+    "headline": "Binder Ring Story Connection Card Pack",
+    "subhead": "Sixteen binder ring cards help writers connect invented story details with because lines, second details, and one short bridge sentence.",
+    "included": [
+      "16 printable binder ring connection cards",
+      "Adult setup guide",
+      "Fictional connection safety notes",
+      "First detail prompts",
+      "Connection prompts",
+      "Because prompts",
+      "Second detail prompts",
+      "Bridge sentence prompts",
+      "Binder ring check prompts",
+      "Six adult-led connection routines",
+      "Ten take-home connection slips",
+      "Printable PDF and ZIP artifact"
+    ]
+  },
+  "adultGuide": {
+    "title": "Binder Ring Story Connection Adult Guide: ____________________.",
+    "setupSteps": [
+      "Set out one binder ring connection card, blank paper, pencil, and a small paper ring mark for the adult-led fictional offline paper-only session: ____________________.",
+      "Label six paper lines detail, connects to, because, second detail, bridge sentence, and binder ring check before the writer begins: ____________________.",
+      "Choose one made-up story moment from a place like Nettlewick Hall or Mallowgate Yard and keep every detail invented: ____________________.",
+      "Tell the writer that pointing, dictating, adult-scribed phrases, or short independent writing all fit this family-friendly paper activity: ____________________.",
+      "Close by rereading the bridge sentence and binder ring check from the paper card only: ____________________."
+    ],
+    "facilitationNotes": [
+      "Start with one small detail so the writer has a clear paper anchor: ____________________.",
+      "Ask what the detail connects to before asking because, so the story link forms in a calm order: ____________________.",
+      "Use the because line to explain the connection with one invented reason: ____________________.",
+      "Add the second detail only after the first detail and connects to line feel clear on paper: ____________________.",
+      "Treat the binder ring check as a quiet close to the bridge sentence, not a correction mark: ____________________."
+    ],
+    "safetyNotes": [
+      "Use only invented names, made-up places, pretend objects, and fictional story details: ____________________.",
+      "Skip any prompt that asks for personal facts, exact place facts, outside facts, or child identity clues: ____________________.",
+      "Keep the activity adult-led, offline, paper-only, and away from audience pressure: ____________________.",
+      "Keep every bridge sentence about the pretend story, not about a person outside the card: ____________________.",
+      "Use the binder ring check as a paper sorting mark for one fictional connection: ____________________."
+    ]
+  },
+  "connectionRoutines": [
+    {
+      "title": "First Detail Finder: ____________________.",
+      "useWhen": "Use when the writer needs one invented detail before making a connection: ____________________.",
+      "steps": [
+        "The adult points to the first detail blank on the paper card: ____________________.",
+        "The writer names one pretend object, color, sound, sign, or tiny change from the made-up story: ____________________.",
+        "The adult repeats the detail in plain words and keeps it fictional: ____________________.",
+        "The writer fills this line: My detail is ____________________."
+      ]
+    },
+    {
+      "title": "Connects To Pair: ____________________.",
+      "useWhen": "Use when the first detail is chosen and needs a story idea to connect to: ____________________.",
+      "steps": [
+        "The adult reads the first detail from the paper card: ____________________.",
+        "The writer says what the detail connects to inside the pretend story: ____________________.",
+        "The adult asks whether the connection stays inside the made-up moment: ____________________.",
+        "The writer fills this line: My detail connects to ____________________."
+      ]
+    },
+    {
+      "title": "Because Link: ____________________.",
+      "useWhen": "Use when the detail connects to an idea but the reason is still missing: ____________________.",
+      "steps": [
+        "The adult places the detail line beside the connects to line: ____________________.",
+        "The writer tells why the detail connects to that pretend story idea: ____________________.",
+        "The adult helps trim the because line to one clear invented phrase: ____________________.",
+        "The writer fills this line: It connects because ____________________."
+      ]
+    },
+    {
+      "title": "Second Detail Support: ____________________.",
+      "useWhen": "Use when one detail and because line are ready and the connection needs a second detail: ____________________.",
+      "steps": [
+        "The adult rereads the detail, connects to, and because lines in order: ____________________.",
+        "The writer chooses a second detail that supports the same fictional connection: ____________________.",
+        "The adult asks how the second detail helps the same bridge sentence: ____________________.",
+        "The writer fills this line: My second detail is ____________________."
+      ]
+    },
+    {
+      "title": "Bridge Sentence Build: ____________________.",
+      "useWhen": "Use when the detail, connects to line, because line, and second detail are ready to combine: ____________________.",
+      "steps": [
+        "The adult reads all four paper lines in order without adding outside facts: ____________________.",
+        "The writer chooses which words belong in one bridge sentence: ____________________.",
+        "The adult keeps the bridge sentence short, fictional, offline, and paper-only: ____________________.",
+        "The writer fills this line: My bridge sentence is ____________________."
+      ]
+    },
+    {
+      "title": "Binder Ring Check Close: ____________________.",
+      "useWhen": "Use when the bridge sentence is written and needs a final paper check: ____________________.",
+      "steps": [
+        "The adult places the paper ring mark beside the bridge sentence: ____________________.",
+        "The writer points to the detail and second detail that support the sentence: ____________________.",
+        "The adult asks why the binder ring check shows a clear fictional connection: ____________________.",
+        "The writer fills this line: My binder ring check says ____________________."
+      ]
+    }
+  ],
+  "takeHomeConnectionSlips": [
+    {
+      "title": "Detail Connects Slip: ____________________.",
+      "prompt": "My detail is ____________________; it connects to ____________________ because ____________________.",
+      "adultNote": "Use this slip for one adult-led fictional paper connection, with no outside facts: ____________________."
+    },
+    {
+      "title": "Second Detail Slip: ____________________.",
+      "prompt": "My second detail is ____________________, and it supports the same connection because ____________________.",
+      "adultNote": "Ask for one more invented detail that belongs with the first detail: ____________________."
+    },
+    {
+      "title": "Bridge Sentence Slip: ____________________.",
+      "prompt": "My bridge sentence is ____________________.",
+      "adultNote": "Combine the detail, connects to line, because line, and second detail in one paper sentence: ____________________."
+    },
+    {
+      "title": "Binder Ring Check Slip: ____________________.",
+      "prompt": "My binder ring check says the two details fit because ____________________.",
+      "adultNote": "Use the check as a quiet ending mark for the made-up story connection: ____________________."
+    },
+    {
+      "title": "Tiny Connection Slip: ____________________.",
+      "prompt": "The tiniest connection I can write is ____________________ because ____________________.",
+      "adultNote": "Keep the line short so the writer can finish one adult-led paper link: ____________________."
+    },
+    {
+      "title": "Made-Up Place Slip: ____________________.",
+      "prompt": "In ____________________, one detail connects to another detail because ____________________.",
+      "adultNote": "Use a pretend place name like Nettlewick Hall, Mallowgate Yard, or Pebblepin Pier: ____________________."
+    },
+    {
+      "title": "Object Detail Slip: ____________________.",
+      "prompt": "The object detail ____________________ connects to the story idea ____________________ because ____________________.",
+      "adultNote": "Choose a pretend object and keep the connection inside the fictional moment: ____________________."
+    },
+    {
+      "title": "Character Thought Slip: ____________________.",
+      "prompt": "A made-up character might think ____________________ because the detail ____________________ connects to ____________________.",
+      "adultNote": "Keep the thought invented and tied to the paper detail: ____________________."
+    },
+    {
+      "title": "Two Detail Pair Slip: ____________________.",
+      "prompt": "First detail: ____________________; second detail: ____________________; bridge sentence: ____________________.",
+      "adultNote": "Read both details before asking for the bridge sentence: ____________________."
+    },
+    {
+      "title": "Later Ring Slip: ____________________.",
+      "prompt": "Next paper session, I can add one new detail that connects to ____________________.",
+      "adultNote": "Save this as a family-friendly offline paper-only starter for another adult-led connection: ____________________."
+    }
+  ],
+  "optionalAdultPrompts": [
+    "Which small detail can start this adult-led fictional paper connection: ____________________.",
+    "What does the detail connects to inside the made-up story moment: ____________________.",
+    "Why does the detail connect because of something already on the card: ____________________.",
+    "What second detail supports the same story connection: ____________________.",
+    "Which words make a clear bridge sentence from the two details: ____________________.",
+    "Where should the binder ring check sit beside the bridge sentence: ____________________.",
+    "Which blank can stay empty until the writer is ready to dictate or write: ____________________.",
+    "What invented detail can be saved for the next offline paper-only connection: ____________________."
+  ],
+  "cards": [
+    {
+      "id": "binder-ring-connection-card-01",
+      "title": "Mitten Market Lost Ticket Binder Ring Story Connection Card",
+      "worldSlug": "mitten-market-lost-ticket",
+      "ageBand": "7-8",
+      "connectionSkill": "Practice story connection by naming one invented detail, telling what it connects to, writing because, adding a second detail, making one bridge sentence, and finishing the binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a pretend Mitten Market Lost Ticket story: ____________________.",
+      "adultSetup": "Adult: set out one blank page, pencil, and two pretend binder ring marks beside the Mitten Market Lost Ticket card: ____________________.",
+      "kidDirection": "Writer: invent a mitten stall, a folded ticket, and a helper who connects one small detail to another made-up detail: ____________________.",
+      "firstDetailPrompt": "first detail: write one pretend mitten stitch, ticket fold, or stall mark the helper notices first: ____________________.",
+      "connectionPrompt": "connects to: write what the first detail connects to inside the invented mitten market story: ____________________.",
+      "becausePrompt": "because: write because why those two details fit together in the pretend story: ____________________.",
+      "secondDetailPrompt": "second detail: write one different mitten market detail that strengthens the same connection: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that connects the first detail, because line, and second detail: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the pretend ring when the bridge sentence uses only invented details: ____________________.",
+      "quietOptionLine": "Quiet option: fill only the first detail and connects to blanks, then pause with the adult: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper connection card and add one new mitten market detail later with an adult: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-02",
+      "title": "Sticker Station Mail Cart Binder Ring Story Connection Card",
+      "worldSlug": "sticker-station-mail-cart",
+      "ageBand": "7-9",
+      "connectionSkill": "Build a story connection by choosing a detail, naming what it connects to, explaining because, adding a second detail, writing a bridge sentence, and doing a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Sticker Station Mail Cart story: ____________________.",
+      "adultSetup": "Adult: place one blank page, pencil, and two pretend binder ring marks near the Sticker Station Mail Cart prompt: ____________________.",
+      "kidDirection": "Writer: make up a sticker counter, a rolling mail cart, and a helper who links two paper-only story details: ____________________.",
+      "firstDetailPrompt": "first detail: write one pretend sticker shape, cart wheel mark, or station signal the helper notices first: ____________________.",
+      "connectionPrompt": "connects to: write which second made-up detail the first detail connects to in the sticker station story: ____________________.",
+      "becausePrompt": "because: write because why the two sticker station details belong together: ____________________.",
+      "secondDetailPrompt": "second detail: write one different mail cart or sticker station detail that supports the connection: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that shows how the first detail connects to the second detail because it fits: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the pretend binder ring when the connection stays calm, invented, and clear: ____________________.",
+      "quietOptionLine": "Quiet option: point to one pretend sticker mark first, then write only the second detail blank: ____________________.",
+      "takeHomeLine": "Take-home line: save this paper connection card for one later adult-led sticker station detail: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-03",
+      "title": "Spoon Ferry Lunchbox Harbor Binder Ring Story Connection Card",
+      "worldSlug": "spoon-ferry-lunchbox-harbor",
+      "ageBand": "7-9",
+      "connectionSkill": "Use story connection practice to name one detail, tell what it connects to, explain because, add a second detail, write a bridge sentence, and finish with a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a pretend Spoon Ferry Lunchbox Harbor story: ____________________.",
+      "adultSetup": "Adult: set a blank page, pencil, and two pretend binder ring marks beside the Spoon Ferry Lunchbox Harbor card: ____________________.",
+      "kidDirection": "Writer: invent a spoon ferry, a lunchbox harbor dock, and a helper who connects two gentle story details on paper: ____________________.",
+      "firstDetailPrompt": "first detail: write one pretend spoon ferry rail, lunchbox lid mark, or harbor flag the helper notices first: ____________________.",
+      "connectionPrompt": "connects to: write what the first detail connects to somewhere else in the invented harbor story: ____________________.",
+      "becausePrompt": "because: write because why the two harbor details fit together for the helper: ____________________.",
+      "secondDetailPrompt": "second detail: write one different spoon ferry or harbor detail that belongs with the first detail: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that connects both details and uses because language: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the pretend ring when the bridge sentence stays fictional and paper-only: ____________________.",
+      "quietOptionLine": "Quiet option: fill the first detail and second detail blanks before trying the bridge sentence: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper connection card and add one new spoon ferry detail later with an adult: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-04",
+      "title": "Penny Path Compass Shop Binder Ring Story Connection Card",
+      "worldSlug": "penny-path-compass-shop",
+      "ageBand": "7-9",
+      "connectionSkill": "Shape a fictional connection by writing a detail, what it connects to, a because line, a second detail, a bridge sentence, and a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Penny Path Compass Shop story: ____________________.",
+      "adultSetup": "Adult: place one blank page, pencil, and two pretend binder ring marks beside the compass shop card: ____________________.",
+      "kidDirection": "Writer: invent a penny path counter, a tiny compass, and a helper who connects two pretend shop details: ____________________.",
+      "firstDetailPrompt": "first detail: write one invented penny mark, compass pointer turn, or counter tag the helper notices first: ____________________.",
+      "connectionPrompt": "connects to: write which second compass shop detail the first detail connects to: ____________________.",
+      "becausePrompt": "because: write because why the penny path detail and compass detail fit in the same story moment: ____________________.",
+      "secondDetailPrompt": "second detail: write one different compass shop detail that supports the connection: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that connects the first detail and second detail with a clear because: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the pretend binder ring when both details are invented and connected: ____________________.",
+      "quietOptionLine": "Quiet option: write only the connects to phrase first, then let the adult read it back: ____________________.",
+      "takeHomeLine": "Take-home line: save this paper connection card and add one new compass shop detail later with an adult: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-05",
+      "title": "Buttonwood Library Train Binder Ring Story Connection Card",
+      "worldSlug": "buttonwood-library-train",
+      "ageBand": "7-9",
+      "connectionSkill": "Practice connecting fictional story details by naming a detail, saying what it connects to, explaining because, adding a second detail, writing a bridge sentence, and finishing the binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a pretend Buttonwood Library Train story: ____________________.",
+      "adultSetup": "Adult: set out a blank page, pencil, and two pretend binder ring marks near the Buttonwood Library Train card: ____________________.",
+      "kidDirection": "Writer: make up a buttonwood train car, a shelf bell, and a helper who connects two invented paper details: ____________________.",
+      "firstDetailPrompt": "first detail: write one pretend buttonwood leaf mark, train wheel sound, or shelf bell detail the helper notices first: ____________________.",
+      "connectionPrompt": "connects to: write which second detail the first detail connects to inside the invented train story: ____________________.",
+      "becausePrompt": "because: write because why those two buttonwood train details fit together: ____________________.",
+      "secondDetailPrompt": "second detail: write one different train car or shelf bell detail that supports the connection: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that links the first detail, second detail, and because idea: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the pretend ring when the bridge sentence stays invented and private to the paper: ____________________.",
+      "quietOptionLine": "Quiet option: fill only the first detail and because blanks while the adult reads the prompts: ____________________.",
+      "takeHomeLine": "Take-home line: keep this paper connection card and add one new buttonwood train detail later with an adult: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-06",
+      "title": "Paperclip Plaza Parcel Day Binder Ring Story Connection Card",
+      "worldSlug": "paperclip-plaza-parcel-day",
+      "ageBand": "7-9",
+      "connectionSkill": "Make a story connection by writing a first detail, what it connects to, a because line, a second detail, one bridge sentence, and a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Paperclip Plaza Parcel Day story: ____________________.",
+      "adultSetup": "Adult: place a blank page, pencil, and two pretend binder ring marks beside the Paperclip Plaza Parcel Day prompt: ____________________.",
+      "kidDirection": "Writer: invent a paperclip plaza, a folded parcel, and a helper who connects two calm story details: ____________________.",
+      "firstDetailPrompt": "first detail: write one pretend paperclip bend, parcel fold, or plaza tile mark the helper notices first: ____________________.",
+      "connectionPrompt": "connects to: write what the first detail connects to in another part of the invented parcel day story: ____________________.",
+      "becausePrompt": "because: write because why the paperclip detail and parcel detail fit together: ____________________.",
+      "secondDetailPrompt": "second detail: write one different plaza or parcel detail that supports the same connection: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that connects the first detail to the second detail because they fit: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the pretend ring when the connection is clear, invented, and paper-only: ____________________.",
+      "quietOptionLine": "Quiet option: fill the second detail blank first, then choose the bridge sentence with the adult: ____________________.",
+      "takeHomeLine": "Take-home line: save this paper connection card and add one new parcel day detail later with an adult: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-07",
+      "title": "Pond Bridge Blueprint Club Binder Ring Story Connection Card",
+      "worldSlug": "pond-bridge-blueprint-club",
+      "ageBand": "8-10",
+      "connectionSkill": "Practice one invented detail, what it connects to, because, a second detail, one bridge sentence, and a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Pond Bridge Blueprint Club story: ____________________.",
+      "adultSetup": "Adult: set out a blank page, pencil, and two pretend binder rings beside the pond bridge blueprint card: ____________________.",
+      "kidDirection": "Writer: invent a pond bridge club, a folded blueprint, and a calm helper who connects two paper details: ____________________.",
+      "firstDetailPrompt": "first detail: write one invented plank mark, ripple sketch, or blueprint corner detail from the pond bridge club: ____________________.",
+      "connectionPrompt": "connects to: write what the first detail connects to in the made-up bridge plan: ____________________.",
+      "becausePrompt": "because: explain because the first detail fits the bridge plan or the helper's next paper choice: ____________________.",
+      "secondDetailPrompt": "second detail: add one different pond bridge detail that belongs with the same connection: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that connects the first detail, because idea, and second detail: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the binder ring when both details connect inside the invented story: ____________________.",
+      "quietOptionLine": "Quiet option: fill only the first detail and second detail blanks before the bridge sentence: ____________________.",
+      "takeHomeLine": "Take-home line: save this pond bridge connection card for one later adult-led paper pass: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-08",
+      "title": "Cloudberry Clocktower Binder Ring Story Connection Card",
+      "worldSlug": "cloudberry-clocktower",
+      "ageBand": "8-10",
+      "connectionSkill": "Connect one invented clocktower detail to a second detail, explain because, write a bridge sentence, and finish with a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Cloudberry Clocktower story: ____________________.",
+      "adultSetup": "Adult: place a blank card page, pencil, and pretend binder rings beside the cloudberry clocktower prompt: ____________________.",
+      "kidDirection": "Writer: make up a clocktower keeper, cloudberry-colored bells, and two details that belong together: ____________________.",
+      "firstDetailPrompt": "first detail: write one invented bell pause, stair scuff, or clock hand detail the keeper notices first: ____________________.",
+      "connectionPrompt": "connects to: write what the first detail connects to inside the clocktower story: ____________________.",
+      "becausePrompt": "because: explain because that connection helps the keeper understand the made-up tower moment: ____________________.",
+      "secondDetailPrompt": "second detail: add one different cloudberry clocktower detail that supports the connection: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that links the two details with because: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the binder ring when the bridge sentence stays invented and clear: ____________________.",
+      "quietOptionLine": "Quiet option: adult-scribe the because line while the writer chooses both details: ____________________.",
+      "takeHomeLine": "Take-home line: keep this clocktower connection card for a later calm paper revisit: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-09",
+      "title": "Solar Oven Picnic Station Binder Ring Story Connection Card",
+      "worldSlug": "solar-oven-picnic-station",
+      "ageBand": "8-10",
+      "connectionSkill": "Use one invented station detail, what it connects to, because, a second detail, a bridge sentence, and a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Solar Oven Picnic Station story: ____________________.",
+      "adultSetup": "Adult: set out a blank page, pencil, and pretend binder rings beside the solar oven picnic station card: ____________________.",
+      "kidDirection": "Writer: invent a shiny paper oven model, a picnic station chart, and two harmless story details that connect: ____________________.",
+      "firstDetailPrompt": "first detail: write one invented mirror flap, sunbeam mark, or folded station chart detail: ____________________.",
+      "connectionPrompt": "connects to: write what the first detail connects to in the made-up station plan: ____________________.",
+      "becausePrompt": "because: explain because the station detail fits the helper's paper-only plan: ____________________.",
+      "secondDetailPrompt": "second detail: add one different solar oven picnic station detail that belongs with the same idea: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that connects the first detail and second detail because they fit: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the binder ring when the connection uses invented object details only: ____________________.",
+      "quietOptionLine": "Quiet option: circle two paper object details, then write only the connects to line: ____________________.",
+      "takeHomeLine": "Take-home line: save this station connection card for one later adult-led paper bridge sentence: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-10",
+      "title": "Greenhouse Gear Garden Binder Ring Story Connection Card",
+      "worldSlug": "greenhouse-gear-garden",
+      "ageBand": "8-10",
+      "connectionSkill": "Build a fictional connection from a first detail, connects to line, because, second detail, bridge sentence, and binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Greenhouse Gear Garden story: ____________________.",
+      "adultSetup": "Adult: provide a blank card page, pencil, and pretend binder rings beside the greenhouse gear garden prompt: ____________________.",
+      "kidDirection": "Writer: invent a gear garden keeper, paper cogs, glass-pane shapes, and two story details that fit together: ____________________.",
+      "firstDetailPrompt": "first detail: write one invented cog click, pane shadow, or garden sketch detail the keeper notices: ____________________.",
+      "connectionPrompt": "connects to: write what the first detail connects to in the gear garden story: ____________________.",
+      "becausePrompt": "because: explain because the two details help the keeper make one gentle paper choice: ____________________.",
+      "secondDetailPrompt": "second detail: add one different greenhouse gear detail that supports the same connection: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that joins the detail, because line, and second detail: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the binder ring when the bridge sentence connects two made-up details: ____________________.",
+      "quietOptionLine": "Quiet option: point to the cog and pane blanks first, then adult-scribe the bridge sentence: ____________________.",
+      "takeHomeLine": "Take-home line: keep this gear garden connection card for another offline paper pass with an adult: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-11",
+      "title": "Seed Library Map Room Binder Ring Story Connection Card",
+      "worldSlug": "seed-library-map-room",
+      "ageBand": "8-10",
+      "connectionSkill": "Name one invented map-room detail, say what it connects to, explain because, add a second detail, write a bridge sentence, and complete a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Seed Library Map Room story: ____________________.",
+      "adultSetup": "Adult: place a blank page, pencil, and pretend binder rings beside the seed library map room card: ____________________.",
+      "kidDirection": "Writer: invent a seed map room, paper drawers, and two pretend map details that connect inside the story: ____________________.",
+      "firstDetailPrompt": "first detail: write one invented seed tag, drawer notch, or map-room corner detail: ____________________.",
+      "connectionPrompt": "connects to: write what the first detail connects to on the made-up map room page: ____________________.",
+      "becausePrompt": "because: explain because the detail fits the map room helper's paper plan: ____________________.",
+      "secondDetailPrompt": "second detail: add one different seed library map room detail that belongs with the same connection: ____________________.",
+      "bridgeSentencePrompt": "bridge sentence: write one sentence that connects the first detail, second detail, and because idea: ____________________.",
+      "binderRingCheckPrompt": "binder ring check: mark the binder ring when both details stay made-up and paper-only: ____________________.",
+      "quietOptionLine": "Quiet option: fill the two detail blanks first, then choose one connects to phrase: ____________________.",
+      "takeHomeLine": "Take-home line: save this map room connection card for one later adult-led bridge sentence: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-12",
+      "title": "Compass Craft Academy Binder Ring Story Connection Card",
+      "worldSlug": "compass-craft-academy",
+      "ageBand": "10-11",
+      "connectionSkill": "Connect one invented compass craft detail to a second detail, explain because it fits, write one bridge sentence, and finish with a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Compass Craft Academy story: ____________________.",
+      "adultSetup": "Adult: set out this card, a pencil, blank paper, and two pretend binder rings for the compass craft connection: ____________________.",
+      "kidDirection": "Writer: invent a paper compass maker, a folded map corner, and calm details that stay inside the made-up academy world: ____________________.",
+      "firstDetailPrompt": "First detail: write one pretend compass craft detail, such as a blue needle mark, folded map tab, or tiny gear stamp: ____________________.",
+      "connectionPrompt": "connects to: write how that detail connects to another invented compass craft detail in the story: ____________________.",
+      "becausePrompt": "Because: explain because why the two details fit together in this pretend compass craft scene: ____________________.",
+      "secondDetailPrompt": "Second detail: write a different invented academy detail that supports the same connection: ____________________.",
+      "bridgeSentencePrompt": "Bridge sentence: write one sentence that links the first detail and second detail with because language: ____________________.",
+      "binderRingCheckPrompt": "Binder ring check: mark the paper ring when the bridge sentence uses detail, connects to, because, and second detail: ____________________.",
+      "quietOptionLine": "Quiet option: fill only the first detail and connection blanks, then pause the paper card: ____________________.",
+      "takeHomeLine": "Take-home line: save this compass craft card and add one more invented detail later with an adult: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-13",
+      "title": "Pencil Dragon Academy Binder Ring Story Connection Card",
+      "worldSlug": "pencil-dragon-academy",
+      "ageBand": "10-11",
+      "connectionSkill": "Use a fictional pencil dragon detail that connects to a second detail, add a because reason, draft one bridge sentence, and complete a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Pencil Dragon Academy story: ____________________.",
+      "adultSetup": "Adult: place this card, blank paper, a pencil, and two pretend binder rings beside the pencil dragon story sketch: ____________________.",
+      "kidDirection": "Writer: make up a pencil dragon helper and keep every academy detail invented, calm, and paper-only: ____________________.",
+      "firstDetailPrompt": "First detail: write one pretend pencil dragon detail, such as a curled graphite scale, soft eraser cloud, or silver paper claw mark: ____________________.",
+      "connectionPrompt": "connects to: write how the first detail connects to a second detail from the same pretend pencil dragon world: ____________________.",
+      "becausePrompt": "Because: explain because why those two details belong together in the invented story: ____________________.",
+      "secondDetailPrompt": "Second detail: write another made-up academy detail that makes the connection clearer: ____________________.",
+      "bridgeSentencePrompt": "Bridge sentence: write one clear sentence that connects the two invented details with because: ____________________.",
+      "binderRingCheckPrompt": "Binder ring check: mark the paper ring when the bridge sentence names both details and the because fit: ____________________.",
+      "quietOptionLine": "Quiet option: let an adult scribe the because line while you choose the second detail: ____________________.",
+      "takeHomeLine": "Take-home line: keep this pencil dragon card and add one new detail connection later with an adult: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-14",
+      "title": "Blue Pencil Observatory Binder Ring Story Connection Card",
+      "worldSlug": "blue-pencil-observatory",
+      "ageBand": "10-11",
+      "connectionSkill": "Connect a fictional observatory detail to a second detail, explain because, write one bridge sentence, and finish the binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Blue Pencil Observatory story: ____________________.",
+      "adultSetup": "Adult: set this card, a pencil, blank paper, and two pretend binder rings beside a paper sky chart: ____________________.",
+      "kidDirection": "Writer: invent a blue-pencil sky watcher, a paper telescope, and details that stay inside the pretend observatory: ____________________.",
+      "firstDetailPrompt": "First detail: write one invented observatory detail, such as a blue star dot, tilted paper lens, or moon-shaped margin mark: ____________________.",
+      "connectionPrompt": "connects to: write how that detail connects to a second detail in the pretend sky chart: ____________________.",
+      "becausePrompt": "Because: explain because why the first detail and second detail fit the same observatory idea: ____________________.",
+      "secondDetailPrompt": "Second detail: write another invented blue-pencil observatory detail that supports the connection: ____________________.",
+      "bridgeSentencePrompt": "Bridge sentence: write one sentence that connects both details and tells because they fit: ____________________.",
+      "binderRingCheckPrompt": "Binder ring check: mark the paper ring when the bridge sentence stays fictional and includes a second detail: ____________________.",
+      "quietOptionLine": "Quiet option: fill the two detail blanks first and save the bridge sentence for later: ____________________.",
+      "takeHomeLine": "Take-home line: save this observatory card and add one more paper sky detail later with an adult: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-15",
+      "title": "Margin Note Market Binder Ring Story Connection Card",
+      "worldSlug": "margin-note-market",
+      "ageBand": "10-11",
+      "connectionSkill": "Name one invented margin note detail, show how it connects to a second detail, explain because, write a bridge sentence, and complete a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Margin Note Market story: ____________________.",
+      "adultSetup": "Adult: place this card, blank paper, a pencil, and two pretend binder rings beside a paper stall map: ____________________.",
+      "kidDirection": "Writer: invent a margin note helper, a folded stall sign, and story details with no real place facts: ____________________.",
+      "firstDetailPrompt": "First detail: write one pretend market detail, such as a curled note corner, dotted stall path, or blue ribbon mark: ____________________.",
+      "connectionPrompt": "connects to: write how the first detail connects to another invented margin note market detail: ____________________.",
+      "becausePrompt": "Because: explain because why the two details fit together in the made-up market scene: ____________________.",
+      "secondDetailPrompt": "Second detail: write a different invented market detail that supports the same connection: ____________________.",
+      "bridgeSentencePrompt": "Bridge sentence: write one sentence that links the first detail and second detail with because: ____________________.",
+      "binderRingCheckPrompt": "Binder ring check: mark the paper ring when the card has a detail, connects to line, because line, second detail, and bridge sentence: ____________________.",
+      "quietOptionLine": "Quiet option: choose the first detail and second detail as short phrases before writing the sentence: ____________________.",
+      "takeHomeLine": "Take-home line: keep this margin note card and add one new invented connection later with an adult: ____________________."
+    },
+    {
+      "id": "binder-ring-connection-card-16",
+      "title": "Index Card Theater Club Binder Ring Story Connection Card",
+      "worldSlug": "index-card-theater-club",
+      "ageBand": "10-11",
+      "connectionSkill": "Connect one invented theater club detail to a second detail, explain because it fits, write one bridge sentence, and finish with a binder ring check: ____________________.",
+      "useCase": "Adult-led fictional offline paper-only connection card for a made-up Index Card Theater Club story: ____________________.",
+      "adultSetup": "Adult: set out this card, blank paper, a pencil, and two pretend binder rings beside an index card scene map: ____________________.",
+      "kidDirection": "Writer: invent a paper theater club helper, quiet card props, and details that stay on the page: ____________________.",
+      "firstDetailPrompt": "First detail: write one pretend theater club detail, such as a folded curtain card, prop label shape, or pencil spotlight circle: ____________________.",
+      "connectionPrompt": "connects to: write how that detail connects to another invented index card detail in the same story: ____________________.",
+      "becausePrompt": "Because: explain because why the two invented details fit together on the paper scene map: ____________________.",
+      "secondDetailPrompt": "Second detail: write a different theater club detail that supports the same connection: ____________________.",
+      "bridgeSentencePrompt": "Bridge sentence: write one sentence that connects the first detail and second detail with because language: ____________________.",
+      "binderRingCheckPrompt": "Binder ring check: mark the paper ring when the bridge sentence includes detail, connects to, because, and second detail: ____________________.",
+      "quietOptionLine": "Quiet option: fill the connection blank with a short phrase and leave the bridge sentence for later: ____________________.",
+      "takeHomeLine": "Take-home line: save this index card theater club card and add one new paper-only detail later with an adult: ____________________."
+    }
+  ]
+}

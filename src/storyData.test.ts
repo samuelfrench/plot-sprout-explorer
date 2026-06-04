@@ -145,6 +145,25 @@ const paperTabInferenceWorldSlugs = [
   'binding-day-boardwalk',
 ]
 
+const binderRingConnectionWorldSlugs = [
+  'mitten-market-lost-ticket',
+  'sticker-station-mail-cart',
+  'spoon-ferry-lunchbox-harbor',
+  'penny-path-compass-shop',
+  'buttonwood-library-train',
+  'paperclip-plaza-parcel-day',
+  'pond-bridge-blueprint-club',
+  'cloudberry-clocktower',
+  'solar-oven-picnic-station',
+  'greenhouse-gear-garden',
+  'seed-library-map-room',
+  'compass-craft-academy',
+  'pencil-dragon-academy',
+  'blue-pencil-observatory',
+  'margin-note-market',
+  'index-card-theater-club',
+]
+
 function readJson(relativePath: string): unknown {
   return JSON.parse(readFileSync(resolve(process.cwd(), relativePath), 'utf8'))
 }
@@ -242,6 +261,7 @@ describe('storyData', () => {
       'bookend-story-evidence-card-pack',
       'page-flag-story-reason-chain-card-pack',
       'paper-tab-story-inference-card-pack',
+      'binder-ring-story-connection-card-pack',
     ])
     expect(productLinks.map((product) => product.pricePoint)).toEqual([
       '$9',
@@ -303,6 +323,7 @@ describe('storyData', () => {
       '$101',
       '$103',
       '$105',
+      '$107',
     ])
     for (const product of productLinks) {
       expect(product.note).toMatch(/No checkout/i)
@@ -831,6 +852,84 @@ describe('storyData', () => {
         'mailto:samfrench@gmail.com?subject=Paper%20Tab%20Story%20Inference%20Card%20Pack',
     })
     expect(product?.worldSlugs).toEqual(paperTabInferenceWorldSlugs)
+    expect(String(product?.ctaHref)).toMatch(/^mailto:/)
+    expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
+  })
+
+  it('keeps the Batch67 binder ring connection source artifact aligned with the lane files', () => {
+    const source = readJson('content/product-artifacts/binder-ring-story-connection-card-pack.json') as Record<
+      string,
+      unknown
+    >
+    const laneA = readJson(
+      'content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-a.json',
+    ) as unknown[]
+    const laneB = readJson(
+      'content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-b.json',
+    ) as unknown[]
+    const laneC = readJson(
+      'content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-c.json',
+    ) as unknown[]
+    const tools = readJson('content/product-artifacts/lanes/batch67-binder-ring-story-connection-tools.json') as Record<
+      string,
+      unknown
+    >
+    const cover = source.cover as { included?: string[] }
+
+    expect(Object.keys(source)).toEqual([
+      'batchId',
+      'generatedAt',
+      'productSlug',
+      'title',
+      'pricePoint',
+      'audience',
+      'sessionLength',
+      'safetyNote',
+      'artifact',
+      'sourceFiles',
+      'worldSlugs',
+      'cover',
+      'adultGuide',
+      'connectionRoutines',
+      'takeHomeConnectionSlips',
+      'optionalAdultPrompts',
+      'cards',
+    ])
+    expect(source.sourceFiles).toEqual([
+      'content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-a.json',
+      'content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-b.json',
+      'content/product-artifacts/lanes/batch67-binder-ring-story-connection-cards-c.json',
+      'content/product-artifacts/lanes/batch67-binder-ring-story-connection-tools.json',
+    ])
+    expect(source.worldSlugs).toEqual(binderRingConnectionWorldSlugs)
+    expect(cover.included).toHaveLength(12)
+    expect(cover.included?.join(' ')).toMatch(/connection/i)
+    expect(cover.included?.join(' ')).not.toMatch(/inference|reason-chain|evidence|theme|summary/i)
+    expect(source.cards).toEqual([...laneA, ...laneB, ...laneC])
+    expect(source.adultGuide).toEqual(tools.adultGuide)
+    expect(source.connectionRoutines).toEqual(tools.connectionRoutines)
+    expect(source.takeHomeConnectionSlips).toEqual(tools.takeHomeConnectionSlips)
+    expect(source.optionalAdultPrompts).toEqual(tools.optionalAdultPrompts)
+  })
+
+  it('keeps the Batch67 binder ring connection product checkout-pending and mailto-only', () => {
+    const products = readJson('content/products/batch5-products.json') as {
+      products: Array<Record<string, unknown>>
+    }
+    const product = products.products.find(
+      (candidate) => candidate.slug === 'binder-ring-story-connection-card-pack',
+    )
+
+    expect(product).toMatchObject({
+      slug: 'binder-ring-story-connection-card-pack',
+      title: 'Binder Ring Story Connection Card Pack',
+      pricePoint: '$107',
+      status: 'checkout_pending',
+      heroImage: 'images/plotsprout/batch67/binder-ring-story-connection-card-pack.jpg',
+      ctaHref:
+        'mailto:samfrench@gmail.com?subject=Binder%20Ring%20Story%20Connection%20Card%20Pack',
+    })
+    expect(product?.worldSlugs).toEqual(binderRingConnectionWorldSlugs)
     expect(String(product?.ctaHref)).toMatch(/^mailto:/)
     expect(String(product?.ctaHref)).not.toMatch(/^https?:/)
   })

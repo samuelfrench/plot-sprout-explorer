@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest'
-import { existsSync, mkdtempSync, readFileSync, rmSync } from 'node:fs'
+import { existsSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs'
 import { tmpdir } from 'node:os'
 import { join, resolve } from 'node:path'
 
@@ -532,8 +532,10 @@ describe('Library Pocket Story Summary Card Pack policy', () => {
   })
 
   it('inspects deterministic builder artifacts and manifest shape', async () => {
-    const buildDir = mkdtempSync(join(tmpdir(), 'library-pocket-summary-build-'))
-    const fixtureImage = resolve(root, 'public/images/plotsprout/batch61/card-catalog-story-retell-card-pack.jpg')
+    const tempRoot = mkdtempSync(join(tmpdir(), 'library-pocket-summary-build-'))
+    const buildDir = join(tempRoot, 'artifact')
+    const fixtureImage = join(tempRoot, 'fixture.jpg')
+    writeFileSync(fixtureImage, 'fixture image')
     const imageSources = new Map(worldSlugs.map((slug) => [slug, fixtureImage]))
 
     try {
@@ -571,7 +573,7 @@ describe('Library Pocket Story Summary Card Pack policy', () => {
       expect(result.manifest.files.zip.path).toBe('library-pocket-story-summary-card-pack.zip')
       expect(status.valid).toBe(true)
     } finally {
-      rmSync(buildDir, { recursive: true, force: true })
+      rmSync(tempRoot, { recursive: true, force: true })
     }
   })
 
