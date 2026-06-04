@@ -72,9 +72,9 @@ describe('content batch verifier summary', () => {
 
     expect(output).toContain(`${currentLocalImageCount()} local world/product images`)
     expect(output).toContain(`${currentProductArtifactCount()} product artifacts`)
-    expect(output).toContain('85 local world/product images')
-    expect(output).toContain('58 static product pages')
-    expect(output).toContain('58 product artifacts')
+    expect(output).toContain('86 local world/product images')
+    expect(output).toContain('59 static product pages')
+    expect(output).toContain('59 product artifacts')
   })
 
   it('rejects product meta descriptions clipped to a trailing adjective fragment', () => {

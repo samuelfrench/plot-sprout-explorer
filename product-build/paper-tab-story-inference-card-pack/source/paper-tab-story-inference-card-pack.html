@@ -1,0 +1,1029 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paper Tab Story Inference Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .image-placeholder { width: 100%; aspect-ratio: 1.28 / 1; border: 1px solid var(--line); background: repeating-linear-gradient(135deg, #fff, #fff 8px, #f3eee4 8px, #f3eee4 16px); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .inference-card-page { font-size: 7.3px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img, .world-card .image-placeholder { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .inference-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .inference-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.245in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable paper tab inference cards</p>
+        <h1>Paper Tab Story Inference Card Pack</h1>
+        <p>Sixteen paper tab cards help writers connect invented story clues to what they might suggest, why they fit, and one short inference sentence.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable paper tab story inference cards plus adult guide tools, inference routines, take-home inference slips, and optional adult prompts</p>
+      <p>Family-safe printable writing pages for adult-led, offline inference practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$105</span>
+        <h2>Included</h2>
+        <ul><li>16 printable paper tab inference cards</li><li>Adult setup guide</li><li>Fictional inference safety notes</li><li>Clue prompts</li><li>Might suggest prompts</li><li>Why prompts</li><li>Second clue prompts</li><li>Inference sentence prompts</li><li>Paper tab check prompts</li><li>Six adult-led inference routines</li><li>Ten take-home inference slips</li><li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Inference coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Paper Tab Story Inference Adult Guide, adult-led fictional offline paper-only family-friendly: ____________________.</h3><ul><li>Place one paper tab card, blank paper, pencil, and scrap tab at the adult-led fictional offline paper-only table: ____________________.</li><li>Name the clue, what it might suggest, why, second clue, inference sentence, and paper tab check blanks before writing: ____________________.</li><li>Choose one made-up story moment and keep each clue adult-led, fictional, offline, paper-only, and family-friendly: ____________________.</li><li>Let the writer point, dictate, or write short paper phrases while the adult keeps the inference calm: ____________________.</li><li>Close by reading the inference sentence and paper tab check from the paper card only: ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Facilitation notes</h3><ul><li>Ask for one tiny clue first so the adult-led fictional offline paper-only inference has a clear start: ____________________.</li><li>Use might suggest language before asking for why, so the writer can try an idea without pressure: ____________________.</li><li>Ask why the clue might suggest the idea, and accept a short family-friendly fictional phrase: ____________________.</li><li>Add a second clue only after the first clue and why line feel clear on paper: ____________________.</li><li>Finish with the paper tab check as a quiet adult-led paper-only mark for the inference sentence: ____________________.</li></ul></article>
+        <article class="guide-card"><h3>Safety notes</h3><ul><li>Keep all names, places, events, clues, and paper tabs made-up for this adult-led fictional offline paper-only activity: ____________________.</li><li>Skip any line that asks for personal facts, exact places, outside facts, or child details: ____________________.</li><li>Use the tabs only as pretend paper markers for this family-friendly inference card: ____________________.</li><li>Keep the inference sentence about the invented story, not about a person outside the card: ____________________.</li><li>Treat the paper tab check as a calm ending to one adult-led fictional offline paper-only session: ____________________.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one story inference card at a time. Keep every inference sentence broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen inference card worlds</h2>
+      <p>Pick a world image, then name the clue, what it might suggest, why it fits, the second clue, the inference sentence, and the paper tab check.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Puddle Planet Post Office</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Mitten Market Lost Ticket</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Button Bakery Map Mix-Up</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Penny Path Compass Shop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Spoon Ferry Lunchbox Harbor</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Buttonwood Library Train</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Rain Boot Route Rangers</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Cloudberry Clocktower</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Pantry Measurement Mystery</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Solar Oven Picnic Station</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Appendix Archive Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Chapter Gate Greenhouse</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Binding Day Boardwalk</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Inference routines</p>
+      <h2>Choose the story inference routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">Use when the writer needs one invented clue before deciding what it might suggest: ____________________.</p>
+      <h3>Clue Spot Routine, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <ol><li>The adult places the blank clue line beside the paper tab card: ____________________.</li><li>The writer names one fictional clue from the made-up story moment: ____________________.</li><li>The adult asks what the clue might suggest inside the pretend story: ____________________.</li><li>The writer fills this paper-only line: This clue might suggest ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the clue is chosen but the idea it might suggest is still loose: ____________________.</p>
+      <h3>Might Suggest Bridge Routine, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <ol><li>The adult reads the clue slowly from the paper card: ____________________.</li><li>The writer says one idea the clue might suggest in the fictional story: ____________________.</li><li>The adult repeats the idea with gentle why language: ____________________.</li><li>The writer completes this adult-led line: The clue might suggest ____________________ because ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the writer has a clue and a might suggest idea but needs a why line: ____________________.</p>
+      <h3>Why Line Routine, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <ol><li>The adult points to the why blank and keeps the card offline and paper-only: ____________________.</li><li>The writer explains why the clue might suggest the story idea: ____________________.</li><li>The adult helps trim the why line to one fictional phrase: ____________________.</li><li>The writer writes this line: My why is ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when one clue and why line are ready and the inference needs a second clue: ____________________.</p>
+      <h3>Second Clue Routine, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <ol><li>The adult rereads the first clue and why line from the paper: ____________________.</li><li>The writer chooses a second clue that fits the same made-up idea: ____________________.</li><li>The adult asks how the second clue might suggest the same inference: ____________________.</li><li>The writer fills this line: My second clue is ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the clue, might suggest idea, why, and second clue are ready to combine: ____________________.</p>
+      <h3>Inference Sentence Routine, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <ol><li>The adult reads the clue, might suggest idea, why, and second clue in order: ____________________.</li><li>The writer chooses the words that belong in one inference sentence: ____________________.</li><li>The adult keeps the sentence fictional, offline, paper-only, and family-friendly: ____________________.</li><li>The writer completes this line: My inference sentence is ____________________.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the inference sentence is written and needs a final paper tab check: ____________________.</p>
+      <h3>Paper Tab Check Routine, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <ol><li>The adult places the paper tab beside the inference sentence: ____________________.</li><li>The writer points to the clue and second clue that support the sentence: ____________________.</li><li>The adult asks why the paper tab check shows a clear fictional inference: ____________________.</li><li>The writer completes this line: My paper tab check says ____________________.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home inference slips</p>
+      <h2>Try one inference later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home inference slip</p>
+      <h3>Tiny Clue Slip, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <p>Fictional clue: ____________________; it might suggest ____________________; why: ____________________.</p>
+      <p>Use this slip as an adult-led paper-only way to start one made-up inference: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home inference slip</p>
+      <h3>Might Suggest Slip, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <p>This clue might suggest ____________________ because ____________________.</p>
+      <p>Ask for a pretend idea first, then ask why the clue might suggest it: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home inference slip</p>
+      <h3>Why Slip, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <p>My why line is ____________________.</p>
+      <p>Keep the why line short, fictional, offline, paper-only, and family-friendly: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home inference slip</p>
+      <h3>Second Clue Slip, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <p>My second clue is ____________________, and it might suggest ____________________.</p>
+      <p>Choose a second clue that supports the same invented inference sentence: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home inference slip</p>
+      <h3>Inference Sentence Slip, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <p>My inference sentence is ____________________.</p>
+      <p>Combine the clue, what it might suggest, why, and second clue in one paper sentence: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home inference slip</p>
+      <h3>Paper Tab Check Slip, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <p>My paper tab check says the clue and second clue fit because ____________________.</p>
+      <p>Use the paper tab check as a calm ending mark, not a pressure mark: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home inference slip</p>
+      <h3>Two Clue Pair Slip, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <p>The first clue is ____________________; the second clue is ____________________; together they might suggest ____________________.</p>
+      <p>Read both fictional clues before asking why they fit together: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home inference slip</p>
+      <h3>Character Guess Slip, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <p>A made-up character might be thinking ____________________ because the clue is ____________________.</p>
+      <p>Keep the guess inside the invented story and on paper only: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home inference slip</p>
+      <h3>Place Guess Slip, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <p>The made-up place might feel ____________________ because the clue is ____________________.</p>
+      <p>Keep place details broad, invented, offline, paper-only, and family-friendly: ____________________.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home inference slip</p>
+      <h3>Later Paper Tab Slip, adult-led fictional offline paper-only family-friendly: ____________________.</h3>
+      <p>Next adult-led paper tab check, I can add a new clue: ____________________.</p>
+      <p>Save the slip for another fictional offline paper-only inference moment: ____________________.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Which clue can start this adult-led fictional offline paper-only inference: ____________________.</li><li>What might suggest idea fits the clue without using outside facts: ____________________.</li><li>Why might the clue suggest that family-friendly story idea: ____________________.</li><li>What second clue supports the same inference sentence: ____________________.</li><li>Which words make the inference sentence clear and still fictional: ____________________.</li><li>Where should the paper tab check sit beside the sentence: ____________________.</li><li>Which blank can stay empty until the writer is ready to dictate or write: ____________________.</li><li>What adult-led fictional offline paper-only clue can be saved for later: ____________________.</li></ul>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 1 | Ages 7-8 | Practice fictional inference by naming a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Puddle Planet Post Office Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/puddle-planet-post-office.jpg" alt="Puddle Planet Post Office illustration">
+        <figcaption>Puddle Planet Post Office</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one blank page, pencil, and two small paper tabs beside the puddle planet card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a puddle stamp desk, a planet pouch, and a helper who figures out what a small clue might suggest: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one made-up puddle stamp, desk mark, or pouch detail that the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what that first clue might suggest inside the pretend post office story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: write why the clue might suggest that idea instead of a different made-up idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: write one different puddle planet detail that points toward the same inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that uses the clue, what it might suggest, why, and the second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when the inference sentence stays invented, calm, and clear: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the clue and might suggest blanks first, then pause: ____________________. Take-home line: keep this paper card and add one new puddle planet clue later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 2 | Ages 7-8 | Use fictional inference to connect a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Moon Muffin Market Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place one blank page, pencil, and paper tabs near the invented moon market prompt: ____________________.</p>
+      <p class="kid-direction">Writer: make up a moon market stall, a silver basket, and a helper who studies two pretend clues on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one moon stall mark, basket shape, or glowing counter detail the helper notices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what the clue might suggest about the helper&#39;s next pretend choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: write why that clue could point to the helper&#39;s idea in the made-up story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: write one different moon market clue that supports the same inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that explains the inference with the clue and second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when the inference sentence uses only invented market details: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: draw a tiny moon tab first, then fill one clue blank with words: ____________________. Take-home line: keep this paper card and invent one more moon market clue later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 3 | Ages 7-8 | Build a fictional inference from a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Teacup Town Weather Window Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a blank page, pencil, and paper tabs beside the weather-window story card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a tiny teacup window, a sky signal, and a helper who thinks about what a clue might suggest: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one window mark, cloud shape, or teacup signal the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what that clue might suggest about the pretend weather-window problem: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: write why the clue could help the helper make that inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: write one different weather-window detail that supports the same inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that links the clue, might suggest idea, why, and second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when the inference sentence is fictional and easy to follow: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the clue and second clue blanks before writing the full sentence: ____________________. Take-home line: keep this paper card and add one new weather-window clue later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 4 | Ages 7-8 | Practice a fictional inference by writing a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Mitten Market Lost Ticket Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+        <figcaption>Mitten Market Lost Ticket</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and paper tabs near the mitten market card before writing begins: ____________________.</p>
+      <p class="kid-direction">Writer: make up a soft mitten booth, a folded ticket, and a helper who notices what two clues might suggest: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one mitten stitch, booth mark, or folded ticket detail the helper spots: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what the clue might suggest about where the pretend ticket belongs: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: write why that clue points toward the helper&#39;s made-up inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: write one different mitten market clue that supports the same idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that uses the clue, might suggest idea, why, and second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when the inference stays on the invented story page: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: ask the adult to read the prompts while you fill one short blank: ____________________. Take-home line: keep this paper card and invent one more mitten market clue later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 5 | Ages 7-9 | Organize fictional inference with a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Button Bakery Map Mix-Up Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/button-bakery-map-mixup.jpg" alt="Button Bakery Map Mix-Up illustration">
+        <figcaption>Button Bakery Map Mix-Up</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one blank page, pencil, and paper tabs beside the button map prompt: ____________________.</p>
+      <p class="kid-direction">Writer: invent button trays, a pretend map, and a helper who uses clues to understand a mix-up: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one button shape, tray mark, or map line the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what that clue might suggest about the mixed-up pretend map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: write why the clue could lead the helper toward that inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: write one different button map detail that supports the same inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that explains the inference with both clues and why: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when the sentence connects the clues without using real place details: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the clue, second clue, and paper tab check blanks first: ____________________. Take-home line: keep this paper card and add one new button map clue later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 6 | Ages 7-9 | Shape a fictional inference from a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Penny Path Compass Shop Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/penny-path-compass-shop.jpg" alt="Penny Path Compass Shop illustration">
+        <figcaption>Penny Path Compass Shop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and paper tabs beside the compass shop card: ____________________.</p>
+      <p class="kid-direction">Writer: make up a penny path counter, a tiny compass, and a helper who thinks about what clues might suggest: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one penny mark, pointer turn, or counter sign the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what the clue might suggest about the helper&#39;s pretend compass choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: write why that clue helps the helper make the inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: write one different compass shop clue that supports the same idea: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that combines the clue, might suggest idea, why, and second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when the inference sentence stays fictional and paper-only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the might suggest blank as a sentence starter, then add one clue: ____________________. Take-home line: keep this paper card and add one new compass shop clue later with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 7 | Ages 7-9 | Use a fictional clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Spoon Ferry Lunchbox Harbor Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/spoon-ferry-lunchbox-harbor.jpg" alt="Spoon Ferry Lunchbox Harbor illustration">
+        <figcaption>Spoon Ferry Lunchbox Harbor</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and small paper tabs beside the invented spoon ferry harbor card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a lunchbox harbor, a spoon ferry, and a careful dock helper who notices calm paper clues: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one pretend spoon ferry detail, lid mark, or dock signal the helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what the first clue might suggest about what the dock helper should do next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: explain why that clue points to your idea inside the invented harbor story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: add one different harbor detail that supports the same inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that uses the clue, what it might suggest, why, and the second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when the inference sentence stays pretend, calm, and paper-only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the clue and second clue blanks first, then adult-scribe the inference sentence: ____________________. Take-home line: keep this spoon ferry card for one later adult-led paper tab check: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 8 | Ages 7-9 | Practice a fictional clue, might suggest statement, why line, second clue, inference sentence, and paper tab check: ____________________.</div>
+      <h2>Buttonwood Library Train Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/buttonwood-library-train.jpg" alt="Buttonwood Library Train illustration">
+        <figcaption>Buttonwood Library Train</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank card page, pencil, and paper tabs near the invented buttonwood train prompt: ____________________.</p>
+      <p class="kid-direction">Writer: make up a buttonwood train, a rolling shelf cart, and a conductor who reads only invented paper clues: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one pretend wheel squeak, shelf ribbon, or window leaf mark the conductor notices: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what the clue might suggest about where the conductor should pause in the story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: explain why that clue helps the conductor make a careful story inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: add one different train or buttonwood detail that points to the same inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that connects the clue, might suggest idea, why line, and second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when the inference uses invented details only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult reads the prompts, and the writer fills only clue, might suggest, and second clue blanks: ____________________. Take-home line: save this buttonwood train card for another paper-only inference pass with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 9 | Ages 7-9 | Build a fictional inference from a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Rain Boot Route Rangers Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+        <figcaption>Rain Boot Route Rangers</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: provide a blank page, pencil, and paper tabs beside the invented rain boot rangers card: ____________________.</p>
+      <p class="kid-direction">Writer: invent two rain boot rangers, a puddle map on paper, and a gentle choice based on story clues: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one pretend boot print, puddle shape, or paper map mark the rangers notice first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what the clue might suggest about which made-up path the rangers choose: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: explain why that clue supports the rangers&#39; paper-only inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: add one different rain boot or puddle-map detail that supports the same inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that uses the clue, might suggest idea, why, and second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when the sentence avoids real places and stays fictional: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: point to two invented map marks, then write only the might suggest line: ____________________. Take-home line: keep this rain boot rangers card for one later paper tab check with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 10 | Ages 8-10 | Explain a fictional clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Cloudberry Clocktower Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/cloudberry-clocktower.jpg" alt="Cloudberry Clocktower illustration">
+        <figcaption>Cloudberry Clocktower</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank card page, pencil, and paper tabs beside the invented clocktower sketch: ____________________.</p>
+      <p class="kid-direction">Writer: invent a clocktower keeper, cloudberry-colored bells, and a small story choice built from clues: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one pretend bell pause, stair scuff, or clock hand detail the keeper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what the clue might suggest about the clocktower keeper&#39;s next careful step: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: explain why that clocktower clue supports the inference inside the made-up story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: add one different cloudberry clocktower detail that supports the same inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that joins the clue, might suggest idea, why, and second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when every detail is invented and the inference is clear: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the clue blank with one phrase, then adult-scribe the why line: ____________________. Take-home line: save this clocktower card for one calm adult-led paper inference revisit: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 11 | Ages 8-10 | Turn fictional railway details into a clue, might suggest idea, why line, second clue, inference sentence, and paper tab check: ____________________.</div>
+      <h2>Rain Gauge Railway Paper Tab Story Inference Card</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a blank page, pencil, and paper tabs beside the invented rain gauge railway card: ____________________.</p>
+      <p class="kid-direction">Writer: invent a railway helper, a rain gauge beside the tracks, and paper clues that point to one idea: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: write one pretend rain line, gauge tick, or track-side flag the railway helper notices first: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: write what the clue might suggest about the helper&#39;s next story choice: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: explain why that clue helps the helper make a fair fictional inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: add one different railway or rain gauge detail that supports the same inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: write one sentence that includes the clue, might suggest idea, why, and second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: mark the paper tab when the inference sentence stays made-up, kind, and paper-only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: adult points to the clue and second clue blanks, and the writer fills one word in each: ____________________. Take-home line: keep this rain gauge railway card for one later offline paper inference pass with an adult: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 12 | Ages 8-10 | Use one clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check for a fictional pantry measurement mystery: ____________________.</div>
+      <h2>Pantry Measurement Mystery Paper Tab Inference Card</h2>
+      <figure>
+        <img src="assets/pantry-measurement-mystery.jpg" alt="Pantry Measurement Mystery illustration">
+        <figcaption>Pantry Measurement Mystery</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card, a pencil, and two blank paper tabs beside a pretend pantry counter sketch: ____________________.</p>
+      <p class="kid-direction">Writer: invent a careful pantry helper who notices measurement clues and writes only made-up story details: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: Write one pretend measurement clue, such as a shifted scoop, uneven cup mark, or folded label edge: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: What might this clue suggest about the helper&#39;s next story move: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: Explain why the clue might suggest that idea inside the pretend pantry mystery: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: Add a different pantry clue that points toward the same inference without repeating the first clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: Write one sentence that uses both clues to tell what the helper can infer: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: Mark the paper tab when the inference sentence uses clue, might suggest, why, and second clue language: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Fill only the clue and might suggest blanks first, then add why later: ____________________. Take-home line: Save this paper card and add one new pretend pantry clue with an adult later: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 13 | Ages 8-10 | Connect a fictional solar station clue to what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Solar Oven Picnic Station Paper Tab Inference Card</h2>
+      <figure>
+        <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+        <figcaption>Solar Oven Picnic Station</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card, a pencil, and two blank paper tabs beside a pretend station map: ____________________.</p>
+      <p class="kid-direction">Writer: make up a sunny station helper, a paper dial, and clues that stay inside the fictional story: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: Write one pretend station clue, such as a tilted paper dial, warm-color mark, or moved shade strip: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: What might this clue suggest about what the station helper should notice next: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: Explain why the clue might suggest that idea in the invented solar station scene: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: Add another station clue that supports the same inference from a different spot on the paper map: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: Write one sentence that connects the clue, second clue, and what they might suggest: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: Mark the paper tab when the sentence stays calm, fictional, and paper-only: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Choose the clue and second clue first, then ask an adult to scribe the why line: ____________________. Take-home line: Save this card and invent one more solar station clue with an adult later: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 14 | Ages 10-11 | Build a fictional archive-lab inference from a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Appendix Archive Lab Paper Tab Inference Card</h2>
+      <figure>
+        <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+        <figcaption>Appendix Archive Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card, a pencil, and three blank paper tabs beside a pretend archive lab diagram: ____________________.</p>
+      <p class="kid-direction">Writer: invent an archive lab helper who studies two paper clues and infers a story idea without naming actual items: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: Write one pretend archive lab clue, such as a misfiled slip, ink dot, or folded specimen tag: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: What might this clue suggest about the hidden order in the invented archive lab: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: Explain why the clue might suggest that order using only made-up lab details: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: Add one different archive lab clue that strengthens or changes the inference: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: Write one sentence that names the inference and links it to the clue and second clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: Mark the paper tab when the inference sentence is based on two invented clues, not outside facts: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Fill the clue, second clue, and might suggest blanks before writing the full sentence: ____________________. Take-home line: Keep this paper card and add one new appendix archive lab clue with an adult later: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 15 | Ages 10-11 | Use greenhouse clue reading to state what a clue might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Chapter Gate Greenhouse Paper Tab Inference Card</h2>
+      <figure>
+        <img src="assets/chapter-gate-greenhouse.jpg" alt="Chapter Gate Greenhouse illustration">
+        <figcaption>Chapter Gate Greenhouse</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set this card, a pencil, and blank paper tabs beside a pretend greenhouse gate sketch: ____________________.</p>
+      <p class="kid-direction">Writer: make up a greenhouse gate helper who notices two calm clues and writes a story inference on paper: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: Write one pretend greenhouse clue, such as a turned paper gate, leaning tag, or changed watering mark: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: What might this clue suggest about which greenhouse path the helper should choose: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: Explain why the clue might suggest that path inside the invented story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: Add another greenhouse clue that points toward the same inference or makes it more exact: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: Write one sentence that connects both greenhouse clues to what the helper infers: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: Mark the paper tab when the inference sentence includes a clue, might suggest, why, and second clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Circle the clue blanks and write only short phrases today: ____________________. Take-home line: Save this paper card and add one new chapter gate greenhouse clue with an adult later: ____________________.</p>
+    </section>
+
+    <section class="pack-page inference-card-page">
+      <div class="page-kicker">Inference Card 16 | Ages 10-11 | Make a fictional boardwalk inference with a clue, what it might suggest, why, a second clue, an inference sentence, and a paper tab check: ____________________.</div>
+      <h2>Binding Day Boardwalk Paper Tab Inference Card</h2>
+      <figure>
+        <img src="assets/binding-day-boardwalk.jpg" alt="Binding Day Boardwalk illustration">
+        <figcaption>Binding Day Boardwalk</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place this card, a pencil, and two blank paper tabs beside a pretend boardwalk strip: ____________________.</p>
+      <p class="kid-direction">Writer: invent a boardwalk helper who reads two gentle clues and writes one clear inference sentence: ____________________.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Clue</h3>
+      <p>clue: Write one pretend boardwalk clue, such as a loose ribbon, shifted cart card, or marked rail plank: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Might suggest</h3>
+      <p>might suggest: What might this clue suggest about what changed before the helper arrived: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Why</h3>
+      <p>why: Explain why the clue might suggest that change in the invented binding day boardwalk story: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Second clue</h3>
+      <p>second clue: Add a different boardwalk clue that supports the inference without copying the first clue: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Inference sentence</h3>
+      <p>inference sentence: Write one sentence that states what the helper infers from both clues: ____________________.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Paper tab check</h3>
+      <p>paper tab check: Mark the paper tab when the sentence is fictional, paper-only, and supported by a second clue: ____________________.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: Fill the clue and second clue blanks, then stop before the full sentence if needed: ____________________. Take-home line: Keep this paper card and add one new boardwalk clue with an adult later: ____________________.</p>
+    </section>
+  </body>
+</html>

@@ -1,0 +1,18 @@
+{
+  "slug": "paper-tab-story-inference-card-pack",
+  "prompt": "family-friendly top-down close-cropped product photo on seamless pale neutral background, blank paper tab story inference card pack, neat stack of blank off-white inference cards with small plain paper tabs, clean printable paper kit, paper-only stationery arrangement, unmarked paper, no readable text, no symbols, no decorative props",
+  "negativePrompt": "text, writing, letters, words, readable text, labels, titles, logo, watermark, symbols, icons, scribbles, printed marks, fake letters, stray marks, forms, borders, ruled paper, handwriting, brand marks, school, classroom, real library checkout desk, checkout desk, library cards, due dates, fines, call numbers, barcodes, real due date slips, books with titles, book titles, author names, real library names, sources, citations, quotes, reviews, ratings, addresses, routes, gps, schedule, screens, devices, keyboard, laptop, trackpad, computer, phone, public, upload, recording, camera, photo, audio, video, voice memo, score, grade, timer, portfolio, showcase, food, snacks, cups, bowls, allergy, medical, scary, violence, weapons, bullying, romance, politics, religion, gambling, ads, branded characters, children, faces, hands, clutter, colored background, dark shadows",
+  "model": "sd_xl_base_1.0.safetensors",
+  "vae": "checkpoint",
+  "width": 1344,
+  "height": 768,
+  "steps": 42,
+  "guidance": 7.0,
+  "seed": 260666105,
+  "jpegQuality": 92,
+  "webpQuality": 92,
+  "outputJpeg": "public/images/plotsprout/batch66/paper-tab-story-inference-card-pack.jpg",
+  "outputWebp": "public/images/plotsprout/batch66/paper-tab-story-inference-card-pack.webp",
+  "manifest": "content/image-queue/2026-06-04-batch66-images.json",
+  "title": "Paper Tab Story Inference Card Pack"
+}

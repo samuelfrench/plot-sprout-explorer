@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-04-batch66",
+  "generatedAt": "2026-06-04",
+  "productSlug": "paper-tab-story-inference-card-pack",
+  "title": "Paper Tab Story Inference Card Pack",
+  "pricePoint": "$105",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.",
+  "files": {
+    "pdf": {
+      "path": "product-build/paper-tab-story-inference-card-pack/Paper-Tab-Story-Inference-Card-Pack.pdf",
+      "sha256": "1a2ad70eb13cd0054624365e24cf42b7d7c647b2a82bf185c6c8b789e43a06f6",
+      "size": 4937853
+    },
+    "zip": {
+      "path": "product-build/paper-tab-story-inference-card-pack/paper-tab-story-inference-card-pack.zip",
+      "sha256": "a3a9e83ddcf5dca5e66d3c4766aa7a2b2e6c3480afcc99ed8febdf763a48730f",
+      "size": 9463880
+    },
+    "sourceHtml": {
+      "path": "product-build/paper-tab-story-inference-card-pack/source/paper-tab-story-inference-card-pack.html",
+      "sha256": "9fd46feb058414a485896ef06c3ebe064b0c5df2955e616c30c647fdd240145f",
+      "size": 60847
+    },
+    "readme": {
+      "path": "product-build/paper-tab-story-inference-card-pack/README.txt",
+      "sha256": "5bda1c8840a7490a45fd8763fdf88a9d36094e49da13989f7d4ceb4ff21d7a86",
+      "size": 554
+    },
+    "assets": [
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/puddle-planet-post-office.jpg",
+        "sha256": "abf1065c54d207cce767bd8a5081e2483bfa37fc4a7d9a476bd65f4e5c914e44",
+        "size": 304692
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/moon-muffin-market.jpg",
+        "sha256": "9fd7c9a4e3584529222c481ce419c67545a98a4ab788f08742ac19df11f0f962",
+        "size": 238603
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/mitten-market-lost-ticket.jpg",
+        "sha256": "ba9662cac7927c25beffc08c6f4e5b52cb422e727f87d10b1d582ae8a296902c",
+        "size": 194672
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/button-bakery-map-mixup.jpg",
+        "sha256": "e84d16e220c8dcfbefda2ed35f7f0458b62520e96ebcbc93ef682cae96b6092e",
+        "size": 347397
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/penny-path-compass-shop.jpg",
+        "sha256": "7a55a4078bd775e51d61d71723b495b9b7674a22f0142358b18042528a22d395",
+        "size": 277215
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/spoon-ferry-lunchbox-harbor.jpg",
+        "sha256": "9e93ddefdec6be587caaa4e6e1dbe8dc0e0e9f42965e3a111f064973fc16b50d",
+        "size": 382607
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/buttonwood-library-train.jpg",
+        "sha256": "8691eed7b3f212a8daaa23a12b74e5795e0884d458c356b8e2a1e237e629be92",
+        "size": 253710
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/cloudberry-clocktower.jpg",
+        "sha256": "3204161ea211c5e28ca7cfeae6e7cfc97be61f53ca978a3606435351731ad6e3",
+        "size": 366382
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/pantry-measurement-mystery.jpg",
+        "sha256": "b85111fa750c89e60fc21133ea09e431a26a010d8ff24db7c4baa305c3ff3f73",
+        "size": 287571
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/solar-oven-picnic-station.jpg",
+        "sha256": "9742a1d469b45961d9634dc0fb6e722bf60c2f8beb872eb9790da8b21e9300be",
+        "size": 299058
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/appendix-archive-lab.jpg",
+        "sha256": "b98def39163f848890045a4790bdae486d811fbdf1d967156eb0e7a5a0a74b4c",
+        "size": 291030
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/chapter-gate-greenhouse.jpg",
+        "sha256": "2a34e6f4bafcaaf422f06aa11146c3d4247b0b7cd76b3fd207dffcb11aa2b2d1",
+        "size": 289788
+      },
+      {
+        "path": "product-build/paper-tab-story-inference-card-pack/source/assets/binding-day-boardwalk.jpg",
+        "sha256": "36ee399f3677daafca5afe6a1a89a2aba44b249fa9f46c89e4aed74a2cb174bb",
+        "size": 222511
+      }
+    ]
+  }
+}
