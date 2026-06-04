@@ -372,6 +372,32 @@ describe('Page Flag Story Reason Chain Card Pack', () => {
     expect(errors.join('\n')).toMatch(/quote|review|cite|source|citation/i)
   })
 
+  it('rejects public-performance and publishing-pressure framing', () => {
+    const forbiddenPhrases = [
+      'showcase',
+      'portfolio',
+      'display',
+      'perfect',
+      'episode',
+      'chapter book',
+      'screenplay',
+      'cliffhanger',
+      'plot twist',
+      'choose your own adventure',
+      'publishable',
+    ]
+
+    for (const phrase of forbiddenPhrases) {
+      const source = makeSource()
+      source.cards[0].reasonChainSentencePrompt = `reason-chain sentence: make this ${phrase} version of the story: ____________________.`
+
+      const errors = validatePageFlagStoryReasonChainCardPackSource(source, makeProduct(source), knownWorldAges)
+      expect(errors.join('\n'), phrase).toMatch(
+        /showcase|portfolio|display|perfect|episode|chapter book|screenplay|cliffhanger|plot twist|choose your own adventure|publishable|publish/i,
+      )
+    }
+  })
+
   it('validates committed source files and product metadata when present', () => {
     const source = readJson('content/product-artifacts/page-flag-story-reason-chain-card-pack.json')
     const products = readJson('content/products/batch5-products.json').products
