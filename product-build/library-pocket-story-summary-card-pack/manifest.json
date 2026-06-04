@@ -1,0 +1,113 @@
+{
+  "batchId": "2026-06-04-batch62",
+  "generatedAt": "2026-06-04",
+  "productSlug": "library-pocket-story-summary-card-pack",
+  "title": "Library Pocket Story Summary Card Pack",
+  "pricePoint": "$97",
+  "sourcePageCount": 16,
+  "fulfillmentNote": "Static artifact bundle: PDF plus source HTML and local image assets; sales path stays pending on the site.",
+  "files": {
+    "pdf": {
+      "path": "product-build/library-pocket-story-summary-card-pack/Library-Pocket-Story-Summary-Card-Pack.pdf",
+      "sha256": "1b2286e434b9d258a7cb3db0b9b89c5a5b317ae3d7f325c8255ac1ea09508394",
+      "size": 4922131
+    },
+    "zip": {
+      "path": "product-build/library-pocket-story-summary-card-pack/library-pocket-story-summary-card-pack.zip",
+      "sha256": "6057fb13cf9f42c505aa6c92f87bdb07125cc62e936bd9ffc820426f6ee5832a",
+      "size": 9431506
+    },
+    "sourceHtml": {
+      "path": "product-build/library-pocket-story-summary-card-pack/source/library-pocket-story-summary-card-pack.html",
+      "sha256": "c6b5feed9a832d1702c7fe7738e481898f327a5d59c3da43325ea8c17d51b023",
+      "size": 56978
+    },
+    "readme": {
+      "path": "product-build/library-pocket-story-summary-card-pack/README.txt",
+      "sha256": "c9713acacf0957e3b17a2a0534fc973059f3f11d80a6c6a914a8405505ea8075",
+      "size": 561
+    },
+    "assets": [
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/moon-muffin-market.jpg",
+        "sha256": "9fd7c9a4e3584529222c481ce419c67545a98a4ab788f08742ac19df11f0f962",
+        "size": 238603
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/pencil-dragon-academy.jpg",
+        "sha256": "a6cbedee60bf72546acee4677a2b5f6a4214f1ee1feaafde681e739bf71da612",
+        "size": 404513
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/teacup-town-weather-window.jpg",
+        "sha256": "bb801e615d2b6276f2f09dd66949a7efe0f7095053bc3ffb8b228f696a019010",
+        "size": 233599
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/mitten-market-lost-ticket.jpg",
+        "sha256": "ba9662cac7927c25beffc08c6f4e5b52cb422e727f87d10b1d582ae8a296902c",
+        "size": 194672
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/rain-boot-route-rangers.jpg",
+        "sha256": "96f688dfd715fcbfd7b1a3bd87dc1718f199c829c22565bc73bd2b9245bf808f",
+        "size": 251554
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/greenhouse-gear-garden.jpg",
+        "sha256": "81f9b3c31a6f1ba6e086c7754cfd24a8d8c5a81f6052ee356d0bfe284f8e0c2f",
+        "size": 321524
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/moss-message-observatory.jpg",
+        "sha256": "c93b7b18de4696794fd46f4faf84a7336cdfac361d5e44021cc480ed313ca91e",
+        "size": 251142
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/rain-gauge-railway.jpg",
+        "sha256": "8d1d93ba67d88c98c989aa7fe93a6859a2d2cd91c98b27301b0851b05347a55e",
+        "size": 221267
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/compost-clock-workshop.jpg",
+        "sha256": "9aed5290d2d2119410590b2a1b52a012529bfc2340dc4bb2310fa45328cb1216",
+        "size": 277439
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/seed-library-map-room.jpg",
+        "sha256": "ae750df0b39a253a6fd268db338c4fd576a7cde8045f4851ec7798f110ddbabf",
+        "size": 349359
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/solar-oven-picnic-station.jpg",
+        "sha256": "9742a1d469b45961d9634dc0fb6e722bf60c2f8beb872eb9790da8b21e9300be",
+        "size": 299058
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/tidepool-timekeepers-lab.jpg",
+        "sha256": "bfc6115b321daa934d76d717701db04f28b8e4c1491b631b66b2cc4afa29687e",
+        "size": 276221
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/almost-invention-workshop.jpg",
+        "sha256": "7a01d44990eea1c5deb8122a60385276744f3ccf29c1e41b42ea9e31c17ea80d",
+        "size": 235339
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/appendix-archive-lab.jpg",
+        "sha256": "b98def39163f848890045a4790bdae486d811fbdf1d967156eb0e7a5a0a74b4c",
+        "size": 291030
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/clue-label-tower-museum.jpg",
+        "sha256": "be7a0395823030f58aa60da6b7ba2f4681509588ab21eb780c612482eb4ad66c",
+        "size": 286869
+      },
+      {
+        "path": "product-build/library-pocket-story-summary-card-pack/source/assets/index-card-theater-club.jpg",
+        "sha256": "ef3205089355a9cfabf3b7c0607f9dd7516b7d4ae68ddd4cbe95cb05d114c478",
+        "size": 316681
+      }
+    ]
+  }
+}

@@ -1,0 +1,1109 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Pocket Story Summary Card Pack</title>
+    <style>
+      @page { size: Letter; margin: 0.34in; }
+      :root {
+        --ink: #263238;
+        --muted: #5a6266;
+        --paper: #fffdf8;
+        --line: #d7cdbc;
+        --green: #356f62;
+        --red: #a54e48;
+        --gold: #d1a64d;
+        --blue: #416f92;
+        color: var(--ink);
+        font-family: Avenir Next, Avenir, Trebuchet MS, Verdana, sans-serif;
+        font-size: 8px;
+        line-height: 1.08;
+      }
+      * { box-sizing: border-box; }
+      body { margin: 0; background: var(--paper); }
+      h1, h2, h3, p { margin-top: 0; }
+      h1, h2 { font-family: Georgia, Times New Roman, serif; line-height: 1.02; }
+      h1 { max-width: 12ch; font-size: 30px; }
+      h2 { margin-bottom: 0.05in; font-size: 17px; }
+      h3 { margin-bottom: 0.025in; font-size: 8.45px; }
+      p, li { color: var(--muted); }
+      img { display: block; max-width: 100%; border: 1px solid var(--line); }
+      .image-placeholder { width: 100%; aspect-ratio: 1.28 / 1; border: 1px solid var(--line); background: repeating-linear-gradient(135deg, #fff, #fff 8px, #f3eee4 8px, #f3eee4 16px); }
+      .pack-page {
+        height: 9.24in;
+        padding: 0.11in;
+        overflow: hidden;
+        page-break-after: always;
+        background:
+          linear-gradient(90deg, rgba(53, 111, 98, 0.08) 1px, transparent 1px),
+          linear-gradient(180deg, rgba(165, 78, 72, 0.07) 1px, transparent 1px),
+          var(--paper);
+        background-size: 0.25in 0.25in;
+        border: 2px solid var(--ink);
+      }
+      .cover-page { display: grid; grid-template-columns: 1fr 2.05in; gap: 0.2in; border-top: 0.16in solid var(--red); }
+      .guide-page { border-top: 0.16in solid var(--green); font-size: 6.7px; }
+      .world-page { border-top: 0.16in solid var(--gold); font-size: 6.82px; }
+      .routine-page { border-top: 0.16in solid var(--blue); font-size: 6.65px; }
+      .slip-page { border-top: 0.16in solid var(--red); font-size: 6.88px; }
+      .summary-card-page { font-size: 7.3px; }
+      .page-kicker, .card-kicker, .kicker {
+        color: var(--green);
+        font-size: 6.55px;
+        font-weight: 900;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+      }
+      .badge {
+        display: inline-grid;
+        min-width: 0.82in;
+        min-height: 0.5in;
+        place-items: center;
+        border: 2px solid var(--ink);
+        background: white;
+        font-weight: 900;
+      }
+      ul, ol { margin: 0; padding-left: 0.14in; }
+      .cover-meta, .guide-grid, .world-grid, .routine-grid, .slip-grid { display: grid; gap: 0.045in; }
+      .guide-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0.032in; }
+      .world-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 0.034in; }
+      .routine-grid, .slip-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0.04in; }
+      .guide-card, .small-card, .world-card, .card-slip, .field-block {
+        padding: 0.04in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px solid var(--line);
+      }
+      .world-card img, .world-card .image-placeholder { width: 100%; aspect-ratio: 2.15 / 1; object-fit: cover; margin-bottom: 0.022in; }
+      .world-card h3 { font-size: 7.1px; }
+      .small-card p, .small-card li, .card-slip p { margin-bottom: 0.02in; }
+      .summary-card-page figure { float: right; width: 1.34in; margin: 0 0 0.05in 0.09in; }
+      .summary-card-page figure img { width: 100%; aspect-ratio: 1.28 / 1; object-fit: cover; }
+      figcaption { color: var(--green); font-size: 6.55px; font-weight: 900; }
+      .adult-note, .kid-direction {
+        margin-bottom: 0.04in;
+        padding: 0.04in;
+        background: white;
+        border-left: 0.055in solid var(--gold);
+      }
+      .kid-direction { border-left-color: var(--green); }
+      .field-grid {
+        clear: both;
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0.032in;
+      }
+      .field-block p {
+        min-height: 0.245in;
+        margin-bottom: 0;
+        padding-bottom: 0.018in;
+        border-bottom: 1px solid rgba(53, 111, 98, 0.18);
+      }
+      .take-home-line {
+        margin-top: 0.047in;
+        padding: 0.045in;
+        background: rgba(255, 255, 255, 0.86);
+        border: 1px dashed var(--red);
+        color: var(--ink);
+        font-weight: 700;
+      }
+      .footer-note { margin-top: 0.05in; font-size: 7px; }
+    </style>
+  </head>
+  <body>
+    <section class="pack-page cover-page">
+      <div>
+        <p class="kicker">Printable library pocket summary cards</p>
+        <h1>Library Pocket Story Summary Card Pack</h1>
+        <p>Sixteen paper pocket cards help writers summarize a story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</p>
+        <p><strong>Audience:</strong> Families, homeschool groups, tutors, and adult-led writing tables for writers ages 7-11.</p>
+        <p><strong>Format:</strong> 16 printable library pocket story summary cards plus adult guide tools, summary routines, take-home summary slips, and optional adult prompts</p>
+        <p>Family-safe printable writing pages for adult-led, offline summary practice.</p>
+      </div>
+      <div class="cover-meta">
+        <span class="badge">$97</span>
+        <h2>Included</h2>
+        <ul><li>16 printable library pocket summary cards</li><li>Adult setup guide</li><li>Fictional summary safety notes</li><li>Story start prompts</li><li>Main action prompts</li><li>Important change prompts</li><li>Ending result prompts</li><li>Keeper detail prompts</li><li>Six adult-led summary routines</li><li>Ten take-home summary slips</li><li>Printable PDF and ZIP artifact</li></ul>
+      </div>
+    </section>
+    <section class="pack-page guide-page">
+      <p class="page-kicker">Adult guide</p>
+      <h2>Summary coaching</h2>
+      <div class="guide-grid">
+        <article class="guide-card"><h3>Library Pocket Story Summary Adult Guide: ____.</h3><ul><li>Set out one story summary card, seven blank slips, a pencil, and a paper pocket before the session begins: ____.</li><li>Name the paper-only path: story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label: ____.</li><li>Choose one fictional story world from the pack and keep all names, places, and actions invented: ____.</li><li>Place one blank slip under each summary heading so the writer can see the full order before writing: ____.</li><li>Keep the finished slips tucked in the paper pocket for adult-led reuse: ____.</li></ul></article>
+        <article class="guide-card"><h3>Facilitation notes</h3><ul><li>Use short spoken choices when a writer gets stuck: start place, action, change, result, detail, sentence, label: ____.</li><li>Accept dictated words, copied adult wording, or independent writing as long as the summary stays fictional: ____.</li><li>Keep the summary sentence to one clear line that names the story start, main action, important change, and ending result: ____.</li><li>Use the keeper detail only if it helps the summary stay specific without adding identifying facts: ____.</li><li>Close by rereading the slips in order and checking that the library pocket label matches the summary sentence: ____.</li></ul></article>
+        <article class="guide-card"><h3>Safety notes</h3><ul><li>Use pretend names, broad made-up places, and invented actions instead of identifying facts: ____.</li><li>Keep the activity away from outside audiences, correction marks, or comparison between writers: ____.</li><li>Keep the pocket metaphor separate from outside title pages, creator names, or service forms: ____.</li><li>Keep every prompt about a pretend story with invented details only: ____.</li><li>Skip any prompt that starts to feel like identifying-fact collection and return to invented story facts: ____.</li></ul></article>
+      </div>
+      <p class="footer-note">Use one story summary card at a time. Keep every summary line broad, invented, paper-only, and guided by an adult.</p>
+    </section>
+    <section class="pack-page world-page">
+      <p class="page-kicker">World menu</p>
+      <h2>Sixteen summary card worlds</h2>
+      <p>Pick a world image, then name the story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</p>
+      <div class="world-grid">
+    <article class="world-card">
+      <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+      <p class="card-kicker">Ages 6-8</p>
+      <h3>Moon Muffin Market</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/pencil-dragon-academy.jpg" alt="Pencil Dragon Academy illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Pencil Dragon Academy</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Teacup Town Weather Window</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+      <p class="card-kicker">Ages 7-8</p>
+      <h3>Mitten Market Lost Ticket</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+      <p class="card-kicker">Ages 7-9</p>
+      <h3>Rain Boot Route Rangers</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Greenhouse Gear Garden</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Moss Message Observatory</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Rain Gauge Railway</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Compost Clock Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Seed Library Map Room</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Solar Oven Picnic Station</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+      <p class="card-kicker">Ages 8-10</p>
+      <h3>Tidepool Timekeepers Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Almost Invention Workshop</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Appendix Archive Lab</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Clue Label Tower Museum</h3>
+    </article>
+
+    <article class="world-card">
+      <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+      <p class="card-kicker">Ages 10-11</p>
+      <h3>Index Card Theater Club</h3>
+    </article></div>
+    </section>
+    <section class="pack-page routine-page">
+      <p class="page-kicker">Summary routines</p>
+      <h2>Choose the story summary routine</h2>
+      <div class="routine-grid">
+    <article class="small-card">
+      <p class="card-kicker">Use before a first summary card so the adult and writer can see the seven paper parts: ____.</p>
+      <h3>Pocket Order Setup: ____.</h3>
+      <ol><li>The adult lays out blank slips labeled story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label: ____.</li><li>The writer points to the story start slip and says where the fictional story begins: ____.</li><li>The adult points across the row and names each next part in order: ____.</li><li>The writer tucks the empty slips halfway into the paper pocket until each one is ready: ____.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the summary needs a clear opening and one action that moves the story: ____.</p>
+      <h3>Story Start To Main Action: ____.</h3>
+      <ol><li>The adult asks for one invented story start with a broad pretend place and a made-up character role: ____.</li><li>The writer writes the story start on the first slip: ____.</li><li>The adult asks what the character does next that matters most: ____.</li><li>The writer writes the main action on the second slip and places it after the story start: ____.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the middle of the summary feels like a list instead of a change: ____.</p>
+      <h3>Important Change Check: ____.</h3>
+      <ol><li>The adult rereads the story start and main action in a calm voice: ____.</li><li>The writer names what becomes different because of the main action: ____.</li><li>The adult helps trim the answer to one important change: ____.</li><li>The writer writes the important change and slides it behind the main action slip: ____.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the summary needs a result that connects back to the earlier slips: ____.</p>
+      <h3>Ending Result Match: ____.</h3>
+      <ol><li>The adult asks what happens after the important change in the fictional story: ____.</li><li>The writer chooses one ending result that answers the main action: ____.</li><li>The adult checks that the ending result does not add a new unrelated problem: ____.</li><li>The writer writes the ending result and places it after the important change: ____.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use when the summary sentence needs one vivid but small detail: ____.</p>
+      <h3>Keeper Detail Sort: ____.</h3>
+      <ol><li>The adult spreads the story start, main action, important change, and ending result slips: ____.</li><li>The writer chooses one keeper detail that helps the summary stay clear: ____.</li><li>The adult asks whether the keeper detail supports the summary sentence: ____.</li><li>The writer writes the keeper detail on its slip and keeps it beside the sentence blank: ____.</li></ol>
+    </article>
+
+    <article class="small-card">
+      <p class="card-kicker">Use at the end of a paper session to close the summary neatly: ____.</p>
+      <h3>Summary Sentence And Pocket Label: ____.</h3>
+      <ol><li>The adult reads the four main slips in order without adding extra facts: ____.</li><li>The writer writes one summary sentence using the story start, main action, important change, and ending result: ____.</li><li>The adult asks for a short library pocket label that names the summary focus: ____.</li><li>The writer writes the library pocket label and tucks all slips into the paper pocket: ____.</li></ol>
+    </article></div>
+    </section>
+    <section class="pack-page slip-page">
+      <p class="page-kicker">Take-home summary slips</p>
+      <h2>Try one summary later</h2>
+      <div class="slip-grid">
+    <article class="card-slip">
+      <p class="card-kicker">Take-home summary slip</p>
+      <h3>Story Start Slip</h3>
+      <p>The fictional story start is ____________________.</p>
+      <p>Ask for one invented starting place or situation, then stop.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home summary slip</p>
+      <h3>Main Action Slip</h3>
+      <p>The main action that moves the story is ____________________.</p>
+      <p>Help choose one action, not every event.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home summary slip</p>
+      <h3>Important Change Slip</h3>
+      <p>The important change after the main action is ____________________.</p>
+      <p>Look for what becomes different in the fictional story.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home summary slip</p>
+      <h3>Ending Result Slip</h3>
+      <p>The ending result is ____________________.</p>
+      <p>Keep the result connected to the earlier action.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home summary slip</p>
+      <h3>Keeper Detail Slip</h3>
+      <p>The keeper detail that helps the summary is ____________________.</p>
+      <p>Choose one useful detail and leave the rest out.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home summary slip</p>
+      <h3>Summary Sentence Slip</h3>
+      <p>My summary sentence is: ____________________.</p>
+      <p>Use one clear sentence from the finished slips.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home summary slip</p>
+      <h3>Library Pocket Label Slip</h3>
+      <p>The library pocket label for this summary is ____________________.</p>
+      <p>Make the label short and fictional.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home summary slip</p>
+      <h3>Order Check Slip</h3>
+      <p>My slips are in this order: story start, main action, important change, ending result, keeper detail, summary sentence, library pocket label: ____________________.</p>
+      <p>Use this as a quiet reread pass.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home summary slip</p>
+      <h3>Shorten The Summary Slip</h3>
+      <p>One extra detail I can leave out is ____________________.</p>
+      <p>Frame this as paper sorting, not judging.</p>
+    </article>
+
+    <article class="card-slip">
+      <p class="card-kicker">Take-home summary slip</p>
+      <h3>Pocket Close Slip</h3>
+      <p>The finished paper pocket holds a summary about ____________________.</p>
+      <p>Close the session by filing the slips without sharing or comparing.</p>
+    </article></div>
+      <h3>Optional adult prompts</h3>
+      <ul><li>Ask which slip should be easiest to fill first, then start there: ____.</li><li>Offer two adult-made fictional examples if the writer needs a model: ____.</li><li>Reread the slips in order before asking for the summary sentence: ____.</li><li>Point to the important change slip when the summary gets too long: ____.</li><li>Use the keeper detail slip only after the ending result is clear: ____.</li><li>Help shorten the library pocket label to a few plain words: ____.</li><li>Keep unused slips blank and return them to the pack for another paper session: ____.</li><li>End the session when the summary sentence and library pocket label both match the same fictional story: ____.</li></ul>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 1 | Ages 6-8 | summarize a fictional paper-only story by naming the story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Moon Muffin Market Story Summary Card</h2>
+      <figure>
+        <img src="assets/moon-muffin-market.jpg" alt="Moon Muffin Market illustration">
+        <figcaption>Moon Muffin Market</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a pencil, blank page, and pretend library pocket slip before the summary talk: ____.</p>
+      <p class="kid-direction">Writer: invent a moon market helper and keep every answer made up and paper-only: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: write who opens the moon market stall and what sign begins the story: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: write what the helper sorts, carries, or fixes at the pretend market: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: write what becomes different after the helper looks closely: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: write how the market feels or works at the end: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: write one moon market detail the summary should keep: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: write one sentence that tells the start, action, change, and end: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: write a short pretend label for this Moon Muffin Market summary: ____.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the story start, ending result, and library pocket label first: ____. Take-home line: save this paper summary and add one new moon market keeper detail later: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 2 | Ages 10-11 | build a concise fictional paper-only summary by connecting story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Pencil Dragon Academy Story Summary Card</h2>
+      <figure>
+        <img src="assets/pencil-dragon-academy.jpg" alt="Pencil Dragon Academy illustration">
+        <figcaption>Pencil Dragon Academy</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank page, pencil, and pretend library pocket slip beside the practice-hall summary card: ____.</p>
+      <p class="kid-direction">Writer: invent the pencil dragons, practice hall, and helper while every answer stays fictional and paper-only: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: write who enters the pencil-dragon practice hall and what paper signal starts the story: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: write the biggest thing the helper does to guide the pencil dragons: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: write what changes in the hall after the helper notices a clue: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: write the final calm result for the helper and pencil dragons: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: write one sharp, clear practice-hall detail the summary should keep: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: write one sentence that explains the whole invented story clearly: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: write a short pretend label for this Pencil Dragon Academy summary: ____.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the main action and important change first, then add the summary sentence: ____. Take-home line: keep this paper summary slip and revise one keeper detail later: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 3 | Ages 7-8 | summarize a fictional paper-only weather-window story with a story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Teacup Town Weather Window Story Summary Card</h2>
+      <figure>
+        <img src="assets/teacup-town-weather-window.jpg" alt="Teacup Town Weather Window illustration">
+        <figcaption>Teacup Town Weather Window</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set a pencil, blank page, and pretend library pocket slip near the weather-window card: ____.</p>
+      <p class="kid-direction">Writer: make up the teacup window, tiny weather sign, and helper while answers stay on paper: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: write who notices the teacup window and what weather sign begins the story: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: write what the helper checks, turns, or sorts at the window: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: write what changes when the weather sign finally makes sense: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: write what the helper sees through the window at the end: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: write one tiny Teacup Town detail that belongs in the summary: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: write one sentence that tells the story in order: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: write a short pretend label for this weather-window summary: ____.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the story start, important change, and summary sentence: ____. Take-home line: save this paper summary and add one new weather-window detail later: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 4 | Ages 7-8 | summarize a fictional paper-only lost-ticket story by naming the story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Mitten Market Lost Ticket Story Summary Card</h2>
+      <figure>
+        <img src="assets/mitten-market-lost-ticket.jpg" alt="Mitten Market Lost Ticket illustration">
+        <figcaption>Mitten Market Lost Ticket</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a pencil, blank page, and pretend library pocket slip beside the mitten-ticket card: ____.</p>
+      <p class="kid-direction">Writer: invent the market stalls, mitten tags, ticket helper, and paper clues: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: write who finds the pretend lost ticket and where the market story begins: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: write what the helper does with the ticket, tag, or stall clue: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: write what becomes clear after the ticket clue is compared: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: write how the ticket question ends in the pretend market: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: write one mitten or market detail the summary should keep: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: write one sentence that tells the ticket story from start to end: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: write a short pretend label for this Mitten Market summary: ____.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the story start and ending result before the other blanks: ____. Take-home line: tuck this paper summary away and add one new ticket detail later: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 5 | Ages 7-9 | write a fictional paper-only summary by linking story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Rain Boot Route Rangers Story Summary Card</h2>
+      <figure>
+        <img src="assets/rain-boot-route-rangers.jpg" alt="Rain Boot Route Rangers illustration">
+        <figcaption>Rain Boot Route Rangers</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank page, pencil, and pretend library pocket slip before the route summary: ____.</p>
+      <p class="kid-direction">Writer: invent rain boots, route marks, and helpful rangers while the route stays fully made up: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: write who spots the first rain-boot route mark and what begins the story: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: write what the rangers trace, sort, or repair on the pretend route: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: write what changes after the route marks are put in order: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: write how the pretend route ends for the rangers: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: write one rain-boot or route-mark detail the summary should keep: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: write one clear sentence that summarizes the whole route story: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: write a short pretend label for this Rain Boot Route Rangers summary: ____.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill the main action, important change, and label before the full sentence: ____. Take-home line: keep this paper summary and add one new route-mark detail later: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 6 | Ages 8-10 | summarize a fictional paper-only gear-garden story with a story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Greenhouse Gear Garden Story Summary Card</h2>
+      <figure>
+        <img src="assets/greenhouse-gear-garden.jpg" alt="Greenhouse Gear Garden illustration">
+        <figcaption>Greenhouse Gear Garden</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a pencil, blank page, and pretend library pocket slip beside the gear-garden card: ____.</p>
+      <p class="kid-direction">Writer: invent the greenhouse gears, garden dials, and helper while every answer stays paper-only: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: write who hears the first garden gear click and what begins the story: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: write what the helper adjusts, matches, or labels in the greenhouse: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: write what changes after the gears and dials line up: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: write how the greenhouse works or feels at the end: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: write one gear, dial, or greenhouse detail the summary should keep: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: write one sentence that tells the gear-garden story clearly: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: write a short pretend label for this Greenhouse Gear Garden summary: ____.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only the important change, ending result, and keeper detail first: ____. Take-home line: save this paper summary and add one new gear-garden detail later: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 7 | Ages 8-10 | Summarize a fictional moss-message observatory story by sorting story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Moss Message Observatory Story Summary Card</h2>
+      <figure>
+        <img src="assets/moss-message-observatory.jpg" alt="Moss Message Observatory illustration">
+        <figcaption>Moss Message Observatory</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out one blank summary card, pencil, and small pocket label strip; keep all observatory details invented: ____.</p>
+      <p class="kid-direction">Writer: make the moss signal, telescope rail, and observatory helper fictional, then fill each summary blank: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: ____ sees a moss message on the observatory ledge.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: ____ follows the moss marks from the telescope rail to the sky chart table.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: ____ changes when the moss marks rearrange into one clear paper path.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: ____ shows how the helper places the solved moss message in the library pocket.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: ____ names one moss color, lens mark, or ledge shape that makes the summary clear.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: ____ tells the whole observatory story in one sentence.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: ____ gives this moss-message summary a short pretend label.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only story start, ending result, and library pocket label: ____. Take-home line: save the paper summary with one keeper detail for a later adult-led summary pass: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 8 | Ages 8-10 | Summarize a fictional rain-gauge railway story by connecting story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Rain Gauge Railway Story Summary Card</h2>
+      <figure>
+        <img src="assets/rain-gauge-railway.jpg" alt="Rain Gauge Railway illustration">
+        <figcaption>Rain Gauge Railway</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: place a blank summary card, pencil, pretend gauge strip, and pocket label slip beside the card: ____.</p>
+      <p class="kid-direction">Writer: keep the rain gauge posts, rail cart, and helper invented while you complete the paper summary: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: ____ notices the rain gauge needle pointing at a tiny rail cart.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: ____ moves the cart between three pretend gauge posts to compare clues.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: ____ changes when the middle gauge shows a new mark.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: ____ explains which rail post holds the answer.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: ____ names the gauge color, rail token, or cart bell to keep.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: ____ sums up the rain-gauge railway story in one clear line.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: ____ writes the short label for this railway summary.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only main action, keeper detail, and summary sentence: ____. Take-home line: keep the railway summary card with its library pocket label for another paper pass: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 9 | Ages 8-10 | Summarize a fictional compost-clock workshop story by naming story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Compost Clock Workshop Story Summary Card</h2>
+      <figure>
+        <img src="assets/compost-clock-workshop.jpg" alt="Compost Clock Workshop illustration">
+        <figcaption>Compost Clock Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank summary card, pencil, pretend clock strip, and pocket label slip before writing: ____.</p>
+      <p class="kid-direction">Writer: invent the compost clock, leaf gears, and workshop helper, then keep every answer on paper: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: ____ enters a workshop where a compost clock ticks beside a leaf bin.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: ____ turns paper gears to match leaf layers with clock marks.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: ____ changes when the clock hand moves after a new leaf layer settles.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: ____ explains which gear tells the workshop order.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: ____ names one gear tooth, leaf tag, or soft tick that belongs in the summary.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: ____ tells the compost-clock workshop story in one sentence.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: ____ gives this workshop summary a short pretend label.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only story start, important change, and keeper detail: ____. Take-home line: save the workshop summary with its pocket label for one later adult-led summary pass: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 10 | Ages 8-10 | Summarize a fictional seed-library map room story by linking story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Seed Library Map Room Story Summary Card</h2>
+      <figure>
+        <img src="assets/seed-library-map-room.jpg" alt="Seed Library Map Room illustration">
+        <figcaption>Seed Library Map Room</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: provide a blank summary card, pencil, pretend seed tag, and library pocket label strip: ____.</p>
+      <p class="kid-direction">Writer: keep the seed library, map drawers, and room helper invented while the summary stays on paper: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: ____ opens a pretend map drawer in the seed-library map room.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: ____ matches seed tags to three paper map shapes.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: ____ changes when one paper map turns and a seed tag no longer fits.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: ____ explains where the seed tag belongs in the invented room.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: ____ names one seed stamp, map corner, or drawer color that helps the summary.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: ____ tells the seed-library map room story in one sentence.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: ____ writes the short pretend label for this map room summary.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only main action, ending result, and library pocket label: ____. Take-home line: keep the map room summary card ready for a later paper summary pass: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 11 | Ages 8-10 | Summarize a fictional solar-oven picnic station story by ordering story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label.</div>
+      <h2>Solar Oven Picnic Station Story Summary Card</h2>
+      <figure>
+        <img src="assets/solar-oven-picnic-station.jpg" alt="Solar Oven Picnic Station illustration">
+        <figcaption>Solar Oven Picnic Station</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Adult: set out a blank summary card, pencil, pretend sun tile, and pocket label strip; keep the station fictional: ____.</p>
+      <p class="kid-direction">Writer: invent the solar oven panel, picnic station helper, and sun-tile problem without leaving the paper page: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: ____ arrives at a pretend picnic station with a solar oven panel and folded sun tiles.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: ____ arranges sun tiles so the paper oven dial points to the right basket marker.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: ____ changes when a cloud card slides over one sun tile.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: ____ explains how the station helper keeps the picnic plan working on paper.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: ____ names one sun tile, dial mark, or blanket pattern that belongs in the summary.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: ____ tells the solar-oven picnic station story in one sentence.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: ____ gives this picnic station summary a short pretend label.</p>
+    </section></div>
+      <p class="take-home-line">Quiet option: fill only story start, important change, and summary sentence: ____. Take-home line: save the picnic station summary with one keeper detail for later adult-led paper use: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 12 | Ages 8-10 | Use story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label language to summarize a fictional Tidepool Timekeepers Lab story.</div>
+      <h2>Tidepool Timekeepers Lab Story Summary Card</h2>
+      <figure>
+        <img src="assets/tidepool-timekeepers-lab.jpg" alt="Tidepool Timekeepers Lab illustration">
+        <figcaption>Tidepool Timekeepers Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place this card, a pencil, and three blank paper slips beside a pretend tidepool clock sketch: ____.</p>
+      <p class="kid-direction">Fill the blanks for a made-up tidepool lab story; keep every detail fictional and paper-only: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: In the tidepool timekeepers lab, the first helper notices ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: The helper tests ____ to keep the tiny tide clocks in order.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: The lab changes when ____ shifts from confusing to useful.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: By the end, the timekeepers know ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: Keep this small lab detail in the summary: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: Write one sentence with the start, action, change, and result: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: File this fictional summary under ____.</p>
+    </section></div>
+      <p class="take-home-line">quiet option: Fill only story start, keeper detail, and library pocket label first: ____. take-home line: Save the paper card and add a clearer summary sentence later: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 13 | Ages 10-11 | Use story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label language to summarize a fictional Almost Invention Workshop story.</div>
+      <h2>Almost Invention Workshop Story Summary Card</h2>
+      <figure>
+        <img src="assets/almost-invention-workshop.jpg" alt="Almost Invention Workshop illustration">
+        <figcaption>Almost Invention Workshop</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place this card, a pencil, and a pretend invention sketch with one circled part: ____.</p>
+      <p class="kid-direction">Fill the blanks for a made-up workshop story about one almost-working idea: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: At the almost-invention workshop, the maker begins with ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: The maker tries ____ with a harmless gear, flap, or lever.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: The invention changes when ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: By the end, the maker can use ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: Keep one workshop detail, such as a bent tag or brass knob: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: Summarize the workshop story in one sentence: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: File this fictional summary under ____.</p>
+    </section></div>
+      <p class="take-home-line">quiet option: Fill story start and ending result before the full summary sentence: ____. take-home line: Save the paper card and add one stronger keeper detail later: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 14 | Ages 10-11 | Use story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label language to summarize a fictional Appendix Archive Lab story.</div>
+      <h2>Appendix Archive Lab Story Summary Card</h2>
+      <figure>
+        <img src="assets/appendix-archive-lab.jpg" alt="Appendix Archive Lab illustration">
+        <figcaption>Appendix Archive Lab</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place this card, a pencil, and three pretend appendix slips with one sideways slip: ____.</p>
+      <p class="kid-direction">Fill the blanks for a made-up archive lab story where one extra note becomes useful: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: In the appendix archive lab, the sorter opens ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: The sorter compares ____ with a tucked extra note.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: The archive changes when ____ moves to the right pocket.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: By the end, the extra note helps explain ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: Keep one archive detail, such as a green tab or quiet tray: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: Write one sentence that tells the archive summary clearly: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: File this fictional summary under ____.</p>
+    </section></div>
+      <p class="take-home-line">quiet option: Fill main action, important change, and library pocket label first: ____. take-home line: Save the paper card and add one cleaner ending result later: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 15 | Ages 10-11 | Use story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label language to summarize a fictional Clue Label Tower Museum story.</div>
+      <h2>Clue Label Tower Museum Story Summary Card</h2>
+      <figure>
+        <img src="assets/clue-label-tower-museum.jpg" alt="Clue Label Tower Museum illustration">
+        <figcaption>Clue Label Tower Museum</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place this card, a pencil, and a pretend tower label stack with one blank tag: ____.</p>
+      <p class="kid-direction">Fill the blanks for a made-up tower museum story about one clue getting a clear label: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: At the clue label tower museum, the label keeper finds ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: The keeper matches ____ to a broad clue label.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: The tower changes when ____ becomes clear.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: By the end, the clue label shows ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: Keep one tower museum detail, such as a narrow shelf or silver tag: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: Write one sentence that summarizes the clue label story: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: File this fictional summary under ____.</p>
+    </section></div>
+      <p class="take-home-line">quiet option: Fill story start, important change, and keeper detail first: ____. take-home line: Save the paper card and add one sharper library pocket label later: ____.</p>
+    </section>
+
+    <section class="pack-page summary-card-page">
+      <div class="page-kicker">Summary Card 16 | Ages 10-11 | Use story start, main action, important change, ending result, keeper detail, summary sentence, and library pocket label language to summarize a fictional Index Card Theater Club story.</div>
+      <h2>Index Card Theater Club Story Summary Card</h2>
+      <figure>
+        <img src="assets/index-card-theater-club.jpg" alt="Index Card Theater Club illustration">
+        <figcaption>Index Card Theater Club</figcaption>
+      </figure>
+      <p class="adult-note"><strong>Adult setup:</strong> Place this card, a pencil, and three pretend index-card scene cues beside a paper stage sketch: ____.</p>
+      <p class="kid-direction">Fill the blanks for a made-up theater club story with invented names and broad made-up places: ____.</p>
+      <div class="field-grid">
+    <section class="field-block">
+      <h3>Story start</h3>
+      <p>story start: At the index-card theater club, the cue keeper begins with ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Main action</h3>
+      <p>main action: The cue keeper arranges ____ on the paper stage.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Important change</h3>
+      <p>important change: The club changes when ____ moves to the top of the stack.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Ending result</h3>
+      <p>ending result: By the end, the scene can begin because ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Keeper detail</h3>
+      <p>keeper detail: Keep one theater detail, such as a folded prop tag or blue curtain mark: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Summary sentence</h3>
+      <p>summary sentence: Write one sentence that summarizes the theater card story: ____.</p>
+    </section>
+
+    <section class="field-block">
+      <h3>Library pocket label</h3>
+      <p>library pocket label: File this fictional summary under ____.</p>
+    </section></div>
+      <p class="take-home-line">quiet option: Fill main action and ending result before the full summary sentence: ____. take-home line: Save the paper card and add one better keeper detail later: ____.</p>
+    </section>
+  </body>
+</html>
