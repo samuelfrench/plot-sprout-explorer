@@ -6465,6 +6465,10 @@ function validateProduct(product, productSlugs, worldSlugs, options = {}) {
     `${label} rendered meta description must not end on dangling punctuation.`,
   )
   expect(
+    !/,\s+\b(short|clear|calm|private|fictional|printable|adult-led)[.!?]?$/i.test(metaDescription),
+    `${label} rendered meta description must not end on a dangling adjective fragment.`,
+  )
+  expect(
     /[.!?]$/.test(metaDescription),
     `${label} rendered meta description must be a complete sentence.`,
   )

@@ -357,7 +357,7 @@ function validProduct(overrides = {}) {
     status: 'checkout_pending',
     headline: 'Printable library pocket cards for private fictional story summaries.',
     summary:
-      'Sixteen library pocket cards help kids summarize fictional stories with story starts, main actions, important changes, ending results, keeper details, short summary sentences, and labels.',
+      'Sixteen library pocket cards help kids summarize fictional stories with story starts, main actions, important changes, ending results, and keeper details.',
     heroImage: 'images/plotsprout/batch62/library-pocket-story-summary-card-pack.jpg',
     ctaLabel: 'Request library pocket pack launch notice',
     ctaHref:

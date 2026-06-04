@@ -77,6 +77,25 @@ describe('content batch verifier summary', () => {
     expect(output).toContain('55 product artifacts')
   })
 
+  it('rejects product meta descriptions clipped to a trailing adjective fragment', () => {
+    const productPageDir = resolve(root, 'public/library-pocket-story-summary-card-pack')
+    const productPagePath = resolve(productPageDir, 'index.html')
+
+    withRestoredPaths([productPageDir], () => {
+      const renderedHtml = readFileSync(productPagePath, 'utf8')
+      writeFileSync(
+        productPagePath,
+        renderedHtml.replace(
+          /<meta name="description" content="[^"]+">/,
+          '<meta name="description" content="Sixteen library pocket cards help kids summarize fictional stories with story starts, main actions, important changes, ending results, keeper details, short.">',
+        ),
+      )
+
+      const output = runVerifierExpectingFailure()
+      expect(output).toContain('rendered meta description must not end on a dangling adjective fragment')
+    })
+  })
+
   it('fails closed if a Batch55 generated image exists before the static page is rendered', () => {
     const imageManifest = readJson('content/image-queue/2026-06-03-batch55-images.json').images[0]
     const imagePath = resolve(
