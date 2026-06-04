@@ -1,0 +1,109 @@
+{
+  "adultGuide": {
+    "title": "Archive Drawer Resolution Adult Guide",
+    "bullets": [
+      "Adult-led setup: place the archive drawer, blank slips, pencils, and one resolution card on the table before the paper-only work begins: ____________________.",
+      "Adult-led framing: keep every loose thread, last choice, changed feeling, closing image, leftover question, next-story seed, and archive drawer label fictional: ____________________.",
+      "Adult-led order: move from loose thread to last choice, changed feeling, closing image, leftover question, next-story seed, and archive drawer label: ____________________.",
+      "Adult-led support: let the writer write or dictate short paper lines while the adult keeps the archive drawer sorted: ____________________.",
+      "Adult-led safety: use pretend names, broad made-up places, and invented actions instead of personal facts or exact identifiers: ____________________.",
+      "Adult-led finish: reread the paper-only resolution plan, choose the next-story seed, and write the archive drawer label: ____________________."
+    ]
+  },
+  "resolutionRoutines": [
+    {
+      "title": "Loose Thread Sort",
+      "time": "short paper setup",
+      "materials": "Archive drawer, loose thread slip, blank page, and pencil.",
+      "steps": [
+        "The adult opens the archive drawer and points to the loose thread blank: ____________________.",
+        "The writer names one fictional loose thread still waiting on paper: ____________________.",
+        "The adult asks which earlier paper note the loose thread connects to: ____________________.",
+        "The writer writes the loose thread on the slip and places it at the front: ____________________."
+      ],
+      "adultWrapLine": "This resolution plan starts with the loose thread: ____________________."
+    },
+    {
+      "title": "Last Choice Link",
+      "time": "choice connection pass",
+      "materials": "Archive drawer, loose thread slip, last choice slip, and pencil.",
+      "steps": [
+        "The adult rereads the loose thread and points to the last choice blank: ____________________.",
+        "The writer names the fictional last choice that answers part of the loose thread: ____________________.",
+        "The adult asks how the last choice links back to the paper plan: ____________________.",
+        "The writer writes the last choice link and slides it behind the loose thread: ____________________."
+      ],
+      "adultWrapLine": "The last choice links the loose thread to this answer: ____________________."
+    },
+    {
+      "title": "Changed Feeling Check",
+      "time": "feeling change pass",
+      "materials": "Archive drawer, last choice slip, changed feeling slip, and pencil.",
+      "steps": [
+        "The adult places the last choice slip beside the changed feeling blank: ____________________.",
+        "The writer names one changed feeling for the fictional character after the last choice: ____________________.",
+        "The adult asks what paper line makes that changed feeling clear: ____________________.",
+        "The writer writes the changed feeling check and keeps it with the last choice: ____________________."
+      ],
+      "adultWrapLine": "The changed feeling after the last choice is: ____________________."
+    },
+    {
+      "title": "Closing Image Pass",
+      "time": "final paper image pass",
+      "materials": "Archive drawer, changed feeling slip, closing image slip, and pencil.",
+      "steps": [
+        "The adult rereads the changed feeling and points to the closing image blank: ____________________.",
+        "The writer invents one paper-only closing image that fits the resolution plan: ____________________.",
+        "The adult asks what the closing image helps the reader imagine at the end: ____________________.",
+        "The writer writes the closing image and places it after the changed feeling: ____________________."
+      ],
+      "adultWrapLine": "The closing image for this fictional resolution is: ____________________."
+    },
+    {
+      "title": "Leftover Question Note",
+      "time": "question sorting pass",
+      "materials": "Archive drawer, closing image slip, leftover question note, and pencil.",
+      "steps": [
+        "The adult sets the closing image beside the leftover question blank: ____________________.",
+        "The writer names one gentle leftover question that can remain for a next-story seed: ____________________.",
+        "The adult asks which part belongs in this resolution and which part waits: ____________________.",
+        "The writer writes the leftover question note and marks it for the next-story seed: ____________________."
+      ],
+      "adultWrapLine": "The leftover question waiting for a next-story seed is: ____________________."
+    },
+    {
+      "title": "Archive Drawer Label Close",
+      "time": "archive drawer wrap",
+      "materials": "Archive drawer, finished slips, label strip, and pencil.",
+      "steps": [
+        "The adult rereads the loose thread, last choice, changed feeling, closing image, and leftover question: ____________________.",
+        "The writer chooses one next-story seed that grows from the leftover question: ____________________.",
+        "The adult asks what archive drawer label will help sort this paper-only resolution: ____________________.",
+        "The writer writes the next-story seed and archive drawer label, then the adult files the slips: ____________________."
+      ],
+      "adultWrapLine": "The archive drawer label closes the resolution as: ____________________."
+    }
+  ],
+  "takeHomeResolutionSlips": [
+    "Adult: set out one paper slip and ask for a fictional loose thread: ____________________.",
+    "Writer: the fictional loose thread waiting in the archive drawer is: ____________________.",
+    "Adult: ask which last choice links back to that loose thread: ____________________.",
+    "Writer: the last choice link is: ____________________.",
+    "Adult: ask what changed feeling follows the last choice: ____________________.",
+    "Writer: the changed feeling is: ____________________.",
+    "Adult: ask for one closing image that fits the paper-only resolution: ____________________.",
+    "Writer: the closing image is: ____________________.",
+    "Adult: ask which leftover question can become a next-story seed: ____________________.",
+    "Writer: the next-story seed and archive drawer label are: ____________________."
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led paper prompt: the loose thread still waiting is ____________________.",
+    "Optional adult-led paper prompt: the last choice links back by ____________________.",
+    "Optional adult-led paper prompt: the changed feeling after the last choice is ____________________.",
+    "Optional adult-led paper prompt: the closing image shows ____________________.",
+    "Optional adult-led paper prompt: the leftover question can ask ____________________.",
+    "Optional adult-led paper prompt: the next-story seed could be ____________________.",
+    "Optional adult-led paper prompt: the archive drawer label can say ____________________.",
+    "Optional adult-led paper prompt: the paper-only resolution closes when ____________________."
+  ]
+}
