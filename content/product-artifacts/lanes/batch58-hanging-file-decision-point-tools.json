@@ -1,0 +1,109 @@
+{
+  "adultGuide": {
+    "title": "Hanging File Decision Point Adult Guide",
+    "bullets": [
+      "Set out one hanging file, blank pages, pencils, and a decision-point card before the adult-led paper start: ____________________.",
+      "Choose one fictional character choice and keep every path, clue, and consequence note invented: ____________________.",
+      "Move through character choice, path one, path two, clue to compare, chosen path, consequence note, and hanging-file label in order: ____________________.",
+      "Keep the adult in charge of the hanging file while the writer writes or dictates short paper lines: ____________________.",
+      "Use pretend characters, broad places, and invented actions only; skip real names, real places, and personal facts: ____________________.",
+      "Close by reading the chosen path, adding one consequence note, and writing the hanging-file label for later adult-led paper planning: ____________________."
+    ]
+  },
+  "decisionPointRoutines": [
+    {
+      "title": "Character Choice Start",
+      "time": "short first-page setup",
+      "materials": "Hanging file, blank page, pencil, and character choice slip.",
+      "steps": [
+        "The adult opens the hanging file and points to the character choice blank: ____________________.",
+        "The writer names one fictional character for the paper plan: ____________________.",
+        "The adult asks what choice is standing in front of that character: ____________________.",
+        "The writer writes or dictates one character choice line on paper: ____________________."
+      ],
+      "adultWrapLine": "The decision point starts with this fictional character choice: ____________________."
+    },
+    {
+      "title": "Path One Fold",
+      "time": "first option pass",
+      "materials": "Hanging file, current page, pencil, and path one slip.",
+      "steps": [
+        "The adult rereads the character choice line from the page: ____________________.",
+        "The writer invents one path the fictional character could take: ____________________.",
+        "The adult asks what makes path one clear on paper: ____________________.",
+        "The writer writes path one on the slip and places it in the hanging file: ____________________."
+      ],
+      "adultWrapLine": "Path one gives the character this possible choice: ____________________."
+    },
+    {
+      "title": "Path Two Fold",
+      "time": "second option pass",
+      "materials": "Hanging file, path one slip, blank path two slip, and pencil.",
+      "steps": [
+        "The adult points from path one to the path two blank: ____________________.",
+        "The writer invents a different path the fictional character could take: ____________________.",
+        "The adult asks how path two is different from path one: ____________________.",
+        "The writer writes path two and tucks it beside path one: ____________________."
+      ],
+      "adultWrapLine": "Path two gives the character this other possible choice: ____________________."
+    },
+    {
+      "title": "Compare Clue Sort",
+      "time": "paper comparison pass",
+      "materials": "Hanging file, path one slip, path two slip, clue-to-compare note, and pencil.",
+      "steps": [
+        "The adult lays path one and path two side by side on the table: ____________________.",
+        "The writer chooses one clue to compare before a path is picked: ____________________.",
+        "The adult asks what the clue shows about each path: ____________________.",
+        "The writer writes the clue to compare on the note: ____________________."
+      ],
+      "adultWrapLine": "The clue to compare says this about the two paths: ____________________."
+    },
+    {
+      "title": "Chosen Path Slip",
+      "time": "choice close pass",
+      "materials": "Hanging file, two path slips, clue note, chosen path slip, and pencil.",
+      "steps": [
+        "The adult rereads path one, path two, and the clue to compare: ____________________.",
+        "The writer picks one chosen path for the fictional character: ____________________.",
+        "The adult asks why that path fits the character choice: ____________________.",
+        "The writer writes the chosen path on the slip: ____________________."
+      ],
+      "adultWrapLine": "The chosen path for this decision point is: ____________________."
+    },
+    {
+      "title": "Consequence Label Close",
+      "time": "hanging-file wrap",
+      "materials": "Hanging file, chosen path slip, consequence note, label strip, and pencil.",
+      "steps": [
+        "The adult places the chosen path slip at the front of the hanging file: ____________________.",
+        "The writer names one fictional consequence note for that chosen path: ____________________.",
+        "The adult asks what hanging-file label will help find this decision point later: ____________________.",
+        "The writer writes the consequence note and hanging-file label: ____________________."
+      ],
+      "adultWrapLine": "The hanging-file label closes this decision point as: ____________________."
+    }
+  ],
+  "takeHomeDecisionSlips": [
+    "Adult: open the hanging file and ask for one fictional character choice: ____________________.",
+    "Writer: the fictional character choice is: ____________________.",
+    "Adult: ask what path one could be on the paper plan: ____________________.",
+    "Writer: path one is: ____________________.",
+    "Adult: ask what different path two could be: ____________________.",
+    "Writer: path two is: ____________________.",
+    "Adult: ask for one clue to compare before choosing: ____________________.",
+    "Writer: the clue to compare is: ____________________.",
+    "Adult: reread both paths and ask which chosen path fits the character choice: ____________________.",
+    "Writer: the consequence note and hanging-file label are: ____________________."
+  ],
+  "optionalAdultPrompts": [
+    "Optional adult-led paper prompt: the fictional character choice is ____________________.",
+    "Optional adult-led paper prompt: path one could lead to ____________________.",
+    "Optional adult-led paper prompt: path two could lead to ____________________.",
+    "Optional adult-led paper prompt: the clue to compare is ____________________.",
+    "Optional adult-led paper prompt: the chosen path should be ____________________.",
+    "Optional adult-led paper prompt: the consequence note says ____________________.",
+    "Optional adult-led paper prompt: the hanging-file label can name ____________________.",
+    "Optional adult-led paper prompt: the next decision point can start with ____________________."
+  ]
+}
